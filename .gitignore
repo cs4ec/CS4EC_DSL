@@ -1,0 +1,7 @@
+# Project exclude paths
+/languages/EDLanguage/classes_gen/
+/languages/EDLanguage/generator/classes_gen/
+/languages/EDLanguage/sandbox/classes_gen/
+/languages/RunnerLanguage/classes_gen/
+/languages/RunnerLanguage/generator/classes_gen/
+/solutions/EDLanguage.Runner/classes_gen/

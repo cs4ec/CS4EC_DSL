@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-t91r06wx2hijqme1gn3fv3vshhf8xv">
+  <files names="ATestSignalSignal.java:AllActorsCanReceiveSignal.java:Anesthetist.java:Doctor.java:EDBuilder.java:EMPSingalSignal.java:ENP.java:InternNurse.java:JuniorDoctor.java:NewPatientGotoENPSignalSignal.java:NewPatientGotoOfficeSignal.java:NewPatientNeedMedicineSignal.java:Nurse.java:NurseSignalSignal.java:OnlyDoctorCanReceiveSignal.java:OnlyNurseReceiveSignal.java:SomeoneNeedsHelpSignal.java:Staff.java:XRaySignal.java" />
+</product>
+

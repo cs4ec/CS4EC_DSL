@@ -1,0 +1,9 @@
+edHello.agents.Patient@232c8cea | total wait time: 29 | dealt at time point: 30.0
+edHello.agents.Patient@2ccb8994 | total wait time: 36 | dealt at time point: 88.0
+edHello.agents.Patient@4e7382e2 | total wait time: 37 | dealt at time point: 140.0
+edHello.agents.Patient@48e5072d | total wait time: 14 | dealt at time point: 167.0
+edHello.agents.Patient@dee9d87 | total wait time: 7 | dealt at time point: 211.0
+edHello.agents.Patient@652532b0 | total wait time: 5 | dealt at time point: 260.0
+edHello.agents.Patient@34667eb3 | total wait time: 39 | dealt at time point: 345.0
+edHello.agents.Patient@197461d | total wait time: 39 | dealt at time point: 396.0
+edHello.agents.Patient@7256a317 | total wait time: 5 | dealt at time point: 413.0

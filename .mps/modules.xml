@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/EDLanguage/sandbox/EDLanguage.sandbox.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.LanguageDependency/EDLanguage.LanguageDependency.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.Runner/EDLanguage.Runner.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/EDRuntimeSolution/EDRuntimeSolution.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_EDLog/EDRuntime_EDLog.msd" folder="dependencies" />
+      <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_EDProject/EDRuntime_EDProject.msd" folder="dependencies" />
+      <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_Repast/EDRuntime_Repast.msd" folder="dependencies" />
+      <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
+    </projectModules>
+  </component>
+</project>

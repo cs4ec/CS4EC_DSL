@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="EDLanguage.Runner.RepastMain.MyRunner">
+    <classNode dependClassName="edHello.logNote.LogNote" />
+    <classNode dependClassName="java.io.File" />
+    <classNode dependClassName="java.io.FileInputStream" />
+    <classNode dependClassName="java.io.FileOutputStream" />
+    <classNode dependClassName="java.io.InputStream" />
+    <classNode dependClassName="java.io.OutputStream" />
+    <classNode dependClassName="java.lang.Exception" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.runtime.RepastMain" />
+  </dependency>
+</dependenciesRoot>
+

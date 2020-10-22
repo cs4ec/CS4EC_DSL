@@ -1,0 +1,2 @@
+Time point: 1038.0 | stress: 3.0
+Time point: 1338.0 | stress: 6.0
