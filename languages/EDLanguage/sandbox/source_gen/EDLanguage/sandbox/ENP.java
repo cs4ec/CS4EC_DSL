@@ -12,6 +12,8 @@ import edHello.action.basicAction.StayForConditionAction;
 import edHello.action.basicAction.conditions.SpaceatCondition;
 import edHello.action.basicAction.StayForTimeAction;
 import edHello.action.basicAction.conditions.PossibilityCondition;
+import edHello.action.ConsequenceStep;
+import edHello.action.Consequence;
 import edHello.action.basicAction.OrderAction;
 import edHello.agents.Patient;
 import edHello.Signals.Orders.MoveToOrder;
@@ -19,6 +21,7 @@ import edHello.action.basicAction.SendSignalAction;
 
 public class ENP extends Staff {
 
+  public double Happiness = Double.parseDouble("" + "0");
   public double groupStress = Double.parseDouble("" + "0");
 
   public ENP(ContinuousSpace<Object> space, Grid<Object> grid) {
@@ -61,6 +64,7 @@ public class ENP extends Staff {
       }
     }
 
+    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("Happiness", "+=", 1)));
   }
   public void InitSendPatientToDoctor(Signal s) {
     System.out.println("SendPatientToDoctor" + " function called");

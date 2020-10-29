@@ -57,7 +57,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "patient arrive interval:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "1 patient every");
     editorCell.setCellId("Constant_comic1_a0");
     editorCell.setDefaultText("");
     return editorCell;
@@ -88,7 +88,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "timestamps/person");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "minutes");
     editorCell.setCellId("Constant_comic1_c0");
     editorCell.setDefaultText("");
     return editorCell;
