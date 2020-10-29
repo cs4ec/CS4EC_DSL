@@ -105,7 +105,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     }
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "space at");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "is at");
     editorCell.setCellId("Constant_x61eh1_b0");
     editorCell.setDefaultText("");
     return editorCell;

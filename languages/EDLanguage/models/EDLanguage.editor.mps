@@ -135,7 +135,7 @@
       </node>
       <node concept="3F0ifn" id="4VcHHLiE1KK" role="3EZMnx" />
       <node concept="3F0ifn" id="4VcHHLiE1Kp" role="3EZMnx">
-        <property role="3F0ifm" value="staff" />
+        <property role="3F0ifm" value="Staff:" />
       </node>
       <node concept="3F2HdR" id="4VcHHLiE1Kx" role="3EZMnx">
         <ref role="1NtTu8" to="3751:3l6cNjec6IF" resolve="staff" />
@@ -152,7 +152,7 @@
       </node>
       <node concept="3F0ifn" id="5VDVzf4iS8C" role="3EZMnx" />
       <node concept="3F0ifn" id="5VDVzf4iS7u" role="3EZMnx">
-        <property role="3F0ifm" value="pateint arrive:" />
+        <property role="3F0ifm" value="Patient arrive rate:" />
       </node>
       <node concept="3F1sOY" id="5VDVzf4iS82" role="3EZMnx">
         <ref role="1NtTu8" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
@@ -449,7 +449,7 @@
     <ref role="1XX52x" to="3751:3KCb14J4_mN" resolve="PlaceInstanceFromSignal" />
     <node concept="3EZMnI" id="3KCb14J4_n2" role="2wV5jI">
       <node concept="3F0ifn" id="3KCb14J4_nc" role="3EZMnx">
-        <property role="3F0ifm" value="the place from signal with name &quot;" />
+        <property role="3F0ifm" value="signal &quot;" />
       </node>
       <node concept="3F0A7n" id="3KCb14J4_ny" role="3EZMnx">
         <ref role="1NtTu8" to="3751:3KCb14J4_mQ" resolve="data" />
@@ -468,7 +468,7 @@
         <ref role="1NtTu8" to="3751:3KCb14J4_oy" resolve="left" />
       </node>
       <node concept="3F0ifn" id="3KCb14J4_oY" role="3EZMnx">
-        <property role="3F0ifm" value="space at" />
+        <property role="3F0ifm" value="is at" />
       </node>
       <node concept="3F1sOY" id="3KCb14J4_p6" role="3EZMnx">
         <property role="1$x2rV" value="integer" />
@@ -762,6 +762,36 @@
           </node>
         </node>
       </node>
+      <node concept="3F0ifn" id="4_Lh49vi2LJ" role="3EZMnx">
+        <property role="3F0ifm" value="x:" />
+      </node>
+      <node concept="3F0A7n" id="4_Lh49vi2M4" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4_Lh49vi2LZ" resolve="x" />
+      </node>
+      <node concept="3F0ifn" id="4_Lh49vi2Mm" role="3EZMnx">
+        <property role="3F0ifm" value=", y:" />
+      </node>
+      <node concept="3F0A7n" id="4_Lh49vi2ME" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4_Lh49vi2M1" resolve="y" />
+      </node>
+      <node concept="3F0ifn" id="4_Lh49vvMPp" role="3EZMnx">
+        <property role="3F0ifm" value=", width:" />
+      </node>
+      <node concept="3F0A7n" id="4_Lh49vvMPL" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4_Lh49vvMP5" resolve="width" />
+      </node>
+      <node concept="3F0ifn" id="4_Lh49vvMQb" role="3EZMnx">
+        <property role="3F0ifm" value=", height:" />
+      </node>
+      <node concept="3F0A7n" id="4_Lh49vvMQB" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4_Lh49vvMP9" resolve="height" />
+      </node>
+      <node concept="3F0ifn" id="4_Lh49vvOeh" role="3EZMnx">
+        <property role="3F0ifm" value=", capacity:" />
+      </node>
+      <node concept="3F0A7n" id="4_Lh49vvOeL" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4_Lh49vvOdW" resolve="capacity" />
+      </node>
       <node concept="l2Vlx" id="3KCb14J991n" role="2iSdaV" />
     </node>
   </node>
@@ -886,7 +916,7 @@
     <ref role="1XX52x" to="3751:7o6PzEpH8eV" resolve="OrderPatientAction" />
     <node concept="3EZMnI" id="7o6PzEpH8gi" role="2wV5jI">
       <node concept="3F0ifn" id="7o6PzEpH8gp" role="3EZMnx">
-        <property role="3F0ifm" value="order patient" />
+        <property role="3F0ifm" value="order" />
       </node>
       <node concept="3F1sOY" id="7o6PzEpH8gy" role="3EZMnx">
         <ref role="1NtTu8" to="3751:7o6PzEpH8gv" resolve="targetPatient" />
@@ -1103,13 +1133,13 @@
     <ref role="1XX52x" to="3751:5VDVzf4iS6y" resolve="PatientInterval" />
     <node concept="3EZMnI" id="5VDVzf4iS6J" role="2wV5jI">
       <node concept="3F0ifn" id="5VDVzf4iS6Q" role="3EZMnx">
-        <property role="3F0ifm" value="patient arrive interval:" />
+        <property role="3F0ifm" value="1 patient every" />
       </node>
       <node concept="3F0A7n" id="5VDVzf4iS75" role="3EZMnx">
         <ref role="1NtTu8" to="3751:5VDVzf4iS6z" resolve="timespan" />
       </node>
       <node concept="3F0ifn" id="5VDVzf4iS70" role="3EZMnx">
-        <property role="3F0ifm" value="timestamps/person" />
+        <property role="3F0ifm" value="minutes" />
       </node>
       <node concept="l2Vlx" id="5VDVzf4iS6M" role="2iSdaV" />
     </node>

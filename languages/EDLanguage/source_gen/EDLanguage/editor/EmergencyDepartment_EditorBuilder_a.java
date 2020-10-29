@@ -101,7 +101,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_3() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "staff");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Staff:");
     editorCell.setCellId("Constant_zbi6l0_c0");
     editorCell.setDefaultText("");
     return editorCell;
@@ -197,7 +197,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_6() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "pateint arrive:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Patient arrive rate:");
     editorCell.setCellId("Constant_zbi6l0_f0");
     editorCell.setDefaultText("");
     return editorCell;

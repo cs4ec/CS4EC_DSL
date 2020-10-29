@@ -44,6 +44,7 @@
   <dependency className="EDLanguage.sandbox.EDBuilder">
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.ENP" />
+    <classNode dependClassName="EDLanguage.sandbox.Nurse" />
     <classNode dependClassName="demo2.Location" />
     <classNode dependClassName="edHello.basicStructures.Board" />
     <classNode dependClassName="edHello.basicStructures.PatientAdder" />
@@ -74,6 +75,8 @@
     <classNode dependClassName="edHello.Signals.Signal" />
     <classNode dependClassName="edHello.action.Action" />
     <classNode dependClassName="edHello.action.ActionStep" />
+    <classNode dependClassName="edHello.action.Consequence" />
+    <classNode dependClassName="edHello.action.ConsequenceStep" />
     <classNode dependClassName="edHello.action.basicAction.MoveAction" />
     <classNode dependClassName="edHello.action.basicAction.OrderAction" />
     <classNode dependClassName="edHello.action.basicAction.SendSignalAction" />

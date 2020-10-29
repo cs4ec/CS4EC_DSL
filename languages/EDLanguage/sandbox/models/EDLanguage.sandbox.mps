@@ -27,6 +27,11 @@
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="EDLanguage">
       <concept id="4334763093661093954" name="EDLanguage.structure.Place" flags="ng" index="j3bLj" />
       <concept id="4334763093661093957" name="EDLanguage.structure.PlaceInstanceDefinition" flags="ng" index="j3bLk">
+        <property id="5292086088997749628" name="capacity" index="m3wsY" />
+        <property id="5292086088997743941" name="width" index="m3A$7" />
+        <property id="5292086088997743945" name="height" index="m3A$b" />
+        <property id="5292086088994139263" name="x" index="memwX" />
+        <property id="5292086088994139265" name="y" index="memz3" />
         <reference id="4334763093661093958" name="type" index="j3bLn" />
       </concept>
       <concept id="4334763093661094018" name="EDLanguage.structure.RoomDefinition" flags="ng" index="j3bMj">
@@ -180,6 +185,10 @@
     <node concept="3VqkwQ" id="3l6cNjecY0m" role="3Vt_yv">
       <property role="3Vt_zX" value="2" />
       <ref role="3Vt_zZ" node="3l6cNjecY0h" resolve="Doctor" />
+    </node>
+    <node concept="3VqkwQ" id="54wwGXXI$aU" role="3Vt_yv">
+      <property role="3Vt_zX" value="7" />
+      <ref role="3Vt_zZ" node="4k5rxZwd$Mm" resolve="Nurse" />
     </node>
     <node concept="3VqkwQ" id="2kH7UIGJDti" role="3Vt_yv">
       <property role="3Vt_zX" value="2" />
@@ -378,35 +387,84 @@
     <property role="3GE5qa" value="rooms" />
     <node concept="j3bLk" id="3KCb14J9VQS" role="j3bMi">
       <property role="TrG5h" value="diagnostic room 1" />
+      <property role="memwX" value="15" />
+      <property role="memz3" value="40" />
+      <property role="m3A$7" value="6" />
+      <property role="m3A$b" value="9" />
+      <property role="m3wsY" value="40" />
       <ref role="j3bLn" node="3KCb14J9zb$" resolve="DiagnosisRoom" />
     </node>
     <node concept="j3bLk" id="3KCb14J9VQU" role="j3bMi">
       <property role="TrG5h" value="office1" />
+      <property role="memwX" value="5" />
+      <property role="memz3" value="20" />
+      <property role="m3A$7" value="6" />
+      <property role="m3A$b" value="9" />
+      <property role="m3wsY" value="40" />
       <ref role="j3bLn" node="3KCb14J9zbz" resolve="Office" />
     </node>
     <node concept="j3bLk" id="53LYXLHX24r" role="j3bMi">
       <property role="TrG5h" value="restRoom1" />
+      <property role="memwX" value="24" />
+      <property role="memz3" value="15" />
+      <property role="m3A$7" value="6" />
+      <property role="m3A$b" value="6" />
+      <property role="m3wsY" value="20" />
       <ref role="j3bLn" node="53LYXLHX212" resolve="Lounge" />
     </node>
     <node concept="j3bLk" id="3kETnqCHuij" role="j3bMi">
       <property role="TrG5h" value="exit" />
+      <property role="memwX" value="40" />
+      <property role="memz3" value="3" />
+      <property role="m3A$7" value="2" />
+      <property role="m3A$b" value="2" />
+      <property role="m3wsY" value="200" />
       <ref role="j3bLn" node="3kETnqCHuii" resolve="Exit" />
     </node>
     <node concept="j3bLk" id="7IDz3VlgXOF" role="j3bMi">
       <property role="TrG5h" value="preDiagnosticArea" />
+      <property role="memwX" value="35" />
+      <property role="memz3" value="20" />
+      <property role="m3A$7" value="5" />
+      <property role="m3A$b" value="3" />
+      <property role="m3wsY" value="200" />
       <ref role="j3bLn" node="3KCb14J9zb$" resolve="DiagnosisRoom" />
     </node>
     <node concept="j3bLk" id="7IDz3VlgXQi" role="j3bMi">
       <property role="TrG5h" value="pharmacy" />
+      <property role="memwX" value="12" />
+      <property role="memz3" value="4" />
+      <property role="m3A$7" value="9" />
+      <property role="m3A$b" value="6" />
+      <property role="m3wsY" value="10" />
       <ref role="j3bLn" node="53LYXLHX212" resolve="Lounge" />
     </node>
     <node concept="j3bLk" id="7IDz3VlgXT4" role="j3bMi">
       <property role="TrG5h" value="XRayRoom1" />
+      <property role="memwX" value="22" />
+      <property role="memz3" value="4" />
+      <property role="m3A$7" value="9" />
+      <property role="m3A$b" value="6" />
+      <property role="m3wsY" value="10" />
       <ref role="j3bLn" node="7IDz3VlgXT3" resolve="XRayRoom" />
     </node>
     <node concept="j3bLk" id="7IDz3VlgY1p" role="j3bMi">
       <property role="TrG5h" value="waitingArea" />
+      <property role="memwX" value="35" />
+      <property role="memz3" value="10" />
+      <property role="m3A$7" value="5" />
+      <property role="m3A$b" value="3" />
+      <property role="m3wsY" value="200" />
       <ref role="j3bLn" node="53LYXLHX212" resolve="Lounge" />
+    </node>
+    <node concept="j3bLk" id="4_Lh49vy4ad" role="j3bMi">
+      <property role="TrG5h" value="XRayRoom2" />
+      <property role="memwX" value="5" />
+      <property role="memz3" value="40" />
+      <property role="m3A$7" value="6" />
+      <property role="m3A$b" value="9" />
+      <property role="m3wsY" value="10" />
+      <ref role="j3bLn" node="7IDz3VlgXT3" resolve="XRayRoom" />
     </node>
   </node>
   <node concept="j3bLj" id="53LYXLHX212">
@@ -832,6 +890,17 @@
       <node concept="3n32J5" id="5VDVzf4kTPn" role="3n3c3i">
         <ref role="3n32J4" node="7IDz3VlgXPm" resolve="NewPatientGotoENPSignal" />
       </node>
+      <node concept="X7x6e" id="4_Lh49vg2Ri" role="X7x6i">
+        <node concept="X7xuQ" id="4_Lh49vg2Rj" role="X7xsq">
+          <property role="X7xuL" value="53LYXLHVYLK/increase" />
+          <ref role="X7xuR" node="4_Lh49vg2R8" resolve="Happiness" />
+          <node concept="xbsuO" id="4_Lh49vg2Rk" role="xbgDt">
+            <node concept="3cmrfG" id="4_Lh49vg2Rq" role="xbgmq">
+              <property role="3cmrfH" value="1" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="3Vt_xe" id="7IDz3VlgXYJ" role="2Ov1EZ">
       <property role="TrG5h" value="SendPatientToDoctor" />
@@ -915,6 +984,10 @@
           </node>
         </node>
       </node>
+    </node>
+    <node concept="jeB$7" id="4_Lh49vg2R8" role="3eYOtt">
+      <property role="TrG5h" value="Happiness" />
+      <property role="x7nQs" value="0" />
     </node>
   </node>
   <node concept="3Vql55" id="4YhGq4eAKUC">

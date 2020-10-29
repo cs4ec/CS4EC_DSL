@@ -52,7 +52,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "order patient");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "order");
     editorCell.setCellId("Constant_bt28hr_a0");
     editorCell.setDefaultText("");
     return editorCell;

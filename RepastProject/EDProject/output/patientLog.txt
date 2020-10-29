@@ -818,3 +818,5 @@ edHello.agents.Patient@40c90945 | total wait time: 35 | dealt at time point: 316
 edHello.agents.Patient@43434923 | total wait time: 35 | dealt at time point: 31695.0
 edHello.agents.Patient@3a8a8f09 | total wait time: 37 | dealt at time point: 31757.0
 edHello.agents.Patient@1caf2d50 | total wait time: 6 | dealt at time point: 31788.0
+edHello.agents.Patient@74c4ea90 | total wait time: 26 | dealt at time point: 26.0
+edHello.agents.Patient@55df4ce5 | total wait time: 55 | dealt at time point: 117.0

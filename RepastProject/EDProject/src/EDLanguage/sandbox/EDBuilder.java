@@ -41,6 +41,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 2; i++) {
       context.add(new Doctor(space, grid));
     }
+    for (int i = 0; i < 7; i++) {
+      context.add(new Nurse(space, grid));
+    }
     for (int i = 0; i < 2; i++) {
       context.add(new ENP(space, grid));
     }
@@ -52,15 +55,18 @@ public class EDBuilder implements ContextBuilder<Object> {
 
 
     // add Locations here 
+    Location diagnosticroom1_a = new Location("diagnostic room 1", context, space, grid, 15, 40, 6, 9, 1, 40, "Left");
+    Location office1_b = new Location("office1", context, space, grid, 5, 20, 6, 9, 1, 40, "Left");
+    Location restRoom1_c = new Location("restRoom1", context, space, grid, 24, 15, 6, 6, 1, 20, "Left");
+    Location exit_d = new Location("exit", context, space, grid, 40, 3, 2, 2, 1, 200, "Left");
+    Location preDiagnosticArea_e = new Location("preDiagnosticArea", context, space, grid, 35, 20, 5, 3, 1, 200, "Left");
+    Location pharmacy_f = new Location("pharmacy", context, space, grid, 12, 4, 9, 6, 1, 10, "Left");
+    Location XRayRoom1_g = new Location("XRayRoom1", context, space, grid, 22, 4, 9, 6, 1, 10, "Left");
+    Location waitingArea_h = new Location("waitingArea", context, space, grid, 35, 10, 5, 3, 1, 200, "Left");
+    Location XRayRoom2_i = new Location("XRayRoom2", context, space, grid, 5, 40, 6, 9, 1, 10, "Left");
+
+
     Location ent = new Location("Entrance", context, space, grid, 40, 40, 2, 2, 3, 20, "Left");
-    Location loc1 = new Location("preDiagnosticArea", context, space, grid, 35, 20, 5, 3, 1, 200, "Bottom");
-    Location loc2 = new Location("waitingArea", context, space, grid, 35, 10, 5, 3, 1, 200, "Bottom");
-    Location loc3 = new Location("pharmacy", context, space, grid, 12, 4, 9, 6, 2, 10, "Top");
-    Location loc4 = new Location("XRayRoom1", context, space, grid, 22, 4, 9, 6, 2, 10, "Top");
-    Location loc5 = new Location("diagnostic room 1", context, space, grid, 5, 40, 6, 9, 2, 40, "Right");
-    Location loc6 = new Location("office1", context, space, grid, 5, 20, 6, 9, 2, 40, "Right");
-    Location loc7 = new Location("restRoom1", context, space, grid, 24, 15, 6, 6, 1, 20, "Left");
-    Location loc8 = new Location("exit", context, space, grid, 40, 3, 2, 2, 3, 20, "Left");
 
 
 

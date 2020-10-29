@@ -441,6 +441,31 @@
     <node concept="PrWs8" id="3KCb14J9918" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="1TJgyi" id="4_Lh49vi2LZ" role="1TKVEl">
+      <property role="IQ2nx" value="5292086088994139263" />
+      <property role="TrG5h" value="x" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4_Lh49vi2M1" role="1TKVEl">
+      <property role="IQ2nx" value="5292086088994139265" />
+      <property role="TrG5h" value="y" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4_Lh49vvMP5" role="1TKVEl">
+      <property role="IQ2nx" value="5292086088997743941" />
+      <property role="TrG5h" value="width" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4_Lh49vvMP9" role="1TKVEl">
+      <property role="IQ2nx" value="5292086088997743945" />
+      <property role="TrG5h" value="height" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="4_Lh49vvOdW" role="1TKVEl">
+      <property role="IQ2nx" value="5292086088997749628" />
+      <property role="TrG5h" value="capacity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3KCb14J9922">
     <property role="EcuMT" value="4334763093661094018" />
