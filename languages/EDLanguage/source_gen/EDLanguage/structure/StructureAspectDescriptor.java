@@ -71,6 +71,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptStayForTimeAction = createDescriptorForStayForTimeAction();
   /*package*/ final ConceptDescriptor myConceptStopOrder = createDescriptorForStopOrder();
   /*package*/ final EnumerationDescriptor myEnumerationBaseType = new EnumerationDescriptor_BaseType();
+  /*package*/ final EnumerationDescriptor myEnumerationDirection = new EnumerationDescriptor_Direction();
   /*package*/ final EnumerationDescriptor myEnumerationJudgeOperator = new EnumerationDescriptor_JudgeOperator();
   /*package*/ final EnumerationDescriptor myEnumerationModifyOperator = new EnumerationDescriptor_ModifyOperator();
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeEasyFloatNumber = new ConstrainedStringDatatypeDescriptorImpl(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL, "EasyFloatNumber", "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/7454555096516561340", "[0-9]+(.[0-9]+)?");
@@ -208,7 +209,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationBaseType, myEnumerationJudgeOperator, myEnumerationModifyOperator, myCSDatatypeEasyFloatNumber);
+    return Arrays.asList(myEnumerationBaseType, myEnumerationDirection, myEnumerationJudgeOperator, myEnumerationModifyOperator, myCSDatatypeEasyFloatNumber);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -554,6 +555,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("width", 0x497144425f7f2d45L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743941").done();
     b.property("height", 0x497144425f7f2d49L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743945").done();
     b.property("capacity", 0x497144425f7f437cL).type(PrimitiveTypeId.INTEGER).origin("5292086088997749628").done();
+    b.property("entrance", 0x497144425f8965fcL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x497144425f896603L)).origin("5292086088998413820").done();
     b.associate("type", 0x3c282c112f249046L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249042L).optional(false).origin("4334763093661093958").done();
     return b.create();
   }

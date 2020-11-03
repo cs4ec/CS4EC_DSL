@@ -27,6 +27,7 @@
       <concept id="1237375020029" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineChildrenStyleClassItem" flags="ln" index="pj6Ft" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
+      <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
@@ -152,7 +153,7 @@
       </node>
       <node concept="3F0ifn" id="5VDVzf4iS8C" role="3EZMnx" />
       <node concept="3F0ifn" id="5VDVzf4iS7u" role="3EZMnx">
-        <property role="3F0ifm" value="Patient arrive rate:" />
+        <property role="3F0ifm" value="Patient arrival rate:" />
       </node>
       <node concept="3F1sOY" id="5VDVzf4iS82" role="3EZMnx">
         <ref role="1NtTu8" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
@@ -764,6 +765,12 @@
       </node>
       <node concept="3F0ifn" id="4_Lh49vi2LJ" role="3EZMnx">
         <property role="3F0ifm" value="x:" />
+        <node concept="pVoyu" id="4_Lh49vymmp" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="4_Lh49vymmr" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0A7n" id="4_Lh49vi2M4" role="3EZMnx">
         <ref role="1NtTu8" to="3751:4_Lh49vi2LZ" resolve="x" />
@@ -775,7 +782,13 @@
         <ref role="1NtTu8" to="3751:4_Lh49vi2M1" resolve="y" />
       </node>
       <node concept="3F0ifn" id="4_Lh49vvMPp" role="3EZMnx">
-        <property role="3F0ifm" value=", width:" />
+        <property role="3F0ifm" value="width:" />
+        <node concept="pVoyu" id="4_Lh49vymm$" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="4_Lh49vymmA" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0A7n" id="4_Lh49vvMPL" role="3EZMnx">
         <ref role="1NtTu8" to="3751:4_Lh49vvMP5" resolve="width" />
@@ -787,10 +800,28 @@
         <ref role="1NtTu8" to="3751:4_Lh49vvMP9" resolve="height" />
       </node>
       <node concept="3F0ifn" id="4_Lh49vvOeh" role="3EZMnx">
-        <property role="3F0ifm" value=", capacity:" />
+        <property role="3F0ifm" value="capacity:" />
+        <node concept="pVoyu" id="4_Lh49vymmD" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="4_Lh49vymmF" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0A7n" id="4_Lh49vvOeL" role="3EZMnx">
         <ref role="1NtTu8" to="3751:4_Lh49vvOdW" resolve="capacity" />
+      </node>
+      <node concept="3F0ifn" id="4_Lh49vymn5" role="3EZMnx">
+        <property role="3F0ifm" value="Entrance:" />
+        <node concept="pVoyu" id="4_Lh49vymnt" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="4_Lh49vymnv" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="4_Lh49vymoh" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4_Lh49vymnW" resolve="entrance" />
       </node>
       <node concept="l2Vlx" id="3KCb14J991n" role="2iSdaV" />
     </node>

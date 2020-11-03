@@ -12,6 +12,7 @@ import java.util.Set;
 import java.util.Stack;
 
 import edHello.agents.Agent;
+import edHello.basicStructures.RoomType;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ISchedule;
@@ -37,6 +38,7 @@ public class Location {
 	private int width;
 	private int colorID;
 	private Grid<Object> grid;
+	private RoomType roomType;
 	
 	private ContinuousSpace<Object> space;
 	
@@ -49,14 +51,20 @@ public class Location {
 	private Queue<Agent> waitList;
 	private Set<Agent> contentPeople;
 	
-
+	// Alternative constructor omitting the roomType (while roomType functionality is in development)
+	// ToDo: REMOVE
 	public Location(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, int w, int h, int colorID, int capacity, String entryPoint) {
+		this(name,context,space,grid,x,y,w,h,colorID, capacity, entryPoint, null);
+	}
+
+	public Location(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, int w, int h, int colorID, int capacity, String entryPoint, RoomType pRoomType) {
 		this.locName = name;
 		this.locX = x;
 		this.locY = y;
 		this.height = h;
 		this.width = w;
 		this.context = context;
+		this.roomType = pRoomType;
 		
 		this.space = space;
 		this.grid = grid;
@@ -334,5 +342,9 @@ public class Location {
 	
 	public int getH() {
 		return this.height;
+	}
+	
+	public RoomType getRoomType() {
+		return this.roomType;
 	}
 }

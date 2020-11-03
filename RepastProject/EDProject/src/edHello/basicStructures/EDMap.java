@@ -17,18 +17,26 @@ import repast.simphony.valueLayer.GridValueLayer;
 public class EDMap {
 	
 	private List<Location> places;
+	private List<RoomType> roomTypes;
 	private Context context;
 	private Grid<Object> grid;
 	
 	public EDMap(Context c) {
 		context = c;
-		IndexedIterable collection = context.getObjects(Location.class);
-		places = new ArrayList();
 		
+		// Add all Locations to the EDMap
+		IndexedIterable collection = context.getObjects(Location.class);
+		places = new ArrayList();		
 		for(Object o : collection) {
 			places.add((Location)o);
 		}
-				
+		
+		// Add all RoomTypes to the EDMap
+		IndexedIterable collectionRoomTypes = context.getObjects(RoomType.class);
+		roomTypes = new ArrayList();
+		for(Object o : collectionRoomTypes) {
+			roomTypes.add((RoomType)o);
+		}		
 	}
 	
 	public EDMap WithGrid(Grid g) {

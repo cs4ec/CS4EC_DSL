@@ -466,6 +466,11 @@
       <property role="TrG5h" value="capacity" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="4_Lh49vymnW" role="1TKVEl">
+      <property role="IQ2nx" value="5292086088998413820" />
+      <property role="TrG5h" value="entrance" />
+      <ref role="AX2Wp" node="4_Lh49vymo3" resolve="Direction" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3KCb14J9922">
     <property role="EcuMT" value="4334763093661094018" />
@@ -991,6 +996,31 @@
       <property role="20kJfa" value="consequence" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="53LYXLHVYLE" resolve="Consequence" />
+    </node>
+  </node>
+  <node concept="25R3W" id="4_Lh49vymo3">
+    <property role="3F6X1D" value="5292086088998413827" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="Direction" />
+    <node concept="25R33" id="4_Lh49vymo4" role="25R1y">
+      <property role="3tVfz5" value="5292086088998413828" />
+      <property role="TrG5h" value="Top" />
+      <property role="1L1pqM" value="North" />
+    </node>
+    <node concept="25R33" id="4_Lh49vymo5" role="25R1y">
+      <property role="3tVfz5" value="5292086088998413829" />
+      <property role="TrG5h" value="Bottom" />
+      <property role="1L1pqM" value="South" />
+    </node>
+    <node concept="25R33" id="4_Lh49vymo8" role="25R1y">
+      <property role="3tVfz5" value="5292086088998413832" />
+      <property role="TrG5h" value="Left" />
+      <property role="1L1pqM" value="West" />
+    </node>
+    <node concept="25R33" id="4_Lh49vymoc" role="25R1y">
+      <property role="3tVfz5" value="5292086088998413836" />
+      <property role="TrG5h" value="Right" />
+      <property role="1L1pqM" value="East" />
     </node>
   </node>
 </model>

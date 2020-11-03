@@ -34,7 +34,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 50, 50));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(60));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(5));
 
 
     // add Agents 
@@ -52,17 +52,15 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 50, 50);
     context.addValueLayer(vl);
 
-
-
     // add Locations here 
-    Location diagnosticroom1_a = new Location("diagnostic room 1", context, space, grid, 15, 40, 6, 9, 1, 40, "Left");
+    Location diagnosticroom1_a = new Location("diagnostic room 1", context, space, grid, 15, 40, 6, 9, 1, 40, "Right");
     Location office1_b = new Location("office1", context, space, grid, 5, 20, 6, 9, 1, 40, "Left");
-    Location restRoom1_c = new Location("restRoom1", context, space, grid, 24, 15, 6, 6, 1, 20, "Left");
-    Location exit_d = new Location("exit", context, space, grid, 40, 3, 2, 2, 1, 200, "Left");
-    Location preDiagnosticArea_e = new Location("preDiagnosticArea", context, space, grid, 35, 20, 5, 3, 1, 200, "Left");
-    Location pharmacy_f = new Location("pharmacy", context, space, grid, 12, 4, 9, 6, 1, 10, "Left");
-    Location XRayRoom1_g = new Location("XRayRoom1", context, space, grid, 22, 4, 9, 6, 1, 10, "Left");
-    Location waitingArea_h = new Location("waitingArea", context, space, grid, 35, 10, 5, 3, 1, 200, "Left");
+    Location restRoom1_c = new Location("restRoom1", context, space, grid, 24, 15, 6, 6, 1, 20, "Right");
+    Location exit_d = new Location("exit", context, space, grid, 40, 3, 2, 2, 1, 200, "Right");
+    Location preDiagnosticArea_e = new Location("preDiagnosticArea", context, space, grid, 35, 20, 5, 3, 1, 200, "Bottom");
+    Location pharmacy_f = new Location("pharmacy", context, space, grid, 12, 4, 9, 6, 1, 10, "Top");
+    Location XRayRoom1_g = new Location("XRayRoom1", context, space, grid, 22, 4, 9, 6, 1, 10, "Top");
+    Location waitingArea_h = new Location("waitingArea", context, space, grid, 35, 10, 5, 3, 1, 200, "Bottom");
     Location XRayRoom2_i = new Location("XRayRoom2", context, space, grid, 5, 40, 6, 9, 1, 10, "Left");
 
 

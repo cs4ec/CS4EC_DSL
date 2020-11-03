@@ -65,8 +65,8 @@
       <node id="3838812034270580677" at="33,72,34,192" concept="9" />
       <node id="3838812034270580677" at="34,192,35,0" concept="12" />
       <node id="3838812034270580677" at="35,0,36,29" concept="3" />
-      <node id="3838812034270580677" at="36,29,37,64" concept="3" />
-      <node id="3838812034270580677" at="37,64,38,0" concept="12" />
+      <node id="3838812034270580677" at="36,29,37,63" concept="3" />
+      <node id="3838812034270580677" at="37,63,38,0" concept="12" />
       <node id="3838812034270580677" at="38,0,39,0" concept="12" />
       <node id="3838812034270580677" at="39,0,40,18" concept="11" />
       <node id="3838812034270748694" at="41,33,42,43" concept="3" />
@@ -77,31 +77,29 @@
       <node id="3838812034270580677" at="51,0,52,116" concept="9" />
       <node id="3838812034270580677" at="52,116,53,30" concept="3" />
       <node id="3838812034270580677" at="53,30,54,0" concept="12" />
-      <node id="3838812034270580677" at="54,0,55,0" concept="12" />
-      <node id="3838812034270580677" at="55,0,56,0" concept="12" />
-      <node id="3838812034270580677" at="56,0,57,26" concept="11" />
-      <node id="3838812034270580677" at="66,103,67,0" concept="12" />
-      <node id="3838812034270580677" at="67,0,68,0" concept="12" />
-      <node id="3838812034270580677" at="68,0,69,95" concept="9" />
-      <node id="3838812034270580677" at="69,95,70,0" concept="12" />
+      <node id="3838812034270580677" at="54,0,55,26" concept="11" />
+      <node id="3838812034270580677" at="64,103,65,0" concept="12" />
+      <node id="3838812034270580677" at="65,0,66,0" concept="12" />
+      <node id="3838812034270580677" at="66,0,67,95" concept="9" />
+      <node id="3838812034270580677" at="67,95,68,0" concept="12" />
+      <node id="3838812034270580677" at="68,0,69,0" concept="12" />
+      <node id="3838812034270580677" at="69,0,70,0" concept="12" />
       <node id="3838812034270580677" at="70,0,71,0" concept="12" />
       <node id="3838812034270580677" at="71,0,72,0" concept="12" />
-      <node id="3838812034270580677" at="72,0,73,0" concept="12" />
-      <node id="3838812034270580677" at="73,0,74,0" concept="12" />
-      <node id="3838812034270580677" at="75,32,76,42" concept="9" />
-      <node id="3838812034270580677" at="76,42,77,57" concept="3" />
-      <node id="3838812034270580677" at="78,5,79,0" concept="12" />
-      <node id="3838812034270580677" at="79,0,80,0" concept="12" />
-      <node id="3838812034270580677" at="80,0,81,19" concept="10" />
+      <node id="3838812034270580677" at="73,32,74,42" concept="9" />
+      <node id="3838812034270580677" at="74,42,75,57" concept="3" />
+      <node id="3838812034270580677" at="76,5,77,0" concept="12" />
+      <node id="3838812034270580677" at="77,0,78,0" concept="12" />
+      <node id="3838812034270580677" at="78,0,79,19" concept="10" />
       <node id="3838812034270748694" at="40,18,43,5" concept="5" />
       <node id="5845816144006103738" at="43,5,46,5" concept="5" />
       <node id="2678832175553353554" at="46,5,49,5" concept="5" />
-      <node id="3838812034270580677" at="74,0,78,5" concept="6" />
-      <node id="3838812034270580677" at="25,0,83,0" concept="8" trace="build#(Lrepast/simphony/context/Context;)Lrepast/simphony/context/Context;" />
+      <node id="3838812034270580677" at="72,0,76,5" concept="6" />
+      <node id="3838812034270580677" at="25,0,81,0" concept="8" trace="build#(Lrepast/simphony/context/Context;)Lrepast/simphony/context/Context;" />
       <scope id="3838812034270748694" at="41,33,42,43" />
       <scope id="5845816144006103738" at="44,33,45,42" />
       <scope id="2678832175553353554" at="47,33,48,40" />
-      <scope id="3838812034270580677" at="75,32,77,57">
+      <scope id="3838812034270580677" at="73,32,75,57">
         <var name="pt" id="3838812034270580677" />
       </scope>
       <scope id="3838812034270748694" at="40,18,43,5">
@@ -113,10 +111,10 @@
       <scope id="2678832175553353554" at="46,5,49,5">
         <var name="i" id="2678832175553353554" />
       </scope>
-      <scope id="3838812034270580677" at="74,0,78,5">
+      <scope id="3838812034270580677" at="72,0,76,5">
         <var name="obj" id="3838812034270580677" />
       </scope>
-      <scope id="3838812034270580677" at="25,49,81,19">
+      <scope id="3838812034270580677" at="25,49,79,19">
         <var name="XRayRoom1_g" id="8910807539223092804" />
         <var name="XRayRoom2_i" id="5292086088998339213" />
         <var name="diagnosticroom1_a" id="4334763093661302200" />
@@ -133,10 +131,10 @@
         <var name="vl" id="3838812034270580677" />
         <var name="waitingArea_h" id="8910807539223093337" />
       </scope>
-      <scope id="3838812034270580677" at="25,0,83,0">
+      <scope id="3838812034270580677" at="25,0,81,0">
         <var name="context" id="3838812034270580677" />
       </scope>
-      <unit id="3838812034270580677" at="23,0,84,0" name="EDLanguage.sandbox.EDBuilder" />
+      <unit id="3838812034270580677" at="23,0,82,0" name="EDLanguage.sandbox.EDBuilder" />
     </file>
   </root>
   <root nodeRef="r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox)/3838812034270748687">
@@ -553,15 +551,15 @@
   </root>
   <root nodeRef="r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox)/4334763093661201236">
     <file name="EDBuilder.java">
-      <node id="4334763093661302200" at="57,26,58,118" concept="9" />
-      <node id="4334763093661302202" at="58,118,59,99" concept="9" />
-      <node id="5832719916577595675" at="59,99,60,104" concept="9" />
-      <node id="3831126730831422611" at="60,104,61,94" concept="9" />
-      <node id="8910807539223092523" at="61,94,62,121" concept="9" />
-      <node id="8910807539223092626" at="62,121,63,101" concept="9" />
-      <node id="8910807539223092804" at="63,101,64,103" concept="9" />
-      <node id="8910807539223093337" at="64,103,65,109" concept="9" />
-      <node id="5292086088998339213" at="65,109,66,103" concept="9" />
+      <node id="4334763093661302200" at="55,26,56,119" concept="9" />
+      <node id="4334763093661302202" at="56,119,57,99" concept="9" />
+      <node id="5832719916577595675" at="57,99,58,105" concept="9" />
+      <node id="3831126730831422611" at="58,105,59,95" concept="9" />
+      <node id="8910807539223092523" at="59,95,60,123" concept="9" />
+      <node id="8910807539223092626" at="60,123,61,100" concept="9" />
+      <node id="8910807539223092804" at="61,100,62,102" concept="9" />
+      <node id="8910807539223093337" at="62,102,63,111" concept="9" />
+      <node id="5292086088998339213" at="63,111,64,103" concept="9" />
     </file>
   </root>
   <root nodeRef="r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox)/4973502446685277334">
@@ -631,9 +629,19 @@
       <node id="3353205758768284999" at="109,41,110,0" concept="12" />
       <node id="3353205758768285087" at="110,0,111,129" concept="3" />
       <node id="3353205758768284999" at="111,129,112,0" concept="12" />
+      <node id="5292086088998392300" at="114,55,115,73" concept="3" />
+      <node id="5292086088998392300" at="115,73,116,0" concept="12" />
+      <node id="5292086088998392300" at="116,0,117,41" concept="9" />
+      <node id="5292086088998392300" at="117,41,118,0" concept="12" />
+      <node id="5292086088998392390" at="118,0,119,58" concept="3" />
+      <node id="5292086088998398090" at="119,58,120,60" concept="3" />
+      <node id="5292086088998398097" at="120,60,121,75" concept="3" />
+      <node id="5292086088998392390" at="121,75,122,179" concept="3" />
+      <node id="5292086088998392300" at="122,179,123,0" concept="12" />
       <node id="4973502446685277334" at="24,0,27,0" concept="2" trace="Nurse#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
       <node id="3353205758768284999" at="106,0,114,0" concept="8" trace="InitGoToPharmacy#(LedHello/Signals/Signal;)V" />
       <node id="3435897115888011770" at="97,0,106,0" concept="8" trace="Inittest#(LedHello/Signals/Signal;)V" />
+      <node id="5292086088998392300" at="114,0,125,0" concept="8" trace="InitCallDoctorForConsultation#(LedHello/Signals/Signal;)V" />
       <node id="5832719916577461097" at="69,0,81,0" concept="8" trace="InitTakeMedicine#(LedHello/Signals/Signal;)V" />
       <node id="4973502446685277391" at="56,0,69,0" concept="8" trace="InitDealNewPatient#(LedHello/Signals/Signal;)V" />
       <node id="5832719916578500688" at="81,0,97,0" concept="8" trace="InitDoXRay#(LedHello/Signals/Signal;)V" />
@@ -662,11 +670,17 @@
       <scope id="3435897115888011770" at="97,0,106,0">
         <var name="s" id="3435897115888011770" />
       </scope>
+      <scope id="5292086088998392300" at="114,55,123,0">
+        <var name="sendSignalTemp" id="5292086088998392300" />
+      </scope>
       <scope id="5832719916577461097" at="69,42,79,0">
         <var name="sendSignalTemp" id="5832719916577461097" />
       </scope>
       <scope id="4973502446685277391" at="56,44,67,0">
         <var name="sendSignalTemp" id="4973502446685277391" />
+      </scope>
+      <scope id="5292086088998392300" at="114,0,125,0">
+        <var name="s" id="5292086088998392300" />
       </scope>
       <scope id="5832719916577461097" at="69,0,81,0">
         <var name="s" id="5832719916577461097" />
@@ -685,19 +699,10 @@
       <scope id="4973502446685277334" at="29,0,55,0">
         <var name="s" id="4973502446685277334" />
       </scope>
-      <unit id="4973502446685277334" at="20,0,116,0" name="EDLanguage.sandbox.Nurse" />
+      <unit id="4973502446685277334" at="20,0,127,0" name="EDLanguage.sandbox.Nurse" />
     </file>
   </root>
   <root nodeRef="r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox)/513408552829927009">
-    <file name="ATestSignalSignal.java">
-      <node id="2480088909320098699" at="9,30,10,32" concept="3" />
-      <node id="2480088909320098699" at="10,32,11,32" concept="3" />
-      <node id="6839259415242282120" at="11,32,12,25" concept="3" />
-      <node id="2480088909320098699" at="9,0,14,0" concept="2" trace="ATestSignalSignal#()V" />
-      <scope id="2480088909320098699" at="9,30,12,25" />
-      <scope id="2480088909320098699" at="9,0,14,0" />
-      <unit id="2480088909320098699" at="7,0,15,0" name="EDLanguage.sandbox.ATestSignalSignal" />
-    </file>
     <file name="AllActorsCanReceiveSignal.java">
       <node id="7454555096517367440" at="9,38,10,40" concept="3" />
       <node id="7454555096517367440" at="10,40,11,32" concept="3" />
@@ -771,6 +776,15 @@
       <scope id="7454555096517253956" at="9,35,12,27" />
       <scope id="7454555096517253956" at="9,0,14,0" />
       <unit id="7454555096517253956" at="7,0,15,0" name="EDLanguage.sandbox.OnlyNurseReceiveSignal" />
+    </file>
+    <file name="PatientNeedsConsultationSignal.java">
+      <node id="2480088909320098699" at="9,43,10,45" concept="3" />
+      <node id="2480088909320098699" at="10,45,11,85" concept="3" />
+      <node id="5292086088998392288" at="11,85,12,28" concept="3" />
+      <node id="2480088909320098699" at="9,0,14,0" concept="2" trace="PatientNeedsConsultationSignal#()V" />
+      <scope id="2480088909320098699" at="9,43,12,28" />
+      <scope id="2480088909320098699" at="9,0,14,0" />
+      <unit id="2480088909320098699" at="7,0,15,0" name="EDLanguage.sandbox.PatientNeedsConsultationSignal" />
     </file>
     <file name="SomeoneNeedsHelpSignal.java">
       <node id="7082680885972395676" at="9,35,10,37" concept="3" />

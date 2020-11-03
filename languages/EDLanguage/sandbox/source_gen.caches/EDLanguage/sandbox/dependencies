@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="EDLanguage.sandbox.ATestSignalSignal">
-    <classNode extendsClassName="edHello.Signals.Signal" />
-  </dependency>
   <dependency className="EDLanguage.sandbox.AllActorsCanReceiveSignal">
     <classNode extendsClassName="edHello.Signals.Signal" />
   </dependency>
@@ -142,6 +139,7 @@
   </dependency>
   <dependency className="EDLanguage.sandbox.Nurse">
     <classNode dependClassName="EDLanguage.sandbox.NewPatientGotoENPSignalSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.PatientNeedsConsultationSignal" />
     <classNode dependClassName="edHello.Signals.Orders.FollowOrder" />
     <classNode dependClassName="edHello.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="edHello.Signals.Signal" />
@@ -168,6 +166,9 @@
     <classNode extendsClassName="edHello.Signals.Signal" />
   </dependency>
   <dependency className="EDLanguage.sandbox.OnlyNurseReceiveSignal">
+    <classNode extendsClassName="edHello.Signals.Signal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.PatientNeedsConsultationSignal">
     <classNode extendsClassName="edHello.Signals.Signal" />
   </dependency>
   <dependency className="EDLanguage.sandbox.SomeoneNeedsHelpSignal">

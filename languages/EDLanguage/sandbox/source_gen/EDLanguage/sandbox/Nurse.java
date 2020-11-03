@@ -111,5 +111,16 @@ public class Nurse extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("XRayRoom1"))));
 
   }
+  public void InitCallDoctorForConsultation(Signal s) {
+    System.out.println("CallDoctorForConsultation" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    sendSignalTemp = new PatientNeedsConsultationSignal();
+    sendSignalTemp.AddData("patient", s.GetData("patient"));
+    sendSignalTemp.AddData("doctorOffice", ReadMap().FindPlace("office1"));
+    curMission.WithStep(new ActionStep().WithName("Let a Doctor know that my current patient needs a consultation").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
 
 }

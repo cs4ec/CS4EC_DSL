@@ -23,6 +23,7 @@ import edHello.action.basicAction.conditions.PossibilityCondition;
 import edHello.action.basicAction.conditions.SpaceatCondition;
 import edHello.action.basicAction.conditions.StateCondition;
 import edHello.basicStructures.Board;
+import edHello.basicStructures.RoomType;
 import edHello.basicStructures.ToolBox;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduledMethod;
@@ -140,6 +141,13 @@ public class Actor extends Agent {
 		
 		if (stepLogic instanceof MoveAction) {
 			Object target = ((MoveAction) stepLogic).getDestinationObject();
+			
+			//If the target object is of instance 'RoomType' then the agent must first decide what instance of that room
+			//   they wish to move towards
+			if(target instanceof RoomType) {
+				target = SelectLocation((RoomType)target);
+			}
+			
 			MoveTowards(target);
 			if (target instanceof Location) {
 				Location targetLocation = (Location) target;
@@ -149,7 +157,7 @@ public class Actor extends Agent {
 					NextStep();
 					return;
 				} else {
-					// not insideroom but already in queue, do nothing and waiting for calling
+					// not inside room but already in queue, do nothing and waiting for calling
 					if (targetLocation.WithInQueue(this)) {
 						return;
 					} else {
@@ -226,6 +234,11 @@ public class Actor extends Agent {
 		System.out.println("-----------------------------------------");
 	}
 	
+	// Given a RoomType, select a Location of that RoomType
+	private Location SelectLocation(RoomType pRoomType) {
+		return null;
+	}
+
 	// Consequence of this Action
 		public void UpdateState(Consequence c) {
 			
