@@ -4,12 +4,12 @@ package EDLanguage.sandbox;
 
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
-import edHello.Signals.Signal;
-import edHello.action.Action;
-import edHello.action.ActionStep;
-import edHello.action.basicAction.MoveAction;
-import edHello.action.ConsequenceStep;
-import edHello.action.Consequence;
+import simcore.Signals.Signal;
+import simcore.action.Action;
+import simcore.action.ActionStep;
+import simcore.action.basicAction.MoveAction;
+import simcore.action.ConsequenceStep;
+import simcore.action.Consequence;
 
 public class InternNurse extends Staff {
 

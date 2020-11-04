@@ -4,21 +4,21 @@ package EDLanguage.sandbox;
 
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
-import edHello.Signals.Signal;
-import edHello.action.Action;
-import edHello.action.ActionStep;
-import edHello.action.basicAction.MoveAction;
-import edHello.action.basicAction.StayForConditionAction;
-import edHello.action.basicAction.conditions.SpaceatCondition;
-import edHello.action.basicAction.StayForTimeAction;
-import edHello.action.basicAction.conditions.PossibilityCondition;
-import edHello.action.basicAction.SendSignalAction;
-import edHello.action.basicAction.OrderAction;
-import edHello.agents.Patient;
-import edHello.Signals.Orders.MoveToOrder;
-import edHello.action.ConsequenceStep;
-import edHello.action.Consequence;
-import edHello.action.basicAction.conditions.StateCondition;
+import simcore.Signals.Signal;
+import simcore.action.Action;
+import simcore.action.ActionStep;
+import simcore.action.basicAction.MoveAction;
+import simcore.action.basicAction.StayForConditionAction;
+import simcore.action.basicAction.conditions.SpaceatCondition;
+import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.basicAction.SendSignalAction;
+import simcore.action.basicAction.OrderAction;
+import simcore.agents.Patient;
+import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.ConsequenceStep;
+import simcore.action.Consequence;
+import simcore.action.basicAction.conditions.StateCondition;
 
 public class Doctor extends Staff {
 

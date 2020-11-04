@@ -14,10 +14,10 @@ import repast.simphony.context.space.grid.GridFactoryFinder;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridBuilderParameters;
 import repast.simphony.space.grid.SimpleGridAdder;
-import edHello.basicStructures.Board;
-import edHello.basicStructures.PatientAdder;
+import simcore.basicStructures.Board;
+import simcore.basicStructures.PatientAdder;
 import repast.simphony.valueLayer.GridValueLayer;
-import demo2.Location;
+import simcore.basicStructures.Location;
 import repast.simphony.space.continuous.NdPoint;
 
 public class EDBuilder implements ContextBuilder<Object> {
@@ -34,7 +34,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 50, 50));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(5));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(60));
 
 
     // add Agents 
