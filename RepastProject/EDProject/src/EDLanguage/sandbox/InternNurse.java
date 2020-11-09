@@ -21,6 +21,9 @@ public class InternNurse extends Staff {
     super(space, grid);
   }
 
+  public InternNurse(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+    super(space, grid, pstrStartLocation);
+  }
 
   public void SetMission(Signal s) {
     switch (s.getName()) {

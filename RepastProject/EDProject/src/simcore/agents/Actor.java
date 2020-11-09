@@ -72,8 +72,33 @@ public class Actor extends Agent {
 		for(int i = 0; i < fs.length; i++){
 			fields.add(fs[i]);
 		}
-		
 	}
+	
+	public Actor(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+		super(space, grid, pstrStartLocation);
+		this.isIdle = true;
+		this.curTimeCount = 0;
+		this.curCondition = null;
+		
+		//Traverse the ancestors of class to record all the Fields
+		fields = new ArrayList<Field>();
+		
+		Class c = this.getClass();
+		
+		while(c != Actor.class){
+			Field fs[] = c.getDeclaredFields();
+			for(int i = 0; i < fs.length; i++){
+				fields.add(fs[i]);
+			}
+			c = c.getSuperclass();
+		}
+		
+		Field fs[] = c.getDeclaredFields();
+		for(int i = 0; i < fs.length; i++){
+			fields.add(fs[i]);
+		}
+	}
+
 	
 	@ScheduledMethod(start = 1, interval = 1)
 	public void step() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="4gb5rmpiy4d2wdrnmdmznsn99a9ld1t">
-  <files names="AllActorsCanReceiveSignal.java:Anesthetist.java:Doctor.java:EDBuilder.java:EMPSingalSignal.java:ENP.java:InternNurse.java:JuniorDoctor.java:NewPatientGotoENPSignalSignal.java:NewPatientGotoOfficeSignal.java:NewPatientNeedMedicineSignal.java:Nurse.java:NurseSignalSignal.java:OnlyDoctorCanReceiveSignal.java:OnlyNurseReceiveSignal.java:PatientNeedsConsultationSignal.java:SomeoneNeedsHelpSignal.java:Staff.java:XRaySignal.java" />
+<product version="3" modelHash="29isvft3u48kwwt3nt8ohyba8kkx5bl">
+  <files names="AllActorsCanReceiveSignal.java:Anesthetist.java:Doctor.java:EDBuilder.java:EMPSingalSignal.java:ENP.java:InternNurse.java:JuniorDoctor.java:NewPatientGotoOfficeSignal.java:NewPatientNeedMedicineSignal.java:Nurse.java:NurseSignalSignal.java:OnlyDoctorCanReceiveSignal.java:OnlyNurseReceiveSignal.java:PatientNeedsBloodTestSignal.java:PatientNeedsFinalConsultationSignal.java:PatientWaitingForDoctorSignal.java:PatientWaitingForTriageSignal.java:SomeoneNeedsHelpSignal.java:Staff.java:XRaySignal.java" />
 </product>
 

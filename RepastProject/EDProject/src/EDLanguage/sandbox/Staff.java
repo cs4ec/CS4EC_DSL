@@ -15,6 +15,9 @@ public class Staff extends Actor {
     super(space, grid);
   }
 
+  public Staff(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+    super(space, grid, pstrStartLocation);
+  }
 
   public void SetMission(Signal s) {
     switch (s.getName()) {

@@ -11,11 +11,11 @@
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
-      <string>simcore.basicStructures.Location</string>
+      <string>simcore.agents.Patient</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
-      <string>simcore.agents.Patient</string>
+      <string>simcore.basicStructures.Location</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
@@ -33,12 +33,12 @@
       <string>EDLanguage.sandbox.Nurse.style_4.xml</string>
     </entry>
     <entry>
-      <string>simcore.basicStructures.Location</string>
-      <string>simcore.basicStructures.Location.style_0.xml</string>
-    </entry>
-    <entry>
       <string>simcore.agents.Patient</string>
       <string>simcore.agents.Patient.style_2.xml</string>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Location</string>
+      <string>simcore.basicStructures.Location.style_0.xml</string>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.ENP</string>
@@ -55,10 +55,10 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>1575544925</hashCode>
+    <hashCode>336199270</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
-  <layoutProjection>space</layoutProjection>
+  <layoutProjection>grid</layoutProjection>
   <layoutInterval>0</layoutInterval>
   <layerOrder>
     <entry>
@@ -67,14 +67,14 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Nurse</string>
-      <int>1</int>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Location</string>
       <int>2</int>
     </entry>
     <entry>
       <string>simcore.agents.Patient</string>
+      <int>1</int>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Location</string>
       <int>0</int>
     </entry>
     <entry>
@@ -95,7 +95,7 @@
     </repast.simphony.scenario.data.ProjectionData>
   </projections>
   <visualizationProperties class="repast.simphony.visualization.UnitSizeLayoutProperties">
-    <unitSize>15.0</unitSize>
+    <unitSize>10.0</unitSize>
   </visualizationProperties>
   <projectionDescriptors>
     <entry>
@@ -112,7 +112,7 @@
               </entry>
               <entry>
                 <string>UNIT_SIZE</string>
-                <float>15.0</float>
+                <float>10.0</float>
               </entry>
               <entry>
                 <string>SHOW</string>

@@ -81,7 +81,10 @@ public class Location {
 		// create entry Grid Point based on given position
 		int midw = (width/2);
 		int midh = (width/2);
-		switch(entryPoint) {
+		
+		this.entry = new GridPoint(locX+midw, locY+midh);
+		
+		/**switch(entryPoint) {
 		case "Top":
 			this.entry = new GridPoint(locX+midw, locY+height-1);
 			break;
@@ -95,7 +98,7 @@ public class Location {
 			// right or unspecified
 			this.entry = new GridPoint(locX+width-1, locY+midh);
 			break;
-		}
+		}*/
 		
 		waitList = new LinkedList<Agent>();
 		contentPeople = new HashSet<Agent>();
@@ -105,7 +108,7 @@ public class Location {
 	}
 	
 	@ProbeID
-    public String name() { return locName +" cap: " + (maxCap - curCap) ;}
+    public String name() { return locName +" cap: " + (maxCap - curCap) + " width: " + width ;}
 	
 	// every tick check for agent at entry point
 	@ScheduledMethod(start = 1, interval = 1)

@@ -2,6 +2,7 @@ package simcore.agents;
 
 import repast.simphony.context.Context;
 import repast.simphony.space.continuous.ContinuousSpace;
+import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import repast.simphony.util.ContextUtils;
@@ -25,6 +26,11 @@ public class Agent {
 		curInside = null;
 	}
 	
+	public Agent(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+		this.space = space;
+		this.grid = grid;
+		curInside = null;
+	}
 	
 	public EDMap ReadMap() {
     	return ToolBox().ReadMap(grid);
@@ -45,7 +51,7 @@ public class Agent {
 	public boolean SpaceAt(GridPoint p) {
 		// 计算网格点间距离，小于2则判断位于目标处
 		GridPoint curPoint = grid.getLocation(this);
-
+		System.out.println("CurrPoint = " + curPoint);
 		return (CalcDistance(curPoint, p) < 2);
 	}
 	

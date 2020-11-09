@@ -28,43 +28,41 @@ public class EDBuilder implements ContextBuilder<Object> {
 
 
     ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
-    ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new RandomCartesianAdder<Object>(), new StrictBorders(), 50, 50);
+    ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new RandomCartesianAdder<Object>(), new StrictBorders(), 400, 200);
 
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
-    Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 50, 50));
+    Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 200));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(60));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(20));
 
 
     // add Agents 
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 5; i++) {
       context.add(new Doctor(space, grid));
     }
     for (int i = 0; i < 7; i++) {
       context.add(new Nurse(space, grid));
     }
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 3; i++) {
       context.add(new ENP(space, grid));
     }
 
 
-    GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 50, 50);
+    GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 400, 200);
     context.addValueLayer(vl);
 
     // add Locations here 
-    Location diagnosticroom1_a = new Location("diagnostic room 1", context, space, grid, 15, 40, 6, 9, 1, 40, "Right");
-    Location office1_b = new Location("office1", context, space, grid, 5, 20, 6, 9, 1, 40, "Left");
-    Location restRoom1_c = new Location("restRoom1", context, space, grid, 24, 15, 6, 6, 1, 20, "Right");
-    Location exit_d = new Location("exit", context, space, grid, 40, 3, 2, 2, 1, 200, "Right");
-    Location preDiagnosticArea_e = new Location("preDiagnosticArea", context, space, grid, 35, 20, 5, 3, 1, 200, "Bottom");
-    Location pharmacy_f = new Location("pharmacy", context, space, grid, 12, 4, 9, 6, 1, 10, "Top");
-    Location XRayRoom1_g = new Location("XRayRoom1", context, space, grid, 22, 4, 9, 6, 1, 10, "Top");
-    Location waitingArea_h = new Location("waitingArea", context, space, grid, 35, 10, 5, 3, 1, 200, "Bottom");
-    Location XRayRoom2_i = new Location("XRayRoom2", context, space, grid, 5, 40, 6, 9, 1, 10, "Left");
+    Location Pediatrics_a = new Location("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, "Right");
+    Location MainReceptions_b = new Location("MainReceptions", context, space, grid, 55, 125, 20, 20, 1, 40, "Top");
+    Location Triage_c = new Location("Triage", context, space, grid, 105, 132, 20, 20, 1, 15, "Left");
+    Location exit_d = new Location("exit", context, space, grid, 95, 192, 10, 2, 1, 500, "Top");
+    Location TaskRoom_e = new Location("TaskRoom", context, space, grid, 130, 105, 20, 20, 1, 15, "Bottom");
+    Location MajorsC_f = new Location("MajorsC", context, space, grid, 120, 50, 50, 50, 1, 50, "Top");
+    Location Entrance_g = new Location("Entrance", context, space, grid, 95, 192, 10, 2, 1, 500, "Top");
+    Location XRayRoom1_h = new Location("XRayRoom1", context, space, grid, 155, 105, 20, 20, 1, 10, "Bottom");
+    Location WaitingRoom_i = new Location("WaitingRoom", context, space, grid, 105, 155, 30, 30, 1, 200, "Left");
 
-
-    Location ent = new Location("Entrance", context, space, grid, 40, 40, 2, 2, 3, 20, "Left");
 
 
 

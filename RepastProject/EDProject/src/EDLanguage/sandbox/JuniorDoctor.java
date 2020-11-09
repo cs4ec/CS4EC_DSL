@@ -8,14 +8,14 @@ import simcore.Signals.Signal;
 import simcore.action.Action;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
+import simcore.action.basicAction.OrderAction;
+import simcore.agents.Patient;
+import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
-import simcore.action.basicAction.SendSignalAction;
-import simcore.action.basicAction.OrderAction;
-import simcore.agents.Patient;
-import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
 import simcore.action.basicAction.conditions.StateCondition;
@@ -31,14 +31,25 @@ public class JuniorDoctor extends Doctor {
     super(space, grid);
   }
 
+  public JuniorDoctor(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+    super(space, grid, pstrStartLocation);
+  }
 
   public void SetMission(Signal s) {
     switch (s.getName()) {
       case "":
         break;
+      case "PatientWaitingForDoctor":
+        curMission = new Action("CallPatientOver");
+        this.InitCallPatientOver(s);
+        break;
       case "NewPatientGotoOffice":
         curMission = new Action("Diagnose");
         this.InitDiagnose(s);
+        break;
+      case "PatientNeedsFinalConsultation":
+        curMission = new Action("GiveFinalConsultation");
+        this.InitGiveFinalConsultation(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -63,6 +74,18 @@ public class JuniorDoctor extends Doctor {
     this.InitDoSomething(s);
 
   }
+  public void InitCallPatientOver(Signal s) {
+    System.out.println("CallPatientOver" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsC")))));
+    sendSignalTemp = new NewPatientGotoOfficeSignal();
+    sendSignalTemp.AddData("patient", s.GetData("patient"));
+    sendSignalTemp.AddData("destination", ReadMap().FindPlace("MajorsC"));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
   public void InitDiagnose(Signal s) {
     System.out.println("Diagnose" + " function called");
 
@@ -79,7 +102,7 @@ public class JuniorDoctor extends Doctor {
       this.InitMakeMistake(s);
     }
     this.InitRest(s);
-    curMission.WithStep(new ActionStep().WithName("go back to office").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("office1"))));
+    curMission.WithStep(new ActionStep().WithName("go back to office in MajorsC").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsC"))));
 
   }
   public void InitXRay(Signal s) {
@@ -117,8 +140,8 @@ public class JuniorDoctor extends Doctor {
 
     if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
       if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("waitingArea")))));
-        this.InitTakeMedicine(s);
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("WaitingRoom")))));
+        this.InitTakeBlood(s);
       } else {
         this.InitLetPatientGo(s);
       }
@@ -136,8 +159,7 @@ public class JuniorDoctor extends Doctor {
 
     if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
       if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("waitingArea")))));
-        this.InitTakeMedicine(s);
+        this.InitTakeBlood(s);
       } else {
         this.InitLetPatientGo(s);
       }
@@ -154,13 +176,34 @@ public class JuniorDoctor extends Doctor {
     Signal sendSignalTemp = new Signal();
 
     if (CheckCondition(new StateCondition().WithContent("stress", ">=", 90))) {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("restRoom1"))));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("WaitingRoom"))));
       StayForConditionAction sa = new StayForConditionAction();
       sa.WithCondition(new StateCondition().WithContent("stress", "<=", 10));
       sa.WithConsequence(new Consequence().WithContent("stress", "-=", 10));
       curMission.WithStep(new ActionStep().WithName("").WithAction(sa));
     } else {
     }
+
+  }
+  public void InitTakeBlood(Signal s) {
+    System.out.println("TakeBlood" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    sendSignalTemp = new PatientNeedsBloodTestSignal();
+    sendSignalTemp.AddData("patient", s.GetData("patient"));
+    sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsC"));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitGiveFinalConsultation(Signal s) {
+    System.out.println("GiveFinalConsultation" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
+    curMission.WithStep(new ActionStep().WithName("We can add more complex behaviour here eventually").WithAction(new StayForTimeAction().WithTimeSpan(5)));
+    this.InitLetPatientGo(s);
 
   }
 

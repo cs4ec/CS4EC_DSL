@@ -16,6 +16,9 @@ public class Anesthetist extends Actor {
     super(space, grid);
   }
 
+  public Anesthetist(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+    super(space, grid, pstrStartLocation);
+  }
 
   public void SetMission(Signal s) {
     switch (s.getName()) {
