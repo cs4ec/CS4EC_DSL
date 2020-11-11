@@ -8,9 +8,6 @@
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1095950406618" name="jetbrains.mps.baseLanguage.structure.DivExpression" flags="nn" index="FJ1c_" />
-      <concept id="1111509017652" name="jetbrains.mps.baseLanguage.structure.FloatingPointConstant" flags="nn" index="3b6qkQ">
-        <property id="1113006610751" name="value" index="$nhwW" />
-      </concept>
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
@@ -33,6 +30,7 @@
         <property id="5292086088994139263" name="x" index="memwX" />
         <property id="5292086088994139265" name="y" index="memz3" />
         <property id="5292086088998413820" name="entrance" index="mY26Y" />
+        <property id="7350611177167876547" name="colour" index="376uKC" />
         <reference id="4334763093661093958" name="type" index="j3bLn" />
       </concept>
       <concept id="4334763093661094018" name="EDLanguage.structure.RoomDefinition" flags="ng" index="j3bMj">
@@ -196,7 +194,7 @@
       <ref role="3Vt_zZ" node="7IDz3VlgXPK" resolve="ENP" />
     </node>
     <node concept="2qCAYh" id="5VDVzf4k7mz" role="2qCAZT">
-      <property role="2qCAYg" value="20" />
+      <property role="2qCAYg" value="10" />
     </node>
   </node>
   <node concept="3n3SPQ" id="svZ_Jg4NTx">
@@ -245,6 +243,10 @@
         <property role="TrG5h" value="patient" />
         <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
       </node>
+      <node concept="3z7ADB" id="6o2BuIxgBxt" role="3z7ADA">
+        <property role="TrG5h" value="returnTo" />
+        <property role="3z0vAZ" value="3DLpJ7ps9X9/Place" />
+      </node>
       <node concept="3n3BjK" id="5VDVzf4gLh_" role="3n3BjM">
         <ref role="3n3BjR" node="4k5rxZwd$Mm" resolve="Nurse" />
       </node>
@@ -281,6 +283,9 @@
       </node>
       <node concept="3n3BjK" id="5VDVzf4gLhN" role="3z7ADm">
         <ref role="3n3BjR" node="4k5rxZwd$Mm" resolve="Nurse" />
+      </node>
+      <node concept="3n3BjK" id="6o2BuIxffFM" role="3z7ADm">
+        <ref role="3n3BjR" node="3FnEatQSrhg" resolve="InternNurse" />
       </node>
     </node>
     <node concept="3n3SPL" id="29F2V$jwEM2" role="3n3SPP">
@@ -404,6 +409,7 @@
       <property role="m3A$b" value="50" />
       <property role="m3wsY" value="40" />
       <property role="mY26Y" value="4_Lh49vymoc/Right" />
+      <property role="376uKC" value="6o2BuIx6R5q/BLUE" />
       <ref role="j3bLn" node="3KCb14J9zb$" resolve="DiagnosisRoom" />
     </node>
     <node concept="j3bLk" id="3KCb14J9VQU" role="j3bMi">
@@ -414,36 +420,29 @@
       <property role="m3A$b" value="20" />
       <property role="m3wsY" value="40" />
       <property role="mY26Y" value="4_Lh49vymo4/Top" />
+      <property role="376uKC" value="6o2BuIx6R5n/GREEN" />
       <ref role="j3bLn" node="3KCb14J9zb$" resolve="DiagnosisRoom" />
     </node>
     <node concept="j3bLk" id="th5uJCfaO9" role="j3bMi">
       <property role="TrG5h" value="Triage" />
       <property role="memwX" value="105" />
-      <property role="memz3" value="132" />
+      <property role="memz3" value="150" />
       <property role="m3A$7" value="20" />
       <property role="m3A$b" value="20" />
       <property role="m3wsY" value="15" />
       <property role="mY26Y" value="4_Lh49vymo8/Left" />
+      <property role="376uKC" value="6o2BuIx6R5n/GREEN" />
       <ref role="j3bLn" node="3KCb14J9zb$" resolve="DiagnosisRoom" />
-    </node>
-    <node concept="j3bLk" id="3kETnqCHuij" role="j3bMi">
-      <property role="TrG5h" value="exit" />
-      <property role="memwX" value="95" />
-      <property role="memz3" value="192" />
-      <property role="m3A$7" value="10" />
-      <property role="m3A$b" value="2" />
-      <property role="m3wsY" value="500" />
-      <property role="mY26Y" value="4_Lh49vymo4/Top" />
-      <ref role="j3bLn" node="3kETnqCHuii" resolve="Exit" />
     </node>
     <node concept="j3bLk" id="164XdQWjy$A" role="j3bMi">
       <property role="TrG5h" value="TaskRoom" />
       <property role="memwX" value="130" />
-      <property role="memz3" value="105" />
+      <property role="memz3" value="125" />
       <property role="m3A$7" value="20" />
       <property role="m3A$b" value="20" />
       <property role="m3wsY" value="15" />
       <property role="mY26Y" value="4_Lh49vymo5/Bottom" />
+      <property role="376uKC" value="6o2BuIx6R5D/YELLOW" />
       <ref role="j3bLn" node="7IDz3VlgXT3" resolve="XRayRoom" />
     </node>
     <node concept="j3bLk" id="th5uJCfigz" role="j3bMi">
@@ -454,6 +453,7 @@
       <property role="m3A$b" value="50" />
       <property role="m3wsY" value="50" />
       <property role="mY26Y" value="4_Lh49vymo4/Top" />
+      <property role="376uKC" value="6o2BuIx6R5q/BLUE" />
       <ref role="j3bLn" node="3KCb14J9zb$" resolve="DiagnosisRoom" />
     </node>
     <node concept="j3bLk" id="th5uJCa1Vh" role="j3bMi">
@@ -462,28 +462,31 @@
       <property role="memz3" value="192" />
       <property role="m3A$7" value="10" />
       <property role="m3A$b" value="2" />
-      <property role="m3wsY" value="500" />
+      <property role="m3wsY" value="100000" />
       <property role="mY26Y" value="4_Lh49vymo4/Top" />
+      <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
       <ref role="j3bLn" node="th5uJCa1Vg" resolve="Entrance" />
     </node>
     <node concept="j3bLk" id="7IDz3VlgXT4" role="j3bMi">
       <property role="TrG5h" value="XRayRoom1" />
       <property role="memwX" value="155" />
-      <property role="memz3" value="105" />
+      <property role="memz3" value="125" />
       <property role="m3A$7" value="20" />
       <property role="m3A$b" value="20" />
       <property role="m3wsY" value="10" />
       <property role="mY26Y" value="4_Lh49vymo5/Bottom" />
+      <property role="376uKC" value="6o2BuIx6R5D/YELLOW" />
       <ref role="j3bLn" node="7IDz3VlgXT3" resolve="XRayRoom" />
     </node>
     <node concept="j3bLk" id="7IDz3VlgY1p" role="j3bMi">
       <property role="TrG5h" value="WaitingRoom" />
       <property role="memwX" value="105" />
-      <property role="memz3" value="155" />
-      <property role="m3A$7" value="30" />
-      <property role="m3A$b" value="30" />
+      <property role="memz3" value="170" />
+      <property role="m3A$7" value="50" />
+      <property role="m3A$b" value="20" />
       <property role="m3wsY" value="200" />
       <property role="mY26Y" value="4_Lh49vymo8/Left" />
+      <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
       <ref role="j3bLn" node="53LYXLHX212" resolve="Lounge" />
     </node>
   </node>
@@ -639,6 +642,14 @@
               <ref role="XnLJh" node="4_npzu9nKWt" resolve="patient" />
               <node concept="3JJFmu" id="2U8YHWubpzH" role="2_cGdO" />
             </node>
+            <node concept="2_cGdR" id="6o2BuIxgB_Z" role="jeBCe">
+              <ref role="XnLJh" node="6o2BuIxgBxt" resolve="returnTo" />
+              <node concept="2Vh8JZ" id="6o2BuIxgBCg" role="2_cGdO">
+                <node concept="j3T7i" id="6o2BuIxgBCL" role="2Vh8JW">
+                  <ref role="j3T7l" node="th5uJCfigz" resolve="MajorsC" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>
@@ -667,8 +678,8 @@
           <node concept="3JJFmu" id="2kH7UIGIR8S" role="3JG_8_" />
           <node concept="3JG_m7" id="2kH7UIGIR8Z" role="3JG_nW">
             <node concept="2Vh8JZ" id="2kH7UIGIR95" role="3JG_nS">
-              <node concept="j3T7i" id="2kH7UIGIR9b" role="2Vh8JW">
-                <ref role="j3T7l" node="3kETnqCHuij" resolve="exit" />
+              <node concept="j3T7i" id="6o2BuIx1fnU" role="2Vh8JW">
+                <ref role="j3T7l" node="th5uJCa1Vh" resolve="Entrance" />
               </node>
             </node>
           </node>
@@ -700,7 +711,7 @@
                   </node>
                 </node>
                 <node concept="1W3xii" id="th5uJCfwpi" role="3VtFpW">
-                  <ref role="1W3xij" node="th5uJCfuuJ" resolve="TakeBlood" />
+                  <ref role="1W3xij" node="th5uJCfuuJ" resolve="OrderBloodTest" />
                 </node>
               </node>
               <node concept="3VtFpM" id="LMHHT2Ps61" role="3VtFp$">
@@ -760,7 +771,7 @@
               </node>
               <node concept="3VtFpM" id="2kH7UIGIR7h" role="3VtFpZ">
                 <node concept="1W3xii" id="th5uJCfwp8" role="3VtFpW">
-                  <ref role="1W3xij" node="th5uJCfuuJ" resolve="TakeBlood" />
+                  <ref role="1W3xij" node="th5uJCfuuJ" resolve="OrderBloodTest" />
                 </node>
               </node>
               <node concept="3VtFpM" id="2kH7UIGIR7L" role="3VtFp$">
@@ -857,7 +868,7 @@
       </node>
     </node>
     <node concept="3Vt_xe" id="th5uJCfuuJ" role="2Ov1EZ">
-      <property role="TrG5h" value="TakeBlood" />
+      <property role="TrG5h" value="OrderBloodTest" />
       <node concept="3VtFpM" id="th5uJCfuuK" role="3VtFpR">
         <node concept="3z7BTx" id="th5uJCfwhP" role="3VtFpW">
           <node concept="3z7ADy" id="th5uJCfwhQ" role="3z7BTw">
@@ -976,9 +987,7 @@
           </node>
         </node>
       </node>
-      <node concept="3n32J5" id="th5uJCfEiN" role="3n3c3i">
-        <ref role="3n32J4" node="7IDz3VlgXPm" resolve="PatientWaitingForTriage" />
-      </node>
+      <node concept="EZebP" id="6o2BuIxg_kC" role="3n3c3i" />
     </node>
     <node concept="3Vt_xe" id="th5uJCfI7p" role="2Ov1EZ">
       <property role="TrG5h" value="SendPatientToWaitingRoom" />
@@ -1038,8 +1047,8 @@
           <node concept="3JJFmu" id="7IDz3VlgY22" role="3JG_8_" />
           <node concept="3JG_m7" id="7IDz3VlgY29" role="3JG_nW">
             <node concept="2Vh8JZ" id="a5pEVkrHx" role="3JG_nS">
-              <node concept="j3T7i" id="a5pEVkrHB" role="2Vh8JW">
-                <ref role="j3T7l" node="3kETnqCHuij" resolve="exit" />
+              <node concept="j3T7i" id="6o2BuIx1fnX" role="2Vh8JW">
+                <ref role="j3T7l" node="th5uJCa1Vh" resolve="Entrance" />
               </node>
             </node>
           </node>
@@ -1079,37 +1088,6 @@
     <property role="3GE5qa" value="StaffDefinition" />
     <property role="TrG5h" value="Nurse" />
     <ref role="3Vt_ys" node="3l6cNjecY0f" resolve="Staff" />
-    <node concept="3Vt_xe" id="4k5rxZwd$Nf" role="2Ov1EZ">
-      <property role="TrG5h" value="DealNewPatient" />
-      <node concept="3VtFpM" id="4k5rxZwd$Nh" role="3VtFpR">
-        <node concept="3JG_m1" id="7IDz3VlgXOl" role="3VtFpW">
-          <node concept="3JJFmu" id="7IDz3VlgXOn" role="3JG_8_" />
-          <node concept="3JG_m7" id="7IDz3VlgXO_" role="3JG_nW">
-            <node concept="2Vh8JZ" id="th5uJCfkWu" role="3JG_nS">
-              <node concept="j3T7i" id="th5uJCfAjk" role="2Vh8JW">
-                <ref role="j3T7l" node="7IDz3VlgY1p" resolve="WaitingRoom" />
-              </node>
-            </node>
-          </node>
-          <node concept="2IBTiW" id="29F2V$jo6TP" role="2IBTiu">
-            <property role="2IBTiX" value="let patient go to see an EMP" />
-          </node>
-        </node>
-        <node concept="3z7BTx" id="7IDz3VlgXP0" role="3VtFpW">
-          <node concept="3z7ADy" id="7IDz3VlgXP2" role="3z7BTw">
-            <ref role="3z7AD_" node="7IDz3VlgXPm" resolve="PatientWaitingForTriage" />
-            <node concept="2_cGdR" id="2kH7UIGJDtE" role="jeBCe">
-              <ref role="XnLJh" node="7IDz3VlgXPO" resolve="patient" />
-              <node concept="3JJFmu" id="2kH7UIGJDtI" role="2_cGdO" />
-            </node>
-          </node>
-          <node concept="2IBTiW" id="7IDz3VlgXPg" role="2IBTiu">
-            <property role="2IBTiX" value="tell ENP patient will arrive" />
-          </node>
-        </node>
-      </node>
-      <node concept="EZebP" id="2YIKz$5kXSE" role="3n3c3i" />
-    </node>
     <node concept="3Vt_xe" id="53LYXLHWxdD" role="2Ov1EZ">
       <property role="TrG5h" value="TakeMedicine" />
       <node concept="3VtFpM" id="53LYXLHWxdF" role="3VtFpR">
@@ -1129,8 +1107,8 @@
           <node concept="3JJFmu" id="7IDz3VlgXR_" role="3JG_8_" />
           <node concept="3JG_m7" id="7IDz3VlgXRQ" role="3JG_nW">
             <node concept="2Vh8JZ" id="a5pEVkqDx" role="3JG_nS">
-              <node concept="j3T7i" id="a5pEVkqDB" role="2Vh8JW">
-                <ref role="j3T7l" node="3kETnqCHuij" resolve="exit" />
+              <node concept="j3T7i" id="6o2BuIx1fo0" role="2Vh8JW">
+                <ref role="j3T7l" node="th5uJCa1Vh" resolve="Entrance" />
               </node>
             </node>
           </node>
@@ -1180,9 +1158,6 @@
               </node>
             </node>
           </node>
-          <node concept="2IBTiW" id="7IDz3VlgXTV" role="2IBTiu">
-            <property role="2IBTiX" value="let patient enter" />
-          </node>
         </node>
         <node concept="jcvAr" id="7IDz3VlgXUf" role="3VtFpW">
           <node concept="jeB_D" id="7IDz3VlgXU_" role="jcvAq">
@@ -1203,8 +1178,22 @@
             <property role="2IBTiX" value="do x-ray" />
           </node>
         </node>
-        <node concept="1W3xii" id="th5uJCfPaX" role="3VtFpW">
-          <ref role="1W3xij" node="4_Lh49vyh7G" resolve="CallDoctorForConsultation" />
+        <node concept="3JG_m1" id="6o2BuIxgBFj" role="3VtFpW">
+          <node concept="3JJFmu" id="6o2BuIxgBFl" role="3JG_8_" />
+          <node concept="3JG_m7" id="6o2BuIxgBGi" role="3JG_nW">
+            <node concept="jeBAy" id="6o2BuIxgBGN" role="3JG_nS">
+              <property role="jeBAB" value="returnTo" />
+            </node>
+          </node>
+        </node>
+        <node concept="3z7BTx" id="6o2BuIxgBL5" role="3VtFpW">
+          <node concept="3z7ADy" id="6o2BuIxgBL7" role="3z7BTw">
+            <ref role="3z7AD_" node="th5uJCf$uc" resolve="PatientNeedsFinalConsultation" />
+            <node concept="2_cGdR" id="6o2BuIxgDsz" role="jeBCe">
+              <ref role="XnLJh" node="th5uJCf$vb" resolve="patient" />
+              <node concept="3JJFmu" id="6o2BuIxgDtt" role="2_cGdO" />
+            </node>
+          </node>
         </node>
       </node>
       <node concept="3n32J5" id="5VDVzf4kTR2" role="3n3c3i">
@@ -1315,8 +1304,8 @@
       <node concept="3VtFpM" id="4OOHQT9lXZe" role="3VtFpR">
         <node concept="3VtFpw" id="7WeLz1AUCuS" role="3VtFpW">
           <node concept="2Vh8JZ" id="7WeLz1AUCuY" role="3nfz8T">
-            <node concept="j3T7i" id="7WeLz1AUCv4" role="2Vh8JW">
-              <ref role="j3T7l" node="3kETnqCHuij" resolve="exit" />
+            <node concept="j3T7i" id="6o2BuIx1fRW" role="2Vh8JW">
+              <ref role="j3T7l" node="th5uJCa1Vh" resolve="Entrance" />
             </node>
           </node>
         </node>
@@ -1327,26 +1316,6 @@
     <property role="3GE5qa" value="StaffDefinition" />
     <property role="TrG5h" value="InternNurse" />
     <ref role="3Vt_ys" node="3l6cNjecY0f" resolve="Staff" />
-    <node concept="3Vt_xe" id="2U8YHWubr8w" role="2Ov1EZ">
-      <property role="TrG5h" value="DoSomething" />
-      <node concept="3VtFpM" id="2U8YHWubr8x" role="3VtFpR">
-        <node concept="3VtFpw" id="7BQYdcDhGlu" role="3VtFpW">
-          <node concept="3JJFmu" id="7BQYdcDhGl$" role="3nfz8T" />
-        </node>
-      </node>
-      <node concept="X7x6e" id="7BQYdcDhGlB" role="X7x6i">
-        <node concept="X7xuQ" id="7BQYdcDhGlC" role="X7xsq">
-          <property role="X7xuL" value="53LYXLHVYLK/increase" />
-          <ref role="X7xuR" node="2U8YHWubr8l" resolve="stress" />
-          <node concept="xbsuO" id="7BQYdcDhGlD" role="xbgDt">
-            <node concept="3b6qkQ" id="7BQYdcDhGlO" role="xbgmq">
-              <property role="$nhwW" value="1.4" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="EZebP" id="7BQYdcDhHoR" role="3n3c3i" />
-    </node>
     <node concept="jeB$7" id="2U8YHWubr8l" role="3eYOtt">
       <property role="TrG5h" value="stress" />
       <property role="x7nQs" value="20.0" />

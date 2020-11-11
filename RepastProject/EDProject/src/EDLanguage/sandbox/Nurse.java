@@ -7,15 +7,15 @@ import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
 import simcore.action.Action;
 import simcore.action.ActionStep;
+import simcore.action.basicAction.MoveAction;
+import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.action.basicAction.SendSignalAction;
-import simcore.action.basicAction.MoveAction;
-import simcore.action.basicAction.StayForTimeAction;
 import simcore.Signals.Orders.FollowOrder;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.conditions.SpaceatCondition;
+import simcore.action.basicAction.SendSignalAction;
 
 public class Nurse extends Staff {
 
@@ -32,10 +32,6 @@ public class Nurse extends Staff {
   public void SetMission(Signal s) {
     switch (s.getName()) {
       case "":
-        break;
-      case "NewPatientArrive":
-        curMission = new Action("DealNewPatient");
-        this.InitDealNewPatient(s);
         break;
       case "NewPatientNeedMedicine":
         curMission = new Action("TakeMedicine");
@@ -60,17 +56,6 @@ public class Nurse extends Staff {
     curActionStep = 0;
   }
 
-  public void InitDealNewPatient(Signal s) {
-    System.out.println("DealNewPatient" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("let patient go to see an EMP").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("WaitingRoom")))));
-    sendSignalTemp = new PatientWaitingForTriageSignal();
-    sendSignalTemp.AddData("patient", s.GetData("patient"));
-    curMission.WithStep(new ActionStep().WithName("tell ENP patient will arrive").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-
-  }
   public void InitTakeMedicine(Signal s) {
     System.out.println("TakeMedicine" + " function called");
 
@@ -78,7 +63,7 @@ public class Nurse extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("move to patient").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("give medicine").WithAction(new StayForTimeAction().WithTimeSpan(1)));
-    curMission.WithStep(new ActionStep().WithName("let patient go out").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("exit")))));
+    curMission.WithStep(new ActionStep().WithName("let patient go out").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }
   public void InitDoXRay(Signal s) {
@@ -89,12 +74,15 @@ public class Nurse extends Staff {
     curMission.WithStep(new ActionStep().WithName("move to patient").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("let patient to follow self").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new FollowOrder().WithTarget(this))));
     curMission.WithStep(new ActionStep().WithName("go to x-ray room").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("XRayRoom1"))));
-    curMission.WithStep(new ActionStep().WithName("let patient enter").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("XRayRoom1")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("XRayRoom1")))));
     StayForConditionAction sa = new StayForConditionAction();
     sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("XRayRoom1")));
     curMission.WithStep(new ActionStep().WithName("wait until patient is inside").WithAction(sa));
     curMission.WithStep(new ActionStep().WithName("do x-ray").WithAction(new StayForTimeAction().WithTimeSpan(20)));
-    this.InitCallDoctorForConsultation(s);
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(s.GetData("returnTo")))));
+    sendSignalTemp = new PatientNeedsFinalConsultationSignal();
+    sendSignalTemp.AddData("patient", s.GetData("patient"));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
   public void Inittest(Signal s) {

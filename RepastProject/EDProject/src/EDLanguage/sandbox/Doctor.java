@@ -85,7 +85,6 @@ public class Doctor extends Staff {
     } else {
       this.InitMakeMistake(s);
     }
-    this.InitRest(s);
     curMission.WithStep(new ActionStep().WithName("go back to office in MajorsC").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsC"))));
 
   }
@@ -96,6 +95,7 @@ public class Doctor extends Staff {
 
     sendSignalTemp = new XRaySignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
+    sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsC"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
@@ -114,7 +114,7 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("exit")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }
   public void InitMakeMistake(Signal s) {
@@ -125,7 +125,7 @@ public class Doctor extends Staff {
     if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
       if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
         curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("WaitingRoom")))));
-        this.InitTakeBlood(s);
+        this.InitOrderBloodTest(s);
       } else {
         this.InitLetPatientGo(s);
       }
@@ -143,7 +143,7 @@ public class Doctor extends Staff {
 
     if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
       if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        this.InitTakeBlood(s);
+        this.InitOrderBloodTest(s);
       } else {
         this.InitLetPatientGo(s);
       }
@@ -169,8 +169,8 @@ public class Doctor extends Staff {
     }
 
   }
-  public void InitTakeBlood(Signal s) {
-    System.out.println("TakeBlood" + " function called");
+  public void InitOrderBloodTest(Signal s) {
+    System.out.println("OrderBloodTest" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

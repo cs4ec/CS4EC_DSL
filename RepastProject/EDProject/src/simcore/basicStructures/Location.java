@@ -1,5 +1,6 @@
 package simcore.basicStructures;
 
+import java.awt.Color;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -39,6 +40,7 @@ public class Location {
 	private int colorID;
 	private Grid<Object> grid;
 	private RoomType roomType;
+	private Color roomColour;
 	
 	private ContinuousSpace<Object> space;
 	
@@ -50,14 +52,13 @@ public class Location {
 	
 	private Queue<Agent> waitList;
 	private Set<Agent> contentPeople;
-	
+
 	// Alternative constructor omitting the roomType (while roomType functionality is in development)
-	// ToDo: REMOVE
-	public Location(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, int w, int h, int colorID, int capacity, String entryPoint) {
-		this(name,context,space,grid,x,y,w,h,colorID, capacity, entryPoint, null);
+	public Location(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, int w, int h, int colorID, int capacity, String entryPoint, Color pColor) {
+		this(name,context,space,grid,x,y,w,h,colorID, capacity, entryPoint, null, pColor);
 	}
 
-	public Location(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, int w, int h, int colorID, int capacity, String entryPoint, RoomType pRoomType) {
+	public Location(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, int w, int h, int colorID, int capacity, String entryPoint, RoomType pRoomType, Color pColor) {
 		this.locName = name;
 		this.locX = x;
 		this.locY = y;
@@ -71,6 +72,7 @@ public class Location {
 		
 		
 		this.colorID = colorID;
+		this.roomColour = pColor;
 		
 		this.maxCap = capacity;
 		this.curCap = 0;
@@ -80,7 +82,7 @@ public class Location {
 		this.entryPoint = entryPoint;
 		// create entry Grid Point based on given position
 		int midw = (width/2);
-		int midh = (width/2);
+		int midh = (height/2);
 		
 		this.entry = new GridPoint(locX+midw, locY+midh);
 		
@@ -349,5 +351,9 @@ public class Location {
 	
 	public RoomType getRoomType() {
 		return this.roomType;
+	}
+	
+	public Color getColour() {
+		return this.roomColour;
 	}
 }

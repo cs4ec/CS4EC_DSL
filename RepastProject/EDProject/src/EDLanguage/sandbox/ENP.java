@@ -36,7 +36,7 @@ public class ENP extends Staff {
     switch (s.getName()) {
       case "":
         break;
-      case "PatientWaitingForTriage":
+      case "NewPatientArrive":
         curMission = new Action("Inspect");
         this.InitInspect(s);
         break;
@@ -93,7 +93,7 @@ public class ENP extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("let patient leave").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("exit")))));
+    curMission.WithStep(new ActionStep().WithName("let patient leave").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }
 

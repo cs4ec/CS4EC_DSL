@@ -1,5 +1,5 @@
 <repast.simphony.visualization.engine.CartesianDisplayDescriptor simphonyVersion="2.7.0">
-  <name>OpenPlan</name>
+  <name>New Display</name>
   <type>2D</type>
   <styles>
     <entry>
@@ -16,7 +16,7 @@
     </entry>
     <entry>
       <string>simcore.basicStructures.Location</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
+      <string>simcore.styles.LocationStyle</string>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.ENP</string>
@@ -26,23 +26,23 @@
   <editedStyles>
     <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <string>EDLanguage.sandbox.Doctor.style_3.xml</string>
+      <string>EDLanguage.sandbox.Doctor.style_5.xml</string>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Nurse</string>
-      <string>EDLanguage.sandbox.Nurse.style_4.xml</string>
+      <string>EDLanguage.sandbox.Nurse.style_6.xml</string>
     </entry>
     <entry>
       <string>simcore.agents.Patient</string>
-      <string>simcore.agents.Patient.style_2.xml</string>
+      <string>simcore.agents.Patient.style_5.xml</string>
     </entry>
     <entry>
       <string>simcore.basicStructures.Location</string>
-      <string>simcore.basicStructures.Location.style_0.xml</string>
+      <null/>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.ENP</string>
-      <string>EDLanguage.sandbox.ENP.style_6.xml</string>
+      <string>EDLanguage.sandbox.ENP.style_8.xml</string>
     </entry>
   </editedStyles>
   <netStyles/>
@@ -55,7 +55,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>336199270</hashCode>
+    <hashCode>-1293861696</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>
@@ -84,14 +84,14 @@
   </layerOrder>
   <projections>
     <repast.simphony.scenario.data.ProjectionData>
-      <id>grid</id>
-      <attributes/>
-      <type>grid</type>
-    </repast.simphony.scenario.data.ProjectionData>
-    <repast.simphony.scenario.data.ProjectionData>
       <id>space</id>
       <attributes/>
       <type>continuous space</type>
+    </repast.simphony.scenario.data.ProjectionData>
+    <repast.simphony.scenario.data.ProjectionData>
+      <id>grid</id>
+      <attributes/>
+      <type>grid</type>
     </repast.simphony.scenario.data.ProjectionData>
   </projections>
   <visualizationProperties class="repast.simphony.visualization.UnitSizeLayoutProperties">
@@ -101,7 +101,7 @@
     <entry>
       <string>grid</string>
       <repast.simphony.visualization.grid.GridProjectionDescriptor>
-        <proj reference="../../../../projections/repast.simphony.scenario.data.ProjectionData"/>
+        <proj reference="../../../../projections/repast.simphony.scenario.data.ProjectionData[2]"/>
         <props>
           <entry>
             <string>repast.simphony.visualization.grid.GridDecorator</string>
@@ -126,7 +126,7 @@
     <entry>
       <string>space</string>
       <repast.simphony.visualization.continuous.ContinuousProjectionDescriptor>
-        <proj reference="../../../../projections/repast.simphony.scenario.data.ProjectionData[2]"/>
+        <proj reference="../../../../projections/repast.simphony.scenario.data.ProjectionData"/>
         <props>
           <entry>
             <string>repast.simphony.visualization.continuous.ContinuousDecorator</string>
@@ -137,7 +137,7 @@
               </entry>
               <entry>
                 <string>UNIT_SIZE</string>
-                <float>15.0</float>
+                <float>10.0</float>
               </entry>
               <entry>
                 <string>SHOW</string>

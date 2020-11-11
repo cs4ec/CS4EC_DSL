@@ -2,6 +2,7 @@
 <model ref="r:eb770749-530b-4012-958c-c54838466dad(main@generator)">
   <persistence version="9" />
   <languages>
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
@@ -9,6 +10,8 @@
     <import index="8zr2" ref="99a71636-4380-4f69-8ffd-d4b1190320d6/java:repast.simphony.runtime(EDRuntime_RepastMainProvider/)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
     <import index="texn" ref="6c87b49f-fe5a-4730-81fb-32cb987c9d37/java:edHello.logNote(EDRuntime_EDLog/)" />
+    <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" />
+    <import index="dxuu" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="pq2j" ref="r:99a9a73c-58f7-4689-abbb-a4a55dedd02b(RunnerLanguage.behavior)" implicit="true" />
   </imports>

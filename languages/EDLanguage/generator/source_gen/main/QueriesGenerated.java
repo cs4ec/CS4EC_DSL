@@ -10,7 +10,15 @@ import EDLanguage.behavior.BehaviourElement__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.ReferenceMacroContext;
 import EDLanguage.behavior.Actor__BehaviorDescriptor;
+import jetbrains.mps.internal.collections.runtime.Sequence;
+import jetbrains.mps.baseLanguage.behavior.Classifier__BehaviorDescriptor;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPointerOperations;
+import jetbrains.mps.smodel.SNodePointer;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import org.jetbrains.mps.openapi.model.SNode;
+import java.util.Objects;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
 import java.util.List;
@@ -161,6 +169,13 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object referenceMacro_GetReferent_1_1(final ReferenceMacroContext _context) {
     return (String) Actor__BehaviorDescriptor.GetSuperTypeName_idJ03_IHVUJg.invoke(_context.getNode());
+  }
+  public static Object referenceMacro_GetReferent_4_0(final ReferenceMacroContext _context) {
+    return Sequence.fromIterable(Classifier__BehaviorDescriptor.staticFields_id4_LVZ3pBr7M.invoke(SPointerOperations.resolveNode(new SNodePointer("6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)", "~Color"), SNodeOperations.getModel(_context.getNode()).getRepository()))).findFirst(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return Objects.equals(SPropertyOperations.getString(it, PROPS.name$MnvL), SEnumOperations.getMemberName0(SPropertyOperations.getEnum(_context.getNode(), PROPS.colour$7icN)));
+      }
+    });
   }
   public static Object referenceMacro_GetReferent_7_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.behaviourElement$jt2v), "actor_Action");
@@ -560,10 +575,11 @@ public class QueriesGenerated extends QueryProviderBase {
   {
     rtqMethods.put("5009038854072129195", new RTQ(0, "Action"));
     rtqMethods.put("846692516868596551", new RTQ(1, "Actor"));
-    rtqMethods.put("4211260315489193931", new RTQ(2, "ActionTemp"));
-    rtqMethods.put("7164338824335622680", new RTQ(3, "Signal"));
-    rtqMethods.put("6750415734858277443", new RTQ(4, "MyActor"));
-    rtqMethods.put("896980341524644559", new RTQ(5, "attribute"));
+    rtqMethods.put("7350611177168348285", new RTQ(2, "red"));
+    rtqMethods.put("4211260315489193931", new RTQ(3, "ActionTemp"));
+    rtqMethods.put("7164338824335622680", new RTQ(4, "Signal"));
+    rtqMethods.put("6750415734858277443", new RTQ(5, "MyActor"));
+    rtqMethods.put("896980341524644559", new RTQ(6, "attribute"));
   }
   @NotNull
   @Override
@@ -588,12 +604,14 @@ public class QueriesGenerated extends QueryProviderBase {
         case 1:
           return QueriesGenerated.referenceMacro_GetReferent_1_1(ctx);
         case 2:
-          return QueriesGenerated.referenceMacro_GetReferent_7_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_4_0(ctx);
         case 3:
-          return QueriesGenerated.referenceMacro_GetReferent_15_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_7_0(ctx);
         case 4:
-          return QueriesGenerated.referenceMacro_GetReferent_16_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_15_0(ctx);
         case 5:
+          return QueriesGenerated.referenceMacro_GetReferent_16_0(ctx);
+        case 6:
           return QueriesGenerated.referenceMacro_GetReferent_30_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -619,6 +637,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty operator$8JJx = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x50f1fbdc6defec6aL, 0x50f1fbdc6defec6dL, "operator");
     /*package*/ static final SProperty description$ttIb = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL, 0x71ffe5bd01074a3L, "description");
     /*package*/ static final SProperty timespan$PLnv = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5ee9ee33c44b81a2L, 0x5ee9ee33c44b81a3L, "timespan");
+    /*package*/ static final SProperty colour$7icN = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x66029deba11b71c3L, "colour");
   }
 
   private static final class LINKS {

@@ -46,6 +46,7 @@
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.ENP" />
     <classNode dependClassName="EDLanguage.sandbox.Nurse" />
+    <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
@@ -102,11 +103,6 @@
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.action.Action" />
-    <classNode dependClassName="simcore.action.ActionStep" />
-    <classNode dependClassName="simcore.action.Consequence" />
-    <classNode dependClassName="simcore.action.ConsequenceStep" />
-    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.JuniorDoctor">
@@ -145,7 +141,6 @@
   </dependency>
   <dependency className="EDLanguage.sandbox.Nurse">
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsFinalConsultationSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForTriageSignal" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />

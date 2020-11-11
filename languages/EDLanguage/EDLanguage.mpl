@@ -28,6 +28,7 @@
         <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
         <dependency reexport="false">4fbbea45-19cc-4b4e-a78f-8d62c6a38b7a(EDRuntime_Repast)</dependency>
         <dependency reexport="false">4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)</dependency>
+        <dependency reexport="false">f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="11" />

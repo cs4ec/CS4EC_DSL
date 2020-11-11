@@ -71,6 +71,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptStayForTimeAction = createDescriptorForStayForTimeAction();
   /*package*/ final ConceptDescriptor myConceptStopOrder = createDescriptorForStopOrder();
   /*package*/ final EnumerationDescriptor myEnumerationBaseType = new EnumerationDescriptor_BaseType();
+  /*package*/ final EnumerationDescriptor myEnumerationColour = new EnumerationDescriptor_Colour();
   /*package*/ final EnumerationDescriptor myEnumerationDirection = new EnumerationDescriptor_Direction();
   /*package*/ final EnumerationDescriptor myEnumerationJudgeOperator = new EnumerationDescriptor_JudgeOperator();
   /*package*/ final EnumerationDescriptor myEnumerationModifyOperator = new EnumerationDescriptor_ModifyOperator();
@@ -209,7 +210,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationBaseType, myEnumerationDirection, myEnumerationJudgeOperator, myEnumerationModifyOperator, myCSDatatypeEasyFloatNumber);
+    return Arrays.asList(myEnumerationBaseType, myEnumerationColour, myEnumerationDirection, myEnumerationJudgeOperator, myEnumerationModifyOperator, myCSDatatypeEasyFloatNumber);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -556,6 +557,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("height", 0x497144425f7f2d49L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743945").done();
     b.property("capacity", 0x497144425f7f437cL).type(PrimitiveTypeId.INTEGER).origin("5292086088997749628").done();
     b.property("entrance", 0x497144425f8965fcL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x497144425f896603L)).origin("5292086088998413820").done();
+    b.property("colour", 0x66029deba11b71c3L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L)).origin("7350611177167876547").done();
     b.associate("type", 0x3c282c112f249046L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249042L).optional(false).origin("4334763093661093958").done();
     return b.create();
   }

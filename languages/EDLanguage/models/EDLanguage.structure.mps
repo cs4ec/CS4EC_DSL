@@ -471,6 +471,11 @@
       <property role="TrG5h" value="entrance" />
       <ref role="AX2Wp" node="4_Lh49vymo3" resolve="Direction" />
     </node>
+    <node concept="1TJgyi" id="6o2BuIx6R73" role="1TKVEl">
+      <property role="IQ2nx" value="7350611177167876547" />
+      <property role="TrG5h" value="colour" />
+      <ref role="AX2Wp" node="6o2BuIx6R5l" resolve="Colour" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3KCb14J9922">
     <property role="EcuMT" value="4334763093661094018" />
@@ -1021,6 +1026,40 @@
       <property role="3tVfz5" value="5292086088998413836" />
       <property role="TrG5h" value="Right" />
       <property role="1L1pqM" value="East" />
+    </node>
+  </node>
+  <node concept="25R3W" id="6o2BuIx6R5l">
+    <property role="3F6X1D" value="7350611177167876437" />
+    <property role="TrG5h" value="Colour" />
+    <node concept="25R33" id="6o2BuIx6R5m" role="25R1y">
+      <property role="3tVfz5" value="7350611177167876438" />
+      <property role="TrG5h" value="RED" />
+      <property role="1L1pqM" value="red" />
+    </node>
+    <node concept="25R33" id="6o2BuIx6R5n" role="25R1y">
+      <property role="3tVfz5" value="7350611177167876439" />
+      <property role="TrG5h" value="GREEN" />
+      <property role="1L1pqM" value="green" />
+    </node>
+    <node concept="25R33" id="6o2BuIx6R5q" role="25R1y">
+      <property role="3tVfz5" value="7350611177167876442" />
+      <property role="TrG5h" value="BLUE" />
+      <property role="1L1pqM" value="blue" />
+    </node>
+    <node concept="25R33" id="6o2BuIx6R5u" role="25R1y">
+      <property role="3tVfz5" value="7350611177167876446" />
+      <property role="TrG5h" value="GRAY" />
+      <property role="1L1pqM" value="grey" />
+    </node>
+    <node concept="25R33" id="6o2BuIx6R5z" role="25R1y">
+      <property role="3tVfz5" value="7350611177167876451" />
+      <property role="TrG5h" value="BLACK" />
+      <property role="1L1pqM" value="black" />
+    </node>
+    <node concept="25R33" id="6o2BuIx6R5D" role="25R1y">
+      <property role="3tVfz5" value="7350611177167876457" />
+      <property role="TrG5h" value="YELLOW" />
+      <property role="1L1pqM" value="yellow" />
     </node>
   </node>
 </model>
