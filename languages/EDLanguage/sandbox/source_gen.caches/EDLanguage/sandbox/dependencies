@@ -152,12 +152,15 @@
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Action" />
     <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.Consequence" />
+    <classNode dependClassName="simcore.action.ConsequenceStep" />
     <classNode dependClassName="simcore.action.basicAction.MoveAction" />
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForConditionAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
     <classNode dependClassName="simcore.action.basicAction.conditions.SpaceatCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.StateCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>

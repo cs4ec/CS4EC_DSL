@@ -8,10 +8,13 @@ import simcore.Signals.Signal;
 import simcore.action.Action;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
+import simcore.action.basicAction.conditions.StateCondition;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.ConsequenceStep;
+import simcore.action.Consequence;
 import simcore.Signals.Orders.FollowOrder;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.conditions.SpaceatCondition;
@@ -19,6 +22,7 @@ import simcore.action.basicAction.SendSignalAction;
 
 public class Nurse extends Staff {
 
+  public double energy = Double.parseDouble("" + "20");
   public double groupStress = Double.parseDouble("" + "0");
 
   public Nurse(ContinuousSpace<Object> space, Grid<Object> grid) {
@@ -34,8 +38,8 @@ public class Nurse extends Staff {
       case "":
         break;
       case "NewPatientNeedMedicine":
-        curMission = new Action("TakeMedicine");
-        this.InitTakeMedicine(s);
+        curMission = new Action("GivePatientMedicine");
+        this.InitGivePatientMedicine(s);
         break;
       case "XRay":
         curMission = new Action("DoXRay");
@@ -56,15 +60,20 @@ public class Nurse extends Staff {
     curActionStep = 0;
   }
 
-  public void InitTakeMedicine(Signal s) {
-    System.out.println("TakeMedicine" + " function called");
+  public void InitGivePatientMedicine(Signal s) {
+    System.out.println("GivePatientMedicine" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("move to patient").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("give medicine").WithAction(new StayForTimeAction().WithTimeSpan(1)));
-    curMission.WithStep(new ActionStep().WithName("let patient go out").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
+    if (CheckCondition(new StateCondition().WithContent("energy", "<", 20))) {
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(5)));
+    } else {
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(2)));
+    }
+    curMission.WithStep(new ActionStep().WithName("Let the patient leave the ED").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
+    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("energy", "-=", 1)));
   }
   public void InitDoXRay(Signal s) {
     System.out.println("DoXRay" + " function called");

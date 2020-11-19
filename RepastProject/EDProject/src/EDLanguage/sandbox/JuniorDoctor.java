@@ -95,12 +95,9 @@ public class JuniorDoctor extends Doctor {
     StayForConditionAction sa = new StayForConditionAction();
     sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(s.GetData("destination")));
     curMission.WithStep(new ActionStep().WithName("wait until patient arrive").WithAction(sa));
-    curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(10)));
-    if (CheckCondition(new PossibilityCondition().WithPossibility(2000 / (this.stress - 100) + 108))) {
-      this.InitMakeCorrectDiagnose(s);
-    } else {
-      this.InitMakeMistake(s);
-    }
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
+    curMission.WithStep(new ActionStep().WithName("inspect the patientmake").WithAction(new StayForTimeAction().WithTimeSpan(10)));
+    this.InitDecideOnPatientPathway(s);
     curMission.WithStep(new ActionStep().WithName("go back to office in MajorsC").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsC"))));
 
   }
@@ -152,8 +149,8 @@ public class JuniorDoctor extends Doctor {
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("mistakes", "+=", 1)));
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("stress", "+=", 8)));
   }
-  public void InitMakeCorrectDiagnose(Signal s) {
-    System.out.println("MakeCorrectDiagnose" + " function called");
+  public void InitDecideOnPatientPathway(Signal s) {
+    System.out.println("DecideOnPatientPathway" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -201,8 +198,13 @@ public class JuniorDoctor extends Doctor {
 
     Signal sendSignalTemp = new Signal();
 
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsC"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsC")))));
+    StayForConditionAction sa = new StayForConditionAction();
+    sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("MajorsC")));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(sa));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("We can add more complex behaviour here eventually").WithAction(new StayForTimeAction().WithTimeSpan(5)));
+    curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(5)));
     this.InitLetPatientGo(s);
 
   }

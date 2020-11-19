@@ -623,7 +623,7 @@
     <node concept="3EZMnI" id="3KCb14J6NaB" role="2wV5jI">
       <node concept="l2Vlx" id="3KCb14J6NaE" role="2iSdaV" />
       <node concept="3F0ifn" id="7IDz3Vleqkj" role="3EZMnx">
-        <property role="3F0ifm" value="move towards" />
+        <property role="3F0ifm" value="go to" />
       </node>
       <node concept="3F1sOY" id="3KCb14J6NaO" role="3EZMnx">
         <ref role="1NtTu8" to="3751:svZ_Jg8sLy" resolve="targetObject" />
@@ -1017,7 +1017,7 @@
     <ref role="1XX52x" to="3751:7o6PzEpHsWk" resolve="SelfInstance" />
     <node concept="3EZMnI" id="7o6PzEpHsWv" role="2wV5jI">
       <node concept="3F0ifn" id="7o6PzEpHsWA" role="3EZMnx">
-        <property role="3F0ifm" value="self" />
+        <property role="3F0ifm" value="me" />
       </node>
       <node concept="l2Vlx" id="7o6PzEpHsWy" role="2iSdaV" />
     </node>

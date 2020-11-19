@@ -5,11 +5,6 @@ package EDLanguage.sandbox;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
-import simcore.action.Action;
-import simcore.action.ActionStep;
-import simcore.action.basicAction.MoveAction;
-import simcore.action.ConsequenceStep;
-import simcore.action.Consequence;
 
 public class InternNurse extends Staff {
 
@@ -29,10 +24,6 @@ public class InternNurse extends Staff {
     switch (s.getName()) {
       case "":
         break;
-      case "NewPatientArrive":
-        curMission = new Action("DoSomething");
-        this.InitDoSomething(s);
-        break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
         return;
@@ -40,14 +31,5 @@ public class InternNurse extends Staff {
     curActionStep = 0;
   }
 
-  public void InitDoSomething(Signal s) {
-    System.out.println("DoSomething" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("stress", "+=", 1.4)));
-  }
 
 }

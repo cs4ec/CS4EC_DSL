@@ -200,7 +200,7 @@
     <property role="EcuMT" value="3838812034270528842" />
     <property role="3GE5qa" value="actions.basic actions" />
     <property role="TrG5h" value="Choice" />
-    <property role="34LRSv" value="choice" />
+    <property role="34LRSv" value="if" />
     <property role="R4oN_" value="A choice between two behaviours" />
     <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
     <node concept="1TJgyj" id="3l6cNjec8ld" role="1TKVEi">
@@ -228,7 +228,7 @@
     <property role="EcuMT" value="3838812034270528852" />
     <property role="3GE5qa" value="actions.basic actions" />
     <property role="TrG5h" value="MoveAction" />
-    <property role="34LRSv" value="move" />
+    <property role="34LRSv" value="go to" />
     <property role="R4oN_" value="Move to a new location" />
     <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
     <node concept="1TJgyj" id="svZ_Jg8sLy" role="1TKVEi">
@@ -577,8 +577,8 @@
     <property role="EcuMT" value="8504720493511036692" />
     <property role="3GE5qa" value="Structures.Class" />
     <property role="TrG5h" value="SelfInstance" />
-    <property role="34LRSv" value="self" />
     <property role="R4oN_" value="the actor himslef" />
+    <property role="34LRSv" value="me" />
     <ref role="1TJDcQ" node="7o6PzEpI6ey" resolve="HumanInstance" />
   </node>
   <node concept="1TIwiD" id="7o6PzEpI6ey">

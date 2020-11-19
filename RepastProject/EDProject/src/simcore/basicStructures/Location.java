@@ -144,8 +144,6 @@ public class Location {
 		return this.entry;
 	}
 	
-	
-	
 
 	
 	public void checkEnter() {
@@ -352,7 +350,7 @@ public class Location {
 	public RoomType getRoomType() {
 		return this.roomType;
 	}
-	
+		
 	public Color getColour() {
 		return this.roomColour;
 	}

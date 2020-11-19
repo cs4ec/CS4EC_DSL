@@ -323,7 +323,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("condition", 0x35463334ce30854dL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ebbb42L).optional(false).ordered(true).multiple(false).origin("3838812034270528845").done();
     b.aggregate("if_case", 0x35463334ce30854bL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(false).ordered(true).multiple(false).origin("3838812034270528843").done();
     b.aggregate("else_case", 0x35463334ce308550L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(true).ordered(true).multiple(false).origin("3838812034270528848").done();
-    b.alias("choice");
+    b.alias("if");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCondition() {
@@ -445,7 +445,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/3838812034270528852");
     b.version(2);
     b.aggregate("targetObject", 0x71ffe5bd021cc62L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f1255b0L).optional(false).ordered(true).multiple(false).origin("513408552830880866").done();
-    b.alias("move");
+    b.alias("go to");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForMoveOrder() {
@@ -603,7 +603,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("EDLanguage.structure.HumanInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a2L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493511036692");
     b.version(2);
-    b.alias("self");
+    b.alias("me");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSendSignalAction() {

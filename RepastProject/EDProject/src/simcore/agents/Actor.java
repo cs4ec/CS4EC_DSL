@@ -188,7 +188,8 @@ public class Actor extends Agent {
 					} else {
 						// not inside the queue or room but had already arrived entrance,
 						// ask Location to put self in
-						if (SpaceAt(targetLocation.getEntryPoint())) {
+//						if (SpaceAt(targetLocation.getEntryPoint())) {
+						if (SpaceAt(targetLocation)) {
 							targetLocation.TakePerson(this);
 						}
 					}

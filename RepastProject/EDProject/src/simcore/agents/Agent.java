@@ -11,6 +11,7 @@ import simcore.action.basicAction.StayForTimeAction;
 import simcore.basicStructures.EDMap;
 import simcore.basicStructures.Location;
 import simcore.basicStructures.ToolBox;
+import simcore.basicStructures.Tuple;
 
 public class Agent {
 	// Record the building that the agent is currently inside
@@ -42,6 +43,26 @@ public class Agent {
 		
 	public void SetInside(Location l) {
 	    curInside = l;
+	}
+	
+	public boolean SpaceAt(Location pLoc) {
+		GridPoint curPoint = grid.getLocation(this);
+		System.out.println("CurrPoint = " + curPoint);
+
+		Tuple<Integer,Integer> pdblBottomLeft = new Tuple<Integer,Integer>(pLoc.getX(), pLoc.getY());
+		Tuple<Integer,Integer> pdblBottomRight = new Tuple<Integer,Integer>(pLoc.getX() + pLoc.getW(), pLoc.getY());
+		Tuple<Integer,Integer> pdblTopLeft = new Tuple<Integer,Integer>(pLoc.getX(), pLoc.getY() + pLoc.getH());
+		Tuple<Integer,Integer> pdblTopRight = new Tuple<Integer,Integer>(pLoc.getX()+pLoc.getW(), pLoc.getY() + pLoc.getH());
+
+		if(curPoint.getX() > pdblBottomLeft.x && curPoint.getX() < pdblBottomRight.x) {
+			if(curPoint.getY() > pdblBottomLeft.y && curPoint.getY() < pdblTopLeft.y) {
+				System.out.println("I am in " + pLoc);
+				return true;
+			}
+		}
+		
+		System.out.println("I am not in " + pLoc);
+		return false;		
 	}
 	
 	public boolean SpaceAt(Object o) {

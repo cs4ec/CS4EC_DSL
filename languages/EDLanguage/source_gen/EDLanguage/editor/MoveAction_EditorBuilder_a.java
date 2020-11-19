@@ -50,7 +50,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "move towards");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "go to");
     editorCell.setCellId("Constant_tjtfaa_a0");
     editorCell.setDefaultText("");
     return editorCell;

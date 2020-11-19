@@ -1615,7 +1615,7 @@
                         <ref role="37wK5l" to="ze1i:~ConceptPresentationBuilder.rawPresentation(java.lang.String)" resolve="rawPresentation" />
                         <uo k="s:originTrace" v="n:3838812034270528842" />
                         <node concept="Xl_RD" id="8z" role="37wK5m">
-                          <property role="Xl_RC" value="choice" />
+                          <property role="Xl_RC" value="if" />
                           <uo k="s:originTrace" v="n:3838812034270528842" />
                         </node>
                       </node>
@@ -13914,7 +13914,7 @@
             <node concept="liA8E" id="1aH" role="2OqNvi">
               <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.alias(java.lang.String)" resolve="alias" />
               <node concept="Xl_RD" id="1aI" role="37wK5m">
-                <property role="Xl_RC" value="choice" />
+                <property role="Xl_RC" value="if" />
               </node>
             </node>
           </node>
@@ -16285,7 +16285,7 @@
             <node concept="liA8E" id="1oL" role="2OqNvi">
               <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.alias(java.lang.String)" resolve="alias" />
               <node concept="Xl_RD" id="1oM" role="37wK5m">
-                <property role="Xl_RC" value="move" />
+                <property role="Xl_RC" value="go to" />
               </node>
             </node>
           </node>
@@ -19135,7 +19135,7 @@
             <node concept="liA8E" id="1D$" role="2OqNvi">
               <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.alias(java.lang.String)" resolve="alias" />
               <node concept="Xl_RD" id="1D_" role="37wK5m">
-                <property role="Xl_RC" value="self" />
+                <property role="Xl_RC" value="me" />
               </node>
             </node>
           </node>
