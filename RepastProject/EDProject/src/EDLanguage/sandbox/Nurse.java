@@ -67,9 +67,9 @@ public class Nurse extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("move to patient").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     if (CheckCondition(new StateCondition().WithContent("energy", "<", 20))) {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(5)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(300)));
     } else {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(2)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
     }
     curMission.WithStep(new ActionStep().WithName("Let the patient leave the ED").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
@@ -87,7 +87,7 @@ public class Nurse extends Staff {
     StayForConditionAction sa = new StayForConditionAction();
     sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("XRayRoom1")));
     curMission.WithStep(new ActionStep().WithName("wait until patient is inside").WithAction(sa));
-    curMission.WithStep(new ActionStep().WithName("do x-ray").WithAction(new StayForTimeAction().WithTimeSpan(20)));
+    curMission.WithStep(new ActionStep().WithName("do x-ray").WithAction(new StayForTimeAction().WithTimeSpan(1200)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(s.GetData("returnTo")))));
     sendSignalTemp = new PatientNeedsFinalConsultationSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
@@ -129,7 +129,7 @@ public class Nurse extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new FollowOrder().WithTarget(this))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("TaskRoom"))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(5)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(300)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(s.GetData("returnTo")))));
     sendSignalTemp = new PatientNeedsFinalConsultationSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));

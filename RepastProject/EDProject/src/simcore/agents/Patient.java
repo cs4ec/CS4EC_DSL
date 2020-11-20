@@ -30,6 +30,8 @@ import simcore.basicStructures.ToolBox;
 
 public class Patient extends Agent{
 
+	private static Integer staticID = 0;
+	private int mintMyID;
 	private Order curOrder;
 	private boolean hasBeenDealtWith;
 	private int totalWaitTime;
@@ -40,6 +42,8 @@ public class Patient extends Agent{
 		curOrder = null;
 		hasBeenDealtWith = false;
 		totalWaitTime = 0;
+		staticID++;
+		mintMyID = staticID;
 	}
 	
 	@ScheduledMethod(start = 1, interval = 1)
@@ -169,7 +173,7 @@ public class Patient extends Agent{
 			NdPoint myPoint = space.getLocation(this);
 			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
 			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
-			space.moveByVector(this, 1, angle, 0);
+			space.moveByVector(this, 1.4, angle, 0);
 			myPoint = space.getLocation(this);
 			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 		}
@@ -194,6 +198,9 @@ public class Patient extends Agent{
 		return Math.pow((x * x + y * y), 0.5);
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "Patient " + mintMyID;
+	}
 
 }

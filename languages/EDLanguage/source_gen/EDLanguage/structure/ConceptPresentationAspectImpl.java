@@ -145,7 +145,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Choice == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("A choice between two behaviours");
-          cpb.rawPresentation("choice");
+          cpb.rawPresentation("if");
           props_Choice = cpb.create();
         }
         return props_Choice;

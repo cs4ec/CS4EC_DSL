@@ -1,6 +1,7 @@
 package simcore.agents;
 
 import java.lang.reflect.Field;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +36,7 @@ import simcore.action.basicAction.conditions.StateCondition;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Location;
 import simcore.basicStructures.RoomType;
+import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
 
 public class Actor extends Agent {
@@ -151,6 +153,8 @@ public class Actor extends Agent {
 	public void ExecMission() {
 		System.out.println("-----------------------------------------");
 		System.out.println(this);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
 		System.out.println("current mission: " + curMission + ": " + curMission.getName());
 		System.out.println("cur action step: " + curActionStep + ": " + curMission.getSteps().get(curActionStep).getName());
 
@@ -556,7 +560,7 @@ public class Actor extends Agent {
 			NdPoint myPoint = space.getLocation(this);
 			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
 			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
-			space.moveByVector(this, 1, angle, 0);
+			space.moveByVector(this, 1.4, angle, 0);
 			myPoint = space.getLocation(this);
 			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 		}

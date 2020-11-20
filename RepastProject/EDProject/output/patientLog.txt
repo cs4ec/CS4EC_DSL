@@ -5247,3 +5247,1067 @@ simcore.agents.Patient@395a6b21 | total wait time: 4 | dealt at time point: 1938
 simcore.agents.Patient@65ada581 | total wait time: 4 | dealt at time point: 19396.0
 simcore.agents.Patient@17a428e1 | total wait time: 4 | dealt at time point: 19412.0
 simcore.agents.Patient@77341994 | total wait time: 3 | dealt at time point: 19428.0
+simcore.agents.Patient@5721f03f | total wait time: 18 | dealt at time point: 51.0
+simcore.agents.Patient@585c1251 | total wait time: 73 | dealt at time point: 89.0
+simcore.agents.Patient@77778f15 | total wait time: 13 | dealt at time point: 93.0
+simcore.agents.Patient@1b1eabb4 | total wait time: 17 | dealt at time point: 129.0
+simcore.agents.Patient@7ef497b5 | total wait time: 131 | dealt at time point: 131.0
+simcore.agents.Patient@7630a397 | total wait time: 6 | dealt at time point: 134.0
+simcore.agents.Patient@e70ad64 | total wait time: 11 | dealt at time point: 171.0
+simcore.agents.Patient@7f76cb00 | total wait time: 29 | dealt at time point: 173.0
+simcore.agents.Patient@4e3bf466 | total wait time: 112 | dealt at time point: 176.0
+simcore.agents.Patient@4d19641a | total wait time: 72 | dealt at time point: 72.0
+simcore.agents.Patient@5ba8bbfc | total wait time: 66 | dealt at time point: 114.0
+simcore.agents.Patient@502a0d75 | total wait time: 120 | dealt at time point: 136.0
+simcore.agents.Patient@404d6d8e | total wait time: 76 | dealt at time point: 156.0
+simcore.agents.Patient@31b3d34f | total wait time: 81 | dealt at time point: 177.0
+simcore.agents.Patient@4718da2d | total wait time: 20 | dealt at time point: 197.0
+simcore.agents.Patient@1b10c1e5 | total wait time: 10 | dealt at time point: 219.0
+simcore.agents.Patient@78980059 | total wait time: 112 | dealt at time point: 240.0
+simcore.agents.Patient@3e6544ac | total wait time: 216 | dealt at time point: 249.0
+simcore.agents.Patient@f2d2c60 | total wait time: 148 | dealt at time point: 260.0
+simcore.agents.Patient@68582584 | total wait time: 8 | dealt at time point: 281.0
+simcore.agents.Patient@4f548e8f | total wait time: 49 | dealt at time point: 290.0
+simcore.agents.Patient@790989ec | total wait time: 12 | dealt at time point: 301.0
+simcore.agents.Patient@7b8f70ca | total wait time: 17 | dealt at time point: 321.0
+simcore.agents.Patient@24e8f72 | total wait time: 12 | dealt at time point: 332.0
+simcore.agents.Patient@4925c583 | total wait time: 150 | dealt at time point: 342.0
+simcore.agents.Patient@988b616 | total wait time: 107 | dealt at time point: 363.0
+simcore.agents.Patient@12e60e41 | total wait time: 6 | dealt at time point: 374.0
+simcore.agents.Patient@44c7ffc7 | total wait time: 223 | dealt at time point: 384.0
+simcore.agents.Patient@442abe8 | total wait time: 19 | dealt at time point: 403.0
+simcore.agents.Patient@52485ea | total wait time: 15 | dealt at time point: 415.0
+simcore.agents.Patient@a828823 | total wait time: 201 | dealt at time point: 425.0
+simcore.agents.Patient@23293a07 | total wait time: 11 | dealt at time point: 444.0
+simcore.agents.Patient@27696206 | total wait time: 6 | dealt at time point: 455.0
+simcore.agents.Patient@56b8112b | total wait time: 2 | dealt at time point: 467.0
+simcore.agents.Patient@decf5d0 | total wait time: 5 | dealt at time point: 485.0
+simcore.agents.Patient@2f1b595f | total wait time: 146 | dealt at time point: 498.0
+simcore.agents.Patient@3aaf25ce | total wait time: 93 | dealt at time point: 509.0
+simcore.agents.Patient@5a8dd22 | total wait time: 12 | dealt at time point: 525.0
+simcore.agents.Patient@3a25244c | total wait time: 10 | dealt at time point: 539.0
+simcore.agents.Patient@c2fefc7 | total wait time: 7 | dealt at time point: 551.0
+simcore.agents.Patient@27f0f3be | total wait time: 7 | dealt at time point: 567.0
+simcore.agents.Patient@1782e551 | total wait time: 517 | dealt at time point: 582.0
+simcore.agents.Patient@6335e34b | total wait time: 449 | dealt at time point: 593.0
+simcore.agents.Patient@2492ab8c | total wait time: 272 | dealt at time point: 609.0
+simcore.agents.Patient@39f47852 | total wait time: 16 | dealt at time point: 624.0
+simcore.agents.Patient@3f81edc8 | total wait time: 9 | dealt at time point: 634.0
+simcore.agents.Patient@4d08af94 | total wait time: 10 | dealt at time point: 651.0
+simcore.agents.Patient@37129e34 | total wait time: 9 | dealt at time point: 666.0
+simcore.agents.Patient@4c9c5a56 | total wait time: 83 | dealt at time point: 676.0
+simcore.agents.Patient@390ba6da | total wait time: 197 | dealt at time point: 693.0
+simcore.agents.Patient@37922c08 | total wait time: 4 | dealt at time point: 708.0
+simcore.agents.Patient@16eb5a0b | total wait time: 141 | dealt at time point: 718.0
+simcore.agents.Patient@124aa8 | total wait time: 15 | dealt at time point: 735.0
+simcore.agents.Patient@9aca879 | total wait time: 12 | dealt at time point: 749.0
+simcore.agents.Patient@4c5aada8 | total wait time: 8 | dealt at time point: 760.0
+simcore.agents.Patient@52d18129 | total wait time: 9 | dealt at time point: 777.0
+simcore.agents.Patient@713eb633 | total wait time: 5 | dealt at time point: 790.0
+simcore.agents.Patient@192bcc8b | total wait time: 129 | dealt at time point: 801.0
+simcore.agents.Patient@37e8dfc9 | total wait time: 20 | dealt at time point: 820.0
+simcore.agents.Patient@18bd2888 | total wait time: 14 | dealt at time point: 831.0
+simcore.agents.Patient@4d23e5b6 | total wait time: 11 | dealt at time point: 843.0
+simcore.agents.Patient@73b7af93 | total wait time: 173 | dealt at time point: 861.0
+simcore.agents.Patient@5fc6be63 | total wait time: 7 | dealt at time point: 872.0
+simcore.agents.Patient@533cbd9c | total wait time: 4 | dealt at time point: 885.0
+simcore.agents.Patient@2c8ab217 | total wait time: 8 | dealt at time point: 904.0
+simcore.agents.Patient@6600a92b | total wait time: 67 | dealt at time point: 915.0
+simcore.agents.Patient@3761defc | total wait time: 14 | dealt at time point: 927.0
+simcore.agents.Patient@1a627e0 | total wait time: 18 | dealt at time point: 946.0
+simcore.agents.Patient@31db36a0 | total wait time: 13 | dealt at time point: 957.0
+simcore.agents.Patient@16ade0af | total wait time: 9 | dealt at time point: 970.0
+simcore.agents.Patient@205d1f3e | total wait time: 12 | dealt at time point: 989.0
+simcore.agents.Patient@73f72d48 | total wait time: 7 | dealt at time point: 999.0
+simcore.agents.Patient@5e59914f | total wait time: 4 | dealt at time point: 1013.0
+simcore.agents.Patient@7b31a0fc | total wait time: 6 | dealt at time point: 1030.0
+simcore.agents.Patient@1a6ced4b | total wait time: 4 | dealt at time point: 1044.0
+simcore.agents.Patient@5bcbec8c | total wait time: 4 | dealt at time point: 1061.0
+simcore.agents.Patient@33ef7de2 | total wait time: 4 | dealt at time point: 1076.0
+simcore.agents.Patient@4310d9cd | total wait time: 4 | dealt at time point: 1092.0
+simcore.agents.Patient@1155945a | total wait time: 2 | dealt at time point: 1107.0
+simcore.agents.Patient@41a3f542 | total wait time: 4 | dealt at time point: 1125.0
+simcore.agents.Patient@347c9fe5 | total wait time: 3 | dealt at time point: 1140.0
+simcore.agents.Patient@3d9724e8 | total wait time: 4 | dealt at time point: 1157.0
+simcore.agents.Patient@552519d0 | total wait time: 4 | dealt at time point: 1173.0
+simcore.agents.Patient@5cce289 | total wait time: 3 | dealt at time point: 1187.0
+simcore.agents.Patient@6a5a0795 | total wait time: 3 | dealt at time point: 1203.0
+simcore.agents.Patient@56bde83a | total wait time: 4 | dealt at time point: 1220.0
+simcore.agents.Patient@214b89e6 | total wait time: 4 | dealt at time point: 1236.0
+simcore.agents.Patient@397b1a49 | total wait time: 3 | dealt at time point: 1252.0
+simcore.agents.Patient@1c4f4507 | total wait time: 4 | dealt at time point: 1268.0
+simcore.agents.Patient@6760b4b1 | total wait time: 3 | dealt at time point: 1284.0
+simcore.agents.Patient@23f2201a | total wait time: 3 | dealt at time point: 1300.0
+simcore.agents.Patient@7cff70a5 | total wait time: 3 | dealt at time point: 1316.0
+simcore.agents.Patient@4989cc6c | total wait time: 4 | dealt at time point: 1332.0
+simcore.agents.Patient@6bfbbaa2 | total wait time: 4 | dealt at time point: 1348.0
+simcore.agents.Patient@74bc6107 | total wait time: 5 | dealt at time point: 1365.0
+simcore.agents.Patient@5f5abbdf | total wait time: 3 | dealt at time point: 1379.0
+simcore.agents.Patient@2fda6249 | total wait time: 4 | dealt at time point: 1396.0
+simcore.agents.Patient@90d2146 | total wait time: 4 | dealt at time point: 1412.0
+simcore.agents.Patient@3d169a50 | total wait time: 5 | dealt at time point: 1429.0
+simcore.agents.Patient@52df7e4 | total wait time: 4 | dealt at time point: 1444.0
+simcore.agents.Patient@456bc661 | total wait time: 4 | dealt at time point: 1461.0
+simcore.agents.Patient@217ac7f1 | total wait time: 4 | dealt at time point: 1476.0
+simcore.agents.Patient@587321dd | total wait time: 3 | dealt at time point: 1491.0
+simcore.agents.Patient@3269c2c | total wait time: 4 | dealt at time point: 1509.0
+simcore.agents.Patient@56351e8e | total wait time: 4 | dealt at time point: 1525.0
+simcore.agents.Patient@6c4c6855 | total wait time: 3 | dealt at time point: 1539.0
+simcore.agents.Patient@180e9662 | total wait time: 3 | dealt at time point: 1555.0
+simcore.agents.Patient@3204d41 | total wait time: 5 | dealt at time point: 1573.0
+simcore.agents.Patient@639353de | total wait time: 3 | dealt at time point: 1588.0
+simcore.agents.Patient@32e35c9d | total wait time: 4 | dealt at time point: 1605.0
+simcore.agents.Patient@63a058 | total wait time: 4 | dealt at time point: 1621.0
+simcore.agents.Patient@754b778d | total wait time: 2 | dealt at time point: 1635.0
+simcore.agents.Patient@68fbc73c | total wait time: 4 | dealt at time point: 1652.0
+simcore.agents.Patient@61bd49b9 | total wait time: 3 | dealt at time point: 1667.0
+simcore.agents.Patient@4a252591 | total wait time: 4 | dealt at time point: 1684.0
+simcore.agents.Patient@62b041ad | total wait time: 3 | dealt at time point: 1699.0
+simcore.agents.Patient@15d19502 | total wait time: 4 | dealt at time point: 1717.0
+simcore.agents.Patient@44f4f775 | total wait time: 4 | dealt at time point: 1733.0
+simcore.agents.Patient@5b9b512d | total wait time: 4 | dealt at time point: 1748.0
+simcore.agents.Patient@3395d5ff | total wait time: 3 | dealt at time point: 1764.0
+simcore.agents.Patient@1a057875 | total wait time: 4 | dealt at time point: 1781.0
+simcore.agents.Patient@506b5025 | total wait time: 3 | dealt at time point: 1796.0
+simcore.agents.Patient@5504dde5 | total wait time: 4 | dealt at time point: 1812.0
+simcore.agents.Patient@7ed4f9f3 | total wait time: 3 | dealt at time point: 1828.0
+simcore.agents.Patient@3eb094f8 | total wait time: 4 | dealt at time point: 1844.0
+simcore.agents.Patient@70dd73f6 | total wait time: 3 | dealt at time point: 1860.0
+simcore.agents.Patient@2e5fadf8 | total wait time: 3 | dealt at time point: 1876.0
+simcore.agents.Patient@593b670b | total wait time: 3 | dealt at time point: 1891.0
+simcore.agents.Patient@7bd190b7 | total wait time: 3 | dealt at time point: 1908.0
+simcore.agents.Patient@17a083d4 | total wait time: 3 | dealt at time point: 1924.0
+simcore.agents.Patient@3ca4d4b5 | total wait time: 4 | dealt at time point: 1940.0
+simcore.agents.Patient@72b8fa52 | total wait time: 4 | dealt at time point: 1957.0
+simcore.agents.Patient@15b11289 | total wait time: 4 | dealt at time point: 1973.0
+simcore.agents.Patient@60f75ee5 | total wait time: 3 | dealt at time point: 1987.0
+simcore.agents.Patient@1bc5b933 | total wait time: 3 | dealt at time point: 2004.0
+simcore.agents.Patient@722c8847 | total wait time: 3 | dealt at time point: 2020.0
+simcore.agents.Patient@1e4be6f6 | total wait time: 3 | dealt at time point: 2035.0
+simcore.agents.Patient@2633659f | total wait time: 3 | dealt at time point: 2052.0
+simcore.agents.Patient@72ec76f0 | total wait time: 3 | dealt at time point: 2067.0
+simcore.agents.Patient@616a44cd | total wait time: 2 | dealt at time point: 2083.0
+simcore.agents.Patient@3133fa9 | total wait time: 4 | dealt at time point: 2101.0
+simcore.agents.Patient@146f6a2e | total wait time: 3 | dealt at time point: 2116.0
+simcore.agents.Patient@7ca823d5 | total wait time: 3 | dealt at time point: 2131.0
+simcore.agents.Patient@63ec6b66 | total wait time: 4 | dealt at time point: 2148.0
+simcore.agents.Patient@1eaab9a6 | total wait time: 3 | dealt at time point: 2164.0
+simcore.agents.Patient@5e549bb9 | total wait time: 3 | dealt at time point: 2179.0
+simcore.agents.Patient@65957991 | total wait time: 3 | dealt at time point: 2196.0
+simcore.agents.Patient@4dd0006 | total wait time: 35 | dealt at time point: 52.0
+simcore.agents.Patient@4d62892f | total wait time: 29 | dealt at time point: 94.0
+simcore.agents.Patient@5f302b3f | total wait time: 55 | dealt at time point: 135.0
+simcore.agents.Patient@305206df | total wait time: 128 | dealt at time point: 177.0
+simcore.agents.Patient@c91e576 | total wait time: 193 | dealt at time point: 194.0
+simcore.agents.Patient@7d845b29 | total wait time: 27 | dealt at time point: 219.0
+simcore.agents.Patient@59f282bd | total wait time: 10 | dealt at time point: 235.0
+simcore.agents.Patient@38e192d3 | total wait time: 221 | dealt at time point: 254.0
+simcore.agents.Patient@fda554d | total wait time: 85 | dealt at time point: 261.0
+simcore.agents.Patient@6ad1345d | total wait time: 19 | dealt at time point: 275.0
+simcore.agents.Patient@4cceebd7 | total wait time: 9 | dealt at time point: 297.0
+simcore.agents.Patient@5ca4acf2 | total wait time: 190 | dealt at time point: 302.0
+simcore.agents.Patient@762bef72 | total wait time: 11 | dealt at time point: 316.0
+simcore.agents.Patient@10da5e99 | total wait time: 177 | dealt at time point: 337.0
+simcore.agents.Patient@5c4ab2d5 | total wait time: 103 | dealt at time point: 343.0
+simcore.agents.Patient@78cd0322 | total wait time: 261 | dealt at time point: 357.0
+simcore.agents.Patient@5f115d8a | total wait time: 11 | dealt at time point: 379.0
+simcore.agents.Patient@2d9bbf14 | total wait time: 111 | dealt at time point: 384.0
+simcore.agents.Patient@768cc322 | total wait time: 14 | dealt at time point: 399.0
+simcore.agents.Patient@71838b99 | total wait time: 5 | dealt at time point: 421.0
+simcore.agents.Patient@4f6406b4 | total wait time: 26 | dealt at time point: 427.0
+simcore.agents.Patient@308080be | total wait time: 119 | dealt at time point: 440.0
+simcore.agents.Patient@2b24082b | total wait time: 14 | dealt at time point: 463.0
+simcore.agents.Patient@57c4b45d | total wait time: 4 | dealt at time point: 468.0
+simcore.agents.Patient@1b7688e | total wait time: 352 | dealt at time point: 480.0
+simcore.agents.Patient@13b9f58e | total wait time: 9 | dealt at time point: 505.0
+simcore.agents.Patient@265096f7 | total wait time: 301 | dealt at time point: 510.0
+simcore.agents.Patient@682ba60f | total wait time: 377 | dealt at time point: 522.0
+simcore.agents.Patient@492a1a47 | total wait time: 17 | dealt at time point: 546.0
+simcore.agents.Patient@265e7303 | total wait time: 199 | dealt at time point: 552.0
+simcore.agents.Patient@37e8ebd5 | total wait time: 51 | dealt at time point: 563.0
+simcore.agents.Patient@62b2edae | total wait time: 12 | dealt at time point: 588.0
+simcore.agents.Patient@6abb3973 | total wait time: 257 | dealt at time point: 594.0
+simcore.agents.Patient@22cd750a | total wait time: 14 | dealt at time point: 606.0
+simcore.agents.Patient@c85b534 | total wait time: 21 | dealt at time point: 629.0
+simcore.agents.Patient@444b3780 | total wait time: 11 | dealt at time point: 636.0
+simcore.agents.Patient@5d7172b3 | total wait time: 6 | dealt at time point: 646.0
+simcore.agents.Patient@1e166ee3 | total wait time: 14 | dealt at time point: 671.0
+simcore.agents.Patient@53723f18 | total wait time: 5 | dealt at time point: 678.0
+simcore.agents.Patient@7db967f2 | total wait time: 257 | dealt at time point: 689.0
+simcore.agents.Patient@50424760 | total wait time: 24 | dealt at time point: 713.0
+simcore.agents.Patient@63d566ed | total wait time: 14 | dealt at time point: 718.0
+simcore.agents.Patient@25921686 | total wait time: 10 | dealt at time point: 730.0
+simcore.agents.Patient@5f2aafb8 | total wait time: 196 | dealt at time point: 756.0
+simcore.agents.Patient@65fbf446 | total wait time: 22 | dealt at time point: 759.0
+simcore.agents.Patient@61c6dfa7 | total wait time: 4 | dealt at time point: 772.0
+simcore.agents.Patient@54f9e918 | total wait time: 15 | dealt at time point: 799.0
+simcore.agents.Patient@2d5d5c77 | total wait time: 48 | dealt at time point: 800.0
+simcore.agents.Patient@14eaa47c | total wait time: 14 | dealt at time point: 814.0
+simcore.agents.Patient@1f88b803 | total wait time: 8 | dealt at time point: 840.0
+simcore.agents.Patient@6d870073 | total wait time: 27 | dealt at time point: 843.0
+simcore.agents.Patient@34a8c7bb | total wait time: 7 | dealt at time point: 855.0
+simcore.agents.Patient@7c55cd1d | total wait time: 401 | dealt at time point: 882.0
+simcore.agents.Patient@5ad3e721 | total wait time: 4 | dealt at time point: 885.0
+simcore.agents.Patient@451a5a19 | total wait time: 351 | dealt at time point: 896.0
+simcore.agents.Patient@fcb890 | total wait time: 26 | dealt at time point: 922.0
+simcore.agents.Patient@4673d9a1 | total wait time: 16 | dealt at time point: 928.0
+simcore.agents.Patient@6c3d568e | total wait time: 8 | dealt at time point: 937.0
+simcore.agents.Patient@20177919 | total wait time: 20 | dealt at time point: 964.0
+simcore.agents.Patient@102629d6 | total wait time: 8 | dealt at time point: 969.0
+simcore.agents.Patient@43088e62 | total wait time: 116 | dealt at time point: 980.0
+simcore.agents.Patient@54e46f6c | total wait time: 28 | dealt at time point: 1005.0
+simcore.agents.Patient@58cfb5db | total wait time: 20 | dealt at time point: 1012.0
+simcore.agents.Patient@54091ae4 | total wait time: 79 | dealt at time point: 112.0
+simcore.agents.Patient@448f4155 | total wait time: 57 | dealt at time point: 153.0
+simcore.agents.Patient@4c3c92eb | total wait time: 19 | dealt at time point: 196.0
+simcore.agents.Patient@eaa2348 | total wait time: 197 | dealt at time point: 214.0
+simcore.agents.Patient@29a9717b | total wait time: 110 | dealt at time point: 238.0
+simcore.agents.Patient@aba859a | total wait time: 245 | dealt at time point: 246.0
+simcore.agents.Patient@51de1df6 | total wait time: 15 | dealt at time point: 256.0
+simcore.agents.Patient@4cbf2d0e | total wait time: 135 | dealt at time point: 279.0
+simcore.agents.Patient@cda006f | total wait time: 79 | dealt at time point: 287.0
+simcore.agents.Patient@77929e05 | total wait time: 9 | dealt at time point: 298.0
+simcore.agents.Patient@62b3d67b | total wait time: 64 | dealt at time point: 320.0
+simcore.agents.Patient@44329966 | total wait time: 137 | dealt at time point: 330.0
+simcore.agents.Patient@2c96cc6e | total wait time: 4 | dealt at time point: 340.0
+simcore.agents.Patient@401e7d32 | total wait time: 8 | dealt at time point: 361.0
+simcore.agents.Patient@192d2b90 | total wait time: 308 | dealt at time point: 372.0
+simcore.agents.Patient@3202c532 | total wait time: 302 | dealt at time point: 382.0
+simcore.agents.Patient@16ce4fbb | total wait time: 178 | dealt at time point: 402.0
+simcore.agents.Patient@1877d969 | total wait time: 14 | dealt at time point: 414.0
+simcore.agents.Patient@7cd02d4 | total wait time: 265 | dealt at time point: 425.0
+simcore.agents.Patient@31580d69 | total wait time: 139 | dealt at time point: 443.0
+simcore.agents.Patient@48a3050f | total wait time: 7 | dealt at time point: 456.0
+simcore.agents.Patient@5cf3c91a | total wait time: 4 | dealt at time point: 468.0
+simcore.agents.Patient@39b7405d | total wait time: 98 | dealt at time point: 483.0
+simcore.agents.Patient@2a807560 | total wait time: 17 | dealt at time point: 498.0
+simcore.agents.Patient@1f805b3e | total wait time: 461 | dealt at time point: 510.0
+simcore.agents.Patient@731a9b17 | total wait time: 11 | dealt at time point: 524.0
+simcore.agents.Patient@73f3858b | total wait time: 267 | dealt at time point: 540.0
+simcore.agents.Patient@653be02 | total wait time: 7 | dealt at time point: 551.0
+simcore.agents.Patient@3bc03b9f | total wait time: 69 | dealt at time point: 565.0
+simcore.agents.Patient@146b680b | total wait time: 6 | dealt at time point: 582.0
+simcore.agents.Patient@45950090 | total wait time: 30 | dealt at time point: 591.0
+simcore.agents.Patient@ce8e8a9 | total wait time: 15 | dealt at time point: 608.0
+simcore.agents.Patient@79a5ae10 | total wait time: 15 | dealt at time point: 624.0
+simcore.agents.Patient@218e9226 | total wait time: 201 | dealt at time point: 633.0
+simcore.agents.Patient@73ab0dfb | total wait time: 9 | dealt at time point: 650.0
+simcore.agents.Patient@505e8e2a | total wait time: 7 | dealt at time point: 664.0
+simcore.agents.Patient@46e97274 | total wait time: 259 | dealt at time point: 675.0
+simcore.agents.Patient@709e044 | total wait time: 20 | dealt at time point: 692.0
+simcore.agents.Patient@201b83d8 | total wait time: 17 | dealt at time point: 706.0
+simcore.agents.Patient@51cfeb00 | total wait time: 13 | dealt at time point: 717.0
+simcore.agents.Patient@67f3ba10 | total wait time: 14 | dealt at time point: 734.0
+simcore.agents.Patient@3a99e2a | total wait time: 11 | dealt at time point: 747.0
+simcore.agents.Patient@7124b6f1 | total wait time: 6 | dealt at time point: 758.0
+simcore.agents.Patient@118b41d3 | total wait time: 8 | dealt at time point: 776.0
+simcore.agents.Patient@2526a79b | total wait time: 4 | dealt at time point: 789.0
+simcore.agents.Patient@3c14a72 | total wait time: 687 | dealt at time point: 799.0
+simcore.agents.Patient@4b7dd35a | total wait time: 18 | dealt at time point: 818.0
+simcore.agents.Patient@25f0c64a | total wait time: 15 | dealt at time point: 832.0
+simcore.agents.Patient@601671f5 | total wait time: 7 | dealt at time point: 840.0
+simcore.agents.Patient@30851528 | total wait time: 11 | dealt at time point: 860.0
+simcore.agents.Patient@4e0aab9 | total wait time: 11 | dealt at time point: 875.0
+simcore.agents.Patient@71e0fd09 | total wait time: 514 | dealt at time point: 882.0
+simcore.agents.Patient@70b46aa1 | total wait time: 22 | dealt at time point: 902.0
+simcore.agents.Patient@18ba034b | total wait time: 5 | dealt at time point: 917.0
+simcore.agents.Patient@7e5fef1f | total wait time: 299 | dealt at time point: 923.0
+simcore.agents.Patient@20bb1276 | total wait time: 16 | dealt at time point: 945.0
+simcore.agents.Patient@6840159a | total wait time: 14 | dealt at time point: 959.0
+simcore.agents.Patient@4050aef8 | total wait time: 4 | dealt at time point: 964.0
+simcore.agents.Patient@72733fde | total wait time: 9 | dealt at time point: 986.0
+simcore.agents.Patient@1798620e | total wait time: 10 | dealt at time point: 1002.0
+simcore.agents.Patient@50ce4efe | total wait time: 684 | dealt at time point: 1005.0
+simcore.agents.Patient@3e45ba6b | total wait time: 19 | dealt at time point: 1028.0
+simcore.agents.Patient@12fd29d3 | total wait time: 20 | dealt at time point: 1044.0
+simcore.agents.Patient@26751efe | total wait time: 7 | dealt at time point: 1047.0
+simcore.agents.Patient@1ce7969d | total wait time: 13 | dealt at time point: 1070.0
+simcore.agents.Patient@5f34b474 | total wait time: 12 | dealt at time point: 1085.0
+simcore.agents.Patient@5a694b24 | total wait time: 560 | dealt at time point: 1089.0
+simcore.agents.Patient@40bbc78e | total wait time: 6 | dealt at time point: 1111.0
+simcore.agents.Patient@6a01e89d | total wait time: 7 | dealt at time point: 1128.0
+simcore.agents.Patient@683c527 | total wait time: 41 | dealt at time point: 1130.0
+simcore.agents.Patient@3137b409 | total wait time: 16 | dealt at time point: 1152.0
+simcore.agents.Patient@2105f890 | total wait time: 18 | dealt at time point: 1171.0
+simcore.agents.Patient@46e9cb02 | total wait time: 4 | dealt at time point: 1172.0
+simcore.agents.Patient@d2b219a | total wait time: 11 | dealt at time point: 1195.0
+simcore.agents.Patient@7c20aeea | total wait time: 12 | dealt at time point: 1212.0
+simcore.agents.Patient@474c3265 | total wait time: 317 | dealt at time point: 1214.0
+simcore.agents.Patient@5e1ff468 | total wait time: 3 | dealt at time point: 1236.0
+simcore.agents.Patient@571e2e37 | total wait time: 37 | dealt at time point: 1254.0
+simcore.agents.Patient@4bdcaec7 | total wait time: 6 | dealt at time point: 1255.0
+simcore.agents.Patient@2f428695 | total wait time: 13 | dealt at time point: 1278.0
+simcore.agents.Patient@526e211d | total wait time: 16 | dealt at time point: 1296.0
+simcore.agents.Patient@2baf6ee1 | total wait time: 3 | dealt at time point: 1300.0
+simcore.agents.Patient@74a199dc | total wait time: 7 | dealt at time point: 1319.0
+simcore.agents.Patient@1b9c5999 | total wait time: 10 | dealt at time point: 1339.0
+simcore.agents.Patient@17721e21 | total wait time: 4 | dealt at time point: 1348.0
+simcore.agents.Patient@4026e85d | total wait time: 3 | dealt at time point: 1364.0
+simcore.agents.Patient@1b6237fc | total wait time: 4 | dealt at time point: 1381.0
+simcore.agents.Patient@4c06ff2b | total wait time: 5 | dealt at time point: 1397.0
+simcore.agents.Patient@fe69e57 | total wait time: 4 | dealt at time point: 1412.0
+simcore.agents.Patient@24022d32 | total wait time: 3 | dealt at time point: 1428.0
+simcore.agents.Patient@368bef92 | total wait time: 3 | dealt at time point: 1444.0
+simcore.agents.Patient@73ce4403 | total wait time: 4 | dealt at time point: 1461.0
+simcore.agents.Patient@6389eb60 | total wait time: 5 | dealt at time point: 1477.0
+simcore.agents.Patient@34a7295a | total wait time: 4 | dealt at time point: 1493.0
+simcore.agents.Patient@23a1bf6 | total wait time: 4 | dealt at time point: 1508.0
+simcore.agents.Patient@abeec7d | total wait time: 4 | dealt at time point: 1525.0
+simcore.agents.Patient@79c8b31d | total wait time: 4 | dealt at time point: 1541.0
+simcore.agents.Patient@360c0449 | total wait time: 3 | dealt at time point: 1555.0
+simcore.agents.Patient@1acbf1d9 | total wait time: 5 | dealt at time point: 1573.0
+simcore.agents.Patient@7ac3a8b8 | total wait time: 4 | dealt at time point: 1589.0
+simcore.agents.Patient@6955b1e1 | total wait time: 3 | dealt at time point: 1603.0
+simcore.agents.Patient@15c32cc7 | total wait time: 3 | dealt at time point: 1620.0
+simcore.agents.Patient@28263ba8 | total wait time: 4 | dealt at time point: 1636.0
+simcore.agents.Patient@460ce0c1 | total wait time: 4 | dealt at time point: 1653.0
+simcore.agents.Patient@6ba8e873 | total wait time: 4 | dealt at time point: 1668.0
+simcore.agents.Patient@52ce7f7d | total wait time: 4 | dealt at time point: 1685.0
+simcore.agents.Patient@554a0f7e | total wait time: 3 | dealt at time point: 1699.0
+simcore.agents.Patient@53f8f6fc | total wait time: 3 | dealt at time point: 1715.0
+simcore.agents.Patient@18838e5c | total wait time: 4 | dealt at time point: 1733.0
+simcore.agents.Patient@6587f2bf | total wait time: 4 | dealt at time point: 1748.0
+simcore.agents.Patient@4ad640cd | total wait time: 5 | dealt at time point: 1765.0
+simcore.agents.Patient@78a3303d | total wait time: 4 | dealt at time point: 1780.0
+simcore.agents.Patient@7ae7ed3d | total wait time: 3 | dealt at time point: 1796.0
+simcore.agents.Patient@467bc491 | total wait time: 5 | dealt at time point: 1813.0
+simcore.agents.Patient@22b384bc | total wait time: 4 | dealt at time point: 1828.0
+simcore.agents.Patient@39df1c95 | total wait time: 3 | dealt at time point: 1843.0
+simcore.agents.Patient@d407316 | total wait time: 4 | dealt at time point: 1861.0
+simcore.agents.Patient@66f5660d | total wait time: 3 | dealt at time point: 1875.0
+simcore.agents.Patient@8910efa | total wait time: 3 | dealt at time point: 1892.0
+simcore.agents.Patient@1d1aeb6c | total wait time: 3 | dealt at time point: 1908.0
+simcore.agents.Patient@37cd8abd | total wait time: 3 | dealt at time point: 1924.0
+simcore.agents.Patient@67d270a2 | total wait time: 3 | dealt at time point: 1939.0
+simcore.agents.Patient@72b6031a | total wait time: 4 | dealt at time point: 1956.0
+simcore.agents.Patient@7038fd94 | total wait time: 4 | dealt at time point: 1972.0
+simcore.agents.Patient@5fd63748 | total wait time: 3 | dealt at time point: 1988.0
+simcore.agents.Patient@41238673 | total wait time: 4 | dealt at time point: 2004.0
+simcore.agents.Patient@5eae99ae | total wait time: 3 | dealt at time point: 2019.0
+simcore.agents.Patient@2df8859b | total wait time: 3 | dealt at time point: 2036.0
+simcore.agents.Patient@164f50d0 | total wait time: 4 | dealt at time point: 2053.0
+simcore.agents.Patient@11d5c53f | total wait time: 3 | dealt at time point: 2067.0
+simcore.agents.Patient@25d27abd | total wait time: 3 | dealt at time point: 2084.0
+simcore.agents.Patient@37fbbbe1 | total wait time: 3 | dealt at time point: 2100.0
+simcore.agents.Patient@76b4d595 | total wait time: 3 | dealt at time point: 2115.0
+simcore.agents.Patient@74563540 | total wait time: 3 | dealt at time point: 2132.0
+simcore.agents.Patient@74601a33 | total wait time: 4 | dealt at time point: 2149.0
+simcore.agents.Patient@526c0b52 | total wait time: 5 | dealt at time point: 2165.0
+simcore.agents.Patient@1d20e94c | total wait time: 4 | dealt at time point: 2180.0
+simcore.agents.Patient@43529c99 | total wait time: 3 | dealt at time point: 2195.0
+simcore.agents.Patient@25c472fe | total wait time: 3 | dealt at time point: 2212.0
+simcore.agents.Patient@7b2828bc | total wait time: 2 | dealt at time point: 2227.0
+simcore.agents.Patient@7b28bff8 | total wait time: 4 | dealt at time point: 2244.0
+simcore.agents.Patient@26b86778 | total wait time: 3 | dealt at time point: 2260.0
+simcore.agents.Patient@14c86aa2 | total wait time: 3 | dealt at time point: 2276.0
+simcore.agents.Patient@588f2e81 | total wait time: 3 | dealt at time point: 2291.0
+simcore.agents.Patient@399ad795 | total wait time: 5 | dealt at time point: 2309.0
+simcore.agents.Patient@728379d8 | total wait time: 4 | dealt at time point: 2324.0
+simcore.agents.Patient@d96a6d3 | total wait time: 4 | dealt at time point: 2341.0
+simcore.agents.Patient@32c561fb | total wait time: 5 | dealt at time point: 2357.0
+simcore.agents.Patient@5b9683f1 | total wait time: 3 | dealt at time point: 2372.0
+simcore.agents.Patient@5f3ac6e2 | total wait time: 3 | dealt at time point: 2388.0
+simcore.agents.Patient@4efac9de | total wait time: 4 | dealt at time point: 2404.0
+simcore.agents.Patient@543eed29 | total wait time: 2 | dealt at time point: 2419.0
+simcore.agents.Patient@6d570a4d | total wait time: 5 | dealt at time point: 2437.0
+simcore.agents.Patient@45ea69b2 | total wait time: 5 | dealt at time point: 2453.0
+simcore.agents.Patient@3e38b33e | total wait time: 4 | dealt at time point: 2468.0
+simcore.agents.Patient@16d36955 | total wait time: 5 | dealt at time point: 2485.0
+simcore.agents.Patient@23852edc | total wait time: 4 | dealt at time point: 2500.0
+simcore.agents.Patient@4ae26cbf | total wait time: 4 | dealt at time point: 2516.0
+simcore.agents.Patient@2a4596a9 | total wait time: 3 | dealt at time point: 2532.0
+simcore.agents.Patient@b78f8ab | total wait time: 4 | dealt at time point: 2548.0
+simcore.agents.Patient@327a4fc5 | total wait time: 3 | dealt at time point: 2564.0
+simcore.agents.Patient@5f4b8f80 | total wait time: 4 | dealt at time point: 2581.0
+simcore.agents.Patient@6980f85c | total wait time: 3 | dealt at time point: 2596.0
+simcore.agents.Patient@5d3896cd | total wait time: 4 | dealt at time point: 2612.0
+simcore.agents.Patient@653fdf2f | total wait time: 2 | dealt at time point: 2627.0
+simcore.agents.Patient@1cd373ae | total wait time: 5 | dealt at time point: 2645.0
+simcore.agents.Patient@627baed6 | total wait time: 4 | dealt at time point: 2660.0
+simcore.agents.Patient@66604e53 | total wait time: 4 | dealt at time point: 2677.0
+simcore.agents.Patient@93666a8 | total wait time: 3 | dealt at time point: 2691.0
+simcore.agents.Patient@58a84696 | total wait time: 3 | dealt at time point: 2708.0
+simcore.agents.Patient@17cd24b3 | total wait time: 3 | dealt at time point: 2723.0
+simcore.agents.Patient@72e25b09 | total wait time: 4 | dealt at time point: 2740.0
+simcore.agents.Patient@2702127c | total wait time: 4 | dealt at time point: 2756.0
+simcore.agents.Patient@4ef28934 | total wait time: 3 | dealt at time point: 2772.0
+simcore.agents.Patient@7daa2e46 | total wait time: 4 | dealt at time point: 2788.0
+simcore.agents.Patient@2143c54a | total wait time: 4 | dealt at time point: 2805.0
+simcore.agents.Patient@79c91842 | total wait time: 3 | dealt at time point: 2819.0
+simcore.agents.Patient@46107aee | total wait time: 4 | dealt at time point: 2836.0
+simcore.agents.Patient@14b73ce7 | total wait time: 4 | dealt at time point: 2853.0
+simcore.agents.Patient@5e189c97 | total wait time: 4 | dealt at time point: 2869.0
+simcore.agents.Patient@1b7f046f | total wait time: 4 | dealt at time point: 2884.0
+simcore.agents.Patient@6faa8829 | total wait time: 3 | dealt at time point: 2899.0
+simcore.agents.Patient@5dcd5190 | total wait time: 4 | dealt at time point: 2916.0
+simcore.agents.Patient@4493db60 | total wait time: 3 | dealt at time point: 2932.0
+simcore.agents.Patient@6874efeb | total wait time: 2 | dealt at time point: 2947.0
+simcore.agents.Patient@b73e578 | total wait time: 2 | dealt at time point: 2963.0
+simcore.agents.Patient@35467af9 | total wait time: 3 | dealt at time point: 2980.0
+simcore.agents.Patient@2e9ae6f7 | total wait time: 3 | dealt at time point: 2995.0
+simcore.agents.Patient@4648da82 | total wait time: 5 | dealt at time point: 3013.0
+simcore.agents.Patient@3868149d | total wait time: 3 | dealt at time point: 3028.0
+simcore.agents.Patient@746bb8b | total wait time: 3 | dealt at time point: 3043.0
+simcore.agents.Patient@15ff9b75 | total wait time: 3 | dealt at time point: 3060.0
+simcore.agents.Patient@4d75e97a | total wait time: 2 | dealt at time point: 3075.0
+simcore.agents.Patient@680a56d3 | total wait time: 3 | dealt at time point: 3092.0
+simcore.agents.Patient@35ef55f9 | total wait time: 3 | dealt at time point: 3108.0
+simcore.agents.Patient@4d639200 | total wait time: 4 | dealt at time point: 3124.0
+simcore.agents.Patient@79cbfd0a | total wait time: 4 | dealt at time point: 3141.0
+simcore.agents.Patient@6293eaa9 | total wait time: 3 | dealt at time point: 3155.0
+simcore.agents.Patient@6b521897 | total wait time: 3 | dealt at time point: 3172.0
+simcore.agents.Patient@2e12e92a | total wait time: 3 | dealt at time point: 3187.0
+simcore.agents.Patient@1ca3bf70 | total wait time: 3 | dealt at time point: 3204.0
+simcore.agents.Patient@3550b43c | total wait time: 3 | dealt at time point: 3220.0
+simcore.agents.Patient@6b8430f9 | total wait time: 3 | dealt at time point: 3236.0
+simcore.agents.Patient@d1059ea | total wait time: 3 | dealt at time point: 3252.0
+simcore.agents.Patient@58a390b8 | total wait time: 4 | dealt at time point: 3268.0
+simcore.agents.Patient@29a98f52 | total wait time: 4 | dealt at time point: 3285.0
+simcore.agents.Patient@32cc3b57 | total wait time: 3 | dealt at time point: 3299.0
+simcore.agents.Patient@9531129 | total wait time: 3 | dealt at time point: 3316.0
+simcore.agents.Patient@23350cf2 | total wait time: 4 | dealt at time point: 3332.0
+simcore.agents.Patient@421e4d79 | total wait time: 4 | dealt at time point: 3348.0
+simcore.agents.Patient@2d180301 | total wait time: 3 | dealt at time point: 3364.0
+simcore.agents.Patient@1be27e01 | total wait time: 2 | dealt at time point: 3379.0
+simcore.agents.Patient@77f006d0 | total wait time: 4 | dealt at time point: 3397.0
+simcore.agents.Patient@432f4b9 | total wait time: 3 | dealt at time point: 3411.0
+simcore.agents.Patient@7d28b6fc | total wait time: 4 | dealt at time point: 3428.0
+simcore.agents.Patient@7072cdad | total wait time: 3 | dealt at time point: 3444.0
+simcore.agents.Patient@35084071 | total wait time: 4 | dealt at time point: 3460.0
+simcore.agents.Patient@38fbc69e | total wait time: 4 | dealt at time point: 3476.0
+simcore.agents.Patient@3087427c | total wait time: 4 | dealt at time point: 3493.0
+simcore.agents.Patient@31683c84 | total wait time: 4 | dealt at time point: 3509.0
+simcore.agents.Patient@40bf3fd3 | total wait time: 4 | dealt at time point: 3525.0
+simcore.agents.Patient@8b26d0f | total wait time: 5 | dealt at time point: 3541.0
+simcore.agents.Patient@1fc3606f | total wait time: 3 | dealt at time point: 3555.0
+simcore.agents.Patient@1de4938a | total wait time: 4 | dealt at time point: 3572.0
+simcore.agents.Patient@6c741929 | total wait time: 3 | dealt at time point: 3588.0
+simcore.agents.Patient@3f91d1fc | total wait time: 4 | dealt at time point: 3604.0
+simcore.agents.Patient@250f9294 | total wait time: 5 | dealt at time point: 3621.0
+simcore.agents.Patient@625958a8 | total wait time: 4 | dealt at time point: 3636.0
+simcore.agents.Patient@73054b3c | total wait time: 4 | dealt at time point: 3653.0
+simcore.agents.Patient@6d5c4b94 | total wait time: 5 | dealt at time point: 3669.0
+simcore.agents.Patient@bdcf6cb | total wait time: 5 | dealt at time point: 3685.0
+simcore.agents.Patient@5fd05ef2 | total wait time: 5 | dealt at time point: 3701.0
+simcore.agents.Patient@3a3b9286 | total wait time: 4 | dealt at time point: 3716.0
+simcore.agents.Patient@68b284c2 | total wait time: 4 | dealt at time point: 3733.0
+simcore.agents.Patient@3b837720 | total wait time: 3 | dealt at time point: 3748.0
+simcore.agents.Patient@23accb5d | total wait time: 4 | dealt at time point: 3765.0
+simcore.agents.Patient@6c2b58f1 | total wait time: 4 | dealt at time point: 3780.0
+simcore.agents.Patient@527b1a6d | total wait time: 5 | dealt at time point: 3797.0
+simcore.agents.Patient@cd3882 | total wait time: 4 | dealt at time point: 3812.0
+simcore.agents.Patient@5f15486 | total wait time: 3 | dealt at time point: 3828.0
+simcore.agents.Patient@730bc13c | total wait time: 4 | dealt at time point: 3845.0
+simcore.agents.Patient@6ac38c1 | total wait time: 3 | dealt at time point: 3860.0
+simcore.agents.Patient@e66f6be | total wait time: 4 | dealt at time point: 3876.0
+simcore.agents.Patient@77f5d833 | total wait time: 3 | dealt at time point: 3892.0
+simcore.agents.Patient@5fb283ce | total wait time: 4 | dealt at time point: 3908.0
+simcore.agents.Patient@7cac227d | total wait time: 5 | dealt at time point: 3925.0
+simcore.agents.Patient@35f072a8 | total wait time: 5 | dealt at time point: 3941.0
+simcore.agents.Patient@4b612209 | total wait time: 4 | dealt at time point: 3956.0
+simcore.agents.Patient@618a7393 | total wait time: 3 | dealt at time point: 3972.0
+simcore.agents.Patient@7d5af048 | total wait time: 3 | dealt at time point: 3987.0
+simcore.agents.Patient@6ba5e28a | total wait time: 3 | dealt at time point: 4004.0
+simcore.agents.Patient@666a05cc | total wait time: 3 | dealt at time point: 4019.0
+simcore.agents.Patient@186f6a73 | total wait time: 4 | dealt at time point: 4037.0
+simcore.agents.Patient@239596f9 | total wait time: 4 | dealt at time point: 4052.0
+simcore.agents.Patient@2cf64a52 | total wait time: 4 | dealt at time point: 4068.0
+simcore.agents.Patient@2d318847 | total wait time: 4 | dealt at time point: 4085.0
+simcore.agents.Patient@1ec03b7f | total wait time: 4 | dealt at time point: 4101.0
+simcore.agents.Patient@4aa410ea | total wait time: 4 | dealt at time point: 4117.0
+simcore.agents.Patient@1e851e1d | total wait time: 3 | dealt at time point: 4131.0
+simcore.agents.Patient@5ebd7945 | total wait time: 3 | dealt at time point: 4147.0
+simcore.agents.Patient@a09c819 | total wait time: 5 | dealt at time point: 4165.0
+simcore.agents.Patient@59b0d788 | total wait time: 3 | dealt at time point: 4179.0
+simcore.agents.Patient@74991ef2 | total wait time: 3 | dealt at time point: 4195.0
+simcore.agents.Patient@3fcbb2d | total wait time: 4 | dealt at time point: 4212.0
+simcore.agents.Patient@4420fdb3 | total wait time: 3 | dealt at time point: 4228.0
+simcore.agents.Patient@6385a4e3 | total wait time: 3 | dealt at time point: 4244.0
+simcore.agents.Patient@77eb6d1c | total wait time: 4 | dealt at time point: 4260.0
+simcore.agents.Patient@38af988a | total wait time: 3 | dealt at time point: 4275.0
+simcore.agents.Patient@40c306f1 | total wait time: 3 | dealt at time point: 4292.0
+simcore.agents.Patient@1561e261 | total wait time: 3 | dealt at time point: 4308.0
+simcore.agents.Patient@10daea76 | total wait time: 4 | dealt at time point: 4324.0
+simcore.agents.Patient@26f0cd98 | total wait time: 5 | dealt at time point: 4341.0
+simcore.agents.Patient@252d85b2 | total wait time: 3 | dealt at time point: 4356.0
+simcore.agents.Patient@19a1bc52 | total wait time: 3 | dealt at time point: 4372.0
+simcore.agents.Patient@19e7eb9a | total wait time: 3 | dealt at time point: 4388.0
+simcore.agents.Patient@7bdca4a4 | total wait time: 3 | dealt at time point: 4403.0
+simcore.agents.Patient@1cc134dc | total wait time: 3 | dealt at time point: 4419.0
+simcore.agents.Patient@7117082f | total wait time: 4 | dealt at time point: 4437.0
+simcore.agents.Patient@7637c070 | total wait time: 3 | dealt at time point: 4452.0
+simcore.agents.Patient@3dc3333b | total wait time: 3 | dealt at time point: 4468.0
+simcore.agents.Patient@65e3aa26 | total wait time: 4 | dealt at time point: 4484.0
+simcore.agents.Patient@51494bef | total wait time: 4 | dealt at time point: 4500.0
+simcore.agents.Patient@1cbcbc44 | total wait time: 4 | dealt at time point: 4517.0
+simcore.agents.Patient@3055ed1 | total wait time: 3 | dealt at time point: 4531.0
+simcore.agents.Patient@e2c1896 | total wait time: 3 | dealt at time point: 4547.0
+simcore.agents.Patient@2fbee84f | total wait time: 3 | dealt at time point: 4563.0
+simcore.agents.Patient@5f7bfd7c | total wait time: 4 | dealt at time point: 4580.0
+simcore.agents.Patient@6ca56d0f | total wait time: 4 | dealt at time point: 4597.0
+simcore.agents.Patient@1a643e | total wait time: 2 | dealt at time point: 4611.0
+simcore.agents.Patient@77b93072 | total wait time: 3 | dealt at time point: 4628.0
+simcore.agents.Patient@1783a890 | total wait time: 2 | dealt at time point: 4643.0
+simcore.agents.Patient@4509e783 | total wait time: 4 | dealt at time point: 4661.0
+simcore.agents.Patient@777bc179 | total wait time: 4 | dealt at time point: 4677.0
+simcore.agents.Patient@63bb467d | total wait time: 4 | dealt at time point: 4692.0
+simcore.agents.Patient@19d1c4ff | total wait time: 4 | dealt at time point: 4708.0
+simcore.agents.Patient@3c0a777b | total wait time: 4 | dealt at time point: 4724.0
+simcore.agents.Patient@76ad371b | total wait time: 3 | dealt at time point: 4739.0
+simcore.agents.Patient@a213948 | total wait time: 3 | dealt at time point: 4756.0
+simcore.agents.Patient@7fa97dc9 | total wait time: 3 | dealt at time point: 4772.0
+simcore.agents.Patient@91f224a | total wait time: 4 | dealt at time point: 4789.0
+simcore.agents.Patient@bc7c163 | total wait time: 3 | dealt at time point: 4804.0
+simcore.agents.Patient@600ab87b | total wait time: 4 | dealt at time point: 4821.0
+simcore.agents.Patient@1794ddd2 | total wait time: 4 | dealt at time point: 4837.0
+simcore.agents.Patient@2cec8aaa | total wait time: 2 | dealt at time point: 4851.0
+simcore.agents.Patient@4b508b8c | total wait time: 3 | dealt at time point: 4867.0
+simcore.agents.Patient@139143a | total wait time: 4 | dealt at time point: 4885.0
+simcore.agents.Patient@3a06cdcd | total wait time: 4 | dealt at time point: 4900.0
+simcore.agents.Patient@211b1f5a | total wait time: 3 | dealt at time point: 4915.0
+simcore.agents.Patient@393910a3 | total wait time: 2 | dealt at time point: 4931.0
+simcore.agents.Patient@2f182c61 | total wait time: 4 | dealt at time point: 4948.0
+simcore.agents.Patient@3bce7141 | total wait time: 4 | dealt at time point: 4964.0
+simcore.agents.Patient@3ee85ec9 | total wait time: 5 | dealt at time point: 4981.0
+simcore.agents.Patient@33ff2bda | total wait time: 5 | dealt at time point: 4997.0
+simcore.agents.Patient@4420e673 | total wait time: 4 | dealt at time point: 5013.0
+simcore.agents.Patient@3b9504c5 | total wait time: 4 | dealt at time point: 5028.0
+simcore.agents.Patient@3e82ce7a | total wait time: 3 | dealt at time point: 5044.0
+simcore.agents.Patient@2f7396c9 | total wait time: 4 | dealt at time point: 5060.0
+simcore.agents.Patient@f60959f | total wait time: 4 | dealt at time point: 5077.0
+simcore.agents.Patient@3b4a0584 | total wait time: 3 | dealt at time point: 5092.0
+simcore.agents.Patient@790aa91 | total wait time: 3 | dealt at time point: 5107.0
+simcore.agents.Patient@395c5834 | total wait time: 4 | dealt at time point: 5124.0
+simcore.agents.Patient@5a91cba1 | total wait time: 3 | dealt at time point: 5140.0
+simcore.agents.Patient@2a823a36 | total wait time: 3 | dealt at time point: 5156.0
+simcore.agents.Patient@3ac342f5 | total wait time: 5 | dealt at time point: 5173.0
+simcore.agents.Patient@5550039d | total wait time: 2 | dealt at time point: 5187.0
+simcore.agents.Patient@3a307c3a | total wait time: 4 | dealt at time point: 5204.0
+simcore.agents.Patient@24803395 | total wait time: 3 | dealt at time point: 5219.0
+simcore.agents.Patient@30c65b90 | total wait time: 3 | dealt at time point: 5236.0
+simcore.agents.Patient@69d923d0 | total wait time: 4 | dealt at time point: 5252.0
+simcore.agents.Patient@fb39e8 | total wait time: 3 | dealt at time point: 5268.0
+simcore.agents.Patient@5dc2264c | total wait time: 3 | dealt at time point: 5284.0
+simcore.agents.Patient@3d3392d3 | total wait time: 3 | dealt at time point: 5300.0
+simcore.agents.Patient@14ae2e04 | total wait time: 3 | dealt at time point: 5315.0
+simcore.agents.Patient@33588e6e | total wait time: 3 | dealt at time point: 5332.0
+simcore.agents.Patient@716402d4 | total wait time: 4 | dealt at time point: 5348.0
+simcore.agents.Patient@58019a9 | total wait time: 3 | dealt at time point: 5364.0
+simcore.agents.Patient@669f63e8 | total wait time: 3 | dealt at time point: 5379.0
+simcore.agents.Patient@3bd4c95f | total wait time: 3 | dealt at time point: 5396.0
+simcore.agents.Patient@3d36b6d4 | total wait time: 3 | dealt at time point: 5412.0
+simcore.agents.Patient@4d4eb0b6 | total wait time: 3 | dealt at time point: 5428.0
+simcore.agents.Patient@7717c758 | total wait time: 3 | dealt at time point: 5444.0
+simcore.agents.Patient@c751798 | total wait time: 3 | dealt at time point: 5460.0
+simcore.agents.Patient@5a0131ec | total wait time: 3 | dealt at time point: 5475.0
+simcore.agents.Patient@69c4e69c | total wait time: 4 | dealt at time point: 5493.0
+simcore.agents.Patient@3de0244e | total wait time: 3 | dealt at time point: 5508.0
+simcore.agents.Patient@565a5858 | total wait time: 5 | dealt at time point: 5525.0
+simcore.agents.Patient@115a9be9 | total wait time: 5 | dealt at time point: 5541.0
+simcore.agents.Patient@266ee76 | total wait time: 4 | dealt at time point: 5557.0
+simcore.agents.Patient@1988d84a | total wait time: 4 | dealt at time point: 5573.0
+simcore.agents.Patient@446cb849 | total wait time: 4 | dealt at time point: 5588.0
+simcore.agents.Patient@4d9ea2a2 | total wait time: 4 | dealt at time point: 5605.0
+simcore.agents.Patient@6670e3d2 | total wait time: 3 | dealt at time point: 5619.0
+simcore.agents.Patient@f63bc3b | total wait time: 4 | dealt at time point: 5636.0
+simcore.agents.Patient@7ffe04c | total wait time: 2 | dealt at time point: 5651.0
+simcore.agents.Patient@5925b4d | total wait time: 3 | dealt at time point: 5668.0
+simcore.agents.Patient@1092f636 | total wait time: 4 | dealt at time point: 5684.0
+simcore.agents.Patient@274131dc | total wait time: 4 | dealt at time point: 5700.0
+simcore.agents.Patient@33549888 | total wait time: 3 | dealt at time point: 5715.0
+simcore.agents.Patient@551fc2ed | total wait time: 4 | dealt at time point: 5733.0
+simcore.agents.Patient@24f9e4bc | total wait time: 3 | dealt at time point: 5747.0
+simcore.agents.Patient@6fd18039 | total wait time: 3 | dealt at time point: 5763.0
+simcore.agents.Patient@3b9441d9 | total wait time: 4 | dealt at time point: 5780.0
+simcore.agents.Patient@1366376b | total wait time: 3 | dealt at time point: 5796.0
+simcore.agents.Patient@79d04a37 | total wait time: 3 | dealt at time point: 5812.0
+simcore.agents.Patient@2c25e14c | total wait time: 3 | dealt at time point: 5828.0
+simcore.agents.Patient@419f53cc | total wait time: 3 | dealt at time point: 5844.0
+simcore.agents.Patient@1f5a4dcd | total wait time: 4 | dealt at time point: 5861.0
+simcore.agents.Patient@131c2e86 | total wait time: 4 | dealt at time point: 5877.0
+simcore.agents.Patient@6ca64b38 | total wait time: 3 | dealt at time point: 5892.0
+simcore.agents.Patient@54abbc17 | total wait time: 4 | dealt at time point: 5908.0
+simcore.agents.Patient@5357c9aa | total wait time: 3 | dealt at time point: 5924.0
+simcore.agents.Patient@20f6dba4 | total wait time: 3 | dealt at time point: 5940.0
+simcore.agents.Patient@8e07774 | total wait time: 4 | dealt at time point: 5956.0
+simcore.agents.Patient@1b0046f8 | total wait time: 4 | dealt at time point: 5973.0
+simcore.agents.Patient@32c9a5aa | total wait time: 3 | dealt at time point: 5988.0
+simcore.agents.Patient@33a6ecdf | total wait time: 3 | dealt at time point: 6003.0
+simcore.agents.Patient@3bdc770b | total wait time: 3 | dealt at time point: 6020.0
+simcore.agents.Patient@b2dd89e | total wait time: 2 | dealt at time point: 6035.0
+simcore.agents.Patient@375c7382 | total wait time: 4 | dealt at time point: 6053.0
+simcore.agents.Patient@a4bd99c | total wait time: 2 | dealt at time point: 6067.0
+simcore.agents.Patient@7bded067 | total wait time: 3 | dealt at time point: 6083.0
+simcore.agents.Patient@6917f564 | total wait time: 3 | dealt at time point: 6100.0
+simcore.agents.Patient@7b208fd9 | total wait time: 4 | dealt at time point: 6117.0
+simcore.agents.Patient@5528404e | total wait time: 3 | dealt at time point: 6131.0
+simcore.agents.Patient@57ea0814 | total wait time: 4 | dealt at time point: 6148.0
+simcore.agents.Patient@6b126e09 | total wait time: 3 | dealt at time point: 6164.0
+simcore.agents.Patient@521e2e21 | total wait time: 2 | dealt at time point: 6179.0
+simcore.agents.Patient@4d847864 | total wait time: 4 | dealt at time point: 6196.0
+simcore.agents.Patient@1dba289b | total wait time: 4 | dealt at time point: 6212.0
+simcore.agents.Patient@2e88d9f4 | total wait time: 4 | dealt at time point: 6229.0
+simcore.agents.Patient@15d214de | total wait time: 4 | dealt at time point: 6245.0
+simcore.agents.Patient@100ec332 | total wait time: 4 | dealt at time point: 6260.0
+simcore.agents.Patient@7c0648b | total wait time: 2 | dealt at time point: 6275.0
+simcore.agents.Patient@4a83cb0e | total wait time: 4 | dealt at time point: 6293.0
+simcore.agents.Patient@54bd7b7b | total wait time: 4 | dealt at time point: 6309.0
+simcore.agents.Patient@1c76a308 | total wait time: 3 | dealt at time point: 6324.0
+simcore.agents.Patient@4272cc21 | total wait time: 4 | dealt at time point: 6340.0
+simcore.agents.Patient@1dfb8cc8 | total wait time: 4 | dealt at time point: 6356.0
+simcore.agents.Patient@1fb8acc8 | total wait time: 4 | dealt at time point: 6372.0
+simcore.agents.Patient@7cdd5efe | total wait time: 3 | dealt at time point: 6388.0
+simcore.agents.Patient@79924819 | total wait time: 4 | dealt at time point: 6404.0
+simcore.agents.Patient@1b74d2cb | total wait time: 3 | dealt at time point: 6420.0
+simcore.agents.Patient@5e70d74b | total wait time: 3 | dealt at time point: 6435.0
+simcore.agents.Patient@184b78f3 | total wait time: 4 | dealt at time point: 6453.0
+simcore.agents.Patient@31a1f079 | total wait time: 3 | dealt at time point: 6467.0
+simcore.agents.Patient@317544c2 | total wait time: 5 | dealt at time point: 6485.0
+simcore.agents.Patient@40f684a6 | total wait time: 4 | dealt at time point: 6500.0
+simcore.agents.Patient@44805a2b | total wait time: 3 | dealt at time point: 6516.0
+simcore.agents.Patient@16df30b | total wait time: 3 | dealt at time point: 6531.0
+simcore.agents.Patient@26695259 | total wait time: 5 | dealt at time point: 6549.0
+simcore.agents.Patient@431bb1f9 | total wait time: 4 | dealt at time point: 6564.0
+simcore.agents.Patient@5d6a2e69 | total wait time: 4 | dealt at time point: 6580.0
+simcore.agents.Patient@7759f327 | total wait time: 3 | dealt at time point: 6595.0
+simcore.agents.Patient@5f32f244 | total wait time: 5 | dealt at time point: 6613.0
+simcore.agents.Patient@5d223774 | total wait time: 3 | dealt at time point: 6627.0
+simcore.agents.Patient@762c7eb5 | total wait time: 4 | dealt at time point: 6645.0
+simcore.agents.Patient@6c208525 | total wait time: 4 | dealt at time point: 6660.0
+simcore.agents.Patient@6c4d8e77 | total wait time: 4 | dealt at time point: 6677.0
+simcore.agents.Patient@47dfa41e | total wait time: 3 | dealt at time point: 6692.0
+simcore.agents.Patient@54cf9ae9 | total wait time: 4 | dealt at time point: 6709.0
+simcore.agents.Patient@41d3a10b | total wait time: 3 | dealt at time point: 6723.0
+simcore.agents.Patient@1651c0d9 | total wait time: 4 | dealt at time point: 6740.0
+simcore.agents.Patient@4aa5e91b | total wait time: 2 | dealt at time point: 6755.0
+simcore.agents.Patient@65d527e6 | total wait time: 3 | dealt at time point: 6771.0
+simcore.agents.Patient@1788bcc1 | total wait time: 5 | dealt at time point: 6789.0
+simcore.agents.Patient@1d5f32a8 | total wait time: 3 | dealt at time point: 6803.0
+simcore.agents.Patient@2042db62 | total wait time: 4 | dealt at time point: 6820.0
+simcore.agents.Patient@2c98b674 | total wait time: 4 | dealt at time point: 6836.0
+simcore.agents.Patient@17bf184d | total wait time: 3 | dealt at time point: 6851.0
+simcore.agents.Patient@4c3532c0 | total wait time: 3 | dealt at time point: 6868.0
+simcore.agents.Patient@6af3a333 | total wait time: 3 | dealt at time point: 6884.0
+simcore.agents.Patient@470b5211 | total wait time: 3 | dealt at time point: 6900.0
+simcore.agents.Patient@64eff8ad | total wait time: 4 | dealt at time point: 6916.0
+simcore.agents.Patient@61e979b5 | total wait time: 4 | dealt at time point: 6932.0
+simcore.agents.Patient@7838094b | total wait time: 3 | dealt at time point: 6947.0
+simcore.agents.Patient@70691185 | total wait time: 2 | dealt at time point: 6963.0
+simcore.agents.Patient@2b27e03e | total wait time: 3 | dealt at time point: 6980.0
+simcore.agents.Patient@4088c0e5 | total wait time: 4 | dealt at time point: 6996.0
+simcore.agents.Patient@111766db | total wait time: 4 | dealt at time point: 7013.0
+simcore.agents.Patient@40526b28 | total wait time: 3 | dealt at time point: 7028.0
+simcore.agents.Patient@5d380f46 | total wait time: 5 | dealt at time point: 7045.0
+simcore.agents.Patient@66d71a82 | total wait time: 3 | dealt at time point: 7060.0
+simcore.agents.Patient@128f962 | total wait time: 2 | dealt at time point: 7075.0
+simcore.agents.Patient@5b3ce3ef | total wait time: 3 | dealt at time point: 7091.0
+simcore.agents.Patient@46770559 | total wait time: 4 | dealt at time point: 7108.0
+simcore.agents.Patient@d0e70e0 | total wait time: 2 | dealt at time point: 7123.0
+simcore.agents.Patient@7342f660 | total wait time: 3 | dealt at time point: 7140.0
+simcore.agents.Patient@42aa883c | total wait time: 2 | dealt at time point: 7155.0
+simcore.agents.Patient@2181ae53 | total wait time: 4 | dealt at time point: 7173.0
+simcore.agents.Patient@7d168328 | total wait time: 3 | dealt at time point: 7187.0
+simcore.agents.Patient@49ed644f | total wait time: 4 | dealt at time point: 7204.0
+simcore.agents.Patient@5cb8140d | total wait time: 4 | dealt at time point: 7220.0
+simcore.agents.Patient@c642aa9 | total wait time: 4 | dealt at time point: 7237.0
+simcore.agents.Patient@718a8b36 | total wait time: 4 | dealt at time point: 7252.0
+simcore.agents.Patient@10efaedd | total wait time: 3 | dealt at time point: 7267.0
+simcore.agents.Patient@71e3f7ea | total wait time: 3 | dealt at time point: 7284.0
+simcore.agents.Patient@57af0041 | total wait time: 4 | dealt at time point: 7301.0
+simcore.agents.Patient@79ece1e4 | total wait time: 4 | dealt at time point: 7317.0
+simcore.agents.Patient@401304b5 | total wait time: 3 | dealt at time point: 7331.0
+simcore.agents.Patient@22174b44 | total wait time: 3 | dealt at time point: 7347.0
+simcore.agents.Patient@609b1b47 | total wait time: 4 | dealt at time point: 7364.0
+simcore.agents.Patient@76197d72 | total wait time: 2 | dealt at time point: 7379.0
+simcore.agents.Patient@55df43f | total wait time: 4 | dealt at time point: 7396.0
+simcore.agents.Patient@3ad1356b | total wait time: 4 | dealt at time point: 7412.0
+simcore.agents.Patient@405a478d | total wait time: 4 | dealt at time point: 7429.0
+simcore.agents.Patient@7ecc19c | total wait time: 4 | dealt at time point: 7444.0
+simcore.agents.Patient@549c1ebb | total wait time: 3 | dealt at time point: 7459.0
+simcore.agents.Patient@4b8899bb | total wait time: 4 | dealt at time point: 7476.0
+simcore.agents.Patient@45d67016 | total wait time: 3 | dealt at time point: 7492.0
+simcore.agents.Patient@45cac771 | total wait time: 4 | dealt at time point: 7509.0
+simcore.agents.Patient@4520dd8b | total wait time: 5 | dealt at time point: 7525.0
+simcore.agents.Patient@5b29caa0 | total wait time: 4 | dealt at time point: 7540.0
+simcore.agents.Patient@62be7b0a | total wait time: 3 | dealt at time point: 7555.0
+simcore.agents.Patient@512497db | total wait time: 2 | dealt at time point: 7571.0
+simcore.agents.Patient@74aaead2 | total wait time: 5 | dealt at time point: 7589.0
+simcore.agents.Patient@4e740be0 | total wait time: 4 | dealt at time point: 7605.0
+simcore.agents.Patient@443d4f2b | total wait time: 3 | dealt at time point: 7620.0
+simcore.agents.Patient@795fec8d | total wait time: 5 | dealt at time point: 7637.0
+simcore.agents.Patient@328a2c99 | total wait time: 4 | dealt at time point: 7653.0
+simcore.agents.Patient@31d13474 | total wait time: 4 | dealt at time point: 7669.0
+simcore.agents.Patient@4a54fe74 | total wait time: 4 | dealt at time point: 7684.0
+simcore.agents.Patient@3b095232 | total wait time: 3 | dealt at time point: 7700.0
+simcore.agents.Patient@4c08f6fe | total wait time: 4 | dealt at time point: 7716.0
+simcore.agents.Patient@cfa73f5 | total wait time: 2 | dealt at time point: 7731.0
+simcore.agents.Patient@599fd84a | total wait time: 4 | dealt at time point: 7749.0
+simcore.agents.Patient@178365ef | total wait time: 4 | dealt at time point: 7764.0
+simcore.agents.Patient@258ca6d7 | total wait time: 3 | dealt at time point: 7780.0
+simcore.agents.Patient@2008657c | total wait time: 4 | dealt at time point: 7796.0
+simcore.agents.Patient@56dd2534 | total wait time: 4 | dealt at time point: 7812.0
+simcore.agents.Patient@6c1e7d19 | total wait time: 3 | dealt at time point: 7827.0
+simcore.agents.Patient@4bbe7c82 | total wait time: 5 | dealt at time point: 7845.0
+simcore.agents.Patient@983f245 | total wait time: 4 | dealt at time point: 7860.0
+simcore.agents.Patient@a211fcd | total wait time: 4 | dealt at time point: 7876.0
+simcore.agents.Patient@3e60621a | total wait time: 4 | dealt at time point: 7893.0
+simcore.agents.Patient@7212b6c1 | total wait time: 3 | dealt at time point: 7908.0
+simcore.agents.Patient@73845068 | total wait time: 3 | dealt at time point: 7924.0
+simcore.agents.Patient@77ea4f2b | total wait time: 4 | dealt at time point: 7940.0
+simcore.agents.Patient@53347732 | total wait time: 5 | dealt at time point: 7957.0
+simcore.agents.Patient@1c8222ee | total wait time: 4 | dealt at time point: 7972.0
+simcore.agents.Patient@7df2a2be | total wait time: 4 | dealt at time point: 7988.0
+simcore.agents.Patient@56d8e149 | total wait time: 3 | dealt at time point: 8004.0
+simcore.agents.Patient@201cdade | total wait time: 3 | dealt at time point: 8020.0
+simcore.agents.Patient@6632cf49 | total wait time: 4 | dealt at time point: 8037.0
+simcore.agents.Patient@658b287 | total wait time: 4 | dealt at time point: 8053.0
+simcore.agents.Patient@4517eeea | total wait time: 5 | dealt at time point: 8069.0
+simcore.agents.Patient@5944bb6f | total wait time: 3 | dealt at time point: 8084.0
+simcore.agents.Patient@6c8366b7 | total wait time: 4 | dealt at time point: 8100.0
+simcore.agents.Patient@2dea2abf | total wait time: 2 | dealt at time point: 8115.0
+simcore.agents.Patient@208a7ff8 | total wait time: 5 | dealt at time point: 8133.0
+simcore.agents.Patient@4d33dbb7 | total wait time: 3 | dealt at time point: 8148.0
+simcore.agents.Patient@2cc1d876 | total wait time: 2 | dealt at time point: 8163.0
+simcore.agents.Patient@4acb8d4f | total wait time: 4 | dealt at time point: 8180.0
+simcore.agents.Patient@2fb5700 | total wait time: 3 | dealt at time point: 8195.0
+simcore.agents.Patient@3be8239c | total wait time: 3 | dealt at time point: 8211.0
+simcore.agents.Patient@52c1a5bc | total wait time: 2 | dealt at time point: 8227.0
+simcore.agents.Patient@39024d97 | total wait time: 5 | dealt at time point: 8245.0
+simcore.agents.Patient@5c805218 | total wait time: 3 | dealt at time point: 8260.0
+simcore.agents.Patient@4d11e4c8 | total wait time: 3 | dealt at time point: 8276.0
+simcore.agents.Patient@7b6683a4 | total wait time: 4 | dealt at time point: 8293.0
+simcore.agents.Patient@778dd221 | total wait time: 4 | dealt at time point: 8309.0
+simcore.agents.Patient@1573135d | total wait time: 4 | dealt at time point: 8324.0
+simcore.agents.Patient@34ec1d99 | total wait time: 3 | dealt at time point: 8339.0
+simcore.agents.Patient@38f97479 | total wait time: 72 | dealt at time point: 73.0
+simcore.agents.Patient@6a1118cd | total wait time: 60 | dealt at time point: 77.0
+simcore.agents.Patient@52d9c2bc | total wait time: 49 | dealt at time point: 82.0
+simcore.agents.Patient@47787253 | total wait time: 67 | dealt at time point: 116.0
+simcore.agents.Patient@7ac9734 | total wait time: 22 | dealt at time point: 118.0
+simcore.agents.Patient@3320931b | total wait time: 60 | dealt at time point: 124.0
+simcore.agents.Patient@6f407fff | total wait time: 13 | dealt at time point: 158.0
+simcore.agents.Patient@199c8cb | total wait time: 80 | dealt at time point: 161.0
+simcore.agents.Patient@2a1349f5 | total wait time: 53 | dealt at time point: 166.0
+simcore.agents.Patient@382a8bd5 | total wait time: 7 | dealt at time point: 200.0
+simcore.agents.Patient@5f030570 | total wait time: 40 | dealt at time point: 201.0
+simcore.agents.Patient@50e862a1 | total wait time: 78 | dealt at time point: 206.0
+simcore.agents.Patient@2d6a9bf3 | total wait time: 32 | dealt at time point: 241.0
+simcore.agents.Patient@18c6f3e0 | total wait time: 19 | dealt at time point: 243.0
+simcore.agents.Patient@49903d0c | total wait time: 8 | dealt at time point: 248.0
+simcore.agents.Patient@a43a297 | total wait time: 11 | dealt at time point: 283.0
+simcore.agents.Patient@5b3dfa12 | total wait time: 28 | dealt at time point: 285.0
+simcore.agents.Patient@58957225 | total wait time: 115 | dealt at time point: 291.0
+simcore.agents.Patient@565f834c | total wait time: 19 | dealt at time point: 324.0
+simcore.agents.Patient@4daa7496 | total wait time: 6 | dealt at time point: 327.0
+simcore.agents.Patient@149265fe | total wait time: 45 | dealt at time point: 334.0
+simcore.agents.Patient@18419a37 | total wait time: 14 | dealt at time point: 366.0
+simcore.agents.Patient@7c07ab5b | total wait time: 34 | dealt at time point: 370.0
+simcore.agents.Patient@7d121452 | total wait time: 7 | dealt at time point: 376.0
+simcore.agents.Patient@563cb6fc | total wait time: 7 | dealt at time point: 407.0
+simcore.agents.Patient@b040f2f | total wait time: 25 | dealt at time point: 410.0
+simcore.agents.Patient@6c72e17a | total wait time: 4 | dealt at time point: 420.0
+simcore.agents.Patient@6c097ac9 | total wait time: 19 | dealt at time point: 36.0
+simcore.agents.Patient@3ea345ab | total wait time: 29 | dealt at time point: 78.0
+simcore.agents.Patient@7ba46563 | total wait time: 108 | dealt at time point: 108.0
+simcore.agents.Patient@6cdaf495 | total wait time: 40 | dealt at time point: 120.0
+simcore.agents.Patient@5de26f15 | total wait time: 6 | dealt at time point: 151.0
+simcore.agents.Patient@3b109697 | total wait time: 34 | dealt at time point: 162.0
+simcore.agents.Patient@7b6bf514 | total wait time: 31 | dealt at time point: 192.0
+simcore.agents.Patient@d02580c | total wait time: 27 | dealt at time point: 204.0
+simcore.agents.Patient@17fbf19a | total wait time: 26 | dealt at time point: 235.0
+simcore.agents.Patient@65192a37 | total wait time: 23 | dealt at time point: 247.0
+simcore.agents.Patient@73098666 | total wait time: 236 | dealt at time point: 268.0
+simcore.agents.Patient@ad31ee0 | total wait time: 5 | dealt at time point: 277.0
+simcore.agents.Patient@7f009de8 | total wait time: 32 | dealt at time point: 288.0
+simcore.agents.Patient@2132b584 | total wait time: 6 | dealt at time point: 311.0
+simcore.agents.Patient@62961c60 | total wait time: 32 | dealt at time point: 320.0
+simcore.agents.Patient@6d6a1787 | total wait time: 9 | dealt at time point: 330.0
+simcore.agents.Patient@791aafbe | total wait time: 160 | dealt at time point: 352.0
+simcore.agents.Patient@6c1d8d0f | total wait time: 296 | dealt at time point: 360.0
+simcore.agents.Patient@3bcb112 | total wait time: 130 | dealt at time point: 371.0
+simcore.agents.Patient@1c39181f | total wait time: 9 | dealt at time point: 393.0
+simcore.agents.Patient@223ae9ff | total wait time: 306 | dealt at time point: 402.0
+simcore.agents.Patient@384352e2 | total wait time: 14 | dealt at time point: 414.0
+simcore.agents.Patient@bbb6877 | total wait time: 18 | dealt at time point: 434.0
+simcore.agents.Patient@42979fa7 | total wait time: 12 | dealt at time point: 444.0
+simcore.agents.Patient@18f46cb6 | total wait time: 8 | dealt at time point: 456.0
+simcore.agents.Patient@9ad3804 | total wait time: 11 | dealt at time point: 475.0
+simcore.agents.Patient@6514e778 | total wait time: 6 | dealt at time point: 486.0
+simcore.agents.Patient@55dd7a9d | total wait time: 387 | dealt at time point: 499.0
+simcore.agents.Patient@4f2d406c | total wait time: 18 | dealt at time point: 515.0
+simcore.agents.Patient@1e35f1a7 | total wait time: 15 | dealt at time point: 527.0
+simcore.agents.Patient@4b6e04e | total wait time: 11 | dealt at time point: 540.0
+simcore.agents.Patient@422960c6 | total wait time: 13 | dealt at time point: 557.0
+simcore.agents.Patient@5426a53 | total wait time: 8 | dealt at time point: 568.0
+simcore.agents.Patient@1c127c37 | total wait time: 6 | dealt at time point: 582.0
+simcore.agents.Patient@5d94f4ca | total wait time: 7 | dealt at time point: 599.0
+simcore.agents.Patient@3a7b07f9 | total wait time: 273 | dealt at time point: 609.0
+simcore.agents.Patient@6cadf44c | total wait time: 270 | dealt at time point: 623.0
+simcore.agents.Patient@641ab5d2 | total wait time: 16 | dealt at time point: 641.0
+simcore.agents.Patient@498209f6 | total wait time: 10 | dealt at time point: 650.0
+simcore.agents.Patient@6ebec46 | total wait time: 9 | dealt at time point: 666.0
+simcore.agents.Patient@13fc7683 | total wait time: 11 | dealt at time point: 683.0
+simcore.agents.Patient@78e79fa7 | total wait time: 322 | dealt at time point: 691.0
+simcore.agents.Patient@57bb5cbf | total wait time: 19 | dealt at time point: 708.0
+simcore.agents.Patient@6d52b35f | total wait time: 21 | dealt at time point: 725.0
+simcore.agents.Patient@b5628f8 | total wait time: 12 | dealt at time point: 733.0
+simcore.agents.Patient@b9328f0 | total wait time: 12 | dealt at time point: 749.0
+simcore.agents.Patient@449c99a8 | total wait time: 16 | dealt at time point: 768.0
+simcore.agents.Patient@15258392 | total wait time: 7 | dealt at time point: 776.0
+simcore.agents.Patient@2082e092 | total wait time: 8 | dealt at time point: 792.0
+simcore.agents.Patient@3afa1088 | total wait time: 7 | dealt at time point: 808.0
+simcore.agents.Patient@63fa8b10 | total wait time: 209 | dealt at time point: 817.0
+simcore.agents.Patient@1ad160ab | total wait time: 18 | dealt at time point: 834.0
+simcore.agents.Patient@358bf4e0 | total wait time: 18 | dealt at time point: 850.0
+simcore.agents.Patient@5d094610 | total wait time: 10 | dealt at time point: 858.0
+simcore.agents.Patient@245e78bc | total wait time: 12 | dealt at time point: 876.0
+simcore.agents.Patient@3c5c1288 | total wait time: 11 | dealt at time point: 892.0
+simcore.agents.Patient@67fda2e2 | total wait time: 5 | dealt at time point: 901.0
+simcore.agents.Patient@5fa184b6 | total wait time: 5 | dealt at time point: 917.0
+simcore.agents.Patient@7d432cf3 | total wait time: 6 | dealt at time point: 935.0
+simcore.agents.Patient@3ececf50 | total wait time: 5 | dealt at time point: 949.0
+simcore.agents.Patient@3c5e03bf | total wait time: 3 | dealt at time point: 963.0
+simcore.agents.Patient@21e200e7 | total wait time: 3 | dealt at time point: 980.0
+simcore.agents.Patient@7ebfc9ee | total wait time: 5 | dealt at time point: 997.0
+simcore.agents.Patient@145556d4 | total wait time: 4 | dealt at time point: 1013.0
+simcore.agents.Patient@25538ce2 | total wait time: 3 | dealt at time point: 1027.0
+Patient 1 | total wait time: 21 | dealt at time point: 37.0
+Patient 1 | total wait time: 30 | dealt at time point: 78.0
+Patient 1 | total wait time: 8 | dealt at time point: 120.0
+Patient 1 | total wait time: 17 | dealt at time point: 162.0
+Patient 1 | total wait time: 195 | dealt at time point: 195.0
+Patient 1 | total wait time: 28 | dealt at time point: 204.0
+Patient 1 | total wait time: 12 | dealt at time point: 236.0
+Patient 1 | total wait time: 205 | dealt at time point: 238.0
+Patient 1 | total wait time: 5 | dealt at time point: 246.0
+Patient 1 | total wait time: 5 | dealt at time point: 278.0
+Patient 1 | total wait time: 119 | dealt at time point: 280.0
+Patient 1 | total wait time: 192 | dealt at time point: 288.0
+Patient 1 | total wait time: 95 | dealt at time point: 96.0
+Patient 1 | total wait time: 78 | dealt at time point: 111.0
+Patient 1 | total wait time: 97 | dealt at time point: 113.0
+Patient 1 | total wait time: 57 | dealt at time point: 138.0
+Patient 1 | total wait time: 10 | dealt at time point: 154.0
+Patient 1 | total wait time: 105 | dealt at time point: 154.0
+Patient 1 | total wait time: 17 | dealt at time point: 178.0
+Patient 1 | total wait time: 84 | dealt at time point: 196.0
+Patient 1 | total wait time: 100 | dealt at time point: 196.0
+Patient 1 | total wait time: 13 | dealt at time point: 221.0
+Patient 1 | total wait time: 109 | dealt at time point: 238.0
+Patient 1 | total wait time: 173 | dealt at time point: 238.0
+Patient 1 | total wait time: 6 | dealt at time point: 263.0
+Patient 1 | total wait time: 87 | dealt at time point: 279.0
+Patient 1 | total wait time: 104 | dealt at time point: 281.0
+Patient 1 | total wait time: 14 | dealt at time point: 303.0
+Patient 1 | total wait time: 79 | dealt at time point: 320.0
+Patient 1 | total wait time: 18 | dealt at time point: 322.0
+Patient 1 | total wait time: 26 | dealt at time point: 346.0
+Patient 1 | total wait time: 8 | dealt at time point: 361.0
+Patient 1 | total wait time: 28 | dealt at time point: 364.0
+Patient 1 | total wait time: 18 | dealt at time point: 387.0
+Patient 1 | total wait time: 16 | dealt at time point: 401.0
+Patient 1 | total wait time: 181 | dealt at time point: 406.0
+Patient 1 | total wait time: 12 | dealt at time point: 429.0
+Patient 1 | total wait time: 10 | dealt at time point: 442.0
+Patient 1 | total wait time: 176 | dealt at time point: 448.0
+Patient 1 | total wait time: 22 | dealt at time point: 471.0
+Patient 1 | total wait time: 5 | dealt at time point: 485.0
+Patient 1 | total wait time: 24 | dealt at time point: 489.0
+Patient 1 | total wait time: 15 | dealt at time point: 512.0
+Patient 1 | total wait time: 13 | dealt at time point: 526.0
+Patient 1 | total wait time: 131 | dealt at time point: 532.0
+Patient 1 | total wait time: 9 | dealt at time point: 553.0
+Patient 1 | total wait time: 5 | dealt at time point: 566.0
+Patient 1 | total wait time: 45 | dealt at time point: 573.0
+Patient 1 | total wait time: 19 | dealt at time point: 595.0
+Patient 1 | total wait time: 15 | dealt at time point: 607.0
+Patient 1 | total wait time: 7 | dealt at time point: 616.0
+Patient 1 | total wait time: 12 | dealt at time point: 637.0
+Patient 1 | total wait time: 7 | dealt at time point: 648.0
+Patient 1 | total wait time: 3 | dealt at time point: 660.0
+Patient 1 | total wait time: 6 | dealt at time point: 678.0
+Patient 1 | total wait time: 3 | dealt at time point: 692.0
+Patient 1 | total wait time: 3 | dealt at time point: 707.0
+Patient 1 | total wait time: 4 | dealt at time point: 724.0
+Patient 1 | total wait time: 3 | dealt at time point: 740.0
+Patient 1 | total wait time: 3 | dealt at time point: 755.0
+Patient 1 | total wait time: 4 | dealt at time point: 773.0
+Patient 1 | total wait time: 3 | dealt at time point: 788.0
+Patient 1 | total wait time: 4 | dealt at time point: 805.0
+Patient 1 | total wait time: 3 | dealt at time point: 820.0
+Patient 1 | total wait time: 3 | dealt at time point: 836.0
+Patient 1 | total wait time: 4 | dealt at time point: 853.0
+Patient 1 | total wait time: 4 | dealt at time point: 868.0
+Patient 1 | total wait time: 124 | dealt at time point: 141.0
+Patient 1 | total wait time: 126 | dealt at time point: 158.0
+Patient 1 | total wait time: 179 | dealt at time point: 179.0
+Patient 1 | total wait time: 53 | dealt at time point: 181.0
+Patient 1 | total wait time: 54 | dealt at time point: 199.0
+Patient 1 | total wait time: 29 | dealt at time point: 221.0
+Patient 1 | total wait time: 127 | dealt at time point: 223.0
+Patient 1 | total wait time: 16 | dealt at time point: 241.0
+Patient 1 | total wait time: 103 | dealt at time point: 263.0
+Patient 1 | total wait time: 89 | dealt at time point: 266.0
+Patient 1 | total wait time: 10 | dealt at time point: 282.0
+Patient 1 | total wait time: 48 | dealt at time point: 305.0
+Patient 1 | total wait time: 243 | dealt at time point: 308.0
+Patient 1 | total wait time: 4 | dealt at time point: 324.0
+Patient 1 | total wait time: 10 | dealt at time point: 346.0
+Patient 1 | total wait time: 140 | dealt at time point: 349.0
+Patient 1 | total wait time: 13 | dealt at time point: 366.0
+Patient 1 | total wait time: 338 | dealt at time point: 387.0
+Patient 1 | total wait time: 6 | dealt at time point: 391.0
+Patient 1 | total wait time: 328 | dealt at time point: 408.0
+Patient 2 | total wait time: 3 | dealt at time point: 19.0
+Patient 1 | total wait time: 38 | dealt at time point: 38.0
+Patient 4 | total wait time: 14 | dealt at time point: 62.0
+Patient 5 | total wait time: 15 | dealt at time point: 80.0
+Patient 3 | total wait time: 60 | dealt at time point: 92.0
+Patient 6 | total wait time: 23 | dealt at time point: 103.0
+Patient 8 | total wait time: 11 | dealt at time point: 123.0
+Patient 9 | total wait time: 5 | dealt at time point: 133.0
+Patient 7 | total wait time: 50 | dealt at time point: 146.0
+Patient 10 | total wait time: 20 | dealt at time point: 165.0
+Patient 11 | total wait time: 13 | dealt at time point: 174.0
+Patient 12 | total wait time: 12 | dealt at time point: 188.0
+Patient 13 | total wait time: 14 | dealt at time point: 207.0
+Patient 14 | total wait time: 7 | dealt at time point: 216.0
+Patient 15 | total wait time: 5 | dealt at time point: 230.0
+Patient 16 | total wait time: 8 | dealt at time point: 249.0
+Patient 17 | total wait time: 4 | dealt at time point: 261.0
+Patient 18 | total wait time: 3 | dealt at time point: 276.0
+Patient 19 | total wait time: 3 | dealt at time point: 292.0
+Patient 20 | total wait time: 4 | dealt at time point: 309.0
+Patient 21 | total wait time: 4 | dealt at time point: 324.0
+Patient 22 | total wait time: 3 | dealt at time point: 339.0
+Patient 23 | total wait time: 4 | dealt at time point: 356.0
+Patient 24 | total wait time: 3 | dealt at time point: 371.0
+Patient 25 | total wait time: 4 | dealt at time point: 388.0
+Patient 26 | total wait time: 3 | dealt at time point: 403.0
+Patient 27 | total wait time: 2 | dealt at time point: 419.0
+Patient 28 | total wait time: 4 | dealt at time point: 436.0
+Patient 29 | total wait time: 3 | dealt at time point: 452.0
+Patient 1 | total wait time: 69 | dealt at time point: 70.0
+Patient 3 | total wait time: 75 | dealt at time point: 107.0
+Patient 2 | total wait time: 128 | dealt at time point: 145.0
+Patient 43 | total wait time: 23 | dealt at time point: 695.0
+Patient 11 | total wait time: 571 | dealt at time point: 731.0
+Patient 48 | total wait time: 17 | dealt at time point: 770.0
+Patient 72 | total wait time: 183 | dealt at time point: 1320.0
+Patient 4 | total wait time: 1308 | dealt at time point: 1356.0
+Patient 80 | total wait time: 130 | dealt at time point: 1395.0
+Patient 112 | total wait time: 167 | dealt at time point: 1944.0
+Patient 119 | total wait time: 93 | dealt at time point: 1981.0
+Patient 30 | total wait time: 1555 | dealt at time point: 2020.0
+Patient 130 | total wait time: 504 | dealt at time point: 2569.0
+Patient 153 | total wait time: 173 | dealt at time point: 2606.0
+Patient 147 | total wait time: 307 | dealt at time point: 2643.0
+Patient 196 | total wait time: 74 | dealt at time point: 3194.0
+Patient 176 | total wait time: 429 | dealt at time point: 3230.0
+Patient 27 | total wait time: 2852 | dealt at time point: 3268.0
+Patient 215 | total wait time: 395 | dealt at time point: 3819.0
+Patient 73 | total wait time: 2703 | dealt at time point: 3855.0
+Patient 87 | total wait time: 2517 | dealt at time point: 3894.0
+Patient 267 | total wait time: 186 | dealt at time point: 4443.0
+Patient 255 | total wait time: 414 | dealt at time point: 4478.0
+Patient 53 | total wait time: 3686 | dealt at time point: 4518.0
+Patient 93 | total wait time: 3594 | dealt at time point: 5067.0
+Patient 95 | total wait time: 3597 | dealt at time point: 5102.0
+Patient 150 | total wait time: 2758 | dealt at time point: 5142.0
+Patient 336 | total wait time: 332 | dealt at time point: 5692.0
+Patient 328 | total wait time: 494 | dealt at time point: 5727.0
+Patient 67 | total wait time: 4710 | dealt at time point: 5767.0
+Patient 387 | total wait time: 140 | dealt at time point: 6316.0
+Patient 364 | total wait time: 542 | dealt at time point: 6351.0
+Patient 390 | total wait time: 168 | dealt at time point: 6393.0
+Patient 432 | total wait time: 46 | dealt at time point: 6942.0
+Patient 376 | total wait time: 975 | dealt at time point: 6975.0
+Patient 70 | total wait time: 5915 | dealt at time point: 7019.0
+Patient 449 | total wait time: 399 | dealt at time point: 7567.0
+Patient 110 | total wait time: 5855 | dealt at time point: 7599.0
+Patient 142 | total wait time: 5388 | dealt at time point: 7645.0
+Patient 503 | total wait time: 161 | dealt at time point: 8193.0
+Patient 502 | total wait time: 206 | dealt at time point: 8223.0
+Patient 349 | total wait time: 2702 | dealt at time point: 8270.0
+Patient 547 | total wait time: 83 | dealt at time point: 8819.0
+Patient 552 | total wait time: 31 | dealt at time point: 8848.0
+Patient 531 | total wait time: 415 | dealt at time point: 8895.0
+Patient 591 | total wait time: 4 | dealt at time point: 9444.0
+Patient 560 | total wait time: 530 | dealt at time point: 9474.0
+Patient 188 | total wait time: 6526 | dealt at time point: 9519.0
+Patient 620 | total wait time: 166 | dealt at time point: 10070.0
+Patient 629 | total wait time: 51 | dealt at time point: 10099.0
+Patient 265 | total wait time: 5921 | dealt at time point: 10145.0
+Patient 633 | total wait time: 582 | dealt at time point: 10695.0
+Patient 324 | total wait time: 5555 | dealt at time point: 10723.0
+Patient 374 | total wait time: 4800 | dealt at time point: 10769.0
+Patient 705 | total wait time: 26 | dealt at time point: 26.0
+Patient 706 | total wait time: 37 | dealt at time point: 53.0
+Patient 707 | total wait time: 80 | dealt at time point: 113.0
+Patient 724 | total wait time: 347 | dealt at time point: 652.0
+Patient 736 | total wait time: 179 | dealt at time point: 676.0
+Patient 750 | total wait time: 18 | dealt at time point: 738.0
+Patient 756 | total wait time: 461 | dealt at time point: 1277.0
+Patient 775 | total wait time: 180 | dealt at time point: 1300.0
+Patient 747 | total wait time: 692 | dealt at time point: 1364.0
+Patient 717 | total wait time: 1710 | dealt at time point: 1902.0
+Patient 824 | total wait time: 19 | dealt at time point: 1924.0
+Patient 789 | total wait time: 645 | dealt at time point: 1990.0
+Patient 760 | total wait time: 1646 | dealt at time point: 2526.0
+Patient 793 | total wait time: 1141 | dealt at time point: 2549.0
+Patient 721 | total wait time: 2359 | dealt at time point: 2615.0
+Patient 869 | total wait time: 526 | dealt at time point: 3150.0
+Patient 897 | total wait time: 103 | dealt at time point: 3175.0
+Patient 726 | total wait time: 2903 | dealt at time point: 3240.0
+Patient 734 | total wait time: 3311 | dealt at time point: 3775.0
+Patient 915 | total wait time: 439 | dealt at time point: 3800.0
+Patient 751 | total wait time: 3127 | dealt at time point: 3863.0
+Patient 952 | total wait time: 448 | dealt at time point: 4401.0
+Patient 962 | total wait time: 312 | dealt at time point: 4424.0
+Patient 948 | total wait time: 598 | dealt at time point: 4487.0
+Patient 960 | total wait time: 944 | dealt at time point: 5024.0
+Patient 836 | total wait time: 2954 | dealt at time point: 5050.0
+Patient 739 | total wait time: 4567 | dealt at time point: 5112.0
+Patient 908 | total wait time: 2399 | dealt at time point: 5648.0
+Patient 954 | total wait time: 1691 | dealt at time point: 5675.0
+Patient 1056 | total wait time: 120 | dealt at time point: 5736.0
+Patient 1089 | total wait time: 126 | dealt at time point: 6271.0
+Patient 1095 | total wait time: 59 | dealt at time point: 6299.0
+Patient 1096 | total wait time: 104 | dealt at time point: 6360.0
+Patient 1007 | total wait time: 2063 | dealt at time point: 6896.0
+Patient 832 | total wait time: 4891 | dealt at time point: 6923.0
+Patient 893 | total wait time: 3976 | dealt at time point: 6985.0
+Patient 1023 | total wait time: 2434 | dealt at time point: 7522.0
+Patient 723 | total wait time: 7261 | dealt at time point: 7549.0
+Patient 1179 | total wait time: 23 | dealt at time point: 7608.0
+Patient 1083 | total wait time: 2099 | dealt at time point: 8147.0
+Patient 833 | total wait time: 6124 | dealt at time point: 8173.0
+Patient 835 | total wait time: 6150 | dealt at time point: 8231.0
+Patient 1162 | total wait time: 1460 | dealt at time point: 8772.0
+Patient 1066 | total wait time: 3022 | dealt at time point: 8798.0
+Patient 1099 | total wait time: 2551 | dealt at time point: 8856.0
+Patient 1282 | total wait time: 164 | dealt at time point: 9397.0
+Patient 1268 | total wait time: 414 | dealt at time point: 9423.0
+Patient 1284 | total wait time: 216 | dealt at time point: 9481.0
+Patient 1291 | total wait time: 644 | dealt at time point: 10021.0
+Patient 827 | total wait time: 8097 | dealt at time point: 10049.0
+Patient 1073 | total wait time: 4216 | dealt at time point: 10105.0
+Patient 1361 | total wait time: 150 | dealt at time point: 10646.0
+Patient 1363 | total wait time: 145 | dealt at time point: 10673.0
+Patient 709 | total wait time: 10667 | dealt at time point: 10731.0
+Patient 1385 | total wait time: 392 | dealt at time point: 11272.0
+Patient 841 | total wait time: 9121 | dealt at time point: 11298.0
+Patient 1264 | total wait time: 2412 | dealt at time point: 11356.0
+Patient 740 | total wait time: 11337 | dealt at time point: 11897.0
+Patient 1132 | total wait time: 5090 | dealt at time point: 11923.0
+Patient 1214 | total wait time: 3837 | dealt at time point: 11982.0
+Patient 1475 | total wait time: 27 | dealt at time point: 43.0
+Patient 1476 | total wait time: 63 | dealt at time point: 96.0
+Patient 1474 | total wait time: 104 | dealt at time point: 105.0
+Patient 1500 | total wait time: 252 | dealt at time point: 668.0
+Patient 1514 | total wait time: 81 | dealt at time point: 721.0
+Patient 1492 | total wait time: 443 | dealt at time point: 731.0
+Patient 1533 | total wait time: 348 | dealt at time point: 1293.0
+Patient 1544 | total wait time: 226 | dealt at time point: 1346.0
+Patient 1519 | total wait time: 636 | dealt at time point: 1357.0
+Patient 1589 | total wait time: 77 | dealt at time point: 1918.0

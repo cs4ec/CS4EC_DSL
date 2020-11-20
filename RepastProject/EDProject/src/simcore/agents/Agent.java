@@ -56,12 +56,12 @@ public class Agent {
 
 		if(curPoint.getX() > pdblBottomLeft.x && curPoint.getX() < pdblBottomRight.x) {
 			if(curPoint.getY() > pdblBottomLeft.y && curPoint.getY() < pdblTopLeft.y) {
-				System.out.println("I am in " + pLoc);
+				System.out.println(this + " I am in " + pLoc);
 				return true;
 			}
 		}
 		
-		System.out.println("I am not in " + pLoc);
+		System.out.println(this + " I am not in " + pLoc);
 		return false;		
 	}
 	

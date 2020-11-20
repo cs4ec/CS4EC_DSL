@@ -79,10 +79,10 @@ public class JuniorDoctor extends Doctor {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsC")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsConsultationRooms")))));
     sendSignalTemp = new NewPatientGotoOfficeSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
-    sendSignalTemp.AddData("destination", ReadMap().FindPlace("MajorsC"));
+    sendSignalTemp.AddData("destination", ReadMap().FindPlace("MajorsConsultationRooms"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
@@ -96,9 +96,9 @@ public class JuniorDoctor extends Doctor {
     sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(s.GetData("destination")));
     curMission.WithStep(new ActionStep().WithName("wait until patient arrive").WithAction(sa));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("inspect the patientmake").WithAction(new StayForTimeAction().WithTimeSpan(10)));
+    curMission.WithStep(new ActionStep().WithName("inspect the patientmake").WithAction(new StayForTimeAction().WithTimeSpan(600)));
     this.InitDecideOnPatientPathway(s);
-    curMission.WithStep(new ActionStep().WithName("go back to office in MajorsC").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsC"))));
+    curMission.WithStep(new ActionStep().WithName("go back to office in MajorsC").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsConsultationRooms"))));
 
   }
   public void InitXRay(Signal s) {
@@ -108,7 +108,7 @@ public class JuniorDoctor extends Doctor {
 
     sendSignalTemp = new XRaySignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
-    sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsC"));
+    sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
@@ -189,7 +189,7 @@ public class JuniorDoctor extends Doctor {
 
     sendSignalTemp = new PatientNeedsBloodTestSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
-    sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsC"));
+    sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
@@ -198,13 +198,13 @@ public class JuniorDoctor extends Doctor {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsC"))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsC")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsConsultationRooms"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsConsultationRooms")))));
     StayForConditionAction sa = new StayForConditionAction();
-    sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("MajorsC")));
+    sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("MajorsConsultationRooms")));
     curMission.WithStep(new ActionStep().WithName("").WithAction(sa));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(5)));
+    curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
     this.InitLetPatientGo(s);
 
   }

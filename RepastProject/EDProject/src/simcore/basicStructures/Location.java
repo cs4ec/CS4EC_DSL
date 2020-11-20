@@ -354,4 +354,9 @@ public class Location {
 	public Color getColour() {
 		return this.roomColour;
 	}
+	
+	@Override
+	public String toString() {
+		return name();
+	}
 }

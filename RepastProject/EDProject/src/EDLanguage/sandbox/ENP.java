@@ -57,7 +57,7 @@ public class ENP extends Staff {
     StayForConditionAction sa = new StayForConditionAction();
     sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("Triage")));
     curMission.WithStep(new ActionStep().WithName("wait until patient arrive").WithAction(sa));
-    curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(10)));
+    curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(600)));
     if (CheckCondition(new PossibilityCondition().WithPossibility(30))) {
       this.InitLetPatientLeave(s);
     } else {

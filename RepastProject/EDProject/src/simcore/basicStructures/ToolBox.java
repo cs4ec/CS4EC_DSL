@@ -1,5 +1,7 @@
 package simcore.basicStructures;
 
+import java.util.Date;
+
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.space.grid.Grid;
