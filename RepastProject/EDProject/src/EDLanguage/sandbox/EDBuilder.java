@@ -13,9 +13,13 @@ import repast.simphony.context.space.grid.GridFactory;
 import repast.simphony.context.space.grid.GridFactoryFinder;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridBuilderParameters;
+import repast.simphony.space.grid.GridPoint;
 import repast.simphony.space.grid.SimpleGridAdder;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.PatientAdder;
+import simcore.basicStructures.Wall;
+import simcore.utilities.AStar;
+import simcore.utilities.StaffAdder;
 import repast.simphony.valueLayer.GridValueLayer;
 import simcore.basicStructures.Location;
 import java.awt.Color;
@@ -23,59 +27,103 @@ import repast.simphony.space.continuous.NdPoint;
 
 public class EDBuilder implements ContextBuilder<Object> {
 
-  public Context build(Context<Object> context) {
+	public Context build(Context<Object> context) {
 
-    context.setId("EDProject");
+		context.setId("EDProject");
 
+		ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
+		ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context,
+				new StaffAdder<Object>(), new StrictBorders(), 400, 200);
 
-    ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
-    ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new RandomCartesianAdder<Object>(), new StrictBorders(), 400, 200);
+		GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
+		Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(
+				new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 200));
 
-    GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
-    Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 200));
+		context.add(new Board());
+		context.add(new PatientAdder(space, grid).WithTimeSpan(15));
 
-    context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(15));
+		// add Agents
+		for (int i = 0; i < 5; i++) {
+			Doctor pDoc = new Doctor(space, grid);
+			context.add(pDoc);
+		}
+		for (int i = 0; i < 7; i++) {
+			Nurse pNurse = new Nurse(space, grid);
+			context.add(pNurse);	
+		}
+		for (int i = 0; i < 3; i++) {
+			ENP pENP = new ENP(space, grid);
+			context.add(pENP);	
+		}
 
+		GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 400,
+				200);
+		context.addValueLayer(vl);
 
-    // add Agents 
-    for (int i = 0; i < 5; i++) {
-      context.add(new Doctor(space, grid));
-    }
-    for (int i = 0; i < 7; i++) {
-      context.add(new Nurse(space, grid));
-    }
-    for (int i = 0; i < 3; i++) {
-      context.add(new ENP(space, grid));
-    }
+		// add Locations here
+		Location Pediatrics_a = new Location("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, "Right",
+				Color.BLUE);
+		Location MainReceptions_b = new Location("MainReceptions", context, space, grid, 55, 125, 20, 20, 1, 40, "Top",
+				Color.GREEN);
+		Location Triage_c = new Location("Triage", context, space, grid, 105, 150, 20, 20, 1, 15, "Left", Color.GREEN);
+		Location MajorsTriage_d = new Location("MajorsTriage", context, space, grid, 120, 80, 20, 20, 1, 15, "Right",
+				Color.GREEN);
+		Location MajorsWaitingRoom_e = new Location("MajorsWaitingRoom", context, space, grid, 150, 60, 20, 50, 1, 50,
+				"Left", Color.GRAY);
+		Location MajorsConsultationRooms_f = new Location("MajorsConsultationRooms", context, space, grid, 120, 50, 50,
+				10, 1, 50, "Top", Color.YELLOW);
+		Location TaskRoom_g = new Location("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, "Bottom",
+				Color.YELLOW);
+		Location Entrance_h = new Location("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, "Top",
+				Color.GRAY);
+		Location XRayRoom1_i = new Location("XRayRoom1", context, space, grid, 155, 125, 20, 20, 1, 10, "Bottom",
+				Color.YELLOW);
+		Location WaitingRoom_j = new Location("WaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 200, "Left",
+				Color.GRAY);
 
+		for (int i = 0; i < 75; i++) {
+			Wall pWall = new Wall("", context, space, grid, i, 124);
+		}
 
-    GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 400, 200);
-    context.addValueLayer(vl);
+//		for (int i = 0; i < 125; i++) {
+//			Wall pWall = new Wall("", context, space, grid, 75, i);
+//		}
 
-    // add Locations here 
-    Location Pediatrics_a = new Location("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, "Right", Color.BLUE);
-    Location MainReceptions_b = new Location("MainReceptions", context, space, grid, 55, 125, 20, 20, 1, 40, "Top", Color.GREEN);
-    Location Triage_c = new Location("Triage", context, space, grid, 105, 150, 20, 20, 1, 15, "Left", Color.GREEN);
-    Location MajorsTriage_d = new Location("MajorsTriage", context, space, grid, 120, 80, 20, 20, 1, 15, "Right", Color.GREEN);
-    Location MajorsWaitingRoom_e = new Location("MajorsWaitingRoom", context, space, grid, 150, 60, 20, 50, 1, 50, "Left", Color.GRAY);
-    Location MajorsConsultationRooms_f = new Location("MajorsConsultationRooms", context, space, grid, 120, 50, 50, 10, 1, 50, "Top", Color.YELLOW);
-    Location TaskRoom_g = new Location("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, "Bottom", Color.YELLOW);
-    Location Entrance_h = new Location("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, "Top", Color.GRAY);
-    Location XRayRoom1_i = new Location("XRayRoom1", context, space, grid, 155, 125, 20, 20, 1, 10, "Bottom", Color.YELLOW);
-    Location WaitingRoom_j = new Location("WaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 200, "Left", Color.GRAY);
+		for (int x = 105; x < 180; x++) {
+			Wall pWall = new Wall("", context, space, grid, x, 149);
+		}
 
+		for (int y = 150; y < 170; y++) {
+			Wall pWall = new Wall("", context, space, grid, 125, y);
+		}
 
+		for (int x = 125; x < 155; x++) {
+			Wall pWall = new Wall("", context, space, grid, x, 170);
+		}
 
+		for (int y = 170; y < 200; y++) {
+			Wall pWall = new Wall("", context, space, grid, 155, y);
+		}
+		
+//		for (int x = 0; x < 300; x++) {
+//			Wall pWall = new Wall("", context, space, grid, x, 100);
+//		}
+		
+		for (int x = 0; x < 399; x++) {
+			Wall pWall = new Wall("", context, space, grid, x, 0);
+			Wall pWall2 = new Wall("", context, space, grid, x, 199);
+		}
+		
+		for (int y = 0; y < 199; y++) {
+			Wall pWall = new Wall("", context, space, grid, 0, y);
+			Wall pWall2 = new Wall("", context, space, grid, 399, y);
+		}
 
+		for (Object obj : context) {
+			NdPoint pt = space.getLocation(obj);
+			grid.moveTo(obj, (int) pt.getX(), (int) pt.getY());
+		}
 
-
-    for (Object obj : context) {
-      NdPoint pt = space.getLocation(obj);
-      grid.moveTo(obj, (int) pt.getX(), (int) pt.getY());
-    }
-
-
-    return context;
-  }
+		return context;
+	}
 }

@@ -1,6 +1,7 @@
 package simcore.agents;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import repast.simphony.context.Context;
@@ -27,6 +28,7 @@ import simcore.action.basicAction.MoveAction;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Location;
 import simcore.basicStructures.ToolBox;
+import simcore.utilities.AStar;
 
 public class Patient extends Agent{
 
@@ -35,6 +37,8 @@ public class Patient extends Agent{
 	private Order curOrder;
 	private boolean hasBeenDealtWith;
 	private int totalWaitTime;
+	protected List<GridPoint> curPath;
+
 	
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -166,17 +170,50 @@ public class Patient extends Agent{
 	}
     
     public void MoveTowards(GridPoint pt) {
+		System.out.println("move to:" + pt);
+
+		NdPoint myPoint = space.getLocation(this);
+
+		if (!SpaceAt(pt)) {
+			if (curPath == null || curPath.isEmpty()) {
+				System.out.println("No path assigned, getting new one");
+				curPath = new ArrayList<>();
+				curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
+
+			} else {
+				System.out.println("Have path already");
+				GridPoint pathGridPoint = curPath.get(curPath.size() - 1);
+				if (pathGridPoint.getX() != pt.getX() || pathGridPoint.getY() != pt.getY()) {
+					System.out.println("But path is to wrong place");
+					curPath = new ArrayList<>();
+					curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
+
+				}
+			}
+			
+			if(!curPath.isEmpty()) {
+				GridPoint GridStep = curPath.get(0);
+				curPath.remove(0);
+				NdPoint otherPoint = new NdPoint(GridStep.getX(), GridStep.getY());
+				space.moveTo(this, otherPoint.getX(), otherPoint.getY());
+				myPoint = space.getLocation(this);
+				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+			}
+		}
+    	
+    	
+    	
 		// only move if we are not already in this grid location
 //		System.out.println("moveTowards called: " + this);
-		if (!grid.getLocation(this).equals(pt)) {
-//			System.out.println("move successfully: " + this);
-			NdPoint myPoint = space.getLocation(this);
-			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
-			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
-			space.moveByVector(this, 1.4, angle, 0);
-			myPoint = space.getLocation(this);
-			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
-		}
+//		if (!grid.getLocation(this).equals(pt)) {
+////			System.out.println("move successfully: " + this);
+//			NdPoint myPoint = space.getLocation(this);
+//			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
+//			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
+//			space.moveByVector(this, 1.4, angle, 0);
+//			myPoint = space.getLocation(this);
+//			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+//		}
 	}
     
 //    public boolean SpaceAt(Object o) {

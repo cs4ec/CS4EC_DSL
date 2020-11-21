@@ -1,4 +1,4 @@
-package simcore.basicStructures;
+package simcore.utilities;
 
 public class Tuple<X, Y> { 
 	  public final X x; 

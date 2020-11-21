@@ -133,6 +133,23 @@
     <classNode dependClassName="simcore.agents.Patient" />
     <classNode extendsClassName="EDLanguage.sandbox.Doctor" />
   </dependency>
+  <dependency className="EDLanguage.sandbox.MajorsTriageNurse">
+    <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForDoctorSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
   <dependency className="EDLanguage.sandbox.NewPatientGotoOfficeSignal">
     <classNode extendsClassName="simcore.Signals.Signal" />
   </dependency>

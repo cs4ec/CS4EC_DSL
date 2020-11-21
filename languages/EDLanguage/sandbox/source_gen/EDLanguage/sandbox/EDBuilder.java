@@ -57,11 +57,13 @@ public class EDBuilder implements ContextBuilder<Object> {
     Location Pediatrics_a = new Location("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, "Right", Color.BLUE);
     Location MainReceptions_b = new Location("MainReceptions", context, space, grid, 55, 125, 20, 20, 1, 40, "Top", Color.GREEN);
     Location Triage_c = new Location("Triage", context, space, grid, 105, 150, 20, 20, 1, 15, "Left", Color.GREEN);
-    Location TaskRoom_d = new Location("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, "Bottom", Color.YELLOW);
-    Location MajorsC_e = new Location("MajorsC", context, space, grid, 120, 50, 50, 50, 1, 5000, "Top", Color.BLUE);
-    Location Entrance_f = new Location("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, "Top", Color.GRAY);
-    Location XRayRoom1_g = new Location("XRayRoom1", context, space, grid, 155, 125, 20, 20, 1, 10, "Bottom", Color.YELLOW);
-    Location WaitingRoom_h = new Location("WaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 200, "Left", Color.GRAY);
+    Location MajorsTriage_d = new Location("MajorsTriage", context, space, grid, 120, 80, 20, 20, 1, 15, "Right", Color.GREEN);
+    Location MajorsWaitingRoom_e = new Location("MajorsWaitingRoom", context, space, grid, 150, 60, 20, 50, 1, 50, "Left", Color.GRAY);
+    Location MajorsConsultationRooms_f = new Location("MajorsConsultationRooms", context, space, grid, 120, 50, 50, 10, 1, 50, "Top", Color.YELLOW);
+    Location TaskRoom_g = new Location("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, "Bottom", Color.YELLOW);
+    Location Entrance_h = new Location("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, "Top", Color.GRAY);
+    Location XRayRoom1_i = new Location("XRayRoom1", context, space, grid, 155, 125, 20, 20, 1, 10, "Bottom", Color.YELLOW);
+    Location WaitingRoom_j = new Location("WaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 200, "Left", Color.GRAY);
 
 
 

@@ -11,7 +11,7 @@ import simcore.action.basicAction.StayForTimeAction;
 import simcore.basicStructures.EDMap;
 import simcore.basicStructures.Location;
 import simcore.basicStructures.ToolBox;
-import simcore.basicStructures.Tuple;
+import simcore.utilities.Tuple;
 
 public class Agent {
 	// Record the building that the agent is currently inside
