@@ -19,6 +19,10 @@
       <string>simcore.styles.LocationStyle</string>
     </entry>
     <entry>
+      <string>simcore.basicStructures.Wall</string>
+      <string>simcore.styles.WallStyle</string>
+    </entry>
+    <entry>
       <string>EDLanguage.sandbox.ENP</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
@@ -41,6 +45,10 @@
       <null/>
     </entry>
     <entry>
+      <string>simcore.basicStructures.Wall</string>
+      <null/>
+    </entry>
+    <entry>
       <string>EDLanguage.sandbox.ENP</string>
       <string>EDLanguage.sandbox.ENP.style_8.xml</string>
     </entry>
@@ -55,7 +63,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-1293861696</hashCode>
+    <hashCode>521838883</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>
@@ -63,23 +71,27 @@
   <layerOrder>
     <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <int>4</int>
+      <int>5</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Nurse</string>
-      <int>2</int>
+      <int>3</int>
     </entry>
     <entry>
       <string>simcore.agents.Patient</string>
-      <int>1</int>
+      <int>2</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Location</string>
+      <int>1</int>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Wall</string>
       <int>0</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.ENP</string>
-      <int>3</int>
+      <int>4</int>
     </entry>
   </layerOrder>
   <projections>

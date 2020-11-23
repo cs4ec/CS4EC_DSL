@@ -21,7 +21,7 @@ public class AStar {
 	private final List<Node> open;
 	private final List<Node> closed;
 	private final List<Node> path;
-	private final int[][] maze;
+	private static int[][] maze = null;
 	private Node now;
 	private final int xstart;
 	private final int ystart;
@@ -48,20 +48,53 @@ public class AStar {
 		@Override
 		public int compareTo(Object o) {
 			Node that = (Node) o;
-			return (int) ((this.g + this.h) - (that.g + that.h));
+			if(((this.g + this.h) - (that.g + that.h)) > 0) {
+				return 1;
+			} else if(((this.g + this.h) - (that.g + that.h)) < 0)  {
+				return -1;
+			} else {
+				return 0;
+			}
 		}
 	}
 
-	AStar(int[][] maze, int xstart, int ystart, boolean diag, Grid<Object> grid) {
+	AStar(int xstart, int ystart, boolean diag, Grid<Object> grid) {
 		this.open = new ArrayList<>();
 		this.closed = new ArrayList<>();
 		this.path = new ArrayList<>();
-		this.maze = maze;
+		if (maze == null) {
+			maze = readMap(grid);
+		}
 		this.now = new Node(null, xstart, ystart, 0, 0);
 		this.xstart = xstart;
 		this.ystart = ystart;
 		this.diag = diag;
 		this.grid = grid;
+	}
+
+	private int[][] readMap(Grid<Object> grid) {
+		GridDimensions pdim = grid.getDimensions();
+		int xMax = (int) pdim.getWidth();
+		int yMax = (int) pdim.getHeight();
+
+		int[][] mazeMap = new int[xMax][yMax];
+
+		for (int i = 0; i < xMax; i++) {
+			for (int j = 0; j < yMax; j++) {
+				Iterable<Object> plstItemsHere = grid.getObjectsAt(i, j);
+				List<Object> actualList = new ArrayList<Object>();
+				plstItemsHere.forEach(actualList::add);
+				ArrayList<Object> plstWalls = (ArrayList<Object>) actualList.stream().filter(x -> x instanceof Wall)
+						.collect(Collectors.toList());
+				if (plstWalls.size() > 0) {
+					mazeMap[i][j] = -1;
+				} else {
+					mazeMap[i][j] = 0;
+				}
+			}
+		}
+
+		return mazeMap;
 	}
 
 	/*
@@ -127,23 +160,11 @@ public class AStar {
 					continue; // skip if diagonal movement is not allowed
 				}
 				node = new Node(this.now, this.now.x + x, this.now.y + y, this.now.g, this.distance(x, y));
-				
-				Boolean passable = true;
-				Iterable<Object> plstItemsHere = grid.getObjectsAt(this.now.x + x, this.now.y + y);
-				List<Object> actualList = new ArrayList<Object>();
-				plstItemsHere.forEach(actualList::add);
-				ArrayList<Object> plstWalls = (ArrayList<Object>) actualList.stream().filter(l -> l instanceof Wall)
-						.collect(Collectors.toList());
-				if (plstWalls.size() > 0) {
-					passable = false;
-				} 
-				
-				
+
 				if ((x != 0 || y != 0) // not this.now
 						&& this.now.x + x >= 0 && this.now.x + x < this.maze[0].length // check maze boundaries
 						&& this.now.y + y >= 0 && this.now.y + y < this.maze.length
-						&& passable
-//						&& this.maze[this.now.y + y][this.now.x + x] != -1 // check if square is walkable
+						&& this.maze[this.now.x + x][this.now.y + y] != -1 // check if square is walkable
 						&& !findNeighborInList(this.open, node) && !findNeighborInList(this.closed, node)) { // if not
 																												// already
 																												// done
@@ -152,10 +173,11 @@ public class AStar {
 
 					// diagonal cost = sqrt(hor_cost² + vert_cost²)
 					// in this example the cost would be 12.2 instead of 11
-					/*
-					 * if (diag && x != 0 && y != 0) { node.g += .4; // Diagonal movement cost = 1.4
-					 * }
-					 */
+
+					if (diag && x != 0 && y != 0) {
+						node.g += 0.4; // Diagonal movement cost = 1.4
+					}
+
 					this.open.add(node);
 				}
 			}
@@ -165,100 +187,18 @@ public class AStar {
 
 	public static ArrayList<GridPoint> getRoute(Grid<Object> grid, GridPoint pMyCoordinates,
 			GridPoint pTargetCoordinates) {
-		// -1 = blocked
-		// 0+ = additional movement cost
-//        int[][] maze = {
-//            {  0,  0,  0,  0,  0,  0,  0,  0},
-//            {  0,  0,  0,  0,  0,  0,  0,  0},
-//            {  0,  0,  0,100,100,100,  0,  0},
-//            {  0,  0,  0,  0,  0,100,  0,  0},
-//            {  0,  0,100,  0,  0,100,  0,  0},
-//            {  0,  0,100,  0,  0,100,  0,  0},
-//            {  0,  0,100,100,100,100,  0,  0},
-//            {  0,  0,  0,  0,  0,  0,  0,  0},
-//        };
-
-		System.out.println("Finding Route Between " + pMyCoordinates.getX() + "," + pMyCoordinates.getY() + " and "
-				+ pTargetCoordinates.getX() + "," + pTargetCoordinates.getY());
-
-		GridDimensions pdim = grid.getDimensions();
-		int xMax = (int) pdim.getWidth();
-		int yMax = (int) pdim.getHeight();
-
-		int[][] mazeMap = new int[xMax][yMax];
-	
-		for (int i = 0; i < xMax; i++) {
-			for (int j = 0; j < yMax; j++) {
-//				Iterable<Object> plstItemsHere = grid.getObjectsAt(i, j);
-//				List<Object> actualList = new ArrayList<Object>();
-//				plstItemsHere.forEach(actualList::add);
-//				ArrayList<Object> plstWalls = (ArrayList<Object>) actualList.stream().filter(x -> x instanceof Wall)
-//						.collect(Collectors.toList());
-//				if (plstWalls.size() > 0) {
-//					mazeMap[i][j] = -1;
-//				} 
-//				else {
-					mazeMap[i][j] = 0;
-//				}
-			}
-		}
 
 		ArrayList<GridPoint> plstRoute = new ArrayList<>();
 
-		AStar as = new AStar(mazeMap, pMyCoordinates.getX(), pMyCoordinates.getY(), false, grid);
+		AStar as = new AStar(pMyCoordinates.getX(), pMyCoordinates.getY(), true, grid);
 		List<Node> path = as.findPathTo(pTargetCoordinates.getX(), pTargetCoordinates.getY());
 		if (path != null) {
 			path.forEach((n) -> {
-				System.out.print("[" + n.x + ", " + n.y + "] ");
 				plstRoute.add(new GridPoint(n.x, n.y));
-				mazeMap[n.y][n.x] = -1;
+//				mazeMap[n.y][n.x] = -1;
 			});
-//			System.out.printf("\nTotal cost: %.02f\n", path.get(path.size() - 1).g);
-
-//			for (int[] maze_row : mazeMap) {
-//				for (int maze_entry : maze_row) {
-//					switch (maze_entry) {
-//					case 0:
-//						System.out.print("_");
-//						break;
-//					case -1:
-//						System.out.print("*");
-//						break;
-//					default:
-//						System.out.print("#");
-//					}
-//
-//				}
-//				System.out.println();
-//			}
 		}
 
 		return plstRoute;
-
-//        AStar as = new AStar(maze, 0, 0, true);
-//        List<Node> path = as.findPathTo(7, 7);
-//        if (path != null) {
-//            path.forEach((n) -> {
-//                System.out.print("[" + n.x + ", " + n.y + "] ");
-//                maze[n.y][n.x] = -1;
-//            });
-//            System.out.printf("\nTotal cost: %.02f\n", path.get(path.size() - 1).g);
-// 
-//            for (int[] maze_row : maze) {
-//                for (int maze_entry : maze_row) {
-//                    switch (maze_entry) {
-//                        case 0:
-//                            System.out.print("_");
-//                            break;
-//                        case -1:
-//                            System.out.print("*");
-//                            break;
-//                        default:
-//                            System.out.print("#");
-//                    }
-//                }
-//                System.out.println();
-//            }
-//        }
 	}
 }

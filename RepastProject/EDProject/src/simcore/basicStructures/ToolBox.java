@@ -34,5 +34,4 @@ public class ToolBox {
 	public LogNote GetLog() {
 		return LogNote.GetUniqueLog();
 	}
-
 }

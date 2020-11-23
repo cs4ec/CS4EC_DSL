@@ -118,6 +118,10 @@ public class EDBuilder implements ContextBuilder<Object> {
 			Wall pWall = new Wall("", context, space, grid, 0, y);
 			Wall pWall2 = new Wall("", context, space, grid, 399, y);
 		}
+		
+		for (int y = 125; y < 149; y++) {
+			Wall pWall = new Wall("", context, space, grid, 152, y);
+		}
 
 		for (Object obj : context) {
 			NdPoint pt = space.getLocation(obj);
