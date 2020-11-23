@@ -1062,5 +1062,48 @@
       <property role="1L1pqM" value="yellow" />
     </node>
   </node>
+  <node concept="1TIwiD" id="12ocaqaua7C">
+    <property role="EcuMT" value="1195759192912732648" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="WallInstanceDefinition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="12ocaqaua7D" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="12ocaqaua7F" role="1TKVEl">
+      <property role="IQ2nx" value="1195759192912732651" />
+      <property role="TrG5h" value="xStart" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="12ocaqaua7H" role="1TKVEl">
+      <property role="IQ2nx" value="1195759192912732653" />
+      <property role="TrG5h" value="yStart" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="12ocaqaua7K" role="1TKVEl">
+      <property role="IQ2nx" value="1195759192912732656" />
+      <property role="TrG5h" value="xEnd" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="12ocaqaua7O" role="1TKVEl">
+      <property role="IQ2nx" value="1195759192912732660" />
+      <property role="TrG5h" value="yEnd" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="12ocaqawGDh">
+    <property role="EcuMT" value="1195759192913398353" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="WallDefinition" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="12ocaqawGDk" role="1TKVEi">
+      <property role="IQ2ns" value="1195759192913398356" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="walls" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="12ocaqaua7C" resolve="WallInstanceDefinition" />
+    </node>
+  </node>
 </model>
 

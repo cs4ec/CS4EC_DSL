@@ -61,6 +61,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StayForConditionAction;
   private ConceptPresentation props_StayForTimeAction;
   private ConceptPresentation props_StopOrder;
+  private ConceptPresentation props_WallDefinition;
+  private ConceptPresentation props_WallInstanceDefinition;
 
   @Override
   @Nullable
@@ -448,6 +450,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StopOrder = cpb.create();
         }
         return props_StopOrder;
+      case LanguageConceptSwitch.WallDefinition:
+        if (props_WallDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("WallDefinition");
+          props_WallDefinition = cpb.create();
+        }
+        return props_WallDefinition;
+      case LanguageConceptSwitch.WallInstanceDefinition:
+        if (props_WallInstanceDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_WallInstanceDefinition = cpb.create();
+        }
+        return props_WallInstanceDefinition;
     }
     return null;
   }

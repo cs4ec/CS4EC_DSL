@@ -57,8 +57,17 @@
       <concept id="4334763093659899467" name="EDLanguage.structure.PossibilityCondition" flags="ng" index="jeBDq">
         <child id="7454555096515830426" name="possibility" index="x58j7" />
       </concept>
+      <concept id="1195759192913398353" name="EDLanguage.structure.WallDefinition" flags="ng" index="2q6JFR">
+        <child id="1195759192913398356" name="walls" index="2q6JFM" />
+      </concept>
       <concept id="6839259415242834338" name="EDLanguage.structure.PatientInterval" flags="ng" index="2qCAYh">
         <property id="6839259415242834339" name="timespan" index="2qCAYg" />
+      </concept>
+      <concept id="1195759192912732648" name="EDLanguage.structure.WallInstanceDefinition" flags="ng" index="2qS95e">
+        <property id="1195759192912732653" name="yStart" index="2qS95b" />
+        <property id="1195759192912732651" name="xStart" index="2qS95d" />
+        <property id="1195759192912732660" name="yEnd" index="2qS95i" />
+        <property id="1195759192912732656" name="xEnd" index="2qS95m" />
       </concept>
       <concept id="7454555096515224041" name="EDLanguage.structure.NumericExpression" flags="ng" index="xbsuO">
         <child id="7454555096515273671" name="expression" index="xbgmq" />
@@ -1406,6 +1415,75 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="2q6JFR" id="2Cgo4_kUScM">
+    <property role="3GE5qa" value="rooms" />
+    <node concept="2qS95e" id="2Cgo4_kUScN" role="2q6JFM">
+      <property role="2qS95d" value="0" />
+      <property role="2qS95b" value="74" />
+      <property role="2qS95m" value="75" />
+      <property role="2qS95i" value="124" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUScP" role="2q6JFM">
+      <property role="2qS95d" value="75" />
+      <property role="2qS95b" value="0" />
+      <property role="2qS95m" value="75" />
+      <property role="2qS95i" value="125" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUScS" role="2q6JFM">
+      <property role="2qS95d" value="105" />
+      <property role="2qS95b" value="149" />
+      <property role="2qS95m" value="180" />
+      <property role="2qS95i" value="149" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUScW" role="2q6JFM">
+      <property role="2qS95d" value="125" />
+      <property role="2qS95b" value="150" />
+      <property role="2qS95m" value="125" />
+      <property role="2qS95i" value="170" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUSd1" role="2q6JFM">
+      <property role="2qS95d" value="125" />
+      <property role="2qS95b" value="170" />
+      <property role="2qS95m" value="155" />
+      <property role="2qS95i" value="170" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUSd7" role="2q6JFM">
+      <property role="2qS95d" value="155" />
+      <property role="2qS95b" value="170" />
+      <property role="2qS95m" value="155" />
+      <property role="2qS95i" value="200" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUSdA" role="2q6JFM">
+      <property role="2qS95d" value="0" />
+      <property role="2qS95b" value="0" />
+      <property role="2qS95m" value="399" />
+      <property role="2qS95i" value="0" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUSdJ" role="2q6JFM">
+      <property role="2qS95d" value="0" />
+      <property role="2qS95b" value="199" />
+      <property role="2qS95m" value="399" />
+      <property role="2qS95i" value="199" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUSdT" role="2q6JFM">
+      <property role="2qS95d" value="0" />
+      <property role="2qS95b" value="0" />
+      <property role="2qS95m" value="199" />
+      <property role="2qS95i" value="0" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUSe4" role="2q6JFM">
+      <property role="2qS95d" value="399" />
+      <property role="2qS95b" value="0" />
+      <property role="2qS95m" value="399" />
+      <property role="2qS95i" value="199" />
+    </node>
+    <node concept="2qS95e" id="2Cgo4_kUSeg" role="2q6JFM">
+      <property role="2qS95d" value="152" />
+      <property role="2qS95b" value="125" />
+      <property role="2qS95m" value="152" />
+      <property role="2qS95i" value="149" />
     </node>
   </node>
 </model>

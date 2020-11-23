@@ -58,3 +58,4 @@ Time point: 3130.0 | PatientsSeen: 57.0
 Time point: 3182.0 | PatientsSeen: 58.0
 Time point: 3233.0 | PatientsSeen: 59.0
 Time point: 3284.0 | PatientsSeen: 60.0
+Time point: 697.0 | PatientsSeen: 1.0

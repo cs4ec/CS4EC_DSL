@@ -7,36 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6cb34ac-6283-4417-93b4-3970d05c4a6a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/WallDefinition_Editor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/WallDefinition_EditorBuilder_a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/WallInstanceDefinition_Editor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/WallInstanceDefinition_EditorBuilder_a.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.display_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.display_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.Doctor@135508c1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.Doctor@135508c1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.Doctor@2e68b3d4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.Doctor@2e68b3d4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@29721ce2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@29721ce2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@5ce70ba8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@5ce70ba8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/patientLog.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/patientLog.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Patient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/basicStructures/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/utilities/Tuple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@2985071a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@2985071a.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@4b203fb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@4b203fb.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@63f3a4be.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/EDLanguage.sandbox.ENP@63f3a4be.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/simcore.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/simcore.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/EDLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/EDLanguage/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/main/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/main/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/QueriesGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/QueriesGenerated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/templates/main@generator.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/templates/main@generator.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.editor.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.structure.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/models/EDLanguage.sandbox.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/models/EDLanguage.sandbox.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen.caches/EDLanguage/sandbox/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen.caches/EDLanguage/sandbox/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen.caches/EDLanguage/sandbox/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen.caches/EDLanguage/sandbox/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/ENP.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/ENP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/JuniorDoctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/JuniorDoctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/Nurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/Nurse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/structure/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/structure/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/EditorAspectDescriptorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/EditorAspectDescriptorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/ConceptPresentationAspectImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/ConceptPresentationAspectImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/LanguageConceptSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/LanguageConceptSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/StructureAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/StructureAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/trace.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +51,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="a1f91c38-26d8-496f-8d5a-e28283785446/r:9645046e-ee8c-40e6-8cbd-504ff71d5f14(TempModulea1f91c38-26d8-496f-8d5a-e28283785446/ConsoleModel_192928361300)">
+            <model ref="22d42bdb-0319-4f52-b830-7ddaedff5a27/r:2f50c1e9-5132-411d-8b3a-8c182a9a9661(TempModule22d42bdb-0319-4f52-b830-7ddaedff5a27/ConsoleModel_241469161300)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -69,11 +71,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="12ocaqapUjO">
-                <node concept="3balQm" id="12ocaqapUjP" role="aymYE" />
-                <node concept="2Clz$F" id="12ocaqapUjQ" role="aymYO" />
-                <node concept="2_V_lH" id="12ocaqapUjR" role="1PhJh3">
-                  <ref role="2_V_lI" node="12ocaqapUjQ" resolve="CommandHolder" />
+              <node concept="aymSD" id="2Cgo4_kUS7I">
+                <node concept="3balQm" id="2Cgo4_kUS7J" role="aymYE" />
+                <node concept="2Clz$F" id="2Cgo4_kUS7K" role="aymYO" />
+                <node concept="2_V_lH" id="2Cgo4_kUS7L" role="1PhJh3">
+                  <ref role="2_V_lI" node="2Cgo4_kUS7K" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -293,6 +295,64 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ED" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ED" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.behavior.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="runtime" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -308,8 +368,10 @@
               <option name="myItemId" value="r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/sandbox/models/EDLanguage.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3838812034270580677" />
+              <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,11 +381,79 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="f3dfb538-58cd-4ced-8dcb-8e0aa9c32bed" />
+              <option name="myItemId" value="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.behavior.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:321f0c26-85df-4c7b-bfec-fddc0961e0f3(RunnerLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/RunnerLanguage/models/RunnerLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RunnerLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:eb770749-530b-4012-958c-c54838466dad(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/RunnerLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6443350202496144861" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RunnerLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:eb770749-530b-4012-958c-c54838466dad(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/RunnerLanguage/generator/templates/main@generator.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -344,12 +474,46 @@
               <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
+              <option name="myItemId" value="Project" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="basic actions" />
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.behavior.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actors" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -376,28 +540,26 @@
               <option name="myItemId" value="RunnerLanguage#01" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
+              <option name="myItemId" value="r:eb770749-530b-4012-958c-c54838466dad(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/RunnerLanguage/generator/templates/main@generator.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemId" value="6443350202496149065" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,6 +570,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RunnerLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -432,18 +608,8 @@
               <option name="myItemId" value="r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/sandbox/models/EDLanguage.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemId" value="rooms" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -453,11 +619,37 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
+              <option name="myItemId" value="runtime" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:321f0c26-85df-4c7b-bfec-fddc0961e0f3(RunnerLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/RunnerLanguage/models/RunnerLanguage.structure.mps]" />
+              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -472,10 +664,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="f3dfb538-58cd-4ced-8dcb-8e0aa9c32bed" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -515,211 +703,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ED" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RunnerLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:eb770749-530b-4012-958c-c54838466dad(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/RunnerLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="6443350202496144861" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ED" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StayAction" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RunnerLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:eb770749-530b-4012-958c-c54838466dad(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/RunnerLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="6443350202496149065" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RunnerLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:eb770749-530b-4012-958c-c54838466dad(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/RunnerLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
+              <option name="myItemId" value="f3dfb538-58cd-4ced-8dcb-8e0aa9c32bed" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -749,39 +733,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="rooms" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actors" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Project" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemId" value="3838812034270580677" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -795,7 +747,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
+              <option name="myItemId" value="f3dfb538-58cd-4ced-8dcb-8e0aa9c32bed" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -803,11 +755,15 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps]" />
+              <option name="myItemId" value="r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/sandbox/models/EDLanguage.sandbox.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="6443350202496435223" />
+              <option name="myItemId" value="rooms" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3031028417293943602" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
@@ -1175,30 +1131,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="225" y="33" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1603403468779" />
-    <state width="674" height="2" key="GridCell.Tab.0.bottom" timestamp="1605872381134">
+    <state width="297" height="235" key="GridCell.Tab.0.bottom" timestamp="1606147881152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="601" height="154" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603403370272" />
     <state width="1313" height="328" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597905977646" />
-    <state width="674" height="2" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605872381134" />
-    <state width="674" height="2" key="GridCell.Tab.0.center" timestamp="1605872381134">
+    <state width="297" height="235" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606147881152" />
+    <state width="297" height="235" key="GridCell.Tab.0.center" timestamp="1606147881152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="601" height="154" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603403370271" />
     <state width="1313" height="328" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597905977646" />
-    <state width="674" height="2" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605872381134" />
-    <state width="674" height="2" key="GridCell.Tab.0.left" timestamp="1605872381134">
+    <state width="297" height="235" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606147881152" />
+    <state width="297" height="235" key="GridCell.Tab.0.left" timestamp="1606147881152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="601" height="154" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603403370271" />
     <state width="1313" height="328" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597905977646" />
-    <state width="674" height="2" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605872381134" />
-    <state width="674" height="2" key="GridCell.Tab.0.right" timestamp="1605872381134">
+    <state width="297" height="235" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606147881152" />
+    <state width="297" height="235" key="GridCell.Tab.0.right" timestamp="1606147881152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="601" height="154" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603403370271" />
     <state width="1313" height="328" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597905977646" />
-    <state width="674" height="2" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605872381134" />
+    <state width="297" height="235" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606147881152" />
     <state x="10" y="71" width="1202" height="623" key="IDE.errors.dialog" timestamp="1603904497348">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

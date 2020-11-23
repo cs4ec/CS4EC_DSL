@@ -1213,5 +1213,47 @@
       <node concept="l2Vlx" id="J03_IHXFWV" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="12ocaqaua7T">
+    <property role="3GE5qa" value="ED" />
+    <ref role="1XX52x" to="3751:12ocaqaua7C" resolve="WallInstanceDefinition" />
+    <node concept="3EZMnI" id="12ocaqaua7V" role="2wV5jI">
+      <node concept="3F0ifn" id="12ocaqaua82" role="3EZMnx">
+        <property role="3F0ifm" value="Wall between (" />
+      </node>
+      <node concept="3F0A7n" id="12ocaqaua8c" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:12ocaqaua7F" resolve="xStart" />
+      </node>
+      <node concept="3F0ifn" id="12ocaqaua8k" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0A7n" id="12ocaqaua8u" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:12ocaqaua7H" resolve="yStart" />
+      </node>
+      <node concept="3F0ifn" id="12ocaqaua8E" role="3EZMnx">
+        <property role="3F0ifm" value=") and (" />
+      </node>
+      <node concept="3F0A7n" id="12ocaqaua8S" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:12ocaqaua7K" resolve="xEnd" />
+      </node>
+      <node concept="3F0ifn" id="12ocaqaua98" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+      </node>
+      <node concept="3F0A7n" id="12ocaqaua9q" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:12ocaqaua7O" resolve="yEnd" />
+      </node>
+      <node concept="3F0ifn" id="12ocaqaua9I" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+      </node>
+      <node concept="l2Vlx" id="12ocaqaua7Y" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="12ocaqaxP4G">
+    <property role="3GE5qa" value="ED" />
+    <ref role="1XX52x" to="3751:12ocaqawGDh" resolve="WallDefinition" />
+    <node concept="3F2HdR" id="12ocaqaxP4R" role="2wV5jI">
+      <ref role="1NtTu8" to="3751:12ocaqawGDk" resolve="walls" />
+      <node concept="2iRkQZ" id="12ocaqaxP4T" role="2czzBx" />
+    </node>
+  </node>
 </model>
 

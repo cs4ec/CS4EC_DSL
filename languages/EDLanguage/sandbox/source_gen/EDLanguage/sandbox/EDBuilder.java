@@ -7,7 +7,7 @@ import repast.simphony.context.Context;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactory;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder;
 import repast.simphony.space.continuous.ContinuousSpace;
-import repast.simphony.space.continuous.RandomCartesianAdder;
+import simcore.utilities.StaffAdder;
 import repast.simphony.space.continuous.StrictBorders;
 import repast.simphony.context.space.grid.GridFactory;
 import repast.simphony.context.space.grid.GridFactoryFinder;
@@ -20,6 +20,7 @@ import repast.simphony.valueLayer.GridValueLayer;
 import simcore.basicStructures.Location;
 import java.awt.Color;
 import repast.simphony.space.continuous.NdPoint;
+import simcore.basicStructures.Wall;
 
 public class EDBuilder implements ContextBuilder<Object> {
 
@@ -29,7 +30,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
 
     ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
-    ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new RandomCartesianAdder<Object>(), new StrictBorders(), 400, 200);
+    ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new StaffAdder<Object>(), new StrictBorders(), 400, 200);
 
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 200));
@@ -66,7 +67,17 @@ public class EDBuilder implements ContextBuilder<Object> {
     Location WaitingRoom_j = new Location("WaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 200, "Left", Color.GRAY);
 
 
-
+    createWallBetween(0, 74, 75, 124, context, space, grid);
+    createWallBetween(75, 0, 75, 125, context, space, grid);
+    createWallBetween(105, 149, 180, 149, context, space, grid);
+    createWallBetween(125, 150, 125, 170, context, space, grid);
+    createWallBetween(125, 170, 155, 170, context, space, grid);
+    createWallBetween(155, 170, 155, 200, context, space, grid);
+    createWallBetween(0, 0, 399, 0, context, space, grid);
+    createWallBetween(0, 199, 399, 199, context, space, grid);
+    createWallBetween(0, 0, 199, 0, context, space, grid);
+    createWallBetween(399, 0, 399, 199, context, space, grid);
+    createWallBetween(152, 125, 152, 149, context, space, grid);
 
 
 
@@ -77,5 +88,22 @@ public class EDBuilder implements ContextBuilder<Object> {
 
 
     return context;
+  }
+
+  private void createWallBetween(int x1, int y1, int x2, int y2, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid) {
+    if (x1 == x2) {
+      for (int i = y1; i < y2; i++) {
+        Wall pWall = new Wall("", context, space, grid, 0, i);
+      }
+    } else {
+      float ratio = (y2 - y1) / (x2 - x1);
+      int width = x2 - x1;
+      for (int i = 0; i < width; i++) {
+        float x = x1 + i;
+        float y = y1 + (ratio * i);
+        Wall pWall = new Wall("", context, space, grid, ((int) x), ((int) y));
+      }
+
+    }
   }
 }

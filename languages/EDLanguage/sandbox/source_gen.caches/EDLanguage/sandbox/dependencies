@@ -55,7 +55,6 @@
     <classNode dependClassName="repast.simphony.context.space.grid.GridFactoryFinder" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.continuous.NdPoint" />
-    <classNode dependClassName="repast.simphony.space.continuous.RandomCartesianAdder" />
     <classNode dependClassName="repast.simphony.space.continuous.StrictBorders" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="repast.simphony.space.grid.GridBuilderParameters" />
@@ -65,6 +64,8 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Location" />
     <classNode dependClassName="simcore.basicStructures.PatientAdder" />
+    <classNode dependClassName="simcore.basicStructures.Wall" />
+    <classNode dependClassName="simcore.utilities.StaffAdder" />
     <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
   </dependency>
   <dependency className="EDLanguage.sandbox.EMPSingalSignal">
