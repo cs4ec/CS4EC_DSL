@@ -47,7 +47,7 @@ public class Agent {
 	
 	public boolean SpaceAt(Location pLoc) {
 		GridPoint curPoint = grid.getLocation(this);
-		System.out.println("CurrPoint = " + curPoint);
+		System.out.println(this + " CurrPoint = " + curPoint);
 
 		Tuple<Integer,Integer> pdblBottomLeft = new Tuple<Integer,Integer>(pLoc.getX(), pLoc.getY());
 		Tuple<Integer,Integer> pdblBottomRight = new Tuple<Integer,Integer>(pLoc.getX() + pLoc.getW(), pLoc.getY());
@@ -72,7 +72,6 @@ public class Agent {
 	public boolean SpaceAt(GridPoint p) {
 		// 计算网格点间距离，小于2则判断位于目标处
 		GridPoint curPoint = grid.getLocation(this);
-		System.out.println("CurrPoint = " + curPoint);
 		return (CalcDistance(curPoint, p) < 2);
 	}
 	

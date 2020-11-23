@@ -402,3 +402,9 @@ Time point: 19259.0 | PatientsSeen: 401.0
 Time point: 19306.0 | PatientsSeen: 402.0
 Time point: 19354.0 | PatientsSeen: 403.0
 Time point: 19401.0 | PatientsSeen: 404.0
+Time point: 258.0 | PatientsSeen: 1.0
+Time point: 470.0 | PatientsSeen: 2.0
+Time point: 681.0 | PatientsSeen: 3.0
+Time point: 892.0 | PatientsSeen: 4.0
+Time point: 1101.0 | PatientsSeen: 5.0
+Time point: 1311.0 | PatientsSeen: 6.0

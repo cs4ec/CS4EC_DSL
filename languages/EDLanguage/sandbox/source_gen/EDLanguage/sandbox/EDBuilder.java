@@ -49,6 +49,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 3; i++) {
       context.add(new ENP(space, grid));
     }
+    for (int i = 0; i < 3; i++) {
+      context.add(new MajorsTriageNurse(space, grid));
+    }
 
 
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 400, 200);
@@ -67,7 +70,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Location WaitingRoom_j = new Location("WaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 200, "Left", Color.GRAY);
 
 
-    createWallBetween(0, 74, 75, 124, context, space, grid);
+    createWallBetween(0, 124, 75, 124, context, space, grid);
     createWallBetween(75, 0, 75, 125, context, space, grid);
     createWallBetween(105, 149, 180, 149, context, space, grid);
     createWallBetween(125, 150, 125, 170, context, space, grid);
@@ -93,7 +96,7 @@ public class EDBuilder implements ContextBuilder<Object> {
   private void createWallBetween(int x1, int y1, int x2, int y2, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid) {
     if (x1 == x2) {
       for (int i = y1; i < y2; i++) {
-        Wall pWall = new Wall("", context, space, grid, 0, i);
+        Wall pWall = new Wall("", context, space, grid, x1, i);
       }
     } else {
       float ratio = (y2 - y1) / (x2 - x1);

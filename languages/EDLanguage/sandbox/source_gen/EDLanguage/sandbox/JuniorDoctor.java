@@ -11,10 +11,10 @@ import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
@@ -42,10 +42,6 @@ public class JuniorDoctor extends Doctor {
       case "PatientWaitingForDoctor":
         curMission = new Action("CallPatientOver");
         this.InitCallPatientOver(s);
-        break;
-      case "NewPatientGotoOffice":
-        curMission = new Action("Diagnose");
-        this.InitDiagnose(s);
         break;
       case "PatientNeedsFinalConsultation":
         curMission = new Action("GiveFinalConsultation");
@@ -80,10 +76,7 @@ public class JuniorDoctor extends Doctor {
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsConsultationRooms")))));
-    sendSignalTemp = new NewPatientGotoOfficeSignal();
-    sendSignalTemp.AddData("patient", s.GetData("patient"));
-    sendSignalTemp.AddData("destination", ReadMap().FindPlace("MajorsConsultationRooms"));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    this.InitDiagnose(s);
 
   }
   public void InitDiagnose(Signal s) {
@@ -91,9 +84,9 @@ public class JuniorDoctor extends Doctor {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("move to diagnostic room").WithAction(new MoveAction().WithTarget(s.GetData("destination"))));
+    curMission.WithStep(new ActionStep().WithName("move to diagnostic room").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsConsultationRooms"))));
     StayForConditionAction sa = new StayForConditionAction();
-    sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(s.GetData("destination")));
+    sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("MajorsConsultationRooms")));
     curMission.WithStep(new ActionStep().WithName("wait until patient arrive").WithAction(sa));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("inspect the patientmake").WithAction(new StayForTimeAction().WithTimeSpan(600)));

@@ -138,3 +138,5 @@ Time point: 8145.0 | correctWork: 69.0
 Time point: 8145.0 | stress: 70.0
 Time point: 8229.0 | correctWork: 70.0
 Time point: 8229.0 | stress: 71.0
+Time point: 974.0 | correctWork: 1.0
+Time point: 974.0 | stress: 2.0

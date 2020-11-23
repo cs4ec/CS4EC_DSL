@@ -5,7 +5,9 @@ package EDLanguage.sandbox;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
+import simcore.action.Action;
 import simcore.action.ActionStep;
+import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
@@ -28,6 +30,10 @@ public class MajorsTriageNurse extends Staff {
     switch (s.getName()) {
       case "":
         break;
+      case "PatientWaitingForMajors":
+        curMission = new Action("TriagePatient");
+        this.InitTriagePatient(s);
+        break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
         return;
@@ -40,8 +46,10 @@ public class MajorsTriageNurse extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("Wait for patient to arrive").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
-    curMission.WithStep(new ActionStep().WithName("Give Triage").WithAction(new StayForTimeAction().WithTimeSpan(300)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsTriage"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
+    curMission.WithStep(new ActionStep().WithName("Triage the patient").WithAction(new StayForTimeAction().WithTimeSpan(180)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
     sendSignalTemp = new PatientWaitingForDoctorSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));

@@ -88,6 +88,18 @@ public class AStar {
 						.collect(Collectors.toList());
 				if (plstWalls.size() > 0) {
 					mazeMap[i][j] = -1;
+					if(i+1 < xMax && mazeMap[i+1][j] != -1) {
+						mazeMap[i][j] = 50;
+					}
+					if(j+1 < yMax && mazeMap[i][j+1] != -1) {
+						mazeMap[i][j] = 50;
+					}
+					if(i-1 > 0 && mazeMap[i-1][j] != -1) {
+						mazeMap[i][j] = 50;
+					}
+					if(j-1 > 0 && mazeMap[i][j-1] != -1) {
+						mazeMap[i][j] = 50;
+					}
 				} else {
 					mazeMap[i][j] = 0;
 				}
@@ -124,6 +136,10 @@ public class AStar {
 		while (this.now.x != this.xstart || this.now.y != this.ystart) {
 			this.now = this.now.parent;
 			this.path.add(0, this.now);
+		}
+		
+		if(this.path != null && this.path.size() > 0) {
+			this.path.remove(0);
 		}
 		return this.path;
 	}

@@ -4,3 +4,8 @@ Time point: 1925.0 | PatientsSeen: 3.0
 Time point: 2549.0 | PatientsSeen: 4.0
 Time point: 3175.0 | PatientsSeen: 5.0
 Time point: 3800.0 | PatientsSeen: 6.0
+Time point: 229.0 | PatientsSeen: 1.0
+Time point: 439.0 | PatientsSeen: 2.0
+Time point: 650.0 | PatientsSeen: 3.0
+Time point: 861.0 | PatientsSeen: 4.0
+Time point: 1072.0 | PatientsSeen: 5.0

@@ -2503,8 +2503,8 @@
                         <node concept="37vLTw" id="2Cgo4_kZMhZ" role="37wK5m">
                           <ref role="3cqZAo" node="2Cgo4_kWsoi" resolve="grid" />
                         </node>
-                        <node concept="3cmrfG" id="2Cgo4_kZMqv" role="37wK5m">
-                          <property role="3cmrfH" value="0" />
+                        <node concept="37vLTw" id="2Cgo4_l3L5r" role="37wK5m">
+                          <ref role="3cqZAo" node="2Cgo4_kWhqF" resolve="x1" />
                         </node>
                         <node concept="37vLTw" id="2Cgo4_kZMuV" role="37wK5m">
                           <ref role="3cqZAo" node="2Cgo4_kZJUq" resolve="i" />

@@ -129,7 +129,7 @@ public class Patient extends Agent{
 			}
 
 		}else if(order instanceof FollowOrder) {
-			
+			System.out.println(this + "following " + ((FollowOrder) order).getFollowTarget());
 			// Already located in some room now but got a new Follow Order
 			// go out of the room first
     		if(curInside != null) {
@@ -148,16 +148,10 @@ public class Patient extends Agent{
 	//待完成
     //从当前任何位置朝目标位置移动
     public void MoveTowards(Object o) {
-    	
-//    	System.out.println("patient move towards: " + o);
-
 		GridPoint pointOfTarget = grid.getLocation(o);
 		
-
-		if (o instanceof Location) {
-			
-//			System.out.println("o is a location");
-			
+		// If my target is a location, move towards it's entrance
+		if (o instanceof Location) {			
 			pointOfTarget = ((Location) o).getEntryPoint();
 		}
 
@@ -170,23 +164,25 @@ public class Patient extends Agent{
 	}
     
     public void MoveTowards(GridPoint pt) {
-		System.out.println("move to:" + pt);
+    	System.out.println(this + " currently at: " + space.getLocation(this));
+		System.out.println(this + " move to:" + pt);
 
 		NdPoint myPoint = space.getLocation(this);
 
 		if (!SpaceAt(pt)) {
 			if (curPath == null || curPath.isEmpty()) {
-				System.out.println("No path assigned, getting new one");
+				System.out.println(this + " No path assigned, getting new one");
 				curPath = new ArrayList<>();
 				curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
 
 			} else {
-				System.out.println("Have path already");
+				System.out.println(this + " Have path already");
 				GridPoint pathGridPoint = curPath.get(curPath.size() - 1);
 				if (pathGridPoint.getX() != pt.getX() || pathGridPoint.getY() != pt.getY()) {
-					System.out.println("But path is to wrong place");
+					System.out.println(this + " But path is to wrong place");
 					curPath = new ArrayList<>();
 					curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
+					System.out.println(this + " new target:" + curPath.get(0));
 
 				}
 			}
@@ -198,7 +194,11 @@ public class Patient extends Agent{
 				space.moveTo(this, otherPoint.getX(), otherPoint.getY());
 				myPoint = space.getLocation(this);
 				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+			} else {
+				System.out.println(this + " Could not find a path");
 			}
+		} else {
+			System.out.println(this + " Already here tho");
 		}
     	
     	
