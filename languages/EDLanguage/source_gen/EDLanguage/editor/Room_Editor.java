@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class PlaceInstanceDefinition_Editor extends DefaultNodeEditor {
+public class Room_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new PlaceInstanceDefinition_EditorBuilder_a(editorContext, node).createCell();
+    return new Room_EditorBuilder_a(editorContext, node).createCell();
   }
 }

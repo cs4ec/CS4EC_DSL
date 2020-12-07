@@ -6,3 +6,11 @@ Time point: 3256.0 | correctWork: 3.0
 Time point: 3256.0 | stress: 4.0
 Time point: 3945.0 | correctWork: 4.0
 Time point: 3945.0 | stress: 5.0
+Time point: 1466.0 | correctWork: 1.0
+Time point: 1466.0 | stress: 2.0
+Time point: 2097.0 | correctWork: 2.0
+Time point: 2097.0 | stress: 3.0
+Time point: 2728.0 | correctWork: 3.0
+Time point: 2728.0 | stress: 4.0
+Time point: 3367.0 | correctWork: 4.0
+Time point: 3367.0 | stress: 5.0

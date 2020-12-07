@@ -41,14 +41,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PatientInterval;
-  private ConceptPresentation props_Place;
   private ConceptPresentation props_PlaceInstance;
   private ConceptPresentation props_PlaceInstanceCollection;
-  private ConceptPresentation props_PlaceInstanceDefinition;
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
+  private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomDefinition;
+  private ConceptPresentation props_RoomInstanceDefinition;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
   private ConceptPresentation props_Signal;
@@ -303,13 +303,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientInterval = cpb.create();
         }
         return props_PatientInterval;
-      case LanguageConceptSwitch.Place:
-        if (props_Place == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_Place = cpb.create();
-        }
-        return props_Place;
       case LanguageConceptSwitch.PlaceInstance:
         if (props_PlaceInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -324,13 +317,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PlaceInstanceCollection = cpb.create();
         }
         return props_PlaceInstanceCollection;
-      case LanguageConceptSwitch.PlaceInstanceDefinition:
-        if (props_PlaceInstanceDefinition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_PlaceInstanceDefinition = cpb.create();
-        }
-        return props_PlaceInstanceDefinition;
       case LanguageConceptSwitch.PlaceInstanceFromSignal:
         if (props_PlaceInstanceFromSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -353,6 +339,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
+      case LanguageConceptSwitch.Room:
+        if (props_Room == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Room = cpb.create();
+        }
+        return props_Room;
       case LanguageConceptSwitch.RoomDefinition:
         if (props_RoomDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -360,6 +353,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RoomDefinition = cpb.create();
         }
         return props_RoomDefinition;
+      case LanguageConceptSwitch.RoomInstanceDefinition:
+        if (props_RoomInstanceDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_RoomInstanceDefinition = cpb.create();
+        }
+        return props_RoomInstanceDefinition;
       case LanguageConceptSwitch.SelfInstance:
         if (props_SelfInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
