@@ -805,18 +805,6 @@
       <node concept="3F0A7n" id="4_Lh49vvOeL" role="3EZMnx">
         <ref role="1NtTu8" to="3751:4_Lh49vvOdW" resolve="capacity" />
       </node>
-      <node concept="3F0ifn" id="4_Lh49vymn5" role="3EZMnx">
-        <property role="3F0ifm" value="Entrance:" />
-        <node concept="pVoyu" id="4_Lh49vymnt" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="4_Lh49vymnv" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="4_Lh49vymoh" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:4_Lh49vymnW" resolve="entrance" />
-      </node>
       <node concept="3F0ifn" id="6o2BuIx6R6b" role="3EZMnx">
         <property role="3F0ifm" value="Colour:" />
         <node concept="pVoyu" id="6o2BuIx6R8w" role="3F10Kt">

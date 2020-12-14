@@ -4,7 +4,7 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="C:/Users/w2037451/Documents/HelloAgent/jars" type="java_classes">
+    <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="simcore.jar" />
     </modelRoot>
   </models>
@@ -14,7 +14,7 @@
     </facet>
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/simcore.jar" />
+    <stubModelEntry path="${module}/lib/simcore.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

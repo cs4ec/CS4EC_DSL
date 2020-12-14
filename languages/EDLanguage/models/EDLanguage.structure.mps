@@ -460,11 +460,6 @@
       <property role="TrG5h" value="capacity" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="4_Lh49vymnW" role="1TKVEl">
-      <property role="IQ2nx" value="5292086088998413820" />
-      <property role="TrG5h" value="entrance" />
-      <ref role="AX2Wp" node="4_Lh49vymo3" resolve="Direction" />
-    </node>
     <node concept="1TJgyi" id="6o2BuIx6R73" role="1TKVEl">
       <property role="IQ2nx" value="7350611177167876547" />
       <property role="TrG5h" value="colour" />

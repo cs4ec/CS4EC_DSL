@@ -4,7 +4,7 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0" type="java_classes">
+    <modelRoot contentPath="${module}/lib/plugins/repast.simphony.runtime_2.7.0" type="java_classes">
       <sourceRoot location="bin" />
       <sourceRoot location="lib" />
     </modelRoot>
@@ -15,17 +15,17 @@
     </facet>
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/bin" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/commons-cli-1.3.1.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/commons-logging-1.1.2.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/javassist-3.17.1-GA.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/jpf-boot.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/jpf.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/log4j-1.2.16.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/saf.core.runtime.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/xmlpull-1.1.3.1.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/xpp3_min-1.1.4c.jar" />
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/plugins/repast.simphony.runtime_2.7.0/lib/xstream-1.4.7.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/bin" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/commons-cli-1.3.1.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/commons-logging-1.1.2.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/javassist-3.17.1-GA.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/jpf-boot.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/jpf.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/log4j-1.2.16.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/saf.core.runtime.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/xmlpull-1.1.3.1.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/xpp3_min-1.1.4c.jar" />
+    <stubModelEntry path="${module}/lib/plugins/repast.simphony.runtime_2.7.0/lib/xstream-1.4.7.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

@@ -62,8 +62,8 @@
     <classNode dependClassName="repast.simphony.space.grid.StrictBorders" />
     <classNode dependClassName="repast.simphony.valueLayer.GridValueLayer" />
     <classNode dependClassName="simcore.basicStructures.Board" />
-    <classNode dependClassName="simcore.basicStructures.Location" />
     <classNode dependClassName="simcore.basicStructures.PatientAdder" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.WaitingRoomLocation" />
     <classNode dependClassName="simcore.basicStructures.Wall" />
     <classNode dependClassName="simcore.utilities.StaffAdder" />

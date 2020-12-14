@@ -130,7 +130,7 @@ public class JuniorDoctor extends Doctor {
 
     if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
       if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("WaitingRoom")))));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
         this.InitOrderBloodTest(s);
       } else {
         this.InitLetPatientGo(s);
@@ -166,7 +166,7 @@ public class JuniorDoctor extends Doctor {
     Signal sendSignalTemp = new Signal();
 
     if (CheckCondition(new StateCondition().WithContent("stress", ">=", 90))) {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("WaitingRoom"))));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsWaitingRoom"))));
       StayForConditionAction sa = new StayForConditionAction();
       sa.WithCondition(new StateCondition().WithContent("stress", "<=", 10));
       sa.WithConsequence(new Consequence().WithContent("stress", "-=", 10));

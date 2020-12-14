@@ -38,7 +38,7 @@ import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
 import simcore.basicStructures.Board;
-import simcore.basicStructures.Location;
+import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;

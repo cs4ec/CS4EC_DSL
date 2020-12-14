@@ -31,7 +31,7 @@ import simcore.action.ConsequenceStep;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.basicStructures.Board;
-import simcore.basicStructures.Location;
+import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Seat;
 import simcore.basicStructures.ToolBox;
@@ -49,7 +49,6 @@ public class Patient extends Agent {
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
-		// TODO Auto-generated constructor stub
 		curOrder = null;
 		this.isIdle = true;
 		hasBeenDealtWith = false;
@@ -90,15 +89,10 @@ public class Patient extends Agent {
 		if (order instanceof MoveToOrder) {
 			Object destination = ((MoveToOrder) order).getTarget();
 
-			// Already located in some room now but got a new Move Order
-//			if (curInside != null && !curInside.equals(destination)) {
-//					curInside.LetOutPerson(this);
-//			}
-
 			MoveTowards(destination);
 
-			if (destination instanceof Location) {
-				Location targetLocation = (Location) destination;
+			if (destination instanceof Room) {
+				Room targetLocation = (Room) destination;
 
 				// if this agent in in the room..
 				if (targetLocation.WithInside(this)) {
@@ -108,22 +102,9 @@ public class Patient extends Agent {
 					}
 					curOrder = null;
 					return;
-					
-				// Below removed due to locations now being self-aware (ish) of what people are in the room or not.
-//				} else {
-//					// not insideroom but already in queue, do nothing and waiting for calling
-//					if (targetLocation.WithInQueue(this)) {
-//						return;
-//					} else {
-//						// not inside the queue or room but had already arrived entrance,
-//						// ask Location to put self in
-//						if (SpaceAt(targetLocation)) {
-//							targetLocation.TakePerson(this);
-//						}
-//					}
 				}
 			} else {
-				if (SpaceAt(destination)) {
+				if (ImAt(destination)) {
 					curOrder = null;
 					return;
 				} else {
@@ -133,12 +114,6 @@ public class Patient extends Agent {
 
 		} else if (order instanceof FollowOrder) {
 			System.out.println(this + "following " + ((FollowOrder) order).getFollowTarget());
-			// Already located in some room now but got a new Follow Order
-			// go out of the room first
-//			if (curInside != null) {
-//				curInside.LetOutPerson(this);
-//			}
-
 			// follow the target
 			Object target = ((FollowOrder) order).getFollowTarget();
 			MoveTowards(target);
@@ -147,60 +122,6 @@ public class Patient extends Agent {
 		}
 
 	}
-
-//	public void MoveTowards(Object o) {
-//		GridPoint pointOfTarget = grid.getLocation(o);
-//
-//		// If my target is a location, move towards it's entrance
-//		if (o instanceof Location) {
-//			pointOfTarget = ((Location) o).getEntryPoint();
-//		}
-//
-//		if (pointOfTarget != null) {
-//			MoveTowards(pointOfTarget);
-//		} else {
-//			System.out.println("Target does not exist");
-//		}
-//
-//	}
-//
-//	public void MoveTowards(GridPoint pt) {
-//		System.out.println(this + " move to:" + pt);
-//
-//		NdPoint myPoint = space.getLocation(this);
-//
-//		if (!SpaceAt(pt)) {
-//			if (curPath == null || curPath.isEmpty()) {
-//				System.out.println(this + " No path assigned, getting new one");
-//				curPath = new ArrayList<>();
-//				curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
-//
-//			} else {
-//				System.out.println(this + " Have path already");
-//				GridPoint pathGridPoint = curPath.get(curPath.size() - 1);
-//				if (pathGridPoint.getX() != pt.getX() || pathGridPoint.getY() != pt.getY()) {
-//					System.out.println(this + " But path is to wrong place");
-//					curPath = new ArrayList<>();
-//					curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
-//					System.out.println(this + " new target:" + curPath.get(0));
-//
-//				}
-//			}
-//
-//			if (!curPath.isEmpty()) {
-//				GridPoint GridStep = curPath.get(0);
-//				curPath.remove(0);
-//				NdPoint otherPoint = new NdPoint(GridStep.getX(), GridStep.getY());
-//				space.moveTo(this, otherPoint.getX(), otherPoint.getY());
-//				myPoint = space.getLocation(this);
-//				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
-//			} else {
-//				System.out.println(this + " Could not find a path");
-//			}
-//		} else {
-//			System.out.println(this + " Already here tho");
-//		}
-//	}
 	
 	private void LogStatus() {
 		if (!hasBeenDealtWith) {

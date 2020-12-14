@@ -4,8 +4,8 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="C:/Users/w2037451/Documents/HelloAgent/jars/repast.simphony.bin_and_src.jar!/" type="java_classes">
-      <sourceRoot location="." />
+    <modelRoot contentPath="${module}/lib" type="java_classes">
+      <sourceRoot location="repast.simphony.bin_and_src.jar" />
     </modelRoot>
   </models>
   <facets>
@@ -14,7 +14,7 @@
     </facet>
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/repast.simphony.bin_and_src.jar" />
+    <stubModelEntry path="${module}/lib/repast.simphony.bin_and_src.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

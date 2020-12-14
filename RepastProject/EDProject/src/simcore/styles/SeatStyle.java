@@ -7,7 +7,7 @@ import repast.simphony.visualization.visualization3D.style.Style3D.LabelPosition
 import repast.simphony.visualizationOGL2D.DefaultStyleOGL2D;
 import saf.v3d.scene.Position;
 import saf.v3d.scene.VSpatial;
-import simcore.basicStructures.Location;
+import simcore.basicStructures.Room;
 import simcore.basicStructures.Seat;
 
 public class SeatStyle extends DefaultStyleOGL2D{

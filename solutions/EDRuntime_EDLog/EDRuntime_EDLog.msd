@@ -4,8 +4,8 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="C:/Users/w2037451/Documents/HelloAgent/jars/ed2Note.jar!/" type="java_classes">
-      <sourceRoot location="." />
+    <modelRoot contentPath="${module}/lib" type="java_classes">
+      <sourceRoot location="ed2Note.jar" />
     </modelRoot>
   </models>
   <facets>
@@ -14,7 +14,7 @@
     </facet>
   </facets>
   <stubModelEntries>
-    <stubModelEntry path="C:/Users/w2037451/Documents/HelloAgent/jars/ed2Note.jar" />
+    <stubModelEntry path="${module}/lib/ed2Note.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

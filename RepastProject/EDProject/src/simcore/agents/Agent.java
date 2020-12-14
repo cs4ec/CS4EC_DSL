@@ -34,7 +34,7 @@ import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.EDMap;
-import simcore.basicStructures.Location;
+import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Seat;
 import simcore.basicStructures.TimeKeeper;
@@ -45,7 +45,7 @@ import simcore.utilities.Tuple;
 
 public class Agent {
 	// Record the building that the agent is currently inside
-	protected Location curInside;
+	protected Room curInside;
 	protected Action curMission;
 	protected int curActionStep;
 	protected int curTimeCount;
@@ -79,98 +79,30 @@ public class Agent {
 			curCondition = ((StayForConditionAction) firstStep).getStayCondition();
 		}
 
-//		if ((firstStep) instanceof MoveAction) {
-//			if (curInside != null) {
-//				curInside.LetOutPerson(this);
-//			}
-//		}
-
 		ExecMission();
 	}
 
 	public void ExecMission() {
 		System.out.println("-----------------------------------------");
-		System.out.println(this);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
-		System.out.println("current mission: " + curMission + ": " + curMission.getName());
-		System.out.println(
-				"cur action step: " + curActionStep + ": " + curMission.getSteps().get(curActionStep).getName());
-
+		LogMission();
 		ActionStep curStep = curMission.getSteps().get(curActionStep);
 
 		if (curStep instanceof ConsequenceStep) {
 			UpdateState(((ConsequenceStep) curStep).getConsequence());
 			NextStep();
-//			ExecMission();
+//			ExecMission();   //Removed because not sure why this is here - I think if removed it means agent will wait a second to process consequences
 		}
 
 		ActionFragment stepLogic = curStep.getStepLogic();
-
+		
+		// Move action
 		if (stepLogic instanceof MoveAction) {
-			Object target = ((MoveAction) stepLogic).getDestinationObject();
-
-			// If the target object is of instance 'RoomType' then the agent must first
-			// decide what instance of that room they wish to move towards
-			if (target instanceof RoomType) {
-				target = SelectLocation((RoomType) target);
-			}
-
-			MoveTowards(target);
-			// If the agent is moving towards a seat, this is currently considered a special case. 
-			// Hopefully a seat could in some way be generalised into a class to account for beds/desks etc too
-			if (target instanceof Seat) {
-				Seat targetSeat = (Seat) target;
-
-				// if this agent already in seat, execute next step
-				if (targetSeat.getResident() == this) {
-					NextStep();
-					return;
-				// If this agent is walking towards a seat that has now been taken, they need to select a new seat
-				} else if(targetSeat.getResident() != null && targetSeat.getResident() != this) {
-					FindASeat(targetSeat.getResidingRoom());
-				}else { // else take the seat
-					if (SpaceAt(targetSeat)) {
-						targetSeat.seatMe(this);
-					}
-				}
-			} else if (target instanceof Location) {
-				Location targetLocation = (Location) target;
-
-				// if this agent already in room, execute next step
-				if (targetLocation.WithInside(this)) {
-					NextStep();
-					return;
-					
-				// Below removed due to locations now being self-aware (ish) of what people are in the room or not.
-//				} else {
-//					// not inside room but already in queue, do nothing and waiting for calling
-//					if (targetLocation.WithInQueue(this)) {
-//						return;
-//					} else {
-//						// not inside the queue or room but had already arrived entrance,
-//						// ask Location to put self in
-//						if (SpaceAt(targetLocation)) {
-//							targetLocation.TakePerson(this);
-//						}
-//					}
-				}
-
-			} else {
-
-				if (SpaceAt(target)) {
-					NextStep();
-					return;
-				} else {// WHAT IS THIS!
-					if (this instanceof Nurse && curMission.getName().equals("GiveBloodTest"))
-						System.out.println("not arrived: keep going");
-					return;
-				}
-			}
-
+			MoveAction(stepLogic);
 		}
 
+		// Stay Action
 		if (stepLogic instanceof StayAction) {
+			// Stay for some set time
 			if (stepLogic instanceof StayForTimeAction) {
 				curTimeCount--;
 				if (curTimeCount == 0) {
@@ -179,9 +111,9 @@ public class Agent {
 				} else {
 					return;
 				}
-
 			}
 
+			// Stay until some condition met
 			if (stepLogic instanceof StayForConditionAction) {
 				UpdateState(((StayForConditionAction) stepLogic).getConsequence());
 				if (CheckCondition(curCondition)) {
@@ -191,9 +123,9 @@ public class Agent {
 					return;
 				}
 			}
-
 		}
 
+		// Send Signal Action
 		if (stepLogic instanceof SendSignalAction) {
 			Signal s = ((SendSignalAction) stepLogic).getSignal();
 			Board b = ReadBoard();
@@ -202,10 +134,8 @@ public class Agent {
 			return;
 		}
 
+		// Order Action
 		if (stepLogic instanceof OrderAction) {
-
-			System.out.println("Order action: ");
-
 			Patient p = ((OrderAction) stepLogic).getOrderTarget();
 			Order o = ((OrderAction) stepLogic).getOrderContent();
 
@@ -215,21 +145,78 @@ public class Agent {
 			NextStep();
 			return;
 		}
-
 		System.out.println("-----------------------------------------");
+	}
+	
+	/**
+	 * Print out the status of the Agent's current mission
+	 */
+	private void LogMission() {
+		System.out.println(this);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
+		System.out.println("current mission: " + curMission + ": " + curMission.getName());
+		System.out.println(
+				"cur action step: " + curActionStep + ": " + curMission.getSteps().get(curActionStep).getName());
+	}
+	
+	/**
+	 * If the current Agent action is to move somewhere, then process that here
+	 * @param stepLogic The current step of the Agent's Mission
+	 */
+	private void MoveAction(ActionFragment stepLogic) {
+		Object target = ((MoveAction) stepLogic).getDestinationObject();
+
+		// If the target object is of instance 'RoomType' then the agent must first
+		// decide what instance of that room they wish to move towards
+		if (target instanceof RoomType) {
+			target = SelectLocation((RoomType) target);
+		}
+
+		// Move in the physical space
+		MoveTowards(target);
+		
+		// If the agent is moving towards a seat, this is currently considered a special case. 
+		// Hopefully a seat could in some way be generalised into a class to account for beds/desks etc too
+		if (target instanceof Seat) {
+			Seat targetSeat = (Seat) target;
+			// if this agent already in seat, execute next step
+			if (targetSeat.getResident() == this) {
+				NextStep();
+			// If this agent is walking towards a seat that has now been taken, they need to select a new seat
+			} else if(targetSeat.getResident() != null && targetSeat.getResident() != this) {
+				FindASeat(targetSeat.getResidingRoom());
+			}else { // else take the seat
+				if (ImAt(targetSeat)) {
+					targetSeat.seatMe(this);
+				}
+			}
+		} 
+		// Else moving towards the room
+		else if (target instanceof Room) {
+			Room targetLocation = (Room) target;
+			// if this agent already in room, execute next step
+			if (targetLocation.WithInside(this)) {
+				NextStep();
+			}
+		} 
+		// Move toward a specific point (e.g. toward an Agent's location)
+		else {
+			if (ImAt(target)) {
+				NextStep();
+			}
+		}
 	}
 
 	// Given a RoomType, select a Location of that RoomType
-	private Location SelectLocation(RoomType pRoomType) {
+	private Room SelectLocation(RoomType pRoomType) {
 		return null;
 	}
 	
 	//Patient has entered the room and now will find a seat to take and move towards it
-	protected void FindASeat(Location insideRoom) {
+	protected void FindASeat(Room insideRoom) {
 		Seat selectedSeat = SelectSeat((WaitingRoomLocation) insideRoom);
 		if(selectedSeat != null) {
-			System.out.println(this + " moving towards a seat at " + selectedSeat.getX() + "," + selectedSeat.getY()
-			+ " is Full?: " + selectedSeat.isTaken());
 			curMission = new Action("TakeSeat").WithStep(new ActionStep().WithName("move to seat").WithAction(new MoveAction().WithTarget(selectedSeat)));
 			curActionStep = 0;
 		}
@@ -257,8 +244,8 @@ public class Agent {
 
 		GridPoint pointOfTarget = grid.getLocation(o);
 
-		if (o instanceof Location) {
-			pointOfTarget = ((Location) o).getEntryPoint();
+		if (o instanceof Room) {
+			pointOfTarget = ((Room) o).getEntryPoint();
 		}
 
 		if (pointOfTarget != null) {
@@ -272,7 +259,6 @@ public class Agent {
 			System.out.println("move towards target: " + o);
 			System.out.println();
 			System.out.println("------------------------------------------");
-
 		}
 	}
 
@@ -281,7 +267,7 @@ public class Agent {
 
 		NdPoint myPoint = space.getLocation(this);
 
-		if (!SpaceAt(pt)) {
+		if (!ImAt(pt)) {
 			if (curPath == null || curPath.isEmpty()) {
 				System.out.println("No path assigned, getting new one");
 				curPath = new ArrayList<>();
@@ -433,7 +419,7 @@ public class Agent {
 		}
 
 		if (c instanceof SpaceatCondition) {
-			return SpaceAt(((SpaceatCondition) c).getSubject(), ((SpaceatCondition) c).getTarget());
+			return ImAt(((SpaceatCondition) c).getSubject(), ((SpaceatCondition) c).getTarget());
 		}
 
 		if (c instanceof StateCondition) {
@@ -528,11 +514,11 @@ public class Agent {
 		return new ToolBox(this);
 	}
 
-	public void SetInside(Location l) {
+	public void SetInside(Room l) {
 		curInside = l;
 	}
 
-	public boolean SpaceAt(Location pLoc) {
+	public boolean ImAt(Room pLoc) {
 		GridPoint curPoint = grid.getLocation(this);
 		System.out.println(this + " CurrPoint = " + curPoint);
 
@@ -553,23 +539,20 @@ public class Agent {
 		return false;
 	}
 
-	public boolean SpaceAt(Object o) {
-		return SpaceAt(this, o);
-	}
-
-	public boolean SpaceAt(GridPoint p) {
-		// 计算网格点间距离，小于2则判断位于目标处
+	public boolean ImAt(GridPoint p) {
 		GridPoint curPoint = grid.getLocation(this);
 		return (CalcDistance(curPoint, p) < 2);
 	}
+	
+	public boolean ImAt(Object o) {
+		return ImAt(this, o);
+	}
 
-	public boolean SpaceAt(Object subject, Object o) {
-
-		if (o instanceof Location) {
-			return ((Location) o).WithInside(subject);
+	public boolean ImAt(Object subject, Object o) {
+		if (o instanceof Room) {
+			return ((Room) o).WithInside(subject);
 		}
 
-		// 计算网格点间距离，小于2则判断位于目标处
 		GridPoint curPoint = grid.getLocation(subject);
 		GridPoint pointOfTarget = grid.getLocation(o);
 

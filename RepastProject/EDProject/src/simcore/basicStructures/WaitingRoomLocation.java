@@ -14,14 +14,12 @@ import simcore.agents.Agent;
 import simcore.agents.Patient;
 import simcore.utilities.Tuple;
 
-public class WaitingRoomLocation extends Location{
-	private List<Seat> seats;
-	private int seatCapacity;
-	
+public class WaitingRoomLocation extends Room{
+	private List<Seat> seats;	
 
 	public WaitingRoomLocation(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid,
-			int x, int y, int w, int h, int colorID, Integer capacity, String entryPoint, Color pColor) {
-		super(name, context, space, grid, x, y, w, h, colorID, capacity, entryPoint, pColor);
+			int x, int y, int w, int h, int colorID, Integer capacity, Color pColor) {
+		super(name, context, space, grid, x, y, w, h, colorID, capacity, pColor);
 		
 		// Create seats inside the room
 //		Tuple<Integer,Integer> pdblBottomLeft = new Tuple<Integer,Integer>(x, y);
@@ -44,22 +42,11 @@ public class WaitingRoomLocation extends Location{
 		return !isAnEmptySeat;
 	}
 	
-	public List<Seat> getAllSeats(){
-		return seats;
-	}
-	
-	public Seat getMySeat(Agent a) {
-		List<Seat> plstSeats = seats.stream().filter(s -> s.getResident()== a).collect(Collectors.toList());
-		if(plstSeats.isEmpty()) {
-			return null;
-		} else {
-			return plstSeats.get(0);
-		}
-	}
-	
 	public List<Seat> getEmptySeats(){
 		return seats.stream().filter(s -> !s.isTaken()).collect(Collectors.toList());
 	}
 	
-
+	public List<Seat> getAllSeats(){
+		return seats;
+	}
 }

@@ -7,13 +7,13 @@ import repast.simphony.visualization.visualization3D.style.Style3D.LabelPosition
 import repast.simphony.visualizationOGL2D.DefaultStyleOGL2D;
 import saf.v3d.scene.Position;
 import saf.v3d.scene.VSpatial;
-import simcore.basicStructures.Location;
+import simcore.basicStructures.Room;
 
 public class LocationStyle extends DefaultStyleOGL2D{
     @Override
     public VSpatial getVSpatial(Object object, VSpatial spatial){
 	
-    	Location pLoc = (Location)object;
+    	Room pLoc = (Room)object;
 	    //Create the spatial and return it.
 	    spatial = shapeFactory.createRectangle(pLoc.getW(), pLoc.getH());
 	    return spatial;
@@ -21,7 +21,7 @@ public class LocationStyle extends DefaultStyleOGL2D{
     
     @Override
     public String getLabel(Object object) {
-        return ((Location)object).GetName();
+        return ((Room)object).GetName();
     }
     
     @Override
@@ -30,7 +30,7 @@ public class LocationStyle extends DefaultStyleOGL2D{
     }
 
     public Color getColor(Object object) {
-        return ((Location)object).getColour();
+        return ((Room)object).getColour();
     }
 
     public Color getBorderColor(Object object) {

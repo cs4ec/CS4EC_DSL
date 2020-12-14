@@ -11,12 +11,12 @@
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
-      <string>simcore.agents.Patient</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
+      <string>simcore.basicStructures.Room</string>
+      <string>simcore.styles.LocationStyle</string>
     </entry>
     <entry>
-      <string>simcore.basicStructures.Location</string>
-      <string>simcore.styles.LocationStyle</string>
+      <string>simcore.agents.Patient</string>
+      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
@@ -45,12 +45,12 @@
       <string>EDLanguage.sandbox.Nurse.style_6.xml</string>
     </entry>
     <entry>
-      <string>simcore.agents.Patient</string>
-      <string>simcore.agents.Patient.style_5.xml</string>
+      <string>simcore.basicStructures.Room</string>
+      <null/>
     </entry>
     <entry>
-      <string>simcore.basicStructures.Location</string>
-      <null/>
+      <string>simcore.agents.Patient</string>
+      <string>simcore.agents.Patient.style_5.xml</string>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
@@ -79,7 +79,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-1222389492</hashCode>
+    <hashCode>350699573</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>
@@ -94,12 +94,12 @@
       <int>4</int>
     </entry>
     <entry>
-      <string>simcore.agents.Patient</string>
-      <int>3</int>
+      <string>simcore.basicStructures.Room</string>
+      <int>0</int>
     </entry>
     <entry>
-      <string>simcore.basicStructures.Location</string>
-      <int>0</int>
+      <string>simcore.agents.Patient</string>
+      <int>3</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>

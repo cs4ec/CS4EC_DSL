@@ -15,7 +15,7 @@ import simcore.utilities.aStarPathFinder;
 
 public class EDMap {
 	
-	private List<Location> places;
+	private List<Room> places;
 	private List<RoomType> roomTypes;
 	private Context context;
 	private Grid<Object> grid;
@@ -24,10 +24,10 @@ public class EDMap {
 		context = c;
 		
 		// Add all Locations to the EDMap
-		IndexedIterable collection = context.getObjects(Location.class);
+		IndexedIterable collection = context.getObjects(Room.class);
 		places = new ArrayList();		
 		for(Object o : collection) {
-			places.add((Location)o);
+			places.add((Room)o);
 		}
 		
 		// Add all RoomTypes to the EDMap
@@ -43,8 +43,8 @@ public class EDMap {
 		return this;
 	}
 	
-	public Location FindPlace(String roomName) {
-		for(Location l : places) {
+	public Room FindPlace(String roomName) {
+		for(Room l : places) {
 			if(l.GetName().equals(roomName)) {
 				return l;
 			}
@@ -63,8 +63,8 @@ public class EDMap {
 			return null;
 		}
 		
-		if(target instanceof Location) {
-			return FindWay(self, (Location)target);
+		if(target instanceof Room) {
+			return FindWay(self, (Room)target);
 		}
 		
 		GridValueLayer vl = (GridValueLayer)context.getValueLayer("cellbox");
@@ -72,7 +72,7 @@ public class EDMap {
 
 	}
 	
-    public Stack<GridPoint> FindWay(Object o, Location room){
+    public Stack<GridPoint> FindWay(Object o, Room room){
 		GridValueLayer vl = (GridValueLayer)context.getValueLayer("cellbox");
 		return new aStarPathFinder(grid.getLocation(o), room.getEntryPoint(), vl).getPath();
 	}
