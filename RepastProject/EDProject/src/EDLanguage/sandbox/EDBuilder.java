@@ -62,14 +62,18 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room Pediatrics_a = new Room("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, Color.BLUE);
     Room MainReception_b = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, Color.GREEN);
     Room Triage_c = new Room("Triage", context, space, grid, 105, 150, 20, 20, 1, 15, Color.GREEN);
+    Triage_c.setDesks(3);
     Room MajorsTriage_d = new Room("MajorsTriage", context, space, grid, 120, 80, 20, 20, 1, 15, Color.GREEN);
     Room MajorsConsultationRooms_f = new Room("MajorsConsultationRooms", context, space, grid, 120, 50, 50, 10, 1, 50, Color.YELLOW);
+    MajorsConsultationRooms_f.setSeats(5);
     Room TaskRoom_g = new Room("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, Color.YELLOW);
     Room Entrance_h = new Room("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, Color.GRAY);
     Room XRayRoom1_i = new Room("XRayRoom1", context, space, grid, 155, 125, 20, 20, 1, 10, Color.YELLOW);
 
     WaitingRoomLocation MajorsWaitingRoom_e = new WaitingRoomLocation("MajorsWaitingRoom", context, space, grid, 150, 60, 20, 50, 1, 20, Color.GRAY);
+    MajorsWaitingRoom_e.setSeats(20);
     WaitingRoomLocation TriageWaitingRoom_j = new WaitingRoomLocation("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, Color.GRAY);
+    TriageWaitingRoom_j.setSeats(12);
 
 
     createWallBetween(0, 124, 75, 124, context, space, grid);

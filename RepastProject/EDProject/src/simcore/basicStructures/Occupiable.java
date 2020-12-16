@@ -9,10 +9,12 @@ import repast.simphony.space.grid.Grid;
 import simcore.agents.Agent;
 
 public class Occupiable extends Locatable{
-	private Agent occupier;
+	protected Agent occupier;
+	protected Room inRoom;
 
-	public Occupiable(Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y) {
+	public Occupiable(Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, Room inRoom) {
 		super(context, space, grid, x, y, 1, 1, Color.GRAY);
+		this.inRoom = inRoom;
 	}
 	
 	// every tick check for agent at entry point
@@ -28,7 +30,7 @@ public class Occupiable extends Locatable{
 		}
 	}
 	
-	public void seatMe(Agent person) {
+	public void setOccupier(Agent person) {
 		occupier = person;
 	}
 	
@@ -38,6 +40,10 @@ public class Occupiable extends Locatable{
 	
 	public Agent getOccupier() {
 		return occupier;
+	}
+	
+	public Room getResidingRoom() {
+		return inRoom;
 	}
 	
 	public Boolean isOccupied() {

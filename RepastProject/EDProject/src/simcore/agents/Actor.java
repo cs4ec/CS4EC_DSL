@@ -46,10 +46,7 @@ import simcore.basicStructures.Wall;
 import simcore.utilities.AStar;
 
 public class Actor extends Agent {
-
-
-
-
+	
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
 		this.isIdle = true;
@@ -120,9 +117,12 @@ public class Actor extends Agent {
 		} else {
 			ExecMission();
 		}
-
 	}
 
+	/**
+	 * ToDo: Add more complex behaviour when assigning a new mission to myself
+	 * @param s Incoming signal to trigger a new Behaviour
+	 */
 	public void SetMission(Signal s) {
 
 	}
@@ -130,5 +130,4 @@ public class Actor extends Agent {
 	public boolean IsIdle() {
 		return isIdle;
 	}
-
 }

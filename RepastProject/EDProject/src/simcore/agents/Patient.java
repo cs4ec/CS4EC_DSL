@@ -97,8 +97,9 @@ public class Patient extends Agent {
 				// if this agent in in the room..
 				if (targetLocation.WithInside(this)) {
 					//... and this room is a waitingroom, the patient will now set itself the action of taking a seat
-					if (destination instanceof WaitingRoomLocation) {
-						FindASeat((WaitingRoomLocation)destination);
+					if (targetLocation.hasSeats()) {
+//						FindASeat(targetLocation);
+						FindASeat();
 					}
 					curOrder = null;
 					return;

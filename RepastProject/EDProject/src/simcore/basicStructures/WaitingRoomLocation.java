@@ -15,8 +15,7 @@ import simcore.agents.Patient;
 import simcore.utilities.Tuple;
 
 public class WaitingRoomLocation extends Room{
-	private List<Seat> seats;	
-
+	
 	public WaitingRoomLocation(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid,
 			int x, int y, int w, int h, int colorID, Integer capacity, Color pColor) {
 		super(name, context, space, grid, x, y, w, h, colorID, capacity, pColor);
@@ -26,27 +25,11 @@ public class WaitingRoomLocation extends Room{
 //		Tuple<Integer,Integer> pdblBottomRight = new Tuple<Integer,Integer>(x + w, y);
 //		Tuple<Integer,Integer> pdblTopLeft = new Tuple<Integer,Integer>(x, y+h);
 //		Tuple<Integer,Integer> pdblTopRight = new Tuple<Integer,Integer>(x+w, y + h);
-		
-		seats = new ArrayList<Seat>();
-		for(int i = 0; i < capacity; i++) {
-			
-			int rndXCoord = RandomHelper.nextIntFromTo(x+5, (x+w-5));
-			int rndYCoord = RandomHelper.nextIntFromTo(y+5, y+h-5);
-			seats.add(new Seat(context, space, grid, rndXCoord, rndYCoord, this));
-		}
 	}
 	
 	@Override
 	public boolean isFull() {
-		Boolean isAnEmptySeat = seats.stream().filter(s -> !s.isTaken()).findAny().isPresent();
+		Boolean isAnEmptySeat = seats.stream().filter(s -> !s.isOccupied()).findAny().isPresent();
 		return !isAnEmptySeat;
-	}
-	
-	public List<Seat> getEmptySeats(){
-		return seats.stream().filter(s -> !s.isTaken()).collect(Collectors.toList());
-	}
-	
-	public List<Seat> getAllSeats(){
-		return seats;
 	}
 }
