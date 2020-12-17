@@ -8,8 +8,10 @@ import simcore.Signals.Signal;
 import simcore.action.Action;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
+import simcore.action.basicAction.OccupyAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
+import simcore.basicStructures.Desk;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.conditions.SpaceatCondition;
@@ -53,6 +55,7 @@ public class ENP extends Staff {
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("move to pre-diagnostic area").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("Triage"))));
+    curMission.WithStep(new ActionStep().WithName("take desk").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Triage")))));
     StayForConditionAction sa = new StayForConditionAction();
     sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("Triage")));

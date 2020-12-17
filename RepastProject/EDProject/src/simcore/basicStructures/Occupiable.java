@@ -32,10 +32,12 @@ public class Occupiable extends Locatable{
 	
 	public void setOccupier(Agent person) {
 		occupier = person;
+		person.SetOccupying(this);
 	}
 	
 	public void eject(Agent person) {
 		occupier = null;
+		person.SetOccupying(null);
 	}
 	
 	public Agent getOccupier() {
@@ -48,5 +50,10 @@ public class Occupiable extends Locatable{
 	
 	public Boolean isOccupied() {
 		return occupier != null;
+	}
+	
+	@Override
+	public String toString() {
+		return "occupiable in " +inRoom.GetName();
 	}
 }

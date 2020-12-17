@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import EDLanguage.sandbox.MajorsTriageNurse;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduledMethod;
@@ -70,14 +71,16 @@ public class Patient extends Agent {
 			curMission = null; // Reset/Remove any independent actions, orders take priority
 			ExecOrder(curOrder);
 		} else if(curMission != null) { // Else, do I have an independent action to take?
+			if(curMission.getName() == "TakeSeat") {
+				System.out.println(this + "is processing a take a seat mission. They have the current occupiable set as " + curOccupying);
+			}
 			if (isIdle) {
 				isIdle = false;
 				InitMission();
 			} else {
 				ExecMission();
 			}
-		}
-		
+		} 
 	}
 
 	public void TakeOrder(Order o) {
@@ -93,8 +96,8 @@ public class Patient extends Agent {
 
 			if (destination instanceof Room) {
 				Room targetLocation = (Room) destination;
-
-				// if this agent in in the room..
+				
+				// if this agent is in the room..
 				if (targetLocation.WithInside(this)) {
 					//... and this room is a waitingroom, the patient will now set itself the action of taking a seat
 					if (targetLocation.hasSeats()) {
@@ -150,6 +153,10 @@ public class Patient extends Agent {
 	@Override
 	public String toString() {
 		return "Patient " + mintMyID;
+	}
+	
+	public String getID() {
+		return mintMyID+ "";
 	}
 
 }

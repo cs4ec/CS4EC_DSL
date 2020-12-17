@@ -50,6 +50,7 @@ import simcore.utilities.Tuple;
 public class Agent {
 	// Record the building that the agent is currently inside
 	protected Room curInside;
+	protected Occupiable curOccupying;
 	protected Action curMission;
 	protected int curActionStep;
 	protected int curTimeCount;
@@ -99,8 +100,16 @@ public class Agent {
 	private void InitOccpuyAction(OccupyAction stepLogic) {
 		Class target = stepLogic.getDestinationOccupiable();
 
+		// If already occupying the target, then move on
+		if(curOccupying != null && curOccupying.getClass() == target) {
+			return;
+		}
+		
 		if(stepLogic.getConcreteDestination() == null) {
 			if (target == Seat.class) {
+				if(curInside == null) {
+					System.out.println("");
+				}
 				stepLogic.setConcreteDestination(SelectSeat(curInside));
 			} else if (target == Desk.class) {
 				stepLogic.setConcreteDestination(SelectDesk(curInside));
@@ -133,7 +142,7 @@ public class Agent {
 			if(((OccupyAction) stepLogic).getConcreteDestination() != null) {
 				MoveTo(((OccupyAction) stepLogic).getConcreteDestination());
 			} else { // Otherwise, ToDO: Add behaviour here
-				
+				NextStep();
 			}
 		}
 
@@ -207,11 +216,17 @@ public class Agent {
 		if (target instanceof RoomType) {
 			target = SelectLocation((RoomType) target);
 		}
-
+		
+		// If I am already here, dont do anything
+		if (ImAt(target)) {
+			NextStep();
+			return;
+		}
+		
 		// Move in the physical space
 		MoveTowards(target);
 		
-		// If the agent is moving towards an occupiable (bed, seat etc)
+		// If the agent is moving towards an occupiable (bed, seat etc) 
 		if (target instanceof Occupiable) {
 			MoveToOccupiable((Occupiable)target);
 		} 
@@ -225,9 +240,7 @@ public class Agent {
 		} 
 		// Move toward a specific point (e.g. toward an Agent's location)
 		else {
-			if (ImAt(target)) {
-				NextStep();
-			}
+
 		}
 	}
 	
@@ -332,26 +345,18 @@ public class Agent {
 	}
 
 	public void MoveTowards(GridPoint pt) {
-		System.out.println("move to:" + pt);
-
 		NdPoint myPoint = space.getLocation(this);
 
 		if (!ImAt(pt)) {
 			if (curPath == null || curPath.isEmpty()) {
-				System.out.println("No path assigned, getting new one");
 				curPath = new ArrayList<>();
 				curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
-				System.out.println("Map wants us to go to:" + curPath.get(curPath.size() - 1));
 
 			} else {
-				System.out.println("Have path already");
 				GridPoint pathGridPoint = curPath.get(curPath.size() - 1);
 				if (pathGridPoint.getX() != pt.getX() || pathGridPoint.getY() != pt.getY()) {
-					System.out.println("But path is to wrong place");
 					curPath = new ArrayList<>();
 					curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
-					System.out.println("Map wants us to go to:" + curPath.get(curPath.size() - 1));
-
 				}
 			}
 
@@ -586,10 +591,14 @@ public class Agent {
 	public void SetInside(Room l) {
 		curInside = l;
 	}
+	
+	public void SetOccupying(Occupiable o) {
+		curOccupying = o;
+	}
 
 	public boolean ImAt(Room pLoc) {
 		GridPoint curPoint = grid.getLocation(this);
-		System.out.println(this + " CurrPoint = " + curPoint);
+//		System.out.println(this + " CurrPoint = " + curPoint);
 
 		Tuple<Integer, Integer> pdblBottomLeft = new Tuple<Integer, Integer>(pLoc.getX(), pLoc.getY());
 		Tuple<Integer, Integer> pdblBottomRight = new Tuple<Integer, Integer>(pLoc.getX() + pLoc.getW(), pLoc.getY());
@@ -599,12 +608,12 @@ public class Agent {
 
 		if (curPoint.getX() > pdblBottomLeft.x && curPoint.getX() < pdblBottomRight.x) {
 			if (curPoint.getY() > pdblBottomLeft.y && curPoint.getY() < pdblTopLeft.y) {
-				System.out.println(this + " I am in " + pLoc);
+//				System.out.println(this + " I am in " + pLoc);
 				return true;
 			}
 		}
 
-		System.out.println(this + " I am not in " + pLoc);
+//		System.out.println(this + " I am not in " + pLoc);
 		return false;
 	}
 

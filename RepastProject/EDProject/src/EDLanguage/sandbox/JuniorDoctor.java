@@ -76,7 +76,13 @@ public class JuniorDoctor extends Doctor {
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsConsultationRooms")))));
-    this.InitDiagnose(s);
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsConsultationRooms"))));
+    StayForConditionAction sa = new StayForConditionAction();
+    sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("MajorsConsultationRooms")));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(sa));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    this.InitDecideOnPatientPathway(s);
 
   }
   public void InitDiagnose(Signal s) {

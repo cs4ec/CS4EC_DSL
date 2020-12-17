@@ -20,16 +20,16 @@ public class Seat extends Occupiable{
 		super(context, space, grid, x, y, inRoom);
 	}
 	
-	// every tick check for agent at entry point
-	@ScheduledMethod(start = 1, interval = 1)
-	public void step() {
-		if(occupier != null) {
-			ArrayList<Agent> plstPeople = new ArrayList<>();
-			context.getObjects(Agent.class).forEach(p -> plstPeople.add((Agent)p));
-			Agent myResident = plstPeople.stream().filter(p -> p == this.occupier).findFirst().get();
-			if(!myResident.ImAt(this)) {
-				occupier = null;
-			}
-		}
-	}
+//	// every tick check for agent at entry point
+//	@ScheduledMethod(start = 1, interval = 1)
+//	public void step() {
+//		if(occupier != null) {
+//			ArrayList<Agent> plstPeople = new ArrayList<>();
+//			context.getObjects(Agent.class).forEach(p -> plstPeople.add((Agent)p));
+//			Agent myResident = plstPeople.stream().filter(p -> p == this.occupier).findFirst().get();
+//			if(!myResident.ImAt(this)) {
+//				occupier = null;
+//			}
+//		}
+//	}
 }
