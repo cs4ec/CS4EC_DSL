@@ -94,6 +94,11 @@
       <property role="20kJfa" value="superType" />
       <ref role="20lvS9" node="3l6cNjebQ9L" resolve="Actor" />
     </node>
+    <node concept="1TJgyi" id="7lVoe4yrHCt" role="1TKVEl">
+      <property role="IQ2nx" value="8465466444634577437" />
+      <property role="TrG5h" value="patientCapacity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3l6cNjebRG0">
     <property role="EcuMT" value="3838812034270460672" />
@@ -469,6 +474,16 @@
       <property role="IQ2nx" value="6995894230161702225" />
       <property role="TrG5h" value="roomType" />
       <ref role="AX2Wp" node="64mqbMaZzOW" resolve="RoomType" />
+    </node>
+    <node concept="1TJgyi" id="7lVoe4ydlAT" role="1TKVEl">
+      <property role="IQ2nx" value="8465466444630809017" />
+      <property role="TrG5h" value="seats" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7lVoe4ydlB2" role="1TKVEl">
+      <property role="IQ2nx" value="8465466444630809026" />
+      <property role="TrG5h" value="desks" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
   <node concept="1TIwiD" id="3KCb14J9922">
@@ -1122,6 +1137,72 @@
       <property role="3tVfz5" value="6995894230162761725" />
       <property role="TrG5h" value="Ward" />
       <property role="1L1pqM" value="ward" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7lVoe4xN_11">
+    <property role="EcuMT" value="8465466444624056385" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="OccupyAction" />
+    <property role="34LRSv" value="take" />
+    <property role="R4oN_" value="Take an occupiable (seat, desk etc.)" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="PrWs8" id="7lVoe4xN_12" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="7lVoe4xN_14" role="1TKVEi">
+      <property role="IQ2ns" value="8465466444624056388" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetObject" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7lVoe4xN_mF">
+    <property role="EcuMT" value="8465466444624057771" />
+    <property role="3GE5qa" value="Structures.Class" />
+    <property role="TrG5h" value="OccupiableInstance" />
+    <property role="34LRSv" value="occupiable" />
+    <ref role="1TJDcQ" node="3KCb14J4_mK" resolve="ObjectInstance" />
+    <node concept="1TJgyi" id="7lVoe4xSFzg" role="1TKVEl">
+      <property role="IQ2nx" value="8465466444625393872" />
+      <property role="TrG5h" value="occupiableType" />
+      <ref role="AX2Wp" node="7lVoe4xN_rL" resolve="OccupiableTypes" />
+    </node>
+    <node concept="PrWs8" id="7lVoe4xSFzi" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="25R3W" id="7lVoe4xN_rL">
+    <property role="3F6X1D" value="8465466444624058097" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="OccupiableTypes" />
+    <node concept="25R33" id="7lVoe4xN_rM" role="25R1y">
+      <property role="3tVfz5" value="8465466444624058098" />
+      <property role="TrG5h" value="Seat" />
+      <property role="1L1pqM" value="seat" />
+    </node>
+    <node concept="25R33" id="7lVoe4xN_rN" role="25R1y">
+      <property role="3tVfz5" value="8465466444624058099" />
+      <property role="TrG5h" value="Desk" />
+      <property role="1L1pqM" value="desk" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7lVoe4ypokx">
+    <property role="EcuMT" value="8465466444633965857" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="EndVisitAction" />
+    <property role="34LRSv" value="end visit for patient" />
+    <property role="R4oN_" value="End the visit for the patient" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="PrWs8" id="7lVoe4ypoky" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="7lVoe4ypok$" role="1TKVEi">
+      <property role="IQ2ns" value="8465466444633965860" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetPatient" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
     </node>
   </node>
 </model>

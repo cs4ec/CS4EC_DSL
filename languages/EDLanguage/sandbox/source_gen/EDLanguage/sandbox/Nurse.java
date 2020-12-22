@@ -27,6 +27,7 @@ public class Nurse extends Staff {
 
   public Nurse(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
+    mintMyMaxPatients = 0;
   }
 
   public Nurse(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {

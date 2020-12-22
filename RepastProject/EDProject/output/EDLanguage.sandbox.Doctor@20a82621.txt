@@ -12,3 +12,7 @@ Time point: 4650.0 | correctWork: 6.0
 Time point: 4650.0 | stress: 7.0
 Time point: 5282.0 | correctWork: 7.0
 Time point: 5282.0 | stress: 8.0
+Time point: 1805.0 | correctWork: 1.0
+Time point: 1806.0 | stress: 2.0
+Time point: 1261.0 | correctWork: 1.0
+Time point: 1262.0 | stress: 2.0

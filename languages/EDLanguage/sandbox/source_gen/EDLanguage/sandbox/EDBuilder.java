@@ -67,9 +67,35 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room TaskRoom_g = new Room("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, Color.YELLOW);
     Room Entrance_h = new Room("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, Color.GRAY);
     Room XRayRoom1_i = new Room("XRayRoom1", context, space, grid, 155, 125, 20, 20, 1, 10, Color.YELLOW);
+    try {
+      Pediatrics_a.setSeats(0);
+      MainReception_b.setSeats(0);
+      Triage_c.setSeats(0);
+      MajorsTriage_d.setSeats(0);
+      MajorsConsultationRooms_f.setSeats(0);
+      TaskRoom_g.setSeats(0);
+      Entrance_h.setSeats(0);
+      XRayRoom1_i.setSeats(0);
+      Pediatrics_a.setDesks(0);
+      MainReception_b.setDesks(0);
+      Triage_c.setDesks(3);
+      MajorsTriage_d.setDesks(3);
+      MajorsConsultationRooms_f.setDesks(5);
+      TaskRoom_g.setDesks(0);
+      Entrance_h.setDesks(0);
+      XRayRoom1_i.setDesks(0);
+    } catch (NumberFormatException e) {
+    }
 
     WaitingRoomLocation MajorsWaitingRoom_e = new WaitingRoomLocation("MajorsWaitingRoom", context, space, grid, 150, 60, 20, 50, 1, 20, Color.GRAY);
     WaitingRoomLocation TriageWaitingRoom_j = new WaitingRoomLocation("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, Color.GRAY);
+    try {
+      MajorsWaitingRoom_e.setSeats(20);
+      TriageWaitingRoom_j.setSeats(20);
+      MajorsWaitingRoom_e.setDesks(0);
+      TriageWaitingRoom_j.setDesks(0);
+    } catch (NumberFormatException e) {
+    }
 
 
     createWallBetween(0, 124, 75, 124, context, space, grid);

@@ -8,6 +8,8 @@ import simcore.Signals.Signal;
 import simcore.action.Action;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
+import simcore.action.basicAction.OccupyAction;
+import simcore.basicStructures.Desk;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
@@ -20,6 +22,7 @@ public class MajorsTriageNurse extends Staff {
 
   public MajorsTriageNurse(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
+    mintMyMaxPatients = 0;
   }
 
   public MajorsTriageNurse(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
@@ -47,6 +50,7 @@ public class MajorsTriageNurse extends Staff {
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsTriage"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("Triage the patient").WithAction(new StayForTimeAction().WithTimeSpan(180)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));

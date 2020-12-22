@@ -22,6 +22,7 @@ import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
+import simcore.action.basicAction.EndVisitAction;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.action.basicAction.OrderAction;
@@ -146,58 +147,58 @@ public class Agent {
 			}
 		}
 
-		// Stay Action
-		if (stepLogic instanceof StayAction) {
-			// Stay for some set time
-			if (stepLogic instanceof StayForTimeAction) {
-				curTimeCount--;
-				if (curTimeCount == 0) {
-					NextStep();
-					return;
-				} else {
-					return;
-				}
-			}
-
-			// Stay until some condition met
-			if (stepLogic instanceof StayForConditionAction) {
-				UpdateState(((StayForConditionAction) stepLogic).getConsequence());
-				if (CheckCondition(curCondition)) {
-					NextStep();
-					return;
-				} else {
-					return;
-				}
-			}
-		}
-
-		// Send Signal Action
-		if (stepLogic instanceof SendSignalAction) {
-			Signal s = ((SendSignalAction) stepLogic).getSignal();
-			Board b = ReadBoard();
-			b.PushMission(s);
-			NextStep();
-			return;
-		}
-
-		// Order Action
-		if (stepLogic instanceof OrderAction) {
-			Patient p = ((OrderAction) stepLogic).getOrderTarget();
-			Order o = ((OrderAction) stepLogic).getOrderContent();
-
-			System.out.println("Order " + p + " To " + o);
-
-			p.TakeOrder(o);
-			NextStep();
-			return;
-		}
+//		// Stay Action
+//		if (stepLogic instanceof StayAction) {
+//			// Stay for some set time
+//			if (stepLogic instanceof StayForTimeAction) {
+//				curTimeCount--;
+//				if (curTimeCount == 0) {
+//					NextStep();
+//					return;
+//				} else {
+//					return;
+//				}
+//			}
+//
+//			// Stay until some condition met
+//			if (stepLogic instanceof StayForConditionAction) {
+//				UpdateState(((StayForConditionAction) stepLogic).getConsequence());
+//				if (CheckCondition(curCondition)) {
+//					NextStep();
+//					return;
+//				} else {
+//					return;
+//				}
+//			}
+//		}
+//
+//		// Send Signal Action
+//		if (stepLogic instanceof SendSignalAction) {
+//			Signal s = ((SendSignalAction) stepLogic).getSignal();
+//			Board b = ReadBoard();
+//			b.PushMission(s);
+//			NextStep();
+//			return;
+//		}
+//
+//		// Order Action
+//		if (stepLogic instanceof OrderAction) {
+//			Patient p = ((OrderAction) stepLogic).getOrderTarget();
+//			Order o = ((OrderAction) stepLogic).getOrderContent();
+//
+//			System.out.println("Order " + p + " To " + o);
+//
+//			p.TakeOrder(o);
+//			NextStep();
+//			return;
+//		}
 		System.out.println("-----------------------------------------");
 	}
 	
 	/**
 	 * Print out the status of the Agent's current mission
 	 */
-	private void LogMission() {
+	protected void LogMission() {
 		System.out.println(this);
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
@@ -210,7 +211,7 @@ public class Agent {
 	 * If the current Agent action is to move somewhere, then process that here
 	 * @param stepLogic The current step of the Agent's Mission
 	 */
-	private void MoveTo(Object target) {
+	protected void MoveTo(Object target) {
 		// If the target object is of instance 'RoomType' then the agent must first
 		// decide what instance of that room they wish to move towards
 		if (target instanceof RoomType) {

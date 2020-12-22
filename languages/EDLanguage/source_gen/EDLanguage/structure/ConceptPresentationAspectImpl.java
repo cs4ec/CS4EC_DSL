@@ -28,6 +28,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DataMap;
   private ConceptPresentation props_Description;
   private ConceptPresentation props_EmergencyDepartment;
+  private ConceptPresentation props_EndVisitAction;
   private ConceptPresentation props_ExpressionCondition;
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
@@ -37,6 +38,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_NewPatientSignal;
   private ConceptPresentation props_NumericExpression;
   private ConceptPresentation props_ObjectInstance;
+  private ConceptPresentation props_OccupiableInstance;
+  private ConceptPresentation props_OccupyAction;
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_PatientInstance;
@@ -209,6 +212,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EmergencyDepartment = cpb.create();
         }
         return props_EmergencyDepartment;
+      case LanguageConceptSwitch.EndVisitAction:
+        if (props_EndVisitAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("End the visit for the patient");
+          cpb.presentationByName();
+          props_EndVisitAction = cpb.create();
+        }
+        return props_EndVisitAction;
       case LanguageConceptSwitch.ExpressionCondition:
         if (props_ExpressionCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -275,6 +286,21 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectInstance = cpb.create();
         }
         return props_ObjectInstance;
+      case LanguageConceptSwitch.OccupiableInstance:
+        if (props_OccupiableInstance == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_OccupiableInstance = cpb.create();
+        }
+        return props_OccupiableInstance;
+      case LanguageConceptSwitch.OccupyAction:
+        if (props_OccupyAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Take an occupiable (seat, desk etc.)");
+          cpb.presentationByName();
+          props_OccupyAction = cpb.create();
+        }
+        return props_OccupyAction;
       case LanguageConceptSwitch.Order:
         if (props_Order == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -50,6 +50,13 @@ public class Signal {
 		data.put(s, o);
 	}
 
+	public Object getDataOfType(Class c) {
+		try {
+			return getData().values().stream().filter(d -> d.getClass() == c).findFirst().get();
+		} catch (Exception e) {
+			return null;
+		}
+	}
 
 	public List<String> getSubjects() {
 		return subjects;

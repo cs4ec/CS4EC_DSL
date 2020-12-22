@@ -805,6 +805,30 @@
       <node concept="3F0A7n" id="4_Lh49vvOeL" role="3EZMnx">
         <ref role="1NtTu8" to="3751:4_Lh49vvOdW" resolve="capacity" />
       </node>
+      <node concept="3F0ifn" id="7lVoe4ydlBE" role="3EZMnx">
+        <property role="3F0ifm" value="seats:" />
+        <node concept="pVoyu" id="7lVoe4ydlC6" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7lVoe4ydlC8" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7lVoe4ydlCB" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:7lVoe4ydlAT" resolve="seats" />
+      </node>
+      <node concept="3F0ifn" id="7lVoe4ydlDx" role="3EZMnx">
+        <property role="3F0ifm" value="desks:" />
+        <node concept="pVoyu" id="7lVoe4ydlDZ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7lVoe4ydlE1" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7lVoe4ydlE$" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:7lVoe4ydlB2" resolve="desks" />
+      </node>
       <node concept="3F0ifn" id="6o2BuIx6R6b" role="3EZMnx">
         <property role="3F0ifm" value="Colour:" />
         <node concept="pVoyu" id="6o2BuIx6R8w" role="3F10Kt">
@@ -870,7 +894,11 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3XFhqQ" id="7o6PzEpEZpH" role="3EZMnx" />
+      <node concept="3XFhqQ" id="7o6PzEpEZpH" role="3EZMnx">
+        <node concept="pVoyu" id="7lVoe4yrHEL" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3EZMnI" id="7o6PzEpEZ$9" role="3EZMnx">
         <node concept="VPM3Z" id="7o6PzEpEZ$c" role="3F10Kt" />
         <node concept="3EZMnI" id="7o6PzEpEZ_E" role="3EZMnx">
@@ -890,6 +918,15 @@
           <node concept="2iRfu4" id="7o6PzEpEZ_J" role="2iSdaV" />
         </node>
         <node concept="3F0ifn" id="7o6PzEpEZAV" role="3EZMnx" />
+        <node concept="3EZMnI" id="7lVoe4yu2xL" role="3EZMnx">
+          <node concept="2iRfu4" id="7lVoe4yu2xM" role="2iSdaV" />
+          <node concept="3F0ifn" id="7lVoe4yu2wn" role="3EZMnx">
+            <property role="3F0ifm" value="patient capacity:" />
+          </node>
+          <node concept="3F0A7n" id="7lVoe4yu2ym" role="3EZMnx">
+            <ref role="1NtTu8" to="3751:7lVoe4yrHCt" resolve="patientCapacity" />
+          </node>
+        </node>
         <node concept="3EZMnI" id="7o6PzEpEZA7" role="3EZMnx">
           <node concept="VPM3Z" id="7o6PzEpEZA9" role="3F10Kt" />
           <node concept="3F0ifn" id="7o6PzEpEZAb" role="3EZMnx">
@@ -1239,6 +1276,45 @@
     <node concept="3F2HdR" id="12ocaqaxP4R" role="2wV5jI">
       <ref role="1NtTu8" to="3751:12ocaqawGDk" resolve="walls" />
       <node concept="2iRkQZ" id="12ocaqaxP4T" role="2czzBx" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7lVoe4xPC4b">
+    <property role="3GE5qa" value="actions.basic actions" />
+    <ref role="1XX52x" to="3751:7lVoe4xN_11" resolve="OccupyAction" />
+    <node concept="3EZMnI" id="7lVoe4xPC4d" role="2wV5jI">
+      <node concept="3F0ifn" id="7lVoe4xPC4k" role="3EZMnx">
+        <property role="3F0ifm" value="take" />
+      </node>
+      <node concept="3F1sOY" id="7lVoe4xPC4q" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:7lVoe4xN_14" resolve="targetObject" />
+      </node>
+      <node concept="l2Vlx" id="7lVoe4xPC4g" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7lVoe4xQDQM">
+    <property role="3GE5qa" value="Structures.Class" />
+    <ref role="1XX52x" to="3751:7lVoe4xN_mF" resolve="OccupiableInstance" />
+    <node concept="3EZMnI" id="7lVoe4xQDQO" role="2wV5jI">
+      <node concept="l2Vlx" id="7lVoe4xQDQR" role="2iSdaV" />
+      <node concept="3F0ifn" id="7lVoe4xUirw" role="3EZMnx">
+        <property role="3F0ifm" value="a" />
+      </node>
+      <node concept="3F0A7n" id="7lVoe4xTbQu" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:7lVoe4xSFzg" resolve="occupiableType" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="7lVoe4ypokA">
+    <property role="3GE5qa" value="actions.basic actions" />
+    <ref role="1XX52x" to="3751:7lVoe4ypokx" resolve="EndVisitAction" />
+    <node concept="3EZMnI" id="7lVoe4ypokC" role="2wV5jI">
+      <node concept="3F0ifn" id="7lVoe4ypokN" role="3EZMnx">
+        <property role="3F0ifm" value="End visit for" />
+      </node>
+      <node concept="3F1sOY" id="7lVoe4ypo$R" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:7lVoe4ypok$" resolve="targetPatient" />
+      </node>
+      <node concept="l2Vlx" id="7lVoe4ypokF" role="2iSdaV" />
     </node>
   </node>
 </model>

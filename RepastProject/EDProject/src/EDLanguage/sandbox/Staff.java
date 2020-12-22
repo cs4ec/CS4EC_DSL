@@ -13,6 +13,7 @@ public class Staff extends Actor {
 
   public Staff(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
+    mintMyMaxPatients = 0;
   }
 
   public Staff(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {

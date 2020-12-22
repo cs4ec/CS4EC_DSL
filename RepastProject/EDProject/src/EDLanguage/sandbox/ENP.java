@@ -9,12 +9,10 @@ import simcore.action.Action;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
+import simcore.basicStructures.Desk;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
-import simcore.basicStructures.Desk;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.action.basicAction.StayForConditionAction;
-import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.ConsequenceStep;
@@ -28,6 +26,7 @@ public class ENP extends Staff {
 
   public ENP(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
+    mintMyMaxPatients = 0;
   }
 
   public ENP(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
@@ -55,11 +54,8 @@ public class ENP extends Staff {
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("move to pre-diagnostic area").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("Triage"))));
-    curMission.WithStep(new ActionStep().WithName("take desk").WithAction(new OccupyAction().WithTarget(Desk.class)));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Triage")))));
-    StayForConditionAction sa = new StayForConditionAction();
-    sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(ReadMap().FindPlace("Triage")));
-    curMission.WithStep(new ActionStep().WithName("wait until patient arrive").WithAction(sa));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(180)));
     if (CheckCondition(new PossibilityCondition().WithPossibility(30))) {
       this.InitLetPatientLeave(s);

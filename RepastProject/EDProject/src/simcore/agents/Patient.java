@@ -3,6 +3,7 @@ package simcore.agents;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import EDLanguage.sandbox.MajorsTriageNurse;
 import repast.simphony.context.Context;
@@ -47,6 +48,7 @@ public class Patient extends Agent {
 	private boolean hasBeenDealtWith;
 	private int totalWaitTime;
 	protected List<GridPoint> curPath;
+	protected List<Actor> mlstMyStaff;
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -56,6 +58,7 @@ public class Patient extends Agent {
 		totalWaitTime = 0;
 		staticID++;
 		mintMyID = staticID;
+		mlstMyStaff = new ArrayList<>();
 	}
 
 	@ScheduledMethod(start = 1, interval = 1)
@@ -148,6 +151,24 @@ public class Patient extends Agent {
 		y = (y < 0) ? -y : y;
 
 		return Math.pow((x * x + y * y), 0.5);
+	}
+	
+	public void assignStaff(Actor pActor) {
+		mlstMyStaff.add(pActor);
+	}
+	
+	public void deAssignStaff(Actor pActor) {
+		if(mlstMyStaff.contains(pActor)) {
+			mlstMyStaff.remove(pActor);
+		}
+	}
+	
+	public List<Actor> getMyAssignedStaff(){
+		return mlstMyStaff;
+	}
+	
+	public List<Actor> getMyAssignedStaffOfType(Class pClass){
+		return mlstMyStaff.stream().filter(s -> s.getClass() == pClass).collect(Collectors.toList());
 	}
 
 	@Override

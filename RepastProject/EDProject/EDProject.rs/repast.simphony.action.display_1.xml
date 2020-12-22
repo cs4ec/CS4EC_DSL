@@ -27,6 +27,10 @@
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
+      <string>simcore.basicStructures.Desk</string>
+      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
+    </entry>
+    <entry>
       <string>EDLanguage.sandbox.MajorsTriageNurse</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
@@ -61,6 +65,10 @@
       <string>EDLanguage.sandbox.ENP.style_8.xml</string>
     </entry>
     <entry>
+      <string>simcore.basicStructures.Desk</string>
+      <null/>
+    </entry>
+    <entry>
       <string>EDLanguage.sandbox.MajorsTriageNurse</string>
       <string>EDLanguage.sandbox.MajorsTriageNurse.style_1.xml</string>
     </entry>
@@ -79,7 +87,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>350699573</hashCode>
+    <hashCode>-2073630180</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>
@@ -87,11 +95,11 @@
   <layerOrder>
     <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <int>6</int>
+      <int>7</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Nurse</string>
-      <int>4</int>
+      <int>5</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Room</string>
@@ -99,23 +107,27 @@
     </entry>
     <entry>
       <string>simcore.agents.Patient</string>
-      <int>3</int>
+      <int>4</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
-      <int>7</int>
+      <int>8</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.ENP</string>
-      <int>5</int>
+      <int>6</int>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Desk</string>
+      <int>1</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.MajorsTriageNurse</string>
-      <int>2</int>
+      <int>3</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Seat</string>
-      <int>1</int>
+      <int>2</int>
     </entry>
   </layerOrder>
   <projections>

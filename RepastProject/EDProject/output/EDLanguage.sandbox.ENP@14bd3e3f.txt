@@ -32,3 +32,13 @@ Time point: 5080.0 | PatientsSeen: 24.0
 Time point: 5289.0 | PatientsSeen: 25.0
 Time point: 5500.0 | PatientsSeen: 26.0
 Time point: 5711.0 | PatientsSeen: 27.0
+Time point: 232.0 | PatientsSeen: 1.0
+Time point: 442.0 | PatientsSeen: 2.0
+Time point: 654.0 | PatientsSeen: 3.0
+Time point: 865.0 | PatientsSeen: 4.0
+Time point: 1075.0 | PatientsSeen: 5.0
+Time point: 1292.0 | PatientsSeen: 6.0
+Time point: 1504.0 | PatientsSeen: 7.0
+Time point: 1717.0 | PatientsSeen: 8.0
+Time point: 1933.0 | PatientsSeen: 9.0
+Time point: 238.0 | PatientsSeen: 1.0

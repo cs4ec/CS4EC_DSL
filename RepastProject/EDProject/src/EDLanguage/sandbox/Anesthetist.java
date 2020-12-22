@@ -14,6 +14,7 @@ public class Anesthetist extends Actor {
 
   public Anesthetist(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
+    mintMyMaxPatients = 0;
   }
 
   public Anesthetist(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {

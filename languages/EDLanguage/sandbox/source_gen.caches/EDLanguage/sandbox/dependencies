@@ -30,15 +30,17 @@
     <classNode dependClassName="simcore.action.ActionStep" />
     <classNode dependClassName="simcore.action.Consequence" />
     <classNode dependClassName="simcore.action.ConsequenceStep" />
+    <classNode dependClassName="simcore.action.basicAction.EndVisitAction" />
     <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForConditionAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
     <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.SpaceatCondition" />
     <classNode dependClassName="simcore.action.basicAction.conditions.StateCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.EDBuilder">
@@ -47,6 +49,7 @@
     <classNode dependClassName="EDLanguage.sandbox.MajorsTriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.Nurse" />
     <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
@@ -88,13 +91,13 @@
     <classNode dependClassName="simcore.action.Consequence" />
     <classNode dependClassName="simcore.action.ConsequenceStep" />
     <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
-    <classNode dependClassName="simcore.action.basicAction.StayForConditionAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
     <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.SpaceatCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.InternNurse">
@@ -123,15 +126,17 @@
     <classNode dependClassName="simcore.action.ActionStep" />
     <classNode dependClassName="simcore.action.Consequence" />
     <classNode dependClassName="simcore.action.ConsequenceStep" />
+    <classNode dependClassName="simcore.action.basicAction.EndVisitAction" />
     <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForConditionAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
     <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.SpaceatCondition" />
     <classNode dependClassName="simcore.action.basicAction.conditions.StateCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Doctor" />
   </dependency>
   <dependency className="EDLanguage.sandbox.MajorsTriageNurse">
@@ -147,10 +152,12 @@
     <classNode dependClassName="simcore.action.Action" />
     <classNode dependClassName="simcore.action.ActionStep" />
     <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
     <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.NewPatientGotoOfficeSignal">
