@@ -35,19 +35,27 @@
     <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
-    <classNode dependClassName="simcore.action.basicAction.StayForConditionAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
     <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.StateCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
+  <dependency className="EDLanguage.sandbox.DoctorOffice">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
   <dependency className="EDLanguage.sandbox.EDBuilder">
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
+    <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
     <classNode dependClassName="EDLanguage.sandbox.ENP" />
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsTriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.Nurse" />
+    <classNode dependClassName="EDLanguage.sandbox.Reception" />
+    <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.Triage" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.Ward" />
     <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
@@ -67,7 +75,6 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.PatientAdder" />
     <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.WaitingRoomLocation" />
     <classNode dependClassName="simcore.basicStructures.Wall" />
     <classNode dependClassName="simcore.utilities.StaffAdder" />
     <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
@@ -100,6 +107,9 @@
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
+  <dependency className="EDLanguage.sandbox.Entrance">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
   <dependency className="EDLanguage.sandbox.InternNurse">
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
@@ -131,10 +141,8 @@
     <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
-    <classNode dependClassName="simcore.action.basicAction.StayForConditionAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
     <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.StateCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Doctor" />
@@ -215,6 +223,9 @@
   <dependency className="EDLanguage.sandbox.PatientWaitingForTriageSignal">
     <classNode extendsClassName="simcore.Signals.Signal" />
   </dependency>
+  <dependency className="EDLanguage.sandbox.Reception">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
   <dependency className="EDLanguage.sandbox.SomeoneNeedsHelpSignal">
     <classNode extendsClassName="simcore.Signals.Signal" />
   </dependency>
@@ -227,6 +238,18 @@
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.TaskRoom">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.Triage">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.WaitingRoom">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.Ward">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.XRaySignal">
     <classNode extendsClassName="simcore.Signals.Signal" />

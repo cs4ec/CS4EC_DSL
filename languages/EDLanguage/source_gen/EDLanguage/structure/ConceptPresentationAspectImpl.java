@@ -52,6 +52,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomDefinition;
   private ConceptPresentation props_RoomInstanceDefinition;
+  private ConceptPresentation props_RoomType;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
   private ConceptPresentation props_Signal;
@@ -386,6 +387,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RoomInstanceDefinition = cpb.create();
         }
         return props_RoomInstanceDefinition;
+      case LanguageConceptSwitch.RoomType:
+        if (props_RoomType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("The type of a room instance");
+          cpb.presentationByName();
+          props_RoomType = cpb.create();
+        }
+        return props_RoomType;
       case LanguageConceptSwitch.SelfInstance:
         if (props_SelfInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

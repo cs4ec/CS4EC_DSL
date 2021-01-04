@@ -19,7 +19,6 @@ import simcore.basicStructures.PatientAdder;
 import repast.simphony.valueLayer.GridValueLayer;
 import simcore.basicStructures.Room;
 import java.awt.Color;
-import simcore.basicStructures.WaitingRoomLocation;
 import repast.simphony.space.continuous.NdPoint;
 import simcore.basicStructures.Wall;
 
@@ -59,44 +58,39 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.addValueLayer(vl);
 
     // add Locations here 
-    Room Pediatrics_a = new Room("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, Color.BLUE);
-    Room MainReception_b = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, Color.GREEN);
-    Room Triage_c = new Room("Triage", context, space, grid, 105, 150, 20, 20, 1, 15, Color.GREEN);
-    Room MajorsTriage_d = new Room("MajorsTriage", context, space, grid, 120, 80, 20, 20, 1, 15, Color.GREEN);
-    Room MajorsConsultationRooms_f = new Room("MajorsConsultationRooms", context, space, grid, 120, 50, 50, 10, 1, 50, Color.YELLOW);
-    Room TaskRoom_g = new Room("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, Color.YELLOW);
-    Room Entrance_h = new Room("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, Color.GRAY);
-    Room XRayRoom1_i = new Room("XRayRoom1", context, space, grid, 155, 125, 20, 20, 1, 10, Color.YELLOW);
+    Room Pediatrics_a = new Room("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, Ward.getInstance(), Color.BLUE);
+    Room MainReception_b = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, Reception.getInstance(), Color.GREEN);
+    Room Triage_c = new Room("Triage", context, space, grid, 105, 150, 20, 20, 1, 15, Triage.getInstance(), Color.GREEN);
+    Room MajorsTriage_d = new Room("MajorsTriage", context, space, grid, 120, 80, 20, 20, 1, 15, Triage.getInstance(), Color.GREEN);
+    Room MajorsWaitingRoom_e = new Room("MajorsWaitingRoom", context, space, grid, 150, 60, 20, 50, 1, 20, WaitingRoom.getInstance(), Color.GRAY);
+    Room MajorsConsultationRooms_f = new Room("MajorsConsultationRooms", context, space, grid, 120, 50, 50, 10, 1, 50, DoctorOffice.getInstance(), Color.YELLOW);
+    Room TaskRoom_g = new Room("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, TaskRoom.getInstance(), Color.YELLOW);
+    Room Entrance_h = new Room("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, Entrance.getInstance(), Color.GRAY);
+    Room XRayRoom_i = new Room("XRayRoom", context, space, grid, 155, 125, 20, 20, 1, 10, TaskRoom.getInstance(), Color.YELLOW);
+    Room TriageWaitingRoom_j = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, WaitingRoom.getInstance(), Color.GRAY);
     try {
       Pediatrics_a.setSeats(0);
       MainReception_b.setSeats(0);
       Triage_c.setSeats(0);
       MajorsTriage_d.setSeats(0);
+      MajorsWaitingRoom_e.setSeats(20);
       MajorsConsultationRooms_f.setSeats(0);
       TaskRoom_g.setSeats(0);
       Entrance_h.setSeats(0);
-      XRayRoom1_i.setSeats(0);
+      XRayRoom_i.setSeats(0);
+      TriageWaitingRoom_j.setSeats(20);
       Pediatrics_a.setDesks(0);
       MainReception_b.setDesks(0);
       Triage_c.setDesks(3);
       MajorsTriage_d.setDesks(3);
+      MajorsWaitingRoom_e.setDesks(0);
       MajorsConsultationRooms_f.setDesks(5);
       TaskRoom_g.setDesks(0);
       Entrance_h.setDesks(0);
-      XRayRoom1_i.setDesks(0);
-    } catch (NumberFormatException e) {
-    }
-
-    WaitingRoomLocation MajorsWaitingRoom_e = new WaitingRoomLocation("MajorsWaitingRoom", context, space, grid, 150, 60, 20, 50, 1, 20, Color.GRAY);
-    WaitingRoomLocation TriageWaitingRoom_j = new WaitingRoomLocation("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, Color.GRAY);
-    try {
-      MajorsWaitingRoom_e.setSeats(20);
-      TriageWaitingRoom_j.setSeats(20);
-      MajorsWaitingRoom_e.setDesks(0);
+      XRayRoom_i.setDesks(0);
       TriageWaitingRoom_j.setDesks(0);
     } catch (NumberFormatException e) {
     }
-
 
     createWallBetween(0, 124, 75, 124, context, space, grid);
     createWallBetween(75, 0, 75, 125, context, space, grid);
@@ -110,13 +104,10 @@ public class EDBuilder implements ContextBuilder<Object> {
     createWallBetween(399, 0, 399, 199, context, space, grid);
     createWallBetween(152, 125, 152, 149, context, space, grid);
 
-
-
     for (Object obj : context) {
       NdPoint pt = space.getLocation(obj);
       grid.moveTo(obj, (int) pt.getX(), (int) pt.getY());
     }
-
 
     return context;
   }

@@ -470,11 +470,6 @@
       <property role="TrG5h" value="colour" />
       <ref role="AX2Wp" node="6o2BuIx6R5l" resolve="Colour" />
     </node>
-    <node concept="1TJgyi" id="64mqbMaZzPh" role="1TKVEl">
-      <property role="IQ2nx" value="6995894230161702225" />
-      <property role="TrG5h" value="roomType" />
-      <ref role="AX2Wp" node="64mqbMaZzOW" resolve="RoomType" />
-    </node>
     <node concept="1TJgyi" id="7lVoe4ydlAT" role="1TKVEl">
       <property role="IQ2nx" value="8465466444630809017" />
       <property role="TrG5h" value="seats" />
@@ -484,6 +479,12 @@
       <property role="IQ2nx" value="8465466444630809026" />
       <property role="TrG5h" value="desks" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="5QJON_AVrZ9" role="1TKVEi">
+      <property role="IQ2ns" value="6750846609945116617" />
+      <property role="20kJfa" value="roomType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5QJON_AUfSp" resolve="RoomType" />
     </node>
   </node>
   <node concept="1TIwiD" id="3KCb14J9922">
@@ -1114,31 +1115,6 @@
       <ref role="20lvS9" node="12ocaqaua7C" resolve="WallInstanceDefinition" />
     </node>
   </node>
-  <node concept="25R3W" id="64mqbMaZzOW">
-    <property role="3F6X1D" value="6995894230161702204" />
-    <property role="3GE5qa" value="ED" />
-    <property role="TrG5h" value="RoomType" />
-    <node concept="25R33" id="64mqbMaZzOX" role="25R1y">
-      <property role="3tVfz5" value="6995894230161702205" />
-      <property role="TrG5h" value="Entrance" />
-      <property role="1L1pqM" value="Entrance" />
-    </node>
-    <node concept="25R33" id="64mqbMaZzP8" role="25R1y">
-      <property role="3tVfz5" value="6995894230161702216" />
-      <property role="TrG5h" value="TaskRoom" />
-      <property role="1L1pqM" value="Task Room" />
-    </node>
-    <node concept="25R33" id="64mqbMaZzPb" role="25R1y">
-      <property role="3tVfz5" value="6995894230161702219" />
-      <property role="TrG5h" value="WaitingRoom" />
-      <property role="1L1pqM" value="Waiting Room" />
-    </node>
-    <node concept="25R33" id="64mqbMb3AvX" role="25R1y">
-      <property role="3tVfz5" value="6995894230162761725" />
-      <property role="TrG5h" value="Ward" />
-      <property role="1L1pqM" value="ward" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="7lVoe4xN_11">
     <property role="EcuMT" value="8465466444624056385" />
     <property role="3GE5qa" value="actions.basic actions" />
@@ -1203,6 +1179,18 @@
       <property role="20kJfa" value="targetPatient" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5QJON_AUfSp">
+    <property role="EcuMT" value="6750846609944804889" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="RoomType" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="roomtype" />
+    <property role="R4oN_" value="The type of a room instance" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="5QJON_AUfU1" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

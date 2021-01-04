@@ -7,20 +7,18 @@ import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
 import simcore.action.Action;
 import simcore.action.ActionStep;
-import simcore.action.basicAction.OrderAction;
-import simcore.agents.Patient;
-import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.basicStructures.Desk;
+import simcore.action.basicAction.OrderAction;
+import simcore.agents.Patient;
+import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.EndVisitAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
-import simcore.action.basicAction.conditions.StateCondition;
-import simcore.action.basicAction.StayForConditionAction;
 
 public class Doctor extends Staff {
 
@@ -62,7 +60,6 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsConsultationRooms")))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsConsultationRooms"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
@@ -113,25 +110,6 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }
-  public void InitMakeMistake(Signal s) {
-    System.out.println("MakeMistake" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
-        this.InitOrderBloodTest(s);
-      } else {
-        this.InitLetPatientGo(s);
-      }
-    } else {
-      this.InitXRay(s);
-    }
-
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("mistakes", "+=", 1)));
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("stress", "+=", 8)));
-  }
   public void InitDecideOnPatientPathway(Signal s) {
     System.out.println("DecideOnPatientPathway" + " function called");
 
@@ -149,21 +127,6 @@ public class Doctor extends Staff {
 
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("correctWork", "+=", 1)));
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("stress", "+=", 1)));
-  }
-  public void InitRest(Signal s) {
-    System.out.println("Rest" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    if (CheckCondition(new StateCondition().WithContent("stress", ">=", 90))) {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsWaitingRoom"))));
-      StayForConditionAction sa = new StayForConditionAction();
-      sa.WithCondition(new StateCondition().WithContent("stress", "<=", 10));
-      sa.WithConsequence(new Consequence().WithContent("stress", "-=", 10));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(sa));
-    } else {
-    }
-
   }
   public void InitOrderBloodTest(Signal s) {
     System.out.println("OrderBloodTest" + " function called");

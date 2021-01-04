@@ -1,44 +1,20 @@
 package simcore.agents;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.MajorsTriageNurse;
-import repast.simphony.context.Context;
-import repast.simphony.engine.environment.RunEnvironment;
+import EDLanguage.sandbox.WaitingRoom;
 import repast.simphony.engine.schedule.ScheduledMethod;
-import repast.simphony.engine.watcher.Watch;
-import repast.simphony.engine.watcher.WatcherTriggerSchedule;
-import repast.simphony.query.space.grid.GridCell;
-import repast.simphony.query.space.grid.GridCellNgh;
-import repast.simphony.random.RandomHelper;
-import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
-import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
-import repast.simphony.util.ContextUtils;
-import repast.simphony.util.SimUtilities;
-import simcore.Signals.Signal;
 import simcore.Signals.Orders.FollowOrder;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
-import simcore.action.Action;
-import simcore.action.ActionFragment;
-import simcore.action.ActionStep;
-import simcore.action.ConsequenceStep;
-import simcore.action.basicAction.MoveAction;
-import simcore.action.basicAction.OrderAction;
-import simcore.basicStructures.Board;
 import simcore.basicStructures.Room;
-import simcore.basicStructures.RoomType;
-import simcore.basicStructures.Seat;
 import simcore.basicStructures.ToolBox;
-import simcore.basicStructures.WaitingRoomLocation;
-import simcore.utilities.AStar;
 
 public class Patient extends Agent {
 
@@ -103,8 +79,7 @@ public class Patient extends Agent {
 				// if this agent is in the room..
 				if (targetLocation.WithInside(this)) {
 					//... and this room is a waitingroom, the patient will now set itself the action of taking a seat
-					if (targetLocation.hasSeats()) {
-//						FindASeat(targetLocation);
+					if (targetLocation.getRoomType() instanceof WaitingRoom) {
 						FindASeat();
 					}
 					curOrder = null;

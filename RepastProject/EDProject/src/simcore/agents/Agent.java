@@ -44,7 +44,6 @@ import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Seat;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
-import simcore.basicStructures.WaitingRoomLocation;
 import simcore.utilities.AStar;
 import simcore.utilities.Tuple;
 

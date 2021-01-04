@@ -141,22 +141,7 @@ public class Actor extends Agent {
 		// If I cant assign patient to myself, then I can just choose the first signal 
 		if(mintMyMaxPatients == 0) {
 			return plstSignals.get(0);
-		}
-		
-		// Otherwise, if my list is empty, select a signal and if it contains a patient, assign it to me
-//		if(mlstMyPatients.isEmpty()) {
-//			Signal s = plstSignals.get(0);
-//			Patient signalPatient = null;
-//			signalPatient = (Patient) s.getDataOfType(Patient.class);
-//
-//			if(signalPatient != null) {
-//				mlstMyPatients.add(signalPatient);
-//				signalPatient.assignStaff(this);
-//			}
-//			
-//			return s;
-//		}
-		
+		}	
 		
 		Map<Signal, Patient> pMapSignalsWithFreePatients = new HashMap<Signal,Patient>();
 		Map<Signal, Patient> pMapSignalsWithMyPatients = new HashMap<Signal,Patient>();

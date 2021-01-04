@@ -754,8 +754,14 @@
       <node concept="3F0ifn" id="64mqbMb2Edu" role="3EZMnx">
         <property role="3F0ifm" value=":" />
       </node>
-      <node concept="3F0A7n" id="64mqbMb2Eem" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:64mqbMaZzPh" resolve="roomType" />
+      <node concept="1iCGBv" id="5QJON_AVs1K" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:5QJON_AVrZ9" resolve="roomType" />
+        <node concept="1sVBvm" id="5QJON_AVs1M" role="1sWHZn">
+          <node concept="3F0A7n" id="5QJON_AVs2n" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="4_Lh49vi2LJ" role="3EZMnx">
         <property role="3F0ifm" value="x:" />
