@@ -28,6 +28,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DataMap;
   private ConceptPresentation props_Description;
   private ConceptPresentation props_EmergencyDepartment;
+  private ConceptPresentation props_EndVisitAction;
   private ConceptPresentation props_ExpressionCondition;
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
@@ -37,18 +38,22 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_NewPatientSignal;
   private ConceptPresentation props_NumericExpression;
   private ConceptPresentation props_ObjectInstance;
+  private ConceptPresentation props_OccupiableInstance;
+  private ConceptPresentation props_OccupyAction;
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PatientInterval;
-  private ConceptPresentation props_Place;
   private ConceptPresentation props_PlaceInstance;
   private ConceptPresentation props_PlaceInstanceCollection;
-  private ConceptPresentation props_PlaceInstanceDefinition;
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
+  private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomDefinition;
+  private ConceptPresentation props_RoomInstanceDefinition;
+  private ConceptPresentation props_RoomType;
+  private ConceptPresentation props_RoomTypeReference;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
   private ConceptPresentation props_Signal;
@@ -61,6 +66,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StayForConditionAction;
   private ConceptPresentation props_StayForTimeAction;
   private ConceptPresentation props_StopOrder;
+  private ConceptPresentation props_WallDefinition;
+  private ConceptPresentation props_WallInstanceDefinition;
 
   @Override
   @Nullable
@@ -145,7 +152,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Choice == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("A choice between two behaviours");
-          cpb.rawPresentation("choice");
+          cpb.rawPresentation("if");
           props_Choice = cpb.create();
         }
         return props_Choice;
@@ -207,6 +214,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EmergencyDepartment = cpb.create();
         }
         return props_EmergencyDepartment;
+      case LanguageConceptSwitch.EndVisitAction:
+        if (props_EndVisitAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("End the visit for the patient");
+          cpb.presentationByName();
+          props_EndVisitAction = cpb.create();
+        }
+        return props_EndVisitAction;
       case LanguageConceptSwitch.ExpressionCondition:
         if (props_ExpressionCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -273,6 +288,21 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectInstance = cpb.create();
         }
         return props_ObjectInstance;
+      case LanguageConceptSwitch.OccupiableInstance:
+        if (props_OccupiableInstance == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_OccupiableInstance = cpb.create();
+        }
+        return props_OccupiableInstance;
+      case LanguageConceptSwitch.OccupyAction:
+        if (props_OccupyAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Take an occupiable (seat, desk etc.)");
+          cpb.presentationByName();
+          props_OccupyAction = cpb.create();
+        }
+        return props_OccupyAction;
       case LanguageConceptSwitch.Order:
         if (props_Order == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -301,13 +331,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientInterval = cpb.create();
         }
         return props_PatientInterval;
-      case LanguageConceptSwitch.Place:
-        if (props_Place == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_Place = cpb.create();
-        }
-        return props_Place;
       case LanguageConceptSwitch.PlaceInstance:
         if (props_PlaceInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -322,13 +345,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PlaceInstanceCollection = cpb.create();
         }
         return props_PlaceInstanceCollection;
-      case LanguageConceptSwitch.PlaceInstanceDefinition:
-        if (props_PlaceInstanceDefinition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_PlaceInstanceDefinition = cpb.create();
-        }
-        return props_PlaceInstanceDefinition;
       case LanguageConceptSwitch.PlaceInstanceFromSignal:
         if (props_PlaceInstanceFromSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -351,6 +367,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
+      case LanguageConceptSwitch.Room:
+        if (props_Room == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Room = cpb.create();
+        }
+        return props_Room;
       case LanguageConceptSwitch.RoomDefinition:
         if (props_RoomDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -358,10 +381,32 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RoomDefinition = cpb.create();
         }
         return props_RoomDefinition;
+      case LanguageConceptSwitch.RoomInstanceDefinition:
+        if (props_RoomInstanceDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_RoomInstanceDefinition = cpb.create();
+        }
+        return props_RoomInstanceDefinition;
+      case LanguageConceptSwitch.RoomType:
+        if (props_RoomType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("The type of a room instance");
+          cpb.presentationByName();
+          props_RoomType = cpb.create();
+        }
+        return props_RoomType;
+      case LanguageConceptSwitch.RoomTypeReference:
+        if (props_RoomTypeReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_RoomTypeReference = cpb.create();
+        }
+        return props_RoomTypeReference;
       case LanguageConceptSwitch.SelfInstance:
         if (props_SelfInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("the actor himslef");
+          cpb.shortDesc("my location");
           cpb.presentationByName();
           props_SelfInstance = cpb.create();
         }
@@ -448,6 +493,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StopOrder = cpb.create();
         }
         return props_StopOrder;
+      case LanguageConceptSwitch.WallDefinition:
+        if (props_WallDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("WallDefinition");
+          props_WallDefinition = cpb.create();
+        }
+        return props_WallDefinition;
+      case LanguageConceptSwitch.WallInstanceDefinition:
+        if (props_WallInstanceDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_WallInstanceDefinition = cpb.create();
+        }
+        return props_WallInstanceDefinition;
     }
     return null;
   }

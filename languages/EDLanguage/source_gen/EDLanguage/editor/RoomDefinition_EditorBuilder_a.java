@@ -11,6 +11,9 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
@@ -54,6 +57,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
     AbstractCellListHandler handler = new roomsListHandler_jcemfz_a0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_rooms");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
@@ -74,7 +80,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.rooms$Qimv;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.PlaceInstanceDefinition$Jk;
+      return CONCEPTS.RoomInstanceDefinition$Jk;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -130,6 +136,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept PlaceInstanceDefinition$Jk = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, "EDLanguage.structure.PlaceInstanceDefinition");
+    /*package*/ static final SConcept RoomInstanceDefinition$Jk = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, "EDLanguage.structure.RoomInstanceDefinition");
   }
 }

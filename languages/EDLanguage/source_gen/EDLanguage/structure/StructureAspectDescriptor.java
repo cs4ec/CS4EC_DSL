@@ -37,6 +37,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDataMap = createDescriptorForDataMap();
   /*package*/ final ConceptDescriptor myConceptDescription = createDescriptorForDescription();
   /*package*/ final ConceptDescriptor myConceptEmergencyDepartment = createDescriptorForEmergencyDepartment();
+  /*package*/ final ConceptDescriptor myConceptEndVisitAction = createDescriptorForEndVisitAction();
   /*package*/ final ConceptDescriptor myConceptExpressionCondition = createDescriptorForExpressionCondition();
   /*package*/ final ConceptDescriptor myConceptFollowOrder = createDescriptorForFollowOrder();
   /*package*/ final ConceptDescriptor myConceptHumanInstance = createDescriptorForHumanInstance();
@@ -46,18 +47,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptNewPatientSignal = createDescriptorForNewPatientSignal();
   /*package*/ final ConceptDescriptor myConceptNumericExpression = createDescriptorForNumericExpression();
   /*package*/ final ConceptDescriptor myConceptObjectInstance = createDescriptorForObjectInstance();
+  /*package*/ final ConceptDescriptor myConceptOccupiableInstance = createDescriptorForOccupiableInstance();
+  /*package*/ final ConceptDescriptor myConceptOccupyAction = createDescriptorForOccupyAction();
   /*package*/ final ConceptDescriptor myConceptOrder = createDescriptorForOrder();
   /*package*/ final ConceptDescriptor myConceptOrderPatientAction = createDescriptorForOrderPatientAction();
   /*package*/ final ConceptDescriptor myConceptPatientInstance = createDescriptorForPatientInstance();
   /*package*/ final ConceptDescriptor myConceptPatientInterval = createDescriptorForPatientInterval();
-  /*package*/ final ConceptDescriptor myConceptPlace = createDescriptorForPlace();
   /*package*/ final ConceptDescriptor myConceptPlaceInstance = createDescriptorForPlaceInstance();
   /*package*/ final ConceptDescriptor myConceptPlaceInstanceCollection = createDescriptorForPlaceInstanceCollection();
-  /*package*/ final ConceptDescriptor myConceptPlaceInstanceDefinition = createDescriptorForPlaceInstanceDefinition();
   /*package*/ final ConceptDescriptor myConceptPlaceInstanceFromSignal = createDescriptorForPlaceInstanceFromSignal();
   /*package*/ final ConceptDescriptor myConceptPlaceInstanceReference = createDescriptorForPlaceInstanceReference();
   /*package*/ final ConceptDescriptor myConceptPossibilityCondition = createDescriptorForPossibilityCondition();
+  /*package*/ final ConceptDescriptor myConceptRoom = createDescriptorForRoom();
   /*package*/ final ConceptDescriptor myConceptRoomDefinition = createDescriptorForRoomDefinition();
+  /*package*/ final ConceptDescriptor myConceptRoomInstanceDefinition = createDescriptorForRoomInstanceDefinition();
+  /*package*/ final ConceptDescriptor myConceptRoomType = createDescriptorForRoomType();
+  /*package*/ final ConceptDescriptor myConceptRoomTypeReference = createDescriptorForRoomTypeReference();
   /*package*/ final ConceptDescriptor myConceptSelfInstance = createDescriptorForSelfInstance();
   /*package*/ final ConceptDescriptor myConceptSendSignalAction = createDescriptorForSendSignalAction();
   /*package*/ final ConceptDescriptor myConceptSignal = createDescriptorForSignal();
@@ -70,9 +75,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptStayForConditionAction = createDescriptorForStayForConditionAction();
   /*package*/ final ConceptDescriptor myConceptStayForTimeAction = createDescriptorForStayForTimeAction();
   /*package*/ final ConceptDescriptor myConceptStopOrder = createDescriptorForStopOrder();
+  /*package*/ final ConceptDescriptor myConceptWallDefinition = createDescriptorForWallDefinition();
+  /*package*/ final ConceptDescriptor myConceptWallInstanceDefinition = createDescriptorForWallInstanceDefinition();
   /*package*/ final EnumerationDescriptor myEnumerationBaseType = new EnumerationDescriptor_BaseType();
+  /*package*/ final EnumerationDescriptor myEnumerationColour = new EnumerationDescriptor_Colour();
+  /*package*/ final EnumerationDescriptor myEnumerationDirection = new EnumerationDescriptor_Direction();
   /*package*/ final EnumerationDescriptor myEnumerationJudgeOperator = new EnumerationDescriptor_JudgeOperator();
   /*package*/ final EnumerationDescriptor myEnumerationModifyOperator = new EnumerationDescriptor_ModifyOperator();
+  /*package*/ final EnumerationDescriptor myEnumerationOccupiableTypes = new EnumerationDescriptor_OccupiableTypes();
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypeEasyFloatNumber = new ConstrainedStringDatatypeDescriptorImpl(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL, "EasyFloatNumber", "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/7454555096516561340", "[0-9]+(.[0-9]+)?");
   private final LanguageConceptSwitch myIndexSwitch;
 
@@ -90,7 +100,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActor, myConceptActorInstantiation, myConceptActorReference, myConceptAttribute, myConceptAttributeExpressionReference, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptChoice, myConceptCondition, myConceptConsequence, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptEmergencyDepartment, myConceptExpressionCondition, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptNumericExpression, myConceptObjectInstance, myConceptOrder, myConceptOrderPatientAction, myConceptPatientInstance, myConceptPatientInterval, myConceptPlace, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceDefinition, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRoomDefinition, myConceptSelfInstance, myConceptSendSignalAction, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder);
+    return Arrays.asList(myConceptActor, myConceptActorInstantiation, myConceptActorReference, myConceptAttribute, myConceptAttributeExpressionReference, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptChoice, myConceptCondition, myConceptConsequence, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptEmergencyDepartment, myConceptEndVisitAction, myConceptExpressionCondition, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptNumericExpression, myConceptObjectInstance, myConceptOccupiableInstance, myConceptOccupyAction, myConceptOrder, myConceptOrderPatientAction, myConceptPatientInstance, myConceptPatientInterval, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRoom, myConceptRoomDefinition, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptRoomTypeReference, myConceptSelfInstance, myConceptSendSignalAction, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -135,6 +145,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDescription;
       case LanguageConceptSwitch.EmergencyDepartment:
         return myConceptEmergencyDepartment;
+      case LanguageConceptSwitch.EndVisitAction:
+        return myConceptEndVisitAction;
       case LanguageConceptSwitch.ExpressionCondition:
         return myConceptExpressionCondition;
       case LanguageConceptSwitch.FollowOrder:
@@ -153,6 +165,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptNumericExpression;
       case LanguageConceptSwitch.ObjectInstance:
         return myConceptObjectInstance;
+      case LanguageConceptSwitch.OccupiableInstance:
+        return myConceptOccupiableInstance;
+      case LanguageConceptSwitch.OccupyAction:
+        return myConceptOccupyAction;
       case LanguageConceptSwitch.Order:
         return myConceptOrder;
       case LanguageConceptSwitch.OrderPatientAction:
@@ -161,22 +177,26 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPatientInstance;
       case LanguageConceptSwitch.PatientInterval:
         return myConceptPatientInterval;
-      case LanguageConceptSwitch.Place:
-        return myConceptPlace;
       case LanguageConceptSwitch.PlaceInstance:
         return myConceptPlaceInstance;
       case LanguageConceptSwitch.PlaceInstanceCollection:
         return myConceptPlaceInstanceCollection;
-      case LanguageConceptSwitch.PlaceInstanceDefinition:
-        return myConceptPlaceInstanceDefinition;
       case LanguageConceptSwitch.PlaceInstanceFromSignal:
         return myConceptPlaceInstanceFromSignal;
       case LanguageConceptSwitch.PlaceInstanceReference:
         return myConceptPlaceInstanceReference;
       case LanguageConceptSwitch.PossibilityCondition:
         return myConceptPossibilityCondition;
+      case LanguageConceptSwitch.Room:
+        return myConceptRoom;
       case LanguageConceptSwitch.RoomDefinition:
         return myConceptRoomDefinition;
+      case LanguageConceptSwitch.RoomInstanceDefinition:
+        return myConceptRoomInstanceDefinition;
+      case LanguageConceptSwitch.RoomType:
+        return myConceptRoomType;
+      case LanguageConceptSwitch.RoomTypeReference:
+        return myConceptRoomTypeReference;
       case LanguageConceptSwitch.SelfInstance:
         return myConceptSelfInstance;
       case LanguageConceptSwitch.SendSignalAction:
@@ -201,6 +221,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptStayForTimeAction;
       case LanguageConceptSwitch.StopOrder:
         return myConceptStopOrder;
+      case LanguageConceptSwitch.WallDefinition:
+        return myConceptWallDefinition;
+      case LanguageConceptSwitch.WallInstanceDefinition:
+        return myConceptWallInstanceDefinition;
       default:
         return null;
     }
@@ -208,7 +232,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationBaseType, myEnumerationJudgeOperator, myEnumerationModifyOperator, myCSDatatypeEasyFloatNumber);
+    return Arrays.asList(myEnumerationBaseType, myEnumerationColour, myEnumerationDirection, myEnumerationJudgeOperator, myEnumerationModifyOperator, myEnumerationOccupiableTypes, myCSDatatypeEasyFloatNumber);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -222,6 +246,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/3838812034270454385");
     b.version(2);
+    b.property("patientCapacity", 0x757b60e1226eda1dL).type(PrimitiveTypeId.INTEGER).origin("8465466444634577437").done();
     b.associate("superType", 0x35463334ce306ba8L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L).optional(true).origin("3838812034270522280").done();
     b.aggregate("attributes", 0x257e995deb85de00L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125516L).optional(true).ordered(true).multiple(true).origin("2701765455131303424").done();
     b.aggregate("behaviours", 0x270efea19372e41eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL).optional(true).ordered(true).multiple(true).origin("2814466787070108702").done();
@@ -321,7 +346,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("condition", 0x35463334ce30854dL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ebbb42L).optional(false).ordered(true).multiple(false).origin("3838812034270528845").done();
     b.aggregate("if_case", 0x35463334ce30854bL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(false).ordered(true).multiple(false).origin("3838812034270528843").done();
     b.aggregate("else_case", 0x35463334ce308550L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(true).ordered(true).multiple(false).origin("3838812034270528848").done();
-    b.alias("choice");
+    b.alias("if");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCondition() {
@@ -394,6 +419,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("staff", 0x35463334ce306babL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f7b02L).optional(true).ordered(true).multiple(true).origin("3838812034270522283").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForEndVisitAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "EndVisitAction", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e122658521L);
+    b.class_(false, false, false);
+    b.super_("EDLanguage.structure.Behaviour", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8465466444633965857");
+    b.version(2);
+    b.aggregate("targetPatient", 0x757b60e122658524L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a4L).optional(false).ordered(true).multiple(false).origin("8465466444633965860").done();
+    b.alias("end visit for patient");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForExpressionCondition() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "ExpressionCondition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125515L);
     b.class_(false, false, false);
@@ -443,7 +479,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/3838812034270528852");
     b.version(2);
     b.aggregate("targetObject", 0x71ffe5bd021cc62L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f1255b0L).optional(false).ordered(true).multiple(false).origin("513408552830880866").done();
-    b.alias("move");
+    b.alias("go to");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForMoveOrder() {
@@ -479,6 +515,27 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093659899312");
     b.version(2);
     b.property("type", 0x3c282c112f1255b1L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d9709f40L)).origin("4334763093659899313").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOccupiableInstance() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "OccupiableInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8465466444624057771");
+    b.version(2);
+    b.property("occupiableType", 0x757b60e121e2b8d0L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce56f1L)).origin("8465466444625393872").done();
+    b.alias("occupiable");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOccupyAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "OccupyAction", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce5041L);
+    b.class_(false, false, false);
+    b.super_("EDLanguage.structure.Behaviour", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8465466444624056385");
+    b.version(2);
+    b.aggregate("targetObject", 0x757b60e121ce5044L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL).optional(false).ordered(true).multiple(false).origin("8465466444624056388").done();
+    b.alias("take");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForOrder() {
@@ -517,14 +574,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("timespan", 0x5ee9ee33c44b81a3L).type(PrimitiveTypeId.INTEGER).origin("6839259415242834339").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForPlace() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "Place", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249042L);
-    b.class_(false, false, true);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093661093954");
-    b.version(2);
-    return b.create();
-  }
   private static ConceptDescriptor createDescriptorForPlaceInstance() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "PlaceInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a3L);
     b.class_(false, true, false);
@@ -541,20 +590,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("place", 0xa159abb4e9e66L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f27bdc3L).optional(false).ordered(true).multiple(false).origin("2838504078745190").done();
     b.alias("constant place");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForPlaceInstanceDefinition() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "PlaceInstanceDefinition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L);
-    b.class_(false, false, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093661093957");
-    b.version(2);
-    b.property("x", 0x497144425f482c7fL).type(PrimitiveTypeId.INTEGER).origin("5292086088994139263").done();
-    b.property("y", 0x497144425f482c81L).type(PrimitiveTypeId.INTEGER).origin("5292086088994139265").done();
-    b.property("width", 0x497144425f7f2d45L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743941").done();
-    b.property("height", 0x497144425f7f2d49L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743945").done();
-    b.property("capacity", 0x497144425f7f437cL).type(PrimitiveTypeId.INTEGER).origin("5292086088997749628").done();
-    b.associate("type", 0x3c282c112f249046L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249042L).optional(false).origin("4334763093661093958").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPlaceInstanceFromSignal() {
@@ -585,6 +620,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("possibility");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForRoom() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "Room", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249042L);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093661093954");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForRoomDefinition() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "RoomDefinition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249082L);
     b.class_(false, false, true);
@@ -593,13 +636,48 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("rooms", 0x3c282c112f249083L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L).optional(true).ordered(true).multiple(true).origin("4334763093661094019").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForRoomInstanceDefinition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "RoomInstanceDefinition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093661093957");
+    b.version(2);
+    b.property("x", 0x497144425f482c7fL).type(PrimitiveTypeId.INTEGER).origin("5292086088994139263").done();
+    b.property("y", 0x497144425f482c81L).type(PrimitiveTypeId.INTEGER).origin("5292086088994139265").done();
+    b.property("width", 0x497144425f7f2d45L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743941").done();
+    b.property("height", 0x497144425f7f2d49L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743945").done();
+    b.property("capacity", 0x497144425f7f437cL).type(PrimitiveTypeId.INTEGER).origin("5292086088997749628").done();
+    b.property("colour", 0x66029deba11b71c3L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L)).origin("7350611177167876547").done();
+    b.property("seats", 0x757b60e1223559b9L).type(PrimitiveTypeId.INTEGER).origin("8465466444630809017").done();
+    b.property("desks", 0x757b60e1223559c2L).type(PrimitiveTypeId.INTEGER).origin("8465466444630809026").done();
+    b.associate("roomType", 0x5dafd33966edbfc9L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L).optional(false).origin("6750846609945116617").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRoomType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "RoomType", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/6750846609944804889");
+    b.version(2);
+    b.alias("roomtype");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRoomTypeReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "RoomTypeReference", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL);
+    b.class_(false, false, false);
+    b.super_("EDLanguage.structure.PlaceInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a3L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/6750846609956093098");
+    b.version(2);
+    b.associate("roomType", 0x5dafd3396799c110L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L).optional(false).origin("6750846609956389136").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForSelfInstance() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "SelfInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b5cf14L);
     b.class_(false, false, false);
     b.super_("EDLanguage.structure.HumanInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a2L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493511036692");
     b.version(2);
-    b.alias("self");
+    b.alias("me");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSendSignalAction() {
@@ -712,6 +790,26 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493510951871");
     b.version(2);
     b.alias("stop");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForWallDefinition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "WallDefinition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x109830a68a82ca51L);
+    b.class_(false, false, true);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/1195759192913398353");
+    b.version(2);
+    b.aggregate("walls", 0x109830a68a82ca54L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x109830a68a78a1e8L).optional(true).ordered(true).multiple(true).origin("1195759192913398356").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForWallInstanceDefinition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "WallInstanceDefinition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x109830a68a78a1e8L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/1195759192912732648");
+    b.version(2);
+    b.property("xStart", 0x109830a68a78a1ebL).type(PrimitiveTypeId.INTEGER).origin("1195759192912732651").done();
+    b.property("yStart", 0x109830a68a78a1edL).type(PrimitiveTypeId.INTEGER).origin("1195759192912732653").done();
+    b.property("xEnd", 0x109830a68a78a1f0L).type(PrimitiveTypeId.INTEGER).origin("1195759192912732656").done();
+    b.property("yEnd", 0x109830a68a78a1f4L).type(PrimitiveTypeId.INTEGER).origin("1195759192912732660").done();
     return b.create();
   }
 }

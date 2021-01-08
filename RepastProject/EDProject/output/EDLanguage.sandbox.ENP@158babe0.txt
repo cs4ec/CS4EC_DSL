@@ -1,0 +1,13 @@
+Time point: 235.0 | PatientsSeen: 1.0
+Time point: 447.0 | PatientsSeen: 2.0
+Time point: 658.0 | PatientsSeen: 3.0
+Time point: 870.0 | PatientsSeen: 4.0
+Time point: 1082.0 | PatientsSeen: 5.0
+Time point: 1291.0 | PatientsSeen: 6.0
+Time point: 1501.0 | PatientsSeen: 7.0
+Time point: 1712.0 | PatientsSeen: 8.0
+Time point: 1922.0 | PatientsSeen: 9.0
+Time point: 2131.0 | PatientsSeen: 10.0
+Time point: 2341.0 | PatientsSeen: 11.0
+Time point: 2552.0 | PatientsSeen: 12.0
+Time point: 2762.0 | PatientsSeen: 13.0

@@ -4,21 +4,21 @@ package EDLanguage.sandbox;
 
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
-import edHello.Signals.Signal;
-import edHello.action.Action;
-import edHello.action.ActionStep;
-import edHello.action.basicAction.MoveAction;
-import edHello.action.basicAction.StayForConditionAction;
-import edHello.action.basicAction.conditions.SpaceatCondition;
-import edHello.action.basicAction.StayForTimeAction;
-import edHello.action.basicAction.conditions.PossibilityCondition;
-import edHello.action.basicAction.SendSignalAction;
-import edHello.action.basicAction.OrderAction;
-import edHello.agents.Patient;
-import edHello.Signals.Orders.MoveToOrder;
-import edHello.action.ConsequenceStep;
-import edHello.action.Consequence;
-import edHello.action.basicAction.conditions.StateCondition;
+import simcore.Signals.Signal;
+import simcore.action.Action;
+import simcore.action.ActionStep;
+import simcore.action.basicAction.MoveAction;
+import simcore.action.basicAction.OccupyAction;
+import simcore.basicStructures.Desk;
+import simcore.action.basicAction.OrderAction;
+import simcore.agents.Patient;
+import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.SendSignalAction;
+import simcore.action.basicAction.EndVisitAction;
+import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.ConsequenceStep;
+import simcore.action.Consequence;
 
 public class Doctor extends Staff {
 
@@ -29,16 +29,24 @@ public class Doctor extends Staff {
 
   public Doctor(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
+    mintMyMaxPatients = 1;
   }
 
+  public Doctor(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+    super(space, grid, pstrStartLocation);
+  }
 
   public void SetMission(Signal s) {
     switch (s.getName()) {
       case "":
         break;
-      case "NewPatientGotoOffice":
-        curMission = new Action("Diagnose");
-        this.InitDiagnose(s);
+      case "PatientWaitingForDoctor":
+        curMission = new Action("CallPatientOver");
+        this.InitCallPatientOver(s);
+        break;
+      case "PatientNeedsFinalConsultation":
+        curMission = new Action("GiveFinalConsultation");
+        this.InitGiveFinalConsultation(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -47,23 +55,28 @@ public class Doctor extends Staff {
     curActionStep = 0;
   }
 
+  public void InitCallPatientOver(Signal s) {
+    System.out.println("CallPatientOver" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    this.InitDecideOnPatientPathway(s);
+
+  }
   public void InitDiagnose(Signal s) {
     System.out.println("Diagnose" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("move to diagnostic room").WithAction(new MoveAction().WithTarget(s.GetData("destination"))));
-    StayForConditionAction sa = new StayForConditionAction();
-    sa.WithCondition(new SpaceatCondition().WithSubject(s.GetData("patient")).WithTarget(s.GetData("destination")));
-    curMission.WithStep(new ActionStep().WithName("wait until patient arrive").WithAction(sa));
-    curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(10)));
-    if (CheckCondition(new PossibilityCondition().WithPossibility(2000 / (this.stress - 100) + 108))) {
-      this.InitMakeCorrectDiagnose(s);
-    } else {
-      this.InitMakeMistake(s);
-    }
-    this.InitRest(s);
-    curMission.WithStep(new ActionStep().WithName("go back to office").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("office1"))));
+    curMission.WithStep(new ActionStep().WithName("move to diagnostic room").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
+    curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    this.InitDecideOnPatientPathway(s);
 
   }
   public void InitXRay(Signal s) {
@@ -71,8 +84,10 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
     sendSignalTemp = new XRaySignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
+    sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
@@ -91,37 +106,18 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("exit")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new EndVisitAction().WithPatient(((Patient) s.GetData("patient")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }
-  public void InitMakeMistake(Signal s) {
-    System.out.println("MakeMistake" + " function called");
+  public void InitDecideOnPatientPathway(Signal s) {
+    System.out.println("DecideOnPatientPathway" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
     if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
       if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("waitingArea")))));
-        this.InitTakeMedicine(s);
-      } else {
-        this.InitLetPatientGo(s);
-      }
-    } else {
-      this.InitXRay(s);
-    }
-
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("mistakes", "+=", 1)));
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("stress", "+=", 8)));
-  }
-  public void InitMakeCorrectDiagnose(Signal s) {
-    System.out.println("MakeCorrectDiagnose" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("waitingArea")))));
-        this.InitTakeMedicine(s);
+        this.InitOrderBloodTest(s);
       } else {
         this.InitLetPatientGo(s);
       }
@@ -132,19 +128,28 @@ public class Doctor extends Staff {
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("correctWork", "+=", 1)));
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("stress", "+=", 1)));
   }
-  public void InitRest(Signal s) {
-    System.out.println("Rest" + " function called");
+  public void InitOrderBloodTest(Signal s) {
+    System.out.println("OrderBloodTest" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
-    if (CheckCondition(new StateCondition().WithContent("stress", ">=", 90))) {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("restRoom1"))));
-      StayForConditionAction sa = new StayForConditionAction();
-      sa.WithCondition(new StateCondition().WithContent("stress", "<=", 10));
-      sa.WithConsequence(new Consequence().WithContent("stress", "-=", 10));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(sa));
-    } else {
-    }
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
+    sendSignalTemp = new PatientNeedsBloodTestSignal();
+    sendSignalTemp.AddData("patient", s.GetData("patient"));
+    sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitGiveFinalConsultation(Signal s) {
+    System.out.println("GiveFinalConsultation" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
+    curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
+    this.InitLetPatientGo(s);
 
   }
 
