@@ -3,8 +3,11 @@ package simcore.agents;
 import java.lang.reflect.Field;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.DoctorOffice;
 import EDLanguage.sandbox.Nurse;
 import repast.simphony.context.Context;
 import repast.simphony.query.space.grid.GridCell;
@@ -35,6 +38,7 @@ import simcore.action.basicAction.conditions.IsAvailableCondition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
+import simcore.basicStructures.Bed;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Desk;
 import simcore.basicStructures.EDMap;
@@ -58,7 +62,6 @@ public class Agent {
 	protected List<GridPoint> curPath;
 	protected boolean isIdle;
 	protected List<Field> fields;
-
 	protected ContinuousSpace<Object> space;
 	protected Grid<Object> grid;
 
@@ -86,33 +89,51 @@ public class Agent {
 
 		ExecMission();
 	}
-	
+
 	public void InitActionFragment(ActionFragment curActionFragment) {
 		if (curActionFragment instanceof OccupyAction) {
-			InitOccpuyAction((OccupyAction)curActionFragment);
+			InitOccpuyAction((OccupyAction) curActionFragment);
+		}
+		if (curActionFragment instanceof MoveAction) {
+			InitMoveAction((MoveAction) curActionFragment);
 		}
 	}
-	
+
 	/**
-	 * If the current Agent action is to move to an occupiable, then process what instance of that occupiable I am targeting
+	 * If the current Agent action is to move to an occupiable, then process what
+	 * instance of that occupiable I am targeting
+	 * 
 	 * @param stepLogic The current step of the Agent's Mission
 	 */
 	private void InitOccpuyAction(OccupyAction stepLogic) {
 		Class target = stepLogic.getDestinationOccupiable();
 
 		// If already occupying the target, then move on
-		if(curOccupying != null && curOccupying.getClass() == target) {
+		if (curOccupying != null && curOccupying.getClass() == target) {
 			return;
 		}
-		
-		if(stepLogic.getConcreteDestination() == null) {
-			if (target == Seat.class) {
-				if(curInside == null) {
-					System.out.println("");
-				}
-				stepLogic.setConcreteDestination(SelectSeat(curInside));
-			} else if (target == Desk.class) {
-				stepLogic.setConcreteDestination(SelectDesk(curInside));
+
+		Occupiable targetOccupiable = stepLogic.getConcreteDestination();
+		// Otherwise, find an instance of the target occupiable type to head towards
+		if (targetOccupiable == null) {
+			stepLogic.setConcreteDestination(SelectOccupiable(curInside,target));
+		} else if (targetOccupiable.getOccupier() != null && targetOccupiable.getOccupier() != this) {
+			if (targetOccupiable instanceof Seat) {
+				FindASeat();
+			}
+		}
+	}
+
+	private void InitMoveAction(MoveAction stepLogic) {
+		// If this is a movement to a room type rather than a specific instance of a
+		// room, then we must select a room instance as our concrete target
+		if (stepLogic.getDestinationObject() == null) {
+			stepLogic.setDestination(SelectLocation((RoomType) stepLogic.getTargetDestinationType()));
+		} 
+		else if(stepLogic.getTargetDestinationType() instanceof RoomType) {
+			Room pCurrentTarget = (Room) stepLogic.getDestinationObject();
+			if(EvaluateRoomChoice(pCurrentTarget) == 0.0){
+				stepLogic.setDestination(SelectLocation((RoomType) stepLogic.getTargetDestinationType()));
 			}
 		}
 	}
@@ -131,69 +152,23 @@ public class Agent {
 		// Get the current logic step and initialise it
 		ActionFragment stepLogic = curStep.getStepLogic();
 		InitActionFragment(stepLogic);
-		
+
 		// Move action
 		if (stepLogic instanceof MoveAction) {
 			MoveTo(((MoveAction) stepLogic).getDestinationObject());
 		}
-		
-		if(stepLogic instanceof OccupyAction) {
+
+		if (stepLogic instanceof OccupyAction) {
 			// If there is an occupiable free, move towards it
-			if(((OccupyAction) stepLogic).getConcreteDestination() != null) {
+			if (((OccupyAction) stepLogic).getConcreteDestination() != null) {
 				MoveTo(((OccupyAction) stepLogic).getConcreteDestination());
 			} else { // Otherwise, ToDO: Add behaviour here
 				NextStep();
 			}
 		}
-
-//		// Stay Action
-//		if (stepLogic instanceof StayAction) {
-//			// Stay for some set time
-//			if (stepLogic instanceof StayForTimeAction) {
-//				curTimeCount--;
-//				if (curTimeCount == 0) {
-//					NextStep();
-//					return;
-//				} else {
-//					return;
-//				}
-//			}
-//
-//			// Stay until some condition met
-//			if (stepLogic instanceof StayForConditionAction) {
-//				UpdateState(((StayForConditionAction) stepLogic).getConsequence());
-//				if (CheckCondition(curCondition)) {
-//					NextStep();
-//					return;
-//				} else {
-//					return;
-//				}
-//			}
-//		}
-//
-//		// Send Signal Action
-//		if (stepLogic instanceof SendSignalAction) {
-//			Signal s = ((SendSignalAction) stepLogic).getSignal();
-//			Board b = ReadBoard();
-//			b.PushMission(s);
-//			NextStep();
-//			return;
-//		}
-//
-//		// Order Action
-//		if (stepLogic instanceof OrderAction) {
-//			Patient p = ((OrderAction) stepLogic).getOrderTarget();
-//			Order o = ((OrderAction) stepLogic).getOrderContent();
-//
-//			System.out.println("Order " + p + " To " + o);
-//
-//			p.TakeOrder(o);
-//			NextStep();
-//			return;
-//		}
 		System.out.println("-----------------------------------------");
 	}
-	
+
 	/**
 	 * Print out the status of the Agent's current mission
 	 */
@@ -205,31 +180,32 @@ public class Agent {
 		System.out.println(
 				"cur action step: " + curActionStep + ": " + curMission.getSteps().get(curActionStep).getName());
 	}
-	
+
 	/**
 	 * If the current Agent action is to move somewhere, then process that here
+	 * 
 	 * @param stepLogic The current step of the Agent's Mission
 	 */
 	protected void MoveTo(Object target) {
-		// If the target object is of instance 'RoomType' then the agent must first
-		// decide what instance of that room they wish to move towards
-		if (target instanceof RoomType) {
-			target = SelectLocation((RoomType) target);
-		}
-		
+//		// If the target object is of instance 'RoomType' then the agent must first
+//		// decide what instance of that room they wish to move towards
+//		if (target instanceof RoomType) {
+//			target = SelectLocation((RoomType) target);
+//		}
+
 		// If I am already here, dont do anything
 		if (ImAt(target)) {
 			NextStep();
 			return;
 		}
-		
+
 		// Move in the physical space
 		MoveTowards(target);
-		
-		// If the agent is moving towards an occupiable (bed, seat etc) 
+
+		// If the agent is moving towards an occupiable (bed, seat etc)
 		if (target instanceof Occupiable) {
-			MoveToOccupiable((Occupiable)target);
-		} 
+			MoveToOccupiable((Occupiable) target);
+		}
 		// Else moving towards the room
 		else if (target instanceof Room) {
 			Room targetLocation = (Room) target;
@@ -237,28 +213,29 @@ public class Agent {
 			if (targetLocation.WithInside(this)) {
 				NextStep();
 			}
-		} 
+		}
 		// Move toward a specific point (e.g. toward an Agent's location)
 		else {
 
 		}
 	}
-	
+
 	private void MoveToOccupiable(Occupiable target) {
 		Occupiable targetOccupiable = (Occupiable) target;
 		// if this agent is already there, continue
 		if (targetOccupiable.getOccupier() == this) {
 			NextStep();
-		// If this agent is walking towards the occupiable that has now been taken, find a new one
-		} else if(targetOccupiable.getOccupier() != null && targetOccupiable.getOccupier() != this) {
-			if(targetOccupiable instanceof Seat) {
-//				FindASeat(targetOccupiable.getResidingRoom());
-				FindASeat();
-			}
+			// If this agent is walking towards the occupiable that has now been taken, find
+			// a new one
+//		} 
+//		else if (targetOccupiable.getOccupier() != null && targetOccupiable.getOccupier() != this) {
+//			if (targetOccupiable instanceof Seat) {
+//				FindASeat();
+//			}
 //			if(targetOccupiable instanceof Desk) {
 //				FindADesk(targetOccupiable.getResidingRoom());
 //			}
-		}else { // else take the seat
+		} else { // else take the seat
 			if (ImAt(targetOccupiable)) {
 				targetOccupiable.setOccupier(this);
 			}
@@ -267,52 +244,75 @@ public class Agent {
 
 	// Given a RoomType, select a Location of that RoomType
 	private Room SelectLocation(RoomType pRoomType) {
-		return null;
+		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
+		// If I am already in one of those rooms, stay there
+		if(pRooms.contains(curInside)) {
+			return curInside;
+		}
+		// Otherwise find an instance of the room we want
+		// By default select the one that is most empty
+		try {
+			return pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r2), EvaluateRoomChoice(r1))).findFirst().get();
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("No instances of roomtype: " + pRoomType.name + " found");
+			return null;
+		}
 	}
 	
-//	//Agent has entered the room and now will find a seat to take and move towards it
-//	protected void FindASeat(Room insideRoom) {
-//		Seat selectedSeat = SelectSeat(insideRoom);
-//		if(selectedSeat != null) {
-//			curMission = new Action("TakeSeat").WithStep(new ActionStep().WithName("move to seat").WithAction(new MoveAction().WithTarget(selectedSeat)));
-//			curActionStep = 0;
-//		}
-//	}
-	
-	//Agent has entered the room and now will find a seat to take and move towards it
+	private double EvaluateRoomChoice(Room pRoom) {
+		if(pRoom.getCurrentCapacity() > 0) {
+			return 0.0;
+		} else {
+			return 1.0;
+		}
+	}
+
+	// Agent has entered the room and now will find a seat to take and move towards
+	// it
 	protected void FindASeat() {
-		curMission = new Action("TakeSeat").WithStep(new ActionStep().WithName("move to seat").WithAction(new OccupyAction().WithTarget(Seat.class)));
+		curMission = new Action("TakeSeat").WithStep(
+				new ActionStep().WithName("move to seat").WithAction(new OccupyAction().WithTarget(Seat.class)));
 		curActionStep = 0;
 	}
-
-	// The Agent scans the room and selects a seat
-	protected Seat SelectSeat(Room destination) {
-		List<Seat> plstEmptySeats = destination.getEmptySeats();
-		if (!plstEmptySeats.isEmpty()) {
-			ArrayList<Seat> emptySeatList = (ArrayList<Seat>) plstEmptySeats;
-			return emptySeatList.get(0);// <------ ToDo: change to have more complex seat selection
-		}
-		return null;
-	}
 	
-	//Agent has entered the room and now will find a desk to take and move towards it
-	protected void FindADesk(Room insideRoom) {
-		Desk selectedDesk = SelectDesk(insideRoom);
-		if(selectedDesk != null) {
-			curMission = new Action("TakeDesk").WithStep(new ActionStep().WithName("move to desk").WithAction(new MoveAction().WithTarget(selectedDesk)));
-			curActionStep = 0;
-		}
-	}
-
-	// The Agent scans the room and selects a desk
-	protected Desk SelectDesk(Room destination) {
-		List<Desk> plstEmptyDesks = destination.getEmptyDesks();
-		if (!plstEmptyDesks.isEmpty()) {
-			ArrayList<Desk> emptyDeskList = (ArrayList<Desk>) plstEmptyDesks;
-			return emptyDeskList.get(0);// <------ ToDo: change to have more complex seat selection
+	protected Occupiable SelectOccupiable(Room destination, Class occupiableType) {
+		ArrayList<Occupiable> plstEmptyOccupiables = (ArrayList<Occupiable>) destination.getAllEmptyOcupiablesOfType(occupiableType);
+		if (!plstEmptyOccupiables.isEmpty()) {
+			ArrayList<Occupiable> emptyOccupiable = (ArrayList<Occupiable>) plstEmptyOccupiables;
+			return emptyOccupiable.get(0);// <------ ToDo: change to have more complex seat selection
 		}
 		return null;
 	}
+
+//	// The Agent scans the room and selects a seat
+//	protected Seat SelectSeat(Room destination) {
+//		List<Seat> plstEmptySeats = destination.getEmptySeats();
+//		if (!plstEmptySeats.isEmpty()) {
+//			ArrayList<Seat> emptySeatList = (ArrayList<Seat>) plstEmptySeats;
+//			return emptySeatList.get(0);// <------ ToDo: change to have more complex seat selection
+//		}
+//		return null;
+//	}
+//	
+//	// The Agent scans the room and selects a desk
+//	protected Desk SelectDesk(Room destination) {
+//		List<Desk> plstEmptyDesks = destination.getEmptyDesks();
+//		if (!plstEmptyDesks.isEmpty()) {
+//			ArrayList<Desk> emptyDeskList = (ArrayList<Desk>) plstEmptyDesks;
+//			return emptyDeskList.get(0);// <------ ToDo: change to have more complex desk selection
+//		}
+//		return null;
+//	}
+//	
+//	// The Agent scans the room and selects a bed
+//	protected Bed SelectBed(Room destination) {
+//		List<Bed> plstEmptyBeds = destination.getEmptyBeds();
+//		if (!plstEmptyBeds.isEmpty()) {
+//			ArrayList<Bed> emptyBedList = (ArrayList<Bed>) plstEmptyBeds;
+//			return emptyBedList.get(0);// <------ ToDo: change to have more complex bed selection
+//		}
+//		return null;
+//	}
 
 	/*
 	 * MovaTowards function is called by all the agents to decide and execute one's
@@ -591,7 +591,7 @@ public class Agent {
 	public void SetInside(Room l) {
 		curInside = l;
 	}
-	
+
 	public void SetOccupying(Occupiable o) {
 		curOccupying = o;
 	}
@@ -621,7 +621,7 @@ public class Agent {
 		GridPoint curPoint = grid.getLocation(this);
 		return (CalcDistance(curPoint, p) < 2);
 	}
-	
+
 	public boolean ImAt(Object o) {
 		return ImAt(this, o);
 	}

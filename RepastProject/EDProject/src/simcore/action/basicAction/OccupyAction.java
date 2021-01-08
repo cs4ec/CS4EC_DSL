@@ -18,18 +18,6 @@ public class OccupyAction extends ActionFragment {
     	return this;
 	}
 	
-    public OccupyAction(Class c) {
-    	destinationOccupiable = c;
-	}
-    
-    public OccupyAction(String s) {
-    	destination = s;
-	}
-
-	public String getDestination() {
-		return destination;
-	}
-
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
@@ -45,9 +33,4 @@ public class OccupyAction extends ActionFragment {
 	public Occupiable getConcreteDestination() {
 		return concreteOccupiable;
 	}
-
-	public void setDestinationOccupiable(Class destinationOccupiable) {
-		this.destinationOccupiable = destinationOccupiable;
-	}
-
 }

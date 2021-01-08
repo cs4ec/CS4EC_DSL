@@ -53,6 +53,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RoomDefinition;
   private ConceptPresentation props_RoomInstanceDefinition;
   private ConceptPresentation props_RoomType;
+  private ConceptPresentation props_RoomTypeReference;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
   private ConceptPresentation props_Signal;
@@ -395,10 +396,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RoomType = cpb.create();
         }
         return props_RoomType;
+      case LanguageConceptSwitch.RoomTypeReference:
+        if (props_RoomTypeReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_RoomTypeReference = cpb.create();
+        }
+        return props_RoomTypeReference;
       case LanguageConceptSwitch.SelfInstance:
         if (props_SelfInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("the actor himslef");
+          cpb.shortDesc("my location");
           cpb.presentationByName();
           props_SelfInstance = cpb.create();
         }

@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 import repast.simphony.context.Context;
 import repast.simphony.space.grid.Grid;
@@ -50,6 +51,10 @@ public class EDMap {
 			}
 		}
 		return null;
+	}
+	
+	public List<Room> FindInstancesOfRoomType(RoomType pRoomType){
+		return places.stream().filter(p -> p.getRoomType().equals(pRoomType)).collect(Collectors.toList());
 	}
 	
 	public Stack<GridPoint> FindWay(Object o, String roomName){

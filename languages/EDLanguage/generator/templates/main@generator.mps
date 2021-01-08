@@ -608,6 +608,18 @@
         <ref role="v9R2y" node="7lVoe4yqsOX" resolve="reduce_EndVisitAction" />
       </node>
     </node>
+    <node concept="3aamgX" id="5QJON_BGIM0" role="3acgRq">
+      <ref role="30HIoZ" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+      <node concept="j$656" id="5QJON_BHhiq" role="1lVwrX">
+        <ref role="v9R2y" node="5QJON_BGKh0" resolve="reduce_RoomTypeReference" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="5QJON_BGKh2" role="3acgRq">
+      <ref role="30HIoZ" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+      <node concept="j$656" id="5QJON_BGKh3" role="1lVwrX">
+        <ref role="v9R2y" node="5QJON_BGKh0" resolve="reduce_RoomTypeReference" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="DbMKZsswSi">
     <property role="TrG5h" value="MyActor" />
@@ -5438,7 +5450,7 @@
               <node concept="3clFbF" id="5QJON_AZQP5" role="3cqZAp">
                 <node concept="2OqwBi" id="5QJON_AZRe2" role="3clFbG">
                   <node concept="30H73N" id="5QJON_AZQP4" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="5QJON_AZRyS" role="2OqNvi">
+                  <node concept="3TrcHB" id="5QJON_BsOdn" role="2OqNvi">
                     <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                   </node>
                 </node>
@@ -5464,10 +5476,10 @@
           <node concept="3clFbS" id="5QJON_AZN6m" role="2VODD2">
             <node concept="3clFbF" id="5QJON_AZN6s" role="3cqZAp">
               <node concept="2OqwBi" id="5QJON_AZN6n" role="3clFbG">
-                <node concept="3TrcHB" id="5QJON_AZN6q" role="2OqNvi">
+                <node concept="30H73N" id="5QJON_AZN6r" role="2Oq$k0" />
+                <node concept="3TrcHB" id="5QJON_BsOxk" role="2OqNvi">
                   <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                 </node>
-                <node concept="30H73N" id="5QJON_AZN6r" role="2Oq$k0" />
               </node>
             </node>
           </node>
@@ -5493,7 +5505,7 @@
                           <node concept="3clFbF" id="5QJON_AZQ6c" role="3cqZAp">
                             <node concept="2OqwBi" id="5QJON_AZQip" role="3clFbG">
                               <node concept="30H73N" id="5QJON_AZQ6b" role="2Oq$k0" />
-                              <node concept="3TrcHB" id="5QJON_AZQrt" role="2OqNvi">
+                              <node concept="3TrcHB" id="5QJON_BsOBQ" role="2OqNvi">
                                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                               </node>
                             </node>
@@ -5539,15 +5551,66 @@
       <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
       <node concept="3zFVjK" id="5QJON_AZebM" role="3zH0cK">
         <node concept="3clFbS" id="5QJON_AZebN" role="2VODD2">
-          <node concept="3clFbF" id="5QJON_AZebT" role="3cqZAp">
-            <node concept="2OqwBi" id="5QJON_AZebO" role="3clFbG">
-              <node concept="3TrcHB" id="5QJON_AZebR" role="2OqNvi">
+          <node concept="3clFbF" id="5QJON_BpvYI" role="3cqZAp">
+            <node concept="2OqwBi" id="5QJON_Bpwam" role="3clFbG">
+              <node concept="30H73N" id="5QJON_BpvYH" role="2Oq$k0" />
+              <node concept="3TrcHB" id="5QJON_BsNZO" role="2OqNvi">
                 <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
               </node>
-              <node concept="30H73N" id="5QJON_AZebS" role="2Oq$k0" />
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="5QJON_BGKh0">
+    <property role="TrG5h" value="reduce_RoomTypeReference" />
+    <property role="3GE5qa" value="Structures.Class" />
+    <ref role="3gUMe" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    <node concept="312cEu" id="5QJON_BGKiE" role="13RCb5">
+      <property role="TrG5h" value="_class_" />
+      <node concept="15s5l7" id="5QJON_BGLs$" role="lGtFl">
+        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: There is no default constructor available in super class simcore.agents.Agent&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/8974945326827961340]&quot;;" />
+        <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Agent" />
+      </node>
+      <node concept="3clFb_" id="5QJON_BGKkq" role="jymVt">
+        <property role="TrG5h" value="InitFunction" />
+        <node concept="3cqZAl" id="5QJON_BGKks" role="3clF45" />
+        <node concept="3Tm1VV" id="5QJON_BGKkt" role="1B3o_S" />
+        <node concept="3clFbS" id="5QJON_BGKku" role="3clF47">
+          <node concept="3clFbF" id="5QJON_BGKlG" role="3cqZAp">
+            <node concept="2YIFZM" id="5QJON_BGKmf" role="3clFbG">
+              <ref role="37wK5l" to="y2pi:~RoomType.getInstance()" resolve="getInstance" />
+              <ref role="1Pybhc" to="y2pi:~RoomType" resolve="RoomType" />
+              <node concept="raruj" id="5QJON_BGKoh" role="lGtFl" />
+              <node concept="1ZhdrF" id="5QJON_BGKoi" role="lGtFl">
+                <property role="2qtEX8" value="classConcept" />
+                <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700937/1144433194310" />
+                <node concept="3$xsQk" id="5QJON_BGKol" role="3$ytzL">
+                  <node concept="3clFbS" id="5QJON_BGKom" role="2VODD2">
+                    <node concept="3clFbF" id="5QJON_BGKos" role="3cqZAp">
+                      <node concept="2OqwBi" id="5QJON_BGKRm" role="3clFbG">
+                        <node concept="2OqwBi" id="5QJON_BGKon" role="2Oq$k0">
+                          <node concept="3TrEf2" id="5QJON_BGKoq" role="2OqNvi">
+                            <ref role="3Tt5mk" to="3751:5QJON_BAs4g" resolve="roomType" />
+                          </node>
+                          <node concept="30H73N" id="5QJON_BGKor" role="2Oq$k0" />
+                        </node>
+                        <node concept="3TrcHB" id="5QJON_BGLci" role="2OqNvi">
+                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="5QJON_BGKiF" role="1B3o_S" />
+      <node concept="3uibUv" id="5QJON_BGKkk" role="1zkMxy">
+        <ref role="3uigEE" to="uux2:~Agent" resolve="Agent" />
       </node>
     </node>
   </node>

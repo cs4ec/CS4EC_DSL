@@ -58,37 +58,55 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.addValueLayer(vl);
 
     // add Locations here 
-    Room Pediatrics_a = new Room("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, Ward.getInstance(), Color.BLUE);
-    Room MainReception_b = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, Reception.getInstance(), Color.GREEN);
-    Room Triage_c = new Room("Triage", context, space, grid, 105, 150, 20, 20, 1, 15, Triage.getInstance(), Color.GREEN);
-    Room MajorsTriage_d = new Room("MajorsTriage", context, space, grid, 120, 80, 20, 20, 1, 15, Triage.getInstance(), Color.GREEN);
+    Room Pediatrics_a = new Room("Pediatrics", context, space, grid, 5, 145, 50, 50, 1, 40, office.getInstance(), Color.BLUE);
+    Room MainReception_b = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, office.getInstance(), Color.GREEN);
+    Room Triage_c = new Room("Triage", context, space, grid, 105, 150, 20, 20, 1, 15, office.getInstance(), Color.GREEN);
+    Room MajorsTriage_d = new Room("MajorsTriage", context, space, grid, 120, 80, 20, 20, 1, 15, office.getInstance(), Color.GREEN);
     Room MajorsWaitingRoom_e = new Room("MajorsWaitingRoom", context, space, grid, 150, 60, 20, 50, 1, 20, WaitingRoom.getInstance(), Color.GRAY);
-    Room MajorsConsultationRooms_f = new Room("MajorsConsultationRooms", context, space, grid, 120, 50, 50, 10, 1, 50, DoctorOffice.getInstance(), Color.YELLOW);
-    Room TaskRoom_g = new Room("TaskRoom", context, space, grid, 130, 125, 20, 20, 1, 15, TaskRoom.getInstance(), Color.YELLOW);
-    Room Entrance_h = new Room("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, Entrance.getInstance(), Color.GRAY);
-    Room XRayRoom_i = new Room("XRayRoom", context, space, grid, 155, 125, 20, 20, 1, 10, TaskRoom.getInstance(), Color.YELLOW);
-    Room TriageWaitingRoom_j = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, WaitingRoom.getInstance(), Color.GRAY);
+    Room DoctorOffice1_f = new Room("DoctorOffice1", context, space, grid, 120, 50, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.YELLOW);
+    Room DoctorOffice2_g = new Room("DoctorOffice2", context, space, grid, 130, 50, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.YELLOW);
+    Room DoctorOffice3_h = new Room("DoctorOffice3", context, space, grid, 140, 50, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.YELLOW);
+    Room DoctorOffice4_i = new Room("DoctorOffice4", context, space, grid, 150, 50, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.YELLOW);
+    Room DoctorOffice5_j = new Room("DoctorOffice5", context, space, grid, 160, 50, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.YELLOW);
+    Room TaskRoom1_k = new Room("TaskRoom1", context, space, grid, 130, 125, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
+    Room TaskRoom2_l = new Room("TaskRoom2", context, space, grid, 135, 125, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
+    Room TaskRoom3_m = new Room("TaskRoom3", context, space, grid, 140, 125, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
+    Room Entrance_n = new Room("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, office.getInstance(), Color.GRAY);
+    Room XRayRoom_o = new Room("XRayRoom", context, space, grid, 155, 125, 20, 20, 1, 10, office.getInstance(), Color.YELLOW);
+    Room TriageWaitingRoom_p = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, WaitingRoom.getInstance(), Color.GRAY);
     try {
       Pediatrics_a.setSeats(0);
       MainReception_b.setSeats(0);
       Triage_c.setSeats(0);
       MajorsTriage_d.setSeats(0);
       MajorsWaitingRoom_e.setSeats(20);
-      MajorsConsultationRooms_f.setSeats(0);
-      TaskRoom_g.setSeats(0);
-      Entrance_h.setSeats(0);
-      XRayRoom_i.setSeats(0);
-      TriageWaitingRoom_j.setSeats(20);
+      DoctorOffice1_f.setSeats(0);
+      DoctorOffice2_g.setSeats(0);
+      DoctorOffice3_h.setSeats(0);
+      DoctorOffice4_i.setSeats(0);
+      DoctorOffice5_j.setSeats(0);
+      TaskRoom1_k.setSeats(0);
+      TaskRoom2_l.setSeats(0);
+      TaskRoom3_m.setSeats(0);
+      Entrance_n.setSeats(0);
+      XRayRoom_o.setSeats(0);
+      TriageWaitingRoom_p.setSeats(20);
       Pediatrics_a.setDesks(0);
       MainReception_b.setDesks(0);
       Triage_c.setDesks(3);
       MajorsTriage_d.setDesks(3);
       MajorsWaitingRoom_e.setDesks(0);
-      MajorsConsultationRooms_f.setDesks(5);
-      TaskRoom_g.setDesks(0);
-      Entrance_h.setDesks(0);
-      XRayRoom_i.setDesks(0);
-      TriageWaitingRoom_j.setDesks(0);
+      DoctorOffice1_f.setDesks(1);
+      DoctorOffice2_g.setDesks(1);
+      DoctorOffice3_h.setDesks(1);
+      DoctorOffice4_i.setDesks(1);
+      DoctorOffice5_j.setDesks(1);
+      TaskRoom1_k.setDesks(0);
+      TaskRoom2_l.setDesks(0);
+      TaskRoom3_m.setDesks(0);
+      Entrance_n.setDesks(0);
+      XRayRoom_o.setDesks(0);
+      TriageWaitingRoom_p.setDesks(0);
     } catch (NumberFormatException e) {
     }
 

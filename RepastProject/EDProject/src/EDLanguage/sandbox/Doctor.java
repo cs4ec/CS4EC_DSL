@@ -60,7 +60,7 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsConsultationRooms"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
@@ -72,10 +72,10 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("move to diagnostic room").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsConsultationRooms"))));
+    curMission.WithStep(new ActionStep().WithName("move to diagnostic room").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
-    curMission.WithStep(new ActionStep().WithName("inspect the patientmake").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(600)));
     this.InitDecideOnPatientPathway(s);
 
   }
@@ -145,7 +145,7 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsConsultationRooms"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));

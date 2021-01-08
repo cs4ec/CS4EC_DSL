@@ -587,8 +587,8 @@
     <property role="EcuMT" value="8504720493511036692" />
     <property role="3GE5qa" value="Structures.Class" />
     <property role="TrG5h" value="SelfInstance" />
-    <property role="R4oN_" value="the actor himslef" />
     <property role="34LRSv" value="me" />
+    <property role="R4oN_" value="my location" />
     <ref role="1TJDcQ" node="7o6PzEpI6ey" resolve="HumanInstance" />
   </node>
   <node concept="1TIwiD" id="7o6PzEpI6ey">
@@ -1138,7 +1138,7 @@
     <property role="3GE5qa" value="Structures.Class" />
     <property role="TrG5h" value="OccupiableInstance" />
     <property role="34LRSv" value="occupiable" />
-    <ref role="1TJDcQ" node="3KCb14J4_mK" resolve="ObjectInstance" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="7lVoe4xSFzg" role="1TKVEl">
       <property role="IQ2nx" value="8465466444625393872" />
       <property role="TrG5h" value="occupiableType" />
@@ -1161,6 +1161,11 @@
       <property role="3tVfz5" value="8465466444624058099" />
       <property role="TrG5h" value="Desk" />
       <property role="1L1pqM" value="desk" />
+    </node>
+    <node concept="25R33" id="5QJON_BPEyz" role="25R1y">
+      <property role="3tVfz5" value="6750846609960380579" />
+      <property role="TrG5h" value="Bed" />
+      <property role="1L1pqM" value="bed" />
     </node>
   </node>
   <node concept="1TIwiD" id="7lVoe4ypokx">
@@ -1189,8 +1194,20 @@
     <property role="34LRSv" value="roomtype" />
     <property role="R4oN_" value="The type of a room instance" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="5QJON_AUfU1" role="PzmwI">
+    <node concept="PrWs8" id="5QJON_BqFe7" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5QJON_B_jME">
+    <property role="EcuMT" value="6750846609956093098" />
+    <property role="3GE5qa" value="Structures.Class" />
+    <property role="TrG5h" value="RoomTypeReference" />
+    <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
+    <node concept="1TJgyj" id="5QJON_BAs4g" role="1TKVEi">
+      <property role="IQ2ns" value="6750846609956389136" />
+      <property role="20kJfa" value="roomType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5QJON_AUfSp" resolve="RoomType" />
     </node>
   </node>
 </model>

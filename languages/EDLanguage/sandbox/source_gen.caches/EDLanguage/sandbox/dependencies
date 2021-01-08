@@ -15,6 +15,7 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="EDLanguage.sandbox.Doctor">
+    <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
     <classNode dependClassName="EDLanguage.sandbox.NewPatientNeedMedicineSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
@@ -48,14 +49,11 @@
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
     <classNode dependClassName="EDLanguage.sandbox.ENP" />
-    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsTriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.Nurse" />
-    <classNode dependClassName="EDLanguage.sandbox.Reception" />
     <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.Triage" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.Ward" />
+    <classNode dependClassName="EDLanguage.sandbox.office" />
     <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
@@ -107,9 +105,6 @@
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
-  <dependency className="EDLanguage.sandbox.Entrance">
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="EDLanguage.sandbox.InternNurse">
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
@@ -121,6 +116,7 @@
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.JuniorDoctor">
+    <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
     <classNode dependClassName="EDLanguage.sandbox.NewPatientNeedMedicineSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
@@ -176,6 +172,7 @@
   </dependency>
   <dependency className="EDLanguage.sandbox.Nurse">
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsFinalConsultationSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -223,9 +220,6 @@
   <dependency className="EDLanguage.sandbox.PatientWaitingForTriageSignal">
     <classNode extendsClassName="simcore.Signals.Signal" />
   </dependency>
-  <dependency className="EDLanguage.sandbox.Reception">
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="EDLanguage.sandbox.SomeoneNeedsHelpSignal">
     <classNode extendsClassName="simcore.Signals.Signal" />
   </dependency>
@@ -242,17 +236,14 @@
   <dependency className="EDLanguage.sandbox.TaskRoom">
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="EDLanguage.sandbox.Triage">
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="EDLanguage.sandbox.WaitingRoom">
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="EDLanguage.sandbox.Ward">
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.XRaySignal">
     <classNode extendsClassName="simcore.Signals.Signal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.office">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
 </dependenciesRoot>
 

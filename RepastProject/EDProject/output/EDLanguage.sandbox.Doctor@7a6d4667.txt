@@ -2,3 +2,5 @@ Time point: 331.0 | correctWork: 1.0
 Time point: 331.0 | stress: 2.0
 Time point: 428.0 | correctWork: 2.0
 Time point: 428.0 | stress: 3.0
+Time point: 1423.0 | correctWork: 1.0
+Time point: 1424.0 | stress: 2.0

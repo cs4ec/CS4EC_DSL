@@ -757,7 +757,7 @@
       <node concept="1iCGBv" id="5QJON_AVs1K" role="3EZMnx">
         <ref role="1NtTu8" to="3751:5QJON_AVrZ9" resolve="roomType" />
         <node concept="1sVBvm" id="5QJON_AVs1M" role="1sWHZn">
-          <node concept="3F0A7n" id="5QJON_AVs2n" role="2wV5jI">
+          <node concept="3F0A7n" id="5QJON_Bpvvz" role="2wV5jI">
             <property role="1Intyy" value="true" />
             <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
           </node>
@@ -1321,6 +1321,25 @@
         <ref role="1NtTu8" to="3751:7lVoe4ypok$" resolve="targetPatient" />
       </node>
       <node concept="l2Vlx" id="7lVoe4ypokF" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="5QJON_B_jN7">
+    <property role="3GE5qa" value="Structures.Class" />
+    <ref role="1XX52x" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    <node concept="3EZMnI" id="5QJON_B_jN9" role="2wV5jI">
+      <node concept="l2Vlx" id="5QJON_B_jNc" role="2iSdaV" />
+      <node concept="3F0ifn" id="5QJON_BC6Wo" role="3EZMnx">
+        <property role="3F0ifm" value="a" />
+      </node>
+      <node concept="1iCGBv" id="5QJON_BAXEg" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:5QJON_BAs4g" resolve="roomType" />
+        <node concept="1sVBvm" id="5QJON_BAXEh" role="1sWHZn">
+          <node concept="3F0A7n" id="5QJON_BAXEm" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

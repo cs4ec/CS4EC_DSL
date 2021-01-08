@@ -129,7 +129,7 @@ public class Nurse extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new FollowOrder().WithTarget(this))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("TaskRoom"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(TaskRoom.getInstance())));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(300)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(s.GetData("returnTo")))));
     sendSignalTemp = new PatientNeedsFinalConsultationSignal();

@@ -62,6 +62,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptRoomDefinition = createDescriptorForRoomDefinition();
   /*package*/ final ConceptDescriptor myConceptRoomInstanceDefinition = createDescriptorForRoomInstanceDefinition();
   /*package*/ final ConceptDescriptor myConceptRoomType = createDescriptorForRoomType();
+  /*package*/ final ConceptDescriptor myConceptRoomTypeReference = createDescriptorForRoomTypeReference();
   /*package*/ final ConceptDescriptor myConceptSelfInstance = createDescriptorForSelfInstance();
   /*package*/ final ConceptDescriptor myConceptSendSignalAction = createDescriptorForSendSignalAction();
   /*package*/ final ConceptDescriptor myConceptSignal = createDescriptorForSignal();
@@ -99,7 +100,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActor, myConceptActorInstantiation, myConceptActorReference, myConceptAttribute, myConceptAttributeExpressionReference, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptChoice, myConceptCondition, myConceptConsequence, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptEmergencyDepartment, myConceptEndVisitAction, myConceptExpressionCondition, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptNumericExpression, myConceptObjectInstance, myConceptOccupiableInstance, myConceptOccupyAction, myConceptOrder, myConceptOrderPatientAction, myConceptPatientInstance, myConceptPatientInterval, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRoom, myConceptRoomDefinition, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptSelfInstance, myConceptSendSignalAction, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptWallDefinition, myConceptWallInstanceDefinition);
+    return Arrays.asList(myConceptActor, myConceptActorInstantiation, myConceptActorReference, myConceptAttribute, myConceptAttributeExpressionReference, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptChoice, myConceptCondition, myConceptConsequence, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptEmergencyDepartment, myConceptEndVisitAction, myConceptExpressionCondition, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptNumericExpression, myConceptObjectInstance, myConceptOccupiableInstance, myConceptOccupyAction, myConceptOrder, myConceptOrderPatientAction, myConceptPatientInstance, myConceptPatientInterval, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRoom, myConceptRoomDefinition, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptRoomTypeReference, myConceptSelfInstance, myConceptSendSignalAction, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -194,6 +195,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptRoomInstanceDefinition;
       case LanguageConceptSwitch.RoomType:
         return myConceptRoomType;
+      case LanguageConceptSwitch.RoomTypeReference:
+        return myConceptRoomTypeReference;
       case LanguageConceptSwitch.SelfInstance:
         return myConceptSelfInstance;
       case LanguageConceptSwitch.SendSignalAction:
@@ -517,7 +520,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForOccupiableInstance() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "OccupiableInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL);
     b.class_(false, false, false);
-    b.super_("EDLanguage.structure.ObjectInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f1255b0L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8465466444624057771");
     b.version(2);
@@ -658,6 +660,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/6750846609944804889");
     b.version(2);
     b.alias("roomtype");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRoomTypeReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "RoomTypeReference", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL);
+    b.class_(false, false, false);
+    b.super_("EDLanguage.structure.PlaceInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a3L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/6750846609956093098");
+    b.version(2);
+    b.associate("roomType", 0x5dafd3396799c110L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L).optional(false).origin("6750846609956389136").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSelfInstance() {

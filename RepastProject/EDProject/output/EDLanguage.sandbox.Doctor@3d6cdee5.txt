@@ -4,3 +4,5 @@ Time point: 394.0 | correctWork: 2.0
 Time point: 394.0 | stress: 3.0
 Time point: 427.0 | correctWork: 3.0
 Time point: 427.0 | stress: 4.0
+Time point: 1251.0 | correctWork: 1.0
+Time point: 1252.0 | stress: 2.0

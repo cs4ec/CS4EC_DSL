@@ -46,6 +46,9 @@ public class Room extends Locatable{
 	protected Set<Agent> contentPeople;
 	protected List<Seat> seats;		
 	protected List<Desk> desks;	
+	protected List<Bed> beds;	
+
+	protected List<Occupiable> occupiables;
 
 	// Alternative constructor omitting the roomType (while roomType functionality
 	// is in development)
@@ -74,6 +77,7 @@ public class Room extends Locatable{
 
 		waitList = new LinkedList<Agent>();
 		contentPeople = new HashSet<Agent>();
+		occupiables = new ArrayList<Occupiable>();
 
 		// call function to create layout style for this location
 		createLayoutStyle();
@@ -134,6 +138,7 @@ public class Room extends Locatable{
 			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
 			seats.add(new Seat(context, space, grid, rndXCoord, rndYCoord, this));
 		}
+		occupiables.addAll(seats);
 	}
 	
 	public void setDesks(int pintNumDesks) {
@@ -143,15 +148,30 @@ public class Room extends Locatable{
 			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
 			desks.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
 		}
+		occupiables.addAll(desks);
 	}
 	
-	public List<Seat> getEmptySeats(){
-		return seats.stream().filter(s -> !s.isOccupied()).collect(Collectors.toList());
+	public void setBeds(int pintNumBeds) {
+		beds = new ArrayList<Bed>();
+		for(int i = 0; i < pintNumBeds; i++) {
+			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
+			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
+			beds.add(new Bed(context, space, grid, rndXCoord, rndYCoord, this));
+		}
+		occupiables.addAll(beds);
 	}
 	
-	public List<Desk> getEmptyDesks(){
-		return desks.stream().filter(s -> !s.isOccupied()).collect(Collectors.toList());
-	}
+//	public List<Seat> getEmptySeats(){
+//		return seats.stream().filter(s -> !s.isOccupied()).collect(Collectors.toList());
+//	}
+//	
+//	public List<Desk> getEmptyDesks(){
+//		return desks.stream().filter(s -> !s.isOccupied()).collect(Collectors.toList());
+//	}
+//	
+//	public List<Bed> getEmptyBeds() {
+//		return beds.stream().filter(s -> !s.isOccupied()).collect(Collectors.toList());
+//	}
 	
 	public boolean hasSeats() {
 		return seats != null && seats.size() > 0;
@@ -159,6 +179,14 @@ public class Room extends Locatable{
 	
 	public List<Seat> getAllSeats(){
 		return seats;
+	}
+	
+	public List<Occupiable> getAllOccupiables(){
+		return occupiables;
+	}
+	
+	public List<Occupiable> getAllEmptyOcupiablesOfType(Class c) {
+		return occupiables.stream().filter(o -> o.getClass() == c && !o.isOccupied()).collect(Collectors.toList());
 	}
 	//-----------------------------------------------------------------------------------------------------------------------------------
 	
@@ -224,6 +252,10 @@ public class Room extends Locatable{
 
 	public Color getColour() {
 		return this.roomColour;
+	}
+	
+	public int getCurrentCapacity() {
+		return this.curCap;
 	}
 
 	@Override

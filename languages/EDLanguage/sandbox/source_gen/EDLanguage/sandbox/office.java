@@ -4,16 +4,16 @@ package EDLanguage.sandbox;
 
 import simcore.basicStructures.RoomType;
 
-public class Ward extends RoomType {
-  private static Ward instance;
+public class office extends RoomType {
+  private static office instance;
 
-  private Ward() {
+  private office() {
     super();
   }
 
   public static RoomType getInstance() {
     if (instance == null) {
-      instance = new Ward();
+      instance = new office();
     }
     return instance;
   }
