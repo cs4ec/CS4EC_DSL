@@ -21,6 +21,9 @@ import simcore.basicStructures.Room;
 import java.awt.Color;
 import repast.simphony.space.continuous.NdPoint;
 import simcore.basicStructures.Wall;
+import simcore.diagnosis.AsymptomaticInfectionState;
+import simcore.diagnosis.InfectionStateType;
+import simcore.diagnosis.SymptomaticInfectionState;
 
 public class EDBuilder implements ContextBuilder<Object> {
 
@@ -52,7 +55,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 3; i++) {
       context.add(new MajorsTriageNurse(space, grid));
     }
-
 
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 400, 200);
     context.addValueLayer(vl);

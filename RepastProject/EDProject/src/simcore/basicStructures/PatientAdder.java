@@ -24,10 +24,13 @@ import simcore.agents.Patient;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.EDMap;
 import simcore.basicStructures.ToolBox;
+import simcore.diagnosis.SusceptibleInfectionState;
+import simcore.diagnosis.SymptomaticInfectionState;
 
 public class PatientAdder {
 	
 	private int interval;
+	private double percentCOVIDPositive;
 	private int count = 0;
 	private ContinuousSpace<Object> space;
 	private Grid<Object> grid;
@@ -41,6 +44,11 @@ public class PatientAdder {
 		interval = span;
 		return this;
 	}
+	
+	public PatientAdder WithPercentageCOVID(double pdblPercentCOVID) {
+		percentCOVIDPositive = pdblPercentCOVID;
+		return this;
+	}
 
 	@ScheduledMethod(start = 1, interval = 1)
 	public void step() {
@@ -52,6 +60,12 @@ public class PatientAdder {
 			count = interval;
 	    	Context context = ContextUtils.getContext (this);
 	    	Patient p = new Patient(space, grid);
+	    	if(RandomHelper.nextDouble() < percentCOVIDPositive) {
+	        	p.setActualInfectionState(SymptomaticInfectionState.getInstance().generateStateForMe(p));
+	    	} else {
+	        	p.setActualInfectionState(SusceptibleInfectionState.getInstance().generateStateForMe(p));
+	    	}
+	    	
 	    	context.add(p);
 	    	System.out.println("new patient arrive");
 	    	

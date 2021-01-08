@@ -38,6 +38,7 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.TestAction;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
@@ -48,6 +49,7 @@ import simcore.basicStructures.RoomType;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
 import simcore.basicStructures.Wall;
+import simcore.diagnosis.TestResult;
 import simcore.utilities.AStar;
 
 /**
@@ -216,6 +218,13 @@ public class Actor extends Agent {
 			} else { // Otherwise, ToDO: Add behaviour here
 				NextStep();
 			}
+		}
+		
+		//Test Action
+		if(stepLogic instanceof TestAction) {
+			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient(), 0.0);
+			System.out.println("TEST RESULT: " + pTestResult);
+			NextStep();
 		}
 
 		// Stay Action

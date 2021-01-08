@@ -15,6 +15,7 @@ import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.ToolBox;
+import simcore.diagnosis.InfectionState;
 
 public class Patient extends Agent {
 
@@ -25,6 +26,7 @@ public class Patient extends Agent {
 	private int totalWaitTime;
 	protected List<GridPoint> curPath;
 	protected List<Actor> mlstMyStaff;
+	private InfectionState actualInfectionState;
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -144,6 +146,14 @@ public class Patient extends Agent {
 	
 	public List<Actor> getMyAssignedStaffOfType(Class pClass){
 		return mlstMyStaff.stream().filter(s -> s.getClass() == pClass).collect(Collectors.toList());
+	}
+	
+	public void setActualInfectionState(InfectionState pInfectionState) {
+		actualInfectionState = pInfectionState;
+	}
+	
+	public InfectionState getActualInfectionState() {
+		return actualInfectionState;
 	}
 
 	@Override

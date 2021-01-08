@@ -79,3 +79,8 @@ Time point: 2263.0 | PatientsSeen: 12.0
 Time point: 2449.0 | PatientsSeen: 13.0
 Time point: 2635.0 | PatientsSeen: 14.0
 Time point: 2820.0 | PatientsSeen: 15.0
+Time point: 210.0 | PatientsSeen: 1.0
+Time point: 396.0 | PatientsSeen: 2.0
+Time point: 582.0 | PatientsSeen: 3.0
+Time point: 768.0 | PatientsSeen: 4.0
+Time point: 954.0 | PatientsSeen: 5.0
