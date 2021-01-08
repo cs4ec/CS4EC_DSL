@@ -50,3 +50,7 @@ Time point: 4019.0 | correctWork: 21.0
 Time point: 4019.0 | stress: 54.0
 Time point: 4155.0 | mistakes: 5.0
 Time point: 4155.0 | stress: 62.0
+Time point: 1589.0 | correctWork: 1.0
+Time point: 1590.0 | stress: 2.0
+Time point: 2196.0 | correctWork: 2.0
+Time point: 2197.0 | stress: 3.0

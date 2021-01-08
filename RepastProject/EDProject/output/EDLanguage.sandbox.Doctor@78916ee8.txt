@@ -48,3 +48,5 @@ Time point: 3934.0 | mistakes: 3.0
 Time point: 3934.0 | stress: 46.0
 Time point: 4044.0 | correctWork: 22.0
 Time point: 4044.0 | stress: 47.0
+Time point: 1403.0 | correctWork: 1.0
+Time point: 1404.0 | stress: 2.0
