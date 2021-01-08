@@ -66,6 +66,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StayForConditionAction;
   private ConceptPresentation props_StayForTimeAction;
   private ConceptPresentation props_StopOrder;
+  private ConceptPresentation props_Test;
+  private ConceptPresentation props_TestAction;
+  private ConceptPresentation props_TestKit;
   private ConceptPresentation props_WallDefinition;
   private ConceptPresentation props_WallInstanceDefinition;
 
@@ -493,6 +496,29 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StopOrder = cpb.create();
         }
         return props_StopOrder;
+      case LanguageConceptSwitch.Test:
+        if (props_Test == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Type of a test");
+          cpb.presentationByName();
+          props_Test = cpb.create();
+        }
+        return props_Test;
+      case LanguageConceptSwitch.TestAction:
+        if (props_TestAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("complete a COVID test");
+          cpb.presentationByName();
+          props_TestAction = cpb.create();
+        }
+        return props_TestAction;
+      case LanguageConceptSwitch.TestKit:
+        if (props_TestKit == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc391d13L, 0x4936c0ffc391d14L, "testType", "", "");
+          props_TestKit = cpb.create();
+        }
+        return props_TestKit;
       case LanguageConceptSwitch.WallDefinition:
         if (props_WallDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

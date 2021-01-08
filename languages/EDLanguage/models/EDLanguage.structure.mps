@@ -1210,5 +1210,64 @@
       <ref role="20lvS9" node="5QJON_AUfSp" resolve="RoomType" />
     </node>
   </node>
+  <node concept="1TIwiD" id="ijr0ZWehMB">
+    <property role="EcuMT" value="329726013640088743" />
+    <property role="TrG5h" value="Test" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="test" />
+    <property role="R4oN_" value="Type of a test" />
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="ijr0ZWehMC" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="ijr0ZWehME" role="1TKVEl">
+      <property role="IQ2nx" value="329726013640088746" />
+      <property role="TrG5h" value="Sensitivity" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyi" id="ijr0ZWehMG" role="1TKVEl">
+      <property role="IQ2nx" value="329726013640088748" />
+      <property role="TrG5h" value="Specificity" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="ijr0ZWehOj">
+    <property role="EcuMT" value="329726013640088851" />
+    <property role="TrG5h" value="TestKit" />
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="ijr0ZWehOk" role="1TKVEi">
+      <property role="IQ2ns" value="329726013640088852" />
+      <property role="20kJfa" value="testType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="ijr0ZWehMB" resolve="Test" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="ijr0ZWh9Pa">
+    <property role="EcuMT" value="329726013640842570" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="TestAction" />
+    <property role="34LRSv" value="test" />
+    <property role="R4oN_" value="complete a COVID test" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="PrWs8" id="ijr0ZWh9Pb" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="ijr0ZWh9Pd" role="1TKVEi">
+      <property role="IQ2ns" value="329726013640842573" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetPatient" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
+    </node>
+    <node concept="1TJgyj" id="ijr0ZWh9Pf" role="1TKVEi">
+      <property role="IQ2ns" value="329726013640842575" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="testkit" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="ijr0ZWehOj" resolve="TestKit" />
+    </node>
+  </node>
 </model>
 

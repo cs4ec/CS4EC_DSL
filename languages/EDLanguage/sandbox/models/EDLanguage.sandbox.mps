@@ -140,6 +140,17 @@
       </concept>
       <concept id="8504720493511036692" name="EDLanguage.structure.SelfInstance" flags="ng" index="3JGL$I" />
       <concept id="8504720493511205796" name="EDLanguage.structure.PatientInstance" flags="ng" index="3JJFmu" />
+      <concept id="329726013640088743" name="EDLanguage.structure.Test" flags="ng" index="3SEB2C">
+        <property id="329726013640088748" name="Specificity" index="3SEB2z" />
+        <property id="329726013640088746" name="Sensitivity" index="3SEB2_" />
+      </concept>
+      <concept id="329726013640088851" name="EDLanguage.structure.TestKit" flags="ng" index="3SEB4s">
+        <reference id="329726013640088852" name="testType" index="3SEB4r" />
+      </concept>
+      <concept id="329726013640842570" name="EDLanguage.structure.TestAction" flags="ng" index="3SPZ55">
+        <child id="329726013640842575" name="testkit" index="3SPZ50" />
+        <child id="329726013640842573" name="targetPatient" index="3SPZ52" />
+      </concept>
       <concept id="3838812034270460672" name="EDLanguage.structure.EmergencyDepartment" flags="ng" index="3VqkwO">
         <child id="6839259415242834378" name="patientInterval" index="2qCAZT" />
         <child id="3838812034270522283" name="staff" index="3Vt_yv" />
@@ -741,6 +752,12 @@
     <node concept="3Vt_xe" id="LMHHT2Ps3x" role="2Ov1EZ">
       <property role="TrG5h" value="DecideOnPatientPathway" />
       <node concept="3VtFpM" id="LMHHT2Ps3y" role="3VtFpR">
+        <node concept="3SPZ55" id="ijr0ZWzORU" role="3VtFpW">
+          <node concept="3JJFmu" id="ijr0ZWzORW" role="3SPZ52" />
+          <node concept="3SEB4s" id="ijr0ZWzOSi" role="3SPZ50">
+            <ref role="3SEB4r" node="ijr0ZWir17" resolve="INOVA" />
+          </node>
+        </node>
         <node concept="3VtFpY" id="4_npzu9nKUZ" role="3VtFpW">
           <node concept="3VtFpM" id="4_npzu9nKV3" role="3VtFpZ">
             <node concept="3VtFpY" id="2kH7UIGIR7d" role="3VtFpW">
@@ -1437,6 +1454,12 @@
   <node concept="VhMOw" id="5QJON_BO0pZ">
     <property role="3GE5qa" value="Room Types" />
     <property role="TrG5h" value="TaskRoom" />
+  </node>
+  <node concept="3SEB2C" id="ijr0ZWir17">
+    <property role="TrG5h" value="INOVA" />
+    <property role="3SEB2_" value="0.8" />
+    <property role="3SEB2z" value="0.91" />
+    <property role="3GE5qa" value="Tests" />
   </node>
 </model>
 

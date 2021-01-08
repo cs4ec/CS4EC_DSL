@@ -16,6 +16,7 @@ import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.EndVisitAction;
+import simcore.action.basicAction.TestAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
@@ -115,6 +116,7 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new TestAction().WithTest(INOVA.getInstance()).WithPatient(((Patient) s.GetData("patient")))));
     if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
       if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
         this.InitOrderBloodTest(s);

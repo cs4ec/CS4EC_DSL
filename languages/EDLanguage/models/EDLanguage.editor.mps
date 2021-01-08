@@ -1342,5 +1342,94 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="ijr0ZWehMJ">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="3751:ijr0ZWehMB" resolve="Test" />
+    <node concept="3EZMnI" id="ijr0ZWehML" role="2wV5jI">
+      <node concept="3F0ifn" id="ijr0ZWehMS" role="3EZMnx">
+        <property role="3F0ifm" value="Test:" />
+      </node>
+      <node concept="3F0A7n" id="ijr0ZWehMY" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="ijr0ZWehNb" role="3EZMnx">
+        <property role="3F0ifm" value="Sensitivity:" />
+        <node concept="pVoyu" id="ijr0ZWehNi" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="ijr0ZWehNk" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="ijr0ZWehNu" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZWehME" resolve="Sensitivity" />
+      </node>
+      <node concept="3F0ifn" id="ijr0ZWehNI" role="3EZMnx">
+        <property role="3F0ifm" value="Specificity:" />
+        <node concept="pVoyu" id="ijr0ZWehNR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="ijr0ZWehNT" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="ijr0ZWehO7" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZWehMG" resolve="Specificity" />
+      </node>
+      <node concept="l2Vlx" id="ijr0ZWehMO" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="ijr0ZWehOm">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="3751:ijr0ZWehOj" resolve="TestKit" />
+    <node concept="3EZMnI" id="ijr0ZWehOo" role="2wV5jI">
+      <node concept="3F0ifn" id="ijr0ZWehOv" role="3EZMnx">
+        <property role="3F0ifm" value="a" />
+      </node>
+      <node concept="1iCGBv" id="ijr0ZWehO_" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZWehOk" resolve="testType" />
+        <node concept="1sVBvm" id="ijr0ZWehOB" role="1sWHZn">
+          <node concept="3F0A7n" id="ijr0ZWehOJ" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="ijr0ZWehOS" role="3EZMnx">
+        <property role="3F0ifm" value="test" />
+      </node>
+      <node concept="l2Vlx" id="ijr0ZWehOr" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="ijr0ZWh9Pi">
+    <property role="3GE5qa" value="actions.basic actions" />
+    <ref role="1XX52x" to="3751:ijr0ZWh9Pa" resolve="TestAction" />
+    <node concept="3EZMnI" id="ijr0ZWh9Pk" role="2wV5jI">
+      <node concept="3F0ifn" id="ijr0ZWh9Pr" role="3EZMnx">
+        <property role="3F0ifm" value="test" />
+      </node>
+      <node concept="3F1sOY" id="ijr0ZWh9Px" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZWh9Pd" resolve="targetPatient" />
+      </node>
+      <node concept="3F0ifn" id="ijr0ZWr13s" role="3EZMnx">
+        <property role="3F0ifm" value="with" />
+      </node>
+      <node concept="1iCGBv" id="ijr0ZWr13A" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZWh9Pf" resolve="testkit" />
+        <node concept="1sVBvm" id="ijr0ZWr13C" role="1sWHZn">
+          <node concept="1iCGBv" id="ijr0ZWr13M" role="2wV5jI">
+            <ref role="1NtTu8" to="3751:ijr0ZWehOk" resolve="testType" />
+            <node concept="1sVBvm" id="ijr0ZWr13O" role="1sWHZn">
+              <node concept="3F0A7n" id="ijr0ZWr13V" role="2wV5jI">
+                <property role="1Intyy" value="true" />
+                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="ijr0ZWh9Pn" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 
