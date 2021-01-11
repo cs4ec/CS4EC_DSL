@@ -809,6 +809,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("Sensitivity", 0x4936c0ffc391caaL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("329726013640088746").done();
     b.property("Specificity", 0x4936c0ffc391cacL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("329726013640088748").done();
+    b.property("ProcessingTime", 0x4936c0ffd8df087L).type(PrimitiveTypeId.INTEGER).origin("329726013662425223").done();
     b.alias("test");
     return b.create();
   }
@@ -820,16 +821,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/329726013640842570");
     b.version(2);
     b.aggregate("targetPatient", 0x4936c0ffc449d4dL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a4L).optional(false).ordered(true).multiple(false).origin("329726013640842573").done();
-    b.aggregate("testkit", 0x4936c0ffc449d4fL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc391d13L).optional(false).ordered(true).multiple(false).origin("329726013640842575").done();
+    b.aggregate("testkit", 0x4936c0ffc449d4fL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc9a8d3fL).optional(false).ordered(true).multiple(false).origin("329726013640842575").done();
+    b.aggregate("positiveCase", 0x4936c0ffc9a989fL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(false).ordered(true).multiple(false).origin("329726013646477471").done();
+    b.aggregate("negativeCase", 0x4936c0ffc9a98a3L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(false).ordered(true).multiple(false).origin("329726013646477475").done();
     b.alias("test");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTestKit() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "TestKit", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc391d13L);
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "TestKit", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc9a8d3fL);
     b.class_(false, false, false);
-    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/329726013640088851");
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/329726013646474559");
     b.version(2);
-    b.associate("testType", 0x4936c0ffc391d14L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc391ca7L).optional(false).origin("329726013640088852").done();
+    b.associate("testCategoryType", 0x4936c0ffd590128L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc391ca7L).optional(false).origin("329726013658956072").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWallDefinition() {

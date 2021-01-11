@@ -21,9 +21,6 @@ import simcore.basicStructures.Room;
 import java.awt.Color;
 import repast.simphony.space.continuous.NdPoint;
 import simcore.basicStructures.Wall;
-import simcore.diagnosis.AsymptomaticInfectionState;
-import simcore.diagnosis.InfectionStateType;
-import simcore.diagnosis.SymptomaticInfectionState;
 
 public class EDBuilder implements ContextBuilder<Object> {
 
@@ -39,7 +36,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 200));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(15));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(30));
 
 
     // add Agents 
@@ -55,6 +52,10 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 3; i++) {
       context.add(new MajorsTriageNurse(space, grid));
     }
+    for (int i = 0; i < 10000; i++) {
+      context.add(new testingDevice(space, grid));
+    }
+
 
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 400, 200);
     context.addValueLayer(vl);

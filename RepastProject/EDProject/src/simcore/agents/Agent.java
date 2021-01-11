@@ -38,6 +38,7 @@ import simcore.action.basicAction.conditions.IsAvailableCondition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
+import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.basicStructures.Bed;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Desk;
@@ -495,6 +496,10 @@ public class Agent {
 		if (c instanceof SpaceatCondition) {
 			return ImAt(((SpaceatCondition) c).getSubject(), ((SpaceatCondition) c).getTarget());
 		}
+		
+		if(c instanceof TestResultCondition) {
+			return ((TestResultCondition) c).getTestType().TestPatient(((TestResultCondition) c).getPatient(), 0.0).isInfected();
+		}
 
 		if (c instanceof StateCondition) {
 			Field targetField = null;
@@ -556,6 +561,8 @@ public class Agent {
 
 	public void NextStep() {
 		curActionStep++;
+		
+		// If the mission is complete, update my status accordingly
 		if (curActionStep == curMission.getSteps().size()) {
 			isIdle = true;
 			curActionStep = 0;
@@ -571,13 +578,6 @@ public class Agent {
 		if (stepLogic instanceof StayForConditionAction) {
 			curCondition = ((StayForConditionAction) stepLogic).getStayCondition();
 		}
-
-//		if (stepLogic instanceof MoveAction) {
-////			if (curInside != null) {
-//				if (curInside != null && !curInside.equals(((MoveAction) stepLogic).getDestinationObject())) {
-//				curInside.LetOutPerson(this);
-//			}
-//		}
 	}
 
 	public EDMap ReadMap() {

@@ -201,7 +201,6 @@ public class Actor extends Agent {
 			for (Actor actor : plstAssignedStaff) {
 				actor.deAssignPatient(p);
 			}
-
 			
 			NextStep();
 		}
@@ -221,11 +220,14 @@ public class Actor extends Agent {
 		}
 		
 		//Test Action
-		if(stepLogic instanceof TestAction) {
-			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient(), 0.0);
-			System.out.println("TEST RESULT: " + pTestResult);
-			NextStep();
-		}
+//		if(stepLogic instanceof TestAction) {
+//			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient(), 0.0);
+//			if(pTestResult.isInfected()) {
+//				
+//			}
+//			System.out.println("TEST RESULT: " + pTestResult);
+//			NextStep();
+//		}
 
 		// Stay Action
 		if (stepLogic instanceof StayAction) {

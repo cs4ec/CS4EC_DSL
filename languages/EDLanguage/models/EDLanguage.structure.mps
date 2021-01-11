@@ -588,7 +588,7 @@
     <property role="3GE5qa" value="Structures.Class" />
     <property role="TrG5h" value="SelfInstance" />
     <property role="34LRSv" value="me" />
-    <property role="R4oN_" value="my location" />
+    <property role="R4oN_" value="myself" />
     <ref role="1TJDcQ" node="7o6PzEpI6ey" resolve="HumanInstance" />
   </node>
   <node concept="1TIwiD" id="7o6PzEpI6ey">
@@ -1231,17 +1231,10 @@
       <property role="TrG5h" value="Specificity" />
       <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="ijr0ZWehOj">
-    <property role="EcuMT" value="329726013640088851" />
-    <property role="TrG5h" value="TestKit" />
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="ijr0ZWehOk" role="1TKVEi">
-      <property role="IQ2ns" value="329726013640088852" />
-      <property role="20kJfa" value="testType" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="ijr0ZWehMB" resolve="Test" />
+    <node concept="1TJgyi" id="ijr0ZXzv27" role="1TKVEl">
+      <property role="IQ2nx" value="329726013662425223" />
+      <property role="TrG5h" value="ProcessingTime" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
   <node concept="1TIwiD" id="ijr0ZWh9Pa">
@@ -1266,7 +1259,33 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="testkit" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="ijr0ZWehOj" resolve="TestKit" />
+      <ref role="20lvS9" node="ijr0ZWACOZ" resolve="TestKit" />
+    </node>
+    <node concept="1TJgyj" id="ijr0ZWADyv" role="1TKVEi">
+      <property role="IQ2ns" value="329726013646477471" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="positiveCase" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjec8l6" resolve="BehaviourSequence" />
+    </node>
+    <node concept="1TJgyj" id="ijr0ZWADyz" role="1TKVEi">
+      <property role="IQ2ns" value="329726013646477475" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="negativeCase" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjec8l6" resolve="BehaviourSequence" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="ijr0ZWACOZ">
+    <property role="EcuMT" value="329726013646474559" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestKit" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="ijr0ZXmg4C" role="1TKVEi">
+      <property role="IQ2ns" value="329726013658956072" />
+      <property role="20kJfa" value="testCategoryType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="ijr0ZWehMB" resolve="Test" />
     </node>
   </node>
 </model>

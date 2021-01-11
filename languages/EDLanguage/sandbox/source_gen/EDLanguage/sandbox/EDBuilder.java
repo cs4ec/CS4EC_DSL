@@ -36,7 +36,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 200));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(15));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(30));
 
 
     // add Agents 
@@ -51,6 +51,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     }
     for (int i = 0; i < 3; i++) {
       context.add(new MajorsTriageNurse(space, grid));
+    }
+    for (int i = 0; i < 10000; i++) {
+      context.add(new testingDevice(space, grid));
     }
 
 

@@ -133,7 +133,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x7606d63a99b483bfL, StopOrder);
     builder.put(0x4936c0ffc391ca7L, Test);
     builder.put(0x4936c0ffc449d4aL, TestAction);
-    builder.put(0x4936c0ffc391d13L, TestKit);
+    builder.put(0x4936c0ffc9a8d3fL, TestKit);
     builder.put(0x109830a68a82ca51L, WallDefinition);
     builder.put(0x109830a68a78a1e8L, WallInstanceDefinition);
     myIndex = builder.seal();

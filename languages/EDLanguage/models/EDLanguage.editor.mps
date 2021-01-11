@@ -1376,29 +1376,22 @@
       <node concept="3F0A7n" id="ijr0ZWehO7" role="3EZMnx">
         <ref role="1NtTu8" to="3751:ijr0ZWehMG" resolve="Specificity" />
       </node>
-      <node concept="l2Vlx" id="ijr0ZWehMO" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="ijr0ZWehOm">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="3751:ijr0ZWehOj" resolve="TestKit" />
-    <node concept="3EZMnI" id="ijr0ZWehOo" role="2wV5jI">
-      <node concept="3F0ifn" id="ijr0ZWehOv" role="3EZMnx">
-        <property role="3F0ifm" value="a" />
-      </node>
-      <node concept="1iCGBv" id="ijr0ZWehO_" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZWehOk" resolve="testType" />
-        <node concept="1sVBvm" id="ijr0ZWehOB" role="1sWHZn">
-          <node concept="3F0A7n" id="ijr0ZWehOJ" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
+      <node concept="3F0ifn" id="ijr0ZX$ZHy" role="3EZMnx">
+        <property role="3F0ifm" value="Processing Time:" />
+        <node concept="pVoyu" id="ijr0ZX$ZHJ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="ijr0ZX$ZHL" role="3F10Kt">
+          <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0ifn" id="ijr0ZWehOS" role="3EZMnx">
-        <property role="3F0ifm" value="test" />
+      <node concept="3F0A7n" id="ijr0ZX$ZI3" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZXzv27" resolve="ProcessingTime" />
       </node>
-      <node concept="l2Vlx" id="ijr0ZWehOr" role="2iSdaV" />
+      <node concept="3F0ifn" id="ijr0ZXApAQ" role="3EZMnx">
+        <property role="3F0ifm" value="minutes" />
+      </node>
+      <node concept="l2Vlx" id="ijr0ZWehMO" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="ijr0ZWh9Pi">
@@ -1414,13 +1407,13 @@
       <node concept="3F0ifn" id="ijr0ZWr13s" role="3EZMnx">
         <property role="3F0ifm" value="with" />
       </node>
-      <node concept="1iCGBv" id="ijr0ZWr13A" role="3EZMnx">
+      <node concept="1iCGBv" id="ijr0ZX8oWe" role="3EZMnx">
         <ref role="1NtTu8" to="3751:ijr0ZWh9Pf" resolve="testkit" />
-        <node concept="1sVBvm" id="ijr0ZWr13C" role="1sWHZn">
-          <node concept="1iCGBv" id="ijr0ZWr13M" role="2wV5jI">
-            <ref role="1NtTu8" to="3751:ijr0ZWehOk" resolve="testType" />
-            <node concept="1sVBvm" id="ijr0ZWr13O" role="1sWHZn">
-              <node concept="3F0A7n" id="ijr0ZWr13V" role="2wV5jI">
+        <node concept="1sVBvm" id="ijr0ZX8oWg" role="1sWHZn">
+          <node concept="1iCGBv" id="ijr0ZXmhjc" role="2wV5jI">
+            <ref role="1NtTu8" to="3751:ijr0ZXmg4C" resolve="testCategoryType" />
+            <node concept="1sVBvm" id="ijr0ZXmhje" role="1sWHZn">
+              <node concept="3F0A7n" id="ijr0ZXmhjl" role="2wV5jI">
                 <property role="1Intyy" value="true" />
                 <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
               </node>
@@ -1428,7 +1421,53 @@
           </node>
         </node>
       </node>
+      <node concept="3F0ifn" id="ijr0ZXqV4g" role="3EZMnx">
+        <property role="3F0ifm" value="if positive:" />
+        <node concept="pVoyu" id="ijr0ZXqV4r" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="ijr0ZXqV4t" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="ijr0ZXqV4H" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZWADyv" resolve="positiveCase" />
+      </node>
+      <node concept="3F0ifn" id="ijr0ZXqV59" role="3EZMnx">
+        <property role="3F0ifm" value="if negative:" />
+        <node concept="pVoyu" id="ijr0ZXqV5O" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="ijr0ZXqV5Q" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="ijr0ZXqV6a" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZWADyz" resolve="negativeCase" />
+      </node>
       <node concept="l2Vlx" id="ijr0ZWh9Pn" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="ijr0ZX9Jjs">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="3751:ijr0ZWACOZ" resolve="TestKit" />
+    <node concept="3EZMnI" id="ijr0ZXmg5i" role="2wV5jI">
+      <node concept="l2Vlx" id="ijr0ZXmg5j" role="2iSdaV" />
+      <node concept="3F0ifn" id="ijr0ZXmg5m" role="3EZMnx">
+        <property role="3F0ifm" value="a" />
+      </node>
+      <node concept="1iCGBv" id="ijr0ZXmg5r" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZXmg4C" resolve="testCategoryType" />
+        <node concept="1sVBvm" id="ijr0ZXmg5t" role="1sWHZn">
+          <node concept="3F0A7n" id="ijr0ZXmg5_" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="ijr0ZXmg5I" role="3EZMnx">
+        <property role="3F0ifm" value="test" />
+      </node>
     </node>
   </node>
 </model>

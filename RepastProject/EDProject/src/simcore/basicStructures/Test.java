@@ -10,6 +10,7 @@ public class Test {
 	public String name;
 	protected double sensitivity;
 	protected double specificity;
+	protected Integer processingTime;
 	
 //	public Test(double pdblSensitivity, double pdblSpecificity) {
 //		sensitivity = pdblSensitivity;
@@ -19,6 +20,7 @@ public class Test {
 	public Test() {
 		sensitivity = 1.0;
 		specificity = 1.0;
+		processingTime = 300;
 	}
 	
 	public static Test getInstance() {

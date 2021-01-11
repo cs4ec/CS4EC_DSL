@@ -28,7 +28,7 @@ public class TestKit_SubstituteMenu extends SubstituteMenuBase {
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_76xedm_a(), CONCEPTS.TestKit$CV));
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_76xedm_a(), CONCEPTS.TestKit$6L));
     result.add(new SMP_Subconcepts_76xedm_b());
     return result;
   }
@@ -37,7 +37,7 @@ public class TestKit_SubstituteMenu extends SubstituteMenuBase {
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for TestKit. Generated from implicit smart reference attribute.", new SNodePointer("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)", "329726013640088851")));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for TestKit. Generated from implicit smart reference attribute.", new SNodePointer("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)", "329726013646474559")));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -50,7 +50,7 @@ public class TestKit_SubstituteMenu extends SubstituteMenuBase {
 
     public SMP_ReferenceScope_76xedm_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) CONCEPTS.TestKit$CV, LINKS.testType$jcBv);
+      super((SAbstractConcept) CONCEPTS.TestKit$6L, LINKS.testCategoryType$2nw8);
     }
     @NotNull
     @Override
@@ -67,7 +67,7 @@ public class TestKit_SubstituteMenu extends SubstituteMenuBase {
   }
   public class SMP_Subconcepts_76xedm_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.TestKit$CV);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.TestKit$6L);
     }
     @NotNull
     @Override
@@ -88,10 +88,10 @@ public class TestKit_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept TestKit$CV = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc391d13L, "EDLanguage.structure.TestKit");
+    /*package*/ static final SConcept TestKit$6L = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc9a8d3fL, "EDLanguage.structure.TestKit");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink testType$jcBv = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc391d13L, 0x4936c0ffc391d14L, "testType");
+    /*package*/ static final SReferenceLink testCategoryType$2nw8 = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc9a8d3fL, 0x4936c0ffd590128L, "testCategoryType");
   }
 }
