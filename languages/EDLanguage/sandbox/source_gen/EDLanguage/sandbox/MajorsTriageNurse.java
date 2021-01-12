@@ -52,7 +52,7 @@ public class MajorsTriageNurse extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsTriage"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
-    curMission.WithStep(new ActionStep().WithName("Triage the patient").WithAction(new StayForTimeAction().WithTimeSpan(180)));
+    curMission.WithStep(new ActionStep().WithName("Triage the patient").WithAction(new StayForTimeAction().WithTimeSpan(300)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
     sendSignalTemp = new PatientWaitingForDoctorSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));

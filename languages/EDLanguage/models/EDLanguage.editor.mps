@@ -483,10 +483,13 @@
     <ref role="1XX52x" to="3751:3KCb14J4_pb" resolve="PossibilityCondition" />
     <node concept="3EZMnI" id="3KCb14J4_po" role="2wV5jI">
       <node concept="3F0ifn" id="3KCb14J4_pv" role="3EZMnx">
-        <property role="3F0ifm" value="at possibility:" />
+        <property role="3F0ifm" value="at probability" />
       </node>
       <node concept="3F1sOY" id="6tNT_P6pQaw" role="3EZMnx">
         <ref role="1NtTu8" to="3751:6tNT_P6pQaq" resolve="possibility" />
+      </node>
+      <node concept="3F0ifn" id="ijr0ZXQl0P" role="3EZMnx">
+        <property role="3F0ifm" value="%" />
       </node>
       <node concept="l2Vlx" id="3KCb14J4_pr" role="2iSdaV" />
     </node>
@@ -496,13 +499,12 @@
     <ref role="1XX52x" to="3751:3l6cNjec8la" resolve="Choice" />
     <node concept="3EZMnI" id="3KCb14J5ffQ" role="2wV5jI">
       <node concept="3F0ifn" id="3KCb14J5fgN" role="3EZMnx">
-        <property role="3F0ifm" value="if: (" />
+        <property role="3F0ifm" value="if" />
       </node>
       <node concept="3F1sOY" id="3KCb14J5fgT" role="3EZMnx">
         <ref role="1NtTu8" to="3751:3l6cNjec8ld" resolve="condition" />
       </node>
       <node concept="3F0ifn" id="3KCb14J5fh1" role="3EZMnx">
-        <property role="3F0ifm" value=")" />
         <node concept="ljvvj" id="3KCb14J5fh6" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -521,7 +523,7 @@
         </node>
       </node>
       <node concept="3F0ifn" id="3KCb14J5fj0" role="3EZMnx">
-        <property role="3F0ifm" value="else:" />
+        <property role="3F0ifm" value="otherwise" />
         <node concept="ljvvj" id="3KCb14J5fjc" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -1468,6 +1470,54 @@
       <node concept="3F0ifn" id="ijr0ZXmg5I" role="3EZMnx">
         <property role="3F0ifm" value="test" />
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="ijr0ZXHrhp">
+    <property role="3GE5qa" value="actors" />
+    <ref role="1XX52x" to="3751:ijr0ZXG0T5" resolve="Patient" />
+    <node concept="3EZMnI" id="ijr0ZXHrhr" role="2wV5jI">
+      <node concept="PMmxH" id="ijr0ZXHrh_" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="3F0ifn" id="ijr0ZXHrkW" role="3EZMnx" />
+      <node concept="3EZMnI" id="ijr0ZXHri$" role="3EZMnx">
+        <node concept="VPM3Z" id="ijr0ZXHri_" role="3F10Kt" />
+        <node concept="3EZMnI" id="ijr0ZXHriM" role="3EZMnx">
+          <node concept="VPM3Z" id="ijr0ZXHriN" role="3F10Kt" />
+          <node concept="3F0ifn" id="ijr0ZXHriO" role="3EZMnx">
+            <property role="3F0ifm" value="has attributes:" />
+          </node>
+          <node concept="3EZMnI" id="ijr0ZXHriP" role="3EZMnx">
+            <node concept="VPM3Z" id="ijr0ZXHriQ" role="3F10Kt" />
+            <node concept="3XFhqQ" id="ijr0ZXHriR" role="3EZMnx" />
+            <node concept="3F2HdR" id="ijr0ZXHriS" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:2lYAlRFxtS0" resolve="attributes" />
+              <node concept="2iRkQZ" id="ijr0ZXHriT" role="2czzBx" />
+              <node concept="VPM3Z" id="ijr0ZXHriU" role="3F10Kt" />
+            </node>
+            <node concept="2iRfu4" id="ijr0ZXHriV" role="2iSdaV" />
+          </node>
+          <node concept="2iRkQZ" id="ijr0ZXHriW" role="2iSdaV" />
+        </node>
+        <node concept="2iRkQZ" id="ijr0ZXHrj5" role="2iSdaV" />
+        <node concept="pVoyu" id="ijr0ZXHrjH" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="ijr0ZXHrhu" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="ijr0ZXLzp_">
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:ijr0ZXLziU" resolve="InfectionCondition" />
+    <node concept="3EZMnI" id="ijr0ZXLzpB" role="2wV5jI">
+      <node concept="3F0ifn" id="ijr0ZXLztM" role="3EZMnx">
+        <property role="3F0ifm" value="I think the patient is" />
+      </node>
+      <node concept="3F0A7n" id="ijr0ZXLztY" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:ijr0ZXLzpz" resolve="InfectionStatus" />
+      </node>
+      <node concept="l2Vlx" id="ijr0ZXLzpE" role="2iSdaV" />
     </node>
   </node>
 </model>

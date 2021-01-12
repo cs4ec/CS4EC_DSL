@@ -31,8 +31,8 @@ public class Test {
 	}
 	
 	public TestResult TestPatient(Patient pPatient, Double pdblCurrentTimestamp) {
-		boolean patientIsInfected = (pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Infected_Asymptomatic
-										|| pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Infected_Symptomatic);
+		boolean patientIsInfected = (pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Asymptomatic
+										|| pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic);
 		
 		Double pdblRand = RandomHelper.nextDouble();
 		if (patientIsInfected) { // Sensitivity value used

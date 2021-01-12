@@ -154,6 +154,10 @@
         <child id="329726013640842575" name="testkit" index="3SPZ50" />
         <child id="329726013640842573" name="targetPatient" index="3SPZ52" />
       </concept>
+      <concept id="329726013664661061" name="EDLanguage.structure.Patient" flags="ng" index="3T8Q9a" />
+      <concept id="329726013666112698" name="EDLanguage.structure.InfectionCondition" flags="ng" index="3TllyP">
+        <property id="329726013666113123" name="InfectionStatus" index="3TllDG" />
+      </concept>
       <concept id="3838812034270460672" name="EDLanguage.structure.EmergencyDepartment" flags="ng" index="3VqkwO">
         <child id="6839259415242834378" name="patientInterval" index="2qCAZT" />
         <child id="3838812034270522283" name="staff" index="3Vt_yv" />
@@ -218,7 +222,7 @@
       <ref role="3Vt_zZ" node="2Cgo4_laXcS" resolve="MajorsTriageNurse" />
     </node>
     <node concept="3VqkwQ" id="ijr0ZXy8W5" role="3Vt_yv">
-      <property role="3Vt_zX" value="10000" />
+      <property role="3Vt_zX" value="50" />
       <ref role="3Vt_zZ" node="ijr0ZWACuy" resolve="testingDevice" />
     </node>
     <node concept="2qCAYh" id="5VDVzf4k7mz" role="2qCAZT">
@@ -679,18 +683,79 @@
             <node concept="3JGL$I" id="7lVoe4ylVbu" role="3JG_nS" />
           </node>
         </node>
-        <node concept="jcv$W" id="ijr0ZXzv1O" role="3VtFpW">
-          <property role="jcv$Z" value="2" />
-          <node concept="2IBTiW" id="ijr0ZXzv24" role="2IBTiu">
-            <property role="2IBTiX" value="Administer the test" />
+        <node concept="jcv$W" id="ijr0ZXMUfK" role="3VtFpW">
+          <property role="jcv$Z" value="5" />
+          <node concept="2IBTiW" id="ijr0ZXMUg2" role="2IBTiu">
+            <property role="2IBTiX" value="Inspect the patient" />
           </node>
         </node>
-        <node concept="3z7BTx" id="ijr0ZXy8Vy" role="3VtFpW">
-          <node concept="3z7ADy" id="ijr0ZXy8V$" role="3z7BTw">
-            <ref role="3z7AD_" node="ijr0ZWACuD" resolve="StartPatientTest" />
-            <node concept="2_cGdR" id="ijr0ZXy8VM" role="jeBCe">
-              <ref role="XnLJh" node="ijr0ZWACvM" resolve="patient" />
-              <node concept="3JJFmu" id="ijr0ZXy8VQ" role="2_cGdO" />
+        <node concept="3VtFpY" id="ijr0ZXMUgm" role="3VtFpW">
+          <node concept="3TllyP" id="ijr0ZXMUgM" role="3VtFpT">
+            <property role="3TllDG" value="ijr0ZXLzgJ/AsymptomaticState" />
+          </node>
+          <node concept="3VtFpM" id="ijr0ZXMUgq" role="3VtFpZ">
+            <node concept="jcv$W" id="ijr0ZXzv1O" role="3VtFpW">
+              <property role="jcv$Z" value="2" />
+              <node concept="2IBTiW" id="ijr0ZXzv24" role="2IBTiu">
+                <property role="2IBTiX" value="Administer the test" />
+              </node>
+            </node>
+            <node concept="3z7BTx" id="ijr0ZXNykE" role="3VtFpW">
+              <node concept="3z7ADy" id="ijr0ZXNykG" role="3z7BTw">
+                <ref role="3z7AD_" node="ijr0ZWACuD" resolve="StartPatientTest" />
+                <node concept="2_cGdR" id="ijr0ZXNypS" role="jeBCe">
+                  <ref role="XnLJh" node="ijr0ZWACvM" resolve="patient" />
+                  <node concept="3JJFmu" id="ijr0ZXNypW" role="2_cGdO" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="ijr0ZXMUgP" role="3VtFp$">
+            <node concept="3VtFpY" id="ijr0ZXMUgT" role="3VtFpW">
+              <node concept="3TllyP" id="ijr0ZXMUh5" role="3VtFpT">
+                <property role="3TllDG" value="ijr0ZXLzgI/SymptomaticState" />
+              </node>
+              <node concept="3VtFpM" id="ijr0ZXMUgX" role="3VtFpZ">
+                <node concept="jcv$W" id="ijr0ZXNyxt" role="3VtFpW">
+                  <property role="jcv$Z" value="2" />
+                  <node concept="2IBTiW" id="ijr0ZXNyxu" role="2IBTiu">
+                    <property role="2IBTiX" value="Administer the test" />
+                  </node>
+                </node>
+                <node concept="3z7BTx" id="ijr0ZXNypZ" role="3VtFpW">
+                  <node concept="3z7ADy" id="ijr0ZXNyq0" role="3z7BTw">
+                    <ref role="3z7AD_" node="ijr0ZWACuD" resolve="StartPatientTest" />
+                    <node concept="2_cGdR" id="ijr0ZXNyq1" role="jeBCe">
+                      <ref role="XnLJh" node="ijr0ZWACvM" resolve="patient" />
+                      <node concept="3JJFmu" id="ijr0ZXNyq2" role="2_cGdO" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="ijr0ZXMUh8" role="3VtFp$">
+                <node concept="3VtFpY" id="ijr0ZXMUhc" role="3VtFpW">
+                  <node concept="3TllyP" id="ijr0ZXMUho" role="3VtFpT">
+                    <property role="3TllDG" value="ijr0ZXLzgM/SusceptibleState" />
+                  </node>
+                  <node concept="3VtFpM" id="ijr0ZXMUhg" role="3VtFpZ">
+                    <node concept="jcv$W" id="ijr0ZXNyxF" role="3VtFpW">
+                      <property role="jcv$Z" value="2" />
+                      <node concept="2IBTiW" id="ijr0ZXNyxG" role="2IBTiu">
+                        <property role="2IBTiX" value="Administer the test" />
+                      </node>
+                    </node>
+                    <node concept="3z7BTx" id="ijr0ZXNyv9" role="3VtFpW">
+                      <node concept="3z7ADy" id="ijr0ZXNyva" role="3z7BTw">
+                        <ref role="3z7AD_" node="ijr0ZWACuD" resolve="StartPatientTest" />
+                        <node concept="2_cGdR" id="ijr0ZXNyvb" role="jeBCe">
+                          <ref role="XnLJh" node="ijr0ZWACvM" resolve="patient" />
+                          <node concept="3JJFmu" id="ijr0ZXNyvc" role="2_cGdO" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>
@@ -1519,7 +1584,7 @@
           </node>
         </node>
         <node concept="jcv$W" id="2Cgo4_laXin" role="3VtFpW">
-          <property role="jcv$Z" value="3" />
+          <property role="jcv$Z" value="5" />
           <node concept="2IBTiW" id="2Cgo4_laXiF" role="2IBTiu">
             <property role="2IBTiX" value="Triage the patient" />
           </node>
@@ -1614,6 +1679,11 @@
         <ref role="3n32J4" node="ijr0ZWACuD" resolve="StartPatientTest" />
       </node>
     </node>
+  </node>
+  <node concept="3T8Q9a" id="ijr0ZXHrg$">
+    <property role="3GE5qa" value="StaffDefinition" />
+    <property role="TrG5h" value="Patient" />
+    <ref role="3Vt_ys" node="ijr0ZXHrg$" resolve="Patient" />
   </node>
 </model>
 

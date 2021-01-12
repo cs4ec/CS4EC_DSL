@@ -33,6 +33,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
   private ConceptPresentation props_HumanInstanceFromSignal;
+  private ConceptPresentation props_InfectionCondition;
+  private ConceptPresentation props_InfectionState;
   private ConceptPresentation props_MoveAction;
   private ConceptPresentation props_MoveOrder;
   private ConceptPresentation props_NewPatientSignal;
@@ -42,6 +44,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_OccupyAction;
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
+  private ConceptPresentation props_Patient;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PatientInterval;
   private ConceptPresentation props_PlaceInstance;
@@ -255,6 +258,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_HumanInstanceFromSignal = cpb.create();
         }
         return props_HumanInstanceFromSignal;
+      case LanguageConceptSwitch.InfectionCondition:
+        if (props_InfectionCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("infection status condition");
+          props_InfectionCondition = cpb.create();
+        }
+        return props_InfectionCondition;
+      case LanguageConceptSwitch.InfectionState:
+        if (props_InfectionState == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("InfectionState");
+          props_InfectionState = cpb.create();
+        }
+        return props_InfectionState;
       case LanguageConceptSwitch.MoveAction:
         if (props_MoveAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -320,6 +337,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OrderPatientAction = cpb.create();
         }
         return props_OrderPatientAction;
+      case LanguageConceptSwitch.Patient:
+        if (props_Patient == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Patient = cpb.create();
+        }
+        return props_Patient;
       case LanguageConceptSwitch.PatientInstance:
         if (props_PatientInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -46,10 +46,11 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     setCellContext(editorCell);
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createRefNode_0());
+    editorCell.addEditorCell(createConstant_1());
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "at possibility:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "at probability");
     editorCell.setCellId("Constant_qafhwy_a0");
     editorCell.setDefaultText("");
     return editorCell;
@@ -108,6 +109,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     protected String getNoTargetText() {
       return "<no possibility>";
     }
+  }
+  private EditorCell createConstant_1() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "%");
+    editorCell.setCellId("Constant_qafhwy_c0");
+    editorCell.setDefaultText("");
+    return editorCell;
   }
 
   private static final class LINKS {

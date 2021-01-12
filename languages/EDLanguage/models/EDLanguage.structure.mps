@@ -1288,5 +1288,51 @@
       <ref role="20lvS9" node="ijr0ZWehMB" resolve="Test" />
     </node>
   </node>
+  <node concept="1TIwiD" id="ijr0ZXG0T5">
+    <property role="EcuMT" value="329726013664661061" />
+    <property role="3GE5qa" value="actors" />
+    <property role="TrG5h" value="Patient" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="Patient" />
+    <ref role="1TJDcQ" node="3l6cNjebQ9L" resolve="Actor" />
+  </node>
+  <node concept="1TIwiD" id="ijr0ZXLzgF">
+    <property role="EcuMT" value="329726013666112555" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="InfectionState" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="25R3W" id="ijr0ZXLzgH">
+    <property role="3F6X1D" value="329726013666112557" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="InfectionStateType" />
+    <node concept="25R33" id="ijr0ZXLzgI" role="25R1y">
+      <property role="3tVfz5" value="329726013666112558" />
+      <property role="TrG5h" value="Symptomatic" />
+      <property role="1L1pqM" value="Symptomatic" />
+    </node>
+    <node concept="25R33" id="ijr0ZXLzgJ" role="25R1y">
+      <property role="3tVfz5" value="329726013666112559" />
+      <property role="TrG5h" value="Asymptomatic" />
+      <property role="1L1pqM" value="Asymptomatic" />
+    </node>
+    <node concept="25R33" id="ijr0ZXLzgM" role="25R1y">
+      <property role="3tVfz5" value="329726013666112562" />
+      <property role="TrG5h" value="Susceptible" />
+      <property role="1L1pqM" value="Susceptible" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="ijr0ZXLziU">
+    <property role="EcuMT" value="329726013666112698" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="InfectionCondition" />
+    <property role="34LRSv" value="infection status condition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyi" id="ijr0ZXLzpz" role="1TKVEl">
+      <property role="IQ2nx" value="329726013666113123" />
+      <property role="TrG5h" value="InfectionStatus" />
+      <ref role="AX2Wp" node="ijr0ZXLzgH" resolve="InfectionStateType" />
+    </node>
+  </node>
 </model>
 

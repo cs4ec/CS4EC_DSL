@@ -267,6 +267,9 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Object referenceMacro_GetReferent_40_0(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.testkit$nR9z), LINKS.testCategoryType$2nw8), PROPS.name$MnvL);
   }
+  public static Object referenceMacro_GetReferent_41_0(final ReferenceMacroContext _context) {
+    return SPropertyOperations.getEnum(_context.getNode(), PROPS.InfectionStatus$$AXU).getName();
+  }
   public static SNode sourceNodeQuery_2_0(final SourceSubstituteMacroNodeContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.behaviour$hsTv);
   }
@@ -748,6 +751,7 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("6750846609958045202", new RTQ(13, "RoomType"));
     rtqMethods.put("329726013644468540", new RTQ(14, "Test"));
     rtqMethods.put("329726013660598349", new RTQ(15, "Test"));
+    rtqMethods.put("329726013669268110", new RTQ(16, "Asymptomatic"));
   }
   @NotNull
   @Override
@@ -799,6 +803,8 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.referenceMacro_GetReferent_39_0(ctx);
         case 15:
           return QueriesGenerated.referenceMacro_GetReferent_40_0(ctx);
+        case 16:
+          return QueriesGenerated.referenceMacro_GetReferent_41_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -834,6 +840,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty ProcessingTime$4J7O = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc391ca7L, 0x4936c0ffd8df087L, "ProcessingTime");
     /*package*/ static final SProperty colour$7icN = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x66029deba11b71c3L, "colour");
     /*package*/ static final SProperty occupiableType$LraA = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL, 0x757b60e121e2b8d0L, "occupiableType");
+    /*package*/ static final SProperty InfectionStatus$$AXU = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffdc634baL, 0x4936c0ffdc63663L, "InfectionStatus");
   }
 
   private static final class LINKS {

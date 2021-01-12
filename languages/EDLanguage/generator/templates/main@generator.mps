@@ -26,6 +26,7 @@
     <import index="kgww" ref="4b3471fe-3d18-4cd3-b548-991a9fa81520/java:simcore.Signals.Orders(EDRuntime_EDProject/)" />
     <import index="mt9v" ref="4b3471fe-3d18-4cd3-b548-991a9fa81520/java:simcore.Signals(EDRuntime_EDProject/)" />
     <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" />
+    <import index="ubqx" ref="4b3471fe-3d18-4cd3-b548-991a9fa81520/java:simcore.diagnosis(EDRuntime_EDProject/)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
     <import index="vp87" ref="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
@@ -64,6 +65,10 @@
       </concept>
       <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
+      </concept>
+      <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
+        <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
+        <reference id="1144432896254" name="enumClass" index="1Px2BO" />
       </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
@@ -630,6 +635,12 @@
       <ref role="30HIoZ" to="3751:ijr0ZWh9Pa" resolve="TestAction" />
       <node concept="j$656" id="ijr0ZWyaY_" role="1lVwrX">
         <ref role="v9R2y" node="ijr0ZWyaYy" resolve="reduce_TestAction" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="ijr0ZXT37W" role="3acgRq">
+      <ref role="30HIoZ" to="3751:ijr0ZXLziU" resolve="InfectionCondition" />
+      <node concept="j$656" id="ijr0ZXT37X" role="1lVwrX">
+        <ref role="v9R2y" node="ijr0ZXT37U" resolve="reduce_InfectionCondition" />
       </node>
     </node>
   </node>
@@ -6066,6 +6077,106 @@
       <node concept="2tJIrI" id="ijr0ZWyb1n" role="jymVt" />
       <node concept="3Tm1VV" id="ijr0ZWyaZO" role="1B3o_S" />
       <node concept="3uibUv" id="ijr0ZXsqHN" role="1zkMxy">
+        <ref role="3uigEE" to="uux2:~Actor" resolve="Actor" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="ijr0ZXT37U">
+    <property role="TrG5h" value="reduce_InfectionCondition" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="3gUMe" to="3751:ijr0ZXLziU" resolve="InfectionCondition" />
+    <node concept="312cEu" id="ijr0ZXT3jZ" role="13RCb5">
+      <property role="TrG5h" value="_class_" />
+      <node concept="15s5l7" id="ijr0ZXT3Fm" role="lGtFl">
+        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: There is no default constructor available in super class simcore.agents.Actor&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/8974945326827961340]&quot;;" />
+        <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Actor" />
+      </node>
+      <node concept="2tJIrI" id="ijr0ZXT3k0" role="jymVt" />
+      <node concept="312cEg" id="ijr0ZXT3k1" role="jymVt">
+        <property role="TrG5h" value="curMission" />
+        <node concept="3Tm6S6" id="ijr0ZXT3k2" role="1B3o_S" />
+        <node concept="3uibUv" id="ijr0ZXT3k3" role="1tU5fm">
+          <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
+        </node>
+      </node>
+      <node concept="2tJIrI" id="ijr0ZXT3k4" role="jymVt" />
+      <node concept="3clFb_" id="ijr0ZXT3k5" role="jymVt">
+        <property role="TrG5h" value="InitFunction" />
+        <node concept="3clFbS" id="ijr0ZXT3k6" role="3clF47">
+          <node concept="3clFbH" id="ijr0ZXX$53" role="3cqZAp" />
+          <node concept="3clFbF" id="ijr0ZXW54t" role="3cqZAp">
+            <node concept="2OqwBi" id="ijr0ZXXzPQ" role="3clFbG">
+              <node concept="2OqwBi" id="ijr0ZXW5AH" role="2Oq$k0">
+                <node concept="2ShNRf" id="ijr0ZXW54p" role="2Oq$k0">
+                  <node concept="1pGfFk" id="ijr0ZXW5uh" role="2ShVmc">
+                    <ref role="37wK5l" to="9axu:~InfectionCondition.&lt;init&gt;()" resolve="InfectionCondition" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="ijr0ZXW64S" role="2OqNvi">
+                  <ref role="37wK5l" to="9axu:~InfectionCondition.WithPatient(simcore.agents.Patient)" resolve="WithPatient" />
+                  <node concept="10QFUN" id="ijr0ZXW6kR" role="37wK5m">
+                    <node concept="3uibUv" id="ijr0ZXW6mw" role="10QFUM">
+                      <ref role="3uigEE" to="uux2:~Patient" resolve="Patient" />
+                    </node>
+                    <node concept="2OqwBi" id="ijr0ZXW6bs" role="10QFUP">
+                      <node concept="37vLTw" id="ijr0ZXW65o" role="2Oq$k0">
+                        <ref role="3cqZAo" node="ijr0ZXT3kn" resolve="s" />
+                      </node>
+                      <node concept="liA8E" id="ijr0ZXW6hb" role="2OqNvi">
+                        <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                        <node concept="Xl_RD" id="ijr0ZXW6hT" role="37wK5m">
+                          <property role="Xl_RC" value="patient" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="ijr0ZXX$_l" role="2OqNvi">
+                <ref role="37wK5l" to="9axu:~InfectionCondition.WithTest(simcore.diagnosis.InfectionStatus)" resolve="WithTest" />
+                <node concept="Rm8GO" id="ijr0ZXX$GI" role="37wK5m">
+                  <ref role="Rm8GQ" to="ubqx:~InfectionStatus.Asymptomatic" resolve="Asymptomatic" />
+                  <ref role="1Px2BO" to="ubqx:~InfectionStatus" resolve="InfectionStatus" />
+                  <node concept="1ZhdrF" id="ijr0ZXX_Ee" role="lGtFl">
+                    <property role="2qtEX8" value="enumConstantDeclaration" />
+                    <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1083260308424/1083260308426" />
+                    <node concept="3$xsQk" id="ijr0ZXX_Ef" role="3$ytzL">
+                      <node concept="3clFbS" id="ijr0ZXX_Eg" role="2VODD2">
+                        <node concept="3clFbF" id="ijr0ZXX_Id" role="3cqZAp">
+                          <node concept="2OqwBi" id="ijr0ZXXAev" role="3clFbG">
+                            <node concept="2OqwBi" id="ijr0ZXX_Uo" role="2Oq$k0">
+                              <node concept="30H73N" id="ijr0ZXX_Ic" role="2Oq$k0" />
+                              <node concept="3TrcHB" id="ijr0ZXXA3q" role="2OqNvi">
+                                <ref role="3TsBF5" to="3751:ijr0ZXLzpz" resolve="InfectionStatus" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="ijr0ZXXAnR" role="2OqNvi">
+                              <ref role="37wK5l" to="c17a:~SEnumerationLiteral.getName()" resolve="getName" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="raruj" id="ijr0ZXX_Ay" role="lGtFl" />
+            </node>
+          </node>
+          <node concept="3clFbH" id="ijr0ZXW4Vh" role="3cqZAp" />
+        </node>
+        <node concept="3Tm1VV" id="ijr0ZXT3kl" role="1B3o_S" />
+        <node concept="3cqZAl" id="ijr0ZXT3km" role="3clF45" />
+        <node concept="37vLTG" id="ijr0ZXT3kn" role="3clF46">
+          <property role="TrG5h" value="s" />
+          <node concept="3uibUv" id="ijr0ZXT3ko" role="1tU5fm">
+            <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
+          </node>
+        </node>
+      </node>
+      <node concept="2tJIrI" id="ijr0ZXT3kp" role="jymVt" />
+      <node concept="3Tm1VV" id="ijr0ZXT3kq" role="1B3o_S" />
+      <node concept="3uibUv" id="ijr0ZXT3CG" role="1zkMxy">
         <ref role="3uigEE" to="uux2:~Actor" resolve="Actor" />
       </node>
     </node>
