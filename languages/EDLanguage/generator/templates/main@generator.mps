@@ -1420,7 +1420,7 @@
                   <property role="3cmrfH" value="400" />
                 </node>
                 <node concept="3cmrfG" id="5WDpsrjEs1V" role="37wK5m">
-                  <property role="3cmrfH" value="200" />
+                  <property role="3cmrfH" value="400" />
                 </node>
               </node>
             </node>
@@ -1487,7 +1487,7 @@
                       <property role="3cmrfH" value="400" />
                     </node>
                     <node concept="3cmrfG" id="5WDpsrjEyPj" role="37wK5m">
-                      <property role="3cmrfH" value="200" />
+                      <property role="3cmrfH" value="400" />
                     </node>
                   </node>
                 </node>
@@ -1518,25 +1518,101 @@
             </node>
             <node concept="liA8E" id="5VDVzf4jCfG" role="2OqNvi">
               <ref role="37wK5l" to="33ny:~Collection.add(java.lang.Object)" resolve="add" />
-              <node concept="2ShNRf" id="5VDVzf4jCm1" role="37wK5m">
-                <node concept="1pGfFk" id="5VDVzf4jCPc" role="2ShVmc">
-                  <ref role="37wK5l" to="y2pi:~PatientAdder.&lt;init&gt;(repast.simphony.space.continuous.ContinuousSpace,repast.simphony.space.grid.Grid)" resolve="PatientAdder" />
-                  <node concept="37vLTw" id="5VDVzf4jDu6" role="37wK5m">
-                    <ref role="3cqZAo" node="5WDpsrjEo8M" resolve="space" />
+              <node concept="2OqwBi" id="ijr0ZY5b_h" role="37wK5m">
+                <node concept="2OqwBi" id="ijr0ZY5aKz" role="2Oq$k0">
+                  <node concept="2ShNRf" id="5VDVzf4jCm1" role="2Oq$k0">
+                    <node concept="1pGfFk" id="5VDVzf4jCPc" role="2ShVmc">
+                      <ref role="37wK5l" to="y2pi:~PatientAdder.&lt;init&gt;(repast.simphony.space.continuous.ContinuousSpace,repast.simphony.space.grid.Grid)" resolve="PatientAdder" />
+                      <node concept="37vLTw" id="5VDVzf4jDu6" role="37wK5m">
+                        <ref role="3cqZAo" node="5WDpsrjEo8M" resolve="space" />
+                      </node>
+                      <node concept="37vLTw" id="5VDVzf4jDDZ" role="37wK5m">
+                        <ref role="3cqZAo" node="5WDpsrjEuSk" resolve="grid" />
+                      </node>
+                    </node>
+                    <node concept="29HgVG" id="5VDVzf4jFge" role="lGtFl">
+                      <node concept="3NFfHV" id="5VDVzf4jFgf" role="3NFExx">
+                        <node concept="3clFbS" id="5VDVzf4jFgg" role="2VODD2">
+                          <node concept="3clFbF" id="5VDVzf4jFgm" role="3cqZAp">
+                            <node concept="2OqwBi" id="5VDVzf4jFgh" role="3clFbG">
+                              <node concept="3TrEf2" id="5VDVzf4jFgk" role="2OqNvi">
+                                <ref role="3Tt5mk" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
+                              </node>
+                              <node concept="30H73N" id="5VDVzf4jFgl" role="2Oq$k0" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
                   </node>
-                  <node concept="37vLTw" id="5VDVzf4jDDZ" role="37wK5m">
-                    <ref role="3cqZAo" node="5WDpsrjEuSk" resolve="grid" />
+                  <node concept="liA8E" id="ijr0ZY5bfl" role="2OqNvi">
+                    <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageCOVIDSymptomatic(double)" resolve="WithPercentageCOVIDSymptomatic" />
+                    <node concept="3b6qkQ" id="ijr0ZY5bn$" role="37wK5m">
+                      <property role="$nhwW" value="0.2" />
+                      <node concept="17Uvod" id="ijr0ZY5c6Q" role="lGtFl">
+                        <property role="2qtEX9" value="value" />
+                        <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1111509017652/1113006610751" />
+                        <node concept="3zFVjK" id="ijr0ZY5c6R" role="3zH0cK">
+                          <node concept="3clFbS" id="ijr0ZY5c6S" role="2VODD2">
+                            <node concept="3clFbF" id="ijr0ZY5cvw" role="3cqZAp">
+                              <node concept="3cpWs3" id="ijr0ZY5qPQ" role="3clFbG">
+                                <node concept="Xl_RD" id="ijr0ZY5qUR" role="3uHU7w" />
+                                <node concept="FJ1c_" id="ijr0ZY5djO" role="3uHU7B">
+                                  <node concept="1eOMI4" id="ijr0ZY5r_I" role="3uHU7B">
+                                    <node concept="2YIFZM" id="ijr0ZY5tfh" role="1eOMHV">
+                                      <ref role="37wK5l" to="wyt6:~Double.parseDouble(java.lang.String)" resolve="parseDouble" />
+                                      <ref role="1Pybhc" to="wyt6:~Double" resolve="Double" />
+                                      <node concept="2OqwBi" id="ijr0ZY5tNb" role="37wK5m">
+                                        <node concept="30H73N" id="ijr0ZY5tnw" role="2Oq$k0" />
+                                        <node concept="3TrcHB" id="ijr0ZY5u81" role="2OqNvi">
+                                          <ref role="3TsBF5" to="3751:ijr0ZY2aM4" resolve="pecentageSymptomatic" />
+                                        </node>
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="3cmrfG" id="ijr0ZY5dmF" role="3uHU7w">
+                                    <property role="3cmrfH" value="100" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
                   </node>
                 </node>
-                <node concept="29HgVG" id="5VDVzf4jFge" role="lGtFl">
-                  <node concept="3NFfHV" id="5VDVzf4jFgf" role="3NFExx">
-                    <node concept="3clFbS" id="5VDVzf4jFgg" role="2VODD2">
-                      <node concept="3clFbF" id="5VDVzf4jFgm" role="3cqZAp">
-                        <node concept="2OqwBi" id="5VDVzf4jFgh" role="3clFbG">
-                          <node concept="3TrEf2" id="5VDVzf4jFgk" role="2OqNvi">
-                            <ref role="3Tt5mk" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
+                <node concept="liA8E" id="ijr0ZY5bIW" role="2OqNvi">
+                  <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageCOVIDAsymptomatic(double)" resolve="WithPercentageCOVIDAsymptomatic" />
+                  <node concept="3b6qkQ" id="ijr0ZY5bPy" role="37wK5m">
+                    <property role="$nhwW" value="0.1" />
+                    <node concept="17Uvod" id="ijr0ZY5uFG" role="lGtFl">
+                      <property role="2qtEX9" value="value" />
+                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1111509017652/1113006610751" />
+                      <node concept="3zFVjK" id="ijr0ZY5uFH" role="3zH0cK">
+                        <node concept="3clFbS" id="ijr0ZY5uFI" role="2VODD2">
+                          <node concept="3clFbF" id="ijr0ZY5uKe" role="3cqZAp">
+                            <node concept="3cpWs3" id="ijr0ZY5uKf" role="3clFbG">
+                              <node concept="Xl_RD" id="ijr0ZY5uKg" role="3uHU7w" />
+                              <node concept="FJ1c_" id="ijr0ZY5uKh" role="3uHU7B">
+                                <node concept="1eOMI4" id="ijr0ZY5uKi" role="3uHU7B">
+                                  <node concept="2YIFZM" id="ijr0ZY5uKj" role="1eOMHV">
+                                    <ref role="1Pybhc" to="wyt6:~Double" resolve="Double" />
+                                    <ref role="37wK5l" to="wyt6:~Double.parseDouble(java.lang.String)" resolve="parseDouble" />
+                                    <node concept="2OqwBi" id="ijr0ZY5uKk" role="37wK5m">
+                                      <node concept="30H73N" id="ijr0ZY5uKl" role="2Oq$k0" />
+                                      <node concept="3TrcHB" id="ijr0ZY5vGe" role="2OqNvi">
+                                        <ref role="3TsBF5" to="3751:ijr0ZY2aM6" resolve="percentageAsymptomatic" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="3cmrfG" id="ijr0ZY5uKn" role="3uHU7w">
+                                  <property role="3cmrfH" value="100" />
+                                </node>
+                              </node>
+                            </node>
                           </node>
-                          <node concept="30H73N" id="5VDVzf4jFgl" role="2Oq$k0" />
                         </node>
                       </node>
                     </node>
@@ -1621,7 +1697,7 @@
                   <property role="3cmrfH" value="400" />
                 </node>
                 <node concept="3cmrfG" id="5VDVzf4jMDu" role="37wK5m">
-                  <property role="3cmrfH" value="200" />
+                  <property role="3cmrfH" value="400" />
                 </node>
               </node>
             </node>
@@ -5072,11 +5148,16 @@
                     <node concept="3zFVjK" id="5VDVzf4jGss" role="3zH0cK">
                       <node concept="3clFbS" id="5VDVzf4jGst" role="2VODD2">
                         <node concept="3clFbF" id="5VDVzf4jGsz" role="3cqZAp">
-                          <node concept="2OqwBi" id="5VDVzf4jGsu" role="3clFbG">
-                            <node concept="3TrcHB" id="5VDVzf4jGsx" role="2OqNvi">
-                              <ref role="3TsBF5" to="3751:5VDVzf4iS6z" resolve="timespan" />
+                          <node concept="17qRlL" id="ijr0ZY0Lrb" role="3clFbG">
+                            <node concept="3cmrfG" id="ijr0ZY0LsC" role="3uHU7w">
+                              <property role="3cmrfH" value="60" />
                             </node>
-                            <node concept="30H73N" id="5VDVzf4jGsy" role="2Oq$k0" />
+                            <node concept="2OqwBi" id="5VDVzf4jGsu" role="3uHU7B">
+                              <node concept="3TrcHB" id="5VDVzf4jGsx" role="2OqNvi">
+                                <ref role="3TsBF5" to="3751:5VDVzf4iS6z" resolve="timespan" />
+                              </node>
+                              <node concept="30H73N" id="5VDVzf4jGsy" role="2Oq$k0" />
+                            </node>
                           </node>
                         </node>
                       </node>

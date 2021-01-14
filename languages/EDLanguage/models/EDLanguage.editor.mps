@@ -158,6 +158,30 @@
       <node concept="3F1sOY" id="5VDVzf4iS82" role="3EZMnx">
         <ref role="1NtTu8" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
       </node>
+      <node concept="3F0ifn" id="ijr0ZY2aLJ" role="3EZMnx">
+        <property role="3F0ifm" value="Percentage Symptomatic:" />
+      </node>
+      <node concept="3EZMnI" id="ijr0ZY2aOQ" role="3EZMnx">
+        <node concept="2iRfu4" id="ijr0ZY2aOR" role="2iSdaV" />
+        <node concept="3F0A7n" id="ijr0ZY2aMu" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:ijr0ZY2aM4" resolve="pecentageSymptomatic" />
+        </node>
+        <node concept="3F0ifn" id="ijr0ZY2aPi" role="3EZMnx">
+          <property role="3F0ifm" value="%" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="ijr0ZY2aPV" role="3EZMnx">
+        <property role="3F0ifm" value="Percentage Asymptomatic:" />
+      </node>
+      <node concept="3EZMnI" id="ijr0ZY2aQJ" role="3EZMnx">
+        <node concept="2iRfu4" id="ijr0ZY2aQK" role="2iSdaV" />
+        <node concept="3F0A7n" id="ijr0ZY2aRd" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:ijr0ZY2aM6" resolve="percentageAsymptomatic" />
+        </node>
+        <node concept="3F0ifn" id="ijr0ZY2aRj" role="3EZMnx">
+          <property role="3F0ifm" value="%" />
+        </node>
+      </node>
       <node concept="pj6Ft" id="4VcHHLiE1KC" role="3F10Kt">
         <property role="VOm3f" value="true" />
       </node>

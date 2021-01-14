@@ -5,6 +5,7 @@ import simcore.agents.Agent;
 
 public class SusceptibleInfectionState extends InfectionStateType{
 	protected Double probabilityMoveToNextState;
+	private static SusceptibleInfectionState instance;
 
 	public SusceptibleInfectionState() {
 		super();

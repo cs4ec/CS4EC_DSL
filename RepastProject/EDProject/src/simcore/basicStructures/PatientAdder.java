@@ -24,13 +24,15 @@ import simcore.agents.Patient;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.EDMap;
 import simcore.basicStructures.ToolBox;
+import simcore.diagnosis.AsymptomaticInfectionState;
 import simcore.diagnosis.SusceptibleInfectionState;
 import simcore.diagnosis.SymptomaticInfectionState;
 
 public class PatientAdder {
 	
 	private int interval;
-	private double percentCOVIDPositive;
+	private double percentCOVIDSymptomatic;
+	private double percentCOVIDAsymptomatic;
 	private int count = 0;
 	private ContinuousSpace<Object> space;
 	private Grid<Object> grid;
@@ -45,8 +47,13 @@ public class PatientAdder {
 		return this;
 	}
 	
-	public PatientAdder WithPercentageCOVID(double pdblPercentCOVID) {
-		percentCOVIDPositive = pdblPercentCOVID;
+	public PatientAdder WithPercentageCOVIDSymptomatic(double pdblPercentCOVIDSymptomatic) {
+		percentCOVIDSymptomatic = pdblPercentCOVIDSymptomatic;
+		return this;
+	}
+	
+	public PatientAdder WithPercentageCOVIDAsymptomatic(double pdblPercentCOVIDAsymptomatic) {
+		percentCOVIDAsymptomatic = pdblPercentCOVIDAsymptomatic;
 		return this;
 	}
 
@@ -60,8 +67,11 @@ public class PatientAdder {
 			count = interval;
 	    	Context context = ContextUtils.getContext (this);
 	    	Patient p = new Patient(space, grid);
-	    	if(RandomHelper.nextDouble() < percentCOVIDPositive) {
+	    	double upperBoundaryForAsymptomatic = percentCOVIDSymptomatic + percentCOVIDAsymptomatic;
+	    	if(RandomHelper.nextDouble() < percentCOVIDSymptomatic) {
 	        	p.setActualInfectionState(SymptomaticInfectionState.getInstance().generateStateForMe(p));
+	    	} else if(RandomHelper.nextDouble() >= percentCOVIDSymptomatic && RandomHelper.nextDouble() < upperBoundaryForAsymptomatic) {
+	        	p.setActualInfectionState(AsymptomaticInfectionState.getInstance().generateStateForMe(p));
 	    	} else {
 	        	p.setActualInfectionState(SusceptibleInfectionState.getInstance().generateStateForMe(p));
 	    	}

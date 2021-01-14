@@ -4,7 +4,7 @@ import repast.simphony.random.RandomHelper;
 import simcore.agents.Agent;
 
 public class InfectionStateType {
-	protected static InfectionStateType instance;
+	private static InfectionStateType instance;
 	protected Integer minDurationOfState; // What is minimum time an agent can spend in this state
 	protected Integer maxDurationOfState; // What is maximum time an agent can spend in this state
 	protected InfectionStatus infectionStatus; //The actual infection status this state represents

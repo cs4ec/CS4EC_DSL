@@ -5,12 +5,13 @@ import simcore.agents.Agent;
 
 public class AsymptomaticInfectionState extends InfectionStateType{
 	protected Double probabilityMoveToNextState;
+	private static AsymptomaticInfectionState instance;
 
 	public AsymptomaticInfectionState() {
 		super();
 		minDurationOfState = 0;
 		maxDurationOfState = 0;
-		this.infectionStatus = InfectionStatus.Infected_Asymptomatic;
+		this.infectionStatus = InfectionStatus.Asymptomatic;
 	}
 	
 	public static AsymptomaticInfectionState getInstance() {

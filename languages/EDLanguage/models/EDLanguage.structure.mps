@@ -121,6 +121,16 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3l6cNjebRG2" resolve="ActorInstantiation" />
     </node>
+    <node concept="1TJgyi" id="ijr0ZY2aM4" role="1TKVEl">
+      <property role="IQ2nx" value="329726013670468740" />
+      <property role="TrG5h" value="pecentageSymptomatic" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyi" id="ijr0ZY2aM6" role="1TKVEl">
+      <property role="IQ2nx" value="329726013670468742" />
+      <property role="TrG5h" value="percentageAsymptomatic" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3l6cNjebRG2">
     <property role="EcuMT" value="3838812034270460674" />

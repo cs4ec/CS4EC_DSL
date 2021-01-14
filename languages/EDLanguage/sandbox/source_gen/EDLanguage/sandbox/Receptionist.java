@@ -19,17 +19,17 @@ import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
 import simcore.action.basicAction.SendSignalAction;
 
-public class ENP extends Staff {
+public class Receptionist extends Staff {
 
   public double PatientsSeen = Double.parseDouble("" + "0");
   public double groupStress = Double.parseDouble("" + "0");
 
-  public ENP(ContinuousSpace<Object> space, Grid<Object> grid) {
+  public Receptionist(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
     mintMyMaxPatients = 0;
   }
 
-  public ENP(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+  public Receptionist(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
     super(space, grid, pstrStartLocation);
   }
 

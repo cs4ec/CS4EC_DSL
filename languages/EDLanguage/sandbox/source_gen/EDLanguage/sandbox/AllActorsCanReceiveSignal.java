@@ -11,6 +11,6 @@ public class AllActorsCanReceiveSignal extends Signal {
     this.setDescription("ssss");
     this.AddActor("Staff");
     this.AddActor("Doctor");
-    this.AddActor("ENP");
+    this.AddActor("Receptionist");
   }
 }

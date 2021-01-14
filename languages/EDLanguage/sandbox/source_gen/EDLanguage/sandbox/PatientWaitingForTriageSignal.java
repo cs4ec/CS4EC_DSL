@@ -9,6 +9,6 @@ public class PatientWaitingForTriageSignal extends Signal {
   public PatientWaitingForTriageSignal() {
     this.setName("PatientWaitingForTriage");
     this.setDescription("a new patient has been sent to waiting area awaiting Triage");
-    this.AddActor("ENP");
+    this.AddActor("Receptionist");
   }
 }

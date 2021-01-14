@@ -7,11 +7,12 @@ import simcore.basicStructures.RoomType;
 
 public class SymptomaticInfectionState extends InfectionStateType {
 	protected Double probabilityMoveToNextState;
+	private static SymptomaticInfectionState instance;
 
 	private SymptomaticInfectionState() {
 		minDurationOfState = 0;
 		maxDurationOfState = 0;
-		this.infectionStatus = InfectionStatus.Infected_Symptomatic;
+		this.infectionStatus = InfectionStatus.Symptomatic;
 	}
 
 	public static SymptomaticInfectionState getInstance() {

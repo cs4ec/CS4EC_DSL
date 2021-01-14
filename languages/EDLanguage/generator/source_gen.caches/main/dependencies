@@ -3,6 +3,7 @@
   <dependency className="main.QueriesGenerated">
     <classNode dependClassName="EDLanguage.behavior.Actor__BehaviorDescriptor" />
     <classNode dependClassName="EDLanguage.behavior.BehaviourElement__BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
