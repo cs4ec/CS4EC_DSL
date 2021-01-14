@@ -36,7 +36,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(120).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.15));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(120).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.15).WithPercentageHighSeverity(1.0).WithPercentageMediumSeverity(0.01));
 
 
     // add Agents 
@@ -51,6 +51,12 @@ public class EDBuilder implements ContextBuilder<Object> {
     }
     for (int i = 0; i < 3; i++) {
       context.add(new MajorsTriageNurse(space, grid));
+    }
+    for (int i = 0; i < 8; i++) {
+      context.add(new MajorsABNurse(space, grid));
+    }
+    for (int i = 0; i < 4; i++) {
+      context.add(new MajorsABDoctor(space, grid));
     }
     for (int i = 0; i < 50; i++) {
       context.add(new testingDevice(space, grid));
@@ -159,8 +165,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     createWallBetween(110, 0, 110, 125, context, space, grid);
     createWallBetween(105, 160, 116, 160, context, space, grid);
     createWallBetween(115, 160, 115, 170, context, space, grid);
-    createWallBetween(115, 170, 155, 170, context, space, grid);
-    createWallBetween(155, 170, 155, 200, context, space, grid);
+    createWallBetween(115, 170, 156, 170, context, space, grid);
+    createWallBetween(156, 170, 156, 200, context, space, grid);
     createWallBetween(0, 0, 399, 0, context, space, grid);
     createWallBetween(0, 200, 399, 200, context, space, grid);
     createWallBetween(0, 0, 199, 0, context, space, grid);

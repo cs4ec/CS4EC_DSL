@@ -87,6 +87,9 @@
         <reference id="5832719916577320043" name="attribute" index="X7xuR" />
         <child id="7454555096515275776" name="value" index="xbgDt" />
       </concept>
+      <concept id="649219036782142268" name="EDLanguage.structure.SeverityCondition" flags="ng" index="XO5TU">
+        <property id="649219036782142269" name="severityScore" index="XO5TV" />
+      </concept>
       <concept id="8465466444624056385" name="EDLanguage.structure.OccupyAction" flags="ng" index="1kHj2w">
         <child id="8465466444624056388" name="targetObject" index="1kHj2_" />
       </concept>
@@ -128,6 +131,7 @@
       <concept id="8504720493510951870" name="EDLanguage.structure.FollowOrder" flags="ng" index="3JG_m4">
         <child id="8504720493510951876" name="targetObject" index="3JG_nY" />
       </concept>
+      <concept id="8504720493510951871" name="EDLanguage.structure.StopOrder" flags="ng" index="3JG_m5" />
       <concept id="8504720493510951869" name="EDLanguage.structure.MoveOrder" flags="ng" index="3JG_m7">
         <child id="8504720493510951874" name="targetObject" index="3JG_nS" />
       </concept>
@@ -152,6 +156,8 @@
         <property id="329726013666113123" name="InfectionStatus" index="3TllDG" />
       </concept>
       <concept id="3838812034270460672" name="EDLanguage.structure.EmergencyDepartment" flags="ng" index="3VqkwO">
+        <property id="649219036782541956" name="percentageHighSeverity" index="XQ$72" />
+        <property id="649219036782541960" name="percentageMediumSeverity" index="XQ$7e" />
         <property id="329726013670468742" name="percentageAsymptomatic" index="3UAW29" />
         <property id="329726013670468740" name="pecentageSymptomatic" index="3UAW2b" />
         <child id="6839259415242834378" name="patientInterval" index="2qCAZT" />
@@ -202,6 +208,8 @@
   <node concept="3VqkwO" id="3l6cNjeckZ5">
     <property role="3UAW2b" value="30" />
     <property role="3UAW29" value="15" />
+    <property role="XQ$72" value="100" />
+    <property role="XQ$7e" value="1" />
     <node concept="3VqkwQ" id="3l6cNjecY0m" role="3Vt_yv">
       <property role="3Vt_zX" value="5" />
       <ref role="3Vt_zZ" node="3l6cNjecY0h" resolve="Doctor" />
@@ -217,6 +225,14 @@
     <node concept="3VqkwQ" id="2Cgo4_laXiN" role="3Vt_yv">
       <property role="3Vt_zX" value="3" />
       <ref role="3Vt_zZ" node="2Cgo4_laXcS" resolve="MajorsTriageNurse" />
+    </node>
+    <node concept="3VqkwQ" id="$2vkoOTHeF" role="3Vt_yv">
+      <property role="3Vt_zX" value="8" />
+      <ref role="3Vt_zZ" node="$2vkoOQeDs" resolve="MajorsABNurse" />
+    </node>
+    <node concept="3VqkwQ" id="$2vkoOTHeM" role="3Vt_yv">
+      <property role="3Vt_zX" value="4" />
+      <ref role="3Vt_zZ" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
     </node>
     <node concept="3VqkwQ" id="ijr0ZXy8W5" role="3Vt_yv">
       <property role="3Vt_zX" value="50" />
@@ -445,6 +461,9 @@
       <node concept="3n3BjK" id="ijr0ZWACvG" role="3z7ADm">
         <ref role="3n3BjR" node="3l6cNjecY0h" resolve="Doctor" />
       </node>
+      <node concept="3n3BjK" id="$2vkoOQeOM" role="3z7ADm">
+        <ref role="3n3BjR" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
+      </node>
       <node concept="3z7ADB" id="ijr0ZWACvM" role="3z7ADA">
         <property role="TrG5h" value="patient" />
         <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
@@ -464,6 +483,9 @@
       <node concept="3n3BjK" id="ijr0ZWACzg" role="3n3BjM">
         <ref role="3n3BjR" node="3l6cNjecY0h" resolve="Doctor" />
       </node>
+      <node concept="3n3BjK" id="$2vkoOQeOT" role="3n3BjM">
+        <ref role="3n3BjR" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
+      </node>
       <node concept="3n3BjK" id="ijr0ZWACzd" role="3z7ADm">
         <ref role="3n3BjR" node="ijr0ZWACuy" resolve="testingDevice" />
       </node>
@@ -480,6 +502,37 @@
       </node>
       <node concept="3n3BjK" id="ijr0ZXsisk" role="3n3BjM">
         <ref role="3n3BjR" node="3l6cNjecY0h" resolve="Doctor" />
+      </node>
+      <node concept="3n3BjK" id="$2vkoOQeP0" role="3n3BjM">
+        <ref role="3n3BjR" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
+      </node>
+    </node>
+    <node concept="3n3SPL" id="$2vkoOQeC9" role="3n3SPP">
+      <property role="TrG5h" value="PatientWaitingForMajorsAB" />
+      <property role="3n3SFS" value="The patient requires Majors AB" />
+      <node concept="3z7ADB" id="$2vkoOQeDR" role="3z7ADA">
+        <property role="TrG5h" value="patient" />
+        <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
+      </node>
+      <node concept="3n3BjK" id="$2vkoOQeDz" role="3n3BjM">
+        <ref role="3n3BjR" node="$2vkoOQeDs" resolve="MajorsABNurse" />
+      </node>
+      <node concept="3n3BjK" id="$2vkoOQeDp" role="3z7ADm">
+        <ref role="3n3BjR" node="7IDz3VlgXPK" resolve="Receptionist" />
+      </node>
+    </node>
+    <node concept="3n3SPL" id="$2vkoOQeGa" role="3n3SPP">
+      <property role="TrG5h" value="PatientWaitingForMajorsABDoctor" />
+      <property role="3n3SFS" value="The patient in Majors AB requires a Doctor" />
+      <node concept="3z7ADB" id="$2vkoOVaRJ" role="3z7ADA">
+        <property role="TrG5h" value="patient" />
+        <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
+      </node>
+      <node concept="3n3BjK" id="$2vkoOQeHL" role="3n3BjM">
+        <ref role="3n3BjR" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
+      </node>
+      <node concept="3n3BjK" id="$2vkoOQeHu" role="3z7ADm">
+        <ref role="3n3BjR" node="$2vkoOQeDs" resolve="MajorsABNurse" />
       </node>
     </node>
   </node>
@@ -1243,22 +1296,30 @@
             <property role="2IBTiX" value="inspect the patient" />
           </node>
         </node>
-        <node concept="3VtFpY" id="7IDz3VlgXYp" role="3VtFpW">
-          <node concept="3VtFpM" id="7IDz3VlgXYt" role="3VtFpZ">
-            <node concept="1W3xii" id="2kH7UIGJDtR" role="3VtFpW">
-              <ref role="1W3xij" node="7IDz3VlgXZF" resolve="LetPatientLeave" />
+        <node concept="3VtFpY" id="$2vkoOQe$n" role="3VtFpW">
+          <node concept="XO5TU" id="$2vkoOQe$R" role="3VtFpT">
+            <property role="XO5TV" value="$2vkoOOycO/SEVERE" />
+          </node>
+          <node concept="3VtFpM" id="$2vkoOQe$r" role="3VtFpZ">
+            <node concept="1W3xii" id="$2vkoOQGGX" role="3VtFpW">
+              <ref role="1W3xij" node="$2vkoOQeAo" resolve="LogPatientForMajorsAB" />
             </node>
           </node>
-          <node concept="jeBDq" id="6tNT_P6vI9n" role="3VtFpT">
-            <node concept="xbsuO" id="6tNT_P6vI9p" role="x58j7">
-              <node concept="3cmrfG" id="J03_IHVlaN" role="xbgmq">
-                <property role="3cmrfH" value="30" />
+          <node concept="3VtFpM" id="$2vkoOQe$U" role="3VtFp$">
+            <node concept="3VtFpY" id="$2vkoOQe$Y" role="3VtFpW">
+              <node concept="XO5TU" id="$2vkoOQe_a" role="3VtFpT">
+                <property role="XO5TV" value="$2vkoOOycP/MODERATE" />
               </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="J03_IHVovo" role="3VtFp$">
-            <node concept="1W3xii" id="th5uJCfIv6" role="3VtFpW">
-              <ref role="1W3xij" node="th5uJCfI7p" resolve="SendPatientToWaitingRoom" />
+              <node concept="3VtFpM" id="$2vkoOQe_2" role="3VtFpZ">
+                <node concept="1W3xii" id="$2vkoOQe_k" role="3VtFpW">
+                  <ref role="1W3xij" node="th5uJCfI7p" resolve="SendPatientToWaitingRoom" />
+                </node>
+              </node>
+              <node concept="3VtFpM" id="$2vkoOQe_d" role="3VtFp$">
+                <node concept="1W3xii" id="$2vkoOQe_h" role="3VtFpW">
+                  <ref role="1W3xij" node="7IDz3VlgXZF" resolve="LetPatientLeave" />
+                </node>
+              </node>
             </node>
           </node>
         </node>
@@ -1295,6 +1356,30 @@
             <node concept="2_cGdR" id="th5uJCfIu0" role="jeBCe">
               <ref role="XnLJh" node="2Cgo4_laXea" resolve="patient" />
               <node concept="3JJFmu" id="th5uJCfIu4" role="2_cGdO" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3Vt_xe" id="$2vkoOQeAo" role="2Ov1EZ">
+      <property role="TrG5h" value="LogPatientForMajorsAB" />
+      <node concept="3VtFpM" id="$2vkoOQeAp" role="3VtFpR">
+        <node concept="3JG_m1" id="$2vkoOQeBr" role="3VtFpW">
+          <node concept="3JJFmu" id="$2vkoOQeBt" role="3JG_8_" />
+          <node concept="3JG_m7" id="$2vkoOQeB$" role="3JG_nW">
+            <node concept="2Vh8JZ" id="$2vkoOQeBE" role="3JG_nS">
+              <node concept="j3T7i" id="$2vkoOQeBK" role="2Vh8JW">
+                <ref role="j3T7l" node="5QJON_AXpx9" resolve="TriageWaitingRoom" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3z7BTx" id="$2vkoOQeBU" role="3VtFpW">
+          <node concept="3z7ADy" id="$2vkoOQeBW" role="3z7BTw">
+            <ref role="3z7AD_" node="$2vkoOQeC9" resolve="PatientWaitingForMajorsAB" />
+            <node concept="2_cGdR" id="$2vkoOQeDT" role="jeBCe">
+              <ref role="XnLJh" node="$2vkoOQeDR" resolve="patient" />
+              <node concept="3JJFmu" id="$2vkoOQeDX" role="2_cGdO" />
             </node>
           </node>
         </node>
@@ -1625,13 +1710,13 @@
     <node concept="2qS95e" id="2Cgo4_kUSd1" role="2q6JFM">
       <property role="2qS95d" value="115" />
       <property role="2qS95b" value="170" />
-      <property role="2qS95m" value="155" />
+      <property role="2qS95m" value="156" />
       <property role="2qS95i" value="170" />
     </node>
     <node concept="2qS95e" id="2Cgo4_kUSd7" role="2q6JFM">
-      <property role="2qS95d" value="155" />
+      <property role="2qS95d" value="156" />
       <property role="2qS95b" value="170" />
-      <property role="2qS95m" value="155" />
+      <property role="2qS95m" value="156" />
       <property role="2qS95i" value="200" />
     </node>
     <node concept="2qS95e" id="2Cgo4_kUSdA" role="2q6JFM">
@@ -1817,6 +1902,162 @@
   <node concept="VhMOw" id="$2vkoOHJaj">
     <property role="3GE5qa" value="Room Types" />
     <property role="TrG5h" value="MajorsABBay" />
+  </node>
+  <node concept="3Vql55" id="$2vkoOQeDs">
+    <property role="3GE5qa" value="StaffDefinition" />
+    <property role="TrG5h" value="MajorsABNurse" />
+    <ref role="3Vt_ys" node="3l6cNjecY0f" resolve="Staff" />
+    <node concept="3Vt_xe" id="$2vkoOQeDt" role="2Ov1EZ">
+      <property role="TrG5h" value="EscortPatientToMajorsAB" />
+      <node concept="3VtFpM" id="$2vkoOQeDu" role="3VtFpR">
+        <node concept="3VtFpM" id="$2vkoOQeDC" role="3VtFpW">
+          <node concept="3VtFpw" id="$2vkoOQeE2" role="3VtFpW">
+            <node concept="3JJFmu" id="$2vkoOQeEt" role="3nfz8T" />
+          </node>
+          <node concept="3JG_m1" id="$2vkoOQeE$" role="3VtFpW">
+            <node concept="3JJFmu" id="$2vkoOQeEA" role="3JG_8_" />
+            <node concept="3JG_m4" id="$2vkoOQeEJ" role="3JG_nW">
+              <node concept="3JGL$I" id="$2vkoOQeEX" role="3JG_nY" />
+            </node>
+          </node>
+          <node concept="3VtFpw" id="$2vkoOQeF0" role="3VtFpW">
+            <node concept="UeIYj" id="$2vkoOQeFc" role="3nfz8T">
+              <ref role="Udx8D" node="$2vkoOHJaj" resolve="MajorsABBay" />
+            </node>
+          </node>
+          <node concept="3JG_m1" id="$2vkoOQeFp" role="3VtFpW">
+            <node concept="3JJFmu" id="$2vkoOQeFr" role="3JG_8_" />
+            <node concept="3JG_m5" id="$2vkoOQeFE" role="3JG_nW" />
+          </node>
+        </node>
+        <node concept="3z7BTx" id="$2vkoOVaRo" role="3VtFpW">
+          <node concept="3z7ADy" id="$2vkoOVaRq" role="3z7BTw">
+            <ref role="3z7AD_" node="$2vkoOQeGa" resolve="PatientWaitingForMajorsABDoctor" />
+            <node concept="2_cGdR" id="$2vkoOVaRL" role="jeBCe">
+              <ref role="XnLJh" node="$2vkoOVaRJ" resolve="patient" />
+              <node concept="3JJFmu" id="$2vkoOVaRP" role="2_cGdO" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3n32J5" id="$2vkoOQeDA" role="3n3c3i">
+        <ref role="3n32J4" node="$2vkoOQeC9" resolve="PatientWaitingForMajorsAB" />
+      </node>
+    </node>
+  </node>
+  <node concept="3Vql55" id="$2vkoOQeHA">
+    <property role="3GE5qa" value="StaffDefinition" />
+    <property role="TrG5h" value="MajorsABDoctor" />
+    <property role="1n5rFW" value="2" />
+    <node concept="3Vt_xe" id="$2vkoOQeIU" role="2Ov1EZ">
+      <property role="TrG5h" value="SeePatient" />
+      <node concept="3VtFpM" id="$2vkoOQeIV" role="3VtFpR">
+        <node concept="3VtFpw" id="$2vkoOQeMQ" role="3VtFpW">
+          <node concept="3JJFmu" id="$2vkoOQeMR" role="3nfz8T" />
+        </node>
+        <node concept="jcv$W" id="$2vkoOQeJ4" role="3VtFpW">
+          <property role="jcv$Z" value="5" />
+          <node concept="2IBTiW" id="$2vkoOQeJ5" role="2IBTiu">
+            <property role="2IBTiX" value="Inspect the patient" />
+          </node>
+        </node>
+        <node concept="3VtFpY" id="$2vkoOQeJ6" role="3VtFpW">
+          <node concept="3TllyP" id="$2vkoOQeJ7" role="3VtFpT">
+            <property role="3TllDG" value="ijr0ZXLzgJ/AsymptomaticState" />
+          </node>
+          <node concept="3VtFpM" id="$2vkoOQeJ8" role="3VtFpZ">
+            <node concept="jcv$W" id="$2vkoOQeJ9" role="3VtFpW">
+              <property role="jcv$Z" value="2" />
+              <node concept="2IBTiW" id="$2vkoOQeJa" role="2IBTiu">
+                <property role="2IBTiX" value="Administer the test" />
+              </node>
+            </node>
+            <node concept="3z7BTx" id="$2vkoOQeJb" role="3VtFpW">
+              <node concept="3z7ADy" id="$2vkoOQeJc" role="3z7BTw">
+                <ref role="3z7AD_" node="ijr0ZWACuD" resolve="StartPatientTest" />
+                <node concept="2_cGdR" id="$2vkoOQeJd" role="jeBCe">
+                  <ref role="XnLJh" node="ijr0ZWACvM" resolve="patient" />
+                  <node concept="3JJFmu" id="$2vkoOQeJe" role="2_cGdO" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="$2vkoOQeJf" role="3VtFp$">
+            <node concept="3VtFpY" id="$2vkoOQeJg" role="3VtFpW">
+              <node concept="3TllyP" id="$2vkoOQeJh" role="3VtFpT">
+                <property role="3TllDG" value="ijr0ZXLzgI/SymptomaticState" />
+              </node>
+              <node concept="3VtFpM" id="$2vkoOQeJi" role="3VtFpZ">
+                <node concept="jcv$W" id="$2vkoOQeJj" role="3VtFpW">
+                  <property role="jcv$Z" value="2" />
+                  <node concept="2IBTiW" id="$2vkoOQeJk" role="2IBTiu">
+                    <property role="2IBTiX" value="Administer the test" />
+                  </node>
+                </node>
+                <node concept="3z7BTx" id="$2vkoOQeJl" role="3VtFpW">
+                  <node concept="3z7ADy" id="$2vkoOQeJm" role="3z7BTw">
+                    <ref role="3z7AD_" node="ijr0ZWACuD" resolve="StartPatientTest" />
+                    <node concept="2_cGdR" id="$2vkoOQeJn" role="jeBCe">
+                      <ref role="XnLJh" node="ijr0ZWACvM" resolve="patient" />
+                      <node concept="3JJFmu" id="$2vkoOQeJo" role="2_cGdO" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="$2vkoOQeJp" role="3VtFp$">
+                <node concept="3VtFpY" id="$2vkoOQeJq" role="3VtFpW">
+                  <node concept="3TllyP" id="$2vkoOQeJr" role="3VtFpT">
+                    <property role="3TllDG" value="ijr0ZXLzgM/SusceptibleState" />
+                  </node>
+                  <node concept="3VtFpM" id="$2vkoOQeJs" role="3VtFpZ">
+                    <node concept="jcv$W" id="$2vkoOQeJt" role="3VtFpW">
+                      <property role="jcv$Z" value="2" />
+                      <node concept="2IBTiW" id="$2vkoOQeJu" role="2IBTiu">
+                        <property role="2IBTiX" value="Administer the test" />
+                      </node>
+                    </node>
+                    <node concept="3z7BTx" id="$2vkoOQeJv" role="3VtFpW">
+                      <node concept="3z7ADy" id="$2vkoOQeJw" role="3z7BTw">
+                        <ref role="3z7AD_" node="ijr0ZWACuD" resolve="StartPatientTest" />
+                        <node concept="2_cGdR" id="$2vkoOQeJx" role="jeBCe">
+                          <ref role="XnLJh" node="ijr0ZWACvM" resolve="patient" />
+                          <node concept="3JJFmu" id="$2vkoOQeJy" role="2_cGdO" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3n32J5" id="$2vkoOQeOC" role="3n3c3i">
+        <ref role="3n32J4" node="$2vkoOQeGa" resolve="PatientWaitingForMajorsABDoctor" />
+      </node>
+    </node>
+    <node concept="3Vt_xe" id="$2vkoOQeP4" role="2Ov1EZ">
+      <property role="TrG5h" value="PatientPositive" />
+      <node concept="3VtFpM" id="$2vkoOQeP5" role="3VtFpR">
+        <node concept="jcv$W" id="$2vkoOQePM" role="3VtFpW">
+          <property role="jcv$Z" value="10" />
+        </node>
+      </node>
+      <node concept="3n32J5" id="$2vkoOQePK" role="3n3c3i">
+        <ref role="3n32J4" node="ijr0ZWACy5" resolve="PatientTestPositive" />
+      </node>
+    </node>
+    <node concept="3Vt_xe" id="$2vkoOQePR" role="2Ov1EZ">
+      <property role="TrG5h" value="PatientNegative" />
+      <node concept="3VtFpM" id="$2vkoOQePS" role="3VtFpR">
+        <node concept="jcv$W" id="$2vkoOQeQD" role="3VtFpW">
+          <property role="jcv$Z" value="5" />
+        </node>
+      </node>
+      <node concept="3n32J5" id="$2vkoOQeQB" role="3n3c3i">
+        <ref role="3n32J4" node="ijr0ZXsir0" resolve="PatientTestNegative" />
+      </node>
+    </node>
   </node>
 </model>
 

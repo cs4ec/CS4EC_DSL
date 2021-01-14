@@ -643,6 +643,12 @@
         <ref role="v9R2y" node="ijr0ZXT37U" resolve="reduce_InfectionCondition" />
       </node>
     </node>
+    <node concept="3aamgX" id="$2vkoOOydI" role="3acgRq">
+      <ref role="30HIoZ" to="3751:$2vkoOOycW" resolve="SeverityCondition" />
+      <node concept="j$656" id="$2vkoOOydJ" role="1lVwrX">
+        <ref role="v9R2y" node="$2vkoOOydG" resolve="reduce_SeverityCondition" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="DbMKZsswSi">
     <property role="TrG5h" value="MyActor" />
@@ -1518,59 +1524,135 @@
             </node>
             <node concept="liA8E" id="5VDVzf4jCfG" role="2OqNvi">
               <ref role="37wK5l" to="33ny:~Collection.add(java.lang.Object)" resolve="add" />
-              <node concept="2OqwBi" id="ijr0ZY5b_h" role="37wK5m">
-                <node concept="2OqwBi" id="ijr0ZY5aKz" role="2Oq$k0">
-                  <node concept="2ShNRf" id="5VDVzf4jCm1" role="2Oq$k0">
-                    <node concept="1pGfFk" id="5VDVzf4jCPc" role="2ShVmc">
-                      <ref role="37wK5l" to="y2pi:~PatientAdder.&lt;init&gt;(repast.simphony.space.continuous.ContinuousSpace,repast.simphony.space.grid.Grid)" resolve="PatientAdder" />
-                      <node concept="37vLTw" id="5VDVzf4jDu6" role="37wK5m">
-                        <ref role="3cqZAo" node="5WDpsrjEo8M" resolve="space" />
+              <node concept="2OqwBi" id="$2vkoOQdej" role="37wK5m">
+                <node concept="2OqwBi" id="$2vkoOQbaM" role="2Oq$k0">
+                  <node concept="2OqwBi" id="ijr0ZY5b_h" role="2Oq$k0">
+                    <node concept="2OqwBi" id="ijr0ZY5aKz" role="2Oq$k0">
+                      <node concept="2ShNRf" id="5VDVzf4jCm1" role="2Oq$k0">
+                        <node concept="1pGfFk" id="5VDVzf4jCPc" role="2ShVmc">
+                          <ref role="37wK5l" to="y2pi:~PatientAdder.&lt;init&gt;(repast.simphony.space.continuous.ContinuousSpace,repast.simphony.space.grid.Grid)" resolve="PatientAdder" />
+                          <node concept="37vLTw" id="5VDVzf4jDu6" role="37wK5m">
+                            <ref role="3cqZAo" node="5WDpsrjEo8M" resolve="space" />
+                          </node>
+                          <node concept="37vLTw" id="5VDVzf4jDDZ" role="37wK5m">
+                            <ref role="3cqZAo" node="5WDpsrjEuSk" resolve="grid" />
+                          </node>
+                        </node>
+                        <node concept="29HgVG" id="5VDVzf4jFge" role="lGtFl">
+                          <node concept="3NFfHV" id="5VDVzf4jFgf" role="3NFExx">
+                            <node concept="3clFbS" id="5VDVzf4jFgg" role="2VODD2">
+                              <node concept="3clFbF" id="5VDVzf4jFgm" role="3cqZAp">
+                                <node concept="2OqwBi" id="5VDVzf4jFgh" role="3clFbG">
+                                  <node concept="3TrEf2" id="5VDVzf4jFgk" role="2OqNvi">
+                                    <ref role="3Tt5mk" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
+                                  </node>
+                                  <node concept="30H73N" id="5VDVzf4jFgl" role="2Oq$k0" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
                       </node>
-                      <node concept="37vLTw" id="5VDVzf4jDDZ" role="37wK5m">
-                        <ref role="3cqZAo" node="5WDpsrjEuSk" resolve="grid" />
+                      <node concept="liA8E" id="ijr0ZY5bfl" role="2OqNvi">
+                        <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageCOVIDSymptomatic(double)" resolve="WithPercentageCOVIDSymptomatic" />
+                        <node concept="3b6qkQ" id="ijr0ZY5bn$" role="37wK5m">
+                          <property role="$nhwW" value="0.2" />
+                          <node concept="17Uvod" id="ijr0ZY5c6Q" role="lGtFl">
+                            <property role="2qtEX9" value="value" />
+                            <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1111509017652/1113006610751" />
+                            <node concept="3zFVjK" id="ijr0ZY5c6R" role="3zH0cK">
+                              <node concept="3clFbS" id="ijr0ZY5c6S" role="2VODD2">
+                                <node concept="3clFbF" id="ijr0ZY5cvw" role="3cqZAp">
+                                  <node concept="3cpWs3" id="ijr0ZY5qPQ" role="3clFbG">
+                                    <node concept="Xl_RD" id="ijr0ZY5qUR" role="3uHU7w" />
+                                    <node concept="FJ1c_" id="ijr0ZY5djO" role="3uHU7B">
+                                      <node concept="1eOMI4" id="ijr0ZY5r_I" role="3uHU7B">
+                                        <node concept="2YIFZM" id="ijr0ZY5tfh" role="1eOMHV">
+                                          <ref role="37wK5l" to="wyt6:~Double.parseDouble(java.lang.String)" resolve="parseDouble" />
+                                          <ref role="1Pybhc" to="wyt6:~Double" resolve="Double" />
+                                          <node concept="2OqwBi" id="ijr0ZY5tNb" role="37wK5m">
+                                            <node concept="30H73N" id="ijr0ZY5tnw" role="2Oq$k0" />
+                                            <node concept="3TrcHB" id="ijr0ZY5u81" role="2OqNvi">
+                                              <ref role="3TsBF5" to="3751:ijr0ZY2aM4" resolve="pecentageSymptomatic" />
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                      <node concept="3cmrfG" id="ijr0ZY5dmF" role="3uHU7w">
+                                        <property role="3cmrfH" value="100" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
                       </node>
                     </node>
-                    <node concept="29HgVG" id="5VDVzf4jFge" role="lGtFl">
-                      <node concept="3NFfHV" id="5VDVzf4jFgf" role="3NFExx">
-                        <node concept="3clFbS" id="5VDVzf4jFgg" role="2VODD2">
-                          <node concept="3clFbF" id="5VDVzf4jFgm" role="3cqZAp">
-                            <node concept="2OqwBi" id="5VDVzf4jFgh" role="3clFbG">
-                              <node concept="3TrEf2" id="5VDVzf4jFgk" role="2OqNvi">
-                                <ref role="3Tt5mk" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
+                    <node concept="liA8E" id="ijr0ZY5bIW" role="2OqNvi">
+                      <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageCOVIDAsymptomatic(double)" resolve="WithPercentageCOVIDAsymptomatic" />
+                      <node concept="3b6qkQ" id="ijr0ZY5bPy" role="37wK5m">
+                        <property role="$nhwW" value="0.1" />
+                        <node concept="17Uvod" id="ijr0ZY5uFG" role="lGtFl">
+                          <property role="2qtEX9" value="value" />
+                          <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1111509017652/1113006610751" />
+                          <node concept="3zFVjK" id="ijr0ZY5uFH" role="3zH0cK">
+                            <node concept="3clFbS" id="ijr0ZY5uFI" role="2VODD2">
+                              <node concept="3clFbF" id="ijr0ZY5uKe" role="3cqZAp">
+                                <node concept="3cpWs3" id="ijr0ZY5uKf" role="3clFbG">
+                                  <node concept="Xl_RD" id="ijr0ZY5uKg" role="3uHU7w" />
+                                  <node concept="FJ1c_" id="ijr0ZY5uKh" role="3uHU7B">
+                                    <node concept="1eOMI4" id="ijr0ZY5uKi" role="3uHU7B">
+                                      <node concept="2YIFZM" id="ijr0ZY5uKj" role="1eOMHV">
+                                        <ref role="1Pybhc" to="wyt6:~Double" resolve="Double" />
+                                        <ref role="37wK5l" to="wyt6:~Double.parseDouble(java.lang.String)" resolve="parseDouble" />
+                                        <node concept="2OqwBi" id="ijr0ZY5uKk" role="37wK5m">
+                                          <node concept="30H73N" id="ijr0ZY5uKl" role="2Oq$k0" />
+                                          <node concept="3TrcHB" id="ijr0ZY5vGe" role="2OqNvi">
+                                            <ref role="3TsBF5" to="3751:ijr0ZY2aM6" resolve="percentageAsymptomatic" />
+                                          </node>
+                                        </node>
+                                      </node>
+                                    </node>
+                                    <node concept="3cmrfG" id="ijr0ZY5uKn" role="3uHU7w">
+                                      <property role="3cmrfH" value="100" />
+                                    </node>
+                                  </node>
+                                </node>
                               </node>
-                              <node concept="30H73N" id="5VDVzf4jFgl" role="2Oq$k0" />
                             </node>
                           </node>
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="liA8E" id="ijr0ZY5bfl" role="2OqNvi">
-                    <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageCOVIDSymptomatic(double)" resolve="WithPercentageCOVIDSymptomatic" />
-                    <node concept="3b6qkQ" id="ijr0ZY5bn$" role="37wK5m">
-                      <property role="$nhwW" value="0.2" />
-                      <node concept="17Uvod" id="ijr0ZY5c6Q" role="lGtFl">
+                  <node concept="liA8E" id="$2vkoOQbue" role="2OqNvi">
+                    <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageHighSeverity(double)" resolve="WithPercentageHighSeverity" />
+                    <node concept="3b6qkQ" id="$2vkoOQcMy" role="37wK5m">
+                      <property role="$nhwW" value="0.1" />
+                      <node concept="17Uvod" id="$2vkoOScxC" role="lGtFl">
                         <property role="2qtEX9" value="value" />
                         <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1111509017652/1113006610751" />
-                        <node concept="3zFVjK" id="ijr0ZY5c6R" role="3zH0cK">
-                          <node concept="3clFbS" id="ijr0ZY5c6S" role="2VODD2">
-                            <node concept="3clFbF" id="ijr0ZY5cvw" role="3cqZAp">
-                              <node concept="3cpWs3" id="ijr0ZY5qPQ" role="3clFbG">
-                                <node concept="Xl_RD" id="ijr0ZY5qUR" role="3uHU7w" />
-                                <node concept="FJ1c_" id="ijr0ZY5djO" role="3uHU7B">
-                                  <node concept="1eOMI4" id="ijr0ZY5r_I" role="3uHU7B">
-                                    <node concept="2YIFZM" id="ijr0ZY5tfh" role="1eOMHV">
-                                      <ref role="37wK5l" to="wyt6:~Double.parseDouble(java.lang.String)" resolve="parseDouble" />
+                        <node concept="3zFVjK" id="$2vkoOScxD" role="3zH0cK">
+                          <node concept="3clFbS" id="$2vkoOScxE" role="2VODD2">
+                            <node concept="3clFbF" id="$2vkoOSdTN" role="3cqZAp">
+                              <node concept="3cpWs3" id="$2vkoOSdTO" role="3clFbG">
+                                <node concept="Xl_RD" id="$2vkoOSdTP" role="3uHU7w" />
+                                <node concept="FJ1c_" id="$2vkoOSdTQ" role="3uHU7B">
+                                  <node concept="1eOMI4" id="$2vkoOSdTR" role="3uHU7B">
+                                    <node concept="2YIFZM" id="$2vkoOSdTS" role="1eOMHV">
                                       <ref role="1Pybhc" to="wyt6:~Double" resolve="Double" />
-                                      <node concept="2OqwBi" id="ijr0ZY5tNb" role="37wK5m">
-                                        <node concept="30H73N" id="ijr0ZY5tnw" role="2Oq$k0" />
-                                        <node concept="3TrcHB" id="ijr0ZY5u81" role="2OqNvi">
-                                          <ref role="3TsBF5" to="3751:ijr0ZY2aM4" resolve="pecentageSymptomatic" />
+                                      <ref role="37wK5l" to="wyt6:~Double.parseDouble(java.lang.String)" resolve="parseDouble" />
+                                      <node concept="2OqwBi" id="$2vkoOSdTT" role="37wK5m">
+                                        <node concept="30H73N" id="$2vkoOSdTU" role="2Oq$k0" />
+                                        <node concept="3TrcHB" id="$2vkoOSexa" role="2OqNvi">
+                                          <ref role="3TsBF5" to="3751:$2vkoOQ3M4" resolve="percentageHighSeverity" />
                                         </node>
                                       </node>
                                     </node>
                                   </node>
-                                  <node concept="3cmrfG" id="ijr0ZY5dmF" role="3uHU7w">
+                                  <node concept="3cmrfG" id="$2vkoOSdTW" role="3uHU7w">
                                     <property role="3cmrfH" value="100" />
                                   </node>
                                 </node>
@@ -1582,32 +1664,32 @@
                     </node>
                   </node>
                 </node>
-                <node concept="liA8E" id="ijr0ZY5bIW" role="2OqNvi">
-                  <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageCOVIDAsymptomatic(double)" resolve="WithPercentageCOVIDAsymptomatic" />
-                  <node concept="3b6qkQ" id="ijr0ZY5bPy" role="37wK5m">
-                    <property role="$nhwW" value="0.1" />
-                    <node concept="17Uvod" id="ijr0ZY5uFG" role="lGtFl">
+                <node concept="liA8E" id="$2vkoOQdS8" role="2OqNvi">
+                  <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageMediumSeverity(double)" resolve="WithPercentageMediumSeverity" />
+                  <node concept="3b6qkQ" id="$2vkoOQe1T" role="37wK5m">
+                    <property role="$nhwW" value="0.7" />
+                    <node concept="17Uvod" id="$2vkoOSf3U" role="lGtFl">
                       <property role="2qtEX9" value="value" />
                       <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1111509017652/1113006610751" />
-                      <node concept="3zFVjK" id="ijr0ZY5uFH" role="3zH0cK">
-                        <node concept="3clFbS" id="ijr0ZY5uFI" role="2VODD2">
-                          <node concept="3clFbF" id="ijr0ZY5uKe" role="3cqZAp">
-                            <node concept="3cpWs3" id="ijr0ZY5uKf" role="3clFbG">
-                              <node concept="Xl_RD" id="ijr0ZY5uKg" role="3uHU7w" />
-                              <node concept="FJ1c_" id="ijr0ZY5uKh" role="3uHU7B">
-                                <node concept="1eOMI4" id="ijr0ZY5uKi" role="3uHU7B">
-                                  <node concept="2YIFZM" id="ijr0ZY5uKj" role="1eOMHV">
-                                    <ref role="1Pybhc" to="wyt6:~Double" resolve="Double" />
+                      <node concept="3zFVjK" id="$2vkoOSf3V" role="3zH0cK">
+                        <node concept="3clFbS" id="$2vkoOSf3W" role="2VODD2">
+                          <node concept="3clFbF" id="$2vkoOSf4R" role="3cqZAp">
+                            <node concept="3cpWs3" id="$2vkoOSf4S" role="3clFbG">
+                              <node concept="Xl_RD" id="$2vkoOSf4T" role="3uHU7w" />
+                              <node concept="FJ1c_" id="$2vkoOSf4U" role="3uHU7B">
+                                <node concept="1eOMI4" id="$2vkoOSf4V" role="3uHU7B">
+                                  <node concept="2YIFZM" id="$2vkoOSf4W" role="1eOMHV">
                                     <ref role="37wK5l" to="wyt6:~Double.parseDouble(java.lang.String)" resolve="parseDouble" />
-                                    <node concept="2OqwBi" id="ijr0ZY5uKk" role="37wK5m">
-                                      <node concept="30H73N" id="ijr0ZY5uKl" role="2Oq$k0" />
-                                      <node concept="3TrcHB" id="ijr0ZY5vGe" role="2OqNvi">
-                                        <ref role="3TsBF5" to="3751:ijr0ZY2aM6" resolve="percentageAsymptomatic" />
+                                    <ref role="1Pybhc" to="wyt6:~Double" resolve="Double" />
+                                    <node concept="2OqwBi" id="$2vkoOSf4X" role="37wK5m">
+                                      <node concept="30H73N" id="$2vkoOSf4Y" role="2Oq$k0" />
+                                      <node concept="3TrcHB" id="$2vkoOSfHh" role="2OqNvi">
+                                        <ref role="3TsBF5" to="3751:$2vkoOQ3M8" resolve="percentageMediumSeverity" />
                                       </node>
                                     </node>
                                   </node>
                                 </node>
-                                <node concept="3cmrfG" id="ijr0ZY5uKn" role="3uHU7w">
+                                <node concept="3cmrfG" id="$2vkoOSf50" role="3uHU7w">
                                   <property role="3cmrfH" value="100" />
                                 </node>
                               </node>
@@ -6258,6 +6340,103 @@
       <node concept="2tJIrI" id="ijr0ZXT3kp" role="jymVt" />
       <node concept="3Tm1VV" id="ijr0ZXT3kq" role="1B3o_S" />
       <node concept="3uibUv" id="ijr0ZXT3CG" role="1zkMxy">
+        <ref role="3uigEE" to="uux2:~Actor" resolve="Actor" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="$2vkoOOydG">
+    <property role="TrG5h" value="reduce_SeverityCondition" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="3gUMe" to="3751:$2vkoOOycW" resolve="SeverityCondition" />
+    <node concept="312cEu" id="$2vkoOOyAG" role="13RCb5">
+      <property role="TrG5h" value="_class_" />
+      <node concept="15s5l7" id="$2vkoOOzd_" role="lGtFl">
+        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: There is no default constructor available in super class simcore.agents.Actor&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/8974945326827961340]&quot;;" />
+        <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Actor" />
+      </node>
+      <node concept="312cEg" id="$2vkoOOyEs" role="jymVt">
+        <property role="TrG5h" value="curMission" />
+        <node concept="3Tm6S6" id="$2vkoOOyDA" role="1B3o_S" />
+        <node concept="3uibUv" id="$2vkoOOyEh" role="1tU5fm">
+          <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
+        </node>
+      </node>
+      <node concept="2tJIrI" id="$2vkoOOyEG" role="jymVt" />
+      <node concept="3clFb_" id="$2vkoOOyF0" role="jymVt">
+        <property role="TrG5h" value="InitFunction" />
+        <node concept="3clFbS" id="$2vkoOOyF1" role="3clF47">
+          <node concept="3clFbH" id="$2vkoOOyF2" role="3cqZAp" />
+          <node concept="3clFbF" id="$2vkoOOyF3" role="3cqZAp">
+            <node concept="2OqwBi" id="$2vkoOOyF4" role="3clFbG">
+              <node concept="2OqwBi" id="$2vkoOOyF5" role="2Oq$k0">
+                <node concept="2ShNRf" id="$2vkoOOyF6" role="2Oq$k0">
+                  <node concept="1pGfFk" id="$2vkoOOyF7" role="2ShVmc">
+                    <ref role="37wK5l" to="9axu:~SeverityCondition.&lt;init&gt;()" resolve="SeverityCondition" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="$2vkoOOyF8" role="2OqNvi">
+                  <ref role="37wK5l" to="9axu:~SeverityCondition.WithPatient(simcore.agents.Patient)" resolve="WithPatient" />
+                  <node concept="10QFUN" id="$2vkoOOyF9" role="37wK5m">
+                    <node concept="3uibUv" id="$2vkoOOyFa" role="10QFUM">
+                      <ref role="3uigEE" to="uux2:~Patient" resolve="Patient" />
+                    </node>
+                    <node concept="2OqwBi" id="$2vkoOOyFb" role="10QFUP">
+                      <node concept="37vLTw" id="$2vkoOOyFc" role="2Oq$k0">
+                        <ref role="3cqZAo" node="$2vkoOOyFu" resolve="s" />
+                      </node>
+                      <node concept="liA8E" id="$2vkoOOyFd" role="2OqNvi">
+                        <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                        <node concept="Xl_RD" id="$2vkoOOyFe" role="37wK5m">
+                          <property role="Xl_RC" value="patient" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="$2vkoOOyFf" role="2OqNvi">
+                <ref role="37wK5l" to="9axu:~SeverityCondition.WithSeverityScore(simcore.diagnosis.SeverityScore)" resolve="WithSeverityScore" />
+                <node concept="Rm8GO" id="$2vkoOOBl8" role="37wK5m">
+                  <ref role="Rm8GQ" to="ubqx:~SeverityScore.MODERATE" resolve="MODERATE" />
+                  <ref role="1Px2BO" to="ubqx:~SeverityScore" resolve="SeverityScore" />
+                  <node concept="1ZhdrF" id="$2vkoOOBoU" role="lGtFl">
+                    <property role="2qtEX8" value="enumConstantDeclaration" />
+                    <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1083260308424/1083260308426" />
+                    <node concept="3$xsQk" id="$2vkoOOBoV" role="3$ytzL">
+                      <node concept="3clFbS" id="$2vkoOOBoW" role="2VODD2">
+                        <node concept="3clFbF" id="$2vkoOOBs9" role="3cqZAp">
+                          <node concept="2OqwBi" id="$2vkoOOC59" role="3clFbG">
+                            <node concept="2OqwBi" id="$2vkoOOBCk" role="2Oq$k0">
+                              <node concept="30H73N" id="$2vkoOOBs8" role="2Oq$k0" />
+                              <node concept="3TrcHB" id="$2vkoOOBLS" role="2OqNvi">
+                                <ref role="3TsBF5" to="3751:$2vkoOOycX" resolve="severityScore" />
+                              </node>
+                            </node>
+                            <node concept="24Tkf9" id="$2vkoOOCda" role="2OqNvi" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="raruj" id="$2vkoOOyFq" role="lGtFl" />
+            </node>
+          </node>
+          <node concept="3clFbH" id="$2vkoOOyFr" role="3cqZAp" />
+        </node>
+        <node concept="3Tm1VV" id="$2vkoOOyFs" role="1B3o_S" />
+        <node concept="3cqZAl" id="$2vkoOOyFt" role="3clF45" />
+        <node concept="37vLTG" id="$2vkoOOyFu" role="3clF46">
+          <property role="TrG5h" value="s" />
+          <node concept="3uibUv" id="$2vkoOOyFv" role="1tU5fm">
+            <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
+          </node>
+        </node>
+      </node>
+      <node concept="2tJIrI" id="$2vkoOOyEU" role="jymVt" />
+      <node concept="3Tm1VV" id="$2vkoOOyAH" role="1B3o_S" />
+      <node concept="3uibUv" id="$2vkoOOz4t" role="1zkMxy">
         <ref role="3uigEE" to="uux2:~Actor" resolve="Actor" />
       </node>
     </node>

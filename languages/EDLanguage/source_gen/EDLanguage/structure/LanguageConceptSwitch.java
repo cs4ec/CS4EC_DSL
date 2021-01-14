@@ -59,21 +59,22 @@ public final class LanguageConceptSwitch {
   public static final int RoomTypeReference = 47;
   public static final int SelfInstance = 48;
   public static final int SendSignalAction = 49;
-  public static final int Signal = 50;
-  public static final int SignalDefinition = 51;
-  public static final int SignalInitReference = 52;
-  public static final int SignalReference = 53;
-  public static final int SignalTrigger = 54;
-  public static final int SpaceAtCondition = 55;
-  public static final int StayAction = 56;
-  public static final int StayForConditionAction = 57;
-  public static final int StayForTimeAction = 58;
-  public static final int StopOrder = 59;
-  public static final int Test = 60;
-  public static final int TestAction = 61;
-  public static final int TestKit = 62;
-  public static final int WallDefinition = 63;
-  public static final int WallInstanceDefinition = 64;
+  public static final int SeverityCondition = 50;
+  public static final int Signal = 51;
+  public static final int SignalDefinition = 52;
+  public static final int SignalInitReference = 53;
+  public static final int SignalReference = 54;
+  public static final int SignalTrigger = 55;
+  public static final int SpaceAtCondition = 56;
+  public static final int StayAction = 57;
+  public static final int StayForConditionAction = 58;
+  public static final int StayForTimeAction = 59;
+  public static final int StopOrder = 60;
+  public static final int Test = 61;
+  public static final int TestAction = 62;
+  public static final int TestKit = 63;
+  public static final int WallDefinition = 64;
+  public static final int WallInstanceDefinition = 65;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x7dcff301ba01414eL, 0x8574a8f6da31876bL);
@@ -127,6 +128,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x5dafd33967953caaL, RoomTypeReference);
     builder.put(0x7606d63a99b5cf14L, SelfInstance);
     builder.put(0x3a7166f1d96f1890L, SendSignalAction);
+    builder.put(0x9027d4634d2233cL, SeverityCondition);
     builder.put(0x71ffe5bd010732aL, Signal);
     builder.put(0x71ffe5bd010732dL, SignalDefinition);
     builder.put(0x3a7166f1d96f0c93L, SignalInitReference);

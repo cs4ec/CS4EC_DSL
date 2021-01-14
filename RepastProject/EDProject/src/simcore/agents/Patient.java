@@ -16,6 +16,7 @@ import simcore.Signals.Orders.StopOrder;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.ToolBox;
 import simcore.diagnosis.InfectionState;
+import simcore.diagnosis.SeverityScore;
 
 public class Patient extends Agent {
 
@@ -27,6 +28,7 @@ public class Patient extends Agent {
 	protected List<GridPoint> curPath;
 	protected List<Actor> mlstMyStaff;
 	private InfectionState actualInfectionState;
+	private SeverityScore severityScore;
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -154,6 +156,14 @@ public class Patient extends Agent {
 	
 	public InfectionState getActualInfectionState() {
 		return actualInfectionState;
+	}
+	
+	public void setSeverityScore(SeverityScore pSeverityScore) {
+		this.severityScore = pSeverityScore;
+	}
+	
+	public SeverityScore getSeverityScore() {
+		return severityScore;
 	}
 
 	@Override

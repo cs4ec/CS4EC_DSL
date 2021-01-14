@@ -131,6 +131,16 @@
       <property role="TrG5h" value="percentageAsymptomatic" />
       <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
+    <node concept="1TJgyi" id="$2vkoOQ3M4" role="1TKVEl">
+      <property role="IQ2nx" value="649219036782541956" />
+      <property role="TrG5h" value="percentageHighSeverity" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyi" id="$2vkoOQ3M8" role="1TKVEl">
+      <property role="IQ2nx" value="649219036782541960" />
+      <property role="TrG5h" value="percentageMediumSeverity" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3l6cNjebRG2">
     <property role="EcuMT" value="3838812034270460674" />
@@ -1342,6 +1352,34 @@
       <property role="IQ2nx" value="329726013666113123" />
       <property role="TrG5h" value="InfectionStatus" />
       <ref role="AX2Wp" node="ijr0ZXLzgH" resolve="InfectionStateType" />
+    </node>
+  </node>
+  <node concept="25R3W" id="$2vkoOOycN">
+    <property role="3F6X1D" value="649219036782142259" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="SeverityScore" />
+    <node concept="25R33" id="$2vkoOOycO" role="25R1y">
+      <property role="3tVfz5" value="649219036782142260" />
+      <property role="TrG5h" value="SEVERE" />
+    </node>
+    <node concept="25R33" id="$2vkoOOycP" role="25R1y">
+      <property role="3tVfz5" value="649219036782142261" />
+      <property role="TrG5h" value="MODERATE" />
+    </node>
+    <node concept="25R33" id="$2vkoOOycS" role="25R1y">
+      <property role="3tVfz5" value="649219036782142264" />
+      <property role="TrG5h" value="LOW" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="$2vkoOOycW">
+    <property role="EcuMT" value="649219036782142268" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="SeverityCondition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyi" id="$2vkoOOycX" role="1TKVEl">
+      <property role="IQ2nx" value="649219036782142269" />
+      <property role="TrG5h" value="severityScore" />
+      <ref role="AX2Wp" node="$2vkoOOycN" resolve="SeverityScore" />
     </node>
   </node>
 </model>

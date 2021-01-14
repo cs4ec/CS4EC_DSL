@@ -14,7 +14,8 @@ import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.basicAction.conditions.SeverityCondition;
+import simcore.diagnosis.SeverityScore;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
 import simcore.action.basicAction.SendSignalAction;
@@ -57,10 +58,14 @@ public class Receptionist extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(180)));
-    if (CheckCondition(new PossibilityCondition().WithPossibility(30))) {
-      this.InitLetPatientLeave(s);
+    if (CheckCondition(new SeverityCondition().WithPatient((Patient) s.GetData("patient")).WithSeverityScore(SeverityScore.SEVERE))) {
+      this.InitLogPatientForMajorsAB(s);
     } else {
-      this.InitSendPatientToWaitingRoom(s);
+      if (CheckCondition(new SeverityCondition().WithPatient((Patient) s.GetData("patient")).WithSeverityScore(SeverityScore.MODERATE))) {
+        this.InitSendPatientToWaitingRoom(s);
+      } else {
+        this.InitLetPatientLeave(s);
+      }
     }
 
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("PatientsSeen", "+=", 1)));
@@ -72,6 +77,17 @@ public class Receptionist extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("TriageWaitingRoom")))));
     sendSignalTemp = new PatientWaitingForMajorsSignal();
+    sendSignalTemp.AddData("patient", s.GetData("patient"));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitLogPatientForMajorsAB(Signal s) {
+    System.out.println("LogPatientForMajorsAB" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("TriageWaitingRoom")))));
+    sendSignalTemp = new PatientWaitingForMajorsABSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 

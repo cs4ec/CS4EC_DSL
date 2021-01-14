@@ -37,6 +37,7 @@ import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.action.basicAction.conditions.IsAvailableCondition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.basicAction.conditions.SeverityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
 import simcore.action.basicAction.conditions.TestResultCondition;
@@ -50,6 +51,7 @@ import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Seat;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
+import simcore.diagnosis.SeverityScore;
 import simcore.utilities.AStar;
 import simcore.utilities.Tuple;
 
@@ -504,6 +506,10 @@ public class Agent {
 		
 		if(c instanceof InfectionCondition) {
 			return ((InfectionCondition) c).getInfectionStatus() == ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
+		}
+		
+		if(c instanceof SeverityCondition) {
+			return ((SeverityCondition) c).getSeverityScore() == ((SeverityCondition) c).getPatient().getSeverityScore();
 		}
 
 		if (c instanceof StateCondition) {

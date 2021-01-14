@@ -59,6 +59,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RoomTypeReference;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
+  private ConceptPresentation props_SeverityCondition;
   private ConceptPresentation props_Signal;
   private ConceptPresentation props_SignalDefinition;
   private ConceptPresentation props_SignalInitReference;
@@ -446,6 +447,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SendSignalAction = cpb.create();
         }
         return props_SendSignalAction;
+      case LanguageConceptSwitch.SeverityCondition:
+        if (props_SeverityCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SeverityCondition");
+          props_SeverityCondition = cpb.create();
+        }
+        return props_SeverityCondition;
       case LanguageConceptSwitch.Signal:
         if (props_Signal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

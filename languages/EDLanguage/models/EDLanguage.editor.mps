@@ -152,14 +152,26 @@
         </node>
       </node>
       <node concept="3F0ifn" id="5VDVzf4iS8C" role="3EZMnx" />
+      <node concept="3F0ifn" id="$2vkoOQ3IQ" role="3EZMnx">
+        <property role="3F0ifm" value="Patients:" />
+      </node>
       <node concept="3F0ifn" id="5VDVzf4iS7u" role="3EZMnx">
         <property role="3F0ifm" value="Patient arrival rate:" />
+        <node concept="lj46D" id="$2vkoOQ3Jl" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F1sOY" id="5VDVzf4iS82" role="3EZMnx">
         <ref role="1NtTu8" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
+        <node concept="lj46D" id="$2vkoOQ3Jn" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="ijr0ZY2aLJ" role="3EZMnx">
         <property role="3F0ifm" value="Percentage Symptomatic:" />
+        <node concept="lj46D" id="$2vkoOQ3Jp" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3EZMnI" id="ijr0ZY2aOQ" role="3EZMnx">
         <node concept="2iRfu4" id="ijr0ZY2aOR" role="2iSdaV" />
@@ -169,9 +181,15 @@
         <node concept="3F0ifn" id="ijr0ZY2aPi" role="3EZMnx">
           <property role="3F0ifm" value="%" />
         </node>
+        <node concept="lj46D" id="$2vkoOQ3Jr" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="ijr0ZY2aPV" role="3EZMnx">
         <property role="3F0ifm" value="Percentage Asymptomatic:" />
+        <node concept="lj46D" id="$2vkoOQ3Jt" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3EZMnI" id="ijr0ZY2aQJ" role="3EZMnx">
         <node concept="2iRfu4" id="ijr0ZY2aQK" role="2iSdaV" />
@@ -180,6 +198,47 @@
         </node>
         <node concept="3F0ifn" id="ijr0ZY2aRj" role="3EZMnx">
           <property role="3F0ifm" value="%" />
+        </node>
+        <node concept="lj46D" id="$2vkoOQ3Jv" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="$2vkoOQ3K6" role="3EZMnx">
+        <property role="3F0ifm" value="Percentage High Severity:" />
+        <node concept="lj46D" id="$2vkoOQ3KG" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="$2vkoOQ3Ll" role="3EZMnx">
+        <node concept="VPM3Z" id="$2vkoOQ3Ln" role="3F10Kt" />
+        <node concept="3F0A7n" id="$2vkoOQ3Md" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:$2vkoOQ3M4" resolve="percentageHighSeverity" />
+        </node>
+        <node concept="3F0ifn" id="$2vkoOQ3Mj" role="3EZMnx">
+          <property role="3F0ifm" value="%" />
+        </node>
+        <node concept="2iRfu4" id="$2vkoOQ3Lq" role="2iSdaV" />
+        <node concept="lj46D" id="$2vkoOQ3Mn" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="$2vkoOQ3N7" role="3EZMnx">
+        <property role="3F0ifm" value="Percentage Medium Severity:" />
+        <node concept="lj46D" id="$2vkoOQ3Pz" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="$2vkoOQ3Oz" role="3EZMnx">
+        <node concept="VPM3Z" id="$2vkoOQ3O_" role="3F10Kt" />
+        <node concept="3F0A7n" id="$2vkoOQ3Pp" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:$2vkoOQ3M8" resolve="percentageMediumSeverity" />
+        </node>
+        <node concept="3F0ifn" id="$2vkoOQ3Pv" role="3EZMnx">
+          <property role="3F0ifm" value="%" />
+        </node>
+        <node concept="2iRfu4" id="$2vkoOQ3OC" role="2iSdaV" />
+        <node concept="lj46D" id="$2vkoOQ3P_" role="3F10Kt">
+          <property role="VOm3f" value="true" />
         </node>
       </node>
       <node concept="pj6Ft" id="4VcHHLiE1KC" role="3F10Kt">
@@ -1542,6 +1601,19 @@
         <ref role="1NtTu8" to="3751:ijr0ZXLzpz" resolve="InfectionStatus" />
       </node>
       <node concept="l2Vlx" id="ijr0ZXLzpE" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="$2vkoOOycZ">
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:$2vkoOOycW" resolve="SeverityCondition" />
+    <node concept="3EZMnI" id="$2vkoOOyd1" role="2wV5jI">
+      <node concept="3F0ifn" id="$2vkoOOyd8" role="3EZMnx">
+        <property role="3F0ifm" value="The patient has severity" />
+      </node>
+      <node concept="3F0A7n" id="$2vkoOOyde" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:$2vkoOOycX" resolve="severityScore" />
+      </node>
+      <node concept="l2Vlx" id="$2vkoOOyd4" role="2iSdaV" />
     </node>
   </node>
 </model>

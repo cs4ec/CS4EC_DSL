@@ -144,8 +144,8 @@ public class Room extends Locatable{
 	public void setDesks(int pintNumDesks) {
 		desks = new ArrayList<Desk>();
 		for(int i = 0; i < pintNumDesks; i++) {
-			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
-			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
+			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
+			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
 			desks.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
 		}
 		occupiables.addAll(desks);
@@ -154,8 +154,8 @@ public class Room extends Locatable{
 	public void setBeds(int pintNumBeds) {
 		beds = new ArrayList<Bed>();
 		for(int i = 0; i < pintNumBeds; i++) {
-			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
-			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
+			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
+			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
 			beds.add(new Bed(context, space, grid, rndXCoord, rndYCoord, this));
 		}
 		occupiables.addAll(beds);

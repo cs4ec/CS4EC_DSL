@@ -25,6 +25,7 @@ import simcore.basicStructures.Board;
 import simcore.basicStructures.EDMap;
 import simcore.basicStructures.ToolBox;
 import simcore.diagnosis.AsymptomaticInfectionState;
+import simcore.diagnosis.SeverityScore;
 import simcore.diagnosis.SusceptibleInfectionState;
 import simcore.diagnosis.SymptomaticInfectionState;
 
@@ -33,6 +34,8 @@ public class PatientAdder {
 	private int interval;
 	private double percentCOVIDSymptomatic;
 	private double percentCOVIDAsymptomatic;
+	private double percentHighSeverity;
+	private double percentMediumSeverity;
 	private int count = 0;
 	private ContinuousSpace<Object> space;
 	private Grid<Object> grid;
@@ -56,6 +59,16 @@ public class PatientAdder {
 		percentCOVIDAsymptomatic = pdblPercentCOVIDAsymptomatic;
 		return this;
 	}
+	
+	public PatientAdder WithPercentageHighSeverity(double pdblPercentHighSeverity) {
+		percentHighSeverity = pdblPercentHighSeverity;
+		return this;
+	}
+	
+	public PatientAdder WithPercentageMediumSeverity(double pdblPercentMediumSeverity) {
+		percentMediumSeverity = pdblPercentMediumSeverity;
+		return this;
+	}
 
 	@ScheduledMethod(start = 1, interval = 1)
 	public void step() {
@@ -67,6 +80,8 @@ public class PatientAdder {
 			count = interval;
 	    	Context context = ContextUtils.getContext (this);
 	    	Patient p = new Patient(space, grid);
+	    	
+	    	// Set patient COVID status
 	    	double upperBoundaryForAsymptomatic = percentCOVIDSymptomatic + percentCOVIDAsymptomatic;
 	    	if(RandomHelper.nextDouble() < percentCOVIDSymptomatic) {
 	        	p.setActualInfectionState(SymptomaticInfectionState.getInstance().generateStateForMe(p));
@@ -74,6 +89,16 @@ public class PatientAdder {
 	        	p.setActualInfectionState(AsymptomaticInfectionState.getInstance().generateStateForMe(p));
 	    	} else {
 	        	p.setActualInfectionState(SusceptibleInfectionState.getInstance().generateStateForMe(p));
+	    	}
+	    	
+	    	// Set patient Severity Score
+	    	double upperBoundaryForHighSeverity = percentMediumSeverity + percentHighSeverity;
+	    	if(RandomHelper.nextDouble() < percentMediumSeverity) {
+	        	p.setSeverityScore(SeverityScore.MODERATE);
+	    	} else if(RandomHelper.nextDouble() >= percentMediumSeverity && RandomHelper.nextDouble() < upperBoundaryForHighSeverity) {
+	        	p.setSeverityScore(SeverityScore.SEVERE);
+	    	} else {
+	        	p.setSeverityScore(SeverityScore.LOW);
 	    	}
 	    	
 	    	context.add(p);
