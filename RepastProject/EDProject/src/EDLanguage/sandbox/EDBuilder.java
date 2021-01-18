@@ -36,7 +36,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(120).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.15).WithPercentageHighSeverity(1.0).WithPercentageMediumSeverity(0.01));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(120).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.15).WithPercentageHighSeverity(0.2).WithPercentageMediumSeverity(0.6));
 
 
     // add Agents 
@@ -167,7 +167,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     createWallBetween(115, 160, 115, 170, context, space, grid);
     createWallBetween(115, 170, 156, 170, context, space, grid);
     createWallBetween(156, 170, 156, 200, context, space, grid);
-    createWallBetween(158, 170, 158, 200, context, space, grid);
     createWallBetween(0, 0, 399, 0, context, space, grid);
     createWallBetween(0, 200, 399, 200, context, space, grid);
     createWallBetween(0, 0, 199, 0, context, space, grid);

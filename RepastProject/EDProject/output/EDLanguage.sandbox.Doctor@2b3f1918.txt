@@ -1,0 +1,6 @@
+Time point: 1799.0 | positivePatientsSeen: 1.0
+Time point: 1800.0 | stress: 2.0
+Time point: 1801.0 | NegativePatientsSeen: 1.0
+Time point: 2829.0 | positivePatientsSeen: 2.0
+Time point: 2830.0 | stress: 3.0
+Time point: 2831.0 | NegativePatientsSeen: 2.0
