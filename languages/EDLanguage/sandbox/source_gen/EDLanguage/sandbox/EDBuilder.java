@@ -36,14 +36,14 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(120).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.15).WithPercentageHighSeverity(1.0).WithPercentageMediumSeverity(0.01));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(120).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.15).WithPercentageHighSeverity(0.6).WithPercentageMediumSeverity(0.4));
 
 
     // add Agents 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 6; i++) {
       context.add(new Doctor(space, grid));
     }
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 5; i++) {
       context.add(new Nurse(space, grid));
     }
     for (int i = 0; i < 3; i++) {
@@ -52,7 +52,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 3; i++) {
       context.add(new MajorsTriageNurse(space, grid));
     }
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 7; i++) {
       context.add(new MajorsABNurse(space, grid));
     }
     for (int i = 0; i < 4; i++) {
@@ -73,30 +73,34 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsTriage_d = new Room("MajorsTriage", context, space, grid, 110, 100, 10, 10, 1, 15, office.getInstance(), Color.GREEN);
     Room MajorsWaitingRoom_e = new Room("MajorsWaitingRoom", context, space, grid, 140, 90, 20, 40, 1, 20, WaitingRoom.getInstance(), Color.BLUE);
     Room DoctorOffice1_f = new Room("DoctorOffice1", context, space, grid, 110, 80, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
-    Room DoctorOffice2_g = new Room("DoctorOffice2", context, space, grid, 120, 80, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
-    Room DoctorOffice3_h = new Room("DoctorOffice3", context, space, grid, 130, 80, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
-    Room DoctorOffice4_i = new Room("DoctorOffice4", context, space, grid, 140, 80, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
-    Room DoctorOffice5_j = new Room("DoctorOffice5", context, space, grid, 150, 80, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
-    Room TaskRoom1_k = new Room("TaskRoom1", context, space, grid, 120, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
-    Room TaskRoom2_l = new Room("TaskRoom2", context, space, grid, 125, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
-    Room TaskRoom3_m = new Room("TaskRoom3", context, space, grid, 130, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
-    Room Entrance_n = new Room("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, office.getInstance(), Color.GRAY);
-    Room XRay1_o = new Room("XRay1", context, space, grid, 140, 155, 5, 5, 1, 3, Radiology.getInstance(), Color.YELLOW);
-    Room XRay2_p = new Room("XRay2", context, space, grid, 145, 155, 5, 5, 1, 3, Radiology.getInstance(), Color.YELLOW);
-    Room TriageWaitingRoom_q = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, WaitingRoom.getInstance(), Color.BLUE);
-    Room MajorsABReception_r = new Room("MajorsABReception", context, space, grid, 200, 168, 20, 10, 1, 6, office.getInstance(), Color.GREEN);
-    Room MajorsBayA_s = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayB_t = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayC_u = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayD_v = new Room("MajorsBayD", context, space, grid, 235, 175, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayE_w = new Room("MajorsBayE", context, space, grid, 235, 160, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayF_x = new Room("MajorsBayF", context, space, grid, 235, 145, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayG_y = new Room("MajorsBayG", context, space, grid, 220, 145, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayH_z = new Room("MajorsBayH", context, space, grid, 205, 145, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayI_ab = new Room("MajorsBayI", context, space, grid, 190, 145, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayJ_bb = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayK_cb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room MajorsBayL_db = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room DoctorOffice3_g = new Room("DoctorOffice3", context, space, grid, 110, 60, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
+    Room DoctorOffice2_h = new Room("DoctorOffice2", context, space, grid, 120, 80, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
+    Room DoctorOffice6_i = new Room("DoctorOffice6", context, space, grid, 120, 60, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
+    Room DoctorOffice4_j = new Room("DoctorOffice4", context, space, grid, 140, 80, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
+    Room DoctorOffice7_k = new Room("DoctorOffice7", context, space, grid, 130, 60, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
+    Room DoctorOffice5_l = new Room("DoctorOffice5", context, space, grid, 150, 80, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
+    Room DoctorOffice8_m = new Room("DoctorOffice8", context, space, grid, 140, 60, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
+    Room DoctorOffice9_n = new Room("DoctorOffice9", context, space, grid, 150, 60, 10, 10, 1, 3, DoctorOffice.getInstance(), Color.GRAY);
+    Room TaskRoom1_o = new Room("TaskRoom1", context, space, grid, 120, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
+    Room TaskRoom2_p = new Room("TaskRoom2", context, space, grid, 125, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
+    Room TaskRoom3_q = new Room("TaskRoom3", context, space, grid, 130, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
+    Room Entrance_r = new Room("Entrance", context, space, grid, 95, 192, 10, 2, 1, 100000, office.getInstance(), Color.GRAY);
+    Room XRay1_s = new Room("XRay1", context, space, grid, 140, 155, 5, 5, 1, 3, Radiology.getInstance(), Color.YELLOW);
+    Room XRay2_t = new Room("XRay2", context, space, grid, 145, 155, 5, 5, 1, 3, Radiology.getInstance(), Color.YELLOW);
+    Room TriageWaitingRoom_u = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, WaitingRoom.getInstance(), Color.BLUE);
+    Room MajorsABReception_v = new Room("MajorsABReception", context, space, grid, 200, 168, 20, 10, 1, 6, office.getInstance(), Color.BLACK);
+    Room MajorsBayA_w = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayB_x = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayC_y = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayD_z = new Room("MajorsBayD", context, space, grid, 235, 175, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayE_ab = new Room("MajorsBayE", context, space, grid, 235, 160, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayF_bb = new Room("MajorsBayF", context, space, grid, 235, 145, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayG_cb = new Room("MajorsBayG", context, space, grid, 220, 145, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayH_db = new Room("MajorsBayH", context, space, grid, 205, 145, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayI_eb = new Room("MajorsBayI", context, space, grid, 190, 145, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayJ_fb = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayK_gb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
+    Room MajorsBayL_hb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
     try {
       Pediatrics_a.setSeats(0);
       MainReception_b.setSeats(0);
@@ -104,65 +108,73 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsTriage_d.setSeats(0);
       MajorsWaitingRoom_e.setSeats(20);
       DoctorOffice1_f.setSeats(0);
-      DoctorOffice2_g.setSeats(0);
-      DoctorOffice3_h.setSeats(0);
-      DoctorOffice4_i.setSeats(0);
-      DoctorOffice5_j.setSeats(0);
-      TaskRoom1_k.setSeats(0);
-      TaskRoom2_l.setSeats(0);
-      TaskRoom3_m.setSeats(0);
-      Entrance_n.setSeats(0);
-      XRay1_o.setSeats(0);
-      XRay2_p.setSeats(0);
-      TriageWaitingRoom_q.setSeats(20);
-      MajorsABReception_r.setSeats(0);
-      MajorsBayA_s.setSeats(0);
-      MajorsBayB_t.setSeats(0);
-      MajorsBayC_u.setSeats(0);
-      MajorsBayD_v.setSeats(0);
-      MajorsBayE_w.setSeats(0);
-      MajorsBayF_x.setSeats(0);
-      MajorsBayG_y.setSeats(0);
-      MajorsBayH_z.setSeats(0);
-      MajorsBayI_ab.setSeats(0);
-      MajorsBayJ_bb.setSeats(0);
-      MajorsBayK_cb.setSeats(0);
-      MajorsBayL_db.setSeats(0);
+      DoctorOffice3_g.setSeats(0);
+      DoctorOffice2_h.setSeats(0);
+      DoctorOffice6_i.setSeats(0);
+      DoctorOffice4_j.setSeats(0);
+      DoctorOffice7_k.setSeats(0);
+      DoctorOffice5_l.setSeats(0);
+      DoctorOffice8_m.setSeats(0);
+      DoctorOffice9_n.setSeats(0);
+      TaskRoom1_o.setSeats(0);
+      TaskRoom2_p.setSeats(0);
+      TaskRoom3_q.setSeats(0);
+      Entrance_r.setSeats(0);
+      XRay1_s.setSeats(0);
+      XRay2_t.setSeats(0);
+      TriageWaitingRoom_u.setSeats(20);
+      MajorsABReception_v.setSeats(0);
+      MajorsBayA_w.setSeats(0);
+      MajorsBayB_x.setSeats(0);
+      MajorsBayC_y.setSeats(0);
+      MajorsBayD_z.setSeats(0);
+      MajorsBayE_ab.setSeats(0);
+      MajorsBayF_bb.setSeats(0);
+      MajorsBayG_cb.setSeats(0);
+      MajorsBayH_db.setSeats(0);
+      MajorsBayI_eb.setSeats(0);
+      MajorsBayJ_fb.setSeats(0);
+      MajorsBayK_gb.setSeats(0);
+      MajorsBayL_hb.setSeats(0);
       Pediatrics_a.setDesks(0);
       MainReception_b.setDesks(0);
       Triage_c.setDesks(3);
       MajorsTriage_d.setDesks(3);
       MajorsWaitingRoom_e.setDesks(0);
       DoctorOffice1_f.setDesks(1);
-      DoctorOffice2_g.setDesks(1);
-      DoctorOffice3_h.setDesks(1);
-      DoctorOffice4_i.setDesks(1);
-      DoctorOffice5_j.setDesks(1);
-      TaskRoom1_k.setDesks(0);
-      TaskRoom2_l.setDesks(0);
-      TaskRoom3_m.setDesks(0);
-      Entrance_n.setDesks(0);
-      XRay1_o.setDesks(1);
-      XRay2_p.setDesks(1);
-      TriageWaitingRoom_q.setDesks(0);
-      MajorsABReception_r.setDesks(3);
-      MajorsBayA_s.setDesks(1);
-      MajorsBayB_t.setDesks(1);
-      MajorsBayC_u.setDesks(1);
-      MajorsBayD_v.setDesks(1);
-      MajorsBayE_w.setDesks(1);
-      MajorsBayF_x.setDesks(1);
-      MajorsBayG_y.setDesks(1);
-      MajorsBayH_z.setDesks(1);
-      MajorsBayI_ab.setDesks(1);
-      MajorsBayJ_bb.setDesks(1);
-      MajorsBayK_cb.setDesks(1);
-      MajorsBayL_db.setDesks(1);
+      DoctorOffice3_g.setDesks(1);
+      DoctorOffice2_h.setDesks(1);
+      DoctorOffice6_i.setDesks(1);
+      DoctorOffice4_j.setDesks(1);
+      DoctorOffice7_k.setDesks(1);
+      DoctorOffice5_l.setDesks(1);
+      DoctorOffice8_m.setDesks(1);
+      DoctorOffice9_n.setDesks(1);
+      TaskRoom1_o.setDesks(0);
+      TaskRoom2_p.setDesks(0);
+      TaskRoom3_q.setDesks(0);
+      Entrance_r.setDesks(0);
+      XRay1_s.setDesks(1);
+      XRay2_t.setDesks(1);
+      TriageWaitingRoom_u.setDesks(0);
+      MajorsABReception_v.setDesks(7);
+      MajorsBayA_w.setDesks(1);
+      MajorsBayB_x.setDesks(1);
+      MajorsBayC_y.setDesks(1);
+      MajorsBayD_z.setDesks(1);
+      MajorsBayE_ab.setDesks(1);
+      MajorsBayF_bb.setDesks(1);
+      MajorsBayG_cb.setDesks(1);
+      MajorsBayH_db.setDesks(1);
+      MajorsBayI_eb.setDesks(1);
+      MajorsBayJ_fb.setDesks(1);
+      MajorsBayK_gb.setDesks(1);
+      MajorsBayL_hb.setDesks(1);
     } catch (NumberFormatException e) {
     }
 
     createWallBetween(0, 124, 110, 124, context, space, grid);
-    createWallBetween(110, 0, 110, 125, context, space, grid);
+    createWallBetween(110, 80, 110, 125, context, space, grid);
     createWallBetween(105, 160, 116, 160, context, space, grid);
     createWallBetween(115, 160, 115, 170, context, space, grid);
     createWallBetween(115, 170, 156, 170, context, space, grid);
@@ -172,8 +184,11 @@ public class EDBuilder implements ContextBuilder<Object> {
     createWallBetween(0, 0, 199, 0, context, space, grid);
     createWallBetween(399, 0, 399, 200, context, space, grid);
     createWallBetween(160, 80, 160, 140, context, space, grid);
-    createWallBetween(110, 80, 160, 80, context, space, grid);
-    createWallBetween(175, 80, 175, 150, context, space, grid);
+    createWallBetween(160, 60, 160, 70, context, space, grid);
+    createWallBetween(110, 90, 130, 90, context, space, grid);
+    createWallBetween(140, 90, 160, 90, context, space, grid);
+    createWallBetween(110, 60, 175, 60, context, space, grid);
+    createWallBetween(175, 60, 175, 150, context, space, grid);
     createWallBetween(175, 165, 175, 200, context, space, grid);
 
     for (Object obj : context) {

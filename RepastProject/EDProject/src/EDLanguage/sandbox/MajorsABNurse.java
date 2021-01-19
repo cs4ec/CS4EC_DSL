@@ -11,6 +11,9 @@ import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.FollowOrder;
+import simcore.action.basicAction.OccupyAction;
+import simcore.basicStructures.Desk;
+import simcore.action.basicAction.StayForTimeAction;
 import simcore.Signals.Orders.StopOrder;
 import simcore.action.basicAction.SendSignalAction;
 
@@ -50,10 +53,13 @@ public class MajorsABNurse extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("TriageWaitingRoom"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new FollowOrder().WithTarget(this))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(MajorsABBay.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new StopOrder())));
     sendSignalTemp = new PatientWaitingForMajorsABDoctorSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
 
   }
 

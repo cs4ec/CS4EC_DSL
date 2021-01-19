@@ -33,6 +33,10 @@ public class testingDevice extends Staff {
         curMission = new Action("TestPatient");
         this.InitTestPatient(s);
         break;
+      case "StartPatientTestAB":
+        curMission = new Action("TestPatientAB");
+        this.InitTestPatientAB(s);
+        break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
         return;
@@ -52,6 +56,23 @@ public class testingDevice extends Staff {
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       sendSignalTemp = new PatientTestNegativeSignal();
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    }
+
+  }
+  public void InitTestPatientAB(Signal s) {
+    System.out.println("TestPatientAB" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
+      sendSignalTemp = new PatientTestPositiveABSignal();
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    } else {
+      sendSignalTemp = new PatientTestNegativeABSignal();
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }

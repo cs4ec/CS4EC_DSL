@@ -14,6 +14,9 @@ import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.agents.Patient;
 import simcore.diagnosis.InfectionStatus;
 import simcore.action.basicAction.SendSignalAction;
+import simcore.action.basicAction.EndVisitAction;
+import simcore.action.basicAction.OrderAction;
+import simcore.Signals.Orders.MoveToOrder;
 
 public class MajorsABDoctor extends Actor {
 
@@ -35,11 +38,11 @@ public class MajorsABDoctor extends Actor {
         curMission = new Action("SeePatient");
         this.InitSeePatient(s);
         break;
-      case "PatientTestPositive":
+      case "PatientTestPositiveAB":
         curMission = new Action("PatientPositive");
         this.InitPatientPositive(s);
         break;
-      case "PatientTestNegative":
+      case "PatientTestNegativeAB":
         curMission = new Action("PatientNegative");
         this.InitPatientNegative(s);
         break;
@@ -56,28 +59,29 @@ public class MajorsABDoctor extends Actor {
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("Inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(300)));
+    curMission.WithStep(new ActionStep().WithName("Inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(120)));
     if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Asymptomatic))) {
-      curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-      sendSignalTemp = new StartPatientTestSignal();
+      curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(60)));
+      sendSignalTemp = new StartPatientTestABSignal();
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-        curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-        sendSignalTemp = new StartPatientTestSignal();
+        curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(60)));
+        sendSignalTemp = new StartPatientTestABSignal();
         sendSignalTemp.AddData("patient", s.GetData("patient"));
         curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       } else {
         if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Susceptible))) {
-          curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-          sendSignalTemp = new StartPatientTestSignal();
+          curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(60)));
+          sendSignalTemp = new StartPatientTestABSignal();
           sendSignalTemp.AddData("patient", s.GetData("patient"));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
         } else {
         }
       }
     }
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
 
   }
   public void InitPatientPositive(Signal s) {
@@ -85,7 +89,11 @@ public class MajorsABDoctor extends Actor {
 
     Signal sendSignalTemp = new Signal();
 
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new EndVisitAction().WithPatient(((Patient) s.GetData("patient")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
 
   }
   public void InitPatientNegative(Signal s) {
@@ -93,7 +101,11 @@ public class MajorsABDoctor extends Actor {
 
     Signal sendSignalTemp = new Signal();
 
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(300)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new EndVisitAction().WithPatient(((Patient) s.GetData("patient")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
 
   }
 

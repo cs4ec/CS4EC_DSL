@@ -10,6 +10,5 @@ public class PatientTestPositiveSignal extends Signal {
     this.setName("PatientTestPositive");
     this.setDescription("The test has now finished and result is positive");
     this.AddActor("Doctor");
-    this.AddActor("MajorsABDoctor");
   }
 }

@@ -10,6 +10,5 @@ public class PatientTestNegativeSignal extends Signal {
     this.setName("PatientTestNegative");
     this.setDescription("The test has now finished and result is negative");
     this.AddActor("Doctor");
-    this.AddActor("MajorsABDoctor");
   }
 }
