@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class LogNote {
 	
-	private String projectPath = "";
+	private String projectPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\";
 	private static LogNote logInstance = null;
 	
 	private LogNote() {}

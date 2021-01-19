@@ -21,6 +21,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptActor = createDescriptorForActor();
   /*package*/ final ConceptDescriptor myConceptActorInstantiation = createDescriptorForActorInstantiation();
   /*package*/ final ConceptDescriptor myConceptActorReference = createDescriptorForActorReference();
+  /*package*/ final ConceptDescriptor myConceptAdmitAction = createDescriptorForAdmitAction();
   /*package*/ final ConceptDescriptor myConceptAttribute = createDescriptorForAttribute();
   /*package*/ final ConceptDescriptor myConceptAttributeExpressionReference = createDescriptorForAttributeExpressionReference();
   /*package*/ final ConceptDescriptor myConceptAttributeReference = createDescriptorForAttributeReference();
@@ -36,8 +37,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDataInstanceMap = createDescriptorForDataInstanceMap();
   /*package*/ final ConceptDescriptor myConceptDataMap = createDescriptorForDataMap();
   /*package*/ final ConceptDescriptor myConceptDescription = createDescriptorForDescription();
+  /*package*/ final ConceptDescriptor myConceptDischargeAction = createDescriptorForDischargeAction();
   /*package*/ final ConceptDescriptor myConceptEmergencyDepartment = createDescriptorForEmergencyDepartment();
-  /*package*/ final ConceptDescriptor myConceptEndVisitAction = createDescriptorForEndVisitAction();
   /*package*/ final ConceptDescriptor myConceptExpressionCondition = createDescriptorForExpressionCondition();
   /*package*/ final ConceptDescriptor myConceptFollowOrder = createDescriptorForFollowOrder();
   /*package*/ final ConceptDescriptor myConceptHumanInstance = createDescriptorForHumanInstance();
@@ -84,6 +85,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptTestKit = createDescriptorForTestKit();
   /*package*/ final ConceptDescriptor myConceptWallDefinition = createDescriptorForWallDefinition();
   /*package*/ final ConceptDescriptor myConceptWallInstanceDefinition = createDescriptorForWallInstanceDefinition();
+  /*package*/ final EnumerationDescriptor myEnumerationAdmissionBays = new EnumerationDescriptor_AdmissionBays();
   /*package*/ final EnumerationDescriptor myEnumerationBaseType = new EnumerationDescriptor_BaseType();
   /*package*/ final EnumerationDescriptor myEnumerationColour = new EnumerationDescriptor_Colour();
   /*package*/ final EnumerationDescriptor myEnumerationDirection = new EnumerationDescriptor_Direction();
@@ -109,7 +111,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActor, myConceptActorInstantiation, myConceptActorReference, myConceptAttribute, myConceptAttributeExpressionReference, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptChoice, myConceptCondition, myConceptConsequence, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptEmergencyDepartment, myConceptEndVisitAction, myConceptExpressionCondition, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptInfectionCondition, myConceptInfectionState, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptNumericExpression, myConceptObjectInstance, myConceptOccupiableInstance, myConceptOccupyAction, myConceptOrder, myConceptOrderPatientAction, myConceptPatient, myConceptPatientInstance, myConceptPatientInterval, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRoom, myConceptRoomDefinition, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptRoomTypeReference, myConceptSelfInstance, myConceptSendSignalAction, myConceptSeverityCondition, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptTest, myConceptTestAction, myConceptTestKit, myConceptWallDefinition, myConceptWallInstanceDefinition);
+    return Arrays.asList(myConceptActor, myConceptActorInstantiation, myConceptActorReference, myConceptAdmitAction, myConceptAttribute, myConceptAttributeExpressionReference, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptChoice, myConceptCondition, myConceptConsequence, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptDischargeAction, myConceptEmergencyDepartment, myConceptExpressionCondition, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptInfectionCondition, myConceptInfectionState, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptNumericExpression, myConceptObjectInstance, myConceptOccupiableInstance, myConceptOccupyAction, myConceptOrder, myConceptOrderPatientAction, myConceptPatient, myConceptPatientInstance, myConceptPatientInterval, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRoom, myConceptRoomDefinition, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptRoomTypeReference, myConceptSelfInstance, myConceptSendSignalAction, myConceptSeverityCondition, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptTest, myConceptTestAction, myConceptTestKit, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -122,6 +124,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActorInstantiation;
       case LanguageConceptSwitch.ActorReference:
         return myConceptActorReference;
+      case LanguageConceptSwitch.AdmitAction:
+        return myConceptAdmitAction;
       case LanguageConceptSwitch.Attribute:
         return myConceptAttribute;
       case LanguageConceptSwitch.AttributeExpressionReference:
@@ -152,10 +156,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDataMap;
       case LanguageConceptSwitch.Description:
         return myConceptDescription;
+      case LanguageConceptSwitch.DischargeAction:
+        return myConceptDischargeAction;
       case LanguageConceptSwitch.EmergencyDepartment:
         return myConceptEmergencyDepartment;
-      case LanguageConceptSwitch.EndVisitAction:
-        return myConceptEndVisitAction;
       case LanguageConceptSwitch.ExpressionCondition:
         return myConceptExpressionCondition;
       case LanguageConceptSwitch.FollowOrder:
@@ -255,7 +259,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationBaseType, myEnumerationColour, myEnumerationDirection, myEnumerationInfectionStateType, myEnumerationJudgeOperator, myEnumerationModifyOperator, myEnumerationOccupiableTypes, myEnumerationSeverityScore, myCSDatatypeEasyFloatNumber);
+    return Arrays.asList(myEnumerationAdmissionBays, myEnumerationBaseType, myEnumerationColour, myEnumerationDirection, myEnumerationInfectionStateType, myEnumerationJudgeOperator, myEnumerationModifyOperator, myEnumerationOccupiableTypes, myEnumerationSeverityScore, myCSDatatypeEasyFloatNumber);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -292,6 +296,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552829815467");
     b.version(2);
     b.associate("actor", 0x71ffe5bd0118aacL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L).optional(false).origin("513408552829815468").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAdmitAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "AdmitAction", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a75955f0be54L);
+    b.class_(false, false, false);
+    b.super_("EDLanguage.structure.Behaviour", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669846203988");
+    b.version(2);
+    b.property("admissionBay", 0x139a75955f654e0L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a75955f64e98L)).origin("88285669846570208").done();
+    b.aggregate("targetPatient", 0x139a75955f0be57L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a4L).optional(false).ordered(true).multiple(false).origin("88285669846203991").done();
+    b.alias("admit");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAttribute() {
@@ -433,6 +449,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("description", 0x7ba98c3ed5361883L).type(PrimitiveTypeId.STRING).origin("8910807539222190211").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForDischargeAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "DischargeAction", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a75955df55b4L);
+    b.class_(false, false, false);
+    b.super_("EDLanguage.structure.Behaviour", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669845063092");
+    b.version(2);
+    b.aggregate("targetPatient", 0x139a75955df55b7L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a4L).optional(false).ordered(true).multiple(false).origin("88285669845063095").done();
+    b.alias("discharge");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForEmergencyDepartment() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "EmergencyDepartment", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f7b00L);
     b.class_(false, false, true);
@@ -444,17 +471,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("percentageMediumSeverity", 0x9027d4634d83c88L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("649219036782541960").done();
     b.aggregate("patientInterval", 0x5ee9ee33c44b81caL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5ee9ee33c44b81a2L).optional(false).ordered(true).multiple(false).origin("6839259415242834378").done();
     b.aggregate("staff", 0x35463334ce306babL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f7b02L).optional(true).ordered(true).multiple(true).origin("3838812034270522283").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForEndVisitAction() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "EndVisitAction", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e122658521L);
-    b.class_(false, false, false);
-    b.super_("EDLanguage.structure.Behaviour", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8465466444633965857");
-    b.version(2);
-    b.aggregate("targetPatient", 0x757b60e122658524L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a4L).optional(false).ordered(true).multiple(false).origin("8465466444633965860").done();
-    b.alias("end visit for patient");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForExpressionCondition() {

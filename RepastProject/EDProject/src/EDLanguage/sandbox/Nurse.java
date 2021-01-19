@@ -46,6 +46,18 @@ public class Nurse extends Staff {
         curMission = new Action("DoXRay");
         this.InitDoXRay(s);
         break;
+      case "LIATIsReady":
+        curMission = new Action("GiveLIATTest");
+        this.InitGiveLIATTest(s);
+        break;
+      case "PatientLIATTestPositive":
+        curMission = new Action("TreatPatientPositive");
+        this.InitTreatPatientPositive(s);
+        break;
+      case "PatientLIATTestNegative":
+        curMission = new Action("TreatPatientNegative");
+        this.InitTreatPatientNegative(s);
+        break;
       case "PatientNeedsBloodTest":
         curMission = new Action("GiveBloodTest");
         this.InitGiveBloodTest(s);
@@ -86,6 +98,43 @@ public class Nurse extends Staff {
     sendSignalTemp = new PatientNeedsFinalConsultationSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitRequestLIAT(Signal s) {
+    System.out.println("RequestLIAT" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    sendSignalTemp = new IsLIATReadySignal();
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitGiveLIATTest(Signal s) {
+    System.out.println("GiveLIATTest" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+    sendSignalTemp = new StartPatientLIATTestSignal();
+    sendSignalTemp.AddData("patient", s.GetData("patient"));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitTreatPatientPositive(Signal s) {
+    System.out.println("TreatPatientPositive" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("do some action").WithAction(new StayForTimeAction().WithTimeSpan(300)));
+
+  }
+  public void InitTreatPatientNegative(Signal s) {
+    System.out.println("TreatPatientNegative" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("do some action").WithAction(new StayForTimeAction().WithTimeSpan(300)));
 
   }
   public void InitCallDoctorForConsultation(Signal s) {

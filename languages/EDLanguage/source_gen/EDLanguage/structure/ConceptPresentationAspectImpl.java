@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Actor;
   private ConceptPresentation props_ActorInstantiation;
   private ConceptPresentation props_ActorReference;
+  private ConceptPresentation props_AdmitAction;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeExpressionReference;
   private ConceptPresentation props_AttributeReference;
@@ -27,8 +28,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DataInstanceMap;
   private ConceptPresentation props_DataMap;
   private ConceptPresentation props_Description;
+  private ConceptPresentation props_DischargeAction;
   private ConceptPresentation props_EmergencyDepartment;
-  private ConceptPresentation props_EndVisitAction;
   private ConceptPresentation props_ExpressionCondition;
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
@@ -104,6 +105,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActorReference = cpb.create();
         }
         return props_ActorReference;
+      case LanguageConceptSwitch.AdmitAction:
+        if (props_AdmitAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Admit the patient");
+          cpb.presentationByName();
+          props_AdmitAction = cpb.create();
+        }
+        return props_AdmitAction;
       case LanguageConceptSwitch.Attribute:
         if (props_Attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -213,6 +222,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Description = cpb.create();
         }
         return props_Description;
+      case LanguageConceptSwitch.DischargeAction:
+        if (props_DischargeAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Discharge the patient");
+          cpb.presentationByName();
+          props_DischargeAction = cpb.create();
+        }
+        return props_DischargeAction;
       case LanguageConceptSwitch.EmergencyDepartment:
         if (props_EmergencyDepartment == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -221,14 +238,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EmergencyDepartment = cpb.create();
         }
         return props_EmergencyDepartment;
-      case LanguageConceptSwitch.EndVisitAction:
-        if (props_EndVisitAction == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("End the visit for the patient");
-          cpb.presentationByName();
-          props_EndVisitAction = cpb.create();
-        }
-        return props_EndVisitAction;
       case LanguageConceptSwitch.ExpressionCondition:
         if (props_ExpressionCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

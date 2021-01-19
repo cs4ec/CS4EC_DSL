@@ -19,7 +19,7 @@ import simcore.diagnosis.InfectionStatus;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
-import simcore.action.basicAction.EndVisitAction;
+import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 
 public class JuniorDoctor extends Doctor {
@@ -173,7 +173,7 @@ public class JuniorDoctor extends Doctor {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new EndVisitAction().WithPatient(((Patient) s.GetData("patient")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }

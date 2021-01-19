@@ -4,16 +4,16 @@ package EDLanguage.sandbox;
 
 import simcore.basicStructures.Test;
 
-public class INOVA extends Test {
-  private INOVA() {
-    sensitivity = 0.008;
-    specificity = 0.0091;
-    processingTime = 10;
+public class LIAT extends Test {
+  private LIAT() {
+    sensitivity = 0.009000000000000001;
+    specificity = 0.0095;
+    processingTime = 30;
   }
 
   public static Test getInstance() {
     if (instance == null) {
-      instance = new INOVA();
+      instance = new LIAT();
     }
     return instance;
   }

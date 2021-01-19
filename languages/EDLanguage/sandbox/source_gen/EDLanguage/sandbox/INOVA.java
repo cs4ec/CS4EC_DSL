@@ -6,8 +6,8 @@ import simcore.basicStructures.Test;
 
 public class INOVA extends Test {
   private INOVA() {
-    sensitivity = 0.8;
-    specificity = 0.91;
+    sensitivity = 0.008;
+    specificity = 0.0091;
     processingTime = 10;
   }
 

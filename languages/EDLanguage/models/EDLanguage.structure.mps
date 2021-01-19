@@ -1188,24 +1188,6 @@
       <property role="1L1pqM" value="bed" />
     </node>
   </node>
-  <node concept="1TIwiD" id="7lVoe4ypokx">
-    <property role="EcuMT" value="8465466444633965857" />
-    <property role="3GE5qa" value="actions.basic actions" />
-    <property role="TrG5h" value="EndVisitAction" />
-    <property role="34LRSv" value="end visit for patient" />
-    <property role="R4oN_" value="End the visit for the patient" />
-    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
-    <node concept="PrWs8" id="7lVoe4ypoky" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyj" id="7lVoe4ypok$" role="1TKVEi">
-      <property role="IQ2ns" value="8465466444633965860" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="targetPatient" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="5QJON_AUfSp">
     <property role="EcuMT" value="6750846609944804889" />
     <property role="3GE5qa" value="ED" />
@@ -1380,6 +1362,67 @@
       <property role="IQ2nx" value="649219036782142269" />
       <property role="TrG5h" value="severityScore" />
       <ref role="AX2Wp" node="$2vkoOOycN" resolve="SeverityScore" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4TDP_lRPmO">
+    <property role="EcuMT" value="88285669845063092" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="DischargeAction" />
+    <property role="34LRSv" value="discharge" />
+    <property role="R4oN_" value="Discharge the patient" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="PrWs8" id="4TDP_lRPmP" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="4TDP_lRPmR" role="1TKVEi">
+      <property role="IQ2ns" value="88285669845063095" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetPatient" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4TDP_lWbTk">
+    <property role="EcuMT" value="88285669846203988" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="AdmitAction" />
+    <property role="34LRSv" value="admit" />
+    <property role="R4oN_" value="Admit the patient" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="PrWs8" id="4TDP_lWbTl" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="4TDP_lWbTn" role="1TKVEi">
+      <property role="IQ2ns" value="88285669846203991" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetPatient" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
+    </node>
+    <node concept="1TJgyi" id="4TDP_lX_jw" role="1TKVEl">
+      <property role="IQ2nx" value="88285669846570208" />
+      <property role="TrG5h" value="admissionBay" />
+      <ref role="AX2Wp" node="4TDP_lX$Uo" resolve="AdmissionBays" />
+    </node>
+  </node>
+  <node concept="25R3W" id="4TDP_lX$Uo">
+    <property role="3F6X1D" value="88285669846568600" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="AdmissionBays" />
+    <node concept="25R33" id="4TDP_lX$Up" role="25R1y">
+      <property role="3tVfz5" value="88285669846568601" />
+      <property role="TrG5h" value="GREEN" />
+      <property role="1L1pqM" value="green bay" />
+    </node>
+    <node concept="25R33" id="4TDP_lX$Uq" role="25R1y">
+      <property role="3tVfz5" value="88285669846568602" />
+      <property role="TrG5h" value="AMBER" />
+      <property role="1L1pqM" value="amber bay" />
+    </node>
+    <node concept="25R33" id="4TDP_lX$Ut" role="25R1y">
+      <property role="3tVfz5" value="88285669846568605" />
+      <property role="TrG5h" value="RED" />
+      <property role="1L1pqM" value="red bay" />
     </node>
   </node>
 </model>

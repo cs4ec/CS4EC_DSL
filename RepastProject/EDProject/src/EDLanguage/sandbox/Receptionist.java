@@ -19,6 +19,7 @@ import simcore.diagnosis.SeverityScore;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
 import simcore.action.basicAction.SendSignalAction;
+import simcore.action.basicAction.DischargeAction;
 
 public class Receptionist extends Staff {
 
@@ -108,6 +109,7 @@ public class Receptionist extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
     curMission.WithStep(new ActionStep().WithName("let patient leave").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }

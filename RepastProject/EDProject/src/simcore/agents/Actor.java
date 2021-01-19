@@ -29,7 +29,8 @@ import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
-import simcore.action.basicAction.EndVisitAction;
+import simcore.action.basicAction.AdmitAction;
+import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.action.basicAction.OrderAction;
@@ -193,9 +194,20 @@ public class Actor extends Agent {
 		ActionFragment stepLogic = curStep.getStepLogic();
 		InitActionFragment(stepLogic);
 		
-		// End Visit Action
-		if(stepLogic instanceof EndVisitAction) {
-			Patient p = ((EndVisitAction)stepLogic).getOrderTarget();
+		// Discharge, End Visit Action
+		if(stepLogic instanceof DischargeAction) {
+			Patient p = ((DischargeAction)stepLogic).getPatient();
+			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
+			for (Actor actor : plstAssignedStaff) {
+				actor.deAssignPatient(p);
+			}
+			
+			NextStep();
+		}
+		
+		// Admit, End Visit Action
+		if(stepLogic instanceof AdmitAction) {
+			Patient p = ((AdmitAction)stepLogic).getPatient();
 			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
 			for (Actor actor : plstAssignedStaff) {
 				actor.deAssignPatient(p);

@@ -14,9 +14,14 @@ import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.agents.Patient;
 import simcore.diagnosis.InfectionStatus;
 import simcore.action.basicAction.SendSignalAction;
-import simcore.action.basicAction.EndVisitAction;
+import simcore.action.basicAction.OccupyAction;
+import simcore.basicStructures.Desk;
+import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.basicAction.AdmitAction;
+import simcore.basicStructures.AdmissionBays;
 
 public class MajorsABDoctor extends Actor {
 
@@ -82,6 +87,7 @@ public class MajorsABDoctor extends Actor {
       }
     }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
 
   }
   public void InitPatientPositive(Signal s) {
@@ -90,10 +96,16 @@ public class MajorsABDoctor extends Actor {
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new EndVisitAction().WithPatient(((Patient) s.GetData("patient")))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(300)));
+    if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
+    } else {
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.RED)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+    }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
 
   }
   public void InitPatientNegative(Signal s) {
@@ -103,9 +115,15 @@ public class MajorsABDoctor extends Actor {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new EndVisitAction().WithPatient(((Patient) s.GetData("patient")))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
+    if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
+    } else {
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+    }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
 
   }
 

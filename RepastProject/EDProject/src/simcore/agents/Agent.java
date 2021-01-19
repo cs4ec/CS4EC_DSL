@@ -25,7 +25,6 @@ import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
-import simcore.action.basicAction.EndVisitAction;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.action.basicAction.OrderAction;

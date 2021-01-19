@@ -83,9 +83,11 @@ public class PatientAdder {
 	    	
 	    	// Set patient COVID status
 	    	double upperBoundaryForAsymptomatic = percentCOVIDSymptomatic + percentCOVIDAsymptomatic;
-	    	if(RandomHelper.nextDouble() < percentCOVIDSymptomatic) {
+	    	double dice = RandomHelper.nextDouble();
+
+	    	if(dice < percentCOVIDSymptomatic) {
 	        	p.setActualInfectionState(SymptomaticInfectionState.getInstance().generateStateForMe(p));
-	    	} else if(RandomHelper.nextDouble() >= percentCOVIDSymptomatic && RandomHelper.nextDouble() < upperBoundaryForAsymptomatic) {
+	    	} else if(dice >= percentCOVIDSymptomatic && dice < upperBoundaryForAsymptomatic) {
 	        	p.setActualInfectionState(AsymptomaticInfectionState.getInstance().generateStateForMe(p));
 	    	} else {
 	        	p.setActualInfectionState(SusceptibleInfectionState.getInstance().generateStateForMe(p));
@@ -93,9 +95,10 @@ public class PatientAdder {
 	    	
 	    	// Set patient Severity Score
 	    	double upperBoundaryForHighSeverity = percentMediumSeverity + percentHighSeverity;
-	    	if(RandomHelper.nextDouble() < percentMediumSeverity) {
+	    	dice = RandomHelper.nextDouble();
+	    	if(dice < percentMediumSeverity) {
 	        	p.setSeverityScore(SeverityScore.MODERATE);
-	    	} else if(RandomHelper.nextDouble() >= percentMediumSeverity && RandomHelper.nextDouble() < upperBoundaryForHighSeverity) {
+	    	} else if(dice >= percentMediumSeverity && dice < upperBoundaryForHighSeverity) {
 	        	p.setSeverityScore(SeverityScore.SEVERE);
 	    	} else {
 	        	p.setSeverityScore(SeverityScore.LOW);

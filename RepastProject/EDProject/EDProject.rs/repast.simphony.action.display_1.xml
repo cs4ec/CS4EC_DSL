@@ -24,7 +24,7 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Receptionist</string>
-      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
+      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
@@ -70,7 +70,7 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Receptionist</string>
-      <null/>
+      <string>EDLanguage.sandbox.Receptionist.style_1.xml</string>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
@@ -103,7 +103,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-1207323662</hashCode>
+    <hashCode>1004709952</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>

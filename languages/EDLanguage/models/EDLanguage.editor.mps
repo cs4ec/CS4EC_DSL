@@ -1395,19 +1395,6 @@
       </node>
     </node>
   </node>
-  <node concept="24kQdi" id="7lVoe4ypokA">
-    <property role="3GE5qa" value="actions.basic actions" />
-    <ref role="1XX52x" to="3751:7lVoe4ypokx" resolve="EndVisitAction" />
-    <node concept="3EZMnI" id="7lVoe4ypokC" role="2wV5jI">
-      <node concept="3F0ifn" id="7lVoe4ypokN" role="3EZMnx">
-        <property role="3F0ifm" value="End visit for" />
-      </node>
-      <node concept="3F1sOY" id="7lVoe4ypo$R" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:7lVoe4ypok$" resolve="targetPatient" />
-      </node>
-      <node concept="l2Vlx" id="7lVoe4ypokF" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="5QJON_B_jN7">
     <property role="3GE5qa" value="Structures.Class" />
     <ref role="1XX52x" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
@@ -1614,6 +1601,38 @@
         <ref role="1NtTu8" to="3751:$2vkoOOycX" resolve="severityScore" />
       </node>
       <node concept="l2Vlx" id="$2vkoOOyd4" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4TDP_lRPmT">
+    <property role="3GE5qa" value="actions.basic actions" />
+    <ref role="1XX52x" to="3751:4TDP_lRPmO" resolve="DischargeAction" />
+    <node concept="3EZMnI" id="4TDP_lRPmV" role="2wV5jI">
+      <node concept="3F0ifn" id="4TDP_lRPn2" role="3EZMnx">
+        <property role="3F0ifm" value="Discharge" />
+      </node>
+      <node concept="3F1sOY" id="4TDP_lRPn8" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4TDP_lRPmR" resolve="targetPatient" />
+      </node>
+      <node concept="l2Vlx" id="4TDP_lRPmY" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4TDP_lXz4m">
+    <property role="3GE5qa" value="actions.basic actions" />
+    <ref role="1XX52x" to="3751:4TDP_lWbTk" resolve="AdmitAction" />
+    <node concept="3EZMnI" id="4TDP_lXz4o" role="2wV5jI">
+      <node concept="3F0ifn" id="4TDP_lXz4v" role="3EZMnx">
+        <property role="3F0ifm" value="admit" />
+      </node>
+      <node concept="3F1sOY" id="4TDP_lXz4_" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4TDP_lWbTn" resolve="targetPatient" />
+      </node>
+      <node concept="3F0ifn" id="4TDP_lX_jA" role="3EZMnx">
+        <property role="3F0ifm" value="to" />
+      </node>
+      <node concept="3F0A7n" id="4TDP_lX_jK" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4TDP_lX_jw" resolve="admissionBay" />
+      </node>
+      <node concept="l2Vlx" id="4TDP_lXz4r" role="2iSdaV" />
     </node>
   </node>
 </model>
