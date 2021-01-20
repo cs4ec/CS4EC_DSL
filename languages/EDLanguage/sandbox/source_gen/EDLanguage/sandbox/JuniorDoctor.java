@@ -14,17 +14,14 @@ import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.conditions.InfectionCondition;
-import simcore.diagnosis.InfectionStatus;
-import simcore.Signals.DirectSignal;
-import simcore.action.basicAction.SendSignalAction;
-import simcore.action.ConsequenceStep;
-import simcore.action.Consequence;
-import simcore.action.basicAction.conditions.PossibilityCondition;
-import simcore.action.basicAction.conditions.ResultCondition;
-import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.AdmitAction;
 import simcore.basicStructures.AdmissionBays;
+import simcore.action.ConsequenceStep;
+import simcore.action.Consequence;
+import simcore.Signals.DirectSignal;
+import simcore.action.basicAction.SendSignalAction;
+import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.basicAction.DischargeAction;
 
 public class JuniorDoctor extends Doctor {
 
@@ -48,8 +45,8 @@ public class JuniorDoctor extends Doctor {
       case "":
         break;
       case "PatientWaitingForDoctor":
-        curMission = new Action("CallPatientOver");
-        this.InitCallPatientOver(s);
+        curMission = new Action("InitialObsevations");
+        this.InitInitialObsevations(s);
         break;
       case "LFDPositive":
         curMission = new Action("TreatPositivePatient");
@@ -60,8 +57,8 @@ public class JuniorDoctor extends Doctor {
         this.InitTreatNegativePatient(s);
         break;
       case "PatientNeedsFinalConsutlation":
-        curMission = new Action("GiveFinalConsultation");
-        this.InitGiveFinalConsultation(s);
+        curMission = new Action("GiveConsultation");
+        this.InitGiveConsultation(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -86,8 +83,8 @@ public class JuniorDoctor extends Doctor {
     this.InitDoSomething(s);
 
   }
-  public void InitCallPatientOver(Signal s) {
-    System.out.println("CallPatientOver" + " function called");
+  public void InitInitialObsevations(Signal s) {
+    System.out.println("InitialObsevations" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -95,39 +92,7 @@ public class JuniorDoctor extends Doctor {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("Inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-    if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Asymptomatic))) {
-      curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-      sendSignalTemp = new ConductLFDSignal();
-      if (sendSignalTemp instanceof DirectSignal) {
-        ((DirectSignal) sendSignalTemp).setTarget();
-      }
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      sendSignalTemp.AddData("replyTo", this);
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-    } else {
-      if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-        curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-        sendSignalTemp = new ConductLFDSignal();
-        if (sendSignalTemp instanceof DirectSignal) {
-          ((DirectSignal) sendSignalTemp).setTarget();
-        }
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        sendSignalTemp.AddData("replyTo", this);
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      } else {
-        if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Susceptible))) {
-          curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-          sendSignalTemp = new ConductLFDSignal();
-          if (sendSignalTemp instanceof DirectSignal) {
-            ((DirectSignal) sendSignalTemp).setTarget();
-          }
-          sendSignalTemp.AddData("patient", s.GetData("patient"));
-          sendSignalTemp.AddData("replyTo", this);
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-        } else {
-        }
-      }
-    }
+    this.InitDecideOnPatientPathway(s);
 
   }
   public void InitTreatPositivePatient(Signal s) {
@@ -135,7 +100,12 @@ public class JuniorDoctor extends Doctor {
 
     Signal sendSignalTemp = new Signal();
 
-    this.InitDecideOnPatientPathway(s);
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
 
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("positivePatientsSeen", "+=", 1)));
   }
@@ -144,7 +114,12 @@ public class JuniorDoctor extends Doctor {
 
     Signal sendSignalTemp = new Signal();
 
-    this.InitDecideOnPatientPathway(s);
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
 
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("NegativePatientsSeen", "+=", 1)));
   }
@@ -209,8 +184,8 @@ public class JuniorDoctor extends Doctor {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
-  public void InitGiveFinalConsultation(Signal s) {
-    System.out.println("GiveFinalConsultation" + " function called");
+  public void InitGiveConsultation(Signal s) {
+    System.out.println("GiveConsultation" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -218,24 +193,16 @@ public class JuniorDoctor extends Doctor {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(1))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
-      } else {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+    if (CheckCondition(new PossibilityCondition().WithPossibility(20))) {
+      sendSignalTemp = new ConductLFDSignal();
+      if (sendSignalTemp instanceof DirectSignal) {
+        ((DirectSignal) sendSignalTemp).setTarget();
       }
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      sendSignalTemp.AddData("replyTo", this);
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
-      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(false))) {
-        if (CheckCondition(new PossibilityCondition().WithPossibility(1))) {
-          this.InitDischargePatient(s);
-        } else {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.GREEN)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        }
-      } else {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
-      }
+      this.InitDischargePatient(s);
     }
 
   }

@@ -7,6 +7,7 @@ import repast.simphony.visualization.visualization3D.style.Style3D.LabelPosition
 import repast.simphony.visualizationOGL2D.DefaultStyleOGL2D;
 import saf.v3d.scene.Position;
 import saf.v3d.scene.VSpatial;
+import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.Seat;
 
@@ -14,7 +15,7 @@ public class SeatStyle extends DefaultStyleOGL2D{
     @Override
     public VSpatial getVSpatial(Object object, VSpatial spatial){
 	
-    	Seat pLoc = (Seat)object;
+    	Occupiable pLoc = (Occupiable)object;
 	    //Create the spatial and return it.
 	    spatial = shapeFactory.createRectangle(pLoc.getW(), pLoc.getH());
 	    return spatial;
@@ -22,7 +23,7 @@ public class SeatStyle extends DefaultStyleOGL2D{
     
     @Override
     public String getLabel(Object object) {
-        return "Seat";
+        return "Occupiable";
     }
     
     @Override

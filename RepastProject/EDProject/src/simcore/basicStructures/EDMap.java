@@ -1,6 +1,7 @@
 package simcore.basicStructures;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -54,7 +55,9 @@ public class EDMap {
 	}
 	
 	public List<Room> FindInstancesOfRoomType(RoomType pRoomType){
-		return places.stream().filter(p -> p.getRoomType().equals(pRoomType)).collect(Collectors.toList());
+		List<Room> pRooms = places.stream().filter(p -> p.getRoomType().equals(pRoomType)).collect(Collectors.toList());
+        Collections.shuffle(pRooms); 
+        return pRooms;
 	}
 	
 	public Stack<GridPoint> FindWay(Object o, String roomName){

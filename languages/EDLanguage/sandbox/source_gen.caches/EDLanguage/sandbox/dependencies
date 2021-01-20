@@ -17,7 +17,6 @@
   <dependency className="EDLanguage.sandbox.Doctor">
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
-    <classNode dependClassName="EDLanguage.sandbox.INOVA" />
     <classNode dependClassName="EDLanguage.sandbox.NewPatientNeedMedicineSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
@@ -41,13 +40,10 @@
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.InfectionCondition" />
     <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
     <classNode dependClassName="simcore.basicStructures.AdmissionBays" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
-    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.DoctorOffice">
@@ -124,7 +120,6 @@
   <dependency className="EDLanguage.sandbox.JuniorDoctor">
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
-    <classNode dependClassName="EDLanguage.sandbox.INOVA" />
     <classNode dependClassName="EDLanguage.sandbox.NewPatientNeedMedicineSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
@@ -148,13 +143,10 @@
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
     <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.InfectionCondition" />
     <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
     <classNode dependClassName="simcore.basicStructures.AdmissionBays" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
-    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
     <classNode extendsClassName="EDLanguage.sandbox.Doctor" />
   </dependency>
   <dependency className="EDLanguage.sandbox.LFDNegativeSignal">

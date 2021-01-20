@@ -143,11 +143,16 @@ public class Room extends Locatable{
 	
 	public void setDesks(int pintNumDesks) {
 		desks = new ArrayList<Desk>();
-		for(int i = 0; i < pintNumDesks; i++) {
-			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
-			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
-			desks.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
+		if(pintNumDesks == 1) {
+			desks.add(new Desk(context, space, grid, (locX+(width/2)), (locY+(height/2)), this));
+		} else {
+			for(int i = 0; i < pintNumDesks; i++) {
+				int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
+				int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
+				desks.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
+			}
 		}
+
 		occupiables.addAll(desks);
 	}
 	
