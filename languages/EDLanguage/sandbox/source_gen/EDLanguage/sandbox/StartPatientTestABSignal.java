@@ -8,7 +8,7 @@ public class StartPatientTestABSignal extends ActorTypeSignal {
   public StartPatientTestABSignal() {
     this.setName("StartPatientTestAB");
     this.setDescription("");
-    this.AddActor("testingDevice");
+    this.AddActor("LFDDevice");
   }
 
 }

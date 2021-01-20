@@ -9,8 +9,10 @@ import simcore.action.Action;
 import simcore.Signals.DirectSignal;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.SendSignalAction;
-import simcore.action.basicAction.DischargeAction;
+import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.agents.Patient;
+import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.Signals.Orders.MoveToOrder;
 
@@ -35,6 +37,10 @@ public class LIATMachine extends Staff {
         curMission = new Action("StateFree");
         this.InitStateFree(s);
         break;
+      case "ConductLIAT":
+        curMission = new Action("TestPatientGeneral");
+        this.InitTestPatientGeneral(s);
+        break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
         return;
@@ -52,6 +58,29 @@ public class LIATMachine extends Staff {
       ((DirectSignal) sendSignalTemp).setTarget();
     }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitTestPatientGeneral(Signal s) {
+    System.out.println("TestPatientGeneral" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
+    if (CheckCondition(new TestResultCondition().WithTest(LIAT.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
+      sendSignalTemp = new LIATPositiveSignal();
+      if (sendSignalTemp instanceof DirectSignal) {
+        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
+      }
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    } else {
+      sendSignalTemp = new LIATNegativeSignal();
+      if (sendSignalTemp instanceof DirectSignal) {
+        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
+      }
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    }
 
   }
   public void InitDischargePatient(Signal s) {

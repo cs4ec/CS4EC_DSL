@@ -14,9 +14,14 @@
   <dependency className="EDLanguage.sandbox.ConductLFDSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
+  <dependency className="EDLanguage.sandbox.ConductLIATSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="EDLanguage.sandbox.Doctor">
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
     <classNode dependClassName="EDLanguage.sandbox.NewPatientNeedMedicineSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
@@ -54,7 +59,9 @@
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
     <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="EDLanguage.sandbox.Exit" />
+    <classNode dependClassName="EDLanguage.sandbox.LFDDevice" />
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATMachine" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsABBay" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsABDoctor" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsABNurse" />
@@ -66,7 +73,6 @@
     <classNode dependClassName="EDLanguage.sandbox.TriageSideRoom" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.office" />
-    <classNode dependClassName="EDLanguage.sandbox.testingDevice" />
     <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
@@ -119,7 +125,9 @@
   </dependency>
   <dependency className="EDLanguage.sandbox.JuniorDoctor">
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
     <classNode dependClassName="EDLanguage.sandbox.NewPatientNeedMedicineSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
@@ -149,6 +157,31 @@
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Doctor" />
   </dependency>
+  <dependency className="EDLanguage.sandbox.LFDDevice">
+    <classNode dependClassName="EDLanguage.sandbox.INOVA" />
+    <classNode dependClassName="EDLanguage.sandbox.LFDNegativeSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LFDPositiveSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.PatientTestNegativeSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.PatientTestPositiveSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.DirectSignal" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
   <dependency className="EDLanguage.sandbox.LFDNegativeSignal">
     <classNode extendsClassName="simcore.Signals.DirectSignal" />
   </dependency>
@@ -165,7 +198,10 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="EDLanguage.sandbox.LIATMachine">
+    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATIsReadySignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATNegativeSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATPositiveSignal" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -180,8 +216,16 @@
     <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
     <classNode dependClassName="simcore.action.basicAction.OrderAction" />
     <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.LIATNegativeSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.LIATPositiveSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
   </dependency>
   <dependency className="EDLanguage.sandbox.MajorsABBay">
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -396,31 +440,6 @@
   </dependency>
   <dependency className="EDLanguage.sandbox.office">
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="EDLanguage.sandbox.testingDevice">
-    <classNode dependClassName="EDLanguage.sandbox.INOVA" />
-    <classNode dependClassName="EDLanguage.sandbox.LFDNegativeSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.LFDPositiveSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.PatientTestNegativeSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.PatientTestPositiveSignal" />
-    <classNode dependClassName="java.lang.Double" />
-    <classNode dependClassName="java.lang.Object" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.lang.System" />
-    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
-    <classNode dependClassName="repast.simphony.space.grid.Grid" />
-    <classNode dependClassName="simcore.Signals.DirectSignal" />
-    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
-    <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.action.Action" />
-    <classNode dependClassName="simcore.action.ActionStep" />
-    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
-    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
-    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
-    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
-    <classNode dependClassName="simcore.agents.Patient" />
-    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
 </dependenciesRoot>
 

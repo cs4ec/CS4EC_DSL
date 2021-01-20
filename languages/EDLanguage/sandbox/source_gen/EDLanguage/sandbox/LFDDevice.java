@@ -16,16 +16,16 @@ import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.Signals.Orders.MoveToOrder;
 
-public class testingDevice extends Staff {
+public class LFDDevice extends Staff {
 
   public double groupStress = Double.parseDouble("" + "0");
 
-  public testingDevice(ContinuousSpace<Object> space, Grid<Object> grid) {
+  public LFDDevice(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
     mintMyMaxPatients = 0;
   }
 
-  public testingDevice(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
+  public LFDDevice(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
     super(space, grid, pstrStartLocation);
   }
 

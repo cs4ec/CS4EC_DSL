@@ -8,7 +8,7 @@ public class ConductLFDSignal extends ActorTypeSignal {
   public ConductLFDSignal() {
     this.setName("ConductLFD");
     this.setDescription("do an LFD");
-    this.AddActor("testingDevice");
+    this.AddActor("LFDDevice");
   }
 
 }

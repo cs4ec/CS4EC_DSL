@@ -59,7 +59,10 @@ public class EDBuilder implements ContextBuilder<Object> {
       context.add(new MajorsABDoctor(space, grid));
     }
     for (int i = 0; i < 50; i++) {
-      context.add(new testingDevice(space, grid));
+      context.add(new LFDDevice(space, grid));
+    }
+    for (int i = 0; i < 10; i++) {
+      context.add(new LIATMachine(space, grid));
     }
 
 

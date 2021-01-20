@@ -14,12 +14,12 @@ import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForTimeAction;
+import simcore.Signals.DirectSignal;
+import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.AdmitAction;
 import simcore.basicStructures.AdmissionBays;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
-import simcore.Signals.DirectSignal;
-import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.DischargeAction;
 
@@ -49,12 +49,20 @@ public class JuniorDoctor extends Doctor {
         this.InitInitialObsevations(s);
         break;
       case "LFDPositive":
-        curMission = new Action("TreatPositivePatient");
-        this.InitTreatPositivePatient(s);
+        curMission = new Action("LFDPositive");
+        this.InitLFDPositive(s);
         break;
       case "LFDNegative":
-        curMission = new Action("TreatNegativePatient");
-        this.InitTreatNegativePatient(s);
+        curMission = new Action("LFDNegative");
+        this.InitLFDNegative(s);
+        break;
+      case "LIATPositive":
+        curMission = new Action("LIATPositive");
+        this.InitLIATPositive(s);
+        break;
+      case "LIATNegative":
+        curMission = new Action("LIATNegative");
+        this.InitLIATNegative(s);
         break;
       case "PatientNeedsFinalConsutlation":
         curMission = new Action("GiveConsultation");
@@ -95,22 +103,28 @@ public class JuniorDoctor extends Doctor {
     this.InitDecideOnPatientPathway(s);
 
   }
-  public void InitTreatPositivePatient(Signal s) {
-    System.out.println("TreatPositivePatient" + " function called");
+  public void InitLFDPositive(Signal s) {
+    System.out.println("LFDPositive" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+    curMission.WithStep(new ActionStep().WithName("Give patient swab test").WithAction(new StayForTimeAction().WithTimeSpan(180)));
+    curMission.WithStep(new ActionStep().WithName("Go to testing machine").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("Put swabs in machine").WithAction(new StayForTimeAction().WithTimeSpan(60)));
+    sendSignalTemp = new ConductLIATSignal();
+    if (sendSignalTemp instanceof DirectSignal) {
+      ((DirectSignal) sendSignalTemp).setTarget();
+    }
+    sendSignalTemp.AddData("patient", s.GetData("patient"));
+    sendSignalTemp.AddData("replyTo", this);
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("positivePatientsSeen", "+=", 1)));
   }
-  public void InitTreatNegativePatient(Signal s) {
-    System.out.println("TreatNegativePatient" + " function called");
+  public void InitLFDNegative(Signal s) {
+    System.out.println("LFDNegative" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -123,8 +137,22 @@ public class JuniorDoctor extends Doctor {
 
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("NegativePatientsSeen", "+=", 1)));
   }
-  public void InitXRay(Signal s) {
-    System.out.println("XRay" + " function called");
+  public void InitLIATPositive(Signal s) {
+    System.out.println("LIATPositive" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.RED)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+
+  }
+  public void InitOrderXRay(Signal s) {
+    System.out.println("OrderXRay" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -136,6 +164,20 @@ public class JuniorDoctor extends Doctor {
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitLIATNegative(Signal s) {
+    System.out.println("LIATNegative" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
 
   }
   public void InitTakeMedicine(Signal s) {
@@ -157,13 +199,9 @@ public class JuniorDoctor extends Doctor {
     Signal sendSignalTemp = new Signal();
 
     if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        this.InitOrderBloodTest(s);
-      } else {
-        this.InitDischargePatient(s);
-      }
+      this.InitOrderBloodTest(s);
     } else {
-      this.InitXRay(s);
+      this.InitOrderXRay(s);
     }
 
     curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("positivePatientsSeen", "+=", 1)));
@@ -200,7 +238,7 @@ public class JuniorDoctor extends Doctor {
       }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       sendSignalTemp.AddData("replyTo", this);
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+      curMission.WithStep(new ActionStep().WithName("20% chance going to be admit, if so need to do an LFD test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       this.InitDischargePatient(s);
     }
