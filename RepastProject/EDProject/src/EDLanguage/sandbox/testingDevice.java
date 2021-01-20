@@ -12,6 +12,9 @@ import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.agents.Patient;
 import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
+import simcore.action.basicAction.DischargeAction;
+import simcore.action.basicAction.OrderAction;
+import simcore.Signals.Orders.MoveToOrder;
 
 public class testingDevice extends Staff {
 
@@ -89,6 +92,15 @@ public class testingDevice extends Staff {
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }
+
+  }
+  public void InitDischargePatient(Signal s) {
+    System.out.println("DischargePatient" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }
 

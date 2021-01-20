@@ -55,6 +55,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
+  private ConceptPresentation props_ResultCondition;
   private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomDefinition;
   private ConceptPresentation props_RoomInstanceDefinition;
@@ -420,6 +421,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
+      case LanguageConceptSwitch.ResultCondition:
+        if (props_ResultCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("result condition");
+          props_ResultCondition = cpb.create();
+        }
+        return props_ResultCondition;
       case LanguageConceptSwitch.Room:
         if (props_Room == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

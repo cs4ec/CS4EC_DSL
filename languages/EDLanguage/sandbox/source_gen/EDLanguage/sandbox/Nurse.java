@@ -20,6 +20,7 @@ import simcore.action.basicAction.OccupyAction;
 import simcore.basicStructures.Desk;
 import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
+import simcore.action.basicAction.DischargeAction;
 
 public class Nurse extends Staff {
 
@@ -162,6 +163,15 @@ public class Nurse extends Staff {
     }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitDischargePatient(Signal s) {
+    System.out.println("DischargePatient" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }
 

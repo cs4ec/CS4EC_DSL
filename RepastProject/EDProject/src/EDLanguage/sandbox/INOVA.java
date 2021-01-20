@@ -9,6 +9,7 @@ public class INOVA extends Test {
     sensitivity = 0.008;
     specificity = 0.0091;
     processingTime = 10;
+    name = "INOVA";
   }
 
   public static Test getInstance() {

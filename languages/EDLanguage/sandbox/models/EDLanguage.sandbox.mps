@@ -103,6 +103,10 @@
       <concept id="88285669845063092" name="EDLanguage.structure.DischargeAction" flags="ng" index="1kTJbH">
         <child id="88285669845063095" name="targetPatient" index="1kTJbI" />
       </concept>
+      <concept id="88285669868571243" name="EDLanguage.structure.ResultCondition" flags="ng" index="1mvUOM">
+        <property id="88285669869395338" name="result" index="1mqNFj" />
+        <child id="88285669868571244" name="test" index="1mvUOP" />
+      </concept>
       <concept id="513408552829965726" name="EDLanguage.structure.SignalReference" flags="ng" index="3n32J5">
         <reference id="513408552829965727" name="signal" index="3n32J4" />
       </concept>
@@ -1220,24 +1224,6 @@
         </node>
       </node>
     </node>
-    <node concept="3Vt_xe" id="2kH7UIGIR7P" role="2Ov1EZ">
-      <property role="TrG5h" value="LetPatientGo" />
-      <node concept="3VtFpM" id="2kH7UIGIR7Q" role="3VtFpR">
-        <node concept="1kTJbH" id="4TDP_lTCJF" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_lTCJH" role="1kTJbI" />
-        </node>
-        <node concept="3JG_m1" id="2kH7UIGIR8Q" role="3VtFpW">
-          <node concept="3JJFmu" id="2kH7UIGIR8S" role="3JG_8_" />
-          <node concept="3JG_m7" id="2kH7UIGIR8Z" role="3JG_nW">
-            <node concept="2Vh8JZ" id="2kH7UIGIR95" role="3JG_nS">
-              <node concept="j3T7i" id="5QJON_AXTJR" role="2Vh8JW">
-                <ref role="j3T7l" node="5QJON_AXpwt" resolve="Entrance" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="3Vt_xe" id="LMHHT2Ps3x" role="2Ov1EZ">
       <property role="TrG5h" value="DecideOnPatientPathway" />
       <node concept="3VtFpM" id="LMHHT2Ps3y" role="3VtFpR">
@@ -1257,8 +1243,8 @@
                 </node>
               </node>
               <node concept="3VtFpM" id="2kH7UIGIR7L" role="3VtFp$">
-                <node concept="1W3xii" id="2kH7UIGIR9e" role="3VtFpW">
-                  <ref role="1W3xij" node="2kH7UIGIR7P" resolve="LetPatientGo" />
+                <node concept="1W3xii" id="4TDP_nr9cw" role="3VtFpW">
+                  <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
                 </node>
               </node>
             </node>
@@ -1355,8 +1341,91 @@
             <property role="2IBTiX" value="The Doctor gives a final consultation with the Patient for 5 minutes" />
           </node>
         </node>
-        <node concept="1W3xii" id="th5uJCf$zc" role="3VtFpW">
-          <ref role="1W3xij" node="2kH7UIGIR7P" resolve="LetPatientGo" />
+        <node concept="3VtFpY" id="4TDP_nlOtn" role="3VtFpW">
+          <node concept="1mvUOM" id="4TDP_nlOtI" role="3VtFpT">
+            <property role="1mqNFj" value="true" />
+            <node concept="3S2u4K" id="4TDP_nlOtO" role="1mvUOP">
+              <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4TDP_nlOtr" role="3VtFpZ">
+            <node concept="3VtFpY" id="4TDP_nn6C0" role="3VtFpW">
+              <node concept="jeBDq" id="4TDP_nn6Cc" role="3VtFpT">
+                <node concept="xbsuO" id="4TDP_nn6Ce" role="x58j7">
+                  <node concept="3cmrfG" id="4TDP_npO$T" role="xbgmq">
+                    <property role="3cmrfH" value="1" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="4TDP_nn6C4" role="3VtFpZ">
+                <node concept="1kTJbH" id="4TDP_nn6Cq" role="3VtFpW">
+                  <node concept="3JJFmu" id="4TDP_nn6Cs" role="1kTJbI" />
+                </node>
+              </node>
+              <node concept="3VtFpM" id="4TDP_nn6Cw" role="3VtFp$">
+                <node concept="1kMh$d" id="4TDP_nr95f" role="3VtFpW">
+                  <property role="1kNZeT" value="4TDP_lX$Uq/AMBER" />
+                  <node concept="3JJFmu" id="4TDP_nr95h" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4TDP_nr96d" role="3VtFpW">
+                  <node concept="3JJFmu" id="4TDP_nr96g" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4TDP_nr96r" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4TDP_nvgFy" role="3JG_nS">
+                      <node concept="j3T7i" id="4TDP_nvgFA" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4TDP_nn6CE" role="3VtFp$">
+            <node concept="3VtFpY" id="4TDP_nn6CI" role="3VtFpW">
+              <node concept="1mvUOM" id="4TDP_nn6CU" role="3VtFpT">
+                <node concept="3S2u4K" id="4TDP_nn6D0" role="1mvUOP">
+                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
+                </node>
+              </node>
+              <node concept="3VtFpM" id="4TDP_nn6CM" role="3VtFpZ">
+                <node concept="3VtFpY" id="4TDP_nn6D3" role="3VtFpW">
+                  <node concept="jeBDq" id="4TDP_nn6Df" role="3VtFpT">
+                    <node concept="xbsuO" id="4TDP_nn6Dh" role="x58j7">
+                      <node concept="3cmrfG" id="4TDP_nn6Do" role="xbgmq">
+                        <property role="3cmrfH" value="1" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3VtFpM" id="4TDP_nn6D7" role="3VtFpZ">
+                    <node concept="1W3xii" id="4TDP_nr97N" role="3VtFpW">
+                      <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
+                    </node>
+                  </node>
+                  <node concept="3VtFpM" id="4TDP_nn6Dz" role="3VtFp$">
+                    <node concept="1kMh$d" id="4TDP_nr99w" role="3VtFpW">
+                      <property role="1kNZeT" value="4TDP_lX$Up/GREEN" />
+                      <node concept="3JJFmu" id="4TDP_nr99y" role="1kMh$e" />
+                    </node>
+                    <node concept="3JG_m1" id="4TDP_nr99d" role="3VtFpW">
+                      <node concept="3JJFmu" id="4TDP_nr99f" role="3JG_8_" />
+                      <node concept="3JG_m7" id="4TDP_nr99n" role="3JG_nW">
+                        <node concept="2Vh8JZ" id="4TDP_nvgFD" role="3JG_nS">
+                          <node concept="j3T7i" id="4TDP_nvgFH" role="2Vh8JW">
+                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="4TDP_nn6Gz" role="3VtFp$">
+                <node concept="1kTJbH" id="4TDP_nn6GB" role="3VtFpW">
+                  <node concept="3JJFmu" id="4TDP_nn6GD" role="1kTJbI" />
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="3n32J5" id="4TDP_n2VUX" role="3n3c3i">
@@ -1773,6 +1842,24 @@
   <node concept="3Vql55" id="3l6cNjecY0f">
     <property role="TrG5h" value="Staff" />
     <property role="3GE5qa" value="StaffDefinition" />
+    <node concept="3Vt_xe" id="4TDP_nr96K" role="2Ov1EZ">
+      <property role="TrG5h" value="DischargePatient" />
+      <node concept="3VtFpM" id="4TDP_nr96L" role="3VtFpR">
+        <node concept="1kTJbH" id="4TDP_nr96Q" role="3VtFpW">
+          <node concept="3JJFmu" id="4TDP_nr96S" role="1kTJbI" />
+        </node>
+        <node concept="3JG_m1" id="4TDP_nr970" role="3VtFpW">
+          <node concept="3JJFmu" id="4TDP_nr972" role="3JG_8_" />
+          <node concept="3JG_m7" id="4TDP_nr97b" role="3JG_nW">
+            <node concept="2Vh8JZ" id="4TDP_ntRl9" role="3JG_nS">
+              <node concept="j3T7i" id="4TDP_ntRld" role="2Vh8JW">
+                <ref role="j3T7l" node="5QJON_AXpwt" resolve="Entrance" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="jeB$7" id="6tNT_P6sMot" role="3eYOtt">
       <property role="TrG5h" value="groupStress" />
       <property role="x7nQs" value="0" />
@@ -2165,6 +2252,7 @@
     <property role="3GE5qa" value="StaffDefinition" />
     <property role="TrG5h" value="MajorsABDoctor" />
     <property role="1n5rFW" value="2" />
+    <ref role="3Vt_ys" node="3l6cNjecY0f" resolve="Staff" />
     <node concept="3Vt_xe" id="$2vkoOQeIU" role="2Ov1EZ">
       <property role="TrG5h" value="SeePatient" />
       <node concept="3VtFpM" id="$2vkoOQeIV" role="3VtFpR">
@@ -2294,18 +2382,8 @@
             </node>
           </node>
           <node concept="3VtFpM" id="4TDP_lYREU" role="3VtFpZ">
-            <node concept="1kTJbH" id="4TDP_lYRFt" role="3VtFpW">
-              <node concept="3JJFmu" id="4TDP_lYRFv" role="1kTJbI" />
-            </node>
-            <node concept="3JG_m1" id="4TDP_lYRHn" role="3VtFpW">
-              <node concept="3JJFmu" id="4TDP_lYRHp" role="3JG_8_" />
-              <node concept="3JG_m7" id="4TDP_lYRHy" role="3JG_nW">
-                <node concept="2Vh8JZ" id="4TDP_lYRHC" role="3JG_nS">
-                  <node concept="j3T7i" id="4TDP_m0txq" role="2Vh8JW">
-                    <ref role="j3T7l" node="5QJON_AXpwt" resolve="Entrance" />
-                  </node>
-                </node>
-              </node>
+            <node concept="1W3xii" id="4TDP_nr9gO" role="3VtFpW">
+              <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
             </node>
           </node>
           <node concept="3VtFpM" id="4TDP_lYRFz" role="3VtFp$">
@@ -2360,18 +2438,8 @@
             </node>
           </node>
           <node concept="3VtFpM" id="4TDP_lYRGx" role="3VtFpZ">
-            <node concept="1kTJbH" id="4TDP_lYRH3" role="3VtFpW">
-              <node concept="3JJFmu" id="4TDP_lYRH5" role="1kTJbI" />
-            </node>
-            <node concept="3JG_m1" id="4TDP_m0erq" role="3VtFpW">
-              <node concept="3JJFmu" id="4TDP_m0ers" role="3JG_8_" />
-              <node concept="3JG_m7" id="4TDP_m0er_" role="3JG_nW">
-                <node concept="2Vh8JZ" id="4TDP_m0erF" role="3JG_nS">
-                  <node concept="j3T7i" id="4TDP_m0txt" role="2Vh8JW">
-                    <ref role="j3T7l" node="5QJON_AXpwt" resolve="Entrance" />
-                  </node>
-                </node>
-              </node>
+            <node concept="1W3xii" id="4TDP_nr9gR" role="3VtFpW">
+              <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
             </node>
           </node>
           <node concept="3VtFpM" id="4TDP_lYRH9" role="3VtFp$">

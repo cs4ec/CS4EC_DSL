@@ -1,12 +1,15 @@
 package simcore.diagnosis;
 
+import simcore.basicStructures.Test;
+
 public class TestResult {
 	private Boolean infected;
 	private Double timestamp;
+	private Test testType;
 	
-	public TestResult(Boolean pboolInfected, Double pdblTimeStamp) {
+	public TestResult(Boolean pboolInfected, Test ptestType) {
 		infected = pboolInfected;
-		timestamp = pdblTimeStamp;
+		testType = ptestType;
 	}
 	
 	public Boolean isInfected() {
@@ -18,16 +21,22 @@ public class TestResult {
 	public Double getTimestamp() {
 		return timestamp;
 	}
+	public Test getTestType() {
+		return testType;
+	}
 	public void setTimestamp(Double timestamp) {
 		this.timestamp = timestamp;
 	}
 	
 	@Override
 	public String toString() {
+		String pstrPrint = "Tested with " + testType.name + " which gave result: ";
 		if (infected) {
-			return "Positive";
+			pstrPrint += "Positive";
 		} else {			
-			return "Negative";
+			pstrPrint += "Negative";
 		}
+		
+		return pstrPrint;
 	}
 }

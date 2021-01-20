@@ -1464,5 +1464,39 @@
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
+  <node concept="1TIwiD" id="4TDP_nhwDF">
+    <property role="EcuMT" value="88285669868571243" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="ResultCondition" />
+    <property role="34LRSv" value="result condition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="4TDP_nhwDG" role="1TKVEi">
+      <property role="IQ2ns" value="88285669868571244" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="test" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="ijr0ZWACOZ" resolve="TestKit" />
+    </node>
+    <node concept="1TJgyi" id="4TDP_nkDQa" role="1TKVEl">
+      <property role="IQ2nx" value="88285669869395338" />
+      <property role="TrG5h" value="result" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="25R3W" id="4TDP_nkDtl">
+    <property role="3F6X1D" value="88285669869393749" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="TestResultTypes" />
+    <node concept="25R33" id="4TDP_nkDtm" role="25R1y">
+      <property role="3tVfz5" value="88285669869393750" />
+      <property role="TrG5h" value="Positive" />
+      <property role="1L1pqM" value="positive" />
+    </node>
+    <node concept="25R33" id="4TDP_nkDtn" role="25R1y">
+      <property role="3tVfz5" value="88285669869393751" />
+      <property role="TrG5h" value="Negative" />
+      <property role="1L1pqM" value="negative" />
+    </node>
+  </node>
 </model>
 

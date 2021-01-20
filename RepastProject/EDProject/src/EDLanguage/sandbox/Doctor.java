@@ -20,8 +20,11 @@ import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
-import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.basicAction.conditions.ResultCondition;
+import simcore.action.basicAction.DischargeAction;
+import simcore.action.basicAction.AdmitAction;
+import simcore.basicStructures.AdmissionBays;
 
 public class Doctor extends Staff {
 
@@ -157,15 +160,6 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("tell nurse to take medicine for patient").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
-  public void InitLetPatientGo(Signal s) {
-    System.out.println("LetPatientGo" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
-
-  }
   public void InitDecideOnPatientPathway(Signal s) {
     System.out.println("DecideOnPatientPathway" + " function called");
 
@@ -175,7 +169,7 @@ public class Doctor extends Staff {
       if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
         this.InitOrderBloodTest(s);
       } else {
-        this.InitLetPatientGo(s);
+        this.InitDischargePatient(s);
       }
     } else {
       this.InitXRay(s);
@@ -208,7 +202,34 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-    this.InitLetPatientGo(s);
+    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
+      if (CheckCondition(new PossibilityCondition().WithPossibility(1))) {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
+      } else {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+      }
+    } else {
+      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(false))) {
+        if (CheckCondition(new PossibilityCondition().WithPossibility(1))) {
+          this.InitDischargePatient(s);
+        } else {
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.GREEN)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+        }
+      } else {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
+      }
+    }
+
+  }
+  public void InitDischargePatient(Signal s) {
+    System.out.println("DischargePatient" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData("patient")))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
 
   }
 

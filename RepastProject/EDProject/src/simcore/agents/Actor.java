@@ -210,7 +210,7 @@ public class Actor extends Agent {
 			for (Actor actor : plstAssignedStaff) {
 				actor.deAssignPatient(p);
 			}
-			
+			p.setDischarged();
 			NextStep();
 		}
 		
@@ -221,7 +221,7 @@ public class Actor extends Agent {
 			for (Actor actor : plstAssignedStaff) {
 				actor.deAssignPatient(p);
 			}
-			
+			p.setAdmitted(((AdmitAction)stepLogic).getAdmissionBay());
 			NextStep();
 		}
 		

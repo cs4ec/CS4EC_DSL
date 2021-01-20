@@ -33,20 +33,24 @@ public class Test {
 	public TestResult TestPatient(Patient pPatient, Double pdblCurrentTimestamp) {
 		boolean patientIsInfected = (pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Asymptomatic
 										|| pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic);
-		
+		TestResult ptestResult = null;
 		Double pdblRand = RandomHelper.nextDouble();
 		if (patientIsInfected) { // Sensitivity value used
 			if (pdblRand < sensitivity) {
-				return new TestResult(true, pdblCurrentTimestamp);
+				ptestResult = new TestResult(true, this);
+			} else {
+				ptestResult = new TestResult(false, this);
 			}
-			return new TestResult(false, pdblCurrentTimestamp);
-
 		} else { // Specificity value used
 			if (pdblRand < specificity) {
-				return new TestResult(false, pdblCurrentTimestamp);
+				ptestResult = new TestResult(false, this);
+			} else {
+				ptestResult = new TestResult(true, this);
 			}
-			return new TestResult(true, pdblCurrentTimestamp);
 		} 
+		
+		pPatient.addTestResult(ptestResult);
+		return ptestResult;
 	}
 	
 	public double getSensitivity() {

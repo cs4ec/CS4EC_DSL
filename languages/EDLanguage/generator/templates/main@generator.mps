@@ -657,6 +657,12 @@
         <ref role="v9R2y" node="4TDP_lXzxf" resolve="reduce_AdmitAction" />
       </node>
     </node>
+    <node concept="3aamgX" id="4TDP_nhx14" role="3acgRq">
+      <ref role="30HIoZ" to="3751:4TDP_nhwDF" resolve="ResultCondition" />
+      <node concept="j$656" id="4TDP_nhx15" role="1lVwrX">
+        <ref role="v9R2y" node="4TDP_nhx12" resolve="reduce_ResultCondition" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="DbMKZsswSi">
     <property role="TrG5h" value="MyActor" />
@@ -5708,6 +5714,32 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbF" id="4TDP_neZtg" role="3cqZAp">
+          <node concept="37vLTI" id="4TDP_neZKt" role="3clFbG">
+            <node concept="Xl_RD" id="4TDP_neZLP" role="37vLTx">
+              <property role="Xl_RC" value="this" />
+              <node concept="17Uvod" id="4TDP_neZRD" role="lGtFl">
+                <property role="2qtEX9" value="value" />
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                <node concept="3zFVjK" id="4TDP_neZRG" role="3zH0cK">
+                  <node concept="3clFbS" id="4TDP_neZRH" role="2VODD2">
+                    <node concept="3clFbF" id="4TDP_neZRN" role="3cqZAp">
+                      <node concept="2OqwBi" id="4TDP_neZRI" role="3clFbG">
+                        <node concept="3TrcHB" id="4TDP_neZRL" role="2OqNvi">
+                          <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                        </node>
+                        <node concept="30H73N" id="4TDP_neZRM" role="2Oq$k0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="37vLTw" id="4TDP_neZte" role="37vLTJ">
+              <ref role="3cqZAo" to="y2pi:~Test.name" resolve="name" />
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="17Uvod" id="ijr0ZWuXyA" role="lGtFl">
         <property role="2qtEX9" value="name" />
@@ -6830,6 +6862,134 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4TDP_nhx12">
+    <property role="TrG5h" value="reduce_ResultCondition" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="3gUMe" to="3751:4TDP_nhwDF" resolve="ResultCondition" />
+    <node concept="312cEu" id="4TDP_nhx3u" role="13RCb5">
+      <property role="TrG5h" value="_class_" />
+      <node concept="15s5l7" id="4TDP_nhxvb" role="lGtFl">
+        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: There is no default constructor available in super class simcore.agents.Actor&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/8974945326827961340]&quot;;" />
+        <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Actor" />
+      </node>
+      <node concept="312cEg" id="4TDP_nhxgZ" role="jymVt">
+        <property role="TrG5h" value="curMission" />
+        <node concept="3Tm6S6" id="4TDP_nhxh0" role="1B3o_S" />
+        <node concept="3uibUv" id="4TDP_nhxh1" role="1tU5fm">
+          <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
+        </node>
+      </node>
+      <node concept="2tJIrI" id="4TDP_nhxh2" role="jymVt" />
+      <node concept="3clFb_" id="4TDP_nhxh3" role="jymVt">
+        <property role="TrG5h" value="InitFunction" />
+        <node concept="3clFbS" id="4TDP_nhxh4" role="3clF47">
+          <node concept="3clFbH" id="4TDP_nhxh5" role="3cqZAp" />
+          <node concept="3clFbF" id="4TDP_nhxh6" role="3cqZAp">
+            <node concept="2OqwBi" id="4TDP_nh$6K" role="3clFbG">
+              <node concept="2OqwBi" id="4TDP_nhxh7" role="2Oq$k0">
+                <node concept="2OqwBi" id="4TDP_nhxh8" role="2Oq$k0">
+                  <node concept="2ShNRf" id="4TDP_nhxh9" role="2Oq$k0">
+                    <node concept="1pGfFk" id="4TDP_nhxha" role="2ShVmc">
+                      <ref role="37wK5l" to="9axu:~ResultCondition.&lt;init&gt;()" resolve="ResultCondition" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="4TDP_nhxhb" role="2OqNvi">
+                    <ref role="37wK5l" to="9axu:~ResultCondition.WithPatient(simcore.agents.Patient)" resolve="WithPatient" />
+                    <node concept="10QFUN" id="4TDP_nhxhc" role="37wK5m">
+                      <node concept="3uibUv" id="4TDP_nhxhd" role="10QFUM">
+                        <ref role="3uigEE" to="uux2:~Patient" resolve="Patient" />
+                      </node>
+                      <node concept="2OqwBi" id="4TDP_nhxhe" role="10QFUP">
+                        <node concept="37vLTw" id="4TDP_nhxhf" role="2Oq$k0">
+                          <ref role="3cqZAo" node="4TDP_nhxhx" resolve="s" />
+                        </node>
+                        <node concept="liA8E" id="4TDP_nhxhg" role="2OqNvi">
+                          <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                          <node concept="Xl_RD" id="4TDP_nhxhh" role="37wK5m">
+                            <property role="Xl_RC" value="patient" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="4TDP_nhxhi" role="2OqNvi">
+                  <ref role="37wK5l" to="9axu:~ResultCondition.WithTest(simcore.basicStructures.Test)" resolve="WithTest" />
+                  <node concept="2YIFZM" id="4TDP_nhyLT" role="37wK5m">
+                    <ref role="37wK5l" to="y2pi:~Test.getInstance()" resolve="getInstance" />
+                    <ref role="1Pybhc" to="y2pi:~Test" resolve="Test" />
+                    <node concept="1ZhdrF" id="4TDP_nhyPB" role="lGtFl">
+                      <property role="2qtEX8" value="classConcept" />
+                      <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700937/1144433194310" />
+                      <node concept="3$xsQk" id="4TDP_nhyPE" role="3$ytzL">
+                        <node concept="3clFbS" id="4TDP_nhyPF" role="2VODD2">
+                          <node concept="3clFbF" id="4TDP_nhyPL" role="3cqZAp">
+                            <node concept="2OqwBi" id="4TDP_nhz$j" role="3clFbG">
+                              <node concept="2OqwBi" id="4TDP_nhzep" role="2Oq$k0">
+                                <node concept="2OqwBi" id="4TDP_nhyPG" role="2Oq$k0">
+                                  <node concept="3TrEf2" id="4TDP_nhyPJ" role="2OqNvi">
+                                    <ref role="3Tt5mk" to="3751:4TDP_nhwDG" resolve="test" />
+                                  </node>
+                                  <node concept="30H73N" id="4TDP_nhyPK" role="2Oq$k0" />
+                                </node>
+                                <node concept="3TrEf2" id="4TDP_nhznF" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="3751:ijr0ZXmg4C" resolve="testCategoryType" />
+                                </node>
+                              </node>
+                              <node concept="3TrcHB" id="4TDP_nhzNd" role="2OqNvi">
+                                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="4TDP_nh$mj" role="2OqNvi">
+                <ref role="37wK5l" to="9axu:~ResultCondition.WithResult(java.lang.Boolean)" resolve="WithResult" />
+                <node concept="3clFbT" id="4TDP_nkE8U" role="37wK5m">
+                  <property role="3clFbU" value="true" />
+                  <node concept="17Uvod" id="4TDP_nkEew" role="lGtFl">
+                    <property role="2qtEX9" value="value" />
+                    <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123137/1068580123138" />
+                    <node concept="3zFVjK" id="4TDP_nkEez" role="3zH0cK">
+                      <node concept="3clFbS" id="4TDP_nkEe$" role="2VODD2">
+                        <node concept="3clFbF" id="4TDP_nkEeE" role="3cqZAp">
+                          <node concept="2OqwBi" id="4TDP_nkEe_" role="3clFbG">
+                            <node concept="3TrcHB" id="4TDP_nkEeC" role="2OqNvi">
+                              <ref role="3TsBF5" to="3751:4TDP_nkDQa" resolve="result" />
+                            </node>
+                            <node concept="30H73N" id="4TDP_nkEeD" role="2Oq$k0" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="raruj" id="4TDP_nou2i" role="lGtFl" />
+            </node>
+          </node>
+          <node concept="3clFbH" id="4TDP_nhxhu" role="3cqZAp" />
+        </node>
+        <node concept="3Tm1VV" id="4TDP_nhxhv" role="1B3o_S" />
+        <node concept="3cqZAl" id="4TDP_nhxhw" role="3clF45" />
+        <node concept="37vLTG" id="4TDP_nhxhx" role="3clF46">
+          <property role="TrG5h" value="s" />
+          <node concept="3uibUv" id="4TDP_nhxhy" role="1tU5fm">
+            <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
+          </node>
+        </node>
+      </node>
+      <node concept="2tJIrI" id="4TDP_nhxgW" role="jymVt" />
+      <node concept="3Tm1VV" id="4TDP_nhx3v" role="1B3o_S" />
+      <node concept="3uibUv" id="4TDP_nhxgT" role="1zkMxy">
+        <ref role="3uigEE" to="uux2:~Actor" resolve="Actor" />
       </node>
     </node>
   </node>

@@ -1783,5 +1783,35 @@
       <node concept="l2Vlx" id="4TDP_mqZg_" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="4TDP_nhwDL">
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:4TDP_nhwDF" resolve="ResultCondition" />
+    <node concept="3EZMnI" id="4TDP_nhwDN" role="2wV5jI">
+      <node concept="3F0ifn" id="4TDP_nhwDU" role="3EZMnx">
+        <property role="3F0ifm" value="test" />
+      </node>
+      <node concept="1iCGBv" id="4TDP_nhwE0" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4TDP_nhwDG" resolve="test" />
+        <node concept="1sVBvm" id="4TDP_nhwE2" role="1sWHZn">
+          <node concept="1iCGBv" id="4TDP_nhwEa" role="2wV5jI">
+            <ref role="1NtTu8" to="3751:ijr0ZXmg4C" resolve="testCategoryType" />
+            <node concept="1sVBvm" id="4TDP_nhwEc" role="1sWHZn">
+              <node concept="3F0A7n" id="4TDP_nhwEj" role="2wV5jI">
+                <property role="1Intyy" value="true" />
+                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4TDP_nhwEu" role="3EZMnx">
+        <property role="3F0ifm" value="gave" />
+      </node>
+      <node concept="3F0A7n" id="4TDP_nkDQs" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4TDP_nkDQa" resolve="result" />
+      </node>
+      <node concept="l2Vlx" id="4TDP_nhwDQ" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

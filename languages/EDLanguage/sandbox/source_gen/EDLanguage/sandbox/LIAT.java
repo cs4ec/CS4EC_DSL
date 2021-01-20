@@ -9,6 +9,7 @@ public class LIAT extends Test {
     sensitivity = 0.009000000000000001;
     specificity = 0.0095;
     processingTime = 30;
+    name = "LIAT";
   }
 
   public static Test getInstance() {

@@ -36,6 +36,7 @@ import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.action.basicAction.conditions.IsAvailableCondition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.basicAction.conditions.ResultCondition;
 import simcore.action.basicAction.conditions.SeverityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
@@ -48,9 +49,11 @@ import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Seat;
+import simcore.basicStructures.Test;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
 import simcore.diagnosis.SeverityScore;
+import simcore.diagnosis.TestResult;
 import simcore.utilities.AStar;
 import simcore.utilities.Tuple;
 
@@ -281,42 +284,12 @@ public class Agent {
 	protected Occupiable SelectOccupiable(Room destination, Class occupiableType) {
 		ArrayList<Occupiable> plstEmptyOccupiables = (ArrayList<Occupiable>) destination.getAllEmptyOcupiablesOfType(occupiableType);
 		if (!plstEmptyOccupiables.isEmpty()) {
-			ArrayList<Occupiable> emptyOccupiable = (ArrayList<Occupiable>) plstEmptyOccupiables;
-			return emptyOccupiable.get(0);// <------ ToDo: change to have more complex seat selection
+			ArrayList<Occupiable> emptyOccupiables = (ArrayList<Occupiable>) plstEmptyOccupiables;
+			int pNumOccupiables = emptyOccupiables.size();
+			return emptyOccupiables.get(RandomHelper.nextIntFromTo(0, pNumOccupiables-1));// <------ ToDo: change to have more complex seat selection
 		}
 		return null;
 	}
-
-//	// The Agent scans the room and selects a seat
-//	protected Seat SelectSeat(Room destination) {
-//		List<Seat> plstEmptySeats = destination.getEmptySeats();
-//		if (!plstEmptySeats.isEmpty()) {
-//			ArrayList<Seat> emptySeatList = (ArrayList<Seat>) plstEmptySeats;
-//			return emptySeatList.get(0);// <------ ToDo: change to have more complex seat selection
-//		}
-//		return null;
-//	}
-//	
-//	// The Agent scans the room and selects a desk
-//	protected Desk SelectDesk(Room destination) {
-//		List<Desk> plstEmptyDesks = destination.getEmptyDesks();
-//		if (!plstEmptyDesks.isEmpty()) {
-//			ArrayList<Desk> emptyDeskList = (ArrayList<Desk>) plstEmptyDesks;
-//			return emptyDeskList.get(0);// <------ ToDo: change to have more complex desk selection
-//		}
-//		return null;
-//	}
-//	
-//	// The Agent scans the room and selects a bed
-//	protected Bed SelectBed(Room destination) {
-//		List<Bed> plstEmptyBeds = destination.getEmptyBeds();
-//		if (!plstEmptyBeds.isEmpty()) {
-//			ArrayList<Bed> emptyBedList = (ArrayList<Bed>) plstEmptyBeds;
-//			return emptyBedList.get(0);// <------ ToDo: change to have more complex bed selection
-//		}
-//		return null;
-//	}
-
 	/*
 	 * MovaTowards function is called by all the agents to decide and execute one's
 	 * next Move Step by is target object. If a target is of class Location, set the
@@ -500,9 +473,21 @@ public class Agent {
 		}
 		
 		if(c instanceof TestResultCondition) {
-			return ((TestResultCondition) c).getTestType().TestPatient(((TestResultCondition) c).getPatient(), 0.0).isInfected();
+			TestResult ptestResult = ((TestResultCondition) c).getTestType().TestPatient(((TestResultCondition) c).getPatient(), 0.0);
+			return ptestResult.isInfected();
 		}
 		
+		if(c instanceof ResultCondition) {
+			Test pTest = ((ResultCondition)c).getTest();
+			Patient pPatient = ((ResultCondition)c).getPatient();
+			ArrayList<TestResult> plstTestResults = (ArrayList<TestResult>) pPatient.getTestResults();
+			for (TestResult testResult : plstTestResults) {
+				if(testResult.getTestType() == pTest) {
+					return testResult.isInfected() == ((ResultCondition)c).getResult();
+				}
+			}
+			return false;
+		}
 		if(c instanceof InfectionCondition) {
 			return ((InfectionCondition) c).getInfectionStatus() == ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
 		}

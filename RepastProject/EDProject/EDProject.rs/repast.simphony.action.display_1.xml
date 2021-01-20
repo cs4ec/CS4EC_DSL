@@ -32,7 +32,7 @@
     </entry>
     <entry>
       <string>simcore.basicStructures.Desk</string>
-      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
+      <string>simcore.styles.SeatStyle</string>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.MajorsTriageNurse</string>
@@ -103,7 +103,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>1004709952</hashCode>
+    <hashCode>481497971</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>

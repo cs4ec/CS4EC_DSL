@@ -13,10 +13,13 @@ import simcore.Signals.Orders.FollowOrder;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
+import simcore.basicStructures.AdmissionBays;
 import simcore.basicStructures.Room;
+import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
 import simcore.diagnosis.InfectionState;
 import simcore.diagnosis.SeverityScore;
+import simcore.diagnosis.TestResult;
 
 public class Patient extends Agent {
 
@@ -24,11 +27,16 @@ public class Patient extends Agent {
 	private int mintMyID;
 	private Order curOrder;
 	private boolean hasBeenDealtWith;
+	private boolean loggedAndFinished;
 	private int totalWaitTime;
 	protected List<GridPoint> curPath;
 	protected List<Actor> mlstMyStaff;
 	private InfectionState actualInfectionState;
+	private List<TestResult> testResults;
 	private SeverityScore severityScore;
+	private boolean discharged;
+	private boolean admitted;
+	private AdmissionBays admittanceBay;
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -38,6 +46,7 @@ public class Patient extends Agent {
 		totalWaitTime = 0;
 		staticID++;
 		mintMyID = staticID;
+		testResults = new ArrayList<>();
 		mlstMyStaff = new ArrayList<>();
 	}
 
@@ -110,14 +119,29 @@ public class Patient extends Agent {
 	}
 	
 	private void LogStatus() {
-		if (!hasBeenDealtWith) {
-			totalWaitTime++;
-		} else if (curOrder != null) {
-			hasBeenDealtWith = true;
+		if (hasBeenDealtWith && !loggedAndFinished) {
 			ToolBox toolBox = ToolBox();
-			String content = this + " | total wait time: " + totalWaitTime + " | dealt at time point: "
-					+ toolBox.getTime();
+			String content = this + " | total wait time: " + totalWaitTime/60 + "mins | dealt at time point: "
+					+ TimeKeeper.getInstance().getTime().toString() + " | Had severity: " + severityScore + " | Had infection state: " + actualInfectionState.stateType.getInfectionStatus().toString();
+			
+			if(!testResults.isEmpty()) {
+				content += " | Test Results: ";
+				for (TestResult testResult : testResults) {
+					content += testResult;
+				}
+			}
+			
+			content += " | Final decision: ";
+			if(discharged) {
+				content += "discharged";
+			} 
+			if(admitted) {
+				content += "admitted to " + admittanceBay;
+			}
 			toolBox.GetLog().WriteLog("patientLog", content);
+			loggedAndFinished = true;
+		} else {
+			totalWaitTime++;
 		}
 	}
 
@@ -173,6 +197,28 @@ public class Patient extends Agent {
 	
 	public String getID() {
 		return mintMyID+ "";
+	}
+
+	public void addTestResult(TestResult ptestResult) {
+		testResults.add(ptestResult);
+	}
+	
+	public void setHasBeenDealtWith() {
+		hasBeenDealtWith = true;
+	}
+	
+	public void setDischarged() {
+		this.discharged = true;
+		setHasBeenDealtWith();
+	}
+	
+	public void setAdmitted(AdmissionBays bay) {
+		this.admittanceBay = bay;
+		setHasBeenDealtWith();
+	}
+	
+	public List<TestResult> getTestResults(){
+		return testResults;
 	}
 
 }
