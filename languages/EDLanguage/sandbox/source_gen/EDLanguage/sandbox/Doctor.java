@@ -16,6 +16,7 @@ import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.diagnosis.InfectionStatus;
+import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
@@ -47,15 +48,15 @@ public class Doctor extends Staff {
         curMission = new Action("CallPatientOver");
         this.InitCallPatientOver(s);
         break;
-      case "PatientTestPositive":
+      case "LFDPositive":
         curMission = new Action("TreatPositivePatient");
         this.InitTreatPositivePatient(s);
         break;
-      case "PatientTestNegative":
+      case "LFDNegative":
         curMission = new Action("TreatNegativePatient");
         this.InitTreatNegativePatient(s);
         break;
-      case "PatientNeedsFinalConsultation":
+      case "PatientNeedsFinalConsutlation":
         curMission = new Action("GiveFinalConsultation");
         this.InitGiveFinalConsultation(s);
         break;
@@ -77,39 +78,37 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("Inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(300)));
     if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Asymptomatic))) {
       curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-      sendSignalTemp = new StartPatientTestSignal();
+      sendSignalTemp = new ConductLFDSignal();
+      if (sendSignalTemp instanceof DirectSignal) {
+        ((DirectSignal) sendSignalTemp).setTarget();
+      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
+      sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
         curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-        sendSignalTemp = new StartPatientTestSignal();
+        sendSignalTemp = new ConductLFDSignal();
+        if (sendSignalTemp instanceof DirectSignal) {
+          ((DirectSignal) sendSignalTemp).setTarget();
+        }
         sendSignalTemp.AddData("patient", s.GetData("patient"));
+        sendSignalTemp.AddData("replyTo", this);
         curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       } else {
         if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Susceptible))) {
           curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-          sendSignalTemp = new StartPatientTestSignal();
+          sendSignalTemp = new ConductLFDSignal();
+          if (sendSignalTemp instanceof DirectSignal) {
+            ((DirectSignal) sendSignalTemp).setTarget();
+          }
           sendSignalTemp.AddData("patient", s.GetData("patient"));
+          sendSignalTemp.AddData("replyTo", this);
           curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
         } else {
         }
       }
     }
-
-  }
-  public void InitDiagnose(Signal s) {
-    System.out.println("Diagnose" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("move to diagnostic room").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
-    sendSignalTemp = new StartPatientTestSignal();
-    sendSignalTemp.AddData("patient", s.GetData("patient"));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-    curMission.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(600)));
 
   }
   public void InitTreatPositivePatient(Signal s) {
@@ -137,6 +136,9 @@ public class Doctor extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
     sendSignalTemp = new XRaySignal();
+    if (sendSignalTemp instanceof DirectSignal) {
+      ((DirectSignal) sendSignalTemp).setTarget();
+    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
@@ -148,6 +150,9 @@ public class Doctor extends Staff {
     Signal sendSignalTemp = new Signal();
 
     sendSignalTemp = new NewPatientNeedMedicineSignal();
+    if (sendSignalTemp instanceof DirectSignal) {
+      ((DirectSignal) sendSignalTemp).setTarget();
+    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("tell nurse to take medicine for patient").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
@@ -186,6 +191,9 @@ public class Doctor extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
     sendSignalTemp = new PatientNeedsBloodTestSignal();
+    if (sendSignalTemp instanceof DirectSignal) {
+      ((DirectSignal) sendSignalTemp).setTarget();
+    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));

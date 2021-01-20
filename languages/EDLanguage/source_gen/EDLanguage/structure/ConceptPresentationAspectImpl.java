@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Actor;
   private ConceptPresentation props_ActorInstantiation;
   private ConceptPresentation props_ActorReference;
+  private ConceptPresentation props_ActorTypeSignal;
   private ConceptPresentation props_AdmitAction;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeExpressionReference;
@@ -28,6 +29,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DataInstanceMap;
   private ConceptPresentation props_DataMap;
   private ConceptPresentation props_Description;
+  private ConceptPresentation props_DirectSignal;
   private ConceptPresentation props_DischargeAction;
   private ConceptPresentation props_EmergencyDepartment;
   private ConceptPresentation props_ExpressionCondition;
@@ -105,6 +107,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActorReference = cpb.create();
         }
         return props_ActorReference;
+      case LanguageConceptSwitch.ActorTypeSignal:
+        if (props_ActorTypeSignal == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ActorTypeSignal = cpb.create();
+        }
+        return props_ActorTypeSignal;
       case LanguageConceptSwitch.AdmitAction:
         if (props_AdmitAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -222,6 +231,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Description = cpb.create();
         }
         return props_Description;
+      case LanguageConceptSwitch.DirectSignal:
+        if (props_DirectSignal == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_DirectSignal = cpb.create();
+        }
+        return props_DirectSignal;
       case LanguageConceptSwitch.DischargeAction:
         if (props_DischargeAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

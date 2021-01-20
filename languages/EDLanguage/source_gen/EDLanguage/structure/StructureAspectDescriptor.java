@@ -21,6 +21,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptActor = createDescriptorForActor();
   /*package*/ final ConceptDescriptor myConceptActorInstantiation = createDescriptorForActorInstantiation();
   /*package*/ final ConceptDescriptor myConceptActorReference = createDescriptorForActorReference();
+  /*package*/ final ConceptDescriptor myConceptActorTypeSignal = createDescriptorForActorTypeSignal();
   /*package*/ final ConceptDescriptor myConceptAdmitAction = createDescriptorForAdmitAction();
   /*package*/ final ConceptDescriptor myConceptAttribute = createDescriptorForAttribute();
   /*package*/ final ConceptDescriptor myConceptAttributeExpressionReference = createDescriptorForAttributeExpressionReference();
@@ -37,6 +38,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDataInstanceMap = createDescriptorForDataInstanceMap();
   /*package*/ final ConceptDescriptor myConceptDataMap = createDescriptorForDataMap();
   /*package*/ final ConceptDescriptor myConceptDescription = createDescriptorForDescription();
+  /*package*/ final ConceptDescriptor myConceptDirectSignal = createDescriptorForDirectSignal();
   /*package*/ final ConceptDescriptor myConceptDischargeAction = createDescriptorForDischargeAction();
   /*package*/ final ConceptDescriptor myConceptEmergencyDepartment = createDescriptorForEmergencyDepartment();
   /*package*/ final ConceptDescriptor myConceptExpressionCondition = createDescriptorForExpressionCondition();
@@ -111,7 +113,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActor, myConceptActorInstantiation, myConceptActorReference, myConceptAdmitAction, myConceptAttribute, myConceptAttributeExpressionReference, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptChoice, myConceptCondition, myConceptConsequence, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptDischargeAction, myConceptEmergencyDepartment, myConceptExpressionCondition, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptInfectionCondition, myConceptInfectionState, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptNumericExpression, myConceptObjectInstance, myConceptOccupiableInstance, myConceptOccupyAction, myConceptOrder, myConceptOrderPatientAction, myConceptPatient, myConceptPatientInstance, myConceptPatientInterval, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRoom, myConceptRoomDefinition, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptRoomTypeReference, myConceptSelfInstance, myConceptSendSignalAction, myConceptSeverityCondition, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptTest, myConceptTestAction, myConceptTestKit, myConceptWallDefinition, myConceptWallInstanceDefinition);
+    return Arrays.asList(myConceptActor, myConceptActorInstantiation, myConceptActorReference, myConceptActorTypeSignal, myConceptAdmitAction, myConceptAttribute, myConceptAttributeExpressionReference, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptChoice, myConceptCondition, myConceptConsequence, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptDirectSignal, myConceptDischargeAction, myConceptEmergencyDepartment, myConceptExpressionCondition, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptInfectionCondition, myConceptInfectionState, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptNumericExpression, myConceptObjectInstance, myConceptOccupiableInstance, myConceptOccupyAction, myConceptOrder, myConceptOrderPatientAction, myConceptPatient, myConceptPatientInstance, myConceptPatientInterval, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRoom, myConceptRoomDefinition, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptRoomTypeReference, myConceptSelfInstance, myConceptSendSignalAction, myConceptSeverityCondition, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptTest, myConceptTestAction, myConceptTestKit, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -124,6 +126,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActorInstantiation;
       case LanguageConceptSwitch.ActorReference:
         return myConceptActorReference;
+      case LanguageConceptSwitch.ActorTypeSignal:
+        return myConceptActorTypeSignal;
       case LanguageConceptSwitch.AdmitAction:
         return myConceptAdmitAction;
       case LanguageConceptSwitch.Attribute:
@@ -156,6 +160,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDataMap;
       case LanguageConceptSwitch.Description:
         return myConceptDescription;
+      case LanguageConceptSwitch.DirectSignal:
+        return myConceptDirectSignal;
       case LanguageConceptSwitch.DischargeAction:
         return myConceptDischargeAction;
       case LanguageConceptSwitch.EmergencyDepartment:
@@ -296,6 +302,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552829815467");
     b.version(2);
     b.associate("actor", 0x71ffe5bd0118aacL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L).optional(false).origin("513408552829815468").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForActorTypeSignal() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "ActorTypeSignal", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a759561627f4L);
+    b.class_(false, false, true);
+    b.super_("EDLanguage.structure.Signal", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669848655860");
+    b.version(2);
+    b.alias("Signal to a set of actor types");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAdmitAction() {
@@ -447,6 +464,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8910807539222190210");
     b.version(2);
     b.property("description", 0x7ba98c3ed5361883L).type(PrimitiveTypeId.STRING).origin("8910807539222190211").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForDirectSignal() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "DirectSignal", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a759560ba2b4L);
+    b.class_(false, false, true);
+    b.super_("EDLanguage.structure.Signal", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669847966388");
+    b.version(2);
+    b.aggregate("targetActor", 0x139a759560ba2b7L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a2L).optional(false).ordered(true).multiple(false).origin("88285669847966391").done();
+    b.alias("direct signal");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDischargeAction() {
@@ -771,16 +800,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForSignal() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("EDLanguage", "Signal", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL);
-    b.class_(false, false, true);
+    b.class_(false, false, false);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552829743914");
     b.version(2);
     b.property("description", 0x71ffe5bd01074a3L).type(PrimitiveTypeId.STRING).origin("513408552829744291").done();
-    b.aggregate("receivers", 0x71ffe5bd0118aa9L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd0118aabL).optional(false).ordered(true).multiple(true).origin("513408552829815465").done();
     b.aggregate("senders", 0x3a7166f1d96f0ca7L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd0118aabL).optional(false).ordered(true).multiple(true).origin("4211260315489209511").done();
+    b.aggregate("receivers", 0x139a759561627f7L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd0118aabL).optional(false).ordered(true).multiple(true).origin("88285669848655863").done();
     b.aggregate("data", 0x3a7166f1d96f0c97L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c96L).optional(true).ordered(true).multiple(true).origin("4211260315489209495").done();
-    b.alias("signal");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSignalDefinition() {
@@ -800,6 +828,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.associate("signal", 0x3a7166f1d96f0c94L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL).optional(false).origin("4211260315489209492").done();
     b.aggregate("signalContent", 0x3c282c112f12561fL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x45056e1fe037ad68L).optional(true).ordered(true).multiple(true).origin("4334763093659899423").done();
+    b.aggregate("signalReceiver", 0x139a75956a903beL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a2L).optional(true).ordered(true).multiple(false).origin("88285669858280382").done();
     b.alias("signal initialize");
     return b.create();
   }

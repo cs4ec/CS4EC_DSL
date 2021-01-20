@@ -18,6 +18,7 @@ import simcore.action.basicAction.conditions.SeverityCondition;
 import simcore.diagnosis.SeverityScore;
 import simcore.action.ConsequenceStep;
 import simcore.action.Consequence;
+import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.DischargeAction;
 
@@ -78,6 +79,9 @@ public class Receptionist extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("TriageWaitingRoom")))));
     sendSignalTemp = new PatientWaitingForMajorsSignal();
+    if (sendSignalTemp instanceof DirectSignal) {
+      ((DirectSignal) sendSignalTemp).setTarget();
+    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
@@ -89,19 +93,11 @@ public class Receptionist extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("TriageWaitingRoom")))));
     sendSignalTemp = new PatientWaitingForMajorsABSignal();
+    if (sendSignalTemp instanceof DirectSignal) {
+      ((DirectSignal) sendSignalTemp).setTarget();
+    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-
-  }
-  public void InitTakeMedicineForPatient(Signal s) {
-    System.out.println("TakeMedicineForPatient" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("TriageWaitingRoom")))));
-    sendSignalTemp = new NewPatientNeedMedicineSignal();
-    sendSignalTemp.AddData("patient", s.GetData("patient"));
-    curMission.WithStep(new ActionStep().WithName("tell nurse patient need medicine").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
   public void InitLetPatientLeave(Signal s) {

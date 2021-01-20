@@ -120,8 +120,17 @@ public class Actor extends Agent {
 		Board board = ReadBoard();
 
 		if (isIdle) {
+			List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
 			List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
-			Signal s = selectSignal(plstSignals);
+			
+			// First see if there are any direct messages for me and prioritise those
+			Signal s = selectSignal(plstDirectSignals);
+			if(s == null) { // If none, select a generic message for my class type
+				s = selectSignal(plstSignals);
+			} else {
+				int iewv = 0;
+			}
+			
 			if (s == null) {
 				return;
 			}

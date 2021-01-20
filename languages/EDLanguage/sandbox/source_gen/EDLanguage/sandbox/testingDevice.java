@@ -10,6 +10,7 @@ import simcore.action.ActionStep;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.agents.Patient;
+import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 
 public class testingDevice extends Staff {
@@ -33,9 +34,9 @@ public class testingDevice extends Staff {
         curMission = new Action("TestPatient");
         this.InitTestPatient(s);
         break;
-      case "StartPatientTestAB":
-        curMission = new Action("TestPatientAB");
-        this.InitTestPatientAB(s);
+      case "ConductLFD":
+        curMission = new Action("TestPatientGeneral");
+        this.InitTestPatientGeneral(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -52,27 +53,39 @@ public class testingDevice extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
     if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new PatientTestPositiveSignal();
+      if (sendSignalTemp instanceof DirectSignal) {
+        ((DirectSignal) sendSignalTemp).setTarget();
+      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       sendSignalTemp = new PatientTestNegativeSignal();
+      if (sendSignalTemp instanceof DirectSignal) {
+        ((DirectSignal) sendSignalTemp).setTarget();
+      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }
 
   }
-  public void InitTestPatientAB(Signal s) {
-    System.out.println("TestPatientAB" + " function called");
+  public void InitTestPatientGeneral(Signal s) {
+    System.out.println("TestPatientGeneral" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
     if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
-      sendSignalTemp = new PatientTestPositiveABSignal();
+      sendSignalTemp = new LFDPositiveSignal();
+      if (sendSignalTemp instanceof DirectSignal) {
+        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
+      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
-      sendSignalTemp = new PatientTestNegativeABSignal();
+      sendSignalTemp = new LFDNegativeSignal();
+      if (sendSignalTemp instanceof DirectSignal) {
+        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
+      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }

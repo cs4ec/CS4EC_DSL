@@ -6,11 +6,9 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
 import simcore.action.Action;
+import simcore.Signals.DirectSignal;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.SendSignalAction;
-import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.conditions.TestResultCondition;
-import simcore.agents.Patient;
 
 public class LIATMachine extends Staff {
 
@@ -33,10 +31,6 @@ public class LIATMachine extends Staff {
         curMission = new Action("StateFree");
         this.InitStateFree(s);
         break;
-      case "StartPatientLIATTest":
-        curMission = new Action("TestPatient");
-        this.InitTestPatient(s);
-        break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
         return;
@@ -50,24 +44,10 @@ public class LIATMachine extends Staff {
     Signal sendSignalTemp = new Signal();
 
     sendSignalTemp = new LIATIsReadySignal();
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-
-  }
-  public void InitTestPatient(Signal s) {
-    System.out.println("TestPatient" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
-    if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
-      sendSignalTemp = new PatientLIATTestPositiveSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-    } else {
-      sendSignalTemp = new PatientLIATTestNegativeSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    if (sendSignalTemp instanceof DirectSignal) {
+      ((DirectSignal) sendSignalTemp).setTarget();
     }
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
 

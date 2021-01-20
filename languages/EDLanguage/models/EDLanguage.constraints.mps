@@ -856,5 +856,42 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="4TDP_mpbaS">
+    <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
+    <ref role="1M2myG" to="3751:svZ_Jg47cE" resolve="Signal" />
+    <node concept="9S07l" id="4TDP_mpbaT" role="9Vyp8">
+      <node concept="3clFbS" id="4TDP_mpbaU" role="2VODD2">
+        <node concept="3cpWs6" id="4TDP_mpbeN" role="3cqZAp">
+          <node concept="3clFbT" id="4TDP_mpbfh" role="3cqZAk" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4TDP_mpbgc">
+    <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
+    <ref role="1M2myG" to="3751:4TDP_m5yvO" resolve="ActorTypeSignal" />
+    <node concept="9S07l" id="4TDP_mpbgd" role="9Vyp8">
+      <node concept="3clFbS" id="4TDP_mpbge" role="2VODD2">
+        <node concept="3cpWs6" id="4TDP_mpbk7" role="3cqZAp">
+          <node concept="3clFbT" id="4TDP_mpbk_" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4TDP_mpblw">
+    <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
+    <ref role="1M2myG" to="3751:4TDP_m2UaO" resolve="DirectSignal" />
+    <node concept="9S07l" id="4TDP_mpblx" role="9Vyp8">
+      <node concept="3clFbS" id="4TDP_mpbly" role="2VODD2">
+        <node concept="3cpWs6" id="4TDP_mpbpr" role="3cqZAp">
+          <node concept="3clFbT" id="4TDP_mpbpz" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

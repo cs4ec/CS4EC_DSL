@@ -15,6 +15,7 @@ import simcore.action.basicAction.OccupyAction;
 import simcore.basicStructures.Desk;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.Signals.Orders.StopOrder;
+import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 
 public class MajorsABNurse extends Staff {
@@ -57,6 +58,9 @@ public class MajorsABNurse extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new StopOrder())));
     sendSignalTemp = new PatientWaitingForMajorsABDoctorSignal();
+    if (sendSignalTemp instanceof DirectSignal) {
+      ((DirectSignal) sendSignalTemp).setTarget();
+    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));

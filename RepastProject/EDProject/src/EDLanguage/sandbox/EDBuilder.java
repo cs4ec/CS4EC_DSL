@@ -88,7 +88,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room TaskRoom1_s = new Room("TaskRoom1", context, space, grid, 120, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
     Room TaskRoom2_t = new Room("TaskRoom2", context, space, grid, 125, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
     Room TaskRoom3_u = new Room("TaskRoom3", context, space, grid, 130, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
-    Room Entrance_v = new Room("Entrance", context, space, grid, 95, 197, 10, 2, 1, 100000, office.getInstance(), Color.GRAY);
+    Room Entrance_v = new Room("Entrance", context, space, grid, 95, 197, 10, 2, 1, 100000, Entrance.getInstance(), Color.GRAY);
     Room XRay1_w = new Room("XRay1", context, space, grid, 140, 155, 5, 5, 1, 3, Radiology.getInstance(), Color.YELLOW);
     Room XRay2_x = new Room("XRay2", context, space, grid, 145, 155, 5, 5, 1, 3, Radiology.getInstance(), Color.YELLOW);
     Room TriageWaitingRoom_y = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, WaitingRoom.getInstance(), Color.BLUE);

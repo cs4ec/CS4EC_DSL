@@ -768,20 +768,18 @@
     <property role="EcuMT" value="513408552829743914" />
     <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
     <property role="TrG5h" value="Signal" />
-    <property role="34LRSv" value="signal" />
-    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="svZ_Jg4oED" role="1TKVEi">
-      <property role="IQ2ns" value="513408552829815465" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="receivers" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
-    </node>
     <node concept="1TJgyj" id="3DLpJ7prKMB" role="1TKVEi">
       <property role="IQ2ns" value="4211260315489209511" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="senders" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
+    </node>
+    <node concept="1TJgyj" id="4TDP_m5yvR" role="1TKVEi">
+      <property role="IQ2ns" value="88285669848655863" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="receivers" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
     </node>
@@ -792,16 +790,16 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3DLpJ7prKMm" resolve="DataMap" />
     </node>
-    <node concept="PrWs8" id="svZ_Jg47cF" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="PrWs8" id="53LYXLHZjRL" role="PzmwI">
-      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
-    </node>
     <node concept="1TJgyi" id="svZ_Jg47iz" role="1TKVEl">
       <property role="IQ2nx" value="513408552829744291" />
       <property role="TrG5h" value="description" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="PrWs8" id="4TDP_mkjW1" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="4TDP_mgX_K" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="svZ_Jg47cH">
@@ -833,6 +831,12 @@
       <property role="20kJfa" value="signalContent" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4k5rxZwdUPC" resolve="DataInstanceMap" />
+    </node>
+    <node concept="1TJgyj" id="4TDP_mEgeY" role="1TKVEi">
+      <property role="IQ2ns" value="88285669858280382" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="signalReceiver" />
+      <ref role="20lvS9" node="7o6PzEpI6ey" resolve="HumanInstance" />
     </node>
     <node concept="1TJgyj" id="3DLpJ7prKMk" role="1TKVEi">
       <property role="IQ2ns" value="4211260315489209492" />
@@ -1423,6 +1427,41 @@
       <property role="3tVfz5" value="88285669846568605" />
       <property role="TrG5h" value="RED" />
       <property role="1L1pqM" value="red bay" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4TDP_m2UaO">
+    <property role="EcuMT" value="88285669847966388" />
+    <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
+    <property role="TrG5h" value="DirectSignal" />
+    <property role="34LRSv" value="direct signal" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="svZ_Jg47cE" resolve="Signal" />
+    <node concept="PrWs8" id="4TDP_m2UaP" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="4TDP_mwJDr" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="1TJgyj" id="4TDP_m2UaR" role="1TKVEi">
+      <property role="IQ2ns" value="88285669847966391" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetActor" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpI6ey" resolve="HumanInstance" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4TDP_m5yvO">
+    <property role="EcuMT" value="88285669848655860" />
+    <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
+    <property role="TrG5h" value="ActorTypeSignal" />
+    <property role="34LRSv" value="Signal to a set of actor types" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="svZ_Jg47cE" resolve="Signal" />
+    <node concept="PrWs8" id="4TDP_m5yvP" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="4TDP_mwJDj" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
 </model>

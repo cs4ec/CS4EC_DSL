@@ -1,6 +1,6 @@
 package simcore.Signals;
 
-public class NewPatientArriveSignal extends Signal {
+public class NewPatientArriveSignal extends ActorTypeSignal {
 
   public NewPatientArriveSignal() {
     this.setName("NewPatientArrive");
