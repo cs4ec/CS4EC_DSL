@@ -14,7 +14,6 @@ import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForTimeAction;
-import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.AdmitAction;
 import simcore.basicStructures.AdmissionBays;
@@ -115,9 +114,6 @@ public class JuniorDoctor extends Doctor {
     curMission.WithStep(new ActionStep().WithName("Go to testing machine").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
     curMission.WithStep(new ActionStep().WithName("Put swabs in machine").WithAction(new StayForTimeAction().WithTimeSpan(60)));
     sendSignalTemp = new ConductLIATSignal();
-    if (sendSignalTemp instanceof DirectSignal) {
-      ((DirectSignal) sendSignalTemp).setTarget();
-    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     sendSignalTemp.AddData("replyTo", this);
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
@@ -158,9 +154,6 @@ public class JuniorDoctor extends Doctor {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
     sendSignalTemp = new XRaySignal();
-    if (sendSignalTemp instanceof DirectSignal) {
-      ((DirectSignal) sendSignalTemp).setTarget();
-    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
@@ -186,9 +179,6 @@ public class JuniorDoctor extends Doctor {
     Signal sendSignalTemp = new Signal();
 
     sendSignalTemp = new NewPatientNeedMedicineSignal();
-    if (sendSignalTemp instanceof DirectSignal) {
-      ((DirectSignal) sendSignalTemp).setTarget();
-    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("tell nurse to take medicine for patient").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
@@ -214,9 +204,6 @@ public class JuniorDoctor extends Doctor {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")))));
     sendSignalTemp = new PatientNeedsBloodTestSignal();
-    if (sendSignalTemp instanceof DirectSignal) {
-      ((DirectSignal) sendSignalTemp).setTarget();
-    }
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
@@ -233,9 +220,6 @@ public class JuniorDoctor extends Doctor {
     curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
     if (CheckCondition(new PossibilityCondition().WithPossibility(20))) {
       sendSignalTemp = new ConductLFDSignal();
-      if (sendSignalTemp instanceof DirectSignal) {
-        ((DirectSignal) sendSignalTemp).setTarget();
-      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("20% chance going to be admit, if so need to do an LFD test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));

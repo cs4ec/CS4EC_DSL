@@ -87,10 +87,6 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
-      <concept id="1081256982272" name="jetbrains.mps.baseLanguage.structure.InstanceOfExpression" flags="nn" index="2ZW3vV">
-        <child id="1081256993305" name="classType" index="2ZW6by" />
-        <child id="1081256993304" name="leftExpression" index="2ZW6bz" />
-      </concept>
       <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
         <reference id="1144433057691" name="classifier" index="1PxDUh" />
       </concept>
@@ -251,9 +247,11 @@
       <concept id="1722980698497626400" name="jetbrains.mps.lang.generator.structure.ITemplateCall" flags="ng" index="v9R3L">
         <reference id="1722980698497626483" name="template" index="v9R2y" />
       </concept>
+      <concept id="1167168920554" name="jetbrains.mps.lang.generator.structure.BaseMappingRule_Condition" flags="in" index="30G5F_" />
       <concept id="1167169188348" name="jetbrains.mps.lang.generator.structure.TemplateFunctionParameter_sourceNode" flags="nn" index="30H73N" />
       <concept id="1167169308231" name="jetbrains.mps.lang.generator.structure.BaseMappingRule" flags="ng" index="30H$t8">
         <reference id="1167169349424" name="applicableConcept" index="30HIoZ" />
+        <child id="1167169362365" name="conditionFunction" index="30HLyM" />
       </concept>
       <concept id="1092059087312" name="jetbrains.mps.lang.generator.structure.TemplateDeclaration" flags="ig" index="13MO4I">
         <reference id="1168285871518" name="applicableConcept" index="3gUMe" />
@@ -315,6 +313,13 @@
         <child id="3648723375513868575" name="repositoryArg" index="Vysub" />
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
+      <concept id="1883223317721008708" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfStatement" flags="nn" index="Jncv_">
+        <reference id="1883223317721008712" name="nodeConcept" index="JncvD" />
+        <child id="1883223317721008709" name="body" index="Jncv$" />
+        <child id="1883223317721008711" name="variable" index="JncvA" />
+        <child id="1883223317721008710" name="nodeExpression" index="JncvB" />
+      </concept>
+      <concept id="1883223317721008713" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVariable" flags="ng" index="JncvC" />
       <concept id="1145404486709" name="jetbrains.mps.lang.smodel.structure.SemanticDowncastExpression" flags="nn" index="2JrnkZ">
         <child id="1145404616321" name="leftExpression" index="2JrQYb" />
       </concept>
@@ -504,7 +509,67 @@
     <node concept="3aamgX" id="6yyWtWVXFUM" role="3acgRq">
       <ref role="30HIoZ" to="3751:3DLpJ7prKMj" resolve="SignalInitReference" />
       <node concept="j$656" id="6yyWtWVXFUN" role="1lVwrX">
-        <ref role="v9R2y" node="6yyWtWVXFUK" resolve="reduce_SignalInitReference" />
+        <ref role="v9R2y" node="6yyWtWVXFUK" resolve="reduce_ActorTypeSignalInitReference" />
+      </node>
+      <node concept="30G5F_" id="4TDP_nMn9F" role="30HLyM">
+        <node concept="3clFbS" id="4TDP_nMn9G" role="2VODD2">
+          <node concept="Jncv_" id="4TDP_nMnhK" role="3cqZAp">
+            <ref role="JncvD" to="3751:4TDP_m5yvO" resolve="ActorTypeSignal" />
+            <node concept="2OqwBi" id="4TDP_nMnhL" role="JncvB">
+              <node concept="30H73N" id="4TDP_nMnhM" role="2Oq$k0" />
+              <node concept="3TrEf2" id="4TDP_nMnhN" role="2OqNvi">
+                <ref role="3Tt5mk" to="3751:3DLpJ7prKMk" resolve="signal" />
+              </node>
+            </node>
+            <node concept="3clFbS" id="4TDP_nMnhO" role="Jncv$">
+              <node concept="3cpWs6" id="4TDP_nMnhP" role="3cqZAp">
+                <node concept="3clFbT" id="4TDP_nMnhQ" role="3cqZAk">
+                  <property role="3clFbU" value="true" />
+                </node>
+              </node>
+            </node>
+            <node concept="JncvC" id="4TDP_nMnhR" role="JncvA">
+              <property role="TrG5h" value="actorTypeSignal" />
+              <node concept="2jxLKc" id="4TDP_nMnhS" role="1tU5fm" />
+            </node>
+          </node>
+          <node concept="3cpWs6" id="4TDP_nMnhT" role="3cqZAp">
+            <node concept="3clFbT" id="4TDP_nMnhU" role="3cqZAk" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="3aamgX" id="4TDP_nMnpI" role="3acgRq">
+      <ref role="30HIoZ" to="3751:3DLpJ7prKMj" resolve="SignalInitReference" />
+      <node concept="j$656" id="4TDP_nMnB0" role="1lVwrX">
+        <ref role="v9R2y" node="4TDP_nGF1k" resolve="reduce_DirectSignalInitReference" />
+      </node>
+      <node concept="30G5F_" id="4TDP_nMnpK" role="30HLyM">
+        <node concept="3clFbS" id="4TDP_nMnpL" role="2VODD2">
+          <node concept="Jncv_" id="4TDP_nMnpM" role="3cqZAp">
+            <ref role="JncvD" to="3751:4TDP_m2UaO" resolve="DirectSignal" />
+            <node concept="2OqwBi" id="4TDP_nMnpN" role="JncvB">
+              <node concept="30H73N" id="4TDP_nMnpO" role="2Oq$k0" />
+              <node concept="3TrEf2" id="4TDP_nMnpP" role="2OqNvi">
+                <ref role="3Tt5mk" to="3751:3DLpJ7prKMk" resolve="signal" />
+              </node>
+            </node>
+            <node concept="3clFbS" id="4TDP_nMnpQ" role="Jncv$">
+              <node concept="3cpWs6" id="4TDP_nMnpR" role="3cqZAp">
+                <node concept="3clFbT" id="4TDP_nMnpS" role="3cqZAk">
+                  <property role="3clFbU" value="true" />
+                </node>
+              </node>
+            </node>
+            <node concept="JncvC" id="4TDP_nMnpT" role="JncvA">
+              <property role="TrG5h" value="actorTypeSignal" />
+              <node concept="2jxLKc" id="4TDP_nMnpU" role="1tU5fm" />
+            </node>
+          </node>
+          <node concept="3cpWs6" id="4TDP_nMnpV" role="3cqZAp">
+            <node concept="3clFbT" id="4TDP_nMnpW" role="3cqZAk" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="3aamgX" id="5QIiPxUrtdg" role="3acgRq">
@@ -661,6 +726,12 @@
       <ref role="30HIoZ" to="3751:4TDP_nhwDF" resolve="ResultCondition" />
       <node concept="j$656" id="4TDP_nhx15" role="1lVwrX">
         <ref role="v9R2y" node="4TDP_nhx12" resolve="reduce_ResultCondition" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4TDP_nGF1m" role="3acgRq">
+      <ref role="30HIoZ" to="3751:3DLpJ7prKMj" resolve="SignalInitReference" />
+      <node concept="j$656" id="4TDP_nGF1n" role="1lVwrX">
+        <ref role="v9R2y" node="4TDP_nGF1k" resolve="reduce_DirectSignalInitReference" />
       </node>
     </node>
   </node>
@@ -3809,7 +3880,7 @@
     </node>
   </node>
   <node concept="13MO4I" id="6yyWtWVXFUK">
-    <property role="TrG5h" value="reduce_SignalInitReference" />
+    <property role="TrG5h" value="reduce_ActorTypeSignalInitReference" />
     <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
     <ref role="3gUMe" to="3751:3DLpJ7prKMj" resolve="SignalInitReference" />
     <node concept="312cEu" id="6yyWtWVXG45" role="13RCb5">
@@ -3868,57 +3939,6 @@
               </node>
             </node>
             <node concept="raruj" id="6dGQ3fj46Di" role="lGtFl" />
-          </node>
-          <node concept="3clFbH" id="4TDP_mEniU" role="3cqZAp" />
-          <node concept="3clFbH" id="4TDP_mQF_q" role="3cqZAp" />
-          <node concept="3clFbJ" id="4TDP_mEo0i" role="3cqZAp">
-            <node concept="3clFbS" id="4TDP_mEo0k" role="3clFbx">
-              <node concept="3clFbF" id="4TDP_mEkFq" role="3cqZAp">
-                <node concept="2OqwBi" id="4TDP_mEkUw" role="3clFbG">
-                  <node concept="1eOMI4" id="4TDP_mEkFo" role="2Oq$k0">
-                    <node concept="10QFUN" id="4TDP_mEkFl" role="1eOMHV">
-                      <node concept="3uibUv" id="4TDP_mEkKd" role="10QFUM">
-                        <ref role="3uigEE" to="mt9v:~DirectSignal" resolve="DirectSignal" />
-                      </node>
-                      <node concept="37vLTw" id="4TDP_mEkLY" role="10QFUP">
-                        <ref role="3cqZAo" node="6dGQ3fj45SM" resolve="sendSignalTemp" />
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="liA8E" id="4TDP_mEl3O" role="2OqNvi">
-                    <ref role="37wK5l" to="mt9v:~DirectSignal.setTarget(java.lang.Object)" resolve="setTarget" />
-                    <node concept="2ShNRf" id="4TDP_mEl5G" role="37wK5m">
-                      <node concept="1pGfFk" id="4TDP_mEp9p" role="2ShVmc">
-                        <ref role="37wK5l" to="uux2:~Actor.&lt;init&gt;(repast.simphony.space.continuous.ContinuousSpace,repast.simphony.space.grid.Grid)" resolve="Actor" />
-                      </node>
-                      <node concept="29HgVG" id="4TDP_mEm5E" role="lGtFl">
-                        <node concept="3NFfHV" id="4TDP_mEm5F" role="3NFExx">
-                          <node concept="3clFbS" id="4TDP_mEm5G" role="2VODD2">
-                            <node concept="3clFbF" id="4TDP_mEm5M" role="3cqZAp">
-                              <node concept="2OqwBi" id="4TDP_mEm5H" role="3clFbG">
-                                <node concept="3TrEf2" id="4TDP_mEm5K" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="3751:4TDP_mEgeY" resolve="signalReceiver" />
-                                </node>
-                                <node concept="30H73N" id="4TDP_mEm5L" role="2Oq$k0" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="2ZW3vV" id="4TDP_mEojr" role="3clFbw">
-              <node concept="3uibUv" id="4TDP_mEoqT" role="2ZW6by">
-                <ref role="3uigEE" to="mt9v:~DirectSignal" resolve="DirectSignal" />
-              </node>
-              <node concept="37vLTw" id="4TDP_mEo8h" role="2ZW6bz">
-                <ref role="3cqZAo" node="6dGQ3fj45SM" resolve="sendSignalTemp" />
-              </node>
-            </node>
-            <node concept="raruj" id="4TDP_mQFQE" role="lGtFl" />
           </node>
           <node concept="3clFbH" id="4TDP_mQFSy" role="3cqZAp" />
           <node concept="3clFbF" id="6dGQ3fj3YpR" role="3cqZAp">
@@ -6991,6 +7011,154 @@
       <node concept="3uibUv" id="4TDP_nhxgT" role="1zkMxy">
         <ref role="3uigEE" to="uux2:~Actor" resolve="Actor" />
       </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4TDP_nGF1k">
+    <property role="TrG5h" value="reduce_DirectSignalInitReference" />
+    <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
+    <ref role="3gUMe" to="3751:3DLpJ7prKMj" resolve="SignalInitReference" />
+    <node concept="312cEu" id="4TDP_nGFtU" role="13RCb5">
+      <property role="TrG5h" value="_class_" />
+      <node concept="3clFb_" id="4TDP_nGFuL" role="jymVt">
+        <property role="TrG5h" value="InitFunction" />
+        <node concept="3clFbS" id="4TDP_nGFuM" role="3clF47">
+          <node concept="3cpWs8" id="4TDP_nGFuN" role="3cqZAp">
+            <node concept="3cpWsn" id="4TDP_nGFuO" role="3cpWs9">
+              <property role="TrG5h" value="sendSignalTemp" />
+              <node concept="3uibUv" id="4TDP_nGFuP" role="1tU5fm">
+                <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
+              </node>
+              <node concept="2ShNRf" id="4TDP_nGFuQ" role="33vP2m">
+                <node concept="1pGfFk" id="4TDP_nGFuR" role="2ShVmc">
+                  <ref role="37wK5l" to="mt9v:~Signal.&lt;init&gt;()" resolve="Signal" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbF" id="4TDP_nGFuS" role="3cqZAp">
+            <node concept="37vLTI" id="4TDP_nGFuT" role="3clFbG">
+              <node concept="2ShNRf" id="4TDP_nGFuU" role="37vLTx">
+                <node concept="1pGfFk" id="4TDP_nGFuV" role="2ShVmc">
+                  <ref role="37wK5l" to="mt9v:~Signal.&lt;init&gt;()" resolve="Signal" />
+                  <node concept="1ZhdrF" id="4TDP_nGFuW" role="lGtFl">
+                    <property role="2qtEX8" value="baseMethodDeclaration" />
+                    <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1204053956946/1068499141037" />
+                    <node concept="3$xsQk" id="4TDP_nGFuX" role="3$ytzL">
+                      <node concept="3clFbS" id="4TDP_nGFuY" role="2VODD2">
+                        <node concept="3clFbF" id="4TDP_nGFuZ" role="3cqZAp">
+                          <node concept="3cpWs3" id="4TDP_nGFv0" role="3clFbG">
+                            <node concept="Xl_RD" id="4TDP_nGFv1" role="3uHU7w">
+                              <property role="Xl_RC" value="Signal" />
+                            </node>
+                            <node concept="2OqwBi" id="4TDP_nGFv2" role="3uHU7B">
+                              <node concept="2OqwBi" id="4TDP_nGFv3" role="2Oq$k0">
+                                <node concept="30H73N" id="4TDP_nGFv4" role="2Oq$k0" />
+                                <node concept="3TrEf2" id="4TDP_nGFv5" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="3751:3DLpJ7prKMk" resolve="signal" />
+                                </node>
+                              </node>
+                              <node concept="3TrcHB" id="4TDP_nGFv6" role="2OqNvi">
+                                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="37vLTw" id="4TDP_nGFv7" role="37vLTJ">
+                <ref role="3cqZAo" node="4TDP_nGFuO" resolve="sendSignalTemp" />
+              </node>
+            </node>
+            <node concept="raruj" id="4TDP_nGFv8" role="lGtFl" />
+          </node>
+          <node concept="3clFbH" id="4TDP_nGFv9" role="3cqZAp" />
+          <node concept="3clFbH" id="4TDP_nGFva" role="3cqZAp" />
+          <node concept="3clFbF" id="4TDP_nGFvd" role="3cqZAp">
+            <node concept="2OqwBi" id="4TDP_nGFve" role="3clFbG">
+              <node concept="1eOMI4" id="4TDP_nGFvf" role="2Oq$k0">
+                <node concept="10QFUN" id="4TDP_nGFvg" role="1eOMHV">
+                  <node concept="3uibUv" id="4TDP_nGFvh" role="10QFUM">
+                    <ref role="3uigEE" to="mt9v:~DirectSignal" resolve="DirectSignal" />
+                  </node>
+                  <node concept="37vLTw" id="4TDP_nGFvi" role="10QFUP">
+                    <ref role="3cqZAo" node="4TDP_nGFuO" resolve="sendSignalTemp" />
+                  </node>
+                </node>
+              </node>
+              <node concept="liA8E" id="4TDP_nGFvj" role="2OqNvi">
+                <ref role="37wK5l" to="mt9v:~DirectSignal.setTarget(java.lang.Object)" resolve="setTarget" />
+                <node concept="2ShNRf" id="4TDP_nGFvk" role="37wK5m">
+                  <node concept="1pGfFk" id="4TDP_nGFvl" role="2ShVmc">
+                    <ref role="37wK5l" to="uux2:~Actor.&lt;init&gt;(repast.simphony.space.continuous.ContinuousSpace,repast.simphony.space.grid.Grid)" resolve="Actor" />
+                  </node>
+                  <node concept="29HgVG" id="4TDP_nGFvm" role="lGtFl">
+                    <node concept="3NFfHV" id="4TDP_nGFvn" role="3NFExx">
+                      <node concept="3clFbS" id="4TDP_nGFvo" role="2VODD2">
+                        <node concept="3clFbF" id="4TDP_nGFvp" role="3cqZAp">
+                          <node concept="2OqwBi" id="4TDP_nGFvq" role="3clFbG">
+                            <node concept="3TrEf2" id="4TDP_nGFvr" role="2OqNvi">
+                              <ref role="3Tt5mk" to="3751:4TDP_mEgeY" resolve="signalReceiver" />
+                            </node>
+                            <node concept="30H73N" id="4TDP_nGFvs" role="2Oq$k0" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="4TDP_nGGaj" role="lGtFl" />
+          </node>
+          <node concept="3clFbH" id="4TDP_nGFvx" role="3cqZAp" />
+          <node concept="3clFbF" id="4TDP_nGFvy" role="3cqZAp">
+            <node concept="2OqwBi" id="4TDP_nGFvz" role="3clFbG">
+              <node concept="37vLTw" id="4TDP_nGFv$" role="2Oq$k0">
+                <ref role="3cqZAo" node="4TDP_nGFuO" resolve="sendSignalTemp" />
+              </node>
+              <node concept="liA8E" id="4TDP_nGFv_" role="2OqNvi">
+                <ref role="37wK5l" to="mt9v:~Signal.AddData(java.lang.String,java.lang.Object)" resolve="AddData" />
+                <node concept="Xl_RD" id="4TDP_nGFvA" role="37wK5m">
+                  <property role="Xl_RC" value="key" />
+                </node>
+                <node concept="2ShNRf" id="4TDP_nGFvB" role="37wK5m">
+                  <node concept="1pGfFk" id="4TDP_nGFvC" role="2ShVmc">
+                    <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="4TDP_nGFvD" role="lGtFl" />
+            <node concept="2b32R4" id="4TDP_nGFvE" role="lGtFl">
+              <node concept="3JmXsc" id="4TDP_nGFvF" role="2P8S$">
+                <node concept="3clFbS" id="4TDP_nGFvG" role="2VODD2">
+                  <node concept="3clFbF" id="4TDP_nGFvH" role="3cqZAp">
+                    <node concept="2OqwBi" id="4TDP_nGFvI" role="3clFbG">
+                      <node concept="3Tsc0h" id="4TDP_nGFvJ" role="2OqNvi">
+                        <ref role="3TtcxE" to="3751:3KCb14J4_ov" resolve="signalContent" />
+                      </node>
+                      <node concept="30H73N" id="4TDP_nGFvK" role="2Oq$k0" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3Tm1VV" id="4TDP_nGFvL" role="1B3o_S" />
+        <node concept="3cqZAl" id="4TDP_nGFvM" role="3clF45" />
+        <node concept="37vLTG" id="4TDP_nGFvN" role="3clF46">
+          <property role="TrG5h" value="s" />
+          <node concept="3uibUv" id="4TDP_nGFvO" role="1tU5fm">
+            <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
+          </node>
+        </node>
+      </node>
+      <node concept="2tJIrI" id="4TDP_nGFuA" role="jymVt" />
+      <node concept="3Tm1VV" id="4TDP_nGFtV" role="1B3o_S" />
     </node>
   </node>
 </model>

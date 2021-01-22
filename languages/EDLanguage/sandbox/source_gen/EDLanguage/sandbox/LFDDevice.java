@@ -10,8 +10,8 @@ import simcore.action.ActionStep;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.agents.Patient;
-import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
+import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.Signals.Orders.MoveToOrder;
@@ -53,19 +53,13 @@ public class LFDDevice extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
     if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new PatientTestPositiveSignal();
-      if (sendSignalTemp instanceof DirectSignal) {
-        ((DirectSignal) sendSignalTemp).setTarget();
-      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       sendSignalTemp = new PatientTestNegativeSignal();
-      if (sendSignalTemp instanceof DirectSignal) {
-        ((DirectSignal) sendSignalTemp).setTarget();
-      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }
@@ -76,19 +70,15 @@ public class LFDDevice extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
     if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new LFDPositiveSignal();
-      if (sendSignalTemp instanceof DirectSignal) {
-        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
-      }
+      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       sendSignalTemp = new LFDNegativeSignal();
-      if (sendSignalTemp instanceof DirectSignal) {
-        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
-      }
+      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }

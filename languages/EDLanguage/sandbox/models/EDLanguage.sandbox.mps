@@ -2147,10 +2147,10 @@
   </node>
   <node concept="3SEB2C" id="ijr0ZWir17">
     <property role="TrG5h" value="INOVA" />
-    <property role="3SEB2_" value="0.8" />
-    <property role="3SEB2z" value="0.91" />
+    <property role="3SEB2_" value="0.70" />
+    <property role="3SEB2z" value="0.991" />
     <property role="3GE5qa" value="Tests" />
-    <property role="3T7DM8" value="10" />
+    <property role="3T7DM8" value="30" />
   </node>
   <node concept="3Vql55" id="ijr0ZWACuy">
     <property role="3GE5qa" value="Tests" />

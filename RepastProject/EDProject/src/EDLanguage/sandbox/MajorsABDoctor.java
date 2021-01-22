@@ -12,7 +12,6 @@ import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.agents.Patient;
 import simcore.diagnosis.InfectionStatus;
-import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.basicStructures.Desk;
@@ -69,9 +68,6 @@ public class MajorsABDoctor extends Staff {
     if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Asymptomatic))) {
       curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(60)));
       sendSignalTemp = new ConductLFDSignal();
-      if (sendSignalTemp instanceof DirectSignal) {
-        ((DirectSignal) sendSignalTemp).setTarget();
-      }
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
@@ -79,9 +75,6 @@ public class MajorsABDoctor extends Staff {
       if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
         curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(60)));
         sendSignalTemp = new ConductLFDSignal();
-        if (sendSignalTemp instanceof DirectSignal) {
-          ((DirectSignal) sendSignalTemp).setTarget();
-        }
         sendSignalTemp.AddData("patient", s.GetData("patient"));
         sendSignalTemp.AddData("replyTo", this);
         curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
@@ -89,9 +82,6 @@ public class MajorsABDoctor extends Staff {
         if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Susceptible))) {
           curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(60)));
           sendSignalTemp = new ConductLFDSignal();
-          if (sendSignalTemp instanceof DirectSignal) {
-            ((DirectSignal) sendSignalTemp).setTarget();
-          }
           sendSignalTemp.AddData("patient", s.GetData("patient"));
           sendSignalTemp.AddData("replyTo", this);
           curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
