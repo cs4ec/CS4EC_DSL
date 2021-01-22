@@ -1,0 +1,106 @@
+Patient 8 | total wait time: 3mins | dealt at time point: 2021-01-22T11:56:28.358735900 | Had severity: LOW | Had infection state: Asymptomatic | Final decision: discharged
+Patient 1 | total wait time: 28mins | dealt at time point: 2021-01-22T12:07:55.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 14 | total wait time: 3mins | dealt at time point: 2021-01-22T12:08:35.358735900 | Had severity: LOW | Had infection state: Asymptomatic | Final decision: discharged
+Patient 2 | total wait time: 28mins | dealt at time point: 2021-01-22T12:10:07.358735900 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: discharged
+Patient 3 | total wait time: 32mins | dealt at time point: 2021-01-22T12:15:47.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 5 | total wait time: 32mins | dealt at time point: 2021-01-22T12:20:00.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 20 | total wait time: 3mins | dealt at time point: 2021-01-22T12:20:40.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 4 | total wait time: 36mins | dealt at time point: 2021-01-22T12:21:48.358735900 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: discharged
+Patient 9 | total wait time: 26mins | dealt at time point: 2021-01-22T12:22:25.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 11 | total wait time: 25mins | dealt at time point: 2021-01-22T12:25:04.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 13 | total wait time: 24mins | dealt at time point: 2021-01-22T12:28:18.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 15 | total wait time: 24mins | dealt at time point: 2021-01-22T12:32:25.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 16 | total wait time: 24mins | dealt at time point: 2021-01-22T12:34:19.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 6 | total wait time: 49mins | dealt at time point: 2021-01-22T12:38:46.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: discharged
+Patient 7 | total wait time: 47mins | dealt at time point: 2021-01-22T12:39:21.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 30 | total wait time: 3mins | dealt at time point: 2021-01-22T12:40:50.358735900 | Had severity: LOW | Had infection state: Symptomatic | Final decision: discharged
+Patient 21 | total wait time: 24mins | dealt at time point: 2021-01-22T12:44:28.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 32 | total wait time: 3mins | dealt at time point: 2021-01-22T12:44:52.358735900 | Had severity: LOW | Had infection state: Asymptomatic | Final decision: discharged
+Patient 24 | total wait time: 24mins | dealt at time point: 2021-01-22T12:50:30.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 12 | total wait time: 49mins | dealt at time point: 2021-01-22T12:50:40.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 22 | total wait time: 29mins | dealt at time point: 2021-01-22T12:51:27.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 23 | total wait time: 28mins | dealt at time point: 2021-01-22T12:52:02.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 10 | total wait time: 56mins | dealt at time point: 2021-01-22T12:54:14.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 39 | total wait time: 3mins | dealt at time point: 2021-01-22T12:58:58.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 28 | total wait time: 25mins | dealt at time point: 2021-01-22T12:59:20.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 41 | total wait time: 3mins | dealt at time point: 2021-01-22T13:03:00.358735900 | Had severity: LOW | Had infection state: Asymptomatic | Final decision: discharged
+Patient 19 | total wait time: 48mins | dealt at time point: 2021-01-22T13:03:40.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 18 | total wait time: 50mins | dealt at time point: 2021-01-22T13:04:14.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: discharged
+Patient 31 | total wait time: 28mins | dealt at time point: 2021-01-22T13:08:13.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 36 | total wait time: 24mins | dealt at time point: 2021-01-22T13:14:50.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 25 | total wait time: 47mins | dealt at time point: 2021-01-22T13:15:32.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 26 | total wait time: 46mins | dealt at time point: 2021-01-22T13:15:52.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 48 | total wait time: 3mins | dealt at time point: 2021-01-22T13:17:08.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 38 | total wait time: 24mins | dealt at time point: 2021-01-22T13:18:49.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 17 | total wait time: 69mins | dealt at time point: 2021-01-22T13:20:54.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 40 | total wait time: 25mins | dealt at time point: 2021-01-22T13:23:02.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 29 | total wait time: 47mins | dealt at time point: 2021-01-22T13:23:30.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: discharged
+Patient 53 | total wait time: 3mins | dealt at time point: 2021-01-22T13:27:13.358735900 | Had severity: LOW | Had infection state: Symptomatic | Final decision: discharged
+Patient 33 | total wait time: 46mins | dealt at time point: 2021-01-22T13:30:26.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 44 | total wait time: 24mins | dealt at time point: 2021-01-22T13:30:54.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 35 | total wait time: 47mins | dealt at time point: 2021-01-22T13:35:45.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 46 | total wait time: 26mins | dealt at time point: 2021-01-22T13:36:25.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 47 | total wait time: 24mins | dealt at time point: 2021-01-22T13:36:57.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 37 | total wait time: 47mins | dealt at time point: 2021-01-22T13:38:54.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 49 | total wait time: 24mins | dealt at time point: 2021-01-22T13:40:52.358735900 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: discharged
+Patient 60 | total wait time: 3mins | dealt at time point: 2021-01-22T13:41:19.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 42 | total wait time: 48mins | dealt at time point: 2021-01-22T13:50:02.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: discharged
+Patient 50 | total wait time: 32mins | dealt at time point: 2021-01-22T13:50:32.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 65 | total wait time: 3mins | dealt at time point: 2021-01-22T13:51:25.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 66 | total wait time: 3mins | dealt at time point: 2021-01-22T13:53:27.358735900 | Had severity: LOW | Had infection state: Symptomatic | Final decision: discharged
+Patient 51 | total wait time: 34mins | dealt at time point: 2021-01-22T13:54:36.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 57 | total wait time: 24mins | dealt at time point: 2021-01-22T13:57:10.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 68 | total wait time: 3mins | dealt at time point: 2021-01-22T13:57:28.358735900 | Had severity: LOW | Had infection state: Symptomatic | Final decision: discharged
+Patient 45 | total wait time: 51mins | dealt at time point: 2021-01-22T13:59:15.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: discharged
+Patient 56 | total wait time: 32mins | dealt at time point: 2021-01-22T14:02:38.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 71 | total wait time: 3mins | dealt at time point: 2021-01-22T14:03:31.358735900 | Had severity: LOW | Had infection state: Symptomatic | Final decision: discharged
+Patient 58 | total wait time: 30mins | dealt at time point: 2021-01-22T14:04:19.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 72 | total wait time: 3mins | dealt at time point: 2021-01-22T14:05:32.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 62 | total wait time: 27mins | dealt at time point: 2021-01-22T14:09:24.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: discharged
+Patient 74 | total wait time: 3mins | dealt at time point: 2021-01-22T14:09:33.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 52 | total wait time: 48mins | dealt at time point: 2021-01-22T14:10:37.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 27 | total wait time: 101mins | dealt at time point: 2021-01-22T14:13:00.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: PositiveTested with INOVA which gave result: Positive | Final decision: 
+Patient 76 | total wait time: 3mins | dealt at time point: 2021-01-22T14:13:37.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 63 | total wait time: 30mins | dealt at time point: 2021-01-22T14:14:44.358735900 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: discharged
+Patient 54 | total wait time: 50mins | dealt at time point: 2021-01-22T14:16:33.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 78 | total wait time: 3mins | dealt at time point: 2021-01-22T14:17:39.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 79 | total wait time: 3mins | dealt at time point: 2021-01-22T14:19:40.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 34 | total wait time: 97mins | dealt at time point: 2021-01-22T14:23:07.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: PositiveTested with INOVA which gave result: Positive | Final decision: 
+Patient 82 | total wait time: 3mins | dealt at time point: 2021-01-22T14:25:42.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 83 | total wait time: 3mins | dealt at time point: 2021-01-22T14:27:43.358735900 | Had severity: LOW | Had infection state: Asymptomatic | Final decision: discharged
+Patient 61 | total wait time: 48mins | dealt at time point: 2021-01-22T14:28:50.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 85 | total wait time: 3mins | dealt at time point: 2021-01-22T14:31:45.358735900 | Had severity: LOW | Had infection state: Symptomatic | Final decision: discharged
+Patient 75 | total wait time: 24mins | dealt at time point: 2021-01-22T14:33:23.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 64 | total wait time: 51mins | dealt at time point: 2021-01-22T14:37:37.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 88 | total wait time: 3mins | dealt at time point: 2021-01-22T14:37:48.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 77 | total wait time: 30mins | dealt at time point: 2021-01-22T14:42:37.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 91 | total wait time: 3mins | dealt at time point: 2021-01-22T14:43:52.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 70 | total wait time: 47mins | dealt at time point: 2021-01-22T14:46:06.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 43 | total wait time: 102mins | dealt at time point: 2021-01-22T14:46:09.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: PositiveTested with INOVA which gave result: Positive | Final decision: 
+Patient 67 | total wait time: 56mins | dealt at time point: 2021-01-22T14:49:17.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 94 | total wait time: 3mins | dealt at time point: 2021-01-22T14:49:54.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 73 | total wait time: 47mins | dealt at time point: 2021-01-22T14:52:26.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 87 | total wait time: 28mins | dealt at time point: 2021-01-22T15:01:08.358735900 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: discharged
+Patient 102 | total wait time: 3mins | dealt at time point: 2021-01-22T15:06:02.358735900 | Had severity: LOW | Had infection state: Symptomatic | Final decision: discharged
+Patient 80 | total wait time: 48mins | dealt at time point: 2021-01-22T15:07:11.358735900 | Had severity: SEVERE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 81 | total wait time: 48mins | dealt at time point: 2021-01-22T15:09:00.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: discharged
+Patient 55 | total wait time: 103mins | dealt at time point: 2021-01-22T15:11:33.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: PositiveTested with INOVA which gave result: Positive | Final decision: 
+Patient 106 | total wait time: 3mins | dealt at time point: 2021-01-22T15:14:05.358735900 | Had severity: LOW | Had infection state: Symptomatic | Final decision: discharged
+Patient 59 | total wait time: 98mins | dealt at time point: 2021-01-22T15:14:36.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: PositiveTested with INOVA which gave result: Positive | Final decision: 
+Patient 93 | total wait time: 29mins | dealt at time point: 2021-01-22T15:14:43.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 107 | total wait time: 3mins | dealt at time point: 2021-01-22T15:16:06.358735900 | Had severity: LOW | Had infection state: Susceptible | Final decision: discharged
+Patient 92 | total wait time: 34mins | dealt at time point: 2021-01-22T15:17:16.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 97 | total wait time: 24mins | dealt at time point: 2021-01-22T15:17:40.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 99 | total wait time: 24mins | dealt at time point: 2021-01-22T15:21:36.358735900 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: discharged
+Patient 100 | total wait time: 24mins | dealt at time point: 2021-01-22T15:23:50.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 98 | total wait time: 29mins | dealt at time point: 2021-01-22T15:24:47.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 90 | total wait time: 48mins | dealt at time point: 2021-01-22T15:27:04.358735900 | Had severity: SEVERE | Had infection state: Asymptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 84 | total wait time: 61mins | dealt at time point: 2021-01-22T15:28:39.358735900 | Had severity: MODERATE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 
+Patient 95 | total wait time: 47mins | dealt at time point: 2021-01-22T15:36:39.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: discharged
+Patient 96 | total wait time: 47mins | dealt at time point: 2021-01-22T15:38:34.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 69 | total wait time: 104mins | dealt at time point: 2021-01-22T15:41:01.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: PositiveTested with INOVA which gave result: Positive | Final decision: 
+Patient 120 | total wait time: 3mins | dealt at time point: 2021-01-22T15:42:19.358735900 | Had severity: LOW | Had infection state: Asymptomatic | Final decision: discharged
+Patient 111 | total wait time: 24mins | dealt at time point: 2021-01-22T15:45:56.358735900 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: discharged
+Patient 109 | total wait time: 29mins | dealt at time point: 2021-01-22T15:46:59.358735900 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: discharged
+Patient 101 | total wait time: 48mins | dealt at time point: 2021-01-22T15:49:25.358735900 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: Positive | Final decision: 
+Patient 103 | total wait time: 47mins | dealt at time point: 2021-01-22T15:52:37.358735900 | Had severity: SEVERE | Had infection state: Asymptomatic | Test Results: Tested with INOVA which gave result: Negative | Final decision: 

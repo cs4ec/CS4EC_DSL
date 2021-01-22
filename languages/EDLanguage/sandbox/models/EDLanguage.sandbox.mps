@@ -2156,46 +2156,8 @@
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="LFDDevice" />
     <ref role="3Vt_ys" node="3l6cNjecY0f" resolve="Staff" />
-    <node concept="3Vt_xe" id="ijr0ZWACuz" role="2Ov1EZ">
-      <property role="TrG5h" value="TestPatient" />
-      <node concept="3VtFpM" id="ijr0ZWACu$" role="3VtFpR">
-        <node concept="3VtFpM" id="ijr0ZWACvT" role="3VtFpW">
-          <node concept="3SPZ55" id="ijr0ZXsiqw" role="3VtFpW">
-            <node concept="3JJFmu" id="ijr0ZXsiqy" role="3SPZ52" />
-            <node concept="3S2u4K" id="ijr0ZXsiqR" role="3SPZ50">
-              <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-            </node>
-            <node concept="3VtFpM" id="ijr0ZXsiqA" role="3S2vig">
-              <node concept="3z7BTx" id="ijr0ZXsjNp" role="3VtFpW">
-                <node concept="3z7ADy" id="ijr0ZXsjNq" role="3z7BTw">
-                  <ref role="3z7AD_" node="4TDP_n2Vey" resolve="PatientTestPositive" />
-                  <node concept="2_cGdR" id="ijr0ZXsjNt" role="jeBCe">
-                    <ref role="XnLJh" node="4TDP_n2Vgj" resolve="patient" />
-                    <node concept="3JJFmu" id="ijr0ZXsjNx" role="2_cGdO" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3VtFpM" id="ijr0ZXsiqE" role="3S2viG">
-              <node concept="3z7BTx" id="ijr0ZXsjN$" role="3VtFpW">
-                <node concept="3z7ADy" id="ijr0ZXsjN_" role="3z7BTw">
-                  <ref role="3z7AD_" node="4TDP_n2VkO" resolve="PatientTestNegative" />
-                  <node concept="2_cGdR" id="ijr0ZXsjNC" role="jeBCe">
-                    <ref role="XnLJh" node="4TDP_n2VkP" resolve="patient" />
-                    <node concept="3JJFmu" id="ijr0ZXsjNG" role="2_cGdO" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_n2VEo" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_n2V4Z" resolve="StartPatientTest" />
-      </node>
-    </node>
     <node concept="3Vt_xe" id="4TDP_mZ2h_" role="2Ov1EZ">
-      <property role="TrG5h" value="TestPatientGeneral" />
+      <property role="TrG5h" value="TestPatient" />
       <node concept="3VtFpM" id="4TDP_mZ2hA" role="3VtFpR">
         <node concept="3SPZ55" id="4TDP_mZ2if" role="3VtFpW">
           <node concept="3JJFmu" id="4TDP_mZ2ih" role="3SPZ52" />
