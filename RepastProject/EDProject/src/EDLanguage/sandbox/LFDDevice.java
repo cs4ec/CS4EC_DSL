@@ -10,8 +10,8 @@ import simcore.action.ActionStep;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.agents.Patient;
-import simcore.action.basicAction.SendSignalAction;
 import simcore.Signals.DirectSignal;
+import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.Signals.Orders.MoveToOrder;
@@ -33,13 +33,13 @@ public class LFDDevice extends Staff {
     switch (s.getName()) {
       case "":
         break;
-      case "StartPatientTest":
+      case "ConductLFD":
         curMission = new Action("TestPatient");
         this.InitTestPatient(s);
         break;
-      case "ConductLFD":
-        curMission = new Action("TestPatientGeneral");
-        this.InitTestPatientGeneral(s);
+      case "ConductTrackAndTraceLFD":
+        curMission = new Action("TestPatientTrackAndTrace");
+        this.InitTestPatientTrackAndTrace(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -55,29 +55,31 @@ public class LFDDevice extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
     if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
-      sendSignalTemp = new PatientTestPositiveSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-    } else {
-      sendSignalTemp = new PatientTestNegativeSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-    }
-
-  }
-  public void InitTestPatientGeneral(Signal s) {
-    System.out.println("TestPatientGeneral" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
-    if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new LFDPositiveSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       sendSignalTemp = new LFDNegativeSignal();
+      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    }
+
+  }
+  public void InitTestPatientTrackAndTrace(Signal s) {
+    System.out.println("TestPatientTrackAndTrace" + " function called");
+
+    Signal sendSignalTemp = new Signal();
+
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
+    if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
+      sendSignalTemp = new LFDTrackAndTraceSignal();
+      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    } else {
+      sendSignalTemp = new LFDTrackAndTraceSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));

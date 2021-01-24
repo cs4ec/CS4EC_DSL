@@ -1442,13 +1442,6 @@
     <node concept="PrWs8" id="4TDP_mwJDr" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
-    <node concept="1TJgyj" id="4TDP_m2UaR" role="1TKVEi">
-      <property role="IQ2ns" value="88285669847966391" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="targetActor" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7o6PzEpI6ey" resolve="HumanInstance" />
-    </node>
   </node>
   <node concept="1TIwiD" id="4TDP_m5yvO">
     <property role="EcuMT" value="88285669848655860" />
@@ -1496,6 +1489,21 @@
       <property role="3tVfz5" value="88285669869393751" />
       <property role="TrG5h" value="Negative" />
       <property role="1L1pqM" value="negative" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4TDP_nS6kw">
+    <property role="EcuMT" value="88285669878687008" />
+    <property role="3GE5qa" value="actions.basic actions.OrderPatientAction.Orders" />
+    <property role="TrG5h" value="OccupyOrder" />
+    <property role="34LRSv" value="occupy" />
+    <property role="R4oN_" value="order the patient to occupy a bed/seat etc" />
+    <ref role="1TJDcQ" node="7o6PzEpH8eW" resolve="Order" />
+    <node concept="1TJgyj" id="4TDP_nS6kx" role="1TKVEi">
+      <property role="IQ2ns" value="88285669878687009" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetOccupiable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
     </node>
   </node>
 </model>

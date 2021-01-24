@@ -46,3 +46,55 @@ Caused by: java.lang.NullPointerException
 	at simcore.agents.Patient.Perceive(Patient.java:64)
 	at simcore.agents.Patient.step(Patient.java:55)
 	... 10 more
+FATAL [Thread-2] 2021-01-23 12:54:21,646 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (25.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.ClassCastException: class simcore.Signals.Orders.MoveToOrder cannot be cast to class java.lang.Comparable (simcore.Signals.Orders.MoveToOrder is in unnamed module of loader repast.simphony.plugin.ExtendablePluginClassLoader @3ebe4ccc; java.lang.Comparable is in module java.base of loader 'bootstrap')
+	at java.base/java.util.PriorityQueue.siftUpComparable(PriorityQueue.java:659)
+	at java.base/java.util.PriorityQueue.siftUp(PriorityQueue.java:655)
+	at java.base/java.util.PriorityQueue.offer(PriorityQueue.java:346)
+	at java.base/java.util.PriorityQueue.add(PriorityQueue.java:327)
+	at simcore.agents.Patient.TakeOrder(Patient.java:85)
+	at simcore.agents.Actor.ExecMission(Actor.java:293)
+	at simcore.agents.Actor.Perceive(Actor.java:142)
+	at simcore.agents.Actor.step(Actor.java:115)
+	... 10 more
+INFO  [AWT-EventQueue-0] 2021-01-24 14:44:33,451 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
+INFO  [AWT-EventQueue-0] 2021-01-24 14:44:33,598 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
+	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:47,832 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost6692568034478652966.zip to 
+C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611499485597 ...
+INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:47,882 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:47,893 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0381
+INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:47,894 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611499485597\w2037451_localhost6692568034478652966.zip
+INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:50,179 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-0] 2021-01-24 14:44:59,239 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-0] 2021-01-24 14:44:59,240 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611499485597/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-0] 2021-01-24 14:44:59,240 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-0] 2021-01-24 14:44:59,240 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-0] 2021-01-24 14:44:59,240 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611499485597/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - ERROR [main] 14:44:59,360 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.parameter.ParameterLineParser.parse(ParameterLineParser.java:55)
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:193)
+INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)

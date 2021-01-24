@@ -1,7 +1,10 @@
 package simcore.agents;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.stream.Collectors;
 
 import EDLanguage.sandbox.WaitingRoom;
@@ -14,10 +17,12 @@ import simcore.Signals.Orders.MoveToOrder;
 import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
 import simcore.basicStructures.AdmissionBays;
+import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
 import simcore.diagnosis.InfectionState;
+import simcore.diagnosis.InfectionStatus;
 import simcore.diagnosis.SeverityScore;
 import simcore.diagnosis.TestResult;
 
@@ -112,6 +117,7 @@ public class Patient extends Agent {
 			// follow the target
 			Object target = ((FollowOrder) order).getFollowTarget();
 			MoveTowards(target);
+			
 		} else if (order instanceof StopOrder) {
 			curOrder = null;
 		}
@@ -213,6 +219,7 @@ public class Patient extends Agent {
 	}
 	
 	public void setAdmitted(AdmissionBays bay) {
+		this.admitted = true;
 		this.admittanceBay = bay;
 		setHasBeenDealtWith();
 	}
@@ -220,5 +227,88 @@ public class Patient extends Agent {
 	public List<TestResult> getTestResults(){
 		return testResults;
 	}
+	
+	public Integer isDischargedToRed() {
+		if(admitted && admittanceBay == AdmissionBays.RED) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isDischargedToAmber() {
+		if(admitted && admittanceBay == AdmissionBays.AMBER) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isDischargedToGreen() {
+		if(admitted && admittanceBay == AdmissionBays.GREEN) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isDischarged() {
+		if(discharged) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndAdmittedToAmber() {
+		if(admitted && admittanceBay == AdmissionBays.AMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndAdmittedToRed() {
+		if(admitted && admittanceBay == AdmissionBays.RED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndAdmittedToGreen() {
+		if(admitted && admittanceBay == AdmissionBays.GREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndDischarged() {
+		if(discharged && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer negativeAndAdmittedToAmber() {
+		if(admitted && admittanceBay == AdmissionBays.AMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer negativeAndAdmittedToRed() {
+		if(admitted && admittanceBay == AdmissionBays.RED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer negativeAndAdmittedToGreen() {
+		if(admitted && admittanceBay == AdmissionBays.GREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
 
+	public Integer negativeAndDischarged() {
+		if(discharged && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
 }

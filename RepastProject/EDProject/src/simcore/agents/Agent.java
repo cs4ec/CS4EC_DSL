@@ -193,12 +193,6 @@ public class Agent {
 	 * @param stepLogic The current step of the Agent's Mission
 	 */
 	protected void MoveTo(Object target) {
-//		// If the target object is of instance 'RoomType' then the agent must first
-//		// decide what instance of that room they wish to move towards
-//		if (target instanceof RoomType) {
-//			target = SelectLocation((RoomType) target);
-//		}
-
 		// If I am already here, dont do anything
 		if (ImAt(target)) {
 			NextStep();
@@ -220,10 +214,6 @@ public class Agent {
 				NextStep();
 			}
 		}
-		// Move toward a specific point (e.g. toward an Agent's location)
-		else {
-
-		}
 	}
 
 	private void MoveToOccupiable(Occupiable target) {
@@ -231,17 +221,7 @@ public class Agent {
 		// if this agent is already there, continue
 		if (targetOccupiable.getOccupier() == this) {
 			NextStep();
-			// If this agent is walking towards the occupiable that has now been taken, find
-			// a new one
-//		} 
-//		else if (targetOccupiable.getOccupier() != null && targetOccupiable.getOccupier() != this) {
-//			if (targetOccupiable instanceof Seat) {
-//				FindASeat();
-//			}
-//			if(targetOccupiable instanceof Desk) {
-//				FindADesk(targetOccupiable.getResidingRoom());
-//			}
-		} else { // else take the seat
+		} else { 
 			if (ImAt(targetOccupiable)) {
 				targetOccupiable.setOccupier(this);
 			}

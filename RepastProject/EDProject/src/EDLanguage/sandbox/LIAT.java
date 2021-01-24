@@ -6,8 +6,8 @@ import simcore.basicStructures.Test;
 
 public class LIAT extends Test {
   private LIAT() {
-    sensitivity = 0.009000000000000001;
-    specificity = 0.0095;
+    sensitivity = 0.9;
+    specificity = 0.95;
     processingTime = 30;
     name = "LIAT";
   }

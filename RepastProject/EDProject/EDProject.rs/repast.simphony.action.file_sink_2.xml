@@ -1,0 +1,19 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>A File Sink</name>
+  <dataSet>A Data Set</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>positiveAndAdmittedToAmber</string>
+    <string>positiveAndAdmittedToRed</string>
+    <string>positiveAndAdmittedToGreen</string>
+    <string>positiveAndDischarged</string>
+    <string>negativeAndAdmittedToAmber</string>
+    <string>negativeAndAdmittedToRed</string>
+    <string>negativeAndAdmittedToGreen</string>
+    <string>negativeAndDischarged</string>
+    <string>tick</string>
+  </sourceIds>
+  <fileName>ModelOutput.txt</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>
