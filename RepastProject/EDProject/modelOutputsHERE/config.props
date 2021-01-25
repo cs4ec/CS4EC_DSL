@@ -1,9 +1,0 @@
-model.archive = C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/modelOutputsHERE/complete_model.jar
-batch.params.file = scenario.rs/batch_params.xml
-ssh.key_dir = C:/Users/w2037451/.ssh
-poll.frequency = 60.0
-model.output = C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/modelOutputsHERE
-
-vm.arguments = 
-local.0.instances = 2
-local.0.working_directory = C:/Users/w2037451/AppData/Local/Temp/

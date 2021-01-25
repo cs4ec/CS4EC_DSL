@@ -29,7 +29,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     context.setId("EDProject");
 
-    RunEnvironment.getInstance().endAt(86400);
+    RunEnvironment.getInstance().endAt(86401);
 
     ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
     ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new StaffAdder<Object>(), new StrictBorders(), 400, 400);
