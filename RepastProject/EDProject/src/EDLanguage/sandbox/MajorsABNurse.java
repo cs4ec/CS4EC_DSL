@@ -48,7 +48,6 @@ public class MajorsABNurse extends Staff {
   }
 
   public void InitEscortPatientToMajorsAB(Signal s) {
-    System.out.println("EscortPatientToMajorsAB" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -67,7 +66,6 @@ public class MajorsABNurse extends Staff {
 
   }
   public void InitDischargePatient(Signal s) {
-    System.out.println("DischargePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

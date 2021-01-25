@@ -32,16 +32,8 @@
       <concept id="4334763093660390701" name="EDLanguage.structure.StayForTimeAction" flags="ng" index="jcv$W">
         <property id="4334763093660390702" name="timeSpan" index="jcv$Z" />
       </concept>
-      <concept id="4334763093659899157" name="EDLanguage.structure.ExpressionCondition" flags="ng" index="jeB$4">
-        <property id="4334763093659899247" name="operator" index="jeB_Y" />
-        <child id="4334763093659899241" name="left" index="jeB_S" />
-        <child id="7454555096515505209" name="right" index="x4oD$" />
-      </concept>
       <concept id="4334763093659899158" name="EDLanguage.structure.Attribute" flags="ng" index="jeB$7">
         <property id="7454555096516303809" name="value" index="x7nQs" />
-      </concept>
-      <concept id="4334763093659899161" name="EDLanguage.structure.AttributeReference" flags="ng" index="jeB$8">
-        <reference id="4334763093659899162" name="attribute" index="jeB$b" />
       </concept>
       <concept id="4334763093659899315" name="EDLanguage.structure.PlaceInstanceFromSignal" flags="ng" index="jeBAy">
         <property id="4334763093659899318" name="data" index="jeBAB" />
@@ -79,14 +71,6 @@
         <child id="2838504078745190" name="place" index="2Vh8JW" />
       </concept>
       <concept id="6750846609944804889" name="EDLanguage.structure.RoomType" flags="ng" index="VhMOw" />
-      <concept id="5832719916577319506" name="EDLanguage.structure.ConsequenceElement" flags="ng" index="X7x6e">
-        <child id="5832719916577320134" name="consequences" index="X7xsq" />
-      </concept>
-      <concept id="5832719916577320042" name="EDLanguage.structure.Consequence" flags="ng" index="X7xuQ">
-        <property id="5832719916577320045" name="operator" index="X7xuL" />
-        <reference id="5832719916577320043" name="attribute" index="X7xuR" />
-        <child id="7454555096515275776" name="value" index="xbgDt" />
-      </concept>
       <concept id="649219036782142268" name="EDLanguage.structure.SeverityCondition" flags="ng" index="XO5TU">
         <property id="649219036782142269" name="severityScore" index="XO5TV" />
       </concept>
@@ -184,7 +168,6 @@
         <child id="2701765455131303424" name="attributes" index="3eYOtt" />
       </concept>
       <concept id="3838812034270522234" name="EDLanguage.structure.BehaviourElement" flags="ng" index="3Vt_xe">
-        <child id="5832719916577319502" name="consequence" index="X7x6i" />
         <child id="513408552829927049" name="signal" index="3n3c3i" />
         <child id="3838812034270528835" name="behaviour" index="3VtFpR" />
       </concept>
@@ -253,7 +236,7 @@
       <ref role="3Vt_zZ" node="4TDP_m1Sqe" resolve="LIATMachine" />
     </node>
     <node concept="2qCAYh" id="5VDVzf4k7mz" role="2qCAZT">
-      <property role="2qCAYg" value="2" />
+      <property role="2qCAYg" value="8" />
     </node>
   </node>
   <node concept="3n3SPQ" id="svZ_Jg4NTx">
@@ -399,11 +382,11 @@
       <node concept="3n3BjK" id="4TDP_nWC0t" role="3z7ADm">
         <ref role="3n3BjR" node="ijr0ZWACuy" resolve="LFDDevice" />
       </node>
-      <node concept="3n3BjK" id="4TDP_nXWVJ" role="3z7ADm">
-        <ref role="3n3BjR" node="7IDz3VlgXPK" resolve="Receptionist" />
-      </node>
       <node concept="3n3BjK" id="4TDP_nWC0u" role="1nbS2I">
         <ref role="3n3BjR" node="3l6cNjecY0h" resolve="Doctor" />
+      </node>
+      <node concept="3n3BjK" id="4TDP_oaZqf" role="1nbS2I">
+        <ref role="3n3BjR" node="7IDz3VlgXPK" resolve="Receptionist" />
       </node>
       <node concept="3n3BjK" id="4TDP_nWC0v" role="1nbS2I">
         <ref role="3n3BjR" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
@@ -1135,22 +1118,6 @@
         <ref role="3n32J4" node="4TDP_n2UFW" resolve="PatientWaitingForDoctor" />
       </node>
     </node>
-    <node concept="jeB$7" id="6NNc2RjmxHI" role="3eYOtt">
-      <property role="TrG5h" value="stress" />
-      <property role="x7nQs" value="1" />
-    </node>
-    <node concept="jeB$7" id="LMHHT2PrRd" role="3eYOtt">
-      <property role="TrG5h" value="mistakes" />
-      <property role="x7nQs" value="0" />
-    </node>
-    <node concept="jeB$7" id="LMHHT2Ps3s" role="3eYOtt">
-      <property role="TrG5h" value="positivePatientsSeen" />
-      <property role="x7nQs" value="0" />
-    </node>
-    <node concept="jeB$7" id="ijr0ZXwKdt" role="3eYOtt">
-      <property role="TrG5h" value="NegativePatientsSeen" />
-      <property role="x7nQs" value="0" />
-    </node>
     <node concept="3Vt_xe" id="ijr0ZXvn0O" role="2Ov1EZ">
       <property role="TrG5h" value="LFDPositive" />
       <node concept="3VtFpM" id="ijr0ZXvn0P" role="3VtFpR">
@@ -1247,17 +1214,6 @@
       </node>
       <node concept="3n32J5" id="4TDP_nWCka" role="3n3c3i">
         <ref role="3n32J4" node="4TDP_nWC0r" resolve="LFDNegative" />
-      </node>
-      <node concept="X7x6e" id="ijr0ZXwKdJ" role="X7x6i">
-        <node concept="X7xuQ" id="ijr0ZXwKdK" role="X7xsq">
-          <property role="X7xuL" value="53LYXLHVYLK/increase" />
-          <ref role="X7xuR" node="ijr0ZXwKdt" resolve="NegativePatientsSeen" />
-          <node concept="xbsuO" id="ijr0ZXwKdL" role="xbgDt">
-            <node concept="3cmrfG" id="ijr0ZXwKdR" role="xbgmq">
-              <property role="3cmrfH" value="1" />
-            </node>
-          </node>
-        </node>
       </node>
     </node>
     <node concept="3Vt_xe" id="4TDP_nBl45" role="2Ov1EZ">
@@ -1404,26 +1360,6 @@
           <node concept="3VtFpM" id="J03_II04C_" role="3VtFp$">
             <node concept="1W3xii" id="2kH7UIGIR9h" role="3VtFpW">
               <ref role="1W3xij" node="4_npzu9nKVu" resolve="OrderXRay" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="X7x6e" id="LMHHT2Ps5q" role="X7x6i">
-        <node concept="X7xuQ" id="LMHHT2Ps5r" role="X7xsq">
-          <property role="X7xuL" value="53LYXLHVYLK/increase" />
-          <ref role="X7xuR" node="LMHHT2Ps3s" resolve="positivePatientsSeen" />
-          <node concept="xbsuO" id="LMHHT2Ps5s" role="xbgDt">
-            <node concept="3cmrfG" id="6NNc2RjmAMj" role="xbgmq">
-              <property role="3cmrfH" value="1" />
-            </node>
-          </node>
-        </node>
-        <node concept="X7xuQ" id="6NNc2RjmylZ" role="X7xsq">
-          <property role="X7xuL" value="53LYXLHVYLK/increase" />
-          <ref role="X7xuR" node="6NNc2RjmxHI" resolve="stress" />
-          <node concept="xbsuO" id="6NNc2Rjmym0" role="xbgDt">
-            <node concept="3cmrfG" id="6NNc2RjnfhA" role="xbgmq">
-              <property role="3cmrfH" value="1" />
             </node>
           </node>
         </node>
@@ -1733,6 +1669,9 @@
           </node>
         </node>
       </node>
+      <node concept="3n32J5" id="4TDP_oaZsm" role="3n3c3i">
+        <ref role="3n32J4" node="4TDP_nWC0r" resolve="LFDNegative" />
+      </node>
     </node>
     <node concept="3Vt_xe" id="4TDP_nXX0O" role="2Ov1EZ">
       <property role="TrG5h" value="LIATPositive" />
@@ -1892,71 +1831,6 @@
     <property role="3GE5qa" value="StaffDefinition" />
     <property role="TrG5h" value="Nurse" />
     <ref role="3Vt_ys" node="3l6cNjecY0f" resolve="Staff" />
-    <node concept="jeB$7" id="6o2BuIxpPI3" role="3eYOtt">
-      <property role="TrG5h" value="energy" />
-      <property role="x7nQs" value="20" />
-    </node>
-    <node concept="3Vt_xe" id="53LYXLHWxdD" role="2Ov1EZ">
-      <property role="TrG5h" value="GivePatientMedicine" />
-      <node concept="3VtFpM" id="53LYXLHWxdF" role="3VtFpR">
-        <node concept="3VtFpw" id="7IDz3VlgXQK" role="3VtFpW">
-          <node concept="3JJFmu" id="7IDz3VlgXQV" role="3nfz8T" />
-          <node concept="2IBTiW" id="7IDz3VlgXQY" role="2IBTiu">
-            <property role="2IBTiX" value="move to patient" />
-          </node>
-        </node>
-        <node concept="3VtFpY" id="6o2BuIxpPIv" role="3VtFpW">
-          <node concept="jeB$4" id="6o2BuIxpPIQ" role="3VtFpT">
-            <property role="jeB_Y" value="3KCb14J4_ll/is_less_than" />
-            <node concept="jeB$8" id="6o2BuIxpPJ2" role="jeB_S">
-              <ref role="jeB$b" node="6o2BuIxpPI3" resolve="energy" />
-            </node>
-            <node concept="xbsuO" id="6o2BuIxpPIU" role="x4oD$">
-              <node concept="3cmrfG" id="6o2BuIxpPJ5" role="xbgmq">
-                <property role="3cmrfH" value="20" />
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="6o2BuIxpPIz" role="3VtFpZ">
-            <node concept="jcv$W" id="6o2BuIxpPJa" role="3VtFpW">
-              <property role="jcv$Z" value="5" />
-            </node>
-          </node>
-          <node concept="3VtFpM" id="6o2BuIxpPJt" role="3VtFp$">
-            <node concept="jcv$W" id="6o2BuIxpPJx" role="3VtFpW">
-              <property role="jcv$Z" value="2" />
-            </node>
-          </node>
-        </node>
-        <node concept="3JG_m1" id="7IDz3VlgXRz" role="3VtFpW">
-          <node concept="3JJFmu" id="7IDz3VlgXR_" role="3JG_8_" />
-          <node concept="3JG_m7" id="7IDz3VlgXRQ" role="3JG_nW">
-            <node concept="2Vh8JZ" id="a5pEVkqDx" role="3JG_nS">
-              <node concept="j3T7i" id="5QJON_AXU4s" role="2Vh8JW">
-                <ref role="j3T7l" node="5QJON_AXpwt" resolve="Entrance" />
-              </node>
-            </node>
-          </node>
-          <node concept="2IBTiW" id="7IDz3VlgXRZ" role="2IBTiu">
-            <property role="2IBTiX" value="Let the patient leave the ED" />
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_n2VTY" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_n2UMe" resolve="NewPatientNeedMedicine" />
-      </node>
-      <node concept="X7x6e" id="6o2BuIxpPI5" role="X7x6i">
-        <node concept="X7xuQ" id="6o2BuIxpPI6" role="X7xsq">
-          <property role="X7xuL" value="53LYXLHVYLL/decrease" />
-          <ref role="X7xuR" node="6o2BuIxpPI3" resolve="energy" />
-          <node concept="xbsuO" id="6o2BuIxpPI7" role="xbgDt">
-            <node concept="3cmrfG" id="6o2BuIxpPId" role="xbgmq">
-              <property role="3cmrfH" value="1" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="3Vt_xe" id="53LYXLI0v1g" role="2Ov1EZ">
       <property role="TrG5h" value="DoXRay" />
       <node concept="3VtFpM" id="53LYXLI0v1i" role="3VtFpR">

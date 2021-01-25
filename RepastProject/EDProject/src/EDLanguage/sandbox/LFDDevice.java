@@ -49,7 +49,6 @@ public class LFDDevice extends Staff {
   }
 
   public void InitTestPatient(Signal s) {
-    System.out.println("TestPatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -68,7 +67,6 @@ public class LFDDevice extends Staff {
 
   }
   public void InitTestPatientTrackAndTrace(Signal s) {
-    System.out.println("TestPatientTrackAndTrace" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -87,7 +85,6 @@ public class LFDDevice extends Staff {
 
   }
   public void InitDischargePatient(Signal s) {
-    System.out.println("DischargePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

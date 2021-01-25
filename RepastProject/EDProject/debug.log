@@ -1,100 +1,734 @@
-FATAL [Thread-2] 2021-01-20 21:57:36,418 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (2732.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Patient$$FastClassByCGLIB$$c61ee6fd.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Patient.CalcDistance(Patient.java:150)
-	at simcore.agents.Agent.ImAt(Agent.java:662)
-	at simcore.agents.Agent.ImAt(Agent.java:651)
-	at simcore.agents.Patient.ExecOrder(Patient.java:102)
-	at simcore.agents.Patient.Perceive(Patient.java:64)
-	at simcore.agents.Patient.step(Patient.java:55)
-	... 10 more
-FATAL [Thread-2] 2021-01-20 22:03:19,215 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (2811.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Patient$$FastClassByCGLIB$$c61ee6fd.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Patient.CalcDistance(Patient.java:150)
-	at simcore.agents.Agent.ImAt(Agent.java:662)
-	at simcore.agents.Agent.ImAt(Agent.java:651)
-	at simcore.agents.Patient.ExecOrder(Patient.java:102)
-	at simcore.agents.Patient.Perceive(Patient.java:64)
-	at simcore.agents.Patient.step(Patient.java:55)
-	... 10 more
-FATAL [Thread-2] 2021-01-23 12:54:21,646 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (25.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.ClassCastException: class simcore.Signals.Orders.MoveToOrder cannot be cast to class java.lang.Comparable (simcore.Signals.Orders.MoveToOrder is in unnamed module of loader repast.simphony.plugin.ExtendablePluginClassLoader @3ebe4ccc; java.lang.Comparable is in module java.base of loader 'bootstrap')
-	at java.base/java.util.PriorityQueue.siftUpComparable(PriorityQueue.java:659)
-	at java.base/java.util.PriorityQueue.siftUp(PriorityQueue.java:655)
-	at java.base/java.util.PriorityQueue.offer(PriorityQueue.java:346)
-	at java.base/java.util.PriorityQueue.add(PriorityQueue.java:327)
-	at simcore.agents.Patient.TakeOrder(Patient.java:85)
-	at simcore.agents.Actor.ExecMission(Actor.java:293)
-	at simcore.agents.Actor.Perceive(Actor.java:142)
-	at simcore.agents.Actor.step(Actor.java:115)
-	... 10 more
-INFO  [AWT-EventQueue-0] 2021-01-24 14:44:33,451 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-01-24 14:44:33,598 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:47,832 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost6692568034478652966.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611499485597 ...
-INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:47,882 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:47,893 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0381
-INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:47,894 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611499485597\w2037451_localhost6692568034478652966.zip
-INFO  [SwingWorker-pool-1-thread-1] 2021-01-24 14:44:50,179 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-0] 2021-01-24 14:44:59,239 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-01-24 14:44:59,240 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611499485597/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-01-24 14:44:59,240 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-01-24 14:44:59,240 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-01-24 14:44:59,240 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611499485597/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - ERROR [main] 14:44:59,360 repast.simphony.batch.InstanceRunner - Error while running model
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.parameter.ParameterLineParser.parse(ParameterLineParser.java:55)
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:193)
-INFO  [Thread-0] 2021-01-24 14:44:59,362 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:05:16,319 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:05:16,319 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0362
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:05:16,319 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611605114149\w2037451_localhost2762567696754669918.zip
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:05:18,449 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-0] 2021-01-25 20:05:27,538 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-0] 2021-01-25 20:05:27,554 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611605114149/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-0] 2021-01-25 20:05:27,554 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-0] 2021-01-25 20:05:27,554 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-0] 2021-01-25 20:05:27,554 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-0] 2021-01-25 20:05:27,679 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-0] 2021-01-25 20:05:27,679 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611605114149/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-0] 2021-01-25 20:05:27,679 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-0] 2021-01-25 20:05:27,679 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-0] 2021-01-25 20:05:27,679 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-0] 2021-01-25 20:05:27,879 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:28,248 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:28,718 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:28,884 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:29,208 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:29,618 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:30,318 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:30,923 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:31,202 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:31,347 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:31,631 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:31,690 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:32,769 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:33,012 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:33,249 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:33,448 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:33,819 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:33,838 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:34,078 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:34,692 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:34,733 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:36,724 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:36,829 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:36,949 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:37,119 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:37,233 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:37,238 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:37,529 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:37,998 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:39,248 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:39,792 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:40,829 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:40,913 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:40,921 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:41,088 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:41,249 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:41,360 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:41,483 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:42,089 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:42,139 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:42,234 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:42,998 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:43,093 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:43,454 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:44,239 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:44,369 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:44,634 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:45,799 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:45,889 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:46,005 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:46,029 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:46,113 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:46,183 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:46,198 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:46,513 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:46,688 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:46,868 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:46,999 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:47,473 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:47,598 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:48,008 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:48,094 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:48,339 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:48,518 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:48,694 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:48,779 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:48,809 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:49,279 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:50,149 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:50,193 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:50,824 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:50,989 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:51,128 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:51,328 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:51,598 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:51,948 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:52,328 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:52,574 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:52,603 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:53,306 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:53,368 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:53,496 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:53,818 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:53,828 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:54,038 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:54,179 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:54,728 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:54,798 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:55,279 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:55,469 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:55,566 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:55,688 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:55,839 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:55,889 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:56,794 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:56,849 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:57,784 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:57,929 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:58,078 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:58,273 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:58,328 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:05:58,389 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:59,298 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:05:59,769 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:00,009 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:00,167 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:00,317 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:00,478 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:00,490 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:00,589 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:00,849 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:00,879 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:00,909 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:01,429 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:01,529 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:01,579 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:02,361 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:02,402 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:03,240 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:03,383 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:03,699 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:03,748 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:04,058 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:04,084 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:04,298 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:04,618 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:04,854 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:05,053 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:05,108 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:06,414 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:06,819 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:07,233 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:07,400 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:07,520 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:07,938 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:07,969 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:08,260 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:08,396 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:08,582 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:08,608 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:08,753 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:09,057 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:10,485 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:10,801 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:10,852 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:12,358 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:12,433 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:12,668 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:13,023 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:13,156 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:13,274 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:13,387 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:13,672 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:13,788 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:13,835 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:13,866 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:14,369 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:14,418 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:14,821 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:15,297 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:15,319 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:15,441 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:16,696 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:17,032 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:17,155 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:17,195 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:17,224 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:17,278 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:17,673 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:17,788 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:18,366 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:18,376 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [pool-3-thread-1] 2021-01-25 20:06:18,475 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611605114149 for DONE:  no
+INFO  [Thread-0] 2021-01-25 20:06:19,164 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:19,727 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:20,044 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:20,236 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:20,426 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:20,739 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:20,927 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:21,268 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:21,495 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:21,816 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:21,869 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:22,229 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:22,388 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:22,510 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:22,668 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:22,678 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:22,900 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:22,936 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:22,944 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:23,562 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:23,788 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:24,087 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:24,298 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:24,698 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:26,050 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:26,273 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:26,383 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:26,468 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:26,708 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:27,048 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:27,724 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:28,039 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:28,128 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:28,293 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:29,071 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:29,799 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:29,879 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:30,652 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:31,108 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:31,198 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:31,303 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:31,389 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:31,668 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:31,779 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:32,078 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:32,232 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:32,488 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:32,864 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:33,078 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:33,168 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:33,208 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:33,408 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:33,704 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:35,258 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:35,981 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:36,032 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:36,088 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:36,501 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:36,562 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:36,778 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:36,794 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:38,222 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:38,299 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:38,474 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:39,756 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:40,003 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:40,190 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:40,521 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:40,785 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:41,019 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:41,070 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:41,235 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:41,298 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:42,348 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:42,363 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:42,369 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:42,409 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:43,524 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:44,369 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:44,384 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:44,585 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:44,826 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:44,903 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:45,339 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:45,376 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:46,019 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:47,030 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:47,234 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:47,629 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:47,908 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:48,233 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:48,559 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:48,619 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:48,638 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:49,004 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:49,748 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:49,788 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:50,143 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:50,163 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:50,503 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:51,539 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:51,613 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:52,052 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:52,618 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:52,698 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:52,723 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:53,465 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:53,933 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:54,070 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:54,368 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:54,762 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:54,936 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:55,581 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:55,651 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:55,671 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:56,288 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:56,358 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:56,418 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:56,718 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:57,330 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:57,402 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:58,128 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:58,716 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:59,010 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:59,041 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:59,134 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:59,338 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:59,413 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:59,622 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:06:59,904 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:06:59,988 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:00,203 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:00,358 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:00,722 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:00,959 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:00,991 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:01,080 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:01,598 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:02,548 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:02,731 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:02,898 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:03,698 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:04,334 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:04,718 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:04,768 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:04,896 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:05,058 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:05,538 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:05,593 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:05,875 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:05,928 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:06,071 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:07,013 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:07,770 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:07,852 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:08,558 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:08,650 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:09,181 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:09,488 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:09,551 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:10,128 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:10,548 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:10,678 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:10,968 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:11,597 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:11,653 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:11,765 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:12,668 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:12,758 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:13,238 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:13,438 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:13,643 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:13,768 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:13,923 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:14,318 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:14,329 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:14,508 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:14,572 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:15,108 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:15,398 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:15,968 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:16,318 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:16,413 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:17,208 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:17,748 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [pool-3-thread-1] 2021-01-25 20:07:18,478 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611605114149 for DONE:  no
+INFO  [Thread-0] 2021-01-25 20:07:19,098 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:19,133 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:19,358 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:19,838 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:19,878 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:20,588 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:20,958 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:21,207 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:21,648 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:22,063 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:22,334 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:22,358 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:23,178 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:23,288 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:23,928 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:24,273 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:24,336 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:27,132 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:27,858 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:27,889 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:27,898 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:28,606 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:29,227 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:30,023 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:30,123 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:31,977 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:32,618 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:33,268 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:33,329 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:33,413 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:33,703 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:33,998 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:34,113 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:34,458 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:34,603 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:34,848 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:34,888 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:34,988 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:35,751 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:36,868 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:36,883 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:36,908 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:36,923 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:37,904 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:38,028 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:38,287 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:38,338 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:38,360 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:38,432 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:39,033 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:41,306 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:41,437 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:41,581 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:41,653 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:42,495 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:42,526 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:42,761 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:43,440 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:44,715 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:44,806 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:44,889 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:45,538 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:46,493 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:46,746 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:47,141 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:47,383 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:47,871 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:47,881 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:48,044 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:48,471 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:50,220 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:50,817 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:50,870 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:51,467 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:51,549 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:51,771 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:52,035 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:52,098 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:52,522 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:52,739 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:52,770 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:52,780 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:54,161 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:54,212 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:54,273 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:54,982 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:55,053 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:55,916 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:56,080 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:56,172 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:56,637 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:56,981 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:57,131 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:57,518 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:57,559 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:57,579 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:57,660 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:58,204 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:58,972 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:07:59,064 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:59,215 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:07:59,832 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:00,005 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:00,025 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:00,571 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:00,612 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:02,519 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:02,735 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:03,161 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:03,169 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:03,242 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:03,771 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:03,819 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:04,246 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:04,541 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:04,886 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:05,606 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:05,627 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:05,900 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:07,148 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:07,402 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:07,665 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:08,114 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:08,406 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:08,519 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:08,891 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:09,380 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:09,744 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:10,355 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:10,416 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:10,447 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:10,809 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:11,145 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:11,187 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:11,671 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:13,472 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:13,713 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:14,953 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:15,014 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:15,965 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:16,435 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:16,554 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:16,658 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:16,769 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:17,243 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:17,296 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:17,467 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:17,641 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [pool-3-thread-1] 2021-01-25 20:08:18,492 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611605114149 for DONE:  no
+INFO  [Thread-0] 2021-01-25 20:08:19,052 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:19,113 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:19,730 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:19,771 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:19,893 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:19,913 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:20,138 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:20,300 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:20,581 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:20,642 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:20,746 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:21,131 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:21,334 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:21,676 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:21,872 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:21,913 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:22,488 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:22,633 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:23,333 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:23,607 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:24,266 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:24,298 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:24,632 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:24,884 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:25,334 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:25,426 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:25,941 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:26,439 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:26,793 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:26,876 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:27,240 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:27,311 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:27,339 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:27,716 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:28,357 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:29,931 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:30,121 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:30,456 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:30,717 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:30,881 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:30,984 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:30,984 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:31,288 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:31,318 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:31,336 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:31,893 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:31,966 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:32,027 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:32,374 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:32,404 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:32,647 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:32,820 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:32,901 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:33,043 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:33,540 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:33,561 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:33,703 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:34,447 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:34,875 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:35,303 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:35,834 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:37,157 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:37,176 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:37,493 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:38,275 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:38,823 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:38,935 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:39,117 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:39,860 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:40,178 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:41,222 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:41,485 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:41,556 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:42,022 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:42,053 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:42,297 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:42,368 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:42,457 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:42,723 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:43,147 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:44,249 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:44,433 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:44,747 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:45,194 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:45,214 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:45,275 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:45,465 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:46,271 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:47,174 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:47,722 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:47,814 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:47,852 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:48,063 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:48,858 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:48,909 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:48,990 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:49,466 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:49,515 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:49,933 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:50,080 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:50,741 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:50,835 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:51,756 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:52,163 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:53,108 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:53,280 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:53,688 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:53,878 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:53,962 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:54,156 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:54,390 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:56,057 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:56,402 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:57,151 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:57,193 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:57,234 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:59,245 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:59,478 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:59,620 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:08:59,782 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:08:59,884 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:00,378 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:01,167 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:01,493 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:02,042 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:02,074 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:02,510 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:02,905 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:05,001 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:05,457 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:05,506 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:05,853 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:06,127 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:06,312 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:06,462 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:06,545 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:07,234 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:07,283 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:09,033 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:09,380 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:11,313 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:11,423 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:11,911 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:12,299 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:12,577 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:12,820 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:13,863 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:14,217 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:14,450 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:14,764 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:14,824 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:15,405 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:15,585 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:16,156 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:16,632 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:17,249 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [pool-3-thread-1] 2021-01-25 20:09:18,500 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611605114149 for DONE:  no
+INFO  [Thread-0] 2021-01-25 20:09:19,382 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:21,198 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:21,267 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:22,998 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:23,150 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:23,727 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:26,628 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:26,699 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:27,132 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:27,305 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:27,707 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:27,760 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:28,467 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:28,485 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:29,345 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:29,357 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:31,763 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:32,506 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:32,516 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:32,642 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:33,488 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:34,363 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:34,434 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:35,338 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:37,479 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:37,507 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:38,383 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:39,151 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:40,294 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:40,731 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:41,255 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:41,661 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:43,270 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:43,685 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:43,744 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:43,801 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:44,553 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:44,606 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:45,325 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:47,813 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:49,949 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:50,011 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:50,316 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:50,458 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:50,827 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:51,021 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [Thread-0] 2021-01-25 20:09:51,818 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:53,276 repast.simphony.batch.ssh.LocalSession - new patient arrive
+INFO  [Thread-0] 2021-01-25 20:09:53,347 repast.simphony.batch.ssh.LocalSession - finish
+INFO  [pool-3-thread-1] 2021-01-25 20:10:18,507 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611605114149 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,507 repast.simphony.batch.ssh.SessionsDriver - Run Time: 5.0365
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,537 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611605114149
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,552 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,653 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0024
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,653 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 5.0752

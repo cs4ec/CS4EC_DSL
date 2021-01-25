@@ -59,7 +59,6 @@ public class MajorsABDoctor extends Staff {
   }
 
   public void InitSeePatient(Signal s) {
-    System.out.println("SeePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -94,7 +93,6 @@ public class MajorsABDoctor extends Staff {
 
   }
   public void InitPatientPositive(Signal s) {
-    System.out.println("PatientPositive" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -111,7 +109,6 @@ public class MajorsABDoctor extends Staff {
 
   }
   public void InitPatientNegative(Signal s) {
-    System.out.println("PatientNegative" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -128,7 +125,6 @@ public class MajorsABDoctor extends Staff {
 
   }
   public void InitDischargePatient(Signal s) {
-    System.out.println("DischargePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

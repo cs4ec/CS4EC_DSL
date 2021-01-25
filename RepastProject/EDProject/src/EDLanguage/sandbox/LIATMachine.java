@@ -49,7 +49,6 @@ public class LIATMachine extends Staff {
   }
 
   public void InitStateFree(Signal s) {
-    System.out.println("StateFree" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -58,7 +57,6 @@ public class LIATMachine extends Staff {
 
   }
   public void InitTestPatientGeneral(Signal s) {
-    System.out.println("TestPatientGeneral" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -77,7 +75,6 @@ public class LIATMachine extends Staff {
 
   }
   public void InitDischargePatient(Signal s) {
-    System.out.println("DischargePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

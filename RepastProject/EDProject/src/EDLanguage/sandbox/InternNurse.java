@@ -38,7 +38,6 @@ public class InternNurse extends Staff {
   }
 
   public void InitDischargePatient(Signal s) {
-    System.out.println("DischargePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

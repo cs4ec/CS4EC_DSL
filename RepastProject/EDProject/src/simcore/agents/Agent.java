@@ -145,8 +145,8 @@ public class Agent {
 	}
 
 	public void ExecMission() {
-		System.out.println("-----------------------------------------");
-		LogMission();
+//		System.out.println("-----------------------------------------");
+//		LogMission();
 		ActionStep curStep = curMission.getSteps().get(curActionStep);
 
 		if (curStep instanceof ConsequenceStep) {
@@ -172,7 +172,7 @@ public class Agent {
 				NextStep();
 			}
 		}
-		System.out.println("-----------------------------------------");
+//		System.out.println("-----------------------------------------");
 	}
 
 	/**
@@ -240,7 +240,6 @@ public class Agent {
 		try {
 			return pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r2), EvaluateRoomChoice(r1))).findFirst().get();
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("No instances of roomtype: " + pRoomType.name + " found");
 			return null;
 		}
 	}
@@ -288,15 +287,6 @@ public class Agent {
 
 		if (pointOfTarget != null) {
 			MoveTowards(pointOfTarget);
-		} else {
-
-			System.out.println("------------------------------------------");
-			System.out.println();
-			System.out.println("Error: Target point does not exist");
-			System.out.println("this: " + this);
-			System.out.println("move towards target: " + o);
-			System.out.println();
-			System.out.println("------------------------------------------");
 		}
 	}
 
@@ -375,8 +365,6 @@ public class Agent {
 			return;
 		}
 
-		System.out.println("-------------------------------");
-
 		Field targetField = null;
 		for (int i = 0; i < fields.size(); i++) {
 			if (fields.get(i).getName().equals(((Consequence) c).getAttribute())) {
@@ -385,19 +373,8 @@ public class Agent {
 		}
 
 		try {
-			System.out.println("this.getClass(): " + this.getClass());
-			System.out.println("attribute: " + ((Consequence) c).getAttribute());
-			System.out.println("attribute find: " + targetField);
-
 			double base = targetField.getDouble(this);
-
-			System.out.println("update: " + this + "." + base);
-
 			double value = ((Consequence) c).getValue();
-
-			System.out.println("base: " + base);
-			System.out.println("Operator: " + ((Consequence) c).getOperator());
-			System.out.println("value: " + value);
 
 			switch (((Consequence) c).getOperator()) {
 			case "":
@@ -423,7 +400,6 @@ public class Agent {
 				break;
 			}
 
-			System.out.println("set into: " + base);
 			targetField.setDouble(this, base);
 
 			ToolBox toolBox = ToolBox();

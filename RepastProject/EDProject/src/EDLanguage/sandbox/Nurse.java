@@ -8,22 +8,18 @@ import simcore.Signals.Signal;
 import simcore.action.Action;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
-import simcore.action.basicAction.conditions.StateCondition;
-import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
-import simcore.Signals.Orders.MoveToOrder;
-import simcore.action.ConsequenceStep;
-import simcore.action.Consequence;
 import simcore.Signals.Orders.FollowOrder;
 import simcore.action.basicAction.OccupyAction;
 import simcore.basicStructures.Desk;
+import simcore.action.basicAction.StayForTimeAction;
+import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.DischargeAction;
 
 public class Nurse extends Staff {
 
-  public double energy = Double.parseDouble("" + "20");
   public double groupStress = Double.parseDouble("" + "0");
 
   public Nurse(ContinuousSpace<Object> space, Grid<Object> grid) {
@@ -38,10 +34,6 @@ public class Nurse extends Staff {
   public void SetMission(Signal s) {
     switch (s.getName()) {
       case "":
-        break;
-      case "NewPatientNeedMedicine":
-        curMission = new Action("GivePatientMedicine");
-        this.InitGivePatientMedicine(s);
         break;
       case "XRay":
         curMission = new Action("DoXRay");
@@ -62,23 +54,7 @@ public class Nurse extends Staff {
     curActionStep = 0;
   }
 
-  public void InitGivePatientMedicine(Signal s) {
-    System.out.println("GivePatientMedicine" + " function called");
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("move to patient").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    if (CheckCondition(new StateCondition().WithContent("energy", "<", 20))) {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-    } else {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-    }
-    curMission.WithStep(new ActionStep().WithName("Let the patient leave the ED").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")))));
-
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("energy", "-=", 1)));
-  }
   public void InitDoXRay(Signal s) {
-    System.out.println("DoXRay" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -94,7 +70,6 @@ public class Nurse extends Staff {
 
   }
   public void InitRequestLIAT(Signal s) {
-    System.out.println("RequestLIAT" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -103,7 +78,6 @@ public class Nurse extends Staff {
 
   }
   public void InitGiveLIATTest(Signal s) {
-    System.out.println("GiveLIATTest" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -112,7 +86,6 @@ public class Nurse extends Staff {
 
   }
   public void InitTreatPatientPositive(Signal s) {
-    System.out.println("TreatPatientPositive" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -120,7 +93,6 @@ public class Nurse extends Staff {
 
   }
   public void InitTreatPatientNegative(Signal s) {
-    System.out.println("TreatPatientNegative" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -128,7 +100,6 @@ public class Nurse extends Staff {
 
   }
   public void InitCallDoctorForConsultation(Signal s) {
-    System.out.println("CallDoctorForConsultation" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -138,7 +109,6 @@ public class Nurse extends Staff {
 
   }
   public void InitGiveBloodTest(Signal s) {
-    System.out.println("GiveBloodTest" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -153,7 +123,6 @@ public class Nurse extends Staff {
 
   }
   public void InitDischargePatient(Signal s) {
-    System.out.println("DischargePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

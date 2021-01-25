@@ -33,7 +33,6 @@ public class Anesthetist extends Actor {
   }
 
   public void InitInject(Signal s) {
-    System.out.println("Inject" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

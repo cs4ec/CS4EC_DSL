@@ -7,8 +7,9 @@ import simcore.Signals.DirectSignal;
 public class LIATPositiveSignal extends DirectSignal {
   public LIATPositiveSignal() {
     this.setName("LIATPositive");
-    this.setDescription("Patient was positive");
-    this.AddActor("MajorsABDoctor");
+    this.setDescription("");
     this.AddActor("Doctor");
+    this.AddActor("MajorsABDoctor");
+    this.AddActor("Receptionist");
   }
 }

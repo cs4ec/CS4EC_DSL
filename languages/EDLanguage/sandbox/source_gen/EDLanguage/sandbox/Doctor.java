@@ -17,17 +17,11 @@ import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.AdmitAction;
 import simcore.basicStructures.AdmissionBays;
-import simcore.action.ConsequenceStep;
-import simcore.action.Consequence;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.DischargeAction;
 
 public class Doctor extends Staff {
 
-  public double stress = Double.parseDouble("" + "1");
-  public double mistakes = Double.parseDouble("" + "0");
-  public double positivePatientsSeen = Double.parseDouble("" + "0");
-  public double NegativePatientsSeen = Double.parseDouble("" + "0");
   public double groupStress = Double.parseDouble("" + "0");
 
   public Doctor(ContinuousSpace<Object> space, Grid<Object> grid) {
@@ -75,7 +69,6 @@ public class Doctor extends Staff {
   }
 
   public void InitInitialObsevations(Signal s) {
-    System.out.println("InitialObsevations" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -87,7 +80,6 @@ public class Doctor extends Staff {
 
   }
   public void InitLFDPositive(Signal s) {
-    System.out.println("LFDPositive" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -104,7 +96,6 @@ public class Doctor extends Staff {
 
   }
   public void InitLFDNegative(Signal s) {
-    System.out.println("LFDNegative" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -115,10 +106,8 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
 
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("NegativePatientsSeen", "+=", 1)));
   }
   public void InitLIATPositive(Signal s) {
-    System.out.println("LIATPositive" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -131,7 +120,6 @@ public class Doctor extends Staff {
 
   }
   public void InitOrderXRay(Signal s) {
-    System.out.println("OrderXRay" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -143,7 +131,6 @@ public class Doctor extends Staff {
 
   }
   public void InitLIATNegative(Signal s) {
-    System.out.println("LIATNegative" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -156,7 +143,6 @@ public class Doctor extends Staff {
 
   }
   public void InitTakeMedicine(Signal s) {
-    System.out.println("TakeMedicine" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -166,7 +152,6 @@ public class Doctor extends Staff {
 
   }
   public void InitDecideOnPatientPathway(Signal s) {
-    System.out.println("DecideOnPatientPathway" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -176,11 +161,8 @@ public class Doctor extends Staff {
       this.InitOrderXRay(s);
     }
 
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("positivePatientsSeen", "+=", 1)));
-    curMission.WithStep(new ConsequenceStep().WithOrder(new Consequence().WithContent("stress", "+=", 1)));
   }
   public void InitOrderBloodTest(Signal s) {
-    System.out.println("OrderBloodTest" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -192,7 +174,6 @@ public class Doctor extends Staff {
 
   }
   public void InitGiveConsultation(Signal s) {
-    System.out.println("GiveConsultation" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -211,7 +192,6 @@ public class Doctor extends Staff {
 
   }
   public void InitDischargePatient(Signal s) {
-    System.out.println("DischargePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

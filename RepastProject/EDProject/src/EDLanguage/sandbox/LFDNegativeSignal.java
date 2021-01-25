@@ -9,6 +9,7 @@ public class LFDNegativeSignal extends DirectSignal {
     this.setName("LFDNegative");
     this.setDescription("");
     this.AddActor("Doctor");
+    this.AddActor("Receptionist");
     this.AddActor("MajorsABDoctor");
   }
 }

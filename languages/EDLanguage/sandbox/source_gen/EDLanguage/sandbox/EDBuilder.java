@@ -4,6 +4,7 @@ package EDLanguage.sandbox;
 
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.context.Context;
+import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactory;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -28,6 +29,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     context.setId("EDProject");
 
+    RunEnvironment.getInstance().endAt(86400);
 
     ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
     ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new StaffAdder<Object>(), new StrictBorders(), 400, 400);
@@ -36,8 +38,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(120).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.15).WithPercentageHighSeverity(0.3).WithPercentageMediumSeverity(0.5));
-
+    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.15).WithPercentageHighSeverity(0.3).WithPercentageMediumSeverity(0.5));
 
     // add Agents 
     for (int i = 0; i < 6; i++) {

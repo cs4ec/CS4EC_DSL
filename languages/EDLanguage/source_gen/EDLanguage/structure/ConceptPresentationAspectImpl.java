@@ -45,6 +45,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObjectInstance;
   private ConceptPresentation props_OccupiableInstance;
   private ConceptPresentation props_OccupyAction;
+  private ConceptPresentation props_OccupyOrder;
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_Patient;
@@ -350,6 +351,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OccupyAction = cpb.create();
         }
         return props_OccupyAction;
+      case LanguageConceptSwitch.OccupyOrder:
+        if (props_OccupyOrder == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("order the patient to occupy a bed/seat etc");
+          cpb.rawPresentation("occupy");
+          props_OccupyOrder = cpb.create();
+        }
+        return props_OccupyOrder;
       case LanguageConceptSwitch.Order:
         if (props_Order == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

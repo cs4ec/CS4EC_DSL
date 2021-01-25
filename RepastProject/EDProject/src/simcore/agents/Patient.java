@@ -69,7 +69,6 @@ public class Patient extends Agent {
 			ExecOrder(curOrder);
 		} else if(curMission != null) { // Else, do I have an independent action to take?
 			if(curMission.getName() == "TakeSeat") {
-				System.out.println(this + "is processing a take a seat mission. They have the current occupiable set as " + curOccupying);
 			}
 			if (isIdle) {
 				isIdle = false;
@@ -113,7 +112,6 @@ public class Patient extends Agent {
 			}
 
 		} else if (order instanceof FollowOrder) {
-			System.out.println(this + "following " + ((FollowOrder) order).getFollowTarget());
 			// follow the target
 			Object target = ((FollowOrder) order).getFollowTarget();
 			MoveTowards(target);

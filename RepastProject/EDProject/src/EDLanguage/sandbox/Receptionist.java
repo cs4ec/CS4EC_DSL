@@ -51,6 +51,10 @@ public class Receptionist extends Staff {
         curMission = new Action("PatientLFDPositive");
         this.InitPatientLFDPositive(s);
         break;
+      case "LFDNegative":
+        curMission = new Action("PatientLFDNegative");
+        this.InitPatientLFDNegative(s);
+        break;
       case "LIATPositive":
         curMission = new Action("LIATPositive");
         this.InitLIATPositive(s);
@@ -71,7 +75,6 @@ public class Receptionist extends Staff {
   }
 
   public void InitInspect(Signal s) {
-    System.out.println("Inspect" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -114,7 +117,6 @@ public class Receptionist extends Staff {
 
   }
   public void InitPatientLFDPositive(Signal s) {
-    System.out.println("PatientLFDPositive" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -125,7 +127,6 @@ public class Receptionist extends Staff {
 
   }
   public void InitPatientLFDNegative(Signal s) {
-    System.out.println("PatientLFDNegative" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -138,7 +139,6 @@ public class Receptionist extends Staff {
 
   }
   public void InitLIATPositive(Signal s) {
-    System.out.println("LIATPositive" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -149,7 +149,6 @@ public class Receptionist extends Staff {
 
   }
   public void InitLIATNegative(Signal s) {
-    System.out.println("LIATNegative" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -160,7 +159,6 @@ public class Receptionist extends Staff {
 
   }
   public void InitTrackAndTrace(Signal s) {
-    System.out.println("TrackAndTrace" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -169,7 +167,6 @@ public class Receptionist extends Staff {
 
   }
   public void InitSendPatientToWaitingRoom(Signal s) {
-    System.out.println("SendPatientToWaitingRoom" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -180,7 +177,6 @@ public class Receptionist extends Staff {
 
   }
   public void InitLogPatientForMajorsAB(Signal s) {
-    System.out.println("LogPatientForMajorsAB" + " function called");
 
     Signal sendSignalTemp = new Signal();
 
@@ -191,7 +187,6 @@ public class Receptionist extends Staff {
 
   }
   public void InitDischargePatient(Signal s) {
-    System.out.println("DischargePatient" + " function called");
 
     Signal sendSignalTemp = new Signal();
 

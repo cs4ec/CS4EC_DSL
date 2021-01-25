@@ -7,8 +7,9 @@ import simcore.Signals.DirectSignal;
 public class LFDPositiveSignal extends DirectSignal {
   public LFDPositiveSignal() {
     this.setName("LFDPositive");
-    this.setDescription("Patient was positive");
-    this.AddActor("MajorsABDoctor");
+    this.setDescription("");
     this.AddActor("Doctor");
+    this.AddActor("Receptionist");
+    this.AddActor("MajorsABDoctor");
   }
 }

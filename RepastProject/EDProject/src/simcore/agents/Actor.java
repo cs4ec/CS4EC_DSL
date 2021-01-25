@@ -189,8 +189,8 @@ public class Actor extends Agent {
 	
 	@Override
 	public void ExecMission() {
-		System.out.println("-----------------------------------------");
-		LogMission();
+//		System.out.println("-----------------------------------------");
+//		LogMission();
 		ActionStep curStep = curMission.getSteps().get(curActionStep);
 
 		if (curStep instanceof ConsequenceStep) {
@@ -288,13 +288,13 @@ public class Actor extends Agent {
 			Patient p = ((OrderAction) stepLogic).getOrderTarget();
 			Order o = ((OrderAction) stepLogic).getOrderContent();
 
-			System.out.println("Order " + p + " To " + o);
+//			System.out.println("Order " + p + " To " + o);
 
 			p.TakeOrder(o);
 			NextStep();
 			return;
 		}
-		System.out.println("-----------------------------------------");
+//		System.out.println("-----------------------------------------");
 	}
 	
 	
