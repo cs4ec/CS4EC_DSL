@@ -49,6 +49,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_Patient;
+  private ConceptPresentation props_PatientAdmissionOutcomeCondition;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PatientInterval;
   private ConceptPresentation props_PlaceInstance;
@@ -380,6 +381,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Patient = cpb.create();
         }
         return props_Patient;
+      case LanguageConceptSwitch.PatientAdmissionOutcomeCondition:
+        if (props_PatientAdmissionOutcomeCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("PatientAdmissionOutcomeCondition");
+          props_PatientAdmissionOutcomeCondition = cpb.create();
+        }
+        return props_PatientAdmissionOutcomeCondition;
       case LanguageConceptSwitch.PatientInstance:
         if (props_PatientInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

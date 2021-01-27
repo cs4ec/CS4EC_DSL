@@ -1835,5 +1835,18 @@
       <node concept="l2Vlx" id="4TDP_nS6kC" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="2Rfu8e4We7E">
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:2Rfu8e4We5v" resolve="PatientAdmissionOutcomeCondition" />
+    <node concept="3EZMnI" id="2Rfu8e4We7G" role="2wV5jI">
+      <node concept="3F0ifn" id="2Rfu8e4We7N" role="3EZMnx">
+        <property role="3F0ifm" value="The patient has been" />
+      </node>
+      <node concept="3F0A7n" id="2Rfu8e4We7T" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2Rfu8e4We7C" resolve="outcome" />
+      </node>
+      <node concept="l2Vlx" id="2Rfu8e4We7J" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

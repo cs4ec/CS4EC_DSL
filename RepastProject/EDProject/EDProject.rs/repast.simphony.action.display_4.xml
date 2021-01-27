@@ -31,6 +31,10 @@
       <string>simcore.styles.WallStyle</string>
     </entry>
     <entry>
+      <string>EDLanguage.sandbox.LabTech</string>
+      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
+    </entry>
+    <entry>
       <string>simcore.basicStructures.Desk</string>
       <string>simcore.styles.SeatStyle</string>
     </entry>
@@ -77,6 +81,10 @@
       <null/>
     </entry>
     <entry>
+      <string>EDLanguage.sandbox.LabTech</string>
+      <string>EDLanguage.sandbox.LabTech.style_1.xml</string>
+    </entry>
+    <entry>
       <string>simcore.basicStructures.Desk</string>
       <null/>
     </entry>
@@ -103,7 +111,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>481497971</hashCode>
+    <hashCode>-1177957011</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>
@@ -111,7 +119,7 @@
   <layerOrder>
     <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <int>9</int>
+      <int>10</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Nurse</string>
@@ -131,11 +139,15 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Receptionist</string>
-      <int>8</int>
+      <int>9</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
-      <int>10</int>
+      <int>11</int>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.LabTech</string>
+      <int>8</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Desk</string>

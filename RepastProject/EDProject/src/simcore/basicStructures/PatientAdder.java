@@ -104,9 +104,7 @@ public class PatientAdder {
 	        	p.setSeverityScore(SeverityScore.LOW);
 	    	}
 	    	
-	    	context.add(p);
-	    	System.out.println("new patient arrive");
-	    	
+	    	context.add(p);	    	
 	    	
 	    	
 	    	// ------------设置新patient的位置----------------------------------

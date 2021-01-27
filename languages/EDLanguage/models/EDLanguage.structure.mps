@@ -1506,5 +1506,46 @@
       <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
     </node>
   </node>
+  <node concept="1TIwiD" id="2Rfu8e4We5v">
+    <property role="EcuMT" value="3300989558152290655" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="PatientAdmissionOutcomeCondition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyi" id="2Rfu8e4We7C" role="1TKVEl">
+      <property role="IQ2nx" value="3300989558152290792" />
+      <property role="TrG5h" value="outcome" />
+      <ref role="AX2Wp" node="2Rfu8e4We78" resolve="PatientOutcomes" />
+    </node>
+  </node>
+  <node concept="25R3W" id="2Rfu8e4We78">
+    <property role="3F6X1D" value="3300989558152290760" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="PatientOutcomes" />
+    <node concept="25R33" id="2Rfu8e4We79" role="25R1y">
+      <property role="3tVfz5" value="3300989558152290761" />
+      <property role="TrG5h" value="ADMITTEDRED" />
+      <property role="1L1pqM" value="Admitted to red bay" />
+    </node>
+    <node concept="25R33" id="2Rfu8e4We7a" role="25R1y">
+      <property role="3tVfz5" value="3300989558152290762" />
+      <property role="TrG5h" value="ADMITTEDAMBER" />
+      <property role="1L1pqM" value="Admitted to amber bay" />
+    </node>
+    <node concept="25R33" id="2Rfu8e4We7d" role="25R1y">
+      <property role="3tVfz5" value="3300989558152290765" />
+      <property role="TrG5h" value="ADMITTEDGREEN" />
+      <property role="1L1pqM" value="Admitted to green bay" />
+    </node>
+    <node concept="25R33" id="2Rfu8e4We7h" role="25R1y">
+      <property role="3tVfz5" value="3300989558152290769" />
+      <property role="TrG5h" value="ADMITTEDSIDEROOM" />
+      <property role="1L1pqM" value="Admitted to a side room" />
+    </node>
+    <node concept="25R33" id="2Rfu8e4We7m" role="25R1y">
+      <property role="3tVfz5" value="3300989558152290774" />
+      <property role="TrG5h" value="DISCHARGED" />
+      <property role="1L1pqM" value="Discharged" />
+    </node>
+  </node>
 </model>
 

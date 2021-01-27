@@ -16,6 +16,7 @@ import simcore.Signals.Orders.FollowOrder;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
+import simcore.action.basicAction.conditions.PatientOutcomes;
 import simcore.basicStructures.AdmissionBays;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
@@ -39,9 +40,7 @@ public class Patient extends Agent {
 	private InfectionState actualInfectionState;
 	private List<TestResult> testResults;
 	private SeverityScore severityScore;
-	private boolean discharged;
-	private boolean admitted;
-	private AdmissionBays admittanceBay;
+	private PatientOutcomes outcome;
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -136,12 +135,12 @@ public class Patient extends Agent {
 			}
 			
 			content += " | Final decision: ";
-			if(discharged) {
-				content += "discharged";
-			} 
-			if(admitted) {
-				content += "admitted to " + admittanceBay;
+			if(outcome == null) {
+				content += "still in ED";
 			}
+			else {
+				content += outcome.toString();
+			} 
 			toolBox.GetLog().WriteLog("patientLog", content);
 			loggedAndFinished = true;
 		} else {
@@ -211,14 +210,24 @@ public class Patient extends Agent {
 		hasBeenDealtWith = true;
 	}
 	
+	public PatientOutcomes getOutcome() {
+		return outcome;
+	}
+	
 	public void setDischarged() {
-		this.discharged = true;
+		this.outcome = PatientOutcomes.DISCHARGED;
 		setHasBeenDealtWith();
 	}
 	
 	public void setAdmitted(AdmissionBays bay) {
-		this.admitted = true;
-		this.admittanceBay = bay;
+		if(bay == AdmissionBays.AMBER) {
+			this.outcome = PatientOutcomes.ADMITTEDAMBER;
+		} else if (bay == AdmissionBays.RED) {
+			this.outcome = PatientOutcomes.ADMITTEDRED;
+		} else if (bay == AdmissionBays.GREEN) {
+			this.outcome = PatientOutcomes.ADMITTEDGREEN;
+		}
+		
 		setHasBeenDealtWith();
 	}
 	
@@ -227,84 +236,84 @@ public class Patient extends Agent {
 	}
 	
 	public Integer isDischargedToRed() {
-		if(admitted && admittanceBay == AdmissionBays.RED) {
+		if(outcome == PatientOutcomes.ADMITTEDRED) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer isDischargedToAmber() {
-		if(admitted && admittanceBay == AdmissionBays.AMBER) {
+		if(outcome == PatientOutcomes.ADMITTEDAMBER) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer isDischargedToGreen() {
-		if(admitted && admittanceBay == AdmissionBays.GREEN) {
+		if(outcome == PatientOutcomes.ADMITTEDGREEN) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer isDischarged() {
-		if(discharged) {
+		if(outcome == PatientOutcomes.DISCHARGED) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer positiveAndAdmittedToAmber() {
-		if(admitted && admittanceBay == AdmissionBays.AMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+		if(outcome == PatientOutcomes.ADMITTEDAMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer positiveAndAdmittedToRed() {
-		if(admitted && admittanceBay == AdmissionBays.RED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+		if(outcome == PatientOutcomes.ADMITTEDRED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer positiveAndAdmittedToGreen() {
-		if(admitted && admittanceBay == AdmissionBays.GREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+		if(outcome == PatientOutcomes.ADMITTEDGREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer positiveAndDischarged() {
-		if(discharged && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+		if(outcome == PatientOutcomes.DISCHARGED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer negativeAndAdmittedToAmber() {
-		if(admitted && admittanceBay == AdmissionBays.AMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+		if(outcome == PatientOutcomes.ADMITTEDAMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer negativeAndAdmittedToRed() {
-		if(admitted && admittanceBay == AdmissionBays.RED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+		if(outcome == PatientOutcomes.ADMITTEDRED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer negativeAndAdmittedToGreen() {
-		if(admitted && admittanceBay == AdmissionBays.GREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+		if(outcome == PatientOutcomes.ADMITTEDGREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;
 	}
 
 	public Integer negativeAndDischarged() {
-		if(discharged && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+		if(outcome == PatientOutcomes.DISCHARGED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;

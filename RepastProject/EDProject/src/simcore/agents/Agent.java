@@ -35,6 +35,8 @@ import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.action.basicAction.conditions.IsAvailableCondition;
+import simcore.action.basicAction.conditions.PatientAdmissionStatusCondition;
+import simcore.action.basicAction.conditions.PatientOutcomes;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.ResultCondition;
 import simcore.action.basicAction.conditions.SeverityCondition;
@@ -431,6 +433,10 @@ public class Agent {
 		if(c instanceof TestResultCondition) {
 			TestResult ptestResult = ((TestResultCondition) c).getTestType().TestPatient(((TestResultCondition) c).getPatient(), 0.0);
 			return ptestResult.isInfected();
+		}
+		
+		if(c instanceof PatientAdmissionStatusCondition) {
+			return ((PatientAdmissionStatusCondition) c).getOutcome() == ((PatientAdmissionStatusCondition) c).getPatient().getOutcome();
 		}
 		
 		if(c instanceof ResultCondition) {

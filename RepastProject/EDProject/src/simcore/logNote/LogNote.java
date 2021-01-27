@@ -41,7 +41,6 @@ public class LogNote {
 			BufferedWriter bw = new BufferedWriter(fileWriter);
 			bw.write(content + "\n");
 			bw.close();
-			System.out.println("finish");
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	    }

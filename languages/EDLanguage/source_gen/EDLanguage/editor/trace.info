@@ -56,7 +56,7 @@
       <unit at="26,0,98,0" name="EDLanguage.editor.DataInstanceMap_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="16,0,186,0" name="EDLanguage.editor.EditorAspectDescriptorImpl" />
+      <unit at="16,0,188,0" name="EDLanguage.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="PlaceInstanceReference_SubstituteMenu.java">
       <unit at="90,0,93,0" name="EDLanguage.editor.PlaceInstanceReference_SubstituteMenu$CONCEPTS" />
@@ -1884,6 +1884,99 @@
       <unit id="329726013666113125" at="94,0,97,0" name="EDLanguage.editor.InfectionCondition_EditorBuilder_a$CONCEPTS" />
       <unit id="329726013666113406" at="75,102,79,7" name="EDLanguage.editor.InfectionCondition_EditorBuilder_a$1" />
       <unit id="329726013666113125" at="30,0,98,0" name="EDLanguage.editor.InfectionCondition_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/3300989558152290794">
+    <file name="PatientAdmissionOutcomeCondition_Editor.java">
+      <node id="3300989558152290794" at="11,79,12,98" concept="7" />
+      <node id="3300989558152290794" at="11,0,14,0" concept="5" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="3300989558152290794" at="11,79,12,98" />
+      <scope id="3300989558152290794" at="11,0,14,0">
+        <var name="editorContext" id="3300989558152290794" />
+        <var name="node" id="3300989558152290794" />
+      </scope>
+      <unit id="3300989558152290794" at="10,0,15,0" name="EDLanguage.editor.PatientAdmissionOutcomeCondition_Editor" />
+    </file>
+    <file name="PatientAdmissionOutcomeCondition_EditorBuilder_a.java">
+      <node id="3300989558152290794" at="34,112,35,19" concept="10" />
+      <node id="3300989558152290794" at="35,19,36,18" concept="2" />
+      <node id="3300989558152290794" at="41,26,42,18" concept="7" />
+      <node id="3300989558152290794" at="45,39,46,32" concept="7" />
+      <node id="3300989558152290794" at="49,43,50,118" concept="6" />
+      <node id="3300989558152290794" at="50,118,51,48" concept="2" />
+      <node id="3300989558152290794" at="51,48,52,28" concept="2" />
+      <node id="3300989558152290794" at="52,28,53,31" concept="2" />
+      <node id="3300989558152290803" at="53,31,54,49" concept="2" />
+      <node id="3300989558152290809" at="54,49,55,49" concept="2" />
+      <node id="3300989558152290794" at="55,49,56,22" concept="7" />
+      <node id="3300989558152290803" at="58,41,59,113" concept="6" />
+      <node id="3300989558152290803" at="59,113,60,47" concept="2" />
+      <node id="3300989558152290803" at="60,47,61,34" concept="2" />
+      <node id="3300989558152290803" at="61,34,62,22" concept="7" />
+      <node id="3300989558152290809" at="64,41,65,39" concept="2" />
+      <node id="3300989558152290809" at="66,9,67,52" concept="6" />
+      <node id="3300989558152290809" at="67,52,68,76" concept="2" />
+      <node id="3300989558152290809" at="68,76,69,149" concept="6" />
+      <node id="3300989558152290809" at="69,149,70,48" concept="2" />
+      <node id="3300989558152290809" at="70,48,71,47" concept="2" />
+      <node id="3300989558152290809" at="71,47,72,86" concept="2" />
+      <node id="3300989558152290809" at="72,86,73,33" concept="2" />
+      <node id="3300989558152290809" at="73,33,74,188" concept="6" />
+      <node id="3300989558152290809" at="76,41,77,118" concept="7" />
+      <node id="3300989558152290809" at="80,74,81,89" concept="6" />
+      <node id="3300989558152290809" at="81,89,82,145" concept="7" />
+      <node id="3300989558152290809" at="83,12,84,24" concept="7" />
+      <node id="3300989558152290809" at="85,15,86,40" concept="2" />
+      <node id="3300989558152290794" at="91,0,92,0" concept="9" trace="outcome$gvjo" />
+      <node id="3300989558152290794" at="95,0,96,0" concept="9" trace="PropertyAttribute$Gb" />
+      <node id="3300989558152290794" at="31,0,33,0" concept="3" trace="myNode" />
+      <node id="3300989558152290794" at="45,0,48,0" concept="5" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="3300989558152290809" at="76,0,79,0" concept="5" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="3300989558152290794" at="34,0,38,0" concept="1" trace="PatientAdmissionOutcomeCondition_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3300989558152290794" at="39,0,44,0" concept="5" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3300989558152290809" at="74,188,79,9" concept="6" />
+      <node id="3300989558152290809" at="79,9,84,24" concept="4" />
+      <node id="3300989558152290803" at="58,0,64,0" concept="5" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="3300989558152290794" at="49,0,58,0" concept="5" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="3300989558152290809" at="65,39,87,5" concept="11" />
+      <node id="3300989558152290809" at="64,0,89,0" concept="5" trace="createProperty_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="3300989558152290794" at="41,26,42,18" />
+      <scope id="3300989558152290794" at="45,39,46,32" />
+      <scope id="3300989558152290809" at="76,41,77,118" />
+      <scope id="3300989558152290809" at="85,15,86,40" />
+      <scope id="3300989558152290794" at="34,112,36,18" />
+      <scope id="3300989558152290809" at="80,74,82,145">
+        <var name="manager" id="3300989558152290809" />
+      </scope>
+      <scope id="3300989558152290794" at="45,0,48,0" />
+      <scope id="3300989558152290809" at="76,0,79,0">
+        <var name="it" id="3300989558152290809" />
+      </scope>
+      <scope id="3300989558152290794" at="34,0,38,0">
+        <var name="context" id="3300989558152290794" />
+        <var name="node" id="3300989558152290794" />
+      </scope>
+      <scope id="3300989558152290803" at="58,41,62,22">
+        <var name="editorCell" id="3300989558152290803" />
+      </scope>
+      <scope id="3300989558152290794" at="39,0,44,0" />
+      <scope id="3300989558152290803" at="58,0,64,0" />
+      <scope id="3300989558152290794" at="49,43,56,22">
+        <var name="editorCell" id="3300989558152290794" />
+      </scope>
+      <scope id="3300989558152290794" at="49,0,58,0" />
+      <scope id="3300989558152290809" at="66,9,84,24">
+        <var name="currentPropertyAttributes" id="3300989558152290809" />
+        <var name="editorCell" id="3300989558152290809" />
+        <var name="property" id="3300989558152290809" />
+        <var name="propertyAttributes" id="3300989558152290809" />
+      </scope>
+      <scope id="3300989558152290809" at="64,41,87,5" />
+      <scope id="3300989558152290809" at="64,0,89,0" />
+      <unit id="3300989558152290794" at="90,0,93,0" name="EDLanguage.editor.PatientAdmissionOutcomeCondition_EditorBuilder_a$PROPS" />
+      <unit id="3300989558152290794" at="94,0,97,0" name="EDLanguage.editor.PatientAdmissionOutcomeCondition_EditorBuilder_a$CONCEPTS" />
+      <unit id="3300989558152290809" at="75,102,79,7" name="EDLanguage.editor.PatientAdmissionOutcomeCondition_EditorBuilder_a$1" />
+      <unit id="3300989558152290794" at="30,0,98,0" name="EDLanguage.editor.PatientAdmissionOutcomeCondition_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/3435897115888459989">

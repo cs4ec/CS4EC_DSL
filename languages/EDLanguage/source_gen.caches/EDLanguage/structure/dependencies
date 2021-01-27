@@ -91,6 +91,16 @@
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
   </dependency>
+  <dependency className="EDLanguage.structure.EnumerationDescriptor_PatientOutcomes">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.EnumerationLiteralsIndex" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptor" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
+  </dependency>
   <dependency className="EDLanguage.structure.EnumerationDescriptor_SeverityScore">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -126,6 +136,7 @@
     <classNode dependClassName="EDLanguage.structure.EnumerationDescriptor_JudgeOperator" />
     <classNode dependClassName="EDLanguage.structure.EnumerationDescriptor_ModifyOperator" />
     <classNode dependClassName="EDLanguage.structure.EnumerationDescriptor_OccupiableTypes" />
+    <classNode dependClassName="EDLanguage.structure.EnumerationDescriptor_PatientOutcomes" />
     <classNode dependClassName="EDLanguage.structure.EnumerationDescriptor_SeverityScore" />
     <classNode dependClassName="EDLanguage.structure.EnumerationDescriptor_TestResultTypes" />
     <classNode dependClassName="EDLanguage.structure.LanguageConceptSwitch" />

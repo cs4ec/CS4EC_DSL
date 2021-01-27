@@ -735,6 +735,12 @@
         <ref role="v9R2y" node="4TDP_nGF1k" resolve="reduce_DirectSignalInitReference" />
       </node>
     </node>
+    <node concept="3aamgX" id="2Rfu8e4WeoZ" role="3acgRq">
+      <ref role="30HIoZ" to="3751:2Rfu8e4We5v" resolve="PatientAdmissionOutcomeCondition" />
+      <node concept="j$656" id="2Rfu8e4Wep0" role="1lVwrX">
+        <ref role="v9R2y" node="2Rfu8e4WeoX" resolve="reduce_PatientAdmissionOutcomeCondition" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="DbMKZsswSi">
     <property role="TrG5h" value="MyActor" />
@@ -7138,6 +7144,88 @@
       </node>
       <node concept="2tJIrI" id="4TDP_nGFuA" role="jymVt" />
       <node concept="3Tm1VV" id="4TDP_nGFtV" role="1B3o_S" />
+    </node>
+  </node>
+  <node concept="13MO4I" id="2Rfu8e4WeoX">
+    <property role="TrG5h" value="reduce_PatientAdmissionOutcomeCondition" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="3gUMe" to="3751:2Rfu8e4We5v" resolve="PatientAdmissionOutcomeCondition" />
+    <node concept="312cEu" id="2Rfu8e4WeqO" role="13RCb5">
+      <property role="TrG5h" value="_class_" />
+      <node concept="3clFb_" id="2Rfu8e4Werw" role="jymVt">
+        <property role="TrG5h" value="InitFunction" />
+        <node concept="3clFbS" id="2Rfu8e4Werx" role="3clF47">
+          <node concept="3clFbH" id="2Rfu8e4Wery" role="3cqZAp" />
+          <node concept="3clFbF" id="2Rfu8e4Werz" role="3cqZAp">
+            <node concept="2OqwBi" id="2Rfu8e4Wer$" role="3clFbG">
+              <node concept="2OqwBi" id="2Rfu8e4Wer_" role="2Oq$k0">
+                <node concept="2ShNRf" id="2Rfu8e4WerA" role="2Oq$k0">
+                  <node concept="1pGfFk" id="2Rfu8e4WerB" role="2ShVmc">
+                    <ref role="37wK5l" to="9axu:~PatientAdmissionStatusCondition.&lt;init&gt;()" resolve="PatientAdmissionStatusCondition" />
+                  </node>
+                </node>
+                <node concept="liA8E" id="2Rfu8e4WerC" role="2OqNvi">
+                  <ref role="37wK5l" to="9axu:~PatientAdmissionStatusCondition.WithPatient(simcore.agents.Patient)" resolve="WithPatient" />
+                  <node concept="10QFUN" id="2Rfu8e4WerD" role="37wK5m">
+                    <node concept="3uibUv" id="2Rfu8e4WerE" role="10QFUM">
+                      <ref role="3uigEE" to="uux2:~Patient" resolve="Patient" />
+                    </node>
+                    <node concept="2OqwBi" id="2Rfu8e4WerF" role="10QFUP">
+                      <node concept="37vLTw" id="2Rfu8e4WerG" role="2Oq$k0">
+                        <ref role="3cqZAo" node="2Rfu8e4WerY" resolve="s" />
+                      </node>
+                      <node concept="liA8E" id="2Rfu8e4WerH" role="2OqNvi">
+                        <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                        <node concept="Xl_RD" id="2Rfu8e4WerI" role="37wK5m">
+                          <property role="Xl_RC" value="patient" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="raruj" id="2Rfu8e4WerU" role="lGtFl" />
+              <node concept="liA8E" id="2Rfu8e4WhFj" role="2OqNvi">
+                <ref role="37wK5l" to="9axu:~PatientAdmissionStatusCondition.WithOutcome(simcore.action.basicAction.conditions.PatientOutcomes)" resolve="WithOutcome" />
+                <node concept="Rm8GO" id="2Rfu8e4WhKR" role="37wK5m">
+                  <ref role="Rm8GQ" to="9axu:~PatientOutcomes.ADMITTEDAMBER" resolve="ADMITTEDAMBER" />
+                  <ref role="1Px2BO" to="9axu:~PatientOutcomes" resolve="PatientOutcomes" />
+                  <node concept="1ZhdrF" id="2Rfu8e4WhON" role="lGtFl">
+                    <property role="2qtEX8" value="enumConstantDeclaration" />
+                    <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1083260308424/1083260308426" />
+                    <node concept="3$xsQk" id="2Rfu8e4WhOO" role="3$ytzL">
+                      <node concept="3clFbS" id="2Rfu8e4WhOP" role="2VODD2">
+                        <node concept="3clFbF" id="2Rfu8e4WhTq" role="3cqZAp">
+                          <node concept="2OqwBi" id="2Rfu8e4WipG" role="3clFbG">
+                            <node concept="2OqwBi" id="2Rfu8e4Wi5_" role="2Oq$k0">
+                              <node concept="30H73N" id="2Rfu8e4WhTp" role="2Oq$k0" />
+                              <node concept="3TrcHB" id="2Rfu8e4WieB" role="2OqNvi">
+                                <ref role="3TsBF5" to="3751:2Rfu8e4We7C" resolve="outcome" />
+                              </node>
+                            </node>
+                            <node concept="24Tkf9" id="2Rfu8e4WizH" role="2OqNvi" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbH" id="2Rfu8e4WerV" role="3cqZAp" />
+        </node>
+        <node concept="3Tm1VV" id="2Rfu8e4WerW" role="1B3o_S" />
+        <node concept="3cqZAl" id="2Rfu8e4WerX" role="3clF45" />
+        <node concept="37vLTG" id="2Rfu8e4WerY" role="3clF46">
+          <property role="TrG5h" value="s" />
+          <node concept="3uibUv" id="2Rfu8e4WerZ" role="1tU5fm">
+            <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
+          </node>
+        </node>
+      </node>
+      <node concept="2tJIrI" id="2Rfu8e4Werl" role="jymVt" />
+      <node concept="3Tm1VV" id="2Rfu8e4WeqP" role="1B3o_S" />
     </node>
   </node>
 </model>

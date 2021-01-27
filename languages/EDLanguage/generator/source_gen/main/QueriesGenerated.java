@@ -336,6 +336,9 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Object referenceMacro_GetReferent_46_0(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.signal$M9Fv), PROPS.name$MnvL) + "Signal";
   }
+  public static Object referenceMacro_GetReferent_47_0(final ReferenceMacroContext _context) {
+    return SEnumOperations.getMemberName0(SPropertyOperations.getEnum(_context.getNode(), PROPS.outcome$gvjo));
+  }
   public static SNode sourceNodeQuery_2_0(final SourceSubstituteMacroNodeContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.behaviour$hsTv);
   }
@@ -905,6 +908,7 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("88285669846571098", new RTQ(18, "GREEN"));
     rtqMethods.put("88285669868580199", new RTQ(19, "Test"));
     rtqMethods.put("88285669875693500", new RTQ(20, "Signal"));
+    rtqMethods.put("3300989558152305971", new RTQ(21, "ADMITTEDAMBER"));
   }
   @NotNull
   @Override
@@ -966,6 +970,8 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.referenceMacro_GetReferent_45_0(ctx);
         case 20:
           return QueriesGenerated.referenceMacro_GetReferent_46_0(ctx);
+        case 21:
+          return QueriesGenerated.referenceMacro_GetReferent_47_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -1069,5 +1075,6 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty InfectionStatus$$AXU = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffdc634baL, 0x4936c0ffdc63663L, "InfectionStatus");
     /*package*/ static final SProperty severityScore$zq8Z = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x9027d4634d2233cL, 0x9027d4634d2233dL, "severityScore");
     /*package*/ static final SProperty admissionBay$qm16 = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a75955f0be54L, 0x139a75955f654e0L, "admissionBay");
+    /*package*/ static final SProperty outcome$gvjo = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x2dcf788384f0e15fL, 0x2dcf788384f0e1e8L, "outcome");
   }
 }
