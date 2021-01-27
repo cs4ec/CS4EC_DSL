@@ -18,9 +18,10 @@ public class EnumerationDescriptor_AdmissionBays extends EnumerationDescriptorBa
   private final EnumerationDescriptor.MemberDescriptor myMember_GREEN_0 = new EnumerationDescriptor.MemberDescriptor("GREEN", "green bay", 0x139a75955f64e99L, "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669846568601");
   private final EnumerationDescriptor.MemberDescriptor myMember_AMBER_0 = new EnumerationDescriptor.MemberDescriptor("AMBER", "amber bay", 0x139a75955f64e9aL, "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669846568602");
   private final EnumerationDescriptor.MemberDescriptor myMember_RED_0 = new EnumerationDescriptor.MemberDescriptor("RED", "red bay", 0x139a75955f64e9dL, "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669846568605");
+  private final EnumerationDescriptor.MemberDescriptor myMember_SIDEROOM_0 = new EnumerationDescriptor.MemberDescriptor("SIDEROOM", "side room", 0x2dcf7883852cdf37L, "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/3300989558156222263");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a75955f64e98L, 0x139a75955f64e99L, 0x139a75955f64e9aL, 0x139a75955f64e9dL);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_GREEN_0, myMember_AMBER_0, myMember_RED_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a75955f64e98L, 0x139a75955f64e99L, 0x139a75955f64e9aL, 0x139a75955f64e9dL, 0x2dcf7883852cdf37L);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_GREEN_0, myMember_AMBER_0, myMember_RED_0, myMember_SIDEROOM_0);
 
   @Nullable
   @Override
@@ -47,6 +48,8 @@ public class EnumerationDescriptor_AdmissionBays extends EnumerationDescriptorBa
         return myMember_AMBER_0;
       case "RED":
         return myMember_RED_0;
+      case "SIDEROOM":
+        return myMember_SIDEROOM_0;
     }
     return null;
   }

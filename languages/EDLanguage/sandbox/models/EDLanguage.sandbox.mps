@@ -1539,7 +1539,7 @@
                       <property role="jcv$Z" value="1" />
                     </node>
                     <node concept="1kMh$d" id="2Rfu8e59zu8" role="3VtFpW">
-                      <property role="1kNZeT" value="4TDP_lX$Ut/RED" />
+                      <property role="1kNZeT" value="2Rfu8e5bdWR/SIDEROOM" />
                       <node concept="3JJFmu" id="2Rfu8e59zu9" role="1kMh$e" />
                     </node>
                     <node concept="3JG_m1" id="2Rfu8e59zua" role="3VtFpW">
@@ -1550,9 +1550,6 @@
                             <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                           </node>
                         </node>
-                      </node>
-                      <node concept="2IBTiW" id="2Rfu8e59zuf" role="2IBTiu">
-                        <property role="2IBTiX" value="NEED TO CHANGE TO SIDE ROOM" />
                       </node>
                     </node>
                   </node>
@@ -1606,7 +1603,7 @@
                       <property role="jcv$Z" value="1" />
                     </node>
                     <node concept="1kMh$d" id="2Rfu8e59zuB" role="3VtFpW">
-                      <property role="1kNZeT" value="4TDP_lX$Ut/RED" />
+                      <property role="1kNZeT" value="2Rfu8e5bdWR/SIDEROOM" />
                       <node concept="3JJFmu" id="2Rfu8e59zuC" role="1kMh$e" />
                     </node>
                     <node concept="3JG_m1" id="2Rfu8e59zuD" role="3VtFpW">
@@ -1617,9 +1614,6 @@
                             <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                           </node>
                         </node>
-                      </node>
-                      <node concept="2IBTiW" id="2Rfu8e59zuI" role="2IBTiu">
-                        <property role="2IBTiX" value="NEED TO CHANGE TO SIDE ROOM" />
                       </node>
                     </node>
                   </node>
@@ -1685,7 +1679,7 @@
                       <property role="jcv$Z" value="1" />
                     </node>
                     <node concept="1kMh$d" id="2Rfu8e59zyu" role="3VtFpW">
-                      <property role="1kNZeT" value="4TDP_lX$Ut/RED" />
+                      <property role="1kNZeT" value="2Rfu8e5bdWR/SIDEROOM" />
                       <node concept="3JJFmu" id="2Rfu8e59zyv" role="1kMh$e" />
                     </node>
                     <node concept="3JG_m1" id="2Rfu8e59zyw" role="3VtFpW">
@@ -1696,9 +1690,6 @@
                             <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                           </node>
                         </node>
-                      </node>
-                      <node concept="2IBTiW" id="2Rfu8e59zy_" role="2IBTiu">
-                        <property role="2IBTiX" value="NEED TO CHANGE TO SIDE ROOM" />
                       </node>
                     </node>
                   </node>
@@ -1752,7 +1743,7 @@
                       <property role="jcv$Z" value="1" />
                     </node>
                     <node concept="1kMh$d" id="2Rfu8e59zyX" role="3VtFpW">
-                      <property role="1kNZeT" value="4TDP_lX$Ut/RED" />
+                      <property role="1kNZeT" value="2Rfu8e5bdWR/SIDEROOM" />
                       <node concept="3JJFmu" id="2Rfu8e59zyY" role="1kMh$e" />
                     </node>
                     <node concept="3JG_m1" id="2Rfu8e59zyZ" role="3VtFpW">
@@ -1763,9 +1754,6 @@
                             <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                           </node>
                         </node>
-                      </node>
-                      <node concept="2IBTiW" id="2Rfu8e59zz4" role="2IBTiu">
-                        <property role="2IBTiX" value="NEED TO CHANGE TO SIDE ROOM" />
                       </node>
                     </node>
                   </node>
@@ -1854,49 +1842,33 @@
             </node>
           </node>
           <node concept="3VtFpM" id="2Rfu8e59zBY" role="3VtFp$">
-            <node concept="3VtFpY" id="2Rfu8e59zBZ" role="3VtFpW">
-              <node concept="jeBDq" id="2Rfu8e59zC0" role="3VtFpT">
-                <node concept="xbsuO" id="2Rfu8e59zC1" role="x58j7">
-                  <node concept="3cmrfG" id="2Rfu8e59zC2" role="xbgmq">
-                    <property role="3cmrfH" value="50" />
-                  </node>
+            <node concept="3z7BTx" id="2Rfu8e59zC4" role="3VtFpW">
+              <node concept="3z7ADy" id="2Rfu8e59zC5" role="3z7BTw">
+                <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
+                <node concept="2_cGdR" id="2Rfu8e59zC6" role="jeBCe">
+                  <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
+                  <node concept="3JJFmu" id="2Rfu8e59zC7" role="2_cGdO" />
+                </node>
+                <node concept="2_cGdR" id="2Rfu8e59zC8" role="jeBCe">
+                  <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
+                  <node concept="3JGL$I" id="2Rfu8e59zC9" role="2_cGdO" />
                 </node>
               </node>
-              <node concept="3VtFpM" id="2Rfu8e59zC3" role="3VtFpZ">
-                <node concept="3z7BTx" id="2Rfu8e59zC4" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e59zC5" role="3z7BTw">
-                    <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                    <node concept="2_cGdR" id="2Rfu8e59zC6" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e59zC7" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e59zC8" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e59zC9" role="2_cGdO" />
-                    </node>
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e59zCa" role="2IBTiu">
-                    <property role="2IBTiX" value="Request the Lab PCR test" />
-                  </node>
-                </node>
-                <node concept="1kMh$d" id="2Rfu8e59zCb" role="3VtFpW">
-                  <property role="1kNZeT" value="4TDP_lX$Uq/AMBER" />
-                  <node concept="3JJFmu" id="2Rfu8e59zCc" role="1kMh$e" />
-                </node>
-                <node concept="3JG_m1" id="2Rfu8e59zCd" role="3VtFpW">
-                  <node concept="3JJFmu" id="2Rfu8e59zCe" role="3JG_8_" />
-                  <node concept="3JG_m7" id="2Rfu8e59zCf" role="3JG_nW">
-                    <node concept="2Vh8JZ" id="2Rfu8e59zCg" role="3JG_nS">
-                      <node concept="j3T7i" id="2Rfu8e59zCh" role="2Vh8JW">
-                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                      </node>
-                    </node>
-                  </node>
-                </node>
+              <node concept="2IBTiW" id="2Rfu8e59zCa" role="2IBTiu">
+                <property role="2IBTiX" value="Request the Lab PCR test" />
               </node>
-              <node concept="3VtFpM" id="2Rfu8e59zCi" role="3VtFp$">
-                <node concept="1W3xii" id="2Rfu8e59zCj" role="3VtFpW">
-                  <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
+            </node>
+            <node concept="1kMh$d" id="2Rfu8e59zCb" role="3VtFpW">
+              <property role="1kNZeT" value="4TDP_lX$Uq/AMBER" />
+              <node concept="3JJFmu" id="2Rfu8e59zCc" role="1kMh$e" />
+            </node>
+            <node concept="3JG_m1" id="2Rfu8e59zCd" role="3VtFpW">
+              <node concept="3JJFmu" id="2Rfu8e59zCe" role="3JG_8_" />
+              <node concept="3JG_m7" id="2Rfu8e59zCf" role="3JG_nW">
+                <node concept="2Vh8JZ" id="2Rfu8e59zCg" role="3JG_nS">
+                  <node concept="j3T7i" id="2Rfu8e59zCh" role="2Vh8JW">
+                    <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -3138,7 +3110,7 @@
                       <property role="jcv$Z" value="1" />
                     </node>
                     <node concept="1kMh$d" id="2Rfu8e50gqr" role="3VtFpW">
-                      <property role="1kNZeT" value="4TDP_lX$Ut/RED" />
+                      <property role="1kNZeT" value="2Rfu8e5bdWR/SIDEROOM" />
                       <node concept="3JJFmu" id="2Rfu8e50gqs" role="1kMh$e" />
                     </node>
                     <node concept="3JG_m1" id="2Rfu8e50gqt" role="3VtFpW">
@@ -3149,9 +3121,6 @@
                             <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                           </node>
                         </node>
-                      </node>
-                      <node concept="2IBTiW" id="2Rfu8e50gqy" role="2IBTiu">
-                        <property role="2IBTiX" value="NEED TO CHANGE TO SIDE ROOM" />
                       </node>
                     </node>
                   </node>
@@ -3205,7 +3174,7 @@
                       <property role="jcv$Z" value="1" />
                     </node>
                     <node concept="1kMh$d" id="2Rfu8e50gqU" role="3VtFpW">
-                      <property role="1kNZeT" value="4TDP_lX$Ut/RED" />
+                      <property role="1kNZeT" value="2Rfu8e5bdWR/SIDEROOM" />
                       <node concept="3JJFmu" id="2Rfu8e50gqV" role="1kMh$e" />
                     </node>
                     <node concept="3JG_m1" id="2Rfu8e50gqW" role="3VtFpW">
@@ -3216,9 +3185,6 @@
                             <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                           </node>
                         </node>
-                      </node>
-                      <node concept="2IBTiW" id="2Rfu8e50gr1" role="2IBTiu">
-                        <property role="2IBTiX" value="NEED TO CHANGE TO SIDE ROOM" />
                       </node>
                     </node>
                   </node>
@@ -3284,7 +3250,7 @@
                       <property role="jcv$Z" value="1" />
                     </node>
                     <node concept="1kMh$d" id="2Rfu8e4Xy_h" role="3VtFpW">
-                      <property role="1kNZeT" value="4TDP_lX$Ut/RED" />
+                      <property role="1kNZeT" value="2Rfu8e5bdWR/SIDEROOM" />
                       <node concept="3JJFmu" id="2Rfu8e4Xy_i" role="1kMh$e" />
                     </node>
                     <node concept="3JG_m1" id="2Rfu8e4Xy_j" role="3VtFpW">
@@ -3295,9 +3261,6 @@
                             <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                           </node>
                         </node>
-                      </node>
-                      <node concept="2IBTiW" id="2Rfu8e4Xy_S" role="2IBTiu">
-                        <property role="2IBTiX" value="NEED TO CHANGE TO SIDE ROOM" />
                       </node>
                     </node>
                   </node>
@@ -3351,7 +3314,7 @@
                       <property role="jcv$Z" value="1" />
                     </node>
                     <node concept="1kMh$d" id="2Rfu8e4XyAB" role="3VtFpW">
-                      <property role="1kNZeT" value="4TDP_lX$Ut/RED" />
+                      <property role="1kNZeT" value="2Rfu8e5bdWR/SIDEROOM" />
                       <node concept="3JJFmu" id="2Rfu8e4XyAC" role="1kMh$e" />
                     </node>
                     <node concept="3JG_m1" id="2Rfu8e4XyAD" role="3VtFpW">
@@ -3362,9 +3325,6 @@
                             <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                           </node>
                         </node>
-                      </node>
-                      <node concept="2IBTiW" id="2Rfu8e4XyAI" role="2IBTiu">
-                        <property role="2IBTiX" value="NEED TO CHANGE TO SIDE ROOM" />
                       </node>
                     </node>
                   </node>

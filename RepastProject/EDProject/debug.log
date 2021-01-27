@@ -732,3 +732,157 @@ INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,537 repast.simphony.batc
 INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,552 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
 INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,653 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0024
 INFO  [SwingWorker-pool-2-thread-1] 2021-01-25 20:10:18,653 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 5.0752
+FATAL [Thread-2] 2021-01-27 15:34:32,283 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (19326.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+	at java.base/java.util.Objects.checkIndex(Objects.java:372)
+	at java.base/java.util.ArrayList.get(ArrayList.java:458)
+	at simcore.agents.Agent.InitMission(Agent.java:89)
+	at simcore.agents.Actor.Perceive(Actor.java:140)
+	at simcore.agents.Actor.step(Actor.java:115)
+	... 10 more
+INFO  [AWT-EventQueue-0] 2021-01-27 17:48:50,597 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
+INFO  [AWT-EventQueue-0] 2021-01-27 17:48:50,724 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
+	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 17:49:03,760 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost16386595589294265211.zip to 
+C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 ...
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 17:49:03,811 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 17:49:03,813 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0377
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 17:49:03,813 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549\w2037451_localhost16386595589294265211.zip
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 17:49:06,248 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-13] 2021-01-27 17:49:24,033 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-13] 2021-01-27 17:49:24,034 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611769741549/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-13] 2021-01-27 17:49:24,034 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-13] 2021-01-27 17:49:24,034 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-13] 2021-01-27 17:49:24,034 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-13] 2021-01-27 17:49:25,036 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-13] 2021-01-27 17:49:25,037 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611769741549/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-13] 2021-01-27 17:49:25,037 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-13] 2021-01-27 17:49:25,037 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-13] 2021-01-27 17:49:25,037 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-13] 2021-01-27 17:49:25,073 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-13] 2021-01-27 17:49:25,073 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611769741549/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-13] 2021-01-27 17:49:25,074 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-13] 2021-01-27 17:49:25,074 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-13] 2021-01-27 17:49:25,074 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-13] 2021-01-27 17:49:25,110 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-13] 2021-01-27 17:49:25,111 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611769741549/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-13] 2021-01-27 17:49:25,111 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-13] 2021-01-27 17:49:25,111 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-13] 2021-01-27 17:49:25,111 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-3-thread-1] 2021-01-27 17:50:06,255 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:51:06,256 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:52:06,256 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:53:06,257 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:54:06,257 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:55:06,258 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:56:06,258 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:57:06,258 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:58:06,259 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 17:59:06,259 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:00:06,259 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:01:06,260 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:02:06,261 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:03:06,262 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:04:06,263 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:05:06,264 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:06:06,264 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:07:06,265 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  no
+INFO  [pool-3-thread-1] 2021-01-27 18:08:06,266 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 18:08:06,266 repast.simphony.batch.ssh.SessionsDriver - Run Time: 19.0409
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 18:08:06,345 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611769741549
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 18:08:06,360 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 18:08:06,377 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0018
+INFO  [SwingWorker-pool-2-thread-1] 2021-01-27 18:08:06,377 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 19.0806
+INFO  [AWT-EventQueue-0] 2021-01-27 18:10:36,206 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
+INFO  [AWT-EventQueue-0] 2021-01-27 18:10:36,213 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
+	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:10:49,039 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost17611955842122558725.zip to 
+C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 ...
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:10:49,085 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:10:49,086 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0344
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:10:49,086 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022\w2037451_localhost17611955842122558725.zip
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:10:51,166 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-15] 2021-01-27 18:10:59,837 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-15] 2021-01-27 18:10:59,838 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611771047022/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-15] 2021-01-27 18:10:59,838 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-15] 2021-01-27 18:10:59,838 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-15] 2021-01-27 18:10:59,838 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-15] 2021-01-27 18:10:59,937 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-15] 2021-01-27 18:10:59,937 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1611771047022/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
+INFO  [Thread-15] 2021-01-27 18:10:59,937 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+INFO  [Thread-15] 2021-01-27 18:10:59,937 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-15] 2021-01-27 18:10:59,937 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-4-thread-1] 2021-01-27 18:11:51,168 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:12:51,169 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:13:51,169 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:14:51,169 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:15:51,170 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:16:51,171 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:17:51,171 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:18:51,178 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:19:51,191 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:20:51,210 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:21:51,218 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:22:51,225 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:23:51,227 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:24:51,240 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:25:51,244 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:26:51,259 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:27:51,267 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:28:51,284 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:29:51,298 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:30:51,313 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:31:51,329 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:32:51,340 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:33:51,352 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:34:51,361 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:35:51,372 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:36:51,377 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:37:51,378 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:38:51,384 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:39:51,386 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:40:51,398 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:41:51,412 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:42:51,421 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:43:51,438 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:44:51,446 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:45:51,463 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:46:51,467 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:47:51,482 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:48:51,484 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:49:51,496 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:50:51,505 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:51:51,506 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:52:51,520 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:53:51,530 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:54:51,547 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:55:51,561 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:56:51,574 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  no
+INFO  [pool-4-thread-1] 2021-01-27 18:57:51,577 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:57:51,577 repast.simphony.batch.ssh.SessionsDriver - Run Time: 47.0415
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:57:51,592 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1611771047022
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:57:51,607 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:57:51,607 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0005
+INFO  [SwingWorker-pool-2-thread-2] 2021-01-27 18:57:51,623 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 47.0768

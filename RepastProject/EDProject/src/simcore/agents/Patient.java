@@ -226,6 +226,8 @@ public class Patient extends Agent {
 			this.outcome = PatientOutcomes.ADMITTEDRED;
 		} else if (bay == AdmissionBays.GREEN) {
 			this.outcome = PatientOutcomes.ADMITTEDGREEN;
+		} else if(bay == AdmissionBays.SIDEROOM) {
+			this.outcome = PatientOutcomes.ADMITTEDSIDEROOM;
 		}
 		
 		setHasBeenDealtWith();
@@ -284,6 +286,13 @@ public class Patient extends Agent {
 		return 0;
 	}
 	
+	public Integer positiveAndAdmittedToSideRoom() {
+		if(outcome == PatientOutcomes.ADMITTEDSIDEROOM && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
 	public Integer positiveAndDischarged() {
 		if(outcome == PatientOutcomes.DISCHARGED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
@@ -307,6 +316,13 @@ public class Patient extends Agent {
 	
 	public Integer negativeAndAdmittedToGreen() {
 		if(outcome == PatientOutcomes.ADMITTEDGREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer negativeAndAdmittedToSIDEROOM() {
+		if(outcome == PatientOutcomes.ADMITTEDSIDEROOM && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;

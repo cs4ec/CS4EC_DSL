@@ -69,6 +69,18 @@
       </SeriesData>
     </entry>
     <entry>
+      <string>positiveAndAdmittedToSideRoom</string>
+      <SeriesData>
+        <label>positiveAndAdmittedToSideRoom</label>
+        <color>
+          <red>0</red>
+          <green>0</green>
+          <blue>255</blue>
+          <alpha>255</alpha>
+        </color>
+      </SeriesData>
+    </entry>
+    <entry>
       <string>negativeAndDischarged</string>
       <SeriesData>
         <label>negativeAndDischarged</label>
@@ -93,6 +105,13 @@
       </SeriesData>
     </entry>
     <entry>
+      <string>negativeAndAdmittedToSideRoom</string>
+      <SeriesData>
+        <label>negativeAndAdmittedToSideRoom</label>
+        <color reference="../../../entry[5]/SeriesData/color"/>
+      </SeriesData>
+    </entry>
+    <entry>
       <string>positiveAndDischarged</string>
       <SeriesData>
         <label>positiveAndDischarged</label>
@@ -108,7 +127,7 @@
       <string>positiveAndAdmittedToAmber</string>
       <SeriesData>
         <label>positiveAndAdmittedToAmber</label>
-        <color reference="../../../entry[5]/SeriesData/color"/>
+        <color reference="../../../entry[6]/SeriesData/color"/>
       </SeriesData>
     </entry>
   </seriesIds>

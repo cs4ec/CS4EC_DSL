@@ -58,6 +58,7 @@ import simcore.utilities.AStar;
  */
 public class Actor extends Agent {
 	  protected List<Patient> mlstMyPatients = new ArrayList<Patient>();
+	  protected List<Patient> mlstSeenPatients = new ArrayList<Patient>();
 	  protected int mintMyMaxPatients = 1;
 	
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid) {
@@ -154,6 +155,7 @@ public class Actor extends Agent {
 			return plstSignals.get(0);
 		}	
 		
+		Map<Signal, Patient> pMapSignalsWithMyPastPatients = new HashMap<Signal,Patient>();
 		Map<Signal, Patient> pMapSignalsWithFreePatients = new HashMap<Signal,Patient>();
 		Map<Signal, Patient> pMapSignalsWithMyPatients = new HashMap<Signal,Patient>();
 
@@ -161,17 +163,21 @@ public class Actor extends Agent {
 			Patient p = (Patient) signal.getDataOfType(Patient.class);
 			if(p != null && mlstMyPatients.contains(p)) {
 				pMapSignalsWithMyPatients.put(signal, p);
+			} else if(p != null && mlstSeenPatients.contains(p)) {
+				pMapSignalsWithMyPastPatients.put(signal, p);
 			} else if(p != null && p.getMyAssignedStaffOfType(this.getClass()).isEmpty()) {
 				pMapSignalsWithFreePatients.put(signal, p);
 			}
 		}
-		if(pMapSignalsWithMyPatients.isEmpty() && pMapSignalsWithFreePatients.isEmpty()) {
+		if(pMapSignalsWithMyPatients.isEmpty() && pMapSignalsWithFreePatients.isEmpty() && pMapSignalsWithMyPastPatients.isEmpty()) {
 			// Currently I cannot do anything as I am at max capacity of patients and there are no tasks for those patients
 			return null;
 		} else {
 			// Look for signals containing my patients. If there is one, take it. 
 			if(!pMapSignalsWithMyPatients.isEmpty()) {
 				return (Signal) pMapSignalsWithMyPatients.keySet().toArray()[0];
+			} else if(!pMapSignalsWithMyPastPatients.isEmpty()) {
+				return (Signal) pMapSignalsWithMyPastPatients.keySet().toArray()[0];
 			}
 			//Otherwise, I am waiting and see if I can take a new case in the meantime...
 			if(!pMapSignalsWithFreePatients.isEmpty() && mlstMyPatients.size() != mintMyMaxPatients) {
@@ -301,6 +307,9 @@ public class Actor extends Agent {
 	private void deAssignPatient(Patient p) {
 		if(mlstMyPatients.contains(p)) {
 			mlstMyPatients.remove(p);
+			if(!mlstSeenPatients.contains(p)) {
+				mlstSeenPatients.add(p);
+			}
 		}
 	}
 

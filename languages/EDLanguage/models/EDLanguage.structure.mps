@@ -1428,6 +1428,11 @@
       <property role="TrG5h" value="RED" />
       <property role="1L1pqM" value="red bay" />
     </node>
+    <node concept="25R33" id="2Rfu8e5bdWR" role="25R1y">
+      <property role="3tVfz5" value="3300989558156222263" />
+      <property role="TrG5h" value="SIDEROOM" />
+      <property role="1L1pqM" value="side room" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4TDP_m2UaO">
     <property role="EcuMT" value="88285669847966388" />
