@@ -1,5 +1,5 @@
 package simcore.basicStructures;
 
 public enum AdmissionBays {
-	GREEN,AMBER,RED
+	GREEN,AMBER,RED, SIDEROOM
 }

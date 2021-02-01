@@ -295,16 +295,12 @@ public class JuniorDoctor extends Doctor {
         curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       }
     } else {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
-        sendSignalTemp = new RequestPCRSignal();
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        sendSignalTemp.AddData("replyTo", this);
-        curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-      } else {
-        this.InitDischargePatient(s);
-      }
+      sendSignalTemp = new RequestPCRSignal();
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      sendSignalTemp.AddData("replyTo", this);
+      curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
     }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
