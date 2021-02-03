@@ -13,6 +13,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActorInstantiation;
   private ConceptPresentation props_ActorReference;
   private ConceptPresentation props_ActorTypeSignal;
+  private ConceptPresentation props_AdmissionBay;
+  private ConceptPresentation props_AdmissionBayList;
   private ConceptPresentation props_AdmitAction;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeExpressionReference;
@@ -117,6 +119,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActorTypeSignal = cpb.create();
         }
         return props_ActorTypeSignal;
+      case LanguageConceptSwitch.AdmissionBay:
+        if (props_AdmissionBay == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AdmissionBay = cpb.create();
+        }
+        return props_AdmissionBay;
+      case LanguageConceptSwitch.AdmissionBayList:
+        if (props_AdmissionBayList == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("AdmissionBayList");
+          props_AdmissionBayList = cpb.create();
+        }
+        return props_AdmissionBayList;
       case LanguageConceptSwitch.AdmitAction:
         if (props_AdmitAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

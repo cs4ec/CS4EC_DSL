@@ -7,6 +7,15 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.Amber;
+import EDLanguage.sandbox.Entrance;
+import EDLanguage.sandbox.Exit;
+import EDLanguage.sandbox.Green;
+import EDLanguage.sandbox.INOVA;
+import EDLanguage.sandbox.LIAT;
+import EDLanguage.sandbox.LabPCR;
+import EDLanguage.sandbox.Red;
+import EDLanguage.sandbox.SideRoom;
 import EDLanguage.sandbox.WaitingRoom;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -17,7 +26,7 @@ import simcore.Signals.Orders.MoveToOrder;
 import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
 import simcore.action.basicAction.conditions.PatientOutcomes;
-import simcore.basicStructures.AdmissionBays;
+import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.TimeKeeper;
@@ -41,6 +50,7 @@ public class Patient extends Agent {
 	private List<TestResult> testResults;
 	private SeverityScore severityScore;
 	private PatientOutcomes outcome;
+	private double pheScore;
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -56,7 +66,11 @@ public class Patient extends Agent {
 
 	@ScheduledMethod(start = 1, interval = 1)
 	public void step() {
-		this.Perceive();
+		if(this.hasBeenDealtWith && (curInside.getRoomType() == Exit.getInstance() || curInside.getRoomType() == Entrance.getInstance())) {
+			
+		} else {
+			this.Perceive();
+		}
 	}
 
 	public void Perceive() {
@@ -113,7 +127,7 @@ public class Patient extends Agent {
 		} else if (order instanceof FollowOrder) {
 			// follow the target
 			Object target = ((FollowOrder) order).getFollowTarget();
-			MoveTowards(target);
+			Follow((Agent)target);
 			
 		} else if (order instanceof StopOrder) {
 			curOrder = null;
@@ -192,6 +206,14 @@ public class Patient extends Agent {
 	public SeverityScore getSeverityScore() {
 		return severityScore;
 	}
+	
+	public double getPHEScore() {
+		return pheScore;
+	}
+	
+	public void setPHEScore(double score) {
+		this.pheScore = score;
+	}
 
 	@Override
 	public String toString() {
@@ -208,6 +230,7 @@ public class Patient extends Agent {
 	
 	public void setHasBeenDealtWith() {
 		hasBeenDealtWith = true;
+		
 	}
 	
 	public PatientOutcomes getOutcome() {
@@ -219,14 +242,14 @@ public class Patient extends Agent {
 		setHasBeenDealtWith();
 	}
 	
-	public void setAdmitted(AdmissionBays bay) {
-		if(bay == AdmissionBays.AMBER) {
+	public void setAdmitted(AdmissionBay bay) {
+		if(bay instanceof Amber) {
 			this.outcome = PatientOutcomes.ADMITTEDAMBER;
-		} else if (bay == AdmissionBays.RED) {
+		} else if (bay instanceof Red) {
 			this.outcome = PatientOutcomes.ADMITTEDRED;
-		} else if (bay == AdmissionBays.GREEN) {
+		} else if (bay instanceof Green) {
 			this.outcome = PatientOutcomes.ADMITTEDGREEN;
-		} else if(bay == AdmissionBays.SIDEROOM) {
+		} else if(bay instanceof SideRoom) {
 			this.outcome = PatientOutcomes.ADMITTEDSIDEROOM;
 		}
 		
@@ -236,6 +259,10 @@ public class Patient extends Agent {
 	public List<TestResult> getTestResults(){
 		return testResults;
 	}
+	
+	
+	
+	//----------------------------------------------------------- Data Sources --------------------------------------------------------------
 	
 	public Integer isDischargedToRed() {
 		if(outcome == PatientOutcomes.ADMITTEDRED) {
@@ -330,6 +357,27 @@ public class Patient extends Agent {
 
 	public Integer negativeAndDischarged() {
 		if(outcome == PatientOutcomes.DISCHARGED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer receivedLFD() {
+		if( testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findAny().isPresent()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer receivedPCR() {
+		if( testResults.stream().filter(t -> t.getTestType().equals(LabPCR.getInstance())).findAny().isPresent()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer receivedLIAT() {
+		if( testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findAny().isPresent()) {
 			return 1;
 		}
 		return 0;

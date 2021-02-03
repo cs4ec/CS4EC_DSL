@@ -32,6 +32,7 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.conditions.CanRedCohortCondition;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.action.basicAction.conditions.IsAvailableCondition;
@@ -199,7 +200,7 @@ public class Agent {
 		if (ImAt(target)) {
 			NextStep();
 			return;
-		}
+		} 
 
 		// Move in the physical space
 		MoveTowards(target);
@@ -234,23 +235,28 @@ public class Agent {
 	private Room SelectLocation(RoomType pRoomType) {
 		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
 		// If I am already in one of those rooms, stay there
-		if(pRooms.contains(curInside)) {
-			return curInside;
-		}
+//		if(pRooms.contains(curInside)) {
+//			return curInside;
+//		}
 		// Otherwise find an instance of the room we want
 		// By default select the one that is most empty
 		try {
-			return pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r2), EvaluateRoomChoice(r1))).findFirst().get();
+			return pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2))).findFirst().get();
 		} catch (ArrayIndexOutOfBoundsException e) {
 			return null;
 		}
 	}
 	
 	private double EvaluateRoomChoice(Room pRoom) {
-		if(pRoom.getCurrentCapacity() > 0) {
-			return 0.0;
+		int pRoomCapacity = pRoom.getCurrentCapacity();
+		if(pRoom.getOccupiers().contains(this)) {
+			pRoomCapacity--;
+		}
+		if(pRoomCapacity > 0) {
+			return Double.MAX_VALUE;
 		} else {
-			return 1.0;
+			return CalcDistance(grid.getLocation(this), grid.getLocation(pRoom));
+//			return 1.0;
 		}
 	}
 
@@ -295,12 +301,14 @@ public class Agent {
 	public void MoveTowards(GridPoint pt) {
 		NdPoint myPoint = space.getLocation(this);
 
+		// If I am not yet at the destination
 		if (!ImAt(pt)) {
+			// And I dont have a path, then get a new one
 			if (curPath == null || curPath.isEmpty()) {
 				curPath = new ArrayList<>();
 				curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
-
 			} else {
+				// Else, I do have a path but do the wrong destination, then get a new one
 				GridPoint pathGridPoint = curPath.get(curPath.size() - 1);
 				if (pathGridPoint.getX() != pt.getX() || pathGridPoint.getY() != pt.getY()) {
 					curPath = new ArrayList<>();
@@ -308,6 +316,7 @@ public class Agent {
 				}
 			}
 
+			// If I have a path, follow it one step
 			if (!curPath.isEmpty()) {
 				GridPoint GridStep = curPath.get(0);
 				curPath.remove(0);
@@ -317,6 +326,18 @@ public class Agent {
 				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 			}
 		}
+	}
+	
+	// A simplified move action where if I am following another agent, I will not use full pathfinding but instead 
+	// copy the path of the agent I am following
+	public void Follow(Agent target) {
+		NdPoint myPoint = space.getLocation(this);
+		GridPoint targetPoint = grid.getLocation(target);
+		
+		NdPoint otherPoint = new NdPoint(targetPoint.getX(), targetPoint.getY());
+		space.moveTo(this, otherPoint.getX(), otherPoint.getY());
+		myPoint = space.getLocation(this);
+		grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 	}
 
 	// 判断当前位置是否在目标处
@@ -362,7 +383,6 @@ public class Agent {
 
 	// Consequence of this Action
 	public void UpdateState(Consequence c) {
-
 		if (c == null) {
 			return;
 		}
@@ -456,6 +476,13 @@ public class Agent {
 		
 		if(c instanceof SeverityCondition) {
 			return ((SeverityCondition) c).getSeverityScore() == ((SeverityCondition) c).getPatient().getSeverityScore();
+		}
+		
+		if(c instanceof CanRedCohortCondition) {
+			Patient pPatient = ((CanRedCohortCondition) c).getPatient();
+			double pPHEScore = pPatient.getPHEScore();
+			
+			
 		}
 
 		if (c instanceof StateCondition) {

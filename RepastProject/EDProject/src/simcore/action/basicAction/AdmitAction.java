@@ -2,18 +2,18 @@ package simcore.action.basicAction;
 
 import simcore.action.ActionFragment;
 import simcore.agents.Patient;
-import simcore.basicStructures.AdmissionBays;
+import simcore.basicStructures.AdmissionBay;
 
 public class AdmitAction extends ActionFragment {
 	private Patient patient;
-	private AdmissionBays admissionBay;
+	private AdmissionBay admissionBay;
 	
 	public AdmitAction WithPatient(Patient p) {
 		patient = p;
 		return this;
 	}
 	
-	public AdmitAction WithAdmissionBay(AdmissionBays bay) {
+	public AdmitAction WithAdmissionBay(AdmissionBay bay) {
 		admissionBay = bay;
 		return this;
 	}
@@ -25,10 +25,10 @@ public class AdmitAction extends ActionFragment {
 		this.patient = patient;
 	}
 	
-	public AdmissionBays getAdmissionBay() {
+	public AdmissionBay getAdmissionBay() {
 		return admissionBay;
 	}
-	public void setAdmissionBay(AdmissionBays bay) {
+	public void setAdmissionBay(AdmissionBay bay) {
 		this.admissionBay = bay;
 	}
 }

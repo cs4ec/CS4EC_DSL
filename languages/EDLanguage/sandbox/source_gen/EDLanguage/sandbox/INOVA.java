@@ -5,6 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.Test;
 
 public class INOVA extends Test {
+  private static INOVA instance;
   private INOVA() {
     sensitivity = 0.7;
     specificity = 0.991;

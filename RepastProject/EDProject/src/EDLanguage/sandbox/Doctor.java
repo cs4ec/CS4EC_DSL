@@ -19,7 +19,6 @@ import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.diagnosis.InfectionStatus;
 import simcore.action.basicAction.AdmitAction;
-import simcore.basicStructures.AdmissionBays;
 import simcore.action.basicAction.conditions.ResultCondition;
 import simcore.action.basicAction.DischargeAction;
 
@@ -127,7 +126,7 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-    if (CheckCondition(new PossibilityCondition().WithPossibility(20))) {
+    if (CheckCondition(new PossibilityCondition().WithPossibility(25))) {
       sendSignalTemp = new ConductLFDSignal();
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       sendSignalTemp.AddData("replyTo", this);
@@ -148,10 +147,10 @@ public class Doctor extends Staff {
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.RED)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red.getInstance())));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
     } else {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(20))) {
+      if (CheckCondition(new PossibilityCondition().WithPossibility(40))) {
         curMission.WithStep(new ActionStep().WithName("Administer LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
         curMission.WithStep(new ActionStep().WithName("Go to the Liat machine").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
         sendSignalTemp = new ConductLIATSignal();
@@ -165,8 +164,6 @@ public class Doctor extends Staff {
         curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       }
     }
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
 
   }
   public void InitLIATNegative(Signal s) {
@@ -194,12 +191,12 @@ public class Doctor extends Staff {
         if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.RED)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red.getInstance())));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
         } else {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.SIDEROOM)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom.getInstance())));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
         }
       } else {
@@ -209,12 +206,12 @@ public class Doctor extends Staff {
         if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.RED)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red.getInstance())));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
         } else {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.SIDEROOM)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom.getInstance())));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
         }
       } else {
@@ -232,12 +229,12 @@ public class Doctor extends Staff {
         if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LabPCR.getInstance()).WithResult(true))) {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.RED)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red.getInstance())));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
         } else {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.SIDEROOM)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom.getInstance())));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
         }
       } else {
@@ -247,12 +244,12 @@ public class Doctor extends Staff {
         if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LabPCR.getInstance()).WithResult(true))) {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.RED)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red.getInstance())));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
         } else {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.SIDEROOM)));
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom.getInstance())));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
         }
       } else {
@@ -267,7 +264,7 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("Consult with patient, determine symptomatic/asymptomatic").WithAction(new StayForTimeAction().WithTimeSpan(180)));
     if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(20))) {
+      if (CheckCondition(new PossibilityCondition().WithPossibility(40))) {
         curMission.WithStep(new ActionStep().WithName("Administer LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
         curMission.WithStep(new ActionStep().WithName("Go to the Liat machine").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
         sendSignalTemp = new ConductLIATSignal();
@@ -285,11 +282,9 @@ public class Doctor extends Staff {
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(AdmissionBays.AMBER)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Amber.getInstance())));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
     }
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
 
   }
   public void InitDischargePatient(Signal s) {

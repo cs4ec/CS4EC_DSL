@@ -1,3 +1,6 @@
-Patient 3 | total wait time: 34mins | dealt at time point: 2021-02-01T12:47:06.954933800 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: Discharged
-Patient 4 | total wait time: 27mins | dealt at time point: 2021-02-01T12:48:05.954933800 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: Discharged
-Patient 1 | total wait time: 51mins | dealt at time point: 2021-02-01T12:48:22.954933800 | Had severity: SEVERE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: NegativeTested with INOVA which gave result: Negative | Final decision: Admitted to Amber bay
+Patient 5 | total wait time: 27mins | dealt at time point: 2021-02-03T19:34:19.927163200 | Had severity: MODERATE | Had infection state: Symptomatic | Final decision: Discharged
+Patient 6 | total wait time: 27mins | dealt at time point: 2021-02-03T19:42:30.927163200 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: Discharged
+Patient 3 | total wait time: 60mins | dealt at time point: 2021-02-03T19:51:30.927163200 | Had severity: MODERATE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: NegativeTested with LabPCR which gave result: Positive | Final decision: Admitted to Amber bay
+Patient 8 | total wait time: 24mins | dealt at time point: 2021-02-03T19:55:50.927163200 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: Discharged
+Patient 4 | total wait time: 65mins | dealt at time point: 2021-02-03T20:04:02.927163200 | Had severity: MODERATE | Had infection state: Symptomatic | Test Results: Tested with INOVA which gave result: PositiveTested with LabPCR which gave result: Positive | Final decision: Admitted to Red bay
+Patient 10 | total wait time: 25mins | dealt at time point: 2021-02-03T20:12:48.927163200 | Had severity: MODERATE | Had infection state: Susceptible | Final decision: Discharged

@@ -105,6 +105,20 @@ public class Room extends Locatable{
 			}
 		}
 	}
+	
+	public Set<Agent> getOccupiers(){
+		return contentPeople;
+	}
+	
+//	public void addPerson(Agent a) {
+//		contentPeople.add(a);
+//		curCap++;
+//	}
+//	
+//	public void removePerson(Agent a) {
+//		contentPeople.remove(a);
+//		curCap--;
+//	}
 
 	private void createLayoutStyle() {
 

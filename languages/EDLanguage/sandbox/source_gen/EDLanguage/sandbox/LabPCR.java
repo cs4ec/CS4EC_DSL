@@ -5,6 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.Test;
 
 public class LabPCR extends Test {
+  private static LabPCR instance;
   private LabPCR() {
     sensitivity = 0.99;
     specificity = 0.95;
