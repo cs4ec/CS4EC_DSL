@@ -78,6 +78,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StayForConditionAction;
   private ConceptPresentation props_StayForTimeAction;
   private ConceptPresentation props_StopOrder;
+  private ConceptPresentation props_SuitableForSideRoomCondition;
   private ConceptPresentation props_Test;
   private ConceptPresentation props_TestAction;
   private ConceptPresentation props_TestKit;
@@ -594,6 +595,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StopOrder = cpb.create();
         }
         return props_StopOrder;
+      case LanguageConceptSwitch.SuitableForSideRoomCondition:
+        if (props_SuitableForSideRoomCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SuitableForSideRoomCondition");
+          props_SuitableForSideRoomCondition = cpb.create();
+        }
+        return props_SuitableForSideRoomCondition;
       case LanguageConceptSwitch.Test:
         if (props_Test == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

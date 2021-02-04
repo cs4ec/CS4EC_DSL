@@ -1557,5 +1557,11 @@
       <ref role="20lvS9" node="L8B6GmHak$" resolve="AdmissionBay" />
     </node>
   </node>
+  <node concept="1TIwiD" id="L8B6GnjfR9">
+    <property role="EcuMT" value="885129310544657865" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="SuitableForSideRoomCondition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+  </node>
 </model>
 

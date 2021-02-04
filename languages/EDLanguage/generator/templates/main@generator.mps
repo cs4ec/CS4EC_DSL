@@ -745,6 +745,12 @@
         <ref role="v9R2y" node="2Rfu8e4WeoX" resolve="reduce_PatientAdmissionOutcomeCondition" />
       </node>
     </node>
+    <node concept="3aamgX" id="L8B6Gnjg4H" role="3acgRq">
+      <ref role="30HIoZ" to="3751:L8B6GnjfR9" resolve="SuitableForSideRoomCondition" />
+      <node concept="j$656" id="L8B6Gnjg4I" role="1lVwrX">
+        <ref role="v9R2y" node="L8B6Gnjg4F" resolve="reduce_CanRedCohortCondition" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="DbMKZsswSi">
     <property role="TrG5h" value="MyActor" />
@@ -7436,6 +7442,75 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="L8B6Gnjg4F">
+    <property role="TrG5h" value="reduce_CanRedCohortCondition" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="3gUMe" to="3751:L8B6GnjfR9" resolve="SuitableForSideRoomCondition" />
+    <node concept="312cEu" id="L8B6Gnjg6$" role="13RCb5">
+      <property role="TrG5h" value="_class_" />
+      <node concept="15s5l7" id="L8B6GnjgKY" role="lGtFl">
+        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: There is no default constructor available in super class simcore.agents.Actor&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/8974945326827961340]&quot;;" />
+        <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Actor" />
+      </node>
+      <node concept="312cEg" id="L8B6Gnjg7J" role="jymVt">
+        <property role="TrG5h" value="curMission" />
+        <node concept="3Tm6S6" id="L8B6Gnjg7K" role="1B3o_S" />
+        <node concept="3uibUv" id="L8B6Gnjg7L" role="1tU5fm">
+          <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
+        </node>
+      </node>
+      <node concept="2tJIrI" id="L8B6Gnjg7M" role="jymVt" />
+      <node concept="3clFb_" id="L8B6Gnjg7N" role="jymVt">
+        <property role="TrG5h" value="InitFunction" />
+        <node concept="3clFbS" id="L8B6Gnjg7O" role="3clF47">
+          <node concept="3clFbF" id="L8B6GnorAN" role="3cqZAp">
+            <node concept="2OqwBi" id="L8B6Gnjg7T" role="3clFbG">
+              <node concept="2ShNRf" id="L8B6Gnjg7U" role="2Oq$k0">
+                <node concept="1pGfFk" id="L8B6Gnjg7V" role="2ShVmc">
+                  <ref role="37wK5l" to="9axu:~SuitableForSideRoomCondition.&lt;init&gt;()" resolve="SuitableForSideRoomCondition" />
+                </node>
+              </node>
+              <node concept="liA8E" id="L8B6Gnjg7W" role="2OqNvi">
+                <ref role="37wK5l" to="9axu:~SuitableForSideRoomCondition.WithPatient(simcore.agents.Patient)" resolve="WithPatient" />
+                <node concept="10QFUN" id="L8B6Gnjg7X" role="37wK5m">
+                  <node concept="3uibUv" id="L8B6Gnjg7Y" role="10QFUM">
+                    <ref role="3uigEE" to="uux2:~Patient" resolve="Patient" />
+                  </node>
+                  <node concept="2OqwBi" id="L8B6Gnjg7Z" role="10QFUP">
+                    <node concept="37vLTw" id="L8B6Gnjg80" role="2Oq$k0">
+                      <ref role="3cqZAo" node="L8B6Gnjg8t" resolve="s" />
+                    </node>
+                    <node concept="liA8E" id="L8B6Gnjg81" role="2OqNvi">
+                      <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                      <node concept="Xl_RD" id="L8B6Gnjg82" role="37wK5m">
+                        <property role="Xl_RC" value="patient" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="raruj" id="L8B6GnorDU" role="lGtFl" />
+            </node>
+          </node>
+          <node concept="3clFbH" id="L8B6Gnjg7P" role="3cqZAp" />
+          <node concept="3clFbH" id="L8B6Gnjg8q" role="3cqZAp" />
+        </node>
+        <node concept="3Tm1VV" id="L8B6Gnjg8r" role="1B3o_S" />
+        <node concept="3cqZAl" id="L8B6Gnjg8s" role="3clF45" />
+        <node concept="37vLTG" id="L8B6Gnjg8t" role="3clF46">
+          <property role="TrG5h" value="s" />
+          <node concept="3uibUv" id="L8B6Gnjg8u" role="1tU5fm">
+            <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
+          </node>
+        </node>
+      </node>
+      <node concept="2tJIrI" id="L8B6Gnjg77" role="jymVt" />
+      <node concept="3Tm1VV" id="L8B6Gnjg6_" role="1B3o_S" />
+      <node concept="3uibUv" id="L8B6Gnjg_b" role="1zkMxy">
+        <ref role="3uigEE" to="uux2:~Actor" resolve="Actor" />
       </node>
     </node>
   </node>

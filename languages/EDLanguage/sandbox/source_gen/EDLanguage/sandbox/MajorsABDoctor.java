@@ -15,6 +15,7 @@ import simcore.basicStructures.Desk;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.agents.Patient;
 import simcore.diagnosis.InfectionStatus;
+import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
 import simcore.action.basicAction.AdmitAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.Signals.Orders.MoveToOrder;
@@ -96,10 +97,14 @@ public class MajorsABDoctor extends Staff {
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red.getInstance())));
+      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")))) {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom.getInstance())));
+      } else {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red.getInstance())));
+      }
       curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
     } else {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(20))) {
+      if (CheckCondition(new PossibilityCondition().WithPossibility(40))) {
         curMission.WithStep(new ActionStep().WithName("Administer LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
         curMission.WithStep(new ActionStep().WithName("Go to the Liat machine").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
         sendSignalTemp = new ConductLIATSignal();
@@ -215,7 +220,7 @@ public class MajorsABDoctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("Consult with patient, determine symptomatic/asymptomatic").WithAction(new StayForTimeAction().WithTimeSpan(180)));
     if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(20))) {
+      if (CheckCondition(new PossibilityCondition().WithPossibility(40))) {
         curMission.WithStep(new ActionStep().WithName("Administer LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
         curMission.WithStep(new ActionStep().WithName("Go to the Liat machine").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
         sendSignalTemp = new ConductLIATSignal();

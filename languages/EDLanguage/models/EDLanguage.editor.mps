@@ -1894,5 +1894,15 @@
       <node concept="l2Vlx" id="L8B6GmHal0" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="L8B6GnjfRa">
+    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:L8B6GnjfR9" resolve="SuitableForSideRoomCondition" />
+    <node concept="3EZMnI" id="L8B6GnjfRc" role="2wV5jI">
+      <node concept="3F0ifn" id="L8B6GnjfRj" role="3EZMnx">
+        <property role="3F0ifm" value="the patient can be placed in a side room" />
+      </node>
+      <node concept="l2Vlx" id="L8B6GnjfRf" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

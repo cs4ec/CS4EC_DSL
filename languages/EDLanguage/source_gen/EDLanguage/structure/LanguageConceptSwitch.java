@@ -78,11 +78,12 @@ public final class LanguageConceptSwitch {
   public static final int StayForConditionAction = 66;
   public static final int StayForTimeAction = 67;
   public static final int StopOrder = 68;
-  public static final int Test = 69;
-  public static final int TestAction = 70;
-  public static final int TestKit = 71;
-  public static final int WallDefinition = 72;
-  public static final int WallInstanceDefinition = 73;
+  public static final int SuitableForSideRoomCondition = 69;
+  public static final int Test = 70;
+  public static final int TestAction = 71;
+  public static final int TestKit = 72;
+  public static final int WallDefinition = 73;
+  public static final int WallInstanceDefinition = 74;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x7dcff301ba01414eL, 0x8574a8f6da31876bL);
@@ -155,6 +156,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x3c282c112f19d58aL, StayForConditionAction);
     builder.put(0x3c282c112f19d52dL, StayForTimeAction);
     builder.put(0x7606d63a99b483bfL, StopOrder);
+    builder.put(0xc489c6b174cfdc9L, SuitableForSideRoomCondition);
     builder.put(0x4936c0ffc391ca7L, Test);
     builder.put(0x4936c0ffc449d4aL, TestAction);
     builder.put(0x4936c0ffc9a8d3fL, TestKit);

@@ -1153,6 +1153,7 @@
     <classNode dependClassName="EDLanguage.editor.StayForConditionAction_Editor" />
     <classNode dependClassName="EDLanguage.editor.StayForTimeAction_Editor" />
     <classNode dependClassName="EDLanguage.editor.StopOrder_Editor" />
+    <classNode dependClassName="EDLanguage.editor.SuitableForSideRoomCondition_Editor" />
     <classNode dependClassName="EDLanguage.editor.TestAction_Editor" />
     <classNode dependClassName="EDLanguage.editor.TestKit_Editor" />
     <classNode dependClassName="EDLanguage.editor.TestKit_SubstituteMenu" />
@@ -2563,6 +2564,24 @@
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
   <dependency className="EDLanguage.editor.StopOrder_EditorBuilder_a">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
+  </dependency>
+  <dependency className="EDLanguage.editor.SuitableForSideRoomCondition_Editor">
+    <classNode dependClassName="EDLanguage.editor.SuitableForSideRoomCondition_EditorBuilder_a" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="EDLanguage.editor.SuitableForSideRoomCondition_EditorBuilder_a">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
     <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />

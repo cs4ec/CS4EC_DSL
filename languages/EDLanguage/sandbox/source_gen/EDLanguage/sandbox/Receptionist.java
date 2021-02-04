@@ -108,7 +108,11 @@ public class Receptionist extends Staff {
         }
       } else {
         if (CheckCondition(new SeverityCondition().WithPatient((Patient) s.GetData("patient")).WithSeverityScore(SeverityScore.MODERATE))) {
-          this.InitSendPatientToWaitingRoom(s);
+          if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
+            this.InitLogPatientForMajorsAB(s);
+          } else {
+            this.InitSendPatientToWaitingRoom(s);
+          }
         } else {
         }
       }

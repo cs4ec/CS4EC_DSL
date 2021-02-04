@@ -5,6 +5,8 @@ package EDLanguage.sandbox;
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.engine.schedule.ISchedule;
+import repast.simphony.engine.schedule.ScheduleParameters;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactory;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -36,10 +38,15 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
-
+    
+    PatientAdder pAdder = new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.2).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66);
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.2).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66));
+    context.add(pAdder);
 
+  ISchedule schedule = RunEnvironment.getInstance().getCurrentSchedule();
+  ScheduleParameters arrival = ScheduleParameters.createPoissonProbabilityRepeating(480, 450, 1);
+  schedule.schedule(arrival , pAdder, "ticccck");
+    
     // add Agents 
     for (int i = 0; i < 6; i++) {
       context.add(new Doctor(space, grid));

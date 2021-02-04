@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 import EDLanguage.sandbox.DoctorOffice;
 import EDLanguage.sandbox.Nurse;
+import EDLanguage.sandbox.SideRoom;
 import repast.simphony.context.Context;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
@@ -32,7 +33,7 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.conditions.CanRedCohortCondition;
+import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.action.basicAction.conditions.IsAvailableCondition;
@@ -478,11 +479,16 @@ public class Agent {
 			return ((SeverityCondition) c).getSeverityScore() == ((SeverityCondition) c).getPatient().getSeverityScore();
 		}
 		
-		if(c instanceof CanRedCohortCondition) {
-			Patient pPatient = ((CanRedCohortCondition) c).getPatient();
+		if(c instanceof SuitableForSideRoomCondition) {
+			Patient pPatient = ((SuitableForSideRoomCondition) c).getPatient();
 			double pPHEScore = pPatient.getPHEScore();
+			double pSideRoomCapacity = (SideRoom.getInstance().getCurrentOccupancy() / SideRoom.getInstance().getCapacity());
+			double pdblChances = 1- ((pPHEScore + pSideRoomCapacity) / 2);
 			
-			
+			if(RandomHelper.nextDouble() < pdblChances) {
+				return true;
+			}
+			return false;
 		}
 
 		if (c instanceof StateCondition) {

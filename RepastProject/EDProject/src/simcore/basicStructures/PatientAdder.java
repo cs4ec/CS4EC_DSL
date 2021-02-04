@@ -75,6 +75,11 @@ public class PatientAdder {
 		Ticktock();
 	}
 	
+	public void ticccck() {
+	    double tick = RunEnvironment.getInstance().getCurrentSchedule().getTickCount();
+	    System.out.println("New arrival on tick: " + tick);
+	}
+	
 	public void Ticktock() {
 		if(count == 0) {
 			count = interval;
@@ -87,10 +92,13 @@ public class PatientAdder {
 
 	    	if(dice < percentCOVIDSymptomatic) {
 	        	p.setActualInfectionState(SymptomaticInfectionState.getInstance().generateStateForMe(p));
+	        	p.setPHEScore(RandomHelper.nextDoubleFromTo(0.3, 1.0));
 	    	} else if(dice >= percentCOVIDSymptomatic && dice < upperBoundaryForAsymptomatic) {
 	        	p.setActualInfectionState(AsymptomaticInfectionState.getInstance().generateStateForMe(p));
+	        	p.setPHEScore(RandomHelper.nextDoubleFromTo(0.01, 0.2));
 	    	} else {
 	        	p.setActualInfectionState(SusceptibleInfectionState.getInstance().generateStateForMe(p));
+	        	p.setPHEScore(RandomHelper.nextDoubleFromTo(0.01, 0.2));
 	    	}
 	    	
 	    	// Set patient Severity Score
