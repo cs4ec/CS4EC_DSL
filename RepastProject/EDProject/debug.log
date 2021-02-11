@@ -1,546 +1,732 @@
-INFO  [pool-3-thread-1] 2021-02-02 12:31:44,997 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:32:44,997 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:33:44,998 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:34:44,998 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:35:44,999 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:36:45,010 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:37:45,010 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:38:45,011 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:39:45,011 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:47:27,474 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:48:27,474 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:49:27,475 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:50:27,475 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:51:27,475 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 12:52:27,477 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 12:52:27,479 repast.simphony.batch.ssh.SessionsDriver - Run Time: 35.7580
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 12:52:27,564 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612268198955
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 12:52:27,587 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 12:52:27,615 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0023
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 12:52:27,615 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 35.8112
-INFO  [AWT-EventQueue-0] 2021-02-02 13:05:07,463 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-02 13:05:07,470 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [AWT-EventQueue-0] 2021-02-02 13:13:57,999 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-02 13:13:58,104 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:14:14,530 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost5334606226522721408.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 ...
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:14:14,616 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:14:14,617 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0582
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:14:14,617 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121\w2037451_localhost5334606226522721408.zip
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:14:17,672 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-0] 2021-02-02 13:14:32,943 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-02 13:14:32,944 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612271651121/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-02 13:14:32,944 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-02 13:14:32,944 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-02 13:14:32,944 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-02-02 13:14:32,946 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-02 13:14:32,946 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612271651121/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-02 13:14:32,947 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-02 13:14:32,947 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-02 13:14:32,947 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [pool-3-thread-1] 2021-02-02 13:15:17,684 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:16:17,685 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:17:17,687 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:18:17,687 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:19:17,690 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:20:17,691 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:21:17,691 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:22:17,693 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:23:17,694 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:24:17,695 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:25:17,695 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:26:17,696 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:27:17,697 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:28:17,697 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:29:17,697 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:30:17,697 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:31:17,698 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:32:17,698 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:33:17,699 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:34:17,700 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:35:17,700 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:36:17,701 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:37:17,701 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:38:17,702 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:39:17,703 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:40:17,706 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:41:17,709 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:42:17,712 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:43:17,715 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:44:17,717 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:45:17,717 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:46:17,744 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:47:17,746 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 13:48:17,747 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:48:17,748 repast.simphony.batch.ssh.SessionsDriver - Run Time: 34.0522
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:48:17,798 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612271651121
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:48:17,814 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:48:17,831 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0014
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 13:48:17,831 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 34.1124
-INFO  [AWT-EventQueue-0] 2021-02-02 16:26:30,476 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-02 16:26:30,662 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:26:51,426 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost4417968709374976308.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283208522 ...
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:26:51,501 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:26:51,501 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0497
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:26:51,502 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283208522\w2037451_localhost4417968709374976308.zip
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:26:54,786 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-0] 2021-02-02 16:27:09,792 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-02 16:27:09,793 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612283208522/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-02 16:27:09,793 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-02 16:27:09,793 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-02 16:27:09,793 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-02-02 16:27:10,007 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-02 16:27:10,007 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612283208522/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-02 16:27:10,007 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-02 16:27:10,007 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-02 16:27:10,007 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-02-02 16:27:18,798 repast.simphony.batch.ssh.LocalSession - Patient got Tested with INOVA which gave result: Negative
-INFO  [Thread-0] 2021-02-02 16:27:23,082 repast.simphony.batch.ssh.LocalSession - Patient got Tested with INOVA which gave result: Negative
-INFO  [Thread-0] 2021-02-02 16:27:23,889 repast.simphony.batch.ssh.LocalSession - Patient got Tested with INOVA which gave result: Negative
-INFO  [Thread-0] 2021-02-02 16:27:26,212 repast.simphony.batch.ssh.LocalSession - Patient got Tested with LabPCR which gave result: Positive
-INFO  [Thread-0] 2021-02-02 16:27:27,395 repast.simphony.batch.ssh.LocalSession - Patient got Tested with INOVA which gave result: Positive
-INFO  [AWT-EventQueue-0] 2021-02-02 16:28:06,748 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-02 16:28:06,862 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:28:26,305 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost16993444687778588784.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 ...
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:28:26,396 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:28:26,397 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0722
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:28:26,398 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063\w2037451_localhost16993444687778588784.zip
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 16:28:30,054 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-0] 2021-02-02 16:28:49,787 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-02 16:28:49,788 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612283302063/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-02 16:28:49,788 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-02 16:28:49,788 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-02 16:28:49,789 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-02-02 16:28:49,964 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-02 16:28:49,964 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612283302063/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-02 16:28:49,964 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-02 16:28:49,964 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-02 16:28:49,964 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [pool-3-thread-1] 2021-02-02 16:29:30,071 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:30:30,072 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:31:30,072 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:32:30,073 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:33:30,073 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:34:30,075 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:35:30,076 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:36:30,077 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:37:30,079 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:38:30,080 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:39:30,081 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:40:30,082 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:41:30,082 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:42:30,083 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:43:30,087 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:44:30,088 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:45:30,088 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:46:30,092 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:47:30,093 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:48:30,094 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:49:30,096 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:50:30,097 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:51:30,098 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:52:30,099 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:53:30,099 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:54:30,099 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:55:30,100 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:56:30,100 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:57:30,101 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:58:30,101 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 16:59:30,102 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:00:30,103 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:01:48,105 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:02:48,106 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:03:48,106 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:04:48,107 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:05:48,107 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:06:48,108 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:07:48,107 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:08:48,107 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:09:48,105 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:10:48,104 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:11:48,103 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:12:48,103 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:13:48,103 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:14:48,104 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:15:48,104 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:16:48,105 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 17:17:48,105 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 17:17:48,110 repast.simphony.batch.ssh.SessionsDriver - Run Time: 49.3619
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 17:17:48,198 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612283302063
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 17:17:48,222 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 17:17:48,244 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0022
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 17:17:48,244 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 49.4366
-INFO  [AWT-EventQueue-0] 2021-02-02 21:28:38,513 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-02 21:28:38,601 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 21:28:51,788 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost12550032877207299792.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 ...
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 21:28:51,843 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 21:28:51,844 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0375
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 21:28:51,845 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593\w2037451_localhost12550032877207299792.zip
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 21:28:54,111 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-0] 2021-02-02 21:29:03,797 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-02 21:29:03,798 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612301329593/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-02 21:29:03,798 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-02 21:29:03,798 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-02 21:29:03,798 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-02-02 21:29:04,092 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-02 21:29:04,092 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612301329593/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-02 21:29:04,093 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-02 21:29:04,093 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-02 21:29:04,093 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [pool-3-thread-1] 2021-02-02 21:29:54,120 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:30:54,120 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:31:54,121 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:32:54,122 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:33:54,122 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:34:54,123 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:35:54,128 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:36:54,131 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:37:54,136 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:38:54,144 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:39:54,154 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:40:54,155 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:41:54,161 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:42:54,163 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:43:54,166 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:44:54,172 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:45:54,177 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:46:54,185 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:47:54,192 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:48:54,195 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:49:54,199 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:50:54,200 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:51:54,213 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:52:54,220 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:53:54,228 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:54:54,236 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:55:54,237 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:56:54,237 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:57:54,245 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:58:54,253 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 21:59:54,256 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:00:54,261 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:01:54,268 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:02:54,270 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:03:54,281 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:04:54,290 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:05:54,293 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:06:54,297 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:07:54,304 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:08:54,304 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-02 22:09:54,308 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 22:09:54,308 repast.simphony.batch.ssh.SessionsDriver - Run Time: 41.0411
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 22:09:54,378 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612301329593
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 22:09:54,394 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 22:09:54,410 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0017
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-02 22:09:54,410 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 41.0804
-FATAL [Thread-2] 2021-02-03 11:17:53,788 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (2.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.ImAt(Agent.java:574)
-	at simcore.agents.Agent.MoveTo(Agent.java:203)
-	at simcore.agents.Actor.ExecMission(Actor.java:236)
-	at simcore.agents.Agent.InitMission(Agent.java:98)
-	at simcore.agents.Actor.Perceive(Actor.java:141)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-FATAL [Thread-2] 2021-02-03 11:21:36,494 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.CalcDistance(Agent.java:616)
-	at simcore.agents.Agent.ImAt(Agent.java:608)
-	at simcore.agents.Agent.ImAt(Agent.java:597)
-	at simcore.agents.Agent.MoveTo(Agent.java:207)
-	at simcore.agents.Actor.ExecMission(Actor.java:236)
-	at simcore.agents.Agent.InitMission(Agent.java:98)
-	at simcore.agents.Actor.Perceive(Actor.java:141)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-FATAL [Thread-2] 2021-02-03 12:06:06,744 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (214.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.ClassCastException: class java.util.HashSet cannot be cast to class java.util.List (java.util.HashSet and java.util.List are in module java.base of loader 'bootstrap')
-	at simcore.basicStructures.Room.getOccupiers(Room.java:110)
-	at simcore.agents.Agent.EvaluateRoomChoice(Agent.java:251)
-	at simcore.agents.Agent.lambda$0(Agent.java:243)
-	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
-	at java.base/java.util.TimSort.sort(TimSort.java:220)
-	at java.base/java.util.Arrays.sort(Arrays.java:1515)
-	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:353)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:503)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at simcore.agents.Agent.SelectLocation(Agent.java:243)
-	at simcore.agents.Agent.InitMoveAction(Agent.java:139)
-	at simcore.agents.Agent.InitActionFragment(Agent.java:106)
-	at simcore.agents.Actor.ExecMission(Actor.java:210)
-	at simcore.agents.Actor.Perceive(Actor.java:143)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-INFO  [AWT-EventQueue-0] 2021-02-03 13:22:21,110 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-03 13:22:21,210 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:22:37,643 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost10079717111486764006.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 ...
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:22:37,708 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:22:37,709 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0419
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:22:37,709 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191\w2037451_localhost10079717111486764006.zip
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:22:40,304 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-0] 2021-02-03 13:22:52,846 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-03 13:22:52,846 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612358555191/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-03 13:22:52,846 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-03 13:22:52,846 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-03 13:22:52,846 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-02-03 13:22:52,897 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-03 13:22:52,897 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612358555191/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-03 13:22:52,897 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-03 13:22:52,897 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-03 13:22:52,897 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [pool-3-thread-1] 2021-02-03 13:23:40,313 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:24:40,314 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:25:40,314 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:26:40,315 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:27:40,316 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:28:40,316 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:29:40,317 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:30:40,318 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:31:40,318 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:32:40,318 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:33:40,319 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:34:40,322 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:35:40,332 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:36:40,337 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:37:40,338 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:38:40,339 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:39:40,339 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:40:40,340 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:41:40,340 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:42:40,346 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:43:40,346 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:44:40,347 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:44:40,350 repast.simphony.batch.ssh.SessionsDriver - Run Time: 22.0440
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:44:40,382 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612358555191
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:44:40,393 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:44:40,415 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0011
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:44:40,415 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 22.0872
-INFO  [AWT-EventQueue-0] 2021-02-03 13:55:36,164 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-03 13:55:36,256 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:55:50,876 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost15348393066101722108.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410 ...
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:55:50,942 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:55:50,943 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0422
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:55:50,943 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410\w2037451_localhost15348393066101722108.zip
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 13:55:53,604 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-0] 2021-02-03 13:56:06,161 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-03 13:56:06,162 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612360548410/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-03 13:56:06,162 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-03 13:56:06,162 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-03 13:56:06,162 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-02-03 13:56:06,264 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-0] 2021-02-03 13:56:06,264 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612360548410/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-0] 2021-02-03 13:56:06,264 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-0] 2021-02-03 13:56:06,264 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-0] 2021-02-03 13:56:06,265 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-0] 2021-02-03 13:56:12,464 repast.simphony.batch.ssh.LocalSession - Generating Log: C:\Users\w2037451\Documents\HelloAgent\output\patientLog.txt
-INFO  [Thread-0] 2021-02-03 13:56:12,466 repast.simphony.batch.ssh.LocalSession - Success;
-INFO  [pool-3-thread-1] 2021-02-03 13:56:53,615 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:57:53,616 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:58:53,616 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 13:59:53,629 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 14:00:53,630 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 14:01:53,630 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-03 14:02:53,630 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 14:02:53,631 repast.simphony.batch.ssh.SessionsDriver - Run Time: 7.0448
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 14:02:53,678 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612360548410
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-03 14:02:53,694 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-ERROR [SwingWorker-pool-2-thread-1] 2021-02-03 14:02:53,714 repast.simphony.batch.ssh.SessionsDriver - Error while aggregating output
-java.nio.file.FileSystemException: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\PatientOutcomes -> C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\PatientOutcomes_2021.Feb.03.14_02_53: The process cannot access the file because it is being used by another process.
-
-	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
-	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
-	at java.base/sun.nio.fs.WindowsFileCopy.move(WindowsFileCopy.java:395)
-	at java.base/sun.nio.fs.WindowsFileSystemProvider.move(WindowsFileSystemProvider.java:288)
-	at java.base/java.nio.file.Files.move(Files.java:1421)
-	at repast.simphony.batch.ssh.MatchedFiles.renamePath(MatchedFiles.java:119)
-	at repast.simphony.batch.ssh.MatchedFiles.aggregateOutput(MatchedFiles.java:158)
-	at repast.simphony.batch.ssh.SessionsDriver.concatenateOutput(SessionsDriver.java:196)
-	at repast.simphony.batch.ssh.SessionsDriver.run(SessionsDriver.java:78)
-	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:481)
-	at repast.simphony.batch.gui.BatchConfigMediator$AntSessionRunner.doInBackground(BatchConfigMediator.java:1)
-	at java.desktop/javax.swing.SwingWorker$1.call(SwingWorker.java:304)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.desktop/javax.swing.SwingWorker.run(SwingWorker.java:343)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-INFO  [AWT-EventQueue-0] 2021-02-03 14:03:42,588 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-03 14:03:42,598 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:03:58,835 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost3830781790198363439.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 ...
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:03:58,965 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:03:58,966 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0555
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:03:58,966 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635\w2037451_localhost3830781790198363439.zip
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:04:02,633 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-1] 2021-02-03 14:04:17,869 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-1] 2021-02-03 14:04:17,869 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612361035635/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-1] 2021-02-03 14:04:17,869 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-1] 2021-02-03 14:04:17,869 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-1] 2021-02-03 14:04:17,869 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-1] 2021-02-03 14:04:17,919 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-1] 2021-02-03 14:04:17,919 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612361035635/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-1] 2021-02-03 14:04:17,919 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-1] 2021-02-03 14:04:17,919 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-1] 2021-02-03 14:04:17,919 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [pool-4-thread-1] 2021-02-03 14:05:02,647 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:06:02,654 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:07:02,655 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:08:02,655 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:09:02,656 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:10:02,656 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:11:02,656 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:12:02,657 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:13:02,657 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:14:02,657 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:15:02,658 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:18:51,732 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:19:51,732 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:20:51,733 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:21:51,733 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:22:51,734 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:23:51,735 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:24:51,741 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:25:51,748 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:26:51,753 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:27:51,759 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:56:43,377 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:57:43,377 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  no
-INFO  [pool-4-thread-1] 2021-02-03 14:58:43,388 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:58:43,388 repast.simphony.batch.ssh.SessionsDriver - Run Time: 54.7404
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:58:43,403 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612361035635
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:58:43,403 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:58:43,434 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0008
-INFO  [SwingWorker-pool-2-thread-2] 2021-02-03 14:58:43,434 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 54.7968
-INFO  [AWT-EventQueue-0] 2021-02-04 12:23:39,709 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\output\config.props
-INFO  [AWT-EventQueue-0] 2021-02-04 12:23:39,825 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
-	C:\Users\w2037451\Documents\HelloAgent\RepastProject\EDProject\batch\batch_params.xml to
-	C:\Users\w2037451\AppData\Local\Temp\unrolledParamFile.txt
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:23:54,524 repast.simphony.batch.ssh.LocalSession - 
-	Copying locally C:\Users\w2037451\AppData\Local\Temp\w2037451_localhost12720211092423142924.zip to 
-C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 ...
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:23:54,582 repast.simphony.batch.ssh.LocalSession - Copying Finished.
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:23:54,592 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0390
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:23:54,593 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240\w2037451_localhost12720211092423142924.zip
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:23:57,108 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
-INFO  [Thread-3] 2021-02-04 12:24:09,725 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-3] 2021-02-04 12:24:09,725 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612441432240/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-3] 2021-02-04 12:24:09,725 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-3] 2021-02-04 12:24:09,725 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-3] 2021-02-04 12:24:09,726 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [Thread-3] 2021-02-04 12:24:09,835 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
-INFO  [Thread-3] 2021-02-04 12:24:09,835 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/w2037451/AppData/Local/Temp/simphony_model_1612441432240/lib/xstream-1.4.7.jar) to field java.util.TreeMap.comparator
-INFO  [Thread-3] 2021-02-04 12:24:09,835 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
-INFO  [Thread-3] 2021-02-04 12:24:09,835 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
-INFO  [Thread-3] 2021-02-04 12:24:09,835 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
-INFO  [pool-3-thread-1] 2021-02-04 12:24:57,118 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:25:57,118 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:26:57,119 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:27:57,119 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:28:57,120 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:29:57,120 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:30:57,121 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:31:57,122 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:32:57,122 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:33:57,123 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:34:57,123 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:35:57,124 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:36:57,124 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:37:57,124 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:38:57,125 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:39:57,125 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:40:57,126 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:41:57,126 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:42:57,126 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:43:57,127 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:44:57,127 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:45:57,129 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:46:57,132 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:47:57,134 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:48:57,137 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:49:57,139 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:50:57,141 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:51:57,143 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:52:57,144 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  no
-INFO  [pool-3-thread-1] 2021-02-04 12:53:57,146 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:53:57,147 repast.simphony.batch.ssh.SessionsDriver - Run Time: 30.0426
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:53:57,211 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1612441432240
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:53:57,230 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:53:57,246 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0016
-INFO  [SwingWorker-pool-2-thread-1] 2021-02-04 12:53:57,247 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 30.0836
+INFO  [Thread-0] 2021-02-11 20:16:40,123 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:57
+INFO  [Thread-0] 2021-02-11 20:16:40,708 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:06
+INFO  [Thread-0] 2021-02-11 20:16:41,620 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:22
+INFO  [Thread-0] 2021-02-11 20:16:42,289 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:32
+INFO  [Thread-0] 2021-02-11 20:16:43,544 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:52
+INFO  [Thread-0] 2021-02-11 20:16:44,585 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 43
+INFO  [Thread-0] 2021-02-11 20:16:44,666 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9284
+INFO  [Thread-0] 2021-02-11 20:16:44,748 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:11
+INFO  [Thread-0] 2021-02-11 20:16:44,807 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:12
+INFO  [Thread-0] 2021-02-11 20:16:45,063 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:16
+INFO  [Thread-0] 2021-02-11 20:16:45,370 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:21
+INFO  [Thread-0] 2021-02-11 20:16:45,768 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:28
+INFO  [Thread-0] 2021-02-11 20:16:45,942 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9283
+INFO  [Thread-0] 2021-02-11 20:16:45,972 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:31
+INFO  [Thread-0] 2021-02-11 20:16:46,411 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:39
+INFO  [Thread-0] 2021-02-11 20:16:46,588 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:42
+INFO  [Thread-0] 2021-02-11 20:16:46,839 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:46
+INFO  [Thread-0] 2021-02-11 20:16:47,284 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:53
+INFO  [Thread-0] 2021-02-11 20:16:47,541 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:57
+INFO  [Thread-0] 2021-02-11 20:16:47,689 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 42
+INFO  [Thread-0] 2021-02-11 20:16:48,025 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:04
+INFO  [Thread-0] 2021-02-11 20:16:48,283 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9282
+INFO  [Thread-0] 2021-02-11 20:16:48,428 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:11
+INFO  [Thread-0] 2021-02-11 20:16:48,614 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9281
+INFO  [Thread-0] 2021-02-11 20:16:48,680 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:15
+INFO  [Thread-0] 2021-02-11 20:16:48,756 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9280
+INFO  [Thread-0] 2021-02-11 20:16:49,156 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:22
+INFO  [Thread-0] 2021-02-11 20:16:49,726 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:29
+INFO  [Thread-0] 2021-02-11 20:16:50,167 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:36
+INFO  [Thread-0] 2021-02-11 20:16:50,661 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:44
+INFO  [Thread-0] 2021-02-11 20:16:51,082 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:50
+INFO  [Thread-0] 2021-02-11 20:16:51,435 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:55
+INFO  [Thread-0] 2021-02-11 20:16:51,943 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:02
+INFO  [Thread-0] 2021-02-11 20:16:52,243 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:07
+INFO  [Thread-0] 2021-02-11 20:16:52,564 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:12
+INFO  [Thread-0] 2021-02-11 20:16:52,875 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 41
+INFO  [Thread-0] 2021-02-11 20:16:52,887 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:17
+INFO  [Thread-0] 2021-02-11 20:16:53,010 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:19
+INFO  [Thread-0] 2021-02-11 20:16:53,086 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 40
+INFO  [Thread-0] 2021-02-11 20:16:53,393 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:25
+INFO  [Thread-0] 2021-02-11 20:16:53,816 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:31
+INFO  [Thread-0] 2021-02-11 20:16:54,317 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9279
+INFO  [Thread-0] 2021-02-11 20:16:56,191 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 39
+INFO  [Thread-0] 2021-02-11 20:16:56,336 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:07
+INFO  [Thread-0] 2021-02-11 20:16:56,878 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:15
+INFO  [Thread-0] 2021-02-11 20:16:58,363 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9278
+INFO  [Thread-0] 2021-02-11 20:16:59,826 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 363
+INFO  [Thread-0] 2021-02-11 20:17:00,242 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:03
+INFO  [Thread-0] 2021-02-11 20:17:00,599 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:08
+INFO  [Thread-0] 2021-02-11 20:17:01,097 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:15
+INFO  [Thread-0] 2021-02-11 20:17:01,658 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:22
+INFO  [Thread-0] 2021-02-11 20:17:01,806 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:24
+INFO  [Thread-0] 2021-02-11 20:17:02,236 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:29
+INFO  [Thread-0] 2021-02-11 20:17:04,784 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:05
+INFO  [Thread-0] 2021-02-11 20:17:05,185 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 38
+INFO  [Thread-0] 2021-02-11 20:17:05,288 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:11
+INFO  [Thread-0] 2021-02-11 20:17:05,356 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:12
+INFO  [Thread-0] 2021-02-11 20:17:05,503 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:14
+INFO  [Thread-0] 2021-02-11 20:17:05,570 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:15
+INFO  [Thread-0] 2021-02-11 20:17:05,649 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:16
+INFO  [Thread-0] 2021-02-11 20:17:05,740 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 37
+INFO  [Thread-0] 2021-02-11 20:17:06,034 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:21
+INFO  [Thread-0] 2021-02-11 20:17:06,496 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:27
+INFO  [Thread-0] 2021-02-11 20:17:06,644 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:29
+INFO  [Thread-0] 2021-02-11 20:17:07,071 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:34
+INFO  [Thread-0] 2021-02-11 20:17:07,262 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:36
+INFO  [Thread-0] 2021-02-11 20:17:07,486 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:39
+INFO  [Thread-0] 2021-02-11 20:17:07,699 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:42
+INFO  [Thread-0] 2021-02-11 20:17:08,273 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:50
+INFO  [Thread-0] 2021-02-11 20:17:08,383 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 362
+INFO  [Thread-0] 2021-02-11 20:17:09,301 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:04
+INFO  [Thread-0] 2021-02-11 20:17:09,513 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:07
+INFO  [Thread-0] 2021-02-11 20:17:09,933 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:13
+INFO  [Thread-0] 2021-02-11 20:17:10,014 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 361
+INFO  [Thread-0] 2021-02-11 20:17:10,076 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 36
+INFO  [Thread-0] 2021-02-11 20:17:10,348 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:18
+INFO  [Thread-0] 2021-02-11 20:17:10,456 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9277
+INFO  [Thread-0] 2021-02-11 20:17:10,523 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:20
+INFO  [Thread-0] 2021-02-11 20:17:10,864 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:25
+INFO  [Thread-0] 2021-02-11 20:17:11,084 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:28
+INFO  [Thread-0] 2021-02-11 20:17:11,159 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:29
+INFO  [Thread-0] 2021-02-11 20:17:11,382 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:32
+INFO  [Thread-0] 2021-02-11 20:17:11,757 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:37
+INFO  [Thread-0] 2021-02-11 20:17:11,894 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:39
+INFO  [Thread-0] 2021-02-11 20:17:12,460 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 35
+INFO  [Thread-0] 2021-02-11 20:17:12,509 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:46
+INFO  [Thread-0] 2021-02-11 20:17:13,097 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:53
+INFO  [Thread-0] 2021-02-11 20:17:13,195 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 34
+INFO  [Thread-0] 2021-02-11 20:17:13,454 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:57
+INFO  [Thread-0] 2021-02-11 20:17:13,620 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:59
+INFO  [Thread-0] 2021-02-11 20:17:13,760 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 33
+INFO  [Thread-0] 2021-02-11 20:17:13,945 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:03
+INFO  [Thread-0] 2021-02-11 20:17:14,109 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:05
+INFO  [Thread-0] 2021-02-11 20:17:14,213 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 32
+INFO  [Thread-0] 2021-02-11 20:17:14,702 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:12
+INFO  [Thread-0] 2021-02-11 20:17:15,052 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:16
+INFO  [Thread-0] 2021-02-11 20:17:15,454 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:21
+INFO  [Thread-0] 2021-02-11 20:17:15,965 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:27
+INFO  [Thread-0] 2021-02-11 20:17:16,301 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:30
+INFO  [Thread-0] 2021-02-11 20:17:16,645 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:34
+INFO  [Thread-0] 2021-02-11 20:17:16,915 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:37
+INFO  [Thread-0] 2021-02-11 20:17:16,981 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 31
+INFO  [Thread-0] 2021-02-11 20:17:17,007 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9276
+INFO  [Thread-0] 2021-02-11 20:17:17,283 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:41
+INFO  [Thread-0] 2021-02-11 20:17:17,742 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:46
+INFO  [Thread-0] 2021-02-11 20:17:17,851 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:47
+INFO  [Thread-0] 2021-02-11 20:17:18,141 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:50
+INFO  [Thread-0] 2021-02-11 20:17:18,424 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:53
+INFO  [Thread-0] 2021-02-11 20:17:18,784 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:57
+INFO  [Thread-0] 2021-02-11 20:17:18,879 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:58
+INFO  [Thread-0] 2021-02-11 20:17:19,100 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:00
+INFO  [Thread-0] 2021-02-11 20:17:19,465 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:04
+INFO  [Thread-0] 2021-02-11 20:17:19,706 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:06
+INFO  [Thread-0] 2021-02-11 20:17:19,881 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 30
+INFO  [Thread-0] 2021-02-11 20:17:20,380 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:13
+INFO  [Thread-0] 2021-02-11 20:17:20,866 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 29
+INFO  [Thread-0] 2021-02-11 20:17:20,885 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:18
+INFO  [Thread-0] 2021-02-11 20:17:21,560 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:25
+INFO  [Thread-0] 2021-02-11 20:17:21,951 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9275
+INFO  [Thread-0] 2021-02-11 20:17:22,060 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 28
+INFO  [Thread-0] 2021-02-11 20:17:22,291 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:32
+INFO  [Thread-0] 2021-02-11 20:17:22,977 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:38
+INFO  [Thread-0] 2021-02-11 20:17:23,569 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:43
+INFO  [Thread-0] 2021-02-11 20:17:23,891 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:46
+INFO  [Thread-0] 2021-02-11 20:17:24,223 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 27
+INFO  [Thread-0] 2021-02-11 20:17:24,630 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:52
+INFO  [Thread-0] 2021-02-11 20:17:25,097 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:56
+INFO  [Thread-0] 2021-02-11 20:17:25,133 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9274
+INFO  [Thread-0] 2021-02-11 20:17:26,346 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:07
+INFO  [Thread-0] 2021-02-11 20:17:26,787 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:11
+INFO  [Thread-0] 2021-02-11 20:17:26,837 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 26
+INFO  [Thread-0] 2021-02-11 20:17:27,390 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:16
+INFO  [Thread-0] 2021-02-11 20:17:28,058 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 360
+INFO  [Thread-0] 2021-02-11 20:17:28,246 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:23
+INFO  [Thread-0] 2021-02-11 20:17:28,582 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 25
+INFO  [Thread-0] 2021-02-11 20:17:29,012 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:29
+INFO  [Thread-0] 2021-02-11 20:17:29,482 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:33
+INFO  [Thread-0] 2021-02-11 20:17:30,062 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:38
+INFO  [Thread-0] 2021-02-11 20:17:30,276 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 24
+INFO  [Thread-0] 2021-02-11 20:17:30,520 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:42
+INFO  [pool-3-thread-1] 2021-02-11 20:17:31,158 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990 for DONE:  no
+INFO  [Thread-0] 2021-02-11 20:17:31,599 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:52
+INFO  [Thread-0] 2021-02-11 20:17:32,278 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:58
+INFO  [Thread-0] 2021-02-11 20:17:33,909 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:12
+INFO  [Thread-0] 2021-02-11 20:17:34,679 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:19
+INFO  [Thread-0] 2021-02-11 20:17:35,529 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9273
+INFO  [Thread-0] 2021-02-11 20:17:35,571 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 23
+INFO  [Thread-0] 2021-02-11 20:17:35,640 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:26
+INFO  [Thread-0] 2021-02-11 20:17:36,286 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:31
+INFO  [Thread-0] 2021-02-11 20:17:38,647 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:49
+INFO  [Thread-0] 2021-02-11 20:17:39,535 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:56
+INFO  [Thread-0] 2021-02-11 20:17:40,947 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:07
+INFO  [Thread-0] 2021-02-11 20:17:41,602 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:12
+INFO  [Thread-0] 2021-02-11 20:17:41,814 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 22
+INFO  [Thread-0] 2021-02-11 20:17:42,009 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 21
+INFO  [Thread-0] 2021-02-11 20:17:42,698 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:21
+INFO  [Thread-0] 2021-02-11 20:17:43,955 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:31
+INFO  [Thread-0] 2021-02-11 20:17:44,496 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:35
+INFO  [Thread-0] 2021-02-11 20:17:44,742 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9272
+INFO  [Thread-0] 2021-02-11 20:17:45,478 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:43
+INFO  [Thread-0] 2021-02-11 20:17:45,584 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 20
+INFO  [Thread-0] 2021-02-11 20:17:46,466 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:51
+INFO  [Thread-0] 2021-02-11 20:17:46,998 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:55
+INFO  [Thread-0] 2021-02-11 20:17:47,003 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 19
+INFO  [Thread-0] 2021-02-11 20:17:47,591 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 18
+INFO  [Thread-0] 2021-02-11 20:17:48,852 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9271
+INFO  [Thread-0] 2021-02-11 20:17:48,898 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:09
+INFO  [Thread-0] 2021-02-11 20:17:50,483 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 17
+INFO  [Thread-0] 2021-02-11 20:17:50,628 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:20
+INFO  [Thread-0] 2021-02-11 20:17:51,745 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:29
+INFO  [Thread-0] 2021-02-11 20:17:53,058 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 16
+INFO  [Thread-0] 2021-02-11 20:17:53,209 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:40
+INFO  [Thread-0] 2021-02-11 20:17:53,377 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9270
+INFO  [Thread-0] 2021-02-11 20:17:54,280 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:48
+INFO  [Thread-0] 2021-02-11 20:17:56,904 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:07
+INFO  [Thread-0] 2021-02-11 20:17:56,951 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 15
+INFO  [Thread-0] 2021-02-11 20:17:57,620 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:12
+INFO  [Thread-0] 2021-02-11 20:17:58,303 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:17
+INFO  [Thread-0] 2021-02-11 20:17:58,437 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:18
+INFO  [Thread-0] 2021-02-11 20:17:58,966 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:22
+INFO  [Thread-0] 2021-02-11 20:17:59,537 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:26
+INFO  [Thread-0] 2021-02-11 20:17:59,789 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 14
+INFO  [Thread-0] 2021-02-11 20:18:00,097 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:30
+INFO  [Thread-0] 2021-02-11 20:18:00,686 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:35
+INFO  [Thread-0] 2021-02-11 20:18:00,752 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 359
+INFO  [Thread-0] 2021-02-11 20:18:01,101 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:38
+INFO  [Thread-0] 2021-02-11 20:18:02,199 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:46
+INFO  [Thread-0] 2021-02-11 20:18:02,625 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:49
+INFO  [Thread-0] 2021-02-11 20:18:03,879 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:58
+INFO  [Thread-0] 2021-02-11 20:18:04,838 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9269
+INFO  [Thread-0] 2021-02-11 20:18:04,927 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 358
+INFO  [Thread-0] 2021-02-11 20:18:05,459 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9268
+INFO  [Thread-0] 2021-02-11 20:18:06,298 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:16
+INFO  [Thread-0] 2021-02-11 20:18:07,259 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 13
+INFO  [Thread-0] 2021-02-11 20:18:08,972 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 12
+INFO  [Thread-0] 2021-02-11 20:18:10,135 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:42
+INFO  [Thread-0] 2021-02-11 20:18:13,557 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:13
+INFO  [Thread-0] 2021-02-11 20:18:14,190 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:27
+INFO  [Thread-0] 2021-02-11 20:18:14,846 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:41
+INFO  [Thread-0] 2021-02-11 20:18:15,485 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:55
+INFO  [Thread-0] 2021-02-11 20:18:15,831 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 49
+INFO  [Thread-0] 2021-02-11 20:18:16,056 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:07
+INFO  [Thread-0] 2021-02-11 20:18:16,568 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:18
+INFO  [Thread-0] 2021-02-11 20:18:16,895 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:25
+INFO  [Thread-0] 2021-02-11 20:18:17,146 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 48
+INFO  [Thread-0] 2021-02-11 20:18:17,280 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:33
+INFO  [Thread-0] 2021-02-11 20:18:17,707 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:42
+INFO  [Thread-0] 2021-02-11 20:18:18,444 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:56
+INFO  [Thread-0] 2021-02-11 20:18:18,796 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9267
+INFO  [Thread-0] 2021-02-11 20:18:19,259 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:09
+INFO  [Thread-0] 2021-02-11 20:18:19,707 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:17
+INFO  [Thread-0] 2021-02-11 20:18:19,957 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 47
+INFO  [Thread-0] 2021-02-11 20:18:20,290 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:27
+INFO  [Thread-0] 2021-02-11 20:18:20,449 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 46
+INFO  [Thread-0] 2021-02-11 20:18:20,798 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:37
+INFO  [Thread-0] 2021-02-11 20:18:21,016 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 357
+INFO  [Thread-0] 2021-02-11 20:18:21,359 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:47
+INFO  [Thread-0] 2021-02-11 20:18:22,337 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 45
+INFO  [Thread-0] 2021-02-11 20:18:23,020 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 44
+INFO  [Thread-0] 2021-02-11 20:18:23,475 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:24
+INFO  [Thread-0] 2021-02-11 20:18:24,601 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:43
+INFO  [Thread-0] 2021-02-11 20:18:26,749 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:18
+INFO  [Thread-0] 2021-02-11 20:18:27,869 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:36
+INFO  [Thread-0] 2021-02-11 20:18:28,377 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 43
+INFO  [Thread-0] 2021-02-11 20:18:29,152 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:57
+INFO  [Thread-0] 2021-02-11 20:18:29,850 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:09
+INFO  [Thread-0] 2021-02-11 20:18:31,016 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:27
+INFO  [pool-3-thread-1] 2021-02-11 20:18:31,159 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990 for DONE:  no
+INFO  [Thread-0] 2021-02-11 20:18:31,988 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:42
+INFO  [Thread-0] 2021-02-11 20:18:32,585 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:51
+INFO  [Thread-0] 2021-02-11 20:18:32,936 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9266
+INFO  [Thread-0] 2021-02-11 20:18:34,101 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 42
+INFO  [Thread-0] 2021-02-11 20:18:35,167 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 356
+INFO  [Thread-0] 2021-02-11 20:18:35,813 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:39
+INFO  [Thread-0] 2021-02-11 20:18:39,271 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:30
+INFO  [Thread-0] 2021-02-11 20:18:40,446 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:47
+INFO  [Thread-0] 2021-02-11 20:18:42,107 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:10
+INFO  [Thread-0] 2021-02-11 20:18:42,949 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:22
+INFO  [Thread-0] 2021-02-11 20:18:43,964 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:38
+INFO  [Thread-0] 2021-02-11 20:18:44,850 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:51
+INFO  [Thread-0] 2021-02-11 20:18:46,178 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:10
+INFO  [Thread-0] 2021-02-11 20:18:46,865 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:20
+INFO  [Thread-0] 2021-02-11 20:18:47,087 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:23
+INFO  [Thread-0] 2021-02-11 20:18:47,209 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9265
+INFO  [Thread-0] 2021-02-11 20:18:47,280 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 355
+INFO  [Thread-0] 2021-02-11 20:18:47,367 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:27
+INFO  [Thread-0] 2021-02-11 20:18:47,498 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:29
+INFO  [Thread-0] 2021-02-11 20:18:47,995 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:36
+INFO  [Thread-0] 2021-02-11 20:18:48,512 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:43
+INFO  [Thread-0] 2021-02-11 20:18:49,035 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:50
+INFO  [Thread-0] 2021-02-11 20:18:49,448 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:55
+INFO  [Thread-0] 2021-02-11 20:18:49,657 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 41
+INFO  [Thread-0] 2021-02-11 20:18:49,758 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:59
+INFO  [Thread-0] 2021-02-11 20:18:50,140 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:04
+INFO  [Thread-0] 2021-02-11 20:18:50,468 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 354
+INFO  [Thread-0] 2021-02-11 20:18:51,097 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:14
+INFO  [Thread-0] 2021-02-11 20:18:51,413 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:18
+INFO  [Thread-0] 2021-02-11 20:18:51,694 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:22
+INFO  [Thread-0] 2021-02-11 20:18:51,834 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 40
+INFO  [Thread-0] 2021-02-11 20:18:51,989 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:26
+INFO  [Thread-0] 2021-02-11 20:18:52,261 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:30
+INFO  [Thread-0] 2021-02-11 20:18:52,335 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 353
+INFO  [Thread-0] 2021-02-11 20:18:52,642 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:35
+INFO  [Thread-0] 2021-02-11 20:18:53,115 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:41
+INFO  [Thread-0] 2021-02-11 20:18:53,334 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:44
+INFO  [Thread-0] 2021-02-11 20:18:53,541 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 39
+INFO  [Thread-0] 2021-02-11 20:18:53,924 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:52
+INFO  [Thread-0] 2021-02-11 20:18:53,953 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 352
+INFO  [Thread-0] 2021-02-11 20:18:54,083 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:54
+INFO  [Thread-0] 2021-02-11 20:18:54,358 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:58
+INFO  [Thread-0] 2021-02-11 20:18:54,464 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 351
+INFO  [Thread-0] 2021-02-11 20:18:54,685 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:02
+INFO  [Thread-0] 2021-02-11 20:18:55,008 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9264
+INFO  [Thread-0] 2021-02-11 20:18:55,222 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:09
+INFO  [Thread-0] 2021-02-11 20:18:55,369 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:11
+INFO  [Thread-0] 2021-02-11 20:18:55,478 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 350
+INFO  [Thread-0] 2021-02-11 20:18:55,629 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:14
+INFO  [Thread-0] 2021-02-11 20:18:56,213 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 38
+INFO  [Thread-0] 2021-02-11 20:18:56,325 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:22
+INFO  [Thread-0] 2021-02-11 20:18:56,843 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 37
+INFO  [Thread-0] 2021-02-11 20:18:56,922 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 349
+INFO  [Thread-0] 2021-02-11 20:18:57,018 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:30
+INFO  [Thread-0] 2021-02-11 20:18:57,496 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:36
+INFO  [Thread-0] 2021-02-11 20:18:57,585 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:37
+INFO  [Thread-0] 2021-02-11 20:18:57,943 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 36
+INFO  [Thread-0] 2021-02-11 20:18:58,701 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 35
+INFO  [Thread-0] 2021-02-11 20:18:59,183 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 34
+INFO  [Thread-0] 2021-02-11 20:18:59,721 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:04
+INFO  [Thread-0] 2021-02-11 20:19:00,239 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 33
+INFO  [Thread-0] 2021-02-11 20:19:00,403 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:12
+INFO  [Thread-0] 2021-02-11 20:19:00,754 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:15
+INFO  [Thread-0] 2021-02-11 20:19:00,974 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:17
+INFO  [Thread-0] 2021-02-11 20:19:01,423 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:21
+INFO  [Thread-0] 2021-02-11 20:19:01,914 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:25
+INFO  [Thread-0] 2021-02-11 20:19:01,971 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 32
+INFO  [Thread-0] 2021-02-11 20:19:02,204 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 348
+INFO  [Thread-0] 2021-02-11 20:19:02,522 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:31
+INFO  [Thread-0] 2021-02-11 20:19:02,865 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:34
+INFO  [Thread-0] 2021-02-11 20:19:03,437 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:39
+INFO  [Thread-0] 2021-02-11 20:19:04,039 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 31
+INFO  [Thread-0] 2021-02-11 20:19:04,270 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:46
+INFO  [Thread-0] 2021-02-11 20:19:04,693 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:50
+INFO  [Thread-0] 2021-02-11 20:19:04,951 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 30
+INFO  [Thread-0] 2021-02-11 20:19:05,247 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:56
+INFO  [Thread-0] 2021-02-11 20:19:05,523 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:59
+INFO  [Thread-0] 2021-02-11 20:19:05,811 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:02
+INFO  [Thread-0] 2021-02-11 20:19:06,275 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:07
+INFO  [Thread-0] 2021-02-11 20:19:06,376 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:08
+INFO  [Thread-0] 2021-02-11 20:19:06,976 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:14
+INFO  [Thread-0] 2021-02-11 20:19:07,429 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 29
+INFO  [Thread-0] 2021-02-11 20:19:07,682 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:21
+INFO  [Thread-0] 2021-02-11 20:19:07,926 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9263
+INFO  [Thread-0] 2021-02-11 20:19:08,004 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9262
+INFO  [Thread-0] 2021-02-11 20:19:08,088 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:25
+INFO  [Thread-0] 2021-02-11 20:19:08,265 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:27
+INFO  [Thread-0] 2021-02-11 20:19:08,638 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:31
+INFO  [Thread-0] 2021-02-11 20:19:08,749 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:32
+INFO  [Thread-0] 2021-02-11 20:19:08,849 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:33
+INFO  [Thread-0] 2021-02-11 20:19:08,951 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 28
+INFO  [Thread-0] 2021-02-11 20:19:09,247 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:37
+INFO  [Thread-0] 2021-02-11 20:19:09,262 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 27
+INFO  [Thread-0] 2021-02-11 20:19:09,540 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:40
+INFO  [Thread-0] 2021-02-11 20:19:09,877 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 26
+INFO  [Thread-0] 2021-02-11 20:19:10,006 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:45
+INFO  [Thread-0] 2021-02-11 20:19:10,169 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:47
+INFO  [Thread-0] 2021-02-11 20:19:10,514 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:51
+INFO  [Thread-0] 2021-02-11 20:19:11,406 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:01
+INFO  [Thread-0] 2021-02-11 20:19:11,913 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:06
+INFO  [Thread-0] 2021-02-11 20:19:12,117 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:08
+INFO  [Thread-0] 2021-02-11 20:19:12,569 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 347
+INFO  [Thread-0] 2021-02-11 20:19:12,679 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9261
+INFO  [Thread-0] 2021-02-11 20:19:12,785 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:14
+INFO  [Thread-0] 2021-02-11 20:19:12,889 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:15
+INFO  [Thread-0] 2021-02-11 20:19:13,409 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:20
+INFO  [Thread-0] 2021-02-11 20:19:13,626 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:22
+INFO  [Thread-0] 2021-02-11 20:19:14,073 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:26
+INFO  [Thread-0] 2021-02-11 20:19:14,792 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:33
+INFO  [Thread-0] 2021-02-11 20:19:15,253 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:37
+INFO  [Thread-0] 2021-02-11 20:19:16,253 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:46
+INFO  [Thread-0] 2021-02-11 20:19:16,624 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:50
+INFO  [Thread-0] 2021-02-11 20:19:16,825 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:52
+INFO  [Thread-0] 2021-02-11 20:19:17,111 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 25
+INFO  [Thread-0] 2021-02-11 20:19:17,379 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:57
+INFO  [Thread-0] 2021-02-11 20:19:17,901 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 346
+INFO  [Thread-0] 2021-02-11 20:19:18,143 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:05
+INFO  [Thread-0] 2021-02-11 20:19:18,256 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:06
+INFO  [Thread-0] 2021-02-11 20:19:18,462 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:08
+INFO  [Thread-0] 2021-02-11 20:19:18,759 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:11
+INFO  [Thread-0] 2021-02-11 20:19:19,141 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:15
+INFO  [Thread-0] 2021-02-11 20:19:19,398 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:17
+INFO  [Thread-0] 2021-02-11 20:19:19,508 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:18
+INFO  [Thread-0] 2021-02-11 20:19:19,735 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:20
+INFO  [Thread-0] 2021-02-11 20:19:20,243 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:25
+INFO  [Thread-0] 2021-02-11 20:19:20,613 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:28
+INFO  [Thread-0] 2021-02-11 20:19:21,087 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:32
+INFO  [Thread-0] 2021-02-11 20:19:21,441 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:35
+INFO  [Thread-0] 2021-02-11 20:19:21,563 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 345
+INFO  [Thread-0] 2021-02-11 20:19:21,767 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:38
+INFO  [Thread-0] 2021-02-11 20:19:21,971 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:40
+INFO  [Thread-0] 2021-02-11 20:19:22,320 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:43
+INFO  [Thread-0] 2021-02-11 20:19:22,376 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 24
+INFO  [Thread-0] 2021-02-11 20:19:23,104 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:50
+INFO  [Thread-0] 2021-02-11 20:19:23,471 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:53
+INFO  [Thread-0] 2021-02-11 20:19:23,814 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:56
+INFO  [Thread-0] 2021-02-11 20:19:24,251 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:59
+INFO  [Thread-0] 2021-02-11 20:19:24,915 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:04
+INFO  [Thread-0] 2021-02-11 20:19:25,473 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:08
+INFO  [Thread-0] 2021-02-11 20:19:26,108 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:13
+INFO  [Thread-0] 2021-02-11 20:19:26,404 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9260
+INFO  [Thread-0] 2021-02-11 20:19:26,480 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:16
+INFO  [Thread-0] 2021-02-11 20:19:26,622 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9259
+INFO  [Thread-0] 2021-02-11 20:19:27,098 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:21
+INFO  [Thread-0] 2021-02-11 20:19:27,484 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9258
+INFO  [Thread-0] 2021-02-11 20:19:27,509 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:24
+INFO  [Thread-0] 2021-02-11 20:19:28,022 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:28
+INFO  [Thread-0] 2021-02-11 20:19:28,866 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:35
+INFO  [Thread-0] 2021-02-11 20:19:28,992 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 344
+INFO  [Thread-0] 2021-02-11 20:19:29,353 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:39
+INFO  [Thread-0] 2021-02-11 20:19:30,249 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:47
+INFO  [pool-3-thread-1] 2021-02-11 20:19:31,159 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990 for DONE:  no
+INFO  [Thread-0] 2021-02-11 20:19:31,161 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:54
+INFO  [Thread-0] 2021-02-11 20:19:31,605 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:58
+INFO  [Thread-0] 2021-02-11 20:19:31,764 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 23
+INFO  [Thread-0] 2021-02-11 20:19:32,476 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:05
+INFO  [Thread-0] 2021-02-11 20:19:32,710 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 22
+INFO  [Thread-0] 2021-02-11 20:19:32,937 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9257
+INFO  [Thread-0] 2021-02-11 20:19:33,313 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:11
+INFO  [Thread-0] 2021-02-11 20:19:33,363 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 343
+INFO  [Thread-0] 2021-02-11 20:19:33,911 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:16
+INFO  [Thread-0] 2021-02-11 20:19:34,169 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:18
+INFO  [Thread-0] 2021-02-11 20:19:34,866 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:24
+INFO  [Thread-0] 2021-02-11 20:19:35,272 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:27
+INFO  [Thread-0] 2021-02-11 20:19:35,902 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:31
+INFO  [Thread-0] 2021-02-11 20:19:36,113 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 342
+INFO  [Thread-0] 2021-02-11 20:19:36,599 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:36
+INFO  [Thread-0] 2021-02-11 20:19:36,941 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9256
+INFO  [Thread-0] 2021-02-11 20:19:36,990 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:39
+INFO  [Thread-0] 2021-02-11 20:19:37,349 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:42
+INFO  [Thread-0] 2021-02-11 20:19:37,478 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 341
+INFO  [Thread-0] 2021-02-11 20:19:37,796 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 21
+INFO  [Thread-0] 2021-02-11 20:19:38,018 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:47
+INFO  [Thread-0] 2021-02-11 20:19:38,881 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 340
+INFO  [Thread-0] 2021-02-11 20:19:38,935 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:53
+INFO  [Thread-0] 2021-02-11 20:19:39,089 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 20
+INFO  [Thread-0] 2021-02-11 20:19:39,446 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:57
+INFO  [Thread-0] 2021-02-11 20:19:40,765 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:07
+INFO  [Thread-0] 2021-02-11 20:19:41,516 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:12
+INFO  [Thread-0] 2021-02-11 20:19:41,720 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9255
+INFO  [Thread-0] 2021-02-11 20:19:43,061 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 19
+INFO  [Thread-0] 2021-02-11 20:19:43,249 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:25
+INFO  [Thread-0] 2021-02-11 20:19:44,134 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:31
+INFO  [Thread-0] 2021-02-11 20:19:44,983 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 18
+INFO  [Thread-0] 2021-02-11 20:19:45,193 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:38
+INFO  [Thread-0] 2021-02-11 20:19:45,746 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:42
+INFO  [Thread-0] 2021-02-11 20:19:46,780 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:49
+INFO  [Thread-0] 2021-02-11 20:19:47,534 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:54
+INFO  [Thread-0] 2021-02-11 20:19:49,106 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 339
+INFO  [Thread-0] 2021-02-11 20:19:49,267 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:06
+INFO  [Thread-0] 2021-02-11 20:19:50,404 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:15
+INFO  [Thread-0] 2021-02-11 20:19:50,816 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 338
+INFO  [Thread-0] 2021-02-11 20:19:51,330 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:21
+INFO  [Thread-0] 2021-02-11 20:19:52,431 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 337
+INFO  [Thread-0] 2021-02-11 20:19:53,229 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:34
+INFO  [Thread-0] 2021-02-11 20:19:55,048 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 336
+INFO  [Thread-0] 2021-02-11 20:19:55,129 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:47
+INFO  [Thread-0] 2021-02-11 20:19:56,204 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:55
+INFO  [Thread-0] 2021-02-11 20:19:56,460 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 335
+INFO  [Thread-0] 2021-02-11 20:19:57,102 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:01
+INFO  [Thread-0] 2021-02-11 20:19:58,121 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:08
+INFO  [Thread-0] 2021-02-11 20:19:58,378 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 334
+INFO  [Thread-0] 2021-02-11 20:19:59,497 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:17
+INFO  [Thread-0] 2021-02-11 20:20:00,921 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:27
+INFO  [Thread-0] 2021-02-11 20:20:01,060 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 17
+INFO  [Thread-0] 2021-02-11 20:20:01,648 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 16
+INFO  [Thread-0] 2021-02-11 20:20:02,092 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:36
+INFO  [Thread-0] 2021-02-11 20:20:03,115 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:44
+INFO  [Thread-0] 2021-02-11 20:20:04,092 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 15
+INFO  [Thread-0] 2021-02-11 20:20:04,280 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:52
+INFO  [Thread-0] 2021-02-11 20:20:04,541 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 14
+INFO  [Thread-0] 2021-02-11 20:20:06,017 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:04
+INFO  [Thread-0] 2021-02-11 20:20:06,372 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9254
+INFO  [Thread-0] 2021-02-11 20:20:06,915 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 333
+INFO  [Thread-0] 2021-02-11 20:20:07,544 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:13
+INFO  [Thread-0] 2021-02-11 20:20:09,221 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 13
+INFO  [Thread-0] 2021-02-11 20:20:09,544 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:24
+INFO  [Thread-0] 2021-02-11 20:20:11,178 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:33
+INFO  [Thread-0] 2021-02-11 20:20:12,330 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:39
+INFO  [Thread-0] 2021-02-11 20:20:14,238 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:49
+INFO  [Thread-0] 2021-02-11 20:20:14,739 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 332
+INFO  [Thread-0] 2021-02-11 20:20:15,738 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:57
+INFO  [Thread-0] 2021-02-11 20:20:16,690 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:02
+INFO  [Thread-0] 2021-02-11 20:20:17,066 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9253
+INFO  [Thread-0] 2021-02-11 20:20:17,459 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 331
+INFO  [Thread-0] 2021-02-11 20:20:17,690 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:07
+INFO  [Thread-0] 2021-02-11 20:20:19,029 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:14
+INFO  [Thread-0] 2021-02-11 20:20:20,078 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:19
+INFO  [Thread-0] 2021-02-11 20:20:22,107 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:29
+INFO  [Thread-0] 2021-02-11 20:20:22,916 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:33
+INFO  [Thread-0] 2021-02-11 20:20:23,507 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:36
+INFO  [Thread-0] 2021-02-11 20:20:25,475 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9252
+INFO  [Thread-0] 2021-02-11 20:20:25,768 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 12
+INFO  [Thread-0] 2021-02-11 20:20:25,837 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:47
+INFO  [Thread-0] 2021-02-11 20:20:26,918 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:53
+INFO  [Thread-0] 2021-02-11 20:20:28,164 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:59
+INFO  [Thread-0] 2021-02-11 20:20:31,040 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 330
+INFO  [pool-3-thread-1] 2021-02-11 20:20:31,160 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990 for DONE:  no
+INFO  [Thread-0] 2021-02-11 20:20:31,240 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 329
+INFO  [Thread-0] 2021-02-11 20:20:33,489 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:27
+INFO  [Thread-0] 2021-02-11 20:20:33,512 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9251
+INFO  [Thread-0] 2021-02-11 20:20:33,720 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9250
+INFO  [Thread-0] 2021-02-11 20:20:37,260 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:45
+INFO  [Thread-0] 2021-02-11 20:20:39,540 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 11
+INFO  [Thread-0] 2021-02-11 20:20:41,178 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:13
+INFO  [Thread-0] 2021-02-11 20:20:41,951 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:27
+INFO  [Thread-0] 2021-02-11 20:20:42,747 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:41
+INFO  [Thread-0] 2021-02-11 20:20:43,616 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:55
+INFO  [Thread-0] 2021-02-11 20:20:44,050 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 49
+INFO  [Thread-0] 2021-02-11 20:20:44,372 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:08
+INFO  [Thread-0] 2021-02-11 20:20:44,862 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 48
+INFO  [Thread-0] 2021-02-11 20:20:45,250 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:22
+INFO  [Thread-0] 2021-02-11 20:20:45,794 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9249
+INFO  [Thread-0] 2021-02-11 20:20:46,060 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:34
+INFO  [Thread-0] 2021-02-11 20:20:46,908 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:46
+INFO  [Thread-0] 2021-02-11 20:20:47,503 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:55
+INFO  [Thread-0] 2021-02-11 20:20:47,678 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 47
+INFO  [Thread-0] 2021-02-11 20:20:48,186 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:06
+INFO  [Thread-0] 2021-02-11 20:20:48,725 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:13
+INFO  [Thread-0] 2021-02-11 20:20:49,809 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:28
+INFO  [Thread-0] 2021-02-11 20:20:50,397 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:36
+INFO  [Thread-0] 2021-02-11 20:20:50,819 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:43
+INFO  [Thread-0] 2021-02-11 20:20:51,849 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:56
+INFO  [Thread-0] 2021-02-11 20:20:52,167 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 46
+INFO  [Thread-0] 2021-02-11 20:20:53,604 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:21
+INFO  [Thread-0] 2021-02-11 20:20:53,805 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9248
+INFO  [Thread-0] 2021-02-11 20:20:54,858 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:39
+INFO  [Thread-0] 2021-02-11 20:20:55,537 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 45
+INFO  [Thread-0] 2021-02-11 20:20:56,225 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:59
+INFO  [Thread-0] 2021-02-11 20:20:57,561 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:18
+INFO  [Thread-0] 2021-02-11 20:20:59,126 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:38
+INFO  [Thread-0] 2021-02-11 20:21:02,170 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:15
+INFO  [Thread-0] 2021-02-11 20:21:02,611 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:21
+INFO  [Thread-0] 2021-02-11 20:21:03,160 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:28
+INFO  [Thread-0] 2021-02-11 20:21:03,708 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:35
+INFO  [Thread-0] 2021-02-11 20:21:04,191 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:41
+INFO  [Thread-0] 2021-02-11 20:21:04,581 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:45
+INFO  [Thread-0] 2021-02-11 20:21:05,667 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:59
+INFO  [Thread-0] 2021-02-11 20:21:06,057 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 44
+INFO  [Thread-0] 2021-02-11 20:21:07,947 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:26
+INFO  [Thread-0] 2021-02-11 20:21:08,565 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 43
+INFO  [Thread-0] 2021-02-11 20:21:10,555 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:56
+INFO  [Thread-0] 2021-02-11 20:21:13,406 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:28
+INFO  [Thread-0] 2021-02-11 20:21:15,539 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:54
+INFO  [Thread-0] 2021-02-11 20:21:17,628 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:18
+INFO  [Thread-0] 2021-02-11 20:21:18,646 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:30
+INFO  [Thread-0] 2021-02-11 20:21:19,961 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:45
+INFO  [Thread-0] 2021-02-11 20:21:21,353 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:01
+INFO  [Thread-0] 2021-02-11 20:21:22,070 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:09
+INFO  [Thread-0] 2021-02-11 20:21:22,572 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:14
+INFO  [Thread-0] 2021-02-11 20:21:22,795 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9247
+INFO  [Thread-0] 2021-02-11 20:21:23,089 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:19
+INFO  [Thread-0] 2021-02-11 20:21:23,515 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:23
+INFO  [Thread-0] 2021-02-11 20:21:24,070 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:29
+INFO  [Thread-0] 2021-02-11 20:21:24,433 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 42
+INFO  [Thread-0] 2021-02-11 20:21:24,541 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:34
+INFO  [Thread-0] 2021-02-11 20:21:24,869 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:38
+INFO  [Thread-0] 2021-02-11 20:21:25,053 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:40
+INFO  [Thread-0] 2021-02-11 20:21:25,732 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:48
+INFO  [Thread-0] 2021-02-11 20:21:25,813 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9246
+INFO  [Thread-0] 2021-02-11 20:21:26,453 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:56
+INFO  [Thread-0] 2021-02-11 20:21:26,737 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:59
+INFO  [Thread-0] 2021-02-11 20:21:27,884 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:11
+INFO  [Thread-0] 2021-02-11 20:21:27,891 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 41
+INFO  [Thread-0] 2021-02-11 20:21:28,475 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 40
+INFO  [Thread-0] 2021-02-11 20:21:28,655 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:19
+INFO  [Thread-0] 2021-02-11 20:21:29,354 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9245
+INFO  [Thread-0] 2021-02-11 20:21:29,479 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:27
+INFO  [Thread-0] 2021-02-11 20:21:29,969 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:32
+INFO  [Thread-0] 2021-02-11 20:21:30,369 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 39
+INFO  [Thread-0] 2021-02-11 20:21:30,693 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:39
+INFO  [pool-3-thread-1] 2021-02-11 20:21:31,160 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990 for DONE:  no
+INFO  [Thread-0] 2021-02-11 20:21:31,448 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 38
+INFO  [Thread-0] 2021-02-11 20:21:31,578 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:49
+INFO  [Thread-0] 2021-02-11 20:21:32,309 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:56
+INFO  [Thread-0] 2021-02-11 20:21:32,983 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 37
+INFO  [Thread-0] 2021-02-11 20:21:33,155 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:04
+INFO  [Thread-0] 2021-02-11 20:21:33,660 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:09
+INFO  [Thread-0] 2021-02-11 20:21:34,296 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:15
+INFO  [Thread-0] 2021-02-11 20:21:34,729 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:19
+INFO  [Thread-0] 2021-02-11 20:21:35,430 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:26
+INFO  [Thread-0] 2021-02-11 20:21:35,519 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9244
+INFO  [Thread-0] 2021-02-11 20:21:36,104 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:32
+INFO  [Thread-0] 2021-02-11 20:21:36,791 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:38
+INFO  [Thread-0] 2021-02-11 20:21:37,424 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9243
+INFO  [Thread-0] 2021-02-11 20:21:37,641 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:46
+INFO  [Thread-0] 2021-02-11 20:21:38,503 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:54
+INFO  [Thread-0] 2021-02-11 20:21:39,072 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:59
+INFO  [Thread-0] 2021-02-11 20:21:39,807 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:06
+INFO  [Thread-0] 2021-02-11 20:21:39,909 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:07
+INFO  [Thread-0] 2021-02-11 20:21:40,435 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:12
+INFO  [Thread-0] 2021-02-11 20:21:41,301 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:20
+INFO  [Thread-0] 2021-02-11 20:21:41,805 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:25
+INFO  [Thread-0] 2021-02-11 20:21:42,091 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:28
+INFO  [Thread-0] 2021-02-11 20:21:42,407 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:31
+INFO  [Thread-0] 2021-02-11 20:21:42,683 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9242
+INFO  [Thread-0] 2021-02-11 20:21:42,805 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:35
+INFO  [Thread-0] 2021-02-11 20:21:43,236 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:39
+INFO  [Thread-0] 2021-02-11 20:21:43,553 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 36
+INFO  [Thread-0] 2021-02-11 20:21:43,845 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:44
+INFO  [Thread-0] 2021-02-11 20:21:44,362 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:49
+INFO  [Thread-0] 2021-02-11 20:21:44,598 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:51
+INFO  [Thread-0] 2021-02-11 20:21:45,316 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:57
+INFO  [Thread-0] 2021-02-11 20:21:45,915 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:02
+INFO  [Thread-0] 2021-02-11 20:21:46,200 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:05
+INFO  [Thread-0] 2021-02-11 20:21:46,650 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:09
+INFO  [Thread-0] 2021-02-11 20:21:47,115 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:13
+INFO  [Thread-0] 2021-02-11 20:21:47,434 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 35
+INFO  [Thread-0] 2021-02-11 20:21:47,583 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:17
+INFO  [Thread-0] 2021-02-11 20:21:47,699 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:18
+INFO  [Thread-0] 2021-02-11 20:21:48,263 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 34
+INFO  [Thread-0] 2021-02-11 20:21:48,303 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:23
+INFO  [Thread-0] 2021-02-11 20:21:48,447 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:24
+INFO  [Thread-0] 2021-02-11 20:21:48,813 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:27
+INFO  [Thread-0] 2021-02-11 20:21:48,911 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 328
+INFO  [Thread-0] 2021-02-11 20:21:49,069 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 327
+INFO  [Thread-0] 2021-02-11 20:21:49,513 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 33
+INFO  [Thread-0] 2021-02-11 20:21:49,734 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:34
+INFO  [Thread-0] 2021-02-11 20:21:50,083 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:37
+INFO  [Thread-0] 2021-02-11 20:21:50,648 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:42
+INFO  [Thread-0] 2021-02-11 20:21:50,979 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 32
+INFO  [Thread-0] 2021-02-11 20:21:51,468 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:49
+INFO  [Thread-0] 2021-02-11 20:21:52,297 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:55
+INFO  [Thread-0] 2021-02-11 20:21:52,673 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:57
+INFO  [Thread-0] 2021-02-11 20:21:52,805 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:58
+INFO  [Thread-0] 2021-02-11 20:21:53,585 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:04
+INFO  [Thread-0] 2021-02-11 20:21:53,697 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:05
+INFO  [Thread-0] 2021-02-11 20:21:54,399 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:10
+INFO  [Thread-0] 2021-02-11 20:21:54,541 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:11
+INFO  [Thread-0] 2021-02-11 20:21:55,040 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:15
+INFO  [Thread-0] 2021-02-11 20:21:55,451 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:18
+INFO  [Thread-0] 2021-02-11 20:21:55,857 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:21
+INFO  [Thread-0] 2021-02-11 20:21:56,214 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 326
+INFO  [Thread-0] 2021-02-11 20:21:56,370 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:25
+INFO  [Thread-0] 2021-02-11 20:21:56,471 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9241
+INFO  [Thread-0] 2021-02-11 20:21:56,694 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:28
+INFO  [Thread-0] 2021-02-11 20:21:57,289 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:33
+INFO  [Thread-0] 2021-02-11 20:21:57,602 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 31
+INFO  [Thread-0] 2021-02-11 20:21:57,811 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:37
+INFO  [Thread-0] 2021-02-11 20:21:58,356 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:41
+INFO  [Thread-0] 2021-02-11 20:21:59,159 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:47
+INFO  [Thread-0] 2021-02-11 20:21:59,640 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:51
+INFO  [Thread-0] 2021-02-11 20:21:59,888 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:53
+INFO  [Thread-0] 2021-02-11 20:22:00,002 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:54
+INFO  [Thread-0] 2021-02-11 20:22:00,602 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 30
+INFO  [Thread-0] 2021-02-11 20:22:00,637 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:59
+INFO  [Thread-0] 2021-02-11 20:22:01,206 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:04
+INFO  [Thread-0] 2021-02-11 20:22:01,951 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:10
+INFO  [Thread-0] 2021-02-11 20:22:02,242 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:12
+INFO  [Thread-0] 2021-02-11 20:22:03,021 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:18
+INFO  [Thread-0] 2021-02-11 20:22:03,357 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 29
+INFO  [Thread-0] 2021-02-11 20:22:03,953 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:26
+INFO  [Thread-0] 2021-02-11 20:22:05,331 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 28
+INFO  [Thread-0] 2021-02-11 20:22:05,738 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:40
+INFO  [Thread-0] 2021-02-11 20:22:05,821 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9240
+INFO  [Thread-0] 2021-02-11 20:22:06,260 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:44
+INFO  [Thread-0] 2021-02-11 20:22:06,685 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:47
+INFO  [Thread-0] 2021-02-11 20:22:07,698 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:54
+INFO  [Thread-0] 2021-02-11 20:22:07,839 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:55
+INFO  [Thread-0] 2021-02-11 20:22:08,380 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:59
+INFO  [Thread-0] 2021-02-11 20:22:09,070 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:04
+INFO  [Thread-0] 2021-02-11 20:22:09,496 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:07
+INFO  [Thread-0] 2021-02-11 20:22:09,816 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:09
+INFO  [Thread-0] 2021-02-11 20:22:10,396 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:13
+INFO  [Thread-0] 2021-02-11 20:22:10,918 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:17
+INFO  [Thread-0] 2021-02-11 20:22:11,206 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:19
+INFO  [Thread-0] 2021-02-11 20:22:12,043 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:25
+INFO  [Thread-0] 2021-02-11 20:22:12,488 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9239
+INFO  [Thread-0] 2021-02-11 20:22:12,778 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:30
+INFO  [Thread-0] 2021-02-11 20:22:13,544 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:35
+INFO  [Thread-0] 2021-02-11 20:22:14,471 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:41
+INFO  [Thread-0] 2021-02-11 20:22:14,594 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 27
+INFO  [Thread-0] 2021-02-11 20:22:15,042 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:45
+INFO  [Thread-0] 2021-02-11 20:22:15,342 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:47
+INFO  [Thread-0] 2021-02-11 20:22:15,524 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 26
+INFO  [Thread-0] 2021-02-11 20:22:16,023 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:52
+INFO  [Thread-0] 2021-02-11 20:22:16,864 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:58
+INFO  [Thread-0] 2021-02-11 20:22:17,527 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:03
+INFO  [Thread-0] 2021-02-11 20:22:18,145 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9238
+INFO  [Thread-0] 2021-02-11 20:22:18,493 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:10
+INFO  [Thread-0] 2021-02-11 20:22:18,963 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:13
+INFO  [Thread-0] 2021-02-11 20:22:19,395 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:16
+INFO  [Thread-0] 2021-02-11 20:22:19,821 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:19
+INFO  [Thread-0] 2021-02-11 20:22:20,340 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9237
+INFO  [Thread-0] 2021-02-11 20:22:20,687 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:24
+INFO  [Thread-0] 2021-02-11 20:22:21,309 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:28
+INFO  [Thread-0] 2021-02-11 20:22:21,970 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:32
+INFO  [Thread-0] 2021-02-11 20:22:22,101 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 25
+INFO  [Thread-0] 2021-02-11 20:22:22,445 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:35
+INFO  [Thread-0] 2021-02-11 20:22:22,898 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:38
+INFO  [Thread-0] 2021-02-11 20:22:23,202 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9236
+INFO  [Thread-0] 2021-02-11 20:22:23,397 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:41
+INFO  [Thread-0] 2021-02-11 20:22:24,255 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:46
+INFO  [Thread-0] 2021-02-11 20:22:25,343 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:52
+INFO  [Thread-0] 2021-02-11 20:22:25,533 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:53
+INFO  [Thread-0] 2021-02-11 20:22:25,759 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9235
+INFO  [Thread-0] 2021-02-11 20:22:26,121 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 24
+INFO  [Thread-0] 2021-02-11 20:22:26,198 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:57
+INFO  [Thread-0] 2021-02-11 20:22:27,301 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:04
+INFO  [Thread-0] 2021-02-11 20:22:28,192 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:09
+INFO  [Thread-0] 2021-02-11 20:22:29,911 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:19
+INFO  [Thread-0] 2021-02-11 20:22:30,823 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:24
+INFO  [pool-3-thread-1] 2021-02-11 20:22:31,161 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990 for DONE:  no
+INFO  [Thread-0] 2021-02-11 20:22:31,190 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:26
+INFO  [Thread-0] 2021-02-11 20:22:31,407 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 23
+INFO  [Thread-0] 2021-02-11 20:22:32,044 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:31
+INFO  [Thread-0] 2021-02-11 20:22:32,352 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9234
+INFO  [Thread-0] 2021-02-11 20:22:33,014 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:37
+INFO  [Thread-0] 2021-02-11 20:22:33,716 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 22
+INFO  [Thread-0] 2021-02-11 20:22:34,372 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:45
+INFO  [Thread-0] 2021-02-11 20:22:35,345 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 21
+INFO  [Thread-0] 2021-02-11 20:22:36,455 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 20
+INFO  [Thread-0] 2021-02-11 20:22:36,538 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:57
+INFO  [Thread-0] 2021-02-11 20:22:38,451 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:08
+INFO  [Thread-0] 2021-02-11 20:22:39,324 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:13
+INFO  [Thread-0] 2021-02-11 20:22:40,220 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:18
+INFO  [Thread-0] 2021-02-11 20:22:41,854 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:27
+INFO  [Thread-0] 2021-02-11 20:22:43,118 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:34
+INFO  [Thread-0] 2021-02-11 20:22:44,827 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:44
+INFO  [Thread-0] 2021-02-11 20:22:45,601 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9233
+INFO  [Thread-0] 2021-02-11 20:22:46,942 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:56
+INFO  [Thread-0] 2021-02-11 20:22:49,675 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:12
+INFO  [Thread-0] 2021-02-11 20:22:50,542 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:17
+INFO  [Thread-0] 2021-02-11 20:22:51,945 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:25
+INFO  [Thread-0] 2021-02-11 20:22:53,745 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:34
+INFO  [Thread-0] 2021-02-11 20:22:54,225 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9232
+INFO  [Thread-0] 2021-02-11 20:22:55,315 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:43
+INFO  [Thread-0] 2021-02-11 20:22:56,313 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 19
+INFO  [Thread-0] 2021-02-11 20:22:56,872 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:52
+INFO  [Thread-0] 2021-02-11 20:22:59,743 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:08
+INFO  [Thread-0] 2021-02-11 20:23:00,124 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 18
+INFO  [Thread-0] 2021-02-11 20:23:02,030 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:19
+INFO  [Thread-0] 2021-02-11 20:23:02,616 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 325
+INFO  [Thread-0] 2021-02-11 20:23:02,891 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 17
+INFO  [Thread-0] 2021-02-11 20:23:03,953 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:29
+INFO  [Thread-0] 2021-02-11 20:23:04,270 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 16
+INFO  [Thread-0] 2021-02-11 20:23:04,941 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:34
+INFO  [Thread-0] 2021-02-11 20:23:06,026 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:40
+INFO  [Thread-0] 2021-02-11 20:23:08,234 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:52
+INFO  [Thread-0] 2021-02-11 20:23:08,879 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9231
+INFO  [Thread-0] 2021-02-11 20:23:10,938 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:07
+INFO  [Thread-0] 2021-02-11 20:23:12,460 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:15
+INFO  [Thread-0] 2021-02-11 20:23:13,715 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9230
+INFO  [Thread-0] 2021-02-11 20:23:14,291 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:25
+INFO  [Thread-0] 2021-02-11 20:23:14,832 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9229
+INFO  [Thread-0] 2021-02-11 20:23:15,407 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:31
+INFO  [Thread-0] 2021-02-11 20:23:16,664 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 324
+INFO  [Thread-0] 2021-02-11 20:23:17,448 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:42
+INFO  [Thread-0] 2021-02-11 20:23:18,608 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:48
+INFO  [Thread-0] 2021-02-11 20:23:19,062 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 15
+INFO  [Thread-0] 2021-02-11 20:23:19,895 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:55
+INFO  [Thread-0] 2021-02-11 20:23:20,669 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:59
+INFO  [Thread-0] 2021-02-11 20:23:23,736 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:15
+INFO  [Thread-0] 2021-02-11 20:23:27,114 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 14
+INFO  [Thread-0] 2021-02-11 20:23:28,142 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:39
+INFO  [Thread-0] 2021-02-11 20:23:29,545 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 13
+INFO  [pool-3-thread-1] 2021-02-11 20:23:31,161 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990 for DONE:  no
+INFO  [Thread-0] 2021-02-11 20:23:32,006 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:59
+INFO  [pool-3-thread-1] 2021-02-11 20:24:31,161 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2021-02-11 20:24:31,163 repast.simphony.batch.ssh.SessionsDriver - Run Time: 147.0695
+INFO  [SwingWorker-pool-2-thread-1] 2021-02-11 20:24:31,252 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1613066242990
+INFO  [SwingWorker-pool-2-thread-1] 2021-02-11 20:24:31,282 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2021-02-11 20:24:31,316 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0025
+INFO  [SwingWorker-pool-2-thread-1] 2021-02-11 20:24:31,316 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 147.1392

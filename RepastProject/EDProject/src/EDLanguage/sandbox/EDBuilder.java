@@ -5,11 +5,12 @@ package EDLanguage.sandbox;
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
-import repast.simphony.engine.schedule.ISchedule;
-import repast.simphony.engine.schedule.ScheduleParameters;
+import repast.simphony.parameter.Parameters;
+import repast.simphony.parameter.DefaultParameters;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactory;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder;
 import repast.simphony.space.continuous.ContinuousSpace;
+import simcore.utilities.ModelParameterStore;
 import simcore.utilities.StaffAdder;
 import repast.simphony.space.continuous.StrictBorders;
 import repast.simphony.context.space.grid.GridFactory;
@@ -30,6 +31,9 @@ public class EDBuilder implements ContextBuilder<Object> {
   public Context build(Context<Object> context) {
 
     context.setId("EDProject");
+    
+    Parameters params = RunEnvironment.getInstance().getParameters();
+
 
     RunEnvironment.getInstance().endAt(86400);
 
@@ -38,14 +42,17 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
-    
-    PatientAdder pAdder = new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.2).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66);
-    context.add(new Board());
-    context.add(pAdder);
 
-  ISchedule schedule = RunEnvironment.getInstance().getCurrentSchedule();
-  ScheduleParameters arrival = ScheduleParameters.createPoissonProbabilityRepeating(480, 450, 1);
-  schedule.schedule(arrival , pAdder, "ticccck");
+    Double pPercentageSymptomatic = params.getDouble("PercentageSymptomatic");
+    Double pPercentageAsymptomatic = params.getDouble("PercentageAsymptomatic");
+
+    context.add(new Board());
+    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(pPercentageSymptomatic).WithPercentageCOVIDAsymptomatic(pPercentageAsymptomatic).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66));
+    
+    Boolean pBool = params.getBoolean("UsePathFinding");
+    ModelParameterStore.UsePathFinding = pBool;
+    
+    SideRoom.reset();
     
     // add Agents 
     for (int i = 0; i < 6; i++) {

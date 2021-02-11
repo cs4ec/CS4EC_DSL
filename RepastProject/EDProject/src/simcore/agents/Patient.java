@@ -3,6 +3,7 @@ package simcore.agents;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.stream.Collectors;
@@ -369,6 +370,32 @@ public class Patient extends Agent {
 		return 0;
 	}
 	
+	public Integer LFDPositive() {
+		TestResult pres =  null;
+		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findFirst();
+		if (opt.isEmpty()) return 0;
+		else 
+			pres = (TestResult) opt.get();
+		
+		if(pres != null && pres.isInfected()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDNegative() {
+		TestResult pres =  null;
+		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findFirst();
+		if (opt.isEmpty()) return 0;
+		else 
+			pres = (TestResult) opt.get();
+		
+		if(pres != null && !pres.isInfected()) {
+			return 1;
+		}
+		return 0;
+	}
+	
 	public Integer receivedPCR() {
 		if( testResults.stream().filter(t -> t.getTestType().equals(LabPCR.getInstance())).findAny().isPresent()) {
 			return 1;
@@ -381,5 +408,23 @@ public class Patient extends Agent {
 			return 1;
 		}
 		return 0;
+	}
+	
+	public Integer isSymptomatic() {
+		if(actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isAsymptomatic() {
+		if(actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer getTotalPatients() {
+		return 1;
 	}
 }

@@ -7,13 +7,16 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.Amber;
 import EDLanguage.sandbox.DoctorOffice;
 import EDLanguage.sandbox.Nurse;
+import EDLanguage.sandbox.Red;
 import EDLanguage.sandbox.SideRoom;
 import repast.simphony.context.Context;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
 import repast.simphony.random.RandomHelper;
+import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.space.grid.Grid;
@@ -45,6 +48,7 @@ import simcore.action.basicAction.conditions.SeverityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
 import simcore.action.basicAction.conditions.TestResultCondition;
+import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Bed;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Desk;
@@ -59,6 +63,7 @@ import simcore.basicStructures.ToolBox;
 import simcore.diagnosis.SeverityScore;
 import simcore.diagnosis.TestResult;
 import simcore.utilities.AStar;
+import simcore.utilities.ModelParameterStore;
 import simcore.utilities.Tuple;
 
 public class Agent {
@@ -300,6 +305,14 @@ public class Agent {
 	}
 
 	public void MoveTowards(GridPoint pt) {
+		if(ModelParameterStore.UsePathFinding) {
+			PathFinding(pt);
+		} else {
+			CrowFlyMovement(pt);
+		}
+	}
+	
+	public void PathFinding(GridPoint pt) {
 		NdPoint myPoint = space.getLocation(this);
 
 		// If I am not yet at the destination
@@ -326,6 +339,18 @@ public class Agent {
 				myPoint = space.getLocation(this);
 				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 			}
+		}
+	}
+	
+	public void CrowFlyMovement(GridPoint pt) {
+		NdPoint myPoint = space.getLocation(this);
+
+		if (!ImAt(pt)) {
+			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
+			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
+			space.moveByVector(this, 1, angle, 0);
+			myPoint = space.getLocation(this);
+			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 		}
 	}
 	
@@ -481,7 +506,16 @@ public class Agent {
 		
 		if(c instanceof SuitableForSideRoomCondition) {
 			Patient pPatient = ((SuitableForSideRoomCondition) c).getPatient();
+			AdmissionBay pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
 			double pPHEScore = pPatient.getPHEScore();
+
+			// Depending on the alternative admission bay, the COVID suspicion level of a patient is either weighted positive or negative
+			// E.g. if admitting to red bay, a high suspicion is good, but for amber you want a low suspicion as amber should contain negative cases
+			if(pAlternativeBay == Red.getInstance()) {
+				
+			} else if(pAlternativeBay == Amber.getInstance()) {
+				pPHEScore = 1- pPHEScore;
+			}
 			double pSideRoomCapacity = (SideRoom.getInstance().getCurrentOccupancy() / SideRoom.getInstance().getCapacity());
 			double pdblChances = 1- ((pPHEScore + pSideRoomCapacity) / 2);
 			

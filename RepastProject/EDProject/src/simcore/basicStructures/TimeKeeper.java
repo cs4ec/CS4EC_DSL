@@ -15,7 +15,7 @@ public class TimeKeeper {
     private static TimeKeeper instance = new TimeKeeper();
 
     private TimeKeeper() {
-    	this.date = LocalDateTime.now();
+    	this.date = LocalDateTime.of(2021, 2, 1, 0, 0);
     	this.startDate = date;
     }
     
