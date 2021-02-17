@@ -13,7 +13,7 @@ public class Green_AdmissionBay extends AdmissionBay {
   }
 
   public Green_AdmissionBay(int curOccupancy) {
-    super("", 1000, curOccupancy);
+    super("Green", 1000, curOccupancy);
   }
 
 

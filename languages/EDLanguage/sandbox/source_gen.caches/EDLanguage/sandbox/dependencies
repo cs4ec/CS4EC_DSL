@@ -14,7 +14,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="EDLanguage.sandbox.Doctor">
-    <classNode dependClassName="EDLanguage.sandbox.Amber" />
+    <classNode dependClassName="EDLanguage.sandbox.Amber_AdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
@@ -23,9 +23,9 @@
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.Red" />
+    <classNode dependClassName="EDLanguage.sandbox.Red_AdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.RequestPCRSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.SideRoom_AdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
@@ -224,16 +224,16 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.MajorsABDoctor">
-    <classNode dependClassName="EDLanguage.sandbox.Amber" />
+    <classNode dependClassName="EDLanguage.sandbox.Amber_AdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
     <classNode dependClassName="EDLanguage.sandbox.INOVA" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
-    <classNode dependClassName="EDLanguage.sandbox.Red" />
+    <classNode dependClassName="EDLanguage.sandbox.Red_AdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.RequestPCRSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.SideRoom_AdmissionBay" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -377,13 +377,13 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.Receptionist">
-    <classNode dependClassName="EDLanguage.sandbox.Amber" />
+    <classNode dependClassName="EDLanguage.sandbox.Amber_AdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ConductTrackAndTraceLFDSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForMajorsABSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForMajorsSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.Red" />
+    <classNode dependClassName="EDLanguage.sandbox.Red_AdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.TriageSideRoom" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />

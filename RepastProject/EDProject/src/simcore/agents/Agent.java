@@ -7,11 +7,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.Amber;
+import EDLanguage.sandbox.Amber_AdmissionBay;
 import EDLanguage.sandbox.DoctorOffice;
 import EDLanguage.sandbox.Nurse;
-import EDLanguage.sandbox.Red;
-import EDLanguage.sandbox.SideRoom;
+import EDLanguage.sandbox.Red_AdmissionBay;
+import EDLanguage.sandbox.SideRoom_AdmissionBay;
 import repast.simphony.context.Context;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
@@ -151,6 +151,8 @@ public class Agent {
 				stepLogic.setDestination(SelectLocation((RoomType) stepLogic.getTargetDestinationType()));
 			}
 		}
+		
+		stepLogic.setTargetGridPoints(grid.getLocation(stepLogic.getDestinationObject()));
 	}
 
 	public void ExecMission() {
@@ -195,7 +197,7 @@ public class Agent {
 		System.out.println(
 				"cur action step: " + curActionStep + ": " + curMission.getSteps().get(curActionStep).getName());
 	}
-
+	
 	/**
 	 * If the current Agent action is to move somewhere, then process that here
 	 * 
@@ -213,7 +215,15 @@ public class Agent {
 
 		// If the agent is moving towards an occupiable (bed, seat etc)
 		if (target instanceof Occupiable) {
-			MoveToOccupiable((Occupiable) target);
+			Occupiable targetOccupiable = (Occupiable) target;
+			// if this agent is already there, continue
+			if (targetOccupiable.getOccupier() == this) {
+				NextStep();
+			} else { 
+				if (ImAt(targetOccupiable)) {
+					targetOccupiable.setOccupier(this);
+				}
+			}
 		}
 		// Else moving towards the room
 		else if (target instanceof Room) {
@@ -225,26 +235,10 @@ public class Agent {
 		}
 	}
 
-	private void MoveToOccupiable(Occupiable target) {
-		Occupiable targetOccupiable = (Occupiable) target;
-		// if this agent is already there, continue
-		if (targetOccupiable.getOccupier() == this) {
-			NextStep();
-		} else { 
-			if (ImAt(targetOccupiable)) {
-				targetOccupiable.setOccupier(this);
-			}
-		}
-	}
-
 	// Given a RoomType, select a Location of that RoomType
 	private Room SelectLocation(RoomType pRoomType) {
 		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
-		// If I am already in one of those rooms, stay there
-//		if(pRooms.contains(curInside)) {
-//			return curInside;
-//		}
-		// Otherwise find an instance of the room we want
+		// find an instance of the room we want
 		// By default select the one that is most empty
 		try {
 			return pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2))).findFirst().get();
@@ -303,7 +297,7 @@ public class Agent {
 			MoveTowards(pointOfTarget);
 		}
 	}
-
+	
 	public void MoveTowards(GridPoint pt) {
 		if(ModelParameterStore.UsePathFinding) {
 			PathFinding(pt);
@@ -342,6 +336,9 @@ public class Agent {
 		}
 	}
 	
+	/*
+	 * An alternative movement implementation that ignores any pathfinding or obstacles, heads straight line to target
+	 */
 	public void CrowFlyMovement(GridPoint pt) {
 		NdPoint myPoint = space.getLocation(this);
 
@@ -511,13 +508,13 @@ public class Agent {
 
 			// Depending on the alternative admission bay, the COVID suspicion level of a patient is either weighted positive or negative
 			// E.g. if admitting to red bay, a high suspicion is good, but for amber you want a low suspicion as amber should contain negative cases
-			if(pAlternativeBay == Red.getInstance()) {
+			if(pAlternativeBay == Red_AdmissionBay.getInstance()) {
 				
-			} else if(pAlternativeBay == Amber.getInstance()) {
+			} else if(pAlternativeBay == Amber_AdmissionBay.getInstance()) {
 				pPHEScore = 1- pPHEScore;
 			}
-			double currOcc = SideRoom.getInstance().getCurrentOccupancy();
-			double maxCap = SideRoom.getInstance().getCapacity();
+			double currOcc = SideRoom_AdmissionBay.getInstance().getCurrentOccupancy();
+			double maxCap = SideRoom_AdmissionBay.getInstance().getCapacity();
 			double pSideRoomCapacity = (currOcc / maxCap);
 			if(currOcc >= maxCap) {
 				pSideRoomCapacity = 1;

@@ -13,7 +13,7 @@ public class SideRoom_AdmissionBay extends AdmissionBay {
   }
 
   public SideRoom_AdmissionBay(int curOccupancy) {
-    super("", 90, curOccupancy);
+    super("SideRoom", 90, curOccupancy);
   }
 
 

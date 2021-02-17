@@ -8,15 +8,15 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.Amber;
+import EDLanguage.sandbox.Amber_AdmissionBay;
 import EDLanguage.sandbox.Entrance;
 import EDLanguage.sandbox.Exit;
-import EDLanguage.sandbox.Green;
+import EDLanguage.sandbox.Green_AdmissionBay;
 import EDLanguage.sandbox.INOVA;
 import EDLanguage.sandbox.LIAT;
 import EDLanguage.sandbox.LabPCR;
-import EDLanguage.sandbox.Red;
-import EDLanguage.sandbox.SideRoom;
+import EDLanguage.sandbox.Red_AdmissionBay;
+import EDLanguage.sandbox.SideRoom_AdmissionBay;
 import EDLanguage.sandbox.WaitingRoom;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -128,7 +128,7 @@ public class Patient extends Agent {
 		} else if (order instanceof FollowOrder) {
 			// follow the target
 			Object target = ((FollowOrder) order).getFollowTarget();
-			Follow((Agent)target);
+			MoveTowards(target);
 			
 		} else if (order instanceof StopOrder) {
 			curOrder = null;
@@ -244,13 +244,13 @@ public class Patient extends Agent {
 	}
 	
 	public void setAdmitted(AdmissionBay bay) {
-		if(bay instanceof Amber) {
+		if(bay instanceof Amber_AdmissionBay) {
 			this.outcome = PatientOutcomes.ADMITTEDAMBER;
-		} else if (bay instanceof Red) {
+		} else if (bay instanceof Red_AdmissionBay) {
 			this.outcome = PatientOutcomes.ADMITTEDRED;
-		} else if (bay instanceof Green) {
+		} else if (bay instanceof Green_AdmissionBay) {
 			this.outcome = PatientOutcomes.ADMITTEDGREEN;
-		} else if(bay instanceof SideRoom) {
+		} else if(bay instanceof SideRoom_AdmissionBay) {
 			this.outcome = PatientOutcomes.ADMITTEDSIDEROOM;
 		}
 		
