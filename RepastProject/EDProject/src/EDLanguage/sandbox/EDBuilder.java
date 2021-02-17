@@ -52,7 +52,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = pBool;
     
-    SideRoom.reset();
     
     // add Agents 
     for (int i = 0; i < 6; i++) {

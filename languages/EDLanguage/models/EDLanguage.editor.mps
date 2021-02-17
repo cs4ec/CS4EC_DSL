@@ -9,6 +9,7 @@
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
+    <import index="8z6w" ref="r:7fdd874b-4384-4587-921a-bc2dc46676c9(com.mbeddr.mpsutil.filepicker.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -1891,6 +1892,18 @@
       <node concept="3F0A7n" id="L8B6GmHalM" role="3EZMnx">
         <ref role="1NtTu8" to="3751:L8B6GmHakB" resolve="capacity" />
       </node>
+      <node concept="3F0ifn" id="6dYFu3AoQpK" role="3EZMnx">
+        <property role="3F0ifm" value="starting occupancy:" />
+        <node concept="pVoyu" id="6dYFu3AoQqe" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="6dYFu3AoQqg" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="6dYFu3AoQqv" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6dYFu3AoQpv" resolve="startOccupancy" />
+      </node>
       <node concept="l2Vlx" id="L8B6GmHal0" role="2iSdaV" />
     </node>
   </node>
@@ -1899,9 +1912,35 @@
     <ref role="1XX52x" to="3751:L8B6GnjfR9" resolve="SuitableForSideRoomCondition" />
     <node concept="3EZMnI" id="L8B6GnjfRc" role="2wV5jI">
       <node concept="3F0ifn" id="L8B6GnjfRj" role="3EZMnx">
-        <property role="3F0ifm" value="the patient can be placed in a side room" />
+        <property role="3F0ifm" value="the patient can be placed in a side room rather than" />
+      </node>
+      <node concept="1iCGBv" id="1Pt3svOPE2h" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1Pt3svOPE2c" resolve="alternativeAdmissionBay" />
+        <node concept="1sVBvm" id="1Pt3svOPE2j" role="1sWHZn">
+          <node concept="3F0A7n" id="1Pt3svOPE2r" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
       </node>
       <node concept="l2Vlx" id="L8B6GnjfRf" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6dYFu3AhE_C">
+    <ref role="1XX52x" to="3751:6dYFu3AbeaS" resolve="PatientArrivals" />
+    <node concept="3EZMnI" id="6dYFu3AhE_E" role="2wV5jI">
+      <node concept="3F0ifn" id="6dYFu3AhE_L" role="3EZMnx">
+        <property role="3F0ifm" value="Select a file from" />
+      </node>
+      <node concept="1iCGBv" id="6dYFu3Aj20O" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6dYFu3Aj20I" resolve="picker" />
+        <node concept="1sVBvm" id="6dYFu3Aj20Q" role="1sWHZn">
+          <node concept="PMmxH" id="6dYFu3AknJo" role="2wV5jI">
+            <ref role="PMmxG" to="8z6w:2RM$2qudcDl" resolve="DefaultPicker_EditorComponent" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="6dYFu3AhE_H" role="2iSdaV" />
     </node>
   </node>
 </model>

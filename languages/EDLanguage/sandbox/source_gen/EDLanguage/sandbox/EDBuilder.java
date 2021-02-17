@@ -4,7 +4,9 @@ package EDLanguage.sandbox;
 
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.context.Context;
+import repast.simphony.parameter.Parameters;
 import repast.simphony.engine.environment.RunEnvironment;
+import simcore.utilities.ModelParameterStore;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactory;
 import repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -29,6 +31,14 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     context.setId("EDProject");
 
+    Parameters params = RunEnvironment.getInstance().getParameters();
+
+    Double pPercentageSymptomatic = params.getDouble("PercentageSymptomatic");
+    Double pPercentageAsymptomatic = params.getDouble("PercentageAsymptomatic");
+
+    Boolean pBool = params.getBoolean("UsePathFinding");
+    ModelParameterStore.UsePathFinding = pBool;
+
     RunEnvironment.getInstance().endAt(86400);
 
     ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
@@ -38,7 +48,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(0.3).WithPercentageCOVIDAsymptomatic(0.2).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(0.47).WithPercentageCOVIDAsymptomatic(0.015).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66));
 
     // add Agents 
     for (int i = 0; i < 6; i++) {

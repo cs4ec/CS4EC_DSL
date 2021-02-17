@@ -54,9 +54,12 @@
         <property id="1195759192912732656" name="xEnd" index="2qS95m" />
       </concept>
       <concept id="885129310534673700" name="EDLanguage.structure.AdmissionBay" flags="ng" index="qZ3_f">
+        <property id="7169358838269961823" name="startOccupancy" index="257sIZ" />
         <property id="885129310534673703" name="capacity" index="qZ3_c" />
       </concept>
-      <concept id="885129310544657865" name="EDLanguage.structure.SuitableForSideRoomCondition" flags="ng" index="r166y" />
+      <concept id="885129310544657865" name="EDLanguage.structure.SuitableForSideRoomCondition" flags="ng" index="r166y">
+        <reference id="2115862552391360652" name="alternativeAdmissionBay" index="3DyUPb" />
+      </concept>
       <concept id="7454555096515224041" name="EDLanguage.structure.NumericExpression" flags="ng" index="xbsuO">
         <child id="7454555096515273671" name="expression" index="xbgmq" />
       </concept>
@@ -207,8 +210,8 @@
     </language>
   </registry>
   <node concept="3VqkwO" id="3l6cNjeckZ5">
-    <property role="3UAW2b" value="30" />
-    <property role="3UAW29" value="20" />
+    <property role="3UAW2b" value="47" />
+    <property role="3UAW29" value="1.5" />
     <property role="XQ$72" value="44" />
     <property role="XQ$7e" value="66" />
     <node concept="3VqkwQ" id="3l6cNjecY0m" role="3Vt_yv">
@@ -1366,7 +1369,9 @@
               </node>
             </node>
             <node concept="3VtFpY" id="L8B6Gnn6JA" role="3VtFpW">
-              <node concept="r166y" id="L8B6Gnn6K0" role="3VtFpT" />
+              <node concept="r166y" id="L8B6Gnn6K0" role="3VtFpT">
+                <ref role="3DyUPb" node="L8B6Gnb_Fx" resolve="Red" />
+              </node>
               <node concept="3VtFpM" id="L8B6Gnn6JE" role="3VtFpZ">
                 <node concept="1kMh$d" id="L8B6Gnn6KD" role="3VtFpW">
                   <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
@@ -1861,9 +1866,22 @@
                 <property role="2IBTiX" value="Request the Lab PCR test" />
               </node>
             </node>
-            <node concept="1kMh$d" id="L8B6GnbGio" role="3VtFpW">
-              <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
-              <node concept="3JJFmu" id="L8B6GnbGiq" role="1kMh$e" />
+            <node concept="3VtFpY" id="1Pt3svORp$0" role="3VtFpW">
+              <node concept="r166y" id="1Pt3svORp$1" role="3VtFpT">
+                <ref role="3DyUPb" node="L8B6GnbCVP" resolve="Amber" />
+              </node>
+              <node concept="3VtFpM" id="1Pt3svORp$2" role="3VtFpZ">
+                <node concept="1kMh$d" id="1Pt3svORp$3" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
+                  <node concept="3JJFmu" id="1Pt3svORp$4" role="1kMh$e" />
+                </node>
+              </node>
+              <node concept="3VtFpM" id="1Pt3svORp$5" role="3VtFp$">
+                <node concept="1kMh$d" id="1Pt3svORp$6" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
+                  <node concept="3JJFmu" id="1Pt3svORp$7" role="1kMh$e" />
+                </node>
+              </node>
             </node>
             <node concept="3JG_m1" id="2Rfu8e59zCd" role="3VtFpW">
               <node concept="3JJFmu" id="2Rfu8e59zCe" role="3JG_8_" />
@@ -2889,7 +2907,9 @@
               </node>
             </node>
             <node concept="3VtFpY" id="L8B6Gnn6MS" role="3VtFpW">
-              <node concept="r166y" id="L8B6Gnn6Ng" role="3VtFpT" />
+              <node concept="r166y" id="L8B6Gnn6Ng" role="3VtFpT">
+                <ref role="3DyUPb" node="L8B6Gnb_Fx" resolve="Red" />
+              </node>
               <node concept="3VtFpM" id="L8B6Gnn6MW" role="3VtFpZ">
                 <node concept="1kMh$d" id="L8B6Gnn6Nj" role="3VtFpW">
                   <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
@@ -3410,9 +3430,22 @@
                     <property role="2IBTiX" value="Request the Lab PCR test" />
                   </node>
                 </node>
-                <node concept="1kMh$d" id="L8B6GnbGn1" role="3VtFpW">
-                  <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
-                  <node concept="3JJFmu" id="L8B6GnbGn3" role="1kMh$e" />
+                <node concept="3VtFpY" id="1Pt3svORpyg" role="3VtFpW">
+                  <node concept="r166y" id="1Pt3svORpyI" role="3VtFpT">
+                    <ref role="3DyUPb" node="L8B6GnbCVP" resolve="Amber" />
+                  </node>
+                  <node concept="3VtFpM" id="1Pt3svORpyk" role="3VtFpZ">
+                    <node concept="1kMh$d" id="1Pt3svORpyL" role="3VtFpW">
+                      <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
+                      <node concept="3JJFmu" id="1Pt3svORpyN" role="1kMh$e" />
+                    </node>
+                  </node>
+                  <node concept="3VtFpM" id="1Pt3svORpzU" role="3VtFp$">
+                    <node concept="1kMh$d" id="L8B6GnbGn1" role="3VtFpW">
+                      <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
+                      <node concept="3JJFmu" id="L8B6GnbGn3" role="1kMh$e" />
+                    </node>
+                  </node>
                 </node>
                 <node concept="3JG_m1" id="2Rfu8e54llN" role="3VtFpW">
                   <node concept="3JJFmu" id="2Rfu8e54llP" role="3JG_8_" />
@@ -3630,7 +3663,8 @@
   <node concept="qZ3_f" id="L8B6GnbCVQ">
     <property role="3GE5qa" value="rooms" />
     <property role="TrG5h" value="SideRoom" />
-    <property role="qZ3_c" value="50" />
+    <property role="qZ3_c" value="90" />
+    <property role="257sIZ" value="80" />
   </node>
 </model>
 

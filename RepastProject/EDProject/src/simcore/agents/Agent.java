@@ -516,10 +516,16 @@ public class Agent {
 			} else if(pAlternativeBay == Amber.getInstance()) {
 				pPHEScore = 1- pPHEScore;
 			}
-			double pSideRoomCapacity = (SideRoom.getInstance().getCurrentOccupancy() / SideRoom.getInstance().getCapacity());
+			double currOcc = SideRoom.getInstance().getCurrentOccupancy();
+			double maxCap = SideRoom.getInstance().getCapacity();
+			double pSideRoomCapacity = (currOcc / maxCap);
+			if(currOcc >= maxCap) {
+				pSideRoomCapacity = 1;
+			}
 			double pdblChances = 1- ((pPHEScore + pSideRoomCapacity) / 2);
 			
-			if(RandomHelper.nextDouble() < pdblChances) {
+			double rnd = RandomHelper.nextDouble();
+			if(rnd < pdblChances) {
 				return true;
 			}
 			return false;

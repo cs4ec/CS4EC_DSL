@@ -3,11 +3,13 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
+    <use id="d3a0fd26-445a-466c-900e-10444ddfed52" name="com.mbeddr.mpsutil.filepicker" version="0" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
+    <import index="68mc" ref="r:2a10821d-612f-4a73-b7b0-ed6b57106321(com.mbeddr.mpsutil.filepicker.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -1542,6 +1544,11 @@
       <property role="TrG5h" value="capacity" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="6dYFu3AoQpv" role="1TKVEl">
+      <property role="IQ2nx" value="7169358838269961823" />
+      <property role="TrG5h" value="startOccupancy" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="L8B6GmHakD">
     <property role="EcuMT" value="885129310534673705" />
@@ -1561,7 +1568,27 @@
     <property role="EcuMT" value="885129310544657865" />
     <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="SuitableForSideRoomCondition" />
+    <property role="34LRSv" value="patient suitable for side room" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="1Pt3svOPE2c" role="1TKVEi">
+      <property role="IQ2ns" value="2115862552391360652" />
+      <property role="20kJfa" value="alternativeAdmissionBay" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="L8B6GmHak$" resolve="AdmissionBay" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6dYFu3AbeaS">
+    <property role="EcuMT" value="7169358838266389176" />
+    <property role="TrG5h" value="PatientArrivals" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="Patient Arrivals" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6dYFu3Aj20I" role="1TKVEi">
+      <property role="IQ2ns" value="7169358838268436526" />
+      <property role="20kJfa" value="picker" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="68mc:1jw2PJJHS3i" resolve="FileSystemFilePicker" />
+    </node>
   </node>
 </model>
 

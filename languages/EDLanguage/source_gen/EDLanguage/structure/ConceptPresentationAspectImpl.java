@@ -52,6 +52,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_Patient;
   private ConceptPresentation props_PatientAdmissionOutcomeCondition;
+  private ConceptPresentation props_PatientArrivals;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PatientInterval;
   private ConceptPresentation props_PlaceInstance;
@@ -405,6 +406,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientAdmissionOutcomeCondition = cpb.create();
         }
         return props_PatientAdmissionOutcomeCondition;
+      case LanguageConceptSwitch.PatientArrivals:
+        if (props_PatientArrivals == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Patient Arrivals");
+          props_PatientArrivals = cpb.create();
+        }
+        return props_PatientArrivals;
       case LanguageConceptSwitch.PatientInstance:
         if (props_PatientInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -598,7 +606,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.SuitableForSideRoomCondition:
         if (props_SuitableForSideRoomCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("SuitableForSideRoomCondition");
+          cpb.rawPresentation("patient suitable for side room");
           props_SuitableForSideRoomCondition = cpb.create();
         }
         return props_SuitableForSideRoomCondition;

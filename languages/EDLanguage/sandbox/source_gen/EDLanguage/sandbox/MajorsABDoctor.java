@@ -97,7 +97,7 @@ public class MajorsABDoctor extends Staff {
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")))) {
+      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Red.getInstance()))) {
         curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom.getInstance())));
       } else {
         curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red.getInstance())));
@@ -239,7 +239,11 @@ public class MajorsABDoctor extends Staff {
         sendSignalTemp.AddData("patient", s.GetData("patient"));
         sendSignalTemp.AddData("replyTo", this);
         curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Amber.getInstance())));
+        if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Amber.getInstance()))) {
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom.getInstance())));
+        } else {
+          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Amber.getInstance())));
+        }
         curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
       } else {
         this.InitDischargePatient(s);

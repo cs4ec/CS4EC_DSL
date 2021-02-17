@@ -108,7 +108,7 @@ public class PatientAdder {
 
 	    	if(dice < percentCOVIDSymptomatic) {
 	        	p.setActualInfectionState(SymptomaticInfectionState.getInstance().generateStateForMe(p));
-	        	p.setPHEScore(RandomHelper.nextDoubleFromTo(0.3, 1.0));
+	        	p.setPHEScore(RandomHelper.nextDoubleFromTo(0.5, 1.0));
 	    	} else if(dice >= percentCOVIDSymptomatic && dice < upperBoundaryForAsymptomatic) {
 	        	p.setActualInfectionState(AsymptomaticInfectionState.getInstance().generateStateForMe(p));
 	        	p.setPHEScore(RandomHelper.nextDoubleFromTo(0.01, 0.2));

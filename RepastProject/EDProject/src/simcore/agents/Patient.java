@@ -370,6 +370,34 @@ public class Patient extends Agent {
 		return 0;
 	}
 	
+	public Integer COVPosLFTPos() {
+		if(LFDPositive() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovNegLFTNeg() {
+		if(LFDNegative() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovPosLFTNeg() {
+		if(LFDNegative() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovNegLFTPos() {
+		if(LFDPositive() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
 	public Integer LFDPositive() {
 		TestResult pres =  null;
 		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findFirst();
@@ -391,6 +419,34 @@ public class Patient extends Agent {
 			pres = (TestResult) opt.get();
 		
 		if(pres != null && !pres.isInfected()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDPositiveAndRed() {
+		if(LFDPositive() ==1 && outcome == PatientOutcomes.ADMITTEDRED) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDPositiveAndSideRoom() {
+		if(LFDPositive() ==1 && outcome == PatientOutcomes.ADMITTEDSIDEROOM) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDNegativeAndRed() {
+		if(LFDNegative() ==1 && outcome == PatientOutcomes.ADMITTEDRED) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDNegativeAndSideRoom() {
+		if(LFDNegative() ==1 && outcome == PatientOutcomes.ADMITTEDSIDEROOM) {
 			return 1;
 		}
 		return 0;

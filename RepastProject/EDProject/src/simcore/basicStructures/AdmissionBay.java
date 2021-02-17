@@ -9,6 +9,7 @@ public class AdmissionBay {
 	protected String name;
 	protected int capacity;
 	protected int curOccupancy;
+	protected int occupancyAtStartOfDay;
 	protected List<Patient> admittedPatients;
 	protected static AdmissionBay instance;
 	
@@ -16,6 +17,13 @@ public class AdmissionBay {
 		this.name = name;
 		this.capacity = capacity;
 		curOccupancy = 40;
+		admittedPatients = new ArrayList<Patient>();
+	}
+	
+	public AdmissionBay(String name, int capacity, int curOccupancy) {
+		this.name = name;
+		this.capacity = capacity;
+		this.curOccupancy = curOccupancy;
 		admittedPatients = new ArrayList<Patient>();
 	}
 	
