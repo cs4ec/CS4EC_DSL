@@ -3,13 +3,14 @@
   <persistence version="9" />
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="14" />
+    <use id="7e450f4e-1ac3-41ef-a851-4598161bdb94" name="de.slisson.mps.tables" version="0" />
+    <use id="d3a0fd26-445a-466c-900e-10444ddfed52" name="com.mbeddr.mpsutil.filepicker" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
-    <import index="8z6w" ref="r:7fdd874b-4384-4587-921a-bc2dc46676c9(com.mbeddr.mpsutil.filepicker.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -113,6 +114,32 @@
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
       <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
+    </language>
+    <language id="7e450f4e-1ac3-41ef-a851-4598161bdb94" name="de.slisson.mps.tables">
+      <concept id="1397920687865593407" name="de.slisson.mps.tables.structure.PartialTable" flags="ng" index="2r0Tta">
+        <child id="1397920687865593523" name="cells" index="2r0Tv6" />
+      </concept>
+      <concept id="1397920687865839151" name="de.slisson.mps.tables.structure.HeaderCollection" flags="ng" index="2r3Xtq">
+        <child id="6874252336974775034" name="childs" index="uCobI" />
+      </concept>
+      <concept id="1397920687864997170" name="de.slisson.mps.tables.structure.TableNodeCollection" flags="ng" index="2reCL7">
+        <child id="1397920687864997171" name="childTableNodes" index="2reCL6" />
+      </concept>
+      <concept id="1397920687864997153" name="de.slisson.mps.tables.structure.StaticHorizontal" flags="ng" index="2reCLk" />
+      <concept id="1397920687864997143" name="de.slisson.mps.tables.structure.TableCell" flags="ng" index="2reCLy">
+        <child id="1397920687865064647" name="editorCell" index="2reSmM" />
+      </concept>
+      <concept id="1397920687865064415" name="de.slisson.mps.tables.structure.ChildsVertical" flags="ng" index="2reSaE" />
+      <concept id="1397920687865064509" name="de.slisson.mps.tables.structure.ChildCollection" flags="ng" index="2reSl8">
+        <reference id="1397920687864997201" name="linkDeclaration" index="2reCK$" />
+        <child id="2199447184407180854" name="rowHeaders" index="2YlbuT" />
+      </concept>
+      <concept id="1397920687864864270" name="de.slisson.mps.tables.structure.StaticHeader" flags="ng" index="2rfbtV">
+        <property id="1397920687864864274" name="text" index="2rfbtB" />
+      </concept>
+      <concept id="1397920687864683158" name="de.slisson.mps.tables.structure.Table" flags="ng" index="2rfBfz">
+        <child id="1397920687864865354" name="cells" index="2rf8GZ" />
+      </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1883223317721008708" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfStatement" flags="nn" index="Jncv_">
@@ -542,7 +569,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3KCb14J4_oJ">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:3KCb14J4_lS" resolve="SpaceAtCondition" />
     <node concept="3EZMnI" id="3KCb14J4_oL" role="2wV5jI">
       <node concept="3F1sOY" id="3KCb14J4_oS" role="3EZMnx">
@@ -559,7 +586,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3KCb14J4_pm">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:3KCb14J4_pb" resolve="PossibilityCondition" />
     <node concept="3EZMnI" id="3KCb14J4_po" role="2wV5jI">
       <node concept="3F0ifn" id="3KCb14J4_pv" role="3EZMnx">
@@ -620,7 +647,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3KCb14J5xBD">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:3KCb14J4_kl" resolve="ExpressionCondition" />
     <node concept="3EZMnI" id="3KCb14J5xBF" role="2wV5jI">
       <node concept="3F1sOY" id="3KCb14J5xDi" role="3EZMnx">
@@ -1584,7 +1611,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="ijr0ZXLzp_">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:ijr0ZXLziU" resolve="InfectionCondition" />
     <node concept="3EZMnI" id="ijr0ZXLzpB" role="2wV5jI">
       <node concept="3F0ifn" id="ijr0ZXLztM" role="3EZMnx">
@@ -1597,7 +1624,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="$2vkoOOycZ">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:$2vkoOOycW" resolve="SeverityCondition" />
     <node concept="3EZMnI" id="$2vkoOOyd1" role="2wV5jI">
       <node concept="3F0ifn" id="$2vkoOOyd8" role="3EZMnx">
@@ -1800,7 +1827,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="4TDP_nhwDL">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:4TDP_nhwDF" resolve="ResultCondition" />
     <node concept="3EZMnI" id="4TDP_nhwDN" role="2wV5jI">
       <node concept="3F0ifn" id="4TDP_nhwDU" role="3EZMnx">
@@ -1843,7 +1870,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="2Rfu8e4We7E">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:2Rfu8e4We5v" resolve="PatientAdmissionOutcomeCondition" />
     <node concept="3EZMnI" id="2Rfu8e4We7G" role="2wV5jI">
       <node concept="3F0ifn" id="2Rfu8e4We7N" role="3EZMnx">
@@ -1908,7 +1935,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="L8B6GnjfRa">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:L8B6GnjfR9" resolve="SuitableForSideRoomCondition" />
     <node concept="3EZMnI" id="L8B6GnjfRc" role="2wV5jI">
       <node concept="3F0ifn" id="L8B6GnjfRj" role="3EZMnx">
@@ -1928,19 +1955,99 @@
   </node>
   <node concept="24kQdi" id="6dYFu3AhE_C">
     <ref role="1XX52x" to="3751:6dYFu3AbeaS" resolve="PatientArrivals" />
-    <node concept="3EZMnI" id="6dYFu3AhE_E" role="2wV5jI">
-      <node concept="3F0ifn" id="6dYFu3AhE_L" role="3EZMnx">
-        <property role="3F0ifm" value="Select a file from" />
-      </node>
-      <node concept="1iCGBv" id="6dYFu3Aj20O" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:6dYFu3Aj20I" resolve="picker" />
-        <node concept="1sVBvm" id="6dYFu3Aj20Q" role="1sWHZn">
-          <node concept="PMmxH" id="6dYFu3AknJo" role="2wV5jI">
-            <ref role="PMmxG" to="8z6w:2RM$2qudcDl" resolve="DefaultPicker_EditorComponent" />
+    <node concept="3EZMnI" id="2vFOz$FUTDm" role="2wV5jI">
+      <node concept="2iRfu4" id="2vFOz$FUTDn" role="2iSdaV" />
+      <node concept="2rfBfz" id="2vFOz$FUEfw" role="3EZMnx">
+        <node concept="2reSaE" id="2vFOz$FUEfL" role="2rf8GZ">
+          <ref role="2reCK$" to="3751:2vFOz$FUEfh" resolve="PatientArrivalLines" />
+          <node concept="2r3Xtq" id="2vFOz$FUTxP" role="2YlbuT">
+            <node concept="2rfbtV" id="2vFOz$FUTxT" role="uCobI">
+              <property role="2rfbtB" value="0:00-1:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTxZ" role="uCobI">
+              <property role="2rfbtB" value="1:00-2:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTy7" role="uCobI">
+              <property role="2rfbtB" value="2:00-3:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTyg" role="uCobI">
+              <property role="2rfbtB" value="3:00-4:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTyl" role="uCobI">
+              <property role="2rfbtB" value="4:00-5:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTyr" role="uCobI">
+              <property role="2rfbtB" value="5:00-6:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTyy" role="uCobI">
+              <property role="2rfbtB" value="6:00-7:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTyE" role="uCobI">
+              <property role="2rfbtB" value="7:00-8:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTyN" role="uCobI">
+              <property role="2rfbtB" value="8:00-9:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTyX" role="uCobI">
+              <property role="2rfbtB" value="9:00-10:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTz8" role="uCobI">
+              <property role="2rfbtB" value="10:00-11:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTzk" role="uCobI">
+              <property role="2rfbtB" value="11:00-12:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTzx" role="uCobI">
+              <property role="2rfbtB" value="12:00-13:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTzJ" role="uCobI">
+              <property role="2rfbtB" value="13:00-14:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTzY" role="uCobI">
+              <property role="2rfbtB" value="14:00-15:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUT$e" role="uCobI">
+              <property role="2rfbtB" value="15:00-16:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUT$v" role="uCobI">
+              <property role="2rfbtB" value="16:00-17:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUT$L" role="uCobI">
+              <property role="2rfbtB" value="17:00-18:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUT_4" role="uCobI">
+              <property role="2rfbtB" value="18:00-19:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUT_o" role="uCobI">
+              <property role="2rfbtB" value="19:00-20:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTA3" role="uCobI">
+              <property role="2rfbtB" value="20:00-21:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTAK" role="uCobI">
+              <property role="2rfbtB" value="21:00-22:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTBv" role="uCobI">
+              <property role="2rfbtB" value="22:00-23:00" />
+            </node>
+            <node concept="2rfbtV" id="2vFOz$FUTCg" role="uCobI">
+              <property role="2rfbtB" value="23:00-24:00" />
+            </node>
           </node>
         </node>
       </node>
-      <node concept="l2Vlx" id="6dYFu3AhE_H" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2vFOz$FUEcN">
+    <ref role="1XX52x" to="3751:2vFOz$FUEc$" resolve="PatientArrivalLine" />
+    <node concept="2r0Tta" id="2vFOz$FUEdR" role="2wV5jI">
+      <node concept="2reCLk" id="2vFOz$FUEel" role="2r0Tv6">
+        <node concept="2reCLy" id="2vFOz$FUEey" role="2reCL6">
+          <node concept="3F0A7n" id="2vFOz$FUEeE" role="2reSmM">
+            <ref role="1NtTu8" to="3751:2vFOz$FUEcK" resolve="NumPatientsInHour" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

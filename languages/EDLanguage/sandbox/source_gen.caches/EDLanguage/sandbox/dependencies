@@ -80,8 +80,11 @@
     <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
     <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder" />
@@ -102,6 +105,7 @@
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.Wall" />
     <classNode dependClassName="simcore.utilities.ModelParameterStore" />
+    <classNode dependClassName="simcore.utilities.PatientArrivalStore" />
     <classNode dependClassName="simcore.utilities.StaffAdder" />
     <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
   </dependency>

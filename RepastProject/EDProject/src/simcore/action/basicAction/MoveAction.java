@@ -1,11 +1,13 @@
 package simcore.action.basicAction;
 
+import repast.simphony.space.grid.GridPoint;
 import simcore.action.ActionFragment;
 import simcore.basicStructures.RoomType;
 
 public class MoveAction extends ActionFragment {
 	private Object destinationObject;
 	private Object concreteDestinationObject;
+	private GridPoint targetCoordinates;
 
 	public MoveAction() {}
 
@@ -27,5 +29,13 @@ public class MoveAction extends ActionFragment {
 
 	public void setDestination(Object o) {
 		concreteDestinationObject = o;
+	}
+	
+	public void setTargetGridPoints(GridPoint gp) {
+		this.targetCoordinates = gp;
+	}
+	
+	public GridPoint getTargetGridPoints() {
+		return targetCoordinates;
 	}
 }

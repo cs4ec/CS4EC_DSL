@@ -2260,7 +2260,7 @@
     </node>
   </node>
   <node concept="13h7C7" id="6tNT_P6oALa">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="13h7C2" to="3751:3KCb14J4_kl" resolve="ExpressionCondition" />
     <node concept="13hLZK" id="6tNT_P6oALb" role="13h7CW">
       <node concept="3clFbS" id="6tNT_P6oALc" role="2VODD2" />

@@ -143,7 +143,7 @@ public class MajorsABDoctor extends Staff {
     Signal sendSignalTemp = new Signal();
 
     if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(false))) {
+      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
         if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
@@ -181,7 +181,7 @@ public class MajorsABDoctor extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
     if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(false))) {
+      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
         if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LabPCR.getInstance()).WithResult(true))) {
           curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
           curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));

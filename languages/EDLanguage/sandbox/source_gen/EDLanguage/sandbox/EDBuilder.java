@@ -23,6 +23,9 @@ import repast.simphony.valueLayer.GridValueLayer;
 import simcore.basicStructures.Room;
 import java.awt.Color;
 import repast.simphony.space.continuous.NdPoint;
+import java.util.HashMap;
+import simcore.utilities.PatientArrivalStore;
+import java.util.Map;
 import simcore.basicStructures.Wall;
 
 public class EDBuilder implements ContextBuilder<Object> {
@@ -41,6 +44,8 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     RunEnvironment.getInstance().endAt(86400);
 
+    CreatePatientArrivalMap();
+
     ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
     ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new StaffAdder<Object>(), new StrictBorders(), 400, 400);
 
@@ -48,7 +53,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(0.47).WithPercentageCOVIDAsymptomatic(0.015).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(pPercentageSymptomatic).WithPercentageCOVIDAsymptomatic(pPercentageAsymptomatic).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66));
 
     // add Agents 
     for (int i = 0; i < 6; i++) {
@@ -126,7 +131,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsBayL_nb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
     Room Exit_ob = new Room("Exit", context, space, grid, 162, 60, 10, 2, 1, 1000000, Exit.getInstance(), Color.GRAY);
     try {
-      Pediatrics_a.setSeats(0);
+      Pediatrics_a.setSeats(4);
       Lab_b.setSeats(0);
       MainReception_c.setSeats(0);
       Triage_d.setSeats(0);
@@ -167,7 +172,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayK_mb.setSeats(0);
       MajorsBayL_nb.setSeats(0);
       Exit_ob.setSeats(0);
-      Pediatrics_a.setDesks(0);
+      Pediatrics_a.setDesks(2);
       Lab_b.setDesks(20);
       MainReception_c.setDesks(0);
       Triage_d.setDesks(3);
@@ -236,6 +241,35 @@ public class EDBuilder implements ContextBuilder<Object> {
     }
 
     return context;
+  }
+
+  public void CreatePatientArrivalMap() {
+    HashMap ArrivalPerHour = new HashMap();
+    ArrivalPerHour.put(0, 4);
+    ArrivalPerHour.put(1, 5);
+    ArrivalPerHour.put(2, 6);
+    ArrivalPerHour.put(3, 7);
+    ArrivalPerHour.put(4, 8);
+    ArrivalPerHour.put(5, 9);
+    ArrivalPerHour.put(6, 234);
+    ArrivalPerHour.put(7, 23423);
+    ArrivalPerHour.put(8, 2);
+    ArrivalPerHour.put(9, 3432);
+    ArrivalPerHour.put(10, 4);
+    ArrivalPerHour.put(11, 23);
+    ArrivalPerHour.put(12, 3);
+    ArrivalPerHour.put(13, 2);
+    ArrivalPerHour.put(14, 23);
+    ArrivalPerHour.put(15, 23);
+    ArrivalPerHour.put(16, 35);
+    ArrivalPerHour.put(17, 35);
+    ArrivalPerHour.put(18, 3);
+    ArrivalPerHour.put(19, 53);
+    ArrivalPerHour.put(20, 54);
+    ArrivalPerHour.put(21, 54);
+    ArrivalPerHour.put(22, 34);
+    ArrivalPerHour.put(23, 34);
+    PatientArrivalStore.Initialise((Map<Integer, Integer>) ArrivalPerHour);
   }
 
   private void createWallBetween(int x1, int y1, int x2, int y2, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid) {

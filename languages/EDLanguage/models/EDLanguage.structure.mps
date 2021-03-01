@@ -9,7 +9,6 @@
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
-    <import index="68mc" ref="r:2a10821d-612f-4a73-b7b0-ed6b57106321(com.mbeddr.mpsutil.filepicker.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -636,7 +635,7 @@
   </node>
   <node concept="1TIwiD" id="3VxbR92UVH2">
     <property role="EcuMT" value="4530954867906952002" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="Condition" />
     <property role="34LRSv" value="condition" />
     <property role="R4oN_" value="condition judgement used in IF statement" />
@@ -645,10 +644,10 @@
   </node>
   <node concept="1TIwiD" id="3KCb14J4_kl">
     <property role="EcuMT" value="4334763093659899157" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="ExpressionCondition" />
     <property role="R4oN_" value="condition about attribute" />
-    <property role="34LRSv" value="attribute value state" />
+    <property role="34LRSv" value="compare attributes" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
     <node concept="1TJgyi" id="3KCb14J4_lJ" role="1TKVEl">
       <property role="IQ2nx" value="4334763093659899247" />
@@ -675,7 +674,7 @@
   </node>
   <node concept="25R3W" id="3KCb14J4_lj">
     <property role="3F6X1D" value="4334763093659899219" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="JudgeOperator" />
     <node concept="25R33" id="3KCb14J4_lk" role="25R1y">
       <property role="3tVfz5" value="4334763093659899220" />
@@ -705,7 +704,7 @@
   </node>
   <node concept="1TIwiD" id="3KCb14J4_pb">
     <property role="EcuMT" value="4334763093659899467" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="PossibilityCondition" />
     <property role="34LRSv" value="possibility" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
@@ -719,10 +718,10 @@
   </node>
   <node concept="1TIwiD" id="3KCb14J4_lS">
     <property role="EcuMT" value="4334763093659899256" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="SpaceAtCondition" />
     <property role="R4oN_" value="whether agent at space" />
-    <property role="34LRSv" value="someone is at shomewhere" />
+    <property role="34LRSv" value="person location condtion" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
     <node concept="1TJgyj" id="3KCb14J4_oy" role="1TKVEi">
       <property role="IQ2ns" value="4334763093659899426" />
@@ -1332,7 +1331,7 @@
   </node>
   <node concept="1TIwiD" id="ijr0ZXLziU">
     <property role="EcuMT" value="329726013666112698" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="InfectionCondition" />
     <property role="34LRSv" value="infection status condition" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
@@ -1361,8 +1360,9 @@
   </node>
   <node concept="1TIwiD" id="$2vkoOOycW">
     <property role="EcuMT" value="649219036782142268" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="SeverityCondition" />
+    <property role="34LRSv" value="patient severity condition" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
     <node concept="1TJgyi" id="$2vkoOOycX" role="1TKVEl">
       <property role="IQ2nx" value="649219036782142269" />
@@ -1442,9 +1442,9 @@
   </node>
   <node concept="1TIwiD" id="4TDP_nhwDF">
     <property role="EcuMT" value="88285669868571243" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="ResultCondition" />
-    <property role="34LRSv" value="result condition" />
+    <property role="34LRSv" value="test result condition" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
     <node concept="1TJgyj" id="4TDP_nhwDG" role="1TKVEi">
       <property role="IQ2ns" value="88285669868571244" />
@@ -1456,22 +1456,7 @@
     <node concept="1TJgyi" id="4TDP_nkDQa" role="1TKVEl">
       <property role="IQ2nx" value="88285669869395338" />
       <property role="TrG5h" value="result" />
-      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
-    </node>
-  </node>
-  <node concept="25R3W" id="4TDP_nkDtl">
-    <property role="3F6X1D" value="88285669869393749" />
-    <property role="3GE5qa" value="Structures" />
-    <property role="TrG5h" value="TestResultTypes" />
-    <node concept="25R33" id="4TDP_nkDtm" role="25R1y">
-      <property role="3tVfz5" value="88285669869393750" />
-      <property role="TrG5h" value="Positive" />
-      <property role="1L1pqM" value="positive" />
-    </node>
-    <node concept="25R33" id="4TDP_nkDtn" role="25R1y">
-      <property role="3tVfz5" value="88285669869393751" />
-      <property role="TrG5h" value="Negative" />
-      <property role="1L1pqM" value="negative" />
+      <ref role="AX2Wp" node="1s4HvCZwevB" resolve="TestResult" />
     </node>
   </node>
   <node concept="1TIwiD" id="4TDP_nS6kw">
@@ -1491,8 +1476,9 @@
   </node>
   <node concept="1TIwiD" id="2Rfu8e4We5v">
     <property role="EcuMT" value="3300989558152290655" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="PatientAdmissionOutcomeCondition" />
+    <property role="34LRSv" value="Patient outcome condition" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
     <node concept="1TJgyi" id="2Rfu8e4We7C" role="1TKVEl">
       <property role="IQ2nx" value="3300989558152290792" />
@@ -1566,9 +1552,9 @@
   </node>
   <node concept="1TIwiD" id="L8B6GnjfR9">
     <property role="EcuMT" value="885129310544657865" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="SuitableForSideRoomCondition" />
-    <property role="34LRSv" value="patient suitable for side room" />
+    <property role="34LRSv" value="suitable for side room condition" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
     <node concept="1TJgyj" id="1Pt3svOPE2c" role="1TKVEi">
       <property role="IQ2ns" value="2115862552391360652" />
@@ -1583,11 +1569,42 @@
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="Patient Arrivals" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="6dYFu3Aj20I" role="1TKVEi">
-      <property role="IQ2ns" value="7169358838268436526" />
-      <property role="20kJfa" value="picker" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="68mc:1jw2PJJHS3i" resolve="FileSystemFilePicker" />
+    <node concept="1TJgyj" id="2vFOz$FUEfh" role="1TKVEi">
+      <property role="IQ2ns" value="2876623929997960145" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="PatientArrivalLines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2vFOz$FUEc$" resolve="PatientArrivalLine" />
+    </node>
+  </node>
+  <node concept="25R3W" id="1s4HvCZwevB">
+    <property role="3F6X1D" value="1658650649191049191" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestResult" />
+    <node concept="25R33" id="1s4HvCZwevC" role="25R1y">
+      <property role="3tVfz5" value="1658650649191049192" />
+      <property role="TrG5h" value="true" />
+      <property role="1L1pqM" value="Positive" />
+    </node>
+    <node concept="25R33" id="1s4HvCZweyW" role="25R1y">
+      <property role="3tVfz5" value="1658650649191049404" />
+      <property role="TrG5h" value="false" />
+      <property role="1L1pqM" value="Negative" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2vFOz$FUEc$">
+    <property role="EcuMT" value="2876623929997959972" />
+    <property role="TrG5h" value="PatientArrivalLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="2vFOz$FUEcI" role="1TKVEl">
+      <property role="IQ2nx" value="2876623929997959982" />
+      <property role="TrG5h" value="Time" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="2vFOz$FUEcK" role="1TKVEl">
+      <property role="IQ2nx" value="2876623929997959984" />
+      <property role="TrG5h" value="NumPatientsInHour" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
 </model>

@@ -52,6 +52,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_Patient;
   private ConceptPresentation props_PatientAdmissionOutcomeCondition;
+  private ConceptPresentation props_PatientArrivalLine;
   private ConceptPresentation props_PatientArrivals;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PatientInterval;
@@ -279,7 +280,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_ExpressionCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("condition about attribute");
-          cpb.rawPresentation("attribute value state");
+          cpb.rawPresentation("compare attributes");
           props_ExpressionCondition = cpb.create();
         }
         return props_ExpressionCondition;
@@ -402,10 +403,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.PatientAdmissionOutcomeCondition:
         if (props_PatientAdmissionOutcomeCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("PatientAdmissionOutcomeCondition");
+          cpb.rawPresentation("Patient outcome condition");
           props_PatientAdmissionOutcomeCondition = cpb.create();
         }
         return props_PatientAdmissionOutcomeCondition;
+      case LanguageConceptSwitch.PatientArrivalLine:
+        if (props_PatientArrivalLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("PatientArrivalLine");
+          props_PatientArrivalLine = cpb.create();
+        }
+        return props_PatientArrivalLine;
       case LanguageConceptSwitch.PatientArrivals:
         if (props_PatientArrivals == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -466,7 +474,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.ResultCondition:
         if (props_ResultCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("result condition");
+          cpb.rawPresentation("test result condition");
           props_ResultCondition = cpb.create();
         }
         return props_ResultCondition;
@@ -525,7 +533,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.SeverityCondition:
         if (props_SeverityCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("SeverityCondition");
+          cpb.rawPresentation("patient severity condition");
           props_SeverityCondition = cpb.create();
         }
         return props_SeverityCondition;
@@ -569,7 +577,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_SpaceAtCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("whether agent at space");
-          cpb.rawPresentation("someone is at shomewhere");
+          cpb.rawPresentation("person location condtion");
           props_SpaceAtCondition = cpb.create();
         }
         return props_SpaceAtCondition;
@@ -606,7 +614,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.SuitableForSideRoomCondition:
         if (props_SuitableForSideRoomCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("patient suitable for side room");
+          cpb.rawPresentation("suitable for side room condition");
           props_SuitableForSideRoomCondition = cpb.create();
         }
         return props_SuitableForSideRoomCondition;

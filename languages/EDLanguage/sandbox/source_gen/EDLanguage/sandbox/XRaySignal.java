@@ -7,7 +7,7 @@ import simcore.Signals.ActorTypeSignal;
 public class XRaySignal extends ActorTypeSignal {
   public XRaySignal() {
     this.setName("XRay");
-    this.setDescription("");
+    this.setDescription("Doctor requests an XRAy from a Nurse");
     this.AddActor("Nurse");
   }
 
