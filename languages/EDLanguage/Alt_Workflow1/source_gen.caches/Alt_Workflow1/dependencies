@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="Alt_Workflow1.Amber_AdmissionBay">
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="Alt_Workflow1.ConductLFDSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.ConductLIATSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.ConductTrackAndTraceLFDSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Doctor">
+    <classNode dependClassName="Alt_Workflow1.Amber_AdmissionBay" />
+    <classNode dependClassName="Alt_Workflow1.ConductLFDSignal" />
+    <classNode dependClassName="Alt_Workflow1.ConductLIATSignal" />
+    <classNode dependClassName="Alt_Workflow1.DoctorOffice" />
+    <classNode dependClassName="Alt_Workflow1.INOVA" />
+    <classNode dependClassName="Alt_Workflow1.LIAT" />
+    <classNode dependClassName="Alt_Workflow1.LIATBooth" />
+    <classNode dependClassName="Alt_Workflow1.LabPCR" />
+    <classNode dependClassName="Alt_Workflow1.PatientNeedsBloodTestSignal" />
+    <classNode dependClassName="Alt_Workflow1.Red_AdmissionBay" />
+    <classNode dependClassName="Alt_Workflow1.RequestPCRSignal" />
+    <classNode dependClassName="Alt_Workflow1.SideRoom_AdmissionBay" />
+    <classNode dependClassName="Alt_Workflow1.XRaySignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.AdmitAction" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.InfectionCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.SuitableForSideRoomCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
+    <classNode extendsClassName="Alt_Workflow1.Staff" />
+  </dependency>
+  <dependency className="Alt_Workflow1.DoctorOffice">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.EDBuilder">
+    <classNode dependClassName="Alt_Workflow1.Doctor" />
+    <classNode dependClassName="Alt_Workflow1.DoctorOffice" />
+    <classNode dependClassName="Alt_Workflow1.Entrance" />
+    <classNode dependClassName="Alt_Workflow1.Exit" />
+    <classNode dependClassName="Alt_Workflow1.LFDDevice" />
+    <classNode dependClassName="Alt_Workflow1.LIATBooth" />
+    <classNode dependClassName="Alt_Workflow1.LIATMachine" />
+    <classNode dependClassName="Alt_Workflow1.Lab" />
+    <classNode dependClassName="Alt_Workflow1.LabTech" />
+    <classNode dependClassName="Alt_Workflow1.MajorsABBay" />
+    <classNode dependClassName="Alt_Workflow1.MajorsABDoctor" />
+    <classNode dependClassName="Alt_Workflow1.MajorsABNurse" />
+    <classNode dependClassName="Alt_Workflow1.MajorsTriageNurse" />
+    <classNode dependClassName="Alt_Workflow1.Nurse" />
+    <classNode dependClassName="Alt_Workflow1.Radiology" />
+    <classNode dependClassName="Alt_Workflow1.Receptionist" />
+    <classNode dependClassName="Alt_Workflow1.TaskRoom" />
+    <classNode dependClassName="Alt_Workflow1.TriageSideRoom" />
+    <classNode dependClassName="Alt_Workflow1.WaitingRoom" />
+    <classNode dependClassName="Alt_Workflow1.office" />
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
+    <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder" />
+    <classNode dependClassName="repast.simphony.context.space.grid.GridFactory" />
+    <classNode dependClassName="repast.simphony.context.space.grid.GridFactoryFinder" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.parameter.Parameters" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.continuous.NdPoint" />
+    <classNode dependClassName="repast.simphony.space.continuous.StrictBorders" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="repast.simphony.space.grid.GridBuilderParameters" />
+    <classNode dependClassName="repast.simphony.space.grid.SimpleGridAdder" />
+    <classNode dependClassName="repast.simphony.space.grid.StrictBorders" />
+    <classNode dependClassName="repast.simphony.valueLayer.GridValueLayer" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.PatientAdder" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.Wall" />
+    <classNode dependClassName="simcore.utilities.ModelParameterStore" />
+    <classNode dependClassName="simcore.utilities.PatientArrivalStore" />
+    <classNode dependClassName="simcore.utilities.StaffAdder" />
+    <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Entrance">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Exit">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Green_AdmissionBay">
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="Alt_Workflow1.INOVA">
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="Alt_Workflow1.IsLIATReadySignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LFDDevice">
+    <classNode dependClassName="Alt_Workflow1.INOVA" />
+    <classNode dependClassName="Alt_Workflow1.LFDNegativeSignal" />
+    <classNode dependClassName="Alt_Workflow1.LFDPositiveSignal" />
+    <classNode dependClassName="Alt_Workflow1.LFDTrackAndTraceSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.DirectSignal" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode extendsClassName="Alt_Workflow1.Staff" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LFDNegativeSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LFDPositiveSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LFDTrackAndTraceSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LIAT">
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LIATBooth">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LIATIsReadySignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LIATMachine">
+    <classNode dependClassName="Alt_Workflow1.LIAT" />
+    <classNode dependClassName="Alt_Workflow1.LIATIsReadySignal" />
+    <classNode dependClassName="Alt_Workflow1.LIATNegativeSignal" />
+    <classNode dependClassName="Alt_Workflow1.LIATPositiveSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.DirectSignal" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode extendsClassName="Alt_Workflow1.Staff" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LIATNegativeSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LIATPositiveSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Lab">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LabPCR">
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="Alt_Workflow1.LabTech">
+    <classNode dependClassName="Alt_Workflow1.LabPCR" />
+    <classNode dependClassName="Alt_Workflow1.PCRCompleteSignal" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.DirectSignal" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="Alt_Workflow1.MajorsABBay">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.MajorsABDoctor">
+    <classNode dependClassName="Alt_Workflow1.Amber_AdmissionBay" />
+    <classNode dependClassName="Alt_Workflow1.ConductLFDSignal" />
+    <classNode dependClassName="Alt_Workflow1.ConductLIATSignal" />
+    <classNode dependClassName="Alt_Workflow1.INOVA" />
+    <classNode dependClassName="Alt_Workflow1.LIAT" />
+    <classNode dependClassName="Alt_Workflow1.LIATBooth" />
+    <classNode dependClassName="Alt_Workflow1.LabPCR" />
+    <classNode dependClassName="Alt_Workflow1.Red_AdmissionBay" />
+    <classNode dependClassName="Alt_Workflow1.RequestPCRSignal" />
+    <classNode dependClassName="Alt_Workflow1.SideRoom_AdmissionBay" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.AdmitAction" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.InfectionCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.SuitableForSideRoomCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
+    <classNode extendsClassName="Alt_Workflow1.Staff" />
+  </dependency>
+  <dependency className="Alt_Workflow1.MajorsABNurse">
+    <classNode dependClassName="Alt_Workflow1.MajorsABBay" />
+    <classNode dependClassName="Alt_Workflow1.PatientWaitingForMajorsABDoctorSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.FollowOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.StopOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode extendsClassName="Alt_Workflow1.Staff" />
+  </dependency>
+  <dependency className="Alt_Workflow1.MajorsTriageNurse">
+    <classNode dependClassName="Alt_Workflow1.PatientWaitingForDoctorSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode extendsClassName="Alt_Workflow1.Staff" />
+  </dependency>
+  <dependency className="Alt_Workflow1.NewPatientNeedMedicineSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Nurse">
+    <classNode dependClassName="Alt_Workflow1.IsLIATReadySignal" />
+    <classNode dependClassName="Alt_Workflow1.LIATBooth" />
+    <classNode dependClassName="Alt_Workflow1.PatientNeedsFinalConsutlationSignal" />
+    <classNode dependClassName="Alt_Workflow1.Radiology" />
+    <classNode dependClassName="Alt_Workflow1.TaskRoom" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.FollowOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode extendsClassName="Alt_Workflow1.Staff" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PCRCompleteSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientNeedsBloodTestSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientNeedsFinalConsutlationSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientTestNegativeABSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientTestNegativeSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientTestPositiveABSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientTestPositiveSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientWaitingForDoctorSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientWaitingForMajorsABDoctorSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientWaitingForMajorsABSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientWaitingForMajorsSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.PatientWaitingForTriageSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Radiology">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Receptionist">
+    <classNode dependClassName="Alt_Workflow1.Amber_AdmissionBay" />
+    <classNode dependClassName="Alt_Workflow1.ConductLFDSignal" />
+    <classNode dependClassName="Alt_Workflow1.ConductLIATSignal" />
+    <classNode dependClassName="Alt_Workflow1.ConductTrackAndTraceLFDSignal" />
+    <classNode dependClassName="Alt_Workflow1.PatientWaitingForMajorsABSignal" />
+    <classNode dependClassName="Alt_Workflow1.PatientWaitingForMajorsSignal" />
+    <classNode dependClassName="Alt_Workflow1.Red_AdmissionBay" />
+    <classNode dependClassName="Alt_Workflow1.TriageSideRoom" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.FollowOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.StopOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.AdmitAction" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.InfectionCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.SeverityCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
+    <classNode dependClassName="simcore.diagnosis.SeverityScore" />
+    <classNode extendsClassName="Alt_Workflow1.Staff" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Red_AdmissionBay">
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="Alt_Workflow1.RequestPCRSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.SideRoom_AdmissionBay">
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="Alt_Workflow1.Staff">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="Alt_Workflow1.StartPatientTestABSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.StartPatientTestSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.TaskRoom">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.TriageSideRoom">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.WaitingRoom">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="Alt_Workflow1.XRaySignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="Alt_Workflow1.office">
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+</dependenciesRoot>
+

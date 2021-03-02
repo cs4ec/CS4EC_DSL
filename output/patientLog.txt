@@ -1,4 +1,0 @@
-Patient 1 | total wait time: 29mins | dealt at time point: 2021-02-01T00:45:10 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: Discharged
-Patient 2 | total wait time: 66mins | dealt at time point: 2021-02-01T01:41:54 | Had severity: MODERATE | Had infection state: Asymptomatic | Test Results: Tested with INOVA which gave result: NegativeTested with LabPCR which gave result: Positive | Final decision: Admitted to Amber bay
-Patient 5 | total wait time: 26mins | dealt at time point: 2021-02-01T01:52:57 | Had severity: MODERATE | Had infection state: Asymptomatic | Final decision: Discharged
-Patient 3 | total wait time: 61mins | dealt at time point: 2021-02-01T01:55 | Had severity: MODERATE | Had infection state: Susceptible | Test Results: Tested with INOVA which gave result: NegativeTested with LabPCR which gave result: Negative | Final decision: Admitted to Amber bay

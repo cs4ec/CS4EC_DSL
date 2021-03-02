@@ -14,14 +14,13 @@ public class PatientArrivalStore {
 	
 	public static double getArrivalForHour(int hour) {
 		double arrHour = getArrivalRateForHour(hour);
-//		return 60/(arrHour *getArrivalRatePerWeek(1));
 		return 60/(arrHour);
 
 	}
 	
 	public static Integer getArrivalRateForHour(int hour) {
 		if(ArrivalPerHour == null) {
-			Initialise();
+			throw new Error("Patient arrival map has not been initialised. Please set a map in the EDBuilder");
 		}
 		return ArrivalPerHour.get(hour);
 	}
@@ -56,6 +55,11 @@ public class PatientArrivalStore {
 		ArrivalPerHour.put(22, 7);
 		ArrivalPerHour.put(23, 10);
 		ArrivalPerHour.put(24, 3);
+	}
+	
+	public static void Initialise(Map<Integer, Integer> inputMap) {
+		ArrivalPerHour = new HashMap<>();
+		ArrivalPerHour.putAll(inputMap);
 	}
 
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/EDLanguage/Alt_Workflow1/Alt_Workflow1.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/EDLanguage/sandbox/EDLanguage.sandbox.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
