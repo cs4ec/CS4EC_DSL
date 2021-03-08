@@ -162,7 +162,6 @@
         <child id="329726013640842575" name="testkit" index="3SPZ50" />
         <child id="329726013640842573" name="targetPatient" index="3SPZ52" />
       </concept>
-      <concept id="329726013664661061" name="EDLanguage.structure.Patient" flags="ng" index="3T8Q9a" />
       <concept id="329726013666112698" name="EDLanguage.structure.InfectionCondition" flags="ng" index="3TllyP">
         <property id="329726013666113123" name="InfectionStatus" index="3TllDG" />
       </concept>
@@ -2781,11 +2780,6 @@
         <ref role="3n32J4" node="4TDP_nUJBD" resolve="ConductTrackAndTraceLFD" />
       </node>
     </node>
-  </node>
-  <node concept="3T8Q9a" id="ijr0ZXHrg$">
-    <property role="3GE5qa" value="StaffDefinition" />
-    <property role="TrG5h" value="Patient" />
-    <ref role="3Vt_ys" node="ijr0ZXHrg$" resolve="Patient" />
   </node>
   <node concept="VhMOw" id="ijr0ZY9P4M">
     <property role="3GE5qa" value="Room Types" />
