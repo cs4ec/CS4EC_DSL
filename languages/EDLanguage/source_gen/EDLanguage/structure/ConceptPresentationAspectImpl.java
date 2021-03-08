@@ -12,6 +12,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Actor;
   private ConceptPresentation props_ActorInstantiation;
   private ConceptPresentation props_ActorReference;
+  private ConceptPresentation props_ActorTypeSignal;
+  private ConceptPresentation props_AdmissionBay;
+  private ConceptPresentation props_AdmissionBayList;
+  private ConceptPresentation props_AdmitAction;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeExpressionReference;
   private ConceptPresentation props_AttributeReference;
@@ -27,12 +31,15 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DataInstanceMap;
   private ConceptPresentation props_DataMap;
   private ConceptPresentation props_Description;
+  private ConceptPresentation props_DirectSignal;
+  private ConceptPresentation props_DischargeAction;
   private ConceptPresentation props_EmergencyDepartment;
-  private ConceptPresentation props_EndVisitAction;
   private ConceptPresentation props_ExpressionCondition;
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
   private ConceptPresentation props_HumanInstanceFromSignal;
+  private ConceptPresentation props_InfectionCondition;
+  private ConceptPresentation props_InfectionState;
   private ConceptPresentation props_MoveAction;
   private ConceptPresentation props_MoveOrder;
   private ConceptPresentation props_NewPatientSignal;
@@ -40,8 +47,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObjectInstance;
   private ConceptPresentation props_OccupiableInstance;
   private ConceptPresentation props_OccupyAction;
+  private ConceptPresentation props_OccupyOrder;
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
+  private ConceptPresentation props_Patient;
+  private ConceptPresentation props_PatientAdmissionOutcomeCondition;
+  private ConceptPresentation props_PatientArrivalLine;
+  private ConceptPresentation props_PatientArrivals;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PatientInterval;
   private ConceptPresentation props_PlaceInstance;
@@ -49,6 +61,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
+  private ConceptPresentation props_ResultCondition;
   private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomDefinition;
   private ConceptPresentation props_RoomInstanceDefinition;
@@ -56,6 +69,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RoomTypeReference;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
+  private ConceptPresentation props_SeverityCondition;
   private ConceptPresentation props_Signal;
   private ConceptPresentation props_SignalDefinition;
   private ConceptPresentation props_SignalInitReference;
@@ -66,6 +80,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StayForConditionAction;
   private ConceptPresentation props_StayForTimeAction;
   private ConceptPresentation props_StopOrder;
+  private ConceptPresentation props_SuitableForSideRoomCondition;
+  private ConceptPresentation props_Test;
+  private ConceptPresentation props_TestAction;
+  private ConceptPresentation props_TestKit;
   private ConceptPresentation props_WallDefinition;
   private ConceptPresentation props_WallInstanceDefinition;
 
@@ -97,6 +115,35 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActorReference = cpb.create();
         }
         return props_ActorReference;
+      case LanguageConceptSwitch.ActorTypeSignal:
+        if (props_ActorTypeSignal == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ActorTypeSignal = cpb.create();
+        }
+        return props_ActorTypeSignal;
+      case LanguageConceptSwitch.AdmissionBay:
+        if (props_AdmissionBay == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AdmissionBay = cpb.create();
+        }
+        return props_AdmissionBay;
+      case LanguageConceptSwitch.AdmissionBayList:
+        if (props_AdmissionBayList == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("AdmissionBayList");
+          props_AdmissionBayList = cpb.create();
+        }
+        return props_AdmissionBayList;
+      case LanguageConceptSwitch.AdmitAction:
+        if (props_AdmitAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Admit the patient");
+          cpb.presentationByName();
+          props_AdmitAction = cpb.create();
+        }
+        return props_AdmitAction;
       case LanguageConceptSwitch.Attribute:
         if (props_Attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -206,6 +253,21 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Description = cpb.create();
         }
         return props_Description;
+      case LanguageConceptSwitch.DirectSignal:
+        if (props_DirectSignal == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_DirectSignal = cpb.create();
+        }
+        return props_DirectSignal;
+      case LanguageConceptSwitch.DischargeAction:
+        if (props_DischargeAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Discharge the patient");
+          cpb.presentationByName();
+          props_DischargeAction = cpb.create();
+        }
+        return props_DischargeAction;
       case LanguageConceptSwitch.EmergencyDepartment:
         if (props_EmergencyDepartment == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -214,19 +276,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EmergencyDepartment = cpb.create();
         }
         return props_EmergencyDepartment;
-      case LanguageConceptSwitch.EndVisitAction:
-        if (props_EndVisitAction == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("End the visit for the patient");
-          cpb.presentationByName();
-          props_EndVisitAction = cpb.create();
-        }
-        return props_EndVisitAction;
       case LanguageConceptSwitch.ExpressionCondition:
         if (props_ExpressionCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("condition about attribute");
-          cpb.rawPresentation("attribute value state");
+          cpb.rawPresentation("compare attributes");
           props_ExpressionCondition = cpb.create();
         }
         return props_ExpressionCondition;
@@ -252,6 +306,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_HumanInstanceFromSignal = cpb.create();
         }
         return props_HumanInstanceFromSignal;
+      case LanguageConceptSwitch.InfectionCondition:
+        if (props_InfectionCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("infection status condition");
+          props_InfectionCondition = cpb.create();
+        }
+        return props_InfectionCondition;
+      case LanguageConceptSwitch.InfectionState:
+        if (props_InfectionState == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("InfectionState");
+          props_InfectionState = cpb.create();
+        }
+        return props_InfectionState;
       case LanguageConceptSwitch.MoveAction:
         if (props_MoveAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -303,6 +371,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OccupyAction = cpb.create();
         }
         return props_OccupyAction;
+      case LanguageConceptSwitch.OccupyOrder:
+        if (props_OccupyOrder == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("order the patient to occupy a bed/seat etc");
+          cpb.rawPresentation("occupy");
+          props_OccupyOrder = cpb.create();
+        }
+        return props_OccupyOrder;
       case LanguageConceptSwitch.Order:
         if (props_Order == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -317,6 +393,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OrderPatientAction = cpb.create();
         }
         return props_OrderPatientAction;
+      case LanguageConceptSwitch.Patient:
+        if (props_Patient == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Patient = cpb.create();
+        }
+        return props_Patient;
+      case LanguageConceptSwitch.PatientAdmissionOutcomeCondition:
+        if (props_PatientAdmissionOutcomeCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Patient outcome condition");
+          props_PatientAdmissionOutcomeCondition = cpb.create();
+        }
+        return props_PatientAdmissionOutcomeCondition;
+      case LanguageConceptSwitch.PatientArrivalLine:
+        if (props_PatientArrivalLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("PatientArrivalLine");
+          props_PatientArrivalLine = cpb.create();
+        }
+        return props_PatientArrivalLine;
+      case LanguageConceptSwitch.PatientArrivals:
+        if (props_PatientArrivals == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Patient Arrivals");
+          props_PatientArrivals = cpb.create();
+        }
+        return props_PatientArrivals;
       case LanguageConceptSwitch.PatientInstance:
         if (props_PatientInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -367,6 +471,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
+      case LanguageConceptSwitch.ResultCondition:
+        if (props_ResultCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("test result condition");
+          props_ResultCondition = cpb.create();
+        }
+        return props_ResultCondition;
       case LanguageConceptSwitch.Room:
         if (props_Room == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -406,7 +517,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.SelfInstance:
         if (props_SelfInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("my location");
+          cpb.shortDesc("myself");
           cpb.presentationByName();
           props_SelfInstance = cpb.create();
         }
@@ -419,6 +530,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SendSignalAction = cpb.create();
         }
         return props_SendSignalAction;
+      case LanguageConceptSwitch.SeverityCondition:
+        if (props_SeverityCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("patient severity condition");
+          props_SeverityCondition = cpb.create();
+        }
+        return props_SeverityCondition;
       case LanguageConceptSwitch.Signal:
         if (props_Signal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -459,7 +577,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_SpaceAtCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("whether agent at space");
-          cpb.rawPresentation("someone is at shomewhere");
+          cpb.rawPresentation("person location condtion");
           props_SpaceAtCondition = cpb.create();
         }
         return props_SpaceAtCondition;
@@ -493,6 +611,36 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StopOrder = cpb.create();
         }
         return props_StopOrder;
+      case LanguageConceptSwitch.SuitableForSideRoomCondition:
+        if (props_SuitableForSideRoomCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("suitable for side room condition");
+          props_SuitableForSideRoomCondition = cpb.create();
+        }
+        return props_SuitableForSideRoomCondition;
+      case LanguageConceptSwitch.Test:
+        if (props_Test == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Type of a test");
+          cpb.presentationByName();
+          props_Test = cpb.create();
+        }
+        return props_Test;
+      case LanguageConceptSwitch.TestAction:
+        if (props_TestAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("complete a COVID test");
+          cpb.presentationByName();
+          props_TestAction = cpb.create();
+        }
+        return props_TestAction;
+      case LanguageConceptSwitch.TestKit:
+        if (props_TestKit == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc9a8d3fL, 0x4936c0ffd590128L, "testCategoryType", "", "");
+          props_TestKit = cpb.create();
+        }
+        return props_TestKit;
       case LanguageConceptSwitch.WallDefinition:
         if (props_WallDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -1,2 +1,0 @@
-Time point: 249.0 | PatientsSeen: 1.0
-Time point: 461.0 | PatientsSeen: 2.0

@@ -1,3 +1,1 @@
-<?xml version="1.0"?>
-<sweep runs="1">
-</sweep>
+<?xml version="1.0" ?><sweep runs="1"><parameter name="UsePathFinding" type="constant" constant_type="boolean" value="false"></parameter><parameter name="PercentageAsymptomatic" type="list" value_type="double" values="0.3 0.6"><parameter name="PercentageSymptomatic" type="list" value_type="double" values="0.2 0.1"></parameter></parameter></sweep>

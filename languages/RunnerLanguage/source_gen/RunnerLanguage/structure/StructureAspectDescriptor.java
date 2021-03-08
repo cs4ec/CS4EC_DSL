@@ -24,6 +24,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
+    deps.aggregatedLanguage(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, "com.mbeddr.mpsutil.filepicker");
   }
 
   @Override
@@ -54,6 +55,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:321f0c26-85df-4c7b-bfec-fddc0961e0f3(RunnerLanguage.structure)/6443350202496148700");
     b.version(2);
     b.property("addr", 0x596b60deef396633L).type(PrimitiveTypeId.STRING).origin("6443350202496149043").done();
+    b.aggregate("ClassesFolderAddress", 0x27ebd2392c7d49a9L).target(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, 0x43bdbc6ab482e997L).optional(false).ordered(true).multiple(false).origin("2876623930007570857").done();
+    b.aggregate("SourcesFolderAddress", 0x27ebd2392c85062cL).target(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, 0x43bdbc6ab482e997L).optional(false).ordered(true).multiple(false).origin("2876623930008077868").done();
     return b.create();
   }
 }

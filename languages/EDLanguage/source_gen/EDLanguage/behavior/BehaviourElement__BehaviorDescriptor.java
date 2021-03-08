@@ -53,6 +53,7 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
       {
         final SNode sr = child;
         if (SNodeOperations.isInstanceOf(sr, CONCEPTS.SignalReference$qb)) {
+
           return new NamedElementsScope(signals);
         }
       }
@@ -61,9 +62,10 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
       List<SNode> nli = new ArrayList<SNode>();
 
       for (SNode signal : ListSequence.fromList(signals)) {
-        if (((boolean) BehaviourElement__BehaviorDescriptor.IsIn_id29F2V$jyINI.invoke(__thisNode__, signal, actorList)) && ((boolean) BehaviourElement__BehaviorDescriptor.NotYetBeenUsed_id6tNT_P6vKBg.invoke(__thisNode__, signal))) {
+        if (((boolean) BehaviourElement__BehaviorDescriptor.IsIn_id29F2V$jyINI.invoke(__thisNode__, signal, actorList))) {
           ListSequence.fromList(nli).addElement(signal);
         }
+
       }
 
       return new NamedElementsScope(nli);
@@ -72,7 +74,7 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
   }
   /*package*/ static boolean IsIn_id29F2V$jyINI(@NotNull SNode __thisNode__, SNode signal, List<SNode> actors) {
     for (SNode actor : ListSequence.fromList(actors)) {
-      for (SNode receiver : ListSequence.fromList(SLinkOperations.getChildren(signal, LINKS.receivers$t10J))) {
+      for (SNode receiver : ListSequence.fromList(SLinkOperations.getChildren(signal, LINKS.receivers$HQLn))) {
         if (SPropertyOperations.getString(actor, PROPS.name$MnvL).equals(SPropertyOperations.getString(SLinkOperations.getTarget(receiver, LINKS.actor$ls$v), PROPS.name$MnvL))) {
           return true;
         }
@@ -179,7 +181,7 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink actor$ls$v = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd0118aabL, 0x71ffe5bd0118aacL, "actor");
-    /*package*/ static final SContainmentLink receivers$t10J = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL, 0x71ffe5bd0118aa9L, "receivers");
+    /*package*/ static final SContainmentLink receivers$HQLn = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL, 0x139a759561627f7L, "receivers");
     /*package*/ static final SContainmentLink behaviours$zTMQ = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x270efea19372e41eL, "behaviours");
     /*package*/ static final SContainmentLink signal$k9aw = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, 0x71ffe5bd0133e89L, "signal");
     /*package*/ static final SReferenceLink signal$j_fv = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd013d59eL, 0x71ffe5bd013d59fL, "signal");

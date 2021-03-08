@@ -1,9 +1,22 @@
 package simcore.agents;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.Amber_AdmissionBay;
+import EDLanguage.sandbox.Entrance;
+import EDLanguage.sandbox.Exit;
+import EDLanguage.sandbox.Green_AdmissionBay;
+import EDLanguage.sandbox.INOVA;
+import EDLanguage.sandbox.LIAT;
+import EDLanguage.sandbox.LabPCR;
+import EDLanguage.sandbox.Red_AdmissionBay;
+import EDLanguage.sandbox.SideRoom_AdmissionBay;
 import EDLanguage.sandbox.WaitingRoom;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -13,8 +26,16 @@ import simcore.Signals.Orders.FollowOrder;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
+import simcore.action.basicAction.conditions.PatientOutcomes;
+import simcore.basicStructures.AdmissionBay;
+import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
+import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
+import simcore.diagnosis.InfectionState;
+import simcore.diagnosis.InfectionStatus;
+import simcore.diagnosis.SeverityScore;
+import simcore.diagnosis.TestResult;
 
 public class Patient extends Agent {
 
@@ -22,9 +43,15 @@ public class Patient extends Agent {
 	private int mintMyID;
 	private Order curOrder;
 	private boolean hasBeenDealtWith;
+	private boolean loggedAndFinished;
 	private int totalWaitTime;
 	protected List<GridPoint> curPath;
 	protected List<Actor> mlstMyStaff;
+	private InfectionState actualInfectionState;
+	private List<TestResult> testResults;
+	private SeverityScore severityScore;
+	private PatientOutcomes outcome;
+	private double pheScore;
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -34,12 +61,17 @@ public class Patient extends Agent {
 		totalWaitTime = 0;
 		staticID++;
 		mintMyID = staticID;
+		testResults = new ArrayList<>();
 		mlstMyStaff = new ArrayList<>();
 	}
 
 	@ScheduledMethod(start = 1, interval = 1)
 	public void step() {
-		this.Perceive();
+		if(this.hasBeenDealtWith && (curInside.getRoomType() == Exit.getInstance() || curInside.getRoomType() == Entrance.getInstance())) {
+			
+		} else {
+			this.Perceive();
+		}
 	}
 
 	public void Perceive() {
@@ -51,7 +83,6 @@ public class Patient extends Agent {
 			ExecOrder(curOrder);
 		} else if(curMission != null) { // Else, do I have an independent action to take?
 			if(curMission.getName() == "TakeSeat") {
-				System.out.println(this + "is processing a take a seat mission. They have the current occupiable set as " + curOccupying);
 			}
 			if (isIdle) {
 				isIdle = false;
@@ -95,10 +126,10 @@ public class Patient extends Agent {
 			}
 
 		} else if (order instanceof FollowOrder) {
-			System.out.println(this + "following " + ((FollowOrder) order).getFollowTarget());
 			// follow the target
 			Object target = ((FollowOrder) order).getFollowTarget();
 			MoveTowards(target);
+			
 		} else if (order instanceof StopOrder) {
 			curOrder = null;
 		}
@@ -106,14 +137,29 @@ public class Patient extends Agent {
 	}
 	
 	private void LogStatus() {
-		if (!hasBeenDealtWith) {
-			totalWaitTime++;
-		} else if (curOrder != null) {
-			hasBeenDealtWith = true;
+		if (hasBeenDealtWith && !loggedAndFinished) {
 			ToolBox toolBox = ToolBox();
-			String content = this + " | total wait time: " + totalWaitTime + " | dealt at time point: "
-					+ toolBox.getTime();
+			String content = this + " | total wait time: " + totalWaitTime/60 + "mins | dealt at time point: "
+					+ TimeKeeper.getInstance().getTime().toString() + " | Had severity: " + severityScore + " | Had infection state: " + actualInfectionState.stateType.getInfectionStatus().toString();
+			
+			if(!testResults.isEmpty()) {
+				content += " | Test Results: ";
+				for (TestResult testResult : testResults) {
+					content += testResult;
+				}
+			}
+			
+			content += " | Final decision: ";
+			if(outcome == null) {
+				content += "still in ED";
+			}
+			else {
+				content += outcome.toString();
+			} 
 			toolBox.GetLog().WriteLog("patientLog", content);
+			loggedAndFinished = true;
+		} else {
+			totalWaitTime++;
 		}
 	}
 
@@ -145,6 +191,30 @@ public class Patient extends Agent {
 	public List<Actor> getMyAssignedStaffOfType(Class pClass){
 		return mlstMyStaff.stream().filter(s -> s.getClass() == pClass).collect(Collectors.toList());
 	}
+	
+	public void setActualInfectionState(InfectionState pInfectionState) {
+		actualInfectionState = pInfectionState;
+	}
+	
+	public InfectionState getActualInfectionState() {
+		return actualInfectionState;
+	}
+	
+	public void setSeverityScore(SeverityScore pSeverityScore) {
+		this.severityScore = pSeverityScore;
+	}
+	
+	public SeverityScore getSeverityScore() {
+		return severityScore;
+	}
+	
+	public double getPHEScore() {
+		return pheScore;
+	}
+	
+	public void setPHEScore(double score) {
+		this.pheScore = score;
+	}
 
 	@Override
 	public String toString() {
@@ -155,4 +225,262 @@ public class Patient extends Agent {
 		return mintMyID+ "";
 	}
 
+	public void addTestResult(TestResult ptestResult) {
+		testResults.add(ptestResult);
+	}
+	
+	public void setHasBeenDealtWith() {
+		hasBeenDealtWith = true;
+		
+	}
+	
+	public PatientOutcomes getOutcome() {
+		return outcome;
+	}
+	
+	public void setDischarged() {
+		this.outcome = PatientOutcomes.DISCHARGED;
+		setHasBeenDealtWith();
+	}
+	
+	public void setAdmitted(AdmissionBay bay) {
+		if(bay instanceof Amber_AdmissionBay) {
+			this.outcome = PatientOutcomes.ADMITTEDAMBER;
+		} else if (bay instanceof Red_AdmissionBay) {
+			this.outcome = PatientOutcomes.ADMITTEDRED;
+		} else if (bay instanceof Green_AdmissionBay) {
+			this.outcome = PatientOutcomes.ADMITTEDGREEN;
+		} else if(bay instanceof SideRoom_AdmissionBay) {
+			this.outcome = PatientOutcomes.ADMITTEDSIDEROOM;
+		}
+		
+		setHasBeenDealtWith();
+	}
+	
+	public List<TestResult> getTestResults(){
+		return testResults;
+	}
+	
+	
+	
+	//----------------------------------------------------------- Data Sources --------------------------------------------------------------
+	
+	public Integer isDischargedToRed() {
+		if(outcome == PatientOutcomes.ADMITTEDRED) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isDischargedToAmber() {
+		if(outcome == PatientOutcomes.ADMITTEDAMBER) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isDischargedToGreen() {
+		if(outcome == PatientOutcomes.ADMITTEDGREEN) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isDischarged() {
+		if(outcome == PatientOutcomes.DISCHARGED) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndAdmittedToAmber() {
+		if(outcome == PatientOutcomes.ADMITTEDAMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndAdmittedToRed() {
+		if(outcome == PatientOutcomes.ADMITTEDRED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndAdmittedToGreen() {
+		if(outcome == PatientOutcomes.ADMITTEDGREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndAdmittedToSideRoom() {
+		if(outcome == PatientOutcomes.ADMITTEDSIDEROOM && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer positiveAndDischarged() {
+		if(outcome == PatientOutcomes.DISCHARGED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer negativeAndAdmittedToAmber() {
+		if(outcome == PatientOutcomes.ADMITTEDAMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer negativeAndAdmittedToRed() {
+		if(outcome == PatientOutcomes.ADMITTEDRED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer negativeAndAdmittedToGreen() {
+		if(outcome == PatientOutcomes.ADMITTEDGREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer negativeAndAdmittedToSIDEROOM() {
+		if(outcome == PatientOutcomes.ADMITTEDSIDEROOM && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+
+	public Integer negativeAndDischarged() {
+		if(outcome == PatientOutcomes.DISCHARGED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer receivedLFD() {
+		if( testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findAny().isPresent()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer COVPosLFTPos() {
+		if(LFDPositive() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovNegLFTNeg() {
+		if(LFDNegative() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovPosLFTNeg() {
+		if(LFDNegative() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovNegLFTPos() {
+		if(LFDPositive() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDPositive() {
+		TestResult pres =  null;
+		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findFirst();
+		if (opt.isEmpty()) return 0;
+		else 
+			pres = (TestResult) opt.get();
+		
+		if(pres != null && pres.isInfected()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDNegative() {
+		TestResult pres =  null;
+		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findFirst();
+		if (opt.isEmpty()) return 0;
+		else 
+			pres = (TestResult) opt.get();
+		
+		if(pres != null && !pres.isInfected()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDPositiveAndRed() {
+		if(LFDPositive() ==1 && outcome == PatientOutcomes.ADMITTEDRED) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDPositiveAndSideRoom() {
+		if(LFDPositive() ==1 && outcome == PatientOutcomes.ADMITTEDSIDEROOM) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDNegativeAndRed() {
+		if(LFDNegative() ==1 && outcome == PatientOutcomes.ADMITTEDRED) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LFDNegativeAndSideRoom() {
+		if(LFDNegative() ==1 && outcome == PatientOutcomes.ADMITTEDSIDEROOM) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer receivedPCR() {
+		if( testResults.stream().filter(t -> t.getTestType().equals(LabPCR.getInstance())).findAny().isPresent()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer receivedLIAT() {
+		if( testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findAny().isPresent()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isSymptomatic() {
+		if(actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isAsymptomatic() {
+		if(actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer getTotalPatients() {
+		return 1;
+	}
 }

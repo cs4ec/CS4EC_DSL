@@ -105,6 +105,20 @@ public class Room extends Locatable{
 			}
 		}
 	}
+	
+	public Set<Agent> getOccupiers(){
+		return contentPeople;
+	}
+	
+//	public void addPerson(Agent a) {
+//		contentPeople.add(a);
+//		curCap++;
+//	}
+//	
+//	public void removePerson(Agent a) {
+//		contentPeople.remove(a);
+//		curCap--;
+//	}
 
 	private void createLayoutStyle() {
 
@@ -143,19 +157,24 @@ public class Room extends Locatable{
 	
 	public void setDesks(int pintNumDesks) {
 		desks = new ArrayList<Desk>();
-		for(int i = 0; i < pintNumDesks; i++) {
-			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
-			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
-			desks.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
+		if(pintNumDesks == 1) {
+			desks.add(new Desk(context, space, grid, (locX+(width/2)), (locY+(height/2)), this));
+		} else {
+			for(int i = 0; i < pintNumDesks; i++) {
+				int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
+				int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
+				desks.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
+			}
 		}
+
 		occupiables.addAll(desks);
 	}
 	
 	public void setBeds(int pintNumBeds) {
 		beds = new ArrayList<Bed>();
 		for(int i = 0; i < pintNumBeds; i++) {
-			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
-			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
+			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
+			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
 			beds.add(new Bed(context, space, grid, rndXCoord, rndYCoord, this));
 		}
 		occupiables.addAll(beds);

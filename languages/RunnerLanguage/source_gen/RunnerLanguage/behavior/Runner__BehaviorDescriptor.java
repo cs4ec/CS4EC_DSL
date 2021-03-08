@@ -24,17 +24,21 @@ public final class Runner__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, "RunnerLanguage.structure.Runner");
 
   public static final SMethod<String> GenerateInputString_id1wal9D1amCA = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GenerateInputString").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1wal9D1amCA").build();
+  public static final SMethod<String> ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("ReplaceForwardSlashesWithBackSlashes").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2vFOz$Gzz4V").build(SMethodBuilder.createJavaParameter(String.class, ""));
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(GenerateInputString_id1wal9D1amCA);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(GenerateInputString_id1wal9D1amCA, ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
 
   /*package*/ static String GenerateInputString_id1wal9D1amCA(@NotNull SNode __thisNode__) {
     String s = SPropertyOperations.getString(__thisNode__, PROPS.addr$49ha);
+    return Runner__BehaviorDescriptor.ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V.invoke(__thisNode__, s);
+  }
+  /*package*/ static String ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V(@NotNull SNode __thisNode__, String inputString) {
     String result = "";
 
-    String[] addrs = s.split("\\\\");
+    String[] addrs = inputString.split("\\\\");
 
     for (int i = 0; i < addrs.length; i++) {
       result += addrs[i];
@@ -61,6 +65,8 @@ public final class Runner__BehaviorDescriptor extends BaseBHDescriptor {
     switch (methodIndex) {
       case 0:
         return (T) ((String) GenerateInputString_id1wal9D1amCA(node));
+      case 1:
+        return (T) ((String) ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V(node, (String) parameters[0]));
       default:
         throw new BHMethodNotFoundException(this, method);
     }

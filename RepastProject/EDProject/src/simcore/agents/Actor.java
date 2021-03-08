@@ -11,7 +11,6 @@ import java.util.Queue;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.ENP;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.query.space.grid.GridCell;
@@ -30,7 +29,8 @@ import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
-import simcore.action.basicAction.EndVisitAction;
+import simcore.action.basicAction.AdmitAction;
+import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.action.basicAction.OrderAction;
@@ -38,16 +38,19 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.TestAction;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
+import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
 import simcore.basicStructures.Wall;
+import simcore.diagnosis.TestResult;
 import simcore.utilities.AStar;
 
 /**
@@ -56,6 +59,7 @@ import simcore.utilities.AStar;
  */
 public class Actor extends Agent {
 	  protected List<Patient> mlstMyPatients = new ArrayList<Patient>();
+	  protected List<Patient> mlstSeenPatients = new ArrayList<Patient>();
 	  protected int mintMyMaxPatients = 1;
 	
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid) {
@@ -118,8 +122,17 @@ public class Actor extends Agent {
 		Board board = ReadBoard();
 
 		if (isIdle) {
+			List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
 			List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
-			Signal s = selectSignal(plstSignals);
+			
+			// First see if there are any direct messages for me and prioritise those
+			Signal s = selectSignal(plstDirectSignals);
+			if(s == null) { // If none, select a generic message for my class type
+				s = selectSignal(plstSignals);
+			} else {
+				int iewv = 0;
+			}
+			
 			if (s == null) {
 				return;
 			}
@@ -143,6 +156,7 @@ public class Actor extends Agent {
 			return plstSignals.get(0);
 		}	
 		
+		Map<Signal, Patient> pMapSignalsWithMyPastPatients = new HashMap<Signal,Patient>();
 		Map<Signal, Patient> pMapSignalsWithFreePatients = new HashMap<Signal,Patient>();
 		Map<Signal, Patient> pMapSignalsWithMyPatients = new HashMap<Signal,Patient>();
 
@@ -150,17 +164,21 @@ public class Actor extends Agent {
 			Patient p = (Patient) signal.getDataOfType(Patient.class);
 			if(p != null && mlstMyPatients.contains(p)) {
 				pMapSignalsWithMyPatients.put(signal, p);
+			} else if(p != null && mlstSeenPatients.contains(p)) {
+				pMapSignalsWithMyPastPatients.put(signal, p);
 			} else if(p != null && p.getMyAssignedStaffOfType(this.getClass()).isEmpty()) {
 				pMapSignalsWithFreePatients.put(signal, p);
 			}
 		}
-		if(pMapSignalsWithMyPatients.isEmpty() && pMapSignalsWithFreePatients.isEmpty()) {
+		if(pMapSignalsWithMyPatients.isEmpty() && pMapSignalsWithFreePatients.isEmpty() && pMapSignalsWithMyPastPatients.isEmpty()) {
 			// Currently I cannot do anything as I am at max capacity of patients and there are no tasks for those patients
 			return null;
 		} else {
 			// Look for signals containing my patients. If there is one, take it. 
 			if(!pMapSignalsWithMyPatients.isEmpty()) {
 				return (Signal) pMapSignalsWithMyPatients.keySet().toArray()[0];
+			} else if(!pMapSignalsWithMyPastPatients.isEmpty()) {
+				return (Signal) pMapSignalsWithMyPastPatients.keySet().toArray()[0];
 			}
 			//Otherwise, I am waiting and see if I can take a new case in the meantime...
 			if(!pMapSignalsWithFreePatients.isEmpty() && mlstMyPatients.size() != mintMyMaxPatients) {
@@ -178,8 +196,8 @@ public class Actor extends Agent {
 	
 	@Override
 	public void ExecMission() {
-		System.out.println("-----------------------------------------");
-		LogMission();
+//		System.out.println("-----------------------------------------");
+//		LogMission();
 		ActionStep curStep = curMission.getSteps().get(curActionStep);
 
 		if (curStep instanceof ConsequenceStep) {
@@ -192,15 +210,27 @@ public class Actor extends Agent {
 		ActionFragment stepLogic = curStep.getStepLogic();
 		InitActionFragment(stepLogic);
 		
-		// End Visit Action
-		if(stepLogic instanceof EndVisitAction) {
-			Patient p = ((EndVisitAction)stepLogic).getOrderTarget();
+		// Discharge, End Visit Action
+		if(stepLogic instanceof DischargeAction) {
+			Patient p = ((DischargeAction)stepLogic).getPatient();
 			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
 			for (Actor actor : plstAssignedStaff) {
 				actor.deAssignPatient(p);
 			}
-
+			p.setDischarged();
+			NextStep();
+		}
+		
+		// Admit, End Visit Action
+		if(stepLogic instanceof AdmitAction) {
+			Patient p = ((AdmitAction)stepLogic).getPatient();
+			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
+			for (Actor actor : plstAssignedStaff) {
+				actor.deAssignPatient(p);
+			}
 			
+			AdmissionBay pAdmisionBay = ((AdmitAction)stepLogic).getAdmissionBay();
+			pAdmisionBay.admitPatient(p);
 			NextStep();
 		}
 		
@@ -217,6 +247,16 @@ public class Actor extends Agent {
 				NextStep();
 			}
 		}
+		
+		//Test Action
+//		if(stepLogic instanceof TestAction) {
+//			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient(), 0.0);
+//			if(pTestResult.isInfected()) {
+//				
+//			}
+//			System.out.println("TEST RESULT: " + pTestResult);
+//			NextStep();
+//		}
 
 		// Stay Action
 		if (stepLogic instanceof StayAction) {
@@ -257,19 +297,22 @@ public class Actor extends Agent {
 			Patient p = ((OrderAction) stepLogic).getOrderTarget();
 			Order o = ((OrderAction) stepLogic).getOrderContent();
 
-			System.out.println("Order " + p + " To " + o);
+//			System.out.println("Order " + p + " To " + o);
 
 			p.TakeOrder(o);
 			NextStep();
 			return;
 		}
-		System.out.println("-----------------------------------------");
+//		System.out.println("-----------------------------------------");
 	}
 	
 	
 	private void deAssignPatient(Patient p) {
 		if(mlstMyPatients.contains(p)) {
 			mlstMyPatients.remove(p);
+			if(!mlstSeenPatients.contains(p)) {
+				mlstSeenPatients.add(p);
+			}
 		}
 	}
 

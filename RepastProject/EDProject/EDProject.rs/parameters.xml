@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <parameters>
-
-	<parameter name="randomSeed"
-		displayName="Default Random Seed" type="int" defaultValue="__NULL__" 
-	/>
-
-</parameters>
-
+					<parameter name="randomSeed" displayName="Default Random Seed" type="int" 
+						defaultValue="__NULL__"
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="UsePathFinding" displayName="Use Path Finding" type="boolean" 
+						defaultValue="false" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter"
+									
+		/>
+				<parameter name="PercentageAsymptomatic" displayName="% patients asymptomatic" type="double" 
+						defaultValue="0.3" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
+				<parameter name="PercentageSymptomatic" displayName="% patients symptomatic" type="double" 
+						defaultValue="0.2" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
+		</parameters>
 
 

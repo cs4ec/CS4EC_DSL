@@ -1,6 +1,0 @@
-Time point: 1460.0 | correctWork: 1.0
-Time point: 1461.0 | stress: 2.0
-Time point: 2108.0 | correctWork: 2.0
-Time point: 2109.0 | stress: 3.0
-Time point: 2749.0 | correctWork: 3.0
-Time point: 2750.0 | stress: 4.0

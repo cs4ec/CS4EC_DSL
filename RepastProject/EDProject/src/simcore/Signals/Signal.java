@@ -7,11 +7,12 @@ import java.util.Map;
 
 public class Signal {
 
-	private String name;
-	private String description;
-	private List<String> subjects; //String to represent Actor
+	protected String name;
+	protected String description;	
+	protected List<String> subjects; //String to represent Actor
+
 	
-	private Map<String, Object> data;
+	protected Map<String, Object> data;
 	
 	public Signal() {
 		data = new HashMap<String, Object>();
@@ -49,7 +50,7 @@ public class Signal {
 	public void AddData(String s, Object o) {
 		data.put(s, o);
 	}
-
+	
 	public Object getDataOfType(Class c) {
 		try {
 			return getData().values().stream().filter(d -> d.getClass() == c).findFirst().get();
@@ -57,7 +58,7 @@ public class Signal {
 			return null;
 		}
 	}
-
+	
 	public List<String> getSubjects() {
 		return subjects;
 	}
@@ -79,5 +80,4 @@ public class Signal {
 		}
 		return false;
 	}
-
 }

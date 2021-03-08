@@ -19,32 +19,38 @@ public class ConstraintsAspectDescriptor extends BaseConstraintsAspectDescriptor
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return new AttributeExpressionReference_Constraints();
+        return new ActorTypeSignal_Constraints();
       case 1:
-        return new AttributeReference_Constraints();
+        return new AttributeExpressionReference_Constraints();
       case 2:
-        return new BehaviourElementReference_Constraints();
+        return new AttributeReference_Constraints();
       case 3:
-        return new Consequence_Constraints();
+        return new BehaviourElementReference_Constraints();
       case 4:
-        return new DataInstanceMap_Constraints();
+        return new Consequence_Constraints();
       case 5:
-        return new HumanInstanceFromSignal_Constraints();
+        return new DataInstanceMap_Constraints();
       case 6:
-        return new PatientInstance_Constraints();
+        return new DirectSignal_Constraints();
       case 7:
-        return new PlaceInstanceCollection_Constraints();
+        return new HumanInstanceFromSignal_Constraints();
       case 8:
-        return new PlaceInstanceFromSignal_Constraints();
+        return new PatientInstance_Constraints();
       case 9:
-        return new SelfInstance_Constraints();
+        return new PlaceInstanceCollection_Constraints();
       case 10:
-        return new SignalInitReference_Constraints();
+        return new PlaceInstanceFromSignal_Constraints();
       case 11:
+        return new SelfInstance_Constraints();
+      case 12:
+        return new Signal_Constraints();
+      case 13:
+        return new SignalInitReference_Constraints();
+      case 14:
         return new SignalReference_Constraints();
       default:
     }
     return new BaseConstraintsDescriptor(concept);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d466277fcL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125519L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ef3be0L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x50f1fbdc6defec6aL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x45056e1fe037ad68L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99baabefL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a4L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xa159abb4e9e65L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f1255b3L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b5cf14L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c93L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd013d59eL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a759561627f4L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d466277fcL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125519L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ef3be0L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x50f1fbdc6defec6aL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x45056e1fe037ad68L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x139a759560ba2b4L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99baabefL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a4L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xa159abb4e9e65L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f1255b3L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b5cf14L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c93L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd013d59eL)).seal();
 }

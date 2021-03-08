@@ -7,12 +7,16 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.Amber_AdmissionBay;
 import EDLanguage.sandbox.DoctorOffice;
 import EDLanguage.sandbox.Nurse;
+import EDLanguage.sandbox.Red_AdmissionBay;
+import EDLanguage.sandbox.SideRoom_AdmissionBay;
 import repast.simphony.context.Context;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
 import repast.simphony.random.RandomHelper;
+import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.space.grid.Grid;
@@ -25,7 +29,6 @@ import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
-import simcore.action.basicAction.EndVisitAction;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.action.basicAction.OrderAction;
@@ -33,11 +36,19 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
 import simcore.action.basicAction.conditions.Condition;
+import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.action.basicAction.conditions.IsAvailableCondition;
+import simcore.action.basicAction.conditions.PatientAdmissionStatusCondition;
+import simcore.action.basicAction.conditions.PatientOutcomes;
 import simcore.action.basicAction.conditions.PossibilityCondition;
+import simcore.action.basicAction.conditions.ResultCondition;
+import simcore.action.basicAction.conditions.SeverityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
+import simcore.action.basicAction.conditions.TestResultCondition;
+import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Bed;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Desk;
@@ -46,9 +57,13 @@ import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Seat;
+import simcore.basicStructures.Test;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
+import simcore.diagnosis.SeverityScore;
+import simcore.diagnosis.TestResult;
 import simcore.utilities.AStar;
+import simcore.utilities.ModelParameterStore;
 import simcore.utilities.Tuple;
 
 public class Agent {
@@ -136,11 +151,13 @@ public class Agent {
 				stepLogic.setDestination(SelectLocation((RoomType) stepLogic.getTargetDestinationType()));
 			}
 		}
+		
+		stepLogic.setTargetGridPoints(grid.getLocation(stepLogic.getDestinationObject()));
 	}
 
 	public void ExecMission() {
-		System.out.println("-----------------------------------------");
-		LogMission();
+//		System.out.println("-----------------------------------------");
+//		LogMission();
 		ActionStep curStep = curMission.getSteps().get(curActionStep);
 
 		if (curStep instanceof ConsequenceStep) {
@@ -166,7 +183,7 @@ public class Agent {
 				NextStep();
 			}
 		}
-		System.out.println("-----------------------------------------");
+//		System.out.println("-----------------------------------------");
 	}
 
 	/**
@@ -180,31 +197,33 @@ public class Agent {
 		System.out.println(
 				"cur action step: " + curActionStep + ": " + curMission.getSteps().get(curActionStep).getName());
 	}
-
+	
 	/**
 	 * If the current Agent action is to move somewhere, then process that here
 	 * 
 	 * @param stepLogic The current step of the Agent's Mission
 	 */
 	protected void MoveTo(Object target) {
-//		// If the target object is of instance 'RoomType' then the agent must first
-//		// decide what instance of that room they wish to move towards
-//		if (target instanceof RoomType) {
-//			target = SelectLocation((RoomType) target);
-//		}
-
 		// If I am already here, dont do anything
 		if (ImAt(target)) {
 			NextStep();
 			return;
-		}
+		} 
 
 		// Move in the physical space
 		MoveTowards(target);
 
 		// If the agent is moving towards an occupiable (bed, seat etc)
 		if (target instanceof Occupiable) {
-			MoveToOccupiable((Occupiable) target);
+			Occupiable targetOccupiable = (Occupiable) target;
+			// if this agent is already there, continue
+			if (targetOccupiable.getOccupier() == this) {
+				NextStep();
+			} else { 
+				if (ImAt(targetOccupiable)) {
+					targetOccupiable.setOccupier(this);
+				}
+			}
 		}
 		// Else moving towards the room
 		else if (target instanceof Room) {
@@ -214,56 +233,30 @@ public class Agent {
 				NextStep();
 			}
 		}
-		// Move toward a specific point (e.g. toward an Agent's location)
-		else {
-
-		}
-	}
-
-	private void MoveToOccupiable(Occupiable target) {
-		Occupiable targetOccupiable = (Occupiable) target;
-		// if this agent is already there, continue
-		if (targetOccupiable.getOccupier() == this) {
-			NextStep();
-			// If this agent is walking towards the occupiable that has now been taken, find
-			// a new one
-//		} 
-//		else if (targetOccupiable.getOccupier() != null && targetOccupiable.getOccupier() != this) {
-//			if (targetOccupiable instanceof Seat) {
-//				FindASeat();
-//			}
-//			if(targetOccupiable instanceof Desk) {
-//				FindADesk(targetOccupiable.getResidingRoom());
-//			}
-		} else { // else take the seat
-			if (ImAt(targetOccupiable)) {
-				targetOccupiable.setOccupier(this);
-			}
-		}
 	}
 
 	// Given a RoomType, select a Location of that RoomType
 	private Room SelectLocation(RoomType pRoomType) {
 		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
-		// If I am already in one of those rooms, stay there
-		if(pRooms.contains(curInside)) {
-			return curInside;
-		}
-		// Otherwise find an instance of the room we want
+		// find an instance of the room we want
 		// By default select the one that is most empty
 		try {
-			return pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r2), EvaluateRoomChoice(r1))).findFirst().get();
+			return pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2))).findFirst().get();
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("No instances of roomtype: " + pRoomType.name + " found");
 			return null;
 		}
 	}
 	
 	private double EvaluateRoomChoice(Room pRoom) {
-		if(pRoom.getCurrentCapacity() > 0) {
-			return 0.0;
+		int pRoomCapacity = pRoom.getCurrentCapacity();
+		if(pRoom.getOccupiers().contains(this)) {
+			pRoomCapacity--;
+		}
+		if(pRoomCapacity > 0) {
+			return Double.MAX_VALUE;
 		} else {
-			return 1.0;
+			return CalcDistance(grid.getLocation(this), grid.getLocation(pRoom));
+//			return 1.0;
 		}
 	}
 
@@ -278,42 +271,12 @@ public class Agent {
 	protected Occupiable SelectOccupiable(Room destination, Class occupiableType) {
 		ArrayList<Occupiable> plstEmptyOccupiables = (ArrayList<Occupiable>) destination.getAllEmptyOcupiablesOfType(occupiableType);
 		if (!plstEmptyOccupiables.isEmpty()) {
-			ArrayList<Occupiable> emptyOccupiable = (ArrayList<Occupiable>) plstEmptyOccupiables;
-			return emptyOccupiable.get(0);// <------ ToDo: change to have more complex seat selection
+			ArrayList<Occupiable> emptyOccupiables = (ArrayList<Occupiable>) plstEmptyOccupiables;
+			int pNumOccupiables = emptyOccupiables.size();
+			return emptyOccupiables.get(RandomHelper.nextIntFromTo(0, pNumOccupiables-1));// <------ ToDo: change to have more complex seat selection
 		}
 		return null;
 	}
-
-//	// The Agent scans the room and selects a seat
-//	protected Seat SelectSeat(Room destination) {
-//		List<Seat> plstEmptySeats = destination.getEmptySeats();
-//		if (!plstEmptySeats.isEmpty()) {
-//			ArrayList<Seat> emptySeatList = (ArrayList<Seat>) plstEmptySeats;
-//			return emptySeatList.get(0);// <------ ToDo: change to have more complex seat selection
-//		}
-//		return null;
-//	}
-//	
-//	// The Agent scans the room and selects a desk
-//	protected Desk SelectDesk(Room destination) {
-//		List<Desk> plstEmptyDesks = destination.getEmptyDesks();
-//		if (!plstEmptyDesks.isEmpty()) {
-//			ArrayList<Desk> emptyDeskList = (ArrayList<Desk>) plstEmptyDesks;
-//			return emptyDeskList.get(0);// <------ ToDo: change to have more complex desk selection
-//		}
-//		return null;
-//	}
-//	
-//	// The Agent scans the room and selects a bed
-//	protected Bed SelectBed(Room destination) {
-//		List<Bed> plstEmptyBeds = destination.getEmptyBeds();
-//		if (!plstEmptyBeds.isEmpty()) {
-//			ArrayList<Bed> emptyBedList = (ArrayList<Bed>) plstEmptyBeds;
-//			return emptyBedList.get(0);// <------ ToDo: change to have more complex bed selection
-//		}
-//		return null;
-//	}
-
 	/*
 	 * MovaTowards function is called by all the agents to decide and execute one's
 	 * next Move Step by is target object. If a target is of class Location, set the
@@ -332,27 +295,28 @@ public class Agent {
 
 		if (pointOfTarget != null) {
 			MoveTowards(pointOfTarget);
-		} else {
-
-			System.out.println("------------------------------------------");
-			System.out.println();
-			System.out.println("Error: Target point does not exist");
-			System.out.println("this: " + this);
-			System.out.println("move towards target: " + o);
-			System.out.println();
-			System.out.println("------------------------------------------");
 		}
 	}
-
+	
 	public void MoveTowards(GridPoint pt) {
+		if(ModelParameterStore.UsePathFinding) {
+			PathFinding(pt);
+		} else {
+			CrowFlyMovement(pt);
+		}
+	}
+	
+	public void PathFinding(GridPoint pt) {
 		NdPoint myPoint = space.getLocation(this);
 
+		// If I am not yet at the destination
 		if (!ImAt(pt)) {
+			// And I dont have a path, then get a new one
 			if (curPath == null || curPath.isEmpty()) {
 				curPath = new ArrayList<>();
 				curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
-
 			} else {
+				// Else, I do have a path but do the wrong destination, then get a new one
 				GridPoint pathGridPoint = curPath.get(curPath.size() - 1);
 				if (pathGridPoint.getX() != pt.getX() || pathGridPoint.getY() != pt.getY()) {
 					curPath = new ArrayList<>();
@@ -360,6 +324,7 @@ public class Agent {
 				}
 			}
 
+			// If I have a path, follow it one step
 			if (!curPath.isEmpty()) {
 				GridPoint GridStep = curPath.get(0);
 				curPath.remove(0);
@@ -369,6 +334,33 @@ public class Agent {
 				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 			}
 		}
+	}
+	
+	/*
+	 * An alternative movement implementation that ignores any pathfinding or obstacles, heads straight line to target
+	 */
+	public void CrowFlyMovement(GridPoint pt) {
+		NdPoint myPoint = space.getLocation(this);
+
+		if (!ImAt(pt)) {
+			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
+			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
+			space.moveByVector(this, 1, angle, 0);
+			myPoint = space.getLocation(this);
+			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+		}
+	}
+	
+	// A simplified move action where if I am following another agent, I will not use full pathfinding but instead 
+	// copy the path of the agent I am following
+	public void Follow(Agent target) {
+		NdPoint myPoint = space.getLocation(this);
+		GridPoint targetPoint = grid.getLocation(target);
+		
+		NdPoint otherPoint = new NdPoint(targetPoint.getX(), targetPoint.getY());
+		space.moveTo(this, otherPoint.getX(), otherPoint.getY());
+		myPoint = space.getLocation(this);
+		grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 	}
 
 	// 判断当前位置是否在目标处
@@ -414,12 +406,9 @@ public class Agent {
 
 	// Consequence of this Action
 	public void UpdateState(Consequence c) {
-
 		if (c == null) {
 			return;
 		}
-
-		System.out.println("-------------------------------");
 
 		Field targetField = null;
 		for (int i = 0; i < fields.size(); i++) {
@@ -429,19 +418,8 @@ public class Agent {
 		}
 
 		try {
-			System.out.println("this.getClass(): " + this.getClass());
-			System.out.println("attribute: " + ((Consequence) c).getAttribute());
-			System.out.println("attribute find: " + targetField);
-
 			double base = targetField.getDouble(this);
-
-			System.out.println("update: " + this + "." + base);
-
 			double value = ((Consequence) c).getValue();
-
-			System.out.println("base: " + base);
-			System.out.println("Operator: " + ((Consequence) c).getOperator());
-			System.out.println("value: " + value);
 
 			switch (((Consequence) c).getOperator()) {
 			case "":
@@ -467,7 +445,6 @@ public class Agent {
 				break;
 			}
 
-			System.out.println("set into: " + base);
 			targetField.setDouble(this, base);
 
 			ToolBox toolBox = ToolBox();
@@ -494,6 +471,61 @@ public class Agent {
 
 		if (c instanceof SpaceatCondition) {
 			return ImAt(((SpaceatCondition) c).getSubject(), ((SpaceatCondition) c).getTarget());
+		}
+		
+		if(c instanceof TestResultCondition) {
+			TestResult ptestResult = ((TestResultCondition) c).getTestType().TestPatient(((TestResultCondition) c).getPatient(), 0.0);
+			return ptestResult.isInfected();
+		}
+		
+		if(c instanceof PatientAdmissionStatusCondition) {
+			return ((PatientAdmissionStatusCondition) c).getOutcome() == ((PatientAdmissionStatusCondition) c).getPatient().getOutcome();
+		}
+		
+		if(c instanceof ResultCondition) {
+			Test pTest = ((ResultCondition)c).getTest();
+			Patient pPatient = ((ResultCondition)c).getPatient();
+			ArrayList<TestResult> plstTestResults = (ArrayList<TestResult>) pPatient.getTestResults();
+			for (TestResult testResult : plstTestResults) {
+				if(testResult.getTestType() == pTest) {
+					return testResult.isInfected() == ((ResultCondition)c).getResult();
+				}
+			}
+			return false;
+		}
+		if(c instanceof InfectionCondition) {
+			return ((InfectionCondition) c).getInfectionStatus() == ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
+		}
+		
+		if(c instanceof SeverityCondition) {
+			return ((SeverityCondition) c).getSeverityScore() == ((SeverityCondition) c).getPatient().getSeverityScore();
+		}
+		
+		if(c instanceof SuitableForSideRoomCondition) {
+			Patient pPatient = ((SuitableForSideRoomCondition) c).getPatient();
+			AdmissionBay pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
+			double pPHEScore = pPatient.getPHEScore();
+
+			// Depending on the alternative admission bay, the COVID suspicion level of a patient is either weighted positive or negative
+			// E.g. if admitting to red bay, a high suspicion is good, but for amber you want a low suspicion as amber should contain negative cases
+			if(pAlternativeBay == Red_AdmissionBay.getInstance()) {
+				
+			} else if(pAlternativeBay == Amber_AdmissionBay.getInstance()) {
+				pPHEScore = 1- pPHEScore;
+			}
+			double currOcc = SideRoom_AdmissionBay.getInstance().getCurrentOccupancy();
+			double maxCap = SideRoom_AdmissionBay.getInstance().getCapacity();
+			double pSideRoomCapacity = (currOcc / maxCap);
+			if(currOcc >= maxCap) {
+				pSideRoomCapacity = 1;
+			}
+			double pdblChances = 1- ((pPHEScore + pSideRoomCapacity) / 2);
+			
+			double rnd = RandomHelper.nextDouble();
+			if(rnd < pdblChances) {
+				return true;
+			}
+			return false;
 		}
 
 		if (c instanceof StateCondition) {
@@ -556,6 +588,8 @@ public class Agent {
 
 	public void NextStep() {
 		curActionStep++;
+		
+		// If the mission is complete, update my status accordingly
 		if (curActionStep == curMission.getSteps().size()) {
 			isIdle = true;
 			curActionStep = 0;
@@ -571,13 +605,6 @@ public class Agent {
 		if (stepLogic instanceof StayForConditionAction) {
 			curCondition = ((StayForConditionAction) stepLogic).getStayCondition();
 		}
-
-//		if (stepLogic instanceof MoveAction) {
-////			if (curInside != null) {
-//				if (curInside != null && !curInside.equals(((MoveAction) stepLogic).getDestinationObject())) {
-//				curInside.LetOutPerson(this);
-//			}
-//		}
 	}
 
 	public EDMap ReadMap() {

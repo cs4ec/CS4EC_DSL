@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class LogNote {
 	
-	private String projectPath = "";
+	private String projectPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\";
 	private static LogNote logInstance = null;
 	
 	private LogNote() {}
@@ -41,7 +41,6 @@ public class LogNote {
 			BufferedWriter bw = new BufferedWriter(fileWriter);
 			bw.write(content + "\n");
 			bw.close();
-			System.out.println("finish");
 	    } catch (IOException e) {
 	        e.printStackTrace();
 	    }
