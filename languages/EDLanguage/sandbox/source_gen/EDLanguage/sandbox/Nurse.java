@@ -39,10 +39,6 @@ public class Nurse extends Staff {
         curMission = new Action("DoXRay");
         this.InitDoXRay(s);
         break;
-      case "LIATIsReady":
-        curMission = new Action("GiveLIATTest");
-        this.InitGiveLIATTest(s);
-        break;
       case "PatientNeedsBloodTest":
         curMission = new Action("GiveBloodTest");
         this.InitGiveBloodTest(s);
@@ -67,36 +63,6 @@ public class Nurse extends Staff {
     sendSignalTemp = new PatientNeedsFinalConsutlationSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-
-  }
-  public void InitRequestLIAT(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    sendSignalTemp = new IsLIATReadySignal();
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-
-  }
-  public void InitGiveLIATTest(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-
-  }
-  public void InitTreatPatientPositive(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("do some action").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-
-  }
-  public void InitTreatPatientNegative(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("do some action").WithAction(new StayForTimeAction().WithTimeSpan(300)));
 
   }
   public void InitCallDoctorForConsultation(Signal s) {

@@ -18,9 +18,9 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.diagnosis.InfectionStatus;
+import simcore.action.basicAction.conditions.ResultCondition;
 import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
 import simcore.action.basicAction.AdmitAction;
-import simcore.action.basicAction.conditions.ResultCondition;
 import simcore.action.basicAction.DischargeAction;
 
 public class Doctor extends Staff {
@@ -48,25 +48,13 @@ public class Doctor extends Staff {
         curMission = new Action("GiveConsultation");
         this.InitGiveConsultation(s);
         break;
-      case "LFDPositive":
-        curMission = new Action("PatientLFDPositive");
-        this.InitPatientLFDPositive(s);
+      case "LFDComplete":
+        curMission = new Action("LFDCompleted");
+        this.InitLFDCompleted(s);
         break;
-      case "LIATNegative":
-        curMission = new Action("LIATNegative");
-        this.InitLIATNegative(s);
-        break;
-      case "LIATPositive":
-        curMission = new Action("LIATPositive");
-        this.InitLIATPositive(s);
-        break;
-      case "PCRComplete":
-        curMission = new Action("PCRComplete");
-        this.InitPCRComplete(s);
-        break;
-      case "LFDNegative":
-        curMission = new Action("PatientLFDNegative");
-        this.InitPatientLFDNegative(s);
+      case "LIATComplete":
+        curMission = new Action("LIATResult");
+        this.InitLIATResult(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -127,77 +115,44 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-    if (CheckCondition(new PossibilityCondition().WithPossibility(25))) {
-      sendSignalTemp = new ConductLFDSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      sendSignalTemp.AddData("replyTo", this);
-      curMission.WithStep(new ActionStep().WithName("25% chance going to be admit, if so need to do an LFD test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-    } else {
-      this.InitDischargePatient(s);
-    }
-
-  }
-  public void InitPatientLFDPositive(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("Consult with patient, determine symptomatic/asymptomatic").WithAction(new StayForTimeAction().WithTimeSpan(180)));
-    if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      sendSignalTemp = new RequestPCRSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      sendSignalTemp.AddData("replyTo", this);
-      curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Red_AdmissionBay.getInstance()))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
-      } else {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
-      }
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-    } else {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(40))) {
-        curMission.WithStep(new ActionStep().WithName("Administer LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-        curMission.WithStep(new ActionStep().WithName("Go to the Liat machine").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+    if (CheckCondition(new PossibilityCondition().WithPossibility(18))) {
+      if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
         sendSignalTemp = new ConductLIATSignal();
         sendSignalTemp.AddData("patient", s.GetData("patient"));
         sendSignalTemp.AddData("replyTo", this);
         curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       } else {
-        sendSignalTemp = new RequestPCRSignal();
+        sendSignalTemp = new ConductLFDSignal();
         sendSignalTemp.AddData("patient", s.GetData("patient"));
         sendSignalTemp.AddData("replyTo", this);
-        curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+        curMission.WithStep(new ActionStep().WithName("18% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       }
+    } else {
+      this.InitDischargePatient(s);
     }
 
   }
-  public void InitLIATNegative(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
-    this.InitLIATResult(s);
-
-  }
-  public void InitLIATPositive(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
-    this.InitLIATResult(s);
-
-  }
-  public void InitPCRResultAvailable(Signal s) {
+  public void InitLFDCompleted(Signal s) {
 
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
-    curMission.WithStep(new ActionStep().WithName("Discussing result with patient").WithAction(new StayForTimeAction().WithTimeSpan(180)));
-    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LabPCR.getInstance()).WithResult(true))) {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("Consult with patient on LFT result").WithAction(new StayForTimeAction().WithTimeSpan(180)));
+    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
+      curMission.WithStep(new ActionStep().WithName("Take a LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+      sendSignalTemp = new ConductLIATSignal();
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      sendSignalTemp.AddData("replyTo", this);
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
+      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Amber_AdmissionBay.getInstance()))) {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+      } else {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Amber_AdmissionBay.getInstance())));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+      }
     }
 
   }
@@ -205,108 +160,26 @@ public class Doctor extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
-        if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-          curMission.WithStep(new ActionStep().WithName("Discuss admission with patient").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        } else {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        }
-      } else {
-      }
-    } else {
-      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
-        if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        } else {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        }
-      } else {
-      }
-    }
-
-  }
-  public void InitPCRComplete(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-    if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
-        if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LabPCR.getInstance()).WithResult(true))) {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        } else {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        }
-      } else {
-      }
-    } else {
-      if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
-        if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LabPCR.getInstance()).WithResult(true))) {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        } else {
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
-          curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-        }
-      } else {
-      }
-    }
-
-  }
-  public void InitPatientLFDNegative(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("Collect the sample").WithAction(new StayForTimeAction().WithTimeSpan(60)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("Consult with patient, determine symptomatic/asymptomatic").WithAction(new StayForTimeAction().WithTimeSpan(180)));
-    if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      if (CheckCondition(new PossibilityCondition().WithPossibility(40))) {
-        curMission.WithStep(new ActionStep().WithName("Administer LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-        curMission.WithStep(new ActionStep().WithName("Go to the Liat machine").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
-        sendSignalTemp = new ConductLIATSignal();
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        sendSignalTemp.AddData("replyTo", this);
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
+      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Red_AdmissionBay.getInstance()))) {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
       } else {
-        sendSignalTemp = new RequestPCRSignal();
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        sendSignalTemp.AddData("replyTo", this);
-        curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
       }
     } else {
-      sendSignalTemp = new RequestPCRSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      sendSignalTemp.AddData("replyTo", this);
-      curMission.WithStep(new ActionStep().WithName("Request the Lab PCR test").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Amber_AdmissionBay.getInstance()))) {
         curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
       } else {
         curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Amber_AdmissionBay.getInstance())));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
       }
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
     }
 
   }

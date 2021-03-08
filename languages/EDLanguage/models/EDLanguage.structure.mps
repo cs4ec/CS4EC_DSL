@@ -959,7 +959,7 @@
     <property role="EcuMT" value="2838504078745189" />
     <property role="3GE5qa" value="Structures.Class" />
     <property role="TrG5h" value="PlaceInstanceCollection" />
-    <property role="34LRSv" value="constant place" />
+    <property role="34LRSv" value="the" />
     <property role="R4oN_" value="a defined constant place in ED" />
     <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
     <node concept="1TJgyj" id="a5pEVjDTA" role="1TKVEi">

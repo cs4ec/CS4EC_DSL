@@ -26789,7 +26789,7 @@
             <node concept="liA8E" id="2in" role="2OqNvi">
               <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.alias(java.lang.String)" resolve="alias" />
               <node concept="Xl_RD" id="2io" role="37wK5m">
-                <property role="Xl_RC" value="constant place" />
+                <property role="Xl_RC" value="the" />
               </node>
             </node>
           </node>

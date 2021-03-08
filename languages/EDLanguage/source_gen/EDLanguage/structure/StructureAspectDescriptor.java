@@ -767,7 +767,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2838504078745189");
     b.version(2);
     b.aggregate("place", 0xa159abb4e9e66L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f27bdc3L).optional(false).ordered(true).multiple(false).origin("2838504078745190").done();
-    b.alias("constant place");
+    b.alias("the");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPlaceInstanceFromSignal() {

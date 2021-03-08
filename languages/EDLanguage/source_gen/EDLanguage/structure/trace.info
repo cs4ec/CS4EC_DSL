@@ -171,8 +171,8 @@
       <node id="2838504078745189" at="766,114,767,94" concept="1" />
       <node id="2838504078745189" at="767,94,768,17" concept="1" />
       <node id="2838504078745190" at="768,17,769,193" concept="1" />
-      <node id="2838504078745189" at="769,193,770,30" concept="1" />
-      <node id="2838504078745189" at="770,30,771,22" concept="6" />
+      <node id="2838504078745189" at="769,193,770,19" concept="1" />
+      <node id="2838504078745189" at="770,19,771,22" concept="6" />
       <node id="2838504078745189" at="763,0,773,0" concept="8" trace="createDescriptorForPlaceInstanceCollection#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="2838504078745189" at="228,57,229,48" />
       <scope id="2838504078745189" at="763,81,771,22">

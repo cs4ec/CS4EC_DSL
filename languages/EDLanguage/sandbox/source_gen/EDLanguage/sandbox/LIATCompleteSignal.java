@@ -4,12 +4,12 @@ package EDLanguage.sandbox;
 
 import simcore.Signals.DirectSignal;
 
-public class LFDNegativeSignal extends DirectSignal {
-  public LFDNegativeSignal() {
-    this.setName("LFDNegative");
+public class LIATCompleteSignal extends DirectSignal {
+  public LIATCompleteSignal() {
+    this.setName("LIATComplete");
     this.setDescription("");
     this.AddActor("Doctor");
-    this.AddActor("Receptionist");
     this.AddActor("MajorsABDoctor");
+    this.AddActor("Receptionist");
   }
 }

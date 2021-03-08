@@ -4,9 +4,9 @@ package EDLanguage.sandbox;
 
 import simcore.Signals.DirectSignal;
 
-public class LFDNegativeSignal extends DirectSignal {
-  public LFDNegativeSignal() {
-    this.setName("LFDNegative");
+public class LFDCompleteSignal extends DirectSignal {
+  public LFDCompleteSignal() {
+    this.setName("LFDComplete");
     this.setDescription("");
     this.AddActor("Doctor");
     this.AddActor("Receptionist");

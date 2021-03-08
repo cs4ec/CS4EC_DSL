@@ -375,7 +375,7 @@
       </node>
     </node>
     <node concept="1ncwnH" id="4TDP_nWBW7" role="3n3SPP">
-      <property role="TrG5h" value="LFDPositive" />
+      <property role="TrG5h" value="LFDComplete" />
       <node concept="3z7ADB" id="4TDP_nWBYv" role="3z7ADA">
         <property role="TrG5h" value="patient" />
         <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
@@ -393,27 +393,8 @@
         <ref role="3n3BjR" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
       </node>
     </node>
-    <node concept="1ncwnH" id="4TDP_nWC0r" role="3n3SPP">
-      <property role="TrG5h" value="LFDNegative" />
-      <node concept="3z7ADB" id="4TDP_nWC0s" role="3z7ADA">
-        <property role="TrG5h" value="patient" />
-        <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nWC0t" role="3z7ADm">
-        <ref role="3n3BjR" node="ijr0ZWACuy" resolve="LFDDevice" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nWC0u" role="1nbS2I">
-        <ref role="3n3BjR" node="3l6cNjecY0h" resolve="Doctor" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_oaZqf" role="1nbS2I">
-        <ref role="3n3BjR" node="7IDz3VlgXPK" resolve="Receptionist" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nWC0v" role="1nbS2I">
-        <ref role="3n3BjR" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
-      </node>
-    </node>
     <node concept="1ncwnH" id="4TDP_nWC4n" role="3n3SPP">
-      <property role="TrG5h" value="LIATPositive" />
+      <property role="TrG5h" value="LIATComplete" />
       <node concept="3z7ADB" id="4TDP_nWC4o" role="3z7ADA">
         <property role="TrG5h" value="patient" />
         <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
@@ -429,25 +410,6 @@
       </node>
       <node concept="3n3BjK" id="4TDP_nXX2U" role="1nbS2I">
         <ref role="3n3BjR" node="7IDz3VlgXPK" resolve="Receptionist" />
-      </node>
-    </node>
-    <node concept="1ncwnH" id="4TDP_nWC8j" role="3n3SPP">
-      <property role="TrG5h" value="LIATNegative" />
-      <node concept="3z7ADB" id="4TDP_nWC8k" role="3z7ADA">
-        <property role="TrG5h" value="patient" />
-        <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nWChK" role="3z7ADm">
-        <ref role="3n3BjR" node="4TDP_m1Sqe" resolve="LIATMachine" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nWC8m" role="1nbS2I">
-        <ref role="3n3BjR" node="3l6cNjecY0h" resolve="Doctor" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nXWWK" role="1nbS2I">
-        <ref role="3n3BjR" node="7IDz3VlgXPK" resolve="Receptionist" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nWC8n" role="1nbS2I">
-        <ref role="3n3BjR" node="$2vkoOQeHA" resolve="MajorsABDoctor" />
       </node>
     </node>
     <node concept="1nbS2H" id="4TDP_n2UrY" role="3n3SPP">
@@ -1309,26 +1271,48 @@
         <node concept="3VtFpY" id="4TDP_ny7Pq" role="3VtFpW">
           <node concept="jeBDq" id="4TDP_ny7Qp" role="3VtFpT">
             <node concept="xbsuO" id="4TDP_ny7Qr" role="x58j7">
-              <node concept="3cmrfG" id="4TDP_ny7QK" role="xbgmq">
-                <property role="3cmrfH" value="25" />
+              <node concept="3cmrfG" id="4mmkymQpqvG" role="xbgmq">
+                <property role="3cmrfH" value="18" />
               </node>
             </node>
           </node>
           <node concept="3VtFpM" id="4TDP_ny7Pu" role="3VtFpZ">
-            <node concept="3z7BTx" id="4TDP_ny7Tj" role="3VtFpW">
-              <node concept="3z7ADy" id="4TDP_ny7Tl" role="3z7BTw">
-                <ref role="3z7AD_" node="4TDP_n2Uye" resolve="ConductLFD" />
-                <node concept="2_cGdR" id="4TDP_ny7Tp" role="jeBCe">
-                  <ref role="XnLJh" node="4TDP_n2U$g" resolve="patient" />
-                  <node concept="3JJFmu" id="4TDP_ny7Tt" role="2_cGdO" />
-                </node>
-                <node concept="2_cGdR" id="4TDP_ny7Tw" role="jeBCe">
-                  <ref role="XnLJh" node="4TDP_n2VUp" resolve="replyTo" />
-                  <node concept="3JGL$I" id="4TDP_ny7TA" role="2_cGdO" />
+            <node concept="3VtFpY" id="4mmkymQpqwY" role="3VtFpW">
+              <node concept="3TllyP" id="4mmkymQpqxa" role="3VtFpT">
+                <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
+              </node>
+              <node concept="3VtFpM" id="4mmkymQpqx2" role="3VtFpZ">
+                <node concept="3z7BTx" id="4mmkymQpqxd" role="3VtFpW">
+                  <node concept="3z7ADy" id="4mmkymQpqxf" role="3z7BTw">
+                    <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
+                    <node concept="2_cGdR" id="4mmkymQpqxj" role="jeBCe">
+                      <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
+                      <node concept="3JJFmu" id="4mmkymQpqxn" role="2_cGdO" />
+                    </node>
+                    <node concept="2_cGdR" id="4mmkymQpqxq" role="jeBCe">
+                      <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
+                      <node concept="3JGL$I" id="4mmkymQpqxw" role="2_cGdO" />
+                    </node>
+                  </node>
                 </node>
               </node>
-              <node concept="2IBTiW" id="4TDP_nBkXv" role="2IBTiu">
-                <property role="2IBTiX" value="25% chance going to be admit, if so need to do an LFD test" />
+              <node concept="3VtFpM" id="4mmkymQpqxL" role="3VtFp$">
+                <node concept="3z7BTx" id="4mmkymQpqxP" role="3VtFpW">
+                  <node concept="3z7ADy" id="4mmkymQpqxR" role="3z7BTw">
+                    <ref role="3z7AD_" node="4TDP_n2Uye" resolve="ConductLFD" />
+                    <node concept="2_cGdR" id="4mmkymQpqxV" role="jeBCe">
+                      <ref role="XnLJh" node="4TDP_n2U$g" resolve="patient" />
+                      <node concept="3JJFmu" id="4mmkymQpqxZ" role="2_cGdO" />
+                    </node>
+                    <node concept="2_cGdR" id="4mmkymQpqy2" role="jeBCe">
+                      <ref role="XnLJh" node="4TDP_n2VUp" resolve="replyTo" />
+                      <node concept="3JGL$I" id="4mmkymQpqy8" role="2_cGdO" />
+                    </node>
+                  </node>
+                  <node concept="2IBTiW" id="4mmkymQpqyb" role="2IBTiu">
+                    <property role="2IBTiX" value="18% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -1344,7 +1328,7 @@
       </node>
     </node>
     <node concept="3Vt_xe" id="2Rfu8e59zjZ" role="2Ov1EZ">
-      <property role="TrG5h" value="PatientLFDPositive" />
+      <property role="TrG5h" value="LFDCompleted" />
       <node concept="3VtFpM" id="2Rfu8e59zk0" role="3VtFpR">
         <node concept="3VtFpw" id="2Rfu8e59zk1" role="3VtFpW">
           <node concept="3JJFmu" id="2Rfu8e59zk2" role="3nfz8T" />
@@ -1352,111 +1336,76 @@
         <node concept="jcv$W" id="2Rfu8e59zk3" role="3VtFpW">
           <property role="jcv$Z" value="3" />
           <node concept="2IBTiW" id="2Rfu8e59zk4" role="2IBTiu">
-            <property role="2IBTiX" value="Consult with patient, determine symptomatic/asymptomatic" />
+            <property role="2IBTiX" value="Consult with patient on LFT result" />
           </node>
         </node>
-        <node concept="3VtFpY" id="2Rfu8e59zk5" role="3VtFpW">
-          <node concept="3TllyP" id="2Rfu8e59zk6" role="3VtFpT">
-            <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
+        <node concept="3VtFpY" id="4mmkymQpqyw" role="3VtFpW">
+          <node concept="1mvUOM" id="4mmkymQpqyK" role="3VtFpT">
+            <property role="1mqNFj" value="1s4HvCZwevC/true" />
+            <node concept="3S2u4K" id="4mmkymQpqyQ" role="1mvUOP">
+              <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
+            </node>
           </node>
-          <node concept="3VtFpM" id="2Rfu8e59zk7" role="3VtFpZ">
-            <node concept="3z7BTx" id="2Rfu8e59zk8" role="3VtFpW">
-              <node concept="3z7ADy" id="2Rfu8e59zk9" role="3z7BTw">
-                <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                <node concept="2_cGdR" id="2Rfu8e59zka" role="jeBCe">
-                  <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                  <node concept="3JJFmu" id="2Rfu8e59zkb" role="2_cGdO" />
-                </node>
-                <node concept="2_cGdR" id="2Rfu8e59zkc" role="jeBCe">
-                  <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                  <node concept="3JGL$I" id="2Rfu8e59zkd" role="2_cGdO" />
-                </node>
-              </node>
-              <node concept="2IBTiW" id="2Rfu8e59zke" role="2IBTiu">
-                <property role="2IBTiX" value="Request the Lab PCR test" />
+          <node concept="3VtFpM" id="4mmkymQpqy$" role="3VtFpZ">
+            <node concept="jcv$W" id="4mmkymQpqT2" role="3VtFpW">
+              <property role="jcv$Z" value="2" />
+              <node concept="2IBTiW" id="4mmkymQpqTd" role="2IBTiu">
+                <property role="2IBTiX" value="Take a LIAT swab" />
               </node>
             </node>
-            <node concept="3VtFpY" id="L8B6Gnn6JA" role="3VtFpW">
-              <node concept="r166y" id="L8B6Gnn6K0" role="3VtFpT">
-                <ref role="3DyUPb" node="L8B6Gnb_Fx" resolve="Red" />
+            <node concept="3VtFpw" id="4mmkymQpqyT" role="3VtFpW">
+              <node concept="UeIYj" id="4mmkymQpqyZ" role="3nfz8T">
+                <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
               </node>
-              <node concept="3VtFpM" id="L8B6Gnn6JE" role="3VtFpZ">
-                <node concept="1kMh$d" id="L8B6Gnn6KD" role="3VtFpW">
+            </node>
+            <node concept="3z7BTx" id="4mmkymQpqz6" role="3VtFpW">
+              <node concept="3z7ADy" id="4mmkymQpqz8" role="3z7BTw">
+                <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
+                <node concept="2_cGdR" id="4mmkymQpqze" role="jeBCe">
+                  <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
+                  <node concept="3JJFmu" id="4mmkymQpqzi" role="2_cGdO" />
+                </node>
+                <node concept="2_cGdR" id="4mmkymQpqzl" role="jeBCe">
+                  <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
+                  <node concept="3JGL$I" id="4mmkymQpqzr" role="2_cGdO" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4mmkymQpqzu" role="3VtFp$">
+            <node concept="3VtFpY" id="4mmkymQpq$g" role="3VtFpW">
+              <node concept="r166y" id="4mmkymQpq$o" role="3VtFpT">
+                <ref role="3DyUPb" node="L8B6GnbCVP" resolve="Amber" />
+              </node>
+              <node concept="3VtFpM" id="4mmkymQpq$i" role="3VtFpZ">
+                <node concept="1kMh$d" id="4mmkymQpq$r" role="3VtFpW">
                   <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                  <node concept="3JJFmu" id="L8B6Gnn6KF" role="1kMh$e" />
+                  <node concept="3JJFmu" id="4mmkymQpq$t" role="1kMh$e" />
                 </node>
-              </node>
-              <node concept="3VtFpM" id="L8B6Gnn6KJ" role="3VtFp$">
-                <node concept="1kMh$d" id="L8B6Gnn6KN" role="3VtFpW">
-                  <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                  <node concept="3JJFmu" id="L8B6Gnn6KP" role="1kMh$e" />
-                </node>
-              </node>
-            </node>
-            <node concept="3JG_m1" id="2Rfu8e59zkh" role="3VtFpW">
-              <node concept="3JJFmu" id="2Rfu8e59zki" role="3JG_8_" />
-              <node concept="3JG_m7" id="2Rfu8e59zkj" role="3JG_nW">
-                <node concept="2Vh8JZ" id="2Rfu8e59zkk" role="3JG_nS">
-                  <node concept="j3T7i" id="2Rfu8e59zkl" role="2Vh8JW">
-                    <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e59zkm" role="3VtFp$">
-            <node concept="3VtFpY" id="2Rfu8e59zkn" role="3VtFpW">
-              <node concept="jeBDq" id="2Rfu8e59zko" role="3VtFpT">
-                <node concept="xbsuO" id="2Rfu8e59zkp" role="x58j7">
-                  <node concept="3cmrfG" id="2Rfu8e59zkq" role="xbgmq">
-                    <property role="3cmrfH" value="40" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e59zkr" role="3VtFpZ">
-                <node concept="jcv$W" id="2Rfu8e59zks" role="3VtFpW">
-                  <property role="jcv$Z" value="2" />
-                  <node concept="2IBTiW" id="2Rfu8e59zkt" role="2IBTiu">
-                    <property role="2IBTiX" value="Administer LIAT swab" />
-                  </node>
-                </node>
-                <node concept="3VtFpw" id="2Rfu8e59zku" role="3VtFpW">
-                  <node concept="UeIYj" id="2Rfu8e59zkv" role="3nfz8T">
-                    <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e59zkw" role="2IBTiu">
-                    <property role="2IBTiX" value="Go to the Liat machine" />
-                  </node>
-                </node>
-                <node concept="3z7BTx" id="2Rfu8e59zkx" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e59zky" role="3z7BTw">
-                    <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
-                    <node concept="2_cGdR" id="2Rfu8e59zkz" role="jeBCe">
-                      <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e59zk$" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e59zk_" role="jeBCe">
-                      <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e59zkA" role="2_cGdO" />
+                <node concept="3JG_m1" id="4mmkymQpq_D" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQpq_F" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQpq_O" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="1X85Kcrs1Bc" role="3JG_nS">
+                      <node concept="j3T7i" id="1X85Kcrs1Bg" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="3VtFpM" id="2Rfu8e59zkB" role="3VtFp$">
-                <node concept="3z7BTx" id="2Rfu8e59zkC" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e59zkD" role="3z7BTw">
-                    <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                    <node concept="2_cGdR" id="2Rfu8e59zkE" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e59zkF" role="2_cGdO" />
+              <node concept="3VtFpM" id="4mmkymQpq$x" role="3VtFp$">
+                <node concept="1kMh$d" id="4mmkymQpqDq" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
+                  <node concept="3JJFmu" id="4mmkymQpqDr" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQpqS8" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQpqSa" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQpqSj" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="1X85Kcrs1B5" role="3JG_nS">
+                      <node concept="j3T7i" id="1X85Kcrs1B9" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
                     </node>
-                    <node concept="2_cGdR" id="2Rfu8e59zkG" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e59zkH" role="2_cGdO" />
-                    </node>
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e59zkI" role="2IBTiu">
-                    <property role="2IBTiX" value="Request the Lab PCR test" />
                   </node>
                 </node>
               </node>
@@ -1465,288 +1414,70 @@
         </node>
       </node>
       <node concept="3n32J5" id="2Rfu8e59zkO" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWBW7" resolve="LFDPositive" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="2Rfu8e59zp5" role="2Ov1EZ">
-      <property role="TrG5h" value="LIATNegative" />
-      <node concept="3VtFpM" id="2Rfu8e59zp6" role="3VtFpR">
-        <node concept="3VtFpw" id="2Rfu8e59zp7" role="3VtFpW">
-          <node concept="UeIYj" id="2Rfu8e59zp8" role="3nfz8T">
-            <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-          </node>
-        </node>
-        <node concept="1W3xii" id="2Rfu8e59zHO" role="3VtFpW">
-          <ref role="1W3xij" node="2Rfu8e59ztH" resolve="LIATResult" />
-        </node>
-      </node>
-      <node concept="3n32J5" id="2Rfu8e59zpa" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC8j" resolve="LIATNegative" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="2Rfu8e59zrm" role="2Ov1EZ">
-      <property role="TrG5h" value="LIATPositive" />
-      <node concept="3VtFpM" id="2Rfu8e59zrn" role="3VtFpR">
-        <node concept="3VtFpw" id="2Rfu8e59zro" role="3VtFpW">
-          <node concept="UeIYj" id="2Rfu8e59zrp" role="3nfz8T">
-            <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-          </node>
-        </node>
-        <node concept="1W3xii" id="2Rfu8e59zHT" role="3VtFpW">
-          <ref role="1W3xij" node="2Rfu8e59ztH" resolve="LIATResult" />
-        </node>
-      </node>
-      <node concept="3n32J5" id="2Rfu8e59zrr" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC4n" resolve="LIATPositive" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="1s4HvCZwd23" role="2Ov1EZ">
-      <property role="TrG5h" value="PCRResultAvailable" />
-      <node concept="3VtFpM" id="1s4HvCZwd24" role="3VtFpR">
-        <node concept="3VtFpw" id="1s4HvCZwd8W" role="3VtFpW">
-          <node concept="3JJFmu" id="1s4HvCZwd9t" role="3nfz8T" />
-        </node>
-        <node concept="1kHj2w" id="1s4HvCZwdaP" role="3VtFpW">
-          <node concept="1kHjla" id="1s4HvCZwdaR" role="1kHj2_">
-            <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
-          </node>
-        </node>
-        <node concept="jcv$W" id="1s4HvCZwdd5" role="3VtFpW">
-          <property role="jcv$Z" value="3" />
-          <node concept="2IBTiW" id="1s4HvCZwde$" role="2IBTiu">
-            <property role="2IBTiX" value="Discussing result with patient" />
-          </node>
-        </node>
-        <node concept="3VtFpY" id="1s4HvCZwdjE" role="3VtFpW">
-          <node concept="1mvUOM" id="1s4HvCZwdkn" role="3VtFpT">
-            <property role="1mqNFj" value="true" />
-            <node concept="3S2u4K" id="1s4HvCZwdkS" role="1mvUOP">
-              <ref role="3TMAOB" node="2Rfu8e4WdtP" resolve="LabPCR" />
-            </node>
-          </node>
-          <node concept="3VtFpM" id="1s4HvCZwdjI" role="3VtFpZ">
-            <node concept="1kMh$d" id="1s4HvCZwdlL" role="3VtFpW">
-              <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-              <node concept="3JJFmu" id="1s4HvCZwdlN" role="1kMh$e" />
-            </node>
-          </node>
-          <node concept="3VtFpM" id="1s4HvCZwdmH" role="3VtFp$">
-            <node concept="1kMh$d" id="1s4HvCZwdnX" role="3VtFpW">
-              <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-              <node concept="3JJFmu" id="1s4HvCZwdnZ" role="1kMh$e" />
-            </node>
-          </node>
-        </node>
+        <ref role="3n32J4" node="4TDP_nWBW7" resolve="LFDComplete" />
       </node>
     </node>
     <node concept="3Vt_xe" id="2Rfu8e59ztH" role="2Ov1EZ">
       <property role="TrG5h" value="LIATResult" />
       <node concept="3VtFpM" id="2Rfu8e59ztI" role="3VtFpR">
-        <node concept="3VtFpY" id="2Rfu8e59ztJ" role="3VtFpW">
-          <node concept="3TllyP" id="2Rfu8e59ztK" role="3VtFpT">
-            <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e59ztL" role="3VtFpZ">
-            <node concept="3VtFpY" id="2Rfu8e59ztM" role="3VtFpW">
-              <node concept="1mvUOM" id="2Rfu8e59ztN" role="3VtFpT">
-                <property role="1mqNFj" value="1s4HvCZwevC/true" />
-                <node concept="3S2u4K" id="2Rfu8e59ztO" role="1mvUOP">
-                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e59ztP" role="3VtFpZ">
-                <node concept="3VtFpY" id="2Rfu8e59ztQ" role="3VtFpW">
-                  <node concept="1mvUOM" id="2Rfu8e59ztR" role="3VtFpT">
-                    <property role="1mqNFj" value="true" />
-                    <node concept="3S2u4K" id="2Rfu8e59ztS" role="1mvUOP">
-                      <ref role="3TMAOB" node="4TDP_m1T$r" resolve="LIAT" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e59ztT" role="3VtFpZ">
-                    <node concept="3VtFpw" id="2Rfu8e59ztU" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59ztV" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e59ztW" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGeE" role="2IBTiu">
-                        <property role="2IBTiX" value="Discuss admission with patient" />
-                      </node>
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGeR" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6GnbGeT" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e59ztZ" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zu0" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e59zu1" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e59zu2" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e59zu3" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e59zu4" role="3VtFp$">
-                    <node concept="3VtFpw" id="2Rfu8e59zu5" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zu6" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e59zu7" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6Gnn6Ly" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6Gnn6L$" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="L8B6Gnky0$" role="3VtFpW">
-                      <node concept="3JJFmu" id="L8B6Gnky0_" role="3JG_8_" />
-                      <node concept="3JG_m7" id="L8B6Gnky0A" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="L8B6Gnky0B" role="3JG_nS">
-                          <node concept="j3T7i" id="L8B6Gnky0C" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e59zug" role="3VtFp$">
-            <node concept="3VtFpY" id="2Rfu8e59zuh" role="3VtFpW">
-              <node concept="1mvUOM" id="2Rfu8e59zui" role="3VtFpT">
-                <property role="1mqNFj" value="true" />
-                <node concept="3S2u4K" id="2Rfu8e59zuj" role="1mvUOP">
-                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e59zuk" role="3VtFpZ">
-                <node concept="3VtFpY" id="2Rfu8e59zul" role="3VtFpW">
-                  <node concept="1mvUOM" id="2Rfu8e59zum" role="3VtFpT">
-                    <property role="1mqNFj" value="true" />
-                    <node concept="3S2u4K" id="2Rfu8e59zun" role="1mvUOP">
-                      <ref role="3TMAOB" node="4TDP_m1T$r" resolve="LIAT" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e59zuo" role="3VtFpZ">
-                    <node concept="3VtFpw" id="2Rfu8e59zup" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zuq" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e59zur" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGfJ" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6GnbGfL" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e59zuu" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zuv" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e59zuw" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e59zux" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e59zuy" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e59zuz" role="3VtFp$">
-                    <node concept="3VtFpw" id="2Rfu8e59zu$" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zu_" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e59zuA" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6Gnn6M6" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6Gnn6M8" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="L8B6Gnky1o" role="3VtFpW">
-                      <node concept="3JJFmu" id="L8B6Gnky1p" role="3JG_8_" />
-                      <node concept="3JG_m7" id="L8B6Gnky1q" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="L8B6Gnky1r" role="3JG_nS">
-                          <node concept="j3T7i" id="L8B6Gnky1s" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
+        <node concept="3VtFpw" id="4mmkymQprhj" role="3VtFpW">
+          <node concept="UeIYj" id="4mmkymQprhY" role="3nfz8T">
+            <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
           </node>
         </node>
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="2Rfu8e59zy2" role="2Ov1EZ">
-      <property role="TrG5h" value="PCRComplete" />
-      <node concept="3VtFpM" id="2Rfu8e59zy3" role="3VtFpR">
-        <node concept="jcv$W" id="2Rfu8e59zy4" role="3VtFpW">
+        <node concept="jcv$W" id="4mmkymQprlH" role="3VtFpW">
           <property role="jcv$Z" value="1" />
-        </node>
-        <node concept="3VtFpY" id="2Rfu8e59zy5" role="3VtFpW">
-          <node concept="3TllyP" id="2Rfu8e59zy6" role="3VtFpT">
-            <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
+          <node concept="2IBTiW" id="4mmkymQprms" role="2IBTiu">
+            <property role="2IBTiX" value="Collect the sample" />
           </node>
-          <node concept="3VtFpM" id="2Rfu8e59zy7" role="3VtFpZ">
-            <node concept="3VtFpY" id="2Rfu8e59zy8" role="3VtFpW">
-              <node concept="1mvUOM" id="2Rfu8e59zy9" role="3VtFpT">
-                <property role="1mqNFj" value="1s4HvCZwevC/true" />
-                <node concept="3S2u4K" id="2Rfu8e59zya" role="1mvUOP">
-                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-                </node>
+        </node>
+        <node concept="3VtFpw" id="4mmkymQpriE" role="3VtFpW">
+          <node concept="3JJFmu" id="4mmkymQprjn" role="3nfz8T" />
+        </node>
+        <node concept="1kHj2w" id="4mmkymQprk5" role="3VtFpW">
+          <node concept="1kHjla" id="4mmkymQprk7" role="1kHj2_">
+            <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
+          </node>
+        </node>
+        <node concept="3VtFpY" id="4mmkymQpqTo" role="3VtFpW">
+          <node concept="1mvUOM" id="4mmkymQpqTw" role="3VtFpT">
+            <property role="1mqNFj" value="1s4HvCZwevC/true" />
+            <node concept="3S2u4K" id="4mmkymQpqTA" role="1mvUOP">
+              <ref role="3TMAOB" node="4TDP_m1T$r" resolve="LIAT" />
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4mmkymQpqTq" role="3VtFpZ">
+            <node concept="3VtFpY" id="4mmkymQpqTS" role="3VtFpW">
+              <node concept="r166y" id="4mmkymQpqTT" role="3VtFpT">
+                <ref role="3DyUPb" node="L8B6Gnb_Fx" resolve="Red" />
               </node>
-              <node concept="3VtFpM" id="2Rfu8e59zyb" role="3VtFpZ">
-                <node concept="3VtFpY" id="2Rfu8e59zyc" role="3VtFpW">
-                  <node concept="1mvUOM" id="2Rfu8e59zyd" role="3VtFpT">
-                    <property role="1mqNFj" value="true" />
-                    <node concept="3S2u4K" id="2Rfu8e59zye" role="1mvUOP">
-                      <ref role="3TMAOB" node="2Rfu8e4WdtP" resolve="LabPCR" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e59zyf" role="3VtFpZ">
-                    <node concept="3VtFpw" id="2Rfu8e59zyg" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zyh" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e59zyi" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGgB" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6GnbGgD" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e59zyl" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zym" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e59zyn" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e59zyo" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e59zyp" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
+              <node concept="3VtFpM" id="4mmkymQpqTU" role="3VtFpZ">
+                <node concept="1kMh$d" id="4mmkymQpqTV" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
+                  <node concept="3JJFmu" id="4mmkymQpqTW" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQpqTX" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQpqTY" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQpqTZ" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfIr" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfIv" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                       </node>
                     </node>
                   </node>
-                  <node concept="3VtFpM" id="2Rfu8e59zyq" role="3VtFp$">
-                    <node concept="3VtFpw" id="2Rfu8e59zyr" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zys" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e59zyt" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGh3" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                      <node concept="3JJFmu" id="L8B6GnbGh5" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e59zyw" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zyx" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e59zyy" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e59zyz" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e59zy$" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="4mmkymQpqU1" role="3VtFp$">
+                <node concept="1kMh$d" id="4mmkymQpqU2" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
+                  <node concept="3JJFmu" id="4mmkymQpqU3" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQrfIy" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfIz" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfI$" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfI_" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfIA" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                       </node>
                     </node>
                   </node>
@@ -1754,190 +1485,40 @@
               </node>
             </node>
           </node>
-          <node concept="3VtFpM" id="2Rfu8e59zyA" role="3VtFp$">
-            <node concept="3VtFpY" id="2Rfu8e59zyB" role="3VtFpW">
-              <node concept="1mvUOM" id="2Rfu8e59zyC" role="3VtFpT">
-                <property role="1mqNFj" value="true" />
-                <node concept="3S2u4K" id="2Rfu8e59zyD" role="1mvUOP">
-                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e59zyE" role="3VtFpZ">
-                <node concept="3VtFpY" id="2Rfu8e59zyF" role="3VtFpW">
-                  <node concept="1mvUOM" id="2Rfu8e59zyG" role="3VtFpT">
-                    <property role="1mqNFj" value="true" />
-                    <node concept="3S2u4K" id="2Rfu8e59zyH" role="1mvUOP">
-                      <ref role="3TMAOB" node="2Rfu8e4WdtP" resolve="LabPCR" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e59zyI" role="3VtFpZ">
-                    <node concept="3VtFpw" id="2Rfu8e59zyJ" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zyK" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e59zyL" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGhv" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6GnbGhx" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e59zyO" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zyP" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e59zyQ" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e59zyR" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e59zyS" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e59zyT" role="3VtFp$">
-                    <node concept="3VtFpw" id="2Rfu8e59zyU" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zyV" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e59zyW" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGhV" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                      <node concept="3JJFmu" id="L8B6GnbGhX" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e59zyZ" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e59zz0" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e59zz1" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e59zz2" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e59zz3" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="2Rfu8e59zz5" role="3n3c3i">
-        <ref role="3n32J4" node="2Rfu8e4WdjT" resolve="PCRComplete" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="2Rfu8e59zBt" role="2Ov1EZ">
-      <property role="TrG5h" value="PatientLFDNegative" />
-      <node concept="3VtFpM" id="2Rfu8e59zBu" role="3VtFpR">
-        <node concept="3VtFpw" id="2Rfu8e59zBv" role="3VtFpW">
-          <node concept="3JJFmu" id="2Rfu8e59zBw" role="3nfz8T" />
-        </node>
-        <node concept="jcv$W" id="2Rfu8e59zBx" role="3VtFpW">
-          <property role="jcv$Z" value="3" />
-          <node concept="2IBTiW" id="2Rfu8e59zBy" role="2IBTiu">
-            <property role="2IBTiX" value="Consult with patient, determine symptomatic/asymptomatic" />
-          </node>
-        </node>
-        <node concept="3VtFpY" id="2Rfu8e59zBz" role="3VtFpW">
-          <node concept="3TllyP" id="2Rfu8e59zB$" role="3VtFpT">
-            <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e59zB_" role="3VtFpZ">
-            <node concept="3VtFpY" id="2Rfu8e59zBA" role="3VtFpW">
-              <node concept="jeBDq" id="2Rfu8e59zBB" role="3VtFpT">
-                <node concept="xbsuO" id="2Rfu8e59zBC" role="x58j7">
-                  <node concept="3cmrfG" id="2Rfu8e59zBD" role="xbgmq">
-                    <property role="3cmrfH" value="40" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e59zBE" role="3VtFpZ">
-                <node concept="jcv$W" id="2Rfu8e59zBF" role="3VtFpW">
-                  <property role="jcv$Z" value="2" />
-                  <node concept="2IBTiW" id="2Rfu8e59zBG" role="2IBTiu">
-                    <property role="2IBTiX" value="Administer LIAT swab" />
-                  </node>
-                </node>
-                <node concept="3VtFpw" id="2Rfu8e59zBH" role="3VtFpW">
-                  <node concept="UeIYj" id="2Rfu8e59zBI" role="3nfz8T">
-                    <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e59zBJ" role="2IBTiu">
-                    <property role="2IBTiX" value="Go to the Liat machine" />
-                  </node>
-                </node>
-                <node concept="3z7BTx" id="2Rfu8e59zBK" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e59zBL" role="3z7BTw">
-                    <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
-                    <node concept="2_cGdR" id="2Rfu8e59zBM" role="jeBCe">
-                      <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e59zBN" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e59zBO" role="jeBCe">
-                      <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e59zBP" role="2_cGdO" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e59zBQ" role="3VtFp$">
-                <node concept="3z7BTx" id="2Rfu8e59zBR" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e59zBS" role="3z7BTw">
-                    <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                    <node concept="2_cGdR" id="2Rfu8e59zBT" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e59zBU" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e59zBV" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e59zBW" role="2_cGdO" />
-                    </node>
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e59zBX" role="2IBTiu">
-                    <property role="2IBTiX" value="Request the Lab PCR test" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e59zBY" role="3VtFp$">
-            <node concept="3z7BTx" id="2Rfu8e59zC4" role="3VtFpW">
-              <node concept="3z7ADy" id="2Rfu8e59zC5" role="3z7BTw">
-                <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                <node concept="2_cGdR" id="2Rfu8e59zC6" role="jeBCe">
-                  <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                  <node concept="3JJFmu" id="2Rfu8e59zC7" role="2_cGdO" />
-                </node>
-                <node concept="2_cGdR" id="2Rfu8e59zC8" role="jeBCe">
-                  <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                  <node concept="3JGL$I" id="2Rfu8e59zC9" role="2_cGdO" />
-                </node>
-              </node>
-              <node concept="2IBTiW" id="2Rfu8e59zCa" role="2IBTiu">
-                <property role="2IBTiX" value="Request the Lab PCR test" />
-              </node>
-            </node>
-            <node concept="3VtFpY" id="1Pt3svORp$0" role="3VtFpW">
-              <node concept="r166y" id="1Pt3svORp$1" role="3VtFpT">
+          <node concept="3VtFpM" id="4mmkymQpqUo" role="3VtFp$">
+            <node concept="3VtFpY" id="4mmkymQpqUs" role="3VtFpW">
+              <node concept="r166y" id="4mmkymQpqUt" role="3VtFpT">
                 <ref role="3DyUPb" node="L8B6GnbCVP" resolve="Amber" />
               </node>
-              <node concept="3VtFpM" id="1Pt3svORp$2" role="3VtFpZ">
-                <node concept="1kMh$d" id="1Pt3svORp$3" role="3VtFpW">
+              <node concept="3VtFpM" id="4mmkymQpqUu" role="3VtFpZ">
+                <node concept="1kMh$d" id="4mmkymQpqUv" role="3VtFpW">
                   <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                  <node concept="3JJFmu" id="1Pt3svORp$4" role="1kMh$e" />
+                  <node concept="3JJFmu" id="4mmkymQpqUw" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQrfIR" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfIS" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfIT" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfIU" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfIV" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
-              <node concept="3VtFpM" id="1Pt3svORp$5" role="3VtFp$">
-                <node concept="1kMh$d" id="1Pt3svORp$6" role="3VtFpW">
+              <node concept="3VtFpM" id="4mmkymQpqU_" role="3VtFp$">
+                <node concept="1kMh$d" id="4mmkymQpqUA" role="3VtFpW">
                   <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
-                  <node concept="3JJFmu" id="1Pt3svORp$7" role="1kMh$e" />
+                  <node concept="3JJFmu" id="4mmkymQpqUB" role="1kMh$e" />
                 </node>
-              </node>
-            </node>
-            <node concept="3JG_m1" id="2Rfu8e59zCd" role="3VtFpW">
-              <node concept="3JJFmu" id="2Rfu8e59zCe" role="3JG_8_" />
-              <node concept="3JG_m7" id="2Rfu8e59zCf" role="3JG_nW">
-                <node concept="2Vh8JZ" id="2Rfu8e59zCg" role="3JG_nS">
-                  <node concept="j3T7i" id="2Rfu8e59zCh" role="2Vh8JW">
-                    <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                <node concept="3JG_m1" id="4mmkymQrfJ3" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfJ4" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfJ5" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfJ6" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfJ7" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>
@@ -1945,8 +1526,8 @@
           </node>
         </node>
       </node>
-      <node concept="3n32J5" id="2Rfu8e59zCp" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC0r" resolve="LFDNegative" />
+      <node concept="3n32J5" id="4mmkymQprgE" role="3n3c3i">
+        <ref role="3n32J4" node="4TDP_nWC4n" resolve="LIATComplete" />
       </node>
     </node>
   </node>
@@ -1999,91 +1580,8 @@
                 <property role="XO5TV" value="$2vkoOOycS/LOW" />
               </node>
               <node concept="3VtFpM" id="4TDP_nUJmv" role="3VtFpZ">
-                <node concept="3VtFpY" id="4TDP_nUJlr" role="3VtFpW">
-                  <node concept="3TllyP" id="4TDP_nUJlY" role="3VtFpT">
-                    <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
-                  </node>
-                  <node concept="3VtFpM" id="4TDP_nUJlv" role="3VtFpZ">
-                    <node concept="3JG_m1" id="4TDP_nUJmE" role="3VtFpW">
-                      <node concept="3JJFmu" id="4TDP_nUJmG" role="3JG_8_" />
-                      <node concept="3JG_m4" id="4TDP_nUJmN" role="3JG_nW">
-                        <node concept="3JGL$I" id="4TDP_nUJn3" role="3JG_nY" />
-                      </node>
-                    </node>
-                    <node concept="3VtFpw" id="4TDP_nUJnc" role="3VtFpW">
-                      <node concept="UeIYj" id="4TDP_nUJnm" role="3nfz8T">
-                        <ref role="Udx8D" node="4TDP_lPwuE" resolve="TriageSideRoom" />
-                      </node>
-                    </node>
-                    <node concept="1kHj2w" id="4TDP_nUJnx" role="3VtFpW">
-                      <node concept="1kHjla" id="4TDP_nUJnz" role="1kHj2_">
-                        <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
-                      </node>
-                    </node>
-                    <node concept="jcv$W" id="4TDP_nUJnR" role="3VtFpW">
-                      <property role="jcv$Z" value="2" />
-                      <node concept="2IBTiW" id="4TDP_nUJo2" role="2IBTiu">
-                        <property role="2IBTiX" value="Administer LFD test" />
-                      </node>
-                    </node>
-                    <node concept="3JG_m1" id="4TDP_nUJpY" role="3VtFpW">
-                      <node concept="3JJFmu" id="4TDP_nUJq0" role="3JG_8_" />
-                      <node concept="3JG_m5" id="4TDP_nUJqs" role="3JG_nW" />
-                    </node>
-                    <node concept="3VtFpY" id="4TDP_nUJog" role="3VtFpW">
-                      <node concept="jeBDq" id="4TDP_nUJoA" role="3VtFpT">
-                        <node concept="xbsuO" id="4TDP_nUJoC" role="x58j7">
-                          <node concept="3cmrfG" id="4TDP_nUJx5" role="xbgmq">
-                            <property role="3cmrfH" value="90" />
-                          </node>
-                        </node>
-                      </node>
-                      <node concept="3VtFpM" id="4TDP_nUJok" role="3VtFpZ">
-                        <node concept="3z7BTx" id="4TDP_nUJt2" role="3VtFpW">
-                          <node concept="3z7ADy" id="4TDP_nUJt4" role="3z7BTw">
-                            <ref role="3z7AD_" node="4TDP_nUJBD" resolve="ConductTrackAndTraceLFD" />
-                            <node concept="2_cGdR" id="4TDP_nUJt8" role="jeBCe">
-                              <ref role="XnLJh" node="4TDP_nUJDL" resolve="patient" />
-                              <node concept="3JJFmu" id="4TDP_nUJtc" role="2_cGdO" />
-                            </node>
-                            <node concept="2_cGdR" id="4TDP_nUJtf" role="jeBCe">
-                              <ref role="XnLJh" node="4TDP_nUJDN" resolve="replyTo" />
-                              <node concept="3JGL$I" id="4TDP_nUJtl" role="2_cGdO" />
-                            </node>
-                          </node>
-                          <node concept="2IBTiW" id="4TDP_nUJxg" role="2IBTiu">
-                            <property role="2IBTiX" value="start the LFD test and log result in track and trace" />
-                          </node>
-                        </node>
-                        <node concept="1W3xii" id="4TDP_nUJzb" role="3VtFpW">
-                          <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
-                        </node>
-                      </node>
-                      <node concept="3VtFpM" id="4TDP_nXWSZ" role="3VtFp$">
-                        <node concept="3z7BTx" id="4TDP_nXWT3" role="3VtFpW">
-                          <node concept="3z7ADy" id="4TDP_nXWT5" role="3z7BTw">
-                            <ref role="3z7AD_" node="4TDP_n2Uye" resolve="ConductLFD" />
-                            <node concept="2_cGdR" id="4TDP_nXWTE" role="jeBCe">
-                              <ref role="XnLJh" node="4TDP_n2U$g" resolve="patient" />
-                              <node concept="3JJFmu" id="4TDP_nXWTI" role="2_cGdO" />
-                            </node>
-                            <node concept="2_cGdR" id="4TDP_nXWTL" role="jeBCe">
-                              <ref role="XnLJh" node="4TDP_n2VUp" resolve="replyTo" />
-                              <node concept="3JGL$I" id="4TDP_nXWTR" role="2_cGdO" />
-                            </node>
-                          </node>
-                          <node concept="2IBTiW" id="4TDP_nXWTU" role="2IBTiu">
-                            <property role="2IBTiX" value="Start the test and ask patient to wait in side room" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="4TDP_nXWSS" role="3VtFp$">
-                    <node concept="1W3xii" id="4TDP_nXWSW" role="3VtFpW">
-                      <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
-                    </node>
-                  </node>
+                <node concept="1W3xii" id="4mmkymQt3LF" role="3VtFpW">
+                  <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
                 </node>
               </node>
               <node concept="3VtFpM" id="4TDP_nUJxi" role="3VtFp$">
@@ -2115,149 +1613,6 @@
         </node>
       </node>
       <node concept="EZebP" id="6o2BuIxg_kC" role="3n3c3i" />
-    </node>
-    <node concept="3Vt_xe" id="4TDP_nXWTW" role="2Ov1EZ">
-      <property role="TrG5h" value="PatientLFDPositive" />
-      <node concept="3VtFpM" id="4TDP_nXWTX" role="3VtFpR">
-        <node concept="3VtFpw" id="4TDP_nXWVP" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nXWVV" role="3nfz8T" />
-        </node>
-        <node concept="1kHj2w" id="4TDP_nXWW2" role="3VtFpW">
-          <node concept="1kHjla" id="4TDP_nXWW4" role="1kHj2_">
-            <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
-          </node>
-        </node>
-        <node concept="1kMh$d" id="L8B6GnbGnx" role="3VtFpW">
-          <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-          <node concept="3JJFmu" id="L8B6GnbGnz" role="1kMh$e" />
-        </node>
-        <node concept="3JG_m1" id="4TDP_nXWXF" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nXWXH" role="3JG_8_" />
-          <node concept="3JG_m7" id="4TDP_nXWXU" role="3JG_nW">
-            <node concept="2Vh8JZ" id="4TDP_nXWY3" role="3JG_nS">
-              <node concept="j3T7i" id="4TDP_nXWY7" role="2Vh8JW">
-                <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_nXWVN" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWBW7" resolve="LFDPositive" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="4TDP_nXWYa" role="2Ov1EZ">
-      <property role="TrG5h" value="PatientLFDNegative" />
-      <node concept="3VtFpM" id="4TDP_nXWYb" role="3VtFpR">
-        <node concept="3VtFpw" id="4TDP_nXX0d" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nXX0p" role="3nfz8T" />
-        </node>
-        <node concept="1kHj2w" id="4TDP_nXX0A" role="3VtFpW">
-          <node concept="1kHjla" id="4TDP_nXX0C" role="1kHj2_">
-            <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
-          </node>
-        </node>
-        <node concept="3z7BTx" id="4TDP_nXWWg" role="3VtFpW">
-          <node concept="3z7ADy" id="4TDP_nXWWi" role="3z7BTw">
-            <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
-            <node concept="2_cGdR" id="4TDP_nXWWP" role="jeBCe">
-              <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
-              <node concept="3JJFmu" id="4TDP_nXWWT" role="2_cGdO" />
-            </node>
-            <node concept="2_cGdR" id="4TDP_nXWWW" role="jeBCe">
-              <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
-              <node concept="3JGL$I" id="4TDP_nXWX2" role="2_cGdO" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_oaZsm" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC0r" resolve="LFDNegative" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="4TDP_nXX0O" role="2Ov1EZ">
-      <property role="TrG5h" value="LIATPositive" />
-      <node concept="3VtFpM" id="4TDP_nXX0P" role="3VtFpR">
-        <node concept="3VtFpw" id="4TDP_nXX34" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nXX3a" role="3nfz8T" />
-        </node>
-        <node concept="jcv$W" id="4TDP_nXX3h" role="3VtFpW">
-          <property role="jcv$Z" value="2" />
-          <node concept="2IBTiW" id="4TDP_nXX3m" role="2IBTiu">
-            <property role="2IBTiX" value="Admit the patient" />
-          </node>
-        </node>
-        <node concept="1kMh$d" id="L8B6GnbGnV" role="3VtFpW">
-          <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-          <node concept="3JJFmu" id="L8B6GnbGnX" role="1kMh$e" />
-        </node>
-        <node concept="3JG_m1" id="4TDP_nXXaz" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nXXa_" role="3JG_8_" />
-          <node concept="3JG_m7" id="4TDP_nXXaM" role="3JG_nW">
-            <node concept="2Vh8JZ" id="4TDP_nXXaS" role="3JG_nS">
-              <node concept="j3T7i" id="4TDP_nXXaY" role="2Vh8JW">
-                <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_nXX31" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC4n" resolve="LIATPositive" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="4TDP_nXX5M" role="2Ov1EZ">
-      <property role="TrG5h" value="LIATNegative" />
-      <node concept="3VtFpM" id="4TDP_nXX5N" role="3VtFpR">
-        <node concept="3VtFpw" id="4TDP_nXX5O" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nXX5P" role="3nfz8T" />
-        </node>
-        <node concept="jcv$W" id="4TDP_nXX5Q" role="3VtFpW">
-          <property role="jcv$Z" value="2" />
-          <node concept="2IBTiW" id="4TDP_nXX5R" role="2IBTiu">
-            <property role="2IBTiX" value="Admit the patient" />
-          </node>
-        </node>
-        <node concept="1kMh$d" id="L8B6GnbGol" role="3VtFpW">
-          <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
-          <node concept="3JJFmu" id="L8B6GnbGon" role="1kMh$e" />
-        </node>
-        <node concept="3JG_m1" id="4TDP_nXXb9" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nXXbb" role="3JG_8_" />
-          <node concept="3JG_m7" id="4TDP_nXXbo" role="3JG_nW">
-            <node concept="2Vh8JZ" id="4TDP_nXXbu" role="3JG_nS">
-              <node concept="j3T7i" id="4TDP_nXXb$" role="2Vh8JW">
-                <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_nXXao" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC8j" resolve="LIATNegative" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="4TDP_nXWLP" role="2Ov1EZ">
-      <property role="TrG5h" value="TrackAndTrace" />
-      <node concept="3VtFpM" id="4TDP_nXWLQ" role="3VtFpR">
-        <node concept="3VtFpw" id="4TDP_nXWNg" role="3VtFpW">
-          <node concept="UeIYj" id="4TDP_nXWNm" role="3nfz8T">
-            <ref role="Udx8D" node="4TDP_lPwuE" resolve="TriageSideRoom" />
-          </node>
-          <node concept="2IBTiW" id="4TDP_nXWN$" role="2IBTiu">
-            <property role="2IBTiX" value="Go to the room where tested the patient" />
-          </node>
-        </node>
-        <node concept="jcv$W" id="4TDP_nXWNt" role="3VtFpW">
-          <property role="jcv$Z" value="2" />
-          <node concept="2IBTiW" id="4TDP_nXWNy" role="2IBTiu">
-            <property role="2IBTiX" value="Register the test result" />
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_nXWNa" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWBOe" resolve="LFDTrackAndTrace" />
-      </node>
     </node>
     <node concept="3Vt_xe" id="th5uJCfI7p" role="2Ov1EZ">
       <property role="TrG5h" value="SendPatientToWaitingRoom" />
@@ -2366,54 +1721,6 @@
       </node>
       <node concept="3n32J5" id="4TDP_n2VU1" role="3n3c3i">
         <ref role="3n32J4" node="4TDP_n2UrY" resolve="XRay" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="4TDP_m1SiD" role="2Ov1EZ">
-      <property role="TrG5h" value="RequestLIAT" />
-      <node concept="3VtFpM" id="4TDP_m1SiE" role="3VtFpR">
-        <node concept="3z7BTx" id="4TDP_m1Sox" role="3VtFpW">
-          <node concept="3z7ADy" id="4TDP_m1Soz" role="3z7BTw">
-            <ref role="3z7AD_" node="4TDP_n2Vxd" resolve="IsLIATReady" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="4TDP_m1SV_" role="2Ov1EZ">
-      <property role="TrG5h" value="GiveLIATTest" />
-      <node concept="3VtFpM" id="4TDP_m1SVA" role="3VtFpR">
-        <node concept="3VtFpw" id="4TDP_m1SZU" role="3VtFpW">
-          <node concept="UeIYj" id="4TDP_m1T0Q" role="3nfz8T">
-            <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-          </node>
-        </node>
-        <node concept="jcv$W" id="4TDP_m1T3s" role="3VtFpW">
-          <property role="jcv$Z" value="2" />
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_n2VU4" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_n2VBf" resolve="LIATIsReady" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="4TDP_m1TUS" role="2Ov1EZ">
-      <property role="TrG5h" value="TreatPatientPositive" />
-      <node concept="3VtFpM" id="4TDP_m1TUT" role="3VtFpR">
-        <node concept="jcv$W" id="4TDP_m1U4p" role="3VtFpW">
-          <property role="jcv$Z" value="5" />
-          <node concept="2IBTiW" id="4TDP_m1U69" role="2IBTiu">
-            <property role="2IBTiX" value="do some action" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="4TDP_m1U9u" role="2Ov1EZ">
-      <property role="TrG5h" value="TreatPatientNegative" />
-      <node concept="3VtFpM" id="4TDP_m1U9v" role="3VtFpR">
-        <node concept="jcv$W" id="4TDP_m1U9w" role="3VtFpW">
-          <property role="jcv$Z" value="5" />
-          <node concept="2IBTiW" id="4TDP_m1U9x" role="2IBTiu">
-            <property role="2IBTiX" value="do some action" />
-          </node>
-        </node>
       </node>
     </node>
     <node concept="3Vt_xe" id="4_Lh49vyh7G" role="2Ov1EZ">
@@ -2707,7 +2014,7 @@
           <node concept="3VtFpM" id="4TDP_mZ2il" role="3S2vig">
             <node concept="3z7BTx" id="4TDP_mZ2iB" role="3VtFpW">
               <node concept="3z7ADy" id="4TDP_mZ2iD" role="3z7BTw">
-                <ref role="3z7AD_" node="4TDP_nWBW7" resolve="LFDPositive" />
+                <ref role="3z7AD_" node="4TDP_nWBW7" resolve="LFDComplete" />
                 <node concept="2_cGdR" id="4TDP_n0pE4" role="jeBCe">
                   <ref role="XnLJh" node="4TDP_nWBYv" resolve="patient" />
                   <node concept="3JJFmu" id="4TDP_n0pE8" role="2_cGdO" />
@@ -2719,14 +2026,14 @@
             </node>
           </node>
           <node concept="3VtFpM" id="4TDP_mZ2ip" role="3S2viG">
-            <node concept="3z7BTx" id="4TDP_mZ2k9" role="3VtFpW">
-              <node concept="3z7ADy" id="4TDP_mZ2kb" role="3z7BTw">
-                <ref role="3z7AD_" node="4TDP_nWC0r" resolve="LFDNegative" />
-                <node concept="2_cGdR" id="4TDP_n0pEb" role="jeBCe">
-                  <ref role="XnLJh" node="4TDP_nWC0s" resolve="patient" />
-                  <node concept="3JJFmu" id="4TDP_n0pEf" role="2_cGdO" />
+            <node concept="3z7BTx" id="4mmkymQpr7F" role="3VtFpW">
+              <node concept="3z7ADy" id="4mmkymQpr7G" role="3z7BTw">
+                <ref role="3z7AD_" node="4TDP_nWBW7" resolve="LFDComplete" />
+                <node concept="2_cGdR" id="4mmkymQpr7J" role="jeBCe">
+                  <ref role="XnLJh" node="4TDP_nWBYv" resolve="patient" />
+                  <node concept="3JJFmu" id="4mmkymQpr7N" role="2_cGdO" />
                 </node>
-                <node concept="3JJ7Rl" id="4TDP_mZ2kf" role="1n$ajB">
+                <node concept="3JJ7Rl" id="4mmkymQpr7Q" role="1n$ajB">
                   <property role="3JJ7Ra" value="replyTo" />
                 </node>
               </node>
@@ -2884,16 +2191,57 @@
             <property role="2IBTiX" value="Administer the test" />
           </node>
         </node>
-        <node concept="3z7BTx" id="4TDP_mZ4Bq" role="3VtFpW">
-          <node concept="3z7ADy" id="4TDP_mZ4Br" role="3z7BTw">
-            <ref role="3z7AD_" node="4TDP_n2Uye" resolve="ConductLFD" />
-            <node concept="2_cGdR" id="4TDP_mZ4Bs" role="jeBCe">
-              <ref role="XnLJh" node="4TDP_n2U$g" resolve="patient" />
-              <node concept="3JJFmu" id="4TDP_mZ4Bt" role="2_cGdO" />
+        <node concept="3VtFpY" id="4mmkymQpr$j" role="3VtFpW">
+          <node concept="jeBDq" id="4mmkymQpr$k" role="3VtFpT">
+            <node concept="xbsuO" id="4mmkymQpr$l" role="x58j7">
+              <node concept="3cmrfG" id="4mmkymQpr_s" role="xbgmq">
+                <property role="3cmrfH" value="50" />
+              </node>
             </node>
-            <node concept="2_cGdR" id="4TDP_mZ4Bu" role="jeBCe">
-              <ref role="XnLJh" node="4TDP_n2VUp" resolve="replyTo" />
-              <node concept="3JGL$I" id="4TDP_mZ4Bv" role="2_cGdO" />
+          </node>
+          <node concept="3VtFpM" id="4mmkymQpr$n" role="3VtFpZ">
+            <node concept="3VtFpY" id="4mmkymQpr$o" role="3VtFpW">
+              <node concept="3TllyP" id="4mmkymQpr$p" role="3VtFpT">
+                <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
+              </node>
+              <node concept="3VtFpM" id="4mmkymQpr$q" role="3VtFpZ">
+                <node concept="3z7BTx" id="4mmkymQpr$r" role="3VtFpW">
+                  <node concept="3z7ADy" id="4mmkymQpr$s" role="3z7BTw">
+                    <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
+                    <node concept="2_cGdR" id="4mmkymQpr$t" role="jeBCe">
+                      <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
+                      <node concept="3JJFmu" id="4mmkymQpr$u" role="2_cGdO" />
+                    </node>
+                    <node concept="2_cGdR" id="4mmkymQpr$v" role="jeBCe">
+                      <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
+                      <node concept="3JGL$I" id="4mmkymQpr$w" role="2_cGdO" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="4mmkymQpr$x" role="3VtFp$">
+                <node concept="3z7BTx" id="4mmkymQpr$y" role="3VtFpW">
+                  <node concept="3z7ADy" id="4mmkymQpr$z" role="3z7BTw">
+                    <ref role="3z7AD_" node="4TDP_n2Uye" resolve="ConductLFD" />
+                    <node concept="2_cGdR" id="4mmkymQpr$$" role="jeBCe">
+                      <ref role="XnLJh" node="4TDP_n2U$g" resolve="patient" />
+                      <node concept="3JJFmu" id="4mmkymQpr$_" role="2_cGdO" />
+                    </node>
+                    <node concept="2_cGdR" id="4mmkymQpr$A" role="jeBCe">
+                      <ref role="XnLJh" node="4TDP_n2VUp" resolve="replyTo" />
+                      <node concept="3JGL$I" id="4mmkymQpr$B" role="2_cGdO" />
+                    </node>
+                  </node>
+                  <node concept="2IBTiW" id="4mmkymQpr$C" role="2IBTiu">
+                    <property role="2IBTiX" value="50% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4mmkymQpr$D" role="3VtFp$">
+            <node concept="1W3xii" id="4mmkymQpr$E" role="3VtFpW">
+              <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
             </node>
           </node>
         </node>
@@ -2914,616 +2262,231 @@
         <ref role="3n32J4" node="4TDP_n2Vsp" resolve="PatientWaitingForMajorsABDoctor" />
       </node>
     </node>
-    <node concept="3Vt_xe" id="$2vkoOQeP4" role="2Ov1EZ">
-      <property role="TrG5h" value="PatientLFDPositive" />
-      <node concept="3VtFpM" id="$2vkoOQeP5" role="3VtFpR">
-        <node concept="3VtFpw" id="4WX2mA8sgwU" role="3VtFpW">
-          <node concept="3JJFmu" id="4WX2mA8sgxd" role="3nfz8T" />
+    <node concept="3Vt_xe" id="4mmkymQpr_W" role="2Ov1EZ">
+      <property role="TrG5h" value="LFDCompleted" />
+      <node concept="3VtFpM" id="4mmkymQpr_X" role="3VtFpR">
+        <node concept="3VtFpw" id="4mmkymQpr_Y" role="3VtFpW">
+          <node concept="3JJFmu" id="4mmkymQpr_Z" role="3nfz8T" />
         </node>
-        <node concept="jcv$W" id="$2vkoOQePM" role="3VtFpW">
+        <node concept="jcv$W" id="4mmkymQprA0" role="3VtFpW">
           <property role="jcv$Z" value="3" />
-          <node concept="2IBTiW" id="2Rfu8e4UvFt" role="2IBTiu">
-            <property role="2IBTiX" value="Consult with patient, determine symptomatic/asymptomatic" />
+          <node concept="2IBTiW" id="4mmkymQprA1" role="2IBTiu">
+            <property role="2IBTiX" value="Consult with patient on LFT result" />
           </node>
         </node>
-        <node concept="3VtFpY" id="2Rfu8e4UvGI" role="3VtFpW">
-          <node concept="3TllyP" id="2Rfu8e4UvHG" role="3VtFpT">
-            <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
+        <node concept="3VtFpY" id="4mmkymQprA2" role="3VtFpW">
+          <node concept="1mvUOM" id="4mmkymQprA3" role="3VtFpT">
+            <property role="1mqNFj" value="1s4HvCZwevC/true" />
+            <node concept="3S2u4K" id="4mmkymQprA4" role="1mvUOP">
+              <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
+            </node>
           </node>
-          <node concept="3VtFpM" id="2Rfu8e4UvGM" role="3VtFpZ">
-            <node concept="3z7BTx" id="2Rfu8e4UvI_" role="3VtFpW">
-              <node concept="3z7ADy" id="2Rfu8e4UvIB" role="3z7BTw">
-                <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                <node concept="2_cGdR" id="2Rfu8e4UvJx" role="jeBCe">
-                  <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                  <node concept="3JJFmu" id="2Rfu8e4UvKr" role="2_cGdO" />
-                </node>
-                <node concept="2_cGdR" id="2Rfu8e4UvKu" role="jeBCe">
-                  <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                  <node concept="3JGL$I" id="2Rfu8e4UvLP" role="2_cGdO" />
-                </node>
-              </node>
-              <node concept="2IBTiW" id="2Rfu8e4Uwto" role="2IBTiu">
-                <property role="2IBTiX" value="Request the Lab PCR test" />
+          <node concept="3VtFpM" id="4mmkymQprA5" role="3VtFpZ">
+            <node concept="jcv$W" id="4mmkymQprA6" role="3VtFpW">
+              <property role="jcv$Z" value="2" />
+              <node concept="2IBTiW" id="4mmkymQprA7" role="2IBTiu">
+                <property role="2IBTiX" value="Take a LIAT swab" />
               </node>
             </node>
-            <node concept="3VtFpY" id="L8B6Gnn6MS" role="3VtFpW">
-              <node concept="r166y" id="L8B6Gnn6Ng" role="3VtFpT">
-                <ref role="3DyUPb" node="L8B6Gnb_Fx" resolve="Red" />
+            <node concept="3VtFpw" id="4mmkymQprA8" role="3VtFpW">
+              <node concept="UeIYj" id="4mmkymQprA9" role="3nfz8T">
+                <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
               </node>
-              <node concept="3VtFpM" id="L8B6Gnn6MW" role="3VtFpZ">
-                <node concept="1kMh$d" id="L8B6Gnn6Nj" role="3VtFpW">
+            </node>
+            <node concept="3z7BTx" id="4mmkymQprAa" role="3VtFpW">
+              <node concept="3z7ADy" id="4mmkymQprAb" role="3z7BTw">
+                <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
+                <node concept="2_cGdR" id="4mmkymQprAc" role="jeBCe">
+                  <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
+                  <node concept="3JJFmu" id="4mmkymQprAd" role="2_cGdO" />
+                </node>
+                <node concept="2_cGdR" id="4mmkymQprAe" role="jeBCe">
+                  <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
+                  <node concept="3JGL$I" id="4mmkymQprAf" role="2_cGdO" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4mmkymQprAg" role="3VtFp$">
+            <node concept="3VtFpY" id="4mmkymQprAh" role="3VtFpW">
+              <node concept="r166y" id="4mmkymQprAi" role="3VtFpT">
+                <ref role="3DyUPb" node="L8B6GnbCVP" resolve="Amber" />
+              </node>
+              <node concept="3VtFpM" id="4mmkymQprAj" role="3VtFpZ">
+                <node concept="1kMh$d" id="4mmkymQprAk" role="3VtFpW">
                   <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                  <node concept="3JJFmu" id="L8B6Gnn6Nl" role="1kMh$e" />
+                  <node concept="3JJFmu" id="4mmkymQprAl" role="1kMh$e" />
                 </node>
-              </node>
-              <node concept="3VtFpM" id="L8B6Gnn6Np" role="3VtFp$">
-                <node concept="1kMh$d" id="L8B6Gnn6Nt" role="3VtFpW">
-                  <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                  <node concept="3JJFmu" id="L8B6Gnn6Nv" role="1kMh$e" />
-                </node>
-              </node>
-            </node>
-            <node concept="3JG_m1" id="2Rfu8e4Wdw7" role="3VtFpW">
-              <node concept="3JJFmu" id="2Rfu8e4Wdw9" role="3JG_8_" />
-              <node concept="3JG_m7" id="2Rfu8e4Wdws" role="3JG_nW">
-                <node concept="2Vh8JZ" id="2Rfu8e4Wdwy" role="3JG_nS">
-                  <node concept="j3T7i" id="2Rfu8e4WdwC" role="2Vh8JW">
-                    <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e4WdwF" role="3VtFp$">
-            <node concept="3VtFpY" id="2Rfu8e4WdwY" role="3VtFpW">
-              <node concept="jeBDq" id="2Rfu8e4Wdx6" role="3VtFpT">
-                <node concept="xbsuO" id="2Rfu8e4Wdx8" role="x58j7">
-                  <node concept="3cmrfG" id="2Rfu8e4Wdxf" role="xbgmq">
-                    <property role="3cmrfH" value="40" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e4Wdx0" role="3VtFpZ">
-                <node concept="jcv$W" id="2Rfu8e4Wdz7" role="3VtFpW">
-                  <property role="jcv$Z" value="2" />
-                  <node concept="2IBTiW" id="2Rfu8e4Wdzi" role="2IBTiu">
-                    <property role="2IBTiX" value="Administer LIAT swab" />
-                  </node>
-                </node>
-                <node concept="3VtFpw" id="2Rfu8e4WdyB" role="3VtFpW">
-                  <node concept="UeIYj" id="2Rfu8e4WdyU" role="3nfz8T">
-                    <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e4Wdzk" role="2IBTiu">
-                    <property role="2IBTiX" value="Go to the Liat machine" />
-                  </node>
-                </node>
-                <node concept="3z7BTx" id="2Rfu8e4Wdy9" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e4Wdyb" role="3z7BTw">
-                    <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
-                    <node concept="2_cGdR" id="2Rfu8e4Wdyf" role="jeBCe">
-                      <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e4Wdyj" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e4Wdym" role="jeBCe">
-                      <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e4Wdys" role="2_cGdO" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e4Wdzm" role="3VtFp$">
-                <node concept="3z7BTx" id="2Rfu8e4Wd$0" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e4Wd$1" role="3z7BTw">
-                    <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                    <node concept="2_cGdR" id="2Rfu8e4Wd$2" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e4Wd$3" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e4Wd$4" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e4Wd$5" role="2_cGdO" />
-                    </node>
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e4Wd$6" role="2IBTiu">
-                    <property role="2IBTiX" value="Request the Lab PCR test" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3VtFpw" id="4WX2mA8scIg" role="3VtFpW">
-          <node concept="2Vh8JZ" id="4WX2mA8scIh" role="3nfz8T">
-            <node concept="j3T7i" id="4WX2mA8scIi" role="2Vh8JW">
-              <ref role="j3T7l" node="$2vkoODeR8" resolve="MajorsABReception" />
-            </node>
-          </node>
-        </node>
-        <node concept="1kHj2w" id="4TDP_m0vUR" role="3VtFpW">
-          <node concept="1kHjla" id="4TDP_m0vUS" role="1kHj2_">
-            <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_nWCjM" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWBW7" resolve="LFDPositive" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="2Rfu8e50gDm" role="2Ov1EZ">
-      <property role="TrG5h" value="LIATNegative" />
-      <node concept="3VtFpM" id="2Rfu8e50gDn" role="3VtFpR">
-        <node concept="3VtFpw" id="2Rfu8e50gNc" role="3VtFpW">
-          <node concept="UeIYj" id="2Rfu8e50gNj" role="3nfz8T">
-            <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-          </node>
-        </node>
-        <node concept="1W3xii" id="2Rfu8e50gDq" role="3VtFpW">
-          <ref role="1W3xij" node="2Rfu8e50gpZ" resolve="LIATResult" />
-        </node>
-      </node>
-      <node concept="3n32J5" id="2Rfu8e50gM5" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC8j" resolve="LIATNegative" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="2Rfu8e50gbF" role="2Ov1EZ">
-      <property role="TrG5h" value="LIATPositive" />
-      <node concept="3VtFpM" id="2Rfu8e50gbG" role="3VtFpR">
-        <node concept="3VtFpw" id="2Rfu8e50gNm" role="3VtFpW">
-          <node concept="UeIYj" id="2Rfu8e50gNn" role="3nfz8T">
-            <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-          </node>
-        </node>
-        <node concept="1W3xii" id="2Rfu8e50g$Y" role="3VtFpW">
-          <ref role="1W3xij" node="2Rfu8e50gpZ" resolve="LIATResult" />
-        </node>
-      </node>
-      <node concept="3n32J5" id="2Rfu8e50gl2" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC4n" resolve="LIATPositive" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="2Rfu8e50gpZ" role="2Ov1EZ">
-      <property role="TrG5h" value="LIATResult" />
-      <node concept="3VtFpM" id="2Rfu8e50gq0" role="3VtFpR">
-        <node concept="3VtFpY" id="2Rfu8e50gq2" role="3VtFpW">
-          <node concept="3TllyP" id="2Rfu8e50gq3" role="3VtFpT">
-            <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e50gq4" role="3VtFpZ">
-            <node concept="3VtFpY" id="2Rfu8e50gq5" role="3VtFpW">
-              <node concept="1mvUOM" id="2Rfu8e50gq6" role="3VtFpT">
-                <property role="1mqNFj" value="1s4HvCZwevC/true" />
-                <node concept="3S2u4K" id="2Rfu8e50gq7" role="1mvUOP">
-                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e50gq8" role="3VtFpZ">
-                <node concept="3VtFpY" id="2Rfu8e50gq9" role="3VtFpW">
-                  <node concept="1mvUOM" id="2Rfu8e50gqa" role="3VtFpT">
-                    <property role="1mqNFj" value="true" />
-                    <node concept="3S2u4K" id="2Rfu8e50g$L" role="1mvUOP">
-                      <ref role="3TMAOB" node="4TDP_m1T$r" resolve="LIAT" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e50gqc" role="3VtFpZ">
-                    <node concept="3VtFpw" id="2Rfu8e50gqd" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e50gqe" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e50gqf" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGkb" role="2IBTiu" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGko" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6GnbGkq" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e50gqi" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e50gqj" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e50gqk" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e50gql" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e50gqm" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e50gqn" role="3VtFp$">
-                    <node concept="3VtFpw" id="2Rfu8e50gqo" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e50gqp" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e50gqq" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGjj" role="2IBTiu" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGjw" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                      <node concept="3JJFmu" id="L8B6GnbGjy" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e50gqt" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e50gqu" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e50gqv" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e50gqw" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e50gqx" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e50gqz" role="3VtFp$">
-            <node concept="3VtFpY" id="2Rfu8e50gq$" role="3VtFpW">
-              <node concept="1mvUOM" id="2Rfu8e50gq_" role="3VtFpT">
-                <property role="1mqNFj" value="true" />
-                <node concept="3S2u4K" id="2Rfu8e50gqA" role="1mvUOP">
-                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e50gqB" role="3VtFpZ">
-                <node concept="3VtFpY" id="2Rfu8e50gqC" role="3VtFpW">
-                  <node concept="1mvUOM" id="2Rfu8e50gqD" role="3VtFpT">
-                    <property role="1mqNFj" value="true" />
-                    <node concept="3S2u4K" id="2Rfu8e50g$O" role="1mvUOP">
-                      <ref role="3TMAOB" node="4TDP_m1T$r" resolve="LIAT" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e50gqF" role="3VtFpZ">
-                    <node concept="3VtFpw" id="2Rfu8e50gqG" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e50gqH" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e50gqI" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGjJ" role="2IBTiu" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGjW" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6GnbGjY" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e50gqL" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e50gqM" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e50gqN" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e50gqO" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e50gqP" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e50gqQ" role="3VtFp$">
-                    <node concept="3VtFpw" id="2Rfu8e50gqR" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e50gqS" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e50gqT" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGkB" role="2IBTiu" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGkO" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                      <node concept="3JJFmu" id="L8B6GnbGkQ" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e50gqW" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e50gqX" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e50gqY" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e50gqZ" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e50gr0" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="2Rfu8e4Xyqr" role="2Ov1EZ">
-      <property role="TrG5h" value="PCRComplete" />
-      <node concept="3VtFpM" id="2Rfu8e4Xyqs" role="3VtFpR">
-        <node concept="jcv$W" id="2Rfu8e4YU$K" role="3VtFpW">
-          <property role="jcv$Z" value="1" />
-        </node>
-        <node concept="3VtFpY" id="2Rfu8e4Xyxc" role="3VtFpW">
-          <node concept="3TllyP" id="2Rfu8e4Xyxo" role="3VtFpT">
-            <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e4Xyxg" role="3VtFpZ">
-            <node concept="3VtFpY" id="2Rfu8e4Xyxr" role="3VtFpW">
-              <node concept="1mvUOM" id="2Rfu8e4XyxB" role="3VtFpT">
-                <property role="1mqNFj" value="1s4HvCZwevC/true" />
-                <node concept="3S2u4K" id="2Rfu8e50g8r" role="1mvUOP">
-                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e4Xyxv" role="3VtFpZ">
-                <node concept="3VtFpY" id="2Rfu8e4XyxK" role="3VtFpW">
-                  <node concept="1mvUOM" id="2Rfu8e4XyxW" role="3VtFpT">
-                    <property role="1mqNFj" value="true" />
-                    <node concept="3S2u4K" id="2Rfu8e4Xyy2" role="1mvUOP">
-                      <ref role="3TMAOB" node="2Rfu8e4WdtP" resolve="LabPCR" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e4XyxO" role="3VtFpZ">
-                    <node concept="3VtFpw" id="2Rfu8e4Xyy5" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e4Xyyb" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e4Xyyi" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGl3" role="2IBTiu" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGlg" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6GnbGli" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e4XyyG" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e4XyyI" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e4XyyU" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e4Xyz0" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e4Xyz6" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e4Xy_a" role="3VtFp$">
-                    <node concept="3VtFpw" id="2Rfu8e4Xy_e" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e4Xy_f" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e4Xy_g" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGlv" role="2IBTiu" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGlG" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                      <node concept="3JJFmu" id="L8B6GnbGlI" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e4Xy_j" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e4Xy_k" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e4Xy_l" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e4Xy_m" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e4Xy_n" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e4Xy_U" role="3VtFp$">
-            <node concept="3VtFpY" id="2Rfu8e4Xy_Y" role="3VtFpW">
-              <node concept="1mvUOM" id="2Rfu8e4XyAa" role="3VtFpT">
-                <property role="1mqNFj" value="true" />
-                <node concept="3S2u4K" id="2Rfu8e50g8u" role="1mvUOP">
-                  <ref role="3TMAOB" node="ijr0ZWir17" resolve="INOVA" />
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e4XyA2" role="3VtFpZ">
-                <node concept="3VtFpY" id="2Rfu8e4XyAl" role="3VtFpW">
-                  <node concept="1mvUOM" id="2Rfu8e4XyAm" role="3VtFpT">
-                    <property role="1mqNFj" value="true" />
-                    <node concept="3S2u4K" id="2Rfu8e4XyAn" role="1mvUOP">
-                      <ref role="3TMAOB" node="2Rfu8e4WdtP" resolve="LabPCR" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e4XyAo" role="3VtFpZ">
-                    <node concept="3VtFpw" id="2Rfu8e4XyAp" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e4XyAq" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e4XyAr" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGlV" role="2IBTiu" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGm8" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
-                      <node concept="3JJFmu" id="L8B6GnbGma" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e4XyAu" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e4XyAv" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e4XyAw" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e4XyAx" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e4XyAy" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="2Rfu8e4XyAz" role="3VtFp$">
-                    <node concept="3VtFpw" id="2Rfu8e4XyA$" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e4XyA_" role="3nfz8T" />
-                    </node>
-                    <node concept="jcv$W" id="2Rfu8e4XyAA" role="3VtFpW">
-                      <property role="jcv$Z" value="1" />
-                      <node concept="2IBTiW" id="L8B6GnbGmn" role="2IBTiu" />
-                    </node>
-                    <node concept="1kMh$d" id="L8B6GnbGm$" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                      <node concept="3JJFmu" id="L8B6GnbGmA" role="1kMh$e" />
-                    </node>
-                    <node concept="3JG_m1" id="2Rfu8e4XyAD" role="3VtFpW">
-                      <node concept="3JJFmu" id="2Rfu8e4XyAE" role="3JG_8_" />
-                      <node concept="3JG_m7" id="2Rfu8e4XyAF" role="3JG_nW">
-                        <node concept="2Vh8JZ" id="2Rfu8e4XyAG" role="3JG_nS">
-                          <node concept="j3T7i" id="2Rfu8e4XyAH" role="2Vh8JW">
-                            <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="2Rfu8e4Xys4" role="3n3c3i">
-        <ref role="3n32J4" node="2Rfu8e4WdjT" resolve="PCRComplete" />
-      </node>
-    </node>
-    <node concept="3Vt_xe" id="$2vkoOQePR" role="2Ov1EZ">
-      <property role="TrG5h" value="PatientLFDNegative" />
-      <node concept="3VtFpM" id="$2vkoOQePS" role="3VtFpR">
-        <node concept="3VtFpw" id="2Rfu8e4Xyu3" role="3VtFpW">
-          <node concept="3JJFmu" id="2Rfu8e4Xyu4" role="3nfz8T" />
-        </node>
-        <node concept="jcv$W" id="2Rfu8e4Xyu5" role="3VtFpW">
-          <property role="jcv$Z" value="3" />
-          <node concept="2IBTiW" id="2Rfu8e4Xyu6" role="2IBTiu">
-            <property role="2IBTiX" value="Consult with patient, determine symptomatic/asymptomatic" />
-          </node>
-        </node>
-        <node concept="3VtFpY" id="2Rfu8e4Xyu7" role="3VtFpW">
-          <node concept="3TllyP" id="2Rfu8e4Xyu8" role="3VtFpT">
-            <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e4Xyu9" role="3VtFpZ">
-            <node concept="3VtFpY" id="2Rfu8e4Xyw7" role="3VtFpW">
-              <node concept="jeBDq" id="2Rfu8e4Xyw8" role="3VtFpT">
-                <node concept="xbsuO" id="2Rfu8e4Xyw9" role="x58j7">
-                  <node concept="3cmrfG" id="2Rfu8e4Xywa" role="xbgmq">
-                    <property role="3cmrfH" value="40" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e4Xywb" role="3VtFpZ">
-                <node concept="jcv$W" id="2Rfu8e4Xywc" role="3VtFpW">
-                  <property role="jcv$Z" value="2" />
-                  <node concept="2IBTiW" id="2Rfu8e4Xywd" role="2IBTiu">
-                    <property role="2IBTiX" value="Administer LIAT swab" />
-                  </node>
-                </node>
-                <node concept="3VtFpw" id="2Rfu8e4Xywe" role="3VtFpW">
-                  <node concept="UeIYj" id="2Rfu8e4Xywf" role="3nfz8T">
-                    <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e4Xywg" role="2IBTiu">
-                    <property role="2IBTiX" value="Go to the Liat machine" />
-                  </node>
-                </node>
-                <node concept="3z7BTx" id="2Rfu8e4Xywh" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e4Xywi" role="3z7BTw">
-                    <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
-                    <node concept="2_cGdR" id="2Rfu8e4Xywj" role="jeBCe">
-                      <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e4Xywk" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e4Xywl" role="jeBCe">
-                      <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e4Xywm" role="2_cGdO" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e4Xywn" role="3VtFp$">
-                <node concept="3z7BTx" id="2Rfu8e4Xywo" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e4Xywp" role="3z7BTw">
-                    <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                    <node concept="2_cGdR" id="2Rfu8e4Xywq" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e4Xywr" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e4Xyws" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e4Xywt" role="2_cGdO" />
-                    </node>
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e4Xywu" role="2IBTiu">
-                    <property role="2IBTiX" value="Request the Lab PCR test" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="2Rfu8e4Xyuo" role="3VtFp$">
-            <node concept="3VtFpY" id="2Rfu8e4Xyup" role="3VtFpW">
-              <node concept="jeBDq" id="2Rfu8e4Xyuq" role="3VtFpT">
-                <node concept="xbsuO" id="2Rfu8e4Xyur" role="x58j7">
-                  <node concept="3cmrfG" id="2Rfu8e4Xyus" role="xbgmq">
-                    <property role="3cmrfH" value="50" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3VtFpM" id="2Rfu8e4Xyut" role="3VtFpZ">
-                <node concept="3z7BTx" id="2Rfu8e4XyuE" role="3VtFpW">
-                  <node concept="3z7ADy" id="2Rfu8e4XyuF" role="3z7BTw">
-                    <ref role="3z7AD_" node="2Rfu8e4WdoA" resolve="RequestPCR" />
-                    <node concept="2_cGdR" id="2Rfu8e4XyuG" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdrg" resolve="patient" />
-                      <node concept="3JJFmu" id="2Rfu8e4XyuH" role="2_cGdO" />
-                    </node>
-                    <node concept="2_cGdR" id="2Rfu8e4XyuI" role="jeBCe">
-                      <ref role="XnLJh" node="2Rfu8e4Wdri" resolve="replyTo" />
-                      <node concept="3JGL$I" id="2Rfu8e4XyuJ" role="2_cGdO" />
-                    </node>
-                  </node>
-                  <node concept="2IBTiW" id="2Rfu8e4XyuK" role="2IBTiu">
-                    <property role="2IBTiX" value="Request the Lab PCR test" />
-                  </node>
-                </node>
-                <node concept="3VtFpY" id="1Pt3svORpyg" role="3VtFpW">
-                  <node concept="r166y" id="1Pt3svORpyI" role="3VtFpT">
-                    <ref role="3DyUPb" node="L8B6GnbCVP" resolve="Amber" />
-                  </node>
-                  <node concept="3VtFpM" id="1Pt3svORpyk" role="3VtFpZ">
-                    <node concept="1kMh$d" id="1Pt3svORpyL" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
-                      <node concept="3JJFmu" id="1Pt3svORpyN" role="1kMh$e" />
-                    </node>
-                  </node>
-                  <node concept="3VtFpM" id="1Pt3svORpzU" role="3VtFp$">
-                    <node concept="1kMh$d" id="L8B6GnbGn1" role="3VtFpW">
-                      <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
-                      <node concept="3JJFmu" id="L8B6GnbGn3" role="1kMh$e" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3JG_m1" id="2Rfu8e54llN" role="3VtFpW">
-                  <node concept="3JJFmu" id="2Rfu8e54llP" role="3JG_8_" />
-                  <node concept="3JG_m7" id="2Rfu8e54lm5" role="3JG_nW">
-                    <node concept="2Vh8JZ" id="2Rfu8e54lmb" role="3JG_nS">
-                      <node concept="j3T7i" id="2Rfu8e54lmh" role="2Vh8JW">
+                <node concept="3JG_m1" id="4mmkymQrfJx" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfJy" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfJz" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfJ$" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfJ_" role="2Vh8JW">
                         <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
                       </node>
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="3VtFpM" id="2Rfu8e4XyuD" role="3VtFp$">
-                <node concept="1W3xii" id="2Rfu8e4Xyx4" role="3VtFpW">
-                  <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
+              <node concept="3VtFpM" id="4mmkymQprAq" role="3VtFp$">
+                <node concept="1kMh$d" id="4mmkymQprAr" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
+                  <node concept="3JJFmu" id="4mmkymQprAs" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQrfJH" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfJI" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfJJ" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfJK" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfJL" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="3VtFpw" id="2Rfu8e4XyuL" role="3VtFpW">
-          <node concept="2Vh8JZ" id="2Rfu8e4XyuM" role="3nfz8T">
-            <node concept="j3T7i" id="2Rfu8e4XyuN" role="2Vh8JW">
+        <node concept="3VtFpw" id="4mmkymQprFJ" role="3VtFpW">
+          <node concept="2Vh8JZ" id="4mmkymQprGs" role="3nfz8T">
+            <node concept="j3T7i" id="4mmkymQprGw" role="2Vh8JW">
               <ref role="j3T7l" node="$2vkoODeR8" resolve="MajorsABReception" />
             </node>
           </node>
         </node>
-        <node concept="1kHj2w" id="2Rfu8e4XyuO" role="3VtFpW">
-          <node concept="1kHjla" id="2Rfu8e4XyuP" role="1kHj2_">
+        <node concept="1kHj2w" id="4mmkymQprHc" role="3VtFpW">
+          <node concept="1kHjla" id="4mmkymQprHe" role="1kHj2_">
             <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
           </node>
         </node>
       </node>
-      <node concept="3n32J5" id="4TDP_nWCjP" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nWC0r" resolve="LFDNegative" />
+      <node concept="3n32J5" id="4mmkymQprAx" role="3n3c3i">
+        <ref role="3n32J4" node="4TDP_nWBW7" resolve="LFDComplete" />
+      </node>
+    </node>
+    <node concept="3Vt_xe" id="4mmkymQprZz" role="2Ov1EZ">
+      <property role="TrG5h" value="LIATResult" />
+      <node concept="3VtFpM" id="4mmkymQprZ$" role="3VtFpR">
+        <node concept="3VtFpw" id="4mmkymQprZ_" role="3VtFpW">
+          <node concept="UeIYj" id="4mmkymQprZA" role="3nfz8T">
+            <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
+          </node>
+        </node>
+        <node concept="jcv$W" id="4mmkymQprZB" role="3VtFpW">
+          <property role="jcv$Z" value="1" />
+          <node concept="2IBTiW" id="4mmkymQprZC" role="2IBTiu">
+            <property role="2IBTiX" value="Collect the sample" />
+          </node>
+        </node>
+        <node concept="3VtFpw" id="4mmkymQprZD" role="3VtFpW">
+          <node concept="3JJFmu" id="4mmkymQprZE" role="3nfz8T" />
+        </node>
+        <node concept="1kHj2w" id="4mmkymQprZF" role="3VtFpW">
+          <node concept="1kHjla" id="4mmkymQprZG" role="1kHj2_">
+            <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
+          </node>
+        </node>
+        <node concept="3VtFpY" id="4mmkymQprZH" role="3VtFpW">
+          <node concept="1mvUOM" id="4mmkymQprZI" role="3VtFpT">
+            <property role="1mqNFj" value="1s4HvCZwevC/true" />
+            <node concept="3S2u4K" id="4mmkymQprZJ" role="1mvUOP">
+              <ref role="3TMAOB" node="4TDP_m1T$r" resolve="LIAT" />
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4mmkymQprZK" role="3VtFpZ">
+            <node concept="3VtFpY" id="4mmkymQprZL" role="3VtFpW">
+              <node concept="r166y" id="4mmkymQprZM" role="3VtFpT">
+                <ref role="3DyUPb" node="L8B6Gnb_Fx" resolve="Red" />
+              </node>
+              <node concept="3VtFpM" id="4mmkymQprZN" role="3VtFpZ">
+                <node concept="1kMh$d" id="4mmkymQprZO" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
+                  <node concept="3JJFmu" id="4mmkymQprZP" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQrfJT" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfJU" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfJV" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfJW" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfJX" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="4mmkymQprZU" role="3VtFp$">
+                <node concept="1kMh$d" id="4mmkymQprZV" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6Gnb_Fx" resolve="Red" />
+                  <node concept="3JJFmu" id="4mmkymQprZW" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQrfK5" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfK6" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfK7" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfK8" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfK9" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4mmkymQps01" role="3VtFp$">
+            <node concept="3VtFpY" id="4mmkymQps02" role="3VtFpW">
+              <node concept="r166y" id="4mmkymQps03" role="3VtFpT">
+                <ref role="3DyUPb" node="L8B6GnbCVP" resolve="Amber" />
+              </node>
+              <node concept="3VtFpM" id="4mmkymQps04" role="3VtFpZ">
+                <node concept="1kMh$d" id="4mmkymQps05" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6GnbCVQ" resolve="SideRoom" />
+                  <node concept="3JJFmu" id="4mmkymQps06" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQrfKh" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfKi" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfKj" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfKk" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfKl" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="4mmkymQps0b" role="3VtFp$">
+                <node concept="1kMh$d" id="4mmkymQps0c" role="3VtFpW">
+                  <ref role="qX6o8" node="L8B6GnbCVP" resolve="Amber" />
+                  <node concept="3JJFmu" id="4mmkymQps0d" role="1kMh$e" />
+                </node>
+                <node concept="3JG_m1" id="4mmkymQrfKt" role="3VtFpW">
+                  <node concept="3JJFmu" id="4mmkymQrfKu" role="3JG_8_" />
+                  <node concept="3JG_m7" id="4mmkymQrfKv" role="3JG_nW">
+                    <node concept="2Vh8JZ" id="4mmkymQrfKw" role="3JG_nS">
+                      <node concept="j3T7i" id="4mmkymQrfKx" role="2Vh8JW">
+                        <ref role="j3T7l" node="4TDP_lXqNf" resolve="Exit" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3VtFpw" id="4mmkymQps5a" role="3VtFpW">
+          <node concept="2Vh8JZ" id="4mmkymQps5Y" role="3nfz8T">
+            <node concept="j3T7i" id="4mmkymQps64" role="2Vh8JW">
+              <ref role="j3T7l" node="$2vkoODeR8" resolve="MajorsABReception" />
+            </node>
+          </node>
+        </node>
+        <node concept="1kHj2w" id="4mmkymQps6U" role="3VtFpW">
+          <node concept="1kHjla" id="4mmkymQps6W" role="1kHj2_">
+            <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
+          </node>
+        </node>
+      </node>
+      <node concept="3n32J5" id="4mmkymQps0i" role="3n3c3i">
+        <ref role="3n32J4" node="4TDP_nWC4n" resolve="LIATComplete" />
       </node>
     </node>
   </node>
@@ -3567,7 +2530,7 @@
           <node concept="3VtFpM" id="4TDP_nBl1p" role="3S2vig">
             <node concept="3z7BTx" id="4TDP_nBl1q" role="3VtFpW">
               <node concept="3z7ADy" id="4TDP_nBl1r" role="3z7BTw">
-                <ref role="3z7AD_" node="4TDP_nWC4n" resolve="LIATPositive" />
+                <ref role="3z7AD_" node="4TDP_nWC4n" resolve="LIATComplete" />
                 <node concept="2_cGdR" id="4TDP_nBl1s" role="jeBCe">
                   <ref role="XnLJh" node="4TDP_nWC4o" resolve="patient" />
                   <node concept="3JJFmu" id="4TDP_nBl1t" role="2_cGdO" />
@@ -3579,14 +2542,14 @@
             </node>
           </node>
           <node concept="3VtFpM" id="4TDP_nBl1v" role="3S2viG">
-            <node concept="3z7BTx" id="4TDP_nBl1w" role="3VtFpW">
-              <node concept="3z7ADy" id="4TDP_nBl1x" role="3z7BTw">
-                <ref role="3z7AD_" node="4TDP_nWC8j" resolve="LIATNegative" />
-                <node concept="2_cGdR" id="4TDP_nBl1y" role="jeBCe">
-                  <ref role="XnLJh" node="4TDP_nWC8k" resolve="patient" />
-                  <node concept="3JJFmu" id="4TDP_nBl1z" role="2_cGdO" />
+            <node concept="3z7BTx" id="4mmkymQpraQ" role="3VtFpW">
+              <node concept="3z7ADy" id="4mmkymQpraR" role="3z7BTw">
+                <ref role="3z7AD_" node="4TDP_nWC4n" resolve="LIATComplete" />
+                <node concept="2_cGdR" id="4mmkymQpraU" role="jeBCe">
+                  <ref role="XnLJh" node="4TDP_nWC4o" resolve="patient" />
+                  <node concept="3JJFmu" id="4mmkymQpraY" role="2_cGdO" />
                 </node>
-                <node concept="3JJ7Rl" id="4TDP_nBl1$" role="1n$ajB">
+                <node concept="3JJ7Rl" id="4mmkymQprb3" role="1n$ajB">
                   <property role="3JJ7Ra" value="replyTo" />
                 </node>
               </node>
