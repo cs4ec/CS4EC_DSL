@@ -134,7 +134,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.NumPatientsInHour$Puav);
   }
   public static Object propertyMacro_GetValue_4_16(final PropertyMacroContext _context) {
-    return SNodeOperations.getIndexInParent(_context.getNode());
+    return SNodeOperations.getIndexInParent(_context.getNode()) + 1;
   }
   public static Object propertyMacro_GetValue_6_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.description$Kute), PROPS.description$WNUv);
@@ -295,12 +295,6 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object propertyMacro_GetValue_48_7(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL) + "_AdmissionBay";
-  }
-  public static Object propertyMacro_GetValue_50_0(final PropertyMacroContext _context) {
-    return SPropertyOperations.getInteger(_context.getNode(), PROPS.NumPatientsInHour$Puav);
-  }
-  public static Object propertyMacro_GetValue_50_1(final PropertyMacroContext _context) {
-    return SNodeOperations.getIndexInParent(_context.getNode()) + 1;
   }
   public static Object referenceMacro_GetReferent_1_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "actor_Action");
@@ -510,9 +504,6 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Iterable<SNode> sourceNodesQuery_46_0(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.signalContent$Jgoy);
   }
-  public static Iterable<SNode> sourceNodesQuery_50_0(final SourceSubstituteMacroNodesContext _context) {
-    return SLinkOperations.getChildren(_context.getNode(), LINKS.PatientArrivalLines$mElW);
-  }
   private final Map<String, ReductionRuleCondition> rrcMethods = new HashMap<String, ReductionRuleCondition>();
   {
     int i = 0;
@@ -656,7 +647,6 @@ public class QueriesGenerated extends QueryProviderBase {
     snsqMethods.put("88285669864422683", new SNsQ(i++));
     snsqMethods.put("88285669848657859", new SNsQ(i++));
     snsqMethods.put("88285669875693547", new SNsQ(i++));
-    snsqMethods.put("2876623929999316140", new SNsQ(i++));
   }
   @NotNull
   @Override
@@ -704,8 +694,6 @@ public class QueriesGenerated extends QueryProviderBase {
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_44_0(ctx));
         case 15:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_46_0(ctx));
-        case 16:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_50_0(ctx));
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -789,8 +777,6 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("6149859341190011515", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), null));
     pvqMethods.put("7169358838270482209", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "1"));
     pvqMethods.put("885129310538055664", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "map_AdmissionBay"));
-    pvqMethods.put("2876623929999320160", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "3"));
-    pvqMethods.put("2876623929999316728", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "1"));
   }
   @NotNull
   @Override
@@ -957,10 +943,6 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.propertyMacro_GetValue_48_6(ctx);
         case 74:
           return QueriesGenerated.propertyMacro_GetValue_48_7(ctx);
-        case 75:
-          return QueriesGenerated.propertyMacro_GetValue_50_0(ctx);
-        case 76:
-          return QueriesGenerated.propertyMacro_GetValue_50_1(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }

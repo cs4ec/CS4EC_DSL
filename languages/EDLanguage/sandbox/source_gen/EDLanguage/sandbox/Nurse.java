@@ -59,10 +59,10 @@ public class Nurse extends Staff {
     Signal sendSignalTemp = new Signal();
 
     curMission.WithStep(new ActionStep().WithName("move to patient").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("let patient to follow self").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new FollowOrder().WithTarget(this))));
-    curMission.WithStep(new ActionStep().WithName("go to x-ray room").WithAction(new MoveAction().WithTarget(Radiology.getInstance())));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new FollowOrder().WithTarget(this))));
+    curMission.WithStep(new ActionStep().WithName("go to an x-ray room").WithAction(new MoveAction().WithTarget(Radiology.getInstance())));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
-    curMission.WithStep(new ActionStep().WithName("do x-ray").WithAction(new StayForTimeAction().WithTimeSpan(600)));
+    curMission.WithStep(new ActionStep().WithName("do the x-ray").WithAction(new StayForTimeAction().WithTimeSpan(600)));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(s.GetData("returnTo")))));
     sendSignalTemp = new PatientNeedsFinalConsutlationSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));

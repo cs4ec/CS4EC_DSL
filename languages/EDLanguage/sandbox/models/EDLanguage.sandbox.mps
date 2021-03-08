@@ -2327,27 +2327,24 @@
           <node concept="3JG_m4" id="7IDz3VlgXSv" role="3JG_nW">
             <node concept="3JGL$I" id="7IDz3VlgXS_" role="3JG_nY" />
           </node>
-          <node concept="2IBTiW" id="7IDz3VlgXSC" role="2IBTiu">
-            <property role="2IBTiX" value="let patient to follow self" />
-          </node>
         </node>
         <node concept="3VtFpw" id="7IDz3VlgXSO" role="3VtFpW">
           <node concept="2IBTiW" id="7IDz3VlgXTf" role="2IBTiu">
-            <property role="2IBTiX" value="go to x-ray room" />
+            <property role="2IBTiX" value="go to an x-ray room" />
           </node>
           <node concept="UeIYj" id="ijr0ZY9P65" role="3nfz8T">
             <ref role="Udx8D" node="ijr0ZY9P4M" resolve="Radiology" />
           </node>
         </node>
-        <node concept="1kHj2w" id="ijr0ZYbTLR" role="3VtFpW">
-          <node concept="1kHjla" id="ijr0ZYbTLT" role="1kHj2_">
+        <node concept="1kHj2w" id="4mmkymQa950" role="3VtFpW">
+          <node concept="1kHjla" id="4mmkymQa952" role="1kHj2_">
             <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
           </node>
         </node>
         <node concept="jcv$W" id="7IDz3VlgXVd" role="3VtFpW">
           <property role="jcv$Z" value="10" />
           <node concept="2IBTiW" id="7IDz3VlgXV_" role="2IBTiu">
-            <property role="2IBTiX" value="do x-ray" />
+            <property role="2IBTiX" value="do the x-ray" />
           </node>
         </node>
         <node concept="3JG_m1" id="6o2BuIxgBFj" role="3VtFpW">

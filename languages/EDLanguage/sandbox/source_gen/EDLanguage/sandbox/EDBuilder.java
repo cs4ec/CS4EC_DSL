@@ -245,30 +245,30 @@ public class EDBuilder implements ContextBuilder<Object> {
 
   public void CreatePatientArrivalMap() {
     HashMap ArrivalPerHour = new HashMap();
-    ArrivalPerHour.put(0, 4);
-    ArrivalPerHour.put(1, 6);
+    ArrivalPerHour.put(1, 4);
     ArrivalPerHour.put(2, 6);
-    ArrivalPerHour.put(3, 3);
+    ArrivalPerHour.put(3, 6);
     ArrivalPerHour.put(4, 3);
-    ArrivalPerHour.put(5, 7);
-    ArrivalPerHour.put(6, 2);
+    ArrivalPerHour.put(5, 3);
+    ArrivalPerHour.put(6, 7);
     ArrivalPerHour.put(7, 2);
-    ArrivalPerHour.put(8, 5);
-    ArrivalPerHour.put(9, 10);
+    ArrivalPerHour.put(8, 2);
+    ArrivalPerHour.put(9, 5);
     ArrivalPerHour.put(10, 10);
-    ArrivalPerHour.put(11, 13);
+    ArrivalPerHour.put(11, 10);
     ArrivalPerHour.put(12, 13);
-    ArrivalPerHour.put(13, 14);
-    ArrivalPerHour.put(14, 15);
-    ArrivalPerHour.put(15, 16);
-    ArrivalPerHour.put(16, 14);
-    ArrivalPerHour.put(17, 13);
-    ArrivalPerHour.put(18, 9);
-    ArrivalPerHour.put(19, 7);
-    ArrivalPerHour.put(20, 8);
-    ArrivalPerHour.put(21, 7);
-    ArrivalPerHour.put(22, 10);
-    ArrivalPerHour.put(23, 3);
+    ArrivalPerHour.put(13, 13);
+    ArrivalPerHour.put(14, 14);
+    ArrivalPerHour.put(15, 15);
+    ArrivalPerHour.put(16, 16);
+    ArrivalPerHour.put(17, 14);
+    ArrivalPerHour.put(18, 13);
+    ArrivalPerHour.put(19, 9);
+    ArrivalPerHour.put(20, 7);
+    ArrivalPerHour.put(21, 8);
+    ArrivalPerHour.put(22, 7);
+    ArrivalPerHour.put(23, 10);
+    ArrivalPerHour.put(24, 3);
     PatientArrivalStore.Initialise((Map<Integer, Integer>) ArrivalPerHour);
   }
 
