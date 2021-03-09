@@ -424,6 +424,60 @@ public class Patient extends Agent {
 		return 0;
 	}
 	
+	public Integer LIATPositive() {
+		TestResult pres =  null;
+		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findFirst();
+		if (opt.isEmpty()) return 0;
+		else 
+			pres = (TestResult) opt.get();
+		
+		if(pres != null && pres.isInfected()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer LIATNegative() {
+		TestResult pres =  null;
+		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findFirst();
+		if (opt.isEmpty()) return 0;
+		else 
+			pres = (TestResult) opt.get();
+		
+		if(pres != null && !pres.isInfected()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer COVPosLIATPos() {
+		if(LIATPositive() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovNegLIATNeg() {
+		if(LIATNegative() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovPosLIATNeg() {
+		if(LIATNegative() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer CovNegLIATPos() {
+		if(LIATPositive() ==1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
 	public Integer LFDPositiveAndRed() {
 		if(LFDPositive() ==1 && outcome == PatientOutcomes.ADMITTEDRED) {
 			return 1;
