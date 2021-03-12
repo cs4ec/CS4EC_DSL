@@ -1,746 +1,195 @@
-INFO  [Thread-3] 2021-03-08 17:01:03,979 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:19
-INFO  [Thread-3] 2021-03-08 17:01:04,388 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 966
-INFO  [Thread-3] 2021-03-08 17:01:04,615 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:54
-INFO  [Thread-3] 2021-03-08 17:01:04,637 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9976
-INFO  [Thread-3] 2021-03-08 17:01:05,158 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:29
-INFO  [Thread-3] 2021-03-08 17:01:05,267 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:59
-INFO  [Thread-3] 2021-03-08 17:01:06,072 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 965
-INFO  [Thread-3] 2021-03-08 17:01:06,522 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:39
-INFO  [Thread-3] 2021-03-08 17:01:06,541 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 964
-INFO  [Thread-3] 2021-03-08 17:01:08,151 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:47
-INFO  [Thread-3] 2021-03-08 17:01:08,616 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:20
-INFO  [Thread-3] 2021-03-08 17:01:09,006 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:52
-INFO  [Thread-3] 2021-03-08 17:01:09,475 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:56
-INFO  [Thread-3] 2021-03-08 17:01:10,583 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 963
-INFO  [Thread-3] 2021-03-08 17:01:10,678 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9975
-INFO  [Thread-3] 2021-03-08 17:01:11,076 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:08
-INFO  [Thread-3] 2021-03-08 17:01:11,859 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:11
-INFO  [Thread-3] 2021-03-08 17:01:12,064 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:44
-INFO  [Thread-3] 2021-03-08 17:01:12,467 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:15
-INFO  [Thread-3] 2021-03-08 17:01:13,152 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 970
-INFO  [Thread-3] 2021-03-08 17:01:13,214 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:21
-INFO  [Thread-3] 2021-03-08 17:01:13,536 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9974
-INFO  [Thread-3] 2021-03-08 17:01:13,660 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 962
-INFO  [Thread-3] 2021-03-08 17:01:13,721 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:59
-INFO  [Thread-3] 2021-03-08 17:01:13,870 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:27
-INFO  [Thread-3] 2021-03-08 17:01:14,326 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:11
-INFO  [Thread-3] 2021-03-08 17:01:14,695 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:23
-INFO  [Thread-3] 2021-03-08 17:01:14,910 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:36
-INFO  [Thread-3] 2021-03-08 17:01:15,140 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:37
-INFO  [Thread-3] 2021-03-08 17:01:15,719 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:55
-INFO  [Thread-3] 2021-03-08 17:01:15,744 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:44
-INFO  [Thread-3] 2021-03-08 17:01:15,830 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 9
-INFO  [Thread-3] 2021-03-08 17:01:16,423 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:50
-INFO  [Thread-3] 2021-03-08 17:01:16,494 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:16
-INFO  [Thread-3] 2021-03-08 17:01:16,872 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:24
-INFO  [Thread-3] 2021-03-08 17:01:17,038 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 961
-INFO  [Thread-3] 2021-03-08 17:01:17,338 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:33
-INFO  [Thread-3] 2021-03-08 17:01:17,359 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:56
-INFO  [Thread-3] 2021-03-08 17:01:17,969 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:45
-INFO  [Thread-3] 2021-03-08 17:01:18,529 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 8
-INFO  [Thread-3] 2021-03-08 17:01:18,614 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:59
-INFO  [Thread-3] 2021-03-08 17:01:18,969 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:09
-INFO  [Thread-3] 2021-03-08 17:01:19,289 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:18
-INFO  [Thread-3] 2021-03-08 17:01:19,474 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 960
-INFO  [Thread-3] 2021-03-08 17:01:19,489 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:23
-INFO  [Thread-3] 2021-03-08 17:01:19,875 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:33
-INFO  [Thread-3] 2021-03-08 17:01:19,915 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:17
-INFO  [Thread-3] 2021-03-08 17:01:20,294 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:42
-INFO  [Thread-3] 2021-03-08 17:01:20,468 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 999
-INFO  [Thread-3] 2021-03-08 17:01:20,528 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 959
-INFO  [Thread-3] 2021-03-08 17:01:20,753 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:51
-INFO  [Thread-3] 2021-03-08 17:01:21,459 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 998
-INFO  [Thread-3] 2021-03-08 17:01:21,999 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:22
-INFO  [Thread-3] 2021-03-08 17:01:22,283 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 7
-INFO  [Thread-3] 2021-03-08 17:01:22,726 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 997
-INFO  [Thread-3] 2021-03-08 17:01:22,778 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:42
-INFO  [Thread-3] 2021-03-08 17:01:23,079 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:47
-INFO  [pool-6-thread-1] 2021-03-08 17:01:24,069 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615222759173 for DONE:  no
-INFO  [Thread-3] 2021-03-08 17:01:24,608 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:18
-INFO  [Thread-3] 2021-03-08 17:01:24,794 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:57
-INFO  [Thread-3] 2021-03-08 17:01:25,691 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:34
-INFO  [Thread-3] 2021-03-08 17:01:26,489 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:21
-INFO  [Thread-3] 2021-03-08 17:01:26,784 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:51
-INFO  [Thread-3] 2021-03-08 17:01:27,337 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:33
-INFO  [Thread-3] 2021-03-08 17:01:27,948 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:47
-INFO  [Thread-3] 2021-03-08 17:01:28,098 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:12
-INFO  [Thread-3] 2021-03-08 17:01:28,553 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:20
-INFO  [Thread-3] 2021-03-08 17:01:28,931 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:09
-INFO  [Thread-3] 2021-03-08 17:01:28,981 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9999
-INFO  [Thread-3] 2021-03-08 17:01:28,990 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:29
-INFO  [Thread-3] 2021-03-08 17:01:29,315 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:17
-INFO  [Thread-3] 2021-03-08 17:01:29,451 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 999
-INFO  [Thread-3] 2021-03-08 17:01:29,656 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:41
-INFO  [Thread-3] 2021-03-08 17:01:29,814 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:26
-INFO  [Thread-3] 2021-03-08 17:01:30,488 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:51
-INFO  [Thread-3] 2021-03-08 17:01:30,528 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:36
-INFO  [Thread-3] 2021-03-08 17:01:30,919 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:59
-INFO  [Thread-3] 2021-03-08 17:01:30,958 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9999
-INFO  [Thread-3] 2021-03-08 17:01:31,069 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:47
-INFO  [Thread-3] 2021-03-08 17:01:31,403 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:55
-INFO  [Thread-3] 2021-03-08 17:01:31,439 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 998
-INFO  [Thread-3] 2021-03-08 17:01:31,968 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:08
-INFO  [Thread-3] 2021-03-08 17:01:32,219 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:13
-INFO  [Thread-3] 2021-03-08 17:01:32,238 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:27
-INFO  [Thread-3] 2021-03-08 17:01:32,646 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:23
-INFO  [Thread-3] 2021-03-08 17:01:33,088 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 997
-INFO  [Thread-3] 2021-03-08 17:01:33,158 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:35
-INFO  [Thread-3] 2021-03-08 17:01:33,556 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:44
-INFO  [Thread-3] 2021-03-08 17:01:34,711 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9998
-INFO  [Thread-3] 2021-03-08 17:01:35,008 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9997
-INFO  [Thread-3] 2021-03-08 17:01:35,048 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9996
-INFO  [Thread-3] 2021-03-08 17:01:35,199 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:29
-INFO  [Thread-3] 2021-03-08 17:01:35,288 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:17
-INFO  [Thread-3] 2021-03-08 17:01:35,444 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 996
-INFO  [Thread-3] 2021-03-08 17:01:36,148 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9995
-INFO  [Thread-3] 2021-03-08 17:01:36,298 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:36
-INFO  [Thread-3] 2021-03-08 17:01:36,588 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:57
-INFO  [Thread-3] 2021-03-08 17:01:37,084 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:53
-INFO  [Thread-3] 2021-03-08 17:01:37,402 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 6
-INFO  [Thread-3] 2021-03-08 17:01:37,462 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:16
-INFO  [Thread-3] 2021-03-08 17:01:38,105 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:28
-INFO  [Thread-3] 2021-03-08 17:01:38,278 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:18
-INFO  [Thread-3] 2021-03-08 17:01:38,693 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:41
-INFO  [Thread-3] 2021-03-08 17:01:39,108 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:50
-INFO  [Thread-3] 2021-03-08 17:01:39,184 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:38
-INFO  [Thread-3] 2021-03-08 17:01:39,228 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9994
-INFO  [Thread-3] 2021-03-08 17:01:39,368 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 995
-INFO  [Thread-3] 2021-03-08 17:01:39,942 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:53
-INFO  [Thread-3] 2021-03-08 17:01:39,998 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:08
-INFO  [Thread-3] 2021-03-08 17:01:40,329 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:15
-INFO  [Thread-3] 2021-03-08 17:01:40,375 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9998
-INFO  [Thread-3] 2021-03-08 17:01:40,563 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:19
-INFO  [Thread-3] 2021-03-08 17:01:40,576 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:06
-INFO  [Thread-3] 2021-03-08 17:01:41,161 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:15
-INFO  [Thread-3] 2021-03-08 17:01:41,179 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 5
-INFO  [Thread-3] 2021-03-08 17:01:41,219 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:29
-INFO  [Thread-3] 2021-03-08 17:01:41,408 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:33
-INFO  [Thread-3] 2021-03-08 17:01:41,462 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:21
-INFO  [Thread-3] 2021-03-08 17:01:41,569 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9993
-INFO  [Thread-3] 2021-03-08 17:01:41,718 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:40
-INFO  [Thread-3] 2021-03-08 17:01:41,773 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:28
-INFO  [Thread-3] 2021-03-08 17:01:42,118 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:49
-INFO  [Thread-3] 2021-03-08 17:01:42,269 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:39
-INFO  [Thread-3] 2021-03-08 17:01:42,418 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9997
-INFO  [Thread-3] 2021-03-08 17:01:42,454 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:43
-INFO  [Thread-3] 2021-03-08 17:01:42,503 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:57
-INFO  [Thread-3] 2021-03-08 17:01:42,985 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:53
-INFO  [Thread-3] 2021-03-08 17:01:43,089 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:08
-INFO  [Thread-3] 2021-03-08 17:01:43,378 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:59
-INFO  [Thread-3] 2021-03-08 17:01:43,420 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:13
-INFO  [Thread-3] 2021-03-08 17:01:43,541 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 4
-INFO  [Thread-3] 2021-03-08 17:01:43,669 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9996
-INFO  [Thread-3] 2021-03-08 17:01:43,768 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:19
-INFO  [Thread-3] 2021-03-08 17:01:43,789 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 3
-INFO  [Thread-3] 2021-03-08 17:01:44,219 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:26
-INFO  [Thread-3] 2021-03-08 17:01:44,228 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 996
-INFO  [Thread-3] 2021-03-08 17:01:44,414 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9992
-INFO  [Thread-3] 2021-03-08 17:01:44,651 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:33
-INFO  [Thread-3] 2021-03-08 17:01:45,084 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:27
-INFO  [Thread-3] 2021-03-08 17:01:45,108 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:40
-INFO  [Thread-3] 2021-03-08 17:01:45,302 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:44
-INFO  [Thread-3] 2021-03-08 17:01:45,453 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:47
-INFO  [Thread-3] 2021-03-08 17:01:45,588 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 9
-INFO  [Thread-3] 2021-03-08 17:01:45,652 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:51
-INFO  [Thread-3] 2021-03-08 17:01:45,808 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9991
-INFO  [Thread-3] 2021-03-08 17:01:45,983 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:56
-INFO  [Thread-3] 2021-03-08 17:01:46,582 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:04
-INFO  [Thread-3] 2021-03-08 17:01:46,705 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9995
-INFO  [Thread-3] 2021-03-08 17:01:46,969 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:10
-INFO  [Thread-3] 2021-03-08 17:01:47,016 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:59
-INFO  [Thread-3] 2021-03-08 17:01:47,118 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 995
-INFO  [Thread-3] 2021-03-08 17:01:47,209 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:14
-INFO  [Thread-3] 2021-03-08 17:01:47,403 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9994
-INFO  [Thread-3] 2021-03-08 17:01:47,577 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:21
-INFO  [Thread-3] 2021-03-08 17:01:47,736 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:24
-INFO  [Thread-3] 2021-03-08 17:01:47,783 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 994
-INFO  [Thread-3] 2021-03-08 17:01:47,888 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 994
-INFO  [Thread-3] 2021-03-08 17:01:47,928 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:27
-INFO  [Thread-3] 2021-03-08 17:01:48,023 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:29
-INFO  [Thread-3] 2021-03-08 17:01:48,124 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:31
-INFO  [Thread-3] 2021-03-08 17:01:48,319 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:35
-INFO  [Thread-3] 2021-03-08 17:01:48,509 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:29
-INFO  [Thread-3] 2021-03-08 17:01:48,715 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 993
-INFO  [Thread-3] 2021-03-08 17:01:48,835 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:44
-INFO  [Thread-3] 2021-03-08 17:01:49,066 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:48
-INFO  [Thread-3] 2021-03-08 17:01:49,273 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9993
-INFO  [Thread-3] 2021-03-08 17:01:49,418 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:54
-INFO  [Thread-3] 2021-03-08 17:01:49,748 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 2
-INFO  [Thread-3] 2021-03-08 17:01:49,956 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:58
-INFO  [Thread-3] 2021-03-08 17:01:49,984 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:04
-INFO  [Thread-3] 2021-03-08 17:01:50,139 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 1
-INFO  [Thread-3] 2021-03-08 17:01:50,327 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 0
-INFO  [Thread-3] 2021-03-08 17:01:50,388 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:11
-INFO  [Thread-3] 2021-03-08 17:01:50,456 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:08
-INFO  [Thread-3] 2021-03-08 17:01:50,565 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:14
-INFO  [Thread-3] 2021-03-08 17:01:51,003 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:21
-INFO  [Thread-3] 2021-03-08 17:01:51,240 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:25
-INFO  [Thread-3] 2021-03-08 17:01:51,263 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:23
-INFO  [Thread-3] 2021-03-08 17:01:51,598 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9992
-INFO  [Thread-3] 2021-03-08 17:01:51,639 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:32
-INFO  [Thread-3] 2021-03-08 17:01:51,856 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:35
-INFO  [Thread-3] 2021-03-08 17:01:52,113 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:39
-INFO  [Thread-3] 2021-03-08 17:01:52,418 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:45
-INFO  [Thread-3] 2021-03-08 17:01:52,818 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:53
-INFO  [Thread-3] 2021-03-08 17:01:52,987 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9990
-INFO  [Thread-3] 2021-03-08 17:01:53,024 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:55
-INFO  [Thread-3] 2021-03-08 17:01:53,280 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:59
-INFO  [Thread-3] 2021-03-08 17:01:53,374 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 992
-INFO  [Thread-3] 2021-03-08 17:01:53,563 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:03
-INFO  [Thread-3] 2021-03-08 17:01:53,841 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 993
-INFO  [Thread-3] 2021-03-08 17:01:53,866 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:07
-INFO  [Thread-3] 2021-03-08 17:01:53,932 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:10
-INFO  [Thread-3] 2021-03-08 17:01:54,118 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:11
-INFO  [Thread-3] 2021-03-08 17:01:54,234 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:15
-INFO  [Thread-3] 2021-03-08 17:01:54,313 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:14
-INFO  [Thread-3] 2021-03-08 17:01:54,509 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:17
-INFO  [Thread-3] 2021-03-08 17:01:54,601 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 991
-INFO  [Thread-3] 2021-03-08 17:01:54,614 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:21
-INFO  [Thread-3] 2021-03-08 17:01:54,696 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:19
-INFO  [Thread-3] 2021-03-08 17:01:54,885 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:21
-INFO  [Thread-3] 2021-03-08 17:01:54,927 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 992
-INFO  [Thread-3] 2021-03-08 17:01:55,011 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9991
-INFO  [Thread-3] 2021-03-08 17:01:55,348 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:27
-INFO  [Thread-3] 2021-03-08 17:01:55,927 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:38
-INFO  [Thread-3] 2021-03-08 17:01:56,083 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:34
-INFO  [Thread-3] 2021-03-08 17:01:56,291 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:42
-INFO  [Thread-3] 2021-03-08 17:01:56,675 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:48
-INFO  [Thread-3] 2021-03-08 17:01:57,094 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9990
-INFO  [Thread-3] 2021-03-08 17:01:57,143 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:55
-INFO  [Thread-3] 2021-03-08 17:01:57,649 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -1
-INFO  [Thread-3] 2021-03-08 17:01:57,988 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:07
-INFO  [Thread-3] 2021-03-08 17:01:58,173 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 990
-INFO  [Thread-3] 2021-03-08 17:01:58,303 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:02
-INFO  [Thread-3] 2021-03-08 17:01:58,468 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:16
-INFO  [Thread-3] 2021-03-08 17:01:58,538 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:06
-INFO  [Thread-3] 2021-03-08 17:01:58,778 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:10
-INFO  [Thread-3] 2021-03-08 17:01:58,788 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:22
-INFO  [Thread-3] 2021-03-08 17:01:58,843 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:11
-INFO  [Thread-3] 2021-03-08 17:01:59,173 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:17
-INFO  [Thread-3] 2021-03-08 17:01:59,188 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9989
-INFO  [Thread-3] 2021-03-08 17:01:59,268 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:31
-INFO  [Thread-3] 2021-03-08 17:01:59,303 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:19
-INFO  [Thread-3] 2021-03-08 17:01:59,478 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:35
-INFO  [Thread-3] 2021-03-08 17:01:59,538 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9988
-INFO  [Thread-3] 2021-03-08 17:01:59,691 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:38
-INFO  [Thread-3] 2021-03-08 17:02:00,301 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:49
-INFO  [Thread-3] 2021-03-08 17:02:00,653 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 989
-INFO  [Thread-3] 2021-03-08 17:02:00,878 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:59
-INFO  [Thread-3] 2021-03-08 17:02:01,118 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:03
-INFO  [Thread-3] 2021-03-08 17:02:01,168 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9987
-INFO  [Thread-3] 2021-03-08 17:02:01,253 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:05
-INFO  [Thread-3] 2021-03-08 17:02:01,418 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:08
-INFO  [Thread-3] 2021-03-08 17:02:01,443 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9989
-INFO  [Thread-3] 2021-03-08 17:02:01,478 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:09
-INFO  [Thread-3] 2021-03-08 17:02:01,599 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:11
-INFO  [Thread-3] 2021-03-08 17:02:01,798 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:14
-INFO  [Thread-3] 2021-03-08 17:02:02,208 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:21
-INFO  [Thread-3] 2021-03-08 17:02:02,336 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:06
-INFO  [Thread-3] 2021-03-08 17:02:02,460 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 991
-INFO  [Thread-3] 2021-03-08 17:02:02,548 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:26
-INFO  [Thread-3] 2021-03-08 17:02:02,603 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:10
-INFO  [Thread-3] 2021-03-08 17:02:02,748 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:12
-INFO  [Thread-3] 2021-03-08 17:02:02,848 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:30
-INFO  [Thread-3] 2021-03-08 17:02:02,886 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:14
-INFO  [Thread-3] 2021-03-08 17:02:02,948 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:15
-INFO  [Thread-3] 2021-03-08 17:02:03,078 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:34
-INFO  [Thread-3] 2021-03-08 17:02:03,207 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:36
-INFO  [Thread-3] 2021-03-08 17:02:03,248 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:20
-INFO  [Thread-3] 2021-03-08 17:02:03,428 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:23
-INFO  [Thread-3] 2021-03-08 17:02:03,519 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9986
-INFO  [Thread-3] 2021-03-08 17:02:03,559 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:42
-INFO  [Thread-3] 2021-03-08 17:02:03,652 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:26
-INFO  [Thread-3] 2021-03-08 17:02:04,028 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:32
-INFO  [Thread-3] 2021-03-08 17:02:04,143 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:52
-INFO  [Thread-3] 2021-03-08 17:02:04,209 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:35
-INFO  [Thread-3] 2021-03-08 17:02:04,273 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:36
-INFO  [Thread-3] 2021-03-08 17:02:04,333 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:37
-INFO  [Thread-3] 2021-03-08 17:02:04,429 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:57
-INFO  [Thread-3] 2021-03-08 17:02:04,798 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:44
-INFO  [Thread-3] 2021-03-08 17:02:05,093 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:48
-INFO  [Thread-3] 2021-03-08 17:02:05,198 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9985
-INFO  [Thread-3] 2021-03-08 17:02:05,272 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:51
-INFO  [Thread-3] 2021-03-08 17:02:05,339 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 990
-INFO  [Thread-3] 2021-03-08 17:02:05,398 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:13
-INFO  [Thread-3] 2021-03-08 17:02:05,458 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:14
-INFO  [Thread-3] 2021-03-08 17:02:05,518 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:55
-INFO  [Thread-3] 2021-03-08 17:02:05,568 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:16
-INFO  [Thread-3] 2021-03-08 17:02:05,723 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9988
-INFO  [Thread-3] 2021-03-08 17:02:05,848 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:21
-INFO  [Thread-3] 2021-03-08 17:02:06,108 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:25
-INFO  [Thread-3] 2021-03-08 17:02:06,148 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:04
-INFO  [Thread-3] 2021-03-08 17:02:06,314 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 988
-INFO  [Thread-3] 2021-03-08 17:02:06,399 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:07
-INFO  [Thread-3] 2021-03-08 17:02:06,413 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9984
-INFO  [Thread-3] 2021-03-08 17:02:06,459 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:30
-INFO  [Thread-3] 2021-03-08 17:02:06,508 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 8
-INFO  [Thread-3] 2021-03-08 17:02:06,838 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:13
-INFO  [Thread-3] 2021-03-08 17:02:07,037 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:15
-INFO  [Thread-3] 2021-03-08 17:02:07,168 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:39
-INFO  [Thread-3] 2021-03-08 17:02:07,235 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9983
-INFO  [Thread-3] 2021-03-08 17:02:07,448 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 989
-INFO  [Thread-3] 2021-03-08 17:02:07,488 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:21
-INFO  [Thread-3] 2021-03-08 17:02:07,586 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -2
-INFO  [Thread-3] 2021-03-08 17:02:07,668 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:46
-INFO  [Thread-3] 2021-03-08 17:02:07,998 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:27
-INFO  [Thread-3] 2021-03-08 17:02:08,108 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:52
-INFO  [Thread-3] 2021-03-08 17:02:08,173 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:53
-INFO  [Thread-3] 2021-03-08 17:02:08,308 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:31
-INFO  [Thread-3] 2021-03-08 17:02:08,388 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:56
-INFO  [Thread-3] 2021-03-08 17:02:08,568 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:59
-INFO  [Thread-3] 2021-03-08 17:02:08,638 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:36
-INFO  [Thread-3] 2021-03-08 17:02:08,883 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:04
-INFO  [Thread-3] 2021-03-08 17:02:08,929 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:40
-INFO  [Thread-3] 2021-03-08 17:02:09,113 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:43
-INFO  [Thread-3] 2021-03-08 17:02:09,249 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:45
-INFO  [Thread-3] 2021-03-08 17:02:09,393 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:12
-INFO  [Thread-3] 2021-03-08 17:02:09,428 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 7
-INFO  [Thread-3] 2021-03-08 17:02:09,476 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:48
-INFO  [Thread-3] 2021-03-08 17:02:09,602 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:50
-INFO  [Thread-3] 2021-03-08 17:02:09,655 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:16
-INFO  [Thread-3] 2021-03-08 17:02:09,998 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:21
-INFO  [Thread-3] 2021-03-08 17:02:10,118 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:57
-INFO  [Thread-3] 2021-03-08 17:02:10,123 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:23
-INFO  [Thread-3] 2021-03-08 17:02:10,288 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -3
-INFO  [Thread-3] 2021-03-08 17:02:10,367 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:00
-INFO  [Thread-3] 2021-03-08 17:02:10,776 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 988
-INFO  [Thread-3] 2021-03-08 17:02:10,882 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:34
-INFO  [Thread-3] 2021-03-08 17:02:11,006 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:09
-INFO  [Thread-3] 2021-03-08 17:02:11,024 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 987
-INFO  [Thread-3] 2021-03-08 17:02:11,112 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:37
-INFO  [Thread-3] 2021-03-08 17:02:11,204 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:12
-INFO  [Thread-3] 2021-03-08 17:02:11,268 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 987
-INFO  [Thread-3] 2021-03-08 17:02:11,324 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9987
-INFO  [Thread-3] 2021-03-08 17:02:11,532 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:44
-INFO  [Thread-3] 2021-03-08 17:02:11,656 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:46
-INFO  [Thread-3] 2021-03-08 17:02:11,701 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9986
-INFO  [Thread-3] 2021-03-08 17:02:11,729 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:19
-INFO  [Thread-3] 2021-03-08 17:02:11,922 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:22
-INFO  [Thread-3] 2021-03-08 17:02:11,990 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:23
-INFO  [Thread-3] 2021-03-08 17:02:12,187 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:54
-INFO  [Thread-3] 2021-03-08 17:02:12,216 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:26
-INFO  [Thread-3] 2021-03-08 17:02:12,281 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9982
-INFO  [Thread-3] 2021-03-08 17:02:12,834 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:34
-INFO  [Thread-3] 2021-03-08 17:02:12,863 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:04
-INFO  [Thread-3] 2021-03-08 17:02:13,063 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:06
-INFO  [Thread-3] 2021-03-08 17:02:13,288 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:09
-INFO  [Thread-3] 2021-03-08 17:02:13,483 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:41
-INFO  [Thread-3] 2021-03-08 17:02:13,518 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:12
-INFO  [Thread-3] 2021-03-08 17:02:13,593 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:13
-INFO  [Thread-3] 2021-03-08 17:02:13,798 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:16
-INFO  [Thread-3] 2021-03-08 17:02:13,903 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9985
-INFO  [Thread-3] 2021-03-08 17:02:14,103 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:20
-INFO  [Thread-3] 2021-03-08 17:02:14,117 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:49
-INFO  [Thread-3] 2021-03-08 17:02:14,258 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:51
-INFO  [Thread-3] 2021-03-08 17:02:14,373 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:24
-INFO  [Thread-3] 2021-03-08 17:02:14,403 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:53
-INFO  [Thread-3] 2021-03-08 17:02:14,479 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9981
-INFO  [Thread-3] 2021-03-08 17:02:14,780 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:30
-INFO  [Thread-3] 2021-03-08 17:02:14,862 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:59
-INFO  [Thread-3] 2021-03-08 17:02:14,866 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:31
-INFO  [Thread-3] 2021-03-08 17:02:15,063 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:34
-INFO  [Thread-3] 2021-03-08 17:02:15,098 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9980
-INFO  [Thread-3] 2021-03-08 17:02:15,413 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:39
-INFO  [Thread-3] 2021-03-08 17:02:15,503 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:40
-INFO  [Thread-3] 2021-03-08 17:02:15,521 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:08
-INFO  [Thread-3] 2021-03-08 17:02:15,621 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 986
-INFO  [Thread-3] 2021-03-08 17:02:15,722 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:43
-INFO  [Thread-3] 2021-03-08 17:02:15,898 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:13
-INFO  [Thread-3] 2021-03-08 17:02:15,993 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:47
-INFO  [Thread-3] 2021-03-08 17:02:16,063 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -4
-INFO  [Thread-3] 2021-03-08 17:02:16,526 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:55
-INFO  [Thread-3] 2021-03-08 17:02:16,687 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:57
-INFO  [Thread-3] 2021-03-08 17:02:16,749 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:58
-INFO  [Thread-3] 2021-03-08 17:02:16,838 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:25
-INFO  [Thread-3] 2021-03-08 17:02:16,930 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9979
-INFO  [Thread-3] 2021-03-08 17:02:17,013 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9978
-INFO  [Thread-3] 2021-03-08 17:02:17,133 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 6
-INFO  [Thread-3] 2021-03-08 17:02:17,278 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:04
-INFO  [Thread-3] 2021-03-08 17:02:17,564 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:34
-INFO  [Thread-3] 2021-03-08 17:02:17,568 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9977
-INFO  [Thread-3] 2021-03-08 17:02:17,688 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:09
-INFO  [Thread-3] 2021-03-08 17:02:17,889 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:12
-INFO  [Thread-3] 2021-03-08 17:02:17,958 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:13
-INFO  [Thread-3] 2021-03-08 17:02:18,198 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:42
-INFO  [Thread-3] 2021-03-08 17:02:18,323 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 986
-INFO  [Thread-3] 2021-03-08 17:02:18,888 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 5
-INFO  [Thread-3] 2021-03-08 17:02:19,151 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:50
-INFO  [Thread-3] 2021-03-08 17:02:19,374 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 985
-INFO  [Thread-3] 2021-03-08 17:02:19,648 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9984
-INFO  [Thread-3] 2021-03-08 17:02:19,693 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 4
-INFO  [Thread-3] 2021-03-08 17:02:19,923 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:59
-INFO  [Thread-3] 2021-03-08 17:02:20,288 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:04
-INFO  [Thread-3] 2021-03-08 17:02:20,368 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9976
-INFO  [Thread-3] 2021-03-08 17:02:20,888 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 984
-INFO  [Thread-3] 2021-03-08 17:02:20,893 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:11
-INFO  [Thread-3] 2021-03-08 17:02:20,898 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9983
-INFO  [Thread-3] 2021-03-08 17:02:21,028 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9982
-INFO  [Thread-3] 2021-03-08 17:02:21,508 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9975
-INFO  [Thread-3] 2021-03-08 17:02:21,592 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:19
-INFO  [Thread-3] 2021-03-08 17:02:21,773 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9974
-INFO  [Thread-3] 2021-03-08 17:02:22,081 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9973
-INFO  [Thread-3] 2021-03-08 17:02:22,231 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:27
-INFO  [Thread-3] 2021-03-08 17:02:22,534 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9981
-INFO  [Thread-3] 2021-03-08 17:02:22,975 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:09
-INFO  [Thread-3] 2021-03-08 17:02:23,274 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:13
-INFO  [Thread-3] 2021-03-08 17:02:23,343 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:39
-INFO  [Thread-3] 2021-03-08 17:02:23,740 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:18
-INFO  [Thread-3] 2021-03-08 17:02:23,742 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:43
-INFO  [Thread-3] 2021-03-08 17:02:23,920 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:20
-INFO  [Thread-3] 2021-03-08 17:02:23,944 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 985
-INFO  [pool-6-thread-1] 2021-03-08 17:02:24,069 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615222759173 for DONE:  no
-INFO  [Thread-3] 2021-03-08 17:02:24,297 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:23
-INFO  [Thread-3] 2021-03-08 17:02:24,728 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:52
-INFO  [Thread-3] 2021-03-08 17:02:24,768 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:28
-INFO  [Thread-3] 2021-03-08 17:02:25,135 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:56
-INFO  [Thread-3] 2021-03-08 17:02:25,251 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:33
-INFO  [Thread-3] 2021-03-08 17:02:25,572 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:37
-INFO  [Thread-3] 2021-03-08 17:02:25,788 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:03
-INFO  [Thread-3] 2021-03-08 17:02:26,234 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:44
-INFO  [Thread-3] 2021-03-08 17:02:26,542 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:11
-INFO  [Thread-3] 2021-03-08 17:02:26,690 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:49
-INFO  [Thread-3] 2021-03-08 17:02:26,748 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -5
-INFO  [Thread-3] 2021-03-08 17:02:26,890 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:51
-INFO  [Thread-3] 2021-03-08 17:02:27,236 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:17
-INFO  [Thread-3] 2021-03-08 17:02:27,625 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:57
-INFO  [Thread-3] 2021-03-08 17:02:28,158 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:02
-INFO  [Thread-3] 2021-03-08 17:02:28,338 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:04
-INFO  [Thread-3] 2021-03-08 17:02:28,441 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:05
-INFO  [Thread-3] 2021-03-08 17:02:28,445 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:28
-INFO  [Thread-3] 2021-03-08 17:02:28,506 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9972
-INFO  [Thread-3] 2021-03-08 17:02:28,795 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:31
-INFO  [Thread-3] 2021-03-08 17:02:29,124 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:11
-INFO  [Thread-3] 2021-03-08 17:02:29,334 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:36
-INFO  [Thread-3] 2021-03-08 17:02:29,648 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:17
-INFO  [Thread-3] 2021-03-08 17:02:29,803 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 984
-INFO  [Thread-3] 2021-03-08 17:02:29,808 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 983
-INFO  [Thread-3] 2021-03-08 17:02:30,013 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9980
-INFO  [Thread-3] 2021-03-08 17:02:30,152 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:23
-INFO  [Thread-3] 2021-03-08 17:02:30,163 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9971
-INFO  [Thread-3] 2021-03-08 17:02:30,253 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:24
-INFO  [Thread-3] 2021-03-08 17:02:30,440 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9970
-INFO  [Thread-3] 2021-03-08 17:02:30,512 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:50
-INFO  [Thread-3] 2021-03-08 17:02:30,896 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:31
-INFO  [Thread-3] 2021-03-08 17:02:31,046 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9979
-INFO  [Thread-3] 2021-03-08 17:02:31,088 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:33
-INFO  [Thread-3] 2021-03-08 17:02:31,293 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:58
-INFO  [Thread-3] 2021-03-08 17:02:31,433 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:37
-INFO  [Thread-3] 2021-03-08 17:02:31,593 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9969
-INFO  [Thread-3] 2021-03-08 17:02:31,806 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:41
-INFO  [Thread-3] 2021-03-08 17:02:32,018 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 982
-INFO  [Thread-3] 2021-03-08 17:02:32,128 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:44
-INFO  [Thread-3] 2021-03-08 17:02:32,179 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9978
-INFO  [Thread-3] 2021-03-08 17:02:32,708 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:50
-INFO  [Thread-3] 2021-03-08 17:02:32,721 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 3
-INFO  [Thread-3] 2021-03-08 17:02:32,783 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:13
-INFO  [Thread-3] 2021-03-08 17:02:32,856 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:51
-INFO  [Thread-3] 2021-03-08 17:02:33,368 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9977
-INFO  [Thread-3] 2021-03-08 17:02:33,408 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:19
-INFO  [Thread-3] 2021-03-08 17:02:33,653 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:59
-INFO  [Thread-3] 2021-03-08 17:02:33,953 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:25
-INFO  [Thread-3] 2021-03-08 17:02:34,046 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 981
-INFO  [Thread-3] 2021-03-08 17:02:34,525 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:07
-INFO  [Thread-3] 2021-03-08 17:02:34,821 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 980
-INFO  [Thread-3] 2021-03-08 17:02:34,909 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9968
-INFO  [Thread-3] 2021-03-08 17:02:35,301 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:38
-INFO  [Thread-3] 2021-03-08 17:02:35,461 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:16
-INFO  [Thread-3] 2021-03-08 17:02:36,338 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9967
-INFO  [Thread-3] 2021-03-08 17:02:36,398 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:49
-INFO  [Thread-3] 2021-03-08 17:02:36,473 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:26
-INFO  [Thread-3] 2021-03-08 17:02:36,705 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9966
-INFO  [Thread-3] 2021-03-08 17:02:36,803 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 2
-INFO  [Thread-3] 2021-03-08 17:02:37,173 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:34
-INFO  [Thread-3] 2021-03-08 17:02:37,193 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:58
-INFO  [Thread-3] 2021-03-08 17:02:37,316 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 983
-INFO  [Thread-3] 2021-03-08 17:02:38,119 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:06
-INFO  [Thread-3] 2021-03-08 17:02:38,386 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 979
-INFO  [Thread-3] 2021-03-08 17:02:38,481 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:46
-INFO  [Thread-3] 2021-03-08 17:02:39,033 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:12
-INFO  [Thread-3] 2021-03-08 17:02:39,118 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9965
-INFO  [Thread-3] 2021-03-08 17:02:39,818 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:19
-INFO  [Thread-3] 2021-03-08 17:02:40,098 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:58
-INFO  [Thread-3] 2021-03-08 17:02:40,238 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9976
-INFO  [Thread-3] 2021-03-08 17:02:40,547 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 978
-INFO  [Thread-3] 2021-03-08 17:02:40,667 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:27
-INFO  [Thread-3] 2021-03-08 17:02:41,211 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:33
-INFO  [Thread-3] 2021-03-08 17:02:41,333 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:11
-INFO  [Thread-3] 2021-03-08 17:02:41,422 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 1
-INFO  [Thread-3] 2021-03-08 17:02:41,745 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:39
-INFO  [Thread-3] 2021-03-08 17:02:41,868 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:17
-INFO  [Thread-3] 2021-03-08 17:02:41,998 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -6
-INFO  [Thread-3] 2021-03-08 17:02:42,138 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 0
-INFO  [Thread-3] 2021-03-08 17:02:42,203 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 982
-INFO  [Thread-3] 2021-03-08 17:02:42,307 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:45
-INFO  [Thread-3] 2021-03-08 17:02:42,824 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:28
-INFO  [Thread-3] 2021-03-08 17:02:42,908 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 981
-INFO  [Thread-3] 2021-03-08 17:02:42,929 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:52
-INFO  [Thread-3] 2021-03-08 17:02:43,308 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:56
-INFO  [Thread-3] 2021-03-08 17:02:43,450 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9964
-INFO  [Thread-3] 2021-03-08 17:02:43,558 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:36
-INFO  [Thread-3] 2021-03-08 17:02:44,018 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:41
-INFO  [Thread-3] 2021-03-08 17:02:44,453 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:46
-INFO  [Thread-3] 2021-03-08 17:02:45,268 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:55
-INFO  [Thread-3] 2021-03-08 17:02:45,413 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 980
-INFO  [Thread-3] 2021-03-08 17:02:45,931 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:24
-INFO  [Thread-3] 2021-03-08 17:02:46,093 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 977
-INFO  [Thread-3] 2021-03-08 17:02:46,944 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:12
-INFO  [Thread-3] 2021-03-08 17:02:47,578 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:19
-INFO  [Thread-3] 2021-03-08 17:02:47,583 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:42
-INFO  [Thread-3] 2021-03-08 17:02:48,021 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:24
-INFO  [Thread-3] 2021-03-08 17:02:48,691 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:31
-INFO  [Thread-3] 2021-03-08 17:02:49,401 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:38
-INFO  [Thread-3] 2021-03-08 17:02:49,528 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9963
-INFO  [Thread-3] 2021-03-08 17:02:49,698 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 976
-INFO  [Thread-3] 2021-03-08 17:02:50,608 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:53
-INFO  [Thread-3] 2021-03-08 17:02:51,504 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -1
-INFO  [Thread-3] 2021-03-08 17:02:51,908 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:11
-INFO  [Thread-3] 2021-03-08 17:02:52,598 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:21
-INFO  [Thread-3] 2021-03-08 17:02:52,838 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 975
-INFO  [Thread-3] 2021-03-08 17:02:53,108 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:28
-INFO  [Thread-3] 2021-03-08 17:02:53,808 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:38
-INFO  [Thread-3] 2021-03-08 17:02:53,898 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 974
-INFO  [Thread-3] 2021-03-08 17:02:54,037 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:41
-INFO  [Thread-3] 2021-03-08 17:02:54,590 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:48
-INFO  [Thread-3] 2021-03-08 17:02:55,580 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:57
-INFO  [Thread-3] 2021-03-08 17:02:57,154 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:11
-INFO  [Thread-3] 2021-03-08 17:02:57,446 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -2
-INFO  [Thread-3] 2021-03-08 17:02:57,742 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:17
-INFO  [Thread-3] 2021-03-08 17:02:58,343 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:24
-INFO  [Thread-3] 2021-03-08 17:02:59,108 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:33
-INFO  [Thread-3] 2021-03-08 17:02:59,423 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:37
-INFO  [Thread-3] 2021-03-08 17:02:59,741 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:40
-INFO  [Thread-3] 2021-03-08 17:03:00,525 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:49
-INFO  [Thread-3] 2021-03-08 17:03:01,008 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:55
-INFO  [Thread-3] 2021-03-08 17:03:01,178 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:57
-INFO  [Thread-3] 2021-03-08 17:03:01,498 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 973
-INFO  [Thread-3] 2021-03-08 17:03:02,958 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:19
-INFO  [Thread-3] 2021-03-08 17:03:04,388 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9962
-INFO  [Thread-3] 2021-03-08 17:03:04,623 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:41
-INFO  [Thread-3] 2021-03-08 17:03:04,803 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= -3
-INFO  [Thread-3] 2021-03-08 17:03:07,464 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:25
-INFO  [Thread-3] 2021-03-08 17:03:08,108 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:42
-INFO  [Thread-3] 2021-03-08 17:03:08,892 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:07
-INFO  [Thread-3] 2021-03-08 17:03:09,151 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 999
-INFO  [Thread-3] 2021-03-08 17:03:09,376 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:18
-INFO  [Thread-3] 2021-03-08 17:03:09,628 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:25
-INFO  [Thread-3] 2021-03-08 17:03:09,949 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:35
-INFO  [Thread-3] 2021-03-08 17:03:10,387 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:45
-INFO  [Thread-3] 2021-03-08 17:03:10,657 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:52
-INFO  [Thread-3] 2021-03-08 17:03:10,904 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:59
-INFO  [Thread-3] 2021-03-08 17:03:11,248 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:08
-INFO  [Thread-3] 2021-03-08 17:03:11,279 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9999
-INFO  [Thread-3] 2021-03-08 17:03:11,439 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:13
-INFO  [Thread-3] 2021-03-08 17:03:11,990 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9998
-INFO  [Thread-3] 2021-03-08 17:03:12,066 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:26
-INFO  [Thread-3] 2021-03-08 17:03:12,617 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:41
-INFO  [Thread-3] 2021-03-08 17:03:13,045 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:52
-INFO  [Thread-3] 2021-03-08 17:03:13,364 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9997
-INFO  [Thread-3] 2021-03-08 17:03:13,833 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 998
-INFO  [Thread-3] 2021-03-08 17:03:13,968 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:16
-INFO  [Thread-3] 2021-03-08 17:03:14,704 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:36
-INFO  [Thread-3] 2021-03-08 17:03:14,831 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 997
-INFO  [Thread-3] 2021-03-08 17:03:15,715 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9996
-INFO  [Thread-3] 2021-03-08 17:03:16,238 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:17
-INFO  [Thread-3] 2021-03-08 17:03:17,082 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:35
-INFO  [Thread-3] 2021-03-08 17:03:18,392 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 996
-INFO  [Thread-3] 2021-03-08 17:03:18,684 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:10
-INFO  [Thread-3] 2021-03-08 17:03:19,067 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:18
-INFO  [Thread-3] 2021-03-08 17:03:19,274 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 9
-INFO  [Thread-3] 2021-03-08 17:03:19,517 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:27
-INFO  [Thread-3] 2021-03-08 17:03:19,807 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:33
-INFO  [Thread-3] 2021-03-08 17:03:20,225 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:42
-INFO  [Thread-3] 2021-03-08 17:03:20,556 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:50
-INFO  [Thread-3] 2021-03-08 17:03:21,483 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 995
-INFO  [Thread-3] 2021-03-08 17:03:22,052 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:27
-INFO  [Thread-3] 2021-03-08 17:03:23,255 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:57
-INFO  [pool-6-thread-1] 2021-03-08 17:03:24,070 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615222759173 for DONE:  no
-INFO  [Thread-3] 2021-03-08 17:03:24,650 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:31
-INFO  [Thread-3] 2021-03-08 17:03:25,687 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:56
-INFO  [Thread-3] 2021-03-08 17:03:26,345 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:13
-INFO  [Thread-3] 2021-03-08 17:03:26,483 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 8
-INFO  [Thread-3] 2021-03-08 17:03:26,828 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:26
-INFO  [Thread-3] 2021-03-08 17:03:27,198 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:36
-INFO  [Thread-3] 2021-03-08 17:03:27,583 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:46
-INFO  [Thread-3] 2021-03-08 17:03:28,063 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:58
-INFO  [Thread-3] 2021-03-08 17:03:28,108 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 7
-INFO  [Thread-3] 2021-03-08 17:03:28,234 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:02
-INFO  [Thread-3] 2021-03-08 17:03:28,534 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:10
-INFO  [Thread-3] 2021-03-08 17:03:28,758 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:15
-INFO  [Thread-3] 2021-03-08 17:03:28,888 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 6
-INFO  [Thread-3] 2021-03-08 17:03:29,040 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:22
-INFO  [Thread-3] 2021-03-08 17:03:29,045 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 994
-INFO  [Thread-3] 2021-03-08 17:03:29,218 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:25
-INFO  [Thread-3] 2021-03-08 17:03:29,638 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:35
-INFO  [Thread-3] 2021-03-08 17:03:29,838 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:40
-INFO  [Thread-3] 2021-03-08 17:03:30,006 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:44
-INFO  [Thread-3] 2021-03-08 17:03:30,278 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:50
-INFO  [Thread-3] 2021-03-08 17:03:30,538 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:56
-INFO  [Thread-3] 2021-03-08 17:03:31,173 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:11
-INFO  [Thread-3] 2021-03-08 17:03:31,258 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:13
-INFO  [Thread-3] 2021-03-08 17:03:31,599 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:21
-INFO  [Thread-3] 2021-03-08 17:03:31,668 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9995
-INFO  [Thread-3] 2021-03-08 17:03:31,739 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:24
-INFO  [Thread-3] 2021-03-08 17:03:32,048 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 993
-INFO  [Thread-3] 2021-03-08 17:03:32,078 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:31
-INFO  [Thread-3] 2021-03-08 17:03:32,617 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:41
-INFO  [Thread-3] 2021-03-08 17:03:32,958 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9994
-INFO  [Thread-3] 2021-03-08 17:03:33,058 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:50
-INFO  [Thread-3] 2021-03-08 17:03:33,418 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:58
-INFO  [Thread-3] 2021-03-08 17:03:34,114 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:07
-INFO  [Thread-3] 2021-03-08 17:03:34,562 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:11
-INFO  [Thread-3] 2021-03-08 17:03:35,042 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 992
-INFO  [Thread-3] 2021-03-08 17:03:35,102 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:18
-INFO  [Thread-3] 2021-03-08 17:03:35,297 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:21
-INFO  [Thread-3] 2021-03-08 17:03:35,493 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:24
-INFO  [Thread-3] 2021-03-08 17:03:35,779 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:28
-INFO  [Thread-3] 2021-03-08 17:03:36,383 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:34
-INFO  [Thread-3] 2021-03-08 17:03:36,780 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:38
-INFO  [Thread-3] 2021-03-08 17:03:37,103 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:43
-INFO  [Thread-3] 2021-03-08 17:03:37,308 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:47
-INFO  [Thread-3] 2021-03-08 17:03:37,519 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9993
-INFO  [Thread-3] 2021-03-08 17:03:37,588 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:52
-INFO  [Thread-3] 2021-03-08 17:03:37,858 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 991
-INFO  [Thread-3] 2021-03-08 17:03:37,983 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:59
-INFO  [Thread-3] 2021-03-08 17:03:38,365 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:05
-INFO  [Thread-3] 2021-03-08 17:03:38,564 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 990
-INFO  [Thread-3] 2021-03-08 17:03:38,743 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:10
-INFO  [Thread-3] 2021-03-08 17:03:38,947 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 5
-INFO  [Thread-3] 2021-03-08 17:03:39,055 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:13
-INFO  [Thread-3] 2021-03-08 17:03:39,458 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:17
-INFO  [Thread-3] 2021-03-08 17:03:39,869 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:22
-INFO  [Thread-3] 2021-03-08 17:03:40,186 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9992
-INFO  [Thread-3] 2021-03-08 17:03:40,413 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:28
-INFO  [Thread-3] 2021-03-08 17:03:40,979 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:35
-INFO  [Thread-3] 2021-03-08 17:03:41,272 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:39
-INFO  [Thread-3] 2021-03-08 17:03:41,573 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:44
-INFO  [Thread-3] 2021-03-08 17:03:41,893 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9991
-INFO  [Thread-3] 2021-03-08 17:03:41,958 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 989
-INFO  [Thread-3] 2021-03-08 17:03:42,008 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:52
-INFO  [Thread-3] 2021-03-08 17:03:42,333 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:58
-INFO  [Thread-3] 2021-03-08 17:03:42,718 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:06
-INFO  [Thread-3] 2021-03-08 17:03:43,066 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:12
-INFO  [Thread-3] 2021-03-08 17:03:43,439 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:19
-INFO  [Thread-3] 2021-03-08 17:03:43,645 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:22
-INFO  [Thread-3] 2021-03-08 17:03:43,924 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:27
-INFO  [Thread-3] 2021-03-08 17:03:44,148 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:31
-INFO  [Thread-3] 2021-03-08 17:03:44,303 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:34
-INFO  [Thread-3] 2021-03-08 17:03:44,477 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 4
-INFO  [Thread-3] 2021-03-08 17:03:44,542 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:38
-INFO  [Thread-3] 2021-03-08 17:03:44,641 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:40
-INFO  [Thread-3] 2021-03-08 17:03:45,008 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9990
-INFO  [Thread-3] 2021-03-08 17:03:45,010 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:46
-INFO  [Thread-3] 2021-03-08 17:03:45,528 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:52
-INFO  [Thread-3] 2021-03-08 17:03:45,728 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:55
-INFO  [Thread-3] 2021-03-08 17:03:45,858 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:57
-INFO  [Thread-3] 2021-03-08 17:03:46,370 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:04
-INFO  [Thread-3] 2021-03-08 17:03:47,603 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:16
-INFO  [Thread-3] 2021-03-08 17:03:48,222 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:23
-INFO  [Thread-3] 2021-03-08 17:03:48,290 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 988
-INFO  [Thread-3] 2021-03-08 17:03:48,602 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:27
-INFO  [Thread-3] 2021-03-08 17:03:48,723 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:28
-INFO  [Thread-3] 2021-03-08 17:03:48,874 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:29
-INFO  [Thread-3] 2021-03-08 17:03:49,223 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9989
-INFO  [Thread-3] 2021-03-08 17:03:49,315 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:33
-INFO  [Thread-3] 2021-03-08 17:03:49,488 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:35
-INFO  [Thread-3] 2021-03-08 17:03:49,687 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 987
-INFO  [Thread-3] 2021-03-08 17:03:50,136 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9988
-INFO  [Thread-3] 2021-03-08 17:03:50,367 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:47
-INFO  [Thread-3] 2021-03-08 17:03:50,498 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:49
-INFO  [Thread-3] 2021-03-08 17:03:51,088 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:58
-INFO  [Thread-3] 2021-03-08 17:03:51,382 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:03
-INFO  [Thread-3] 2021-03-08 17:03:51,956 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 986
-INFO  [Thread-3] 2021-03-08 17:03:52,068 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9987
-INFO  [Thread-3] 2021-03-08 17:03:52,730 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9986
-INFO  [Thread-3] 2021-03-08 17:03:53,757 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 3
-INFO  [Thread-3] 2021-03-08 17:03:53,838 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 2
-INFO  [Thread-3] 2021-03-08 17:03:55,045 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:07
-INFO  [Thread-3] 2021-03-08 17:03:55,373 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:13
-INFO  [Thread-3] 2021-03-08 17:03:55,484 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:15
-INFO  [Thread-3] 2021-03-08 17:03:55,826 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:21
-INFO  [Thread-3] 2021-03-08 17:03:56,167 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:26
-INFO  [Thread-3] 2021-03-08 17:03:56,240 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:27
-INFO  [Thread-3] 2021-03-08 17:03:56,310 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:28
-INFO  [Thread-3] 2021-03-08 17:03:56,936 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:36
-INFO  [Thread-3] 2021-03-08 17:03:57,565 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:42
-INFO  [Thread-3] 2021-03-08 17:03:57,802 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:45
-INFO  [Thread-3] 2021-03-08 17:03:58,088 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:49
-INFO  [Thread-3] 2021-03-08 17:03:58,360 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:53
-INFO  [Thread-3] 2021-03-08 17:03:58,727 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 985
-INFO  [Thread-3] 2021-03-08 17:03:58,898 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:01
-INFO  [Thread-3] 2021-03-08 17:03:59,328 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:08
-INFO  [Thread-3] 2021-03-08 17:03:59,539 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:11
-INFO  [Thread-3] 2021-03-08 17:03:59,913 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:16
-INFO  [Thread-3] 2021-03-08 17:04:00,197 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:20
-INFO  [Thread-3] 2021-03-08 17:04:00,463 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:24
-INFO  [Thread-3] 2021-03-08 17:04:00,655 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:27
-INFO  [Thread-3] 2021-03-08 17:04:01,084 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:34
-INFO  [Thread-3] 2021-03-08 17:04:01,294 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:37
-INFO  [Thread-3] 2021-03-08 17:04:01,429 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:39
-INFO  [Thread-3] 2021-03-08 17:04:01,628 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 1
-INFO  [Thread-3] 2021-03-08 17:04:01,753 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:44
-INFO  [Thread-3] 2021-03-08 17:04:02,128 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:50
-INFO  [Thread-3] 2021-03-08 17:04:02,318 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:53
-INFO  [Thread-3] 2021-03-08 17:04:02,618 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:58
-INFO  [Thread-3] 2021-03-08 17:04:03,093 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:06
-INFO  [Thread-3] 2021-03-08 17:04:03,098 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 984
-INFO  [Thread-3] 2021-03-08 17:04:03,550 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:13
-INFO  [Thread-3] 2021-03-08 17:04:03,988 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 983
-INFO  [Thread-3] 2021-03-08 17:04:04,068 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:21
-INFO  [Thread-3] 2021-03-08 17:04:04,379 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:26
-INFO  [Thread-3] 2021-03-08 17:04:04,442 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9985
-INFO  [Thread-3] 2021-03-08 17:04:04,728 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9984
-INFO  [Thread-3] 2021-03-08 17:04:04,864 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:33
-INFO  [Thread-3] 2021-03-08 17:04:05,285 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:40
-INFO  [Thread-3] 2021-03-08 17:04:05,429 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 982
-INFO  [Thread-3] 2021-03-08 17:04:05,713 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:47
-INFO  [Thread-3] 2021-03-08 17:04:05,958 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9983
-INFO  [Thread-3] 2021-03-08 17:04:06,178 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:54
-INFO  [Thread-3] 2021-03-08 17:04:07,100 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:09
-INFO  [Thread-3] 2021-03-08 17:04:07,394 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9982
-INFO  [Thread-3] 2021-03-08 17:04:07,496 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:15
-INFO  [Thread-3] 2021-03-08 17:04:07,999 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:22
-INFO  [Thread-3] 2021-03-08 17:04:08,623 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:31
-INFO  [Thread-3] 2021-03-08 17:04:08,773 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 981
-INFO  [Thread-3] 2021-03-08 17:04:09,258 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:39
-INFO  [Thread-3] 2021-03-08 17:04:09,359 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 980
-INFO  [Thread-3] 2021-03-08 17:04:10,034 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:50
-INFO  [Thread-3] 2021-03-08 17:04:10,501 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:57
-INFO  [Thread-3] 2021-03-08 17:04:10,762 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 979
-INFO  [Thread-3] 2021-03-08 17:04:11,498 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:12
-INFO  [Thread-3] 2021-03-08 17:04:11,608 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 978
-INFO  [Thread-3] 2021-03-08 17:04:12,021 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:20
-INFO  [Thread-3] 2021-03-08 17:04:12,504 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:27
-INFO  [Thread-3] 2021-03-08 17:04:12,988 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:34
-INFO  [Thread-3] 2021-03-08 17:04:13,457 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:41
-INFO  [Thread-3] 2021-03-08 17:04:13,612 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 977
-INFO  [Thread-3] 2021-03-08 17:04:14,198 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:50
-INFO  [Thread-3] 2021-03-08 17:04:15,171 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:02
-INFO  [Thread-3] 2021-03-08 17:04:15,709 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:07
-INFO  [Thread-3] 2021-03-08 17:04:16,279 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:14
-INFO  [Thread-3] 2021-03-08 17:04:16,642 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:19
-INFO  [Thread-3] 2021-03-08 17:04:17,308 repast.simphony.batch.ssh.LocalSession - Admit to SideRoom occupancy left= 0
-INFO  [Thread-3] 2021-03-08 17:04:17,538 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:30
-INFO  [Thread-3] 2021-03-08 17:04:18,427 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:42
-INFO  [Thread-3] 2021-03-08 17:04:18,769 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:47
-INFO  [Thread-3] 2021-03-08 17:04:19,598 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:58
-INFO  [Thread-3] 2021-03-08 17:04:20,269 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:06
-INFO  [Thread-3] 2021-03-08 17:04:20,569 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:10
-INFO  [Thread-3] 2021-03-08 17:04:21,121 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:17
-INFO  [Thread-3] 2021-03-08 17:04:21,769 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:25
-INFO  [Thread-3] 2021-03-08 17:04:22,644 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 976
-INFO  [Thread-3] 2021-03-08 17:04:22,951 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:38
-INFO  [Thread-3] 2021-03-08 17:04:23,309 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:42
-INFO  [Thread-3] 2021-03-08 17:04:23,905 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:48
-INFO  [pool-6-thread-1] 2021-03-08 17:04:24,073 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615222759173 for DONE:  no
-INFO  [Thread-3] 2021-03-08 17:04:24,289 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:52
-INFO  [Thread-3] 2021-03-08 17:04:24,859 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:59
-INFO  [Thread-3] 2021-03-08 17:04:25,259 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9981
-INFO  [Thread-3] 2021-03-08 17:04:26,784 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:23
-INFO  [Thread-3] 2021-03-08 17:04:28,009 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 975
-INFO  [Thread-3] 2021-03-08 17:04:28,187 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:42
-INFO  [pool-6-thread-1] 2021-03-08 17:05:24,075 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615222759173 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-4] 2021-03-08 17:05:24,075 repast.simphony.batch.ssh.SessionsDriver - Run Time: 6.0438
-INFO  [SwingWorker-pool-2-thread-4] 2021-03-08 17:05:24,089 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615222759173
-INFO  [SwingWorker-pool-2-thread-4] 2021-03-08 17:05:24,098 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-4] 2021-03-08 17:05:24,132 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0009
-INFO  [SwingWorker-pool-2-thread-4] 2021-03-08 17:05:24,132 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 6.0828
+INFO  [Thread-4] 2021-03-11 16:53:19,387 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:34
+INFO  [Thread-4] 2021-03-11 16:53:19,942 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:43
+INFO  [Thread-4] 2021-03-11 16:53:20,444 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:53
+INFO  [Thread-4] 2021-03-11 16:53:20,505 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9988
+INFO  [Thread-4] 2021-03-11 16:53:20,860 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:59
+INFO  [Thread-4] 2021-03-11 16:53:21,098 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:02
+INFO  [Thread-4] 2021-03-11 16:53:21,376 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:06
+INFO  [Thread-4] 2021-03-11 16:53:21,708 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:12
+INFO  [Thread-4] 2021-03-11 16:53:21,762 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:13
+INFO  [Thread-4] 2021-03-11 16:53:22,016 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:17
+INFO  [Thread-4] 2021-03-11 16:53:22,347 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:22
+INFO  [Thread-4] 2021-03-11 16:53:22,546 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:26
+INFO  [Thread-4] 2021-03-11 16:53:22,648 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:28
+INFO  [Thread-4] 2021-03-11 16:53:22,880 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:32
+INFO  [Thread-4] 2021-03-11 16:53:23,435 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:40
+INFO  [Thread-4] 2021-03-11 16:53:23,698 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:44
+INFO  [Thread-4] 2021-03-11 16:53:23,967 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9987
+INFO  [Thread-4] 2021-03-11 16:53:24,021 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:49
+INFO  [Thread-4] 2021-03-11 16:53:24,352 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:54
+INFO  [Thread-4] 2021-03-11 16:53:24,630 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:58
+INFO  [Thread-4] 2021-03-11 16:53:24,954 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:04
+INFO  [Thread-4] 2021-03-11 16:53:25,123 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:07
+INFO  [Thread-4] 2021-03-11 16:53:25,254 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:09
+INFO  [Thread-4] 2021-03-11 16:53:25,540 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:13
+INFO  [Thread-4] 2021-03-11 16:53:25,686 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9986
+INFO  [Thread-4] 2021-03-11 16:53:25,972 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:17
+INFO  [Thread-4] 2021-03-11 16:53:26,256 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:20
+INFO  [Thread-4] 2021-03-11 16:53:26,588 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:25
+INFO  [Thread-4] 2021-03-11 16:53:27,074 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9985
+INFO  [Thread-4] 2021-03-11 16:53:27,105 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:32
+INFO  [Thread-4] 2021-03-11 16:53:27,461 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:38
+INFO  [Thread-4] 2021-03-11 16:53:27,676 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:42
+INFO  [Thread-4] 2021-03-11 16:53:27,747 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:43
+INFO  [Thread-4] 2021-03-11 16:53:27,947 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9984
+INFO  [Thread-4] 2021-03-11 16:53:28,132 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:48
+INFO  [Thread-4] 2021-03-11 16:53:28,733 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:56
+INFO  [Thread-4] 2021-03-11 16:53:28,764 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9983
+INFO  [Thread-4] 2021-03-11 16:53:28,934 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:59
+INFO  [Thread-4] 2021-03-11 16:53:29,266 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:04
+INFO  [Thread-4] 2021-03-11 16:53:29,667 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:10
+INFO  [Thread-4] 2021-03-11 16:53:29,798 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:12
+INFO  [Thread-4] 2021-03-11 16:53:30,120 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:18
+INFO  [pool-3-thread-1] 2021-03-11 16:53:30,274 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615481304500 for DONE:  no
+INFO  [Thread-4] 2021-03-11 16:53:30,356 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:21
+INFO  [Thread-4] 2021-03-11 16:53:30,637 repast.simphony.batch.ssh.LocalSession - Admit to Red occupancy left= 999
+INFO  [Thread-4] 2021-03-11 16:53:30,797 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:26
+INFO  [Thread-4] 2021-03-11 16:53:30,937 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9982
+INFO  [Thread-4] 2021-03-11 16:53:31,122 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9981
+INFO  [Thread-4] 2021-03-11 16:53:31,154 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:31
+INFO  [Thread-4] 2021-03-11 16:53:31,454 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:35
+INFO  [Thread-4] 2021-03-11 16:53:31,523 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9980
+INFO  [Thread-4] 2021-03-11 16:53:31,555 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:36
+INFO  [Thread-4] 2021-03-11 16:53:31,808 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:39
+INFO  [Thread-4] 2021-03-11 16:53:32,210 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:45
+INFO  [Thread-4] 2021-03-11 16:53:32,441 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:49
+INFO  [Thread-4] 2021-03-11 16:53:32,726 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:53
+INFO  [Thread-4] 2021-03-11 16:53:32,911 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:55
+INFO  [Thread-4] 2021-03-11 16:53:32,973 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:56
+INFO  [Thread-4] 2021-03-11 16:53:33,143 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:58
+INFO  [Thread-4] 2021-03-11 16:53:33,388 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:01
+INFO  [Thread-4] 2021-03-11 16:53:33,467 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:02
+INFO  [Thread-4] 2021-03-11 16:53:33,812 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:07
+INFO  [Thread-4] 2021-03-11 16:53:34,075 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:10
+INFO  [Thread-4] 2021-03-11 16:53:34,364 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:14
+INFO  [Thread-4] 2021-03-11 16:53:34,411 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9979
+INFO  [Thread-4] 2021-03-11 16:53:34,749 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:20
+INFO  [Thread-4] 2021-03-11 16:53:35,049 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:24
+INFO  [Thread-4] 2021-03-11 16:53:35,065 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9978
+INFO  [Thread-4] 2021-03-11 16:53:35,165 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:25
+INFO  [Thread-4] 2021-03-11 16:53:35,519 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9977
+INFO  [Thread-4] 2021-03-11 16:53:35,535 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:29
+INFO  [Thread-4] 2021-03-11 16:53:35,851 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9976
+INFO  [Thread-4] 2021-03-11 16:53:35,882 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:33
+INFO  [Thread-4] 2021-03-11 16:53:36,020 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:35
+INFO  [Thread-4] 2021-03-11 16:53:36,537 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:41
+INFO  [Thread-4] 2021-03-11 16:53:36,769 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9975
+INFO  [Thread-4] 2021-03-11 16:53:36,860 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:45
+INFO  [Thread-4] 2021-03-11 16:53:37,016 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:47
+INFO  [Thread-4] 2021-03-11 16:53:37,101 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:48
+INFO  [Thread-4] 2021-03-11 16:53:37,702 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:55
+INFO  [Thread-4] 2021-03-11 16:53:37,956 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:58
+INFO  [Thread-4] 2021-03-11 16:53:38,541 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9974
+INFO  [Thread-4] 2021-03-11 16:53:38,958 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:10
+INFO  [Thread-4] 2021-03-11 16:53:39,105 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:12
+INFO  [Thread-4] 2021-03-11 16:53:39,142 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9973
+INFO  [Thread-4] 2021-03-11 16:53:39,388 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:16
+INFO  [Thread-4] 2021-03-11 16:53:40,075 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:24
+INFO  [Thread-4] 2021-03-11 16:53:40,229 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:26
+INFO  [Thread-4] 2021-03-11 16:53:40,608 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:31
+INFO  [Thread-4] 2021-03-11 16:53:40,896 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9972
+INFO  [Thread-4] 2021-03-11 16:53:40,931 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:35
+INFO  [Thread-4] 2021-03-11 16:53:40,993 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9971
+INFO  [Thread-4] 2021-03-11 16:53:41,295 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:39
+INFO  [Thread-4] 2021-03-11 16:53:41,443 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:41
+INFO  [Thread-4] 2021-03-11 16:53:41,646 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9970
+INFO  [Thread-4] 2021-03-11 16:53:42,000 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:48
+INFO  [Thread-4] 2021-03-11 16:53:43,133 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9969
+INFO  [Thread-4] 2021-03-11 16:53:43,519 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:04
+INFO  [Thread-4] 2021-03-11 16:53:44,012 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:09
+INFO  [Thread-4] 2021-03-11 16:53:44,506 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:15
+INFO  [Thread-4] 2021-03-11 16:53:44,775 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9968
+INFO  [Thread-4] 2021-03-11 16:53:45,060 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:20
+INFO  [Thread-4] 2021-03-11 16:53:45,282 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9967
+INFO  [Thread-4] 2021-03-11 16:53:45,345 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:23
+INFO  [Thread-4] 2021-03-11 16:53:45,778 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:28
+INFO  [Thread-4] 2021-03-11 16:53:45,856 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9966
+INFO  [Thread-4] 2021-03-11 16:53:46,125 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:32
+INFO  [Thread-4] 2021-03-11 16:53:46,347 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:35
+INFO  [Thread-4] 2021-03-11 16:53:46,695 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:39
+INFO  [Thread-4] 2021-03-11 16:53:47,397 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:45
+INFO  [Thread-4] 2021-03-11 16:53:47,597 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:47
+INFO  [Thread-4] 2021-03-11 16:53:48,012 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:52
+INFO  [Thread-4] 2021-03-11 16:53:48,529 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:58
+INFO  [Thread-4] 2021-03-11 16:53:48,946 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:03
+INFO  [Thread-4] 2021-03-11 16:53:49,146 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:05
+INFO  [Thread-4] 2021-03-11 16:53:49,600 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:09
+INFO  [Thread-4] 2021-03-11 16:53:49,848 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9965
+INFO  [Thread-4] 2021-03-11 16:53:49,863 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:12
+INFO  [Thread-4] 2021-03-11 16:53:49,979 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9964
+INFO  [Thread-4] 2021-03-11 16:53:50,133 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:15
+INFO  [Thread-4] 2021-03-11 16:53:50,202 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9963
+INFO  [Thread-4] 2021-03-11 16:53:50,618 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:20
+INFO  [Thread-4] 2021-03-11 16:53:50,919 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:24
+INFO  [Thread-4] 2021-03-11 16:53:51,397 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:29
+INFO  [Thread-4] 2021-03-11 16:53:51,767 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9962
+INFO  [Thread-4] 2021-03-11 16:53:51,805 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:33
+INFO  [Thread-4] 2021-03-11 16:53:52,331 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:39
+INFO  [Thread-4] 2021-03-11 16:53:52,607 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:42
+INFO  [Thread-4] 2021-03-11 16:53:52,945 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:46
+INFO  [Thread-4] 2021-03-11 16:53:53,201 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:49
+INFO  [Thread-4] 2021-03-11 16:53:53,987 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:56
+INFO  [Thread-4] 2021-03-11 16:53:54,056 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9961
+INFO  [Thread-4] 2021-03-11 16:53:55,089 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9960
+INFO  [Thread-4] 2021-03-11 16:53:55,259 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:10
+INFO  [Thread-4] 2021-03-11 16:53:55,553 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:13
+INFO  [Thread-4] 2021-03-11 16:53:55,791 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:15
+INFO  [Thread-4] 2021-03-11 16:53:56,188 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:19
+INFO  [Thread-4] 2021-03-11 16:53:56,314 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9959
+INFO  [Thread-4] 2021-03-11 16:53:56,854 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:26
+INFO  [Thread-4] 2021-03-11 16:53:57,403 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:33
+INFO  [Thread-4] 2021-03-11 16:53:57,789 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9958
+INFO  [Thread-4] 2021-03-11 16:53:58,559 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:43
+INFO  [Thread-4] 2021-03-11 16:53:58,959 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:47
+INFO  [Thread-4] 2021-03-11 16:53:59,176 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9957
+INFO  [Thread-4] 2021-03-11 16:53:59,336 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:51
+INFO  [Thread-4] 2021-03-11 16:54:00,118 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:59
+INFO  [Thread-4] 2021-03-11 16:54:01,575 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:14
+INFO  [Thread-4] 2021-03-11 16:54:02,041 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9956
+INFO  [Thread-4] 2021-03-11 16:54:03,099 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:29
+INFO  [Thread-4] 2021-03-11 16:54:04,254 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9955
+INFO  [Thread-4] 2021-03-11 16:54:04,380 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:42
+INFO  [Thread-4] 2021-03-11 16:54:05,071 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:48
+INFO  [Thread-4] 2021-03-11 16:54:05,950 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:57
+INFO  [Thread-4] 2021-03-11 16:54:07,557 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:13
+INFO  [Thread-4] 2021-03-11 16:54:07,960 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9954
+INFO  [Thread-4] 2021-03-11 16:54:08,000 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:17
+INFO  [Thread-4] 2021-03-11 16:54:08,586 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:23
+INFO  [Thread-4] 2021-03-11 16:54:09,749 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:34
+INFO  [Thread-4] 2021-03-11 16:54:10,502 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:42
+INFO  [Thread-4] 2021-03-11 16:54:11,437 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:52
+INFO  [Thread-4] 2021-03-11 16:54:11,938 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:56
+INFO  [Thread-4] 2021-03-11 16:54:13,072 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:07
+INFO  [Thread-4] 2021-03-11 16:54:13,942 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:16
+INFO  [Thread-4] 2021-03-11 16:54:14,945 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:25
+INFO  [Thread-4] 2021-03-11 16:54:15,777 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:33
+INFO  [Thread-4] 2021-03-11 16:54:16,202 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:38
+INFO  [Thread-4] 2021-03-11 16:54:17,167 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:47
+INFO  [Thread-4] 2021-03-11 16:54:17,885 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9953
+INFO  [Thread-4] 2021-03-11 16:54:18,308 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:59
+INFO  [Thread-4] 2021-03-11 16:54:19,411 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:08
+INFO  [Thread-4] 2021-03-11 16:54:19,959 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:13
+INFO  [Thread-4] 2021-03-11 16:54:20,299 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:17
+INFO  [Thread-4] 2021-03-11 16:54:20,898 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:23
+INFO  [Thread-4] 2021-03-11 16:54:21,399 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:27
+INFO  [Thread-4] 2021-03-11 16:54:21,900 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:32
+INFO  [Thread-4] 2021-03-11 16:54:22,169 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9952
+INFO  [Thread-4] 2021-03-11 16:54:22,570 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:38
+INFO  [Thread-4] 2021-03-11 16:54:23,044 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:43
+INFO  [Thread-4] 2021-03-11 16:54:23,494 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9951
+INFO  [Thread-4] 2021-03-11 16:54:23,942 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:50
+INFO  [Thread-4] 2021-03-11 16:54:24,504 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:55
+INFO  [Thread-4] 2021-03-11 16:54:24,852 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:58
+INFO  [Thread-4] 2021-03-11 16:54:25,848 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9950
+INFO  [Thread-4] 2021-03-11 16:54:26,456 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9949
+INFO  [Thread-4] 2021-03-11 16:54:26,735 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:17
+INFO  [Thread-4] 2021-03-11 16:54:27,013 repast.simphony.batch.ssh.LocalSession - Admit to Amber occupancy left= 9948
+INFO  [Thread-4] 2021-03-11 16:54:28,426 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:37
+INFO  [Thread-4] 2021-03-11 16:54:29,752 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:53
+INFO  [pool-3-thread-1] 2021-03-11 16:54:30,289 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615481304500 for DONE:  no
+INFO  [pool-3-thread-1] 2021-03-11 16:55:30,301 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615481304500 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2021-03-11 16:55:30,305 repast.simphony.batch.ssh.SessionsDriver - Run Time: 7.0527
+INFO  [SwingWorker-pool-2-thread-1] 2021-03-11 16:55:30,369 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1615481304500
+INFO  [SwingWorker-pool-2-thread-1] 2021-03-11 16:55:30,400 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2021-03-11 16:55:30,431 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0018
+INFO  [SwingWorker-pool-2-thread-1] 2021-03-11 16:55:30,431 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 7.0992

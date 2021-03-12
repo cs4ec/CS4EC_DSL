@@ -13,6 +13,8 @@ import EDLanguage.sandbox.Nurse;
 import EDLanguage.sandbox.Red_AdmissionBay;
 import EDLanguage.sandbox.SideRoom_AdmissionBay;
 import repast.simphony.context.Context;
+import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.parameter.Parameters;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
 import repast.simphony.random.RandomHelper;
@@ -60,6 +62,7 @@ import simcore.basicStructures.Seat;
 import simcore.basicStructures.Test;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
+import simcore.diagnosis.InfectionStatus;
 import simcore.diagnosis.SeverityScore;
 import simcore.diagnosis.TestResult;
 import simcore.utilities.AStar;
@@ -494,7 +497,25 @@ public class Agent {
 			return false;
 		}
 		if(c instanceof InfectionCondition) {
-			return ((InfectionCondition) c).getInfectionStatus() == ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
+			
+			// Introduce stochasticity in whether patient is correctly identified as symptomatic 
+		    Parameters params = RunEnvironment.getInstance().getParameters();
+		    Double pdblFalsePositiveSymptomatic = params.getDouble("FalsePositiveSymptomatic");
+		    
+		    InfectionStatus testingStatus = ((InfectionCondition) c).getInfectionStatus();
+		    InfectionStatus patientActualStatus = ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
+			
+		    // margin of error comes when patient is susceptible, but doc thinks they are actually symptomatic
+			// so when deciding if a patient is symptomatic, there is a 7% chance that the doc says YES, but patient actual infection status is susc
+		    if(testingStatus == InfectionStatus.Symptomatic && patientActualStatus == InfectionStatus.Susceptible) {
+		    	if (RandomHelper.nextDouble() < pdblFalsePositiveSymptomatic) {
+		    		return true;
+		    	} else {
+		    		return false;
+		    	}
+		    } else {
+				return ((InfectionCondition) c).getInfectionStatus() == ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
+		    }
 		}
 		
 		if(c instanceof SeverityCondition) {

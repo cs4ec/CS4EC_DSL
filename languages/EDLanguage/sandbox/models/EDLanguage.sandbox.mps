@@ -215,10 +215,10 @@
     </language>
   </registry>
   <node concept="3VqkwO" id="3l6cNjeckZ5">
-    <property role="3UAW2b" value="47" />
-    <property role="3UAW29" value="1.5" />
-    <property role="XQ$72" value="44" />
-    <property role="XQ$7e" value="66" />
+    <property role="3UAW2b" value="4" />
+    <property role="3UAW29" value="1" />
+    <property role="XQ$72" value="60" />
+    <property role="XQ$7e" value="40" />
     <node concept="3VqkwQ" id="3l6cNjecY0m" role="3Vt_yv">
       <property role="3Vt_zX" value="6" />
       <ref role="3Vt_zZ" node="3l6cNjecY0h" resolve="Doctor" />
@@ -2122,19 +2122,13 @@
               <ref role="Udx8D" node="$2vkoOHJaj" resolve="MajorsABBay" />
             </node>
           </node>
-          <node concept="3JG_m1" id="4TDP_nS6jE" role="3VtFpW">
-            <node concept="3JJFmu" id="4TDP_nS6jG" role="3JG_8_" />
-            <node concept="3JG_m4" id="4TDP_nS6k0" role="3JG_nW">
-              <node concept="3JGL$I" id="4TDP_nS6_g" role="3JG_nY" />
-            </node>
-          </node>
           <node concept="1kHj2w" id="4WX2mA8rZB5" role="3VtFpW">
             <node concept="1kHjla" id="4WX2mA8rZB7" role="1kHj2_">
               <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
             </node>
           </node>
           <node concept="jcv$W" id="4WX2mA8rXKi" role="3VtFpW">
-            <property role="jcv$Z" value="2" />
+            <property role="jcv$Z" value="5" />
           </node>
           <node concept="3JG_m1" id="4WX2mA8rXKA" role="3VtFpW">
             <node concept="3JJFmu" id="4WX2mA8rXKC" role="3JG_8_" />

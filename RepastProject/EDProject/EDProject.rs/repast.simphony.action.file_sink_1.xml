@@ -1,0 +1,42 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>A File Sink</name>
+  <dataSet>A Data Set</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>PositiveLFT</string>
+    <string>NegativeLFT</string>
+    <string>Positive_Amber</string>
+    <string>Negative_Amber</string>
+    <string>Positive_Red</string>
+    <string>Negative_Red</string>
+    <string>Positive_Green</string>
+    <string>Negative_Green</string>
+    <string>Positive_SideRoom</string>
+    <string>Negative_SideRoom</string>
+    <string>Positive_Discharged</string>
+    <string>Negative_Discharged</string>
+    <string>LFT_Total</string>
+    <string>LIAT_Total</string>
+    <string>PCR_Total</string>
+    <string>Num_Symptomatic</string>
+    <string>Num_Asymptomatic</string>
+    <string>TotalPatients</string>
+    <string>CovPlusLFTPos</string>
+    <string>CovNegLFTNeg</string>
+    <string>CovPosLFTNeg</string>
+    <string>CovNegLFTPos</string>
+    <string>LFTPosRed</string>
+    <string>LFTPosSideRoom</string>
+    <string>LFTNegRed</string>
+    <string>LFTNegSideRoom</string>
+    <string>LIATPositive</string>
+    <string>LIATNegative</string>
+    <string>COVPlusLIATPos</string>
+    <string>COVPlusLIATNeg</string>
+    <string>COVNegLIATPos</string>
+    <string>COVNegLIATNeg</string>
+  </sourceIds>
+  <fileName>PatientOutcomes</fileName>
+  <addTimeStamp>false</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>
