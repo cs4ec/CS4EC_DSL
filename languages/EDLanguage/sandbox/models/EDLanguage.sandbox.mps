@@ -47,6 +47,13 @@
       <concept id="4334763093659899467" name="EDLanguage.structure.PossibilityCondition" flags="ng" index="jeBDq">
         <child id="7454555096515830426" name="possibility" index="x58j7" />
       </concept>
+      <concept id="1645043697875742234" name="EDLanguage.structure.ProcessingTimeLine" flags="ng" index="ldb2t">
+        <property id="1645043697875742262" name="Time" index="ldb2L" />
+        <property id="1645043697875742264" name="Occurances" index="ldb2Z" />
+      </concept>
+      <concept id="1645043697875742197" name="EDLanguage.structure.ProcessingTimeTable" flags="ng" index="ldbdM">
+        <child id="1645043697875742305" name="ProcessingTimeLines" index="ldb3A" />
+      </concept>
       <concept id="1195759192913398353" name="EDLanguage.structure.WallDefinition" flags="ng" index="2q6JFR">
         <child id="1195759192913398356" name="walls" index="2q6JFM" />
       </concept>
@@ -155,6 +162,7 @@
         <property id="329726013640088748" name="Specificity" index="3SEB2z" />
         <property id="329726013640088746" name="Sensitivity" index="3SEB2_" />
         <property id="329726013662425223" name="ProcessingTime" index="3T7DM8" />
+        <child id="1645043697875742355" name="ProcessingTimeTable" index="ldb0k" />
       </concept>
       <concept id="329726013640842570" name="EDLanguage.structure.TestAction" flags="ng" index="3SPZ55">
         <child id="329726013646477471" name="positiveCase" index="3S2vig" />
@@ -1997,7 +2005,7 @@
     <property role="3SEB2_" value="70" />
     <property role="3SEB2z" value="99.1" />
     <property role="3GE5qa" value="Tests" />
-    <property role="3T7DM8" value="30" />
+    <property role="3T7DM8" value="15" />
   </node>
   <node concept="3Vql55" id="ijr0ZWACuy">
     <property role="3GE5qa" value="Tests" />
@@ -2598,7 +2606,7 @@
           <node concept="3SPZ55" id="2Rfu8e4WdtQ" role="3VtFpW">
             <node concept="3JJFmu" id="2Rfu8e4WdtR" role="3SPZ52" />
             <node concept="3S2u4K" id="2Rfu8e4Wdu4" role="3SPZ50">
-              <ref role="3TMAOB" node="2Rfu8e4WdtP" resolve="LabPCR" />
+              <ref role="3TMAOB" node="2Rfu8e4WdtP" resolve="LabSymptomaticPCR" />
             </node>
             <node concept="3VtFpM" id="2Rfu8e4WdtT" role="3S2vig">
               <node concept="3VtFpM" id="2Rfu8e4Wdu7" role="3VtFpW">
@@ -2640,10 +2648,68 @@
   </node>
   <node concept="3SEB2C" id="2Rfu8e4WdtP">
     <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LabPCR" />
+    <property role="TrG5h" value="LabSymptomaticPCR" />
     <property role="3SEB2_" value="99" />
     <property role="3SEB2z" value="95" />
     <property role="3T7DM8" value="240" />
+    <node concept="ldbdM" id="1rknCs41dS7" role="ldb0k">
+      <node concept="ldb2t" id="1rknCs41dS9" role="ldb3A">
+        <property role="ldb2L" value="5" />
+        <property role="ldb2Z" value="5" />
+      </node>
+      <node concept="ldb2t" id="1rknCs41dSb" role="ldb3A">
+        <property role="ldb2L" value="9" />
+        <property role="ldb2Z" value="70" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8JF" role="ldb3A">
+        <property role="ldb2L" value="13" />
+        <property role="ldb2Z" value="210" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8JJ" role="ldb3A">
+        <property role="ldb2L" value="17" />
+        <property role="ldb2Z" value="300" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8JO" role="ldb3A">
+        <property role="ldb2L" value="21" />
+        <property role="ldb2Z" value="350" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8JU" role="ldb3A">
+        <property role="ldb2L" value="25" />
+        <property role="ldb2Z" value="290" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8K1" role="ldb3A">
+        <property role="ldb2L" value="29" />
+        <property role="ldb2Z" value="290" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8K9" role="ldb3A">
+        <property role="ldb2L" value="33" />
+        <property role="ldb2Z" value="280" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8Ki" role="ldb3A">
+        <property role="ldb2L" value="37" />
+        <property role="ldb2Z" value="180" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8Ks" role="ldb3A">
+        <property role="ldb2L" value="41" />
+        <property role="ldb2Z" value="100" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8KB" role="ldb3A">
+        <property role="ldb2L" value="45" />
+        <property role="ldb2Z" value="50" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8KW" role="ldb3A">
+        <property role="ldb2L" value="49" />
+        <property role="ldb2Z" value="50" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8L9" role="ldb3A">
+        <property role="ldb2L" value="53" />
+        <property role="ldb2Z" value="40" />
+      </node>
+      <node concept="ldb2t" id="1rknCs4i8Ln" role="ldb3A">
+        <property role="ldb2L" value="57" />
+        <property role="ldb2Z" value="30" />
+      </node>
+    </node>
   </node>
   <node concept="qZ3_f" id="L8B6Gnb_Fx">
     <property role="3GE5qa" value="rooms" />

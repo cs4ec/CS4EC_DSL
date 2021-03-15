@@ -51,8 +51,8 @@ public class LabTech extends Actor {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("replyTo"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("Lab"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(14400)));
-    if (CheckCondition(new TestResultCondition().WithTest(LabPCR.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LabSymptomaticPCR.getInstance().getProcessingTime())));
+    if (CheckCondition(new TestResultCondition().WithTest(LabSymptomaticPCR.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new PCRCompleteSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));

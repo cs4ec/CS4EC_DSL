@@ -61,6 +61,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
+  private ConceptPresentation props_ProcessingTimeLine;
+  private ConceptPresentation props_ProcessingTimeTable;
   private ConceptPresentation props_ResultCondition;
   private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomDefinition;
@@ -471,6 +473,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
+      case LanguageConceptSwitch.ProcessingTimeLine:
+        if (props_ProcessingTimeLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ProcessingTimeLine");
+          props_ProcessingTimeLine = cpb.create();
+        }
+        return props_ProcessingTimeLine;
+      case LanguageConceptSwitch.ProcessingTimeTable:
+        if (props_ProcessingTimeTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Test processing time table");
+          props_ProcessingTimeTable = cpb.create();
+        }
+        return props_ProcessingTimeTable;
       case LanguageConceptSwitch.ResultCondition:
         if (props_ResultCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

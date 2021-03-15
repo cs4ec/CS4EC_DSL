@@ -1243,6 +1243,12 @@
       <property role="TrG5h" value="ProcessingTime" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyj" id="1rknCs3SeUj" role="1TKVEi">
+      <property role="IQ2ns" value="1645043697875742355" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ProcessingTimeTable" />
+      <ref role="20lvS9" node="1rknCs3SeRP" resolve="ProcessingTimeTable" />
+    </node>
   </node>
   <node concept="1TIwiD" id="ijr0ZWh9Pa">
     <property role="EcuMT" value="329726013640842570" />
@@ -1604,6 +1610,37 @@
     <node concept="1TJgyi" id="2vFOz$FUEcK" role="1TKVEl">
       <property role="IQ2nx" value="2876623929997959984" />
       <property role="TrG5h" value="NumPatientsInHour" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1rknCs3SeRP">
+    <property role="EcuMT" value="1645043697875742197" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ProcessingTimeTable" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="Test processing time table" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1rknCs3SeTx" role="1TKVEi">
+      <property role="IQ2ns" value="1645043697875742305" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ProcessingTimeLines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1rknCs3SeSq" resolve="ProcessingTimeLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1rknCs3SeSq">
+    <property role="EcuMT" value="1645043697875742234" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ProcessingTimeLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="1rknCs3SeSQ" role="1TKVEl">
+      <property role="IQ2nx" value="1645043697875742262" />
+      <property role="TrG5h" value="Time" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyi" id="1rknCs3SeSS" role="1TKVEl">
+      <property role="IQ2nx" value="1645043697875742264" />
+      <property role="TrG5h" value="Occurances" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>

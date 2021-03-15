@@ -11,6 +11,7 @@ public class LIAT extends Test {
     specificity = 0.95;
     processingTime = 30;
     name = "LIAT";
+
   }
 
   public static Test getInstance() {
@@ -19,4 +20,5 @@ public class LIAT extends Test {
     }
     return instance;
   }
+
 }

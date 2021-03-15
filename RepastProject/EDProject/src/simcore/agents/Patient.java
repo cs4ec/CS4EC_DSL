@@ -14,7 +14,7 @@ import EDLanguage.sandbox.Exit;
 import EDLanguage.sandbox.Green_AdmissionBay;
 import EDLanguage.sandbox.INOVA;
 import EDLanguage.sandbox.LIAT;
-import EDLanguage.sandbox.LabPCR;
+import EDLanguage.sandbox.LabSymptomaticPCR;
 import EDLanguage.sandbox.Red_AdmissionBay;
 import EDLanguage.sandbox.SideRoom_AdmissionBay;
 import EDLanguage.sandbox.WaitingRoom;
@@ -507,7 +507,7 @@ public class Patient extends Agent {
 	}
 	
 	public Integer receivedPCR() {
-		if( testResults.stream().filter(t -> t.getTestType().equals(LabPCR.getInstance())).findAny().isPresent()) {
+		if( testResults.stream().filter(t -> t.getTestType().equals(LabSymptomaticPCR.getInstance())).findAny().isPresent()) {
 			return 1;
 		}
 		return 0;

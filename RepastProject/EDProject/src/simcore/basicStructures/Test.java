@@ -4,6 +4,7 @@ import repast.simphony.random.RandomHelper;
 import simcore.agents.Patient;
 import simcore.diagnosis.InfectionStatus;
 import simcore.diagnosis.TestResult;
+import simcore.utilities.Distribution;
 
 public class Test {
 	protected static Test instance;
@@ -11,6 +12,7 @@ public class Test {
 	protected double sensitivity;
 	protected double specificity;
 	protected Integer processingTime;
+	protected Distribution<Integer> processingTimeDistribution;
 	
 //	public Test(double pdblSensitivity, double pdblSpecificity) {
 //		sensitivity = pdblSensitivity;
@@ -59,5 +61,12 @@ public class Test {
 	
 	public double getSpecificity() {
 		return specificity;
+	}
+	
+	public Integer getProcessingTime() {
+		if(processingTimeDistribution == null) {
+			return processingTime;
+		}
+		return processingTimeDistribution.sample();
 	}
 }
