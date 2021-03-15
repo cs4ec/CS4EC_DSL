@@ -17,20 +17,20 @@ public class LabSymptomaticPCR extends Test {
 
     HashMap returnMap = new HashMap();
     double TotalOccurances = 2246;
-    returnMap.put(5, ((Double) (5 / TotalOccurances)));
-    returnMap.put(9, ((Double) (70 / TotalOccurances)));
-    returnMap.put(13, ((Double) (210 / TotalOccurances)));
-    returnMap.put(17, ((Double) (300 / TotalOccurances)));
-    returnMap.put(21, ((Double) (350 / TotalOccurances)));
-    returnMap.put(25, ((Double) (290 / TotalOccurances)));
-    returnMap.put(29, ((Double) (290 / TotalOccurances)));
-    returnMap.put(33, ((Double) (280 / TotalOccurances)));
-    returnMap.put(37, ((Double) (180 / TotalOccurances)));
-    returnMap.put(41, ((Double) (100 / TotalOccurances)));
-    returnMap.put(45, ((Double) (50 / TotalOccurances)));
-    returnMap.put(49, ((Double) (50 / TotalOccurances)));
-    returnMap.put(53, ((Double) (40 / TotalOccurances)));
-    returnMap.put(57, ((Double) (30 / TotalOccurances)));
+    returnMap.put(300, ((Double) (5 / TotalOccurances)));
+    returnMap.put(540, ((Double) (70 / TotalOccurances)));
+    returnMap.put(780, ((Double) (210 / TotalOccurances)));
+    returnMap.put(1020, ((Double) (300 / TotalOccurances)));
+    returnMap.put(1260, ((Double) (350 / TotalOccurances)));
+    returnMap.put(1500, ((Double) (290 / TotalOccurances)));
+    returnMap.put(1740, ((Double) (290 / TotalOccurances)));
+    returnMap.put(1980, ((Double) (280 / TotalOccurances)));
+    returnMap.put(2220, ((Double) (180 / TotalOccurances)));
+    returnMap.put(2460, ((Double) (100 / TotalOccurances)));
+    returnMap.put(2700, ((Double) (50 / TotalOccurances)));
+    returnMap.put(2940, ((Double) (50 / TotalOccurances)));
+    returnMap.put(3180, ((Double) (40 / TotalOccurances)));
+    returnMap.put(3420, ((Double) (30 / TotalOccurances)));
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 

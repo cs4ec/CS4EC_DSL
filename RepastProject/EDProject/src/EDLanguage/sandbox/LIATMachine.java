@@ -60,7 +60,7 @@ public class LIATMachine extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LIAT.getInstance().getProcessingTime())));
     if (CheckCondition(new TestResultCondition().WithTest(LIAT.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new LIATCompleteSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));

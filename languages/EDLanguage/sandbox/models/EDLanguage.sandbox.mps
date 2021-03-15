@@ -2806,5 +2806,74 @@
       <property role="c0n49" value="3" />
     </node>
   </node>
+  <node concept="3SEB2C" id="2blVuwUEXrZ">
+    <property role="3GE5qa" value="Tests" />
+    <property role="TrG5h" value="LabAsymptomaticPCR" />
+    <property role="3SEB2_" value="99" />
+    <property role="3SEB2z" value="95" />
+    <property role="3T7DM8" value="120" />
+    <node concept="ldbdM" id="2blVuwUEXsr" role="ldb0k">
+      <node concept="ldb2t" id="2blVuwUEXsS" role="ldb3A">
+        <property role="ldb2L" value="7" />
+        <property role="ldb2Z" value="100" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXsU" role="ldb3A">
+        <property role="ldb2L" value="11" />
+        <property role="ldb2Z" value="950" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXsX" role="ldb3A">
+        <property role="ldb2L" value="15" />
+        <property role="ldb2Z" value="1500" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXt1" role="ldb3A">
+        <property role="ldb2L" value="19" />
+        <property role="ldb2Z" value="1250" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXt6" role="ldb3A">
+        <property role="ldb2L" value="23" />
+        <property role="ldb2Z" value="900" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXtc" role="ldb3A">
+        <property role="ldb2L" value="27" />
+        <property role="ldb2Z" value="600" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXtj" role="ldb3A">
+        <property role="ldb2L" value="31" />
+        <property role="ldb2Z" value="400" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXtr" role="ldb3A">
+        <property role="ldb2L" value="35" />
+        <property role="ldb2Z" value="300" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXt$" role="ldb3A">
+        <property role="ldb2L" value="39" />
+        <property role="ldb2Z" value="250" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXtI" role="ldb3A">
+        <property role="ldb2L" value="43" />
+        <property role="ldb2Z" value="200" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXtT" role="ldb3A">
+        <property role="ldb2L" value="47" />
+        <property role="ldb2Z" value="150" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXu5" role="ldb3A">
+        <property role="ldb2L" value="53" />
+        <property role="ldb2Z" value="90" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXui" role="ldb3A">
+        <property role="ldb2L" value="57" />
+        <property role="ldb2Z" value="70" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXuw" role="ldb3A">
+        <property role="ldb2L" value="75" />
+        <property role="ldb2Z" value="50" />
+      </node>
+      <node concept="ldb2t" id="2blVuwUEXuJ" role="ldb3A">
+        <property role="ldb2L" value="87" />
+        <property role="ldb2Z" value="30" />
+      </node>
+    </node>
+  </node>
 </model>
 

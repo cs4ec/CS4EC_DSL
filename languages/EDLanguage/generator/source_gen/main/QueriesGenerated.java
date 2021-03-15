@@ -235,7 +235,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.Occurances$bnEV);
   }
   public static Object propertyMacro_GetValue_37_6(final PropertyMacroContext _context) {
-    return Integer.valueOf(SPropertyOperations.getString(_context.getNode(), PROPS.Time$bncT));
+    return Integer.valueOf(SPropertyOperations.getString(_context.getNode(), PROPS.Time$bncT)) * 60;
   }
   public static Object propertyMacro_GetValue_37_7(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);

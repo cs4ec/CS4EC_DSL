@@ -6130,13 +6130,18 @@
                   <node concept="3zFVjK" id="1rknCs3YENF" role="3zH0cK">
                     <node concept="3clFbS" id="1rknCs3YENG" role="2VODD2">
                       <node concept="3clFbF" id="1rknCs3YENH" role="3cqZAp">
-                        <node concept="2YIFZM" id="1rknCs3YENI" role="3clFbG">
-                          <ref role="1Pybhc" to="wyt6:~Integer" resolve="Integer" />
-                          <ref role="37wK5l" to="wyt6:~Integer.valueOf(java.lang.String)" resolve="valueOf" />
-                          <node concept="2OqwBi" id="1rknCs3YENJ" role="37wK5m">
-                            <node concept="30H73N" id="1rknCs3YENK" role="2Oq$k0" />
-                            <node concept="3TrcHB" id="1rknCs3YENL" role="2OqNvi">
-                              <ref role="3TsBF5" to="3751:1rknCs3SeSQ" resolve="Time" />
+                        <node concept="17qRlL" id="2blVuwUEZfX" role="3clFbG">
+                          <node concept="3cmrfG" id="2blVuwUEZrQ" role="3uHU7w">
+                            <property role="3cmrfH" value="60" />
+                          </node>
+                          <node concept="2YIFZM" id="1rknCs3YENI" role="3uHU7B">
+                            <ref role="1Pybhc" to="wyt6:~Integer" resolve="Integer" />
+                            <ref role="37wK5l" to="wyt6:~Integer.valueOf(java.lang.String)" resolve="valueOf" />
+                            <node concept="2OqwBi" id="1rknCs3YENJ" role="37wK5m">
+                              <node concept="30H73N" id="1rknCs3YENK" role="2Oq$k0" />
+                              <node concept="3TrcHB" id="1rknCs3YENL" role="2OqNvi">
+                                <ref role="3TsBF5" to="3751:1rknCs3SeSQ" resolve="Time" />
+                              </node>
                             </node>
                           </node>
                         </node>
