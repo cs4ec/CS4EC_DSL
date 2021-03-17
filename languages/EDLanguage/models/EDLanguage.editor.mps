@@ -2082,5 +2082,18 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="2blVuwVt5Fh">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:2blVuwVt5E5" resolve="BedAvailableCondition" />
+    <node concept="3EZMnI" id="2blVuwVt5Fs" role="2wV5jI">
+      <node concept="2iRfu4" id="2blVuwVt5Ft" role="2iSdaV" />
+      <node concept="3F0ifn" id="2blVuwVt5Fy" role="3EZMnx">
+        <property role="3F0ifm" value="Bed is available in ward" />
+      </node>
+      <node concept="3F1sOY" id="2blVuwVt5FC" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2blVuwVt5EX" resolve="targetWard" />
+      </node>
+    </node>
+  </node>
 </model>
 

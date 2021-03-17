@@ -1662,5 +1662,19 @@
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
+  <node concept="1TIwiD" id="2blVuwVt5E5">
+    <property role="EcuMT" value="2510173949014596229" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="BedAvailableCondition" />
+    <property role="34LRSv" value="Bed is available condition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="2blVuwVt5EX" role="1TKVEi">
+      <property role="IQ2ns" value="2510173949014596285" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetWard" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
+    </node>
+  </node>
 </model>
 

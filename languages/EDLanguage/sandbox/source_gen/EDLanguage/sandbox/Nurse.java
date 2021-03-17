@@ -16,6 +16,11 @@ import simcore.basicStructures.Desk;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.SendSignalAction;
+import simcore.action.basicAction.StayForConditionAction;
+import simcore.action.basicAction.conditions.BedAvailableCondition;
+import simcore.basicStructures.Room;
+import simcore.basicStructures.Bed;
+import simcore.action.basicAction.AdmitAction;
 import simcore.action.basicAction.DischargeAction;
 
 public class Nurse extends Staff {
@@ -24,7 +29,7 @@ public class Nurse extends Staff {
 
   public Nurse(ContinuousSpace<Object> space, Grid<Object> grid) {
     super(space, grid);
-    mintMyMaxPatients = 0;
+    mintMyMaxPatients = 1;
   }
 
   public Nurse(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
@@ -42,6 +47,10 @@ public class Nurse extends Staff {
       case "PatientNeedsBloodTest":
         curMission = new Action("GiveBloodTest");
         this.InitGiveBloodTest(s);
+        break;
+      case "AdmitPatient":
+        curMission = new Action("AdmitPatient");
+        this.InitAdmitPatient(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -86,6 +95,17 @@ public class Nurse extends Staff {
     sendSignalTemp = new PatientNeedsFinalConsutlationSignal();
     sendSignalTemp.AddData("patient", s.GetData("patient"));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+
+  }
+  public void InitAdmitPatient(Signal s) {
+
+    Signal sendSignalTemp = new Signal();
+
+    StayForConditionAction sa = new StayForConditionAction();
+    sa.WithCondition(new BedAvailableCondition().WithPatient((Patient) s.GetData("patient")).WithTargetWard((Room) s.GetData("targetWard")));
+    curMission.WithStep(new ActionStep().WithName("Wait until a bed is available").WithAction(sa));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(s.GetData("targetWard")).WithOccupiable(Bed.class))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) s.GetData("targetWard"))));
 
   }
   public void InitDischargePatient(Signal s) {

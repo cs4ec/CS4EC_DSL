@@ -173,7 +173,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayJ_lb.setSeats(0);
       MajorsBayK_mb.setSeats(0);
       MajorsBayL_nb.setSeats(0);
-      SideRoom_ob.setSeats(100);
+      SideRoom_ob.setSeats(0);
       AmberBay_pb.setSeats(0);
       RedBay_qb.setSeats(0);
       Pediatrics_a.setDesks(2);
@@ -218,7 +218,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayL_nb.setDesks(1);
       SideRoom_ob.setDesks(0);
       AmberBay_pb.setDesks(0);
-      RedBay_qb.setDesks(3);
+      RedBay_qb.setDesks(0);
       Pediatrics_a.setBeds(0);
       Lab_b.setBeds(0);
       MainReception_c.setBeds(0);
@@ -259,7 +259,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayJ_lb.setBeds(0);
       MajorsBayK_mb.setBeds(0);
       MajorsBayL_nb.setBeds(0);
-      SideRoom_ob.setBeds(90);
+      SideRoom_ob.setBeds(20);
       AmberBay_pb.setBeds(150);
       RedBay_qb.setBeds(150);
     } catch (NumberFormatException e) {

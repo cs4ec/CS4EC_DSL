@@ -5,10 +5,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import EDLanguage.sandbox.DoctorOffice;
 import EDLanguage.sandbox.Nurse;
+import EDLanguage.sandbox.RedAdmissionBay;
+import EDLanguage.sandbox.SideRoomAdmissionBay;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.parameter.Parameters;
@@ -36,6 +39,7 @@ import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
+import simcore.action.basicAction.conditions.BedAvailableCondition;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.action.basicAction.conditions.IsAvailableCondition;
@@ -489,6 +493,16 @@ public class Agent {
 			return ((PatientAdmissionStatusCondition) c).getOutcome() == ((PatientAdmissionStatusCondition) c).getPatient().getOutcome();
 		}
 		
+		if(c instanceof BedAvailableCondition) {
+			Room targetWard = ((BedAvailableCondition) c).getTargetWard();
+			ArrayList<Occupiable> emptyBeds = (ArrayList<Occupiable>) targetWard.getAllEmptyOcupiablesOfType(Bed.class);
+			if(emptyBeds.isEmpty()) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+		
 		if(c instanceof ResultCondition) {
 			Test pTest = ((ResultCondition)c).getTest();
 			Patient pPatient = ((ResultCondition)c).getPatient();
@@ -531,9 +545,20 @@ public class Agent {
 			Room pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
 			InfectionStatus pPatientStatus = pPatient.getActualInfectionState().stateType.getInfectionStatus();
 			
-			if(pAlternativeBay.getRoomType() == EDLanguage.sandbox.RedAdmissionBay.getInstance()) {
+			// Calculate the current occupancy of side rooms
+			ArrayList<Room> plstSideRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(SideRoomAdmissionBay.getInstance());
+			int maxSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllOcupiablesOfType(Bed.class).size()).sum();
+			int curSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllEmptyOcupiablesOfType(Bed.class).size()).sum();
+			double pdblChanceUseSideRoom = (double)curSRCapacity / (double)maxSRCapacity;
+			
+			if(pAlternativeBay.getRoomType() == RedAdmissionBay.getInstance()) {
 				if(pPatientStatus == InfectionStatus.Symptomatic) {
-					return false; // Patient not suitable for SR, should go to Red bay
+					//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
+					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
+						return true;
+					} else {
+						return false;
+					}
 				} else {
 					return true; // Patient can go to a SR
 				}
@@ -541,37 +566,13 @@ public class Agent {
 				if(pPatientStatus == InfectionStatus.Symptomatic) {
 					return true; // Patient can go to a SR
 				} else {
-					return false; // Patient not suitable for SR, should go to Green/Amber bay
-				}
+					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
+						return true;
+					} else {
+						return false;
+					}				}
 			}
 		}
-		
-//		if(c instanceof SuitableForSideRoomCondition) {
-//			Patient pPatient = ((SuitableForSideRoomCondition) c).getPatient();
-//			AdmissionBay pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
-//			double pPHEScore = pPatient.getPHEScore();
-//
-//			// Depending on the alternative admission bay, the COVID suspicion level of a patient is either weighted positive or negative
-//			// E.g. if admitting to red bay, a high suspicion is good, but for amber you want a low suspicion as amber should contain negative cases
-//			if(pAlternativeBay == Red_AdmissionBay.getInstance()) {
-//				
-//			} else if(pAlternativeBay == Amber_AdmissionBay.getInstance()) {
-//				pPHEScore = 1- pPHEScore;
-//			}
-//			double currOcc = SideRoom_AdmissionBay.getInstance().getCurrentOccupancy();
-//			double maxCap = SideRoom_AdmissionBay.getInstance().getCapacity();
-//			double pSideRoomCapacity = (currOcc / maxCap);
-//			if(currOcc >= maxCap) {
-//				pSideRoomCapacity = 1;
-//			}
-//			double pdblChances = 1- ((pPHEScore + pSideRoomCapacity) / 2);
-//			
-//			double rnd = RandomHelper.nextDouble();
-//			if(rnd < pdblChances) {
-//				return true;
-//			}
-//			return false;
-//		}
 
 		if (c instanceof StateCondition) {
 			Field targetField = null;

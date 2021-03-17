@@ -19,10 +19,8 @@ import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.diagnosis.InfectionStatus;
 import simcore.action.basicAction.conditions.ResultCondition;
-import simcore.basicStructures.Bed;
-import simcore.action.basicAction.AdmitAction;
-import simcore.basicStructures.Room;
 import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
+import simcore.basicStructures.Room;
 import simcore.action.basicAction.DischargeAction;
 
 public class Doctor extends Staff {
@@ -148,8 +146,10 @@ public class Doctor extends Staff {
       sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("AmberBay")).WithOccupiable(Bed.class))));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("AmberBay"))));
+      sendSignalTemp = new AdmitPatientSignal();
+      sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }
 
   }
@@ -163,19 +163,27 @@ public class Doctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
       if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("RedBay")))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("SideRoom")).WithOccupiable(Bed.class))));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("SideRoom"))));
+        sendSignalTemp = new AdmitPatientSignal();
+        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+        sendSignalTemp.AddData("patient", s.GetData("patient"));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       } else {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("RedBay")).WithOccupiable(Bed.class))));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("RedBay"))));
+        sendSignalTemp = new AdmitPatientSignal();
+        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("RedBay"));
+        sendSignalTemp.AddData("patient", s.GetData("patient"));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       }
     } else {
       if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("AmberBay")))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("SideRoom")).WithOccupiable(Bed.class))));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("SideRoom"))));
+        sendSignalTemp = new AdmitPatientSignal();
+        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+        sendSignalTemp.AddData("patient", s.GetData("patient"));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       } else {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("AmberBay")).WithOccupiable(Bed.class))));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("AmberBay"))));
+        sendSignalTemp = new AdmitPatientSignal();
+        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
+        sendSignalTemp.AddData("patient", s.GetData("patient"));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       }
     }
 

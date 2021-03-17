@@ -5,14 +5,14 @@ import simcore.basicStructures.Occupiable;
 public class MoveToOrder extends Order{
 	
 	private Object Target;
-	private Occupiable targetOccupiable;
+	private Class targetOccupiable;
 	
 	public MoveToOrder WithDestination(Object o) {
 		Target = o;
 		return this;
 	}
 	
-	public MoveToOrder WithOccupiable(Occupiable o) {
+	public MoveToOrder WithOccupiable(Class o) {
 		targetOccupiable = o;
 		return this;
 	}
@@ -21,7 +21,7 @@ public class MoveToOrder extends Order{
 		return Target;
 	}
 	
-	public Occupiable getOccupiable() {
+	public Class getOccupiable() {
 		return targetOccupiable;
 	}
 
@@ -29,7 +29,7 @@ public class MoveToOrder extends Order{
 		Target = target;
 	}
 	
-	public void setTargetOccupiable(Occupiable pTargetOccupiable) {
+	public void setTargetOccupiable(Class pTargetOccupiable) {
 		targetOccupiable = pTargetOccupiable;
 	}
 

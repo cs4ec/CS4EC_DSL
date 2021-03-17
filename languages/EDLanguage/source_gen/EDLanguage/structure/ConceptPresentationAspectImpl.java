@@ -19,6 +19,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeExpressionReference;
   private ConceptPresentation props_AttributeReference;
+  private ConceptPresentation props_BedAvailableCondition;
   private ConceptPresentation props_Behaviour;
   private ConceptPresentation props_BehaviourElement;
   private ConceptPresentation props_BehaviourElementReference;
@@ -168,6 +169,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttributeReference = cpb.create();
         }
         return props_AttributeReference;
+      case LanguageConceptSwitch.BedAvailableCondition:
+        if (props_BedAvailableCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Bed is available condition");
+          props_BedAvailableCondition = cpb.create();
+        }
+        return props_BedAvailableCondition;
       case LanguageConceptSwitch.Behaviour:
         if (props_Behaviour == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
