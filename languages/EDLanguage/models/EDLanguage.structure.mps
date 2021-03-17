@@ -1096,6 +1096,11 @@
       <property role="TrG5h" value="YELLOW" />
       <property role="1L1pqM" value="yellow" />
     </node>
+    <node concept="25R33" id="2blVuwUK9bq" role="25R1y">
+      <property role="3tVfz5" value="2510173949002814170" />
+      <property role="TrG5h" value="ORANGE" />
+      <property role="1L1pqM" value="orange" />
+    </node>
   </node>
   <node concept="1TIwiD" id="12ocaqaua7C">
     <property role="EcuMT" value="1195759192912732648" />
@@ -1401,12 +1406,6 @@
     <property role="34LRSv" value="admit" />
     <property role="R4oN_" value="Admit the patient" />
     <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
-    <node concept="1TJgyj" id="L8B6GmJfDz" role="1TKVEi">
-      <property role="IQ2ns" value="885129310535219811" />
-      <property role="20kJfa" value="targetBay" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="L8B6GmHak$" resolve="AdmissionBay" />
-    </node>
     <node concept="PrWs8" id="4TDP_lWbTl" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -1416,6 +1415,13 @@
       <property role="20kJfa" value="targetPatient" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
+    </node>
+    <node concept="1TJgyj" id="2blVuwV8Ivb" role="1TKVEi">
+      <property role="IQ2ns" value="2510173949009258443" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetBay" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="4TDP_m2UaO">
@@ -1562,11 +1568,12 @@
     <property role="TrG5h" value="SuitableForSideRoomCondition" />
     <property role="34LRSv" value="suitable for side room condition" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
-    <node concept="1TJgyj" id="1Pt3svOPE2c" role="1TKVEi">
-      <property role="IQ2ns" value="2115862552391360652" />
-      <property role="20kJfa" value="alternativeAdmissionBay" />
+    <node concept="1TJgyj" id="2blVuwUXD_C" role="1TKVEi">
+      <property role="IQ2ns" value="2510173949006354792" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="alternativeBay" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="L8B6GmHak$" resolve="AdmissionBay" />
+      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="6dYFu3AbeaS">

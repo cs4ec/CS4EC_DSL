@@ -129,7 +129,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsBayJ_lb = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
     Room MajorsBayK_mb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
     Room MajorsBayL_nb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room Exit_ob = new Room("Exit", context, space, grid, 162, 60, 10, 2, 1, 1000000, Exit.getInstance(), Color.GRAY);
+    Room SideRoom_ob = new Room("SideRoom", context, space, grid, 200, 60, 50, 50, 1, 100000, SideRoomAdmissionBay.getInstance(), Color.GRAY);
+    Room AmberBay_pb = new Room("AmberBay", context, space, grid, 260, 60, 50, 50, 1, 100000, AmberAdmissionBay.getInstance(), Color.ORANGE);
+    Room RedBay_qb = new Room("RedBay", context, space, grid, 260, 5, 50, 50, 1, 100000, RedAdmissionBay.getInstance(), Color.RED);
     try {
       Pediatrics_a.setSeats(4);
       Lab_b.setSeats(0);
@@ -171,7 +173,9 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayJ_lb.setSeats(0);
       MajorsBayK_mb.setSeats(0);
       MajorsBayL_nb.setSeats(0);
-      Exit_ob.setSeats(0);
+      SideRoom_ob.setSeats(100);
+      AmberBay_pb.setSeats(300);
+      RedBay_qb.setSeats(0);
       Pediatrics_a.setDesks(2);
       Lab_b.setDesks(20);
       MainReception_c.setDesks(0);
@@ -212,7 +216,9 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayJ_lb.setDesks(1);
       MajorsBayK_mb.setDesks(1);
       MajorsBayL_nb.setDesks(1);
-      Exit_ob.setDesks(0);
+      SideRoom_ob.setDesks(0);
+      AmberBay_pb.setDesks(0);
+      RedBay_qb.setDesks(300);
     } catch (NumberFormatException e) {
     }
 
@@ -229,7 +235,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     createWallBetween(160, 60, 160, 70, context, space, grid);
     createWallBetween(110, 90, 130, 90, context, space, grid);
     createWallBetween(140, 90, 160, 90, context, space, grid);
-    createWallBetween(110, 60, 175, 60, context, space, grid);
+    createWallBetween(110, 60, 155, 60, context, space, grid);
     createWallBetween(175, 60, 175, 150, context, space, grid);
     createWallBetween(175, 165, 175, 200, context, space, grid);
     createWallBetween(175, 145, 245, 145, context, space, grid);

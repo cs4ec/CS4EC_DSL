@@ -8,15 +8,15 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.Amber_AdmissionBay;
+import EDLanguage.sandbox.AmberAdmissionBay;
 import EDLanguage.sandbox.Entrance;
 import EDLanguage.sandbox.Exit;
-import EDLanguage.sandbox.Green_AdmissionBay;
+import EDLanguage.sandbox.GreenAdmissionBay;
 import EDLanguage.sandbox.INOVA;
 import EDLanguage.sandbox.LIAT;
 import EDLanguage.sandbox.LabSymptomaticPCR;
-import EDLanguage.sandbox.Red_AdmissionBay;
-import EDLanguage.sandbox.SideRoom_AdmissionBay;
+import EDLanguage.sandbox.RedAdmissionBay;
+import EDLanguage.sandbox.SideRoomAdmissionBay;
 import EDLanguage.sandbox.WaitingRoom;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -27,7 +27,6 @@ import simcore.Signals.Orders.MoveToOrder;
 import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
 import simcore.action.basicAction.conditions.PatientOutcomes;
-import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.TimeKeeper;
@@ -52,6 +51,7 @@ public class Patient extends Agent {
 	private SeverityScore severityScore;
 	private PatientOutcomes outcome;
 	private double pheScore;
+	private boolean usedSideRoom;
 
 	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
@@ -67,15 +67,15 @@ public class Patient extends Agent {
 
 	@ScheduledMethod(start = 1, interval = 1)
 	public void step() {
-		if(this.hasBeenDealtWith && (curInside.getRoomType() == Exit.getInstance() || curInside.getRoomType() == Entrance.getInstance())) {
-			
-		} else {
+//		if(this.hasBeenDealtWith && (curInside.getRoomType() == Exit.getInstance() || curInside.getRoomType() == Entrance.getInstance())) {
+//			
+//		} else {
 			this.Perceive();
-		}
+//		}
 	}
 
 	public void Perceive() {
-		LogStatus();
+//		LogStatus();
 		
 		// Have I been given an order?
 		if(curOrder != null) {
@@ -243,19 +243,20 @@ public class Patient extends Agent {
 		setHasBeenDealtWith();
 	}
 	
-	public void setAdmitted(AdmissionBay bay) {
-		if(bay instanceof Amber_AdmissionBay) {
-			this.outcome = PatientOutcomes.ADMITTEDAMBER;
-		} else if (bay instanceof Red_AdmissionBay) {
-			this.outcome = PatientOutcomes.ADMITTEDRED;
-		} else if (bay instanceof Green_AdmissionBay) {
-			this.outcome = PatientOutcomes.ADMITTEDGREEN;
-		} else if(bay instanceof SideRoom_AdmissionBay) {
-			this.outcome = PatientOutcomes.ADMITTEDSIDEROOM;
-		}
-		
-		setHasBeenDealtWith();
-	}
+//	public void setAdmitted(AdmissionBay bay) {
+//		if(bay instanceof Amber_AdmissionBay) {
+//			this.outcome = PatientOutcomes.ADMITTEDAMBER;
+//		} else if (bay instanceof Red_AdmissionBay) {
+//			this.outcome = PatientOutcomes.ADMITTEDRED;
+//		} else if (bay instanceof Green_AdmissionBay) {
+//			this.outcome = PatientOutcomes.ADMITTEDGREEN;
+//		} else if(bay instanceof SideRoom_AdmissionBay) {
+//			this.outcome = PatientOutcomes.ADMITTEDSIDEROOM;
+//			this.usedSideRoom = true;
+//		}
+//		
+//		setHasBeenDealtWith();
+//	}
 	
 	public List<TestResult> getTestResults(){
 		return testResults;
@@ -266,21 +267,28 @@ public class Patient extends Agent {
 	//----------------------------------------------------------- Data Sources --------------------------------------------------------------
 	
 	public Integer isDischargedToRed() {
-		if(outcome == PatientOutcomes.ADMITTEDRED) {
+		if(curInside.getRoomType() == RedAdmissionBay.getInstance()) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer isDischargedToAmber() {
-		if(outcome == PatientOutcomes.ADMITTEDAMBER) {
+		if(curInside.getRoomType() == AmberAdmissionBay.getInstance()) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer isDischargedToGreen() {
-		if(outcome == PatientOutcomes.ADMITTEDGREEN) {
+		if(curInside.getRoomType() == GreenAdmissionBay.getInstance()) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer isAdmittedToSideRoom() {
+		if(curInside.getRoomType() == SideRoomAdmissionBay.getInstance()) {
 			return 1;
 		}
 		return 0;
@@ -294,28 +302,28 @@ public class Patient extends Agent {
 	}
 	
 	public Integer positiveAndAdmittedToAmber() {
-		if(outcome == PatientOutcomes.ADMITTEDAMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+		if(isDischargedToAmber() == 1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer positiveAndAdmittedToRed() {
-		if(outcome == PatientOutcomes.ADMITTEDRED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+		if(isDischargedToRed() == 1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer positiveAndAdmittedToGreen() {
-		if(outcome == PatientOutcomes.ADMITTEDGREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+		if(isDischargedToGreen() == 1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer positiveAndAdmittedToSideRoom() {
-		if(outcome == PatientOutcomes.ADMITTEDSIDEROOM && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
+		if(isAdmittedToSideRoom() == 1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Asymptomatic || actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Symptomatic)) {
 			return 1;
 		}
 		return 0;
@@ -329,28 +337,28 @@ public class Patient extends Agent {
 	}
 	
 	public Integer negativeAndAdmittedToAmber() {
-		if(outcome == PatientOutcomes.ADMITTEDAMBER && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+		if(isDischargedToAmber() == 1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer negativeAndAdmittedToRed() {
-		if(outcome == PatientOutcomes.ADMITTEDRED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+		if(isDischargedToRed() == 1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer negativeAndAdmittedToGreen() {
-		if(outcome == PatientOutcomes.ADMITTEDGREEN && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+		if(isDischargedToGreen() == 1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer negativeAndAdmittedToSIDEROOM() {
-		if(outcome == PatientOutcomes.ADMITTEDSIDEROOM && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+		if(isAdmittedToSideRoom() == 1 && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
 			return 1;
 		}
 		return 0;
@@ -358,6 +366,13 @@ public class Patient extends Agent {
 
 	public Integer negativeAndDischarged() {
 		if(outcome == PatientOutcomes.DISCHARGED && (actualInfectionState.stateType.getInfectionStatus() == InfectionStatus.Susceptible)) {
+			return 1;
+		}
+		return 0;
+	}
+	
+	public Integer usedSideRoom() {
+		if(usedSideRoom == true) {
 			return 1;
 		}
 		return 0;
@@ -479,28 +494,28 @@ public class Patient extends Agent {
 	}
 	
 	public Integer LFDPositiveAndRed() {
-		if(LFDPositive() ==1 && outcome == PatientOutcomes.ADMITTEDRED) {
+		if(LFDPositive() ==1 && isDischargedToRed() == 1) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer LFDPositiveAndSideRoom() {
-		if(LFDPositive() ==1 && outcome == PatientOutcomes.ADMITTEDSIDEROOM) {
+		if(LFDPositive() ==1 && isAdmittedToSideRoom() == 1) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer LFDNegativeAndRed() {
-		if(LFDNegative() ==1 && outcome == PatientOutcomes.ADMITTEDRED) {
+		if(LFDNegative() ==1 && isDischargedToRed() == 1) {
 			return 1;
 		}
 		return 0;
 	}
 	
 	public Integer LFDNegativeAndSideRoom() {
-		if(LFDNegative() ==1 && outcome == PatientOutcomes.ADMITTEDSIDEROOM) {
+		if(LFDNegative() ==1 && isAdmittedToSideRoom() == 1) {
 			return 1;
 		}
 		return 0;

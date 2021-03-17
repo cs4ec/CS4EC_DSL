@@ -43,7 +43,6 @@ import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
-import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
@@ -229,8 +228,8 @@ public class Actor extends Agent {
 				actor.deAssignPatient(p);
 			}
 			
-			AdmissionBay pAdmisionBay = ((AdmitAction)stepLogic).getAdmissionBay();
-			pAdmisionBay.admitPatient(p);
+//			AdmissionBay pAdmisionBay = ((AdmitAction)stepLogic).getAdmissionBay();
+//			pAdmisionBay.admitPatient(p);
 			NextStep();
 		}
 		

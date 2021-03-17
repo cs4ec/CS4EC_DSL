@@ -7,11 +7,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.Amber_AdmissionBay;
 import EDLanguage.sandbox.DoctorOffice;
 import EDLanguage.sandbox.Nurse;
-import EDLanguage.sandbox.Red_AdmissionBay;
-import EDLanguage.sandbox.SideRoom_AdmissionBay;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.parameter.Parameters;
@@ -50,7 +47,6 @@ import simcore.action.basicAction.conditions.SeverityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
 import simcore.action.basicAction.conditions.TestResultCondition;
-import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Bed;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Desk;
@@ -524,30 +520,50 @@ public class Agent {
 		
 		if(c instanceof SuitableForSideRoomCondition) {
 			Patient pPatient = ((SuitableForSideRoomCondition) c).getPatient();
-			AdmissionBay pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
-			double pPHEScore = pPatient.getPHEScore();
-
-			// Depending on the alternative admission bay, the COVID suspicion level of a patient is either weighted positive or negative
-			// E.g. if admitting to red bay, a high suspicion is good, but for amber you want a low suspicion as amber should contain negative cases
-			if(pAlternativeBay == Red_AdmissionBay.getInstance()) {
-				
-			} else if(pAlternativeBay == Amber_AdmissionBay.getInstance()) {
-				pPHEScore = 1- pPHEScore;
-			}
-			double currOcc = SideRoom_AdmissionBay.getInstance().getCurrentOccupancy();
-			double maxCap = SideRoom_AdmissionBay.getInstance().getCapacity();
-			double pSideRoomCapacity = (currOcc / maxCap);
-			if(currOcc >= maxCap) {
-				pSideRoomCapacity = 1;
-			}
-			double pdblChances = 1- ((pPHEScore + pSideRoomCapacity) / 2);
+			Room pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
+			InfectionStatus pPatientStatus = pPatient.getActualInfectionState().stateType.getInfectionStatus();
 			
-			double rnd = RandomHelper.nextDouble();
-			if(rnd < pdblChances) {
-				return true;
+			if(pAlternativeBay.getRoomType() == EDLanguage.sandbox.RedAdmissionBay.getInstance()) {
+				if(pPatientStatus == InfectionStatus.Symptomatic) {
+					return false; // Patient not suitable for SR, should go to Red bay
+				} else {
+					return true; // Patient can go to a SR
+				}
+			} else {
+				if(pPatientStatus == InfectionStatus.Symptomatic) {
+					return true; // Patient can go to a SR
+				} else {
+					return false; // Patient not suitable for SR, should go to Green/Amber bay
+				}
 			}
-			return false;
 		}
+		
+//		if(c instanceof SuitableForSideRoomCondition) {
+//			Patient pPatient = ((SuitableForSideRoomCondition) c).getPatient();
+//			AdmissionBay pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
+//			double pPHEScore = pPatient.getPHEScore();
+//
+//			// Depending on the alternative admission bay, the COVID suspicion level of a patient is either weighted positive or negative
+//			// E.g. if admitting to red bay, a high suspicion is good, but for amber you want a low suspicion as amber should contain negative cases
+//			if(pAlternativeBay == Red_AdmissionBay.getInstance()) {
+//				
+//			} else if(pAlternativeBay == Amber_AdmissionBay.getInstance()) {
+//				pPHEScore = 1- pPHEScore;
+//			}
+//			double currOcc = SideRoom_AdmissionBay.getInstance().getCurrentOccupancy();
+//			double maxCap = SideRoom_AdmissionBay.getInstance().getCapacity();
+//			double pSideRoomCapacity = (currOcc / maxCap);
+//			if(currOcc >= maxCap) {
+//				pSideRoomCapacity = 1;
+//			}
+//			double pdblChances = 1- ((pPHEScore + pSideRoomCapacity) / 2);
+//			
+//			double rnd = RandomHelper.nextDouble();
+//			if(rnd < pdblChances) {
+//				return true;
+//			}
+//			return false;
+//		}
 
 		if (c instanceof StateCondition) {
 			Field targetField = null;

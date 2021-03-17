@@ -6094,10 +6094,7 @@
                   <ref role="3uigEE" to="wyt6:~Double" resolve="Double" />
                 </node>
                 <node concept="1eOMI4" id="1rknCs4glwT" role="10QFUP">
-                  <node concept="FJ1c_" id="1rknCs3YENu" role="1eOMHV">
-                    <node concept="37vLTw" id="1rknCs3YENv" role="3uHU7w">
-                      <ref role="3cqZAo" node="1rknCs3YEMY" resolve="TotalOccurances" />
-                    </node>
+                  <node concept="FJ1c_" id="2blVuwUIssM" role="1eOMHV">
                     <node concept="3cmrfG" id="1rknCs3YENw" role="3uHU7B">
                       <property role="3cmrfH" value="3" />
                       <node concept="17Uvod" id="1rknCs3YENx" role="lGtFl">
@@ -6116,6 +6113,9 @@
                           </node>
                         </node>
                       </node>
+                    </node>
+                    <node concept="37vLTw" id="1rknCs3YENv" role="3uHU7w">
+                      <ref role="3cqZAo" node="1rknCs3YEMY" resolve="TotalOccurances" />
                     </node>
                   </node>
                 </node>
@@ -6929,6 +6929,118 @@
       <node concept="3clFb_" id="4TDP_lXzYq" role="jymVt">
         <property role="TrG5h" value="InitFunction" />
         <node concept="3clFbS" id="4TDP_lXzYr" role="3clF47">
+          <node concept="3clFbF" id="2blVuwV8GAC" role="3cqZAp">
+            <node concept="2OqwBi" id="2blVuwV8GAE" role="3clFbG">
+              <node concept="37vLTw" id="2blVuwV8GAF" role="2Oq$k0">
+                <ref role="3cqZAo" node="4TDP_lXzYm" resolve="curMission" />
+              </node>
+              <node concept="liA8E" id="2blVuwV8GAG" role="2OqNvi">
+                <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
+                <node concept="2OqwBi" id="2blVuwV8GAH" role="37wK5m">
+                  <node concept="2OqwBi" id="2blVuwV8GAI" role="2Oq$k0">
+                    <node concept="2ShNRf" id="2blVuwV8GAJ" role="2Oq$k0">
+                      <node concept="1pGfFk" id="2blVuwV8GAK" role="2ShVmc">
+                        <ref role="37wK5l" to="x5im:~ActionStep.&lt;init&gt;()" resolve="ActionStep" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="2blVuwV8GAL" role="2OqNvi">
+                      <ref role="37wK5l" to="x5im:~ActionStep.WithName(java.lang.String)" resolve="WithName" />
+                      <node concept="Xl_RD" id="2blVuwV8GAM" role="37wK5m">
+                        <property role="Xl_RC" value="name" />
+                        <node concept="17Uvod" id="2blVuwV8GAN" role="lGtFl">
+                          <property role="2qtEX9" value="value" />
+                          <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
+                          <node concept="3zFVjK" id="2blVuwV8GAO" role="3zH0cK">
+                            <node concept="3clFbS" id="2blVuwV8GAP" role="2VODD2">
+                              <node concept="3clFbF" id="2blVuwV8GAQ" role="3cqZAp">
+                                <node concept="2OqwBi" id="2blVuwV8GAR" role="3clFbG">
+                                  <node concept="2OqwBi" id="2blVuwV8GAS" role="2Oq$k0">
+                                    <node concept="30H73N" id="2blVuwV8GAT" role="2Oq$k0" />
+                                    <node concept="3TrEf2" id="2blVuwV8GAU" role="2OqNvi">
+                                      <ref role="3Tt5mk" to="3751:7IDz3Vldxyw" resolve="description" />
+                                    </node>
+                                  </node>
+                                  <node concept="3TrcHB" id="2blVuwV8GAV" role="2OqNvi">
+                                    <ref role="3TsBF5" to="3751:7IDz3Vldxy3" resolve="description" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="2blVuwV8GAW" role="2OqNvi">
+                    <ref role="37wK5l" to="x5im:~ActionStep.WithAction(simcore.action.ActionFragment)" resolve="WithAction" />
+                    <node concept="2OqwBi" id="2blVuwV8GAX" role="37wK5m">
+                      <node concept="2OqwBi" id="2blVuwV8GAY" role="2Oq$k0">
+                        <node concept="2ShNRf" id="2blVuwV8GAZ" role="2Oq$k0">
+                          <node concept="1pGfFk" id="2blVuwV8GB0" role="2ShVmc">
+                            <ref role="37wK5l" to="36f8:~OrderAction.&lt;init&gt;()" resolve="OrderAction" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="2blVuwV8GB1" role="2OqNvi">
+                          <ref role="37wK5l" to="36f8:~OrderAction.WithPatient(simcore.agents.Patient)" resolve="WithPatient" />
+                          <node concept="1eOMI4" id="2blVuwV8GB2" role="37wK5m">
+                            <node concept="10QFUN" id="2blVuwV8GB3" role="1eOMHV">
+                              <node concept="3uibUv" id="2blVuwV8GB4" role="10QFUM">
+                                <ref role="3uigEE" to="uux2:~Patient" resolve="Patient" />
+                              </node>
+                              <node concept="2OqwBi" id="2blVuwV8GB5" role="10QFUP">
+                                <node concept="37vLTw" id="2blVuwV8GB6" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="4TDP_lXzYY" resolve="s" />
+                                </node>
+                                <node concept="liA8E" id="2blVuwV8GB7" role="2OqNvi">
+                                  <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                                  <node concept="Xl_RD" id="2blVuwV8GB8" role="37wK5m">
+                                    <property role="Xl_RC" value="patient" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="2blVuwV8GB9" role="2OqNvi">
+                        <ref role="37wK5l" to="36f8:~OrderAction.WithOrder(simcore.Signals.Orders.Order)" resolve="WithOrder" />
+                        <node concept="2OqwBi" id="2blVuwV8IgR" role="37wK5m">
+                          <node concept="2ShNRf" id="2blVuwV8IgS" role="2Oq$k0">
+                            <node concept="1pGfFk" id="2blVuwV8IgT" role="2ShVmc">
+                              <ref role="37wK5l" to="kgww:~MoveToOrder.&lt;init&gt;()" resolve="MoveToOrder" />
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="2blVuwV8IgU" role="2OqNvi">
+                            <ref role="37wK5l" to="kgww:~MoveToOrder.WithDestination(java.lang.Object)" resolve="WithDestination" />
+                            <node concept="2ShNRf" id="2blVuwV8IgV" role="37wK5m">
+                              <node concept="1pGfFk" id="2blVuwV8IgW" role="2ShVmc">
+                                <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                              </node>
+                              <node concept="29HgVG" id="2blVuwV8IgX" role="lGtFl">
+                                <node concept="3NFfHV" id="2blVuwV8IgY" role="3NFExx">
+                                  <node concept="3clFbS" id="2blVuwV8IgZ" role="2VODD2">
+                                    <node concept="3clFbF" id="2blVuwV8Ih0" role="3cqZAp">
+                                      <node concept="2OqwBi" id="2blVuwV8Ih1" role="3clFbG">
+                                        <node concept="3TrEf2" id="2blVuwV8J57" role="2OqNvi">
+                                          <ref role="3Tt5mk" to="3751:2blVuwV8Ivb" resolve="targetBay" />
+                                        </node>
+                                        <node concept="30H73N" id="2blVuwV8Ih3" role="2Oq$k0" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="raruj" id="2blVuwV8HE_" role="lGtFl" />
+          </node>
           <node concept="3clFbF" id="4TDP_lXzYs" role="3cqZAp">
             <node concept="2OqwBi" id="4TDP_lXzYt" role="3clFbG">
               <node concept="37vLTw" id="4TDP_lXzYu" role="2Oq$k0">
@@ -7002,31 +7114,25 @@
                           </node>
                         </node>
                       </node>
-                      <node concept="liA8E" id="4TDP_lX$Rb" role="2OqNvi">
-                        <ref role="37wK5l" to="36f8:~AdmitAction.WithAdmissionBay(simcore.basicStructures.AdmissionBay)" resolve="WithAdmissionBay" />
-                        <node concept="2YIFZM" id="L8B6Gne$Fs" role="37wK5m">
-                          <ref role="37wK5l" to="y2pi:~AdmissionBay.getInstance()" resolve="getInstance" />
-                          <ref role="1Pybhc" to="y2pi:~AdmissionBay" resolve="AdmissionBay" />
-                          <node concept="1ZhdrF" id="L8B6Gne$Ft" role="lGtFl">
-                            <property role="2qtEX8" value="classConcept" />
-                            <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700937/1144433194310" />
-                            <node concept="3$xsQk" id="L8B6Gne$Fu" role="3$ytzL">
-                              <node concept="3clFbS" id="L8B6Gne$Fv" role="2VODD2">
-                                <node concept="3clFbF" id="L8B6Gne$Fw" role="3cqZAp">
-                                  <node concept="3cpWs3" id="6dYFu3AvfVG" role="3clFbG">
-                                    <node concept="Xl_RD" id="6dYFu3AvfXa" role="3uHU7w">
-                                      <property role="Xl_RC" value="_AdmissionBay" />
-                                    </node>
-                                    <node concept="2OqwBi" id="L8B6Gne$Fx" role="3uHU7B">
-                                      <node concept="2OqwBi" id="L8B6Gne$Fy" role="2Oq$k0">
-                                        <node concept="3TrEf2" id="L8B6Gne$Fz" role="2OqNvi">
-                                          <ref role="3Tt5mk" to="3751:L8B6GmJfDz" resolve="targetBay" />
-                                        </node>
-                                        <node concept="30H73N" id="L8B6Gne$F$" role="2Oq$k0" />
+                      <node concept="liA8E" id="2blVuwV8KIw" role="2OqNvi">
+                        <ref role="37wK5l" to="36f8:~AdmitAction.WithAdmissionBay(simcore.basicStructures.Room)" resolve="WithAdmissionBay" />
+                        <node concept="10QFUN" id="2blVuwV8Lug" role="37wK5m">
+                          <node concept="3uibUv" id="2blVuwV8Lyq" role="10QFUM">
+                            <ref role="3uigEE" to="y2pi:~Room" resolve="Room" />
+                          </node>
+                          <node concept="2ShNRf" id="2blVuwV8L4V" role="10QFUP">
+                            <node concept="1pGfFk" id="2blVuwV8Ltr" role="2ShVmc">
+                              <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                            </node>
+                            <node concept="29HgVG" id="2blVuwV8LKb" role="lGtFl">
+                              <node concept="3NFfHV" id="2blVuwV8LKc" role="3NFExx">
+                                <node concept="3clFbS" id="2blVuwV8LKd" role="2VODD2">
+                                  <node concept="3clFbF" id="2blVuwV8LKj" role="3cqZAp">
+                                    <node concept="2OqwBi" id="2blVuwV8LKe" role="3clFbG">
+                                      <node concept="3TrEf2" id="2blVuwV8LKh" role="2OqNvi">
+                                        <ref role="3Tt5mk" to="3751:2blVuwV8Ivb" resolve="targetBay" />
                                       </node>
-                                      <node concept="3TrcHB" id="L8B6Gne$F_" role="2OqNvi">
-                                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                                      </node>
+                                      <node concept="30H73N" id="2blVuwV8LKi" role="2Oq$k0" />
                                     </node>
                                   </node>
                                 </node>
@@ -7042,6 +7148,7 @@
             </node>
             <node concept="raruj" id="4TDP_lXzYV" role="lGtFl" />
           </node>
+          <node concept="3clFbH" id="2blVuwV8Frg" role="3cqZAp" />
         </node>
         <node concept="3Tm1VV" id="4TDP_lXzYW" role="1B3o_S" />
         <node concept="3cqZAl" id="4TDP_lXzYX" role="3clF45" />
@@ -8157,31 +8264,32 @@
                   </node>
                 </node>
               </node>
-              <node concept="liA8E" id="1Pt3svOPEqG" role="2OqNvi">
-                <ref role="37wK5l" to="9axu:~SuitableForSideRoomCondition.WithAlternativeBay(simcore.basicStructures.AdmissionBay)" resolve="WithAlternativeBay" />
-                <node concept="2YIFZM" id="1Pt3svOPPXE" role="37wK5m">
-                  <ref role="37wK5l" to="y2pi:~AdmissionBay.getInstance()" resolve="getInstance" />
-                  <ref role="1Pybhc" to="y2pi:~AdmissionBay" resolve="AdmissionBay" />
-                  <node concept="1ZhdrF" id="1Pt3svOPQ1p" role="lGtFl">
-                    <property role="2qtEX8" value="classConcept" />
-                    <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700937/1144433194310" />
-                    <node concept="3$xsQk" id="1Pt3svOPQ1s" role="3$ytzL">
-                      <node concept="3clFbS" id="1Pt3svOPQ1t" role="2VODD2">
-                        <node concept="3clFbF" id="1Pt3svOPQ1z" role="3cqZAp">
-                          <node concept="3cpWs3" id="6dYFu3AwIHM" role="3clFbG">
-                            <node concept="Xl_RD" id="6dYFu3AwIJg" role="3uHU7w">
-                              <property role="Xl_RC" value="_AdmissionBay" />
-                            </node>
-                            <node concept="2OqwBi" id="1Pt3svOPR2h" role="3uHU7B">
-                              <node concept="2OqwBi" id="1Pt3svOPQ1u" role="2Oq$k0">
-                                <node concept="3TrEf2" id="1Pt3svOPQ1x" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="3751:1Pt3svOPE2c" resolve="alternativeAdmissionBay" />
-                                </node>
-                                <node concept="30H73N" id="1Pt3svOPQ1y" role="2Oq$k0" />
+              <node concept="raruj" id="1Pt3svOPRTI" role="lGtFl" />
+              <node concept="liA8E" id="2blVuwUSDzm" role="2OqNvi">
+                <ref role="37wK5l" to="9axu:~SuitableForSideRoomCondition.WithAlternativeBay(simcore.basicStructures.Room)" resolve="WithAlternativeBay" />
+                <node concept="10QFUN" id="2blVuwUSDBi" role="37wK5m">
+                  <node concept="3uibUv" id="2blVuwUSDEp" role="10QFUM">
+                    <ref role="3uigEE" to="y2pi:~Room" resolve="Room" />
+                  </node>
+                  <node concept="2OqwBi" id="2blVuwUSCCh" role="10QFUP">
+                    <node concept="37vLTw" id="2blVuwUSCwY" role="2Oq$k0">
+                      <ref role="3cqZAo" node="L8B6Gnjg8t" resolve="s" />
+                    </node>
+                    <node concept="liA8E" id="2blVuwUSCJM" role="2OqNvi">
+                      <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                      <node concept="Xl_RD" id="2blVuwUSD16" role="37wK5m">
+                        <property role="Xl_RC" value="Destination" />
+                      </node>
+                    </node>
+                    <node concept="29HgVG" id="2blVuwUSDHl" role="lGtFl">
+                      <node concept="3NFfHV" id="2blVuwUSDHm" role="3NFExx">
+                        <node concept="3clFbS" id="2blVuwUSDHn" role="2VODD2">
+                          <node concept="3clFbF" id="2blVuwUSDHt" role="3cqZAp">
+                            <node concept="2OqwBi" id="2blVuwUSDHo" role="3clFbG">
+                              <node concept="3TrEf2" id="2blVuwUXDQZ" role="2OqNvi">
+                                <ref role="3Tt5mk" to="3751:2blVuwUXD_C" resolve="alternativeBay" />
                               </node>
-                              <node concept="3TrcHB" id="1Pt3svOPRp9" role="2OqNvi">
-                                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                              </node>
+                              <node concept="30H73N" id="2blVuwUSDHs" role="2Oq$k0" />
                             </node>
                           </node>
                         </node>
@@ -8190,7 +8298,6 @@
                   </node>
                 </node>
               </node>
-              <node concept="raruj" id="1Pt3svOPRTI" role="lGtFl" />
             </node>
           </node>
           <node concept="3clFbH" id="L8B6Gnjg7P" role="3cqZAp" />

@@ -371,8 +371,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669846203988");
     b.version(2);
-    b.associate("targetBay", 0xc489c6b16bcfa63L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xc489c6b16b4a524L).optional(false).origin("885129310535219811").done();
     b.aggregate("targetPatient", 0x139a75955f0be57L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a4L).optional(false).ordered(true).multiple(false).origin("88285669846203991").done();
+    b.aggregate("targetBay", 0x22d5ede83b22e7cbL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f1255b0L).optional(false).ordered(true).multiple(false).origin("2510173949009258443").done();
     b.alias("admit");
     return b.create();
   }
@@ -1021,7 +1021,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("EDLanguage.structure.Condition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ebbb42L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/885129310544657865");
     b.version(2);
-    b.associate("alternativeAdmissionBay", 0x1d5d0dc7f4d6a08cL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xc489c6b16b4a524L).optional(false).origin("2115862552391360652").done();
+    b.aggregate("alternativeBay", 0x22d5ede83af69968L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f1255b0L).optional(false).ordered(true).multiple(false).origin("2510173949006354792").done();
     b.alias("suitable for side room condition");
     return b.create();
   }

@@ -17,10 +17,11 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.basicStructures.Desk;
 import simcore.action.basicAction.conditions.ResultCondition;
-import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
-import simcore.action.basicAction.AdmitAction;
 import simcore.action.basicAction.OrderAction;
 import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.basicAction.AdmitAction;
+import simcore.basicStructures.Room;
+import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
 import simcore.action.basicAction.DischargeAction;
 
 public class MajorsABDoctor extends Staff {
@@ -99,13 +100,8 @@ public class MajorsABDoctor extends Staff {
       sendSignalTemp.AddData("replyTo", this);
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Amber_AdmissionBay.getInstance()))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-      } else {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Amber_AdmissionBay.getInstance())));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
-      }
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("AmberBay")))));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("AmberBay"))));
     }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
@@ -120,20 +116,20 @@ public class MajorsABDoctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Red_AdmissionBay.getInstance()))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("RedBay")))) {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("SideRoom")))));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("SideRoom"))));
       } else {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Red_AdmissionBay.getInstance())));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("RedBay")))));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("RedBay"))));
       }
     } else {
-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay(Amber_AdmissionBay.getInstance()))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(SideRoom_AdmissionBay.getInstance())));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("AmberBay")))) {
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("SideRoom")))));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("SideRoom"))));
       } else {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay(Amber_AdmissionBay.getInstance())));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Exit")))));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("AmberBay")))));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new AdmitAction().WithPatient(((Patient) s.GetData("patient"))).WithAdmissionBay((Room) ReadMap().FindPlace("AmberBay"))));
       }
     }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));

@@ -36,6 +36,7 @@
     <string>COVPlusLIATNeg</string>
     <string>COVNegLIATPos</string>
     <string>COVNegLIATNeg</string>
+    <string>InSideRoom</string>
   </sourceIds>
   <fileName>PatientOutcomes</fileName>
   <addTimeStamp>false</addTimeStamp>

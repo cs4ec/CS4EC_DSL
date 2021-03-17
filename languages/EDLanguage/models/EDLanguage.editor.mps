@@ -1659,14 +1659,8 @@
       <node concept="3F0ifn" id="4TDP_lX_jA" role="3EZMnx">
         <property role="3F0ifm" value="to" />
       </node>
-      <node concept="1iCGBv" id="L8B6GmJfDN" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:L8B6GmJfDz" resolve="targetBay" />
-        <node concept="1sVBvm" id="L8B6GmJfDP" role="1sWHZn">
-          <node concept="3F0A7n" id="L8B6GmJfDZ" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
+      <node concept="3F1sOY" id="2blVuwVb2u7" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2blVuwV8Ivb" resolve="targetBay" />
       </node>
       <node concept="l2Vlx" id="4TDP_lXz4r" role="2iSdaV" />
     </node>
@@ -1935,17 +1929,11 @@
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:L8B6GnjfR9" resolve="SuitableForSideRoomCondition" />
     <node concept="3EZMnI" id="L8B6GnjfRc" role="2wV5jI">
-      <node concept="3F0ifn" id="L8B6GnjfRj" role="3EZMnx">
-        <property role="3F0ifm" value="the patient can be placed in a side room rather than" />
+      <node concept="3F0ifn" id="2blVuwUUSWA" role="3EZMnx">
+        <property role="3F0ifm" value="the patient can be placed in a side room rather than " />
       </node>
-      <node concept="1iCGBv" id="1Pt3svOPE2h" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:1Pt3svOPE2c" resolve="alternativeAdmissionBay" />
-        <node concept="1sVBvm" id="1Pt3svOPE2j" role="1sWHZn">
-          <node concept="3F0A7n" id="1Pt3svOPE2r" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
+      <node concept="3F1sOY" id="2blVuwUXD_N" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2blVuwUXD_C" resolve="alternativeBay" />
       </node>
       <node concept="l2Vlx" id="L8B6GnjfRf" role="2iSdaV" />
     </node>

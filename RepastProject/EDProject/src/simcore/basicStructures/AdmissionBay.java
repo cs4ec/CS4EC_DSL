@@ -35,7 +35,7 @@ public class AdmissionBay {
 	}
 	
 	public void admitPatient(Patient p) {
-		p.setAdmitted(this);
+//		p.setAdmitted(this);
 		curOccupancy++;
 		System.out.println("Admit to " + name + " occupancy left= " + (capacity-curOccupancy));
 	}
