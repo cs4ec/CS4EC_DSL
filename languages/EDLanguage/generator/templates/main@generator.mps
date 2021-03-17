@@ -2399,6 +2399,74 @@
                 </node>
               </node>
             </node>
+            <node concept="3clFbF" id="2blVuwVgnU9" role="3cqZAp">
+              <node concept="2OqwBi" id="2blVuwVgnUa" role="3clFbG">
+                <node concept="37vLTw" id="2blVuwVgnUb" role="2Oq$k0">
+                  <ref role="3cqZAo" node="5VDVzf4jSEz" resolve="pLocNew" />
+                  <node concept="1ZhdrF" id="2blVuwVgnUc" role="lGtFl">
+                    <property role="2qtEX8" value="variableDeclaration" />
+                    <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068498886296/1068581517664" />
+                    <node concept="3$xsQk" id="2blVuwVgnUd" role="3$ytzL">
+                      <node concept="3clFbS" id="2blVuwVgnUe" role="2VODD2">
+                        <node concept="3clFbF" id="2blVuwVgnUf" role="3cqZAp">
+                          <node concept="2OqwBi" id="2blVuwVgnUg" role="3clFbG">
+                            <node concept="1iwH7S" id="2blVuwVgnUh" role="2Oq$k0" />
+                            <node concept="1iwH70" id="2blVuwVgnUi" role="2OqNvi">
+                              <ref role="1iwH77" node="7lVoe4y8Tiz" resolve="LocalRoomVar" />
+                              <node concept="30H73N" id="2blVuwVgnUj" role="1iwH7V" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="2blVuwVgnUk" role="2OqNvi">
+                  <ref role="37wK5l" to="y2pi:~Room.setBeds(int)" resolve="setBeds" />
+                  <node concept="3cmrfG" id="2blVuwVgnUl" role="37wK5m">
+                    <property role="3cmrfH" value="2" />
+                    <node concept="17Uvod" id="2blVuwVgnUm" role="lGtFl">
+                      <property role="2qtEX9" value="value" />
+                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                      <node concept="3zFVjK" id="2blVuwVgnUn" role="3zH0cK">
+                        <node concept="3clFbS" id="2blVuwVgnUo" role="2VODD2">
+                          <node concept="3clFbF" id="2blVuwVgnUp" role="3cqZAp">
+                            <node concept="2OqwBi" id="2blVuwVgnUq" role="3clFbG">
+                              <node concept="30H73N" id="2blVuwVgnUr" role="2Oq$k0" />
+                              <node concept="3TrcHB" id="2blVuwVgpgL" role="2OqNvi">
+                                <ref role="3TsBF5" to="3751:2blVuwVgjzN" resolve="beds" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="1WS0z7" id="2blVuwVgnUt" role="lGtFl">
+                <node concept="3JmXsc" id="2blVuwVgnUu" role="3Jn$fo">
+                  <node concept="3clFbS" id="2blVuwVgnUv" role="2VODD2">
+                    <node concept="3clFbF" id="2blVuwVgnUw" role="3cqZAp">
+                      <node concept="2OqwBi" id="2blVuwVgnUx" role="3clFbG">
+                        <node concept="2OqwBi" id="2blVuwVgnUy" role="2Oq$k0">
+                          <node concept="2OqwBi" id="2blVuwVgnUz" role="2Oq$k0">
+                            <node concept="1iwH7S" id="2blVuwVgnU$" role="2Oq$k0" />
+                            <node concept="1r8y6K" id="2blVuwVgnU_" role="2OqNvi" />
+                          </node>
+                          <node concept="2RRcyG" id="2blVuwVgnUA" role="2OqNvi">
+                            <ref role="2RRcyH" to="3751:3KCb14J9922" resolve="RoomDefinition" />
+                          </node>
+                        </node>
+                        <node concept="13MTOL" id="2blVuwVgnUB" role="2OqNvi">
+                          <ref role="13MTZf" to="3751:3KCb14J9923" resolve="rooms" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
         </node>
         <node concept="3clFbH" id="5VDVzf4kE6N" role="3cqZAp" />
@@ -4666,6 +4734,7 @@
       <node concept="3clFb_" id="a5pEVkxFR" role="jymVt">
         <property role="TrG5h" value="InitFunction" />
         <node concept="3clFbS" id="a5pEVkxFS" role="3clF47">
+          <node concept="3clFbH" id="2blVuwVjMJh" role="3cqZAp" />
           <node concept="3clFbF" id="a5pEVkxFT" role="3cqZAp">
             <node concept="2OqwBi" id="a5pEVkzaQ" role="3clFbG">
               <node concept="2ShNRf" id="a5pEVkxFU" role="2Oq$k0">
@@ -4695,7 +4764,7 @@
                   </node>
                 </node>
               </node>
-              <node concept="raruj" id="a5pEVkzLg" role="lGtFl" />
+              <node concept="raruj" id="2blVuwVnNG2" role="lGtFl" />
             </node>
           </node>
         </node>
@@ -7004,32 +7073,40 @@
                       </node>
                       <node concept="liA8E" id="2blVuwV8GB9" role="2OqNvi">
                         <ref role="37wK5l" to="36f8:~OrderAction.WithOrder(simcore.Signals.Orders.Order)" resolve="WithOrder" />
-                        <node concept="2OqwBi" id="2blVuwV8IgR" role="37wK5m">
-                          <node concept="2ShNRf" id="2blVuwV8IgS" role="2Oq$k0">
-                            <node concept="1pGfFk" id="2blVuwV8IgT" role="2ShVmc">
-                              <ref role="37wK5l" to="kgww:~MoveToOrder.&lt;init&gt;()" resolve="MoveToOrder" />
-                            </node>
-                          </node>
-                          <node concept="liA8E" id="2blVuwV8IgU" role="2OqNvi">
-                            <ref role="37wK5l" to="kgww:~MoveToOrder.WithDestination(java.lang.Object)" resolve="WithDestination" />
-                            <node concept="2ShNRf" id="2blVuwV8IgV" role="37wK5m">
-                              <node concept="1pGfFk" id="2blVuwV8IgW" role="2ShVmc">
-                                <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                        <node concept="2OqwBi" id="2blVuwVjHsw" role="37wK5m">
+                          <node concept="2OqwBi" id="2blVuwV8IgR" role="2Oq$k0">
+                            <node concept="2ShNRf" id="2blVuwV8IgS" role="2Oq$k0">
+                              <node concept="1pGfFk" id="2blVuwV8IgT" role="2ShVmc">
+                                <ref role="37wK5l" to="kgww:~MoveToOrder.&lt;init&gt;()" resolve="MoveToOrder" />
                               </node>
-                              <node concept="29HgVG" id="2blVuwV8IgX" role="lGtFl">
-                                <node concept="3NFfHV" id="2blVuwV8IgY" role="3NFExx">
-                                  <node concept="3clFbS" id="2blVuwV8IgZ" role="2VODD2">
-                                    <node concept="3clFbF" id="2blVuwV8Ih0" role="3cqZAp">
-                                      <node concept="2OqwBi" id="2blVuwV8Ih1" role="3clFbG">
-                                        <node concept="3TrEf2" id="2blVuwV8J57" role="2OqNvi">
-                                          <ref role="3Tt5mk" to="3751:2blVuwV8Ivb" resolve="targetBay" />
+                            </node>
+                            <node concept="liA8E" id="2blVuwV8IgU" role="2OqNvi">
+                              <ref role="37wK5l" to="kgww:~MoveToOrder.WithDestination(java.lang.Object)" resolve="WithDestination" />
+                              <node concept="2ShNRf" id="2blVuwV8IgV" role="37wK5m">
+                                <node concept="1pGfFk" id="2blVuwV8IgW" role="2ShVmc">
+                                  <ref role="37wK5l" to="wyt6:~Object.&lt;init&gt;()" resolve="Object" />
+                                </node>
+                                <node concept="29HgVG" id="2blVuwV8IgX" role="lGtFl">
+                                  <node concept="3NFfHV" id="2blVuwV8IgY" role="3NFExx">
+                                    <node concept="3clFbS" id="2blVuwV8IgZ" role="2VODD2">
+                                      <node concept="3clFbF" id="2blVuwV8Ih0" role="3cqZAp">
+                                        <node concept="2OqwBi" id="2blVuwV8Ih1" role="3clFbG">
+                                          <node concept="3TrEf2" id="2blVuwV8J57" role="2OqNvi">
+                                            <ref role="3Tt5mk" to="3751:2blVuwV8Ivb" resolve="targetBay" />
+                                          </node>
+                                          <node concept="30H73N" id="2blVuwV8Ih3" role="2Oq$k0" />
                                         </node>
-                                        <node concept="30H73N" id="2blVuwV8Ih3" role="2Oq$k0" />
                                       </node>
                                     </node>
                                   </node>
                                 </node>
                               </node>
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="2blVuwVjHDc" role="2OqNvi">
+                            <ref role="37wK5l" to="kgww:~MoveToOrder.WithOccupiable(java.lang.Class)" resolve="WithOccupiable" />
+                            <node concept="3VsKOn" id="2blVuwVjHQI" role="37wK5m">
+                              <ref role="3VsUkX" to="y2pi:~Bed" resolve="Bed" />
                             </node>
                           </node>
                         </node>

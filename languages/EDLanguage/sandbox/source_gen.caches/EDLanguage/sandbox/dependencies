@@ -47,6 +47,7 @@
     <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
     <classNode dependClassName="simcore.action.basicAction.conditions.SuitableForSideRoomCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Bed" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
@@ -264,6 +265,7 @@
     <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
     <classNode dependClassName="simcore.action.basicAction.conditions.SuitableForSideRoomCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Bed" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.diagnosis.InfectionStatus" />

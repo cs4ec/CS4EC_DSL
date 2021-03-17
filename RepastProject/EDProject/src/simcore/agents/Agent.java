@@ -267,6 +267,14 @@ public class Agent {
 		curActionStep = 0;
 	}
 	
+	// Agent has entered the room and now will find a seat to take and move towards
+	// it
+	protected void FindAnOccupiable(Class occupiableType) {
+		curMission = new Action("TakeOccupiable").WithStep(
+				new ActionStep().WithName("move to an occupiable").WithAction(new OccupyAction().WithTarget(occupiableType)));
+		curActionStep = 0;
+	}
+	
 	protected Occupiable SelectOccupiable(Room destination, Class occupiableType) {
 		ArrayList<Occupiable> plstEmptyOccupiables = (ArrayList<Occupiable>) destination.getAllEmptyOcupiablesOfType(occupiableType);
 		if (!plstEmptyOccupiables.isEmpty()) {

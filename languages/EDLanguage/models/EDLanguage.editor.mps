@@ -933,6 +933,18 @@
       <node concept="3F0A7n" id="7lVoe4ydlE$" role="3EZMnx">
         <ref role="1NtTu8" to="3751:7lVoe4ydlB2" resolve="desks" />
       </node>
+      <node concept="3F0ifn" id="2blVuwVgj$w" role="3EZMnx">
+        <property role="3F0ifm" value="beds:" />
+        <node concept="pVoyu" id="2blVuwVgj_4" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="2blVuwVgj_6" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="2blVuwVgj_J" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2blVuwVgjzN" resolve="beds" />
+      </node>
       <node concept="3F0ifn" id="6o2BuIx6R6b" role="3EZMnx">
         <property role="3F0ifm" value="Colour:" />
         <node concept="pVoyu" id="6o2BuIx6R8w" role="3F10Kt">

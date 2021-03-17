@@ -501,6 +501,11 @@
       <property role="TrG5h" value="desks" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="2blVuwVgjzN" role="1TKVEl">
+      <property role="IQ2nx" value="2510173949011245299" />
+      <property role="TrG5h" value="beds" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="5QJON_AVrZ9" role="1TKVEi">
       <property role="IQ2ns" value="6750846609945116617" />
       <property role="20kJfa" value="roomType" />
@@ -579,6 +584,12 @@
       <property role="20kJfa" value="targetObject" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
+    </node>
+    <node concept="1TJgyj" id="2blVuwVjJgR" role="1TKVEi">
+      <property role="IQ2ns" value="2510173949012145207" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetOccupiable" />
+      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="7o6PzEpH8eY">

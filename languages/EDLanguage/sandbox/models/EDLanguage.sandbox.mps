@@ -24,6 +24,7 @@
         <property id="5292086088997743945" name="height" index="m3A$b" />
         <property id="5292086088994139263" name="x" index="memwX" />
         <property id="5292086088994139265" name="y" index="memz3" />
+        <property id="2510173949011245299" name="beds" index="p_dkr" />
         <property id="7350611177167876547" name="colour" index="376uKC" />
         <property id="8465466444630809026" name="desks" index="1njz$z" />
         <property id="8465466444630809017" name="seats" index="1njz_o" />
@@ -1123,6 +1124,7 @@
       <property role="m3wsY" value="100000" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
       <property role="1njz_o" value="100" />
+      <property role="p_dkr" value="90" />
       <ref role="VgANK" node="2blVuwUSDOm" resolve="SideRoomAdmissionBay" />
     </node>
     <node concept="j3bLk" id="2blVuwUK99D" role="j3bMi">
@@ -1133,7 +1135,8 @@
       <property role="m3A$b" value="50" />
       <property role="m3wsY" value="100000" />
       <property role="376uKC" value="2blVuwUK9bq/Amber" />
-      <property role="1njz_o" value="300" />
+      <property role="1njz_o" value="0" />
+      <property role="p_dkr" value="150" />
       <ref role="VgANK" node="2blVuwUSDO2" resolve="AmberAdmissionBay" />
     </node>
     <node concept="j3bLk" id="2blVuwUNJO9" role="j3bMi">
@@ -1144,7 +1147,8 @@
       <property role="m3A$b" value="50" />
       <property role="m3wsY" value="100000" />
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
-      <property role="1njz$z" value="300" />
+      <property role="1njz$z" value="3" />
+      <property role="p_dkr" value="150" />
       <ref role="VgANK" node="2blVuwUK98g" resolve="RedAdmissionBay" />
     </node>
   </node>

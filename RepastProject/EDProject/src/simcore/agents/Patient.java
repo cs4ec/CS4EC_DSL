@@ -112,6 +112,8 @@ public class Patient extends Agent {
 					//... and this room is a waitingroom, the patient will now set itself the action of taking a seat
 					if (targetLocation.getRoomType() instanceof WaitingRoom) {
 						FindASeat();
+					} else if (((MoveToOrder) order).getOccupiable() != null) {
+						FindAnOccupiable(((MoveToOrder) order).getOccupiable());
 					}
 					curOrder = null;
 					return;
