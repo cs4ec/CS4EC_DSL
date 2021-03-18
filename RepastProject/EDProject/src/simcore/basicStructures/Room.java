@@ -204,6 +204,10 @@ public class Room extends Locatable{
 		return occupiables;
 	}
 	
+	public List<Occupiable> getAllOcupiablesOfType(Class c) {
+		return occupiables.stream().filter(o -> o.getClass() == c).collect(Collectors.toList());
+	}
+	
 	public List<Occupiable> getAllEmptyOcupiablesOfType(Class c) {
 		return occupiables.stream().filter(o -> o.getClass() == c && !o.isOccupied()).collect(Collectors.toList());
 	}

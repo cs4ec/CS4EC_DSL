@@ -554,7 +554,8 @@ public class Agent {
 			if(pAlternativeBay.getRoomType() == RedAdmissionBay.getInstance()) {
 				if(pPatientStatus == InfectionStatus.Symptomatic) {
 					//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
-					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
+//					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
+					if(curSRCapacity > 0) {
 						return true;
 					} else {
 						return false;
@@ -566,7 +567,8 @@ public class Agent {
 				if(pPatientStatus == InfectionStatus.Symptomatic) {
 					return true; // Patient can go to a SR
 				} else {
-					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
+//					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
+					if(curSRCapacity > 0) {
 						return true;
 					} else {
 						return false;
