@@ -24,10 +24,10 @@
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
-    <classNode dependClassName="EDLanguage.sandbox.INOVA" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
@@ -126,9 +126,6 @@
     <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
     <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
   </dependency>
-  <dependency className="EDLanguage.sandbox.INOVA">
-    <classNode extendsClassName="simcore.basicStructures.Test" />
-  </dependency>
   <dependency className="EDLanguage.sandbox.IsLIATReadySignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
@@ -136,9 +133,9 @@
     <classNode extendsClassName="simcore.Signals.DirectSignal" />
   </dependency>
   <dependency className="EDLanguage.sandbox.LFDDevice">
-    <classNode dependClassName="EDLanguage.sandbox.INOVA" />
     <classNode dependClassName="EDLanguage.sandbox.LFDCompleteSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LFDTrackAndTraceSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -243,9 +240,9 @@
     <classNode dependClassName="EDLanguage.sandbox.AdmitPatientSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.INOVA" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -432,6 +429,9 @@
   </dependency>
   <dependency className="EDLanguage.sandbox.RequestPCRSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.SURESCREEN">
+    <classNode extendsClassName="simcore.basicStructures.Test" />
   </dependency>
   <dependency className="EDLanguage.sandbox.SideRoomAdmissionBay">
     <classNode extendsClassName="simcore.basicStructures.RoomType" />

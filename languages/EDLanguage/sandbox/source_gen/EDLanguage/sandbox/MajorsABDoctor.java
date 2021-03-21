@@ -91,7 +91,7 @@ public class MajorsABDoctor extends Staff {
 
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("Consult with patient on LFT result").WithAction(new StayForTimeAction().WithTimeSpan(180)));
-    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(INOVA.getInstance()).WithResult(true))) {
+    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(SURESCREEN.getInstance()).WithResult(true))) {
       curMission.WithStep(new ActionStep().WithName("Take a LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
       sendSignalTemp = new ConductLIATSignal();

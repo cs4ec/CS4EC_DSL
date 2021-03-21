@@ -68,7 +68,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 3; i++) {
       context.add(new MajorsTriageNurse(space, grid));
     }
-    for (int i = 0; i < 12; i++) {
+    for (int i = 0; i < 7; i++) {
       context.add(new MajorsABNurse(space, grid));
     }
     for (int i = 0; i < 4; i++) {
@@ -259,7 +259,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayJ_lb.setBeds(0);
       MajorsBayK_mb.setBeds(0);
       MajorsBayL_nb.setBeds(0);
-      SideRoom_ob.setBeds(90);
+      SideRoom_ob.setBeds(20);
       AmberBay_pb.setBeds(150);
       RedBay_qb.setBeds(150);
     } catch (NumberFormatException e) {

@@ -11,11 +11,9 @@ import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.basicStructures.Desk;
-import simcore.action.basicAction.conditions.InfectionCondition;
-import simcore.agents.Patient;
-import simcore.diagnosis.InfectionStatus;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.TestResultCondition;
+import simcore.agents.Patient;
 import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 
@@ -53,32 +51,17 @@ public class LabTech extends Actor {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("replyTo"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("Lab"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
-    if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LabSymptomaticPCR.getInstance().getProcessingTime())));
-      if (CheckCondition(new TestResultCondition().WithTest(LabSymptomaticPCR.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
-        sendSignalTemp = new PCRCompleteSignal();
-        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      } else {
-        sendSignalTemp = new PCRCompleteSignal();
-        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      }
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LabSymptomaticPCR.getInstance().getProcessingTime())));
+    if (CheckCondition(new TestResultCondition().WithTest(LabSymptomaticPCR.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
+      sendSignalTemp = new PCRCompleteSignal();
+      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LabAsymptomaticPCR.getInstance().getProcessingTime())));
-      if (CheckCondition(new TestResultCondition().WithTest(LabAsymptomaticPCR.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
-        sendSignalTemp = new PCRCompleteSignal();
-        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      } else {
-        sendSignalTemp = new PCRCompleteSignal();
-        ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      }
+      sendSignalTemp = new PCRCompleteSignal();
+      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
+      sendSignalTemp.AddData("patient", s.GetData("patient"));
+      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }
 
   }
