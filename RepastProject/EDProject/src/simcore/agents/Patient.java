@@ -12,10 +12,10 @@ import EDLanguage.sandbox.AmberAdmissionBay;
 import EDLanguage.sandbox.Entrance;
 import EDLanguage.sandbox.Exit;
 import EDLanguage.sandbox.GreenAdmissionBay;
-import EDLanguage.sandbox.INOVA;
 import EDLanguage.sandbox.LIAT;
 import EDLanguage.sandbox.LabSymptomaticPCR;
 import EDLanguage.sandbox.RedAdmissionBay;
+import EDLanguage.sandbox.SURESCREEN;
 import EDLanguage.sandbox.SideRoomAdmissionBay;
 import EDLanguage.sandbox.WaitingRoom;
 import repast.simphony.engine.schedule.ScheduledMethod;
@@ -381,7 +381,7 @@ public class Patient extends Agent {
 	}
 	
 	public Integer receivedLFD() {
-		if( testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findAny().isPresent()) {
+		if( testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findAny().isPresent()) {
 			return 1;
 		}
 		return 0;
@@ -417,7 +417,7 @@ public class Patient extends Agent {
 	
 	public Integer LFDPositive() {
 		TestResult pres =  null;
-		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findFirst();
+		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findFirst();
 		if (opt.isEmpty()) return 0;
 		else 
 			pres = (TestResult) opt.get();
@@ -430,7 +430,7 @@ public class Patient extends Agent {
 	
 	public Integer LFDNegative() {
 		TestResult pres =  null;
-		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(INOVA.getInstance())).findFirst();
+		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findFirst();
 		if (opt.isEmpty()) return 0;
 		else 
 			pres = (TestResult) opt.get();
