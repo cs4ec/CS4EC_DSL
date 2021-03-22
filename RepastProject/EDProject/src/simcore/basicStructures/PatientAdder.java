@@ -35,8 +35,8 @@ import simcore.utilities.PatientArrivalStore;
 public class PatientAdder {
 	
 	private int interval;
-	private double percentCOVIDSymptomatic;
-	private double percentCOVIDAsymptomatic;
+	private double prevalence;
+	private double proportionSymptomatic;
 	private double percentHighSeverity;
 	private double percentMediumSeverity;
 	private int count = 0;
@@ -57,13 +57,9 @@ public class PatientAdder {
 		return this;
 	}
 	
-	public PatientAdder WithPercentageCOVIDSymptomatic(double pdblPercentCOVIDSymptomatic) {
-		percentCOVIDSymptomatic = pdblPercentCOVIDSymptomatic;
-		return this;
-	}
-	
-	public PatientAdder WithPercentageCOVIDAsymptomatic(double pdblPercentCOVIDAsymptomatic) {
-		percentCOVIDAsymptomatic = pdblPercentCOVIDAsymptomatic;
+	public PatientAdder WithPrevalence(Double pPrevalence, Double pPercentagePrevSymptomatic) {
+		prevalence = pPrevalence;
+		proportionSymptomatic = pPercentagePrevSymptomatic;
 		return this;
 	}
 	
@@ -103,13 +99,16 @@ public class PatientAdder {
 	    	Patient p = new Patient(space, grid);
 	    	
 	    	// Set patient COVID status
-	    	double upperBoundaryForAsymptomatic = percentCOVIDSymptomatic + percentCOVIDAsymptomatic;
+	    	double pPercentSymptomatic = prevalence * proportionSymptomatic;
+	    	double pPercentAsymptomatic = prevalence * (1-proportionSymptomatic);
+
+	    	double upperBoundaryForAsymptomatic = pPercentSymptomatic + pPercentAsymptomatic;
 	    	double dice = RandomHelper.nextDouble();
 
-	    	if(dice < percentCOVIDSymptomatic) {
+	    	if(dice < pPercentSymptomatic) {
 	        	p.setActualInfectionState(SymptomaticInfectionState.getInstance().generateStateForMe(p));
 	        	p.setPHEScore(RandomHelper.nextDoubleFromTo(0.5, 1.0));
-	    	} else if(dice >= percentCOVIDSymptomatic && dice < upperBoundaryForAsymptomatic) {
+	    	} else if(dice >= pPercentSymptomatic && dice < upperBoundaryForAsymptomatic) {
 	        	p.setActualInfectionState(AsymptomaticInfectionState.getInstance().generateStateForMe(p));
 	        	p.setPHEScore(RandomHelper.nextDoubleFromTo(0.01, 0.2));
 	    	} else {

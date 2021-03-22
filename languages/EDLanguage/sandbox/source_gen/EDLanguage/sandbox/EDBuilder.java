@@ -36,8 +36,8 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     Parameters params = RunEnvironment.getInstance().getParameters();
 
-    Double pPercentageSymptomatic = params.getDouble("PercentageSymptomatic");
-    Double pPercentageAsymptomatic = params.getDouble("PercentageAsymptomatic");
+    Double pPrev = params.getDouble("Prevalence");
+    Double pProportionSymptomatic = params.getDouble("PercentagePrevSymptomatic");
 
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = pBool;
@@ -53,7 +53,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(pPercentageSymptomatic).WithPercentageCOVIDAsymptomatic(pPercentageAsymptomatic).WithPercentageHighSeverity(0.6).WithPercentageMediumSeverity(0.4));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPrevalence(pPrev, pProportionSymptomatic).WithPercentageHighSeverity(0.6).WithPercentageMediumSeverity(0.4));
 
     // add Agents 
     for (int i = 0; i < 6; i++) {

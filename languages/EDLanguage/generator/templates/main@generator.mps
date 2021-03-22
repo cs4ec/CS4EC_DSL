@@ -1501,39 +1501,39 @@
           </node>
         </node>
         <node concept="3clFbH" id="5loG7Nagkmp" role="3cqZAp" />
-        <node concept="3cpWs8" id="5loG7Nagq6K" role="3cqZAp">
-          <node concept="3cpWsn" id="5loG7Nagq6L" role="3cpWs9">
-            <property role="TrG5h" value="pPercentageSymptomatic" />
-            <node concept="3uibUv" id="5loG7Nagq6M" role="1tU5fm">
+        <node concept="3cpWs8" id="5XwDiw_$s3H" role="3cqZAp">
+          <node concept="3cpWsn" id="5XwDiw_$s3I" role="3cpWs9">
+            <property role="TrG5h" value="pPrev" />
+            <node concept="3uibUv" id="5XwDiw_$s3J" role="1tU5fm">
               <ref role="3uigEE" to="wyt6:~Double" resolve="Double" />
             </node>
-            <node concept="2OqwBi" id="5loG7Nagt37" role="33vP2m">
-              <node concept="37vLTw" id="5loG7NagsOI" role="2Oq$k0">
+            <node concept="2OqwBi" id="5XwDiw_$tuG" role="33vP2m">
+              <node concept="37vLTw" id="5XwDiw_$tho" role="2Oq$k0">
                 <ref role="3cqZAo" node="5loG7NagfLk" resolve="params" />
               </node>
-              <node concept="liA8E" id="5loG7Nagth9" role="2OqNvi">
+              <node concept="liA8E" id="5XwDiw_$tHn" role="2OqNvi">
                 <ref role="37wK5l" to="88cv:~Parameters.getDouble(java.lang.String)" resolve="getDouble" />
-                <node concept="Xl_RD" id="5loG7NagtlS" role="37wK5m">
-                  <property role="Xl_RC" value="PercentageSymptomatic" />
+                <node concept="Xl_RD" id="5XwDiw_$tPz" role="37wK5m">
+                  <property role="Xl_RC" value="Prevalence" />
                 </node>
               </node>
             </node>
           </node>
         </node>
-        <node concept="3cpWs8" id="5loG7NagyxT" role="3cqZAp">
-          <node concept="3cpWsn" id="5loG7NagyxU" role="3cpWs9">
-            <property role="TrG5h" value="pPercentageAsymptomatic" />
-            <node concept="3uibUv" id="5loG7NagyxV" role="1tU5fm">
+        <node concept="3cpWs8" id="5XwDiw_$zr9" role="3cqZAp">
+          <node concept="3cpWsn" id="5XwDiw_$zra" role="3cpWs9">
+            <property role="TrG5h" value="pProportionSymptomatic" />
+            <node concept="3uibUv" id="5XwDiw_$zrb" role="1tU5fm">
               <ref role="3uigEE" to="wyt6:~Double" resolve="Double" />
             </node>
-            <node concept="2OqwBi" id="5loG7NagzZd" role="33vP2m">
-              <node concept="37vLTw" id="5loG7NagzMp" role="2Oq$k0">
+            <node concept="2OqwBi" id="5XwDiw_$$ZC" role="33vP2m">
+              <node concept="37vLTw" id="5XwDiw_$$I1" role="2Oq$k0">
                 <ref role="3cqZAo" node="5loG7NagfLk" resolve="params" />
               </node>
-              <node concept="liA8E" id="5loG7Nag$c0" role="2OqNvi">
+              <node concept="liA8E" id="5XwDiw_$_d4" role="2OqNvi">
                 <ref role="37wK5l" to="88cv:~Parameters.getDouble(java.lang.String)" resolve="getDouble" />
-                <node concept="Xl_RD" id="5loG7Nag$gN" role="37wK5m">
-                  <property role="Xl_RC" value="PercentageAsymptomatic" />
+                <node concept="Xl_RD" id="5XwDiw_$_ip" role="37wK5m">
+                  <property role="Xl_RC" value="PercentagePrevSymptomatic" />
                 </node>
               </node>
             </node>
@@ -1743,44 +1743,39 @@
               <ref role="37wK5l" to="33ny:~Collection.add(java.lang.Object)" resolve="add" />
               <node concept="2OqwBi" id="$2vkoOQdej" role="37wK5m">
                 <node concept="2OqwBi" id="$2vkoOQbaM" role="2Oq$k0">
-                  <node concept="2OqwBi" id="ijr0ZY5b_h" role="2Oq$k0">
-                    <node concept="2OqwBi" id="ijr0ZY5aKz" role="2Oq$k0">
-                      <node concept="2ShNRf" id="5VDVzf4jCm1" role="2Oq$k0">
-                        <node concept="1pGfFk" id="5VDVzf4jCPc" role="2ShVmc">
-                          <ref role="37wK5l" to="y2pi:~PatientAdder.&lt;init&gt;(repast.simphony.space.continuous.ContinuousSpace,repast.simphony.space.grid.Grid)" resolve="PatientAdder" />
-                          <node concept="37vLTw" id="5VDVzf4jDu6" role="37wK5m">
-                            <ref role="3cqZAo" node="5WDpsrjEo8M" resolve="space" />
-                          </node>
-                          <node concept="37vLTw" id="5VDVzf4jDDZ" role="37wK5m">
-                            <ref role="3cqZAo" node="5WDpsrjEuSk" resolve="grid" />
-                          </node>
+                  <node concept="2OqwBi" id="ijr0ZY5aKz" role="2Oq$k0">
+                    <node concept="2ShNRf" id="5VDVzf4jCm1" role="2Oq$k0">
+                      <node concept="1pGfFk" id="5VDVzf4jCPc" role="2ShVmc">
+                        <ref role="37wK5l" to="y2pi:~PatientAdder.&lt;init&gt;(repast.simphony.space.continuous.ContinuousSpace,repast.simphony.space.grid.Grid)" resolve="PatientAdder" />
+                        <node concept="37vLTw" id="5VDVzf4jDu6" role="37wK5m">
+                          <ref role="3cqZAo" node="5WDpsrjEo8M" resolve="space" />
                         </node>
-                        <node concept="29HgVG" id="5VDVzf4jFge" role="lGtFl">
-                          <node concept="3NFfHV" id="5VDVzf4jFgf" role="3NFExx">
-                            <node concept="3clFbS" id="5VDVzf4jFgg" role="2VODD2">
-                              <node concept="3clFbF" id="5VDVzf4jFgm" role="3cqZAp">
-                                <node concept="2OqwBi" id="5VDVzf4jFgh" role="3clFbG">
-                                  <node concept="3TrEf2" id="5VDVzf4jFgk" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
-                                  </node>
-                                  <node concept="30H73N" id="5VDVzf4jFgl" role="2Oq$k0" />
+                        <node concept="37vLTw" id="5VDVzf4jDDZ" role="37wK5m">
+                          <ref role="3cqZAo" node="5WDpsrjEuSk" resolve="grid" />
+                        </node>
+                      </node>
+                      <node concept="29HgVG" id="5VDVzf4jFge" role="lGtFl">
+                        <node concept="3NFfHV" id="5VDVzf4jFgf" role="3NFExx">
+                          <node concept="3clFbS" id="5VDVzf4jFgg" role="2VODD2">
+                            <node concept="3clFbF" id="5VDVzf4jFgm" role="3cqZAp">
+                              <node concept="2OqwBi" id="5VDVzf4jFgh" role="3clFbG">
+                                <node concept="3TrEf2" id="5VDVzf4jFgk" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="3751:5VDVzf4iS7a" resolve="patientInterval" />
                                 </node>
+                                <node concept="30H73N" id="5VDVzf4jFgl" role="2Oq$k0" />
                               </node>
                             </node>
                           </node>
                         </node>
                       </node>
-                      <node concept="liA8E" id="ijr0ZY5bfl" role="2OqNvi">
-                        <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageCOVIDSymptomatic(double)" resolve="WithPercentageCOVIDSymptomatic" />
-                        <node concept="37vLTw" id="6dYFu3AzHIS" role="37wK5m">
-                          <ref role="3cqZAo" node="5loG7Nagq6L" resolve="pPercentageSymptomatic" />
-                        </node>
-                      </node>
                     </node>
-                    <node concept="liA8E" id="ijr0ZY5bIW" role="2OqNvi">
-                      <ref role="37wK5l" to="y2pi:~PatientAdder.WithPercentageCOVIDAsymptomatic(double)" resolve="WithPercentageCOVIDAsymptomatic" />
-                      <node concept="37vLTw" id="6dYFu3AzITH" role="37wK5m">
-                        <ref role="3cqZAo" node="5loG7NagyxU" resolve="pPercentageAsymptomatic" />
+                    <node concept="liA8E" id="5XwDiw_$LCl" role="2OqNvi">
+                      <ref role="37wK5l" to="y2pi:~PatientAdder.WithPrevalence(java.lang.Double,java.lang.Double)" resolve="WithPrevalence" />
+                      <node concept="37vLTw" id="5XwDiw_$MlI" role="37wK5m">
+                        <ref role="3cqZAo" node="5XwDiw_$s3I" resolve="pPrev" />
+                      </node>
+                      <node concept="37vLTw" id="5XwDiw_$OLG" role="37wK5m">
+                        <ref role="3cqZAo" node="5XwDiw_$zra" resolve="pProportionSymptomatic" />
                       </node>
                     </node>
                   </node>

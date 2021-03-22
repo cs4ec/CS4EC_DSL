@@ -12,20 +12,20 @@
 						converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter"
 									
 		/>
-				<parameter name="PercentageAsymptomatic" displayName="% patients asymptomatic" type="double" 
-						defaultValue="0.02" 
+				<parameter name="Prevalence" displayName="Prevalence" type="double" 
+						defaultValue="0.05" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
+									
+		/>
+				<parameter name="PercentagePrevSymptomatic" displayName="Percent Symptomatic" type="double" 
+						defaultValue="0.2" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
 				<parameter name="FalsePositiveSymptomatic" displayName="False Positives PHE3" type="double" 
 						defaultValue="0.08" 
-						isReadOnly="false" 
-						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
-									
-		/>
-				<parameter name="PercentageSymptomatic" displayName="% patients symptomatic" type="double" 
-						defaultValue="0.4" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									

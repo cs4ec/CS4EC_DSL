@@ -18,6 +18,7 @@ import EDLanguage.sandbox.RedAdmissionBay;
 import EDLanguage.sandbox.SURESCREEN;
 import EDLanguage.sandbox.SideRoomAdmissionBay;
 import EDLanguage.sandbox.WaitingRoom;
+import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
@@ -553,5 +554,9 @@ public class Patient extends Agent {
 	
 	public Integer getTotalPatients() {
 		return 1;
+	}
+	
+	public Double Prevalence() {
+		return RunEnvironment.getInstance().getParameters().getDouble("Prevalence");
 	}
 }
