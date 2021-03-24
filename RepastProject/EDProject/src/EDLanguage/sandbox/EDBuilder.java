@@ -57,7 +57,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     // add Agents 
     for (int i = 0; i < 6; i++) {
-      context.add(new Doctor(space, grid));
+      context.add(new Doctor2(space, grid));
     }
     for (int i = 0; i < 5; i++) {
       context.add(new Nurse(space, grid));

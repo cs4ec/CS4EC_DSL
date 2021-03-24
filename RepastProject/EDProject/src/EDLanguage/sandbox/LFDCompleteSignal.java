@@ -8,7 +8,7 @@ public class LFDCompleteSignal extends DirectSignal {
   public LFDCompleteSignal() {
     this.setName("LFDComplete");
     this.setDescription("");
-    this.AddActor("Doctor");
+    this.AddActor("Doctor2");
     this.AddActor("Receptionist");
     this.AddActor("MajorsABDoctor");
   }

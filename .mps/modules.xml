@@ -3,6 +3,7 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.LFTOnly/EDLanguage.sandbox.LFTOnly.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/languages/EDLanguage/sandbox/EDLanguage.sandbox.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.LanguageDependency/EDLanguage.LanguageDependency.msd" folder="" />

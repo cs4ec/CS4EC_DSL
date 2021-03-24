@@ -8,7 +8,7 @@ public class PatientTestNegativeSignal extends ActorTypeSignal {
   public PatientTestNegativeSignal() {
     this.setName("PatientTestNegative");
     this.setDescription("");
-    this.AddActor("Doctor");
+    this.AddActor("Doctor2");
   }
 
 }

@@ -8,7 +8,7 @@ public class LIATCompleteSignal extends DirectSignal {
   public LIATCompleteSignal() {
     this.setName("LIATComplete");
     this.setDescription("");
-    this.AddActor("Doctor");
+    this.AddActor("Doctor2");
     this.AddActor("MajorsABDoctor");
     this.AddActor("Receptionist");
   }
