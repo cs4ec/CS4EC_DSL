@@ -52,14 +52,14 @@ public class LFDDevice extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
-    if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
-      sendSignalTemp = new LFDPositiveSignal();
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(SURESCREEN.getInstance().getProcessingTime())));
+    if (CheckCondition(new TestResultCondition().WithTest(SURESCREEN.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
+      sendSignalTemp = new LFDCompleteSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
-      sendSignalTemp = new LFDNegativeSignal();
+      sendSignalTemp = new LFDCompleteSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
@@ -70,8 +70,8 @@ public class LFDDevice extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(1800)));
-    if (CheckCondition(new TestResultCondition().WithTest(INOVA.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(SURESCREEN.getInstance().getProcessingTime())));
+    if (CheckCondition(new TestResultCondition().WithTest(SURESCREEN.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new LFDTrackAndTraceSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));

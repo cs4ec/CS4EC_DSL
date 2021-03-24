@@ -132,6 +132,7 @@
       <concept id="1397920687865064415" name="de.slisson.mps.tables.structure.ChildsVertical" flags="ng" index="2reSaE" />
       <concept id="1397920687865064509" name="de.slisson.mps.tables.structure.ChildCollection" flags="ng" index="2reSl8">
         <reference id="1397920687864997201" name="linkDeclaration" index="2reCK$" />
+        <child id="2199447184406843652" name="columnHeaders" index="2YiT2b" />
         <child id="2199447184407180854" name="rowHeaders" index="2YlbuT" />
       </concept>
       <concept id="1397920687864864270" name="de.slisson.mps.tables.structure.StaticHeader" flags="ng" index="2rfbtV">
@@ -932,6 +933,18 @@
       <node concept="3F0A7n" id="7lVoe4ydlE$" role="3EZMnx">
         <ref role="1NtTu8" to="3751:7lVoe4ydlB2" resolve="desks" />
       </node>
+      <node concept="3F0ifn" id="2blVuwVgj$w" role="3EZMnx">
+        <property role="3F0ifm" value="beds:" />
+        <node concept="pVoyu" id="2blVuwVgj_4" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="2blVuwVgj_6" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="2blVuwVgj_J" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2blVuwVgjzN" resolve="beds" />
+      </node>
       <node concept="3F0ifn" id="6o2BuIx6R6b" role="3EZMnx">
         <property role="3F0ifm" value="Colour:" />
         <node concept="pVoyu" id="6o2BuIx6R8w" role="3F10Kt">
@@ -1484,6 +1497,14 @@
       <node concept="3F0ifn" id="ijr0ZXApAQ" role="3EZMnx">
         <property role="3F0ifm" value="minutes" />
       </node>
+      <node concept="3F0ifn" id="1rknCs3SnJz" role="3EZMnx">
+        <node concept="ljvvj" id="1rknCs3SnJR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="1rknCs3SnKe" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1rknCs3SeUj" resolve="ProcessingTimeTable" />
+      </node>
       <node concept="l2Vlx" id="ijr0ZWehMO" role="2iSdaV" />
     </node>
   </node>
@@ -1650,14 +1671,8 @@
       <node concept="3F0ifn" id="4TDP_lX_jA" role="3EZMnx">
         <property role="3F0ifm" value="to" />
       </node>
-      <node concept="1iCGBv" id="L8B6GmJfDN" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:L8B6GmJfDz" resolve="targetBay" />
-        <node concept="1sVBvm" id="L8B6GmJfDP" role="1sWHZn">
-          <node concept="3F0A7n" id="L8B6GmJfDZ" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
+      <node concept="3F1sOY" id="2blVuwVb2u7" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2blVuwV8Ivb" resolve="targetBay" />
       </node>
       <node concept="l2Vlx" id="4TDP_lXz4r" role="2iSdaV" />
     </node>
@@ -1926,17 +1941,11 @@
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:L8B6GnjfR9" resolve="SuitableForSideRoomCondition" />
     <node concept="3EZMnI" id="L8B6GnjfRc" role="2wV5jI">
-      <node concept="3F0ifn" id="L8B6GnjfRj" role="3EZMnx">
-        <property role="3F0ifm" value="the patient can be placed in a side room rather than" />
+      <node concept="3F0ifn" id="2blVuwUUSWA" role="3EZMnx">
+        <property role="3F0ifm" value="the patient can be placed in a side room rather than " />
       </node>
-      <node concept="1iCGBv" id="1Pt3svOPE2h" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:1Pt3svOPE2c" resolve="alternativeAdmissionBay" />
-        <node concept="1sVBvm" id="1Pt3svOPE2j" role="1sWHZn">
-          <node concept="3F0A7n" id="1Pt3svOPE2r" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
+      <node concept="3F1sOY" id="2blVuwUXD_N" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2blVuwUXD_C" resolve="alternativeBay" />
       </node>
       <node concept="l2Vlx" id="L8B6GnjfRf" role="2iSdaV" />
     </node>
@@ -2035,6 +2044,54 @@
             <ref role="1NtTu8" to="3751:2vFOz$FUEcK" resolve="NumPatientsInHour" />
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1rknCs3SeUu">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="3751:1rknCs3SeSq" resolve="ProcessingTimeLine" />
+    <node concept="2r0Tta" id="1rknCs3SeUG" role="2wV5jI">
+      <node concept="2reCLk" id="1rknCs3SeUJ" role="2r0Tv6">
+        <node concept="2reCLy" id="1rknCs3SeUL" role="2reCL6">
+          <node concept="3F0A7n" id="1rknCs3VZtm" role="2reSmM">
+            <ref role="1NtTu8" to="3751:1rknCs3SeSQ" resolve="Time" />
+          </node>
+        </node>
+        <node concept="2reCLy" id="1rknCs3VZt_" role="2reCL6">
+          <node concept="3F0A7n" id="1rknCs3VZtH" role="2reSmM">
+            <ref role="1NtTu8" to="3751:1rknCs3SeSS" resolve="Occurances" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1rknCs3SeVy">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="3751:1rknCs3SeRP" resolve="ProcessingTimeTable" />
+    <node concept="2rfBfz" id="1rknCs3SeVH" role="2wV5jI">
+      <node concept="2reSaE" id="1rknCs3SeVM" role="2rf8GZ">
+        <ref role="2reCK$" to="3751:1rknCs3SeTx" resolve="ProcessingTimeLines" />
+        <node concept="2r3Xtq" id="1rknCs3VJaA" role="2YiT2b">
+          <node concept="2rfbtV" id="1rknCs3VJeQ" role="uCobI">
+            <property role="2rfbtB" value="Processing Time (hours)" />
+          </node>
+          <node concept="2rfbtV" id="1rknCs3VJeW" role="uCobI">
+            <property role="2rfbtB" value="Occurances" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2blVuwVt5Fh">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:2blVuwVt5E5" resolve="BedAvailableCondition" />
+    <node concept="3EZMnI" id="2blVuwVt5Fs" role="2wV5jI">
+      <node concept="2iRfu4" id="2blVuwVt5Ft" role="2iSdaV" />
+      <node concept="3F0ifn" id="2blVuwVt5Fy" role="3EZMnx">
+        <property role="3F0ifm" value="Bed is available in ward" />
+      </node>
+      <node concept="3F1sOY" id="2blVuwVt5FC" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2blVuwVt5EX" resolve="targetWard" />
       </node>
     </node>
   </node>

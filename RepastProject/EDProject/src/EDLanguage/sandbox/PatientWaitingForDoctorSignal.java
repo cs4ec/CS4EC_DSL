@@ -8,7 +8,7 @@ public class PatientWaitingForDoctorSignal extends ActorTypeSignal {
   public PatientWaitingForDoctorSignal() {
     this.setName("PatientWaitingForDoctor");
     this.setDescription("");
-    this.AddActor("Doctor");
+    this.AddActor("Doctor2");
   }
 
 }

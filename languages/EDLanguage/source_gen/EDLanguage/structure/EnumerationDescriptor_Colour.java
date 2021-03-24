@@ -21,9 +21,10 @@ public class EnumerationDescriptor_Colour extends EnumerationDescriptorBase {
   private final EnumerationDescriptor.MemberDescriptor myMember_GRAY_0 = new EnumerationDescriptor.MemberDescriptor("GRAY", "grey", 0x66029deba11b715eL, "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/7350611177167876446");
   private final EnumerationDescriptor.MemberDescriptor myMember_BLACK_0 = new EnumerationDescriptor.MemberDescriptor("BLACK", "black", 0x66029deba11b7163L, "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/7350611177167876451");
   private final EnumerationDescriptor.MemberDescriptor myMember_YELLOW_0 = new EnumerationDescriptor.MemberDescriptor("YELLOW", "yellow", 0x66029deba11b7169L, "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/7350611177167876457");
+  private final EnumerationDescriptor.MemberDescriptor myMember_ORANGE_0 = new EnumerationDescriptor.MemberDescriptor("ORANGE", "orange", 0x22d5ede83ac092daL, "r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949002814170");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L, 0x66029deba11b7156L, 0x66029deba11b7157L, 0x66029deba11b715aL, 0x66029deba11b715eL, 0x66029deba11b7163L, 0x66029deba11b7169L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_RED_0, myMember_GREEN_0, myMember_BLUE_0, myMember_GRAY_0, myMember_BLACK_0, myMember_YELLOW_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L, 0x66029deba11b7156L, 0x66029deba11b7157L, 0x66029deba11b715aL, 0x66029deba11b715eL, 0x66029deba11b7163L, 0x66029deba11b7169L, 0x22d5ede83ac092daL);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_RED_0, myMember_GREEN_0, myMember_BLUE_0, myMember_GRAY_0, myMember_BLACK_0, myMember_YELLOW_0, myMember_ORANGE_0);
 
   @Nullable
   @Override
@@ -56,6 +57,8 @@ public class EnumerationDescriptor_Colour extends EnumerationDescriptorBase {
         return myMember_BLACK_0;
       case "YELLOW":
         return myMember_YELLOW_0;
+      case "ORANGE":
+        return myMember_ORANGE_0;
     }
     return null;
   }

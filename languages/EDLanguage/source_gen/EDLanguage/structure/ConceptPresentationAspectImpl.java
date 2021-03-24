@@ -19,6 +19,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeExpressionReference;
   private ConceptPresentation props_AttributeReference;
+  private ConceptPresentation props_BedAvailableCondition;
   private ConceptPresentation props_Behaviour;
   private ConceptPresentation props_BehaviourElement;
   private ConceptPresentation props_BehaviourElementReference;
@@ -61,6 +62,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
+  private ConceptPresentation props_ProcessingTimeLine;
+  private ConceptPresentation props_ProcessingTimeTable;
   private ConceptPresentation props_ResultCondition;
   private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomDefinition;
@@ -166,6 +169,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttributeReference = cpb.create();
         }
         return props_AttributeReference;
+      case LanguageConceptSwitch.BedAvailableCondition:
+        if (props_BedAvailableCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Bed is available condition");
+          props_BedAvailableCondition = cpb.create();
+        }
+        return props_BedAvailableCondition;
       case LanguageConceptSwitch.Behaviour:
         if (props_Behaviour == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -471,6 +481,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
+      case LanguageConceptSwitch.ProcessingTimeLine:
+        if (props_ProcessingTimeLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ProcessingTimeLine");
+          props_ProcessingTimeLine = cpb.create();
+        }
+        return props_ProcessingTimeLine;
+      case LanguageConceptSwitch.ProcessingTimeTable:
+        if (props_ProcessingTimeTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Test processing time table");
+          props_ProcessingTimeTable = cpb.create();
+        }
+        return props_ProcessingTimeTable;
       case LanguageConceptSwitch.ResultCondition:
         if (props_ResultCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

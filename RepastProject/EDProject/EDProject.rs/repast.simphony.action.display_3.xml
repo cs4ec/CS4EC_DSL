@@ -15,11 +15,23 @@
       <string>simcore.styles.LocationStyle</string>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.MajorsABNurse</string>
+      <string>simcore.agents.Patient</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
-      <string>simcore.agents.Patient</string>
+      <string>EDLanguage.sandbox.LabTech</string>
+      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.MajorsABDoctor</string>
+      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Seat</string>
+      <string>simcore.styles.SeatStyle</string>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.MajorsABNurse</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
@@ -31,10 +43,6 @@
       <string>simcore.styles.WallStyle</string>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.LabTech</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
-    </entry>
-    <entry>
       <string>simcore.basicStructures.Desk</string>
       <string>simcore.styles.SeatStyle</string>
     </entry>
@@ -43,12 +51,8 @@
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.MajorsABDoctor</string>
+      <string>simcore.basicStructures.Bed</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Seat</string>
-      <string>simcore.styles.SeatStyle</string>
     </entry>
   </styles>
   <editedStyles>
@@ -65,12 +69,24 @@
       <null/>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.MajorsABNurse</string>
-      <string>EDLanguage.sandbox.MajorsABNurse.style_0.xml</string>
-    </entry>
-    <entry>
       <string>simcore.agents.Patient</string>
       <string>simcore.agents.Patient.style_5.xml</string>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.LabTech</string>
+      <string>EDLanguage.sandbox.LabTech.style_1.xml</string>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.MajorsABDoctor</string>
+      <string>EDLanguage.sandbox.MajorsABDoctor.style_0.xml</string>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Seat</string>
+      <null/>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.MajorsABNurse</string>
+      <string>EDLanguage.sandbox.MajorsABNurse.style_0.xml</string>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Receptionist</string>
@@ -81,10 +97,6 @@
       <null/>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.LabTech</string>
-      <string>EDLanguage.sandbox.LabTech.style_1.xml</string>
-    </entry>
-    <entry>
       <string>simcore.basicStructures.Desk</string>
       <null/>
     </entry>
@@ -93,12 +105,8 @@
       <string>EDLanguage.sandbox.MajorsTriageNurse.style_1.xml</string>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.MajorsABDoctor</string>
-      <string>EDLanguage.sandbox.MajorsABDoctor.style_0.xml</string>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Seat</string>
-      <null/>
+      <string>simcore.basicStructures.Bed</string>
+      <string>simcore.basicStructures.Bed.style_1.xml</string>
     </entry>
   </editedStyles>
   <netStyles/>
@@ -111,7 +119,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-1646641878</hashCode>
+    <hashCode>1319711806</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>grid</layoutProjection>
@@ -130,12 +138,24 @@
       <int>0</int>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.MajorsABNurse</string>
-      <int>4</int>
-    </entry>
-    <entry>
       <string>simcore.agents.Patient</string>
       <int>5</int>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.LabTech</string>
+      <int>8</int>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.MajorsABDoctor</string>
+      <int>6</int>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Seat</string>
+      <int>2</int>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.MajorsABNurse</string>
+      <int>4</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Receptionist</string>
@@ -143,11 +163,7 @@
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
-      <int>11</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.LabTech</string>
-      <int>8</int>
+      <int>12</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Desk</string>
@@ -158,12 +174,8 @@
       <int>3</int>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.MajorsABDoctor</string>
-      <int>6</int>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Seat</string>
-      <int>2</int>
+      <string>simcore.basicStructures.Bed</string>
+      <int>11</int>
     </entry>
   </layerOrder>
   <projections>

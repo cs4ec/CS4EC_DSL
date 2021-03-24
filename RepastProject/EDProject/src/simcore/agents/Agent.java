@@ -5,14 +5,16 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.Amber_AdmissionBay;
 import EDLanguage.sandbox.DoctorOffice;
 import EDLanguage.sandbox.Nurse;
-import EDLanguage.sandbox.Red_AdmissionBay;
-import EDLanguage.sandbox.SideRoom_AdmissionBay;
+import EDLanguage.sandbox.RedAdmissionBay;
+import EDLanguage.sandbox.SideRoomAdmissionBay;
 import repast.simphony.context.Context;
+import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.parameter.Parameters;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
 import repast.simphony.random.RandomHelper;
@@ -37,6 +39,7 @@ import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
+import simcore.action.basicAction.conditions.BedAvailableCondition;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.action.basicAction.conditions.IsAvailableCondition;
@@ -48,7 +51,6 @@ import simcore.action.basicAction.conditions.SeverityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
 import simcore.action.basicAction.conditions.StateCondition;
 import simcore.action.basicAction.conditions.TestResultCondition;
-import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Bed;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.Desk;
@@ -60,6 +62,7 @@ import simcore.basicStructures.Seat;
 import simcore.basicStructures.Test;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
+import simcore.diagnosis.InfectionStatus;
 import simcore.diagnosis.SeverityScore;
 import simcore.diagnosis.TestResult;
 import simcore.utilities.AStar;
@@ -265,6 +268,14 @@ public class Agent {
 	protected void FindASeat() {
 		curMission = new Action("TakeSeat").WithStep(
 				new ActionStep().WithName("move to seat").WithAction(new OccupyAction().WithTarget(Seat.class)));
+		curActionStep = 0;
+	}
+	
+	// Agent has entered the room and now will find a seat to take and move towards
+	// it
+	protected void FindAnOccupiable(Class occupiableType) {
+		curMission = new Action("TakeOccupiable").WithStep(
+				new ActionStep().WithName("move to an occupiable").WithAction(new OccupyAction().WithTarget(occupiableType)));
 		curActionStep = 0;
 	}
 	
@@ -482,6 +493,16 @@ public class Agent {
 			return ((PatientAdmissionStatusCondition) c).getOutcome() == ((PatientAdmissionStatusCondition) c).getPatient().getOutcome();
 		}
 		
+		if(c instanceof BedAvailableCondition) {
+			Room targetWard = ((BedAvailableCondition) c).getTargetWard();
+			ArrayList<Occupiable> emptyBeds = (ArrayList<Occupiable>) targetWard.getAllEmptyOcupiablesOfType(Bed.class);
+			if(emptyBeds.isEmpty()) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+		
 		if(c instanceof ResultCondition) {
 			Test pTest = ((ResultCondition)c).getTest();
 			Patient pPatient = ((ResultCondition)c).getPatient();
@@ -494,7 +515,25 @@ public class Agent {
 			return false;
 		}
 		if(c instanceof InfectionCondition) {
-			return ((InfectionCondition) c).getInfectionStatus() == ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
+			
+			// Introduce stochasticity in whether patient is correctly identified as symptomatic 
+		    Parameters params = RunEnvironment.getInstance().getParameters();
+		    Double pdblFalsePositiveSymptomatic = params.getDouble("FalsePositiveSymptomatic");
+		    
+		    InfectionStatus testingStatus = ((InfectionCondition) c).getInfectionStatus();
+		    InfectionStatus patientActualStatus = ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
+			
+		    // margin of error comes when patient is susceptible, but doc thinks they are actually symptomatic
+			// so when deciding if a patient is symptomatic, there is a 7% chance that the doc says YES, but patient actual infection status is susc
+		    if(testingStatus == InfectionStatus.Symptomatic && patientActualStatus == InfectionStatus.Susceptible) {
+		    	if (RandomHelper.nextDouble() < pdblFalsePositiveSymptomatic) {
+		    		return true;
+		    	} else {
+		    		return false;
+		    	}
+		    } else {
+				return ((InfectionCondition) c).getInfectionStatus() == ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
+		    }
 		}
 		
 		if(c instanceof SeverityCondition) {
@@ -503,29 +542,38 @@ public class Agent {
 		
 		if(c instanceof SuitableForSideRoomCondition) {
 			Patient pPatient = ((SuitableForSideRoomCondition) c).getPatient();
-			AdmissionBay pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
-			double pPHEScore = pPatient.getPHEScore();
-
-			// Depending on the alternative admission bay, the COVID suspicion level of a patient is either weighted positive or negative
-			// E.g. if admitting to red bay, a high suspicion is good, but for amber you want a low suspicion as amber should contain negative cases
-			if(pAlternativeBay == Red_AdmissionBay.getInstance()) {
-				
-			} else if(pAlternativeBay == Amber_AdmissionBay.getInstance()) {
-				pPHEScore = 1- pPHEScore;
-			}
-			double currOcc = SideRoom_AdmissionBay.getInstance().getCurrentOccupancy();
-			double maxCap = SideRoom_AdmissionBay.getInstance().getCapacity();
-			double pSideRoomCapacity = (currOcc / maxCap);
-			if(currOcc >= maxCap) {
-				pSideRoomCapacity = 1;
-			}
-			double pdblChances = 1- ((pPHEScore + pSideRoomCapacity) / 2);
+			Room pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
+			InfectionStatus pPatientStatus = pPatient.getActualInfectionState().stateType.getInfectionStatus();
 			
-			double rnd = RandomHelper.nextDouble();
-			if(rnd < pdblChances) {
-				return true;
+			// Calculate the current occupancy of side rooms
+			ArrayList<Room> plstSideRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(SideRoomAdmissionBay.getInstance());
+			int maxSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllOcupiablesOfType(Bed.class).size()).sum();
+			int curSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllEmptyOcupiablesOfType(Bed.class).size()).sum();
+			double pdblChanceUseSideRoom = (double)curSRCapacity / (double)maxSRCapacity;
+			
+			if(pAlternativeBay.getRoomType() == RedAdmissionBay.getInstance()) {
+				if(pPatientStatus == InfectionStatus.Symptomatic) {
+					//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
+//					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
+					if(curSRCapacity > 0) {
+						return true;
+					} else {
+						return false;
+					}
+				} else {
+					return true; // Patient can go to a SR
+				}
+			} else {
+				if(pPatientStatus == InfectionStatus.Symptomatic) {
+					return true; // Patient can go to a SR
+				} else {
+//					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
+					if(curSRCapacity > 0) {
+						return true;
+					} else {
+						return false;
+					}				}
 			}
-			return false;
 		}
 
 		if (c instanceof StateCondition) {

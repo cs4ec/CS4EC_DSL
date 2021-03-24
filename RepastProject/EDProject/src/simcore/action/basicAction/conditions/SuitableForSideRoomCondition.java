@@ -1,12 +1,13 @@
 package simcore.action.basicAction.conditions;
 
 import simcore.agents.Patient;
-import simcore.basicStructures.AdmissionBay;
+import simcore.basicStructures.Room;
+import simcore.basicStructures.RoomType;
 
 public class SuitableForSideRoomCondition extends Condition{
 	
 	private Patient patient;
-	private AdmissionBay alternativebay;
+	private Room alternativebay;
 	
 	public SuitableForSideRoomCondition() {
 		
@@ -17,8 +18,8 @@ public class SuitableForSideRoomCondition extends Condition{
     	return this;
 	}
     
-    public SuitableForSideRoomCondition WithAlternativeBay(AdmissionBay pBay) {
-    	alternativebay = pBay;
+    public SuitableForSideRoomCondition WithAlternativeBay(Room pAlternativeBay) {
+    	alternativebay = pAlternativeBay;
     	return this;
 	}
     
@@ -26,7 +27,7 @@ public class SuitableForSideRoomCondition extends Condition{
 		return patient;
 	}
 	
-	public AdmissionBay getAlternativeBay() {
+	public Room getAlternativeBay() {
 		return alternativebay;
 	}
 

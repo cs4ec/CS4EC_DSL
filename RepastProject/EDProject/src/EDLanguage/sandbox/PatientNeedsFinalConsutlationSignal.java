@@ -8,7 +8,7 @@ public class PatientNeedsFinalConsutlationSignal extends ActorTypeSignal {
   public PatientNeedsFinalConsutlationSignal() {
     this.setName("PatientNeedsFinalConsutlation");
     this.setDescription("");
-    this.AddActor("Doctor");
+    this.AddActor("Doctor2");
   }
 
 }

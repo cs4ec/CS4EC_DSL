@@ -36,8 +36,8 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     Parameters params = RunEnvironment.getInstance().getParameters();
 
-    Double pPercentageSymptomatic = params.getDouble("PercentageSymptomatic");
-    Double pPercentageAsymptomatic = params.getDouble("PercentageAsymptomatic");
+    Double pPrev = params.getDouble("Prevalence");
+    Double pProportionSymptomatic = params.getDouble("PercentagePrevSymptomatic");
 
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = pBool;
@@ -53,11 +53,11 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPercentageCOVIDSymptomatic(pPercentageSymptomatic).WithPercentageCOVIDAsymptomatic(pPercentageAsymptomatic).WithPercentageHighSeverity(0.44).WithPercentageMediumSeverity(0.66));
+    context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPrevalence(pPrev, pProportionSymptomatic).WithPercentageHighSeverity(0.6).WithPercentageMediumSeverity(0.4));
 
     // add Agents 
     for (int i = 0; i < 6; i++) {
-      context.add(new Doctor(space, grid));
+      context.add(new Doctor2(space, grid));
     }
     for (int i = 0; i < 5; i++) {
       context.add(new Nurse(space, grid));
@@ -129,7 +129,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsBayJ_lb = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
     Room MajorsBayK_mb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
     Room MajorsBayL_nb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 3, MajorsABBay.getInstance(), Color.GRAY);
-    Room Exit_ob = new Room("Exit", context, space, grid, 162, 60, 10, 2, 1, 1000000, Exit.getInstance(), Color.GRAY);
+    Room SideRoom_ob = new Room("SideRoom", context, space, grid, 200, 60, 50, 50, 1, 100000, SideRoomAdmissionBay.getInstance(), Color.GRAY);
+    Room AmberBay_pb = new Room("AmberBay", context, space, grid, 260, 60, 50, 50, 1, 100000, AmberAdmissionBay.getInstance(), Color.ORANGE);
+    Room RedBay_qb = new Room("RedBay", context, space, grid, 260, 5, 50, 50, 1, 100000, RedAdmissionBay.getInstance(), Color.RED);
     try {
       Pediatrics_a.setSeats(4);
       Lab_b.setSeats(0);
@@ -171,7 +173,9 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayJ_lb.setSeats(0);
       MajorsBayK_mb.setSeats(0);
       MajorsBayL_nb.setSeats(0);
-      Exit_ob.setSeats(0);
+      SideRoom_ob.setSeats(0);
+      AmberBay_pb.setSeats(0);
+      RedBay_qb.setSeats(0);
       Pediatrics_a.setDesks(2);
       Lab_b.setDesks(20);
       MainReception_c.setDesks(0);
@@ -212,7 +216,52 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsBayJ_lb.setDesks(1);
       MajorsBayK_mb.setDesks(1);
       MajorsBayL_nb.setDesks(1);
-      Exit_ob.setDesks(0);
+      SideRoom_ob.setDesks(0);
+      AmberBay_pb.setDesks(0);
+      RedBay_qb.setDesks(0);
+      Pediatrics_a.setBeds(0);
+      Lab_b.setBeds(0);
+      MainReception_c.setBeds(0);
+      Triage_d.setBeds(0);
+      TriageSideRoom1_e.setBeds(0);
+      TriageSideRoom2_f.setBeds(0);
+      TriageSideRoom3_g.setBeds(0);
+      MajorsTriage_h.setBeds(0);
+      LiatBooth1_i.setBeds(0);
+      MajorsWaitingRoom_j.setBeds(0);
+      DoctorOffice1_k.setBeds(0);
+      DoctorOffice3_l.setBeds(0);
+      DoctorOffice2_m.setBeds(0);
+      DoctorOffice6_n.setBeds(0);
+      DoctorOffice4_o.setBeds(0);
+      DoctorOffice7_p.setBeds(0);
+      DoctorOffice5_q.setBeds(0);
+      DoctorOffice8_r.setBeds(0);
+      DoctorOffice9_s.setBeds(0);
+      TaskRoom1_t.setBeds(0);
+      TaskRoom2_u.setBeds(0);
+      TaskRoom3_v.setBeds(0);
+      Entrance_w.setBeds(0);
+      XRay1_x.setBeds(0);
+      XRay2_y.setBeds(0);
+      TriageWaitingRoom_z.setBeds(0);
+      MajorsABReception_ab.setBeds(0);
+      LIATBooth2_bb.setBeds(0);
+      MajorsBayA_cb.setBeds(0);
+      MajorsBayB_db.setBeds(0);
+      MajorsBayC_eb.setBeds(0);
+      MajorsBayD_fb.setBeds(0);
+      MajorsBayE_gb.setBeds(0);
+      MajorsBayF_hb.setBeds(0);
+      MajorsBayG_ib.setBeds(0);
+      MajorsBayH_jb.setBeds(0);
+      MajorsBayI_kb.setBeds(0);
+      MajorsBayJ_lb.setBeds(0);
+      MajorsBayK_mb.setBeds(0);
+      MajorsBayL_nb.setBeds(0);
+      SideRoom_ob.setBeds(20);
+      AmberBay_pb.setBeds(150);
+      RedBay_qb.setBeds(150);
     } catch (NumberFormatException e) {
     }
 
@@ -229,7 +278,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     createWallBetween(160, 60, 160, 70, context, space, grid);
     createWallBetween(110, 90, 130, 90, context, space, grid);
     createWallBetween(140, 90, 160, 90, context, space, grid);
-    createWallBetween(110, 60, 175, 60, context, space, grid);
+    createWallBetween(110, 60, 155, 60, context, space, grid);
     createWallBetween(175, 60, 175, 150, context, space, grid);
     createWallBetween(175, 165, 175, 200, context, space, grid);
     createWallBetween(175, 145, 245, 145, context, space, grid);

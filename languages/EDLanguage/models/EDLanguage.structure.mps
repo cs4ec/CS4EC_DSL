@@ -501,6 +501,11 @@
       <property role="TrG5h" value="desks" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="2blVuwVgjzN" role="1TKVEl">
+      <property role="IQ2nx" value="2510173949011245299" />
+      <property role="TrG5h" value="beds" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="5QJON_AVrZ9" role="1TKVEi">
       <property role="IQ2ns" value="6750846609945116617" />
       <property role="20kJfa" value="roomType" />
@@ -579,6 +584,12 @@
       <property role="20kJfa" value="targetObject" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
+    </node>
+    <node concept="1TJgyj" id="2blVuwVjJgR" role="1TKVEi">
+      <property role="IQ2ns" value="2510173949012145207" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetOccupiable" />
+      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="7o6PzEpH8eY">
@@ -959,7 +970,7 @@
     <property role="EcuMT" value="2838504078745189" />
     <property role="3GE5qa" value="Structures.Class" />
     <property role="TrG5h" value="PlaceInstanceCollection" />
-    <property role="34LRSv" value="constant place" />
+    <property role="34LRSv" value="the" />
     <property role="R4oN_" value="a defined constant place in ED" />
     <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
     <node concept="1TJgyj" id="a5pEVjDTA" role="1TKVEi">
@@ -1095,6 +1106,11 @@
       <property role="3tVfz5" value="7350611177167876457" />
       <property role="TrG5h" value="YELLOW" />
       <property role="1L1pqM" value="yellow" />
+    </node>
+    <node concept="25R33" id="2blVuwUK9bq" role="25R1y">
+      <property role="3tVfz5" value="2510173949002814170" />
+      <property role="TrG5h" value="ORANGE" />
+      <property role="1L1pqM" value="orange" />
     </node>
   </node>
   <node concept="1TIwiD" id="12ocaqaua7C">
@@ -1242,6 +1258,12 @@
       <property role="IQ2nx" value="329726013662425223" />
       <property role="TrG5h" value="ProcessingTime" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="1rknCs3SeUj" role="1TKVEi">
+      <property role="IQ2ns" value="1645043697875742355" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ProcessingTimeTable" />
+      <ref role="20lvS9" node="1rknCs3SeRP" resolve="ProcessingTimeTable" />
     </node>
   </node>
   <node concept="1TIwiD" id="ijr0ZWh9Pa">
@@ -1395,12 +1417,6 @@
     <property role="34LRSv" value="admit" />
     <property role="R4oN_" value="Admit the patient" />
     <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
-    <node concept="1TJgyj" id="L8B6GmJfDz" role="1TKVEi">
-      <property role="IQ2ns" value="885129310535219811" />
-      <property role="20kJfa" value="targetBay" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="L8B6GmHak$" resolve="AdmissionBay" />
-    </node>
     <node concept="PrWs8" id="4TDP_lWbTl" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -1410,6 +1426,13 @@
       <property role="20kJfa" value="targetPatient" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
+    </node>
+    <node concept="1TJgyj" id="2blVuwV8Ivb" role="1TKVEi">
+      <property role="IQ2ns" value="2510173949009258443" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetBay" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="4TDP_m2UaO">
@@ -1556,11 +1579,12 @@
     <property role="TrG5h" value="SuitableForSideRoomCondition" />
     <property role="34LRSv" value="suitable for side room condition" />
     <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
-    <node concept="1TJgyj" id="1Pt3svOPE2c" role="1TKVEi">
-      <property role="IQ2ns" value="2115862552391360652" />
-      <property role="20kJfa" value="alternativeAdmissionBay" />
+    <node concept="1TJgyj" id="2blVuwUXD_C" role="1TKVEi">
+      <property role="IQ2ns" value="2510173949006354792" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="alternativeBay" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="L8B6GmHak$" resolve="AdmissionBay" />
+      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="6dYFu3AbeaS">
@@ -1605,6 +1629,51 @@
       <property role="IQ2nx" value="2876623929997959984" />
       <property role="TrG5h" value="NumPatientsInHour" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1rknCs3SeRP">
+    <property role="EcuMT" value="1645043697875742197" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ProcessingTimeTable" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="Test processing time table" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1rknCs3SeTx" role="1TKVEi">
+      <property role="IQ2ns" value="1645043697875742305" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ProcessingTimeLines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1rknCs3SeSq" resolve="ProcessingTimeLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1rknCs3SeSq">
+    <property role="EcuMT" value="1645043697875742234" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ProcessingTimeLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="1rknCs3SeSQ" role="1TKVEl">
+      <property role="IQ2nx" value="1645043697875742262" />
+      <property role="TrG5h" value="Time" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyi" id="1rknCs3SeSS" role="1TKVEl">
+      <property role="IQ2nx" value="1645043697875742264" />
+      <property role="TrG5h" value="Occurances" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2blVuwVt5E5">
+    <property role="EcuMT" value="2510173949014596229" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="BedAvailableCondition" />
+    <property role="34LRSv" value="Bed is available condition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="2blVuwVt5EX" role="1TKVEi">
+      <property role="IQ2ns" value="2510173949014596285" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetWard" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
     </node>
   </node>
 </model>
