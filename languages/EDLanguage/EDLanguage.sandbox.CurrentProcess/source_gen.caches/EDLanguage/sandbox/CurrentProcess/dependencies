@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.AdmitPatientSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.AmberAdmissionBay">
+    <classNode dependClassName="EDLanguage.sandbox.AmberAdmissionBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Amber_AdmissionBay">
+    <classNode dependClassName="EDLanguage.sandbox.Amber_AdmissionBay" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.ConductLFDSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.ConductLIATSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.ConductLIATTrackAndTraceSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.ConductTrackAndTraceLFDSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Doctor">
+    <classNode dependClassName="EDLanguage.sandbox.AdmitPatientSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ConductLIATTrackAndTraceSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
+    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.RequestPCRSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
+    <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.InfectionCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.SuitableForSideRoomCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.DoctorOffice">
+    <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.EDBuilder">
+    <classNode dependClassName="EDLanguage.sandbox.AmberAdmissionBay" />
+    <classNode dependClassName="EDLanguage.sandbox.Doctor" />
+    <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
+    <classNode dependClassName="EDLanguage.sandbox.LFDDevice" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATMachine" />
+    <classNode dependClassName="EDLanguage.sandbox.Lab" />
+    <classNode dependClassName="EDLanguage.sandbox.LabTech" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsABBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsABDoctor" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsABNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsTriageNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.Nurse" />
+    <classNode dependClassName="EDLanguage.sandbox.Radiology" />
+    <classNode dependClassName="EDLanguage.sandbox.Receptionist" />
+    <classNode dependClassName="EDLanguage.sandbox.RedAdmissionBay" />
+    <classNode dependClassName="EDLanguage.sandbox.SideRoomAdmissionBay" />
+    <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.TriageSideRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.office" />
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
+    <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder" />
+    <classNode dependClassName="repast.simphony.context.space.grid.GridFactory" />
+    <classNode dependClassName="repast.simphony.context.space.grid.GridFactoryFinder" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.parameter.Parameters" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.continuous.NdPoint" />
+    <classNode dependClassName="repast.simphony.space.continuous.StrictBorders" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="repast.simphony.space.grid.GridBuilderParameters" />
+    <classNode dependClassName="repast.simphony.space.grid.SimpleGridAdder" />
+    <classNode dependClassName="repast.simphony.space.grid.StrictBorders" />
+    <classNode dependClassName="repast.simphony.valueLayer.GridValueLayer" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.PatientAdder" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.Wall" />
+    <classNode dependClassName="simcore.utilities.ModelParameterStore" />
+    <classNode dependClassName="simcore.utilities.PatientArrivalStore" />
+    <classNode dependClassName="simcore.utilities.StaffAdder" />
+    <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Entrance">
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Exit">
+    <classNode dependClassName="EDLanguage.sandbox.Exit" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.GreenAdmissionBay">
+    <classNode dependClassName="EDLanguage.sandbox.GreenAdmissionBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Green_AdmissionBay">
+    <classNode dependClassName="EDLanguage.sandbox.Green_AdmissionBay" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.IsLIATReadySignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LFDCompleteSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LFDDevice">
+    <classNode dependClassName="EDLanguage.sandbox.LFDCompleteSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LFDTrackAndTraceSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.DirectSignal" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LFDTrackAndTraceSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LIAT">
+    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LIATBooth">
+    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LIATCompleteSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LIATCompleteTrackAndTraceSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LIATIsReadySignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LIATMachine">
+    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATCompleteSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATCompleteTrackAndTraceSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATIsReadySignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.DirectSignal" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Lab">
+    <classNode dependClassName="EDLanguage.sandbox.Lab" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LabAsymptomaticPCR">
+    <classNode dependClassName="EDLanguage.sandbox.LabAsymptomaticPCR" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LabSymptomaticPCR">
+    <classNode dependClassName="EDLanguage.sandbox.LabSymptomaticPCR" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.LabTech">
+    <classNode dependClassName="EDLanguage.sandbox.LabSymptomaticPCR" />
+    <classNode dependClassName="EDLanguage.sandbox.PCRCompleteSignal" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.DirectSignal" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.MajorsABBay">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsABBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.MajorsABDoctor">
+    <classNode dependClassName="EDLanguage.sandbox.AdmitPatientSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ConductLFDSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ConductLIATSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ConductLIATTrackAndTraceSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode dependClassName="EDLanguage.sandbox.RequestPCRSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.InfectionCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.PossibilityCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.SuitableForSideRoomCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.MajorsABNurse">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsABBay" />
+    <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForMajorsABDoctorSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.FollowOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.StopOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.AdmitAction" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForConditionAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.BedAvailableCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Bed" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.MajorsTriageNurse">
+    <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForDoctorSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.NewPatientNeedMedicineSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Nurse">
+    <classNode dependClassName="EDLanguage.sandbox.PatientNeedsFinalConsutlationSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.Radiology" />
+    <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.FollowOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.AdmitAction" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForConditionAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.BedAvailableCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Bed" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PCRCompleteSignal">
+    <classNode extendsClassName="simcore.Signals.DirectSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientNeedsBloodTestSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientNeedsFinalConsutlationSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientTestNegativeABSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientTestNegativeSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientTestPositiveABSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientTestPositiveSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientWaitingForDoctorSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientWaitingForMajorsABDoctorSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientWaitingForMajorsABSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientWaitingForMajorsSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.PatientWaitingForTriageSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Radiology">
+    <classNode dependClassName="EDLanguage.sandbox.Radiology" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Receptionist">
+    <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForMajorsABSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForMajorsSignal" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.InfectionCondition" />
+    <classNode dependClassName="simcore.action.basicAction.conditions.SeverityCondition" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Desk" />
+    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
+    <classNode dependClassName="simcore.diagnosis.SeverityScore" />
+    <classNode extendsClassName="EDLanguage.sandbox.Staff" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.RedAdmissionBay">
+    <classNode dependClassName="EDLanguage.sandbox.RedAdmissionBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Red_AdmissionBay">
+    <classNode dependClassName="EDLanguage.sandbox.Red_AdmissionBay" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.RequestPCRSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.SURESCREEN">
+    <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.SideRoomAdmissionBay">
+    <classNode dependClassName="EDLanguage.sandbox.SideRoomAdmissionBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.SideRoom_AdmissionBay">
+    <classNode dependClassName="EDLanguage.sandbox.SideRoom_AdmissionBay" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.Staff">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
+    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
+    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.StartPatientTestABSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.StartPatientTestSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.TaskRoom">
+    <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.TriageSideRoom">
+    <classNode dependClassName="EDLanguage.sandbox.TriageSideRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.WaitingRoom">
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.XRaySignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.CurrentProcess.office">
+    <classNode dependClassName="EDLanguage.sandbox.office" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+</dependenciesRoot>
+

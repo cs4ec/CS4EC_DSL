@@ -535,8 +535,8 @@
             </node>
             <node concept="3clFbF" id="2vFOz$H99cb" role="3cqZAp">
               <node concept="2YIFZM" id="2vFOz$H99_V" role="3clFbG">
-                <ref role="37wK5l" to="8zr2:~RepastBatchMain.main(java.lang.String[])" resolve="main" />
-                <ref role="1Pybhc" to="8zr2:~RepastBatchMain" resolve="RepastBatchMain" />
+                <ref role="1Pybhc" to="8zr2:~RepastMain" resolve="RepastMain" />
+                <ref role="37wK5l" to="8zr2:~RepastMain.main(java.lang.String[])" resolve="main" />
                 <node concept="37vLTw" id="2vFOz$H99Gt" role="37wK5m">
                   <ref role="3cqZAo" node="7bnUeyOXLvG" resolve="argos" />
                 </node>

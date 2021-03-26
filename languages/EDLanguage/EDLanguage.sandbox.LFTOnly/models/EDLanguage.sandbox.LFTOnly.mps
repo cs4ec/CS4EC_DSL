@@ -5,7 +5,9 @@
   <languages>
     <use id="7dcff301-ba01-414e-8574-a8f6da31876b" name="EDLanguage" version="0" />
   </languages>
-  <imports />
+  <imports>
+    <import index="de4c" ref="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)" implicit="true" />
+  </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
@@ -1337,57 +1339,95 @@
             <property role="2IBTiX" value="The Doctor gives a final consultation with the Patient for 5 minutes" />
           </node>
         </node>
-        <node concept="3VtFpY" id="4TDP_ny7Pq" role="3VtFpW">
-          <node concept="jeBDq" id="4TDP_ny7Qp" role="3VtFpT">
-            <node concept="xbsuO" id="4TDP_ny7Qr" role="x58j7">
-              <node concept="3cmrfG" id="4mmkymQpqvG" role="xbgmq">
+        <node concept="3VtFpY" id="3OPoSt98TfO" role="3VtFpW">
+          <node concept="jeBDq" id="3OPoSt98TfP" role="3VtFpT">
+            <node concept="xbsuO" id="3OPoSt98TfQ" role="x58j7">
+              <node concept="3cmrfG" id="3OPoSt98Th7" role="xbgmq">
                 <property role="3cmrfH" value="18" />
               </node>
             </node>
           </node>
-          <node concept="3VtFpM" id="4TDP_ny7Pu" role="3VtFpZ">
-            <node concept="3VtFpY" id="4mmkymQpqwY" role="3VtFpW">
-              <node concept="3TllyP" id="4mmkymQpqxa" role="3VtFpT">
+          <node concept="3VtFpM" id="3OPoSt98TfS" role="3VtFpZ">
+            <node concept="3VtFpY" id="3OPoSt98TfT" role="3VtFpW">
+              <node concept="3TllyP" id="3OPoSt98TfU" role="3VtFpT">
                 <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
               </node>
-              <node concept="3VtFpM" id="4mmkymQpqx2" role="3VtFpZ">
-                <node concept="3z7BTx" id="4mmkymQpqxd" role="3VtFpW">
-                  <node concept="3z7ADy" id="4mmkymQpqxf" role="3z7BTw">
+              <node concept="3VtFpM" id="3OPoSt98TfV" role="3VtFpZ">
+                <node concept="3VtFpw" id="3OPoSt98Thk" role="3VtFpW">
+                  <node concept="UeIYj" id="3OPoSt98Thw" role="3nfz8T">
+                    <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
+                  </node>
+                </node>
+                <node concept="jcv$W" id="3OPoSt98Ti_" role="3VtFpW">
+                  <property role="jcv$Z" value="1" />
+                </node>
+                <node concept="3z7BTx" id="3OPoSt98TfW" role="3VtFpW">
+                  <node concept="3z7ADy" id="3OPoSt98TfX" role="3z7BTw">
                     <ref role="3z7AD_" node="4TDP_nBkYd" resolve="ConductLIAT" />
-                    <node concept="2_cGdR" id="4mmkymQpqxj" role="jeBCe">
+                    <node concept="2_cGdR" id="3OPoSt98TfY" role="jeBCe">
                       <ref role="XnLJh" node="4TDP_nBkYe" resolve="patient" />
-                      <node concept="3JJFmu" id="4mmkymQpqxn" role="2_cGdO" />
+                      <node concept="3JJFmu" id="3OPoSt98TfZ" role="2_cGdO" />
                     </node>
-                    <node concept="2_cGdR" id="4mmkymQpqxq" role="jeBCe">
+                    <node concept="2_cGdR" id="3OPoSt98Tg0" role="jeBCe">
                       <ref role="XnLJh" node="4TDP_nBkYf" resolve="replyTo" />
-                      <node concept="3JGL$I" id="4mmkymQpqxw" role="2_cGdO" />
+                      <node concept="3JGL$I" id="3OPoSt98Tg1" role="2_cGdO" />
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="3VtFpM" id="4mmkymQpqxL" role="3VtFp$">
-                <node concept="3z7BTx" id="4mmkymQpqxP" role="3VtFpW">
-                  <node concept="3z7ADy" id="4mmkymQpqxR" role="3z7BTw">
+              <node concept="3VtFpM" id="3OPoSt98Tg2" role="3VtFp$">
+                <node concept="3z7BTx" id="3OPoSt98Tg3" role="3VtFpW">
+                  <node concept="3z7ADy" id="3OPoSt98Tg4" role="3z7BTw">
                     <ref role="3z7AD_" node="4TDP_n2Uye" resolve="ConductLFD" />
-                    <node concept="2_cGdR" id="4mmkymQpqxV" role="jeBCe">
+                    <node concept="2_cGdR" id="3OPoSt98Tg5" role="jeBCe">
                       <ref role="XnLJh" node="4TDP_n2U$g" resolve="patient" />
-                      <node concept="3JJFmu" id="4mmkymQpqxZ" role="2_cGdO" />
+                      <node concept="3JJFmu" id="3OPoSt98Tg6" role="2_cGdO" />
                     </node>
-                    <node concept="2_cGdR" id="4mmkymQpqy2" role="jeBCe">
+                    <node concept="2_cGdR" id="3OPoSt98Tg7" role="jeBCe">
                       <ref role="XnLJh" node="4TDP_n2VUp" resolve="replyTo" />
-                      <node concept="3JGL$I" id="4mmkymQpqy8" role="2_cGdO" />
+                      <node concept="3JGL$I" id="3OPoSt98Tg8" role="2_cGdO" />
                     </node>
                   </node>
-                  <node concept="2IBTiW" id="4mmkymQpqyb" role="2IBTiu">
+                  <node concept="2IBTiW" id="3OPoSt98Tg9" role="2IBTiu">
                     <property role="2IBTiX" value="18% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD" />
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="3VtFpM" id="4TDP_ny7TD" role="3VtFp$">
-            <node concept="1W3xii" id="4TDP_ny7TH" role="3VtFpW">
-              <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
+          <node concept="3VtFpM" id="3OPoSt98Tga" role="3VtFp$">
+            <node concept="3VtFpY" id="3OPoSt98Tgb" role="3VtFpW">
+              <node concept="3TllyP" id="3OPoSt98Tgc" role="3VtFpT">
+                <property role="3TllDG" value="ijr0ZXLzgI/Symptomatic" />
+              </node>
+              <node concept="3VtFpM" id="3OPoSt98Tgd" role="3VtFpZ">
+                <node concept="3VtFpw" id="3OPoSt98ThF" role="3VtFpW">
+                  <node concept="UeIYj" id="3OPoSt98ThR" role="3nfz8T">
+                    <ref role="Udx8D" node="4TDP_lPoS4" resolve="LIATBooth" />
+                  </node>
+                </node>
+                <node concept="jcv$W" id="3OPoSt98Tid" role="3VtFpW">
+                  <property role="jcv$Z" value="1" />
+                </node>
+                <node concept="3z7BTx" id="3OPoSt98Tge" role="3VtFpW">
+                  <node concept="3z7ADy" id="3OPoSt98Tgf" role="3z7BTw">
+                    <ref role="3z7AD_" to="de4c:3OPoSt91vll" resolve="ConductLIATTrackAndTrace" />
+                    <node concept="2_cGdR" id="3OPoSt98Tgg" role="jeBCe">
+                      <ref role="XnLJh" to="de4c:3OPoSt91vlm" resolve="patient" />
+                      <node concept="3JJFmu" id="3OPoSt98Tgh" role="2_cGdO" />
+                    </node>
+                    <node concept="2_cGdR" id="3OPoSt98Tgi" role="jeBCe">
+                      <ref role="XnLJh" to="de4c:3OPoSt91vln" resolve="replyTo" />
+                      <node concept="3JGL$I" id="3OPoSt98Tgj" role="2_cGdO" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="3OPoSt98Tgk" role="3VtFp$">
+                <node concept="1W3xii" id="3OPoSt98Tgl" role="3VtFpW">
+                  <ref role="1W3xij" node="4TDP_nr96K" resolve="DischargePatient" />
+                </node>
+              </node>
             </node>
           </node>
         </node>
