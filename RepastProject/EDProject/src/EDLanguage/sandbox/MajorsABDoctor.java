@@ -52,14 +52,6 @@ public class MajorsABDoctor extends Staff {
         curMission = new Action("LIATResult");
         this.InitLIATResult(s);
         break;
-      case "PCRComplete":
-        curMission = new Action("PCRResult");
-        this.InitPCRResult(s);
-        break;
-      case "LIATCompleteTrackAndTrace":
-        curMission = new Action("LIATTrackAndTrace");
-        this.InitLIATTrackAndTrace(s);
-        break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
         return;
@@ -76,29 +68,18 @@ public class MajorsABDoctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
     if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
       if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
         sendSignalTemp = new ConductLIATSignal();
         sendSignalTemp.AddData("patient", s.GetData("patient"));
         sendSignalTemp.AddData("replyTo", this);
         curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       } else {
-        sendSignalTemp = new AdmitPatientSignal();
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      }
-    } else {
-      if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-        sendSignalTemp = new ConductLIATTrackAndTraceSignal();
+        sendSignalTemp = new ConductLFDSignal();
         sendSignalTemp.AddData("patient", s.GetData("patient"));
         sendSignalTemp.AddData("replyTo", this);
-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      } else {
-        this.InitDischargePatient(s);
+        curMission.WithStep(new ActionStep().WithName("50% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       }
+    } else {
+      this.InitDischargePatient(s);
     }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
@@ -122,10 +103,6 @@ public class MajorsABDoctor extends Staff {
       sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-      sendSignalTemp = new RequestPCRSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      sendSignalTemp.AddData("replyTo", this);
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     }
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
@@ -140,10 +117,17 @@ public class MajorsABDoctor extends Staff {
     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
-      sendSignalTemp = new AdmitPatientSignal();
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("RedBay")))) {
+        sendSignalTemp = new AdmitPatientSignal();
+        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+        sendSignalTemp.AddData("patient", s.GetData("patient"));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+      } else {
+        sendSignalTemp = new AdmitPatientSignal();
+        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("RedBay"));
+        sendSignalTemp.AddData("patient", s.GetData("patient"));
+        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+      }
     } else {
       if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("AmberBay")))) {
         sendSignalTemp = new AdmitPatientSignal();
@@ -157,22 +141,8 @@ public class MajorsABDoctor extends Staff {
         curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
       }
     }
-
-  }
-  public void InitPCRResult(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-
-  }
-  public void InitLIATTrackAndTrace(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
-    this.InitDischargePatient(s);
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
+    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
 
   }
   public void InitDischargePatient(Signal s) {

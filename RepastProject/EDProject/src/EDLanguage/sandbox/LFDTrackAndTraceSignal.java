@@ -7,7 +7,7 @@ import simcore.Signals.DirectSignal;
 public class LFDTrackAndTraceSignal extends DirectSignal {
   public LFDTrackAndTraceSignal() {
     this.setName("LFDTrackAndTrace");
-    this.setDescription("Do an FD for discharged patient");
+    this.setDescription("");
     this.AddActor("Receptionist");
   }
 }

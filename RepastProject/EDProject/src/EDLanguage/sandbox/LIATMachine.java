@@ -41,10 +41,6 @@ public class LIATMachine extends Staff {
         curMission = new Action("TestPatientGeneral");
         this.InitTestPatientGeneral(s);
         break;
-      case "ConductLIATTrackAndTrace":
-        curMission = new Action("TestPatientTrackAndTrace");
-        this.InitTestPatientTrackAndTrace(s);
-        break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
         return;
@@ -72,24 +68,6 @@ public class LIATMachine extends Staff {
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
     } else {
       sendSignalTemp = new LIATCompleteSignal();
-      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-    }
-
-  }
-  public void InitTestPatientTrackAndTrace(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LIAT.getInstance().getProcessingTime())));
-    if (CheckCondition(new TestResultCondition().WithTest(LIAT.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
-      sendSignalTemp = new LIATCompleteTrackAndTraceSignal();
-      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
-      sendSignalTemp.AddData("patient", s.GetData("patient"));
-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
-    } else {
-      sendSignalTemp = new LIATCompleteTrackAndTraceSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
       sendSignalTemp.AddData("patient", s.GetData("patient"));
       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
