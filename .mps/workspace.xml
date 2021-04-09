@@ -10,21 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6cb34ac-6283-4417-93b4-3970d05c4a6a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.mps/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/batch/batch_params.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/batch/batch_params.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/bin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/debug.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/debug.log.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/complete_model.jar" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/complete_model.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.structure.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/structure/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/structure/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/EditorAspectDescriptorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/EditorAspectDescriptorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/RoomTypeReference_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/RoomTypeReference_EditorBuilder_a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/RoomTypeReference_SubstituteMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/ConceptPresentationAspectImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/ConceptPresentationAspectImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/StructureAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/StructureAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/structure/trace.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +98,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="LFTOnly" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -558,6 +559,100 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structures" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structures" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Class" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -567,46 +662,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="r:2042c10c-dbe6-4906-9092-937b921f1765(EDLanguage.sandbox.OnlyLFT) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -638,27 +693,33 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <SELECTED>
             <PATH_ELEMENT>
               <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:2042c10c-dbe6-4906-9092-937b921f1765(EDLanguage.sandbox.OnlyLFT) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StaffDefinition" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3838812034270748689" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
@@ -852,10 +913,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Java Application.Node Sanda12.www.MyRunner (1)" />
         <item itemvalue="Java Application.Node sand2.aaa.MyRunner" />
         <item itemvalue="Java Application.Node sand2.aaa.HelloTest" />
         <item itemvalue="Java Application.Node Sanda12.www.MyRunner" />
+        <item itemvalue="Java Application.Node Sanda12.www.MyRunner (1)" />
         <item itemvalue="Java Application.Node EDLanguage.Runner.RepastMain.MyRunner" />
       </list>
     </recent_temporary>
@@ -1054,7 +1115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616413104813</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Pre-Branching">
+      <created>1617974933025</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1617974933025</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="UsagesViewTool">
@@ -1144,7 +1212,6 @@
     </default_view_options>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement Patient Infection Status condition" />
     <MESSAGE value="Add MajorsAB Area" />
     <MESSAGE value="Add MajorsAB staff and patient severity score" />
     <MESSAGE value="Implement and clean baseline staff behaviours pre intervention" />
@@ -1169,7 +1236,8 @@
     <MESSAGE value="Implement patients occupying beds in admission wards" />
     <MESSAGE value="#27 Implement using side rooms when available, selecting cohort otherwise" />
     <MESSAGE value="Finalise LIAT Only" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalise LIAT Only" />
+    <MESSAGE value="Pre-Branching" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pre-Branching" />
   </component>
   <component name="mpsMakeService">
     <option name="makeInBackground" value="true" />

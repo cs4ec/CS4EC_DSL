@@ -534,6 +534,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.RoomTypeReference:
         if (props_RoomTypeReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("A room of a given type");
           cpb.presentationByName();
           props_RoomTypeReference = cpb.create();
         }

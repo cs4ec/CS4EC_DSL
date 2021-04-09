@@ -1225,6 +1225,8 @@
     <property role="EcuMT" value="6750846609956093098" />
     <property role="3GE5qa" value="Structures.Class" />
     <property role="TrG5h" value="RoomTypeReference" />
+    <property role="34LRSv" value="a" />
+    <property role="R4oN_" value="A room of a given type" />
     <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
     <node concept="1TJgyj" id="5QJON_BAs4g" role="1TKVEi">
       <property role="IQ2ns" value="6750846609956389136" />
