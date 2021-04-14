@@ -43,6 +43,7 @@
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.OccupyOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Action" />
     <classNode dependClassName="simcore.action.ActionStep" />
@@ -57,6 +58,7 @@
     <classNode dependClassName="simcore.action.basicAction.conditions.ResultCondition" />
     <classNode dependClassName="simcore.action.basicAction.conditions.SuitableForSideRoomCondition" />
     <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Bed" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.diagnosis.InfectionStatus" />

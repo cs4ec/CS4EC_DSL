@@ -112,8 +112,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room TaskRoom2_u = new Room("TaskRoom2", context, space, grid, 125, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
     Room TaskRoom3_v = new Room("TaskRoom3", context, space, grid, 130, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.YELLOW);
     Room Entrance_w = new Room("Entrance", context, space, grid, 95, 197, 10, 2, 1, 100000, Entrance.getInstance(), Color.GRAY);
-    Room XRay1_x = new Room("XRay1", context, space, grid, 140, 155, 5, 5, 1, 3, Radiology.getInstance(), Color.YELLOW);
-    Room XRay2_y = new Room("XRay2", context, space, grid, 145, 155, 5, 5, 1, 3, Radiology.getInstance(), Color.YELLOW);
+    Room XRay1_x = new Room("XRay1", context, space, grid, 140, 155, 5, 5, 1, 3, ImagingRoom.getInstance(), Color.YELLOW);
+    Room XRay2_y = new Room("XRay2", context, space, grid, 145, 155, 5, 5, 1, 3, ImagingRoom.getInstance(), Color.YELLOW);
     Room TriageWaitingRoom_z = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 12, WaitingRoom.getInstance(), Color.BLUE);
     Room MajorsABReception_ab = new Room("MajorsABReception", context, space, grid, 200, 168, 20, 10, 1, 15, office.getInstance(), Color.BLACK);
     Room LIATBooth2_bb = new Room("LIATBooth2", context, space, grid, 220, 169, 5, 5, 1, 8, LIATBooth.getInstance(), Color.RED);

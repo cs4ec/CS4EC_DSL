@@ -59,6 +59,10 @@
       <concept id="1645043697875742197" name="EDLanguage.structure.ProcessingTimeTable" flags="ng" index="ldbdM">
         <child id="1645043697875742305" name="ProcessingTimeLines" index="ldb3A" />
       </concept>
+      <concept id="3553172394608014330" name="EDLanguage.structure.CompositeOrder" flags="ng" index="2n6Hid">
+        <child id="3553172394608014358" name="orderLeft" index="2n6Hdx" />
+        <child id="3553172394608014360" name="orderRight" index="2n6HdJ" />
+      </concept>
       <concept id="2510173949014596229" name="EDLanguage.structure.BedAvailableCondition" flags="ng" index="pCrtH">
         <child id="2510173949014596285" name="targetWard" index="pCrtl" />
       </concept>
@@ -118,6 +122,9 @@
       <concept id="88285669868571243" name="EDLanguage.structure.ResultCondition" flags="ng" index="1mvUOM">
         <property id="88285669869395338" name="result" index="1mqNFj" />
         <child id="88285669868571244" name="test" index="1mvUOP" />
+      </concept>
+      <concept id="88285669878687008" name="EDLanguage.structure.OccupyOrder" flags="ng" index="1mQs9T">
+        <child id="88285669878687009" name="targetOccupiable" index="1mQs9S" />
       </concept>
       <concept id="513408552829965726" name="EDLanguage.structure.SignalReference" flags="ng" index="3n32J5">
         <reference id="513408552829965727" name="signal" index="3n32J4" />
@@ -876,6 +883,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="4WX2mA8rGVf" role="j3bMi">
@@ -887,6 +895,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="5QJON_BIqty" role="j3bMi">
@@ -898,6 +907,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="4WX2mA8rGVI" role="j3bMi">
@@ -909,6 +919,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="5QJON_BIqtV" role="j3bMi">
@@ -920,6 +931,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="4WX2mA8rGWe" role="j3bMi">
@@ -931,6 +943,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="5QJON_BIqu9" role="j3bMi">
@@ -942,6 +955,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="4WX2mA8rGWJ" role="j3bMi">
@@ -953,6 +967,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="4WX2mA8rGYl" role="j3bMi">
@@ -964,6 +979,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <property role="p_dkr" value="1" />
       <ref role="VgANK" node="5QJON_BJzg5" resolve="DoctorOffice" />
     </node>
     <node concept="j3bLk" id="5QJON_BO0pJ" role="j3bMi">
@@ -1251,10 +1267,17 @@
             <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
           </node>
         </node>
-        <node concept="3JG_m1" id="7lVoe4ylVaW" role="3VtFpW">
-          <node concept="3JJFmu" id="7lVoe4ylVaY" role="3JG_8_" />
-          <node concept="3JG_m7" id="7lVoe4ylVbo" role="3JG_nW">
-            <node concept="3JGL$I" id="7lVoe4ylVbu" role="3JG_nS" />
+        <node concept="3JG_m1" id="2VPlUUsD5oX" role="3VtFpW">
+          <node concept="3JJFmu" id="2VPlUUsD5oZ" role="3JG_8_" />
+          <node concept="2n6Hid" id="2VPlUUsD5pl" role="3JG_nW">
+            <node concept="3JG_m7" id="2VPlUUsD5pu" role="2n6Hdx">
+              <node concept="3JGL$I" id="2VPlUUsD5p$" role="3JG_nS" />
+            </node>
+            <node concept="1mQs9T" id="2VPlUUsD5pB" role="2n6HdJ">
+              <node concept="1kHjla" id="2VPlUUsD5pD" role="1mQs9S">
+                <property role="1kAtwL" value="5QJON_BPEyz/Bed" />
+              </node>
+            </node>
           </node>
         </node>
         <node concept="jcv$W" id="ijr0ZXMUfK" role="3VtFpW">

@@ -537,7 +537,7 @@
       </node>
     </node>
     <node concept="1nbS2H" id="4TDP_n2V0n" role="3n3SPP">
-      <property role="TrG5h" value="PatientNeedsFinalConsutlation" />
+      <property role="TrG5h" value="PatientNeedsFinalConsultation" />
       <node concept="3z7ADB" id="4TDP_n2V25" role="3z7ADA">
         <property role="TrG5h" value="patient" />
         <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
@@ -1012,7 +1012,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5D/YELLOW" />
-      <ref role="VgANK" node="ijr0ZY9P4M" resolve="Radiology" />
+      <ref role="VgANK" node="ijr0ZY9P4M" resolve="ImagingRoom" />
     </node>
     <node concept="j3bLk" id="ijr0ZY9P4N" role="j3bMi">
       <property role="TrG5h" value="XRay2" />
@@ -1023,7 +1023,7 @@
       <property role="m3wsY" value="3" />
       <property role="1njz$z" value="1" />
       <property role="376uKC" value="6o2BuIx6R5D/YELLOW" />
-      <ref role="VgANK" node="ijr0ZY9P4M" resolve="Radiology" />
+      <ref role="VgANK" node="ijr0ZY9P4M" resolve="ImagingRoom" />
     </node>
     <node concept="j3bLk" id="5QJON_AXpx9" role="j3bMi">
       <property role="TrG5h" value="TriageWaitingRoom" />
@@ -1467,7 +1467,7 @@
         </node>
       </node>
       <node concept="3n32J5" id="4TDP_n2VUX" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_n2V0n" resolve="PatientNeedsFinalConsutlation" />
+        <ref role="3n32J4" node="4TDP_n2V0n" resolve="PatientNeedsFinalConsultation" />
       </node>
     </node>
     <node concept="3Vt_xe" id="2Rfu8e59zjZ" role="2Ov1EZ">
@@ -1738,7 +1738,7 @@
             <property role="2IBTiX" value="go to an x-ray room" />
           </node>
           <node concept="UeIYj" id="ijr0ZY9P65" role="3nfz8T">
-            <ref role="Udx8D" node="ijr0ZY9P4M" resolve="Radiology" />
+            <ref role="Udx8D" node="ijr0ZY9P4M" resolve="ImagingRoom" />
           </node>
         </node>
         <node concept="1kHj2w" id="4mmkymQa950" role="3VtFpW">
@@ -1762,7 +1762,7 @@
         </node>
         <node concept="3z7BTx" id="6o2BuIxgBL5" role="3VtFpW">
           <node concept="3z7ADy" id="6o2BuIxgBL7" role="3z7BTw">
-            <ref role="3z7AD_" node="4TDP_n2V0n" resolve="PatientNeedsFinalConsutlation" />
+            <ref role="3z7AD_" node="4TDP_n2V0n" resolve="PatientNeedsFinalConsultation" />
             <node concept="2_cGdR" id="6o2BuIxgDsz" role="jeBCe">
               <ref role="XnLJh" node="4TDP_n2V25" resolve="patient" />
               <node concept="3JJFmu" id="6o2BuIxgDtt" role="2_cGdO" />
@@ -1779,7 +1779,7 @@
       <node concept="3VtFpM" id="4_Lh49vyh7H" role="3VtFpR">
         <node concept="3z7BTx" id="4_Lh49vyh96" role="3VtFpW">
           <node concept="3z7ADy" id="4_Lh49vyh98" role="3z7BTw">
-            <ref role="3z7AD_" node="4TDP_n2V0n" resolve="PatientNeedsFinalConsutlation" />
+            <ref role="3z7AD_" node="4TDP_n2V0n" resolve="PatientNeedsFinalConsultation" />
             <node concept="2_cGdR" id="th5uJCf$wa" role="jeBCe">
               <ref role="XnLJh" node="4TDP_n2V25" resolve="patient" />
               <node concept="3JJFmu" id="th5uJCf$we" role="2_cGdO" />
@@ -1821,7 +1821,7 @@
         </node>
         <node concept="3z7BTx" id="th5uJCf$t$" role="3VtFpW">
           <node concept="3z7ADy" id="th5uJCf$tA" role="3z7BTw">
-            <ref role="3z7AD_" node="4TDP_n2V0n" resolve="PatientNeedsFinalConsutlation" />
+            <ref role="3z7AD_" node="4TDP_n2V0n" resolve="PatientNeedsFinalConsultation" />
             <node concept="2_cGdR" id="th5uJCf$wh" role="jeBCe">
               <ref role="XnLJh" node="4TDP_n2V25" resolve="patient" />
               <node concept="3JJFmu" id="th5uJCf$wl" role="2_cGdO" />
@@ -2165,7 +2165,7 @@
   </node>
   <node concept="VhMOw" id="ijr0ZY9P4M">
     <property role="3GE5qa" value="Room Types" />
-    <property role="TrG5h" value="Radiology" />
+    <property role="TrG5h" value="ImagingRoom" />
   </node>
   <node concept="VhMOw" id="$2vkoOHJaj">
     <property role="3GE5qa" value="Room Types" />

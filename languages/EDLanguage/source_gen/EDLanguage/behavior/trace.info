@@ -18,7 +18,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1076505808687:jetbrains.mps.baseLanguage.structure.WhileStatement" />
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="14,0,44,0" name="EDLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="14,0,47,0" name="EDLanguage.behavior.BehaviorAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/2480088909320734001">
@@ -347,6 +347,80 @@
       <unit id="2480088909322298279" at="171,0,177,0" name="EDLanguage.behavior.BehaviourElement__BehaviorDescriptor$CONCEPTS" />
       <unit id="2480088909322298279" at="182,0,189,0" name="EDLanguage.behavior.BehaviourElement__BehaviorDescriptor$LINKS" />
       <unit id="2480088909322298279" at="35,0,190,0" name="EDLanguage.behavior.BehaviourElement__BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/3553172394605862126">
+    <file name="RoomType__BehaviorDescriptor.java">
+      <node id="3553172394605862126" at="24,0,25,0" concept="11" trace="CONCEPT" />
+      <node id="3553172394605862126" at="26,0,27,0" concept="11" trace="getFormattedName_id35fpRuAddNT" />
+      <node id="3553172394605862126" at="28,0,29,0" concept="11" trace="BH_METHODS" />
+      <node id="3553172394605862180" at="33,89,34,95" concept="9" />
+      <node id="3553172394605862126" at="41,114,42,21" concept="3" />
+      <node id="3553172394605862126" at="46,114,47,49" concept="8" />
+      <node id="3553172394605862126" at="48,26,49,56" concept="14" />
+      <node id="3553172394605862126" at="52,13,53,67" concept="9" />
+      <node id="3553172394605862126" at="54,14,55,58" concept="14" />
+      <node id="3553172394605862126" at="60,128,61,49" concept="8" />
+      <node id="3553172394605862126" at="62,26,63,56" concept="14" />
+      <node id="3553172394605862126" at="66,14,67,58" concept="14" />
+      <node id="3553172394605862126" at="73,48,74,22" concept="9" />
+      <node id="3553172394605862126" at="79,40,80,19" concept="9" />
+      <node id="3553172394605862126" at="84,0,85,0" concept="11" trace="name$MnvL" />
+      <node id="3553172394605862126" at="30,0,32,0" concept="12" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3553172394605862126" at="37,0,39,0" concept="1" trace="RoomType__BehaviorDescriptor#()V" />
+      <node id="3553172394605862126" at="33,0,36,0" concept="12" trace="getFormattedName_id35fpRuAddNT#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="3553172394605862126" at="47,49,50,5" concept="6" />
+      <node id="3553172394605862126" at="61,49,64,5" concept="6" />
+      <node id="3553172394605862126" at="40,0,44,0" concept="7" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="3553172394605862126" at="64,5,68,5" concept="13" />
+      <node id="3553172394605862126" at="71,0,76,0" concept="7" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="3553172394605862126" at="77,0,82,0" concept="7" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="3553172394605862126" at="50,5,56,5" concept="13" />
+      <node id="3553172394605862126" at="59,0,70,0" concept="7" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="3553172394605862126" at="45,0,58,0" concept="7" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="3553172394605862126" at="30,63,30,63" />
+      <scope id="3553172394605862126" at="37,46,37,46" />
+      <scope id="3553172394605862140" at="33,89,34,95" />
+      <scope id="3553172394605862126" at="41,114,42,21" />
+      <scope id="3553172394605862126" at="48,26,49,56" />
+      <scope id="3553172394605862126" at="52,13,53,67" />
+      <scope id="3553172394605862126" at="54,14,55,58" />
+      <scope id="3553172394605862126" at="62,26,63,56" />
+      <scope id="3553172394605862126" at="66,14,67,58" />
+      <scope id="3553172394605862126" at="73,48,74,22" />
+      <scope id="3553172394605862126" at="79,40,80,19" />
+      <scope id="3553172394605862126" at="30,0,32,0">
+        <var name="__thisNode__" id="3553172394605862126" />
+      </scope>
+      <scope id="3553172394605862126" at="37,0,39,0" />
+      <scope id="3553172394605862126" at="33,0,36,0">
+        <var name="__thisNode__" id="3553172394605862126" />
+      </scope>
+      <scope id="3553172394605862126" at="40,0,44,0">
+        <var name="constructor" id="3553172394605862126" />
+        <var name="node" id="3553172394605862126" />
+        <var name="parameters" id="3553172394605862126" />
+      </scope>
+      <scope id="3553172394605862126" at="71,0,76,0" />
+      <scope id="3553172394605862126" at="77,0,82,0" />
+      <scope id="3553172394605862126" at="60,128,68,5">
+        <var name="methodIndex" id="3553172394605862126" />
+      </scope>
+      <scope id="3553172394605862126" at="46,114,56,5">
+        <var name="methodIndex" id="3553172394605862126" />
+      </scope>
+      <scope id="3553172394605862126" at="59,0,70,0">
+        <var name="concept" id="3553172394605862126" />
+        <var name="method" id="3553172394605862126" />
+        <var name="parameters" id="3553172394605862126" />
+      </scope>
+      <scope id="3553172394605862126" at="45,0,58,0">
+        <var name="method" id="3553172394605862126" />
+        <var name="node" id="3553172394605862126" />
+        <var name="parameters" id="3553172394605862126" />
+      </scope>
+      <unit id="3553172394605862126" at="83,0,86,0" name="EDLanguage.behavior.RoomType__BehaviorDescriptor$PROPS" />
+      <unit id="3553172394605862126" at="23,0,87,0" name="EDLanguage.behavior.RoomType__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/5832719916574271241">

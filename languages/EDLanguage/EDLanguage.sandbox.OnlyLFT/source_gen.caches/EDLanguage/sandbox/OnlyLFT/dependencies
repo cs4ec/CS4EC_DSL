@@ -67,6 +67,7 @@
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
     <classNode dependClassName="EDLanguage.sandbox.Entrance" />
+    <classNode dependClassName="EDLanguage.sandbox.ImagingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.LFDDevice" />
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
     <classNode dependClassName="EDLanguage.sandbox.LIATMachine" />
@@ -77,7 +78,6 @@
     <classNode dependClassName="EDLanguage.sandbox.MajorsABNurse" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsTriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.Nurse" />
-    <classNode dependClassName="EDLanguage.sandbox.Radiology" />
     <classNode dependClassName="EDLanguage.sandbox.Receptionist" />
     <classNode dependClassName="EDLanguage.sandbox.RedAdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoomAdmissionBay" />
@@ -133,6 +133,10 @@
     <classNode dependClassName="EDLanguage.sandbox.Green_AdmissionBay" />
     <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
     <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.OnlyLFT.ImagingRoom">
+    <classNode dependClassName="EDLanguage.sandbox.ImagingRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.OnlyLFT.IsLIATReadySignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
@@ -341,8 +345,8 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="EDLanguage.sandbox.OnlyLFT.Nurse">
-    <classNode dependClassName="EDLanguage.sandbox.PatientNeedsFinalConsutlationSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.Radiology" />
+    <classNode dependClassName="EDLanguage.sandbox.ImagingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.PatientNeedsFinalConsultationSignal" />
     <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
@@ -376,7 +380,7 @@
   <dependency className="EDLanguage.sandbox.OnlyLFT.PatientNeedsBloodTestSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="EDLanguage.sandbox.OnlyLFT.PatientNeedsFinalConsutlationSignal">
+  <dependency className="EDLanguage.sandbox.OnlyLFT.PatientNeedsFinalConsultationSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="EDLanguage.sandbox.OnlyLFT.PatientTestNegativeABSignal">
@@ -405,10 +409,6 @@
   </dependency>
   <dependency className="EDLanguage.sandbox.OnlyLFT.PatientWaitingForTriageSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="EDLanguage.sandbox.OnlyLFT.Radiology">
-    <classNode dependClassName="EDLanguage.sandbox.Radiology" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.OnlyLFT.Receptionist">
     <classNode dependClassName="EDLanguage.sandbox.PatientWaitingForMajorsABSignal" />

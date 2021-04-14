@@ -25,6 +25,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BehaviourElementReference;
   private ConceptPresentation props_BehaviourSequence;
   private ConceptPresentation props_Choice;
+  private ConceptPresentation props_CompositeOrder;
   private ConceptPresentation props_Condition;
   private ConceptPresentation props_Consequence;
   private ConceptPresentation props_ConsequenceElement;
@@ -213,6 +214,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Choice = cpb.create();
         }
         return props_Choice;
+      case LanguageConceptSwitch.CompositeOrder:
+        if (props_CompositeOrder == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("CompositeOrder");
+          props_CompositeOrder = cpb.create();
+        }
+        return props_CompositeOrder;
       case LanguageConceptSwitch.Condition:
         if (props_Condition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -398,7 +406,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.OrderPatientAction:
         if (props_OrderPatientAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("order patient to do something");
+          cpb.shortDesc("ask patient to do something");
           cpb.presentationByName();
           props_OrderPatientAction = cpb.create();
         }

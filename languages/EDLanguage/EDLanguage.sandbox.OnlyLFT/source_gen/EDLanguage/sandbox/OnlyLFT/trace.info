@@ -345,20 +345,20 @@
     </file>
   </root>
   <root nodeRef="r:2042c10c-dbe6-4906-9092-937b921f1765(EDLanguage.sandbox.OnlyLFT)/329726013672476978">
-    <file name="Radiology.java">
+    <file name="ImagingRoom.java">
       <node id="329726013672476978" at="8,0,9,0" concept="13" trace="instance" />
-      <node id="329726013672476978" at="10,23,11,12" concept="15" />
-      <node id="329726013672476978" at="15,27,16,33" concept="3" />
+      <node id="329726013672476978" at="10,25,11,12" concept="15" />
+      <node id="329726013672476978" at="15,27,16,35" concept="3" />
       <node id="329726013672476978" at="17,5,18,20" concept="10" />
-      <node id="329726013672476978" at="10,0,13,0" concept="2" trace="Radiology#()V" />
+      <node id="329726013672476978" at="10,0,13,0" concept="2" trace="ImagingRoom#()V" />
       <node id="329726013672476978" at="14,40,17,5" concept="7" />
       <node id="329726013672476978" at="14,0,20,0" concept="14" trace="getInstance#()Lsimcore/basicStructures/RoomType;" />
-      <scope id="329726013672476978" at="10,23,11,12" />
-      <scope id="329726013672476978" at="15,27,16,33" />
+      <scope id="329726013672476978" at="10,25,11,12" />
+      <scope id="329726013672476978" at="15,27,16,35" />
       <scope id="329726013672476978" at="10,0,13,0" />
       <scope id="329726013672476978" at="14,40,18,20" />
       <scope id="329726013672476978" at="14,0,20,0" />
-      <unit id="329726013672476978" at="7,0,21,0" name="EDLanguage.sandbox.Radiology" />
+      <unit id="329726013672476978" at="7,0,21,0" name="EDLanguage.sandbox.ImagingRoom" />
     </file>
   </root>
   <root nodeRef="r:2042c10c-dbe6-4906-9092-937b921f1765(EDLanguage.sandbox.OnlyLFT)/3300989558151843322">
@@ -1114,9 +1114,9 @@
       <node id="6750846609959945856" at="111,127,112,127" concept="9" />
       <node id="6750846609959945873" at="112,127,113,127" concept="9" />
       <node id="6750846609945630749" at="113,127,114,128" concept="9" />
-      <node id="329726013672476960" at="114,128,115,120" concept="9" />
-      <node id="329726013672476979" at="115,120,116,120" concept="9" />
-      <node id="6750846609945630793" at="116,120,117,147" concept="9" />
+      <node id="329726013672476960" at="114,128,115,122" concept="9" />
+      <node id="329726013672476979" at="115,122,116,122" concept="9" />
+      <node id="6750846609945630793" at="116,122,117,147" concept="9" />
       <node id="649219036779179464" at="117,147,118,144" concept="9" />
       <node id="88285669844478020" at="118,144,119,128" concept="9" />
       <node id="649219036780360319" at="119,128,120,133" concept="9" />
@@ -1288,8 +1288,8 @@
       <node id="5832719916578500688" at="64,41,65,0" concept="12" />
       <node id="8910807539223092739" at="65,0,66,132" concept="3" />
       <node id="8910807539223092755" at="66,132,67,177" concept="3" />
-      <node id="8910807539223092788" at="67,177,68,139" concept="3" />
-      <node id="5014285557047005504" at="68,139,69,109" concept="3" />
+      <node id="8910807539223092788" at="67,177,68,141" concept="3" />
+      <node id="5014285557047005504" at="68,141,69,109" concept="3" />
       <node id="8910807539223092941" at="69,109,70,121" concept="3" />
       <node id="7350611177170434771" at="70,121,71,199" concept="3" />
       <node id="7350611177170435141" at="71,199,72,63" concept="3" />
@@ -1516,14 +1516,14 @@
       <scope id="88285669864746732" at="8,0,13,0" />
       <unit id="88285669864746732" at="7,0,15,0" name="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
     </file>
-    <file name="PatientNeedsFinalConsutlationSignal.java">
+    <file name="PatientNeedsFinalConsultationSignal.java">
       <node id="88285669864747031" at="8,48,9,50" concept="3" />
       <node id="88285669864747031" at="9,50,10,28" concept="3" />
       <node id="88285669864747138" at="10,28,11,28" concept="3" />
-      <node id="88285669864747031" at="8,0,13,0" concept="2" trace="PatientNeedsFinalConsutlationSignal#()V" />
+      <node id="88285669864747031" at="8,0,13,0" concept="2" trace="PatientNeedsFinalConsultationSignal#()V" />
       <scope id="88285669864747031" at="8,48,11,28" />
       <scope id="88285669864747031" at="8,0,13,0" />
-      <unit id="88285669864747031" at="7,0,15,0" name="EDLanguage.sandbox.PatientNeedsFinalConsutlationSignal" />
+      <unit id="88285669864747031" at="7,0,15,0" name="EDLanguage.sandbox.PatientNeedsFinalConsultationSignal" />
     </file>
     <file name="PatientTestNegativeABSignal.java">
       <node id="88285669864748532" at="8,40,9,42" concept="3" />

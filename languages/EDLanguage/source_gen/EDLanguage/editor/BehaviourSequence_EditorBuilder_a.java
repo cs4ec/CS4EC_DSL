@@ -132,7 +132,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     @Override
     public EditorCell createSeparatorCell(SNode prevNode, SNode nextNode) {
-      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), getNode(), "-----------------");
+      EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), getNode(), "---------------------");
       editorCell.setSelectable(false);
       Style style = new StyleImpl();
       style.set(StyleAttributes.LAYOUT_CONSTRAINT, "");

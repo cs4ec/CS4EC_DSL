@@ -42,7 +42,7 @@ public class Doctor extends Staff {
         curMission = new Action("InitialObsevations");
         this.InitInitialObsevations(s);
         break;
-      case "PatientNeedsFinalConsutlation":
+      case "PatientNeedsFinalConsultation":
         curMission = new Action("GiveConsultation");
         this.InitGiveConsultation(s);
         break;

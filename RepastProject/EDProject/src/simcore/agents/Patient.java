@@ -25,6 +25,7 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import simcore.Signals.Orders.FollowOrder;
 import simcore.Signals.Orders.MoveToOrder;
+import simcore.Signals.Orders.OccupyOrder;
 import simcore.Signals.Orders.Order;
 import simcore.Signals.Orders.StopOrder;
 import simcore.action.basicAction.conditions.PatientOutcomes;
@@ -110,21 +111,17 @@ public class Patient extends Agent {
 				
 				// if this agent is in the room..
 				if (targetLocation.WithInside(this)) {
-					//... and this room is a waitingroom, the patient will now set itself the action of taking a seat
+					//... and this room is a waiting room, the patient will now set itself the action of taking a seat
 					if (targetLocation.getRoomType() instanceof WaitingRoom) {
 						FindASeat();
 					} else if (((MoveToOrder) order).getOccupiable() != null) {
 						FindAnOccupiable(((MoveToOrder) order).getOccupiable());
 					}
-					curOrder = null;
-					return;
+					iterateOrder();
 				}
 			} else {
 				if (ImAt(destination)) {
-					curOrder = null;
-					return;
-				} else {
-					return;
+					iterateOrder();
 				}
 			}
 
@@ -132,11 +129,20 @@ public class Patient extends Agent {
 			// follow the target
 			Object target = ((FollowOrder) order).getFollowTarget();
 			MoveTowards(target);
-			
 		} else if (order instanceof StopOrder) {
-			curOrder = null;
+			iterateOrder();
+		} else if (order instanceof OccupyOrder) {
+			FindAnOccupiable(((OccupyOrder) order).getOccupiable());
+			iterateOrder();
 		}
-
+	}
+	
+	/**
+	 * Go to the next step in the Order - this may involve taking on a new order
+	 * This is used in cases of 'composite orders' e.g. Go to the DocOffice AND Take a Seat
+	 */
+	private void iterateOrder() {
+		curOrder = curOrder.getNextStep();
 	}
 	
 	private void LogStatus() {

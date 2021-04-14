@@ -543,8 +543,8 @@
     <property role="EcuMT" value="8504720493510951867" />
     <property role="3GE5qa" value="actions.basic actions.OrderPatientAction" />
     <property role="TrG5h" value="OrderPatientAction" />
-    <property role="34LRSv" value="order patient" />
-    <property role="R4oN_" value="order patient to do something" />
+    <property role="34LRSv" value="ask patient" />
+    <property role="R4oN_" value="ask patient to do something" />
     <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
     <node concept="1TJgyj" id="7o6PzEpH8gv" role="1TKVEi">
       <property role="IQ2ns" value="8504720493510951967" />
@@ -584,12 +584,6 @@
       <property role="20kJfa" value="targetObject" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
-    </node>
-    <node concept="1TJgyj" id="2blVuwVjJgR" role="1TKVEi">
-      <property role="IQ2ns" value="2510173949012145207" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="targetOccupiable" />
-      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="7o6PzEpH8eY">
@@ -1676,6 +1670,26 @@
       <property role="20kJfa" value="targetWard" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="35fpRuAlrfU">
+    <property role="EcuMT" value="3553172394608014330" />
+    <property role="3GE5qa" value="actions.basic actions.OrderPatientAction.Orders" />
+    <property role="TrG5h" value="CompositeOrder" />
+    <ref role="1TJDcQ" node="7o6PzEpH8eW" resolve="Order" />
+    <node concept="1TJgyj" id="35fpRuAlrgm" role="1TKVEi">
+      <property role="IQ2ns" value="3553172394608014358" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="orderLeft" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpH8eW" resolve="Order" />
+    </node>
+    <node concept="1TJgyj" id="35fpRuAlrgo" role="1TKVEi">
+      <property role="IQ2ns" value="3553172394608014360" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="orderRight" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpH8eW" resolve="Order" />
     </node>
   </node>
 </model>

@@ -533,7 +533,7 @@
     <ref role="1XX52x" to="3751:3l6cNjec8l6" resolve="BehaviourSequence" />
     <node concept="3EZMnI" id="3KCb14J87DF" role="2wV5jI">
       <node concept="3F2HdR" id="3KCb14J87Ep" role="3EZMnx">
-        <property role="2czwfO" value="-----------------" />
+        <property role="2czwfO" value="---------------------" />
         <ref role="1NtTu8" to="3751:3l6cNjec8l8" resolve="steps" />
         <node concept="2iRkQZ" id="3KCb14J87Es" role="2czzBx" />
         <node concept="VPM3Z" id="3KCb14J87Et" role="3F10Kt" />
@@ -735,12 +735,6 @@
     <property role="3GE5qa" value="actions" />
     <ref role="1XX52x" to="3751:3l6cNjec6HU" resolve="BehaviourElement" />
     <node concept="3EZMnI" id="3KCb14J7tkw" role="2wV5jI">
-      <node concept="3F0ifn" id="53LYXLHYNKJ" role="3EZMnx">
-        <property role="3F0ifm" value="-----------------------------------------------------------" />
-        <node concept="ljvvj" id="53LYXLHYNLo" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
       <node concept="3F0ifn" id="53LYXLHYNNm" role="3EZMnx">
         <node concept="ljvvj" id="53LYXLHYNPl" role="3F10Kt">
           <property role="VOm3f" value="true" />
@@ -777,13 +771,13 @@
       <node concept="3EZMnI" id="3KCb14J87Cp" role="3EZMnx">
         <node concept="VPM3Z" id="3KCb14J87Cs" role="3F10Kt" />
         <node concept="3F0ifn" id="3KCb14J87Cu" role="3EZMnx">
-          <property role="3F0ifm" value="Behaviour Steps:" />
+          <property role="3F0ifm" value="Steps:" />
           <node concept="ljvvj" id="3KCb14J87Cv" role="3F10Kt">
             <property role="VOm3f" value="true" />
           </node>
         </node>
-        <node concept="3F0ifn" id="7IDz3Vlg240" role="3EZMnx">
-          <property role="3F0ifm" value="-----------------" />
+        <node concept="3F0ifn" id="35fpRuA5Sns" role="3EZMnx">
+          <property role="3F0ifm" value="---------------------------" />
         </node>
         <node concept="3EZMnI" id="3KCb14J87D0" role="3EZMnx">
           <node concept="VPM3Z" id="3KCb14J87D2" role="3F10Kt" />
@@ -1098,7 +1092,7 @@
     <ref role="1XX52x" to="3751:7o6PzEpH8eV" resolve="OrderPatientAction" />
     <node concept="3EZMnI" id="7o6PzEpH8gi" role="2wV5jI">
       <node concept="3F0ifn" id="7o6PzEpH8gp" role="3EZMnx">
-        <property role="3F0ifm" value="order" />
+        <property role="3F0ifm" value="ask" />
       </node>
       <node concept="3F1sOY" id="7o6PzEpH8gy" role="3EZMnx">
         <ref role="1NtTu8" to="3751:7o6PzEpH8gv" resolve="targetPatient" />
@@ -2093,6 +2087,22 @@
       <node concept="3F1sOY" id="2blVuwVt5FC" role="3EZMnx">
         <ref role="1NtTu8" to="3751:2blVuwVt5EX" resolve="targetWard" />
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="35fpRuAlrha">
+    <property role="3GE5qa" value="actions.basic actions.OrderPatientAction.Orders" />
+    <ref role="1XX52x" to="3751:35fpRuAlrfU" resolve="CompositeOrder" />
+    <node concept="3EZMnI" id="35fpRuAlrhl" role="2wV5jI">
+      <node concept="3F1sOY" id="35fpRuAlrhs" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:35fpRuAlrgm" resolve="orderLeft" />
+      </node>
+      <node concept="3F0ifn" id="35fpRuAlrhy" role="3EZMnx">
+        <property role="3F0ifm" value="and then" />
+      </node>
+      <node concept="3F1sOY" id="35fpRuAlrhE" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:35fpRuAlrgo" resolve="orderRight" />
+      </node>
+      <node concept="l2Vlx" id="35fpRuAlrho" role="2iSdaV" />
     </node>
   </node>
 </model>

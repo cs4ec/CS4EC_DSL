@@ -4,16 +4,16 @@ package EDLanguage.sandbox;
 
 import simcore.basicStructures.RoomType;
 
-public class Radiology extends RoomType {
-  private static Radiology instance;
+public class ImagingRoom extends RoomType {
+  private static ImagingRoom instance;
 
-  private Radiology() {
+  private ImagingRoom() {
     super();
   }
 
   public static RoomType getInstance() {
     if (instance == null) {
-      instance = new Radiology();
+      instance = new ImagingRoom();
     }
     return instance;
   }
