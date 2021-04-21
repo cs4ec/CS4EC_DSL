@@ -73,10 +73,8 @@ public class Agent {
 	// Record the building that the agent is currently inside
 	protected Room curInside;
 	protected Occupiable curOccupying;
-	protected Action curMission;
-	protected int curActionStep;
-	protected int curTimeCount;
-	protected Condition curCondition;
+	protected List<Action> myCurrentActions = new ArrayList<Action>();
+	protected Action myActiveAction;
 	protected List<GridPoint> curPath;
 	protected boolean isIdle;
 	protected List<Field> fields;
@@ -95,17 +93,17 @@ public class Agent {
 		curInside = null;
 	}
 
-	public void InitMission() {
-		ActionFragment firstStep = curMission.getSteps().get(0).getStepLogic();
+	public void InitAction() {
+		ActionFragment firstStep = myActiveAction.getSteps().get(0).getStepLogic();
 		if ((firstStep) instanceof StayForTimeAction) {
-			curTimeCount = ((StayForTimeAction) firstStep).getTimeSpan();
+			myActiveAction.curTimeCount = ((StayForTimeAction) firstStep).getTimeSpan();
 		}
 
 		if ((firstStep) instanceof StayForConditionAction) {
-			curCondition = ((StayForConditionAction) firstStep).getStayCondition();
+			myActiveAction.curCondition = ((StayForConditionAction) firstStep).getStayCondition();
 		}
 
-		ExecMission();
+		executeCurrentActions();
 	}
 
 	public void InitActionFragment(ActionFragment curActionFragment) {
@@ -158,15 +156,30 @@ public class Agent {
 		stepLogic.setTargetGridPoints(grid.getLocation(stepLogic.getDestinationObject()));
 	}
 
-	public void ExecMission() {
+	public void executeCurrentActions() {
 //		System.out.println("-----------------------------------------");
 //		LogMission();
-		ActionStep curStep = curMission.getSteps().get(curActionStep);
+		
+		// Iterate through all my passive actions
+		List<Action> currentPassiveActions = myCurrentActions.stream().filter(a -> a.getCurrentStep().isPassive()).collect(Collectors.toList());
+		for (Action action : currentPassiveActions) {
+			doAction(action);
+		}
+
+		// Then do my active action 
+		if(myActiveAction != null) {
+			doAction(myActiveAction);
+		}
+		
+//		System.out.println("-----------------------------------------");
+	}
+	
+	protected void doAction(Action a) {
+		ActionStep curStep = a.getCurrentStep();
 
 		if (curStep instanceof ConsequenceStep) {
 			UpdateState(((ConsequenceStep) curStep).getConsequence());
-			NextStep();
-//			ExecMission();   //Removed because not sure why this is here - I think because we call next step() we should be able to carry on here. Maybe if there are multiple consequences this wouldnt work
+			NextStep(a);
 		}
 
 		// Get the current logic step and initialise it
@@ -175,30 +188,29 @@ public class Agent {
 
 		// Move action
 		if (stepLogic instanceof MoveAction) {
-			MoveTo(((MoveAction) stepLogic).getDestinationObject());
+			MoveTo(a, ((MoveAction) stepLogic).getDestinationObject());
 		}
 
 		if (stepLogic instanceof OccupyAction) {
 			// If there is an occupiable free, move towards it
 			if (((OccupyAction) stepLogic).getConcreteDestination() != null) {
-				MoveTo(((OccupyAction) stepLogic).getConcreteDestination());
+				MoveTo(a, ((OccupyAction) stepLogic).getConcreteDestination());
 			} else { // Otherwise, ToDO: Add behaviour here
-				NextStep();
+				NextStep(a);
 			}
 		}
-//		System.out.println("-----------------------------------------");
 	}
 
 	/**
-	 * Print out the status of the Agent's current mission
+	 * Print out the status of the Agent's current active mission
 	 */
 	protected void LogMission() {
 		System.out.println(this);
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
-		System.out.println("current mission: " + curMission + ": " + curMission.getName());
+		System.out.println("current mission: " + myActiveAction + ": " + myActiveAction.getName());
 		System.out.println(
-				"cur action step: " + curActionStep + ": " + curMission.getSteps().get(curActionStep).getName());
+				"cur action step: " + myActiveAction.curActionStep + ": " + myActiveAction.getCurrentStep().getName());
 	}
 	
 	/**
@@ -206,10 +218,10 @@ public class Agent {
 	 * 
 	 * @param stepLogic The current step of the Agent's Mission
 	 */
-	protected void MoveTo(Object target) {
+	protected void MoveTo(Action a, Object target) {
 		// If I am already here, dont do anything
 		if (ImAt(target)) {
-			NextStep();
+			NextStep(a);
 			return;
 		} 
 
@@ -221,7 +233,7 @@ public class Agent {
 			Occupiable targetOccupiable = (Occupiable) target;
 			// if this agent is already there, continue
 			if (targetOccupiable.getOccupier() == this) {
-				NextStep();
+				NextStep(a);
 			} else { 
 				if (ImAt(targetOccupiable)) {
 					targetOccupiable.setOccupier(this);
@@ -233,7 +245,7 @@ public class Agent {
 			Room targetLocation = (Room) target;
 			// if this agent already in room, execute next step
 			if (targetLocation.WithInside(this)) {
-				NextStep();
+				NextStep(a);
 			}
 		}
 	}
@@ -259,24 +271,19 @@ public class Agent {
 			return Double.MAX_VALUE;
 		} else {
 			return CalcDistance(grid.getLocation(this), grid.getLocation(pRoom));
-//			return 1.0;
 		}
 	}
 
 	// Agent has entered the room and now will find a seat to take and move towards
 	// it
 	protected void FindASeat() {
-		curMission = new Action("TakeSeat").WithStep(
+		myActiveAction = new Action("TakeSeat").WithStep(
 				new ActionStep().WithName("move to seat").WithAction(new OccupyAction().WithTarget(Seat.class)));
-		curActionStep = 0;
 	}
 	
-	// Agent has entered the room and now will find a seat to take and move towards
-	// it
 	protected void FindAnOccupiable(Class occupiableType) {
-		curMission = new Action("TakeOccupiable").WithStep(
-				new ActionStep().WithName("move to an occupiable").WithAction(new OccupyAction().WithTarget(occupiableType)));
-		curActionStep = 0;
+		myActiveAction = new Action("TakeOccupiable").WithStep(
+				new ActionStep().WithName("move to a " + occupiableType.getName()).WithAction(new OccupyAction().WithTarget(occupiableType)));
 	}
 	
 	protected Occupiable SelectOccupiable(Room destination, Class occupiableType) {
@@ -634,24 +641,26 @@ public class Agent {
 		return false;
 	}
 
-	public void NextStep() {
-		curActionStep++;
+	public void NextStep(Action a) {
+		a.curActionStep++;
 		
 		// If the mission is complete, update my status accordingly
-		if (curActionStep == curMission.getSteps().size()) {
-			isIdle = true;
-			curActionStep = 0;
-			curMission = null;
+		if (a.isComplete()) {
+			a.curActionStep = 0;
+			if(a == myActiveAction) {
+				isIdle = true;
+				myActiveAction = null;
+			}
 			return;
 		}
 
-		ActionFragment stepLogic = curMission.getSteps().get(curActionStep).getStepLogic();
+		ActionFragment stepLogic = a.getCurrentStep().getStepLogic();
 		if (stepLogic instanceof StayForTimeAction) {
-			curTimeCount = ((StayForTimeAction) stepLogic).getTimeSpan();
+			a.curTimeCount = ((StayForTimeAction) stepLogic).getTimeSpan();
 		}
 
 		if (stepLogic instanceof StayForConditionAction) {
-			curCondition = ((StayForConditionAction) stepLogic).getStayCondition();
+			a.curCondition = ((StayForConditionAction) stepLogic).getStayCondition();
 		}
 	}
 

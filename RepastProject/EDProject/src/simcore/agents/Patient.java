@@ -81,16 +81,16 @@ public class Patient extends Agent {
 		
 		// Have I been given an order?
 		if(curOrder != null) {
-			curMission = null; // Reset/Remove any independent actions, orders take priority
+			myActiveAction = null; // Reset/Remove any independent actions, orders take priority
 			ExecOrder(curOrder);
-		} else if(curMission != null) { // Else, do I have an independent action to take?
-			if(curMission.getName() == "TakeSeat") {
+		} else if(myActiveAction != null) { // Else, do I have an independent action to take?
+			if(myActiveAction.getName() == "TakeSeat") {
 			}
 			if (isIdle) {
 				isIdle = false;
-				InitMission();
+				InitAction();
 			} else {
-				ExecMission();
+				executeCurrentActions();
 			}
 		} 
 	}

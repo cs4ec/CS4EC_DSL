@@ -64,8 +64,8 @@ public class Actor extends Agent {
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
 		this.isIdle = true;
-		this.curTimeCount = 0;
-		this.curCondition = null;
+//		this.curTimeCount = 0;
+//		this.curCondition = null;
 
 		// Traverse the ancestors of class to record all the Fields
 		fields = new ArrayList<Field>();
@@ -89,8 +89,8 @@ public class Actor extends Agent {
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
 		super(space, grid, pstrStartLocation);
 		this.isIdle = true;
-		this.curTimeCount = 0;
-		this.curCondition = null;
+//		this.curTimeCount = 0;
+//		this.curCondition = null;
 
 		// Traverse the ancestors of class to record all the Fields
 		fields = new ArrayList<Field>();
@@ -115,33 +115,54 @@ public class Actor extends Agent {
 	public void step() {
 		Perceive();
 	}
-
-	public void Perceive() {
-		// Read the Board
+	
+	public void Perceive() {	
 		Board board = ReadBoard();
 
-		if (isIdle) {
-			List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
-			List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
+		List<Action> plstReadyActions = myCurrentActions.stream().filter(a -> !a.getCurrentStep().isPassive()).collect(Collectors.toList());
+		
+		if(plstReadyActions.isEmpty()) {
 			
-			// First see if there are any direct messages for me and prioritise those
-			Signal s = selectSignal(plstDirectSignals);
-			if(s == null) { // If none, select a generic message for my class type
-				s = selectSignal(plstSignals);
-			} else {
-				int iewv = 0;
-			}
-			
-			if (s == null) {
-				return;
-			}
-			board.board.remove(s);
-			isIdle = false;
-			SetMission(s);
-			InitMission();
-		} else {
-			ExecMission();
 		}
+		
+		if (isIdle) {
+			
+			Signal s = searchForSignals(board);
+			// If we now have a signal, build the action for which this signal is a trigger
+			if (s != null) {
+				board.board.remove(s);
+				isIdle = false;
+				Action a = BuildActionFromSignal(s);
+				if(a != null && !a.getCurrentStep().isPassive()) {
+					myActiveAction = a;
+					InitAction();		
+				}
+			}
+		} else {
+			executeCurrentActions();
+		}
+	}
+
+//	public void Perceive() {		
+//		if (isIdle) {
+//			selectNewAction();
+//		} else {
+//			executeCurrentActions();
+//		}
+//	}
+
+	private Signal searchForSignals(Board board) {
+		// Read the board for signals, and find ones for me
+		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
+		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
+		
+		// First see if there are any direct messages for me and prioritise those
+		Signal s = selectSignal(plstDirectSignals);
+		if(s == null) { // If none, select a message for my class type
+			s = selectSignal(plstSignals);
+		}
+		
+		return s;
 	}
 	
 	// Behaviour to select signals. To be overridden in Actor subclasses
@@ -150,7 +171,7 @@ public class Actor extends Agent {
 			return null;
 		}
 				
-		// If I cant assign patient to myself, then I can just choose the first signal 
+		// If I can't assign patient to myself, then I can just choose the first signal 
 		if(mintMyMaxPatients == 0) {
 			return plstSignals.get(0);
 		}	
@@ -194,14 +215,12 @@ public class Actor extends Agent {
 	}
 	
 	@Override
-	public void ExecMission() {
-//		System.out.println("-----------------------------------------");
-//		LogMission();
-		ActionStep curStep = curMission.getSteps().get(curActionStep);
+	protected void doAction(Action a) {
+		ActionStep curStep = a.getCurrentStep();
 
 		if (curStep instanceof ConsequenceStep) {
 			UpdateState(((ConsequenceStep) curStep).getConsequence());
-			NextStep();
+			NextStep(a);
 //			ExecMission();   //Removed because not sure why this is here - I think because we call next step() we should be able to carry on here. Maybe if there are multiple consequences this wouldnt work
 		}
 
@@ -217,7 +236,7 @@ public class Actor extends Agent {
 				actor.deAssignPatient(p);
 			}
 			p.setDischarged();
-			NextStep();
+			NextStep(a);
 		}
 		
 		// Admit, End Visit Action
@@ -227,23 +246,21 @@ public class Actor extends Agent {
 			for (Actor actor : plstAssignedStaff) {
 				actor.deAssignPatient(p);
 			}
-			
-//			AdmissionBay pAdmisionBay = ((AdmitAction)stepLogic).getAdmissionBay();
-//			pAdmisionBay.admitPatient(p);
-			NextStep();
+
+			NextStep(a);
 		}
 		
 		// Move action
 		if (stepLogic instanceof MoveAction) {
-			MoveTo(((MoveAction) stepLogic).getDestinationObject());
+			MoveTo(a, ((MoveAction) stepLogic).getDestinationObject());
 		}
 		
 		if(stepLogic instanceof OccupyAction) {
 			// If there is an occupiable free, move towards it
 			if(((OccupyAction) stepLogic).getConcreteDestination() != null) {
-				MoveTo(((OccupyAction) stepLogic).getConcreteDestination());
+				MoveTo(a, ((OccupyAction) stepLogic).getConcreteDestination());
 			} else { // Otherwise, ToDO: Add behaviour here
-				NextStep();
+				NextStep(a);
 			}
 		}
 		
@@ -261,9 +278,10 @@ public class Actor extends Agent {
 		if (stepLogic instanceof StayAction) {
 			// Stay for some set time
 			if (stepLogic instanceof StayForTimeAction) {
-				curTimeCount--;
-				if (curTimeCount == 0) {
-					NextStep();
+				a.tick();
+				// If the wait time has elapsed, then do the next step
+				if (a.curTimeCount == 0) {
+					NextStep(a);
 					return;
 				} else {
 					return;
@@ -273,8 +291,8 @@ public class Actor extends Agent {
 			// Stay until some condition met
 			if (stepLogic instanceof StayForConditionAction) {
 				UpdateState(((StayForConditionAction) stepLogic).getConsequence());
-				if (CheckCondition(curCondition)) {
-					NextStep();
+				if (CheckCondition(a.curCondition)) {
+					NextStep(a);
 					return;
 				} else {
 					return;
@@ -287,7 +305,7 @@ public class Actor extends Agent {
 			Signal s = ((SendSignalAction) stepLogic).getSignal();
 			Board b = ReadBoard();
 			b.PushMission(s);
-			NextStep();
+			NextStep(a);
 			return;
 		}
 
@@ -299,12 +317,10 @@ public class Actor extends Agent {
 //			System.out.println("Order " + p + " To " + o);
 
 			p.TakeOrder(o);
-			NextStep();
+			NextStep(a);
 			return;
 		}
-//		System.out.println("-----------------------------------------");
 	}
-	
 	
 	private void deAssignPatient(Patient p) {
 		if(mlstMyPatients.contains(p)) {
@@ -319,7 +335,8 @@ public class Actor extends Agent {
 	 * ToDo: Add more complex behaviour when assigning a new mission to myself
 	 * @param s Incoming signal to trigger a new Behaviour
 	 */
-	public void SetMission(Signal s) {
+	public Action BuildActionFromSignal(Signal s) {
+		return null;
 
 	}
 

@@ -828,6 +828,13 @@
         </node>
       </node>
     </node>
+    <node concept="312cEg" id="4X1nFNzFLYp" role="jymVt">
+      <property role="TrG5h" value="actionBuilder" />
+      <node concept="3Tm1VV" id="4X1nFNzFLEY" role="1B3o_S" />
+      <node concept="3uibUv" id="4X1nFNzFLVT" role="1tU5fm">
+        <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="4m3F$LV6iQ8" role="jymVt" />
     <node concept="3clFbW" id="3t2$6LwEV7n" role="jymVt">
       <node concept="3cqZAl" id="3t2$6LwEV7o" role="3clF45" />
@@ -953,7 +960,7 @@
     </node>
     <node concept="2tJIrI" id="6yyWtWVY2Ei" role="jymVt" />
     <node concept="3clFb_" id="4m3F$LV6j_Y" role="jymVt">
-      <property role="TrG5h" value="SetMission" />
+      <property role="TrG5h" value="BuildActionFromSignal" />
       <node concept="3clFbS" id="4m3F$LV6jA1" role="3clF47">
         <node concept="3KaCP$" id="4m3F$LV6kh5" role="3cqZAp">
           <node concept="3KbdKl" id="4m3F$LV6kid" role="3KbHQx">
@@ -1009,8 +1016,8 @@
                       </node>
                     </node>
                   </node>
-                  <node concept="37vLTw" id="64mqbMaQwSt" role="37vLTJ">
-                    <ref role="3cqZAo" to="uux2:~Agent.curMission" resolve="curMission" />
+                  <node concept="37vLTw" id="4X1nFNzFMWQ" role="37vLTJ">
+                    <ref role="3cqZAo" node="4X1nFNzFLYp" resolve="actionBuilder" />
                   </node>
                 </node>
               </node>
@@ -1097,22 +1104,23 @@
                 </node>
               </node>
             </node>
-            <node concept="3cpWs6" id="a5pEVkVFS" role="3cqZAp" />
+            <node concept="3cpWs6" id="a5pEVkVFS" role="3cqZAp">
+              <node concept="37vLTw" id="4X1nFNzFQKp" role="3cqZAk">
+                <ref role="3cqZAo" node="4X1nFNzFLYp" resolve="actionBuilder" />
+              </node>
+            </node>
           </node>
         </node>
-        <node concept="3clFbF" id="a5pEVkVHU" role="3cqZAp">
-          <node concept="37vLTI" id="a5pEVkWSz" role="3clFbG">
-            <node concept="37vLTw" id="64mqbMaQxN5" role="37vLTJ">
-              <ref role="3cqZAo" to="uux2:~Agent.curActionStep" resolve="curActionStep" />
-            </node>
-            <node concept="3cmrfG" id="a5pEVkXkG" role="37vLTx">
-              <property role="3cmrfH" value="0" />
-            </node>
+        <node concept="3cpWs6" id="4X1nFNzFOjx" role="3cqZAp">
+          <node concept="37vLTw" id="4X1nFNzFNk3" role="3cqZAk">
+            <ref role="3cqZAo" node="4X1nFNzFLYp" resolve="actionBuilder" />
           </node>
         </node>
       </node>
       <node concept="3Tm1VV" id="4m3F$LV6jpq" role="1B3o_S" />
-      <node concept="3cqZAl" id="4m3F$LV6j$H" role="3clF45" />
+      <node concept="3uibUv" id="4X1nFNzFOGc" role="3clF45">
+        <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
+      </node>
       <node concept="37vLTG" id="4m3F$LV6k6i" role="3clF46">
         <property role="TrG5h" value="s" />
         <node concept="3uibUv" id="164XdQWa3$y" role="1tU5fm">
@@ -1197,7 +1205,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="30vGAS8gF11" role="jymVt" />
       <node concept="312cEg" id="30vGAS8hgqM" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="30vGAS8hgoG" role="1B3o_S" />
         <node concept="3uibUv" id="164XdQWa0J_" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -1231,7 +1239,7 @@
           <node concept="3clFbF" id="svZ_Jg7ZVo" role="3cqZAp">
             <node concept="2OqwBi" id="svZ_Jg80qL" role="3clFbG">
               <node concept="37vLTw" id="svZ_Jg7ZVm" role="2Oq$k0">
-                <ref role="3cqZAo" node="30vGAS8hgqM" resolve="curMission" />
+                <ref role="3cqZAo" node="30vGAS8hgqM" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="svZ_Jg80$o" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -1261,7 +1269,7 @@
           <node concept="3clFbF" id="a5pEVkY_H" role="3cqZAp">
             <node concept="2OqwBi" id="a5pEVkY_I" role="3clFbG">
               <node concept="37vLTw" id="a5pEVkY_J" role="2Oq$k0">
-                <ref role="3cqZAo" node="30vGAS8hgqM" resolve="curMission" />
+                <ref role="3cqZAo" node="30vGAS8hgqM" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="a5pEVkY_K" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -1331,7 +1339,7 @@
       </node>
       <node concept="2tJIrI" id="6yyWtWVXKxb" role="jymVt" />
       <node concept="312cEg" id="6yyWtWVXKxc" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="6yyWtWVXKxd" role="1B3o_S" />
         <node concept="3uibUv" id="64mqbMaQwya" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -3056,7 +3064,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="1DVvOQqVGaX" role="jymVt" />
       <node concept="312cEg" id="1DVvOQqW$Lg" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="1DVvOQqW$Jc" role="1B3o_S" />
         <node concept="3uibUv" id="164XdQWa17H" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -3070,7 +3078,7 @@
           <node concept="3clFbF" id="svZ_Jg81If" role="3cqZAp">
             <node concept="2OqwBi" id="svZ_Jg81UZ" role="3clFbG">
               <node concept="37vLTw" id="svZ_Jg81Id" role="2Oq$k0">
-                <ref role="3cqZAo" node="1DVvOQqW$Lg" resolve="curMission" />
+                <ref role="3cqZAo" node="1DVvOQqW$Lg" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="svZ_Jg821I" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -3117,7 +3125,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="svZ_Jg83dC" role="jymVt" />
       <node concept="312cEg" id="svZ_Jg83sd" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="svZ_Jg83rj" role="1B3o_S" />
         <node concept="3uibUv" id="164XdQWa0r_" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -3130,7 +3138,7 @@
           <node concept="3clFbF" id="svZ_Jg83FC" role="3cqZAp">
             <node concept="2OqwBi" id="svZ_Jg83NN" role="3clFbG">
               <node concept="37vLTw" id="svZ_Jg83FB" role="2Oq$k0">
-                <ref role="3cqZAo" node="svZ_Jg83sd" resolve="curMission" />
+                <ref role="3cqZAo" node="svZ_Jg83sd" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="svZ_Jg83U$" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -3234,7 +3242,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="3DLpJ7prmJc" role="jymVt" />
       <node concept="312cEg" id="3DLpJ7prmJd" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="3DLpJ7prmJe" role="1B3o_S" />
         <node concept="3uibUv" id="164XdQWa1hk" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -3274,7 +3282,7 @@
                 </node>
               </node>
               <node concept="37vLTw" id="3DLpJ7prmJq" role="37vLTJ">
-                <ref role="3cqZAo" node="3DLpJ7prmJd" resolve="curMission" />
+                <ref role="3cqZAo" node="3DLpJ7prmJd" resolve="actionBuilder" />
               </node>
             </node>
           </node>
@@ -3331,7 +3339,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="6yyWtWVWLih" role="jymVt" />
       <node concept="312cEg" id="6yyWtWVWLii" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="6yyWtWVWLij" role="1B3o_S" />
         <node concept="3uibUv" id="164XdQW9ZGV" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -3344,7 +3352,7 @@
           <node concept="3clFbF" id="6yyWtWVWLio" role="3cqZAp">
             <node concept="2OqwBi" id="6yyWtWVWLip" role="3clFbG">
               <node concept="37vLTw" id="6yyWtWVWLiq" role="2Oq$k0">
-                <ref role="3cqZAo" node="6yyWtWVWLii" resolve="curMission" />
+                <ref role="3cqZAo" node="6yyWtWVWLii" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="6yyWtWVWLir" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -3447,7 +3455,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="6yyWtWVWVj0" role="jymVt" />
       <node concept="312cEg" id="6yyWtWVWVj1" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="6yyWtWVWVj2" role="1B3o_S" />
         <node concept="3uibUv" id="164XdQW9Za6" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -3537,7 +3545,7 @@
           <node concept="3clFbF" id="J03_IHZOpx" role="3cqZAp">
             <node concept="2OqwBi" id="J03_IHZOpz" role="3clFbG">
               <node concept="37vLTw" id="J03_IHZOp$" role="2Oq$k0">
-                <ref role="3cqZAo" node="6yyWtWVWVj1" resolve="curMission" />
+                <ref role="3cqZAo" node="6yyWtWVWVj1" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="J03_IHZOp_" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -3877,7 +3885,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="6yyWtWVXu1l" role="jymVt" />
       <node concept="312cEg" id="6yyWtWVXu1m" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="6yyWtWVXu1n" role="1B3o_S" />
         <node concept="3uibUv" id="164XdQW9WIi" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -3890,7 +3898,7 @@
           <node concept="3clFbF" id="6yyWtWVXxO5" role="3cqZAp">
             <node concept="2OqwBi" id="6yyWtWVXyaI" role="3clFbG">
               <node concept="37vLTw" id="6yyWtWVXxO3" role="2Oq$k0">
-                <ref role="3cqZAo" node="6yyWtWVXu1m" resolve="curMission" />
+                <ref role="3cqZAo" node="6yyWtWVXu1m" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="6yyWtWVXyk8" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -4011,7 +4019,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="6yyWtWVXEo9" role="jymVt" />
       <node concept="312cEg" id="6yyWtWVXEoa" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="6yyWtWVXEob" role="1B3o_S" />
         <node concept="3uibUv" id="164XdQW9Y0M" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -4064,7 +4072,7 @@
           <node concept="3clFbF" id="6yyWtWVXEog" role="3cqZAp">
             <node concept="2OqwBi" id="6yyWtWVXEoh" role="3clFbG">
               <node concept="37vLTw" id="6yyWtWVXEoi" role="2Oq$k0">
-                <ref role="3cqZAo" node="6yyWtWVXEoa" resolve="curMission" />
+                <ref role="3cqZAo" node="6yyWtWVXEoa" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="6yyWtWVXEoj" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -5601,7 +5609,7 @@
       <property role="TrG5h" value="_class_" />
       <node concept="2tJIrI" id="7lVoe4xZGFk" role="jymVt" />
       <node concept="312cEg" id="7lVoe4y4ORy" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="7lVoe4y4ONv" role="1B3o_S" />
         <node concept="3uibUv" id="7lVoe4y4ORn" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -5693,7 +5701,7 @@
                 </node>
               </node>
               <node concept="37vLTw" id="7lVoe4y4OXw" role="2Oq$k0">
-                <ref role="3cqZAo" node="7lVoe4y4ORy" resolve="curMission" />
+                <ref role="3cqZAo" node="7lVoe4y4ORy" resolve="actionBuilder" />
               </node>
             </node>
             <node concept="raruj" id="7lVoe4y3H0K" role="lGtFl" />
@@ -6422,7 +6430,7 @@
       </node>
       <node concept="2tJIrI" id="ijr0ZWyb1y" role="jymVt" />
       <node concept="312cEg" id="ijr0ZWyb1z" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="ijr0ZWyb1$" role="1B3o_S" />
         <node concept="3uibUv" id="ijr0ZWyb1_" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -6436,7 +6444,7 @@
           <node concept="3clFbF" id="ijr0ZXzycx" role="3cqZAp">
             <node concept="2OqwBi" id="ijr0ZXzycy" role="3clFbG">
               <node concept="37vLTw" id="ijr0ZXzycz" role="2Oq$k0">
-                <ref role="3cqZAo" node="ijr0ZWyb1z" resolve="curMission" />
+                <ref role="3cqZAo" node="ijr0ZWyb1z" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="ijr0ZXzyc$" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -6884,7 +6892,7 @@
         <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Agent" />
       </node>
       <node concept="312cEg" id="4TDP_lRQiH" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="4TDP_lRQiI" role="1B3o_S" />
         <node concept="3uibUv" id="4TDP_lRQiJ" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -6897,7 +6905,7 @@
           <node concept="3clFbF" id="4TDP_lRQiN" role="3cqZAp">
             <node concept="2OqwBi" id="4TDP_lRQiO" role="3clFbG">
               <node concept="37vLTw" id="4TDP_lRQiP" role="2Oq$k0">
-                <ref role="3cqZAo" node="4TDP_lRQiH" resolve="curMission" />
+                <ref role="3cqZAo" node="4TDP_lRQiH" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="4TDP_lRQiQ" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -7001,7 +7009,7 @@
         <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Actor" />
       </node>
       <node concept="312cEg" id="4TDP_lXzYm" role="jymVt">
-        <property role="TrG5h" value="curMission" />
+        <property role="TrG5h" value="actionBuilder" />
         <node concept="3Tm6S6" id="4TDP_lXzYn" role="1B3o_S" />
         <node concept="3uibUv" id="4TDP_lXzYo" role="1tU5fm">
           <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
@@ -7014,7 +7022,7 @@
           <node concept="3clFbF" id="2blVuwV8GAC" role="3cqZAp">
             <node concept="2OqwBi" id="2blVuwV8GAE" role="3clFbG">
               <node concept="37vLTw" id="2blVuwV8GAF" role="2Oq$k0">
-                <ref role="3cqZAo" node="4TDP_lXzYm" resolve="curMission" />
+                <ref role="3cqZAo" node="4TDP_lXzYm" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="2blVuwV8GAG" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
@@ -7134,7 +7142,7 @@
           <node concept="3clFbF" id="4TDP_lXzYs" role="3cqZAp">
             <node concept="2OqwBi" id="4TDP_lXzYt" role="3clFbG">
               <node concept="37vLTw" id="4TDP_lXzYu" role="2Oq$k0">
-                <ref role="3cqZAo" node="4TDP_lXzYm" resolve="curMission" />
+                <ref role="3cqZAo" node="4TDP_lXzYm" resolve="actionBuilder" />
               </node>
               <node concept="liA8E" id="4TDP_lXzYv" role="2OqNvi">
                 <ref role="37wK5l" to="x5im:~Action.WithStep(simcore.action.ActionStep)" resolve="WithStep" />
