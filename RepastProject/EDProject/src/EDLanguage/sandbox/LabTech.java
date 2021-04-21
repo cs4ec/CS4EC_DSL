@@ -22,7 +22,7 @@ public class LabTech extends Actor {
   public Action actionBuilder;
 
   public LabTech(ContinuousSpace<Object> space, Grid<Object> grid) {
-    super(space, grid);
+    super(space, grid); 
     mintMyMaxPatients = 0;
   }
 
