@@ -8,9 +8,10 @@ import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.SendSignalAction;
-import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.conditions.TestResultCondition;
+import simcore.action.basicAction.TestAction;
 import simcore.agents.Patient;
+import simcore.action.basicAction.WaitAction;
+import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.OrderAction;
@@ -61,7 +62,8 @@ public class LIATMachine extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LIAT.getInstance().getProcessingTime())));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new TestAction().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance())));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new WaitAction().WithWaitTime(LIAT.getInstance().getProcessingTime())));
     if (CheckCondition(new TestResultCondition().WithTest(LIAT.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new LIATCompleteSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));

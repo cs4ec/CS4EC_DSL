@@ -653,6 +653,13 @@ public class Agent {
 			}
 			return;
 		}
+		
+		// If my active action is now passive, set myself as idle and add it to my current actions
+		if(a.getCurrentStep().isPassive()) {
+			isIdle = true;
+			myCurrentActions.add(a);
+			myActiveAction = null;
+		}
 
 		ActionFragment stepLogic = a.getCurrentStep().getStepLogic();
 		if (stepLogic instanceof StayForTimeAction) {

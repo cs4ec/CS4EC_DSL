@@ -39,6 +39,7 @@ import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.TestAction;
+import simcore.action.basicAction.WaitAction;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
@@ -118,29 +119,37 @@ public class Actor extends Agent {
 	
 	public void Perceive() {	
 		Board board = ReadBoard();
+		
+		
+		//If my active action has now moved into a passive one -> Pick a new Active Action
+		// If my passive action has moved to active -> consider that as a candidate
 
-		List<Action> plstReadyActions = myCurrentActions.stream().filter(a -> !a.getCurrentStep().isPassive()).collect(Collectors.toList());
-		
-		if(plstReadyActions.isEmpty()) {
-			
-		}
-		
+		// If I do not have a current active action, then select one
 		if (isIdle) {
+			List<Action> plstReadyActions = myCurrentActions.stream().filter(a -> !a.getCurrentStep().isPassive()).collect(Collectors.toList());
 			
-			Signal s = searchForSignals(board);
-			// If we now have a signal, build the action for which this signal is a trigger
-			if (s != null) {
-				board.board.remove(s);
-				isIdle = false;
-				Action a = BuildActionFromSignal(s);
-				if(a != null && !a.getCurrentStep().isPassive()) {
-					myActiveAction = a;
-					InitAction();		
+			// If no active actions ongoing, then look for new signals
+			if(plstReadyActions.isEmpty()) {
+				Signal s = searchForSignals(board);
+				// If we now have a signal, build the action for which this signal is a trigger
+				if (s != null) {
+					board.board.remove(s);
+					isIdle = false;
+					Action signalAction = BuildActionFromSignal(s);
+					if(signalAction != null && !signalAction.getCurrentStep().isPassive()) {
+						myActiveAction = signalAction;
+						InitAction();
+					}
 				}
+			} else {
+				Action myCurrentAction = plstReadyActions.get(0);
+				myActiveAction = myCurrentAction;
 			}
-		} else {
-			executeCurrentActions();
 		}
+
+		
+		
+		executeCurrentActions();
 	}
 
 //	public void Perceive() {		
@@ -265,14 +274,10 @@ public class Actor extends Agent {
 		}
 		
 		//Test Action
-//		if(stepLogic instanceof TestAction) {
-//			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient(), 0.0);
-//			if(pTestResult.isInfected()) {
-//				
-//			}
-//			System.out.println("TEST RESULT: " + pTestResult);
-//			NextStep();
-//		}
+		if(stepLogic instanceof TestAction) {
+			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient(), 0.0);
+			NextStep(a);
+		}
 
 		// Stay Action
 		if (stepLogic instanceof StayAction) {
@@ -297,6 +302,17 @@ public class Actor extends Agent {
 				} else {
 					return;
 				}
+			}
+		}
+		
+		if (stepLogic instanceof WaitAction) {
+			a.tick();
+			// If the wait time has elapsed, then do the next step
+			if (a.curTimeCount == 0) {
+				NextStep(a);
+				return;
+			} else {
+				return;
 			}
 		}
 

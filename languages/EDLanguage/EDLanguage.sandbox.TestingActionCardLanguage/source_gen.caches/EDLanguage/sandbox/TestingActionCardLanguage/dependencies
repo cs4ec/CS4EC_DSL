@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="EDLanguage.sandbox.TestingActionCardLanguage.Triage">
+    <classNode dependClassName="EDLanguage.sandbox.Triage" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EDLanguage.sandbox.TestingActionCardLanguage.WaitingRoom">
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+</dependenciesRoot>
+

@@ -11,9 +11,10 @@ import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.basicStructures.Desk;
-import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.conditions.TestResultCondition;
+import simcore.action.basicAction.TestAction;
 import simcore.agents.Patient;
+import simcore.action.basicAction.WaitAction;
+import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 
@@ -22,7 +23,7 @@ public class LabTech extends Actor {
   public Action actionBuilder;
 
   public LabTech(ContinuousSpace<Object> space, Grid<Object> grid) {
-    super(space, grid); 
+    super(space, grid);
     mintMyMaxPatients = 0;
   }
 
@@ -52,7 +53,8 @@ public class LabTech extends Actor {
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("replyTo"))));
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("Lab"))));
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
-    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LabSymptomaticPCR.getInstance().getProcessingTime())));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new TestAction().WithPatient((Patient) s.GetData("patient")).WithTest(LabSymptomaticPCR.getInstance())));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new WaitAction().WithWaitTime(LabSymptomaticPCR.getInstance().getProcessingTime())));
     if (CheckCondition(new TestResultCondition().WithTest(LabSymptomaticPCR.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new PCRCompleteSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));

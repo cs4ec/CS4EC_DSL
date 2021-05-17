@@ -12,8 +12,13 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
+  /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActionCard = createDescriptorForActionCard();
-  /*package*/ final ConceptDescriptor myConceptActionNode = createDescriptorForActionNode();
+  /*package*/ final ConceptDescriptor myConceptActionStep = createDescriptorForActionStep();
+  /*package*/ final ConceptDescriptor myConceptBranch = createDescriptorForBranch();
+  /*package*/ final ConceptDescriptor myConceptGoToAction = createDescriptorForGoToAction();
+  /*package*/ final ConceptDescriptor myConceptStaffType = createDescriptorForStaffType();
+  /*package*/ final ConceptDescriptor myConceptStaffTypeList = createDescriptorForStaffTypeList();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -24,21 +29,32 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
+    deps.aggregatedLanguage(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, "EDLanguage");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActionCard, myConceptActionNode);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptBranch, myConceptGoToAction, myConceptStaffType, myConceptStaffTypeList);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
+      case LanguageConceptSwitch.Action:
+        return myConceptAction;
       case LanguageConceptSwitch.ActionCard:
         return myConceptActionCard;
-      case LanguageConceptSwitch.ActionNode:
-        return myConceptActionNode;
+      case LanguageConceptSwitch.ActionStep:
+        return myConceptActionStep;
+      case LanguageConceptSwitch.Branch:
+        return myConceptBranch;
+      case LanguageConceptSwitch.GoToAction:
+        return myConceptGoToAction;
+      case LanguageConceptSwitch.StaffType:
+        return myConceptStaffType;
+      case LanguageConceptSwitch.StaffTypeList:
+        return myConceptStaffTypeList;
       default:
         return null;
     }
@@ -49,21 +65,66 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     return myIndexSwitch.index(c);
   }
 
+  private static ConceptDescriptor createDescriptorForAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Action", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528548");
+    b.version(2);
+    b.associate("staffType", 0x4f415ebce3f66032L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL).optional(false).origin("5710949967853936690").done();
+    b.aggregate("steps", 0x4f415ebce3f34595L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3455bL).optional(true).ordered(true).multiple(true).origin("5710949967853733269").done();
+    b.aggregate("branch", 0x4f415ebce3f345bdL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(true).ordered(true).multiple(false).origin("5710949967853733309").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForActionCard() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ActionCard", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L);
     b.class_(false, false, true);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528520");
     b.version(2);
-    b.aggregate("ActionNodes", 0x2ef557ae9cb06877L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(true).ordered(true).multiple(true).origin("3383707102503528567").done();
+    b.aggregate("Actions", 0x2ef557ae9cb06877L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(true).ordered(true).multiple(true).origin("3383707102503528567").done();
     b.alias("Action Card");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForActionNode() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ActionNode", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L);
+  private static ConceptDescriptor createDescriptorForActionStep() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ActionStep", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3455bL);
     b.class_(false, false, false);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528548");
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733211");
     b.version(2);
-    b.alias("Action");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBranch() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Branch", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733230");
+    b.version(2);
+    b.associate("targetAction", 0x4f415ebce3f345b2L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(false).origin("5710949967853733298").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForGoToAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "GoToAction", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f36ef2L);
+    b.class_(false, false, false);
+    b.super_("ActionCards.structure.ActionStep", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3455bL);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853743858");
+    b.version(2);
+    b.aggregate("destination", 0x4f415ebce3f36f0eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(false).ordered(true).multiple(false).origin("5710949967853743886").done();
+    b.alias("Go to a place");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStaffType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "StaffType", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733612");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStaffTypeList() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "StaffTypeList", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3471eL);
+    b.class_(false, false, true);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733662");
+    b.version(2);
+    b.aggregate("StaffType", 0x4f415ebce3f3474cL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL).optional(true).ordered(true).multiple(true).origin("5710949967853733708").done();
+    b.alias("Staff Type List");
     return b.create();
   }
 }

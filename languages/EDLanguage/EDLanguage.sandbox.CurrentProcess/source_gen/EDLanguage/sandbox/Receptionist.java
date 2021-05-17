@@ -14,10 +14,6 @@ import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.conditions.SeverityCondition;
-import simcore.diagnosis.SeverityScore;
-import simcore.action.basicAction.conditions.InfectionCondition;
-import simcore.diagnosis.InfectionStatus;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.DischargeAction;
 
@@ -58,22 +54,7 @@ public class Receptionist extends Staff {
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     actionBuilder.WithStep(new ActionStep().WithName("inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(180)));
-    if (CheckCondition(new SeverityCondition().WithPatient((Patient) s.GetData("patient")).WithSeverityScore(SeverityScore.SEVERE))) {
-      this.InitLogPatientForMajorsAB(s);
-    } else {
-      if (CheckCondition(new SeverityCondition().WithPatient((Patient) s.GetData("patient")).WithSeverityScore(SeverityScore.LOW))) {
-        this.InitDischargePatient(s);
-      } else {
-        if (CheckCondition(new SeverityCondition().WithPatient((Patient) s.GetData("patient")).WithSeverityScore(SeverityScore.MODERATE))) {
-          if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
-            this.InitLogPatientForMajorsAB(s);
-          } else {
-            this.InitSendPatientToWaitingRoom(s);
-          }
-        } else {
-        }
-      }
-    }
+    this.InitSendPatientToWaitingRoom(s);
 
   }
   public void InitSendPatientToWaitingRoom(Signal s) {

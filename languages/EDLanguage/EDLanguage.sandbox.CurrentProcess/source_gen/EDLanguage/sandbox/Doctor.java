@@ -20,9 +20,12 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.InfectionCondition;
 import simcore.diagnosis.InfectionStatus;
-import simcore.action.basicAction.conditions.ResultCondition;
+import simcore.action.basicAction.TestAction;
+import simcore.action.basicAction.WaitAction;
+import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
 import simcore.basicStructures.Room;
+import simcore.action.basicAction.conditions.ResultCondition;
 import simcore.action.basicAction.DischargeAction;
 
 public class Doctor extends Staff {
@@ -126,14 +129,37 @@ public class Doctor extends Staff {
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     actionBuilder.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
-    if (CheckCondition(new PossibilityCondition().WithPossibility(18))) {
+    if (CheckCondition(new PossibilityCondition().WithPossibility(100))) {
       if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
         actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
         actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
-        sendSignalTemp = new ConductLIATSignal();
-        sendSignalTemp.AddData("patient", s.GetData("patient"));
-        sendSignalTemp.AddData("replyTo", this);
-        actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+        actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new TestAction().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance())));
+        actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new WaitAction().WithWaitTime(LIAT.getInstance().getProcessingTime())));
+        if (CheckCondition(new TestResultCondition().WithTest(LIAT.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
+          if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("RedBay")))) {
+            sendSignalTemp = new AdmitPatientSignal();
+            sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+            sendSignalTemp.AddData("patient", s.GetData("patient"));
+            actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+          } else {
+            sendSignalTemp = new AdmitPatientSignal();
+            sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("RedBay"));
+            sendSignalTemp.AddData("patient", s.GetData("patient"));
+            actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+          }
+        } else {
+          if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("AmberBay")))) {
+            sendSignalTemp = new AdmitPatientSignal();
+            sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+            sendSignalTemp.AddData("patient", s.GetData("patient"));
+            actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+          } else {
+            sendSignalTemp = new AdmitPatientSignal();
+            sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
+            sendSignalTemp.AddData("patient", s.GetData("patient"));
+            actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+          }
+        }
       } else {
         sendSignalTemp = new ConductLFDSignal();
         sendSignalTemp.AddData("patient", s.GetData("patient"));

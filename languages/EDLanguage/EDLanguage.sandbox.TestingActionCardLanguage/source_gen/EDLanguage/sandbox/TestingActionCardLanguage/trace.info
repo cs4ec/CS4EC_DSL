@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root nodeRef="r:51504dfe-6676-41a3-8095-3bec03fd4910(EDLanguage.sandbox.TestingActionCardLanguage)/5710949967853772364">
+    <file name="Triage.java">
+      <node id="5710949967853772364" at="8,0,9,0" concept="4" trace="instance" />
+      <node id="5710949967853772364" at="10,20,11,12" concept="6" />
+      <node id="5710949967853772364" at="15,27,16,30" concept="1" />
+      <node id="5710949967853772364" at="17,5,18,20" concept="3" />
+      <node id="5710949967853772364" at="10,0,13,0" concept="0" trace="Triage#()V" />
+      <node id="5710949967853772364" at="14,40,17,5" concept="2" />
+      <node id="5710949967853772364" at="14,0,20,0" concept="5" trace="getInstance#()Lsimcore/basicStructures/RoomType;" />
+      <scope id="5710949967853772364" at="10,20,11,12" />
+      <scope id="5710949967853772364" at="15,27,16,30" />
+      <scope id="5710949967853772364" at="10,0,13,0" />
+      <scope id="5710949967853772364" at="14,40,18,20" />
+      <scope id="5710949967853772364" at="14,0,20,0" />
+      <unit id="5710949967853772364" at="7,0,21,0" name="EDLanguage.sandbox.Triage" />
+    </file>
+  </root>
+  <root nodeRef="r:51504dfe-6676-41a3-8095-3bec03fd4910(EDLanguage.sandbox.TestingActionCardLanguage)/5710949967853912045">
+    <file name="WaitingRoom.java">
+      <node id="5710949967853912045" at="8,0,9,0" concept="4" trace="instance" />
+      <node id="5710949967853912045" at="10,25,11,12" concept="6" />
+      <node id="5710949967853912045" at="15,27,16,35" concept="1" />
+      <node id="5710949967853912045" at="17,5,18,20" concept="3" />
+      <node id="5710949967853912045" at="10,0,13,0" concept="0" trace="WaitingRoom#()V" />
+      <node id="5710949967853912045" at="14,40,17,5" concept="2" />
+      <node id="5710949967853912045" at="14,0,20,0" concept="5" trace="getInstance#()Lsimcore/basicStructures/RoomType;" />
+      <scope id="5710949967853912045" at="10,25,11,12" />
+      <scope id="5710949967853912045" at="15,27,16,35" />
+      <scope id="5710949967853912045" at="10,0,13,0" />
+      <scope id="5710949967853912045" at="14,40,18,20" />
+      <scope id="5710949967853912045" at="14,0,20,0" />
+      <unit id="5710949967853912045" at="7,0,21,0" name="EDLanguage.sandbox.WaitingRoom" />
+    </file>
+  </root>
+</debug-info>
+

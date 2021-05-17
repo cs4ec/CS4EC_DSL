@@ -7,9 +7,10 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
 import simcore.action.ActionStep;
-import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.conditions.TestResultCondition;
+import simcore.action.basicAction.TestAction;
 import simcore.agents.Patient;
+import simcore.action.basicAction.WaitAction;
+import simcore.action.basicAction.conditions.TestResultCondition;
 import simcore.Signals.DirectSignal;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.DischargeAction;
@@ -53,7 +54,8 @@ public class LFDDevice extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(SURESCREEN.getInstance().getProcessingTime())));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new TestAction().WithPatient((Patient) s.GetData("patient")).WithTest(SURESCREEN.getInstance())));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new WaitAction().WithWaitTime(SURESCREEN.getInstance().getProcessingTime())));
     if (CheckCondition(new TestResultCondition().WithTest(SURESCREEN.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new LFDCompleteSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
@@ -71,7 +73,8 @@ public class LFDDevice extends Staff {
 
     Signal sendSignalTemp = new Signal();
 
-    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(SURESCREEN.getInstance().getProcessingTime())));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new TestAction().WithPatient((Patient) s.GetData("patient")).WithTest(SURESCREEN.getInstance())));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new WaitAction().WithWaitTime(SURESCREEN.getInstance().getProcessingTime())));
     if (CheckCondition(new TestResultCondition().WithTest(SURESCREEN.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
       sendSignalTemp = new LFDTrackAndTraceSignal();
       ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
