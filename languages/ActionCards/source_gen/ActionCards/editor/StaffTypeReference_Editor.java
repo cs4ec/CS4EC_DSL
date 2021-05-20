@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class StaffTypeList_Editor extends DefaultNodeEditor {
+public class StaffTypeReference_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new StaffTypeList_EditorBuilder_a(editorContext, node).createCell();
+    return new StaffTypeReference_EditorBuilder_a(editorContext, node).createCell();
   }
 }

@@ -23,13 +23,13 @@ import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 
-public class Action_SubstituteMenu extends SubstituteMenuBase {
+public class StaffTypeReference_SubstituteMenu extends SubstituteMenuBase {
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_g3c1ep_a(), CONCEPTS.Action$K5));
-    result.add(new SMP_Subconcepts_g3c1ep_b());
+    result.add(new ConstraintsFilteringSubstituteMenuPartDecorator(new SMP_ReferenceScope_osz14j_a(), CONCEPTS.StaffTypeReference$tN));
+    result.add(new SMP_Subconcepts_osz14j_b());
     return result;
   }
 
@@ -37,7 +37,7 @@ public class Action_SubstituteMenu extends SubstituteMenuBase {
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for Action. Generated from implicit smart reference attribute.", new SNodePointer("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)", "3383707102503528548")));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("default substitute menu for StaffTypeReference. Generated from implicit smart reference attribute.", new SNodePointer("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)", "5402567240276654720")));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -46,11 +46,11 @@ public class Action_SubstituteMenu extends SubstituteMenuBase {
   }
 
 
-  public class SMP_ReferenceScope_g3c1ep_a extends ReferenceScopeSubstituteMenuPart {
+  public class SMP_ReferenceScope_osz14j_a extends ReferenceScopeSubstituteMenuPart {
 
-    public SMP_ReferenceScope_g3c1ep_a() {
+    public SMP_ReferenceScope_osz14j_a() {
       // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
-      super((SAbstractConcept) CONCEPTS.Action$K5, LINKS.staffType$Gb0d);
+      super((SAbstractConcept) CONCEPTS.StaffTypeReference$tN, LINKS.staffType$$i7d);
     }
     @NotNull
     @Override
@@ -65,15 +65,15 @@ public class Action_SubstituteMenu extends SubstituteMenuBase {
     }
 
   }
-  public class SMP_Subconcepts_g3c1ep_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
+  public class SMP_Subconcepts_osz14j_b extends ConceptMenusPart<SubstituteMenuItem, SubstituteMenuContext> {
     protected Collection getConcepts(final SubstituteMenuContext _context) {
-      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.Action$K5);
+      return ConceptDescendantsCache.getInstance().getDirectDescendants(CONCEPTS.StaffTypeReference$tN);
     }
     @NotNull
     @Override
     public List<SubstituteMenuItem> createItems(SubstituteMenuContext context) {
       context.getEditorMenuTrace().pushTraceInfo();
-      context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("include menus for all the direct subconcepts of " + "Action", null));
+      context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("include menus for all the direct subconcepts of " + "StaffTypeReference", null));
       try {
         return super.createItems(context);
       } finally {
@@ -88,10 +88,10 @@ public class Action_SubstituteMenu extends SubstituteMenuBase {
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Action$K5 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action");
+    /*package*/ static final SConcept StaffTypeReference$tN = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L, "ActionCards.structure.StaffTypeReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink staffType$Gb0d = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x4f415ebce3f66032L, "staffType");
+    /*package*/ static final SReferenceLink staffType$$i7d = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L, 0x4af9c647efda3aa5L, "staffType");
   }
 }

@@ -49,7 +49,7 @@
       <property role="IQ2ns" value="3383707102503528567" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="Actions" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="2VPlUUsG6x$" resolve="Action" />
     </node>
   </node>
@@ -58,12 +58,6 @@
     <property role="TrG5h" value="Action" />
     <property role="R4oN_" value="A task that must be completed" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="4X1nFNzXA0M" role="1TKVEi">
-      <property role="IQ2ns" value="5710949967853936690" />
-      <property role="20kJfa" value="staffType" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
-    </node>
     <node concept="1TJgyj" id="4X1nFNzWOml" role="1TKVEi">
       <property role="IQ2ns" value="5710949967853733269" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -76,6 +70,13 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="branch" />
       <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
+    </node>
+    <node concept="1TJgyj" id="4FTL$vJQLjT" role="1TKVEi">
+      <property role="IQ2ns" value="5402567240276710649" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="staffTypeReference" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4FTL$vJQzE0" resolve="StaffTypeReference" />
     </node>
     <node concept="PrWs8" id="4X1nFNzWQUs" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -103,24 +104,10 @@
     <property role="EcuMT" value="5710949967853733612" />
     <property role="TrG5h" value="StaffType" />
     <property role="R4oN_" value="Staff type in the ED" />
+    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4X1nFNzWPeB" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="4X1nFNzWOsu">
-    <property role="EcuMT" value="5710949967853733662" />
-    <property role="TrG5h" value="StaffTypeList" />
-    <property role="19KtqR" value="true" />
-    <property role="34LRSv" value="Staff Type List" />
-    <property role="R4oN_" value="A List of Staff Types" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="4X1nFNzWOtc" role="1TKVEi">
-      <property role="IQ2ns" value="5710949967853733708" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="StaffType" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
     </node>
   </node>
   <node concept="1TIwiD" id="4X1nFNzWQVM">
@@ -134,6 +121,17 @@
       <property role="20kJfa" value="destination" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4FTL$vJQzE0">
+    <property role="EcuMT" value="5402567240276654720" />
+    <property role="TrG5h" value="StaffTypeReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4FTL$vJQzE_" role="1TKVEi">
+      <property role="IQ2ns" value="5402567240276654757" />
+      <property role="20kJfa" value="staffType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
     </node>
   </node>
 </model>

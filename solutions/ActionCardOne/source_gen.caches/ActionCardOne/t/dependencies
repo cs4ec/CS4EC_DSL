@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="ActionCardOne.t.Doc">
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="ActionCardOne.t.WaitingRoom">
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardOne.t.placeholderNameSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+</dependenciesRoot>
+

@@ -54,7 +54,22 @@
         <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
         <module reference="9e98f4e2-decf-4e97-bf80-9109e8b759aa(jetbrains.mps.lang.feedback.context)" version="0" />
       </dependencyVersions>
-      <mapping-priorities />
+      <mapping-priorities>
+        <mapping-priority-rule kind="strictly_before">
+          <greater-priority-mapping>
+            <generator generatorUID="18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)" />
+            <external-mapping>
+              <mapping-node modelUID="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)" nodeID="5402567240274677796" />
+            </external-mapping>
+          </greater-priority-mapping>
+          <lesser-priority-mapping>
+            <generator generatorUID="18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)" />
+            <external-mapping>
+              <mapping-node modelUID="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)" nodeID="3383707102503528444" />
+            </external-mapping>
+          </lesser-priority-mapping>
+        </mapping-priority-rule>
+      </mapping-priorities>
     </generator>
   </generators>
   <sourcePath />

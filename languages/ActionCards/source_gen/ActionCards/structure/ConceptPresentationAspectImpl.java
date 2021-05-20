@@ -15,7 +15,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Branch;
   private ConceptPresentation props_GoToAction;
   private ConceptPresentation props_StaffType;
-  private ConceptPresentation props_StaffTypeList;
+  private ConceptPresentation props_StaffTypeReference;
 
   @Override
   @Nullable
@@ -69,14 +69,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StaffType = cpb.create();
         }
         return props_StaffType;
-      case LanguageConceptSwitch.StaffTypeList:
-        if (props_StaffTypeList == null) {
+      case LanguageConceptSwitch.StaffTypeReference:
+        if (props_StaffTypeReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("A List of Staff Types");
-          cpb.rawPresentation("Staff Type List");
-          props_StaffTypeList = cpb.create();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L, 0x4af9c647efda3aa5L, "staffType", "", "");
+          props_StaffTypeReference = cpb.create();
         }
-        return props_StaffTypeList;
+        return props_StaffTypeReference;
     }
     return null;
   }

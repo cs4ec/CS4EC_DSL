@@ -13,6 +13,8 @@ import java.util.Collection;
 import org.jetbrains.mps.openapi.language.SLanguage;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import java.util.Arrays;
+import jetbrains.mps.generator.runtime.TemplateMappingPriorityRule;
+import jetbrains.mps.generator.runtime.TemplateUtil;
 
 public class Generator extends TemplateModuleInterpreted2 {
 
@@ -39,4 +41,8 @@ public class Generator extends TemplateModuleInterpreted2 {
     return Arrays.asList(rv);
   }
 
+  @Override
+  public Collection<TemplateMappingPriorityRule> getPriorities() {
+    return TemplateUtil.asCollection(TemplateUtil.createStrictlyBeforeRule(TemplateUtil.createRefExternal("18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)", TemplateUtil.createRefNormal("r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)", "5402567240274677796", "5402567240274677796")), TemplateUtil.createRefExternal("18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)", TemplateUtil.createRefNormal("r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)", "3383707102503528444", "main"))));
+  }
 }

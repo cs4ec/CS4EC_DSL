@@ -54,17 +54,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="24kQdi" id="4X1nFNzWOtn">
-    <ref role="1XX52x" to="e88n:4X1nFNzWOsu" resolve="StaffTypeList" />
-    <node concept="3EZMnI" id="4X1nFNzWOty" role="2wV5jI">
-      <node concept="3F2HdR" id="4X1nFNzWOtD" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:4X1nFNzWOtc" resolve="StaffType" />
-        <node concept="2iRkQZ" id="4X1nFNzWOtG" role="2czzBx" />
-        <node concept="VPM3Z" id="4X1nFNzWOtH" role="3F10Kt" />
-      </node>
-      <node concept="l2Vlx" id="4X1nFNzWOt_" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="4X1nFNzWPIm">
     <ref role="1XX52x" to="e88n:4X1nFNzWOrG" resolve="StaffType" />
     <node concept="3EZMnI" id="4X1nFNzWPIx" role="2wV5jI">
@@ -89,14 +78,8 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="1iCGBv" id="4X1nFNzXA24" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:4X1nFNzXA0M" resolve="staffType" />
-        <node concept="1sVBvm" id="4X1nFNzXA26" role="1sWHZn">
-          <node concept="3F0A7n" id="4X1nFNzXA2n" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
+      <node concept="3F1sOY" id="4FTL$vJQLkF" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:4FTL$vJQLjT" resolve="staffTypeReference" />
       </node>
       <node concept="3EZMnI" id="4X1nFNzXEIw" role="3EZMnx">
         <node concept="l2Vlx" id="4X1nFNzXEIx" role="2iSdaV" />
@@ -160,6 +143,18 @@
         <node concept="VPM3Z" id="4X1nFNzXpqV" role="3F10Kt" />
       </node>
       <node concept="l2Vlx" id="4X1nFNzXpqN" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4FTL$vJQzFb">
+    <ref role="1XX52x" to="e88n:4FTL$vJQzE0" resolve="StaffTypeReference" />
+    <node concept="1iCGBv" id="4FTL$vJQzFm" role="2wV5jI">
+      <ref role="1NtTu8" to="e88n:4FTL$vJQzE_" resolve="staffType" />
+      <node concept="1sVBvm" id="4FTL$vJQzFo" role="1sWHZn">
+        <node concept="3F0A7n" id="4FTL$vJQzFv" role="2wV5jI">
+          <property role="1Intyy" value="true" />
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+      </node>
     </node>
   </node>
 </model>

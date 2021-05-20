@@ -13,8 +13,6 @@ import simcore.basicStructures.Desk;
 import simcore.action.basicAction.OrderAction;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.Signals.Orders.OccupyOrder;
-import simcore.basicStructures.Bed;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.conditions.PossibilityCondition;
@@ -83,7 +81,7 @@ public class Doctor extends Staff {
 
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
-    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this).andThen(new OccupyOrder().WithOccupiable(Bed.class)))));
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new OrderAction().WithPatient(((Patient) s.GetData("patient"))).WithOrder(new MoveToOrder().WithDestination(this))));
     actionBuilder.WithStep(new ActionStep().WithName("Inspect the patient").WithAction(new StayForTimeAction().WithTimeSpan(300)));
     this.InitDecideOnPatientPathway(s);
 
