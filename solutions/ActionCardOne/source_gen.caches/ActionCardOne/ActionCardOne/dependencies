@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="ActionCardOne.ActionCardOne.Doc">
+    <classNode dependClassName="EDLanguage.sandbox.TwoTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="ActionCardOne.ActionCardOne.EDBuilder">
+    <classNode dependClassName="EDLanguage.sandbox.Doc" />
+    <classNode dependClassName="EDLanguage.sandbox.Nurse" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
+    <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder" />
+    <classNode dependClassName="repast.simphony.context.space.grid.GridFactory" />
+    <classNode dependClassName="repast.simphony.context.space.grid.GridFactoryFinder" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.parameter.Parameters" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.continuous.NdPoint" />
+    <classNode dependClassName="repast.simphony.space.continuous.StrictBorders" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="repast.simphony.space.grid.GridBuilderParameters" />
+    <classNode dependClassName="repast.simphony.space.grid.SimpleGridAdder" />
+    <classNode dependClassName="repast.simphony.space.grid.StrictBorders" />
+    <classNode dependClassName="repast.simphony.valueLayer.GridValueLayer" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.PatientAdder" />
+    <classNode dependClassName="simcore.basicStructures.Wall" />
+    <classNode dependClassName="simcore.utilities.ModelParameterStore" />
+    <classNode dependClassName="simcore.utilities.PatientArrivalStore" />
+    <classNode dependClassName="simcore.utilities.StaffAdder" />
+    <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
+  </dependency>
+  <dependency className="ActionCardOne.ActionCardOne.Nurse">
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Action" />
+    <classNode dependClassName="simcore.action.ActionStep" />
+    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="ActionCardOne.ActionCardOne.TwoTriggerSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="ActionCardOne.ActionCardOne.WaitingRoom">
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+</dependenciesRoot>
+

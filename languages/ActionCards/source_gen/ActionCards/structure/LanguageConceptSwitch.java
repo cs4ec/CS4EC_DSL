@@ -13,9 +13,11 @@ public final class LanguageConceptSwitch {
   public static final int ActionCard = 1;
   public static final int ActionStep = 2;
   public static final int Branch = 3;
-  public static final int GoToAction = 4;
-  public static final int StaffType = 5;
-  public static final int StaffTypeReference = 6;
+  public static final int EDScenario = 4;
+  public static final int GoToAction = 5;
+  public static final int StaffNumber = 6;
+  public static final int StaffType = 7;
+  public static final int StaffTypeReference = 8;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L);
@@ -23,7 +25,9 @@ public final class LanguageConceptSwitch {
     builder.put(0x2ef557ae9cb06848L, ActionCard);
     builder.put(0x4f415ebce3f3455bL, ActionStep);
     builder.put(0x4f415ebce3f3456eL, Branch);
+    builder.put(0x4af9c647eff82e56L, EDScenario);
     builder.put(0x4f415ebce3f36ef2L, GoToAction);
+    builder.put(0x4af9c647eff82e7bL, StaffNumber);
     builder.put(0x4f415ebce3f346ecL, StaffType);
     builder.put(0x4af9c647efda3a80L, StaffTypeReference);
     myIndex = builder.seal();

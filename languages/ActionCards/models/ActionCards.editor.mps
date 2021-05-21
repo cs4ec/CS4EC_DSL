@@ -157,5 +157,60 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="4FTL$vJY2UJ">
+    <ref role="1XX52x" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
+    <node concept="3EZMnI" id="4FTL$vJY2UU" role="2wV5jI">
+      <node concept="3F0ifn" id="4FTL$vJY2V1" role="3EZMnx">
+        <property role="3F0ifm" value="Emergency Department" />
+      </node>
+      <node concept="3F0ifn" id="4FTL$vJY2V7" role="3EZMnx">
+        <property role="3F0ifm" value="---------------------------------" />
+        <node concept="pVoyu" id="4FTL$vJY2Vb" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4FTL$vJY2Vi" role="3EZMnx">
+        <property role="3F0ifm" value="Staff:" />
+        <node concept="pVoyu" id="4FTL$vJY2Vo" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="4FTL$vJYrhQ" role="3EZMnx">
+        <node concept="2iRkQZ" id="4FTL$vJYrhR" role="2iSdaV" />
+        <node concept="3F2HdR" id="4FTL$vJY2Vx" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:4FTL$vJY2U$" resolve="staffNumbers" />
+          <node concept="l2Vlx" id="4FTL$vJY2Vz" role="2czzBx" />
+          <node concept="pVoyu" id="4FTL$vJY2VF" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="4FTL$vJY2VH" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="4FTL$vJY2UX" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4FTL$vJY2VT">
+    <ref role="1XX52x" to="e88n:4FTL$vJY2TV" resolve="StaffNumber" />
+    <node concept="3EZMnI" id="4FTL$vJY2W4" role="2wV5jI">
+      <node concept="1iCGBv" id="4FTL$vJY2Wb" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:4FTL$vJY2U7" resolve="staff" />
+        <node concept="1sVBvm" id="4FTL$vJY2Wd" role="1sWHZn">
+          <node concept="3F0A7n" id="4FTL$vJY2Wk" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4FTL$vJY2Wy" role="3EZMnx">
+        <property role="3F0ifm" value="x" />
+      </node>
+      <node concept="3F0A7n" id="4FTL$vJY2WI" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:4FTL$vJY2U5" resolve="number" />
+      </node>
+      <node concept="l2Vlx" id="4FTL$vJY2W7" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

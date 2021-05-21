@@ -9,6 +9,7 @@ import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
 import simcore.action.ActionStep;
 import simcore.action.basicAction.MoveAction;
+import simcore.action.basicAction.SendSignalAction;
 
 public class Doc extends Actor {
 
@@ -27,6 +28,10 @@ public class Doc extends Actor {
     switch (s.getName()) {
       case "":
         break;
+      case "NewPatientArrive":
+        actionBuilder = new Action("One");
+        this.InitOne(s);
+        break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
         return actionBuilder;
@@ -39,13 +44,8 @@ public class Doc extends Actor {
     Signal sendSignalTemp = new Signal();
 
     actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(WaitingRoom.getInstance())));
-
-  }
-  public void InitTwo(Signal s) {
-
-    Signal sendSignalTemp = new Signal();
-
-    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(WaitingRoom.getInstance())));
+    sendSignalTemp = new TwoTriggerSignal();
+    actionBuilder.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
 
   }
 

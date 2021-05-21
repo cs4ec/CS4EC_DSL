@@ -10,13 +10,16 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
+import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActionCard = createDescriptorForActionCard();
   /*package*/ final ConceptDescriptor myConceptActionStep = createDescriptorForActionStep();
   /*package*/ final ConceptDescriptor myConceptBranch = createDescriptorForBranch();
+  /*package*/ final ConceptDescriptor myConceptEDScenario = createDescriptorForEDScenario();
   /*package*/ final ConceptDescriptor myConceptGoToAction = createDescriptorForGoToAction();
+  /*package*/ final ConceptDescriptor myConceptStaffNumber = createDescriptorForStaffNumber();
   /*package*/ final ConceptDescriptor myConceptStaffType = createDescriptorForStaffType();
   /*package*/ final ConceptDescriptor myConceptStaffTypeReference = createDescriptorForStaffTypeReference();
   private final LanguageConceptSwitch myIndexSwitch;
@@ -34,7 +37,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptBranch, myConceptGoToAction, myConceptStaffType, myConceptStaffTypeReference);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptBranch, myConceptEDScenario, myConceptGoToAction, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference);
   }
 
   @Override
@@ -49,8 +52,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActionStep;
       case LanguageConceptSwitch.Branch:
         return myConceptBranch;
+      case LanguageConceptSwitch.EDScenario:
+        return myConceptEDScenario;
       case LanguageConceptSwitch.GoToAction:
         return myConceptGoToAction;
+      case LanguageConceptSwitch.StaffNumber:
+        return myConceptStaffNumber;
       case LanguageConceptSwitch.StaffType:
         return myConceptStaffType;
       case LanguageConceptSwitch.StaffTypeReference:
@@ -100,6 +107,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.associate("targetAction", 0x4f415ebce3f345b2L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(false).origin("5710949967853733298").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForEDScenario() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "EDScenario", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e56L);
+    b.class_(false, false, true);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240278617686");
+    b.version(2);
+    b.aggregate("staffNumbers", 0x4af9c647eff82ea4L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e7bL).optional(true).ordered(true).multiple(true).origin("5402567240278617764").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForGoToAction() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "GoToAction", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f36ef2L);
     b.class_(false, false, false);
@@ -108,6 +123,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("destination", 0x4f415ebce3f36f0eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(false).ordered(true).multiple(false).origin("5710949967853743886").done();
     b.alias("Go to a place");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStaffNumber() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "StaffNumber", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e7bL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240278617723");
+    b.version(2);
+    b.property("number", 0x4af9c647eff82e85L).type(PrimitiveTypeId.INTEGER).origin("5402567240278617733").done();
+    b.associate("staff", 0x4af9c647eff82e87L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL).optional(false).origin("5402567240278617735").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForStaffType() {

@@ -13,7 +13,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActionCard;
   private ConceptPresentation props_ActionStep;
   private ConceptPresentation props_Branch;
+  private ConceptPresentation props_EDScenario;
   private ConceptPresentation props_GoToAction;
+  private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
 
@@ -54,6 +56,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Branch = cpb.create();
         }
         return props_Branch;
+      case LanguageConceptSwitch.EDScenario:
+        if (props_EDScenario == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("EDScenario");
+          props_EDScenario = cpb.create();
+        }
+        return props_EDScenario;
       case LanguageConceptSwitch.GoToAction:
         if (props_GoToAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -61,6 +70,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GoToAction = cpb.create();
         }
         return props_GoToAction;
+      case LanguageConceptSwitch.StaffNumber:
+        if (props_StaffNumber == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e7bL, 0x4af9c647eff82e87L, "staff", "", "");
+          props_StaffNumber = cpb.create();
+        }
+        return props_StaffNumber;
       case LanguageConceptSwitch.StaffType:
         if (props_StaffType == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
