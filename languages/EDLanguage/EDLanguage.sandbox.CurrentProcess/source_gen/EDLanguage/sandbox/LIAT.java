@@ -9,7 +9,7 @@ public class LIAT extends Test {
   private LIAT() {
     sensitivity = 1.0;
     specificity = 0.98;
-    processingTime = 30;
+    processingTime = 1800;
     name = "LIAT";
 
   }

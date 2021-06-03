@@ -854,27 +854,27 @@
         </node>
         <node concept="3clFbF" id="7lVoe4yrI$I" role="3cqZAp">
           <node concept="37vLTI" id="7lVoe4yrJiA" role="3clFbG">
-            <node concept="3cmrfG" id="7lVoe4yrJnU" role="37vLTx">
-              <property role="3cmrfH" value="1" />
-              <node concept="17Uvod" id="7lVoe4yrJx3" role="lGtFl">
+            <node concept="37vLTw" id="7lVoe4yrI$G" role="37vLTJ">
+              <ref role="3cqZAo" to="uux2:~Actor.mintMyMaxPatients" resolve="mintMyMaxPatients" />
+            </node>
+            <node concept="3cmrfG" id="4BMD7YhIU0O" role="37vLTx">
+              <property role="3cmrfH" value="0" />
+              <node concept="17Uvod" id="4BMD7YhIU9X" role="lGtFl">
                 <property role="2qtEX9" value="value" />
                 <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                <node concept="3zFVjK" id="7lVoe4yrJx6" role="3zH0cK">
-                  <node concept="3clFbS" id="7lVoe4yrJx7" role="2VODD2">
-                    <node concept="3clFbF" id="7lVoe4yrJxd" role="3cqZAp">
-                      <node concept="2OqwBi" id="7lVoe4yrJx8" role="3clFbG">
-                        <node concept="3TrcHB" id="7lVoe4yrJxb" role="2OqNvi">
+                <node concept="3zFVjK" id="4BMD7YhIU9Y" role="3zH0cK">
+                  <node concept="3clFbS" id="4BMD7YhIU9Z" role="2VODD2">
+                    <node concept="3clFbF" id="4BMD7YhIUjv" role="3cqZAp">
+                      <node concept="2OqwBi" id="4BMD7YhIUBW" role="3clFbG">
+                        <node concept="30H73N" id="4BMD7YhIUju" role="2Oq$k0" />
+                        <node concept="3TrcHB" id="4BMD7YhIUPe" role="2OqNvi">
                           <ref role="3TsBF5" to="3751:7lVoe4yrHCt" resolve="patientCapacity" />
                         </node>
-                        <node concept="30H73N" id="7lVoe4yrJxc" role="2Oq$k0" />
                       </node>
                     </node>
                   </node>
                 </node>
               </node>
-            </node>
-            <node concept="37vLTw" id="7lVoe4yrI$G" role="37vLTJ">
-              <ref role="3cqZAo" to="uux2:~Actor.mintMyMaxPatients" resolve="mintMyMaxPatients" />
             </node>
           </node>
         </node>
@@ -6016,11 +6016,16 @@
                 <node concept="3zFVjK" id="ijr0ZXzx0m" role="3zH0cK">
                   <node concept="3clFbS" id="ijr0ZXzx0n" role="2VODD2">
                     <node concept="3clFbF" id="ijr0ZXzx0t" role="3cqZAp">
-                      <node concept="2OqwBi" id="ijr0ZXzx0o" role="3clFbG">
-                        <node concept="3TrcHB" id="ijr0ZXzx0r" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:ijr0ZXzv27" resolve="ProcessingTime" />
+                      <node concept="17qRlL" id="4BMD7YhEPgq" role="3clFbG">
+                        <node concept="3cmrfG" id="4BMD7YhEPhI" role="3uHU7w">
+                          <property role="3cmrfH" value="60" />
                         </node>
-                        <node concept="30H73N" id="ijr0ZXzx0s" role="2Oq$k0" />
+                        <node concept="2OqwBi" id="ijr0ZXzx0o" role="3uHU7B">
+                          <node concept="3TrcHB" id="ijr0ZXzx0r" role="2OqNvi">
+                            <ref role="3TsBF5" to="3751:ijr0ZXzv27" resolve="ProcessingTime" />
+                          </node>
+                          <node concept="30H73N" id="ijr0ZXzx0s" role="2Oq$k0" />
+                        </node>
                       </node>
                     </node>
                   </node>

@@ -7,6 +7,7 @@
       <modulePath path="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/EDLanguage.sandbox.CurrentProcess.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/EDLanguage.sandbox.OnlyLFT.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/EDLanguage.sandbox.OnlyLIAT.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/EDLanguage.sandbox.TestingPassiveActions.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/languages/EDLanguage/sandbox/EDLanguage.sandbox.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/ActionCardOne/ActionCardOne.msd" folder="runtime" />

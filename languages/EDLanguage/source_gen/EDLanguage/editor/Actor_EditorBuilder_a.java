@@ -266,7 +266,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       final SProperty property = PROPS.patientCapacity$13cR;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no patientCapacity>");
+      editorCell.setDefaultText("");
       editorCell.setCellId("property_patientCapacity");
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);

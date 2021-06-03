@@ -12,7 +12,7 @@ public class LabSymptomaticPCR extends Test {
   private LabSymptomaticPCR() {
     sensitivity = 0.99;
     specificity = 0.95;
-    processingTime = 240;
+    processingTime = 14400;
     name = "LabSymptomaticPCR";
 
     HashMap returnMap = new HashMap();

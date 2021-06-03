@@ -9,7 +9,7 @@ public class SURESCREEN extends Test {
   private SURESCREEN() {
     sensitivity = 0.6990000000000001;
     specificity = 0.99;
-    processingTime = 15;
+    processingTime = 900;
     name = "SURESCREEN";
 
   }

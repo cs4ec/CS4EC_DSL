@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.DoctorOffice;
-import EDLanguage.sandbox.Nurse;
 import EDLanguage.sandbox.RedAdmissionBay;
 import EDLanguage.sandbox.SideRoomAdmissionBay;
 import repast.simphony.context.Context;
@@ -38,6 +36,7 @@ import simcore.action.basicAction.SendSignalAction;
 import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
+import simcore.action.basicAction.WaitAction;
 import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
 import simcore.action.basicAction.conditions.BedAvailableCondition;
 import simcore.action.basicAction.conditions.Condition;
@@ -561,7 +560,6 @@ public class Agent {
 			if(pAlternativeBay.getRoomType() == RedAdmissionBay.getInstance()) {
 				if(pPatientStatus == InfectionStatus.Symptomatic) {
 					//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
-//					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
 					if(curSRCapacity > 0) {
 						return true;
 					} else {
@@ -574,7 +572,6 @@ public class Agent {
 				if(pPatientStatus == InfectionStatus.Symptomatic) {
 					return true; // Patient can go to a SR
 				} else {
-//					if(RandomHelper.nextDouble() < pdblChanceUseSideRoom) {
 					if(curSRCapacity > 0) {
 						return true;
 					} else {
@@ -650,6 +647,7 @@ public class Agent {
 			if(a == myActiveAction) {
 				isIdle = true;
 				myActiveAction = null;
+				myCurrentActions.remove(a);
 			}
 			return;
 		}
@@ -657,13 +655,19 @@ public class Agent {
 		// If my active action is now passive, set myself as idle and add it to my current actions
 		if(a.getCurrentStep().isPassive()) {
 			isIdle = true;
-			myCurrentActions.add(a);
+			if(!myCurrentActions.contains(a)) {
+				myCurrentActions.add(a);
+			}
 			myActiveAction = null;
 		}
 
 		ActionFragment stepLogic = a.getCurrentStep().getStepLogic();
 		if (stepLogic instanceof StayForTimeAction) {
 			a.curTimeCount = ((StayForTimeAction) stepLogic).getTimeSpan();
+		}
+		
+		if (stepLogic instanceof WaitAction) {
+			a.curTimeCount = ((WaitAction) stepLogic).getWaitTime();
 		}
 
 		if (stepLogic instanceof StayForConditionAction) {

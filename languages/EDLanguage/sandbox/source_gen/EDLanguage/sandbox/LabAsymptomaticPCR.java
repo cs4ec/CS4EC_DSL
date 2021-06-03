@@ -12,7 +12,7 @@ public class LabAsymptomaticPCR extends Test {
   private LabAsymptomaticPCR() {
     sensitivity = 0.99;
     specificity = 0.95;
-    processingTime = 120;
+    processingTime = 7200;
     name = "LabAsymptomaticPCR";
 
     HashMap returnMap = new HashMap();
