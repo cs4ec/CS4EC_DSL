@@ -83,26 +83,19 @@
     <classNode extendsClassName="simcore.basicStructures.AdmissionBay" />
   </dependency>
   <dependency className="EDLanguage.sandbox.TestingPassiveActions.LFDDevice">
-    <classNode dependClassName="EDLanguage.sandbox.LFDTrackAndTraceSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LFDDevice" />
     <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
-    <classNode dependClassName="simcore.Signals.DirectSignal" />
-    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.action.Action" />
-    <classNode dependClassName="simcore.action.ActionStep" />
-    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
-    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
-    <classNode dependClassName="simcore.action.basicAction.SendSignalAction" />
-    <classNode dependClassName="simcore.action.basicAction.TestAction" />
-    <classNode dependClassName="simcore.action.basicAction.WaitAction" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
-    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.diagnosis.TestResult" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.TestingPassiveActions.LFDTrackAndTraceSignal">
@@ -123,13 +116,8 @@
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
-    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.action.Action" />
-    <classNode dependClassName="simcore.action.ActionStep" />
-    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
-    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
-    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.action.Behaviour" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.TestingPassiveActions.Lab">
@@ -163,27 +151,20 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.TestingPassiveActions.Receptionist">
-    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
+    <classNode dependClassName="EDLanguage.sandbox.Receptionist" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.action.Action" />
-    <classNode dependClassName="simcore.action.ActionStep" />
-    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
-    <classNode dependClassName="simcore.action.basicAction.MoveAction" />
-    <classNode dependClassName="simcore.action.basicAction.OccupyAction" />
-    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
-    <classNode dependClassName="simcore.action.basicAction.StayForTimeAction" />
-    <classNode dependClassName="simcore.action.basicAction.TestAction" />
-    <classNode dependClassName="simcore.action.basicAction.WaitAction" />
-    <classNode dependClassName="simcore.action.basicAction.conditions.TestResultCondition" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.action.PassiveBehaviourStep" />
     <classNode dependClassName="simcore.agents.Patient" />
-    <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>
   <dependency className="EDLanguage.sandbox.TestingPassiveActions.RedAdmissionBay">
@@ -215,13 +196,8 @@
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
-    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.action.Action" />
-    <classNode dependClassName="simcore.action.ActionStep" />
-    <classNode dependClassName="simcore.action.basicAction.DischargeAction" />
-    <classNode dependClassName="simcore.action.basicAction.OrderAction" />
-    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.action.Behaviour" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="EDLanguage.sandbox.TestingPassiveActions.TaskRoom">

@@ -27,8 +27,11 @@ import simcore.Signals.Orders.Order;
 import simcore.action.Action;
 import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
+import simcore.action.Behaviour;
+import simcore.action.ConditionalActionStep;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
+import simcore.action.PassiveBehaviourStep;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
 import simcore.action.basicAction.OrderAction;
@@ -72,8 +75,8 @@ public class Agent {
 	// Record the building that the agent is currently inside
 	protected Room curInside;
 	protected Occupiable curOccupying;
-	protected List<Action> myCurrentActions = new ArrayList<Action>();
-	protected Action myActiveAction;
+	protected List<Behaviour> myCurrentActions = new ArrayList<Behaviour>();
+	protected Behaviour myActiveAction;
 	protected List<GridPoint> curPath;
 	protected boolean isIdle;
 	protected List<Field> fields;
@@ -92,19 +95,144 @@ public class Agent {
 		curInside = null;
 	}
 
-	public void InitAction() {
-		ActionFragment firstStep = myActiveAction.getSteps().get(0).getStepLogic();
-		if ((firstStep) instanceof StayForTimeAction) {
-			myActiveAction.curTimeCount = ((StayForTimeAction) firstStep).getTimeSpan();
+	public void executeCurrentActions() {
+//		System.out.println("-----------------------------------------");
+//		LogMission();
+		
+		// Tick through all my passive actions
+		List<Behaviour> currentPassiveActions = myCurrentActions.stream().filter(a -> a.getCurrentStep() instanceof PassiveBehaviourStep).collect(Collectors.toList());
+		for (Behaviour action : currentPassiveActions) {
+			stepAction(action);
 		}
 
-		if ((firstStep) instanceof StayForConditionAction) {
-			myActiveAction.curCondition = ((StayForConditionAction) firstStep).getStayCondition();
+		// Then do my `active' action 
+		if(myActiveAction != null) {
+			stepAction(myActiveAction);
 		}
-
-		executeCurrentActions();
+		
+//		System.out.println("-----------------------------------------");
 	}
+	
+	public void stepAction(Behaviour action) {
+		// If the mission is complete, update my status accordingly
+		if (action.isComplete()) {
+			if(action == myActiveAction) {
+				isIdle = true;
+				myActiveAction = null;
+				myCurrentActions.remove(action);
+			}
+			return;
+		} else {
+			action.step();
+		}
+	}
+	
+//	public void InitAction() {
+//		ActionFragment firstStep = myActiveAction.getSteps().get(0).getStepLogic();
+//		if ((firstStep) instanceof StayForTimeAction) {
+//			myActiveAction.curTimeCount = ((StayForTimeAction) firstStep).getTimeSpan();
+//		}
+//
+//		if ((firstStep) instanceof StayForConditionAction) {
+//			myActiveAction.curCondition = ((StayForConditionAction) firstStep).getStayCondition();
+//		}
+//
+//		executeCurrentActions();
+//	}
+	
+//	protected void doAction(Action a) {
+//		ActionStep curStep = a.getCurrentStep();
+//
+//		if (curStep instanceof ConsequenceStep) {
+//			UpdateState(((ConsequenceStep) curStep).getConsequence());
+//			NextStep(a);
+//		}
+//
+//		// Get the current logic step and initialise it
+//		ActionFragment stepLogic = curStep.getStepLogic();
+//		InitActionFragment(stepLogic);
+//
+//		// Move Action
+//		if (stepLogic instanceof MoveAction) {
+//			MoveTo(a, ((MoveAction) stepLogic).getDestinationObject());
+//		}
+//
+//		// Occupy Action
+//		if (stepLogic instanceof OccupyAction) {
+//			// If there is an occupiable free, move towards it
+//			if (((OccupyAction) stepLogic).getConcreteDestination() != null) {
+//				MoveTo(a, ((OccupyAction) stepLogic).getConcreteDestination());
+//			} else { // Otherwise, ToDO: Add behaviour here
+//				NextStep(a);
+//			}
+//		}
+//	}
+	
+	/**
+	 * If the current Agent action is to move somewhere, then process that here
+	 * 
+	 * @param stepLogic The current step of the Agent's Mission
+	 */
+//	protected void MoveTo(Action a, Object target) {
+//		// If I am already here, dont do anything
+//		if (ImAt(target)) {
+//			NextStep(a);
+//			return;
+//		} 
+//
+//		// Move in the physical space
+//		MoveTowards(target);
+//
+//		// If the agent is moving towards an occupiable (bed, seat etc)
+//		if (target instanceof Occupiable) {
+//			Occupiable targetOccupiable = (Occupiable) target;
+//			// if this agent is already there, continue
+//			if (targetOccupiable.getOccupier() == this) {
+//				NextStep(a);
+//			} else { 
+//				if (ImAt(targetOccupiable)) {
+//					targetOccupiable.setOccupier(this);
+//				}
+//			}
+//		}
+//		// Else moving towards the room
+//		else if (target instanceof Room) {
+//			Room targetLocation = (Room) target;
+//			// if this agent already in room, execute next step
+//			if (targetLocation.WithInside(this)) {
+//				NextStep(a);
+//			}
+//		}
+//	}
+	
+	
+	/*
+	 * An alternative movement implementation that ignores any pathfinding or obstacles, heads straight line to target
+	 */
+	public void CrowFlyMovement(GridPoint pt) {
+		NdPoint myPoint = space.getLocation(this);
 
+		if (!ImAt(pt)) {
+			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
+			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
+			space.moveByVector(this, 1, angle, 0);
+			myPoint = space.getLocation(this);
+			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+		}
+	}
+	
+	// A simplified move action where if I am following another agent, I will not use full pathfinding but instead 
+	// copy the path of the agent I am following
+	public void Follow(Agent target) {
+		NdPoint myPoint = space.getLocation(this);
+		GridPoint targetPoint = grid.getLocation(target);
+		
+		NdPoint otherPoint = new NdPoint(targetPoint.getX(), targetPoint.getY());
+		space.moveTo(this, otherPoint.getX(), otherPoint.getY());
+		myPoint = space.getLocation(this);
+		grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+	}
+	
 	public void InitActionFragment(ActionFragment curActionFragment) {
 		if (curActionFragment instanceof OccupyAction) {
 			InitOccpuyAction((OccupyAction) curActionFragment);
@@ -134,7 +262,7 @@ public class Agent {
 			stepLogic.setConcreteDestination(SelectOccupiable(curInside,target));
 		} else if (targetOccupiable.getOccupier() != null && targetOccupiable.getOccupier() != this) {
 			if (targetOccupiable instanceof Seat) {
-				FindASeat();
+				FindAnOccupiable(Seat.class);
 			}
 		}
 	}
@@ -154,101 +282,9 @@ public class Agent {
 		
 		stepLogic.setTargetGridPoints(grid.getLocation(stepLogic.getDestinationObject()));
 	}
-
-	public void executeCurrentActions() {
-//		System.out.println("-----------------------------------------");
-//		LogMission();
-		
-		// Iterate through all my passive actions
-		List<Action> currentPassiveActions = myCurrentActions.stream().filter(a -> a.getCurrentStep().isPassive()).collect(Collectors.toList());
-		for (Action action : currentPassiveActions) {
-			doAction(action);
-		}
-
-		// Then do my active action 
-		if(myActiveAction != null) {
-			doAction(myActiveAction);
-		}
-		
-//		System.out.println("-----------------------------------------");
-	}
 	
-	protected void doAction(Action a) {
-		ActionStep curStep = a.getCurrentStep();
-
-		if (curStep instanceof ConsequenceStep) {
-			UpdateState(((ConsequenceStep) curStep).getConsequence());
-			NextStep(a);
-		}
-
-		// Get the current logic step and initialise it
-		ActionFragment stepLogic = curStep.getStepLogic();
-		InitActionFragment(stepLogic);
-
-		// Move action
-		if (stepLogic instanceof MoveAction) {
-			MoveTo(a, ((MoveAction) stepLogic).getDestinationObject());
-		}
-
-		if (stepLogic instanceof OccupyAction) {
-			// If there is an occupiable free, move towards it
-			if (((OccupyAction) stepLogic).getConcreteDestination() != null) {
-				MoveTo(a, ((OccupyAction) stepLogic).getConcreteDestination());
-			} else { // Otherwise, ToDO: Add behaviour here
-				NextStep(a);
-			}
-		}
-	}
-
-	/**
-	 * Print out the status of the Agent's current active mission
-	 */
-	protected void LogMission() {
-		System.out.println(this);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
-		System.out.println("current mission: " + myActiveAction + ": " + myActiveAction.getName());
-		System.out.println(
-				"cur action step: " + myActiveAction.curActionStep + ": " + myActiveAction.getCurrentStep().getName());
-	}
 	
-	/**
-	 * If the current Agent action is to move somewhere, then process that here
-	 * 
-	 * @param stepLogic The current step of the Agent's Mission
-	 */
-	protected void MoveTo(Action a, Object target) {
-		// If I am already here, dont do anything
-		if (ImAt(target)) {
-			NextStep(a);
-			return;
-		} 
-
-		// Move in the physical space
-		MoveTowards(target);
-
-		// If the agent is moving towards an occupiable (bed, seat etc)
-		if (target instanceof Occupiable) {
-			Occupiable targetOccupiable = (Occupiable) target;
-			// if this agent is already there, continue
-			if (targetOccupiable.getOccupier() == this) {
-				NextStep(a);
-			} else { 
-				if (ImAt(targetOccupiable)) {
-					targetOccupiable.setOccupier(this);
-				}
-			}
-		}
-		// Else moving towards the room
-		else if (target instanceof Room) {
-			Room targetLocation = (Room) target;
-			// if this agent already in room, execute next step
-			if (targetLocation.WithInside(this)) {
-				NextStep(a);
-			}
-		}
-	}
-
+	// ----------------------------------- AUX METHODS ---------------------
 	// Given a RoomType, select a Location of that RoomType
 	private Room SelectLocation(RoomType pRoomType) {
 		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
@@ -261,30 +297,13 @@ public class Agent {
 		}
 	}
 	
-	private double EvaluateRoomChoice(Room pRoom) {
-		int pRoomCapacity = pRoom.getCurrentCapacity();
-		if(pRoom.getOccupiers().contains(this)) {
-			pRoomCapacity--;
-		}
-		if(pRoomCapacity > 0) {
-			return Double.MAX_VALUE;
-		} else {
-			return CalcDistance(grid.getLocation(this), grid.getLocation(pRoom));
-		}
-	}
-
-	// Agent has entered the room and now will find a seat to take and move towards
-	// it
-	protected void FindASeat() {
-		myActiveAction = new Action("TakeSeat").WithStep(
-				new ActionStep().WithName("move to seat").WithAction(new OccupyAction().WithTarget(Seat.class)));
-	}
-	
+	// Create an action plan to select and occupy an object of the specified type
 	protected void FindAnOccupiable(Class occupiableType) {
-		myActiveAction = new Action("TakeOccupiable").WithStep(
-				new ActionStep().WithName("move to a " + occupiableType.getName()).WithAction(new OccupyAction().WithTarget(occupiableType)));
+//		myActiveAction = new Action("TakeOccupiable").WithStep(
+//				new ActionStep().WithName("move to a " + occupiableType.getName()).WithAction(new OccupyAction().WithTarget(occupiableType)));
 	}
 	
+	// Utility method to select an occupiable of a given type
 	protected Occupiable SelectOccupiable(Room destination, Class occupiableType) {
 		ArrayList<Occupiable> plstEmptyOccupiables = (ArrayList<Occupiable>) destination.getAllEmptyOcupiablesOfType(occupiableType);
 		if (!plstEmptyOccupiables.isEmpty()) {
@@ -294,6 +313,7 @@ public class Agent {
 		}
 		return null;
 	}
+	
 	/*
 	 * MovaTowards function is called by all the agents to decide and execute one's
 	 * next Move Step by is target object. If a target is of class Location, set the
@@ -353,31 +373,29 @@ public class Agent {
 		}
 	}
 	
-	/*
-	 * An alternative movement implementation that ignores any pathfinding or obstacles, heads straight line to target
-	 */
-	public void CrowFlyMovement(GridPoint pt) {
-		NdPoint myPoint = space.getLocation(this);
-
-		if (!ImAt(pt)) {
-			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
-			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
-			space.moveByVector(this, 1, angle, 0);
-			myPoint = space.getLocation(this);
-			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+	// Utility method to evaluate the utility of a room for selection
+	private double EvaluateRoomChoice(Room pRoom) {
+		int pRoomCapacity = pRoom.getCurrentCapacity();
+		if(pRoom.getOccupiers().contains(this)) {
+			pRoomCapacity--;
+		}
+		if(pRoomCapacity > 0) {
+			return Double.MAX_VALUE;
+		} else {
+			return CalcDistance(grid.getLocation(this), grid.getLocation(pRoom));
 		}
 	}
 	
-	// A simplified move action where if I am following another agent, I will not use full pathfinding but instead 
-	// copy the path of the agent I am following
-	public void Follow(Agent target) {
-		NdPoint myPoint = space.getLocation(this);
-		GridPoint targetPoint = grid.getLocation(target);
-		
-		NdPoint otherPoint = new NdPoint(targetPoint.getX(), targetPoint.getY());
-		space.moveTo(this, otherPoint.getX(), otherPoint.getY());
-		myPoint = space.getLocation(this);
-		grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+	/**
+	 * Print out the status of the Agent's current active mission
+	 */
+	protected void LogMission() {
+		System.out.println(this);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
+		System.out.println("current mission: " + myActiveAction + ": " + myActiveAction);
+		System.out.println(
+				"cur action step: " + myActiveAction.getCurrentStep() + ": " + myActiveAction.getCurrentStep());
 	}
 
 	// 判断当前位置是否在目标处
@@ -491,7 +509,7 @@ public class Agent {
 		}
 		
 		if(c instanceof TestResultCondition) {
-			TestResult ptestResult = ((TestResultCondition) c).getTestType().TestPatient(((TestResultCondition) c).getPatient(), 0.0);
+			TestResult ptestResult = ((TestResultCondition) c).getTestType().TestPatient(((TestResultCondition) c).getPatient());
 			return ptestResult.isInfected();
 		}
 		
@@ -637,43 +655,52 @@ public class Agent {
 
 		return false;
 	}
-
-	public void NextStep(Action a) {
-		a.curActionStep++;
-		
-		// If the mission is complete, update my status accordingly
-		if (a.isComplete()) {
-			a.curActionStep = 0;
-			if(a == myActiveAction) {
-				isIdle = true;
-				myActiveAction = null;
-				myCurrentActions.remove(a);
-			}
-			return;
-		}
-		
-		// If my active action is now passive, set myself as idle and add it to my current actions
-		if(a.getCurrentStep().isPassive()) {
-			isIdle = true;
-			if(!myCurrentActions.contains(a)) {
-				myCurrentActions.add(a);
-			}
-			myActiveAction = null;
-		}
-
-		ActionFragment stepLogic = a.getCurrentStep().getStepLogic();
-		if (stepLogic instanceof StayForTimeAction) {
-			a.curTimeCount = ((StayForTimeAction) stepLogic).getTimeSpan();
-		}
-		
-		if (stepLogic instanceof WaitAction) {
-			a.curTimeCount = ((WaitAction) stepLogic).getWaitTime();
-		}
-
-		if (stepLogic instanceof StayForConditionAction) {
-			a.curCondition = ((StayForConditionAction) stepLogic).getStayCondition();
-		}
-	}
+//
+//	public void NextStep(Action a) {
+//		//If the finished action step was a conditional, evaluate what branch should be chosen next
+//		if(a.getCurrentStep() instanceof ConditionalActionStep) {
+//			ConditionalActionStep branch = ((ConditionalActionStep) a.getCurrentStep());
+//			Condition branchCondition = branch.getCondition();
+//			a.injectSteps(branch.Evaluate(CheckCondition(branchCondition)));
+//		}
+//		
+//		// Iterate the action step
+//		a.curActionStep++;
+//		
+//		// If the mission is complete, update my status accordingly
+//		if (a.isComplete()) {
+//			a.curActionStep = 0;
+//			if(a == myActiveAction) {
+//				isIdle = true;
+//				myActiveAction = null;
+//				myCurrentActions.remove(a);
+//			}
+//			return;
+//		}
+//		
+//		// If my active action has turned passive, set myself as idle and add it to my current actions backlog
+//		if(a.getCurrentStep().isPassive()) {
+//			isIdle = true;
+//			if(!myCurrentActions.contains(a)) {
+//				myCurrentActions.add(a);
+//			}
+//			myActiveAction = null;
+//		}		
+//
+//		// Initialise the action fragment
+//		ActionFragment stepLogic = a.getCurrentStep().getStepLogic();
+//		if (stepLogic instanceof StayForTimeAction) {
+//			a.curTimeCount = ((StayForTimeAction) stepLogic).getTimeSpan();
+//		}
+//		
+//		if (stepLogic instanceof WaitAction) {
+//			a.curTimeCount = ((WaitAction) stepLogic).getWaitTime();
+//		}
+//
+//		if (stepLogic instanceof StayForConditionAction) {
+//			a.curCondition = ((StayForConditionAction) stepLogic).getStayCondition();
+//		}
+//	}
 
 	public EDMap ReadMap() {
 		return ToolBox().ReadMap(grid);

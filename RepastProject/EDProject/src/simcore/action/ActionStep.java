@@ -2,8 +2,8 @@ package simcore.action;
 
 public class ActionStep {
 	
-	private String name;
-	private ActionFragment stepLogic;
+	protected String name;
+	protected ActionFragment stepLogic;
 	
 	public ActionStep() {
 		

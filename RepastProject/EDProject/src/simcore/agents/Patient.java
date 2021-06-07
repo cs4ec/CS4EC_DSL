@@ -31,6 +31,7 @@ import simcore.Signals.Orders.StopOrder;
 import simcore.action.basicAction.conditions.PatientOutcomes;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
+import simcore.basicStructures.Seat;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
 import simcore.diagnosis.InfectionState;
@@ -84,11 +85,9 @@ public class Patient extends Agent {
 			myActiveAction = null; // Reset/Remove any independent actions, orders take priority
 			ExecOrder(curOrder);
 		} else if(myActiveAction != null) { // Else, do I have an independent action to take?
-			if(myActiveAction.getName() == "TakeSeat") {
-			}
 			if (isIdle) {
 				isIdle = false;
-				InitAction();
+//				InitAction();
 			} else {
 				executeCurrentActions();
 			}
@@ -113,7 +112,7 @@ public class Patient extends Agent {
 				if (targetLocation.WithInside(this)) {
 					//... and this room is a waiting room, the patient will now set itself the action of taking a seat
 					if (targetLocation.getRoomType() instanceof WaitingRoom) {
-						FindASeat();
+						FindAnOccupiable(Seat.class);
 					} else if (((MoveToOrder) order).getOccupiable() != null) {
 						FindAnOccupiable(((MoveToOrder) order).getOccupiable());
 					}

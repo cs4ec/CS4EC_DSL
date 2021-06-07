@@ -12,6 +12,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import repast.simphony.context.Context;
+import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
@@ -27,8 +28,10 @@ import simcore.Signals.Orders.Order;
 import simcore.action.Action;
 import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
+import simcore.action.Behaviour;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
+import simcore.action.PassiveBehaviourStep;
 import simcore.action.basicAction.AdmitAction;
 import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.MoveAction;
@@ -61,10 +64,13 @@ public class Actor extends Agent {
 	  protected List<Patient> mlstMyPatients = new ArrayList<Patient>();
 	  protected List<Patient> mlstSeenPatients = new ArrayList<Patient>();
 	  protected int mintMyMaxPatients = 1;
+	  protected Schedule schedule;
+
 	
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid) {
 		super(space, grid);
 		this.isIdle = true;
+		schedule = new Schedule();
 //		this.curTimeCount = 0;
 //		this.curCondition = null;
 
@@ -119,14 +125,12 @@ public class Actor extends Agent {
 	
 	public void Perceive() {	
 		Board board = ReadBoard();
-		
-		
 		//If my active action has now moved into a passive one -> Pick a new Active Action
 		// If my passive action has moved to active -> consider that as a candidate
 
 		// If I do not have a current active action, then select one
 		if (isIdle) {
-			List<Action> plstReadyActions = myCurrentActions.stream().filter(a -> !a.getCurrentStep().isPassive()).collect(Collectors.toList());
+			List<Behaviour> plstReadyActions = myCurrentActions.stream().filter(a -> !(a.getCurrentStep() instanceof PassiveBehaviourStep)).collect(Collectors.toList());
 			
 			// If no active actions ongoing, then look for new signals
 			if(plstReadyActions.isEmpty()) {
@@ -135,22 +139,53 @@ public class Actor extends Agent {
 				if (s != null) {
 					board.board.remove(s);
 					isIdle = false;
-					Action signalAction = BuildActionFromSignal(s);
-					if(signalAction != null && !signalAction.getCurrentStep().isPassive()) {
+					Behaviour signalAction = BuildActionFromSignal(s);
+					if(signalAction != null && !(signalAction.getCurrentStep() instanceof PassiveBehaviourStep)) {
+						myCurrentActions.add(signalAction);
 						myActiveAction = signalAction;
-						InitAction();
+//						InitAction();
 					}
 				}
 			} else {
-				Action myCurrentAction = plstReadyActions.get(0);
+				Behaviour myCurrentAction = plstReadyActions.get(0);
 				myActiveAction = myCurrentAction;
 			}
 		}
 
-		
-		
 		executeCurrentActions();
 	}
+	
+//	public void Perceive() {	
+//		Board board = ReadBoard();
+//		//If my active action has now moved into a passive one -> Pick a new Active Action
+//		// If my passive action has moved to active -> consider that as a candidate
+//
+//		// If I do not have a current active action, then select one
+//		if (isIdle) {
+//			List<Action> plstReadyActions = myCurrentActions.stream().filter(a -> !a.getCurrentStep().isPassive()).collect(Collectors.toList());
+//			
+//			// If no active actions ongoing, then look for new signals
+//			if(plstReadyActions.isEmpty()) {
+//				Signal s = searchForSignals(board);
+//				// If we now have a signal, build the action for which this signal is a trigger
+//				if (s != null) {
+//					board.board.remove(s);
+//					isIdle = false;
+//					Action signalAction = BuildActionFromSignal(s);
+//					if(signalAction != null && !signalAction.getCurrentStep().isPassive()) {
+//						myCurrentActions.add(signalAction);
+//						myActiveAction = signalAction;
+//						InitAction();
+//					}
+//				}
+//			} else {
+//				Action myCurrentAction = plstReadyActions.get(0);
+//				myActiveAction = myCurrentAction;
+//			}
+//		}
+//
+//		executeCurrentActions();
+//	}
 
 //	public void Perceive() {		
 //		if (isIdle) {
@@ -223,122 +258,121 @@ public class Actor extends Agent {
 		return null;
 	}
 	
-	@Override
-	protected void doAction(Action a) {
-		ActionStep curStep = a.getCurrentStep();
-
-		if (curStep instanceof ConsequenceStep) {
-			UpdateState(((ConsequenceStep) curStep).getConsequence());
-			NextStep(a);
-//			ExecMission();   //Removed because not sure why this is here - I think because we call next step() we should be able to carry on here. Maybe if there are multiple consequences this wouldnt work
-		}
-
-		// Get the current logic step and initialise it
-		ActionFragment stepLogic = curStep.getStepLogic();
-		InitActionFragment(stepLogic);
-		
-		// Discharge, End Visit Action
-		if(stepLogic instanceof DischargeAction) {
-			Patient p = ((DischargeAction)stepLogic).getPatient();
-			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
-			for (Actor actor : plstAssignedStaff) {
-				actor.deAssignPatient(p);
-			}
-			p.setDischarged();
-			NextStep(a);
-		}
-		
-		// Admit, End Visit Action
-		if(stepLogic instanceof AdmitAction) {
-			Patient p = ((AdmitAction)stepLogic).getPatient();
-			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
-			for (Actor actor : plstAssignedStaff) {
-				actor.deAssignPatient(p);
-			}
-
-			NextStep(a);
-		}
-		
-		// Move action
-		if (stepLogic instanceof MoveAction) {
-			MoveTo(a, ((MoveAction) stepLogic).getDestinationObject());
-		}
-		
-		if(stepLogic instanceof OccupyAction) {
-			// If there is an occupiable free, move towards it
-			if(((OccupyAction) stepLogic).getConcreteDestination() != null) {
-				MoveTo(a, ((OccupyAction) stepLogic).getConcreteDestination());
-			} else { // Otherwise, ToDO: Add behaviour here
-				NextStep(a);
-			}
-		}
-		
-		//Test Action
-		if(stepLogic instanceof TestAction) {
-			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient(), 0.0);
-			NextStep(a);
-		}
-
-		// Stay Action
-		if (stepLogic instanceof StayAction) {
-			// Stay for some set time
-			if (stepLogic instanceof StayForTimeAction) {
-				a.tick();
-				// If the wait time has elapsed, then do the next step
-				if (a.curTimeCount == 0) {
-					NextStep(a);
-					return;
-				} else {
-					return;
-				}
-			}
-
-			// Stay until some condition met
-			if (stepLogic instanceof StayForConditionAction) {
-				UpdateState(((StayForConditionAction) stepLogic).getConsequence());
-				if (CheckCondition(a.curCondition)) {
-					NextStep(a);
-					return;
-				} else {
-					return;
-				}
-			}
-		}
-		
-		if (stepLogic instanceof WaitAction) {
-			a.tick();
-			// If the wait time has elapsed, then do the next step
-			if (a.curTimeCount == 0) {
-				NextStep(a);
-				return;
-			} else {
-				return;
-			}
-		}
-
-		// Send Signal Action
-		if (stepLogic instanceof SendSignalAction) {
-			Signal s = ((SendSignalAction) stepLogic).getSignal();
-			Board b = ReadBoard();
-			b.PushMission(s);
-			NextStep(a);
-			return;
-		}
-
-		// Order Action
-		if (stepLogic instanceof OrderAction) {
-			Patient p = ((OrderAction) stepLogic).getOrderTarget();
-			Order o = ((OrderAction) stepLogic).getOrderContent();
-
-//			System.out.println("Order " + p + " To " + o);
-
-			p.TakeOrder(o);
-			NextStep(a);
-			return;
-		}
-	}
+//	@Override
+//	protected void doAction(Action a) {
+//		ActionStep curStep = a.getCurrentStep();
+//
+//		if (curStep instanceof ConsequenceStep) {
+//			UpdateState(((ConsequenceStep) curStep).getConsequence());
+//			NextStep(a);
+//		}
+//
+//		// Get the current logic step and initialise it
+//		ActionFragment stepLogic = curStep.getStepLogic();
+//		InitActionFragment(stepLogic);
+//		
+//		// Discharge, End Visit Action
+//		if(stepLogic instanceof DischargeAction) {
+//			Patient p = ((DischargeAction)stepLogic).getPatient();
+//			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
+//			for (Actor actor : plstAssignedStaff) {
+//				actor.deAssignPatient(p);
+//			}
+//			p.setDischarged();
+//			NextStep(a);
+//		}
+//		
+//		// Admit, End Visit Action
+//		if(stepLogic instanceof AdmitAction) {
+//			Patient p = ((AdmitAction)stepLogic).getPatient();
+//			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
+//			for (Actor actor : plstAssignedStaff) {
+//				actor.deAssignPatient(p);
+//			}
+//
+//			NextStep(a);
+//		}
+//		
+//		// Move action
+//		if (stepLogic instanceof MoveAction) {
+//			MoveTo(a, ((MoveAction) stepLogic).getDestinationObject());
+//		}
+//		
+//		if(stepLogic instanceof OccupyAction) {
+//			// If there is an occupiable free, move towards it
+//			if(((OccupyAction) stepLogic).getConcreteDestination() != null) {
+//				MoveTo(a, ((OccupyAction) stepLogic).getConcreteDestination());
+//			} else { // Otherwise, ToDO: Add behaviour here
+//				NextStep(a);
+//			}
+//		}
+//		
+//		//Test Action
+//		if(stepLogic instanceof TestAction) {
+//			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient());
+//			NextStep(a);
+//		}
+//
+//		// Stay Action
+//		if (stepLogic instanceof StayAction) {
+//			// Stay for some set time
+//			if (stepLogic instanceof StayForTimeAction) {
+//				a.tick();
+//				// If the wait time has elapsed, then do the next step
+//				if (a.curTimeCount == 0) {
+//					NextStep(a);
+//					return;
+//				} else {
+//					return;
+//				}
+//			}
+//
+//			// Stay until some condition met
+//			if (stepLogic instanceof StayForConditionAction) {
+//				UpdateState(((StayForConditionAction) stepLogic).getConsequence());
+//				if (CheckCondition(a.curCondition)) {
+//					NextStep(a);
+//					return;
+//				} else {
+//					return;
+//				}
+//			}
+//		}
+//		
+//		if (stepLogic instanceof WaitAction) {
+//			a.tick();
+//			// If the wait time has elapsed, then do the next step
+//			if (a.curTimeCount == 0) {
+//				NextStep(a);
+//				return;
+//			} else {
+//				return;
+//			}
+//		}
+//
+//		// Send Signal Action
+//		if (stepLogic instanceof SendSignalAction) {
+//			Signal s = ((SendSignalAction) stepLogic).getSignal();
+//			Board b = ReadBoard();
+//			b.PushMission(s);
+//			NextStep(a);
+//			return;
+//		}
+//
+//		// Order Action
+//		if (stepLogic instanceof OrderAction) {
+//			Patient p = ((OrderAction) stepLogic).getOrderTarget();
+//			Order o = ((OrderAction) stepLogic).getOrderContent();
+//
+////			System.out.println("Order " + p + " To " + o);
+//
+//			p.TakeOrder(o);
+//			NextStep(a);
+//			return;
+//		}
+//	}
 	
-	private void deAssignPatient(Patient p) {
+	public void deAssignPatient(Patient p) {
 		if(mlstMyPatients.contains(p)) {
 			mlstMyPatients.remove(p);
 			if(!mlstSeenPatients.contains(p)) {
@@ -351,7 +385,7 @@ public class Actor extends Agent {
 	 * ToDo: Add more complex behaviour when assigning a new mission to myself
 	 * @param s Incoming signal to trigger a new Behaviour
 	 */
-	public Action BuildActionFromSignal(Signal s) {
+	public Behaviour BuildActionFromSignal(Signal s) {
 		return null;
 
 	}

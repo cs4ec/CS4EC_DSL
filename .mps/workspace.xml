@@ -10,101 +10,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6cb34ac-6283-4417-93b4-3970d05c4a6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/EDLanguage.sandbox.TestingPassiveActions.msd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/AmberAdmissionBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Amber_AdmissionBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/ConductTrackAndTraceLFDSignal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/DoctorOffice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Entrance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Exit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/GreenAdmissionBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Green_AdmissionBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LFDDevice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LFDTrackAndTraceSignal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LIATBooth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LIATMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Lab.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/MajorsABBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Radiology.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Receptionist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/RedAdmissionBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Red_AdmissionBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/SURESCREEN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/SideRoomAdmissionBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/SideRoom_AdmissionBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/TaskRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/TestingPassiveActions/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/TriageSideRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/WaitingRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/office.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mps/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/BehaviourSequence__BehaviorDescriptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/Repast.settings" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/Repast.settings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/Nurse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.display_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.display_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/Nurse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/ActionStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/ActionStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Actor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/diagnosis/SymptomaticInfectionState.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/diagnosis/SymptomaticInfectionState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Patient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/CurrentProcess/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/CurrentProcess/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LIAT.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LIAT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LabAsymptomaticPCR.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LabAsymptomaticPCR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LabSymptomaticPCR.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LabSymptomaticPCR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/SURESCREEN.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/SURESCREEN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/CurrentProcess/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/CurrentProcess/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/LIAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/SURESCREEN.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/source_gen/EDLanguage/sandbox/SURESCREEN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LIAT.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LIAT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LabAsymptomaticPCR.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LabAsymptomaticPCR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LabSymptomaticPCR.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LabSymptomaticPCR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/OnlyLFT/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/OnlyLFT/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/SURESCREEN.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/SURESCREEN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/LIAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/OnlyLFT/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/OnlyLFT/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/SURESCREEN.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox/SURESCREEN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LIAT.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LIAT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LabAsymptomaticPCR.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LabAsymptomaticPCR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LabSymptomaticPCR.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LabSymptomaticPCR.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/OnlyLIAT/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/OnlyLIAT/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/SURESCREEN.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/SURESCREEN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/LIAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/OnlyLIAT/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/OnlyLIAT/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/SURESCREEN.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/source_gen/EDLanguage/sandbox/SURESCREEN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LFDDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LFDDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LIATMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LIATMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Receptionist.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Receptionist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/TestingPassiveActions/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/TestingPassiveActions/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/EDLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/EDLanguage/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/main/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/main/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/QueriesGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/QueriesGenerated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/templates/main@generator.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/templates/main@generator.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.editor.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/LIAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/SURESCREEN.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/SURESCREEN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/editor/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.behavior.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.behavior.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/behavior/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/behavior/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/behavior/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/behavior/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/Actor_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/Actor_EditorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/editor/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/BehaviorAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/BehaviorAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/EDRuntime_EDProject/lib/simcore.jar" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDRuntime_EDProject/lib/simcore.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -637,6 +572,38 @@
               <option name="myItemId" value="HelloAgentProject" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="runtime" />
               <option name="myItemType" value="" />
@@ -663,12 +630,28 @@
               <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemId" value="HelloAgentProject" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps]" />
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -691,108 +674,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rooms" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -828,7 +709,259 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ED" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OrderPatientAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SendSignalAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actors" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Structures" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OrderPatientAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Orders" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -858,7 +991,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
-          <SELECTED>
+          <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="HelloAgentProject" />
               <option name="myItemType" value="" />
@@ -867,20 +1000,36 @@
               <option name="myItemId" value="runtime" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
+              <option name="myItemId" value="HelloAgentProject" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps]" />
+              <option name="myItemId" value="EDLanguage#01" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="6443350202496435223" />
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <SELECTED>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
@@ -1363,7 +1512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621617378460</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Fix passive actions (but need further testing)">
+      <created>1622740215982</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1622740215982</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="UsagesViewTool">
@@ -1378,241 +1534,7 @@
         <query>
           <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
           <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-            <node ref="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/88285669864745724" title="PatientWaitingForDoctor" />
-          </holder>
-        </query>
-        <usage_view>
-          <tree_wrapper>
-            <view_options>
-              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
-            </view_options>
-            <contents caption="" excluded="false" isresult="false" results_section="false">
-              <role name="main root" />
-              <child caption="Searched nodes" excluded="false" isresult="false" results_section="false">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" />
-                <role name="searched nodes" />
-                <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="EDLanguage.sandbox.CurrentProcess" excluded="false" isresult="false" results_section="false" module_ref="e7540802-219b-4b2e-bd91-549f46382c92(EDLanguage.sandbox.CurrentProcess)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="EDLanguage.sandbox.CurrentProcess" excluded="false" isresult="false" results_section="false">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="Signals" info="" excluded="false" isresult="false" results_section="false" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/513408552829927009" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="PatientWaitingForDoctor" info="(role: signals in: Signals)" excluded="false" isresult="true" results_section="false" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/88285669864745724">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-              <child caption="Usages" excluded="false" isresult="false" results_section="true">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" />
-                <role name="results" />
-                <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="EDLanguage.sandbox.CurrentProcess" excluded="false" isresult="false" results_section="true" module_ref="e7540802-219b-4b2e-bd91-549f46382c92(EDLanguage.sandbox.CurrentProcess)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="EDLanguage.sandbox.CurrentProcess" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="Doctor" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/3838812034270748689" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="InitialObsevations" info="(role: behaviours in: Doctor)" excluded="false" isresult="false" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/527226734336992924">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="PatientWaitingForDoctor" info="(role: signal in: InitialObsevations)" excluded="false" isresult="true" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/88285669864750772">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                      </child>
-                      <child caption="MajorsTriageNurse" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/3031028417298158392" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="TriagePatient" info="(role: behaviours in: MajorsTriageNurse)" excluded="false" isresult="false" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/3031028417298158393">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="signal initialize" info="(role: signalInitReference in: send signal)" excluded="false" isresult="true" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/3031028417298158624">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                      </child>
-                      <model uid="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-            </contents>
-          </tree_wrapper>
-        </usage_view>
-      </tab>
-      <tab>
-        <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
-          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
-            <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
-          </child>
-          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
-            <generated_finder class_name="jetbrains.mps.baseLanguage.findUsages.ExactMethodUsages_Finder" />
-          </child>
-        </result_provider>
-        <query>
-          <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
-          <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-            <node ref="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/3553172394605862137" title="getFormattedName():String" />
-          </holder>
-        </query>
-        <usage_view>
-          <tree_wrapper>
-            <view_options>
-              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
-            </view_options>
-            <contents caption="" excluded="false" isresult="false" results_section="false">
-              <role name="main root" />
-              <child caption="Searched nodes" excluded="false" isresult="false" results_section="false">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" />
-                <role name="searched nodes" />
-                <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="EDLanguage" excluded="false" isresult="false" results_section="false" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="EDLanguage.behavior" excluded="false" isresult="false" results_section="false">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="RoomType_Behavior" info="" excluded="false" isresult="false" results_section="false" nodePtr="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/3553172394605862126" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="getFormattedName():String" info="(role: method in: RoomType_Behavior)" excluded="false" isresult="true" results_section="false" nodePtr="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/3553172394605862137">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-              <child caption="Usages" excluded="false" isresult="false" results_section="true">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" />
-                <role name="results" />
-                <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="EDLanguage#01" excluded="false" isresult="false" results_section="true" module_ref="7b52bc0f-0af6-4ced-b84b-e851110576df(EDLanguage#01)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="main@generator" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="myRoomType" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609946103527" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="instance" info="(role: member in: myRoomType)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609946117394">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="getFormattedName():String" info="(role: operation in: DotExpression)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3553172394605871943">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="myRoomType()" info="(role: member in: myRoomType)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609946121509">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="getFormattedName():String" info="(role: operation in: DotExpression)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3553172394605873458">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="getInstance():RoomType" info="(role: member in: myRoomType)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609946267408">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="getFormattedName():String" info="(role: operation in: DotExpression)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3553172394605874576">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="getFormattedName():String" info="(role: operation in: DotExpression)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3553172394605871175">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)" />
-                    </child>
-                  </child>
-                </child>
-                <child caption="Exact Method Usages" excluded="false" isresult="false" results_section="true" category="Exact Method Usages" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="EDLanguage#01" excluded="false" isresult="false" results_section="true" module_ref="7b52bc0f-0af6-4ced-b84b-e851110576df(EDLanguage#01)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="main@generator" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="myRoomType" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609946103527" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="instance" info="(role: member in: myRoomType)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609946117394">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="getFormattedName():String" info="(role: operation in: DotExpression)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3553172394605871943">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="myRoomType()" info="(role: member in: myRoomType)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609946121509">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="getFormattedName():String" info="(role: operation in: DotExpression)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3553172394605873458">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="getInstance():RoomType" info="(role: member in: myRoomType)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609946267408">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="getFormattedName():String" info="(role: operation in: DotExpression)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3553172394605874576">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="getFormattedName():String" info="(role: operation in: DotExpression)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3553172394605871175">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-            </contents>
-          </tree_wrapper>
-        </usage_view>
-      </tab>
-      <tab>
-        <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
-          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
-            <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
-          </child>
-        </result_provider>
-        <query>
-          <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
-          <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-            <node ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552829815467" title="ActorReference" />
+            <node ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093659899312" title="ObjectInstance" />
           </holder>
         </query>
         <usage_view>
@@ -1634,7 +1556,7 @@
                     <child caption="EDLanguage.structure" excluded="false" isresult="false" results_section="false">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="ActorReference" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552829815467" isRoot="true">
+                      <child caption="ObjectInstance" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093659899312" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                         <role name="target" />
                       </child>
@@ -1655,7 +1577,7 @@
                     <child caption="EDLanguage.editor" excluded="false" isresult="false" results_section="true">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="ActorReference_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/513408552830889054" isRoot="true">
+                      <child caption="ObjectInstance_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/4334763093660304367" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                         <role name="target" />
                       </child>
@@ -1664,225 +1586,63 @@
                     <child caption="EDLanguage.structure" excluded="false" isresult="false" results_section="true">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="Signal" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552829743914" isRoot="true">
+                      <child caption="AdmitAction" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669846203988" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                         <role name="root" />
-                        <child caption="senders" info="(role: linkDeclaration in: Signal)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4211260315489209511">
+                        <child caption="targetBay" info="(role: linkDeclaration in: AdmitAction)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949009258443">
                           <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                           <role name="target" />
                         </child>
-                        <child caption="receivers" info="(role: linkDeclaration in: Signal)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669848655863">
+                      </child>
+                      <child caption="BedAvailableCondition" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949014596229" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="targetWard" info="(role: linkDeclaration in: BedAvailableCondition)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949014596285">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                      </child>
+                      <child caption="DataInstanceMap" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4973502446685367656" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="objectInstance" info="(role: linkDeclaration in: DataInstanceMap)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4973502446685367659">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                      </child>
+                      <child caption="HumanInstance" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493511205794" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="target" />
+                      </child>
+                      <child caption="MoveAction" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/3838812034270528852" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="targetObject" info="(role: linkDeclaration in: MoveAction)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552830880866">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                      </child>
+                      <child caption="MoveOrder" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493510951869" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="targetObject" info="(role: linkDeclaration in: MoveOrder)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493510951874">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                      </child>
+                      <child caption="PlaceInstance" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493511205795" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="target" />
+                      </child>
+                      <child caption="SuitableForSideRoomCondition" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/885129310544657865" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="alternativeBay" info="(role: linkDeclaration in: SuitableForSideRoomCondition)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949006354792">
                           <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                           <role name="target" />
                         </child>
                       </child>
                       <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-            </contents>
-          </tree_wrapper>
-        </usage_view>
-      </tab>
-      <tab>
-        <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
-          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
-            <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
-          </child>
-        </result_provider>
-        <query>
-          <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
-          <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-            <node ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240276654720" title="StaffTypeReference" />
-          </holder>
-        </query>
-        <usage_view>
-          <tree_wrapper>
-            <view_options>
-              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
-            </view_options>
-            <contents caption="" excluded="false" isresult="false" results_section="false">
-              <role name="main root" />
-              <child caption="Searched nodes" excluded="false" isresult="false" results_section="false">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" />
-                <role name="searched nodes" />
-                <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="ActionCards" excluded="false" isresult="false" results_section="false" module_ref="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="ActionCards.structure" excluded="false" isresult="false" results_section="false">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="StaffTypeReference" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240276654720" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <model uid="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-              <child caption="Usages" excluded="false" isresult="false" results_section="true">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" />
-                <role name="results" />
-                <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="ActionCards" excluded="false" isresult="false" results_section="true" module_ref="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="ActionCards.editor" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="StaffTypeReference_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/5402567240276654795" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <model uid="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)" />
-                    </child>
-                    <child caption="ActionCards.structure" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="Action" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528548" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="stafTypeReference" info="(role: linkDeclaration in: Action)" excluded="false" isresult="true" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240276710649">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
-                    </child>
-                  </child>
-                  <child caption="ActionCards.generator" excluded="false" isresult="false" results_section="true" module_ref="18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="ActionCards.generator.templates@generator" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="main" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/3383707102503528444" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="reduce StaffTypeReference" info="(role: reductionMappingRule in: main)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/5402567240276654855">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <child caption="reduce_StaffTypeReference" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/5402567240276654853" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <model uid="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-            </contents>
-          </tree_wrapper>
-        </usage_view>
-      </tab>
-      <tab>
-        <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
-          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
-            <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
-          </child>
-        </result_provider>
-        <query>
-          <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
-          <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-            <node ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552829965726" title="SignalReference" />
-          </holder>
-        </query>
-        <usage_view>
-          <tree_wrapper>
-            <view_options>
-              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
-            </view_options>
-            <contents caption="" excluded="false" isresult="false" results_section="false">
-              <role name="main root" />
-              <child caption="Searched nodes" excluded="false" isresult="false" results_section="false">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" />
-                <role name="searched nodes" />
-                <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="EDLanguage" excluded="false" isresult="false" results_section="false" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="EDLanguage.structure" excluded="false" isresult="false" results_section="false">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="SignalReference" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552829965726" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-              <child caption="Usages" excluded="false" isresult="false" results_section="true">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" />
-                <role name="results" />
-                <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="EDLanguage" excluded="false" isresult="false" results_section="true" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="EDLanguage.behavior" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="BehaviourElement_Behavior" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/2480088909322298279" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="getScope(concept&lt; &gt;,node&lt;&gt;):Scope" info="(role: method in: BehaviourElement_Behavior)" excluded="false" isresult="false" results_section="true" nodePtr="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/2480088909322302231">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="ifInstanceOf" info="(role: statement in: StatementList)" excluded="false" isresult="true" results_section="true" nodePtr="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/5733559105912213447">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                          <child caption="SignalReference" info="(role: conceptArgument in: isSubConceptOf)" excluded="false" isresult="true" results_section="true" nodePtr="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/7454555096514840570">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="GetSignalName():String" info="(role: method in: BehaviourElement_Behavior)" excluded="false" isresult="false" results_section="true" nodePtr="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/3435897115888622415">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="ifInstanceOf" info="(role: statement in: StatementList)" excluded="false" isresult="true" results_section="true" nodePtr="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)/3435897115888858847">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                      </child>
-                      <model uid="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(EDLanguage.behavior)" />
-                    </child>
-                    <child caption="EDLanguage.constraints" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="SignalReference_Constraints" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(EDLanguage.constraints)/2480088909322519859" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                        <child caption="inherited" info="(role: searchScopeFactory in: link {signal})" excluded="false" isresult="true" results_section="true" nodePtr="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(EDLanguage.constraints)/7454555096514786711">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(EDLanguage.constraints)" />
-                    </child>
-                    <child caption="EDLanguage.editor" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="SignalReference_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/4334763093660998570" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <model uid="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)" />
                     </child>
                   </child>
                 </child>
@@ -1897,7 +1657,6 @@
     </default_view_options>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement test result condition" />
     <MESSAGE value="Implement basic pathway for Doctors" />
     <MESSAGE value="Implement more complex pathway with PCR tests" />
     <MESSAGE value="Clean direct signal code generation" />
@@ -1922,7 +1681,8 @@
     <MESSAGE value="Add capacity for agents to have multiple simultaneous actions" />
     <MESSAGE value="Add StaffTypes to Actions" />
     <MESSAGE value="Add working generator for ActionCards" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add working generator for ActionCards" />
+    <MESSAGE value="Fix passive actions (but need further testing)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix passive actions (but need further testing)" />
   </component>
   <component name="mpsMakeService">
     <option name="makeInBackground" value="true" />

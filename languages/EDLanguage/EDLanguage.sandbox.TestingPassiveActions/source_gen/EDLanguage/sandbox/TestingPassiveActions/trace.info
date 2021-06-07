@@ -201,65 +201,95 @@
   </root>
   <root nodeRef="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions)/329726013646473122">
     <file name="LFDDevice.java">
-      <node id="329726013646473122" at="23,0,24,0" concept="4" trace="actionBuilder" />
-      <node id="329726013646473122" at="25,70,26,23" concept="15" />
-      <node id="329726013646473122" at="26,23,27,26" concept="3" />
-      <node id="329726013646473122" at="30,96,31,42" concept="15" />
-      <node id="329726013646473122" at="36,14,37,14" concept="1" />
-      <node id="88285669879551483" at="38,37,39,63" concept="3" />
-      <node id="88285669879551483" at="39,63,40,45" concept="3" />
-      <node id="88285669879551483" at="40,45,41,14" concept="1" />
-      <node id="329726013646473122" at="42,14,43,71" concept="3" />
-      <node id="329726013646473122" at="43,71,44,29" concept="10" />
-      <node id="329726013646473122" at="45,5,46,25" concept="10" />
-      <node id="88285669879551483" at="49,54,50,0" concept="12" />
-      <node id="88285669879551483" at="50,0,51,41" concept="9" />
-      <node id="88285669879551483" at="51,41,52,0" concept="12" />
-      <node id="88285669879551485" at="52,0,53,166" concept="3" />
-      <node id="88285669879551485" at="53,166,54,146" concept="3" />
-      <node id="88285669879551489" at="55,131,56,52" concept="3" />
-      <node id="88285669879551489" at="56,52,57,70" concept="3" />
-      <node id="88285669879551491" at="57,70,58,62" concept="3" />
-      <node id="88285669879551489" at="58,62,59,122" concept="3" />
-      <node id="88285669879551495" at="60,12,61,52" concept="3" />
-      <node id="88285669879551495" at="61,52,62,70" concept="3" />
-      <node id="88285669879551497" at="62,70,63,62" concept="3" />
-      <node id="88285669879551495" at="63,62,64,122" concept="3" />
-      <node id="88285669879551483" at="65,5,66,0" concept="12" />
-      <node id="329726013646473122" at="30,0,33,0" concept="2" trace="LFDDevice#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
-      <node id="329726013646473122" at="25,0,29,0" concept="2" trace="LFDDevice#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
-      <node id="88285669879551485" at="60,10,65,5" concept="0" />
-      <node id="329726013646473122" at="34,49,45,5" concept="16" />
-      <node id="88285669879551485" at="54,146,65,5" concept="7" />
-      <node id="329726013646473122" at="34,0,48,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Action;" />
-      <node id="88285669879551483" at="49,0,68,0" concept="8" trace="InitTestPatientTrackAndTrace#(Lsimcore/Signals/Signal;)V" />
-      <scope id="329726013646473122" at="30,96,31,42" />
-      <scope id="329726013646473122" at="36,14,37,14" />
-      <scope id="329726013646473122" at="25,70,27,26" />
-      <scope id="329726013646473122" at="42,14,44,29" />
-      <scope id="329726013646473122" at="30,0,33,0">
+      <node id="329726013646473122" at="16,0,17,0" concept="4" trace="behaviourBuilder" />
+      <node id="329726013646473122" at="18,70,19,23" concept="15" />
+      <node id="329726013646473122" at="19,23,20,26" concept="3" />
+      <node id="329726013646473122" at="23,96,24,42" concept="15" />
+      <node id="329726013646473122" at="29,14,30,14" concept="1" />
+      <node id="88285669879551483" at="31,37,32,68" concept="3" />
+      <node id="88285669879551483" at="32,68,33,45" concept="3" />
+      <node id="88285669879551483" at="33,45,34,14" concept="1" />
+      <node id="329726013646473122" at="35,14,36,71" concept="3" />
+      <node id="329726013646473122" at="36,71,37,32" concept="10" />
+      <node id="329726013646473122" at="38,5,39,28" concept="10" />
+      <node id="88285669879551485" at="43,0,44,0" concept="4" trace="behaviour" />
+      <node id="88285669879551485" at="44,0,45,0" concept="4" trace="testingTime" />
+      <node id="88285669879551485" at="45,0,46,0" concept="4" trace="timeExecuted" />
+      <node id="88285669879551485" at="46,0,47,0" concept="4" trace="testResult" />
+      <node id="88285669879551485" at="47,40,48,20" concept="3" />
+      <node id="88285669879551485" at="52,30,53,82" concept="3" />
+      <node id="88285669879551485" at="54,7,55,0" concept="12" />
+      <node id="88285669879551485" at="55,0,56,21" concept="3" />
+      <node id="88285669879551485" at="56,21,57,0" concept="12" />
+      <node id="88285669879551485" at="59,38,60,63" concept="9" />
+      <node id="88285669879551489" at="60,63,61,45" concept="3" />
+      <node id="88285669879551485" at="61,45,62,43" concept="3" />
+      <node id="88285669879551485" at="63,16,64,63" concept="9" />
+      <node id="88285669879551495" at="64,63,65,45" concept="3" />
+      <node id="88285669879551485" at="65,45,66,43" concept="3" />
+      <node id="88285669879551485" at="71,38,72,41" concept="10" />
+      <node id="88285669879551483" at="77,54,78,41" concept="3" />
+      <node id="88285669879551483" at="78,41,79,57" concept="9" />
+      <node id="88285669879551485" at="79,57,80,56" concept="3" />
+      <node id="88285669879551483" at="80,56,81,41" concept="3" />
+      <node id="88285669879551483" at="81,41,82,0" concept="12" />
+      <node id="88285669879551483" at="82,0,83,41" concept="9" />
+      <node id="88285669879551483" at="83,41,84,0" concept="12" />
+      <node id="329726013646473122" at="23,0,26,0" concept="2" trace="LFDDevice#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
+      <node id="88285669879551485" at="47,0,50,0" concept="2" trace="TestAction_a0a#(Lsimcore/action/Behaviour;)V" />
+      <node id="88285669879551485" at="51,27,54,7" concept="7" />
+      <node id="88285669879551485" at="71,0,74,0" concept="8" trace="finishCondition#()Z" />
+      <node id="329726013646473122" at="18,0,22,0" concept="2" trace="LFDDevice#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
+      <node id="88285669879551485" at="63,14,67,9" concept="0" />
+      <node id="88285669879551485" at="58,40,67,9" concept="7" />
+      <node id="88285669879551483" at="77,0,86,0" concept="8" trace="InitTestPatientTrackAndTrace#(Lsimcore/Signals/Signal;)V" />
+      <node id="329726013646473122" at="27,52,38,5" concept="16" />
+      <node id="88285669879551485" at="57,0,68,7" concept="7" />
+      <node id="329726013646473122" at="27,0,41,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
+      <node id="88285669879551485" at="51,0,70,0" concept="8" trace="execute#()V" />
+      <scope id="329726013646473122" at="23,96,24,42" />
+      <scope id="329726013646473122" at="29,14,30,14" />
+      <scope id="88285669879551485" at="47,40,48,20" />
+      <scope id="88285669879551485" at="52,30,53,82" />
+      <scope id="88285669879551485" at="71,38,72,41" />
+      <scope id="329726013646473122" at="18,70,20,26" />
+      <scope id="329726013646473122" at="35,14,37,32" />
+      <scope id="329726013646473122" at="23,0,26,0">
         <var name="grid" id="329726013646473122" />
         <var name="pstrStartLocation" id="329726013646473122" />
         <var name="space" id="329726013646473122" />
       </scope>
-      <scope id="88285669879551483" at="38,37,41,14" />
-      <scope id="329726013646473122" at="25,0,29,0">
+      <scope id="88285669879551483" at="31,37,34,14" />
+      <scope id="88285669879551485" at="47,0,50,0">
+        <var name="b" id="88285669879551485" />
+      </scope>
+      <scope id="88285669879551485" at="59,38,62,43">
+        <var name="plstSteps" id="88285669879551485" />
+      </scope>
+      <scope id="88285669879551485" at="63,16,66,43">
+        <var name="plstSteps" id="88285669879551485" />
+      </scope>
+      <scope id="88285669879551485" at="71,0,74,0" />
+      <scope id="329726013646473122" at="18,0,22,0">
         <var name="grid" id="329726013646473122" />
         <var name="space" id="329726013646473122" />
       </scope>
-      <scope id="88285669879551485" at="55,131,59,122" />
-      <scope id="88285669879551485" at="60,12,64,122" />
-      <scope id="329726013646473122" at="34,49,46,25" />
-      <scope id="329726013646473122" at="34,0,48,0">
-        <var name="s" id="329726013646473122" />
-      </scope>
-      <scope id="88285669879551483" at="49,54,66,0">
+      <scope id="88285669879551483" at="77,54,84,0">
+        <var name="plstSteps" id="88285669879551483" />
         <var name="sendSignalTemp" id="88285669879551483" />
       </scope>
-      <scope id="88285669879551483" at="49,0,68,0">
+      <scope id="88285669879551485" at="58,40,67,9" />
+      <scope id="88285669879551483" at="77,0,86,0">
         <var name="s" id="88285669879551483" />
       </scope>
-      <unit id="329726013646473122" at="20,0,78,0" name="EDLanguage.sandbox.LFDDevice" />
+      <scope id="329726013646473122" at="27,52,39,28" />
+      <scope id="329726013646473122" at="27,0,41,0">
+        <var name="s" id="329726013646473122" />
+      </scope>
+      <scope id="88285669879551485" at="51,27,68,7" />
+      <scope id="88285669879551485" at="51,0,70,0" />
+      <unit id="88285669879551485" at="42,0,75,0" name="EDLanguage.sandbox.LFDDevice$TestAction_a0a" />
+      <unit id="329726013646473122" at="13,0,88,0" name="EDLanguage.sandbox.LFDDevice" />
     </file>
   </root>
   <root nodeRef="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions)/329726013672476978">
@@ -518,98 +548,46 @@
   </root>
   <root nodeRef="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions)/3838812034270748687">
     <file name="LFDDevice.java">
-      <node id="7454555096516601373" at="22,0,23,0" concept="4" trace="groupStress" />
-      <node id="88285669871096240" at="68,46,69,0" concept="12" />
-      <node id="88285669871096240" at="69,0,70,41" concept="9" />
-      <node id="88285669871096240" at="70,41,71,0" concept="12" />
-      <node id="88285669871096246" at="71,0,72,138" concept="3" />
-      <node id="88285669871096256" at="72,138,73,212" concept="3" />
-      <node id="88285669871096240" at="73,212,74,0" concept="12" />
-      <node id="88285669871096240" at="68,0,76,0" concept="8" trace="InitDischargePatient#(Lsimcore/Signals/Signal;)V" />
-      <scope id="88285669871096240" at="68,46,74,0">
-        <var name="sendSignalTemp" id="88285669871096240" />
-      </scope>
-      <scope id="88285669871096240" at="68,0,76,0">
-        <var name="s" id="88285669871096240" />
-      </scope>
+      <node id="7454555096516601373" at="15,0,16,0" concept="4" trace="groupStress" />
     </file>
     <file name="LIATMachine.java">
-      <node id="7454555096516601373" at="17,0,18,0" concept="4" trace="groupStress" />
-      <node id="88285669871096240" at="40,46,41,0" concept="12" />
-      <node id="88285669871096240" at="41,0,42,41" concept="9" />
-      <node id="88285669871096240" at="42,41,43,0" concept="12" />
-      <node id="88285669871096246" at="43,0,44,138" concept="3" />
-      <node id="88285669871096256" at="44,138,45,212" concept="3" />
-      <node id="88285669871096240" at="45,212,46,0" concept="12" />
-      <node id="88285669871096240" at="40,0,48,0" concept="8" trace="InitDischargePatient#(Lsimcore/Signals/Signal;)V" />
-      <scope id="88285669871096240" at="40,46,46,0">
-        <var name="sendSignalTemp" id="88285669871096240" />
-      </scope>
-      <scope id="88285669871096240" at="40,0,48,0">
-        <var name="s" id="88285669871096240" />
-      </scope>
+      <node id="7454555096516601373" at="12,0,13,0" concept="4" trace="groupStress" />
     </file>
     <file name="Receptionist.java">
-      <node id="7454555096516601373" at="24,0,25,0" concept="4" trace="groupStress" />
-      <node id="88285669871096240" at="68,46,69,0" concept="12" />
-      <node id="88285669871096240" at="69,0,70,41" concept="9" />
-      <node id="88285669871096240" at="70,41,71,0" concept="12" />
-      <node id="88285669871096246" at="71,0,72,138" concept="3" />
-      <node id="88285669871096256" at="72,138,73,212" concept="3" />
-      <node id="88285669871096240" at="73,212,74,0" concept="12" />
-      <node id="88285669871096240" at="68,0,76,0" concept="8" trace="InitDischargePatient#(Lsimcore/Signals/Signal;)V" />
-      <scope id="88285669871096240" at="68,46,74,0">
-        <var name="sendSignalTemp" id="88285669871096240" />
-      </scope>
-      <scope id="88285669871096240" at="68,0,76,0">
-        <var name="s" id="88285669871096240" />
-      </scope>
+      <node id="7454555096516601373" at="17,0,18,0" concept="4" trace="groupStress" />
     </file>
     <file name="Staff.java">
-      <node id="7454555096516601373" at="18,0,19,0" concept="4" trace="groupStress" />
-      <node id="3838812034270748687" at="19,0,20,0" concept="4" trace="actionBuilder" />
-      <node id="3838812034270748687" at="21,66,22,23" concept="15" />
-      <node id="3838812034270748687" at="22,23,23,26" concept="3" />
-      <node id="3838812034270748687" at="26,92,27,42" concept="15" />
-      <node id="3838812034270748687" at="32,14,33,14" concept="1" />
-      <node id="3838812034270748687" at="34,14,35,71" concept="3" />
-      <node id="3838812034270748687" at="35,71,36,29" concept="10" />
-      <node id="3838812034270748687" at="37,5,38,25" concept="10" />
-      <node id="88285669871096240" at="41,46,42,0" concept="12" />
-      <node id="88285669871096240" at="42,0,43,41" concept="9" />
-      <node id="88285669871096240" at="43,41,44,0" concept="12" />
-      <node id="88285669871096246" at="44,0,45,138" concept="3" />
-      <node id="88285669871096256" at="45,138,46,212" concept="3" />
-      <node id="88285669871096240" at="46,212,47,0" concept="12" />
-      <node id="3838812034270748687" at="26,0,29,0" concept="2" trace="Staff#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
-      <node id="3838812034270748687" at="21,0,25,0" concept="2" trace="Staff#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
-      <node id="3838812034270748687" at="30,49,37,5" concept="16" />
-      <node id="88285669871096240" at="41,0,49,0" concept="8" trace="InitDischargePatient#(Lsimcore/Signals/Signal;)V" />
-      <node id="3838812034270748687" at="30,0,40,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Action;" />
-      <scope id="3838812034270748687" at="26,92,27,42" />
-      <scope id="3838812034270748687" at="32,14,33,14" />
-      <scope id="3838812034270748687" at="21,66,23,26" />
-      <scope id="3838812034270748687" at="34,14,36,29" />
-      <scope id="3838812034270748687" at="26,0,29,0">
+      <node id="7454555096516601373" at="13,0,14,0" concept="4" trace="groupStress" />
+      <node id="3838812034270748687" at="14,0,15,0" concept="4" trace="behaviourBuilder" />
+      <node id="3838812034270748687" at="16,66,17,23" concept="15" />
+      <node id="3838812034270748687" at="17,23,18,26" concept="3" />
+      <node id="3838812034270748687" at="21,92,22,42" concept="15" />
+      <node id="3838812034270748687" at="27,14,28,14" concept="1" />
+      <node id="3838812034270748687" at="29,14,30,71" concept="3" />
+      <node id="3838812034270748687" at="30,71,31,32" concept="10" />
+      <node id="3838812034270748687" at="32,5,33,28" concept="10" />
+      <node id="3838812034270748687" at="21,0,24,0" concept="2" trace="Staff#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
+      <node id="3838812034270748687" at="16,0,20,0" concept="2" trace="Staff#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
+      <node id="3838812034270748687" at="25,52,32,5" concept="16" />
+      <node id="3838812034270748687" at="25,0,35,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
+      <scope id="3838812034270748687" at="21,92,22,42" />
+      <scope id="3838812034270748687" at="27,14,28,14" />
+      <scope id="3838812034270748687" at="16,66,18,26" />
+      <scope id="3838812034270748687" at="29,14,31,32" />
+      <scope id="3838812034270748687" at="21,0,24,0">
         <var name="grid" id="3838812034270748687" />
         <var name="pstrStartLocation" id="3838812034270748687" />
         <var name="space" id="3838812034270748687" />
       </scope>
-      <scope id="3838812034270748687" at="21,0,25,0">
+      <scope id="3838812034270748687" at="16,0,20,0">
         <var name="grid" id="3838812034270748687" />
         <var name="space" id="3838812034270748687" />
       </scope>
-      <scope id="88285669871096240" at="41,46,47,0">
-        <var name="sendSignalTemp" id="88285669871096240" />
-      </scope>
-      <scope id="3838812034270748687" at="30,49,38,25" />
-      <scope id="88285669871096240" at="41,0,49,0">
-        <var name="s" id="88285669871096240" />
-      </scope>
-      <scope id="3838812034270748687" at="30,0,40,0">
+      <scope id="3838812034270748687" at="25,52,33,28" />
+      <scope id="3838812034270748687" at="25,0,35,0">
         <var name="s" id="3838812034270748687" />
       </scope>
-      <unit id="3838812034270748687" at="16,0,51,0" name="EDLanguage.sandbox.Staff" />
+      <unit id="3838812034270748687" at="11,0,40,0" name="EDLanguage.sandbox.Staff" />
     </file>
   </root>
   <root nodeRef="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions)/4334763093661201236">
@@ -946,36 +924,36 @@
   </root>
   <root nodeRef="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions)/88285669847697038">
     <file name="LIATMachine.java">
-      <node id="88285669847697038" at="18,0,19,0" concept="4" trace="actionBuilder" />
-      <node id="88285669847697038" at="20,72,21,23" concept="15" />
-      <node id="88285669847697038" at="21,23,22,26" concept="3" />
-      <node id="88285669847697038" at="25,98,26,42" concept="15" />
-      <node id="88285669847697038" at="31,14,32,14" concept="1" />
-      <node id="88285669847697038" at="33,14,34,71" concept="3" />
-      <node id="88285669847697038" at="34,71,35,29" concept="10" />
-      <node id="88285669847697038" at="36,5,37,25" concept="10" />
-      <node id="88285669847697038" at="25,0,28,0" concept="2" trace="LIATMachine#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
-      <node id="88285669847697038" at="20,0,24,0" concept="2" trace="LIATMachine#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
-      <node id="88285669847697038" at="29,49,36,5" concept="16" />
-      <node id="88285669847697038" at="29,0,39,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Action;" />
-      <scope id="88285669847697038" at="25,98,26,42" />
-      <scope id="88285669847697038" at="31,14,32,14" />
-      <scope id="88285669847697038" at="20,72,22,26" />
-      <scope id="88285669847697038" at="33,14,35,29" />
-      <scope id="88285669847697038" at="25,0,28,0">
+      <node id="88285669847697038" at="13,0,14,0" concept="4" trace="behaviourBuilder" />
+      <node id="88285669847697038" at="15,72,16,23" concept="15" />
+      <node id="88285669847697038" at="16,23,17,26" concept="3" />
+      <node id="88285669847697038" at="20,98,21,42" concept="15" />
+      <node id="88285669847697038" at="26,14,27,14" concept="1" />
+      <node id="88285669847697038" at="28,14,29,71" concept="3" />
+      <node id="88285669847697038" at="29,71,30,32" concept="10" />
+      <node id="88285669847697038" at="31,5,32,28" concept="10" />
+      <node id="88285669847697038" at="20,0,23,0" concept="2" trace="LIATMachine#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
+      <node id="88285669847697038" at="15,0,19,0" concept="2" trace="LIATMachine#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
+      <node id="88285669847697038" at="24,52,31,5" concept="16" />
+      <node id="88285669847697038" at="24,0,34,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
+      <scope id="88285669847697038" at="20,98,21,42" />
+      <scope id="88285669847697038" at="26,14,27,14" />
+      <scope id="88285669847697038" at="15,72,17,26" />
+      <scope id="88285669847697038" at="28,14,30,32" />
+      <scope id="88285669847697038" at="20,0,23,0">
         <var name="grid" id="88285669847697038" />
         <var name="pstrStartLocation" id="88285669847697038" />
         <var name="space" id="88285669847697038" />
       </scope>
-      <scope id="88285669847697038" at="20,0,24,0">
+      <scope id="88285669847697038" at="15,0,19,0">
         <var name="grid" id="88285669847697038" />
         <var name="space" id="88285669847697038" />
       </scope>
-      <scope id="88285669847697038" at="29,49,37,25" />
-      <scope id="88285669847697038" at="29,0,39,0">
+      <scope id="88285669847697038" at="24,52,32,28" />
+      <scope id="88285669847697038" at="24,0,34,0">
         <var name="s" id="88285669847697038" />
       </scope>
-      <unit id="88285669847697038" at="15,0,50,0" name="EDLanguage.sandbox.LIATMachine" />
+      <unit id="88285669847697038" at="10,0,39,0" name="EDLanguage.sandbox.LIATMachine" />
     </file>
   </root>
   <root nodeRef="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions)/88285669847701787">
@@ -1126,63 +1104,107 @@
   </root>
   <root nodeRef="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions)/8910807539223092592">
     <file name="Receptionist.java">
-      <node id="8910807539223092592" at="25,0,26,0" concept="4" trace="actionBuilder" />
-      <node id="8910807539223092592" at="27,73,28,23" concept="15" />
-      <node id="8910807539223092592" at="28,23,29,26" concept="3" />
-      <node id="8910807539223092592" at="32,99,33,42" concept="15" />
-      <node id="8910807539223092592" at="38,14,39,14" concept="1" />
-      <node id="8910807539223093042" at="40,30,41,46" concept="3" />
-      <node id="8910807539223093042" at="41,46,42,28" concept="3" />
-      <node id="8910807539223093042" at="42,28,43,14" concept="1" />
-      <node id="8910807539223092592" at="44,14,45,71" concept="3" />
-      <node id="8910807539223092592" at="45,71,46,29" concept="10" />
-      <node id="8910807539223092592" at="47,5,48,25" concept="10" />
-      <node id="8910807539223093042" at="51,37,52,0" concept="12" />
-      <node id="8910807539223093042" at="52,0,53,41" concept="9" />
-      <node id="8910807539223093042" at="53,41,54,0" concept="12" />
-      <node id="8910807539223093050" at="54,0,55,156" concept="3" />
-      <node id="8465466444626101516" at="55,156,56,112" concept="3" />
-      <node id="527226734336983504" at="56,112,57,185" concept="3" />
-      <node id="5328502176943731192" at="57,185,58,111" concept="3" />
-      <node id="5328502176943731220" at="58,111,59,160" concept="3" />
-      <node id="5328502176943731220" at="59,160,60,140" concept="3" />
-      <node id="5328502176943731300" at="61,125,62,211" concept="3" />
-      <node id="5328502176943731321" at="63,12,64,216" concept="3" />
-      <node id="8910807539223093042" at="65,5,66,0" concept="12" />
-      <node id="5328502176943731220" at="63,10,65,5" concept="0" />
-      <node id="8910807539223092592" at="32,0,35,0" concept="2" trace="Receptionist#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
-      <node id="8910807539223092592" at="27,0,31,0" concept="2" trace="Receptionist#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
-      <node id="5328502176943731220" at="60,140,65,5" concept="7" />
-      <node id="8910807539223092592" at="36,49,47,5" concept="16" />
-      <node id="8910807539223092592" at="36,0,50,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Action;" />
-      <node id="8910807539223093042" at="51,0,68,0" concept="8" trace="InitInspect#(Lsimcore/Signals/Signal;)V" />
-      <scope id="8910807539223092592" at="32,99,33,42" />
-      <scope id="8910807539223092592" at="38,14,39,14" />
-      <scope id="5328502176943731220" at="61,125,62,211" />
-      <scope id="5328502176943731220" at="63,12,64,216" />
-      <scope id="8910807539223092592" at="27,73,29,26" />
-      <scope id="8910807539223092592" at="44,14,46,29" />
-      <scope id="8910807539223092592" at="32,0,35,0">
+      <node id="8910807539223092592" at="18,0,19,0" concept="4" trace="behaviourBuilder" />
+      <node id="8910807539223092592" at="20,73,21,23" concept="15" />
+      <node id="8910807539223092592" at="21,23,22,26" concept="3" />
+      <node id="8910807539223092592" at="25,99,26,42" concept="15" />
+      <node id="8910807539223092592" at="31,14,32,14" concept="1" />
+      <node id="8910807539223093042" at="33,30,34,61" concept="3" />
+      <node id="8910807539223093042" at="34,61,35,28" concept="3" />
+      <node id="8910807539223093042" at="35,28,36,14" concept="1" />
+      <node id="8910807539223092592" at="37,14,38,71" concept="3" />
+      <node id="8910807539223092592" at="38,71,39,32" concept="10" />
+      <node id="8910807539223092592" at="40,5,41,28" concept="10" />
+      <node id="8910807539223093050" at="45,0,46,0" concept="4" trace="behaviour" />
+      <node id="8910807539223093050" at="46,40,47,20" concept="3" />
+      <node id="8910807539223093050" at="50,27,51,49" concept="3" />
+      <node id="8910807539223093050" at="54,38,55,49" concept="10" />
+      <node id="5328502176954228996" at="59,0,60,0" concept="4" trace="behaviour" />
+      <node id="5328502176954228996" at="60,41,61,20" concept="3" />
+      <node id="5328502176954228996" at="64,27,65,41" concept="9" />
+      <node id="5328502176954228996" at="65,41,66,0" concept="12" />
+      <node id="5328502176954228996" at="66,0,67,72" concept="3" />
+      <node id="5328502176949658272" at="71,0,72,0" concept="4" trace="behaviour" />
+      <node id="5328502176949658272" at="72,0,73,0" concept="4" trace="timeExecuted" />
+      <node id="5328502176949658272" at="73,40,74,20" concept="3" />
+      <node id="5328502176949658272" at="77,27,78,20" concept="11" />
+      <node id="5328502176949658272" at="78,20,79,21" concept="3" />
+      <node id="5328502176949658272" at="82,38,83,31" concept="10" />
+      <node id="8910807539223093042" at="88,37,89,41" concept="3" />
+      <node id="8910807539223093042" at="89,41,90,57" concept="9" />
+      <node id="8910807539223093050" at="90,57,91,56" concept="3" />
+      <node id="5328502176954228996" at="91,56,92,57" concept="3" />
+      <node id="5328502176949658272" at="92,57,93,56" concept="3" />
+      <node id="8910807539223093042" at="93,56,94,41" concept="3" />
+      <node id="8910807539223093042" at="94,41,95,0" concept="12" />
+      <node id="8910807539223093042" at="95,0,96,41" concept="9" />
+      <node id="8910807539223093042" at="96,41,97,0" concept="12" />
+      <node id="8910807539223092592" at="25,0,28,0" concept="2" trace="Receptionist#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
+      <node id="8910807539223093050" at="46,0,49,0" concept="2" trace="MoveAction_a0a#(Lsimcore/action/Behaviour;)V" />
+      <node id="8910807539223093050" at="50,0,53,0" concept="8" trace="execute#()V" />
+      <node id="8910807539223093050" at="54,0,57,0" concept="8" trace="finishCondition#()Z" />
+      <node id="5328502176954228996" at="60,0,63,0" concept="2" trace="OrderAction_b0a#(Lsimcore/action/Behaviour;)V" />
+      <node id="5328502176949658272" at="73,0,76,0" concept="2" trace="StayAction_c0a#(Lsimcore/action/Behaviour;)V" />
+      <node id="5328502176949658272" at="82,0,85,0" concept="8" trace="finishCondition#()Z" />
+      <node id="8910807539223092592" at="20,0,24,0" concept="2" trace="Receptionist#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;)V" />
+      <node id="5328502176949658272" at="77,0,81,0" concept="8" trace="execute#()V" />
+      <node id="5328502176954228996" at="64,0,69,0" concept="8" trace="execute#()V" />
+      <node id="8910807539223092592" at="29,52,40,5" concept="16" />
+      <node id="8910807539223093042" at="88,0,99,0" concept="8" trace="InitInspect#(Lsimcore/Signals/Signal;)V" />
+      <node id="8910807539223092592" at="29,0,43,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
+      <scope id="8910807539223092592" at="25,99,26,42" />
+      <scope id="8910807539223092592" at="31,14,32,14" />
+      <scope id="8910807539223093050" at="46,40,47,20" />
+      <scope id="8910807539223093050" at="50,27,51,49" />
+      <scope id="8910807539223093050" at="54,38,55,49" />
+      <scope id="5328502176954228996" at="60,41,61,20" />
+      <scope id="5328502176949658272" at="73,40,74,20" />
+      <scope id="5328502176949658272" at="82,38,83,31" />
+      <scope id="8910807539223092592" at="20,73,22,26" />
+      <scope id="8910807539223092592" at="37,14,39,32" />
+      <scope id="5328502176949658272" at="77,27,79,21" />
+      <scope id="8910807539223092592" at="25,0,28,0">
         <var name="grid" id="8910807539223092592" />
         <var name="pstrStartLocation" id="8910807539223092592" />
         <var name="space" id="8910807539223092592" />
       </scope>
-      <scope id="8910807539223093042" at="40,30,43,14" />
-      <scope id="8910807539223092592" at="27,0,31,0">
+      <scope id="8910807539223093042" at="33,30,36,14" />
+      <scope id="8910807539223093050" at="46,0,49,0">
+        <var name="b" id="8910807539223093050" />
+      </scope>
+      <scope id="8910807539223093050" at="50,0,53,0" />
+      <scope id="8910807539223093050" at="54,0,57,0" />
+      <scope id="5328502176954228996" at="60,0,63,0">
+        <var name="b" id="5328502176954228996" />
+      </scope>
+      <scope id="5328502176954228996" at="64,27,67,72">
+        <var name="p" id="5328502176954228996" />
+      </scope>
+      <scope id="5328502176949658272" at="73,0,76,0">
+        <var name="b" id="5328502176949658272" />
+      </scope>
+      <scope id="5328502176949658272" at="82,0,85,0" />
+      <scope id="8910807539223092592" at="20,0,24,0">
         <var name="grid" id="8910807539223092592" />
         <var name="space" id="8910807539223092592" />
       </scope>
-      <scope id="8910807539223092592" at="36,49,48,25" />
-      <scope id="8910807539223092592" at="36,0,50,0">
-        <var name="s" id="8910807539223092592" />
-      </scope>
-      <scope id="8910807539223093042" at="51,37,66,0">
+      <scope id="5328502176949658272" at="77,0,81,0" />
+      <scope id="5328502176954228996" at="64,0,69,0" />
+      <scope id="8910807539223093042" at="88,37,97,0">
+        <var name="plstSteps" id="8910807539223093042" />
         <var name="sendSignalTemp" id="8910807539223093042" />
       </scope>
-      <scope id="8910807539223093042" at="51,0,68,0">
+      <scope id="8910807539223093042" at="88,0,99,0">
         <var name="s" id="8910807539223093042" />
       </scope>
-      <unit id="8910807539223092592" at="22,0,78,0" name="EDLanguage.sandbox.Receptionist" />
+      <scope id="8910807539223092592" at="29,52,41,28" />
+      <scope id="8910807539223092592" at="29,0,43,0">
+        <var name="s" id="8910807539223092592" />
+      </scope>
+      <unit id="5328502176954228996" at="58,0,70,0" name="EDLanguage.sandbox.Receptionist$OrderAction_b0a" />
+      <unit id="8910807539223093050" at="44,0,58,0" name="EDLanguage.sandbox.Receptionist$MoveAction_a0a" />
+      <unit id="5328502176949658272" at="70,0,86,0" name="EDLanguage.sandbox.Receptionist$StayAction_c0a" />
+      <unit id="8910807539223092592" at="15,0,101,0" name="EDLanguage.sandbox.Receptionist" />
     </file>
   </root>
 </debug-info>

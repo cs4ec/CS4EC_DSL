@@ -54,6 +54,10 @@ public class Action {
 	public boolean isComplete() {
 		return curActionStep == getSteps().size();
 	}
+	
+	public void injectSteps(List<ActionStep> steps) {
+		this.steps.addAll(curActionStep, steps);
+	}
 
 	public void setSteps(List<ActionStep> steps) {
 		this.steps = steps;
