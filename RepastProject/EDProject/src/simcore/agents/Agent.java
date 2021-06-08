@@ -114,6 +114,8 @@ public class Agent {
 	}
 	
 	public void stepAction(Behaviour action) {
+		action.step();
+		
 		// If the mission is complete, update my status accordingly
 		if (action.isComplete()) {
 			if(action == myActiveAction) {
@@ -122,8 +124,15 @@ public class Agent {
 				myCurrentActions.remove(action);
 			}
 			return;
-		} else {
-			action.step();
+		} 
+		
+		// If my active action has turned passive, set myself as idle and add it to my current actions backlog
+		if(action.getCurrentStep() instanceof PassiveBehaviourStep) {
+			isIdle = true;
+			if(!myCurrentActions.contains(action)) {
+				myCurrentActions.add(action);
+			}
+			myActiveAction = null;
 		}
 	}
 	
@@ -286,7 +295,7 @@ public class Agent {
 	
 	// ----------------------------------- AUX METHODS ---------------------
 	// Given a RoomType, select a Location of that RoomType
-	private Room SelectLocation(RoomType pRoomType) {
+	protected Room SelectLocation(RoomType pRoomType) {
 		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
 		// find an instance of the room we want
 		// By default select the one that is most empty
@@ -305,6 +314,9 @@ public class Agent {
 	
 	// Utility method to select an occupiable of a given type
 	protected Occupiable SelectOccupiable(Room destination, Class occupiableType) {
+		if(curOccupying != null && curOccupying.getClass() == occupiableType) {
+			return curOccupying;
+		}
 		ArrayList<Occupiable> plstEmptyOccupiables = (ArrayList<Occupiable>) destination.getAllEmptyOcupiablesOfType(occupiableType);
 		if (!plstEmptyOccupiables.isEmpty()) {
 			ArrayList<Occupiable> emptyOccupiables = (ArrayList<Occupiable>) plstEmptyOccupiables;
@@ -374,7 +386,7 @@ public class Agent {
 	}
 	
 	// Utility method to evaluate the utility of a room for selection
-	private double EvaluateRoomChoice(Room pRoom) {
+	protected double EvaluateRoomChoice(Room pRoom) {
 		int pRoomCapacity = pRoom.getCurrentCapacity();
 		if(pRoom.getOccupiers().contains(this)) {
 			pRoomCapacity--;

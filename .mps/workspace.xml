@@ -10,35 +10,158 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6cb34ac-6283-4417-93b4-3970d05c4a6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/BehaviourSequence__BehaviorDescriptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/EDLanguage.sandbox.CurrentProcessClone.msd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/models/EDLanguage.sandbox.CurrentProcessClone.mps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen.caches/EDLanguage/sandbox/CurrentProcessClone/dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen.caches/EDLanguage/sandbox/CurrentProcessClone/generated" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/AdmitPatientSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/AmberAdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Amber_AdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/ConductLFDSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/ConductLIATSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/ConductLIATTrackAndTraceSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/CurrentProcessClone/trace.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/DoctorOffice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Entrance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Exit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/GreenAdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Green_AdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/IsLIATReadySignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LFDCompleteSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LFDDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LIATBooth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LIATCompleteSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LIATCompleteTrackAndTraceSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LIATIsReadySignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LIATMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Lab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LabTech.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/MajorsABBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/MajorsABDoctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/MajorsABNurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/MajorsTriageNurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/NewPatientNeedMedicineSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Nurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PCRCompleteSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PCRCompleteTwoSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientNeedsBloodTestSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientNeedsFinalConsutlationSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientTestNegativeABSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientTestNegativeSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientTestPositiveABSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientTestPositiveSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientWaitingForDoctorSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientWaitingForMajorsABDoctorSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientWaitingForMajorsABSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientWaitingForMajorsSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/PatientWaitingForTriageSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Radiology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Receptionist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/RedAdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Red_AdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/RequestPCRSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/SURESCREEN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/SideRoomAdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/SideRoom_AdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/Staff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/StartPatientTestABSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/StartPatientTestSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/TaskRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/TriageSideRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/WaitingRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/XRaySignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/office.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/EDLanguage.sandbox.CurrentProcessClone2.msd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/models/EDLanguage.sandbox.CurrentProcessClone2.mps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen.caches/EDLanguage/sandbox/CurrentProcessClone2/dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen.caches/EDLanguage/sandbox/CurrentProcessClone2/generated" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/AmberAdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Amber_AdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/ConductTrackAndTraceLFDSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/CurrentProcessClone2/trace.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/DoctorOffice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Entrance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Exit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/GreenAdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Green_AdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/IsLIATReadySignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LFDDevice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LFDTrackAndTraceSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LIATBooth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LIATIsReadySignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LIATMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Lab.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LabAsymptomaticPCR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LabSymptomaticPCR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/LabTech.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/MajorsABBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/NewPatientNeedMedicineSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Nurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/PatientNeedsBloodTestSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/PatientNeedsFinalConsutlationSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/PatientTestNegativeSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/PatientTestPositiveSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/PatientWaitingForTriageSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Radiology.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Receptionist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/RedAdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Red_AdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/RequestPCRSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/SURESCREEN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/SideRoomAdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/SideRoom_AdmissionBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/Staff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/StartPatientTestSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/TaskRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/TriageSideRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/WaitingRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/XRaySignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox/office.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/PlaceholderSignalSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/ActionCardTwo/ActionCardTwo.msd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/ActionCardTwo/models/ActionCardTwo.AC.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mps/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.display_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.display_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/ActionStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/ActionStep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Agent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/basicStructures/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/basicStructures/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/models/EDLanguage.sandbox.CurrentProcess.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/models/EDLanguage.sandbox.CurrentProcess.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen.caches/EDLanguage/sandbox/TestingPassiveActions/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LFDDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LFDDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LIATMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LIATMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/ConductTrackAndTraceLFDSignal.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/ConductTrackAndTraceLFDSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LFDDevice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LFDTrackAndTraceSignal.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/source_gen/EDLanguage/sandbox/LFDTrackAndTraceSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/LIATMachine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Receptionist.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Receptionist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/Staff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/TestingPassiveActions/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox/TestingPassiveActions/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/EDLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/EDLanguage/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/main/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen.caches/main/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/EDLanguage/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/EDLanguage/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/EDLanguage/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/EDLanguage/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/QueriesGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/QueriesGenerated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/source_gen/main/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/generator/templates/main@generator.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/generator/templates/main@generator.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.behavior.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/models/EDLanguage.behavior.mps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/behavior/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/behavior/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/behavior/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/behavior/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen.caches/EDLanguage/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/BehaviorAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/BehaviorAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/Actor__BehaviorDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/Actor__BehaviorDescriptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/source_gen/EDLanguage/behavior/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/ActionCardOne/models/ActionCardOne.ActionCardOne.mps" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/ActionCardOne/models/ActionCardOne.ActionCardOne.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/EDRuntime_EDProject/lib/simcore.jar" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDRuntime_EDProject/lib/simcore.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +183,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="c59a2567-e2e5-495f-b002-4b7508b4063d/r:131c97e9-068d-49fc-b396-0a93a0c1c920(TempModulec59a2567-e2e5-495f-b002-4b7508b4063d/ConsoleModel_149410054409700)">
+            <model ref="8e98fd7d-cb91-4be4-a3a8-1cc20b4a2590/r:8dba3131-7987-415e-ab81-603f2826d5a6(TempModule8e98fd7d-cb91-4be4-a3a8-1cc20b4a2590/ConsoleModel_620327271285800)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -80,11 +203,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="4BMD7Yh_5Ed">
-                <node concept="3balQm" id="4BMD7Yh_5Ee" role="aymYE" />
-                <node concept="2Clz$F" id="4BMD7Yh_5Ef" role="aymYO" />
-                <node concept="2_V_lH" id="4BMD7Yh_5Eg" role="1PhJh3">
-                  <ref role="2_V_lI" node="4BMD7Yh_5Ef" resolve="CommandHolder" />
+              <node concept="aymSD" id="4BMD7YjgHm0">
+                <node concept="3balQm" id="4BMD7YjgHm1" role="aymYE" />
+                <node concept="2Clz$F" id="4BMD7YjgHm2" role="aymYO" />
+                <node concept="2_V_lH" id="4BMD7YjgHm3" role="1PhJh3">
+                  <ref role="2_V_lI" node="4BMD7YjgHm2" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -564,7 +687,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -572,30 +694,12 @@
               <option name="myItemId" value="HelloAgentProject" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic actions" />
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -609,7 +713,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
+              <option name="myItemId" value="783c4252-334b-405c-87f8-bd0b953235d2" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -623,101 +727,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tests" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -739,15 +753,29 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemId" value="runtime" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemId" value="783c4252-334b-405c-87f8-bd0b953235d2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -761,15 +789,11 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ED" />
+              <option name="myItemId" value="actions" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -780,132 +804,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrderPatientAction" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SendSignalAction" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actors" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Structures" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -928,40 +826,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="r:81ba5209-d7f5-4c8f-bade-287df4880985(EDLanguage.sandbox.TestingPassiveActions) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/models/EDLanguage.sandbox.TestingPassiveActions.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic actions" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OrderPatientAction" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Orders" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -1000,6 +864,354 @@
               <option name="myItemId" value="runtime" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6dfecd67-0a05-49f1-bb44-26013bf4abec" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:9302f939-0a41-43ac-988a-5356bb546d9c(EDLanguage.sandbox.CurrentProcessClone2) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/models/EDLanguage.sandbox.CurrentProcessClone2.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayForConditionAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayForConditionAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Condition" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2fe6650d-d2c3-4339-8624-9632d3850671" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCardOne" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="783c4252-334b-405c-87f8-bd0b953235d2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/models/EDLanguage.sandbox.CurrentProcessClone.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StaffDefinition" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayForConditionAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6dfecd67-0a05-49f1-bb44-26013bf4abec" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StayAction" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2fe6650d-d2c3-4339-8624-9632d3850671" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCardOne" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:d5248687-fb77-4032-b767-602d9bcbd3a4(ActionCardOne.ActionCardOne) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/ActionCardOne/models/ActionCardOne.ActionCardOne.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1018,8 +1230,144 @@
               <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/generator/templates/main@generator.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6dfecd67-0a05-49f1-bb44-26013bf4abec" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:9302f939-0a41-43ac-988a-5356bb546d9c(EDLanguage.sandbox.CurrentProcessClone2) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/models/EDLanguage.sandbox.CurrentProcessClone2.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StaffDefinition" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic actions" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="09c4e2a3-630d-4dc2-851c-3b2b5f702862" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2fe6650d-d2c3-4339-8624-9632d3850671" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6dfecd67-0a05-49f1-bb44-26013bf4abec" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="783c4252-334b-405c-87f8-bd0b953235d2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EDLanguage" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone/models/EDLanguage.sandbox.CurrentProcessClone.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -1029,12 +1377,17 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="783c4252-334b-405c-87f8-bd0b953235d2" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer">
         <subPane />
       </pane>
@@ -1268,10 +1621,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Java Application.Node Sanda12.www.MyRunner (1)" />
         <item itemvalue="Java Application.Node sand2.aaa.MyRunner" />
         <item itemvalue="Java Application.Node sand2.aaa.HelloTest" />
         <item itemvalue="Java Application.Node Sanda12.www.MyRunner" />
+        <item itemvalue="Java Application.Node Sanda12.www.MyRunner (1)" />
         <item itemvalue="Java Application.Node EDLanguage.Runner.RepastMain.MyRunner" />
       </list>
     </recent_temporary>
@@ -1519,7 +1872,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622740215982</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="(IN PROGRESS) Refactor generator to directly generate agent actions as inner classes">
+      <created>1623090379996</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1623090379996</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="UsagesViewTool">
@@ -1534,7 +1894,7 @@
         <query>
           <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
           <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-            <node ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093659899312" title="ObjectInstance" />
+            <node ref="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone)/3300989558152287782" title="RequestPCR" />
           </holder>
         </query>
         <usage_view>
@@ -1550,17 +1910,21 @@
                 <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
                   <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
                   <role name="category:Category" />
-                  <child caption="EDLanguage" excluded="false" isresult="false" results_section="false" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)">
+                  <child caption="EDLanguage.sandbox.CurrentProcessClone" excluded="false" isresult="false" results_section="false" module_ref="783c4252-334b-405c-87f8-bd0b953235d2(EDLanguage.sandbox.CurrentProcessClone)">
                     <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
                     <role name="module" />
-                    <child caption="EDLanguage.structure" excluded="false" isresult="false" results_section="false">
+                    <child caption="EDLanguage.sandbox.CurrentProcessClone" excluded="false" isresult="false" results_section="false">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="ObjectInstance" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093659899312" isRoot="true">
+                      <child caption="Signals" info="" excluded="false" isresult="false" results_section="false" nodePtr="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone)/513408552829927009" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
+                        <role name="root" />
+                        <child caption="RequestPCR" info="(role: signals in: Signals)" excluded="false" isresult="true" results_section="false" nodePtr="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone)/3300989558152287782">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
                       </child>
-                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" />
+                      <model uid="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone)" />
                     </child>
                   </child>
                 </child>
@@ -1571,78 +1935,25 @@
                 <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
                   <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
                   <role name="category:Category" />
-                  <child caption="EDLanguage" excluded="false" isresult="false" results_section="true" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)">
+                  <child caption="EDLanguage.sandbox.CurrentProcessClone" excluded="false" isresult="false" results_section="true" module_ref="783c4252-334b-405c-87f8-bd0b953235d2(EDLanguage.sandbox.CurrentProcessClone)">
                     <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
                     <role name="module" />
-                    <child caption="EDLanguage.editor" excluded="false" isresult="false" results_section="true">
+                    <child caption="EDLanguage.sandbox.CurrentProcessClone" excluded="false" isresult="false" results_section="true">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="ObjectInstance_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/4334763093660304367" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <model uid="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)" />
-                    </child>
-                    <child caption="EDLanguage.structure" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="AdmitAction" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/88285669846203988" isRoot="true">
+                      <child caption="LabTech" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone)/3300989558152287345" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                         <role name="root" />
-                        <child caption="targetBay" info="(role: linkDeclaration in: AdmitAction)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949009258443">
+                        <child caption="StartPCR" info="(role: behaviours in: LabTech)" excluded="false" isresult="false" results_section="true" nodePtr="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone)/3300989558152287346">
                           <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
+                          <role name="root to target" />
+                          <child caption="RequestPCR" info="(role: signal in: StartPCR)" excluded="false" isresult="true" results_section="true" nodePtr="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone)/5328502176975734995">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
                         </child>
                       </child>
-                      <child caption="BedAvailableCondition" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949014596229" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="targetWard" info="(role: linkDeclaration in: BedAvailableCondition)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949014596285">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <child caption="DataInstanceMap" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4973502446685367656" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="objectInstance" info="(role: linkDeclaration in: DataInstanceMap)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4973502446685367659">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <child caption="HumanInstance" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493511205794" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <child caption="MoveAction" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/3838812034270528852" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="targetObject" info="(role: linkDeclaration in: MoveAction)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/513408552830880866">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <child caption="MoveOrder" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493510951869" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="targetObject" info="(role: linkDeclaration in: MoveOrder)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493510951874">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <child caption="PlaceInstance" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/8504720493511205795" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <child caption="SuitableForSideRoomCondition" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/885129310544657865" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="alternativeBay" info="(role: linkDeclaration in: SuitableForSideRoomCondition)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2510173949006354792">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" />
+                      <model uid="r:04aed460-9f8f-4f9b-a13c-91b4dfa3c3bc(EDLanguage.sandbox.CurrentProcessClone)" />
                     </child>
                   </child>
                 </child>
@@ -1657,7 +1968,6 @@
     </default_view_options>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement basic pathway for Doctors" />
     <MESSAGE value="Implement more complex pathway with PCR tests" />
     <MESSAGE value="Clean direct signal code generation" />
     <MESSAGE value="Implement accurate workflow and lab PCR testing" />
@@ -1682,7 +1992,8 @@
     <MESSAGE value="Add StaffTypes to Actions" />
     <MESSAGE value="Add working generator for ActionCards" />
     <MESSAGE value="Fix passive actions (but need further testing)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix passive actions (but need further testing)" />
+    <MESSAGE value="(IN PROGRESS) Refactor generator to directly generate agent actions as inner classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="(IN PROGRESS) Refactor generator to directly generate agent actions as inner classes" />
   </component>
   <component name="mpsMakeService">
     <option name="makeInBackground" value="true" />

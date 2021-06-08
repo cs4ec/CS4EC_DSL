@@ -61,10 +61,6 @@
         <property id="7169358838269961823" name="startOccupancy" index="257sIZ" />
         <property id="885129310534673703" name="capacity" index="qZ3_c" />
       </concept>
-      <concept id="4973502446685367656" name="EDLanguage.structure.DataInstanceMap" flags="ng" index="2_cGdR">
-        <reference id="5832719916573057037" name="dataLine" index="XnLJh" />
-        <child id="4973502446685367659" name="objectInstance" index="2_cGdO" />
-      </concept>
       <concept id="3435897115888459980" name="EDLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
       <concept id="8910807539222190210" name="EDLanguage.structure.Description" flags="ng" index="2IBTiW">
         <property id="8910807539222190211" name="description" index="2IBTiX" />
@@ -73,11 +69,14 @@
         <child id="2838504078745190" name="place" index="2Vh8JW" />
       </concept>
       <concept id="6750846609944804889" name="EDLanguage.structure.RoomType" flags="ng" index="VhMOw" />
+      <concept id="8465466444624056385" name="EDLanguage.structure.OccupyAction" flags="ng" index="1kHj2w">
+        <child id="8465466444624056388" name="targetObject" index="1kHj2_" />
+      </concept>
+      <concept id="8465466444624057771" name="EDLanguage.structure.OccupiableInstance" flags="ng" index="1kHjla">
+        <property id="8465466444625393872" name="occupiableType" index="1kAtwL" />
+      </concept>
       <concept id="88285669845063092" name="EDLanguage.structure.DischargeAction" flags="ng" index="1kTJbH">
         <child id="88285669845063095" name="targetPatient" index="1kTJbI" />
-      </concept>
-      <concept id="513408552829965726" name="EDLanguage.structure.SignalReference" flags="ng" index="3n32J5">
-        <reference id="513408552829965727" name="signal" index="3n32J4" />
       </concept>
       <concept id="513408552829815467" name="EDLanguage.structure.ActorReference" flags="ng" index="3n3BjK">
         <reference id="513408552829815468" name="actor" index="3n3BjR" />
@@ -86,20 +85,13 @@
         <property id="513408552829744291" name="description" index="3n3SFS" />
         <child id="88285669848655863" name="receivers" index="1nbS2I" />
         <child id="4211260315489209511" name="senders" index="3z7ADm" />
-        <child id="4211260315489209495" name="data" index="3z7ADA" />
       </concept>
       <concept id="513408552829743917" name="EDLanguage.structure.SignalDefinition" flags="ng" index="3n3SPQ">
         <child id="513408552829743918" name="signals" index="3n3SPP" />
       </concept>
       <concept id="88285669848655860" name="EDLanguage.structure.ActorTypeSignal" flags="ng" index="1nbS2H" />
-      <concept id="88285669847966388" name="EDLanguage.structure.DirectSignal" flags="ng" index="1ncwnH" />
       <concept id="4211260315489209491" name="EDLanguage.structure.SignalInitReference" flags="ng" index="3z7ADy">
         <reference id="4211260315489209492" name="signal" index="3z7AD_" />
-        <child id="4334763093659899423" name="signalContent" index="jeBCe" />
-        <child id="88285669858280382" name="signalReceiver" index="1n$ajB" />
-      </concept>
-      <concept id="4211260315489209494" name="EDLanguage.structure.DataMap" flags="ng" index="3z7ADB">
-        <property id="4211260315489312590" name="valueType" index="3z0vAZ" />
       </concept>
       <concept id="4211260315489212560" name="EDLanguage.structure.SendSignalAction" flags="ng" index="3z7BTx">
         <child id="4211260315489212561" name="signalInitReference" index="3z7BTw" />
@@ -112,9 +104,6 @@
         <child id="8504720493510951874" name="targetObject" index="3JG_nS" />
       </concept>
       <concept id="8504720493511036692" name="EDLanguage.structure.SelfInstance" flags="ng" index="3JGL$I" />
-      <concept id="8504720493511355375" name="EDLanguage.structure.HumanInstanceFromSignal" flags="ng" index="3JJ7Rl">
-        <property id="8504720493511355376" name="data" index="3JJ7Ra" />
-      </concept>
       <concept id="8504720493511205796" name="EDLanguage.structure.PatientInstance" flags="ng" index="3JJFmu" />
       <concept id="329726013646474559" name="EDLanguage.structure.TestKit" flags="ng" index="3S2u4K">
         <reference id="329726013658956072" name="testCategoryType" index="3TMAOB" />
@@ -181,49 +170,19 @@
       <property role="3Vt_zX" value="3" />
       <ref role="3Vt_zZ" node="7IDz3VlgXPK" resolve="Receptionist" />
     </node>
-    <node concept="3VqkwQ" id="ijr0ZXy8W5" role="3Vt_yv">
-      <property role="3Vt_zX" value="50" />
-      <ref role="3Vt_zZ" node="ijr0ZWACuy" resolve="LFDDevice" />
-    </node>
-    <node concept="3VqkwQ" id="4TDP_nCHdX" role="3Vt_yv">
-      <property role="3Vt_zX" value="10" />
-      <ref role="3Vt_zZ" node="4TDP_m1Sqe" resolve="LIATMachine" />
-    </node>
     <node concept="2qCAYh" id="5VDVzf4k7mz" role="2qCAZT">
       <property role="2qCAYg" value="8" />
     </node>
   </node>
   <node concept="3n3SPQ" id="svZ_Jg4NTx">
-    <node concept="1nbS2H" id="4TDP_nUJBD" role="3n3SPP">
-      <property role="TrG5h" value="ConductTrackAndTraceLFD" />
-      <property role="3n3SFS" value="Start an LFD test but give the reslt via track and trace" />
-      <node concept="3z7ADB" id="4TDP_nUJDL" role="3z7ADA">
-        <property role="TrG5h" value="patient" />
-        <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
-      </node>
-      <node concept="3z7ADB" id="4TDP_nUJDN" role="3z7ADA">
-        <property role="TrG5h" value="replyTo" />
-        <property role="3z0vAZ" value="3DLpJ7ps9X2/Staff" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nUJDF" role="3z7ADm">
+    <node concept="1nbS2H" id="4BMD7YiOxOT" role="3n3SPP">
+      <property role="TrG5h" value="PlaceholderSignal" />
+      <property role="3n3SFS" value="blah" />
+      <node concept="3n3BjK" id="4BMD7YiOxOZ" role="3z7ADm">
         <ref role="3n3BjR" node="7IDz3VlgXPK" resolve="Receptionist" />
       </node>
-      <node concept="3n3BjK" id="4TDP_nUJDI" role="1nbS2I">
-        <ref role="3n3BjR" node="ijr0ZWACuy" resolve="LFDDevice" />
-      </node>
-    </node>
-    <node concept="1ncwnH" id="4TDP_nWBOe" role="3n3SPP">
-      <property role="TrG5h" value="LFDTrackAndTrace" />
-      <property role="3n3SFS" value="Do an FD for discharged patient" />
-      <node concept="3z7ADB" id="4TDP_nWBQw" role="3z7ADA">
-        <property role="TrG5h" value="patient" />
-        <property role="3z0vAZ" value="3DLpJ7ps9X5/Patient" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nWBQq" role="3z7ADm">
-        <ref role="3n3BjR" node="ijr0ZWACuy" resolve="LFDDevice" />
-      </node>
-      <node concept="3n3BjK" id="4TDP_nWBQt" role="1nbS2I">
-        <ref role="3n3BjR" node="7IDz3VlgXPK" resolve="Receptionist" />
+      <node concept="3n3BjK" id="4BMD7YiOxP2" role="1nbS2I">
+        <ref role="3n3BjR" node="3l6cNjecY0f" resolve="Staff" />
       </node>
     </node>
   </node>
@@ -726,10 +685,15 @@
           <node concept="2IBTiW" id="7IDz3VlgXX3" role="2IBTiu">
             <property role="2IBTiX" value="move to pre-diagnostic area" />
           </node>
-          <node concept="2Vh8JZ" id="a5pEVkrGP" role="3nfz8T">
-            <node concept="j3T7i" id="5QJON_AXTWH" role="2Vh8JW">
+          <node concept="2Vh8JZ" id="4BMD7YiKeIl" role="3nfz8T">
+            <node concept="j3T7i" id="4BMD7YiKeIr" role="2Vh8JW">
               <ref role="j3T7l" node="5QJON_AXpuJ" resolve="Triage" />
             </node>
+          </node>
+        </node>
+        <node concept="1kHj2w" id="4BMD7YiKeHQ" role="3VtFpW">
+          <node concept="1kHjla" id="4BMD7YiKeHS" role="1kHj2_">
+            <property role="1kAtwL" value="7lVoe4xN_rN/Desk" />
           </node>
         </node>
         <node concept="3JG_m1" id="4BMD7Yiga44" role="3VtFpW">
@@ -740,7 +704,31 @@
         </node>
         <node concept="jcv$W" id="4BMD7YhYIaw" role="3VtFpW">
           <property role="jcv$Z" value="3" />
-          <node concept="2IBTiW" id="4BMD7YilW29" role="2IBTiu" />
+        </node>
+        <node concept="3SPZ55" id="4TDP_nVpnX" role="3VtFpW">
+          <node concept="3JJFmu" id="4TDP_nVpnY" role="3SPZ52" />
+          <node concept="3S2u4K" id="4TDP_nVpnZ" role="3SPZ50">
+            <ref role="3TMAOB" node="ijr0ZWir17" resolve="SURESCREEN" />
+          </node>
+          <node concept="3VtFpM" id="4TDP_nVpo0" role="3S2vig">
+            <node concept="3JG_m1" id="4BMD7YitADV" role="3VtFpW">
+              <node concept="3JJFmu" id="4BMD7YitADW" role="3JG_8_" />
+              <node concept="3JG_m7" id="4BMD7YitAE1" role="3JG_nW">
+                <node concept="2Vh8JZ" id="4BMD7YiGyTt" role="3JG_nS">
+                  <node concept="j3T7i" id="4BMD7YjvV0n" role="2Vh8JW">
+                    <ref role="j3T7l" node="5QJON_AXpvL" resolve="DoctorOffice1" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="4TDP_nVpo6" role="3S2viG">
+            <node concept="3z7BTx" id="4BMD7YjvV0u" role="3VtFpW">
+              <node concept="3z7ADy" id="4BMD7YjvV0v" role="3z7BTw">
+                <ref role="3z7AD_" node="4BMD7YiOxOT" resolve="PlaceholderSignal" />
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="EZebP" id="6o2BuIxg_kC" role="3n3c3i" />
@@ -906,53 +894,6 @@
     <property role="3GE5qa" value="Tests" />
     <property role="3T7DM8" value="15" />
   </node>
-  <node concept="3Vql55" id="ijr0ZWACuy">
-    <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LFDDevice" />
-    <ref role="3Vt_ys" node="3l6cNjecY0f" resolve="Staff" />
-    <node concept="3Vt_xe" id="4TDP_nVpnV" role="2Ov1EZ">
-      <property role="TrG5h" value="TestPatientTrackAndTrace" />
-      <node concept="3VtFpM" id="4TDP_nVpnW" role="3VtFpR">
-        <node concept="3SPZ55" id="4TDP_nVpnX" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nVpnY" role="3SPZ52" />
-          <node concept="3S2u4K" id="4TDP_nVpnZ" role="3SPZ50">
-            <ref role="3TMAOB" node="ijr0ZWir17" resolve="SURESCREEN" />
-          </node>
-          <node concept="3VtFpM" id="4TDP_nVpo0" role="3S2vig">
-            <node concept="3z7BTx" id="4TDP_nVpo1" role="3VtFpW">
-              <node concept="3z7ADy" id="4TDP_nVpo2" role="3z7BTw">
-                <ref role="3z7AD_" node="4TDP_nWBOe" resolve="LFDTrackAndTrace" />
-                <node concept="2_cGdR" id="4TDP_nVpo3" role="jeBCe">
-                  <ref role="XnLJh" node="4TDP_nWBQw" resolve="patient" />
-                  <node concept="3JJFmu" id="4TDP_nVpo4" role="2_cGdO" />
-                </node>
-                <node concept="3JJ7Rl" id="4TDP_nVpo5" role="1n$ajB">
-                  <property role="3JJ7Ra" value="replyTo" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="3VtFpM" id="4TDP_nVpo6" role="3S2viG">
-            <node concept="3z7BTx" id="4TDP_nVpo7" role="3VtFpW">
-              <node concept="3z7ADy" id="4TDP_nVpo8" role="3z7BTw">
-                <ref role="3z7AD_" node="4TDP_nWBOe" resolve="LFDTrackAndTrace" />
-                <node concept="2_cGdR" id="4TDP_nVpo9" role="jeBCe">
-                  <ref role="XnLJh" node="4TDP_nWBQw" resolve="patient" />
-                  <node concept="3JJFmu" id="4TDP_nVpoa" role="2_cGdO" />
-                </node>
-                <node concept="3JJ7Rl" id="4TDP_nVpob" role="1n$ajB">
-                  <property role="3JJ7Ra" value="replyTo" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3n32J5" id="4TDP_nVpoL" role="3n3c3i">
-        <ref role="3n32J4" node="4TDP_nUJBD" resolve="ConductTrackAndTraceLFD" />
-      </node>
-    </node>
-  </node>
   <node concept="VhMOw" id="ijr0ZY9P4M">
     <property role="3GE5qa" value="Room Types" />
     <property role="TrG5h" value="Radiology" />
@@ -972,11 +913,6 @@
   <node concept="VhMOw" id="4TDP_lXqNe">
     <property role="3GE5qa" value="Room Types" />
     <property role="TrG5h" value="Exit" />
-  </node>
-  <node concept="3Vql55" id="4TDP_m1Sqe">
-    <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LIATMachine" />
-    <ref role="3Vt_ys" node="3l6cNjecY0f" resolve="Staff" />
   </node>
   <node concept="3SEB2C" id="4TDP_m1T$r">
     <property role="3GE5qa" value="Tests" />

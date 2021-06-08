@@ -32,7 +32,7 @@ public class Test {
 		return instance;
 	}
 	
-	public TestResult TestPatient(Patient pPatient, Double pdblCurrentTimestamp) {
+	public TestResult TestPatient(Patient pPatient) {
 		boolean patientIsInfected = (pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Asymptomatic
 										|| pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic);
 		TestResult ptestResult = null;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-atwx9hjho11f77i8hdutzlo4rpgi1fp">
-  <files dir="EDLanguage/sandbox" names="AmberAdmissionBay.java:Amber_AdmissionBay.java:ConductTrackAndTraceLFDSignal.java:DoctorOffice.java:EDBuilder.java:Entrance.java:Exit.java:GreenAdmissionBay.java:Green_AdmissionBay.java:LFDDevice.java:LFDTrackAndTraceSignal.java:LIAT.java:LIATBooth.java:LIATMachine.java:Lab.java:LabAsymptomaticPCR.java:LabSymptomaticPCR.java:MajorsABBay.java:Radiology.java:Receptionist.java:RedAdmissionBay.java:Red_AdmissionBay.java:SURESCREEN.java:SideRoomAdmissionBay.java:SideRoom_AdmissionBay.java:Staff.java:TaskRoom.java:TriageSideRoom.java:WaitingRoom.java:office.java" />
+<product version="3" modelHash="y8t2nu64rxw398mq9obo97fddb61kl">
+  <files dir="EDLanguage/sandbox" names="AmberAdmissionBay.java:Amber_AdmissionBay.java:DoctorOffice.java:EDBuilder.java:Entrance.java:Exit.java:GreenAdmissionBay.java:Green_AdmissionBay.java:LIAT.java:LIATBooth.java:Lab.java:LabAsymptomaticPCR.java:LabSymptomaticPCR.java:MajorsABBay.java:PlaceholderSignalSignal.java:Radiology.java:Receptionist.java:RedAdmissionBay.java:Red_AdmissionBay.java:SURESCREEN.java:SideRoomAdmissionBay.java:SideRoom_AdmissionBay.java:Staff.java:TaskRoom.java:TriageSideRoom.java:WaitingRoom.java:office.java" />
 </product>
 

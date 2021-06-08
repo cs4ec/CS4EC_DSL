@@ -59,12 +59,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 3; i++) {
       context.add(new Receptionist(space, grid));
     }
-    for (int i = 0; i < 50; i++) {
-      context.add(new LFDDevice(space, grid));
-    }
-    for (int i = 0; i < 10; i++) {
-      context.add(new LIATMachine(space, grid));
-    }
 
 
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 400, 400);

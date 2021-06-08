@@ -38,12 +38,14 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
   public static final SMethod<List<SNode>> GetInheritedBehaviourElement_id29F2V$jvuup = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetInheritedBehaviourElement").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("29F2V$jvuup").build();
   public static final SMethod<List<SNode>> GetInheritedAttributes_id6tNT_P6mjyK = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetInheritedAttributes").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6tNT_P6mjyK").build();
   public static final SMethod<List<SNode>> GetConstructBehaviourElement_id7IDz3VlgFrn = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetConstructBehaviourElement").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7IDz3VlgFrn").build();
+  public static final SMethod<List<SNode>> GetAllBehaviours_id4BMD7YivWul = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetAllBehaviours").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BMD7YivWul").build();
+  public static final SMethod<List<SNode>> searhBehaviourSequence_id4BMD7YiwBKD = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("searhBehaviourSequence").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BMD7YiwBKD").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
   public static final SMethod<List<SNode>> GetAllInheritanceList_id29F2V$jrHY3 = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetAllInheritanceList").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("29F2V$jrHY3").build();
   public static final SMethod<Boolean> BehaviourSignalIsIn_id4EinDJV_e0e = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("BehaviourSignalIsIn").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4EinDJV_e0e").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
   public static final SMethod<Boolean> AttributeIsIn_id4aMsku86oa7 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("AttributeIsIn").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4aMsku86oa7").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
   public static final SMethod<String> GetSuperTypeName_idJ03_IHVUJg = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetSuperTypeName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("J03_IHVUJg").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getScope_id52_Geb4QDV$, GetInheritedBehaviourElement_id29F2V$jvuup, GetInheritedAttributes_id6tNT_P6mjyK, GetConstructBehaviourElement_id7IDz3VlgFrn, GetAllInheritanceList_id29F2V$jrHY3, BehaviourSignalIsIn_id4EinDJV_e0e, AttributeIsIn_id4aMsku86oa7, GetSuperTypeName_idJ03_IHVUJg);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getScope_id52_Geb4QDV$, GetInheritedBehaviourElement_id29F2V$jvuup, GetInheritedAttributes_id6tNT_P6mjyK, GetConstructBehaviourElement_id7IDz3VlgFrn, GetAllBehaviours_id4BMD7YivWul, searhBehaviourSequence_id4BMD7YiwBKD, GetAllInheritanceList_id29F2V$jrHY3, BehaviourSignalIsIn_id4EinDJV_e0e, AttributeIsIn_id4aMsku86oa7, GetSuperTypeName_idJ03_IHVUJg);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -135,6 +137,27 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
 
     return nli;
   }
+  /*package*/ static List<SNode> GetAllBehaviours_id4BMD7YivWul(@NotNull SNode __thisNode__) {
+    List<SNode> nli = new ArrayList<SNode>();
+    SNode actorBase = __thisNode__;
+
+    return SNodeOperations.getNodeDescendants(actorBase, CONCEPTS.Behaviour$OO, false, new SAbstractConcept[]{});
+
+
+  }
+  /*package*/ static List<SNode> searhBehaviourSequence_id4BMD7YiwBKD(@NotNull SNode __thisNode__, SNode sequence, List<SNode> behaviours) {
+
+    for (int i = 0; i < ListSequence.fromList(SLinkOperations.getChildren(sequence, LINKS.steps$BnuP)).count(); i++) {
+      if (SLinkOperations.getChildren(sequence, LINKS.steps$BnuP).get(i) instanceof SNode) {
+        behaviours.addAll(Actor__BehaviorDescriptor.searhBehaviourSequence_id4BMD7YiwBKD.invoke(__thisNode__, ((SNode) SLinkOperations.getChildren(sequence, LINKS.steps$BnuP).get(i)), behaviours));
+      } else {
+        ListSequence.fromList(behaviours).addElement((SNode) SLinkOperations.getChildren(sequence, LINKS.steps$BnuP).get(i));
+      }
+
+    }
+
+    return behaviours;
+  }
   /*package*/ static List<SNode> GetAllInheritanceList_id29F2V$jrHY3(@NotNull SNode __thisNode__) {
     List<SNode> nli = new ArrayList<SNode>();
     SNode actorBase = __thisNode__;
@@ -197,12 +220,16 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
       case 3:
         return (T) ((List<SNode>) GetConstructBehaviourElement_id7IDz3VlgFrn(node));
       case 4:
-        return (T) ((List<SNode>) GetAllInheritanceList_id29F2V$jrHY3(node));
+        return (T) ((List<SNode>) GetAllBehaviours_id4BMD7YivWul(node));
       case 5:
-        return (T) ((Boolean) BehaviourSignalIsIn_id4EinDJV_e0e(node, (SNode) parameters[0], (List<SNode>) parameters[1]));
+        return (T) ((List<SNode>) searhBehaviourSequence_id4BMD7YiwBKD(node, (SNode) parameters[0], (List<SNode>) parameters[1]));
       case 6:
-        return (T) ((Boolean) AttributeIsIn_id4aMsku86oa7(node, (SNode) parameters[0], (List<SNode>) parameters[1]));
+        return (T) ((List<SNode>) GetAllInheritanceList_id29F2V$jrHY3(node));
       case 7:
+        return (T) ((Boolean) BehaviourSignalIsIn_id4EinDJV_e0e(node, (SNode) parameters[0], (List<SNode>) parameters[1]));
+      case 8:
+        return (T) ((Boolean) AttributeIsIn_id4aMsku86oa7(node, (SNode) parameters[0], (List<SNode>) parameters[1]));
+      case 9:
         return (T) ((String) GetSuperTypeName_idJ03_IHVUJg(node));
       default:
         throw new BHMethodNotFoundException(this, method);
@@ -236,6 +263,7 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
   private static final class CONCEPTS {
     /*package*/ static final SConcept BehaviourElement$lp = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, "EDLanguage.structure.BehaviourElement");
     /*package*/ static final SConcept Attribute$w0 = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125516L, "EDLanguage.structure.Attribute");
+    /*package*/ static final SConcept Behaviour$OO = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L, "EDLanguage.structure.Behaviour");
   }
 
   private static final class LINKS {
@@ -243,6 +271,7 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SContainmentLink behaviours$zTMQ = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x270efea19372e41eL, "behaviours");
     /*package*/ static final SContainmentLink attributes$f_y3 = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x257e995deb85de00L, "attributes");
     /*package*/ static final SReferenceLink superType$2Qmm = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x35463334ce306ba8L, "superType");
+    /*package*/ static final SContainmentLink steps$BnuP = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L, 0x35463334ce308548L, "steps");
   }
 
   private static final class PROPS {
