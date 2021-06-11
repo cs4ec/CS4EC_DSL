@@ -119,28 +119,30 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.TestingPassiveActions.Receptionist">
-    <classNode dependClassName="EDLanguage.sandbox.PlaceholderSignalSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AmberAdmissionBay" />
     <classNode dependClassName="EDLanguage.sandbox.Receptionist" />
-    <classNode dependClassName="EDLanguage.sandbox.SURESCREEN" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
     <classNode dependClassName="simcore.action.PassiveBehaviourStep" />
     <classNode dependClassName="simcore.agents.Patient" />
-    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode dependClassName="simcore.basicStructures.Occupiable" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.Test" />
+    <classNode dependClassName="simcore.diagnosis.InfectionStatus" />
     <classNode dependClassName="simcore.diagnosis.TestResult" />
     <classNode extendsClassName="EDLanguage.sandbox.Staff" />
   </dependency>

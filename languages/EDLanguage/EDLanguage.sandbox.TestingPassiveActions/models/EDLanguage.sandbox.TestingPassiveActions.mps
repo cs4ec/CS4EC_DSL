@@ -61,9 +61,15 @@
         <property id="7169358838269961823" name="startOccupancy" index="257sIZ" />
         <property id="885129310534673703" name="capacity" index="qZ3_c" />
       </concept>
+      <concept id="885129310544657865" name="EDLanguage.structure.SuitableForSideRoomCondition" flags="ng" index="r166y">
+        <child id="2510173949006354792" name="alternativeBay" index="o8Ri0" />
+      </concept>
       <concept id="3435897115888459980" name="EDLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
       <concept id="8910807539222190210" name="EDLanguage.structure.Description" flags="ng" index="2IBTiW">
         <property id="8910807539222190211" name="description" index="2IBTiX" />
+      </concept>
+      <concept id="6750846609956093098" name="EDLanguage.structure.RoomTypeReference" flags="ng" index="UeIYj">
+        <reference id="6750846609956389136" name="roomType" index="Udx8D" />
       </concept>
       <concept id="2838504078745189" name="EDLanguage.structure.PlaceInstanceCollection" flags="ng" index="2Vh8JZ">
         <child id="2838504078745190" name="place" index="2Vh8JW" />
@@ -78,6 +84,10 @@
       <concept id="88285669845063092" name="EDLanguage.structure.DischargeAction" flags="ng" index="1kTJbH">
         <child id="88285669845063095" name="targetPatient" index="1kTJbI" />
       </concept>
+      <concept id="88285669868571243" name="EDLanguage.structure.ResultCondition" flags="ng" index="1mvUOM">
+        <property id="88285669869395338" name="result" index="1mqNFj" />
+        <child id="88285669868571244" name="test" index="1mvUOP" />
+      </concept>
       <concept id="513408552829815467" name="EDLanguage.structure.ActorReference" flags="ng" index="3n3BjK">
         <reference id="513408552829815468" name="actor" index="3n3BjR" />
       </concept>
@@ -90,12 +100,6 @@
         <child id="513408552829743918" name="signals" index="3n3SPP" />
       </concept>
       <concept id="88285669848655860" name="EDLanguage.structure.ActorTypeSignal" flags="ng" index="1nbS2H" />
-      <concept id="4211260315489209491" name="EDLanguage.structure.SignalInitReference" flags="ng" index="3z7ADy">
-        <reference id="4211260315489209492" name="signal" index="3z7AD_" />
-      </concept>
-      <concept id="4211260315489212560" name="EDLanguage.structure.SendSignalAction" flags="ng" index="3z7BTx">
-        <child id="4211260315489212561" name="signalInitReference" index="3z7BTw" />
-      </concept>
       <concept id="8504720493510951867" name="EDLanguage.structure.OrderPatientAction" flags="ng" index="3JG_m1">
         <child id="8504720493510951967" name="targetPatient" index="3JG_8_" />
         <child id="8504720493510951878" name="orderContent" index="3JG_nW" />
@@ -114,11 +118,8 @@
         <property id="329726013662425223" name="ProcessingTime" index="3T7DM8" />
         <child id="1645043697875742355" name="ProcessingTimeTable" index="ldb0k" />
       </concept>
-      <concept id="329726013640842570" name="EDLanguage.structure.TestAction" flags="ng" index="3SPZ55">
-        <child id="329726013646477471" name="positiveCase" index="3S2vig" />
-        <child id="329726013646477475" name="negativeCase" index="3S2viG" />
-        <child id="329726013640842575" name="testkit" index="3SPZ50" />
-        <child id="329726013640842573" name="targetPatient" index="3SPZ52" />
+      <concept id="329726013666112698" name="EDLanguage.structure.InfectionCondition" flags="ng" index="3TllyP">
+        <property id="329726013666113123" name="InfectionStatus" index="3TllDG" />
       </concept>
       <concept id="3838812034270460672" name="EDLanguage.structure.EmergencyDepartment" flags="ng" index="3VqkwO">
         <property id="649219036782541956" name="percentageHighSeverity" index="XQ$72" />
@@ -150,6 +151,11 @@
       </concept>
       <concept id="3838812034270528839" name="EDLanguage.structure.Behaviour" flags="ng" index="3VtFpN">
         <child id="8910807539222190240" name="description" index="2IBTiu" />
+      </concept>
+      <concept id="3838812034270528842" name="EDLanguage.structure.Choice" flags="ng" index="3VtFpY">
+        <child id="3838812034270528848" name="else_case" index="3VtFp$" />
+        <child id="3838812034270528845" name="condition" index="3VtFpT" />
+        <child id="3838812034270528843" name="if_case" index="3VtFpZ" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -704,28 +710,49 @@
         </node>
         <node concept="jcv$W" id="4BMD7YhYIaw" role="3VtFpW">
           <property role="jcv$Z" value="3" />
+          <node concept="2IBTiW" id="4BMD7YjE0G7" role="2IBTiu" />
         </node>
-        <node concept="3SPZ55" id="4TDP_nVpnX" role="3VtFpW">
-          <node concept="3JJFmu" id="4TDP_nVpnY" role="3SPZ52" />
-          <node concept="3S2u4K" id="4TDP_nVpnZ" role="3SPZ50">
-            <ref role="3TMAOB" node="ijr0ZWir17" resolve="SURESCREEN" />
+        <node concept="3VtFpY" id="4BMD7YjE0Gz" role="3VtFpW">
+          <node concept="r166y" id="4BMD7YjE0H7" role="3VtFpT">
+            <node concept="UeIYj" id="4BMD7YjE0Hd" role="o8Ri0">
+              <ref role="Udx8D" node="2blVuwUSDO2" resolve="AmberAdmissionBay" />
+            </node>
           </node>
-          <node concept="3VtFpM" id="4TDP_nVpo0" role="3S2vig">
-            <node concept="3JG_m1" id="4BMD7YitADV" role="3VtFpW">
-              <node concept="3JJFmu" id="4BMD7YitADW" role="3JG_8_" />
-              <node concept="3JG_m7" id="4BMD7YitAE1" role="3JG_nW">
-                <node concept="2Vh8JZ" id="4BMD7YiGyTt" role="3JG_nS">
-                  <node concept="j3T7i" id="4BMD7YjvV0n" role="2Vh8JW">
-                    <ref role="j3T7l" node="5QJON_AXpvL" resolve="DoctorOffice1" />
+          <node concept="3VtFpM" id="4BMD7YjE0GB" role="3VtFpZ">
+            <node concept="3JG_m1" id="4BMD7YjE0Hg" role="3VtFpW">
+              <node concept="3JJFmu" id="4BMD7YjE0Hi" role="3JG_8_" />
+              <node concept="3JG_m7" id="4BMD7YjE0Hp" role="3JG_nW">
+                <node concept="2Vh8JZ" id="4BMD7YjE0Hv" role="3JG_nS">
+                  <node concept="j3T7i" id="4BMD7YjE0H_" role="2Vh8JW">
+                    <ref role="j3T7l" node="2blVuwUK99D" resolve="AmberBay" />
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="3VtFpM" id="4TDP_nVpo6" role="3S2viG">
-            <node concept="3z7BTx" id="4BMD7YjvV0u" role="3VtFpW">
-              <node concept="3z7ADy" id="4BMD7YjvV0v" role="3z7BTw">
-                <ref role="3z7AD_" node="4BMD7YiOxOT" resolve="PlaceholderSignal" />
+          <node concept="3VtFpM" id="4BMD7YjE7bi" role="3VtFp$">
+            <node concept="3VtFpY" id="4BMD7YjE7bm" role="3VtFpW">
+              <node concept="3TllyP" id="4BMD7YjE7by" role="3VtFpT">
+                <property role="3TllDG" value="ijr0ZXLzgJ/Asymptomatic" />
+              </node>
+              <node concept="3VtFpM" id="4BMD7YjE7bq" role="3VtFpZ">
+                <node concept="3VtFpY" id="4BMD7YjE7b_" role="3VtFpW">
+                  <node concept="1mvUOM" id="4BMD7YjE7bL" role="3VtFpT">
+                    <property role="1mqNFj" value="1s4HvCZwevC/true" />
+                    <node concept="3S2u4K" id="4BMD7YjE7bR" role="1mvUOP">
+                      <ref role="3TMAOB" node="4TDP_m1T$r" resolve="LIAT" />
+                    </node>
+                  </node>
+                  <node concept="3VtFpM" id="4BMD7YjE7bD" role="3VtFpZ">
+                    <node concept="3VtFpw" id="4BMD7YjE7bU" role="3VtFpW">
+                      <node concept="2Vh8JZ" id="4BMD7YjE7c0" role="3nfz8T">
+                        <node concept="j3T7i" id="4BMD7YjE7c6" role="2Vh8JW">
+                          <ref role="j3T7l" node="5QJON_AXpvL" resolve="DoctorOffice1" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
               </node>
             </node>
           </node>

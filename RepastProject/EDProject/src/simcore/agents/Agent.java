@@ -136,84 +136,6 @@ public class Agent {
 		}
 	}
 	
-//	public void InitAction() {
-//		ActionFragment firstStep = myActiveAction.getSteps().get(0).getStepLogic();
-//		if ((firstStep) instanceof StayForTimeAction) {
-//			myActiveAction.curTimeCount = ((StayForTimeAction) firstStep).getTimeSpan();
-//		}
-//
-//		if ((firstStep) instanceof StayForConditionAction) {
-//			myActiveAction.curCondition = ((StayForConditionAction) firstStep).getStayCondition();
-//		}
-//
-//		executeCurrentActions();
-//	}
-	
-//	protected void doAction(Action a) {
-//		ActionStep curStep = a.getCurrentStep();
-//
-//		if (curStep instanceof ConsequenceStep) {
-//			UpdateState(((ConsequenceStep) curStep).getConsequence());
-//			NextStep(a);
-//		}
-//
-//		// Get the current logic step and initialise it
-//		ActionFragment stepLogic = curStep.getStepLogic();
-//		InitActionFragment(stepLogic);
-//
-//		// Move Action
-//		if (stepLogic instanceof MoveAction) {
-//			MoveTo(a, ((MoveAction) stepLogic).getDestinationObject());
-//		}
-//
-//		// Occupy Action
-//		if (stepLogic instanceof OccupyAction) {
-//			// If there is an occupiable free, move towards it
-//			if (((OccupyAction) stepLogic).getConcreteDestination() != null) {
-//				MoveTo(a, ((OccupyAction) stepLogic).getConcreteDestination());
-//			} else { // Otherwise, ToDO: Add behaviour here
-//				NextStep(a);
-//			}
-//		}
-//	}
-	
-	/**
-	 * If the current Agent action is to move somewhere, then process that here
-	 * 
-	 * @param stepLogic The current step of the Agent's Mission
-	 */
-//	protected void MoveTo(Action a, Object target) {
-//		// If I am already here, dont do anything
-//		if (ImAt(target)) {
-//			NextStep(a);
-//			return;
-//		} 
-//
-//		// Move in the physical space
-//		MoveTowards(target);
-//
-//		// If the agent is moving towards an occupiable (bed, seat etc)
-//		if (target instanceof Occupiable) {
-//			Occupiable targetOccupiable = (Occupiable) target;
-//			// if this agent is already there, continue
-//			if (targetOccupiable.getOccupier() == this) {
-//				NextStep(a);
-//			} else { 
-//				if (ImAt(targetOccupiable)) {
-//					targetOccupiable.setOccupier(this);
-//				}
-//			}
-//		}
-//		// Else moving towards the room
-//		else if (target instanceof Room) {
-//			Room targetLocation = (Room) target;
-//			// if this agent already in room, execute next step
-//			if (targetLocation.WithInside(this)) {
-//				NextStep(a);
-//			}
-//		}
-//	}
-	
 	
 	/*
 	 * An alternative movement implementation that ignores any pathfinding or obstacles, heads straight line to target
@@ -410,47 +332,6 @@ public class Agent {
 				"cur action step: " + myActiveAction.getCurrentStep() + ": " + myActiveAction.getCurrentStep());
 	}
 
-	// 判断当前位置是否在目标处
-	public boolean SpaceAtByGrid(Object o) {
-
-		// 以当前位置构造长度为1的网格，如果网格中包含目标对象，则表示当前已位于目标处
-		GridPoint pt = grid.getLocation(this);
-
-		GridCellNgh<Object> nghCreator = new GridCellNgh<Object>(grid, pt, Object.class, 1, 1);
-		List<GridCell<Object>> gridCells = nghCreator.getNeighborhood(true);
-
-		for (GridCell<Object> cell : gridCells) {
-			List<Object> list = (List<Object>) cell.items();
-			for (int i = 0; i < list.size(); i++) {
-				if (o.equals(list.get(i))) {
-					return true;
-				}
-			}
-		}
-
-		return false;
-	}
-
-	public boolean SpaceAtByGrid(GridPoint o) {
-
-		// 以当前位置构造长度为1的网格，如果网格中包含目标对象，则表示当前已位于目标处
-		GridPoint pt = grid.getLocation(this);
-
-		GridCellNgh<Object> nghCreator = new GridCellNgh<Object>(grid, pt, Object.class, 1, 1);
-		List<GridCell<Object>> gridCells = nghCreator.getNeighborhood(true);
-
-		for (GridCell<Object> cell : gridCells) {
-			List<Object> list = (List<Object>) cell.items();
-			for (int i = 0; i < list.size(); i++) {
-				if (o.equals(list.get(i))) {
-					return true;
-				}
-			}
-		}
-
-		return false;
-	}
-
 	// Consequence of this Action
 	public void UpdateState(Consequence c) {
 		if (c == null) {
@@ -509,131 +390,66 @@ public class Agent {
 			e.printStackTrace();
 		}
 	}
-
-	public boolean CheckCondition(Condition c) {
-
-		if (c instanceof PossibilityCondition) {
-			return Dice(((PossibilityCondition) c).getPossibility());
+	
+	public boolean evaluateStateCondition(String fieldName, String operator, Double comparisonValue) {
+		Field field = fields.stream().filter(f -> f.getName() == fieldName).findFirst().get();
+		try {
+			return Compare(field.getDouble(this), operator, comparisonValue);
+		} catch (IllegalArgumentException | IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-
-		if (c instanceof SpaceatCondition) {
-			return ImAt(((SpaceatCondition) c).getSubject(), ((SpaceatCondition) c).getTarget());
-		}
-		
-		if(c instanceof TestResultCondition) {
-			TestResult ptestResult = ((TestResultCondition) c).getTestType().TestPatient(((TestResultCondition) c).getPatient());
-			return ptestResult.isInfected();
-		}
-		
-		if(c instanceof PatientAdmissionStatusCondition) {
-			return ((PatientAdmissionStatusCondition) c).getOutcome() == ((PatientAdmissionStatusCondition) c).getPatient().getOutcome();
-		}
-		
-		if(c instanceof BedAvailableCondition) {
-			Room targetWard = ((BedAvailableCondition) c).getTargetWard();
-			ArrayList<Occupiable> emptyBeds = (ArrayList<Occupiable>) targetWard.getAllEmptyOcupiablesOfType(Bed.class);
-			if(emptyBeds.isEmpty()) {
-				return false;
-			} else {
-				return true;
-			}
-		}
-		
-		if(c instanceof ResultCondition) {
-			Test pTest = ((ResultCondition)c).getTest();
-			Patient pPatient = ((ResultCondition)c).getPatient();
-			ArrayList<TestResult> plstTestResults = (ArrayList<TestResult>) pPatient.getTestResults();
-			for (TestResult testResult : plstTestResults) {
-				if(testResult.getTestType() == pTest) {
-					return testResult.isInfected() == ((ResultCondition)c).getResult();
-				}
-			}
-			return false;
-		}
-		if(c instanceof InfectionCondition) {
-			
-			// Introduce stochasticity in whether patient is correctly identified as symptomatic 
-		    Parameters params = RunEnvironment.getInstance().getParameters();
-		    Double pdblFalsePositiveSymptomatic = params.getDouble("FalsePositiveSymptomatic");
-		    
-		    InfectionStatus testingStatus = ((InfectionCondition) c).getInfectionStatus();
-		    InfectionStatus patientActualStatus = ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
-			
-		    // margin of error comes when patient is susceptible, but doc thinks they are actually symptomatic
-			// so when deciding if a patient is symptomatic, there is a 7% chance that the doc says YES, but patient actual infection status is susc
-		    if(testingStatus == InfectionStatus.Symptomatic && patientActualStatus == InfectionStatus.Susceptible) {
-		    	if (RandomHelper.nextDouble() < pdblFalsePositiveSymptomatic) {
-		    		return true;
-		    	} else {
-		    		return false;
-		    	}
-		    } else {
-				return ((InfectionCondition) c).getInfectionStatus() == ((InfectionCondition) c).getPatient().getActualInfectionState().stateType.getInfectionStatus();
-		    }
-		}
-		
-		if(c instanceof SeverityCondition) {
-			return ((SeverityCondition) c).getSeverityScore() == ((SeverityCondition) c).getPatient().getSeverityScore();
-		}
-		
-		if(c instanceof SuitableForSideRoomCondition) {
-			Patient pPatient = ((SuitableForSideRoomCondition) c).getPatient();
-			Room pAlternativeBay = ((SuitableForSideRoomCondition) c).getAlternativeBay();
-			InfectionStatus pPatientStatus = pPatient.getActualInfectionState().stateType.getInfectionStatus();
-			
-			// Calculate the current occupancy of side rooms
-			ArrayList<Room> plstSideRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(SideRoomAdmissionBay.getInstance());
-			int maxSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllOcupiablesOfType(Bed.class).size()).sum();
-			int curSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllEmptyOcupiablesOfType(Bed.class).size()).sum();
-			double pdblChanceUseSideRoom = (double)curSRCapacity / (double)maxSRCapacity;
-			
-			if(pAlternativeBay.getRoomType() == RedAdmissionBay.getInstance()) {
-				if(pPatientStatus == InfectionStatus.Symptomatic) {
-					//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
-					if(curSRCapacity > 0) {
-						return true;
-					} else {
-						return false;
-					}
-				} else {
-					return true; // Patient can go to a SR
-				}
-			} else {
-				if(pPatientStatus == InfectionStatus.Symptomatic) {
-					return true; // Patient can go to a SR
-				} else {
-					if(curSRCapacity > 0) {
-						return true;
-					} else {
-						return false;
-					}				}
-			}
-		}
-
-		if (c instanceof StateCondition) {
-			Field targetField = null;
-			for (int i = 0; i < fields.size(); i++) {
-				if (fields.get(i).getName().equals(((StateCondition) c).getAttribute())) {
-					targetField = fields.get(i);
-				}
-			}
-
-			try {
-				return Compare(targetField.getDouble(this), ((StateCondition) c).getOperator(),
-						((StateCondition) c).getValue());
-			} catch (SecurityException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IllegalArgumentException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-
 		return false;
+	}
+	
+	public boolean EvaluateInfectionCondition(InfectionStatus comparisonStatus, Patient p) {
+		
+		// Introduce stochasticity in whether patient is correctly identified as symptomatic 
+	    Parameters params = RunEnvironment.getInstance().getParameters();
+	    Double pdblFalsePositiveSymptomatic = params.getDouble("FalsePositiveSymptomatic");
+	    		
+	    // margin of error comes when patient is susceptible, but doc thinks they are actually symptomatic
+		// so when deciding if a patient is symptomatic, there is a 7% chance that the doc says YES, but patient actual infection status is susc
+	    if(comparisonStatus == InfectionStatus.Symptomatic && p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Susceptible) {
+	    	if (RandomHelper.nextDouble() < pdblFalsePositiveSymptomatic) {
+	    		return true;
+	    	} else {
+	    		return false;
+	    	}
+	    } else {
+			return (comparisonStatus == p.getActualInfectionState().stateType.getInfectionStatus());
+	    }
+	}
+	
+	public boolean EvaluateSuitableForSideRoomCondition(Patient p, RoomType alternativeBay) {		
+		// Calculate the current occupancy of side rooms
+		ArrayList<Room> plstSideRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(SideRoomAdmissionBay.getInstance());
+		int maxSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllOcupiablesOfType(Bed.class).size()).sum();
+		int curSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllEmptyOcupiablesOfType(Bed.class).size()).sum();
+		double pdblChanceUseSideRoom = (double)curSRCapacity / (double)maxSRCapacity;
+		
+		if(alternativeBay == RedAdmissionBay.getInstance()) {
+			if(p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
+				//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
+				if(curSRCapacity > 0) {
+					return true;
+				} else {
+					return false;
+				}
+			} else {
+				return true; // Patient can go to a SR
+			}
+		} else {
+			if(p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
+				return true; // Patient can go to a SR
+			} else {
+				if(curSRCapacity > 0) {
+					return true;
+				} else {
+					return false;
+				}				
+			}
+		}
 	}
 
 	public boolean Dice(double possibility) {
@@ -667,52 +483,6 @@ public class Agent {
 
 		return false;
 	}
-//
-//	public void NextStep(Action a) {
-//		//If the finished action step was a conditional, evaluate what branch should be chosen next
-//		if(a.getCurrentStep() instanceof ConditionalActionStep) {
-//			ConditionalActionStep branch = ((ConditionalActionStep) a.getCurrentStep());
-//			Condition branchCondition = branch.getCondition();
-//			a.injectSteps(branch.Evaluate(CheckCondition(branchCondition)));
-//		}
-//		
-//		// Iterate the action step
-//		a.curActionStep++;
-//		
-//		// If the mission is complete, update my status accordingly
-//		if (a.isComplete()) {
-//			a.curActionStep = 0;
-//			if(a == myActiveAction) {
-//				isIdle = true;
-//				myActiveAction = null;
-//				myCurrentActions.remove(a);
-//			}
-//			return;
-//		}
-//		
-//		// If my active action has turned passive, set myself as idle and add it to my current actions backlog
-//		if(a.getCurrentStep().isPassive()) {
-//			isIdle = true;
-//			if(!myCurrentActions.contains(a)) {
-//				myCurrentActions.add(a);
-//			}
-//			myActiveAction = null;
-//		}		
-//
-//		// Initialise the action fragment
-//		ActionFragment stepLogic = a.getCurrentStep().getStepLogic();
-//		if (stepLogic instanceof StayForTimeAction) {
-//			a.curTimeCount = ((StayForTimeAction) stepLogic).getTimeSpan();
-//		}
-//		
-//		if (stepLogic instanceof WaitAction) {
-//			a.curTimeCount = ((WaitAction) stepLogic).getWaitTime();
-//		}
-//
-//		if (stepLogic instanceof StayForConditionAction) {
-//			a.curCondition = ((StayForConditionAction) stepLogic).getStayCondition();
-//		}
-//	}
 
 	public EDMap ReadMap() {
 		return ToolBox().ReadMap(grid);
