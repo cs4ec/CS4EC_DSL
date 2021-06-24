@@ -119,7 +119,7 @@ public class Receptionist extends Staff {
     public void execute() {
       Patient p = behaviour.getPatient();
 
-      p.TakeOrder(new MoveToOrder().WithDestination(Receptionist.this));
+      p.TakeOrder(new MoveToOrder().WithDestination(DoctorOffice.getInstance()));
     }
   }
   public class StayAction_d0a extends PassiveBehaviourStep {
@@ -225,7 +225,7 @@ public class Receptionist extends Staff {
     public void execute() {
       Patient p = behaviour.getPatient();
 
-      p.TakeOrder(new MoveToOrder().WithDestination(Receptionist.this));
+      p.TakeOrder(new MoveToOrder().WithDestination(DoctorOffice.getInstance()));
     }
   }
   public class StayAction_d0a_1 extends PassiveBehaviourStep {
