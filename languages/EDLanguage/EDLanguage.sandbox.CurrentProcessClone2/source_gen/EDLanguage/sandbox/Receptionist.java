@@ -14,6 +14,7 @@ import simcore.basicStructures.Desk;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.PassiveBehaviourStep;
+import simcore.basicStructures.Board;
 import java.util.ArrayList;
 
 public class Receptionist extends Staff {
@@ -97,7 +98,7 @@ public class Receptionist extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(Receptionist.this);
         return true;
       } else {
@@ -130,7 +131,7 @@ public class Receptionist extends Staff {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 3;
+      return timeExecuted == 180;
     }
   }
   public class OrderAction_e0a extends BehaviourStep {
@@ -143,6 +144,22 @@ public class Receptionist extends Staff {
       Patient p = behaviour.getPatient();
 
       p.TakeOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("TriageWaitingRoom")));
+    }
+  }
+  public class SendSignalAction_f0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_f0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new NewPatientNeedMedicineSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0a_5 extends BehaviourStep {
@@ -197,7 +214,7 @@ public class Receptionist extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(Receptionist.this);
         return true;
       } else {
@@ -230,7 +247,7 @@ public class Receptionist extends Staff {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 3;
+      return timeExecuted == 180;
     }
   }
   public class OrderAction_e0a_1 extends BehaviourStep {
@@ -245,6 +262,22 @@ public class Receptionist extends Staff {
       p.TakeOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("TriageWaitingRoom")));
     }
   }
+  public class SendSignalAction_f0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_f0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new NewPatientNeedMedicineSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
 
 
   public void InitInspect(Signal s) {
@@ -255,6 +288,7 @@ public class Receptionist extends Staff {
     plstSteps.add(new OrderAction_c0a_3(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_3(behaviourBuilder));
     plstSteps.add(new OrderAction_e0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_f0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

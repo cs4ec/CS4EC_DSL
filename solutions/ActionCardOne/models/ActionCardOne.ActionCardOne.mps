@@ -58,11 +58,11 @@
         </node>
       </node>
       <node concept="2GGxJi" id="4BMD7Yjxn7u" role="2GGxG1">
-        <ref role="2GGxGe" node="4BMD7Yjxn6W" resolve="TaskNext" />
+        <ref role="2GGxGe" node="4BMD7Yjxn6W" resolve="TaskTwo" />
       </node>
     </node>
     <node concept="2MhjZa" id="4BMD7Yjxn6W" role="2MhjZp">
-      <property role="TrG5h" value="TaskNext" />
+      <property role="TrG5h" value="TaskTwo" />
       <node concept="2_8ZN7" id="4BMD7Yjxn75" role="2_8HaY">
         <ref role="2_8ZNy" node="4FTL$vJUPHw" resolve="Nurse" />
       </node>

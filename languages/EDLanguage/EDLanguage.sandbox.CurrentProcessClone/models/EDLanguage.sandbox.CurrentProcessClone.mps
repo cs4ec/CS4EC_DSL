@@ -1998,6 +1998,13 @@
               <ref role="j3T7l" node="5QJON_AXpx9" resolve="TriageWaitingRoom" />
             </node>
           </node>
+          <node concept="2IBTiW" id="1JOzhSMGDRa" role="2IBTiu" />
+        </node>
+        <node concept="3JG_m1" id="1JOzhSMGDRw" role="3VtFpW">
+          <node concept="3JJFmu" id="1JOzhSMGDRy" role="3JG_8_" />
+          <node concept="3JG_m4" id="1JOzhSMGDRV" role="3JG_nW">
+            <node concept="3JGL$I" id="1JOzhSMGDS1" role="3JG_nY" />
+          </node>
         </node>
         <node concept="3VtFpw" id="4BMD7Yj$5Re" role="3VtFpW">
           <node concept="UeIYj" id="4BMD7Yj$5Rn" role="3nfz8T">
@@ -2011,10 +2018,11 @@
         </node>
         <node concept="jcv$W" id="4BMD7Yj$5RP" role="3VtFpW">
           <property role="jcv$Z" value="5" />
+          <node concept="2IBTiW" id="1JOzhSMGDS4" role="2IBTiu" />
         </node>
-        <node concept="3JG_m1" id="4BMD7Yj$5S9" role="3VtFpW">
-          <node concept="3JJFmu" id="4BMD7Yj$5Sb" role="3JG_8_" />
-          <node concept="3JG_m5" id="4BMD7Yj$5Sq" role="3JG_nW" />
+        <node concept="3JG_m1" id="1JOzhSMGDSv" role="3VtFpW">
+          <node concept="3JJFmu" id="1JOzhSMGDSx" role="3JG_8_" />
+          <node concept="3JG_m5" id="1JOzhSMGDSZ" role="3JG_nW" />
         </node>
         <node concept="3z7BTx" id="4BMD7Yj$5SE" role="3VtFpW">
           <node concept="3z7ADy" id="4BMD7Yj$5SG" role="3z7BTw">

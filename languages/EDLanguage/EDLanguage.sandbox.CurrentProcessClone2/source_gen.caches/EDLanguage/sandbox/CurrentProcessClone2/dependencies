@@ -15,7 +15,6 @@
   <dependency className="EDLanguage.sandbox.CurrentProcessClone2.Doctor">
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorOffice" />
-    <classNode dependClassName="EDLanguage.sandbox.PatientNeedsBloodTestSignal" />
     <classNode dependClassName="EDLanguage.sandbox.XRaySignal" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Double" />
@@ -30,6 +29,7 @@
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.action.PassiveBehaviourStep" />
+    <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Patient" />
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
@@ -220,7 +220,6 @@
     <classNode dependClassName="EDLanguage.sandbox.Nurse" />
     <classNode dependClassName="EDLanguage.sandbox.PatientNeedsFinalConsutlationSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Radiology" />
-    <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
@@ -231,6 +230,7 @@
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Orders.FollowOrder" />
     <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Orders.StopOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
@@ -263,6 +263,7 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="EDLanguage.sandbox.CurrentProcessClone2.Receptionist">
+    <classNode dependClassName="EDLanguage.sandbox.NewPatientNeedMedicineSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Receptionist" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Double" />
@@ -278,6 +279,7 @@
     <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.action.PassiveBehaviourStep" />
     <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Desk" />
     <classNode dependClassName="simcore.basicStructures.Occupiable" />
     <classNode dependClassName="simcore.basicStructures.Room" />

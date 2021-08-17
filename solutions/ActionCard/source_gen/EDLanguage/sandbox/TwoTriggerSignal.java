@@ -7,8 +7,8 @@ import simcore.Signals.ActorTypeSignal;
 public class TwoTriggerSignal extends ActorTypeSignal {
   public TwoTriggerSignal() {
     this.setName("TwoTrigger");
-    this.setDescription("hello");
-    this.AddActor("Nurse");
+    this.setDescription("helloTwo");
+    this.AddActor("Doctor");
   }
 
 }

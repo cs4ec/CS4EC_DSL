@@ -8,7 +8,7 @@ public class PatientNeedsBloodTestSignal extends ActorTypeSignal {
   public PatientNeedsBloodTestSignal() {
     this.setName("PatientNeedsBloodTest");
     this.setDescription("");
-    this.AddActor("Nurse");
+    this.AddActor("LIATMachine");
   }
 
 }

@@ -62,11 +62,11 @@ public class MyRunner {
     ClearDir(LogNote.GetUniqueLog().GetAddress() + "output\\");
 
     String classPathOld = "languages\\EDLanguage\\sandbox\\classes_gen\\EDLanguage\\sandbox\\";
-    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\languages\\EDLanguage\\EDLanguage.sandbox.TestingPassiveActions\\classes_gen\\EDLanguage\\sandbox\\";
+    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\languages\\EDLanguage\\EDLanguage.sandbox.CurrentProcessClone2\\classes_gen\\EDLanguage\\sandbox\\";
     String classPathAfter = "RepastProject\\EDProject\\bin\\EDLanguage\\sandbox\\";
 
     String javaPathOld = "languages\\EDLanguage\\sandbox\\source_gen\\EDLanguage\\sandbox\\";
-    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\languages\\EDLanguage\\EDLanguage.sandbox.TestingPassiveActions\\source_gen\\EDLanguage\\sandbox\\";
+    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\languages\\EDLanguage\\EDLanguage.sandbox.CurrentProcessClone2\\source_gen\\EDLanguage\\sandbox\\";
     String javaPathAfter = "RepastProject\\EDProject\\src\\EDLanguage\\sandbox\\";
 
     System.out.println("Generating files:");

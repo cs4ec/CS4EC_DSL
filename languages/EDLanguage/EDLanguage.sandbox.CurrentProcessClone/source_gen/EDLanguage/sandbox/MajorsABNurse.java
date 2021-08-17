@@ -9,10 +9,11 @@ import simcore.Signals.Signal;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
+import simcore.agents.Patient;
+import simcore.Signals.Orders.FollowOrder;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Desk;
 import simcore.action.PassiveBehaviourStep;
-import simcore.agents.Patient;
 import simcore.Signals.Orders.StopOrder;
 import simcore.basicStructures.Board;
 import simcore.Signals.Orders.MoveToOrder;
@@ -84,11 +85,23 @@ public class MajorsABNurse extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class MoveAction_b0a extends BehaviourStep {
+  public class OrderAction_b0a_7 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0a_7(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
+      p.TakeOrder(new FollowOrder().WithTarget(MajorsABNurse.this));
+    }
+  }
+  public class MoveAction_c0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_b0a(Behaviour behaviour) {
+    public MoveAction_c0a_3(Behaviour behaviour) {
       target = MajorsABBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -115,11 +128,11 @@ public class MajorsABNurse extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class OccupyAction_c0a extends BehaviourStep {
+  public class OccupyAction_d0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Class target;
     /*package*/ Occupiable concreteTarget;
-    public OccupyAction_c0a(Behaviour behaviour) {
+    public OccupyAction_d0a_3(Behaviour behaviour) {
       target = Desk.class;
       this.behaviour = behaviour;
     }
@@ -144,10 +157,10 @@ public class MajorsABNurse extends Staff {
       }
     }
   }
-  public class StayAction_d0a_11 extends PassiveBehaviourStep {
+  public class StayAction_e0a_3 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_11(Behaviour behaviour) {
+    public StayAction_e0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -160,9 +173,9 @@ public class MajorsABNurse extends Staff {
       return timeExecuted == 5;
     }
   }
-  public class OrderAction_e0a_7 extends BehaviourStep {
+  public class OrderAction_f0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_e0a_7(Behaviour behaviour) {
+    public OrderAction_f0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -172,10 +185,10 @@ public class MajorsABNurse extends Staff {
       p.TakeOrder(new StopOrder());
     }
   }
-  public class SendSignalAction_f0a_7 extends BehaviourStep {
+  public class SendSignalAction_g0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_f0a_7(Behaviour behaviour) {
+    public SendSignalAction_g0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -188,11 +201,11 @@ public class MajorsABNurse extends Staff {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_g0a extends BehaviourStep {
+  public class MoveAction_h0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_g0a(Behaviour behaviour) {
+    public MoveAction_h0a(Behaviour behaviour) {
       target = ReadMap().FindPlace("MajorsABReception");
       this.behaviour = behaviour;
     }
@@ -219,11 +232,11 @@ public class MajorsABNurse extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class OccupyAction_h0a extends BehaviourStep {
+  public class OccupyAction_i0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Class target;
     /*package*/ Occupiable concreteTarget;
-    public OccupyAction_h0a(Behaviour behaviour) {
+    public OccupyAction_i0a(Behaviour behaviour) {
       target = Desk.class;
       this.behaviour = behaviour;
     }
@@ -279,11 +292,23 @@ public class MajorsABNurse extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class MoveAction_b0a_1 extends BehaviourStep {
+  public class OrderAction_b0a_9 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0a_9(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
+      p.TakeOrder(new FollowOrder().WithTarget(MajorsABNurse.this));
+    }
+  }
+  public class MoveAction_c0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_b0a_1(Behaviour behaviour) {
+    public MoveAction_c0a_5(Behaviour behaviour) {
       target = MajorsABBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -310,11 +335,11 @@ public class MajorsABNurse extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class OccupyAction_c0a_1 extends BehaviourStep {
+  public class OccupyAction_d0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Class target;
     /*package*/ Occupiable concreteTarget;
-    public OccupyAction_c0a_1(Behaviour behaviour) {
+    public OccupyAction_d0a_5(Behaviour behaviour) {
       target = Desk.class;
       this.behaviour = behaviour;
     }
@@ -339,10 +364,10 @@ public class MajorsABNurse extends Staff {
       }
     }
   }
-  public class StayAction_d0a_13 extends PassiveBehaviourStep {
+  public class StayAction_e0a_5 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_13(Behaviour behaviour) {
+    public StayAction_e0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -355,9 +380,9 @@ public class MajorsABNurse extends Staff {
       return timeExecuted == 5;
     }
   }
-  public class OrderAction_e0a_9 extends BehaviourStep {
+  public class OrderAction_f0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_e0a_9(Behaviour behaviour) {
+    public OrderAction_f0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -367,10 +392,10 @@ public class MajorsABNurse extends Staff {
       p.TakeOrder(new StopOrder());
     }
   }
-  public class SendSignalAction_f0a_9 extends BehaviourStep {
+  public class SendSignalAction_g0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_f0a_9(Behaviour behaviour) {
+    public SendSignalAction_g0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -383,11 +408,11 @@ public class MajorsABNurse extends Staff {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_g0a_1 extends BehaviourStep {
+  public class MoveAction_h0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_g0a_1(Behaviour behaviour) {
+    public MoveAction_h0a_1(Behaviour behaviour) {
       target = ReadMap().FindPlace("MajorsABReception");
       this.behaviour = behaviour;
     }
@@ -414,11 +439,11 @@ public class MajorsABNurse extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class OccupyAction_h0a_1 extends BehaviourStep {
+  public class OccupyAction_i0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Class target;
     /*package*/ Occupiable concreteTarget;
-    public OccupyAction_h0a_1(Behaviour behaviour) {
+    public OccupyAction_i0a_1(Behaviour behaviour) {
       target = Desk.class;
       this.behaviour = behaviour;
     }
@@ -485,13 +510,14 @@ public class MajorsABNurse extends Staff {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_15(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0a(behaviourBuilder));
-    plstSteps.add(new OccupyAction_c0a(behaviourBuilder));
-    plstSteps.add(new StayAction_d0a_11(behaviourBuilder));
-    plstSteps.add(new OrderAction_e0a_7(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_f0a_7(behaviourBuilder));
-    plstSteps.add(new MoveAction_g0a(behaviourBuilder));
-    plstSteps.add(new OccupyAction_h0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0a_7(behaviourBuilder));
+    plstSteps.add(new MoveAction_c0a_3(behaviourBuilder));
+    plstSteps.add(new OccupyAction_d0a_3(behaviourBuilder));
+    plstSteps.add(new StayAction_e0a_3(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0a_3(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_g0a_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_h0a(behaviourBuilder));
+    plstSteps.add(new OccupyAction_i0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

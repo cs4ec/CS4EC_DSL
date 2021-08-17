@@ -56,8 +56,23 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.add(new PatientAdder(space, grid).WithTimeSpan(480).WithPrevalence(pPrev, pProportionSymptomatic).WithPercentageHighSeverity(0.6).WithPercentageMediumSeverity(0.4));
 
     // add Agents 
+    for (int i = 0; i < 6; i++) {
+      context.add(new Doctor(space, grid));
+    }
+    for (int i = 0; i < 2; i++) {
+      context.add(new Nurse(space, grid));
+    }
     for (int i = 0; i < 3; i++) {
       context.add(new Receptionist(space, grid));
+    }
+    for (int i = 0; i < 50; i++) {
+      context.add(new LFDDevice(space, grid));
+    }
+    for (int i = 0; i < 10; i++) {
+      context.add(new LIATMachine(space, grid));
+    }
+    for (int i = 0; i < 10; i++) {
+      context.add(new LabTech(space, grid));
     }
 
 

@@ -14,6 +14,7 @@ import simcore.basicStructures.Desk;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.PassiveBehaviourStep;
+import simcore.action.InstantBehaviourStep;
 import java.util.ArrayList;
 import simcore.basicStructures.Board;
 import simcore.agents.Actor;
@@ -155,7 +156,7 @@ public class Doctor extends Staff {
       return timeExecuted == 5;
     }
   }
-  public class Choice_e0a extends BehaviourStep {
+  public class Choice_e0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Choice_e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -263,7 +264,7 @@ public class Doctor extends Staff {
       return timeExecuted == 5;
     }
   }
-  public class Choice_e0a_1 extends BehaviourStep {
+  public class Choice_e0a_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Choice_e0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;

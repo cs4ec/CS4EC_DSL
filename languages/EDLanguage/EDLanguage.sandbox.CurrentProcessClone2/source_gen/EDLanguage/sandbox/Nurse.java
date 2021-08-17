@@ -14,6 +14,7 @@ import simcore.Signals.Orders.FollowOrder;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Desk;
 import simcore.action.PassiveBehaviourStep;
+import simcore.Signals.Orders.StopOrder;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.basicStructures.Board;
 import java.util.ArrayList;
@@ -39,10 +40,6 @@ public class Nurse extends Staff {
       case "XRay":
         behaviourBuilder = new Behaviour("XRay");
         this.InitDoXRay(s);
-        break;
-      case "PatientNeedsBloodTest":
-        behaviourBuilder = new Behaviour("PatientNeedsBloodTest");
-        this.InitGiveBloodTest(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -146,7 +143,7 @@ public class Nurse extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(Nurse.this);
         return true;
       } else {
@@ -167,7 +164,7 @@ public class Nurse extends Staff {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 10;
+      return timeExecuted == 600;
     }
   }
   public class OrderAction_f0a extends BehaviourStep {
@@ -179,13 +176,25 @@ public class Nurse extends Staff {
     public void execute() {
       Patient p = behaviour.getPatient();
 
+      p.TakeOrder(new StopOrder());
+    }
+  }
+  public class OrderAction_g0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_g0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
       p.TakeOrder(new MoveToOrder().WithDestination(behaviour.getSignalTrigger().GetData("returnTo")));
     }
   }
-  public class SendSignalAction_g0a extends BehaviourStep {
+  public class SendSignalAction_h0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_g0a(Behaviour behaviour) {
+    public SendSignalAction_h0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -293,7 +302,7 @@ public class Nurse extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(Nurse.this);
         return true;
       } else {
@@ -314,7 +323,7 @@ public class Nurse extends Staff {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 10;
+      return timeExecuted == 600;
     }
   }
   public class OrderAction_f0a_1 extends BehaviourStep {
@@ -326,13 +335,25 @@ public class Nurse extends Staff {
     public void execute() {
       Patient p = behaviour.getPatient();
 
+      p.TakeOrder(new StopOrder());
+    }
+  }
+  public class OrderAction_g0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_g0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
       p.TakeOrder(new MoveToOrder().WithDestination(behaviour.getSignalTrigger().GetData("returnTo")));
     }
   }
-  public class SendSignalAction_g0a_1 extends BehaviourStep {
+  public class SendSignalAction_h0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_g0a_1(Behaviour behaviour) {
+    public SendSignalAction_h0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -377,242 +398,6 @@ public class Nurse extends Staff {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_a0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0c(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_b0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_b0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Patient p = behaviour.getPatient();
-
-      p.TakeOrder(new FollowOrder().WithTarget(Nurse.this));
-    }
-  }
-  public class MoveAction_c0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_c0c(Behaviour behaviour) {
-      target = TaskRoom.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class StayAction_d0c extends PassiveBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_d0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 5;
-    }
-  }
-  public class OrderAction_e0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_e0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Patient p = behaviour.getPatient();
-
-      p.TakeOrder(new MoveToOrder().WithDestination(behaviour.getSignalTrigger().GetData("returnTo")));
-    }
-  }
-  public class SendSignalAction_f0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_f0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new PatientNeedsFinalConsutlationSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class MoveAction_a0c_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0c_1(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_b0c_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Patient p = behaviour.getPatient();
-
-      p.TakeOrder(new FollowOrder().WithTarget(Nurse.this));
-    }
-  }
-  public class MoveAction_c0c_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_c0c_1(Behaviour behaviour) {
-      target = TaskRoom.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class StayAction_d0c_1 extends PassiveBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_d0c_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 5;
-    }
-  }
-  public class OrderAction_e0c_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_e0c_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Patient p = behaviour.getPatient();
-
-      p.TakeOrder(new MoveToOrder().WithDestination(behaviour.getSignalTrigger().GetData("returnTo")));
-    }
-  }
-  public class SendSignalAction_f0c_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_f0c_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new PatientNeedsFinalConsutlationSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
 
 
   public void InitDoXRay(Signal s) {
@@ -624,21 +409,8 @@ public class Nurse extends Staff {
     plstSteps.add(new OccupyAction_d0a(behaviourBuilder));
     plstSteps.add(new StayAction_e0a(behaviourBuilder));
     plstSteps.add(new OrderAction_f0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0a(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitGiveBloodTest(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0c(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0c(behaviourBuilder));
-    plstSteps.add(new MoveAction_c0c(behaviourBuilder));
-    plstSteps.add(new StayAction_d0c(behaviourBuilder));
-    plstSteps.add(new OrderAction_e0c(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_f0c(behaviourBuilder));
+    plstSteps.add(new OrderAction_g0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_h0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

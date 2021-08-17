@@ -339,7 +339,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.createUniqueName("StayAction", null);
   }
   public static Object propertyMacro_GetValue_51_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getInteger(_context.getNode(), PROPS.timeSpan$oO5Z);
+    return SPropertyOperations.getInteger(_context.getNode(), PROPS.timeSpan$oO5Z) * 60;
   }
   public static Object propertyMacro_GetValue_51_2(final PropertyMacroContext _context) {
     return _context.createUniqueName("StayAction", null);
@@ -357,7 +357,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return (String) Actor__BehaviorDescriptor.GetSuperTypeName_idJ03_IHVUJg.invoke(_context.getNode());
   }
   public static Object referenceMacro_GetReferent_2_0(final ReferenceMacroContext _context) {
-    return SPropertyOperations.getString(_context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "BehaviourMap"), PROPS.name$MnvL);
+    return SPropertyOperations.getString((_context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "BehaviourMap")), PROPS.name$MnvL);
   }
   public static Object referenceMacro_GetReferent_3_0(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(_context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "BehaviourMap"), PROPS.name$MnvL);
@@ -1188,7 +1188,7 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("896980341524644559", new RTQ(14, "attribute"));
     rtqMethods.put("5328502176961740173", new RTQ(15, "Desk"));
     rtqMethods.put("5328502176961762753", new RTQ(16, "_class_"));
-    rtqMethods.put("5328502176962670540", new RTQ(17, "_class_"));
+    rtqMethods.put("2014390094196372845", new RTQ(17, "_class_"));
     rtqMethods.put("6750846609946274294", new RTQ(18, "RoomType"));
     rtqMethods.put("6750846609946271984", new RTQ(19, "myRoomType"));
     rtqMethods.put("6750846609958045202", new RTQ(20, "RoomType"));

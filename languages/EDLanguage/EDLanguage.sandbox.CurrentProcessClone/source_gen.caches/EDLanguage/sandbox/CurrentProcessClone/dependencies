@@ -42,6 +42,7 @@
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
     <classNode dependClassName="simcore.action.PassiveBehaviourStep" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Patient" />
@@ -281,6 +282,7 @@
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.FollowOrder" />
     <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Orders.StopOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />

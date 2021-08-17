@@ -14,8 +14,9 @@ import simcore.basicStructures.Desk;
 import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.PassiveBehaviourStep;
-import java.util.ArrayList;
 import simcore.basicStructures.Board;
+import java.util.ArrayList;
+import simcore.agents.Actor;
 
 public class Doctor extends Staff {
 
@@ -35,8 +36,8 @@ public class Doctor extends Staff {
     switch (s.getName()) {
       case "":
         break;
-      case "NewPatientArrive":
-        behaviourBuilder = new Behaviour("NewPatientArrive");
+      case "NewPatientNeedMedicine":
+        behaviourBuilder = new Behaviour("NewPatientNeedMedicine");
         this.InitInitialObsevations(s);
         break;
       case "PatientNeedsFinalConsutlation":
@@ -102,7 +103,7 @@ public class Doctor extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(Doctor.this);
         return true;
       } else {
@@ -135,27 +136,24 @@ public class Doctor extends Staff {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 300;
     }
   }
-  public class Choice_e0a extends BehaviourStep {
+  public class SendSignalAction_e0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0a(Behaviour behaviour) {
+
+    public SendSignalAction_e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (Dice(70)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new OrderAction_a0e0a(behaviour));
-        plstSteps.add(new SendSignalAction_b0e0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new OrderAction_a0e0a_3(behaviour));
-        plstSteps.add(new SendSignalAction_b0e0a_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new XRaySignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+      sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0a_1 extends BehaviourStep {
@@ -210,7 +208,7 @@ public class Doctor extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(Doctor.this);
         return true;
       } else {
@@ -243,132 +241,13 @@ public class Doctor extends Staff {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 300;
     }
   }
-  public class Choice_e0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_e0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(70)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new OrderAction_a0e0a(behaviour));
-        plstSteps.add(new SendSignalAction_b0e0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new OrderAction_a0e0a_3(behaviour));
-        plstSteps.add(new SendSignalAction_b0e0a_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class OrderAction_a0e0a extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_a0e0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Patient p = behaviour.getPatient();
-
-      p.TakeOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")));
-    }
-  }
-  public class SendSignalAction_b0e0a extends BehaviourStep {
+  public class SendSignalAction_e0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0e0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new PatientNeedsBloodTestSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-      sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class OrderAction_a0e0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_a0e0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Patient p = behaviour.getPatient();
-
-      p.TakeOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")));
-    }
-  }
-  public class SendSignalAction_b0e0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_b0e0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new PatientNeedsBloodTestSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-      sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class OrderAction_a0e0a_3 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_a0e0a_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Patient p = behaviour.getPatient();
-
-      p.TakeOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")));
-    }
-  }
-  public class SendSignalAction_b0e0a_3 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_b0e0a_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new XRaySignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-      sendSignalTemp.AddData("returnTo", ReadMap().FindPlace("MajorsWaitingRoom"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class OrderAction_a0e0a_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_a0e0a_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Patient p = behaviour.getPatient();
-
-      p.TakeOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("MajorsWaitingRoom")));
-    }
-  }
-  public class SendSignalAction_b0e0a_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_b0e0a_5(Behaviour behaviour) {
+    public SendSignalAction_e0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -434,7 +313,7 @@ public class Doctor extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(Doctor.this);
         return true;
       } else {
@@ -467,7 +346,36 @@ public class Doctor extends Staff {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 1200;
+    }
+  }
+  public class DischargeAction_e0b extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public DischargeAction_e0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
+      ArrayList<Actor> plstAssignedStaff = (ArrayList) p.getMyAssignedStaff();
+      for (Actor actor : plstAssignedStaff) {
+        ((Actor) actor).deAssignPatient(p);
+      }
+
+      p.setDischarged();
+    }
+  }
+  public class OrderAction_f0b extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_f0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
+      p.TakeOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")));
     }
   }
   public class MoveAction_a0b_1 extends BehaviourStep {
@@ -522,7 +430,7 @@ public class Doctor extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(Doctor.this);
         return true;
       } else {
@@ -555,7 +463,36 @@ public class Doctor extends Staff {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 1200;
+    }
+  }
+  public class DischargeAction_e0b_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public DischargeAction_e0b_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
+      ArrayList<Actor> plstAssignedStaff = (ArrayList) p.getMyAssignedStaff();
+      for (Actor actor : plstAssignedStaff) {
+        ((Actor) actor).deAssignPatient(p);
+      }
+
+      p.setDischarged();
+    }
+  }
+  public class OrderAction_f0b_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_f0b_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
+      p.TakeOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace("Entrance")));
     }
   }
 
@@ -567,7 +504,7 @@ public class Doctor extends Staff {
     plstSteps.add(new OccupyAction_b0a(behaviourBuilder));
     plstSteps.add(new OrderAction_c0a(behaviourBuilder));
     plstSteps.add(new StayAction_d0a(behaviourBuilder));
-    plstSteps.add(new Choice_e0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -580,6 +517,8 @@ public class Doctor extends Staff {
     plstSteps.add(new OccupyAction_b0b(behaviourBuilder));
     plstSteps.add(new OrderAction_c0b(behaviourBuilder));
     plstSteps.add(new StayAction_d0b(behaviourBuilder));
+    plstSteps.add(new DischargeAction_e0b(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

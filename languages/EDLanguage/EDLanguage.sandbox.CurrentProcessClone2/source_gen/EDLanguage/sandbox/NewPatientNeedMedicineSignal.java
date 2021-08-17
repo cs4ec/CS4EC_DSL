@@ -9,6 +9,7 @@ public class NewPatientNeedMedicineSignal extends ActorTypeSignal {
     this.setName("NewPatientNeedMedicine");
     this.setDescription("");
     this.AddActor("Nurse");
+    this.AddActor("Doctor");
   }
 
 }

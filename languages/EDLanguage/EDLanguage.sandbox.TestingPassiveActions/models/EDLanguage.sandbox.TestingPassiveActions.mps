@@ -107,6 +107,7 @@
       <concept id="8504720493510951869" name="EDLanguage.structure.MoveOrder" flags="ng" index="3JG_m7">
         <child id="8504720493510951874" name="targetObject" index="3JG_nS" />
       </concept>
+      <concept id="8504720493511036692" name="EDLanguage.structure.SelfInstance" flags="ng" index="3JGL$I" />
       <concept id="8504720493511205796" name="EDLanguage.structure.PatientInstance" flags="ng" index="3JJFmu" />
       <concept id="329726013646474559" name="EDLanguage.structure.TestKit" flags="ng" index="3S2u4K">
         <reference id="329726013658956072" name="testCategoryType" index="3TMAOB" />
@@ -704,14 +705,11 @@
         <node concept="3JG_m1" id="4BMD7Yiga44" role="3VtFpW">
           <node concept="3JJFmu" id="4BMD7Yiga46" role="3JG_8_" />
           <node concept="3JG_m7" id="1JOzhSMBPdx" role="3JG_nW">
-            <node concept="UeIYj" id="1JOzhSMBPdB" role="3JG_nS">
-              <ref role="Udx8D" node="5QJON_BJzg5" resolve="DoctorOffice" />
-            </node>
+            <node concept="3JGL$I" id="1JOzhSMG3mk" role="3JG_nS" />
           </node>
         </node>
         <node concept="jcv$W" id="4BMD7YhYIaw" role="3VtFpW">
           <property role="jcv$Z" value="3" />
-          <node concept="2IBTiW" id="4BMD7YjE0G7" role="2IBTiu" />
         </node>
         <node concept="3VtFpY" id="4BMD7YjE0Gz" role="3VtFpW">
           <node concept="r166y" id="4BMD7YjE0H7" role="3VtFpT">

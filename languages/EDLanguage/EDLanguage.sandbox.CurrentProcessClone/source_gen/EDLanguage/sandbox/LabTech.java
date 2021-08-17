@@ -76,11 +76,11 @@ public class LabTech extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class MoveAction_b0a_3 extends BehaviourStep {
+  public class MoveAction_b0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_b0a_3(Behaviour behaviour) {
+    public MoveAction_b0a(Behaviour behaviour) {
       target = ReadMap().FindPlace("Lab");
       this.behaviour = behaviour;
     }
@@ -107,11 +107,11 @@ public class LabTech extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class OccupyAction_c0a_3 extends BehaviourStep {
+  public class OccupyAction_c0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Class target;
     /*package*/ Occupiable concreteTarget;
-    public OccupyAction_c0a_3(Behaviour behaviour) {
+    public OccupyAction_c0a(Behaviour behaviour) {
       target = Desk.class;
       this.behaviour = behaviour;
     }
@@ -200,11 +200,11 @@ public class LabTech extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class MoveAction_b0a_5 extends BehaviourStep {
+  public class MoveAction_b0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_b0a_5(Behaviour behaviour) {
+    public MoveAction_b0a_1(Behaviour behaviour) {
       target = ReadMap().FindPlace("Lab");
       this.behaviour = behaviour;
     }
@@ -231,11 +231,11 @@ public class LabTech extends Staff {
       return ImAt(concreteTarget);
     }
   }
-  public class OccupyAction_c0a_5 extends BehaviourStep {
+  public class OccupyAction_c0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Class target;
     /*package*/ Occupiable concreteTarget;
-    public OccupyAction_c0a_5(Behaviour behaviour) {
+    public OccupyAction_c0a_1(Behaviour behaviour) {
       target = Desk.class;
       this.behaviour = behaviour;
     }
@@ -395,8 +395,8 @@ public class LabTech extends Staff {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_23(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0a_3(behaviourBuilder));
-    plstSteps.add(new OccupyAction_c0a_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_b0a(behaviourBuilder));
+    plstSteps.add(new OccupyAction_c0a(behaviourBuilder));
     plstSteps.add(new TestAction_d0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

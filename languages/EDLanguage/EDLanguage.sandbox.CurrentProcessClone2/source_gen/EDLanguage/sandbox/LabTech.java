@@ -128,7 +128,7 @@ public class LabTech extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(LabTech.this);
         return true;
       } else {
@@ -252,7 +252,7 @@ public class LabTech extends Staff {
     }
 
     public boolean finishCondition() {
-      if (ImAt(concreteTarget)) {
+      if (concreteTarget != null && ImAt(concreteTarget)) {
         concreteTarget.setOccupier(LabTech.this);
         return true;
       } else {

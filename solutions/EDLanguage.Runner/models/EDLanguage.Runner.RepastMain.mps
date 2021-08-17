@@ -23,10 +23,10 @@
   <node concept="2Qkwg2" id="5_FodVJfsgn">
     <property role="2QkwrH" value="C:\Users\w2037451\Documents\HelloAgent" />
     <node concept="3RfPnX" id="2vFOz$Gxkmp" role="b_DIg">
-      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/classes_gen/EDLanguage/sandbox" />
+      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/classes_gen/EDLanguage/sandbox" />
     </node>
     <node concept="3RfPnX" id="2vFOz$Gxn39" role="brHgl">
-      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.TestingPassiveActions/source_gen/EDLanguage/sandbox" />
+      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.CurrentProcessClone2/source_gen/EDLanguage/sandbox" />
     </node>
   </node>
 </model>
