@@ -7,10 +7,8 @@ import simcore.action.Behaviour;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import simcore.Signals.Signal;
-import simcore.action.BehaviourStep;
-import simcore.basicStructures.RoomType;
-import simcore.basicStructures.Room;
 import java.util.ArrayList;
+import simcore.action.BehaviourStep;
 
 public class Nurse extends Actor {
 
@@ -29,9 +27,13 @@ public class Nurse extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "TaskTwoTrigger":
-        behaviourBuilder = new Behaviour("TaskTwoTrigger");
-        this.InitTaskTwo(s);
+      case "TaskPosTrigger":
+        behaviourBuilder = new Behaviour("TaskPosTrigger");
+        this.InitTaskPos(s);
+        break;
+      case "TaskNegTrigger":
+        behaviourBuilder = new Behaviour("TaskNegTrigger");
+        this.InitTaskNeg(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -40,74 +42,19 @@ public class Nurse extends Actor {
     return behaviourBuilder;
   }
 
-  public class MoveAction_a0a_3 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0a_3(Behaviour behaviour) {
-      target = Nurse.this;
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_a0a_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
-      target = Nurse.this;
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
 
 
-  public void InitTaskTwo(Signal s) {
+  public void InitTaskPos(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+  }
+  public void InitTaskNeg(Signal s) {
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

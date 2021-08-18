@@ -10,7 +10,9 @@ import simcore.Signals.Signal;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
+import simcore.diagnosis.TestResult;
 import java.util.ArrayList;
+import simcore.basicStructures.Board;
 
 public class Doc extends Actor {
 
@@ -45,7 +47,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a(Behaviour behaviour) {
-      target = Doc.this;
+      target = WaitingRoom.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -71,12 +73,45 @@ public class Doc extends Actor {
       return ImAt(concreteTarget);
     }
   }
+  public class TestAction_b0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int testingTime = PCR.getInstance().getProcessingTime();
+    /*package*/ int timeExecuted = 0;
+    /*package*/ TestResult testResult;
+    public TestAction_b0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (timeExecuted == 0) {
+        testResult = PCR.getInstance().TestPatient(behaviour.getPatient());
+      }
+
+      timeExecuted++;
+
+      if (timeExecuted == testingTime) {
+        if (testResult.isInfected()) {
+          ArrayList<BehaviourStep> plstSteps = new ArrayList();
+          plstSteps.add(new SendSignalAction_a0b0a(behaviour));
+          behaviour.injectSteps(plstSteps);
+        } else {
+          ArrayList<BehaviourStep> plstSteps = new ArrayList();
+          plstSteps.add(new SendSignalAction_a0b0a_3(behaviour));
+          behaviour.injectSteps(plstSteps);
+        }
+      }
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == testingTime;
+    }
+  }
   public class MoveAction_a0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_1(Behaviour behaviour) {
-      target = Doc.this;
+      target = WaitingRoom.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -100,6 +135,99 @@ public class Doc extends Actor {
 
     public boolean finishCondition() {
       return ImAt(concreteTarget);
+    }
+  }
+  public class TestAction_b0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int testingTime = PCR.getInstance().getProcessingTime();
+    /*package*/ int timeExecuted = 0;
+    /*package*/ TestResult testResult;
+    public TestAction_b0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (timeExecuted == 0) {
+        testResult = PCR.getInstance().TestPatient(behaviour.getPatient());
+      }
+
+      timeExecuted++;
+
+      if (timeExecuted == testingTime) {
+        if (testResult.isInfected()) {
+          ArrayList<BehaviourStep> plstSteps = new ArrayList();
+          plstSteps.add(new SendSignalAction_a0b0a(behaviour));
+          behaviour.injectSteps(plstSteps);
+        } else {
+          ArrayList<BehaviourStep> plstSteps = new ArrayList();
+          plstSteps.add(new SendSignalAction_a0b0a_3(behaviour));
+          behaviour.injectSteps(plstSteps);
+        }
+      }
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == testingTime;
+    }
+  }
+  public class SendSignalAction_a0b0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0b0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new TaskPosTriggerSignal();
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0b0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0b0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new TaskPosTriggerSignal();
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0b0a_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0b0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new TaskNegTriggerSignal();
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0b0a_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0b0a_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new TaskNegTriggerSignal();
+
+      b.PushMission(sendSignalTemp);
     }
   }
 
@@ -108,6 +236,7 @@ public class Doc extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
+    plstSteps.add(new TestAction_b0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

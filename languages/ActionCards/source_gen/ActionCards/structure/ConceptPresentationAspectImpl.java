@@ -18,6 +18,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
+  private ConceptPresentation props_TestActionStep;
 
   @Override
   @Nullable
@@ -92,6 +93,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StaffTypeReference = cpb.create();
         }
         return props_StaffTypeReference;
+      case LanguageConceptSwitch.TestActionStep:
+        if (props_TestActionStep == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Test patient");
+          props_TestActionStep = cpb.create();
+        }
+        return props_TestActionStep;
     }
     return null;
   }

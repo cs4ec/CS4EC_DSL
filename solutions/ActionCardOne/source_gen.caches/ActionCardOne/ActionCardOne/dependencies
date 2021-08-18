@@ -2,6 +2,10 @@
 <dependenciesRoot>
   <dependency className="ActionCardOne.ActionCardOne.Doc">
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
+    <classNode dependClassName="EDLanguage.sandbox.PCR" />
+    <classNode dependClassName="EDLanguage.sandbox.TaskNegTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.TaskPosTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -11,8 +15,10 @@
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.diagnosis.TestResult" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="ActionCardOne.ActionCardOne.EDBuilder">
@@ -49,7 +55,6 @@
     <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
   </dependency>
   <dependency className="ActionCardOne.ActionCardOne.Nurse">
-    <classNode dependClassName="EDLanguage.sandbox.Nurse" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -59,11 +64,16 @@
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
-  <dependency className="ActionCardOne.ActionCardOne.TaskTwoTriggerSignal">
+  <dependency className="ActionCardOne.ActionCardOne.PCR">
+    <classNode dependClassName="EDLanguage.sandbox.PCR" />
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="ActionCardOne.ActionCardOne.TaskNegTriggerSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="ActionCardOne.ActionCardOne.TaskPosTriggerSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="ActionCardOne.ActionCardOne.WaitingRoom">

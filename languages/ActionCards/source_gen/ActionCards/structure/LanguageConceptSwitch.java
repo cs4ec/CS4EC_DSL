@@ -18,6 +18,7 @@ public final class LanguageConceptSwitch {
   public static final int StaffNumber = 6;
   public static final int StaffType = 7;
   public static final int StaffTypeReference = 8;
+  public static final int TestActionStep = 9;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L);
@@ -30,6 +31,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x4af9c647eff82e7bL, StaffNumber);
     builder.put(0x4f415ebce3f346ecL, StaffType);
     builder.put(0x4af9c647efda3a80L, StaffTypeReference);
+    builder.put(0x3f10eb6deabea835L, TestActionStep);
     myIndex = builder.seal();
   }
 

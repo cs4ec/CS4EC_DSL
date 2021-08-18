@@ -70,12 +70,6 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4X1nFNzWOlr" resolve="ActionStep" />
     </node>
-    <node concept="1TJgyj" id="4X1nFNzWOmX" role="1TKVEi">
-      <property role="IQ2ns" value="5710949967853733309" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="branch" />
-      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
-    </node>
     <node concept="1TJgyj" id="4FTL$vJQLjT" role="1TKVEi">
       <property role="IQ2ns" value="5402567240276710649" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -83,8 +77,19 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="4FTL$vJQzE0" resolve="StaffTypeReference" />
     </node>
+    <node concept="1TJgyj" id="3WgUQREIXw5" role="1TKVEi">
+      <property role="IQ2ns" value="4544390881338972165" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="location" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
     <node concept="PrWs8" id="4X1nFNzWQUs" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="3WgUQREJscS" role="1TKVEl">
+      <property role="IQ2nx" value="4544390881339097912" />
+      <property role="TrG5h" value="requiresPatient" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
   <node concept="1TIwiD" id="4X1nFNzWOlr">
@@ -166,6 +171,33 @@
       <property role="20kJfa" value="staff" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3WgUQREJEwP">
+    <property role="EcuMT" value="4544390881339156533" />
+    <property role="TrG5h" value="TestActionStep" />
+    <property role="34LRSv" value="Test patient" />
+    <ref role="1TJDcQ" node="4X1nFNzWOlr" resolve="ActionStep" />
+    <node concept="1TJgyj" id="3WgUQREJExz" role="1TKVEi">
+      <property role="IQ2ns" value="4544390881339156579" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="testType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="3751:ijr0ZWACOZ" resolve="TestKit" />
+    </node>
+    <node concept="1TJgyj" id="3WgUQREJEx_" role="1TKVEi">
+      <property role="IQ2ns" value="4544390881339156581" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="IfPositive" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
+    </node>
+    <node concept="1TJgyj" id="3WgUQREJExU" role="1TKVEi">
+      <property role="IQ2ns" value="4544390881339156602" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="IfNegative" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
     </node>
   </node>
 </model>

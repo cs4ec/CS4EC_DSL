@@ -72,8 +72,26 @@
       <node concept="3F0A7n" id="4X1nFNzXbOs" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
+      <node concept="3F0ifn" id="3WgUQREIXwZ" role="3EZMnx">
+        <property role="3F0ifm" value="Location:" />
+        <node concept="pVoyu" id="3WgUQREIXxi" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="3WgUQREJeAK" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3WgUQREIXw5" resolve="location" />
+      </node>
+      <node concept="3F0ifn" id="3WgUQREJsdD" role="3EZMnx">
+        <property role="3F0ifm" value="NeedsPatient?:" />
+        <node concept="pVoyu" id="3WgUQREJsdY" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="3WgUQREJsem" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3WgUQREJscS" resolve="requiresPatient" />
+      </node>
       <node concept="3F0ifn" id="4X1nFNzWQSH" role="3EZMnx">
-        <property role="3F0ifm" value="Requires Staff Member:" />
+        <property role="3F0ifm" value="Required Staff:" />
         <node concept="pVoyu" id="4X1nFNzXbP4" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -96,15 +114,6 @@
         <node concept="pVoyu" id="4X1nFNzXEIO" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
-      </node>
-      <node concept="3F0ifn" id="4X1nFNzWQTD" role="3EZMnx">
-        <property role="3F0ifm" value="And Then:" />
-        <node concept="pVoyu" id="4X1nFNzWQTO" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="4X1nFNzX93M" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:4X1nFNzWOmX" resolve="branch" />
       </node>
       <node concept="l2Vlx" id="4X1nFNzWQSk" role="2iSdaV" />
     </node>
@@ -210,6 +219,39 @@
         <ref role="1NtTu8" to="e88n:4FTL$vJY2U5" resolve="number" />
       </node>
       <node concept="l2Vlx" id="4FTL$vJY2W7" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3WgUQREJExY">
+    <ref role="1XX52x" to="e88n:3WgUQREJEwP" resolve="TestActionStep" />
+    <node concept="3EZMnI" id="3WgUQREJEy9" role="2wV5jI">
+      <node concept="3F0ifn" id="3WgUQREJEyg" role="3EZMnx">
+        <property role="3F0ifm" value="Conduct" />
+      </node>
+      <node concept="3F1sOY" id="3WgUQREJEym" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3WgUQREJExz" resolve="testType" />
+      </node>
+      <node concept="3F0ifn" id="3WgUQREJEyu" role="3EZMnx">
+        <property role="3F0ifm" value="test," />
+      </node>
+      <node concept="3F0ifn" id="3WgUQREJEyC" role="3EZMnx">
+        <property role="3F0ifm" value="If Positive:" />
+        <node concept="pVoyu" id="3WgUQREJEyI" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="3WgUQREJEyR" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3WgUQREJEx_" resolve="IfPositive" />
+      </node>
+      <node concept="3F0ifn" id="3WgUQREJEz7" role="3EZMnx">
+        <property role="3F0ifm" value="If Negative:" />
+        <node concept="pVoyu" id="3WgUQREJEzg" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="3WgUQREJEzs" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3WgUQREJExU" resolve="IfNegative" />
+      </node>
+      <node concept="l2Vlx" id="3WgUQREJEyc" role="2iSdaV" />
     </node>
   </node>
 </model>

@@ -22,6 +22,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptStaffNumber = createDescriptorForStaffNumber();
   /*package*/ final ConceptDescriptor myConceptStaffType = createDescriptorForStaffType();
   /*package*/ final ConceptDescriptor myConceptStaffTypeReference = createDescriptorForStaffTypeReference();
+  /*package*/ final ConceptDescriptor myConceptTestActionStep = createDescriptorForTestActionStep();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -37,7 +38,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptBranch, myConceptEDScenario, myConceptGoToAction, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptBranch, myConceptEDScenario, myConceptGoToAction, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptTestActionStep);
   }
 
   @Override
@@ -62,6 +63,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptStaffType;
       case LanguageConceptSwitch.StaffTypeReference:
         return myConceptStaffTypeReference;
+      case LanguageConceptSwitch.TestActionStep:
+        return myConceptTestActionStep;
       default:
         return null;
     }
@@ -78,9 +81,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528548");
     b.version(2);
+    b.property("requiresPatient", 0x3f10eb6deabdc338L).type(PrimitiveTypeId.BOOLEAN).origin("4544390881339097912").done();
     b.aggregate("steps", 0x4f415ebce3f34595L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3455bL).optional(true).ordered(true).multiple(true).origin("5710949967853733269").done();
-    b.aggregate("branch", 0x4f415ebce3f345bdL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(true).ordered(true).multiple(false).origin("5710949967853733309").done();
     b.aggregate("staffTypeReference", 0x4af9c647efdb14f9L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L).optional(false).ordered(true).multiple(false).origin("5402567240276710649").done();
+    b.aggregate("location", 0x3f10eb6deabbd805L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(true).ordered(true).multiple(false).origin("4544390881338972165").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForActionCard() {
@@ -148,6 +152,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240276654720");
     b.version(2);
     b.associate("staffType", 0x4af9c647efda3aa5L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL).optional(false).origin("5402567240276654757").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTestActionStep() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TestActionStep", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3f10eb6deabea835L);
+    b.class_(false, false, false);
+    b.super_("ActionCards.structure.ActionStep", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3455bL);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4544390881339156533");
+    b.version(2);
+    b.aggregate("testType", 0x3f10eb6deabea863L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc9a8d3fL).optional(false).ordered(true).multiple(false).origin("4544390881339156579").done();
+    b.aggregate("IfPositive", 0x3f10eb6deabea865L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(false).ordered(true).multiple(false).origin("4544390881339156581").done();
+    b.aggregate("IfNegative", 0x3f10eb6deabea87aL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(false).ordered(true).multiple(false).origin("4544390881339156602").done();
+    b.alias("Test patient");
     return b.create();
   }
 }
