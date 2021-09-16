@@ -87,6 +87,13 @@
         <property id="6720495385597071501" name="bounds_x" index="gqqTZ" />
         <property id="4583510071007917016" name="transform" index="TgtnS" />
       </concept>
+      <concept id="2319506556913310852" name="de.itemis.mps.editor.diagram.layout.structure.Layout_Connection" flags="ng" index="2VclpC">
+        <child id="2319506556913311101" name="anchors" index="2Vcluh" />
+      </concept>
+      <concept id="2319506556913310727" name="de.itemis.mps.editor.diagram.layout.structure.Point" flags="ng" index="2VclrF">
+        <property id="2319506556913310861" name="x" index="2Vclpx" />
+        <property id="2319506556913310863" name="y" index="2Vclpz" />
+      </concept>
       <concept id="8963411245960991886" name="de.itemis.mps.editor.diagram.layout.structure.LayoutMap" flags="ng" index="37mRI7">
         <child id="8963411245960991904" name="entries" index="37mRID" />
       </concept>
@@ -100,20 +107,19 @@
     <node concept="2MhjZa" id="2lOlAdP0yiq" role="2MhjZp">
       <property role="TrG5h" value="A" />
       <ref role="3tPpTl" node="av1M7vefIR" resolve="INOVA" />
+      <node concept="2GGxJi" id="2lOlAdPgOLa" role="3tG3Yq">
+        <ref role="3tVEyn" node="2lOlAdP0yiq" resolve="A" />
+        <ref role="2GGxGe" node="2lOlAdP0yix" resolve="B" />
+        <node concept="3tEh0H" id="2lOlAdPhBdX" role="1hyIAf">
+          <property role="3tE8W8" value="av1M7vdSxg/positive" />
+          <ref role="3tE8WY" node="av1M7vefIR" resolve="INOVA" />
+        </node>
+      </node>
       <node concept="2_8ZN7" id="2lOlAdP0yiu" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
       </node>
       <node concept="UeIYj" id="2lOlAdP2IAX" role="3lENdC">
         <ref role="Udx8D" node="2lOlAdP2IBt" resolve="Ward" />
-      </node>
-      <node concept="2GGxJi" id="2lOlAdPc9Rd" role="3tG3Yq">
-        <property role="3tVDA4" value="FEHI" />
-        <ref role="3tVEyn" node="2lOlAdP0yiq" resolve="A" />
-        <ref role="2GGxGe" node="2lOlAdP0yix" resolve="B" />
-        <node concept="3tEh0H" id="2lOlAdPc9Rf" role="1hyIAf">
-          <property role="3tE8W8" value="av1M7vdSxP/negative" />
-          <ref role="3tE8WY" node="av1M7vefIR" resolve="INOVA" />
-        </node>
       </node>
     </node>
     <node concept="2MhjZa" id="2lOlAdP0yix" role="2MhjZp">
@@ -123,6 +129,23 @@
       </node>
       <node concept="UeIYj" id="2lOlAdP3BDj" role="3lENdC">
         <ref role="Udx8D" node="2lOlAdP2IBt" resolve="Ward" />
+      </node>
+      <node concept="2GGxJi" id="2lOlAdPhBdm" role="3tG3Yq">
+        <property role="3tVDA4" value="FEHI" />
+        <ref role="3tVEyn" node="2lOlAdP0yix" resolve="B" />
+        <ref role="2GGxGe" node="2lOlAdP0yiq" resolve="A" />
+        <node concept="3tEh0H" id="2lOlAdPhBdo" role="1hyIAf">
+          <property role="3tE8W8" value="av1M7vdSxP/negative" />
+          <ref role="3tE8WY" node="av1M7vefIR" resolve="INOVA" />
+        </node>
+      </node>
+      <node concept="2GGxJi" id="2lOlAdPhBdC" role="3tG3Yq">
+        <ref role="3tVEyn" node="2lOlAdP0yix" resolve="B" />
+        <ref role="2GGxGe" node="2lOlAdP0yix" resolve="B" />
+        <node concept="3tEh0H" id="2lOlAdPhBdU" role="1hyIAf">
+          <property role="3tE8W8" value="av1M7vdSxg/positive" />
+          <ref role="3tE8WY" node="av1M7vefIR" resolve="INOVA" />
+        </node>
       </node>
     </node>
     <node concept="37mRI7" id="av1M7vryLM" role="lGtFl">
@@ -184,6 +207,23 @@
           <property role="gqqTX" value="196.0" />
           <property role="gqqTy" value="121.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="2lOlAdPhBe1" role="37mRID">
+        <property role="37mO49" value="2698877061871072104" />
+        <node concept="2VclpC" id="2lOlAdPhBe0" role="37mO4d">
+          <node concept="2VclrF" id="2lOlAdPhBe2" role="2Vcluh">
+            <property role="2Vclpx" value="375.0" />
+            <property role="2Vclpz" value="275.5" />
+          </node>
+          <node concept="2VclrF" id="2lOlAdPhBe3" role="2Vcluh">
+            <property role="2Vclpx" value="375.0" />
+            <property role="2Vclpz" value="185.0" />
+          </node>
+          <node concept="2VclrF" id="2lOlAdPhBe4" role="2Vcluh">
+            <property role="2Vclpx" value="247.0" />
+            <property role="2Vclpz" value="185.0" />
+          </node>
         </node>
       </node>
     </node>

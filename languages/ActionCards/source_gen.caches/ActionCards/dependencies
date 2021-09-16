@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="ActionCards.Language">
-    <classNode dependClassName="ActionCards.actions.ActionAspectDescriptorImpl" />
     <classNode dependClassName="ActionCards.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="ActionCards.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="ActionCards.editor.EditorAspectDescriptorImpl" />
@@ -11,7 +10,6 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Collection" />
-    <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
