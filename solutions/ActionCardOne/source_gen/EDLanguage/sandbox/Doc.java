@@ -13,6 +13,7 @@ import simcore.basicStructures.Room;
 import simcore.diagnosis.TestResult;
 import java.util.ArrayList;
 import simcore.basicStructures.Board;
+import ActionCardOne.ActionCardOne.TaskNegTriggerSignal;
 
 public class Doc extends Actor {
 
@@ -31,8 +32,8 @@ public class Doc extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "NewPatientArrive":
-        behaviourBuilder = new Behaviour("NewPatientArrive");
+      case "TaskOneTrigger":
+        behaviourBuilder = new Behaviour("TaskOneTrigger");
         this.InitTaskOne(s);
         break;
       default:

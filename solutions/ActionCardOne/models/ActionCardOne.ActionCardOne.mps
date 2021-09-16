@@ -4,6 +4,8 @@
   <languages>
     <use id="b3cac82c-d024-46bc-b485-624ad80c3cc2" name="ActionCards" version="0" />
     <use id="7dcff301-ba01-414e-8574-a8f6da31876b" name="EDLanguage" version="0" />
+    <use id="fa13cc63-c476-4d46-9c96-d53670abe7bc" name="de.itemis.mps.editor.diagram" version="0" />
+    <use id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout" version="0" />
   </languages>
   <imports />
   <registry>
@@ -29,6 +31,7 @@
       </concept>
       <concept id="3383707102503528520" name="ActionCards.structure.ActionCard" flags="ng" index="2MhjZA">
         <child id="3383707102503528567" name="Actions" index="2MhjZp" />
+        <child id="188877551430877797" name="Branches" index="3ty$l4" />
       </concept>
       <concept id="4544390881339156533" name="ActionCards.structure.TestActionStep" flags="ng" index="3lF$do">
         <child id="4544390881339156581" name="IfPositive" index="3lF$c8" />
@@ -51,30 +54,49 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+    <language id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout">
+      <concept id="6720495385597071406" name="de.itemis.mps.editor.diagram.layout.structure.Layout_Box" flags="ng" index="gqqVs">
+        <property id="6720495385597071504" name="bounds_height" index="gqqTy" />
+        <property id="6720495385597071502" name="bounds_y" index="gqqTW" />
+        <property id="6720495385597071503" name="bounds_width" index="gqqTX" />
+        <property id="6720495385597071501" name="bounds_x" index="gqqTZ" />
+        <property id="4583510071007917016" name="transform" index="TgtnS" />
+      </concept>
+      <concept id="8963411245960991886" name="de.itemis.mps.editor.diagram.layout.structure.LayoutMap" flags="ng" index="37mRI7">
+        <child id="8963411245960991904" name="entries" index="37mRID" />
+      </concept>
+      <concept id="8963411245960991903" name="de.itemis.mps.editor.diagram.layout.structure.LayoutMapEntry" flags="ng" index="37mRIm">
+        <property id="8963411245960998400" name="key" index="37mO49" />
+        <child id="8963411245960998404" name="value" index="37mO4d" />
       </concept>
     </language>
   </registry>
   <node concept="2MhjZA" id="4FTL$vJIgVQ">
     <node concept="2MhjZa" id="3WgUQRELP87" role="2MhjZp">
       <property role="TrG5h" value="TaskOne" />
+      <node concept="3lF$do" id="av1M7vbtax" role="2GGxGD">
+        <node concept="3S2u4K" id="av1M7vbtaz" role="3lF$ce">
+          <ref role="3TMAOB" node="3WgUQREKerm" resolve="PCR" />
+        </node>
+        <node concept="2GGxJi" id="av1M7vbtaH" role="3lF$c8">
+          <ref role="2GGxGe" node="3WgUQREM843" resolve="TaskPos" />
+        </node>
+        <node concept="2GGxJi" id="av1M7vbtaK" role="3lF$cn">
+          <ref role="2GGxGe" node="3WgUQREM84h" resolve="TaskNeg" />
+        </node>
+      </node>
       <node concept="2_8ZN7" id="3WgUQRELP8j" role="2_8HaY">
         <ref role="2_8ZNy" node="4FTL$vJIw1q" resolve="Doc" />
       </node>
       <node concept="UeIYj" id="3WgUQRELP8h" role="3lENdC">
         <ref role="Udx8D" node="4FTL$vJQiIf" resolve="WaitingRoom" />
-      </node>
-      <node concept="3lF$do" id="3WgUQRELP8m" role="2GGxGD">
-        <node concept="3S2u4K" id="3WgUQRELP8n" role="3lF$ce">
-          <ref role="3TMAOB" node="3WgUQREKerm" resolve="PCR" />
-        </node>
-        <node concept="2GGxJi" id="3WgUQREM84x" role="3lF$c8">
-          <ref role="2GGxGe" node="3WgUQREM843" resolve="TaskPos" />
-        </node>
-        <node concept="2GGxJi" id="3WgUQREM84$" role="3lF$cn">
-          <ref role="2GGxGe" node="3WgUQREM84h" resolve="TaskNeg" />
-        </node>
       </node>
     </node>
     <node concept="2MhjZa" id="3WgUQREM843" role="2MhjZp">
@@ -82,12 +104,76 @@
       <node concept="2_8ZN7" id="3WgUQREM84e" role="2_8HaY">
         <ref role="2_8ZNy" node="4FTL$vJUPHw" resolve="Nurse" />
       </node>
+      <node concept="UeIYj" id="av1M7v4hNt" role="3lENdC">
+        <ref role="Udx8D" node="4FTL$vJQiIf" resolve="WaitingRoom" />
+      </node>
     </node>
     <node concept="2MhjZa" id="3WgUQREM84h" role="2MhjZp">
       <property role="TrG5h" value="TaskNeg" />
       <node concept="2_8ZN7" id="3WgUQREM84u" role="2_8HaY">
         <ref role="2_8ZNy" node="4FTL$vJUPHw" resolve="Nurse" />
       </node>
+      <node concept="UeIYj" id="av1M7vb5Sf" role="3lENdC">
+        <ref role="Udx8D" node="4FTL$vJQiIf" resolve="WaitingRoom" />
+      </node>
+    </node>
+    <node concept="37mRI7" id="7ih0ZFGRpBE" role="lGtFl">
+      <node concept="37mRIm" id="7ih0ZFGRpBF" role="37mRID">
+        <property role="37mO49" value="4544390881339724295" />
+        <node concept="gqqVs" id="7ih0ZFGRpBD" role="37mO4d">
+          <property role="gqqTZ" value="196.0" />
+          <property role="gqqTW" value="9.0" />
+          <property role="gqqTX" value="202.0" />
+          <property role="gqqTy" value="111.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="7ih0ZFGRpBH" role="37mRID">
+        <property role="37mO49" value="4544390881339801859" />
+        <node concept="gqqVs" id="7ih0ZFGRpBG" role="37mO4d">
+          <property role="gqqTZ" value="80.0001" />
+          <property role="gqqTW" value="262.0" />
+          <property role="gqqTX" value="196.0" />
+          <property role="gqqTy" value="97.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="7ih0ZFGRpBJ" role="37mRID">
+        <property role="37mO49" value="4544390881339801873" />
+        <node concept="gqqVs" id="7ih0ZFGRpBI" role="37mO4d">
+          <property role="gqqTZ" value="433.9129197234811" />
+          <property role="gqqTW" value="262.0" />
+          <property role="gqqTX" value="196.0" />
+          <property role="gqqTy" value="97.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="av1M7v6dFW" role="37mRID">
+        <property role="37mO49" value="188877551431113446" />
+        <node concept="gqqVs" id="av1M7v6dFV" role="37mO4d">
+          <property role="gqqTZ" value="401.0" />
+          <property role="gqqTW" value="68.0" />
+          <property role="gqqTX" value="196.0" />
+          <property role="gqqTy" value="97.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="av1M7v6dGC" role="37mRID">
+        <property role="37mO49" value="188877551431113490" />
+        <node concept="gqqVs" id="av1M7v6dGB" role="37mO4d">
+          <property role="gqqTZ" value="455.0" />
+          <property role="gqqTW" value="102.0" />
+          <property role="gqqTX" value="196.0" />
+          <property role="gqqTy" value="97.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+    </node>
+    <node concept="2GGxJi" id="av1M7v6tUI" role="3ty$l4">
+      <ref role="2GGxGe" node="3WgUQRELP87" resolve="TaskOne" />
+    </node>
+    <node concept="2GGxJi" id="av1M7v6tUK" role="3ty$l4">
+      <ref role="2GGxGe" node="3WgUQREM84h" resolve="TaskNeg" />
     </node>
   </node>
   <node concept="2GGxxg" id="4FTL$vJIw1q">

@@ -38,8 +38,14 @@
         <child id="6702802731807737306" name="canBeChild" index="9Vyp8" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="1M2fIO" id="4X1nFNzX3nr">
+    <property role="3GE5qa" value="ActionCard" />
     <ref role="1M2myG" to="e88n:4X1nFNzWOlr" resolve="ActionStep" />
     <node concept="9S07l" id="4X1nFNzX3ns" role="9Vyp8">
       <node concept="3clFbS" id="4X1nFNzX3nt" role="2VODD2">
@@ -69,6 +75,30 @@
           <node concept="3clFbT" id="3WgUQREJZXR" role="3cqZAk">
             <property role="3clFbU" value="true" />
           </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="av1M7vfJS6">
+    <property role="3GE5qa" value="Conditions" />
+    <ref role="1M2myG" to="e88n:av1M7vdxsc" resolve="DiagnosticCondition" />
+    <node concept="9S07l" id="av1M7vfJS7" role="9Vyp8">
+      <node concept="3clFbS" id="av1M7vfJS8" role="2VODD2">
+        <node concept="3cpWs6" id="av1M7vfJW1" role="3cqZAp">
+          <node concept="3clFbT" id="av1M7vfJWv" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="av1M7vg7IN">
+    <property role="3GE5qa" value="Conditions" />
+    <ref role="1M2myG" to="e88n:av1M7vc78a" resolve="Conditional" />
+    <node concept="9S07l" id="av1M7vg7IO" role="9Vyp8">
+      <node concept="3clFbS" id="av1M7vg7IP" role="2VODD2">
+        <node concept="3cpWs6" id="av1M7vg7MI" role="3cqZAp">
+          <node concept="3clFbT" id="av1M7vg7MQ" role="3cqZAk" />
         </node>
       </node>
     </node>

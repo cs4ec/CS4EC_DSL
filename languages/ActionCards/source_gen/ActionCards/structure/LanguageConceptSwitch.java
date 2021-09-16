@@ -13,12 +13,21 @@ public final class LanguageConceptSwitch {
   public static final int ActionCard = 1;
   public static final int ActionStep = 2;
   public static final int Branch = 3;
-  public static final int EDScenario = 4;
-  public static final int GoToAction = 5;
-  public static final int StaffNumber = 6;
-  public static final int StaffType = 7;
-  public static final int StaffTypeReference = 8;
-  public static final int TestActionStep = 9;
+  public static final int Condition = 4;
+  public static final int Conditional = 5;
+  public static final int DiagnosticCondition = 6;
+  public static final int EDScenario = 7;
+  public static final int GoToAction = 8;
+  public static final int Location = 9;
+  public static final int ProcessingTimeLine = 10;
+  public static final int ProcessingTimeTable = 11;
+  public static final int Resource = 12;
+  public static final int StaffNumber = 13;
+  public static final int StaffType = 14;
+  public static final int StaffTypeReference = 15;
+  public static final int Test = 16;
+  public static final int TestActionStep = 17;
+  public static final int Variable = 18;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L);
@@ -26,12 +35,21 @@ public final class LanguageConceptSwitch {
     builder.put(0x2ef557ae9cb06848L, ActionCard);
     builder.put(0x4f415ebce3f3455bL, ActionStep);
     builder.put(0x4f415ebce3f3456eL, Branch);
+    builder.put(0x29f0721df30722fL, Condition);
+    builder.put(0x29f0721df30720aL, Conditional);
+    builder.put(0x29f0721df36170cL, DiagnosticCondition);
     builder.put(0x4af9c647eff82e56L, EDScenario);
     builder.put(0x4f415ebce3f36ef2L, GoToAction);
+    builder.put(0x29f0721df4db989L, Location);
+    builder.put(0x16d45e8703e0ee1aL, ProcessingTimeLine);
+    builder.put(0x16d45e8703e0edf5L, ProcessingTimeTable);
+    builder.put(0x29f0721df2f3819L, Resource);
     builder.put(0x4af9c647eff82e7bL, StaffNumber);
     builder.put(0x4f415ebce3f346ecL, StaffType);
     builder.put(0x4af9c647efda3a80L, StaffTypeReference);
+    builder.put(0x4936c0ffc391ca7L, Test);
     builder.put(0x3f10eb6deabea835L, TestActionStep);
+    builder.put(0x29f0721df307244L, Variable);
     myIndex = builder.seal();
   }
 

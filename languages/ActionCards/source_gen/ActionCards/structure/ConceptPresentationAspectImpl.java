@@ -13,12 +13,21 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActionCard;
   private ConceptPresentation props_ActionStep;
   private ConceptPresentation props_Branch;
+  private ConceptPresentation props_Condition;
+  private ConceptPresentation props_Conditional;
+  private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_EDScenario;
   private ConceptPresentation props_GoToAction;
+  private ConceptPresentation props_Location;
+  private ConceptPresentation props_ProcessingTimeLine;
+  private ConceptPresentation props_ProcessingTimeTable;
+  private ConceptPresentation props_Resource;
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
+  private ConceptPresentation props_Test;
   private ConceptPresentation props_TestActionStep;
+  private ConceptPresentation props_Variable;
 
   @Override
   @Nullable
@@ -53,10 +62,31 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_Branch == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("Connect Activities using this Branch");
-          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x4f415ebce3f345b2L, "targetAction", "", "");
+          cpb.rawPresentation("Branch");
           props_Branch = cpb.create();
         }
         return props_Branch;
+      case LanguageConceptSwitch.Condition:
+        if (props_Condition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Condition");
+          props_Condition = cpb.create();
+        }
+        return props_Condition;
+      case LanguageConceptSwitch.Conditional:
+        if (props_Conditional == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Conditional");
+          props_Conditional = cpb.create();
+        }
+        return props_Conditional;
+      case LanguageConceptSwitch.DiagnosticCondition:
+        if (props_DiagnosticCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("diagnostic condition");
+          props_DiagnosticCondition = cpb.create();
+        }
+        return props_DiagnosticCondition;
       case LanguageConceptSwitch.EDScenario:
         if (props_EDScenario == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -71,6 +101,35 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GoToAction = cpb.create();
         }
         return props_GoToAction;
+      case LanguageConceptSwitch.Location:
+        if (props_Location == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Location = cpb.create();
+        }
+        return props_Location;
+      case LanguageConceptSwitch.ProcessingTimeLine:
+        if (props_ProcessingTimeLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ProcessingTimeLine");
+          props_ProcessingTimeLine = cpb.create();
+        }
+        return props_ProcessingTimeLine;
+      case LanguageConceptSwitch.ProcessingTimeTable:
+        if (props_ProcessingTimeTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Test processing time table");
+          props_ProcessingTimeTable = cpb.create();
+        }
+        return props_ProcessingTimeTable;
+      case LanguageConceptSwitch.Resource:
+        if (props_Resource == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("A resource in the hospital");
+          cpb.presentationByName();
+          props_Resource = cpb.create();
+        }
+        return props_Resource;
       case LanguageConceptSwitch.StaffNumber:
         if (props_StaffNumber == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -93,6 +152,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StaffTypeReference = cpb.create();
         }
         return props_StaffTypeReference;
+      case LanguageConceptSwitch.Test:
+        if (props_Test == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Type of a test");
+          cpb.presentationByName();
+          props_Test = cpb.create();
+        }
+        return props_Test;
       case LanguageConceptSwitch.TestActionStep:
         if (props_TestActionStep == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -100,6 +167,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TestActionStep = cpb.create();
         }
         return props_TestActionStep;
+      case LanguageConceptSwitch.Variable:
+        if (props_Variable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Variable");
+          props_Variable = cpb.create();
+        }
+        return props_Variable;
     }
     return null;
   }
