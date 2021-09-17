@@ -11,7 +11,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspectBase" />
   </dependency>
-  <dependency className="ActionCards.structure.EnumerationDescriptor_Operands">
+  <dependency className="ActionCards.structure.EnumerationDescriptor_Operators">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.List" />
@@ -38,7 +38,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
   </dependency>
   <dependency className="ActionCards.structure.StructureAspectDescriptor">
-    <classNode dependClassName="ActionCards.structure.EnumerationDescriptor_Operands" />
+    <classNode dependClassName="ActionCards.structure.EnumerationDescriptor_Operators" />
     <classNode dependClassName="ActionCards.structure.EnumerationDescriptor_TestResult" />
     <classNode dependClassName="ActionCards.structure.LanguageConceptSwitch" />
     <classNode dependClassName="java.lang.Override" />

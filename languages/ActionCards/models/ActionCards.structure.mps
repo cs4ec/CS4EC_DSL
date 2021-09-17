@@ -159,7 +159,6 @@
       <property role="IQ2ns" value="2698877061866373100" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
-      <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="av1M7vc78a" resolve="Conditional" />
     </node>
     <node concept="1TJgyi" id="av1M7vspU_" role="1TKVEl">
@@ -303,6 +302,11 @@
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="av1M7vc78a" resolve="Conditional" />
     </node>
+    <node concept="1TJgyi" id="2lOlAdPhCb3" role="1TKVEl">
+      <property role="IQ2nx" value="2698877061871076035" />
+      <property role="TrG5h" value="operator" />
+      <ref role="AX2Wp" node="av1M7vdSz0" resolve="Operators" />
+    </node>
   </node>
   <node concept="1TIwiD" id="av1M7vc794">
     <property role="EcuMT" value="188877551432659524" />
@@ -330,7 +334,7 @@
   </node>
   <node concept="25R3W" id="av1M7vdSz0">
     <property role="3F6X1D" value="188877551433124032" />
-    <property role="TrG5h" value="Operands" />
+    <property role="TrG5h" value="Operators" />
     <property role="3GE5qa" value="Expressions" />
     <node concept="25R33" id="av1M7vdSz1" role="25R1y">
       <property role="3tVfz5" value="188877551433124033" />

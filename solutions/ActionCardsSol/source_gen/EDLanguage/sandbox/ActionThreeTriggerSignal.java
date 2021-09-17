@@ -4,9 +4,9 @@ package EDLanguage.sandbox;
 
 import simcore.Signals.ActorTypeSignal;
 
-public class BTriggerSignal extends ActorTypeSignal {
-  public BTriggerSignal() {
-    this.setName("BTrigger");
+public class ActionThreeTriggerSignal extends ActorTypeSignal {
+  public ActionThreeTriggerSignal() {
+    this.setName("ActionThreeTrigger");
     this.setDescription("h");
     this.AddActor("Doc");
   }

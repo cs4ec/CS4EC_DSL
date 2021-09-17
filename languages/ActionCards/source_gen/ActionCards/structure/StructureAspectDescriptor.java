@@ -35,7 +35,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptTest = createDescriptorForTest();
   /*package*/ final ConceptDescriptor myConceptTestActionStep = createDescriptorForTestActionStep();
   /*package*/ final ConceptDescriptor myConceptVariable = createDescriptorForVariable();
-  /*package*/ final EnumerationDescriptor myEnumerationOperands = new EnumerationDescriptor_Operands();
+  /*package*/ final EnumerationDescriptor myEnumerationOperators = new EnumerationDescriptor_Operators();
   /*package*/ final EnumerationDescriptor myEnumerationTestResult = new EnumerationDescriptor_TestResult();
   private final LanguageConceptSwitch myIndexSwitch;
 
@@ -104,7 +104,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationOperands, myEnumerationTestResult);
+    return Arrays.asList(myEnumerationOperators, myEnumerationTestResult);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -154,7 +154,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("toPort", 0x29f0721df719ea7L).type(PrimitiveTypeId.STRING).origin("188877551436930727").done();
     b.associate("targetAction", 0x4f415ebce3f345b2L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(true).origin("5710949967853733298").done();
     b.associate("fromAction", 0x29f0721df71afb6L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(true).origin("188877551436935094").done();
-    b.aggregate("condition", 0x2574566374febfecL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df30720aL).optional(false).ordered(true).multiple(false).origin("2698877061866373100").done();
+    b.aggregate("condition", 0x2574566374febfecL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df30720aL).optional(true).ordered(true).multiple(false).origin("2698877061866373100").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCondition() {
@@ -163,6 +163,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("ActionCards.structure.Conditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df30720aL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551432659503");
     b.version(2);
+    b.property("operator", 0x25745663754682c3L).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df3788c0L)).origin("2698877061871076035").done();
     b.aggregate("Conditionals", 0x29f0721df307239L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df30720aL).optional(false).ordered(true).multiple(true).origin("188877551432659513").done();
     return b.create();
   }

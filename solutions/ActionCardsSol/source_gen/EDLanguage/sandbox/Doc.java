@@ -10,6 +10,8 @@ import simcore.Signals.Signal;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
+import simcore.agents.Patient;
+import simcore.Signals.Orders.MoveToOrder;
 import java.util.ArrayList;
 
 public class Doc extends Actor {
@@ -31,11 +33,15 @@ public class Doc extends Actor {
         break;
       case "NewPatientArrive":
         behaviourBuilder = new Behaviour("NewPatientArrive");
-        this.InitA(s);
+        this.InitActionOne(s);
         break;
-      case "BTrigger":
-        behaviourBuilder = new Behaviour("BTrigger");
-        this.InitB(s);
+      case "ActionTwoTrigger":
+        behaviourBuilder = new Behaviour("ActionTwoTrigger");
+        this.InitActionTwo(s);
+        break;
+      case "ActionThreeTrigger":
+        behaviourBuilder = new Behaviour("ActionThreeTrigger");
+        this.InitActionThree(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -75,6 +81,18 @@ public class Doc extends Actor {
       return ImAt(concreteTarget);
     }
   }
+  public class OrderAction_b0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
+      p.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+    }
+  }
   public class MoveAction_a0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -104,6 +122,18 @@ public class Doc extends Actor {
 
     public boolean finishCondition() {
       return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Patient p = behaviour.getPatient();
+
+      p.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
     }
   }
   public class MoveAction_a0b extends BehaviourStep {
@@ -170,19 +200,28 @@ public class Doc extends Actor {
   }
 
 
-  public void InitA(Signal s) {
+  public void InitActionOne(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitB(Signal s) {
+  public void InitActionTwo(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+  }
+  public void InitActionThree(Signal s) {
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

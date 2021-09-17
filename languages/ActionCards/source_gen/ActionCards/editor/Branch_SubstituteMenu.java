@@ -24,6 +24,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import org.jetbrains.mps.openapi.language.SConcept;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SProperty;
 
 public class Branch_SubstituteMenu extends SubstituteMenuBase {
@@ -90,6 +91,7 @@ public class Branch_SubstituteMenu extends SubstituteMenuBase {
         SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
         SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, ((SNode) _context.getParentNode()));
         SPropertyOperations.assign(newBranch, PROPS.fromPort$vu09, "FEHI");
+        SLinkOperations.setTarget(newBranch, LINKS.condition$UnEW, null);
         return newBranch;
       }
 
@@ -106,6 +108,7 @@ public class Branch_SubstituteMenu extends SubstituteMenuBase {
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
+    /*package*/ static final SContainmentLink condition$UnEW = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x2574566374febfecL, "condition");
   }
 
   private static final class PROPS {

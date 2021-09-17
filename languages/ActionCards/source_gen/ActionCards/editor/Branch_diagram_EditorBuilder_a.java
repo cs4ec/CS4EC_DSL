@@ -14,6 +14,7 @@ import de.itemis.mps.editor.diagram.runtime.model.IEdgeAccessor;
 import de.itemis.mps.editor.diagram.runtime.model.SNodeEdgeAccessor;
 import de.itemis.mps.editor.diagram.runtime.DiagramUtil;
 import de.itemis.mps.editor.diagram.runtime.shape.IShape;
+import de.itemis.mps.editor.diagram.shapes.ArrowHead;
 import de.itemis.mps.editor.diagram.runtime.model.IConnectionEndpointReference;
 import de.itemis.mps.editor.diagram.runtime.model.EndpointUtil;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
@@ -63,7 +64,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
           private EditorCell labelCell = DiagramUtil.getCellIfNotEmpty(null);
           private EditorCell startRoleCell = DiagramUtil.getCellIfNotEmpty(null);
           private EditorCell endRoleCell = DiagramUtil.getCellIfNotEmpty(null);
-          private IShape endShape = null;
+          private IShape endShape = new ArrowHead(1.0, true);
           private IShape startShape = null;
 
           private IConnectionEndpointReference endpointFrom = EndpointUtil.createEndpointReferenceForNodeSafe(SLinkOperations.getTarget(((SNode) _variablesContext.getValue("thisNode")), LINKS.fromAction$DE5P));

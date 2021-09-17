@@ -105,5 +105,40 @@
       <node concept="3clFbS" id="av1M7vjsdl" role="2VODD2" />
     </node>
   </node>
+  <node concept="13h7C7" id="2lOlAdPvbFf">
+    <property role="3GE5qa" value="ActionCard" />
+    <ref role="13h7C2" to="e88n:2VPlUUsG6x$" resolve="Action" />
+    <node concept="13i0hz" id="2lOlAdPvbFq" role="13h7CS">
+      <property role="TrG5h" value="getFormattedName" />
+      <node concept="3Tm1VV" id="2lOlAdPvbFr" role="1B3o_S" />
+      <node concept="3uibUv" id="2lOlAdPvbFE" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="3clFbS" id="2lOlAdPvbFt" role="3clF47">
+        <node concept="3cpWs6" id="2lOlAdPvoOv" role="3cqZAp">
+          <node concept="2OqwBi" id="2lOlAdPvoOw" role="3cqZAk">
+            <node concept="2OqwBi" id="2lOlAdPvoOx" role="2Oq$k0">
+              <node concept="13iPFW" id="2lOlAdPvoOy" role="2Oq$k0" />
+              <node concept="3TrcHB" id="2lOlAdPvoOz" role="2OqNvi">
+                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+            <node concept="liA8E" id="2lOlAdPvoO$" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~String.replaceAll(java.lang.String,java.lang.String)" resolve="replaceAll" />
+              <node concept="Xl_RD" id="2lOlAdPvoO_" role="37wK5m">
+                <property role="Xl_RC" value="\\s+" />
+              </node>
+              <node concept="Xl_RD" id="2lOlAdPvoOA" role="37wK5m">
+                <property role="Xl_RC" value="" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="2lOlAdPvbFg" role="13h7CW">
+      <node concept="3clFbS" id="2lOlAdPvbFh" role="2VODD2" />
+    </node>
+  </node>
 </model>
 

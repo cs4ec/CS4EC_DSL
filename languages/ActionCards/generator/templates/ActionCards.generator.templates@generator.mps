@@ -14,6 +14,7 @@
     <import index="nm6q" ref="4b3471fe-3d18-4cd3-b548-991a9fa81520/java:simcore.utilities(EDRuntime_EDProject/)" />
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <import index="uyrv" ref="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -284,6 +285,7 @@
       <concept id="1138411891628" name="jetbrains.mps.lang.smodel.structure.SNodeOperation" flags="nn" index="eCIE_">
         <child id="1144104376918" name="parameter" index="1xVPHs" />
       </concept>
+      <concept id="1179409122411" name="jetbrains.mps.lang.smodel.structure.Node_ConceptMethodCall" flags="nn" index="2qgKlT" />
       <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
         <reference id="1171315804605" name="concept" index="2RRcyH" />
       </concept>
@@ -383,12 +385,6 @@
       <ref role="30HIoZ" to="e88n:2VPlUUsG6x$" resolve="Action" />
       <node concept="j$656" id="3WgUQREHuT0" role="1lVwrX">
         <ref role="v9R2y" node="3WgUQREHuSX" resolve="ActionToSignalTrigger" />
-      </node>
-    </node>
-    <node concept="3aamgX" id="3WgUQREJE$c" role="3acgRq">
-      <ref role="30HIoZ" to="e88n:3WgUQREJEwP" resolve="TestActionStep" />
-      <node concept="j$656" id="3WgUQREJE$d" role="1lVwrX">
-        <ref role="v9R2y" node="3WgUQREJE$a" resolve="reduce_TestActionStep" />
       </node>
     </node>
     <node concept="3aamgX" id="3WgUQREJGCh" role="3acgRq">
@@ -551,8 +547,8 @@
                       <ref role="3Tt5mk" to="e88n:4X1nFNzWOmM" resolve="targetAction" />
                     </node>
                   </node>
-                  <node concept="3TrcHB" id="3WgUQRELlq3" role="2OqNvi">
-                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                  <node concept="2qgKlT" id="2lOlAdPvuZJ" role="2OqNvi">
+                    <ref role="37wK5l" to="uyrv:2lOlAdPvbFq" resolve="getFormattedName" />
                   </node>
                 </node>
               </node>
@@ -797,8 +793,8 @@
             <node concept="3clFbF" id="1JOzhSNIC19" role="3cqZAp">
               <node concept="2OqwBi" id="1JOzhSNICed" role="3clFbG">
                 <node concept="30H73N" id="1JOzhSNIC18" role="2Oq$k0" />
-                <node concept="3TrcHB" id="1JOzhSNICpm" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                <node concept="2qgKlT" id="2lOlAdPvpzZ" role="2OqNvi">
+                  <ref role="37wK5l" to="uyrv:2lOlAdPvbFq" resolve="getFormattedName" />
                 </node>
               </node>
             </node>

@@ -9,10 +9,10 @@ import java.util.List;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.NotNull;
 
-public class EnumerationDescriptor_Operands extends EnumerationDescriptorBase {
+public class EnumerationDescriptor_Operators extends EnumerationDescriptorBase {
 
-  public EnumerationDescriptor_Operands() {
-    super(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df3788c0L, "Operands", "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551433124032");
+  public EnumerationDescriptor_Operators() {
+    super(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df3788c0L, "Operators", "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551433124032");
   }
 
   private final EnumerationDescriptor.MemberDescriptor myMember_and_0 = new EnumerationDescriptor.MemberDescriptor("and", "and", 0x29f0721df3788c1L, "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551433124033");
