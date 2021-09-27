@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-cs5t0v8w8h42khr9tqc5h4z4ycldqhf">
+  <files names="ActorTypeSignal_Constraints.java:AttributeExpressionReference_Constraints.java:AttributeReference_Constraints.java:BehaviourElementReference_Constraints.java:ConstraintsAspectDescriptor.java:DataInstanceMap_Constraints.java:DirectSignal_Constraints.java:HumanInstanceFromSignal_Constraints.java:PatientInstance_Constraints.java:PlaceInstanceCollection_Constraints.java:PlaceInstanceFromSignal_Constraints.java:SelfInstance_Constraints.java:SignalInitReference_Constraints.java:SignalReference_Constraints.java:Signal_Constraints.java:UpdateAttributeAction_Constraints.java" />
+</product>
+

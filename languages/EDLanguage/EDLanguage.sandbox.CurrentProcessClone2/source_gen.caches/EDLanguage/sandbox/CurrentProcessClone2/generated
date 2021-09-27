@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="65hxzosa17up36ps5btsawuuhmzgtz8">
-  <files dir="EDLanguage/sandbox" names="AmberAdmissionBay.java:Amber_AdmissionBay.java:ConductTrackAndTraceLFDSignal.java:Doctor.java:DoctorOffice.java:EDBuilder.java:Entrance.java:Exit.java:GreenAdmissionBay.java:Green_AdmissionBay.java:IsLIATReadySignal.java:LFDDevice.java:LFDTrackAndTraceSignal.java:LIAT.java:LIATBooth.java:LIATIsReadySignal.java:LIATMachine.java:Lab.java:LabAsymptomaticPCR.java:LabSymptomaticPCR.java:LabTech.java:MajorsABBay.java:NewPatientNeedMedicineSignal.java:Nurse.java:PatientNeedsBloodTestSignal.java:PatientNeedsFinalConsutlationSignal.java:PatientTestNegativeSignal.java:PatientTestPositiveSignal.java:PatientWaitingForTriageSignal.java:Radiology.java:Receptionist.java:RedAdmissionBay.java:Red_AdmissionBay.java:RequestPCRSignal.java:SURESCREEN.java:SideRoomAdmissionBay.java:SideRoom_AdmissionBay.java:Staff.java:StartPatientTestSignal.java:TaskRoom.java:TriageSideRoom.java:WaitingRoom.java:XRaySignal.java:office.java" />
-</product>
-

@@ -8,16 +8,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.AmberAdmissionBay;
-import EDLanguage.sandbox.Entrance;
-import EDLanguage.sandbox.Exit;
-import EDLanguage.sandbox.GreenAdmissionBay;
-import EDLanguage.sandbox.LIAT;
-import EDLanguage.sandbox.LabSymptomaticPCR;
-import EDLanguage.sandbox.RedAdmissionBay;
-import EDLanguage.sandbox.SURESCREEN;
-import EDLanguage.sandbox.SideRoomAdmissionBay;
-import EDLanguage.sandbox.WaitingRoom;
+import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -56,8 +47,8 @@ public class Patient extends Agent {
 	private double pheScore;
 	private boolean usedSideRoom;
 
-	public Patient(ContinuousSpace<Object> space, Grid<Object> grid) {
-		super(space, grid);
+	public Patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
+		super(space, grid, context);
 		curOrder = null;
 		this.isIdle = true;
 		hasBeenDealtWith = false;
@@ -111,9 +102,10 @@ public class Patient extends Agent {
 				// if this agent is in the room..
 				if (targetLocation.WithInside(this)) {
 					//... and this room is a waiting room, the patient will now set itself the action of taking a seat
-					if (targetLocation.getRoomType() instanceof WaitingRoom) {
-						FindAnOccupiable(Seat.class);
-					} else if (((MoveToOrder) order).getOccupiable() != null) {
+//					if (targetLocation.getRoomType() instanceof WaitingRoom) {
+//						FindAnOccupiable(Seat.class);
+//					} else 
+						if (((MoveToOrder) order).getOccupiable() != null) {
 						FindAnOccupiable(((MoveToOrder) order).getOccupiable());
 					}
 					iterateOrder();
@@ -275,30 +267,30 @@ public class Patient extends Agent {
 	//----------------------------------------------------------- Data Sources --------------------------------------------------------------
 	
 	public Integer isDischargedToRed() {
-		if(curInside.getRoomType() == RedAdmissionBay.getInstance()) {
-			return 1;
-		}
+//		if(curInside.getRoomType() == RedAdmissionBay.getInstance()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
 	public Integer isDischargedToAmber() {
-		if(curInside.getRoomType() == AmberAdmissionBay.getInstance()) {
-			return 1;
-		}
+//		if(curInside.getRoomType() == AmberAdmissionBay.getInstance()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
 	public Integer isDischargedToGreen() {
-		if(curInside.getRoomType() == GreenAdmissionBay.getInstance()) {
-			return 1;
-		}
+//		if(curInside.getRoomType() == GreenAdmissionBay.getInstance()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
 	public Integer isAdmittedToSideRoom() {
-		if(curInside.getRoomType() == SideRoomAdmissionBay.getInstance()) {
-			return 1;
-		}
+//		if(curInside.getRoomType() == SideRoomAdmissionBay.getInstance()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
@@ -387,9 +379,9 @@ public class Patient extends Agent {
 	}
 	
 	public Integer receivedLFD() {
-		if( testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findAny().isPresent()) {
-			return 1;
-		}
+//		if( testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findAny().isPresent()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
@@ -422,54 +414,54 @@ public class Patient extends Agent {
 	}
 	
 	public Integer LFDPositive() {
-		TestResult pres =  null;
-		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findFirst();
-		if (opt.isEmpty()) return 0;
-		else 
-			pres = (TestResult) opt.get();
-		
-		if(pres != null && pres.isInfected()) {
-			return 1;
-		}
+//		TestResult pres =  null;
+//		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findFirst();
+//		if (opt.isEmpty()) return 0;
+//		else 
+//			pres = (TestResult) opt.get();
+//		
+//		if(pres != null && pres.isInfected()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
 	public Integer LFDNegative() {
-		TestResult pres =  null;
-		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findFirst();
-		if (opt.isEmpty()) return 0;
-		else 
-			pres = (TestResult) opt.get();
-		
-		if(pres != null && !pres.isInfected()) {
-			return 1;
-		}
+//		TestResult pres =  null;
+//		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(SURESCREEN.getInstance())).findFirst();
+//		if (opt.isEmpty()) return 0;
+//		else 
+//			pres = (TestResult) opt.get();
+//		
+//		if(pres != null && !pres.isInfected()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
 	public Integer LIATPositive() {
-		TestResult pres =  null;
-		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findFirst();
-		if (opt.isEmpty()) return 0;
-		else 
-			pres = (TestResult) opt.get();
-		
-		if(pres != null && pres.isInfected()) {
-			return 1;
-		}
+//		TestResult pres =  null;
+//		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findFirst();
+//		if (opt.isEmpty()) return 0;
+//		else 
+//			pres = (TestResult) opt.get();
+//		
+//		if(pres != null && pres.isInfected()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
 	public Integer LIATNegative() {
-		TestResult pres =  null;
-		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findFirst();
-		if (opt.isEmpty()) return 0;
-		else 
-			pres = (TestResult) opt.get();
-		
-		if(pres != null && !pres.isInfected()) {
-			return 1;
-		}
+//		TestResult pres =  null;
+//		Optional<TestResult> opt = testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findFirst();
+//		if (opt.isEmpty()) return 0;
+//		else 
+//			pres = (TestResult) opt.get();
+//		
+//		if(pres != null && !pres.isInfected()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
@@ -530,16 +522,16 @@ public class Patient extends Agent {
 	}
 	
 	public Integer receivedPCR() {
-		if( testResults.stream().filter(t -> t.getTestType().equals(LabSymptomaticPCR.getInstance())).findAny().isPresent()) {
-			return 1;
-		}
+//		if( testResults.stream().filter(t -> t.getTestType().equals(LabSymptomaticPCR.getInstance())).findAny().isPresent()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	
 	public Integer receivedLIAT() {
-		if( testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findAny().isPresent()) {
-			return 1;
-		}
+//		if( testResults.stream().filter(t -> t.getTestType().equals(LIAT.getInstance())).findAny().isPresent()) {
+//			return 1;
+//		}
 		return 0;
 	}
 	

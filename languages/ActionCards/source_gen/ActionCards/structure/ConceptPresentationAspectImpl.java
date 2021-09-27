@@ -12,21 +12,31 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Action;
   private ConceptPresentation props_ActionCard;
   private ConceptPresentation props_ActionStep;
+  private ConceptPresentation props_AtributeLine;
+  private ConceptPresentation props_Attribute;
+  private ConceptPresentation props_AttributeCondition;
+  private ConceptPresentation props_AttributeTable;
   private ConceptPresentation props_Branch;
   private ConceptPresentation props_Condition;
   private ConceptPresentation props_Conditional;
   private ConceptPresentation props_DiagnosticCondition;
+  private ConceptPresentation props_Disease;
+  private ConceptPresentation props_DiseaseList;
   private ConceptPresentation props_EDScenario;
   private ConceptPresentation props_GoToAction;
-  private ConceptPresentation props_Location;
+  private ConceptPresentation props_PatientArrivalLine;
+  private ConceptPresentation props_PatientArrivals;
+  private ConceptPresentation props_PatientProfile;
   private ConceptPresentation props_ProcessingTimeLine;
   private ConceptPresentation props_ProcessingTimeTable;
   private ConceptPresentation props_Resource;
+  private ConceptPresentation props_Severity;
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
   private ConceptPresentation props_Test;
   private ConceptPresentation props_TestActionStep;
+  private ConceptPresentation props_TestResult;
   private ConceptPresentation props_Variable;
 
   @Override
@@ -58,6 +68,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActionStep = cpb.create();
         }
         return props_ActionStep;
+      case LanguageConceptSwitch.AtributeLine:
+        if (props_AtributeLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x25745663764b1ac7L, "attribute", "", "");
+          props_AtributeLine = cpb.create();
+        }
+        return props_AtributeLine;
+      case LanguageConceptSwitch.Attribute:
+        if (props_Attribute == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Attribute = cpb.create();
+        }
+        return props_Attribute;
+      case LanguageConceptSwitch.AttributeCondition:
+        if (props_AttributeCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab4ddL, 0x25745663758ab4e7L, "attribute", "", "");
+          props_AttributeCondition = cpb.create();
+        }
+        return props_AttributeCondition;
+      case LanguageConceptSwitch.AttributeTable:
+        if (props_AttributeTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("AttributeTable");
+          props_AttributeTable = cpb.create();
+        }
+        return props_AttributeTable;
       case LanguageConceptSwitch.Branch:
         if (props_Branch == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -87,6 +125,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DiagnosticCondition = cpb.create();
         }
         return props_DiagnosticCondition;
+      case LanguageConceptSwitch.Disease:
+        if (props_Disease == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Disease = cpb.create();
+        }
+        return props_Disease;
+      case LanguageConceptSwitch.DiseaseList:
+        if (props_DiseaseList == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("DiseaseList");
+          props_DiseaseList = cpb.create();
+        }
+        return props_DiseaseList;
       case LanguageConceptSwitch.EDScenario:
         if (props_EDScenario == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -101,13 +153,28 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_GoToAction = cpb.create();
         }
         return props_GoToAction;
-      case LanguageConceptSwitch.Location:
-        if (props_Location == null) {
+      case LanguageConceptSwitch.PatientArrivalLine:
+        if (props_PatientArrivalLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_Location = cpb.create();
+          cpb.rawPresentation("PatientArrivalLine");
+          props_PatientArrivalLine = cpb.create();
         }
-        return props_Location;
+        return props_PatientArrivalLine;
+      case LanguageConceptSwitch.PatientArrivals:
+        if (props_PatientArrivals == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Patient Arrivals");
+          props_PatientArrivals = cpb.create();
+        }
+        return props_PatientArrivals;
+      case LanguageConceptSwitch.PatientProfile:
+        if (props_PatientProfile == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("The patient");
+          cpb.presentationByName();
+          props_PatientProfile = cpb.create();
+        }
+        return props_PatientProfile;
       case LanguageConceptSwitch.ProcessingTimeLine:
         if (props_ProcessingTimeLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -130,6 +197,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Resource = cpb.create();
         }
         return props_Resource;
+      case LanguageConceptSwitch.Severity:
+        if (props_Severity == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Severity = cpb.create();
+        }
+        return props_Severity;
       case LanguageConceptSwitch.StaffNumber:
         if (props_StaffNumber == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -167,6 +241,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TestActionStep = cpb.create();
         }
         return props_TestActionStep;
+      case LanguageConceptSwitch.TestResult:
+        if (props_TestResult == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_TestResult = cpb.create();
+        }
+        return props_TestResult;
       case LanguageConceptSwitch.Variable:
         if (props_Variable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

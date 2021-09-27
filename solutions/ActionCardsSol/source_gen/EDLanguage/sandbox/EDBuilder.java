@@ -18,7 +18,6 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridBuilderParameters;
 import repast.simphony.space.grid.SimpleGridAdder;
 import simcore.basicStructures.Board;
-import simcore.basicStructures.PatientAdder;
 import repast.simphony.valueLayer.GridValueLayer;
 import simcore.basicStructures.Room;
 import java.awt.Color;
@@ -52,12 +51,12 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
 
+    context.add(new patientGenerator(space, grid, context));
     context.add(new Board());
-    context.add(new PatientAdder(space, grid).WithTimeSpan(0).WithPrevalence(pPrev, pProportionSymptomatic).WithPercentageHighSeverity(0.45).WithPercentageMediumSeverity(0.4));
 
     // add Agents 
-    for (int i = 0; i < 3; i++) {
-      context.add(new Doc(space, grid));
+    for (int i = 0; i < 5; i++) {
+      context.add(new Doc(space, grid, context));
     }
 
 
@@ -84,6 +83,30 @@ public class EDBuilder implements ContextBuilder<Object> {
 
   public void CreatePatientArrivalMap() {
     HashMap ArrivalPerHour = new HashMap();
+    ArrivalPerHour.put(1, 5);
+    ArrivalPerHour.put(2, 4);
+    ArrivalPerHour.put(3, 5);
+    ArrivalPerHour.put(4, 6);
+    ArrivalPerHour.put(5, 5);
+    ArrivalPerHour.put(6, 4);
+    ArrivalPerHour.put(7, 5);
+    ArrivalPerHour.put(8, 6);
+    ArrivalPerHour.put(9, 7);
+    ArrivalPerHour.put(10, 3);
+    ArrivalPerHour.put(11, 8);
+    ArrivalPerHour.put(12, 4);
+    ArrivalPerHour.put(13, 6);
+    ArrivalPerHour.put(14, 3);
+    ArrivalPerHour.put(15, 3);
+    ArrivalPerHour.put(16, 3);
+    ArrivalPerHour.put(17, 6);
+    ArrivalPerHour.put(18, 3);
+    ArrivalPerHour.put(19, 4);
+    ArrivalPerHour.put(20, 5);
+    ArrivalPerHour.put(21, 6);
+    ArrivalPerHour.put(22, 7);
+    ArrivalPerHour.put(23, 3);
+    ArrivalPerHour.put(24, 4);
     PatientArrivalStore.Initialise((Map<Integer, Integer>) ArrivalPerHour);
   }
 

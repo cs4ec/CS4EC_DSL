@@ -1,239 +1,419 @@
-INFO  [Thread-0] 2021-03-30 19:39:43,785 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:26
-INFO  [Thread-0] 2021-03-30 19:39:44,289 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:44
-INFO  [Thread-0] 2021-03-30 19:39:44,912 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:33
-INFO  [Thread-0] 2021-03-30 19:39:45,356 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:51
-INFO  [Thread-0] 2021-03-30 19:39:45,884 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:39
-INFO  [Thread-0] 2021-03-30 19:39:46,683 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:59
-INFO  [Thread-0] 2021-03-30 19:39:47,128 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:47
-INFO  [Thread-0] 2021-03-30 19:39:47,801 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:06
-INFO  [Thread-0] 2021-03-30 19:39:47,849 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:51
-INFO  [Thread-0] 2021-03-30 19:39:48,386 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:54
-INFO  [Thread-0] 2021-03-30 19:39:49,261 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:15
-INFO  [Thread-0] 2021-03-30 19:39:50,469 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:22
-INFO  [Thread-0] 2021-03-30 19:39:50,957 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:10
-INFO  [Thread-0] 2021-03-30 19:39:51,810 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:30
-INFO  [Thread-0] 2021-03-30 19:39:52,186 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:17
-INFO  [Thread-0] 2021-03-30 19:39:52,770 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:36
-INFO  [Thread-0] 2021-03-30 19:39:53,363 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:24
-INFO  [Thread-0] 2021-03-30 19:39:54,347 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:45
-INFO  [Thread-0] 2021-03-30 19:39:54,411 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:30
-INFO  [Thread-0] 2021-03-30 19:39:55,375 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:51
-INFO  [Thread-0] 2021-03-30 19:39:55,591 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:37
-INFO  [Thread-0] 2021-03-30 19:39:55,701 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:53
-INFO  [Thread-0] 2021-03-30 19:39:56,278 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:41
-INFO  [Thread-0] 2021-03-30 19:39:56,907 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:45
-INFO  [Thread-0] 2021-03-30 19:39:58,119 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:52
-INFO  [Thread-0] 2021-03-30 19:39:59,169 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:58
-INFO  [Thread-0] 2021-03-30 19:39:59,249 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:14
-INFO  [Thread-0] 2021-03-30 19:40:00,649 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:06
-INFO  [Thread-0] 2021-03-30 19:40:02,630 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:17
-INFO  [Thread-0] 2021-03-30 19:40:03,608 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:39
-INFO  [Thread-0] 2021-03-30 19:40:04,804 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:29
-INFO  [Thread-0] 2021-03-30 19:40:05,310 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:32
-INFO  [Thread-0] 2021-03-30 19:40:06,222 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:37
-INFO  [Thread-0] 2021-03-30 19:40:07,027 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:58
-INFO  [Thread-0] 2021-03-30 19:40:07,099 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:42
-INFO  [Thread-0] 2021-03-30 19:40:07,850 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:12
-INFO  [Thread-0] 2021-03-30 19:40:08,178 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:48
-INFO  [Thread-0] 2021-03-30 19:40:08,418 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:26
-INFO  [Thread-0] 2021-03-30 19:40:08,538 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:50
-INFO  [Thread-0] 2021-03-30 19:40:09,029 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:41
-INFO  [Thread-0] 2021-03-30 19:40:09,561 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T00:55
-INFO  [Thread-0] 2021-03-30 19:40:10,081 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:58
-INFO  [Thread-0] 2021-03-30 19:40:10,389 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:13
-INFO  [Thread-0] 2021-03-30 19:40:10,669 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:19
-INFO  [Thread-0] 2021-03-30 19:40:11,162 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:31
-INFO  [Thread-0] 2021-03-30 19:40:11,732 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:44
-INFO  [Thread-0] 2021-03-30 19:40:12,428 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T01:58
-INFO  [Thread-0] 2021-03-30 19:40:13,232 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:16
-INFO  [Thread-0] 2021-03-30 19:40:13,536 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:23
-INFO  [Thread-0] 2021-03-30 19:40:13,920 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:30
-INFO  [Thread-0] 2021-03-30 19:40:14,192 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:35
-INFO  [Thread-0] 2021-03-30 19:40:14,474 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:41
-INFO  [Thread-0] 2021-03-30 19:40:15,087 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T02:53
-INFO  [Thread-0] 2021-03-30 19:40:15,392 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:26
-INFO  [Thread-0] 2021-03-30 19:40:16,088 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:13
-INFO  [Thread-0] 2021-03-30 19:40:16,953 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:31
-INFO  [Thread-0] 2021-03-30 19:40:17,829 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T03:48
-INFO  [Thread-0] 2021-03-30 19:40:18,749 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:44
-INFO  [Thread-0] 2021-03-30 19:40:19,486 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:21
-INFO  [Thread-0] 2021-03-30 19:40:20,422 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:38
-INFO  [Thread-0] 2021-03-30 19:40:21,242 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T04:55
-INFO  [Thread-0] 2021-03-30 19:40:21,858 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:05
-INFO  [Thread-0] 2021-03-30 19:40:22,170 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:11
-INFO  [Thread-0] 2021-03-30 19:40:22,634 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:21
-INFO  [Thread-0] 2021-03-30 19:40:23,007 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:30
-INFO  [Thread-0] 2021-03-30 19:40:23,215 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:34
-INFO  [Thread-0] 2021-03-30 19:40:23,375 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:37
-INFO  [Thread-0] 2021-03-30 19:40:24,087 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T05:52
-INFO  [Thread-0] 2021-03-30 19:40:25,949 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:32
-INFO  [Thread-0] 2021-03-30 19:40:27,178 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T06:59
-INFO  [Thread-0] 2021-03-30 19:40:28,531 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T07:29
-INFO  [pool-3-thread-1] 2021-03-30 19:40:30,408 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1617124285182 for DONE:  no
-INFO  [Thread-0] 2021-03-30 19:40:30,855 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:14
-INFO  [Thread-0] 2021-03-30 19:40:31,384 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:25
-INFO  [Thread-0] 2021-03-30 19:40:31,970 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:38
-INFO  [Thread-0] 2021-03-30 19:40:32,458 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:47
-INFO  [Thread-0] 2021-03-30 19:40:32,874 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T08:55
-INFO  [Thread-0] 2021-03-30 19:40:33,412 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:07
-INFO  [Thread-0] 2021-03-30 19:40:33,508 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:09
-INFO  [Thread-0] 2021-03-30 19:40:33,748 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:13
-INFO  [Thread-0] 2021-03-30 19:40:33,964 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:17
-INFO  [Thread-0] 2021-03-30 19:40:34,503 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:27
-INFO  [Thread-0] 2021-03-30 19:40:34,838 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:34
-INFO  [Thread-0] 2021-03-30 19:40:35,168 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:41
-INFO  [Thread-0] 2021-03-30 19:40:35,584 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:48
-INFO  [Thread-0] 2021-03-30 19:40:35,752 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T09:51
-INFO  [Thread-0] 2021-03-30 19:40:36,567 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:07
-INFO  [Thread-0] 2021-03-30 19:40:36,969 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:14
-INFO  [Thread-0] 2021-03-30 19:40:37,325 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:20
-INFO  [Thread-0] 2021-03-30 19:40:37,562 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:24
-INFO  [Thread-0] 2021-03-30 19:40:37,674 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:26
-INFO  [Thread-0] 2021-03-30 19:40:38,116 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:35
-INFO  [Thread-0] 2021-03-30 19:40:38,333 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:39
-INFO  [Thread-0] 2021-03-30 19:40:38,885 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:48
-INFO  [Thread-0] 2021-03-30 19:40:39,129 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:52
-INFO  [Thread-0] 2021-03-30 19:40:39,515 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T10:59
-INFO  [Thread-0] 2021-03-30 19:40:39,785 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:04
-INFO  [Thread-0] 2021-03-30 19:40:39,969 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:07
-INFO  [Thread-0] 2021-03-30 19:40:40,321 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:12
-INFO  [Thread-0] 2021-03-30 19:40:40,625 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:17
-INFO  [Thread-0] 2021-03-30 19:40:40,833 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:20
-INFO  [Thread-0] 2021-03-30 19:40:41,058 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:24
-INFO  [Thread-0] 2021-03-30 19:40:41,490 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:32
-INFO  [Thread-0] 2021-03-30 19:40:41,754 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:36
-INFO  [Thread-0] 2021-03-30 19:40:42,154 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:42
-INFO  [Thread-0] 2021-03-30 19:40:42,290 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:44
-INFO  [Thread-0] 2021-03-30 19:40:42,506 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:47
-INFO  [Thread-0] 2021-03-30 19:40:42,696 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:50
-INFO  [Thread-0] 2021-03-30 19:40:43,054 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T11:56
-INFO  [Thread-0] 2021-03-30 19:40:43,366 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:01
-INFO  [Thread-0] 2021-03-30 19:40:43,678 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:05
-INFO  [Thread-0] 2021-03-30 19:40:44,025 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:10
-INFO  [Thread-0] 2021-03-30 19:40:44,443 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:16
-INFO  [Thread-0] 2021-03-30 19:40:44,571 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:18
-INFO  [Thread-0] 2021-03-30 19:40:44,635 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:19
-INFO  [Thread-0] 2021-03-30 19:40:45,167 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:27
-INFO  [Thread-0] 2021-03-30 19:40:45,487 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:31
-INFO  [Thread-0] 2021-03-30 19:40:45,855 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:36
-INFO  [Thread-0] 2021-03-30 19:40:46,223 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:41
-INFO  [Thread-0] 2021-03-30 19:40:46,420 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:44
-INFO  [Thread-0] 2021-03-30 19:40:46,605 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:47
-INFO  [Thread-0] 2021-03-30 19:40:46,735 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:49
-INFO  [Thread-0] 2021-03-30 19:40:46,951 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:52
-INFO  [Thread-0] 2021-03-30 19:40:47,364 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T12:57
-INFO  [Thread-0] 2021-03-30 19:40:47,748 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:02
-INFO  [Thread-0] 2021-03-30 19:40:48,419 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:12
-INFO  [Thread-0] 2021-03-30 19:40:48,491 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:13
-INFO  [Thread-0] 2021-03-30 19:40:48,827 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:17
-INFO  [Thread-0] 2021-03-30 19:40:49,143 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:21
-INFO  [Thread-0] 2021-03-30 19:40:49,866 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:30
-INFO  [Thread-0] 2021-03-30 19:40:50,224 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:35
-INFO  [Thread-0] 2021-03-30 19:40:50,840 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:42
-INFO  [Thread-0] 2021-03-30 19:40:51,333 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:48
-INFO  [Thread-0] 2021-03-30 19:40:51,749 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T13:54
-INFO  [Thread-0] 2021-03-30 19:40:52,669 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:05
-INFO  [Thread-0] 2021-03-30 19:40:53,073 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:10
-INFO  [Thread-0] 2021-03-30 19:40:53,225 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:12
-INFO  [Thread-0] 2021-03-30 19:40:53,507 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:16
-INFO  [Thread-0] 2021-03-30 19:40:53,891 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:20
-INFO  [Thread-0] 2021-03-30 19:40:54,239 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:24
-INFO  [Thread-0] 2021-03-30 19:40:54,663 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T14:29
-INFO  [Thread-0] 2021-03-30 19:40:57,618 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:04
-INFO  [Thread-0] 2021-03-30 19:40:58,090 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:10
-INFO  [Thread-0] 2021-03-30 19:40:58,322 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:13
-INFO  [Thread-0] 2021-03-30 19:40:58,410 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:14
-INFO  [Thread-0] 2021-03-30 19:40:58,626 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:16
-INFO  [Thread-0] 2021-03-30 19:40:58,906 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:19
-INFO  [Thread-0] 2021-03-30 19:40:59,454 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:25
-INFO  [Thread-0] 2021-03-30 19:40:59,702 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:28
-INFO  [Thread-0] 2021-03-30 19:40:59,958 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:31
-INFO  [Thread-0] 2021-03-30 19:41:00,206 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:33
-INFO  [Thread-0] 2021-03-30 19:41:00,958 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:38
-INFO  [Thread-0] 2021-03-30 19:41:02,039 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:47
-INFO  [Thread-0] 2021-03-30 19:41:02,495 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:52
-INFO  [Thread-0] 2021-03-30 19:41:02,839 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:55
-INFO  [Thread-0] 2021-03-30 19:41:02,943 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:56
-INFO  [Thread-0] 2021-03-30 19:41:03,232 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T15:59
-INFO  [Thread-0] 2021-03-30 19:41:03,538 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:02
-INFO  [Thread-0] 2021-03-30 19:41:04,227 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:10
-INFO  [Thread-0] 2021-03-30 19:41:04,675 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:14
-INFO  [Thread-0] 2021-03-30 19:41:04,889 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:16
-INFO  [Thread-0] 2021-03-30 19:41:05,414 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:21
-INFO  [Thread-0] 2021-03-30 19:41:05,598 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:23
-INFO  [Thread-0] 2021-03-30 19:41:05,854 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:26
-INFO  [Thread-0] 2021-03-30 19:41:06,534 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:32
-INFO  [Thread-0] 2021-03-30 19:41:06,952 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:36
-INFO  [Thread-0] 2021-03-30 19:41:07,438 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:41
-INFO  [Thread-0] 2021-03-30 19:41:08,033 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:47
-INFO  [Thread-0] 2021-03-30 19:41:08,577 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:52
-INFO  [Thread-0] 2021-03-30 19:41:08,913 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T16:55
-INFO  [Thread-0] 2021-03-30 19:41:10,124 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:07
-INFO  [Thread-0] 2021-03-30 19:41:10,676 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:12
-INFO  [Thread-0] 2021-03-30 19:41:11,063 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:16
-INFO  [Thread-0] 2021-03-30 19:41:11,615 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:21
-INFO  [Thread-0] 2021-03-30 19:41:11,839 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:23
-INFO  [Thread-0] 2021-03-30 19:41:12,168 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:26
-INFO  [Thread-0] 2021-03-30 19:41:12,632 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:30
-INFO  [Thread-0] 2021-03-30 19:41:13,021 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:34
-INFO  [Thread-0] 2021-03-30 19:41:13,621 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:39
-INFO  [Thread-0] 2021-03-30 19:41:14,165 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:44
-INFO  [Thread-0] 2021-03-30 19:41:14,557 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:48
-INFO  [Thread-0] 2021-03-30 19:41:14,925 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:51
-INFO  [Thread-0] 2021-03-30 19:41:15,865 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T17:59
-INFO  [Thread-0] 2021-03-30 19:41:17,364 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:12
-INFO  [Thread-0] 2021-03-30 19:41:18,156 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:19
-INFO  [Thread-0] 2021-03-30 19:41:18,644 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:23
-INFO  [Thread-0] 2021-03-30 19:41:19,225 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:28
-INFO  [Thread-0] 2021-03-30 19:41:19,690 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:32
-INFO  [Thread-0] 2021-03-30 19:41:20,599 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:39
-INFO  [Thread-0] 2021-03-30 19:41:21,552 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:47
-INFO  [Thread-0] 2021-03-30 19:41:21,804 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:49
-INFO  [Thread-0] 2021-03-30 19:41:22,718 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:57
-INFO  [Thread-0] 2021-03-30 19:41:23,034 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T18:59
-INFO  [Thread-0] 2021-03-30 19:41:24,004 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:07
-INFO  [Thread-0] 2021-03-30 19:41:24,324 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:10
-INFO  [Thread-0] 2021-03-30 19:41:25,139 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:16
-INFO  [Thread-0] 2021-03-30 19:41:25,971 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:23
-INFO  [Thread-0] 2021-03-30 19:41:27,480 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:34
-INFO  [Thread-0] 2021-03-30 19:41:28,251 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:40
-INFO  [Thread-0] 2021-03-30 19:41:29,607 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T19:51
-INFO  [pool-3-thread-1] 2021-03-30 19:41:30,415 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1617124285182 for DONE:  no
-INFO  [Thread-0] 2021-03-30 19:41:31,584 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:06
-INFO  [Thread-0] 2021-03-30 19:41:32,126 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:10
-INFO  [Thread-0] 2021-03-30 19:41:32,581 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:14
-INFO  [Thread-0] 2021-03-30 19:41:33,409 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:20
-INFO  [Thread-0] 2021-03-30 19:41:34,543 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:29
-INFO  [Thread-0] 2021-03-30 19:41:35,778 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:38
-INFO  [Thread-0] 2021-03-30 19:41:36,994 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:47
-INFO  [Thread-0] 2021-03-30 19:41:37,731 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:53
-INFO  [Thread-0] 2021-03-30 19:41:38,572 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T20:59
-INFO  [Thread-0] 2021-03-30 19:41:39,442 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:06
-INFO  [Thread-0] 2021-03-30 19:41:40,698 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:15
-INFO  [Thread-0] 2021-03-30 19:41:41,790 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:23
-INFO  [Thread-0] 2021-03-30 19:41:42,899 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:31
-INFO  [Thread-0] 2021-03-30 19:41:44,154 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:40
-INFO  [Thread-0] 2021-03-30 19:41:44,853 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:45
-INFO  [Thread-0] 2021-03-30 19:41:45,918 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T21:53
-INFO  [Thread-0] 2021-03-30 19:41:47,474 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:04
-INFO  [Thread-0] 2021-03-30 19:41:48,082 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:08
-INFO  [Thread-0] 2021-03-30 19:41:48,894 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:14
-INFO  [Thread-0] 2021-03-30 19:41:49,802 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:20
-INFO  [Thread-0] 2021-03-30 19:41:50,448 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:25
-INFO  [Thread-0] 2021-03-30 19:41:51,219 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:30
-INFO  [Thread-0] 2021-03-30 19:41:52,178 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:37
-INFO  [Thread-0] 2021-03-30 19:41:52,666 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:40
-INFO  [Thread-0] 2021-03-30 19:41:53,928 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:49
-INFO  [Thread-0] 2021-03-30 19:41:55,133 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T22:57
-INFO  [Thread-0] 2021-03-30 19:41:58,795 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:22
-INFO  [Thread-0] 2021-03-30 19:42:02,382 repast.simphony.batch.ssh.LocalSession - New patient at: 2021-02-01T23:45
-INFO  [pool-3-thread-1] 2021-03-30 19:42:30,423 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\w2037451\AppData\Local\Temp\simphony_model_1617124285182 for DONE:  yes
-INFO  [SwingWorker-pool-2-thread-1] 2021-03-30 19:42:30,423 repast.simphony.batch.ssh.SessionsDriver - Run Time: 91.0497
-INFO  [SwingWorker-pool-2-thread-1] 2021-03-30 19:42:30,463 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\w2037451\AppData\Local\Temp\simphony_model_1617124285182
-INFO  [SwingWorker-pool-2-thread-1] 2021-03-30 19:42:30,479 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
-INFO  [SwingWorker-pool-2-thread-1] 2021-03-30 19:42:30,511 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0015
-INFO  [SwingWorker-pool-2-thread-1] 2021-03-30 19:42:30,511 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 91.0891
-FATAL [Thread-2] 2021-04-21 11:41:29,464 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+FATAL [AWT-EventQueue-0] 2021-09-27 14:57:46,595 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: EDLanguage/sandbox/HeyoTriggerSignal
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166)
+	at java.base/java.lang.Class.privateGetPublicMethods(Class.java:3191)
+	at java.base/java.lang.Class.getMethods(Class.java:1904)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.HeyoTriggerSignal
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 29 more
+FATAL [AWT-EventQueue-0] 2021-09-27 14:57:53,809 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: EDLanguage/sandbox/HEYbTriggerSignal
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166)
+	at java.base/java.lang.Class.privateGetPublicMethods(Class.java:3191)
+	at java.base/java.lang.Class.getMethods(Class.java:1904)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.HEYbTriggerSignal
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	... 29 more
+ERROR [AWT-EventQueue-0] 2021-09-27 15:35:21,009 repast.simphony.context.DefaultContext - Projection 'MyPatients' has already been added
+Note that projection factories automatically add the projection to the context.
+java.lang.IllegalArgumentException: Duplicate projections added.
+	at repast.simphony.context.AbstractContext.addProjection(AbstractContext.java:360)
+	at repast.simphony.context.space.graph.NetworkBuilder.buildNetwork(NetworkBuilder.java:99)
+	at simcore.agents.Actor.<init>(Actor.java:79)
+	at EDLanguage.sandbox.Doc.<init>(Doc.java:23)
+	at EDLanguage.sandbox.EDBuilder.build(EDBuilder.java:60)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6632)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6397)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5008)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+ERROR [AWT-EventQueue-0] 2021-09-27 15:35:21,013 repast.simphony.context.DefaultContext - Projection 'MySeenPatients' has already been added
+Note that projection factories automatically add the projection to the context.
+java.lang.IllegalArgumentException: Duplicate projections added.
+	at repast.simphony.context.AbstractContext.addProjection(AbstractContext.java:360)
+	at repast.simphony.context.space.graph.NetworkBuilder.buildNetwork(NetworkBuilder.java:99)
+	at simcore.agents.Actor.<init>(Actor.java:83)
+	at EDLanguage.sandbox.Doc.<init>(Doc.java:23)
+	at EDLanguage.sandbox.EDBuilder.build(EDBuilder.java:60)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6632)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6397)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5008)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+ERROR [AWT-EventQueue-0] 2021-09-27 15:35:21,014 repast.simphony.context.DefaultContext - Projection 'MyPatients' has already been added
+Note that projection factories automatically add the projection to the context.
+java.lang.IllegalArgumentException: Duplicate projections added.
+	at repast.simphony.context.AbstractContext.addProjection(AbstractContext.java:360)
+	at repast.simphony.context.space.graph.NetworkBuilder.buildNetwork(NetworkBuilder.java:99)
+	at simcore.agents.Actor.<init>(Actor.java:79)
+	at EDLanguage.sandbox.Doc.<init>(Doc.java:23)
+	at EDLanguage.sandbox.EDBuilder.build(EDBuilder.java:60)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6632)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6397)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5008)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+ERROR [AWT-EventQueue-0] 2021-09-27 15:35:21,015 repast.simphony.context.DefaultContext - Projection 'MySeenPatients' has already been added
+Note that projection factories automatically add the projection to the context.
+java.lang.IllegalArgumentException: Duplicate projections added.
+	at repast.simphony.context.AbstractContext.addProjection(AbstractContext.java:360)
+	at repast.simphony.context.space.graph.NetworkBuilder.buildNetwork(NetworkBuilder.java:99)
+	at simcore.agents.Actor.<init>(Actor.java:83)
+	at EDLanguage.sandbox.Doc.<init>(Doc.java:23)
+	at EDLanguage.sandbox.EDBuilder.build(EDBuilder.java:60)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6632)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6397)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5008)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+ERROR [AWT-EventQueue-0] 2021-09-27 15:35:27,727 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
+repast.simphony.visualization.engine.DisplayCreationException: Error while creating display.
+	at repast.simphony.visualization.engine.DisplayCreatorOGL2D.createDisplay(DisplayCreatorOGL2D.java:102)
+	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:48)
+	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:116)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6632)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6397)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5008)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.Doctor
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at repast.simphony.visualization.engine.StyleRegistrar.registerStyles(StyleRegistrar.java:87)
+	at repast.simphony.visualization.engine.StyleRegistrar.registerStyles(StyleRegistrar.java:34)
+	at repast.simphony.visualization.engine.DisplayCreatorOGL2D.createDisplay(DisplayCreatorOGL2D.java:79)
+	... 48 more
+ERROR [AWT-EventQueue-0] 2021-09-27 15:37:12,472 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
+repast.simphony.visualization.engine.DisplayCreationException: Error while creating display.
+	at repast.simphony.visualization.engine.DisplayCreatorOGL2D.createDisplay(DisplayCreatorOGL2D.java:102)
+	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:48)
+	at repast.simphony.visualization.engine.DisplayComponentControllerAction.runInitialize(DisplayComponentControllerAction.java:116)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.RSApplication.start(RSApplication.java:189)
+	at repast.simphony.ui.action.StartRun.actionPerformed(StartRun.java:17)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6632)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6397)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5008)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.Doctor
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at repast.simphony.visualization.engine.StyleRegistrar.registerStyles(StyleRegistrar.java:87)
+	at repast.simphony.visualization.engine.StyleRegistrar.registerStyles(StyleRegistrar.java:34)
+	at repast.simphony.visualization.engine.DisplayCreatorOGL2D.createDisplay(DisplayCreatorOGL2D.java:79)
+	... 49 more
+FATAL [Thread-2] 2021-09-27 15:37:12,593 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
 Current tick (1.0)
 java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
@@ -245,152 +425,16 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
+	at simcore.basicStructures.PatientAdder$$FastClassByCGLIB$$8f295ce1.invoke(<generated>)
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
 	... 7 more
 Caused by: java.lang.NullPointerException
-	at simcore.agents.Actor.Perceive(Actor.java:122)
-	at simcore.agents.Actor.step(Actor.java:116)
+	at simcore.utilities.PatientArrivalStore.getArrivalForHour(PatientArrivalStore.java:16)
+	at simcore.basicStructures.PatientAdder.Ticktock(PatientAdder.java:91)
+	at simcore.basicStructures.PatientAdder.step(PatientAdder.java:78)
 	... 10 more
-FATAL [Thread-2] 2021-04-21 11:42:48,729 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (841.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.InitAction(Agent.java:97)
-	at simcore.agents.Actor.Perceive(Actor.java:136)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-FATAL [Thread-2] 2021-04-21 11:45:01,524 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (961.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Actor.Perceive(Actor.java:136)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-FATAL [Thread-2] 2021-04-21 11:46:51,388 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1021.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.InitAction(Agent.java:97)
-	at simcore.agents.Actor.Perceive(Actor.java:139)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-FATAL [Thread-2] 2021-04-21 11:50:32,349 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1081.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Actor.doAction(Actor.java:219)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:170)
-	at simcore.agents.Actor.Perceive(Actor.java:142)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-FATAL [Thread-2] 2021-04-21 15:12:37,583 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1170.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 6 out of bounds for length 6
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Action.getCurrentStep(Action.java:51)
-	at simcore.agents.Agent.NextStep(Agent.java:647)
-	at simcore.agents.Actor.doAction(Actor.java:316)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:171)
-	at simcore.agents.Actor.Perceive(Actor.java:151)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-FATAL [Thread-2] 2021-04-21 15:39:08,231 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (6975.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.basicStructures.Test.TestPatient(Test.java:36)
-	at simcore.agents.Actor.doAction(Actor.java:277)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:171)
-	at simcore.agents.Agent.InitAction(Agent.java:106)
-	at simcore.agents.Actor.Perceive(Actor.java:140)
-	at simcore.agents.Actor.step(Actor.java:116)
-	... 10 more
-ERROR [AWT-EventQueue-0] 2021-06-03 15:51:38,991 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
+ERROR [AWT-EventQueue-0] 2021-09-27 15:39:40,486 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
 repast.simphony.visualization.engine.DisplayCreationException: Error while creating display.
 	at repast.simphony.visualization.engine.DisplayCreatorOGL2D.createDisplay(DisplayCreatorOGL2D.java:102)
 	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:48)
@@ -404,8 +448,7 @@ repast.simphony.visualization.engine.DisplayCreationException: Error while creat
 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
 	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.start(RSApplication.java:189)
-	at repast.simphony.ui.action.StartRun.actionPerformed(StartRun.java:17)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
 	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
 	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
@@ -442,7 +485,7 @@ repast.simphony.visualization.engine.DisplayCreationException: Error while creat
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.MajorsTriageNurse
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.Nurse
 	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
 	at java.base/java.lang.Class.forName0(Native Method)
@@ -450,8 +493,8 @@ Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.MajorsTriageNurs
 	at repast.simphony.visualization.engine.StyleRegistrar.registerStyles(StyleRegistrar.java:87)
 	at repast.simphony.visualization.engine.StyleRegistrar.registerStyles(StyleRegistrar.java:34)
 	at repast.simphony.visualization.engine.DisplayCreatorOGL2D.createDisplay(DisplayCreatorOGL2D.java:79)
-	... 49 more
-ERROR [AWT-EventQueue-0] 2021-06-03 15:52:27,614 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
+	... 48 more
+ERROR [AWT-EventQueue-0] 2021-09-27 15:40:10,364 repast.simphony.visualization.engine.DisplayComponentControllerAction - Error while creating displays
 repast.simphony.visualization.engine.DisplayCreationException: Error while creating display.
 	at repast.simphony.visualization.engine.DisplayCreatorOGL2D.createDisplay(DisplayCreatorOGL2D.java:102)
 	at repast.simphony.visualization.engine.DisplayProducer.createDisplay(DisplayProducer.java:48)
@@ -465,8 +508,7 @@ repast.simphony.visualization.engine.DisplayCreationException: Error while creat
 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
 	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
-	at repast.simphony.ui.RSApplication.start(RSApplication.java:189)
-	at repast.simphony.ui.action.StartRun.actionPerformed(StartRun.java:17)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
 	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
 	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
 	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
@@ -503,7 +545,7 @@ repast.simphony.visualization.engine.DisplayCreationException: Error while creat
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.MajorsTriageNurse
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.Nurse
 	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
 	at java.base/java.lang.Class.forName0(Native Method)
@@ -511,9 +553,9 @@ Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.MajorsTriageNurs
 	at repast.simphony.visualization.engine.StyleRegistrar.registerStyles(StyleRegistrar.java:87)
 	at repast.simphony.visualization.engine.StyleRegistrar.registerStyles(StyleRegistrar.java:34)
 	at repast.simphony.visualization.engine.DisplayCreatorOGL2D.createDisplay(DisplayCreatorOGL2D.java:79)
-	... 49 more
-FATAL [Thread-2] 2021-06-07 17:44:44,395 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1097.0)
+	... 48 more
+FATAL [Thread-11] 2021-09-27 15:40:43,974 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
 java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
 	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
@@ -524,589 +566,77 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 2 out of bounds for length 2
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.step(Behaviour.java:25)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:110)
-	at simcore.agents.Actor.Perceive(Actor.java:155)
-	at simcore.agents.Actor.step(Actor.java:123)
-	... 10 more
-FATAL [Thread-2] 2021-06-07 18:54:11,933 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (977.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Patient$$FastClassByCGLIB$$c61ee6fd.invoke(<generated>)
+	at simcore.basicStructures.PatientAdder$$FastClassByCGLIB$$8f295ce1.invoke(<generated>)
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
 	... 7 more
 Caused by: java.lang.NullPointerException
-	at simcore.agents.Patient.CalcDistance(Patient.java:176)
-	at simcore.agents.Agent.ImAt(Agent.java:759)
-	at simcore.agents.Agent.ImAt(Agent.java:748)
-	at simcore.agents.Patient.ExecOrder(Patient.java:122)
-	at simcore.agents.Patient.Perceive(Patient.java:86)
-	at simcore.agents.Patient.step(Patient.java:76)
+	at simcore.utilities.PatientArrivalStore.getArrivalForHour(PatientArrivalStore.java:16)
+	at simcore.basicStructures.PatientAdder.Ticktock(PatientAdder.java:91)
+	at simcore.basicStructures.PatientAdder.step(PatientAdder.java:78)
 	... 10 more
-FATAL [Thread-2] 2021-06-07 19:00:26,007 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1276.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Patient$$FastClassByCGLIB$$c61ee6fd.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Patient.CalcDistance(Patient.java:176)
-	at simcore.agents.Agent.ImAt(Agent.java:759)
-	at simcore.agents.Agent.ImAt(Agent.java:748)
-	at simcore.agents.Patient.ExecOrder(Patient.java:122)
-	at simcore.agents.Patient.Perceive(Patient.java:86)
-	at simcore.agents.Patient.step(Patient.java:76)
-	... 10 more
-FATAL [Thread-2] 2021-06-07 19:01:01,005 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (617.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Patient$$FastClassByCGLIB$$c61ee6fd.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Patient.CalcDistance(Patient.java:176)
-	at simcore.agents.Agent.ImAt(Agent.java:759)
-	at simcore.agents.Agent.ImAt(Agent.java:748)
-	at simcore.agents.Patient.ExecOrder(Patient.java:122)
-	at simcore.agents.Patient.Perceive(Patient.java:86)
-	at simcore.agents.Patient.step(Patient.java:76)
-	... 10 more
-FATAL [Thread-2] 2021-06-08 12:40:58,659 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1640.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Patient$$FastClassByCGLIB$$c61ee6fd.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Patient.CalcDistance(Patient.java:176)
-	at simcore.agents.Agent.ImAt(Agent.java:768)
-	at simcore.agents.Agent.ImAt(Agent.java:757)
-	at simcore.agents.Patient.ExecOrder(Patient.java:122)
-	at simcore.agents.Patient.Perceive(Patient.java:86)
-	at simcore.agents.Patient.step(Patient.java:76)
-	... 10 more
-FATAL [Thread-2] 2021-06-08 18:29:45,163 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1671.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Patient$$FastClassByCGLIB$$c61ee6fd.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Patient.CalcDistance(Patient.java:176)
-	at simcore.agents.Agent.ImAt(Agent.java:768)
-	at simcore.agents.Agent.ImAt(Agent.java:757)
-	at simcore.agents.Patient.ExecOrder(Patient.java:122)
-	at simcore.agents.Patient.Perceive(Patient.java:86)
-	at simcore.agents.Patient.step(Patient.java:76)
-	... 10 more
-FATAL [Thread-2] 2021-06-08 18:51:00,360 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (5582.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.CalcDistance(Agent.java:776)
-	at simcore.agents.Agent.ImAt(Agent.java:768)
-	at simcore.agents.Agent.ImAt(Agent.java:757)
-	at EDLanguage.sandbox.Receptionist$OccupyAction_b0a.finishCondition(Receptionist.java:101)
-	at simcore.action.Behaviour.step(Behaviour.java:29)
-	at simcore.agents.Agent.stepAction(Agent.java:117)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:110)
-	at simcore.agents.Actor.Perceive(Actor.java:155)
-	at simcore.agents.Actor.step(Actor.java:123)
-	... 10 more
-FATAL [Thread-2] 2021-06-08 18:52:03,452 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (5042.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.CalcDistance(Agent.java:776)
-	at simcore.agents.Agent.ImAt(Agent.java:768)
-	at simcore.agents.Agent.ImAt(Agent.java:757)
-	at EDLanguage.sandbox.Receptionist$OccupyAction_b0a.finishCondition(Receptionist.java:101)
-	at simcore.action.Behaviour.step(Behaviour.java:29)
-	at simcore.agents.Agent.stepAction(Agent.java:117)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:110)
-	at simcore.agents.Actor.Perceive(Actor.java:155)
-	at simcore.agents.Actor.step(Actor.java:123)
-	... 10 more
-FATAL [Thread-2] 2021-06-08 19:07:05,015 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (918.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.SelectOccupiable(Agent.java:317)
-	at EDLanguage.sandbox.Receptionist.access$3(Receptionist.java:1)
-	at EDLanguage.sandbox.Receptionist$OccupyAction_b0a.execute(Receptionist.java:91)
-	at simcore.action.Behaviour.step(Behaviour.java:27)
-	at simcore.agents.Agent.stepAction(Agent.java:117)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:110)
-	at simcore.agents.Actor.Perceive(Actor.java:155)
-	at simcore.agents.Actor.step(Actor.java:123)
-	... 10 more
-FATAL [Thread-2] 2021-06-28 16:11:53,371 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1341.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Patient$$FastClassByCGLIB$$c61ee6fd.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Patient.CalcDistance(Patient.java:176)
-	at simcore.agents.Agent.ImAt(Agent.java:541)
-	at simcore.agents.Agent.ImAt(Agent.java:530)
-	at simcore.agents.Patient.ExecOrder(Patient.java:122)
-	at simcore.agents.Patient.Perceive(Patient.java:86)
-	at simcore.agents.Patient.step(Patient.java:76)
-	... 10 more
-FATAL [Thread-2] 2021-06-28 16:21:18,914 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1505.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.getCurrentStep(Behaviour.java:44)
-	at simcore.agents.Actor.lambda$0(Actor.java:129)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at simcore.agents.Actor.Perceive(Actor.java:129)
-	at simcore.agents.Actor.step(Actor.java:119)
-	... 10 more
-FATAL [Thread-3] 2021-06-28 16:22:49,844 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (961.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.getCurrentStep(Behaviour.java:44)
-	at simcore.agents.Actor.lambda$0(Actor.java:129)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at simcore.agents.Actor.Perceive(Actor.java:129)
-	at simcore.agents.Actor.step(Actor.java:119)
-	... 10 more
-FATAL [Thread-2] 2021-06-28 16:26:13,282 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1682.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.getCurrentStep(Behaviour.java:44)
-	at simcore.agents.Actor.lambda$0(Actor.java:129)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at simcore.agents.Actor.Perceive(Actor.java:129)
-	at simcore.agents.Actor.step(Actor.java:119)
-	... 10 more
-FATAL [Thread-2] 2021-06-28 16:30:40,880 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (956.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.getCurrentStep(Behaviour.java:44)
-	at simcore.agents.Actor.lambda$0(Actor.java:129)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at simcore.agents.Actor.Perceive(Actor.java:129)
-	at simcore.agents.Actor.step(Actor.java:119)
-	... 10 more
-FATAL [Thread-2] 2021-06-28 16:36:00,032 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1442.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.getCurrentStep(Behaviour.java:44)
-	at simcore.agents.Actor.lambda$0(Actor.java:129)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at simcore.agents.Actor.Perceive(Actor.java:129)
-	at simcore.agents.Actor.step(Actor.java:119)
-	... 10 more
-FATAL [Thread-2] 2021-07-03 12:04:53,576 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1167.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.getCurrentStep(Behaviour.java:44)
-	at simcore.agents.Actor.lambda$0(Actor.java:129)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at simcore.agents.Actor.Perceive(Actor.java:129)
-	at simcore.agents.Actor.step(Actor.java:119)
-	... 10 more
-FATAL [Thread-12] 2021-07-03 12:08:31,464 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1162.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.getCurrentStep(Behaviour.java:44)
-	at simcore.agents.Actor.lambda$0(Actor.java:129)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at simcore.agents.Actor.Perceive(Actor.java:129)
-	at simcore.agents.Actor.step(Actor.java:119)
-	... 10 more
-FATAL [Thread-13] 2021-07-03 12:11:53,316 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1278.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
-	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:458)
-	at simcore.action.Behaviour.getCurrentStep(Behaviour.java:44)
-	at simcore.agents.Actor.lambda$0(Actor.java:129)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:176)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1654)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-	at simcore.agents.Actor.Perceive(Actor.java:129)
-	at simcore.agents.Actor.step(Actor.java:119)
-	... 10 more
-FATAL [AWT-EventQueue-0] 2021-07-03 12:17:51,656 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
-java.lang.NoClassDefFoundError: EDLanguage/sandbox/PatientNeedsBloodTestSignal
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166)
-	at java.base/java.lang.Class.privateGetPublicMethods(Class.java:3191)
-	at java.base/java.lang.Class.getMethods(Class.java:1904)
-	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42)
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155)
-	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
-	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
-	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216)
-	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
-	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
-	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
-	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
-	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101)
-	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+ERROR [AWT-EventQueue-0] 2021-09-27 15:41:10,067 repast.simphony.ui.RSApplication - Projection error
+repast.simphony.space.SpatialException: Target location -1 is outside of grid's dimensions.
+	at repast.simphony.space.grid.AbstractGridPointTranslator.boundsCheck(AbstractGridPointTranslator.java:48)
+	at repast.simphony.space.grid.AbstractGridPointTranslator.transform(AbstractGridPointTranslator.java:38)
+	at repast.simphony.space.grid.AbstractGrid.moveTo(AbstractGrid.java:137)
+	at simcore.utilities.Cellbox.<init>(Cellbox.java:17)
+	at simcore.basicStructures.Locatable.createLayoutStyle(Locatable.java:39)
+	at simcore.basicStructures.Locatable.<init>(Locatable.java:32)
+	at simcore.basicStructures.Occupiable.<init>(Occupiable.java:16)
+	at simcore.basicStructures.Seat.<init>(Seat.java:20)
+	at simcore.basicStructures.Room.setSeats(Room.java:151)
+	at EDLanguage.sandbox.EDBuilder.build(EDBuilder.java:70)
+	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.build(ClassNameContextBuilder.java:41)
+	at repast.simphony.dataLoader.engine.DataLoaderControllerAction.runInitialize(DataLoaderControllerAction.java:48)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:157)
+	at repast.simphony.ui.action.InitRun.actionPerformed(InitRun.java:17)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1967)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2308)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:405)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(AWTEventMulticaster.java:297)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6632)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3342)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6397)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2263)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:5008)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2321)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4918)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4547)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4488)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2307)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2772)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4840)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:772)
 	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
 	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
 	at java.base/java.security.AccessController.doPrivileged(Native Method)
 	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:95)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:743)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:742)
 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.PatientNeedsBloodTestSignal
-	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	... 29 more
-FATAL [AWT-EventQueue-0] 2021-07-03 12:21:34,791 repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
-java.lang.NoClassDefFoundError: EDLanguage/sandbox/PatientNeedsBloodTestSignal
-	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
-	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166)
-	at java.base/java.lang.Class.privateGetPublicMethods(Class.java:3191)
-	at java.base/java.lang.Class.getMethods(Class.java:1904)
-	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42)
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30)
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36)
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155)
-	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
-	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
-	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216)
-	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
-	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
-	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
-	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
-	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101)
-	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
-	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
-	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
-	at java.base/java.security.AccessController.doPrivileged(Native Method)
-	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
-	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
-	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
-	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
-	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.PatientNeedsBloodTestSignal
-	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
-	... 29 more
-FATAL [Thread-2] 2021-07-03 12:32:48,381 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1650.0)
+FATAL [Thread-0] 2021-09-27 15:42:12,260 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
 java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
 	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
@@ -1117,22 +647,17 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
+	at simcore.basicStructures.PatientAdder$$FastClassByCGLIB$$8f295ce1.invoke(<generated>)
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
 	... 7 more
 Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.CalcDistance(Agent.java:549)
-	at simcore.agents.Agent.ImAt(Agent.java:541)
-	at EDLanguage.sandbox.Doctor$StayForConditionAction_d0b.finishCondition(Doctor.java:348)
-	at simcore.action.Behaviour.step(Behaviour.java:37)
-	at simcore.agents.Agent.stepAction(Agent.java:117)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:105)
-	at simcore.agents.Actor.Perceive(Actor.java:151)
-	at simcore.agents.Actor.step(Actor.java:119)
+	at simcore.utilities.PatientArrivalStore.getArrivalForHour(PatientArrivalStore.java:16)
+	at simcore.basicStructures.PatientAdder.Ticktock(PatientAdder.java:91)
+	at simcore.basicStructures.PatientAdder.step(PatientAdder.java:78)
 	... 10 more
-FATAL [Thread-2] 2021-07-03 12:39:05,123 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (4745.0)
+FATAL [Thread-0] 2021-09-27 15:43:51,060 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1.0)
 java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
 	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
@@ -1143,18 +668,32 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
+	at simcore.basicStructures.PatientAdder$$FastClassByCGLIB$$8f295ce1.invoke(<generated>)
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
 	... 7 more
 Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.CalcDistance(Agent.java:549)
-	at simcore.agents.Agent.ImAt(Agent.java:541)
-	at simcore.agents.Agent.ImAt(Agent.java:530)
-	at EDLanguage.sandbox.Nurse$OccupyAction_d0a.finishCondition(Nurse.java:146)
-	at simcore.action.Behaviour.step(Behaviour.java:37)
-	at simcore.agents.Agent.stepAction(Agent.java:117)
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:110)
-	at simcore.agents.Actor.Perceive(Actor.java:151)
-	at simcore.agents.Actor.step(Actor.java:119)
+	at simcore.utilities.PatientArrivalStore.getArrivalForHour(PatientArrivalStore.java:17)
+	at simcore.basicStructures.PatientAdder.Ticktock(PatientAdder.java:91)
+	at simcore.basicStructures.PatientAdder.step(PatientAdder.java:78)
+	... 10 more
+FATAL [Thread-0] 2021-09-27 17:15:26,608 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (720.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.basicStructures.PatientAdder$$FastClassByCGLIB$$8f295ce1.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.NullPointerException
+	at simcore.basicStructures.PatientAdder.Ticktock(PatientAdder.java:85)
+	at simcore.basicStructures.PatientAdder.step(PatientAdder.java:52)
 	... 10 more

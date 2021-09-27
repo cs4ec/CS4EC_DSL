@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="ActionCardsSol.AC1.ActionFourTriggerSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="ActionCardsSol.AC1.ActionThreeTriggerSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.ActionTwoTriggerSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.CoughTest">
+    <classNode dependClassName="EDLanguage.sandbox.CoughTest" />
+    <classNode extendsClassName="simcore.basicStructures.Test" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.Doc">
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
@@ -13,6 +20,7 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
@@ -27,6 +35,7 @@
   <dependency className="ActionCardsSol.AC1.EDBuilder">
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
     <classNode dependClassName="EDLanguage.sandbox.Ward" />
+    <classNode dependClassName="EDLanguage.sandbox.patientGenerator" />
     <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Double" />
@@ -51,7 +60,6 @@
     <classNode dependClassName="repast.simphony.space.grid.StrictBorders" />
     <classNode dependClassName="repast.simphony.valueLayer.GridValueLayer" />
     <classNode dependClassName="simcore.basicStructures.Board" />
-    <classNode dependClassName="simcore.basicStructures.PatientAdder" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.Wall" />
     <classNode dependClassName="simcore.utilities.ModelParameterStore" />
@@ -60,6 +68,7 @@
     <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.INOVA">
+    <classNode dependClassName="EDLanguage.sandbox.INOVA" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
@@ -70,6 +79,30 @@
   <dependency className="ActionCardsSol.AC1.Ward">
     <classNode dependClassName="EDLanguage.sandbox.Ward" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.patient">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.patientGenerator">
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
   </dependency>
 </dependenciesRoot>
 

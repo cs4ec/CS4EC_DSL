@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.RedAdmissionBay;
-import EDLanguage.sandbox.SideRoomAdmissionBay;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.parameter.Parameters;
@@ -82,10 +80,12 @@ public class Agent {
 	protected List<Field> fields;
 	protected ContinuousSpace<Object> space;
 	protected Grid<Object> grid;
+	protected Context<Object> context;
 
-	public Agent(ContinuousSpace<Object> space, Grid<Object> grid) {
+	public Agent(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
 		this.space = space;
 		this.grid = grid;
+		this.context = context;
 		curInside = null;
 	}
 
@@ -421,35 +421,37 @@ public class Agent {
 	    }
 	}
 	
-	public boolean EvaluateSuitableForSideRoomCondition(Patient p, RoomType alternativeBay) {		
-		// Calculate the current occupancy of side rooms
-		ArrayList<Room> plstSideRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(SideRoomAdmissionBay.getInstance());
-		int maxSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllOcupiablesOfType(Bed.class).size()).sum();
-		int curSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllEmptyOcupiablesOfType(Bed.class).size()).sum();
-		double pdblChanceUseSideRoom = (double)curSRCapacity / (double)maxSRCapacity;
-		
-		if(alternativeBay == RedAdmissionBay.getInstance()) {
-			if(p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
-				//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
-				if(curSRCapacity > 0) {
-					return true;
-				} else {
-					return false;
-				}
-			} else {
-				return true; // Patient can go to a SR
-			}
-		} else {
-			if(p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
-				return true; // Patient can go to a SR
-			} else {
-				if(curSRCapacity > 0) {
-					return true;
-				} else {
-					return false;
-				}				
-			}
-		}
+	public boolean EvaluateSuitableForSideRoomCondition(Patient p, RoomType alternativeBay) throws Exception {		
+//		// Calculate the current occupancy of side rooms
+//		ArrayList<Room> plstSideRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(SideRoomAdmissionBay.getInstance());
+//		int maxSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllOcupiablesOfType(Bed.class).size()).sum();
+//		int curSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllEmptyOcupiablesOfType(Bed.class).size()).sum();
+//		double pdblChanceUseSideRoom = (double)curSRCapacity / (double)maxSRCapacity;
+//		
+//		if(alternativeBay == RedAdmissionBay.getInstance()) {
+//			if(p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
+//				//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
+//				if(curSRCapacity > 0) {
+//					return true;
+//				} else {
+//					return false;
+//				}
+//			} else {
+//				return true; // Patient can go to a SR
+//			}
+//		} else {
+//			if(p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
+//				return true; // Patient can go to a SR
+//			} else {
+//				if(curSRCapacity > 0) {
+//					return true;
+//				} else {
+//					return false;
+//				}				
+//			}
+//		}
+		throw new Exception("METHOD EVALUATESUITABLEFORSIDEROOM REMOVED");
+
 	}
 
 	public boolean Dice(double possibility) {

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="aqbgc9e40k2zw1riezocrzy2whlpry1">
-  <files names="INOVA.java" />
-  <files dir="EDLanguage/sandbox" names="ActionThreeTriggerSignal.java:ActionTwoTriggerSignal.java:Doc.java:EDBuilder.java:Ward.java" />
+<product version="3" modelHash="rsrc5q1bvu9bp7dhxmrtkaijxyee28">
+  <files dir="EDLanguage/sandbox" names="ActionFourTriggerSignal.java:ActionThreeTriggerSignal.java:ActionTwoTriggerSignal.java:CoughTest.java:Doc.java:EDBuilder.java:INOVA.java:Ward.java:patient.java:patientGenerator.java" />
 </product>
 

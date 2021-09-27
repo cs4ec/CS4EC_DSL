@@ -12,6 +12,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import repast.simphony.context.Context;
+import repast.simphony.context.space.graph.NetworkBuilder;
 import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.query.space.grid.GridCell;
@@ -20,6 +21,7 @@ import repast.simphony.random.RandomHelper;
 import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.continuous.NdPoint;
+import repast.simphony.space.graph.Network;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import repast.simphony.util.ContextUtils;
@@ -61,18 +63,24 @@ import simcore.utilities.AStar;
  * These types of agents have the capacity to give orders to patients etc. 
  */
 public class Actor extends Agent {
-	  protected List<Patient> mlstMyPatients = new ArrayList<Patient>();
-	  protected List<Patient> mlstSeenPatients = new ArrayList<Patient>();
 	  protected int mintMyMaxPatients = 1;
+	  protected Network myPatientsNetwork;
+	  protected Network mySeenPatientsNetwork;
 	  protected Schedule schedule;
 
 	
-	public Actor(ContinuousSpace<Object> space, Grid<Object> grid) {
-		super(space, grid);
+	public Actor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
+		super(space, grid, context);
 		this.isIdle = true;
 		schedule = new Schedule();
+		
+		// Create network for 'myPatients'
+	    NetworkBuilder builder = new NetworkBuilder("MyPatients", context, true);
+	    
+		// Create network for 'mySeenPatients'
+	    NetworkBuilder builder2 = new NetworkBuilder("MySeenPatients", context, true);
 
-		// Traverse the ancestors of class to record all the Fields
+	    // Traverse the ancestors of class to record all the Fields
 		fields = new ArrayList<Field>();
 
 		Class c = this.getClass();
@@ -121,6 +129,7 @@ public class Actor extends Agent {
 	
 	public void Perceive() {	
 		Board board = ReadBoard();
+		
 		//If my active action has now moved into a passive one -> Pick a new Active Action
 		// If my passive action has moved to active -> consider that as a candidate
 
@@ -182,9 +191,9 @@ public class Actor extends Agent {
 
 		for (Signal signal : plstSignals) {
 			Patient p = (Patient) signal.getDataOfType(Patient.class);
-			if(p != null && mlstMyPatients.contains(p)) {
+			if(p != null && myPatientsNetwork.isAdjacent(this, p)) {
 				pMapSignalsWithMyPatients.put(signal, p);
-			} else if(p != null && mlstSeenPatients.contains(p)) {
+			} else if(p != null && mySeenPatientsNetwork.isAdjacent(this, p)) {
 				pMapSignalsWithMyPastPatients.put(signal, p);
 			} else if(p != null && p.getMyAssignedStaffOfType(this.getClass()).isEmpty()) {
 				pMapSignalsWithFreePatients.put(signal, p);
@@ -201,10 +210,10 @@ public class Actor extends Agent {
 				return (Signal) pMapSignalsWithMyPastPatients.keySet().toArray()[0];
 			}
 			//Otherwise, I am waiting and see if I can take a new case in the meantime...
-			if(!pMapSignalsWithFreePatients.isEmpty() && mlstMyPatients.size() != mintMyMaxPatients) {
+			if(!pMapSignalsWithFreePatients.isEmpty() && myPatientsNetwork.size() != mintMyMaxPatients) {
 				Signal pSignalNext = (Signal) pMapSignalsWithFreePatients.keySet().toArray()[0];
 				Patient pSignalPatient = pMapSignalsWithFreePatients.get(pSignalNext);
-				mlstMyPatients.add(pSignalPatient);
+				mySeenPatientsNetwork.addEdge(this, pSignalPatient);
 				pSignalPatient.assignStaff(this);
 				return pSignalNext;
 			}
@@ -215,10 +224,10 @@ public class Actor extends Agent {
 	}
 	
 	public void deAssignPatient(Patient p) {
-		if(mlstMyPatients.contains(p)) {
-			mlstMyPatients.remove(p);
-			if(!mlstSeenPatients.contains(p)) {
-				mlstSeenPatients.add(p);
+		if(myPatientsNetwork.isAdjacent(this, p)) {
+			myPatientsNetwork.removeEdge(myPatientsNetwork.getEdge(this, p));
+			if(!mySeenPatientsNetwork.isAdjacent(this, p)) {
+				mySeenPatientsNetwork.addEdge(this,p);
 			}
 		}
 	}
