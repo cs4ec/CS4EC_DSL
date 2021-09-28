@@ -60,7 +60,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a(Behaviour behaviour) {
-      target = Ward.getInstance();
+      target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -103,7 +103,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_1(Behaviour behaviour) {
-      target = Ward.getInstance();
+      target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -146,7 +146,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0b(Behaviour behaviour) {
-      target = Ward.getInstance();
+      target = MajorsCBay.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -177,7 +177,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0b_1(Behaviour behaviour) {
-      target = Ward.getInstance();
+      target = MajorsCBay.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -208,7 +208,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0c(Behaviour behaviour) {
-      target = Ward.getInstance();
+      target = MajorsCBay.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -239,7 +239,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0c_1(Behaviour behaviour) {
-      target = Ward.getInstance();
+      target = MajorsCBay.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -270,7 +270,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0d(Behaviour behaviour) {
-      target = Ward.getInstance();
+      target = MajorsCBay.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -301,7 +301,7 @@ public class Doc extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0d_1(Behaviour behaviour) {
-      target = Ward.getInstance();
+      target = MajorsCBay.getInstance();
       this.behaviour = behaviour;
     }
 

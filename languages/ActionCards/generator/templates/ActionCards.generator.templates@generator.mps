@@ -136,6 +136,7 @@
       <concept id="7169358838266389176" name="AgentLanguage.structure.AgentGenerator" flags="ng" index="25k$Xo">
         <child id="2876623929997960145" name="AgentGeneratorLines" index="c0n7C" />
         <child id="768972137576841584" name="AgentType" index="2OQN5_" />
+        <child id="768972137592765284" name="SpawnAt" index="2PM4HL" />
       </concept>
       <concept id="2876623929997959972" name="AgentLanguage.structure.AgentGeneratorLine" flags="ng" index="c0n4t" />
       <concept id="4334763093660390701" name="AgentLanguage.structure.StayForTimeAction" flags="ng" index="jcv$W">
@@ -276,6 +277,10 @@
       </concept>
       <concept id="1167756080639" name="jetbrains.mps.lang.generator.structure.PropertyMacro_GetPropertyValue" flags="in" index="3zFVjK" />
       <concept id="1167770111131" name="jetbrains.mps.lang.generator.structure.ReferenceMacro_GetReferent" flags="in" index="3$xsQk" />
+      <concept id="1311078761699563727" name="jetbrains.mps.lang.generator.structure.InsertMacro_CreateNodeQuery" flags="in" index="3_AbJw" />
+      <concept id="1311078761699563726" name="jetbrains.mps.lang.generator.structure.InsertMacro" flags="ln" index="3_AbJx">
+        <child id="1311078761699602381" name="createNodeQuery" index="3_A0Ny" />
+      </concept>
       <concept id="1167945743726" name="jetbrains.mps.lang.generator.structure.IfMacro_Condition" flags="in" index="3IZrLx" />
       <concept id="1167951910403" name="jetbrains.mps.lang.generator.structure.SourceSubstituteMacro_SourceNodesQuery" flags="in" index="3JmXsc" />
       <concept id="1168024337012" name="jetbrains.mps.lang.generator.structure.SourceSubstituteMacro_SourceNodeQuery" flags="in" index="3NFfHV" />
@@ -325,6 +330,9 @@
       <concept id="1172008320231" name="jetbrains.mps.lang.smodel.structure.Node_IsNotNullOperation" flags="nn" index="3x8VRR" />
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
+      </concept>
+      <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
+        <child id="1180636770616" name="createdType" index="3zrR0E" />
       </concept>
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
@@ -1596,6 +1604,39 @@
                         </node>
                       </node>
                     </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="UeIYj" id="EFW1mZr7ZI" role="2PM4HL">
+      <node concept="3_AbJx" id="EFW1mZr82V" role="lGtFl">
+        <node concept="3_AbJw" id="EFW1mZr82W" role="3_A0Ny">
+          <node concept="3clFbS" id="EFW1mZr82X" role="2VODD2">
+            <node concept="3clFbF" id="EFW1mZr84V" role="3cqZAp">
+              <node concept="2OqwBi" id="EFW1mZr8eL" role="3clFbG">
+                <node concept="30H73N" id="EFW1mZr84U" role="2Oq$k0" />
+                <node concept="3TrEf2" id="EFW1mZr8po" role="2OqNvi">
+                  <ref role="3Tt5mk" to="e88n:EFW1mZoVng" resolve="ArrivalLocation" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ZhdrF" id="EFW1mZrg5t" role="lGtFl">
+        <property role="2qtEX8" value="roomType" />
+        <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/6750846609956093098/6750846609956389136" />
+        <node concept="3$xsQk" id="EFW1mZrg5u" role="3$ytzL">
+          <node concept="3clFbS" id="EFW1mZrg5v" role="2VODD2">
+            <node concept="3cpWs6" id="EFW1mZrg6F" role="3cqZAp">
+              <node concept="2ShNRf" id="EFW1mZrg7o" role="3cqZAk">
+                <node concept="3zrR0B" id="EFW1mZrglu" role="2ShVmc">
+                  <node concept="3Tqbb2" id="EFW1mZrglw" role="3zrR0E">
+                    <ref role="ehGHo" to="3751:5QJON_AUfSp" resolve="RoomType" />
                   </node>
                 </node>
               </node>

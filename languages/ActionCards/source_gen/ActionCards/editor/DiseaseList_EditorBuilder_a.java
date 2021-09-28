@@ -9,6 +9,7 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -46,21 +47,28 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setCellId("Collection_zsre1_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
+    editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createRefNodeList_0());
     return editorCell;
   }
+  private EditorCell createConstant_0() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Disease List:");
+    editorCell.setCellId("Constant_zsre1_a0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new diseasesListHandler_zsre1_a0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new diseasesListHandler_zsre1_b0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
     editorCell.setCellId("refNodeList_diseases");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class diseasesListHandler_zsre1_a0 extends RefNodeListHandler {
+  private static class diseasesListHandler_zsre1_b0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public diseasesListHandler_zsre1_a0(SNode ownerNode, EditorContext context) {
+    public diseasesListHandler_zsre1_b0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -83,7 +91,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(diseasesListHandler_zsre1_a0.this.getNode(), LINKS.diseases$1RjC));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(diseasesListHandler_zsre1_b0.this.getNode(), LINKS.diseases$1RjC));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();

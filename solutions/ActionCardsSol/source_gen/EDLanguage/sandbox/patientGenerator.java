@@ -14,7 +14,9 @@ import java.util.HashMap;
 public class patientGenerator extends AgentGenerator {
   public patientGenerator(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
+    spawnRoomType = MainEntrance.getInstance();
   }
+
 
   public Object onGenerate() {
     patient a = new patient(space, grid, context);

@@ -64,11 +64,43 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.addValueLayer(vl);
 
     // add Locations here 
-    Room Ward1_a = new Room("Ward1", context, space, grid, 1, 1, 1, 1, 1, 2, Ward.getInstance(), Color.BLACK);
+    Room Lab_a = new Room("Lab", context, space, grid, 98, 503, 233, 115, 1, 0, Lab.getInstance(), Color.BLUE);
+    Room Triage_b = new Room("Triage", context, space, grid, 312, 95, 101, 57, 1, 0, TriageDesk.getInstance(), Color.BLUE);
+    Room MajorsCBay_c = new Room("MajorsCBay", context, space, grid, 583, 585, 75, 41, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
+    Room MajorsCBay_d = new Room("MajorsCBay", context, space, grid, 581, 463, 73, 41, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
+    Room MajorsCBay_e = new Room("MajorsCBay", context, space, grid, 842, 466, 72, 41, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
+    Room MajorsCBay_f = new Room("MajorsCBay", context, space, grid, 461, 464, 71, 39, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
+    Room MajorsCBay_g = new Room("MajorsCBay", context, space, grid, 464, 584, 70, 39, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
+    Room MajorsCBay_h = new Room("MajorsCBay", context, space, grid, 843, 585, 70, 38, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
+    Room MainEntrance_i = new Room("MainEntrance", context, space, grid, 264, 21, 47, 19, 1, 0, MainEntrance.getInstance(), Color.BLUE);
     try {
-      Ward1_a.setSeats(1);
-      Ward1_a.setDesks(0);
-      Ward1_a.setBeds(0);
+      Lab_a.setSeats(0);
+      Triage_b.setSeats(0);
+      MajorsCBay_c.setSeats(0);
+      MajorsCBay_d.setSeats(0);
+      MajorsCBay_e.setSeats(0);
+      MajorsCBay_f.setSeats(0);
+      MajorsCBay_g.setSeats(0);
+      MajorsCBay_h.setSeats(0);
+      MainEntrance_i.setSeats(0);
+      Lab_a.setDesks(0);
+      Triage_b.setDesks(0);
+      MajorsCBay_c.setDesks(0);
+      MajorsCBay_d.setDesks(0);
+      MajorsCBay_e.setDesks(0);
+      MajorsCBay_f.setDesks(0);
+      MajorsCBay_g.setDesks(0);
+      MajorsCBay_h.setDesks(0);
+      MainEntrance_i.setDesks(0);
+      Lab_a.setBeds(0);
+      Triage_b.setBeds(0);
+      MajorsCBay_c.setBeds(0);
+      MajorsCBay_d.setBeds(0);
+      MajorsCBay_e.setBeds(0);
+      MajorsCBay_f.setBeds(0);
+      MajorsCBay_g.setBeds(0);
+      MajorsCBay_h.setBeds(0);
+      MainEntrance_i.setBeds(0);
     } catch (NumberFormatException e) {
     }
 

@@ -300,6 +300,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/7169358838266389176");
     b.version(2);
     b.aggregate("PatientArrivalLines", 0x27ebd2392beaa3d1L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x27ebd2392beaa324L).optional(true).ordered(true).multiple(true).origin("2876623929997960145").done();
+    b.aggregate("ArrivalLocation", 0xaabf015bf63b5d0L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(false).ordered(true).multiple(false).origin("768972137592763856").done();
     b.alias("Patient Arrivals");
     return b.create();
   }

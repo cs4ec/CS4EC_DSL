@@ -4,23 +4,15 @@ package BuiltEnvironment.structure;
 
 import jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptDescriptor;
-import jetbrains.mps.smodel.runtime.EnumerationDescriptor;
 import java.util.Collection;
 import java.util.Arrays;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
-import jetbrains.mps.smodel.runtime.DataTypeDescriptor;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
-import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
-import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
-  /*package*/ final ConceptDescriptor myConceptMapBuilder = createDescriptorForMapBuilder();
-  /*package*/ final ConceptDescriptor myConceptRoom = createDescriptorForRoom();
-  /*package*/ final ConceptDescriptor myConceptRoomType = createDescriptorForRoomType();
-  /*package*/ final ConceptDescriptor myConceptWall = createDescriptorForWall();
-  /*package*/ final EnumerationDescriptor myEnumerationColour = new EnumerationDescriptor_Colour();
+  /*package*/ final ConceptDescriptor myConceptMapImporter = createDescriptorForMapImporter();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -31,84 +23,39 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
+    deps.aggregatedLanguage(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, "com.mbeddr.mpsutil.filepicker");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptMapBuilder, myConceptRoom, myConceptRoomType, myConceptWall);
+    return Arrays.asList(myConceptMapImporter);
   }
 
   @Override
   @Nullable
   public ConceptDescriptor getDescriptor(SConceptId id) {
     switch (myIndexSwitch.index(id)) {
-      case LanguageConceptSwitch.MapBuilder:
-        return myConceptMapBuilder;
-      case LanguageConceptSwitch.Room:
-        return myConceptRoom;
-      case LanguageConceptSwitch.RoomType:
-        return myConceptRoomType;
-      case LanguageConceptSwitch.Wall:
-        return myConceptWall;
+      case LanguageConceptSwitch.MapImporter:
+        return myConceptMapImporter;
       default:
         return null;
     }
   }
 
-  @Override
-  public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationColour);
-  }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
     return myIndexSwitch.index(c);
   }
 
-  private static ConceptDescriptor createDescriptorForMapBuilder() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "MapBuilder", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bdec55cdL);
-    b.class_(false, false, false);
-    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/768972137568163277");
-    b.version(2);
-    b.aggregate("rooms", 0xaabf015bdec55e9L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bdec4a29L).optional(true).ordered(true).multiple(true).origin("768972137568163305").done();
-    b.aggregate("walls", 0xaabf015bdec568fL).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bdec569bL).optional(true).ordered(true).multiple(true).origin("768972137568163471").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForRoom() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "Room", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bdec4a29L);
-    b.class_(false, false, false);
+  private static ConceptDescriptor createDescriptorForMapImporter() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "MapImporter", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bed74217L);
+    b.class_(false, false, true);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/768972137568160297");
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/768972137583559191");
     b.version(2);
-    b.property("x", 0x497144425f482c7fL).type(PrimitiveTypeId.INTEGER).origin("5292086088994139263").done();
-    b.property("y", 0x497144425f482c81L).type(PrimitiveTypeId.INTEGER).origin("5292086088994139265").done();
-    b.property("width", 0x497144425f7f2d45L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743941").done();
-    b.property("height", 0x497144425f7f2d49L).type(PrimitiveTypeId.INTEGER).origin("5292086088997743945").done();
-    b.property("capacity", 0x497144425f7f437cL).type(PrimitiveTypeId.INTEGER).origin("5292086088997749628").done();
-    b.property("colour", 0x66029deba11b71c3L).type(MetaIdFactory.dataTypeId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bdec54b1L)).origin("7350611177167876547").done();
-    b.property("seats", 0x757b60e1223559b9L).type(PrimitiveTypeId.INTEGER).origin("8465466444630809017").done();
-    b.property("desks", 0x757b60e1223559c2L).type(PrimitiveTypeId.INTEGER).origin("8465466444630809026").done();
-    b.property("beds", 0x22d5ede83b4138f3L).type(PrimitiveTypeId.INTEGER).origin("2510173949011245299").done();
-    b.associate("roomType", 0xaabf015bdec5579L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bdec4a86L).optional(false).origin("768972137568163193").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForRoomType() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "RoomType", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bdec4a86L);
-    b.class_(false, false, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/768972137568160390");
-    b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForWall() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "Wall", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0xaabf015bdec569bL);
-    b.class_(false, false, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/768972137568163483");
-    b.version(2);
-    b.property("xStart", 0x109830a68a78a1ebL).type(PrimitiveTypeId.INTEGER).origin("1195759192912732651").done();
-    b.property("yStart", 0x109830a68a78a1edL).type(PrimitiveTypeId.INTEGER).origin("1195759192912732653").done();
-    b.property("xEnd", 0x109830a68a78a1f0L).type(PrimitiveTypeId.INTEGER).origin("1195759192912732656").done();
-    b.property("yEnd", 0x109830a68a78a1f4L).type(PrimitiveTypeId.INTEGER).origin("1195759192912732660").done();
+    b.associate("targetContainer", 0xaabf015bed74236L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249082L).optional(false).origin("768972137583559222").done();
+    b.aggregate("sourceFile", 0xaabf015bf5fafbbL).target(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, 0x14e00b5befb780d2L).optional(true).ordered(true).multiple(false).origin("768972137592500155").done();
+    b.alias("Map Importer");
     return b.create();
   }
 }

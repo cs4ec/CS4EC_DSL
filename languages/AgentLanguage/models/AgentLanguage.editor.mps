@@ -1908,6 +1908,12 @@
       <node concept="3F1sOY" id="EFW1mYwZtq" role="3EZMnx">
         <ref role="1NtTu8" to="3751:EFW1mYsc5K" resolve="AgentType" />
       </node>
+      <node concept="3F0ifn" id="EFW1mZoVG$" role="3EZMnx">
+        <property role="3F0ifm" value="Spawn at:" />
+      </node>
+      <node concept="3F1sOY" id="EFW1mZp2zv" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:EFW1mZoVH$" resolve="SpawnAt" />
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="2vFOz$FUEcN">

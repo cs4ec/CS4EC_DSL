@@ -9,44 +9,20 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
-  private ConceptPresentation props_MapBuilder;
-  private ConceptPresentation props_Room;
-  private ConceptPresentation props_RoomType;
-  private ConceptPresentation props_Wall;
+  private ConceptPresentation props_MapImporter;
 
   @Override
   @Nullable
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
-      case LanguageConceptSwitch.MapBuilder:
-        if (props_MapBuilder == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("MapBuilder");
-          props_MapBuilder = cpb.create();
-        }
-        return props_MapBuilder;
-      case LanguageConceptSwitch.Room:
-        if (props_Room == null) {
+      case LanguageConceptSwitch.MapImporter:
+        if (props_MapImporter == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          props_Room = cpb.create();
+          props_MapImporter = cpb.create();
         }
-        return props_Room;
-      case LanguageConceptSwitch.RoomType:
-        if (props_RoomType == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_RoomType = cpb.create();
-        }
-        return props_RoomType;
-      case LanguageConceptSwitch.Wall:
-        if (props_Wall == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_Wall = cpb.create();
-        }
-        return props_Wall;
+        return props_MapImporter;
     }
     return null;
   }

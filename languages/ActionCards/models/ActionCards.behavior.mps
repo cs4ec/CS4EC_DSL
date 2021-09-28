@@ -134,5 +134,12 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="EFW1mYNLll">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="13h7C2" to="e88n:2lOlAdPyFe9" resolve="DiseaseList" />
+    <node concept="13hLZK" id="EFW1mYNLlm" role="13h7CW">
+      <node concept="3clFbS" id="EFW1mYNLln" role="2VODD2" />
+    </node>
+  </node>
 </model>
 

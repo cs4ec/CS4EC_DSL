@@ -389,6 +389,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("AgentGeneratorLines", 0x27ebd2392beaa3d1L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x27ebd2392beaa324L).optional(true).ordered(true).multiple(true).origin("2876623929997960145").done();
     b.aggregate("AgentType", 0xaabf015be70c170L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd0118aabL).optional(false).ordered(true).multiple(false).origin("768972137576841584").done();
     b.aggregate("OnGenerateAnnouncement", 0xaabf015be728ddfL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c93L).optional(true).ordered(true).multiple(false).origin("768972137576959455").done();
+    b.aggregate("SpawnAt", 0xaabf015bf63bb64L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(false).ordered(true).multiple(false).origin("768972137592765284").done();
     b.alias("Agent Generator");
     return b.create();
   }
@@ -864,6 +865,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("seats", 0x757b60e1223559b9L).type(PrimitiveTypeId.INTEGER).origin("8465466444630809017").done();
     b.property("desks", 0x757b60e1223559c2L).type(PrimitiveTypeId.INTEGER).origin("8465466444630809026").done();
     b.property("beds", 0x22d5ede83b4138f3L).type(PrimitiveTypeId.INTEGER).origin("2510173949011245299").done();
+    b.property("ID", 0xaabf015beeb4a25L).type(PrimitiveTypeId.INTEGER).origin("768972137584871973").done();
     b.associate("roomType", 0x5dafd33966edbfc9L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L).optional(false).origin("6750846609945116617").done();
     return b.create();
   }

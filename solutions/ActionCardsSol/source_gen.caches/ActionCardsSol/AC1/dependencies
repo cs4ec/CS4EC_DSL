@@ -15,7 +15,8 @@
   </dependency>
   <dependency className="ActionCardsSol.AC1.Doc">
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
-    <classNode dependClassName="EDLanguage.sandbox.Ward" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -34,7 +35,10 @@
   </dependency>
   <dependency className="ActionCardsSol.AC1.EDBuilder">
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
-    <classNode dependClassName="EDLanguage.sandbox.Ward" />
+    <classNode dependClassName="EDLanguage.sandbox.Lab" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
+    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.patientGenerator" />
     <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.Boolean" />
@@ -76,6 +80,30 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
     <classNode extendsClassName="simcore.basicStructures.Test" />
   </dependency>
+  <dependency className="ActionCardsSol.AC1.Lab">
+    <classNode dependClassName="EDLanguage.sandbox.Lab" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.MainEntrance">
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.MajorsABBay">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsABBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.MajorsCBay">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.TriageDesk">
+    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.WaitingRoom">
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
   <dependency className="ActionCardsSol.AC1.Ward">
     <classNode dependClassName="EDLanguage.sandbox.Ward" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -92,6 +120,7 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.patientGenerator">
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />

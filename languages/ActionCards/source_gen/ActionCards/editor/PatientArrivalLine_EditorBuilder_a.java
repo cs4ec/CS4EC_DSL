@@ -31,6 +31,11 @@ import java.util.Objects;
 import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
+import de.slisson.mps.tables.runtime.gridmodel.HeaderGrid;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
+import de.slisson.mps.tables.runtime.gridmodel.Header;
+import de.slisson.mps.tables.runtime.gridmodel.EditorCellHeader;
+import de.slisson.mps.tables.runtime.gridmodel.StringHeaderReference;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
@@ -138,6 +143,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       leaf.setStyle(style);
       grid.setElement(0, 0, leaf);
     }
+    grid.setColumnHeaders(0, 0, createStaticHeader_cfz2n6_a0a0(editorContext, node));
 
     return grid;
   }
@@ -165,6 +171,22 @@ import org.jetbrains.mps.openapi.language.SConcept;
     } finally {
       getCellFactory().popCellContext();
     }
+  }
+  public HeaderGrid createStaticHeader_cfz2n6_a0a0(final EditorContext editorContext, final SNode snode) {
+    final Style style = new ITableStyleFactory() {
+      public Style createStyle(final int columnIndex, final int rowIndex) {
+        Style style = new StyleImpl();
+        final EditorCell editorCell = null;
+        return style;
+      }
+    }.createStyle(0, 0);
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Num Patients in Hour", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Num Patients in Hour"), cell);
+    header.setLabel("Num Patients in Hour");
+    header.setStyle(style);
+    HeaderGrid grid = new HeaderGrid();
+    grid.setElement(0, 0, header);
+    return grid;
   }
 
   private static final class PROPS {

@@ -250,6 +250,7 @@
       </concept>
       <concept id="1397920687864997153" name="de.slisson.mps.tables.structure.StaticHorizontal" flags="ng" index="2reCLk" />
       <concept id="1397920687864997143" name="de.slisson.mps.tables.structure.TableCell" flags="ng" index="2reCLy">
+        <child id="1397920687865111420" name="columnHeader" index="2recC9" />
         <child id="1397920687865064647" name="editorCell" index="2reSmM" />
       </concept>
       <concept id="1397920687865064415" name="de.slisson.mps.tables.structure.ChildsVertical" flags="ng" index="2reSaE" />
@@ -1416,9 +1417,6 @@
     <property role="3GE5qa" value="Attributes" />
     <ref role="1XX52x" to="e88n:2lOlAdPyF0i" resolve="Disease" />
     <node concept="3EZMnI" id="2lOlAdPyFbL" role="2wV5jI">
-      <node concept="3F0ifn" id="2lOlAdPyFbS" role="3EZMnx">
-        <property role="3F0ifm" value="Disease Name:" />
-      </node>
       <node concept="3F0A7n" id="2lOlAdPyFbY" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
@@ -1429,6 +1427,9 @@
     <property role="3GE5qa" value="Testing" />
     <ref role="1XX52x" to="e88n:2lOlAdPyFe9" resolve="DiseaseList" />
     <node concept="3EZMnI" id="2lOlAdPyFew" role="2wV5jI">
+      <node concept="3F0ifn" id="EFW1mYJI3w" role="3EZMnx">
+        <property role="3F0ifm" value="Disease List:" />
+      </node>
       <node concept="3F2HdR" id="2lOlAdPyFeB" role="3EZMnx">
         <ref role="1NtTu8" to="e88n:2lOlAdPyFej" resolve="diseases" />
         <node concept="2iRkQZ" id="2lOlAdPyFeD" role="2czzBx" />
@@ -1480,6 +1481,9 @@
           <node concept="3F0A7n" id="2vFOz$FUEeE" role="2reSmM">
             <ref role="1NtTu8" to="e88n:2vFOz$FUEcK" resolve="NumPatientsInHour" />
           </node>
+          <node concept="2rfbtV" id="EFW1mYKybo" role="2recC9">
+            <property role="2rfbtB" value="Num Patients in Hour" />
+          </node>
         </node>
       </node>
     </node>
@@ -1488,7 +1492,6 @@
     <property role="3GE5qa" value="People" />
     <ref role="1XX52x" to="e88n:6dYFu3AbeaS" resolve="PatientArrivals" />
     <node concept="3EZMnI" id="EFW1mY060u" role="2wV5jI">
-      <node concept="2iRfu4" id="EFW1mY060v" role="2iSdaV" />
       <node concept="2rfBfz" id="EFW1mY060w" role="3EZMnx">
         <node concept="2reSaE" id="EFW1mY060x" role="2rf8GZ">
           <ref role="2reCK$" to="e88n:2vFOz$FUEfh" resolve="PatientArrivalLines" />
@@ -1568,6 +1571,13 @@
           </node>
         </node>
       </node>
+      <node concept="3F0ifn" id="EFW1mZoVnK" role="3EZMnx">
+        <property role="3F0ifm" value="Arrives at:" />
+      </node>
+      <node concept="3F1sOY" id="EFW1mZoVoG" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:EFW1mZoVng" resolve="ArrivalLocation" />
+      </node>
+      <node concept="2iRkQZ" id="EFW1mZoVpb" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="EFW1mY_7ch">

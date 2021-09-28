@@ -488,6 +488,11 @@
       <property role="TrG5h" value="beds" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="EFW1mYUOC_" role="1TKVEl">
+      <property role="IQ2nx" value="768972137584871973" />
+      <property role="TrG5h" value="ID" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="5QJON_AVrZ9" role="1TKVEi">
       <property role="IQ2ns" value="6750846609945116617" />
       <property role="20kJfa" value="roomType" />
@@ -1571,6 +1576,13 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="OnGenerateAnnouncement" />
       <ref role="20lvS9" node="3DLpJ7prKMj" resolve="SignalInitReference" />
+    </node>
+    <node concept="1TJgyj" id="EFW1mZoVH$" role="1TKVEi">
+      <property role="IQ2ns" value="768972137592765284" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="SpawnAt" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
   </node>
   <node concept="25R3W" id="1s4HvCZwevB">

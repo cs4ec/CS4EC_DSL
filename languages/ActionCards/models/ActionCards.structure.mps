@@ -575,6 +575,13 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2vFOz$FUEc$" resolve="PatientArrivalLine" />
     </node>
+    <node concept="1TJgyj" id="EFW1mZoVng" role="1TKVEi">
+      <property role="IQ2ns" value="768972137592763856" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ArrivalLocation" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
   </node>
   <node concept="1TIwiD" id="EFW1mY_7c6">
     <property role="EcuMT" value="768972137579180806" />

@@ -9,17 +9,11 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int MapBuilder = 0;
-  public static final int Room = 1;
-  public static final int RoomType = 2;
-  public static final int Wall = 3;
+  public static final int MapImporter = 0;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1a0150acdda54129L, 0x824e01dce96fdea4L);
-    builder.put(0xaabf015bdec55cdL, MapBuilder);
-    builder.put(0xaabf015bdec4a29L, Room);
-    builder.put(0xaabf015bdec4a86L, RoomType);
-    builder.put(0xaabf015bdec569bL, Wall);
+    builder.put(0xaabf015bed74217L, MapImporter);
     myIndex = builder.seal();
   }
 
