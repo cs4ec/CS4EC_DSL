@@ -1,16 +1,16 @@
 package simcore.action.basicAction;
 
 import simcore.action.ActionFragment;
-import simcore.agents.Patient;
+import simcore.agents.Agent;
 import simcore.basicStructures.AdmissionBay;
 import simcore.basicStructures.Room;
 
 public class AdmitAction extends ActionFragment {
-	private Patient patient;
+	private Agent target;
 	private Room admissionBay;
 	
-	public AdmitAction WithPatient(Patient p) {
-		patient = p;
+	public AdmitAction WithPatient(Agent target) {
+		this.target = target;
 		return this;
 	}
 	
@@ -19,11 +19,11 @@ public class AdmitAction extends ActionFragment {
 		return this;
 	}
 	
-	public Patient getPatient() {
-		return patient;
+	public Agent getTarget() {
+		return target;
 	}
-	public void setPatient(Patient patient) {
-		this.patient = patient;
+	public void setPatient(Agent patient) {
+		this.target = patient;
 	}
 	
 	public Room getAdmissionBay() {

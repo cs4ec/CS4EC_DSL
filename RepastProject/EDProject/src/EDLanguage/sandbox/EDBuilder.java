@@ -22,6 +22,7 @@ import repast.simphony.valueLayer.GridValueLayer;
 import simcore.basicStructures.Room;
 import java.awt.Color;
 import repast.simphony.space.continuous.NdPoint;
+import repast.simphony.context.space.graph.NetworkBuilder;
 import java.util.HashMap;
 import simcore.utilities.PatientArrivalStore;
 import java.util.Map;
@@ -32,6 +33,8 @@ public class EDBuilder implements ContextBuilder<Object> {
   public Context build(Context<Object> context) {
 
     context.setId("EDProject");
+    int mapWidth = 924;
+    int mapHeight = 636;
 
     Parameters params = RunEnvironment.getInstance().getParameters();
 
@@ -46,10 +49,10 @@ public class EDBuilder implements ContextBuilder<Object> {
     CreatePatientArrivalMap();
 
     ContinuousSpaceFactory spaceFactory = ContinuousSpaceFactoryFinder.createContinuousSpaceFactory(null);
-    ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new StaffAdder<Object>(), new StrictBorders(), 400, 400);
+    ContinuousSpace<Object> space = spaceFactory.createContinuousSpace("space", context, new StaffAdder<Object>(), new StrictBorders(), mapWidth, mapHeight);
 
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
-    Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, 400, 400));
+    Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
     context.add(new patientGenerator(space, grid, context));
     context.add(new Board());
@@ -60,7 +63,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     }
 
 
-    GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), 400, 400);
+    GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), mapWidth, mapHeight);
     context.addValueLayer(vl);
 
     // add Locations here 
@@ -109,6 +112,13 @@ public class EDBuilder implements ContextBuilder<Object> {
       NdPoint pt = space.getLocation(obj);
       grid.moveTo(obj, (int) pt.getX(), (int) pt.getY());
     }
+
+    NetworkBuilder builder = new NetworkBuilder("MyPatients", context, true);
+    builder.buildNetwork();
+    // Create network for 'mySeenPatients' 
+    NetworkBuilder builder2 = new NetworkBuilder("MySeenPatients", context, true);
+    builder2.buildNetwork();
+
 
     return context;
   }

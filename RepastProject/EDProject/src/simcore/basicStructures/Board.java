@@ -43,7 +43,7 @@ public class Board {
 	public List<Signal> GetSignalListBySubject(Class c) {
 		List<Signal> list = new ArrayList<Signal>();
 		for(Signal signal : board){
-			if((signal instanceof ActorTypeSignal) && ((ActorTypeSignal)signal).CanBeActorOf(c)) {
+			if(((signal instanceof ActorTypeSignal) && ((ActorTypeSignal)signal).CanBeActorOf(c)) || signal.getSubjects().isEmpty()) {
 				list.add(signal);
 			}
 		}

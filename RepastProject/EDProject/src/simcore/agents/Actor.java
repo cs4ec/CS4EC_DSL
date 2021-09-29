@@ -26,7 +26,11 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import repast.simphony.util.ContextUtils;
 import simcore.Signals.Signal;
+import simcore.Signals.Orders.FollowOrder;
+import simcore.Signals.Orders.MoveToOrder;
+import simcore.Signals.Orders.OccupyOrder;
 import simcore.Signals.Orders.Order;
+import simcore.Signals.Orders.StopOrder;
 import simcore.action.Action;
 import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
@@ -64,9 +68,10 @@ import simcore.utilities.AStar;
  */
 public class Actor extends Agent {
 	  protected int mintMyMaxPatients = 1;
-	  protected Network myPatientsNetwork;
-	  protected Network mySeenPatientsNetwork;
+//	  protected Network myPatientsNetwork;
+//	  protected Network mySeenPatientsNetwork;
 	  protected Schedule schedule;
+	  protected Order curOrder;
 
 	
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -75,10 +80,6 @@ public class Actor extends Agent {
 		schedule = new Schedule();
 		
 		// Create network for 'myPatients'
-	    NetworkBuilder builder = new NetworkBuilder("MyPatients", context, true);
-	    
-		// Create network for 'mySeenPatients'
-	    NetworkBuilder builder2 = new NetworkBuilder("MySeenPatients", context, true);
 
 	    // Traverse the ancestors of class to record all the Fields
 		fields = new ArrayList<Field>();
@@ -135,6 +136,14 @@ public class Actor extends Agent {
 
 		// If I do not have a current active action, then select one
 		if (isIdle) {
+			
+			// Have I been given an order?
+			if(curOrder != null) {
+				myActiveAction = null; // Reset/Remove any independent actions, orders take priority
+				ExecOrder(curOrder);
+				return;
+			} 
+
 			List<Behaviour> plstReadyActions = myCurrentActions.stream().filter(a -> !(a.getCurrentStep() instanceof PassiveBehaviourStep)).collect(Collectors.toList());
 			
 			// If no active actions ongoing, then look for new signals
@@ -158,6 +167,57 @@ public class Actor extends Agent {
 		}
 
 		executeCurrentActions();
+	}
+	
+	public void TakeOrder(Order o) {
+		curOrder = o;
+	}
+
+	// Process an order given by a staff member
+	private void ExecOrder(Order order) {
+		if (order instanceof MoveToOrder) {
+			Object destination = ((MoveToOrder) order).getTarget();
+
+			MoveTowards(destination);
+
+			if (destination instanceof Room) {
+				Room targetLocation = (Room) destination;
+				
+				// if this agent is in the room..
+				if (targetLocation.WithInside(this)) {
+					//... and this room is a waiting room, the patient will now set itself the action of taking a seat
+//					if (targetLocation.getRoomType() instanceof WaitingRoom) {
+//						FindAnOccupiable(Seat.class);
+//					} else 
+						if (((MoveToOrder) order).getOccupiable() != null) {
+						FindAnOccupiable(((MoveToOrder) order).getOccupiable());
+					}
+					iterateOrder();
+				}
+			} else {
+				if (ImAt(destination)) {
+					iterateOrder();
+				}
+			}
+
+		} else if (order instanceof FollowOrder) {
+			// follow the target
+			Object target = ((FollowOrder) order).getFollowTarget();
+			MoveTowards(target);
+		} else if (order instanceof StopOrder) {
+			iterateOrder();
+		} else if (order instanceof OccupyOrder) {
+			FindAnOccupiable(((OccupyOrder) order).getOccupiable());
+			iterateOrder();
+		}
+	}
+	
+	/**
+	 * Go to the next step in the Order - this may involve taking on a new order
+	 * This is used in cases of 'composite orders' e.g. Go to the DocOffice AND Take a Seat
+	 */
+	private void iterateOrder() {
+		curOrder = curOrder.getNextStep();
 	}
 
 	private Signal searchForSignals(Board board) {
@@ -185,17 +245,21 @@ public class Actor extends Agent {
 			return plstSignals.get(0);
 		}	
 		
-		Map<Signal, Patient> pMapSignalsWithMyPastPatients = new HashMap<Signal,Patient>();
-		Map<Signal, Patient> pMapSignalsWithFreePatients = new HashMap<Signal,Patient>();
-		Map<Signal, Patient> pMapSignalsWithMyPatients = new HashMap<Signal,Patient>();
+		Map<Signal, Object> pMapSignalsWithMyPastPatients = new HashMap<Signal,Object>();
+		Map<Signal, Object> pMapSignalsWithFreePatients = new HashMap<Signal,Object>();
+		Map<Signal, Object> pMapSignalsWithMyPatients = new HashMap<Signal,Object>();
+		
+		Network patientNetwork = (Network)context.getProjection("MyPatients");
+		Network seenPatientNetwork = (Network)context.getProjection("MySeenPatients");
 
 		for (Signal signal : plstSignals) {
-			Patient p = (Patient) signal.getDataOfType(Patient.class);
-			if(p != null && myPatientsNetwork.isAdjacent(this, p)) {
+			Object p = signal.GetData("patient");
+			if(p != null && (patientNetwork.getEdge(this, p) != null) && patientNetwork.isAdjacent(this, p)) {
 				pMapSignalsWithMyPatients.put(signal, p);
-			} else if(p != null && mySeenPatientsNetwork.isAdjacent(this, p)) {
+			} else if(p != null && (patientNetwork.getEdge(this, p) != null) && seenPatientNetwork.isAdjacent(this, p)) {
 				pMapSignalsWithMyPastPatients.put(signal, p);
-			} else if(p != null && p.getMyAssignedStaffOfType(this.getClass()).isEmpty()) {
+			} 
+			else if(p != null /**&& p.getMyAssignedStaffOfType(this.getClass()).isEmpty()*/) {
 				pMapSignalsWithFreePatients.put(signal, p);
 			}
 		}
@@ -210,11 +274,11 @@ public class Actor extends Agent {
 				return (Signal) pMapSignalsWithMyPastPatients.keySet().toArray()[0];
 			}
 			//Otherwise, I am waiting and see if I can take a new case in the meantime...
-			if(!pMapSignalsWithFreePatients.isEmpty() && myPatientsNetwork.size() != mintMyMaxPatients) {
+			if(!pMapSignalsWithFreePatients.isEmpty() && patientNetwork.size() != mintMyMaxPatients) {
 				Signal pSignalNext = (Signal) pMapSignalsWithFreePatients.keySet().toArray()[0];
-				Patient pSignalPatient = pMapSignalsWithFreePatients.get(pSignalNext);
-				mySeenPatientsNetwork.addEdge(this, pSignalPatient);
-				pSignalPatient.assignStaff(this);
+				Object pSignalPatient = pMapSignalsWithFreePatients.get(pSignalNext);
+				seenPatientNetwork.addEdge(this, pSignalPatient);
+//				pSignalPatient.assignStaff(this);
 				return pSignalNext;
 			}
 		}
@@ -223,11 +287,15 @@ public class Actor extends Agent {
 		return null;
 	}
 	
-	public void deAssignPatient(Patient p) {
-		if(myPatientsNetwork.isAdjacent(this, p)) {
-			myPatientsNetwork.removeEdge(myPatientsNetwork.getEdge(this, p));
-			if(!mySeenPatientsNetwork.isAdjacent(this, p)) {
-				mySeenPatientsNetwork.addEdge(this,p);
+	public void removeRelationship(Agent target) {
+		Network patientNetwork = (Network)context.getProjection("MyPatients");
+		Network seenPatientNetwork = (Network)context.getProjection("MySeenPatients");
+
+		
+		if(patientNetwork.isAdjacent(this, target)) {
+			patientNetwork.removeEdge(patientNetwork.getEdge(this, target));
+			if(!seenPatientNetwork.isAdjacent(this, target)) {
+				seenPatientNetwork.addEdge(this,target);
 			}
 		}
 	}

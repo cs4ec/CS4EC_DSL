@@ -1,22 +1,22 @@
 package simcore.action.basicAction;
 
 import simcore.action.ActionFragment;
-import simcore.agents.Patient;
+import simcore.agents.Agent;
 
 public class DischargeAction extends ActionFragment {
-	private Patient patient;
+	private Agent target;
 	
-	public DischargeAction WithPatient(Patient p) {
-		patient = p;
+	public DischargeAction WithPatient(Agent p) {
+		target = p;
 		return this;
 	}
 	
-	public Patient getPatient() {
-		return patient;
+	public Agent getPatient() {
+		return target;
 		
 	}
-	public void setPatient(Patient patient) {
-		this.patient = patient;
+	public void setPatient(Agent patient) {
+		this.target = patient;
 	}
 }
 

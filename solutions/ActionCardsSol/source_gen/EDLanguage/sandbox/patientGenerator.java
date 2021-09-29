@@ -6,6 +6,7 @@ import simcore.basicStructures.AgentGenerator;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
+import repast.simphony.engine.schedule.ScheduledMethod;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.ToolBox;
 import simcore.Signals.Signal;
@@ -15,8 +16,13 @@ public class patientGenerator extends AgentGenerator {
   public patientGenerator(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
     spawnRoomType = MainEntrance.getInstance();
+    initialiseArrivalMap();
   }
 
+  @ScheduledMethod(start = 1, interval = 1)
+  public void step() {
+    tick();
+  }
 
   public Object onGenerate() {
     patient a = new patient(space, grid, context);

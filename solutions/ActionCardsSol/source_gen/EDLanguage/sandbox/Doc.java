@@ -11,8 +11,8 @@ import simcore.Signals.Signal;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
-import simcore.agents.Patient;
 import simcore.Signals.Orders.MoveToOrder;
+import simcore.basicStructures.Board;
 import java.util.ArrayList;
 
 public class Doc extends Actor {
@@ -93,9 +93,41 @@ public class Doc extends Actor {
     }
 
     public void execute() {
-      Patient p = behaviour.getPatient();
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      p.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+    }
+  }
+  public class SendSignalAction_c0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_c0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ActionTwoTriggerSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_d0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_d0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ActionThreeTriggerSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0a_1 extends BehaviourStep {
@@ -136,9 +168,41 @@ public class Doc extends Actor {
     }
 
     public void execute() {
-      Patient p = behaviour.getPatient();
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      p.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+    }
+  }
+  public class SendSignalAction_c0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_c0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ActionTwoTriggerSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_d0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_d0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ActionThreeTriggerSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0b extends BehaviourStep {
@@ -172,6 +236,18 @@ public class Doc extends Actor {
       return ImAt(concreteTarget);
     }
   }
+  public class OrderAction_b0b extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+    }
+  }
   public class MoveAction_a0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -201,6 +277,18 @@ public class Doc extends Actor {
 
     public boolean finishCondition() {
       return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0b_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0b_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
     }
   }
   public class MoveAction_a0c extends BehaviourStep {
@@ -234,6 +322,34 @@ public class Doc extends Actor {
       return ImAt(concreteTarget);
     }
   }
+  public class OrderAction_b0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+    }
+  }
+  public class SendSignalAction_c0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_c0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ActionFourTriggerSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
   public class MoveAction_a0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -263,6 +379,34 @@ public class Doc extends Actor {
 
     public boolean finishCondition() {
       return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0c_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0c_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+    }
+  }
+  public class SendSignalAction_c0c_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_c0c_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ActionFourTriggerSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0d extends BehaviourStep {
@@ -296,6 +440,18 @@ public class Doc extends Actor {
       return ImAt(concreteTarget);
     }
   }
+  public class OrderAction_b0d extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0d(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+    }
+  }
   public class MoveAction_a0d_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -327,6 +483,18 @@ public class Doc extends Actor {
       return ImAt(concreteTarget);
     }
   }
+  public class OrderAction_b0d_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0d_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
+    }
+  }
 
 
   public void InitActionOne(Signal s) {
@@ -334,6 +502,8 @@ public class Doc extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_c0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -343,6 +513,7 @@ public class Doc extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -352,6 +523,8 @@ public class Doc extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0c(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0c(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_c0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -361,6 +534,7 @@ public class Doc extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

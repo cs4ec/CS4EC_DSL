@@ -81,62 +81,43 @@
   </root>
   <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/2480088909319834257">
     <file name="HumanInstanceFromSignal_Constraints.java">
-      <node id="2480088909319834257" at="24,48,25,47" concept="10" />
-      <node id="2480088909319834257" at="32,127,33,128" concept="5" />
-      <node id="2480088909319834257" at="33,128,34,0" concept="7" />
-      <node id="2480088909319834257" at="35,55,36,71" concept="2" />
-      <node id="2480088909319834257" at="37,9,38,0" concept="7" />
-      <node id="2480088909319834257" at="38,0,39,22" concept="6" />
-      <node id="2480088909319835128" at="44,5,45,34" concept="5" />
-      <node id="2480088909319835156" at="47,151,48,22" concept="6" />
-      <node id="2480088909320099532" at="50,151,51,22" concept="6" />
-      <node id="2480088909320280597" at="52,9,53,21" concept="6" />
-      <node id="2480088909319835161" at="55,5,56,16" concept="6" />
-      <node id="2480088909319834257" at="58,0,59,0" concept="8" trace="canBeChildBreakingPoint" />
-      <node id="2480088909319834257" at="61,0,62,0" concept="8" trace="HumanInstanceFromSignal$n7" />
-      <node id="2480088909319834257" at="62,0,63,0" concept="8" trace="DataInstanceMap$Ya" />
-      <node id="2480088909319834257" at="66,0,67,0" concept="8" trace="dataLine$x$TU" />
-      <node id="2480088909319834257" at="70,0,71,0" concept="8" trace="valueType$F2s2" />
-      <node id="2480088909319834257" at="24,0,27,0" concept="1" trace="HumanInstanceFromSignal_Constraints#()V" />
-      <node id="2480088909319834257" at="34,0,37,9" concept="3" />
-      <node id="2480088909319835144" at="46,74,49,9" concept="3" />
-      <node id="2480088909320099520" at="49,9,52,9" concept="3" />
-      <node id="2480088909319835128" at="45,34,54,7" concept="3" />
-      <node id="2480088909319834257" at="31,0,41,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
-      <node id="2480088909319834257" at="29,103,41,6" concept="6" />
-      <node id="2480088909319835128" at="43,128,55,5" concept="0" />
-      <node id="2480088909319834257" at="28,0,43,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <node id="2480088909319834257" at="43,0,58,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
-      <scope id="2480088909319834257" at="24,48,25,47" />
-      <scope id="2480088909319834257" at="35,55,36,71" />
-      <scope id="2480088909319835155" at="47,151,48,22" />
-      <scope id="2480088909320099531" at="50,151,51,22" />
-      <scope id="2480088909319834257" at="24,0,27,0" />
-      <scope id="2480088909319834257" at="32,127,39,22">
-        <var name="result" id="2480088909319834257" />
-      </scope>
-      <scope id="2480088909319835129" at="46,74,53,21" />
-      <scope id="2480088909319834257" at="31,0,41,0">
-        <var name="checkingNodeContext" id="2480088909319834257" />
-        <var name="context" id="2480088909319834257" />
-      </scope>
-      <scope id="2480088909319835128" at="44,5,54,7">
-        <var name="di" id="2480088909319835128" />
-      </scope>
-      <scope id="2480088909319834257" at="29,103,41,6" />
-      <scope id="2480088909319835127" at="43,128,56,16" />
-      <scope id="2480088909319834257" at="28,0,43,0" />
-      <scope id="2480088909319834257" at="43,0,58,0">
+      <node id="2480088909319834257" at="19,48,20,47" concept="10" />
+      <node id="2480088909319834257" at="27,127,28,128" concept="5" />
+      <node id="2480088909319834257" at="28,128,29,0" concept="7" />
+      <node id="2480088909319834257" at="30,55,31,71" concept="2" />
+      <node id="2480088909319834257" at="32,9,33,0" concept="7" />
+      <node id="2480088909319834257" at="33,0,34,22" concept="6" />
+      <node id="2480088909319835161" at="38,128,39,16" concept="6" />
+      <node id="2480088909319834257" at="41,0,42,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="2480088909319834257" at="44,0,45,0" concept="8" trace="HumanInstanceFromSignal$n7" />
+      <node id="2480088909319834257" at="19,0,22,0" concept="1" trace="HumanInstanceFromSignal_Constraints#()V" />
+      <node id="2480088909319834257" at="29,0,32,9" concept="3" />
+      <node id="2480088909319834257" at="38,0,41,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="2480088909319834257" at="26,0,36,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="2480088909319834257" at="24,103,36,6" concept="6" />
+      <node id="2480088909319834257" at="23,0,38,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="2480088909319834257" at="19,48,20,47" />
+      <scope id="2480088909319834257" at="30,55,31,71" />
+      <scope id="2480088909319835127" at="38,128,39,16" />
+      <scope id="2480088909319834257" at="19,0,22,0" />
+      <scope id="2480088909319834257" at="38,0,41,0">
         <var name="childConcept" id="2480088909319834257" />
         <var name="link" id="2480088909319834257" />
         <var name="node" id="2480088909319834257" />
         <var name="parentNode" id="2480088909319834257" />
       </scope>
-      <unit id="2480088909319834257" at="65,0,68,0" name="AgentLanguage.constraints.HumanInstanceFromSignal_Constraints$LINKS" />
-      <unit id="2480088909319834257" at="69,0,72,0" name="AgentLanguage.constraints.HumanInstanceFromSignal_Constraints$PROPS" />
-      <unit id="2480088909319834257" at="60,0,64,0" name="AgentLanguage.constraints.HumanInstanceFromSignal_Constraints$CONCEPTS" />
-      <unit id="2480088909319834257" at="30,15,41,5" name="AgentLanguage.constraints.HumanInstanceFromSignal_Constraints$1" />
-      <unit id="2480088909319834257" at="23,0,73,0" name="AgentLanguage.constraints.HumanInstanceFromSignal_Constraints" />
+      <scope id="2480088909319834257" at="27,127,34,22">
+        <var name="result" id="2480088909319834257" />
+      </scope>
+      <scope id="2480088909319834257" at="26,0,36,0">
+        <var name="checkingNodeContext" id="2480088909319834257" />
+        <var name="context" id="2480088909319834257" />
+      </scope>
+      <scope id="2480088909319834257" at="24,103,36,6" />
+      <scope id="2480088909319834257" at="23,0,38,0" />
+      <unit id="2480088909319834257" at="43,0,46,0" name="AgentLanguage.constraints.HumanInstanceFromSignal_Constraints$CONCEPTS" />
+      <unit id="2480088909319834257" at="25,15,36,5" name="AgentLanguage.constraints.HumanInstanceFromSignal_Constraints$1" />
+      <unit id="2480088909319834257" at="18,0,47,0" name="AgentLanguage.constraints.HumanInstanceFromSignal_Constraints" />
     </file>
   </root>
   <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/2480088909319836276">

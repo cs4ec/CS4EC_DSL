@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class SeverityCondition_Editor extends DefaultNodeEditor {
+public class RemoveRelationshipAction_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new SeverityCondition_EditorBuilder_a(editorContext, node).createCell();
+    return new RemoveRelationshipAction_EditorBuilder_a(editorContext, node).createCell();
   }
 }

@@ -29,7 +29,6 @@ import repast.simphony.ui.probe.ProbeID;
 import repast.simphony.util.ContextUtils;
 import repast.simphony.valueLayer.GridValueLayer;
 import simcore.agents.Agent;
-import simcore.agents.Patient;
 import simcore.utilities.Cellbox;
 
 public class Room extends Locatable{

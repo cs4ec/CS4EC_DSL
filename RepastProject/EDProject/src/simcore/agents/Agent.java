@@ -3,68 +3,30 @@ package simcore.agents;
 import java.lang.reflect.Field;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import repast.simphony.context.Context;
-import repast.simphony.engine.environment.RunEnvironment;
-import repast.simphony.parameter.Parameters;
-import repast.simphony.query.space.grid.GridCell;
-import repast.simphony.query.space.grid.GridCellNgh;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
-import repast.simphony.util.ContextUtils;
-import simcore.Signals.Signal;
-import simcore.Signals.Orders.Order;
-import simcore.action.Action;
 import simcore.action.ActionFragment;
-import simcore.action.ActionStep;
 import simcore.action.Behaviour;
-import simcore.action.ConditionalActionStep;
 import simcore.action.Consequence;
-import simcore.action.ConsequenceStep;
 import simcore.action.PassiveBehaviourStep;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
-import simcore.action.basicAction.OrderAction;
-import simcore.action.basicAction.SendSignalAction;
-import simcore.action.basicAction.StayAction;
-import simcore.action.basicAction.StayForConditionAction;
-import simcore.action.basicAction.StayForTimeAction;
-import simcore.action.basicAction.WaitAction;
-import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
-import simcore.action.basicAction.conditions.BedAvailableCondition;
-import simcore.action.basicAction.conditions.Condition;
-import simcore.action.basicAction.conditions.InfectionCondition;
-import simcore.action.basicAction.conditions.IsAvailableCondition;
-import simcore.action.basicAction.conditions.PatientAdmissionStatusCondition;
-import simcore.action.basicAction.conditions.PatientOutcomes;
-import simcore.action.basicAction.conditions.PossibilityCondition;
-import simcore.action.basicAction.conditions.ResultCondition;
-import simcore.action.basicAction.conditions.SeverityCondition;
-import simcore.action.basicAction.conditions.SpaceatCondition;
-import simcore.action.basicAction.conditions.StateCondition;
-import simcore.action.basicAction.conditions.TestResultCondition;
-import simcore.basicStructures.Bed;
 import simcore.basicStructures.Board;
-import simcore.basicStructures.Desk;
 import simcore.basicStructures.EDMap;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Seat;
-import simcore.basicStructures.Test;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
-import simcore.diagnosis.InfectionStatus;
-import simcore.diagnosis.SeverityScore;
-import simcore.diagnosis.TestResult;
 import simcore.utilities.AStar;
 import simcore.utilities.ModelParameterStore;
 import simcore.utilities.Tuple;
@@ -402,26 +364,26 @@ public class Agent {
 		return false;
 	}
 	
-	public boolean EvaluateInfectionCondition(InfectionStatus comparisonStatus, Patient p) {
-		
-		// Introduce stochasticity in whether patient is correctly identified as symptomatic 
-	    Parameters params = RunEnvironment.getInstance().getParameters();
-	    Double pdblFalsePositiveSymptomatic = params.getDouble("FalsePositiveSymptomatic");
-	    		
-	    // margin of error comes when patient is susceptible, but doc thinks they are actually symptomatic
-		// so when deciding if a patient is symptomatic, there is a 7% chance that the doc says YES, but patient actual infection status is susc
-	    if(comparisonStatus == InfectionStatus.Symptomatic && p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Susceptible) {
-	    	if (RandomHelper.nextDouble() < pdblFalsePositiveSymptomatic) {
-	    		return true;
-	    	} else {
-	    		return false;
-	    	}
-	    } else {
-			return (comparisonStatus == p.getActualInfectionState().stateType.getInfectionStatus());
-	    }
-	}
+//	public boolean EvaluateInfectionCondition(InfectionStatus comparisonStatus, Patient p) {
+//		
+//		// Introduce stochasticity in whether patient is correctly identified as symptomatic 
+//	    Parameters params = RunEnvironment.getInstance().getParameters();
+//	    Double pdblFalsePositiveSymptomatic = params.getDouble("FalsePositiveSymptomatic");
+//	    		
+//	    // margin of error comes when patient is susceptible, but doc thinks they are actually symptomatic
+//		// so when deciding if a patient is symptomatic, there is a 7% chance that the doc says YES, but patient actual infection status is susc
+//	    if(comparisonStatus == InfectionStatus.Symptomatic && p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Susceptible) {
+//	    	if (RandomHelper.nextDouble() < pdblFalsePositiveSymptomatic) {
+//	    		return true;
+//	    	} else {
+//	    		return false;
+//	    	}
+//	    } else {
+//			return (comparisonStatus == p.getActualInfectionState().stateType.getInfectionStatus());
+//	    }
+//	}
 	
-	public boolean EvaluateSuitableForSideRoomCondition(Patient p, RoomType alternativeBay) throws Exception {		
+//	public boolean EvaluateSuitableForSideRoomCondition(Patient p, RoomType alternativeBay) throws Exception {		
 //		// Calculate the current occupancy of side rooms
 //		ArrayList<Room> plstSideRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(SideRoomAdmissionBay.getInstance());
 //		int maxSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllOcupiablesOfType(Bed.class).size()).sum();
@@ -450,9 +412,9 @@ public class Agent {
 //				}				
 //			}
 //		}
-		throw new Exception("METHOD EVALUATESUITABLEFORSIDEROOM REMOVED");
+//		throw new Exception("METHOD EVALUATESUITABLEFORSIDEROOM REMOVED");
 
-	}
+//	}
 
 	public boolean Dice(double possibility) {
 		double dice = 100 * RandomHelper.nextDouble();

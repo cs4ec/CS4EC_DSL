@@ -14,6 +14,9 @@
     <classNode extendsClassName="simcore.basicStructures.Test" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.Doc">
+    <classNode dependClassName="EDLanguage.sandbox.ActionFourTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ActionThreeTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ActionTwoTriggerSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
@@ -28,7 +31,7 @@
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
-    <classNode dependClassName="simcore.agents.Patient" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
@@ -51,6 +54,7 @@
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
     <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder" />
+    <classNode dependClassName="repast.simphony.context.space.graph.NetworkBuilder" />
     <classNode dependClassName="repast.simphony.context.space.grid.GridFactory" />
     <classNode dependClassName="repast.simphony.context.space.grid.GridFactoryFinder" />
     <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
@@ -126,6 +130,7 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />

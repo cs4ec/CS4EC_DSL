@@ -5,8 +5,6 @@
     <use id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage" version="0" />
     <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="3" />
     <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="2" />
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
-    <use id="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" name="org.iets3.core.expr.genjava.simpleTypes" version="0" />
     <engage id="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" name="org.iets3.core.expr.genjava.base" />
     <engage id="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" name="org.iets3.core.expr.genjava.simpleTypes" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
@@ -145,6 +143,12 @@
       <concept id="4334763093659899158" name="AgentLanguage.structure.Attribute" flags="ng" index="jeB$7">
         <child id="2698877061876378325" name="value" index="1gSNMQ" />
       </concept>
+      <concept id="4334763093659899312" name="AgentLanguage.structure.ObjectInstance" flags="ng" index="jeBAx">
+        <property id="4334763093659899313" name="type" index="jeBAw" />
+      </concept>
+      <concept id="4973502446685367656" name="AgentLanguage.structure.DataInstanceMap" flags="ng" index="2_cGdR">
+        <child id="4973502446685367659" name="objectInstance" index="2_cGdO" />
+      </concept>
       <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
       <concept id="8910807539222190210" name="AgentLanguage.structure.Description" flags="ng" index="2IBTiW" />
       <concept id="6750846609956093098" name="AgentLanguage.structure.RoomTypeReference" flags="ng" index="UeIYj" />
@@ -156,12 +160,18 @@
         <property id="513408552829744291" name="description" index="3n3SFS" />
         <child id="88285669848655863" name="receivers" index="1nbS2I" />
         <child id="4211260315489209511" name="senders" index="3z7ADm" />
+        <child id="4211260315489209495" name="data" index="3z7ADA" />
       </concept>
       <concept id="513408552829743917" name="AgentLanguage.structure.SignalDefinition" flags="ng" index="3n3SPQ">
         <child id="513408552829743918" name="signals" index="3n3SPP" />
       </concept>
       <concept id="88285669848655860" name="AgentLanguage.structure.ActorTypeSignal" flags="ng" index="1nbS2H" />
-      <concept id="4211260315489209491" name="AgentLanguage.structure.SignalInitReference" flags="ng" index="3z7ADy" />
+      <concept id="4211260315489209491" name="AgentLanguage.structure.SignalInitReference" flags="ng" index="3z7ADy">
+        <child id="4334763093659899423" name="signalContent" index="jeBCe" />
+      </concept>
+      <concept id="4211260315489209494" name="AgentLanguage.structure.DataMap" flags="ng" index="3z7ADB">
+        <property id="4211260315489312590" name="valueType" index="3z0vAZ" />
+      </concept>
       <concept id="4211260315489212560" name="AgentLanguage.structure.SendSignalAction" flags="ng" index="3z7BTx">
         <child id="4211260315489212561" name="signalInitReference" index="3z7BTw" />
       </concept>
@@ -173,6 +183,9 @@
         <child id="8504720493510951874" name="targetObject" index="3JG_nS" />
       </concept>
       <concept id="8504720493511036692" name="AgentLanguage.structure.SelfInstance" flags="ng" index="3JGL$I" />
+      <concept id="8504720493511355375" name="AgentLanguage.structure.HumanInstanceFromSignal" flags="ng" index="3JJ7Rl">
+        <property id="8504720493511355376" name="data" index="3JJ7Ra" />
+      </concept>
       <concept id="8504720493511205796" name="AgentLanguage.structure.PatientInstance" flags="ng" index="3JJFmu" />
       <concept id="329726013646474559" name="AgentLanguage.structure.TestKit" flags="ng" index="3S2u4K" />
       <concept id="329726013640842570" name="AgentLanguage.structure.TestAction" flags="ng" index="3SPZ55">
@@ -323,6 +336,9 @@
       <concept id="1171323947159" name="jetbrains.mps.lang.smodel.structure.Model_NodesOperation" flags="nn" index="2SmgA7">
         <child id="1758937410080001570" name="conceptArgument" index="1dBWTz" />
       </concept>
+      <concept id="1966870290088668512" name="jetbrains.mps.lang.smodel.structure.Enum_MemberLiteral" flags="ng" index="2ViDtV">
+        <reference id="1966870290088668516" name="memberDeclaration" index="2ViDtZ" />
+      </concept>
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="3562215692195599741" name="jetbrains.mps.lang.smodel.structure.SLinkImplicitSelect" flags="nn" index="13MTOL">
         <reference id="3562215692195600259" name="link" index="13MTZf" />
@@ -345,6 +361,9 @@
       </concept>
       <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
         <reference id="1138056546658" name="link" index="3TtcxE" />
+      </concept>
+      <concept id="5779574625830813396" name="jetbrains.mps.lang.smodel.structure.EnumerationIdRefExpression" flags="ng" index="1XH99k">
+        <reference id="5779574625830813397" name="enumDeclaration" index="1XH99l" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -591,6 +610,10 @@
     <node concept="1nbS2H" id="4FTL$vJQj2b" role="3n3SPP">
       <property role="TrG5h" value="placeholderName" />
       <property role="3n3SFS" value="h" />
+      <node concept="3z7ADB" id="EFW1mZWWqb" role="3z7ADA">
+        <property role="TrG5h" value="patient" />
+        <property role="3z0vAZ" value="29F2V$jpgeN/Person" />
+      </node>
       <node concept="1WS0z7" id="4FTL$vJQj$d" role="lGtFl">
         <node concept="3JmXsc" id="4FTL$vJQj$g" role="3Jn$fo">
           <node concept="3clFbS" id="4FTL$vJQj$h" role="2VODD2">
@@ -797,6 +820,41 @@
           </node>
           <node concept="2IBTiW" id="av1M7vkmoR" role="2IBTiu" />
         </node>
+        <node concept="3z7BTx" id="EFW1mZKINj" role="3VtFpW">
+          <node concept="3z7ADy" id="EFW1mZKINl" role="3z7BTw">
+            <node concept="1ZhdrF" id="EFW1mZKIQa" role="lGtFl">
+              <property role="2qtEX8" value="signal" />
+              <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/4211260315489209491/4211260315489209492" />
+              <node concept="3$xsQk" id="EFW1mZKIQb" role="3$ytzL">
+                <node concept="3clFbS" id="EFW1mZKIQc" role="2VODD2">
+                  <node concept="3cpWs6" id="EFW1mZKKkX" role="3cqZAp">
+                    <node concept="2ShNRf" id="EFW1mZKKlC" role="3cqZAk">
+                      <node concept="3zrR0B" id="EFW1mZKKzI" role="2ShVmc">
+                        <node concept="3Tqbb2" id="EFW1mZKKzK" role="3zrR0E">
+                          <ref role="ehGHo" to="3751:svZ_Jg47cE" resolve="Signal" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2b32R4" id="EFW1mZKLsn" role="lGtFl">
+            <node concept="3JmXsc" id="EFW1mZKLso" role="2P8S$">
+              <node concept="3clFbS" id="EFW1mZKLsp" role="2VODD2">
+                <node concept="3clFbF" id="EFW1mZKLvb" role="3cqZAp">
+                  <node concept="2OqwBi" id="EFW1mZKLGG" role="3clFbG">
+                    <node concept="30H73N" id="EFW1mZKLva" role="2Oq$k0" />
+                    <node concept="3Tsc0h" id="EFW1mZKLTV" role="2OqNvi">
+                      <ref role="3TtcxE" to="e88n:av1M7vbNyV" resolve="outgoingBranches" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="raruj" id="1JOzhSNIBWw" role="lGtFl" />
       <node concept="17Uvod" id="1JOzhSNIBWx" role="lGtFl">
@@ -967,6 +1025,77 @@
     <ref role="3gUMe" to="e88n:4X1nFNzWOlI" resolve="Branch" />
     <node concept="3z7BTx" id="3WgUQREJGCF" role="13RCb5">
       <node concept="3z7ADy" id="3WgUQREJGCG" role="3z7BTw">
+        <node concept="2_cGdR" id="EFW1n02CFt" role="jeBCe">
+          <node concept="1ZhdrF" id="EFW1n02CHh" role="lGtFl">
+            <property role="2qtEX8" value="dataLine" />
+            <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/4973502446685367656/5832719916573057037" />
+            <node concept="3$xsQk" id="EFW1n02CHi" role="3$ytzL">
+              <node concept="3clFbS" id="EFW1n02CHj" role="2VODD2">
+                <node concept="3cpWs8" id="EFW1mZXsSE" role="3cqZAp">
+                  <node concept="3cpWsn" id="EFW1mZXsSH" role="3cpWs9">
+                    <property role="TrG5h" value="newDataMap" />
+                    <node concept="3Tqbb2" id="EFW1mZXsSC" role="1tU5fm">
+                      <ref role="ehGHo" to="3751:3DLpJ7prKMm" resolve="DataMap" />
+                    </node>
+                    <node concept="2ShNRf" id="EFW1mZXsDF" role="33vP2m">
+                      <node concept="3zrR0B" id="EFW1mZXsQw" role="2ShVmc">
+                        <node concept="3Tqbb2" id="EFW1mZXsQy" role="3zrR0E">
+                          <ref role="ehGHo" to="3751:3DLpJ7prKMm" resolve="DataMap" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbH" id="EFW1mZXt0x" role="3cqZAp" />
+                <node concept="3clFbF" id="EFW1mZXZRr" role="3cqZAp">
+                  <node concept="37vLTI" id="EFW1mZY0xL" role="3clFbG">
+                    <node concept="2OqwBi" id="EFW1mZY1dS" role="37vLTx">
+                      <node concept="1XH99k" id="EFW1mZY0GH" role="2Oq$k0">
+                        <ref role="1XH99l" to="3751:3DLpJ7ps9X0" resolve="BaseType" />
+                      </node>
+                      <node concept="2ViDtV" id="EFW1mZY1ze" role="2OqNvi">
+                        <ref role="2ViDtZ" to="3751:29F2V$jpgeN" resolve="Person" />
+                      </node>
+                    </node>
+                    <node concept="2OqwBi" id="EFW1mZY04Y" role="37vLTJ">
+                      <node concept="37vLTw" id="EFW1mZXZRp" role="2Oq$k0">
+                        <ref role="3cqZAo" node="EFW1mZXsSH" resolve="newDataMap" />
+                      </node>
+                      <node concept="3TrcHB" id="EFW1mZY0lT" role="2OqNvi">
+                        <ref role="3TsBF5" to="3751:3DLpJ7ps9Xe" resolve="valueType" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="EFW1mZXCR_" role="3cqZAp">
+                  <node concept="37vLTI" id="EFW1mZXDNJ" role="3clFbG">
+                    <node concept="Xl_RD" id="EFW1mZXDRH" role="37vLTx">
+                      <property role="Xl_RC" value="patient" />
+                    </node>
+                    <node concept="2OqwBi" id="EFW1mZXDar" role="37vLTJ">
+                      <node concept="37vLTw" id="EFW1mZXCRz" role="2Oq$k0">
+                        <ref role="3cqZAo" node="EFW1mZXsSH" resolve="newDataMap" />
+                      </node>
+                      <node concept="3TrcHB" id="EFW1mZXDqk" role="2OqNvi">
+                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbH" id="EFW1mZXE7p" role="3cqZAp" />
+                <node concept="3cpWs6" id="EFW1mZXEAS" role="3cqZAp">
+                  <node concept="37vLTw" id="EFW1mZXEF$" role="3cqZAk">
+                    <ref role="3cqZAo" node="EFW1mZXsSH" resolve="newDataMap" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3JJ7Rl" id="EFW1n0bHGx" role="2_cGdO">
+            <property role="3JJ7Ra" value="patient" />
+            <property role="jeBAw" value="29F2V$jpgeN/Person" />
+          </node>
+        </node>
         <node concept="1ZhdrF" id="3WgUQREJGOJ" role="lGtFl">
           <property role="2qtEX8" value="signal" />
           <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/4211260315489209491/4211260315489209492" />
