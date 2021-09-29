@@ -1,0 +1,93 @@
+[
+	{
+		"ID":1
+		"name of the room":"Lab",
+		"type of the room":"Lab",
+		"x coordinate":12,
+		"y coordinate":293,
+		"width":129,
+		"height":78,
+		"desks":0,
+		"seats":0,
+		"beds":0,
+		"color":""
+	},
+	{
+		"ID":1
+		"name of the room":"Triage",
+		"type of the room":"TriageDesk",
+		"x coordinate":144,
+		"y coordinate":43,
+		"width":80,
+		"height":42,
+		"desks":0,
+		"seats":0,
+		"beds":0,
+		"color":""
+	},
+	{
+		"ID":1
+		"name of the room":"MajorsCBay",
+		"type of the room":"MajorsCBay",
+		"x coordinate":350,
+		"y coordinate":235,
+		"width":32,
+		"height":28,
+		"desks":0,
+		"seats":0,
+		"beds":0,
+		"color":""
+	},
+	{
+		"ID":1
+		"name of the room":"MajorsCBay",
+		"type of the room":"MajorsCBay",
+		"x coordinate":182,
+		"y coordinate":233,
+		"width":29,
+		"height":30,
+		"desks":0,
+		"seats":0,
+		"beds":0,
+		"color":""
+	},
+	{
+		"ID":1
+		"name of the room":"MainEntrance",
+		"type of the room":"MainEntrance",
+		"x coordinate":59,
+		"y coordinate":2,
+		"width":51,
+		"height":17,
+		"desks":0,
+		"seats":0,
+		"beds":0,
+		"color":""
+	},
+	{
+		"ID":1
+		"name of the room":"MajorsCBay",
+		"type of the room":"MajorsCBay",
+		"x coordinate":270,
+		"y coordinate":235,
+		"width":28,
+		"height":27,
+		"desks":0,
+		"seats":0,
+		"beds":0,
+		"color":""
+	},
+	{
+		"ID":1
+		"name of the room":"MajorsCBay",
+		"type of the room":"MajorsCBay",
+		"x coordinate":350,
+		"y coordinate":303,
+		"width":32,
+		"height":24,
+		"desks":0,
+		"seats":0,
+		"beds":0,
+		"color":""
+	}
+]
