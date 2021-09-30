@@ -1621,5 +1621,104 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="1SF32lRXZv">
+    <property role="3GE5qa" value="ActionCard" />
+    <ref role="1XX52x" to="e88n:1SF32lRXYq" resolve="AdmissionAction" />
+    <node concept="2aJ2om" id="1SF32lRXZx" role="CpUAK">
+      <ref role="2$4xQ3" node="7ih0ZFGR6CE" resolve="diagram" />
+    </node>
+    <node concept="2ZK4vF" id="1SF32lRXZz" role="2wV5jI">
+      <node concept="Veino" id="1SF32lRXZ$" role="3F10Kt">
+        <property role="Vb096" value="fLwANPp/orange" />
+      </node>
+      <node concept="3EZMnI" id="1SF32lRXZ_" role="1ytjkN">
+        <node concept="3EZMnI" id="1SF32lRY1l" role="3EZMnx">
+          <node concept="VPM3Z" id="1SF32lRY1n" role="3F10Kt" />
+          <node concept="l2Vlx" id="1SF32lRY1q" role="2iSdaV" />
+          <node concept="3F0ifn" id="1SF32lRY20" role="3EZMnx">
+            <property role="3F0ifm" value="Admit Patient" />
+          </node>
+        </node>
+        <node concept="3F0A7n" id="1SF32lS0pc" role="3EZMnx">
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        </node>
+        <node concept="3F0ifn" id="1SF32lRXZD" role="3EZMnx">
+          <property role="3F0ifm" value="---------------------" />
+        </node>
+        <node concept="3EZMnI" id="1SF32lRXZE" role="3EZMnx">
+          <node concept="VPM3Z" id="1SF32lRXZF" role="3F10Kt" />
+          <node concept="3F0ifn" id="1SF32lRXZG" role="3EZMnx">
+            <property role="3F0ifm" value="Location:" />
+            <node concept="VechU" id="1SF32lRXZH" role="3F10Kt">
+              <property role="Vb096" value="hEZAO13/white" />
+            </node>
+          </node>
+          <node concept="3F1sOY" id="1SF32lRXZI" role="3EZMnx">
+            <ref role="1NtTu8" to="e88n:3WgUQREIXw5" resolve="location" />
+          </node>
+          <node concept="2iRfu4" id="1SF32lRXZJ" role="2iSdaV" />
+        </node>
+        <node concept="3EZMnI" id="1SF32lRXZK" role="3EZMnx">
+          <node concept="VPM3Z" id="1SF32lRXZL" role="3F10Kt" />
+          <node concept="3F0ifn" id="1SF32lRXZM" role="3EZMnx">
+            <property role="3F0ifm" value="Staff:" />
+            <node concept="VechU" id="1SF32lRXZN" role="3F10Kt">
+              <property role="Vb096" value="hEZAO13/white" />
+            </node>
+          </node>
+          <node concept="1iCGBv" id="1SF32lRXZO" role="3EZMnx">
+            <ref role="1NtTu8" to="e88n:4FTL$vJQLjT" resolve="staffTypeReference" />
+            <node concept="VechU" id="1SF32lRXZP" role="3F10Kt">
+              <property role="Vb096" value="hEZAO13/white" />
+            </node>
+            <node concept="1sVBvm" id="1SF32lRXZQ" role="1sWHZn">
+              <node concept="1iCGBv" id="1SF32lRXZR" role="2wV5jI">
+                <ref role="1NtTu8" to="e88n:4FTL$vJQzE_" resolve="staffType" />
+                <node concept="VechU" id="1SF32lRXZS" role="3F10Kt">
+                  <property role="Vb096" value="hEZAO13/white" />
+                </node>
+                <node concept="1sVBvm" id="1SF32lRXZT" role="1sWHZn">
+                  <node concept="3F0A7n" id="1SF32lRXZU" role="2wV5jI">
+                    <property role="1Intyy" value="true" />
+                    <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+                    <node concept="VechU" id="1SF32lRXZV" role="3F10Kt">
+                      <property role="Vb096" value="hEZAO13/white" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2iRfu4" id="1SF32lRXZW" role="2iSdaV" />
+        </node>
+        <node concept="3EZMnI" id="1SF32lRXZX" role="3EZMnx">
+          <node concept="VPM3Z" id="1SF32lRXZY" role="3F10Kt" />
+          <node concept="3F0ifn" id="1SF32lRXZZ" role="3EZMnx">
+            <property role="3F0ifm" value="Resource:" />
+            <node concept="VechU" id="1SF32lRY00" role="3F10Kt">
+              <property role="Vb096" value="hEZAO13/white" />
+            </node>
+          </node>
+          <node concept="1iCGBv" id="1SF32lRY01" role="3EZMnx">
+            <ref role="1NtTu8" to="e88n:av1M7viD_O" resolve="resource" />
+            <node concept="1sVBvm" id="1SF32lRY02" role="1sWHZn">
+              <node concept="3F0A7n" id="1SF32lRY03" role="2wV5jI">
+                <property role="1Intyy" value="true" />
+                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+                <node concept="VechU" id="1SF32lRY04" role="3F10Kt">
+                  <property role="Vb096" value="hEZAO13/white" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2iRfu4" id="1SF32lRY05" role="2iSdaV" />
+        </node>
+        <node concept="2iRkQZ" id="1SF32lRY06" role="2iSdaV" />
+        <node concept="Veino" id="1SF32lRY07" role="3F10Kt">
+          <property role="Vb096" value="fLwANPp/orange" />
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

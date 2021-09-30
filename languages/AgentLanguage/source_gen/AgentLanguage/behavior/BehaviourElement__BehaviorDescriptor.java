@@ -109,7 +109,7 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
     {
       final SNode ns = SLinkOperations.getTarget(__thisNode__, LINKS.signal$k9aw);
       if (SNodeOperations.isInstanceOf(ns, CONCEPTS.NewPatientSignal$mL)) {
-        return "NewPatientArrive";
+        return "NewpatientArrive";
       }
     }
 

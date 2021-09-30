@@ -892,5 +892,68 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="1SF32m4KGD">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1M2myG" to="3751:1SF32lWRBI" resolve="SignalSelectionRule" />
+    <node concept="9S07l" id="1SF32m4KGE" role="9Vyp8">
+      <node concept="3clFbS" id="1SF32m4KGF" role="2VODD2">
+        <node concept="3cpWs6" id="1SF32m4KK$" role="3cqZAp">
+          <node concept="3clFbT" id="1SF32m4KKG" role="3cqZAk" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1SF32m4KLo">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1M2myG" to="3751:1SF32lWSFn" resolve="SelectFirstSignal" />
+    <node concept="9S07l" id="1SF32m4KLp" role="9Vyp8">
+      <node concept="3clFbS" id="1SF32m4KLq" role="2VODD2">
+        <node concept="3cpWs6" id="1SF32m4KLr" role="3cqZAp">
+          <node concept="3clFbT" id="1SF32m4KQm" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1SF32m4KR2">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1M2myG" to="3751:1SF32lXSQZ" resolve="SelectNotRelationshipDataSignal" />
+    <node concept="9S07l" id="1SF32m4KR3" role="9Vyp8">
+      <node concept="3clFbS" id="1SF32m4KR4" role="2VODD2">
+        <node concept="3cpWs6" id="1SF32m4KR5" role="3cqZAp">
+          <node concept="3clFbT" id="1SF32m4KR6" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1SF32m4KVo">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1M2myG" to="3751:1SF32lWSFZ" resolve="SelectRandomSignal" />
+    <node concept="9S07l" id="1SF32m4KVp" role="9Vyp8">
+      <node concept="3clFbS" id="1SF32m4KVq" role="2VODD2">
+        <node concept="3cpWs6" id="1SF32m4KVr" role="3cqZAp">
+          <node concept="3clFbT" id="1SF32m4KVs" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1SF32m4KWb">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1M2myG" to="3751:1SF32lWSGB" resolve="SelectRelationshipDataSignal" />
+    <node concept="9S07l" id="1SF32m4KWc" role="9Vyp8">
+      <node concept="3clFbS" id="1SF32m4KWd" role="2VODD2">
+        <node concept="3cpWs6" id="1SF32m4KWe" role="3cqZAp">
+          <node concept="3clFbT" id="1SF32m4KWf" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

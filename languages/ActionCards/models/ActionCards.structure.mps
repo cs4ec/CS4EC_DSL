@@ -605,5 +605,12 @@
       <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals" />
     </node>
   </node>
+  <node concept="1TIwiD" id="1SF32lRXYq">
+    <property role="EcuMT" value="33966321878163354" />
+    <property role="3GE5qa" value="ActionCard" />
+    <property role="TrG5h" value="AdmissionAction" />
+    <property role="34LRSv" value="admission action" />
+    <ref role="1TJDcQ" node="2VPlUUsG6x$" resolve="Action" />
+  </node>
 </model>
 

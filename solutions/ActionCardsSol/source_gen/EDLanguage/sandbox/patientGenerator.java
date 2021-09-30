@@ -30,7 +30,7 @@ public class patientGenerator extends AgentGenerator {
 
     Signal sendSignalTemp = new Signal();
 
-
+    sendSignalTemp.setName("NewpatientArrive");
     sendSignalTemp.AddData("patient", a);
     b.PushMission(sendSignalTemp);
 

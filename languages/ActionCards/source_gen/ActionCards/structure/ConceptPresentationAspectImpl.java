@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Action;
   private ConceptPresentation props_ActionCard;
   private ConceptPresentation props_ActionStep;
+  private ConceptPresentation props_AdmissionAction;
   private ConceptPresentation props_AtributeLine;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeCondition;
@@ -68,6 +69,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActionStep = cpb.create();
         }
         return props_ActionStep;
+      case LanguageConceptSwitch.AdmissionAction:
+        if (props_AdmissionAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_AdmissionAction = cpb.create();
+        }
+        return props_AdmissionAction;
       case LanguageConceptSwitch.AtributeLine:
         if (props_AtributeLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

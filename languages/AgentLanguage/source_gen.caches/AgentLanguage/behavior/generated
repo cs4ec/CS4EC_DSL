@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="7myteiaorcyy9ipw2rcls91fx2obqh5">
+<product version="3" modelHash="5v1z7qcc5vrmlu0pxw99g57y6p2z7et">
   <files names="Actor__BehaviorDescriptor.java:AttributeReference__BehaviorDescriptor.java:Attribute__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:BehaviourElement__BehaviorDescriptor.java:BehaviourSequence__BehaviorDescriptor.java:ExpressionCondition__BehaviorDescriptor.java:RoomType__BehaviorDescriptor.java:SendSignalAction__BehaviorDescriptor.java:SignalInitReference__BehaviorDescriptor.java" />
 </product>
 

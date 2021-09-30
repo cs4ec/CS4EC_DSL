@@ -6,7 +6,7 @@
   <dependency className="ActionCardsSol.AC1.ActionThreeTriggerSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="ActionCardsSol.AC1.ActionTwoTriggerSignal">
+  <dependency className="ActionCardsSol.AC1.AdmitPatientTriggerSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.CoughTest">
@@ -16,7 +16,7 @@
   <dependency className="ActionCardsSol.AC1.Doc">
     <classNode dependClassName="EDLanguage.sandbox.ActionFourTriggerSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ActionThreeTriggerSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.ActionTwoTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmitPatientTriggerSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
@@ -24,13 +24,17 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
@@ -116,6 +120,7 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.List" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />

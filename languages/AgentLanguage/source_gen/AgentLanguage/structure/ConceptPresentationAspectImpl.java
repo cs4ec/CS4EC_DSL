@@ -61,6 +61,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PossibilityCondition;
   private ConceptPresentation props_ProcessingTimeLine;
   private ConceptPresentation props_ProcessingTimeTable;
+  private ConceptPresentation props_Relationship;
   private ConceptPresentation props_RemoveRelationshipAction;
   private ConceptPresentation props_ResultCondition;
   private ConceptPresentation props_Room;
@@ -69,12 +70,19 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RoomType;
   private ConceptPresentation props_RoomTypeReference;
   private ConceptPresentation props_ScenarioBuilder;
+  private ConceptPresentation props_SelectFirstSignal;
+  private ConceptPresentation props_SelectNotRelationshipDataSignal;
+  private ConceptPresentation props_SelectRandomSignal;
+  private ConceptPresentation props_SelectRelationshipDataSignal;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
   private ConceptPresentation props_Signal;
   private ConceptPresentation props_SignalDefinition;
   private ConceptPresentation props_SignalInitReference;
   private ConceptPresentation props_SignalReference;
+  private ConceptPresentation props_SignalSelectionRule;
+  private ConceptPresentation props_SignalSelectionRuleLine;
+  private ConceptPresentation props_SignalSelectionStrategy;
   private ConceptPresentation props_SignalTrigger;
   private ConceptPresentation props_SpaceAtCondition;
   private ConceptPresentation props_StayAction;
@@ -471,6 +479,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ProcessingTimeTable = cpb.create();
         }
         return props_ProcessingTimeTable;
+      case LanguageConceptSwitch.Relationship:
+        if (props_Relationship == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Relationship = cpb.create();
+        }
+        return props_Relationship;
       case LanguageConceptSwitch.RemoveRelationshipAction:
         if (props_RemoveRelationshipAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -531,6 +546,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ScenarioBuilder = cpb.create();
         }
         return props_ScenarioBuilder;
+      case LanguageConceptSwitch.SelectFirstSignal:
+        if (props_SelectFirstSignal == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select first signal");
+          props_SelectFirstSignal = cpb.create();
+        }
+        return props_SelectFirstSignal;
+      case LanguageConceptSwitch.SelectNotRelationshipDataSignal:
+        if (props_SelectNotRelationshipDataSignal == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SelectNotRelationshipDataSignal");
+          props_SelectNotRelationshipDataSignal = cpb.create();
+        }
+        return props_SelectNotRelationshipDataSignal;
+      case LanguageConceptSwitch.SelectRandomSignal:
+        if (props_SelectRandomSignal == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select a random signal");
+          props_SelectRandomSignal = cpb.create();
+        }
+        return props_SelectRandomSignal;
+      case LanguageConceptSwitch.SelectRelationshipDataSignal:
+        if (props_SelectRelationshipDataSignal == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select signal based on relationship of data");
+          props_SelectRelationshipDataSignal = cpb.create();
+        }
+        return props_SelectRelationshipDataSignal;
       case LanguageConceptSwitch.SelfInstance:
         if (props_SelfInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -577,6 +620,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SignalReference = cpb.create();
         }
         return props_SignalReference;
+      case LanguageConceptSwitch.SignalSelectionRule:
+        if (props_SignalSelectionRule == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SignalSelectionRule");
+          props_SignalSelectionRule = cpb.create();
+        }
+        return props_SignalSelectionRule;
+      case LanguageConceptSwitch.SignalSelectionRuleLine:
+        if (props_SignalSelectionRuleLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SignalSelectionRuleLine");
+          props_SignalSelectionRuleLine = cpb.create();
+        }
+        return props_SignalSelectionRuleLine;
+      case LanguageConceptSwitch.SignalSelectionStrategy:
+        if (props_SignalSelectionStrategy == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("signal selection strategy");
+          props_SignalSelectionStrategy = cpb.create();
+        }
+        return props_SignalSelectionStrategy;
       case LanguageConceptSwitch.SignalTrigger:
         if (props_SignalTrigger == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

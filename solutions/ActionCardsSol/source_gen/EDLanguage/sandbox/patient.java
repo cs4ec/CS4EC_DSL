@@ -8,6 +8,7 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
 import simcore.Signals.Signal;
+import java.util.List;
 
 public class patient extends Actor {
 
@@ -21,6 +22,15 @@ public class patient extends Actor {
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
     super(space, grid, pstrStartLocation);
   }
+
+  protected Signal selectSignal(List<Signal> plstSignals) {
+    if (plstSignals.isEmpty()) {
+      return null;
+    }
+    return null;
+  }
+
+
 
   public Behaviour BuildActionFromSignal(Signal s) {
     switch (s.getName()) {

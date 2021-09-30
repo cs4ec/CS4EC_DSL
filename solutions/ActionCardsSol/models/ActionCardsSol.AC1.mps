@@ -23,6 +23,7 @@
       <concept id="2876623929997959972" name="ActionCards.structure.PatientArrivalLine" flags="ng" index="c0n4t">
         <property id="2876623929997959984" name="NumPatientsInHour" index="c0n49" />
       </concept>
+      <concept id="33966321878163354" name="ActionCards.structure.AdmissionAction" flags="ng" index="2lDReE" />
       <concept id="5402567240278617686" name="ActionCards.structure.EDScenario" flags="ng" index="2_0uwh">
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
       </concept>
@@ -152,14 +153,6 @@
       <node concept="UeIYj" id="2lOlAdP2IAX" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
       </node>
-      <node concept="2GGxJi" id="2lOlAdPrsPw" role="3tG3Yq">
-        <ref role="3tVEyn" node="2lOlAdP0yiq" resolve="Action One" />
-        <ref role="2GGxGe" node="2lOlAdP0yix" resolve="Action Two" />
-        <node concept="3tEh0H" id="2lOlAdP$iJk" role="1hyIAf">
-          <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-          <ref role="3tE8WY" node="av1M7vefIR" resolve="INOVA" />
-        </node>
-      </node>
       <node concept="2GGxJi" id="2lOlAdP_QCC" role="3tG3Yq">
         <ref role="3tVEyn" node="2lOlAdP0yiq" resolve="Action One" />
         <ref role="2GGxGe" node="2lOlAdPhCdg" resolve="ActionThree" />
@@ -167,16 +160,6 @@
           <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
           <ref role="3tE8WY" node="av1M7vefIR" resolve="INOVA" />
         </node>
-      </node>
-    </node>
-    <node concept="2MhjZa" id="2lOlAdP0yix" role="2MhjZp">
-      <property role="TrG5h" value="Action Two" />
-      <property role="3lFixl" value="true" />
-      <node concept="2_8ZN7" id="2lOlAdP0yiB" role="2_8HaY">
-        <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
-      </node>
-      <node concept="UeIYj" id="2lOlAdP3BDj" role="3lENdC">
-        <ref role="Udx8D" node="EFW1mYOHdY" resolve="MajorsCBay" />
       </node>
     </node>
     <node concept="2MhjZa" id="2lOlAdPhCdg" role="2MhjZp">
@@ -373,6 +356,16 @@
           </node>
         </node>
       </node>
+      <node concept="37mRIm" id="1SF32ml0sA" role="37mRID">
+        <property role="37mO49" value="33966321885775532" />
+        <node concept="gqqVs" id="1SF32ml0s_" role="37mO4d">
+          <property role="gqqTZ" value="478.0" />
+          <property role="gqqTW" value="525.0" />
+          <property role="gqqTX" value="204.0" />
+          <property role="gqqTy" value="132.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="EFW1mXV2de" role="2MhjZp">
       <property role="TrG5h" value="Action Four" />
@@ -382,6 +375,19 @@
       </node>
       <node concept="UeIYj" id="EFW1mXV2dv" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHdY" resolve="MajorsCBay" />
+      </node>
+      <node concept="2GGxJi" id="1SF32ml0tn" role="3tG3Yq">
+        <ref role="3tVEyn" node="EFW1mXV2de" resolve="Action Four" />
+        <ref role="2GGxGe" node="1SF32ml0qG" resolve="AdmitPatient" />
+      </node>
+    </node>
+    <node concept="2lDReE" id="1SF32ml0qG" role="2MhjZp">
+      <property role="TrG5h" value="AdmitPatient" />
+      <node concept="2_8ZN7" id="1SF32ml0sy" role="2_8HaY">
+        <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
+      </node>
+      <node concept="UeIYj" id="1SF32ml0sw" role="3lENdC">
+        <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
       </node>
     </node>
   </node>

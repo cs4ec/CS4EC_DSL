@@ -19,6 +19,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActionCard = createDescriptorForActionCard();
   /*package*/ final ConceptDescriptor myConceptActionStep = createDescriptorForActionStep();
+  /*package*/ final ConceptDescriptor myConceptAdmissionAction = createDescriptorForAdmissionAction();
   /*package*/ final ConceptDescriptor myConceptAtributeLine = createDescriptorForAtributeLine();
   /*package*/ final ConceptDescriptor myConceptAttribute = createDescriptorForAttribute();
   /*package*/ final ConceptDescriptor myConceptAttributeCondition = createDescriptorForAttributeCondition();
@@ -64,7 +65,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptAtributeLine, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeTable, myConceptBranch, myConceptCondition, myConceptConditional, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseaseList, myConceptEDScenario, myConceptGoToAction, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptResource, myConceptSeverity, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptTest, myConceptTestActionStep, myConceptTestResult, myConceptVariable);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptAdmissionAction, myConceptAtributeLine, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeTable, myConceptBranch, myConceptCondition, myConceptConditional, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseaseList, myConceptEDScenario, myConceptGoToAction, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptResource, myConceptSeverity, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptTest, myConceptTestActionStep, myConceptTestResult, myConceptVariable);
   }
 
   @Override
@@ -77,6 +78,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActionCard;
       case LanguageConceptSwitch.ActionStep:
         return myConceptActionStep;
+      case LanguageConceptSwitch.AdmissionAction:
+        return myConceptAdmissionAction;
       case LanguageConceptSwitch.AtributeLine:
         return myConceptAtributeLine;
       case LanguageConceptSwitch.Attribute:
@@ -174,6 +177,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733211");
     b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAdmissionAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "AdmissionAction", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x78ac3095dfdf9aL);
+    b.class_(false, false, false);
+    b.super_("ActionCards.structure.Action", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/33966321878163354");
+    b.version(2);
+    b.alias("admission action");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAtributeLine() {

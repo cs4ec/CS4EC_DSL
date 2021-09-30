@@ -29,8 +29,8 @@ public class patientGenerator extends AgentGenerator {
     Board b = new ToolBox(this).ReadBoard();
 
     Signal sendSignalTemp = new Signal();
-    sendSignalTemp.setName("NewPatientArrive");
 
+    sendSignalTemp.setName("NewpatientArrive");
     sendSignalTemp.AddData("patient", a);
     b.PushMission(sendSignalTemp);
 

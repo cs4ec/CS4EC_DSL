@@ -87,6 +87,12 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3l6cNjec6HU" resolve="BehaviourElement" />
     </node>
+    <node concept="1TJgyj" id="1SF32lWSJU" role="1TKVEi">
+      <property role="IQ2ns" value="33966321879452666" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="signalselectionstrategy" />
+      <ref role="20lvS9" node="1SF32lWRB3" resolve="SignalSelectionStrategy" />
+    </node>
     <node concept="PrWs8" id="3l6cNjec6HS" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -117,6 +123,13 @@
       <property role="20kJfa" value="agents" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3l6cNjebRG2" resolve="ActorInstantiation" />
+    </node>
+    <node concept="1TJgyj" id="1SF32mdWBO" role="1TKVEi">
+      <property role="IQ2ns" value="33966321883924980" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="relationships" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1SF32mdTHt" resolve="Relationship" />
     </node>
   </node>
   <node concept="1TIwiD" id="3l6cNjebRG2">
@@ -1684,6 +1697,106 @@
       <property role="20kJfa" value="target" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="7o6PzEpI6ey" resolve="HumanInstance" />
+    </node>
+    <node concept="1TJgyi" id="1SF32lSZQ9" role="1TKVEl">
+      <property role="IQ2nx" value="33966321878433161" />
+      <property role="TrG5h" value="relationshipName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1SF32lWRB3">
+    <property role="EcuMT" value="33966321879448003" />
+    <property role="TrG5h" value="SignalSelectionStrategy" />
+    <property role="34LRSv" value="signal selection strategy" />
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1SF32lWSIn" role="1TKVEi">
+      <property role="IQ2ns" value="33966321879452567" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rules" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1SF32lWRBm" resolve="SignalSelectionRuleLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1SF32lWRBm">
+    <property role="EcuMT" value="33966321879448022" />
+    <property role="TrG5h" value="SignalSelectionRuleLine" />
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="1SF32lWRBw" role="1TKVEi">
+      <property role="IQ2ns" value="33966321879448032" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
+    </node>
+    <node concept="1TJgyj" id="1SF32lWRBy" role="1TKVEi">
+      <property role="IQ2ns" value="33966321879448034" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rule" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1SF32lWRBI" resolve="SignalSelectionRule" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1SF32lWRBI">
+    <property role="EcuMT" value="33966321879448046" />
+    <property role="TrG5h" value="SignalSelectionRule" />
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="1SF32lWSFn">
+    <property role="EcuMT" value="33966321879452375" />
+    <property role="TrG5h" value="SelectFirstSignal" />
+    <property role="34LRSv" value="select first signal" />
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1TJDcQ" node="1SF32lWRBI" resolve="SignalSelectionRule" />
+  </node>
+  <node concept="1TIwiD" id="1SF32lWSFZ">
+    <property role="EcuMT" value="33966321879452415" />
+    <property role="TrG5h" value="SelectRandomSignal" />
+    <property role="34LRSv" value="select a random signal" />
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1TJDcQ" node="1SF32lWRBI" resolve="SignalSelectionRule" />
+  </node>
+  <node concept="1TIwiD" id="1SF32lWSGB">
+    <property role="EcuMT" value="33966321879452455" />
+    <property role="TrG5h" value="SelectRelationshipDataSignal" />
+    <property role="34LRSv" value="select signal based on relationship of data" />
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1TJDcQ" node="1SF32lWRBI" resolve="SignalSelectionRule" />
+    <node concept="1TJgyi" id="1SF32lWSGL" role="1TKVEl">
+      <property role="IQ2nx" value="33966321879452465" />
+      <property role="TrG5h" value="relationshipName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="1SF32lWSGN" role="1TKVEl">
+      <property role="IQ2nx" value="33966321879452467" />
+      <property role="TrG5h" value="dataName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1SF32lXSQZ">
+    <property role="EcuMT" value="33966321879715263" />
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <property role="TrG5h" value="SelectNotRelationshipDataSignal" />
+    <ref role="1TJDcQ" node="1SF32lWRBI" resolve="SignalSelectionRule" />
+    <node concept="1TJgyi" id="1SF32lXXNI" role="1TKVEl">
+      <property role="IQ2nx" value="33966321879735534" />
+      <property role="TrG5h" value="relationshipName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="1SF32lXXNK" role="1TKVEl">
+      <property role="IQ2nx" value="33966321879735536" />
+      <property role="TrG5h" value="dataName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1SF32mdTHt">
+    <property role="EcuMT" value="33966321883913053" />
+    <property role="TrG5h" value="Relationship" />
+    <property role="34LRSv" value="relationship" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="1SF32mdTHD" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

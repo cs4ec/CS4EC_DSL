@@ -209,6 +209,16 @@
           <property role="3F0ifm" value="add staff" />
         </node>
       </node>
+      <node concept="3F0ifn" id="1SF32mdWBm" role="3EZMnx">
+        <property role="3F0ifm" value="Relationships:" />
+      </node>
+      <node concept="3F2HdR" id="1SF32mdWCH" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32mdWBO" resolve="relationships" />
+        <node concept="l2Vlx" id="1SF32mdWCJ" role="2czzBx" />
+        <node concept="lj46D" id="1SF32mdWCZ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="pj6Ft" id="4VcHHLiE1KC" role="3F10Kt">
         <property role="VOm3f" value="true" />
       </node>
@@ -978,6 +988,9 @@
           <node concept="2iRkQZ" id="7o6PzEpEZAc" role="2iSdaV" />
         </node>
         <node concept="3F0ifn" id="7o6PzEpEZ$x" role="3EZMnx" />
+        <node concept="3F1sOY" id="1SF32lWSJZ" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:1SF32lWSJU" resolve="signalselectionstrategy" />
+        </node>
         <node concept="3F0ifn" id="7o6PzEpEZAC" role="3EZMnx">
           <property role="3F0ifm" value="who" />
         </node>
@@ -1237,7 +1250,7 @@
     <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
     <ref role="1XX52x" to="3751:2YIKz$5ky3c" resolve="NewPatientSignal" />
     <node concept="3F0ifn" id="2YIKz$5ky3n" role="2wV5jI">
-      <property role="3F0ifm" value="NewPatientArrive" />
+      <property role="3F0ifm" value="NewpatientArrive" />
     </node>
   </node>
   <node concept="24kQdi" id="J03_IHXFWQ">
@@ -1991,12 +2004,130 @@
     <ref role="1XX52x" to="3751:EFW1mXVky1" resolve="RemoveRelationshipAction" />
     <node concept="3EZMnI" id="EFW1mZKI3D" role="2wV5jI">
       <node concept="3F0ifn" id="EFW1mZKI3K" role="3EZMnx">
-        <property role="3F0ifm" value="Remove relationship with" />
+        <property role="3F0ifm" value="Remove relationship '" />
+      </node>
+      <node concept="3F0A7n" id="1SF32lSZXj" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32lSZQ9" resolve="relationshipName" />
+      </node>
+      <node concept="3F0ifn" id="1SF32lSZXd" role="3EZMnx">
+        <property role="3F0ifm" value="' with" />
       </node>
       <node concept="3F1sOY" id="EFW1mZKI3Q" role="3EZMnx">
         <ref role="1NtTu8" to="3751:EFW1mZKI4V" resolve="target" />
       </node>
       <node concept="l2Vlx" id="EFW1mZKI3G" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1SF32lWRC1">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1XX52x" to="3751:1SF32lWRBm" resolve="SignalSelectionRuleLine" />
+    <node concept="3EZMnI" id="1SF32lWRC3" role="2wV5jI">
+      <node concept="3F0ifn" id="1SF32lWSEP" role="3EZMnx">
+        <property role="3F0ifm" value="if" />
+      </node>
+      <node concept="3F1sOY" id="1SF32lWRCa" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32lWRBw" resolve="condition" />
+      </node>
+      <node concept="3F0ifn" id="1SF32lWSEZ" role="3EZMnx">
+        <property role="3F0ifm" value="do" />
+      </node>
+      <node concept="3F1sOY" id="1SF32lWRCg" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32lWRBy" resolve="rule" />
+      </node>
+      <node concept="l2Vlx" id="1SF32lWRC6" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1SF32lWSFx">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1XX52x" to="3751:1SF32lWSFn" resolve="SelectFirstSignal" />
+    <node concept="3EZMnI" id="1SF32lWSFG" role="2wV5jI">
+      <node concept="3F0ifn" id="1SF32lWSFN" role="3EZMnx">
+        <property role="3F0ifm" value="select first signal" />
+      </node>
+      <node concept="l2Vlx" id="1SF32lWSFJ" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1SF32lWSG9">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1XX52x" to="3751:1SF32lWSFZ" resolve="SelectRandomSignal" />
+    <node concept="3EZMnI" id="1SF32lWSGk" role="2wV5jI">
+      <node concept="3F0ifn" id="1SF32lWSGr" role="3EZMnx">
+        <property role="3F0ifm" value="Select a random signal" />
+      </node>
+      <node concept="l2Vlx" id="1SF32lWSGn" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1SF32lWSGQ">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1XX52x" to="3751:1SF32lWSGB" resolve="SelectRelationshipDataSignal" />
+    <node concept="3EZMnI" id="1SF32lWSH1" role="2wV5jI">
+      <node concept="3F0ifn" id="1SF32lWSH8" role="3EZMnx">
+        <property role="3F0ifm" value="Select signal where data item '" />
+      </node>
+      <node concept="3F0A7n" id="1SF32lWSHe" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32lWSGN" resolve="dataName" />
+      </node>
+      <node concept="3F0ifn" id="1SF32lWSHm" role="3EZMnx">
+        <property role="3F0ifm" value="' is in relationship '" />
+      </node>
+      <node concept="3F0A7n" id="1SF32lWSHw" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32lWSGL" resolve="relationshipName" />
+      </node>
+      <node concept="3F0ifn" id="1SF32lWSHG" role="3EZMnx">
+        <property role="3F0ifm" value="'" />
+      </node>
+      <node concept="l2Vlx" id="1SF32lWSH4" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1SF32lWSIp">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1XX52x" to="3751:1SF32lWRB3" resolve="SignalSelectionStrategy" />
+    <node concept="3EZMnI" id="1SF32lWSII" role="2wV5jI">
+      <node concept="2iRkQZ" id="1SF32lWSIJ" role="2iSdaV" />
+      <node concept="3EZMnI" id="1SF32lWSI$" role="3EZMnx">
+        <node concept="3F0ifn" id="1SF32lWSIF" role="3EZMnx">
+          <property role="3F0ifm" value="Signal Selection Strategy" />
+        </node>
+        <node concept="l2Vlx" id="1SF32lWSIB" role="2iSdaV" />
+      </node>
+      <node concept="3F0ifn" id="1SF32lWSIW" role="3EZMnx">
+        <property role="3F0ifm" value="------------------------------" />
+      </node>
+      <node concept="3F2HdR" id="1SF32lWSJ7" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32lWSIn" resolve="rules" />
+        <node concept="2iRkQZ" id="1SF32lWSJ9" role="2czzBx" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1SF32lXYVa">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1XX52x" to="3751:1SF32lXSQZ" resolve="SelectNotRelationshipDataSignal" />
+    <node concept="3EZMnI" id="1SF32lXYVl" role="2wV5jI">
+      <node concept="3F0ifn" id="1SF32lXZrl" role="3EZMnx">
+        <property role="3F0ifm" value="Select signal where data '" />
+      </node>
+      <node concept="3F0A7n" id="1SF32lXZrr" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32lXXNK" resolve="dataName" />
+      </node>
+      <node concept="3F0ifn" id="1SF32lXZrz" role="3EZMnx">
+        <property role="3F0ifm" value="' is not present in relationship '" />
+      </node>
+      <node concept="3F0A7n" id="1SF32lXZrH" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1SF32lXXNI" resolve="relationshipName" />
+      </node>
+      <node concept="3F0ifn" id="1SF32lXZrT" role="3EZMnx">
+        <property role="3F0ifm" value="'" />
+      </node>
+      <node concept="l2Vlx" id="1SF32lXYVo" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1SF32mdTHF">
+    <ref role="1XX52x" to="3751:1SF32mdTHt" resolve="Relationship" />
+    <node concept="3EZMnI" id="1SF32mdTHQ" role="2wV5jI">
+      <node concept="3F0A7n" id="1SF32mdTHX" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="1SF32mdTHT" role="2iSdaV" />
     </node>
   </node>
 </model>

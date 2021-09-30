@@ -4,9 +4,9 @@ package EDLanguage.sandbox;
 
 import simcore.Signals.ActorTypeSignal;
 
-public class ActionTwoTriggerSignal extends ActorTypeSignal {
-  public ActionTwoTriggerSignal() {
-    this.setName("ActionTwoTrigger");
+public class AdmitPatientTriggerSignal extends ActorTypeSignal {
+  public AdmitPatientTriggerSignal() {
+    this.setName("AdmitPatientTrigger");
     this.setDescription("h");
     this.AddActor("Doc");
   }

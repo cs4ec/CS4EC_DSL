@@ -113,12 +113,8 @@ public class EDBuilder implements ContextBuilder<Object> {
       grid.moveTo(obj, (int) pt.getX(), (int) pt.getY());
     }
 
-    NetworkBuilder builder = new NetworkBuilder("MyPatients", context, true);
-    builder.buildNetwork();
-    // Create network for 'mySeenPatients' 
-    NetworkBuilder builder2 = new NetworkBuilder("MySeenPatients", context, true);
-    builder2.buildNetwork();
-
+    new NetworkBuilder("CurrentPatientAllocations", context, true).buildNetwork();
+    new NetworkBuilder("HistoricalPatientAllocations", context, true).buildNetwork();
 
     return context;
   }

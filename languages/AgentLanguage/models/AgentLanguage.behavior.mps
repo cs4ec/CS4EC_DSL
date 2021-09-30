@@ -3112,7 +3112,7 @@
           <node concept="3clFbS" id="2YIKz$5m51F" role="Jncv$">
             <node concept="3cpWs6" id="2YIKz$5m6bJ" role="3cqZAp">
               <node concept="Xl_RD" id="2YIKz$5m6c7" role="3cqZAk">
-                <property role="Xl_RC" value="NewPatientArrive" />
+                <property role="Xl_RC" value="NewpatientArrive" />
               </node>
             </node>
           </node>

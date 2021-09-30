@@ -6,6 +6,7 @@
       <modulePath path="$PROJECT_DIR$/languages/ActionCards/ActionCards.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/AgentLanguage/AgentLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/BuiltEnvironment/BuiltEnvironment.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/PatientSelectionStrategy/PatientSelectionStrategy.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/StaffDefinitionLanguage/StaffDefinitionLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/ActionCardsSol/ActionCardsSol.msd" folder="runtime" />

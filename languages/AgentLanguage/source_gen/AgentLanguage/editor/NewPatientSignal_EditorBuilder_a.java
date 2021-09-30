@@ -29,7 +29,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
   }
 
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "NewPatientArrive");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "NewpatientArrive");
     editorCell.setCellId("Constant_f911vz_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
