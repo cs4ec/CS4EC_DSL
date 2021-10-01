@@ -42,7 +42,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Double pProportionSymptomatic = params.getDouble("PercentagePrevSymptomatic");
 
     Boolean pBool = params.getBoolean("UsePathFinding");
-    ModelParameterStore.UsePathFinding = pBool;
+    ModelParameterStore.UsePathFinding = false;
 
     RunEnvironment.getInstance().endAt(86400);
 

@@ -68,8 +68,6 @@ import simcore.utilities.AStar;
  */
 public class Actor extends Agent {
 	  protected int mintMyMaxPatients = 1;
-//	  protected Network myPatientsNetwork;
-//	  protected Network mySeenPatientsNetwork;
 	  protected Schedule schedule;
 	  protected Order curOrder;
 
@@ -79,8 +77,6 @@ public class Actor extends Agent {
 		this.isIdle = true;
 		schedule = new Schedule();
 		
-		// Create network for 'myPatients'
-
 	    // Traverse the ancestors of class to record all the Fields
 		fields = new ArrayList<Field>();
 
@@ -130,10 +126,6 @@ public class Actor extends Agent {
 	
 	public void Perceive() {	
 		Board board = ReadBoard();
-		
-		//If my active action has now moved into a passive one -> Pick a new Active Action
-		// If my passive action has moved to active -> consider that as a candidate
-
 		// If I do not have a current active action, then select one
 		if (isIdle) {
 			
@@ -157,7 +149,6 @@ public class Actor extends Agent {
 					if(signalAction != null && !(signalAction.getCurrentStep() instanceof PassiveBehaviourStep)) {
 						myCurrentActions.add(signalAction);
 						myActiveAction = signalAction;
-//						InitAction();
 					}
 				}
 			} else {
@@ -185,10 +176,6 @@ public class Actor extends Agent {
 				
 				// if this agent is in the room..
 				if (targetLocation.WithInside(this)) {
-					//... and this room is a waiting room, the patient will now set itself the action of taking a seat
-//					if (targetLocation.getRoomType() instanceof WaitingRoom) {
-//						FindAnOccupiable(Seat.class);
-//					} else 
 						if (((MoveToOrder) order).getOccupiable() != null) {
 						FindAnOccupiable(((MoveToOrder) order).getOccupiable());
 					}
@@ -224,6 +211,10 @@ public class Actor extends Agent {
 		// Read the board for signals, and find ones for me
 		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
 		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
+		
+		if(plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
+			return null;
+		}
 		
 		// First see if there are any direct messages for me and prioritise those
 		Signal s = selectSignal(plstDirectSignals);

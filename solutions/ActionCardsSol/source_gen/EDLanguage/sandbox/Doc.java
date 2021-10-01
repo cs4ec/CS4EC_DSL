@@ -16,7 +16,6 @@ import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.basicStructures.Board;
-import simcore.action.InstantBehaviourStep;
 import java.util.ArrayList;
 
 public class Doc extends Actor {
@@ -474,7 +473,7 @@ public class Doc extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class RemoveRelationshipAction_b0d extends InstantBehaviourStep {
+  public class RemoveRelationshipAction_b0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     public RemoveRelationshipAction_b0d(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -516,7 +515,7 @@ public class Doc extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class RemoveRelationshipAction_b0d_0 extends InstantBehaviourStep {
+  public class RemoveRelationshipAction_b0d_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     public RemoveRelationshipAction_b0d_0(Behaviour behaviour) {
       this.behaviour = behaviour;

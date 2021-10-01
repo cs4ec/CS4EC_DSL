@@ -2029,7 +2029,7 @@
         <ref role="1NtTu8" to="3751:1SF32lWRBw" resolve="condition" />
       </node>
       <node concept="3F0ifn" id="1SF32lWSEZ" role="3EZMnx">
-        <property role="3F0ifm" value="do" />
+        <property role="3F0ifm" value="then" />
       </node>
       <node concept="3F1sOY" id="1SF32lWRCg" role="3EZMnx">
         <ref role="1NtTu8" to="3751:1SF32lWRBy" resolve="rule" />
