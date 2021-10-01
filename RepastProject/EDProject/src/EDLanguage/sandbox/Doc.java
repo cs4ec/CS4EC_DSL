@@ -16,6 +16,7 @@ import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.basicStructures.Board;
+import simcore.action.PassiveBehaviourStep;
 import java.util.ArrayList;
 
 public class Doc extends Actor {
@@ -249,10 +250,26 @@ public class Doc extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
     }
   }
-  public class SendSignalAction_c0b extends BehaviourStep {
+  public class StayAction_c0b extends PassiveBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 180;
+    }
+  }
+  public class SendSignalAction_d0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_c0b(Behaviour behaviour) {
+    public SendSignalAction_d0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -308,10 +325,26 @@ public class Doc extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doc.this));
     }
   }
-  public class SendSignalAction_c0b_1 extends BehaviourStep {
+  public class StayAction_c0b_1 extends PassiveBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0b_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 180;
+    }
+  }
+  public class SendSignalAction_d0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_c0b_1(Behaviour behaviour) {
+    public SendSignalAction_d0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -544,7 +577,8 @@ public class Doc extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b(behaviourBuilder));
     plstSteps.add(new OrderAction_b0b(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0b(behaviourBuilder));
+    plstSteps.add(new StayAction_c0b(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_d0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

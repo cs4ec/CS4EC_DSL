@@ -41,6 +41,7 @@
         <child id="2698877061866373100" name="condition" index="1hyIAf" />
       </concept>
       <concept id="3383707102503528548" name="ActionCards.structure.Action" flags="ng" index="2MhjZa">
+        <property id="33966321893684004" name="duration" index="2mH1Wk" />
         <property id="4544390881339097912" name="requiresPatient" index="3lFixl" />
         <reference id="188877551434373492" name="resource" index="3tPpTl" />
         <child id="5402567240276710649" name="staffTypeReference" index="2_8HaY" />
@@ -165,6 +166,7 @@
     <node concept="2MhjZa" id="2lOlAdPhCdg" role="2MhjZp">
       <property role="TrG5h" value="ActionThree" />
       <property role="3lFixl" value="true" />
+      <property role="2mH1Wk" value="3" />
       <node concept="2_8ZN7" id="2lOlAdPhCdK" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
       </node>

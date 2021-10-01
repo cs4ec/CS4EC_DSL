@@ -130,6 +130,11 @@
       <property role="TrG5h" value="yPos" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="1SF32mNbc$" role="1TKVEl">
+      <property role="IQ2nx" value="33966321893684004" />
+      <property role="TrG5h" value="duration" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="av1M7viD_O" role="1TKVEi">
       <property role="IQ2ns" value="188877551434373492" />
       <property role="20kJfa" value="resource" />
