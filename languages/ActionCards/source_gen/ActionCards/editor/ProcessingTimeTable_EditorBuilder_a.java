@@ -7,6 +7,8 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import de.slisson.mps.tables.runtime.cells.TableEditor;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
@@ -61,9 +63,17 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   }
 
   /*package*/ EditorCell createCell() {
-    return createTable_1();
+    return createCollection_0();
   }
 
+  private EditorCell createCollection_0() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
+    editorCell.setCellId("Collection_p3yi9b_a");
+    editorCell.setBig(true);
+    setCellContext(editorCell);
+    editorCell.addEditorCell(createTable_1());
+    return editorCell;
+  }
   private EditorCell createTable_0(final EditorContext editorContext, final SNode node) {
 
     final Wrappers._T<TableEditor> editorCell = new Wrappers._T<TableEditor>(null);
@@ -88,15 +98,13 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
                 List<HeaderGrid> headerGrids = new ArrayList<HeaderGrid>(0);
                 grid.setRowHeaders(headerGrids);
               }
-              final Grid childGrid = createChildsVertical_p3yi9b_a0(editorContext, node);
+              final Grid childGrid = createChildsVertical_p3yi9b_a0a(editorContext, node);
               childGrid.setSpanX(Math.max(1, grid.getColumnHeadersSizeX()));
               childGrid.setSpanY(Math.max(1, grid.getRowHeadersSizeY()));
               grid.setElement(0, 0, childGrid);
 
               editorCell.value = new TableEditor(editorContext, node, grid);
-              editorCell.value.setCellId("Table_p3yi9b_a");
-              editorCell.value.setBig(true);
-              setCellContext(editorCell.value);
+              editorCell.value.setCellId("Table_p3yi9b_a0");
 
 
               editorCell.value.init();
@@ -117,11 +125,11 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   private EditorCell createTable_1() {
     return createTable_0(getEditorContext(), myNode);
   }
-  public Grid createChildsVertical_p3yi9b_a0(final EditorContext editorContext, final SNode node) {
+  public Grid createChildsVertical_p3yi9b_a0a(final EditorContext editorContext, final SNode node) {
     Grid grid = new Grid();
     GridAdapter gridAdapter = new GridAdapter(grid, editorContext, node);
 
-    grid.setColumnHeaders(0, 0, createHeaderCollection_p3yi9b_a0a(editorContext, node));
+    grid.setColumnHeaders(0, 0, createHeaderCollection_p3yi9b_a0a0(editorContext, node));
 
     final IHeaderNodeInsertAction insertAction = new ChildNodesInsertAction(node, SLinkOperations.findLinkDeclaration(LINKS.ProcessingTimeLines$Y13M)) {};
 
@@ -192,17 +200,17 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     grid.flattenOneLevel();
     return grid;
   }
-  public HeaderGrid createHeaderCollection_p3yi9b_a0a(final EditorContext editorContext, final SNode node) {
+  public HeaderGrid createHeaderCollection_p3yi9b_a0a0(final EditorContext editorContext, final SNode node) {
     IHeaderNodeInsertAction insertAction = null;
     IHeaderNodeDeleteAction deleteAction = null;
 
     List<HeaderGrid> nodeList = new ArrayList<HeaderGrid>();
-    nodeList.add(createStaticHeader_p3yi9b_a0a0(editorContext, node));
-    nodeList.add(createStaticHeader_p3yi9b_b0a0(editorContext, node));
+    nodeList.add(createStaticHeader_p3yi9b_a0a0a(editorContext, node));
+    nodeList.add(createStaticHeader_p3yi9b_b0a0a(editorContext, node));
 
     return new HeaderGridFactory(editorContext, node, true).createFromHeaderGridList(nodeList);
   }
-  public HeaderGrid createStaticHeader_p3yi9b_a0a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_p3yi9b_a0a0a(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();
@@ -218,7 +226,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     grid.setElement(0, 0, header);
     return grid;
   }
-  public HeaderGrid createStaticHeader_p3yi9b_b0a0(final EditorContext editorContext, final SNode snode) {
+  public HeaderGrid createStaticHeader_p3yi9b_b0a0a(final EditorContext editorContext, final SNode snode) {
     final Style style = new ITableStyleFactory() {
       public Style createStyle(final int columnIndex, final int rowIndex) {
         Style style = new StyleImpl();

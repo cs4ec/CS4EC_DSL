@@ -991,15 +991,18 @@
   <node concept="24kQdi" id="av1M7vc7eg">
     <property role="3GE5qa" value="Testing" />
     <ref role="1XX52x" to="e88n:1rknCs3SeRP" resolve="ProcessingTimeTable" />
-    <node concept="2rfBfz" id="1rknCs3SeVH" role="2wV5jI">
-      <node concept="2reSaE" id="1rknCs3SeVM" role="2rf8GZ">
-        <ref role="2reCK$" to="e88n:1rknCs3SeTx" resolve="ProcessingTimeLines" />
-        <node concept="2r3Xtq" id="1rknCs3VJaA" role="2YiT2b">
-          <node concept="2rfbtV" id="1rknCs3VJeQ" role="uCobI">
-            <property role="2rfbtB" value="Processing Time (hours)" />
-          </node>
-          <node concept="2rfbtV" id="1rknCs3VJeW" role="uCobI">
-            <property role="2rfbtB" value="Occurances" />
+    <node concept="3EZMnI" id="2_JteYNWsdf" role="2wV5jI">
+      <node concept="2iRkQZ" id="2_JteYNWsdg" role="2iSdaV" />
+      <node concept="2rfBfz" id="1rknCs3SeVH" role="3EZMnx">
+        <node concept="2reSaE" id="1rknCs3SeVM" role="2rf8GZ">
+          <ref role="2reCK$" to="e88n:1rknCs3SeTx" resolve="ProcessingTimeLines" />
+          <node concept="2r3Xtq" id="1rknCs3VJaA" role="2YiT2b">
+            <node concept="2rfbtV" id="1rknCs3VJeQ" role="uCobI">
+              <property role="2rfbtB" value="Processing Time (hours)" />
+            </node>
+            <node concept="2rfbtV" id="1rknCs3VJeW" role="uCobI">
+              <property role="2rfbtB" value="Occurances" />
+            </node>
           </node>
         </node>
       </node>
@@ -1466,6 +1469,25 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F0ifn" id="2_JteYNXyz2" role="3EZMnx">
+        <property role="3F0ifm" value="Diseases:" />
+        <node concept="pVoyu" id="2_JteYNXyzh" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="2_JteYNXyzS" role="3EZMnx">
+        <node concept="2iRkQZ" id="2_JteYNXyzT" role="2iSdaV" />
+        <node concept="3F2HdR" id="2_JteYNXyzz" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:2_JteYNXyyK" resolve="diseaseTables" />
+          <node concept="l2Vlx" id="2_JteYNXyz_" role="2czzBx" />
+          <node concept="pVoyu" id="2_JteYNXyzQ" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="pVoyu" id="2_JteYNXy$g" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
     </node>
   </node>
   <node concept="24kQdi" id="1SF32lRXZv">
@@ -1563,6 +1585,59 @@
         <node concept="2iRkQZ" id="1SF32lRY06" role="2iSdaV" />
         <node concept="Veino" id="1SF32lRY07" role="3F10Kt">
           <property role="Vb096" value="fLwANPp/orange" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2_JteYNWs9Q">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="e88n:2_JteYNWs8U" resolve="DiseaseInitialiserLine" />
+    <node concept="2r0Tta" id="2_JteYNWseY" role="2wV5jI">
+      <node concept="2reCLk" id="2_JteYNWseZ" role="2r0Tv6">
+        <node concept="2reCLy" id="2_JteYNWsf0" role="2reCL6">
+          <node concept="3F0A7n" id="2_JteYNWsf1" role="2reSmM">
+            <ref role="1NtTu8" to="e88n:2_JteYNWs9m" resolve="Condition" />
+          </node>
+        </node>
+        <node concept="2reCLy" id="2_JteYNWsf2" role="2reCL6">
+          <node concept="3F0A7n" id="2_JteYNWsf3" role="2reSmM">
+            <ref role="1NtTu8" to="e88n:2_JteYNWs9o" resolve="Prevalence" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2_JteYNWsaD">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="e88n:2_JteYNWsab" resolve="DiseaseInitialiserTable" />
+    <node concept="3EZMnI" id="2_JteYNYsUz" role="2wV5jI">
+      <node concept="3EZMnI" id="2_JteYNYsVB" role="3EZMnx">
+        <node concept="2iRfu4" id="2_JteYNYsVC" role="2iSdaV" />
+        <node concept="3F0ifn" id="2_JteYNYsUL" role="3EZMnx">
+          <property role="3F0ifm" value="Prevalence table for" />
+        </node>
+        <node concept="1iCGBv" id="2_JteYNYsVl" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:2_JteYNWsd6" resolve="Disease" />
+          <node concept="1sVBvm" id="2_JteYNYsVn" role="1sWHZn">
+            <node concept="3F0A7n" id="2_JteYNYsV$" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2iRkQZ" id="2_JteYNYsU$" role="2iSdaV" />
+      <node concept="2rfBfz" id="2_JteYNWsb6" role="3EZMnx">
+        <node concept="2reSaE" id="2_JteYNWsbm" role="2rf8GZ">
+          <ref role="2reCK$" to="e88n:2_JteYNWsaB" resolve="lines" />
+          <node concept="2r3Xtq" id="2_JteYNWscj" role="2YiT2b">
+            <node concept="2rfbtV" id="2_JteYNWsco" role="uCobI">
+              <property role="2rfbtB" value="Condition" />
+            </node>
+            <node concept="2rfbtV" id="2_JteYNWscu" role="uCobI">
+              <property role="2rfbtB" value="Prevalence (%)" />
+            </node>
+          </node>
         </node>
       </node>
     </node>

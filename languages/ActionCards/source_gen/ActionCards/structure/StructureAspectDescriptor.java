@@ -29,6 +29,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptConditional = createDescriptorForConditional();
   /*package*/ final ConceptDescriptor myConceptDiagnosticCondition = createDescriptorForDiagnosticCondition();
   /*package*/ final ConceptDescriptor myConceptDisease = createDescriptorForDisease();
+  /*package*/ final ConceptDescriptor myConceptDiseaseInitialiserLine = createDescriptorForDiseaseInitialiserLine();
+  /*package*/ final ConceptDescriptor myConceptDiseaseInitialiserTable = createDescriptorForDiseaseInitialiserTable();
   /*package*/ final ConceptDescriptor myConceptDiseaseList = createDescriptorForDiseaseList();
   /*package*/ final ConceptDescriptor myConceptEDScenario = createDescriptorForEDScenario();
   /*package*/ final ConceptDescriptor myConceptGoToAction = createDescriptorForGoToAction();
@@ -65,7 +67,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptAdmissionAction, myConceptAtributeLine, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeTable, myConceptBranch, myConceptCondition, myConceptConditional, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseaseList, myConceptEDScenario, myConceptGoToAction, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptResource, myConceptSeverity, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptTest, myConceptTestActionStep, myConceptTestResult, myConceptVariable);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptAdmissionAction, myConceptAtributeLine, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeTable, myConceptBranch, myConceptCondition, myConceptConditional, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseaseInitialiserLine, myConceptDiseaseInitialiserTable, myConceptDiseaseList, myConceptEDScenario, myConceptGoToAction, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptResource, myConceptSeverity, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptTest, myConceptTestActionStep, myConceptTestResult, myConceptVariable);
   }
 
   @Override
@@ -98,6 +100,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDiagnosticCondition;
       case LanguageConceptSwitch.Disease:
         return myConceptDisease;
+      case LanguageConceptSwitch.DiseaseInitialiserLine:
+        return myConceptDiseaseInitialiserLine;
+      case LanguageConceptSwitch.DiseaseInitialiserTable:
+        return myConceptDiseaseInitialiserTable;
       case LanguageConceptSwitch.DiseaseList:
         return myConceptDiseaseList;
       case LanguageConceptSwitch.EDScenario:
@@ -272,6 +278,24 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("value", 0x25745663758ab0deL).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab06aL)).origin("2698877061875544286").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForDiseaseInitialiserLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiseaseInitialiserLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2985733650834899514");
+    b.version(2);
+    b.property("Condition", 0x296f74efb3f1c256L).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab06aL)).origin("2985733650834899542").done();
+    b.property("Prevalence", 0x296f74efb3f1c258L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("2985733650834899544").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForDiseaseInitialiserTable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiseaseInitialiserTable", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c28bL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2985733650834899595");
+    b.version(2);
+    b.associate("Disease", 0x296f74efb3f1c346L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(true).origin("2985733650834899782").done();
+    b.aggregate("lines", 0x296f74efb3f1c2a7L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL).optional(true).ordered(true).multiple(true).origin("2985733650834899623").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForDiseaseList() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiseaseList", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab389L);
     b.class_(false, false, true);
@@ -325,6 +349,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("attributes", 0xaabf015be951259L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab027L).optional(true).ordered(true).multiple(true).origin("768972137579221593").done();
     b.aggregate("arrivalRate", 0xaabf015be951280L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x637eade0e62ce2b8L).optional(false).ordered(true).multiple(false).origin("768972137579221632").done();
+    b.aggregate("diseaseTables", 0x296f74efb3f628b0L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c28bL).optional(true).ordered(true).multiple(true).origin("2985733650835187888").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProcessingTimeLine() {

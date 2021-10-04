@@ -157,65 +157,68 @@
   </root>
   <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/768972137583023445">
     <file name="DiseaseList__BehaviorDescriptor.java">
-      <node id="768972137583023445" at="18,0,19,0" concept="6" trace="CONCEPT" />
-      <node id="768972137583023445" at="21,0,22,0" concept="6" trace="BH_METHODS" />
-      <node id="768972137583023445" at="31,114,32,21" concept="1" />
-      <node id="768972137583023445" at="36,114,37,49" concept="4" />
-      <node id="768972137583023445" at="38,26,39,56" concept="9" />
-      <node id="768972137583023445" at="42,14,43,58" concept="9" />
-      <node id="768972137583023445" at="48,128,49,49" concept="4" />
-      <node id="768972137583023445" at="50,26,51,56" concept="9" />
-      <node id="768972137583023445" at="54,14,55,58" concept="9" />
-      <node id="768972137583023445" at="61,48,62,22" concept="5" />
-      <node id="768972137583023445" at="67,40,68,19" concept="5" />
-      <node id="768972137583023445" at="23,0,25,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="768972137583023445" at="27,0,29,0" concept="0" trace="DiseaseList__BehaviorDescriptor#()V" />
-      <node id="768972137583023445" at="37,49,40,5" concept="2" />
-      <node id="768972137583023445" at="49,49,52,5" concept="2" />
-      <node id="768972137583023445" at="30,0,34,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
-      <node id="768972137583023445" at="40,5,44,5" concept="8" />
-      <node id="768972137583023445" at="52,5,56,5" concept="8" />
-      <node id="768972137583023445" at="59,0,64,0" concept="3" trace="getDeclaredMethods#()Ljava/util/List;" />
-      <node id="768972137583023445" at="65,0,70,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
-      <node id="768972137583023445" at="35,0,46,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
-      <node id="768972137583023445" at="47,0,58,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
-      <scope id="768972137583023445" at="23,63,23,63" />
-      <scope id="768972137583023445" at="27,49,27,49" />
-      <scope id="768972137583023445" at="31,114,32,21" />
-      <scope id="768972137583023445" at="38,26,39,56" />
-      <scope id="768972137583023445" at="42,14,43,58" />
-      <scope id="768972137583023445" at="50,26,51,56" />
-      <scope id="768972137583023445" at="54,14,55,58" />
-      <scope id="768972137583023445" at="61,48,62,22" />
-      <scope id="768972137583023445" at="67,40,68,19" />
-      <scope id="768972137583023445" at="23,0,25,0">
+      <node id="768972137583023445" at="22,0,23,0" concept="6" trace="CONCEPT" />
+      <node id="768972137583023445" at="25,0,26,0" concept="6" trace="BH_METHODS" />
+      <node id="2985733650834870449" at="27,63,28,132" concept="1" />
+      <node id="768972137583023445" at="36,114,37,21" concept="1" />
+      <node id="768972137583023445" at="41,114,42,49" concept="4" />
+      <node id="768972137583023445" at="43,26,44,56" concept="9" />
+      <node id="768972137583023445" at="47,14,48,58" concept="9" />
+      <node id="768972137583023445" at="53,128,54,49" concept="4" />
+      <node id="768972137583023445" at="55,26,56,56" concept="9" />
+      <node id="768972137583023445" at="59,14,60,58" concept="9" />
+      <node id="768972137583023445" at="66,48,67,22" concept="5" />
+      <node id="768972137583023445" at="72,40,73,19" concept="5" />
+      <node id="768972137583023445" at="77,0,78,0" concept="6" trace="PatientProfile$ZT" />
+      <node id="768972137583023445" at="32,0,34,0" concept="0" trace="DiseaseList__BehaviorDescriptor#()V" />
+      <node id="768972137583023445" at="27,0,30,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="768972137583023445" at="42,49,45,5" concept="2" />
+      <node id="768972137583023445" at="54,49,57,5" concept="2" />
+      <node id="768972137583023445" at="35,0,39,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="768972137583023445" at="45,5,49,5" concept="8" />
+      <node id="768972137583023445" at="57,5,61,5" concept="8" />
+      <node id="768972137583023445" at="64,0,69,0" concept="3" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="768972137583023445" at="70,0,75,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="768972137583023445" at="40,0,51,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="768972137583023445" at="52,0,63,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="768972137583023445" at="32,49,32,49" />
+      <scope id="768972137583023445" at="27,63,28,132" />
+      <scope id="768972137583023445" at="36,114,37,21" />
+      <scope id="768972137583023445" at="43,26,44,56" />
+      <scope id="768972137583023445" at="47,14,48,58" />
+      <scope id="768972137583023445" at="55,26,56,56" />
+      <scope id="768972137583023445" at="59,14,60,58" />
+      <scope id="768972137583023445" at="66,48,67,22" />
+      <scope id="768972137583023445" at="72,40,73,19" />
+      <scope id="768972137583023445" at="32,0,34,0" />
+      <scope id="768972137583023445" at="27,0,30,0">
         <var name="__thisNode__" id="768972137583023445" />
       </scope>
-      <scope id="768972137583023445" at="27,0,29,0" />
-      <scope id="768972137583023445" at="30,0,34,0">
+      <scope id="768972137583023445" at="35,0,39,0">
         <var name="constructor" id="768972137583023445" />
         <var name="node" id="768972137583023445" />
         <var name="parameters" id="768972137583023445" />
       </scope>
-      <scope id="768972137583023445" at="59,0,64,0" />
-      <scope id="768972137583023445" at="65,0,70,0" />
-      <scope id="768972137583023445" at="36,114,44,5">
+      <scope id="768972137583023445" at="64,0,69,0" />
+      <scope id="768972137583023445" at="70,0,75,0" />
+      <scope id="768972137583023445" at="41,114,49,5">
         <var name="methodIndex" id="768972137583023445" />
       </scope>
-      <scope id="768972137583023445" at="48,128,56,5">
+      <scope id="768972137583023445" at="53,128,61,5">
         <var name="methodIndex" id="768972137583023445" />
       </scope>
-      <scope id="768972137583023445" at="35,0,46,0">
+      <scope id="768972137583023445" at="40,0,51,0">
         <var name="method" id="768972137583023445" />
         <var name="node" id="768972137583023445" />
         <var name="parameters" id="768972137583023445" />
       </scope>
-      <scope id="768972137583023445" at="47,0,58,0">
+      <scope id="768972137583023445" at="52,0,63,0">
         <var name="concept" id="768972137583023445" />
         <var name="method" id="768972137583023445" />
         <var name="parameters" id="768972137583023445" />
       </scope>
-      <unit id="768972137583023445" at="17,0,71,0" name="ActionCards.behavior.DiseaseList__BehaviorDescriptor" />
+      <unit id="768972137583023445" at="76,0,79,0" name="ActionCards.behavior.DiseaseList__BehaviorDescriptor$CONCEPTS" />
+      <unit id="768972137583023445" at="21,0,80,0" name="ActionCards.behavior.DiseaseList__BehaviorDescriptor" />
     </file>
   </root>
 </debug-info>

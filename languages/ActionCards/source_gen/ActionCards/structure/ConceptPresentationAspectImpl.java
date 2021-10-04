@@ -22,6 +22,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Conditional;
   private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_Disease;
+  private ConceptPresentation props_DiseaseInitialiserLine;
+  private ConceptPresentation props_DiseaseInitialiserTable;
   private ConceptPresentation props_DiseaseList;
   private ConceptPresentation props_EDScenario;
   private ConceptPresentation props_GoToAction;
@@ -140,6 +142,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Disease = cpb.create();
         }
         return props_Disease;
+      case LanguageConceptSwitch.DiseaseInitialiserLine:
+        if (props_DiseaseInitialiserLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("DiseaseInitialiserLine");
+          props_DiseaseInitialiserLine = cpb.create();
+        }
+        return props_DiseaseInitialiserLine;
+      case LanguageConceptSwitch.DiseaseInitialiserTable:
+        if (props_DiseaseInitialiserTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("DiseaseInitialiserTable");
+          props_DiseaseInitialiserTable = cpb.create();
+        }
+        return props_DiseaseInitialiserTable;
       case LanguageConceptSwitch.DiseaseList:
         if (props_DiseaseList == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

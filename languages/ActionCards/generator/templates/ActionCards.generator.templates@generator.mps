@@ -19,6 +19,7 @@
     <import index="uyrv" ref="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
+    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -89,7 +90,6 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
-      <concept id="1068580123137" name="jetbrains.mps.baseLanguage.structure.BooleanConstant" flags="nn" index="3clFbT" />
       <concept id="1068580123140" name="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" flags="ig" index="3clFbW" />
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
@@ -243,19 +243,16 @@
       </concept>
     </language>
     <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
+      <concept id="7425695345928347719" name="org.iets3.core.expr.base.structure.Expression" flags="ng" index="2vmvVl" />
       <concept id="7089558164905593724" name="org.iets3.core.expr.base.structure.IOptionallyTyped" flags="ng" index="2zM23E">
         <child id="7089558164905593725" name="type" index="2zM23F" />
       </concept>
     </language>
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
-      <concept id="8219602584782245544" name="org.iets3.core.expr.simpleTypes.structure.NumberType" flags="ng" index="mLuIC" />
       <concept id="5115872837157252552" name="org.iets3.core.expr.simpleTypes.structure.StringLiteral" flags="ng" index="30bdrP">
         <property id="5115872837157252555" name="value" index="30bdrQ" />
       </concept>
       <concept id="5115872837157252551" name="org.iets3.core.expr.simpleTypes.structure.StringType" flags="ng" index="30bdrU" />
-      <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
-        <property id="5115872837157054173" name="value" index="30bXRw" />
-      </concept>
     </language>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">
       <concept id="1510949579266781519" name="jetbrains.mps.lang.generator.structure.TemplateCallMacro" flags="ln" index="5jKBG" />
@@ -446,6 +443,12 @@
         <ref role="v9R2y" node="1JOzhSNIBWl" resolve="reduce_Action" />
       </node>
     </node>
+    <node concept="3aamgX" id="1SF32n2b8U" role="3acgRq">
+      <ref role="30HIoZ" to="e88n:2lOlAdPyF0i" resolve="Disease" />
+      <node concept="j$656" id="1SF32n2b9a" role="1lVwrX">
+        <ref role="v9R2y" node="2lOlAdQ9_jt" resolve="reduce_Disease" />
+      </node>
+    </node>
     <node concept="2rT7sh" id="4FTL$vJSBos" role="2rTMjI">
       <property role="TrG5h" value="staffReduction" />
       <ref role="2rTdP9" to="e88n:4X1nFNzWOrG" resolve="StaffType" />
@@ -497,44 +500,6 @@
     <property role="TrG5h" value="map_StaffType" />
     <property role="1n5rFW" value="1" />
     <property role="3GE5qa" value="People.Staff" />
-    <node concept="jeB$7" id="EFW1mVP_Fo" role="3eYOtt">
-      <property role="TrG5h" value="trevor" />
-      <node concept="30bXRB" id="EFW1mVPA9l" role="1gSNMQ">
-        <property role="30bXRw" value="4" />
-      </node>
-      <node concept="mLuIC" id="EFW1mVPA98" role="2zM23F" />
-      <node concept="1W57fq" id="EFW1mXXYZc" role="lGtFl">
-        <node concept="3IZrLx" id="EFW1mXXYZd" role="3IZSJc">
-          <node concept="3clFbS" id="EFW1mXXYZe" role="2VODD2">
-            <node concept="3clFbF" id="EFW1mXXZ3M" role="3cqZAp">
-              <node concept="3clFbT" id="EFW1mXXZ3L" role="3clFbG" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="2b32R4" id="EFW1mVPAal" role="lGtFl">
-        <node concept="3JmXsc" id="EFW1mVPAam" role="2P8S$">
-          <node concept="3clFbS" id="EFW1mVPAan" role="2VODD2">
-            <node concept="3clFbF" id="EFW1mVPAdx" role="3cqZAp">
-              <node concept="2OqwBi" id="EFW1mVRyDK" role="3clFbG">
-                <node concept="2OqwBi" id="EFW1mVPACD" role="2Oq$k0">
-                  <node concept="2OqwBi" id="EFW1mVPAmr" role="2Oq$k0">
-                    <node concept="1iwH7S" id="EFW1mVPAdw" role="2Oq$k0" />
-                    <node concept="1r8y6K" id="EFW1mVPAva" role="2OqNvi" />
-                  </node>
-                  <node concept="2RRcyG" id="EFW1mVPAJu" role="2OqNvi">
-                    <ref role="2RRcyH" to="e88n:2lOlAdPyFe9" resolve="DiseaseList" />
-                  </node>
-                </node>
-                <node concept="13MTOL" id="EFW1mVR$gb" role="2OqNvi">
-                  <ref role="13MTZf" to="e88n:2lOlAdPyFej" resolve="diseases" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
     <node concept="3Vt_xe" id="4FTL$vJIww3" role="2Ov1EZ">
       <property role="TrG5h" value="PlaceholderName" />
       <node concept="3VtFpM" id="4FTL$vJIww4" role="3VtFpR">
@@ -1759,7 +1724,23 @@
           </node>
         </node>
       </node>
-      <node concept="30bdrU" id="EFW1mWggcS" role="2zM23F" />
+      <node concept="30bdrU" id="1SF32n0lnj" role="2zM23F">
+        <node concept="29HgVG" id="1SF32n4blb" role="lGtFl">
+          <node concept="3NFfHV" id="1SF32n4bmP" role="3NFExx">
+            <node concept="3clFbS" id="1SF32n4bmQ" role="2VODD2">
+              <node concept="3clFbF" id="1SF32n4bKF" role="3cqZAp">
+                <node concept="2ShNRf" id="1SF32n4bKD" role="3clFbG">
+                  <node concept="3zrR0B" id="1SF32n4c0z" role="2ShVmc">
+                    <node concept="3Tqbb2" id="1SF32n4c0_" role="3zrR0E">
+                      <ref role="ehGHo" to="5qo5:4rZeNQ6OYR7" resolve="StringType" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="25k$Xo" id="EFW1mY3_MX">
@@ -1932,6 +1913,31 @@
     <property role="TrG5h" value="map_Patient" />
     <property role="1n5rFW" value="1" />
     <property role="3GE5qa" value="People" />
+    <node concept="jeB$7" id="1SF32n3aWs" role="3eYOtt">
+      <node concept="2vmvVl" id="1SF32n3aWt" role="1gSNMQ" />
+      <node concept="2b32R4" id="1SF32n3aXr" role="lGtFl">
+        <node concept="3JmXsc" id="1SF32n3aXs" role="2P8S$">
+          <node concept="3clFbS" id="1SF32n3aXt" role="2VODD2">
+            <node concept="3clFbF" id="1SF32n3b0b" role="3cqZAp">
+              <node concept="2OqwBi" id="1SF32n3cYU" role="3clFbG">
+                <node concept="2OqwBi" id="1SF32n3btN" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1SF32n3baY" role="2Oq$k0">
+                    <node concept="1iwH7S" id="1SF32n3b0a" role="2Oq$k0" />
+                    <node concept="1r8y6K" id="1SF32n3bhW" role="2OqNvi" />
+                  </node>
+                  <node concept="2RRcyG" id="1SF32n3b_8" role="2OqNvi">
+                    <ref role="2RRcyH" to="e88n:2lOlAdPyFe9" resolve="DiseaseList" />
+                  </node>
+                </node>
+                <node concept="13MTOL" id="1SF32n3eV7" role="2OqNvi">
+                  <ref role="13MTZf" to="e88n:2lOlAdPyFej" resolve="diseases" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="n94m4" id="EFW1mY_7M1" role="lGtFl">
       <ref role="n9lRv" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
     </node>

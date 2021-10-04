@@ -812,6 +812,13 @@
       <unit id="2698877061867170269" at="7,0,21,0" name="EDLanguage.sandbox.Ward" />
     </file>
   </root>
+  <root nodeRef="r:68827187-1d93-4c9a-94bf-235f8770ba86(ActionCardsSol.AC1)/2698877061875968937">
+    <file name="patient.java">
+      <node id="2698877061875968947" at="15,0,16,0" concept="4" trace="COVID" />
+      <node id="2698877061881048189" at="16,0,17,0" concept="4" trace="Flu" />
+      <node id="768972137568157491" at="17,0,18,0" concept="4" trace="MRSA" />
+    </file>
+  </root>
   <root nodeRef="r:68827187-1d93-4c9a-94bf-235f8770ba86(ActionCardsSol.AC1)/2698877061881048201">
     <file name="CoughTest.java">
       <node id="2698877061881048201" at="8,0,9,0" concept="13" trace="instance" />
@@ -1000,46 +1007,46 @@
       <node id="768972137579873969" at="146,30,147,30" concept="3" />
     </file>
     <file name="patient.java">
-      <node id="768972137579873659" at="15,0,16,0" concept="4" trace="behaviourBuilder" />
-      <node id="768972137579873659" at="17,93,18,32" concept="15" />
-      <node id="768972137579873659" at="18,32,19,26" concept="3" />
-      <node id="768972137579873659" at="22,94,23,42" concept="15" />
-      <node id="768972137579873659" at="27,32,28,18" concept="10" />
-      <node id="768972137579873659" at="29,5,30,16" concept="10" />
-      <node id="768972137579873659" at="37,14,38,14" concept="1" />
-      <node id="768972137579873659" at="39,14,40,71" concept="3" />
-      <node id="768972137579873659" at="40,71,41,32" concept="10" />
-      <node id="768972137579873659" at="42,5,43,28" concept="10" />
-      <node id="768972137579873659" at="22,0,25,0" concept="2" trace="patient#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
-      <node id="768972137579873659" at="26,59,29,5" concept="7" />
-      <node id="768972137579873659" at="17,0,21,0" concept="2" trace="patient#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
-      <node id="768972137579873659" at="26,0,32,0" concept="8" trace="selectSignal#(Ljava/util/List;)Lsimcore/Signals/Signal;" />
-      <node id="768972137579873659" at="35,52,42,5" concept="16" />
-      <node id="768972137579873659" at="35,0,45,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
-      <scope id="768972137579873659" at="22,94,23,42" />
-      <scope id="768972137579873659" at="27,32,28,18" />
-      <scope id="768972137579873659" at="37,14,38,14" />
-      <scope id="768972137579873659" at="17,93,19,26" />
-      <scope id="768972137579873659" at="39,14,41,32" />
-      <scope id="768972137579873659" at="22,0,25,0">
+      <node id="768972137579873659" at="18,0,19,0" concept="4" trace="behaviourBuilder" />
+      <node id="768972137579873659" at="20,93,21,32" concept="15" />
+      <node id="768972137579873659" at="21,32,22,26" concept="3" />
+      <node id="768972137579873659" at="25,94,26,42" concept="15" />
+      <node id="768972137579873659" at="30,32,31,18" concept="10" />
+      <node id="768972137579873659" at="32,5,33,16" concept="10" />
+      <node id="768972137579873659" at="40,14,41,14" concept="1" />
+      <node id="768972137579873659" at="42,14,43,71" concept="3" />
+      <node id="768972137579873659" at="43,71,44,32" concept="10" />
+      <node id="768972137579873659" at="45,5,46,28" concept="10" />
+      <node id="768972137579873659" at="25,0,28,0" concept="2" trace="patient#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
+      <node id="768972137579873659" at="29,59,32,5" concept="7" />
+      <node id="768972137579873659" at="20,0,24,0" concept="2" trace="patient#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
+      <node id="768972137579873659" at="29,0,35,0" concept="8" trace="selectSignal#(Ljava/util/List;)Lsimcore/Signals/Signal;" />
+      <node id="768972137579873659" at="38,52,45,5" concept="16" />
+      <node id="768972137579873659" at="38,0,48,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
+      <scope id="768972137579873659" at="25,94,26,42" />
+      <scope id="768972137579873659" at="30,32,31,18" />
+      <scope id="768972137579873659" at="40,14,41,14" />
+      <scope id="768972137579873659" at="20,93,22,26" />
+      <scope id="768972137579873659" at="42,14,44,32" />
+      <scope id="768972137579873659" at="25,0,28,0">
         <var name="grid" id="768972137579873659" />
         <var name="pstrStartLocation" id="768972137579873659" />
         <var name="space" id="768972137579873659" />
       </scope>
-      <scope id="768972137579873659" at="17,0,21,0">
+      <scope id="768972137579873659" at="20,0,24,0">
         <var name="context" id="768972137579873659" />
         <var name="grid" id="768972137579873659" />
         <var name="space" id="768972137579873659" />
       </scope>
-      <scope id="768972137579873659" at="26,59,30,16" />
-      <scope id="768972137579873659" at="26,0,32,0">
+      <scope id="768972137579873659" at="29,59,33,16" />
+      <scope id="768972137579873659" at="29,0,35,0">
         <var name="plstSignals" id="768972137579873659" />
       </scope>
-      <scope id="768972137579873659" at="35,52,43,28" />
-      <scope id="768972137579873659" at="35,0,45,0">
+      <scope id="768972137579873659" at="38,52,46,28" />
+      <scope id="768972137579873659" at="38,0,48,0">
         <var name="s" id="768972137579873659" />
       </scope>
-      <unit id="768972137579873659" at="13,0,50,0" name="EDLanguage.sandbox.patient" />
+      <unit id="768972137579873659" at="13,0,53,0" name="EDLanguage.sandbox.patient" />
     </file>
     <file name="patientGenerator.java">
       <node id="768972137579873660" at="16,102,17,32" concept="15" />

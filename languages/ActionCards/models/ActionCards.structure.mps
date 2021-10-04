@@ -609,6 +609,13 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals" />
     </node>
+    <node concept="1TJgyj" id="2_JteYNXyyK" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650835187888" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="diseaseTables" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2_JteYNWsab" resolve="DiseaseInitialiserTable" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1SF32lRXYq">
     <property role="EcuMT" value="33966321878163354" />
@@ -616,6 +623,40 @@
     <property role="TrG5h" value="AdmissionAction" />
     <property role="34LRSv" value="admission action" />
     <ref role="1TJDcQ" node="2VPlUUsG6x$" resolve="Action" />
+  </node>
+  <node concept="1TIwiD" id="2_JteYNWs8U">
+    <property role="EcuMT" value="2985733650834899514" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="DiseaseInitialiserLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="2_JteYNWs9m" role="1TKVEl">
+      <property role="IQ2nx" value="2985733650834899542" />
+      <property role="TrG5h" value="Condition" />
+      <ref role="AX2Wp" node="2lOlAdPyF1E" resolve="E_SEIR" />
+    </node>
+    <node concept="1TJgyi" id="2_JteYNWs9o" role="1TKVEl">
+      <property role="IQ2nx" value="2985733650834899544" />
+      <property role="TrG5h" value="Prevalence" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2_JteYNWsab">
+    <property role="EcuMT" value="2985733650834899595" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="DiseaseInitialiserTable" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2_JteYNWsd6" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650834899782" />
+      <property role="20kJfa" value="Disease" />
+      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+    </node>
+    <node concept="1TJgyj" id="2_JteYNWsaB" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650834899623" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2_JteYNWs8U" resolve="DiseaseInitialiserLine" />
+    </node>
   </node>
 </model>
 

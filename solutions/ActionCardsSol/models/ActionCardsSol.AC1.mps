@@ -13,7 +13,9 @@
     <engage id="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" name="org.iets3.core.expr.genjava.base" />
     <engage id="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" name="org.iets3.core.expr.genjava.simpleTypes" />
   </languages>
-  <imports />
+  <imports>
+    <import index="2jw" ref="r:89d28cee-e63f-45c3-83da-f519738636d8(org.iets3.core.expr.genjava.simpleTypes.typesystem)" />
+  </imports>
   <registry>
     <language id="b3cac82c-d024-46bc-b485-624ad80c3cc2" name="ActionCards">
       <concept id="7169358838266389176" name="ActionCards.structure.PatientArrivals" flags="ng" index="25k$Xo">
@@ -24,6 +26,14 @@
         <property id="2876623929997959984" name="NumPatientsInHour" index="c0n49" />
       </concept>
       <concept id="33966321878163354" name="ActionCards.structure.AdmissionAction" flags="ng" index="2lDReE" />
+      <concept id="2985733650834899595" name="ActionCards.structure.DiseaseInitialiserTable" flags="ng" index="2qBFp$">
+        <reference id="2985733650834899782" name="Disease" index="2qBFuD" />
+        <child id="2985733650834899623" name="lines" index="2qBFp8" />
+      </concept>
+      <concept id="2985733650834899514" name="ActionCards.structure.DiseaseInitialiserLine" flags="ng" index="2qBFrl">
+        <property id="2985733650834899544" name="Prevalence" index="2qBFqR" />
+        <property id="2985733650834899542" name="Condition" index="2qBFqT" />
+      </concept>
       <concept id="5402567240278617686" name="ActionCards.structure.EDScenario" flags="ng" index="2_0uwh">
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
       </concept>
@@ -52,6 +62,7 @@
         <child id="3383707102503528567" name="Actions" index="2MhjZp" />
       </concept>
       <concept id="768972137579180806" name="ActionCards.structure.PatientProfile" flags="ng" index="2OfScj">
+        <child id="2985733650835187888" name="diseaseTables" index="2qAlLv" />
         <child id="768972137579221632" name="arrivalRate" index="2OfIal" />
       </concept>
       <concept id="2698877061875544969" name="ActionCards.structure.DiseaseList" flags="ng" index="1gZInE">
@@ -459,6 +470,48 @@
   <node concept="2OfScj" id="EFW1mYBKlV">
     <property role="TrG5h" value="patient" />
     <property role="3GE5qa" value="Builder" />
+    <node concept="2qBFp$" id="2_JteYNZvQi" role="2qAlLv">
+      <ref role="2qBFuD" node="2lOlAdP$iIN" resolve="COVID" />
+      <node concept="2qBFrl" id="2_JteYNZvQk" role="2qBFp8">
+        <property role="2qBFqR" value="34" />
+      </node>
+      <node concept="2qBFrl" id="2_JteYNZvQm" role="2qBFp8">
+        <property role="2qBFqT" value="2lOlAdPyF1P/Infectious" />
+        <property role="2qBFqR" value="26" />
+      </node>
+      <node concept="2qBFrl" id="2_JteYNZvQp" role="2qBFp8">
+        <property role="2qBFqT" value="2lOlAdPyF1S/Recovered" />
+        <property role="2qBFqR" value="40" />
+      </node>
+    </node>
+    <node concept="2qBFp$" id="2_JteYNZvQ_" role="2qAlLv">
+      <ref role="2qBFuD" node="2lOlAdPRELX" resolve="Flu" />
+      <node concept="2qBFrl" id="2_JteYNZvQF" role="2qBFp8">
+        <property role="2qBFqR" value="12" />
+      </node>
+      <node concept="2qBFrl" id="2_JteYNZvQH" role="2qBFp8">
+        <property role="2qBFqT" value="2lOlAdPyF1P/Infectious" />
+        <property role="2qBFqR" value="8" />
+      </node>
+      <node concept="2qBFrl" id="2_JteYNZvQK" role="2qBFp8">
+        <property role="2qBFqT" value="2lOlAdPyF1S/Recovered" />
+        <property role="2qBFqR" value="80" />
+      </node>
+    </node>
+    <node concept="2qBFp$" id="2_JteYNZvQO" role="2qAlLv">
+      <ref role="2qBFuD" node="EFW1mXV3WN" resolve="MRSA" />
+      <node concept="2qBFrl" id="2_JteYNZvQY" role="2qBFp8">
+        <property role="2qBFqR" value="67" />
+      </node>
+      <node concept="2qBFrl" id="2_JteYNZvR0" role="2qBFp8">
+        <property role="2qBFqT" value="2lOlAdPyF1S/Recovered" />
+        <property role="2qBFqR" value="3" />
+      </node>
+      <node concept="2qBFrl" id="2_JteYNZvR3" role="2qBFp8">
+        <property role="2qBFqT" value="2lOlAdPyF1P/Infectious" />
+        <property role="2qBFqR" value="30" />
+      </node>
+    </node>
     <node concept="25k$Xo" id="EFW1mYBKlW" role="2OfIal">
       <node concept="c0n4t" id="EFW1mYBKm6" role="c0n7C">
         <property role="c0n49" value="5" />
