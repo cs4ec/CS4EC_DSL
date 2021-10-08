@@ -82,6 +82,7 @@
     </language>
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage">
       <concept id="4334763093661093957" name="AgentLanguage.structure.RoomInstanceDefinition" flags="ng" index="j3bLk">
+        <property id="5292086088997749628" name="capacity" index="m3wsY" />
         <property id="5292086088997743941" name="width" index="m3A$7" />
         <property id="5292086088997743945" name="height" index="m3A$b" />
         <property id="5292086088994139263" name="x" index="memwX" />
@@ -156,37 +157,45 @@
   <node concept="2MhjZA" id="av1M7vbJXD">
     <property role="3GE5qa" value="ActionCard" />
     <node concept="2MhjZa" id="2lOlAdP0yiq" role="2MhjZp">
-      <property role="TrG5h" value="Action One" />
+      <property role="TrG5h" value="Triage" />
       <property role="3lFixl" value="true" />
-      <ref role="3tPpTl" node="av1M7vefIR" resolve="INOVA" />
       <node concept="2_8ZN7" id="2lOlAdP0yiu" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
       </node>
       <node concept="UeIYj" id="2lOlAdP2IAX" role="3lENdC">
-        <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
+        <ref role="Udx8D" node="EFW1mYOHdm" resolve="TriageDesk" />
       </node>
       <node concept="2GGxJi" id="2lOlAdP_QCC" role="3tG3Yq">
-        <ref role="3tVEyn" node="2lOlAdP0yiq" resolve="Action One" />
-        <ref role="2GGxGe" node="2lOlAdPhCdg" resolve="ActionThree" />
-        <node concept="3tEh0H" id="2lOlAdP_QCK" role="1hyIAf">
-          <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-          <ref role="3tE8WY" node="av1M7vefIR" resolve="INOVA" />
-        </node>
+        <ref role="3tVEyn" node="2lOlAdP0yiq" resolve="Triage" />
+        <ref role="2GGxGe" node="2lOlAdPhCdg" resolve="Do LIAT" />
       </node>
     </node>
     <node concept="2MhjZa" id="2lOlAdPhCdg" role="2MhjZp">
-      <property role="TrG5h" value="ActionThree" />
+      <property role="TrG5h" value="Do LIAT" />
       <property role="3lFixl" value="true" />
       <property role="2mH1Wk" value="3" />
+      <ref role="3tPpTl" node="2_JteYO0kmX" resolve="LIAT" />
       <node concept="2_8ZN7" id="2lOlAdPhCdK" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
       </node>
       <node concept="UeIYj" id="EFW1mVOzV8" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHdY" resolve="MajorsCBay" />
       </node>
-      <node concept="2GGxJi" id="EFW1mXV2f1" role="3tG3Yq">
-        <ref role="3tVEyn" node="2lOlAdPhCdg" resolve="ActionThree" />
-        <ref role="2GGxGe" node="EFW1mXV2de" resolve="Action Four" />
+      <node concept="2GGxJi" id="2_JteYO0knz" role="3tG3Yq">
+        <ref role="3tVEyn" node="2lOlAdPhCdg" resolve="Do LIAT" />
+        <ref role="2GGxGe" node="1SF32ml0qG" resolve="Discharge" />
+        <node concept="3tEh0H" id="2_JteYO0knD" role="1hyIAf">
+          <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
+          <ref role="3tE8WY" node="2_JteYO0kmX" resolve="LIAT" />
+        </node>
+      </node>
+      <node concept="2GGxJi" id="2_JteYO0kqi" role="3tG3Yq">
+        <ref role="3tVEyn" node="2lOlAdPhCdg" resolve="Do LIAT" />
+        <ref role="2GGxGe" node="2_JteYO0kp4" resolve="Admit to Amber Bay" />
+        <node concept="3tEh0H" id="2_JteYOlJ5m" role="1hyIAf">
+          <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
+          <ref role="3tE8WY" node="2_JteYO0kmX" resolve="LIAT" />
+        </node>
       </node>
     </node>
     <node concept="37mRI7" id="av1M7vryLM" role="lGtFl">
@@ -233,9 +242,9 @@
       <node concept="37mRIm" id="2lOlAdP0YL8" role="37mRID">
         <property role="37mO49" value="2698877061866595482" />
         <node concept="gqqVs" id="2lOlAdP0YL7" role="37mO4d">
-          <property role="gqqTZ" value="169.0" />
-          <property role="gqqTW" value="98.0" />
-          <property role="gqqTX" value="204.0" />
+          <property role="gqqTZ" value="305.0" />
+          <property role="gqqTW" value="78.0" />
+          <property role="gqqTX" value="196.0" />
           <property role="gqqTy" value="117.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -272,7 +281,7 @@
         <node concept="gqqVs" id="2lOlAdPhCdq" role="37mO4d">
           <property role="gqqTZ" value="308.0" />
           <property role="gqqTW" value="269.0" />
-          <property role="gqqTX" value="198.0" />
+          <property role="gqqTX" value="189.0" />
           <property role="gqqTy" value="117.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -316,12 +325,7 @@
       </node>
       <node concept="37mRIm" id="EFW1mXV2a6" role="37mRID">
         <property role="37mO49" value="2698877061876378152" />
-        <node concept="2VclpC" id="EFW1mXV2a5" role="37mO4d">
-          <node concept="2VclrF" id="EFW1mXV2a7" role="2Vcluh">
-            <property role="2Vclpx" value="400.0" />
-            <property role="2Vclpz" value="180.0" />
-          </node>
-        </node>
+        <node concept="2VclpC" id="EFW1mXV2a5" role="37mO4d" />
       </node>
       <node concept="37mRIm" id="EFW1mXV2aF" role="37mRID">
         <property role="37mO49" value="2698877061873651040" />
@@ -372,35 +376,68 @@
       <node concept="37mRIm" id="1SF32ml0sA" role="37mRID">
         <property role="37mO49" value="33966321885775532" />
         <node concept="gqqVs" id="1SF32ml0s_" role="37mO4d">
-          <property role="gqqTZ" value="478.0" />
-          <property role="gqqTW" value="525.0" />
-          <property role="gqqTX" value="204.0" />
-          <property role="gqqTy" value="132.0" />
+          <property role="gqqTZ" value="103.0" />
+          <property role="gqqTW" value="482.0" />
+          <property role="gqqTX" value="284.0" />
+          <property role="gqqTy" value="112.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
-    </node>
-    <node concept="2MhjZa" id="EFW1mXV2de" role="2MhjZp">
-      <property role="TrG5h" value="Action Four" />
-      <property role="3lFixl" value="true" />
-      <node concept="2_8ZN7" id="EFW1mXV2dx" role="2_8HaY">
-        <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
+      <node concept="37mRIm" id="2_JteYO0kl4" role="37mRID">
+        <property role="37mO49" value="2985733650835916047" />
+        <node concept="gqqVs" id="2_JteYO0kl3" role="37mO4d">
+          <property role="gqqTZ" value="493.0" />
+          <property role="gqqTW" value="121.0" />
+          <property role="gqqTX" value="196.0" />
+          <property role="gqqTy" value="117.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
       </node>
-      <node concept="UeIYj" id="EFW1mXV2dv" role="3lENdC">
-        <ref role="Udx8D" node="EFW1mYOHdY" resolve="MajorsCBay" />
+      <node concept="37mRIm" id="2_JteYO0kob" role="37mRID">
+        <property role="37mO49" value="2985733650835916259" />
+        <node concept="2VclpC" id="2_JteYO0koa" role="37mO4d">
+          <node concept="2VclrF" id="2_JteYO0koc" role="2Vcluh">
+            <property role="2Vclpx" value="238.0" />
+            <property role="2Vclpz" value="427.0" />
+          </node>
+        </node>
       </node>
-      <node concept="2GGxJi" id="1SF32ml0tn" role="3tG3Yq">
-        <ref role="3tVEyn" node="EFW1mXV2de" resolve="Action Four" />
-        <ref role="2GGxGe" node="1SF32ml0qG" resolve="AdmitPatient" />
+      <node concept="37mRIm" id="2_JteYO0kpl" role="37mRID">
+        <property role="37mO49" value="2985733650835916356" />
+        <node concept="gqqVs" id="2_JteYO0kpk" role="37mO4d">
+          <property role="gqqTZ" value="462.0" />
+          <property role="gqqTW" value="482.0" />
+          <property role="gqqTX" value="252.0" />
+          <property role="gqqTy" value="112.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="2_JteYO0kqn" role="37mRID">
+        <property role="37mO49" value="2985733650835916434" />
+        <node concept="2VclpC" id="2_JteYO0kqm" role="37mO4d">
+          <node concept="2VclrF" id="2_JteYO0kqo" role="2Vcluh">
+            <property role="2Vclpx" value="591.5222723162765" />
+            <property role="2Vclpz" value="431.4777276837235" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2lDReE" id="1SF32ml0qG" role="2MhjZp">
-      <property role="TrG5h" value="AdmitPatient" />
+      <property role="TrG5h" value="Discharge" />
       <node concept="2_8ZN7" id="1SF32ml0sy" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
       </node>
       <node concept="UeIYj" id="1SF32ml0sw" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
+      </node>
+    </node>
+    <node concept="2lDReE" id="2_JteYO0kp4" role="2MhjZp">
+      <property role="TrG5h" value="Admit to Amber Bay" />
+      <node concept="2_8ZN7" id="2_JteYO0kqd" role="2_8HaY">
+        <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doc" />
+      </node>
+      <node concept="UeIYj" id="2_JteYO0kqg" role="3lENdC">
+        <ref role="Udx8D" node="2_JteYO1fw4" resolve="AmberBay" />
       </node>
     </node>
   </node>
@@ -463,7 +500,7 @@
   <node concept="2_0uwh" id="EFW1mYe4_u">
     <property role="3GE5qa" value="Builder" />
     <node concept="2_0uwW" id="EFW1mYe4_C" role="2_0uzz">
-      <property role="2_0uz2" value="5" />
+      <property role="2_0uz2" value="2" />
       <ref role="2_0uz0" node="av1M7vbJYz" resolve="Doc" />
     </node>
   </node>
@@ -733,6 +770,17 @@
       <property role="376uKC" value="6o2BuIx6R5q/BLUE" />
       <ref role="VgANK" node="EFW1mYOHez" resolve="MainEntrance" />
     </node>
+    <node concept="j3bLk" id="2_JteYO1fwM" role="j3bMi">
+      <property role="TrG5h" value="AmberBay1" />
+      <property role="memwX" value="250" />
+      <property role="memz3" value="150" />
+      <property role="m3A$7" value="20" />
+      <property role="m3A$b" value="20" />
+      <property role="m3wsY" value="30" />
+      <property role="p_dkr" value="40" />
+      <property role="376uKC" value="2blVuwUK9bq/ORANGE" />
+      <ref role="VgANK" node="2_JteYO1fw4" resolve="AmberBay" />
+    </node>
   </node>
   <node concept="2Ovb82" id="EFW1mZonCG">
     <property role="TrG5h" value="EDMapImporter" />
@@ -740,6 +788,17 @@
     <node concept="3VlSI9" id="EFW1mZonD8" role="2PX5YI">
       <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/ActionCardsSol/StThomasEDMap.json" />
     </node>
+  </node>
+  <node concept="3SEB2C" id="2_JteYO0kmX">
+    <property role="3GE5qa" value="Tests" />
+    <property role="TrG5h" value="LIAT" />
+    <property role="3SEB2_" value="98" />
+    <property role="3SEB2z" value="99" />
+    <ref role="1gZIjJ" node="2lOlAdP$iIN" resolve="COVID" />
+  </node>
+  <node concept="VhMOw" id="2_JteYO1fw4">
+    <property role="3GE5qa" value="RoomType" />
+    <property role="TrG5h" value="AmberBay" />
   </node>
 </model>
 

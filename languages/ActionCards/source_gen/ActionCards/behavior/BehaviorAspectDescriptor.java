@@ -14,6 +14,8 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myPatientProfile__BehaviorDescriptor = new PatientProfile__BehaviorDescriptor();
   private final BHDescriptor myDiseaseList__BehaviorDescriptor = new DiseaseList__BehaviorDescriptor();
+  private final BHDescriptor myDiseaseInitialiserLine__BehaviorDescriptor = new DiseaseInitialiserLine__BehaviorDescriptor();
+  private final BHDescriptor myDiseaseInitialiserTable__BehaviorDescriptor = new DiseaseInitialiserTable__BehaviorDescriptor();
   private final BHDescriptor myAction__BehaviorDescriptor = new Action__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
@@ -26,12 +28,16 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 0:
         return myAction__BehaviorDescriptor;
       case 1:
-        return myDiseaseList__BehaviorDescriptor;
+        return myDiseaseInitialiserLine__BehaviorDescriptor;
       case 2:
+        return myDiseaseInitialiserTable__BehaviorDescriptor;
+      case 3:
+        return myDiseaseList__BehaviorDescriptor;
+      case 4:
         return myPatientProfile__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab389L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c28bL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab389L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L)).seal();
 }

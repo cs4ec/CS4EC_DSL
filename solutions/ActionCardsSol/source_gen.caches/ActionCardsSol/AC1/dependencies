@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="ActionCardsSol.AC1.ActionFourTriggerSignal">
+  <dependency className="ActionCardsSol.AC1.AdmittoAmberBayTriggerSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="ActionCardsSol.AC1.ActionThreeTriggerSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="ActionCardsSol.AC1.AdmitPatientTriggerSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  <dependency className="ActionCardsSol.AC1.AmberBay">
+    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.CoughTest">
     <classNode dependClassName="EDLanguage.sandbox.CoughTest" />
     <classNode extendsClassName="simcore.basicStructures.Test" />
   </dependency>
+  <dependency className="ActionCardsSol.AC1.DischargeTriggerSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.DoLIATTriggerSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="ActionCardsSol.AC1.Doc">
-    <classNode dependClassName="EDLanguage.sandbox.ActionFourTriggerSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.ActionThreeTriggerSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmitPatientTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmittoAmberBayTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTriggerSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoLIATTriggerSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
+    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -41,6 +47,7 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.EDBuilder">
+    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
     <classNode dependClassName="EDLanguage.sandbox.Doc" />
     <classNode dependClassName="EDLanguage.sandbox.Lab" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
@@ -86,6 +93,10 @@
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
+    <classNode extendsClassName="simcore.basicStructures.Test" />
+  </dependency>
+  <dependency className="ActionCardsSol.AC1.LIAT">
+    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode extendsClassName="simcore.basicStructures.Test" />
   </dependency>
   <dependency className="ActionCardsSol.AC1.Lab">
@@ -136,6 +147,7 @@
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode dependClassName="repast.simphony.random.RandomHelper" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />

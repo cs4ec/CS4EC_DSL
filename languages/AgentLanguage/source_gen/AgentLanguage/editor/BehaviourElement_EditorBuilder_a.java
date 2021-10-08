@@ -144,7 +144,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_3() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Trigger Signal:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Trigger Message:");
     editorCell.setCellId("Constant_s6xfkm_a5a");
     editorCell.setDefaultText("");
     return editorCell;

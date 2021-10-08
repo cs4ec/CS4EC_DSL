@@ -10,6 +10,7 @@ import repast.simphony.engine.schedule.ScheduledMethod;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.ToolBox;
 import simcore.Signals.Signal;
+import repast.simphony.random.RandomHelper;
 import java.util.HashMap;
 
 public class patientGenerator extends AgentGenerator {
@@ -32,6 +33,40 @@ public class patientGenerator extends AgentGenerator {
 
     sendSignalTemp.setName("NewpatientArrive");
     sendSignalTemp.AddData("patient", a);
+
+
+    // For each agent attribute 
+    // For each attribute value option 
+    // Assign the value based on probability function 
+    double rndDouble = RandomHelper.nextDouble();
+    if (rndDouble < 0.34) {
+      a.COVID = "Susceptible";
+    }
+    if (rndDouble < 0.6000000000000001) {
+      a.COVID = "Infectious";
+    }
+    if (rndDouble < 1.0) {
+      a.COVID = "Recovered";
+    }
+    if (rndDouble < 0.12) {
+      a.Flu = "Susceptible";
+    }
+    if (rndDouble < 0.2) {
+      a.Flu = "Infectious";
+    }
+    if (rndDouble < 1.0) {
+      a.Flu = "Recovered";
+    }
+    if (rndDouble < 0.67) {
+      a.MRSA = "Susceptible";
+    }
+    if (rndDouble < 0.7000000000000001) {
+      a.MRSA = "Recovered";
+    }
+    if (rndDouble < 1.0) {
+      a.MRSA = "Infectious";
+    }
+
     b.PushMission(sendSignalTemp);
 
     return a;

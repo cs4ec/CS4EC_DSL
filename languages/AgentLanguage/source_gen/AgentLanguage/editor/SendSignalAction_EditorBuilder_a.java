@@ -52,7 +52,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "send signal:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "send message:");
     editorCell.setCellId("Constant_9snn2r_a0");
     editorCell.setDefaultText("");
     return editorCell;

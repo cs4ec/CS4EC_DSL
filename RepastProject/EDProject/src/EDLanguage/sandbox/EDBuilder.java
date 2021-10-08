@@ -58,7 +58,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.add(new Board());
 
     // add Agents 
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 2; i++) {
       context.add(new Doc(space, grid, context));
     }
 
@@ -76,6 +76,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsCBay_g = new Room("MajorsCBay", context, space, grid, 464, 584, 70, 39, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
     Room MajorsCBay_h = new Room("MajorsCBay", context, space, grid, 843, 585, 70, 38, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
     Room MainEntrance_i = new Room("MainEntrance", context, space, grid, 264, 21, 47, 19, 1, 0, MainEntrance.getInstance(), Color.BLUE);
+    Room AmberBay1_j = new Room("AmberBay1", context, space, grid, 250, 150, 20, 20, 1, 30, AmberBay.getInstance(), Color.ORANGE);
     try {
       Lab_a.setSeats(0);
       Triage_b.setSeats(0);
@@ -86,6 +87,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsCBay_g.setSeats(0);
       MajorsCBay_h.setSeats(0);
       MainEntrance_i.setSeats(0);
+      AmberBay1_j.setSeats(0);
       Lab_a.setDesks(0);
       Triage_b.setDesks(0);
       MajorsCBay_c.setDesks(0);
@@ -95,6 +97,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsCBay_g.setDesks(0);
       MajorsCBay_h.setDesks(0);
       MainEntrance_i.setDesks(0);
+      AmberBay1_j.setDesks(0);
       Lab_a.setBeds(0);
       Triage_b.setBeds(0);
       MajorsCBay_c.setBeds(0);
@@ -104,6 +107,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsCBay_g.setBeds(0);
       MajorsCBay_h.setBeds(0);
       MainEntrance_i.setBeds(0);
+      AmberBay1_j.setBeds(40);
     } catch (NumberFormatException e) {
     }
 

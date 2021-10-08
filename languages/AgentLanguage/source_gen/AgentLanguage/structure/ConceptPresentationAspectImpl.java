@@ -19,6 +19,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AgentGenerator;
   private ConceptPresentation props_AgentGeneratorLine;
   private ConceptPresentation props_Attribute;
+  private ConceptPresentation props_AttributeDistributionLine;
+  private ConceptPresentation props_AttributeDistributionTable;
   private ConceptPresentation props_AttributeExpressionReference;
   private ConceptPresentation props_AttributeReference;
   private ConceptPresentation props_BedAvailableCondition;
@@ -42,6 +44,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_HumanInstanceFromSignal;
   private ConceptPresentation props_InfectionCondition;
   private ConceptPresentation props_InfectionState;
+  private ConceptPresentation props_MessageSelectionStrategy;
   private ConceptPresentation props_MoveAction;
   private ConceptPresentation props_MoveOrder;
   private ConceptPresentation props_NewPatientSignal;
@@ -82,7 +85,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SignalReference;
   private ConceptPresentation props_SignalSelectionRule;
   private ConceptPresentation props_SignalSelectionRuleLine;
-  private ConceptPresentation props_SignalSelectionStrategy;
   private ConceptPresentation props_SignalTrigger;
   private ConceptPresentation props_SpaceAtCondition;
   private ConceptPresentation props_StayAction;
@@ -175,6 +177,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Attribute = cpb.create();
         }
         return props_Attribute;
+      case LanguageConceptSwitch.AttributeDistributionLine:
+        if (props_AttributeDistributionLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("AttributeDistributionLine");
+          props_AttributeDistributionLine = cpb.create();
+        }
+        return props_AttributeDistributionLine;
+      case LanguageConceptSwitch.AttributeDistributionTable:
+        if (props_AttributeDistributionTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("AttributeDistributionTable");
+          props_AttributeDistributionTable = cpb.create();
+        }
+        return props_AttributeDistributionTable;
       case LanguageConceptSwitch.AttributeExpressionReference:
         if (props_AttributeExpressionReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -342,6 +358,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InfectionState = cpb.create();
         }
         return props_InfectionState;
+      case LanguageConceptSwitch.MessageSelectionStrategy:
+        if (props_MessageSelectionStrategy == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("message selection strategy");
+          props_MessageSelectionStrategy = cpb.create();
+        }
+        return props_MessageSelectionStrategy;
       case LanguageConceptSwitch.MoveAction:
         if (props_MoveAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -634,13 +657,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SignalSelectionRuleLine = cpb.create();
         }
         return props_SignalSelectionRuleLine;
-      case LanguageConceptSwitch.SignalSelectionStrategy:
-        if (props_SignalSelectionStrategy == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("signal selection strategy");
-          props_SignalSelectionStrategy = cpb.create();
-        }
-        return props_SignalSelectionStrategy;
       case LanguageConceptSwitch.SignalTrigger:
         if (props_SignalTrigger == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

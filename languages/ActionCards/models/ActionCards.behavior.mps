@@ -28,6 +28,7 @@
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
+      <concept id="1095950406618" name="jetbrains.mps.baseLanguage.structure.DivExpression" flags="nn" index="FJ1c_" />
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
@@ -37,6 +38,9 @@
       </concept>
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
+      </concept>
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
@@ -61,6 +65,10 @@
       </concept>
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
+      </concept>
+      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
+        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
+        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -171,6 +179,46 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="13h7C7" id="2_JteYP3tbs">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="13h7C2" to="e88n:2_JteYNWsab" resolve="DiseaseInitialiserTable" />
+    <node concept="13hLZK" id="2_JteYP3tbt" role="13h7CW">
+      <node concept="3clFbS" id="2_JteYP3tbu" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="2_JteYP3tvy">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="13h7C2" to="e88n:2_JteYNWs8U" resolve="DiseaseInitialiserLine" />
+    <node concept="13i0hz" id="2_JteYP3tbB" role="13h7CS">
+      <property role="TrG5h" value="getPrevalenceAsDouble" />
+      <node concept="3Tm1VV" id="2_JteYP3tbC" role="1B3o_S" />
+      <node concept="3uibUv" id="2_JteYP3tbR" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~Double" resolve="Double" />
+      </node>
+      <node concept="3clFbS" id="2_JteYP3tbE" role="3clF47">
+        <node concept="3cpWs6" id="2_JteYP3tcE" role="3cqZAp">
+          <node concept="FJ1c_" id="2_JteYP3vtt" role="3cqZAk">
+            <node concept="3cmrfG" id="2_JteYP3vtw" role="3uHU7w">
+              <property role="3cmrfH" value="100" />
+            </node>
+            <node concept="2YIFZM" id="2_JteYP3uBG" role="3uHU7B">
+              <ref role="37wK5l" to="wyt6:~Double.parseDouble(java.lang.String)" resolve="parseDouble" />
+              <ref role="1Pybhc" to="wyt6:~Double" resolve="Double" />
+              <node concept="2OqwBi" id="2_JteYP3uWx" role="37wK5m">
+                <node concept="13iPFW" id="2_JteYP3uMH" role="2Oq$k0" />
+                <node concept="3TrcHB" id="2_JteYP3v5J" role="2OqNvi">
+                  <ref role="3TsBF5" to="e88n:2_JteYNWs9o" resolve="Prevalence" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="2_JteYP3tvz" role="13h7CW">
+      <node concept="3clFbS" id="2_JteYP3tv$" role="2VODD2" />
     </node>
   </node>
 </model>

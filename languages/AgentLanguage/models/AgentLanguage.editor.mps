@@ -54,7 +54,6 @@
       <concept id="1215007883204" name="jetbrains.mps.lang.editor.structure.PaddingLeftStyleClassItem" flags="ln" index="3$7fVu" />
       <concept id="1215007897487" name="jetbrains.mps.lang.editor.structure.PaddingRightStyleClassItem" flags="ln" index="3$7jql" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
-        <property id="1214560368769" name="emptyNoTargetText" index="39s7Ar" />
         <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
@@ -360,7 +359,7 @@
     <ref role="1XX52x" to="3751:3DLpJ7prLyg" resolve="SendSignalAction" />
     <node concept="3EZMnI" id="3DLpJ7psBzA" role="2wV5jI">
       <node concept="3F0ifn" id="3DLpJ7psBzH" role="3EZMnx">
-        <property role="3F0ifm" value="send signal:" />
+        <property role="3F0ifm" value="send message:" />
       </node>
       <node concept="l2Vlx" id="3DLpJ7psBzD" role="2iSdaV" />
       <node concept="3EZMnI" id="53LYXLI10tJ" role="3EZMnx">
@@ -686,7 +685,7 @@
       <node concept="3XFhqQ" id="3KCb14J7tlC" role="3EZMnx" />
       <node concept="3EZMnI" id="3KCb14J7tmf" role="3EZMnx">
         <node concept="3F0ifn" id="3KCb14J7tp3" role="3EZMnx">
-          <property role="3F0ifm" value="Trigger Signal:" />
+          <property role="3F0ifm" value="Trigger Message:" />
         </node>
         <node concept="3F1sOY" id="3KCb14J7tp7" role="3EZMnx">
           <ref role="1NtTu8" to="3751:svZ_Jg4NU9" resolve="signal" />
@@ -943,33 +942,7 @@
       </node>
       <node concept="3EZMnI" id="7o6PzEpEZ$9" role="3EZMnx">
         <node concept="VPM3Z" id="7o6PzEpEZ$c" role="3F10Kt" />
-        <node concept="3EZMnI" id="7o6PzEpEZ_E" role="3EZMnx">
-          <node concept="VPM3Z" id="7o6PzEpEZ_G" role="3F10Kt" />
-          <node concept="3F0ifn" id="7o6PzEpEZ_I" role="3EZMnx">
-            <property role="3F0ifm" value="is a" />
-          </node>
-          <node concept="1iCGBv" id="7o6PzEpEZ_U" role="3EZMnx">
-            <ref role="1NtTu8" to="3751:3l6cNjec6IC" resolve="superType" />
-            <node concept="1sVBvm" id="7o6PzEpEZ_W" role="1sWHZn">
-              <node concept="3F0A7n" id="7o6PzEpEZA4" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-          <node concept="2iRfu4" id="7o6PzEpEZ_J" role="2iSdaV" />
-        </node>
         <node concept="3F0ifn" id="7o6PzEpEZAV" role="3EZMnx" />
-        <node concept="3EZMnI" id="7lVoe4yu2xL" role="3EZMnx">
-          <node concept="2iRfu4" id="7lVoe4yu2xM" role="2iSdaV" />
-          <node concept="3F0ifn" id="7lVoe4yu2wn" role="3EZMnx">
-            <property role="3F0ifm" value="patient capacity:" />
-          </node>
-          <node concept="3F0A7n" id="7lVoe4yu2ym" role="3EZMnx">
-            <property role="39s7Ar" value="true" />
-            <ref role="1NtTu8" to="3751:7lVoe4yrHCt" resolve="patientCapacity" />
-          </node>
-        </node>
         <node concept="3EZMnI" id="7o6PzEpEZA7" role="3EZMnx">
           <node concept="VPM3Z" id="7o6PzEpEZA9" role="3F10Kt" />
           <node concept="3F0ifn" id="7o6PzEpEZAb" role="3EZMnx">
@@ -988,8 +961,11 @@
           <node concept="2iRkQZ" id="7o6PzEpEZAc" role="2iSdaV" />
         </node>
         <node concept="3F0ifn" id="7o6PzEpEZ$x" role="3EZMnx" />
-        <node concept="3F1sOY" id="1SF32lWSJZ" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:1SF32lWSJU" resolve="signalselectionstrategy" />
+        <node concept="3EZMnI" id="2_JteYOhd$8" role="3EZMnx">
+          <node concept="3F1sOY" id="1SF32lWSJZ" role="3EZMnx">
+            <ref role="1NtTu8" to="3751:1SF32lWSJU" resolve="signalselectionstrategy" />
+          </node>
+          <node concept="2iRfu4" id="2_JteYOhd$9" role="2iSdaV" />
         </node>
         <node concept="3F0ifn" id="7o6PzEpEZAC" role="3EZMnx">
           <property role="3F0ifm" value="who" />
@@ -1821,98 +1797,108 @@
   </node>
   <node concept="24kQdi" id="6dYFu3AhE_C">
     <ref role="1XX52x" to="3751:6dYFu3AbeaS" resolve="AgentGenerator" />
-    <node concept="3EZMnI" id="2vFOz$FUTDm" role="2wV5jI">
-      <node concept="2iRfu4" id="2vFOz$FUTDn" role="2iSdaV" />
-      <node concept="2rfBfz" id="2vFOz$FUEfw" role="3EZMnx">
-        <node concept="2reSaE" id="2vFOz$FUEfL" role="2rf8GZ">
-          <ref role="2reCK$" to="3751:2vFOz$FUEfh" resolve="AgentGeneratorLines" />
-          <node concept="2r3Xtq" id="2vFOz$FUTxP" role="2YlbuT">
-            <node concept="2rfbtV" id="2vFOz$FUTxT" role="uCobI">
-              <property role="2rfbtB" value="0:00-1:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTxZ" role="uCobI">
-              <property role="2rfbtB" value="1:00-2:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTy7" role="uCobI">
-              <property role="2rfbtB" value="2:00-3:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTyg" role="uCobI">
-              <property role="2rfbtB" value="3:00-4:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTyl" role="uCobI">
-              <property role="2rfbtB" value="4:00-5:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTyr" role="uCobI">
-              <property role="2rfbtB" value="5:00-6:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTyy" role="uCobI">
-              <property role="2rfbtB" value="6:00-7:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTyE" role="uCobI">
-              <property role="2rfbtB" value="7:00-8:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTyN" role="uCobI">
-              <property role="2rfbtB" value="8:00-9:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTyX" role="uCobI">
-              <property role="2rfbtB" value="9:00-10:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTz8" role="uCobI">
-              <property role="2rfbtB" value="10:00-11:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTzk" role="uCobI">
-              <property role="2rfbtB" value="11:00-12:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTzx" role="uCobI">
-              <property role="2rfbtB" value="12:00-13:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTzJ" role="uCobI">
-              <property role="2rfbtB" value="13:00-14:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTzY" role="uCobI">
-              <property role="2rfbtB" value="14:00-15:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUT$e" role="uCobI">
-              <property role="2rfbtB" value="15:00-16:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUT$v" role="uCobI">
-              <property role="2rfbtB" value="16:00-17:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUT$L" role="uCobI">
-              <property role="2rfbtB" value="17:00-18:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUT_4" role="uCobI">
-              <property role="2rfbtB" value="18:00-19:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUT_o" role="uCobI">
-              <property role="2rfbtB" value="19:00-20:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTA3" role="uCobI">
-              <property role="2rfbtB" value="20:00-21:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTAK" role="uCobI">
-              <property role="2rfbtB" value="21:00-22:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTBv" role="uCobI">
-              <property role="2rfbtB" value="22:00-23:00" />
-            </node>
-            <node concept="2rfbtV" id="2vFOz$FUTCg" role="uCobI">
-              <property role="2rfbtB" value="23:00-24:00" />
+    <node concept="3EZMnI" id="2_JteYOEVVA" role="2wV5jI">
+      <node concept="2iRkQZ" id="2_JteYOEVVB" role="2iSdaV" />
+      <node concept="3EZMnI" id="2vFOz$FUTDm" role="3EZMnx">
+        <node concept="2iRfu4" id="2vFOz$FUTDn" role="2iSdaV" />
+        <node concept="2rfBfz" id="2vFOz$FUEfw" role="3EZMnx">
+          <node concept="2reSaE" id="2vFOz$FUEfL" role="2rf8GZ">
+            <ref role="2reCK$" to="3751:2vFOz$FUEfh" resolve="AgentGeneratorLines" />
+            <node concept="2r3Xtq" id="2vFOz$FUTxP" role="2YlbuT">
+              <node concept="2rfbtV" id="2vFOz$FUTxT" role="uCobI">
+                <property role="2rfbtB" value="0:00-1:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTxZ" role="uCobI">
+                <property role="2rfbtB" value="1:00-2:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTy7" role="uCobI">
+                <property role="2rfbtB" value="2:00-3:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTyg" role="uCobI">
+                <property role="2rfbtB" value="3:00-4:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTyl" role="uCobI">
+                <property role="2rfbtB" value="4:00-5:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTyr" role="uCobI">
+                <property role="2rfbtB" value="5:00-6:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTyy" role="uCobI">
+                <property role="2rfbtB" value="6:00-7:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTyE" role="uCobI">
+                <property role="2rfbtB" value="7:00-8:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTyN" role="uCobI">
+                <property role="2rfbtB" value="8:00-9:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTyX" role="uCobI">
+                <property role="2rfbtB" value="9:00-10:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTz8" role="uCobI">
+                <property role="2rfbtB" value="10:00-11:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTzk" role="uCobI">
+                <property role="2rfbtB" value="11:00-12:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTzx" role="uCobI">
+                <property role="2rfbtB" value="12:00-13:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTzJ" role="uCobI">
+                <property role="2rfbtB" value="13:00-14:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTzY" role="uCobI">
+                <property role="2rfbtB" value="14:00-15:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUT$e" role="uCobI">
+                <property role="2rfbtB" value="15:00-16:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUT$v" role="uCobI">
+                <property role="2rfbtB" value="16:00-17:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUT$L" role="uCobI">
+                <property role="2rfbtB" value="17:00-18:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUT_4" role="uCobI">
+                <property role="2rfbtB" value="18:00-19:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUT_o" role="uCobI">
+                <property role="2rfbtB" value="19:00-20:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTA3" role="uCobI">
+                <property role="2rfbtB" value="20:00-21:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTAK" role="uCobI">
+                <property role="2rfbtB" value="21:00-22:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTBv" role="uCobI">
+                <property role="2rfbtB" value="22:00-23:00" />
+              </node>
+              <node concept="2rfbtV" id="2vFOz$FUTCg" role="uCobI">
+                <property role="2rfbtB" value="23:00-24:00" />
+              </node>
             </node>
           </node>
         </node>
+        <node concept="3F0ifn" id="EFW1mYwZsu" role="3EZMnx">
+          <property role="3F0ifm" value="Agent Type:" />
+        </node>
+        <node concept="3F1sOY" id="EFW1mYwZtq" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:EFW1mYsc5K" resolve="AgentType" />
+        </node>
+        <node concept="3F0ifn" id="EFW1mZoVG$" role="3EZMnx">
+          <property role="3F0ifm" value="Spawn at:" />
+        </node>
+        <node concept="3F1sOY" id="EFW1mZp2zv" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:EFW1mZoVH$" resolve="SpawnAt" />
+        </node>
       </node>
-      <node concept="3F0ifn" id="EFW1mYwZsu" role="3EZMnx">
-        <property role="3F0ifm" value="Agent Type:" />
-      </node>
-      <node concept="3F1sOY" id="EFW1mYwZtq" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:EFW1mYsc5K" resolve="AgentType" />
-      </node>
-      <node concept="3F0ifn" id="EFW1mZoVG$" role="3EZMnx">
-        <property role="3F0ifm" value="Spawn at:" />
-      </node>
-      <node concept="3F1sOY" id="EFW1mZp2zv" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:EFW1mZoVH$" resolve="SpawnAt" />
+      <node concept="3EZMnI" id="2_JteYOEVXP" role="3EZMnx">
+        <node concept="2iRkQZ" id="2_JteYOEVXQ" role="2iSdaV" />
+        <node concept="3F2HdR" id="2_JteYOEVXf" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:2_JteYOEVUw" resolve="AttributeMaps" />
+          <node concept="2iRkQZ" id="2_JteYOEVXh" role="2czzBx" />
+        </node>
       </node>
     </node>
   </node>
@@ -2081,12 +2067,12 @@
   </node>
   <node concept="24kQdi" id="1SF32lWSIp">
     <property role="3GE5qa" value="SignalSelectionStrategy" />
-    <ref role="1XX52x" to="3751:1SF32lWRB3" resolve="SignalSelectionStrategy" />
+    <ref role="1XX52x" to="3751:1SF32lWRB3" resolve="MessageSelectionStrategy" />
     <node concept="3EZMnI" id="1SF32lWSII" role="2wV5jI">
       <node concept="2iRkQZ" id="1SF32lWSIJ" role="2iSdaV" />
       <node concept="3EZMnI" id="1SF32lWSI$" role="3EZMnx">
         <node concept="3F0ifn" id="1SF32lWSIF" role="3EZMnx">
-          <property role="3F0ifm" value="Signal Selection Strategy" />
+          <property role="3F0ifm" value="Message Selection Strategy" />
         </node>
         <node concept="l2Vlx" id="1SF32lWSIB" role="2iSdaV" />
       </node>
@@ -2128,6 +2114,53 @@
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="l2Vlx" id="1SF32mdTHT" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2_JteYOpJeQ">
+    <property role="3GE5qa" value="actors.attribute" />
+    <ref role="1XX52x" to="3751:2_JteYOpJdB" resolve="AttributeDistributionLine" />
+    <node concept="2r0Tta" id="2_JteYNWseY" role="2wV5jI">
+      <node concept="2reCLk" id="2_JteYNWseZ" role="2r0Tv6">
+        <node concept="2reCLy" id="2_JteYNWsf0" role="2reCL6">
+          <node concept="3F1sOY" id="2_JteYOpJiC" role="2reSmM">
+            <ref role="1NtTu8" to="3751:2_JteYOpJiq" resolve="attributeValue" />
+          </node>
+        </node>
+        <node concept="2reCLy" id="2_JteYNWsf2" role="2reCL6">
+          <node concept="3F0A7n" id="2_JteYOpJfn" role="2reSmM">
+            <ref role="1NtTu8" to="3751:2_JteYOpJey" resolve="probabilityDistribution" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2_JteYOtdTW">
+    <property role="3GE5qa" value="actors.attribute" />
+    <ref role="1XX52x" to="3751:2_JteYOpJg7" resolve="AttributeDistributionTable" />
+    <node concept="3EZMnI" id="2_JteYNYsUz" role="2wV5jI">
+      <node concept="3EZMnI" id="2_JteYNYsVB" role="3EZMnx">
+        <node concept="2iRfu4" id="2_JteYNYsVC" role="2iSdaV" />
+        <node concept="3F0ifn" id="2_JteYNYsUL" role="3EZMnx">
+          <property role="3F0ifm" value="Probability Distribution table for" />
+        </node>
+        <node concept="3F0A7n" id="2_JteYOYVmu" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:2_JteYOU2tR" resolve="attributeName" />
+        </node>
+      </node>
+      <node concept="2iRkQZ" id="2_JteYNYsU$" role="2iSdaV" />
+      <node concept="2rfBfz" id="2_JteYNWsb6" role="3EZMnx">
+        <node concept="2reSaE" id="2_JteYNWsbm" role="2rf8GZ">
+          <ref role="2reCK$" to="3751:2_JteYOpJgP" resolve="lines" />
+          <node concept="2r3Xtq" id="2_JteYNWscj" role="2YiT2b">
+            <node concept="2rfbtV" id="2_JteYNWsco" role="uCobI">
+              <property role="2rfbtB" value="Value" />
+            </node>
+            <node concept="2rfbtV" id="2_JteYNWscu" role="uCobI">
+              <property role="2rfbtB" value="Distribution (%)" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

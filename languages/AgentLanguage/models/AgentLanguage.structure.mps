@@ -91,7 +91,7 @@
       <property role="IQ2ns" value="33966321879452666" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="signalselectionstrategy" />
-      <ref role="20lvS9" node="1SF32lWRB3" resolve="SignalSelectionStrategy" />
+      <ref role="20lvS9" node="1SF32lWRB3" resolve="MessageSelectionStrategy" />
     </node>
     <node concept="PrWs8" id="3l6cNjec6HS" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -1585,6 +1585,13 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
+    <node concept="1TJgyj" id="2_JteYOEVUw" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650847088288" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="AttributeMaps" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2_JteYOpJg7" resolve="AttributeDistributionTable" />
+    </node>
   </node>
   <node concept="25R3W" id="1s4HvCZwevB">
     <property role="3F6X1D" value="1658650649191049191" />
@@ -1706,8 +1713,8 @@
   </node>
   <node concept="1TIwiD" id="1SF32lWRB3">
     <property role="EcuMT" value="33966321879448003" />
-    <property role="TrG5h" value="SignalSelectionStrategy" />
-    <property role="34LRSv" value="signal selection strategy" />
+    <property role="TrG5h" value="MessageSelectionStrategy" />
+    <property role="34LRSv" value="message selection strategy" />
     <property role="3GE5qa" value="SignalSelectionStrategy" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1SF32lWSIn" role="1TKVEi">
@@ -1797,6 +1804,42 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="1SF32mdTHD" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2_JteYOpJdB">
+    <property role="EcuMT" value="2985733650842579815" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="AttributeDistributionLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="2_JteYOpJey" role="1TKVEl">
+      <property role="IQ2nx" value="2985733650842579874" />
+      <property role="TrG5h" value="probabilityDistribution" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyj" id="2_JteYOpJiq" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650842580122" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="attributeValue" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2_JteYOpJg7">
+    <property role="EcuMT" value="2985733650842579975" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="AttributeDistributionTable" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="2_JteYOpJgP" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650842580021" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="2_JteYOpJdB" resolve="AttributeDistributionLine" />
+    </node>
+    <node concept="1TJgyi" id="2_JteYOU2tR" role="1TKVEl">
+      <property role="IQ2nx" value="2985733650851047287" />
+      <property role="TrG5h" value="attributeName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

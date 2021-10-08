@@ -34,6 +34,7 @@ import simcore.utilities.Tuple;
 public class Agent {
 	// Record the building that the agent is currently inside
 	protected Room curInside;
+	public Object placeholderVariable;
 	protected Occupiable curOccupying;
 	protected List<Behaviour> myCurrentActions = new ArrayList<Behaviour>();
 	protected Behaviour myActiveAction;
@@ -363,6 +364,7 @@ public class Agent {
 		}
 		return false;
 	}
+	
 	
 //	public boolean EvaluateInfectionCondition(InfectionStatus comparisonStatus, Patient p) {
 //		

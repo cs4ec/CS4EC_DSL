@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-c2y9eqfcoosngj1m4f2ue2dern28clb">
-  <files dir="EDLanguage/sandbox" names="ActionFourTriggerSignal.java:ActionThreeTriggerSignal.java:AdmitPatientTriggerSignal.java:CoughTest.java:Doc.java:EDBuilder.java:INOVA.java:Lab.java:MainEntrance.java:MajorsABBay.java:MajorsCBay.java:TriageDesk.java:WaitingRoom.java:Ward.java:patient.java:patientGenerator.java" />
+<product version="3" modelHash="eat9swga8lps45lavqvty2qlz225zxz">
+  <files dir="EDLanguage/sandbox" names="AdmittoAmberBayTriggerSignal.java:AmberBay.java:CoughTest.java:DischargeTriggerSignal.java:DoLIATTriggerSignal.java:Doc.java:EDBuilder.java:INOVA.java:LIAT.java:Lab.java:MainEntrance.java:MajorsABBay.java:MajorsCBay.java:TriageDesk.java:WaitingRoom.java:Ward.java:patient.java:patientGenerator.java" />
 </product>
 

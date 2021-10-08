@@ -12,7 +12,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="14,0,38,0" name="ActionCards.behavior.BehaviorAspectDescriptor" />
+      <unit at="14,0,44,0" name="ActionCards.behavior.BehaviorAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/2698877061874629327">
@@ -87,6 +87,143 @@
       </scope>
       <unit id="2698877061874629327" at="83,0,86,0" name="ActionCards.behavior.Action__BehaviorDescriptor$PROPS" />
       <unit id="2698877061874629327" at="23,0,87,0" name="ActionCards.behavior.Action__BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/2985733650853515996">
+    <file name="DiseaseInitialiserTable__BehaviorDescriptor.java">
+      <node id="2985733650853515996" at="18,0,19,0" concept="6" trace="CONCEPT" />
+      <node id="2985733650853515996" at="21,0,22,0" concept="6" trace="BH_METHODS" />
+      <node id="2985733650853515996" at="31,114,32,21" concept="1" />
+      <node id="2985733650853515996" at="36,114,37,49" concept="4" />
+      <node id="2985733650853515996" at="38,26,39,56" concept="9" />
+      <node id="2985733650853515996" at="42,14,43,58" concept="9" />
+      <node id="2985733650853515996" at="48,128,49,49" concept="4" />
+      <node id="2985733650853515996" at="50,26,51,56" concept="9" />
+      <node id="2985733650853515996" at="54,14,55,58" concept="9" />
+      <node id="2985733650853515996" at="61,48,62,22" concept="5" />
+      <node id="2985733650853515996" at="67,40,68,19" concept="5" />
+      <node id="2985733650853515996" at="23,0,25,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2985733650853515996" at="27,0,29,0" concept="0" trace="DiseaseInitialiserTable__BehaviorDescriptor#()V" />
+      <node id="2985733650853515996" at="37,49,40,5" concept="2" />
+      <node id="2985733650853515996" at="49,49,52,5" concept="2" />
+      <node id="2985733650853515996" at="30,0,34,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="2985733650853515996" at="40,5,44,5" concept="8" />
+      <node id="2985733650853515996" at="52,5,56,5" concept="8" />
+      <node id="2985733650853515996" at="59,0,64,0" concept="3" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="2985733650853515996" at="65,0,70,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="2985733650853515996" at="35,0,46,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="2985733650853515996" at="47,0,58,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="2985733650853515996" at="23,63,23,63" />
+      <scope id="2985733650853515996" at="27,61,27,61" />
+      <scope id="2985733650853515996" at="31,114,32,21" />
+      <scope id="2985733650853515996" at="38,26,39,56" />
+      <scope id="2985733650853515996" at="42,14,43,58" />
+      <scope id="2985733650853515996" at="50,26,51,56" />
+      <scope id="2985733650853515996" at="54,14,55,58" />
+      <scope id="2985733650853515996" at="61,48,62,22" />
+      <scope id="2985733650853515996" at="67,40,68,19" />
+      <scope id="2985733650853515996" at="23,0,25,0">
+        <var name="__thisNode__" id="2985733650853515996" />
+      </scope>
+      <scope id="2985733650853515996" at="27,0,29,0" />
+      <scope id="2985733650853515996" at="30,0,34,0">
+        <var name="constructor" id="2985733650853515996" />
+        <var name="node" id="2985733650853515996" />
+        <var name="parameters" id="2985733650853515996" />
+      </scope>
+      <scope id="2985733650853515996" at="59,0,64,0" />
+      <scope id="2985733650853515996" at="65,0,70,0" />
+      <scope id="2985733650853515996" at="36,114,44,5">
+        <var name="methodIndex" id="2985733650853515996" />
+      </scope>
+      <scope id="2985733650853515996" at="48,128,56,5">
+        <var name="methodIndex" id="2985733650853515996" />
+      </scope>
+      <scope id="2985733650853515996" at="35,0,46,0">
+        <var name="method" id="2985733650853515996" />
+        <var name="node" id="2985733650853515996" />
+        <var name="parameters" id="2985733650853515996" />
+      </scope>
+      <scope id="2985733650853515996" at="47,0,58,0">
+        <var name="concept" id="2985733650853515996" />
+        <var name="method" id="2985733650853515996" />
+        <var name="parameters" id="2985733650853515996" />
+      </scope>
+      <unit id="2985733650853515996" at="17,0,71,0" name="ActionCards.behavior.DiseaseInitialiserTable__BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/2985733650853517282">
+    <file name="DiseaseInitialiserLine__BehaviorDescriptor.java">
+      <node id="2985733650853517282" at="24,0,25,0" concept="6" trace="CONCEPT" />
+      <node id="2985733650853517282" at="26,0,27,0" concept="6" trace="getPrevalenceAsDouble_id2_JteYP3tbB" />
+      <node id="2985733650853517282" at="28,0,29,0" concept="6" trace="BH_METHODS" />
+      <node id="2985733650853516074" at="33,94,34,104" concept="5" />
+      <node id="2985733650853517282" at="41,114,42,21" concept="1" />
+      <node id="2985733650853517282" at="46,114,47,49" concept="4" />
+      <node id="2985733650853517282" at="48,26,49,56" concept="9" />
+      <node id="2985733650853517282" at="52,13,53,72" concept="5" />
+      <node id="2985733650853517282" at="54,14,55,58" concept="9" />
+      <node id="2985733650853517282" at="60,128,61,49" concept="4" />
+      <node id="2985733650853517282" at="62,26,63,56" concept="9" />
+      <node id="2985733650853517282" at="66,14,67,58" concept="9" />
+      <node id="2985733650853517282" at="73,48,74,22" concept="5" />
+      <node id="2985733650853517282" at="79,40,80,19" concept="5" />
+      <node id="2985733650853517282" at="84,0,85,0" concept="6" trace="Prevalence$d4sA" />
+      <node id="2985733650853517282" at="30,0,32,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2985733650853517282" at="37,0,39,0" concept="0" trace="DiseaseInitialiserLine__BehaviorDescriptor#()V" />
+      <node id="2985733650853517282" at="33,0,36,0" concept="7" trace="getPrevalenceAsDouble_id2_JteYP3tbB#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/Double;" />
+      <node id="2985733650853517282" at="47,49,50,5" concept="2" />
+      <node id="2985733650853517282" at="61,49,64,5" concept="2" />
+      <node id="2985733650853517282" at="40,0,44,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="2985733650853517282" at="64,5,68,5" concept="8" />
+      <node id="2985733650853517282" at="71,0,76,0" concept="3" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="2985733650853517282" at="77,0,82,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="2985733650853517282" at="50,5,56,5" concept="8" />
+      <node id="2985733650853517282" at="59,0,70,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="2985733650853517282" at="45,0,58,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="2985733650853517282" at="30,63,30,63" />
+      <scope id="2985733650853517282" at="37,60,37,60" />
+      <scope id="2985733650853516010" at="33,94,34,104" />
+      <scope id="2985733650853517282" at="41,114,42,21" />
+      <scope id="2985733650853517282" at="48,26,49,56" />
+      <scope id="2985733650853517282" at="52,13,53,72" />
+      <scope id="2985733650853517282" at="54,14,55,58" />
+      <scope id="2985733650853517282" at="62,26,63,56" />
+      <scope id="2985733650853517282" at="66,14,67,58" />
+      <scope id="2985733650853517282" at="73,48,74,22" />
+      <scope id="2985733650853517282" at="79,40,80,19" />
+      <scope id="2985733650853517282" at="30,0,32,0">
+        <var name="__thisNode__" id="2985733650853517282" />
+      </scope>
+      <scope id="2985733650853517282" at="37,0,39,0" />
+      <scope id="2985733650853517282" at="33,0,36,0">
+        <var name="__thisNode__" id="2985733650853517282" />
+      </scope>
+      <scope id="2985733650853517282" at="40,0,44,0">
+        <var name="constructor" id="2985733650853517282" />
+        <var name="node" id="2985733650853517282" />
+        <var name="parameters" id="2985733650853517282" />
+      </scope>
+      <scope id="2985733650853517282" at="71,0,76,0" />
+      <scope id="2985733650853517282" at="77,0,82,0" />
+      <scope id="2985733650853517282" at="60,128,68,5">
+        <var name="methodIndex" id="2985733650853517282" />
+      </scope>
+      <scope id="2985733650853517282" at="46,114,56,5">
+        <var name="methodIndex" id="2985733650853517282" />
+      </scope>
+      <scope id="2985733650853517282" at="59,0,70,0">
+        <var name="concept" id="2985733650853517282" />
+        <var name="method" id="2985733650853517282" />
+        <var name="parameters" id="2985733650853517282" />
+      </scope>
+      <scope id="2985733650853517282" at="45,0,58,0">
+        <var name="method" id="2985733650853517282" />
+        <var name="node" id="2985733650853517282" />
+        <var name="parameters" id="2985733650853517282" />
+      </scope>
+      <unit id="2985733650853517282" at="83,0,86,0" name="ActionCards.behavior.DiseaseInitialiserLine__BehaviorDescriptor$PROPS" />
+      <unit id="2985733650853517282" at="23,0,87,0" name="ActionCards.behavior.DiseaseInitialiserLine__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/768972137579649659">
