@@ -659,22 +659,24 @@
       <property role="TrG5h" value="operator" />
       <ref role="AX2Wp" node="3KCb14J4_lj" resolve="JudgeOperator" />
     </node>
-    <node concept="1TJgyj" id="3KCb14J4_lD" role="1TKVEi">
-      <property role="IQ2ns" value="4334763093659899241" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="left" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3KCb14J4_kp" resolve="AttributeReference" />
-    </node>
     <node concept="1TJgyj" id="6tNT_P6oAKT" role="1TKVEi">
       <property role="IQ2ns" value="7454555096515505209" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="right" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6tNT_P6ny7D" resolve="NumericExpression" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-    <node concept="PrWs8" id="6tNT_P6oAL8" role="PzmwI">
-      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    <node concept="1TJgyj" id="2_JteYRiHEQ" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650891070134" />
+      <property role="20kJfa" value="attrRef" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_km" resolve="Attribute" />
+    </node>
+    <node concept="1TJgyj" id="2_JteYSjZ1X" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650908180605" />
+      <property role="20kJfa" value="actorRef" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjebQ9L" resolve="Actor" />
     </node>
   </node>
   <node concept="25R3W" id="3KCb14J4_lj">
@@ -906,6 +908,12 @@
     <property role="TrG5h" value="UpdateAttributeAction" />
     <property role="34LRSv" value="updateAttribute" />
     <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="1TJgyj" id="2_JteYSt6$A" role="1TKVEi">
+      <property role="IQ2ns" value="2985733650910570790" />
+      <property role="20kJfa" value="actorRef" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjebQ9L" resolve="Actor" />
+    </node>
     <node concept="PrWs8" id="EFW1mWoudf" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>

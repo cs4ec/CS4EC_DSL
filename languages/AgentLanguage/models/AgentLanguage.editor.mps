@@ -44,6 +44,7 @@
       </concept>
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
+      <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
       </concept>
@@ -570,8 +571,28 @@
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:3KCb14J4_kl" resolve="ExpressionCondition" />
     <node concept="3EZMnI" id="3KCb14J5xBF" role="2wV5jI">
-      <node concept="3F1sOY" id="3KCb14J5xDi" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:3KCb14J4_lD" resolve="left" />
+      <node concept="1iCGBv" id="2_JteYSjZ2x" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2_JteYSjZ1X" resolve="actorRef" />
+        <node concept="1sVBvm" id="2_JteYSjZ2z" role="1sWHZn">
+          <node concept="3F0A7n" id="2_JteYSjZ2K" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2_JteYSbqjS" role="3EZMnx">
+        <property role="3F0ifm" value="." />
+        <node concept="11L4FC" id="2_JteYSpAdb" role="3F10Kt" />
+        <node concept="11LMrY" id="2_JteYSpAdG" role="3F10Kt" />
+      </node>
+      <node concept="1iCGBv" id="2_JteYRiXyr" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2_JteYRiHEQ" resolve="attrRef" />
+        <node concept="1sVBvm" id="2_JteYRiXyt" role="1sWHZn">
+          <node concept="3F0A7n" id="2_JteYRiXyA" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
       </node>
       <node concept="3F0A7n" id="3KCb14J5xDo" role="3EZMnx">
         <ref role="1NtTu8" to="3751:3KCb14J4_lJ" resolve="operator" />
@@ -1152,9 +1173,25 @@
     <property role="3GE5qa" value="actions.basic actions" />
     <ref role="1XX52x" to="3751:53LYXLHVYLE" resolve="UpdateAttributeAction" />
     <node concept="3EZMnI" id="53LYXLHVYM7" role="2wV5jI">
+      <node concept="1iCGBv" id="2_JteYSt6_j" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2_JteYSt6$A" resolve="actorRef" />
+        <node concept="1sVBvm" id="2_JteYSt6_l" role="1sWHZn">
+          <node concept="3F0A7n" id="2_JteYSt6_C" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            <node concept="11LMrY" id="2_JteYSt6A6" role="3F10Kt" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2_JteYSt6Az" role="3EZMnx">
+        <property role="3F0ifm" value="." />
+        <node concept="11L4FC" id="2_JteYSt6Bs" role="3F10Kt" />
+        <node concept="11LMrY" id="2_JteYSt6BE" role="3F10Kt" />
+      </node>
       <node concept="l2Vlx" id="53LYXLHVYMa" role="2iSdaV" />
       <node concept="3F1sOY" id="EFW1mX8QoS" role="3EZMnx">
         <ref role="1NtTu8" to="3751:EFW1mX8QoQ" resolve="attributeReference" />
+        <node concept="11L4FC" id="2_JteYSt6B8" role="3F10Kt" />
       </node>
       <node concept="3F0ifn" id="EFW1mXaZdB" role="3EZMnx">
         <property role="3F0ifm" value="=" />

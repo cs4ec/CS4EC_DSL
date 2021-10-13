@@ -13,7 +13,7 @@ public class CoughTest {
   private CoughTest() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 5;
-    returnMap.put(120, ((Double) (4 / TotalOccurances)));
+    returnMap.put(60, ((Double) (4 / TotalOccurances)));
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 

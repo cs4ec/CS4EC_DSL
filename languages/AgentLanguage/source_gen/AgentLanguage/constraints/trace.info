@@ -428,6 +428,54 @@
       <unit id="2480088909322519859" at="22,0,64,0" name="AgentLanguage.constraints.SignalReference_Constraints" />
     </file>
   </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/2985733650897868649">
+    <file name="AttributeReference_Constraints.java">
+      <node id="2985733650897868649" at="23,43,24,42" concept="10" />
+      <node id="5832719916577197540" at="31,44,32,20" concept="6" />
+      <node id="5832719916577197540" at="39,63,40,57" concept="6" />
+      <node id="5832719916577197540" at="43,80,44,146" concept="5" />
+      <node id="5832719916577197540" at="44,146,45,62" concept="6" />
+      <node id="2985733650897868649" at="49,6,50,131" concept="5" />
+      <node id="5832719916577197540" at="50,131,51,42" concept="2" />
+      <node id="2985733650897868649" at="51,42,52,22" concept="6" />
+      <node id="2985733650897868649" at="54,0,55,0" concept="8" trace="breakingNode_imd69v_a0a0a0a0a1a0a0a0c" />
+      <node id="2985733650897868649" at="57,0,58,0" concept="8" trace="AttributeReference$FC" />
+      <node id="2985733650897868649" at="58,0,59,0" concept="8" trace="Attribute$w0" />
+      <node id="2985733650897868649" at="62,0,63,0" concept="8" trace="attribute$$HXZ" />
+      <node id="2985733650897868649" at="23,0,26,0" concept="1" trace="AttributeReference_Constraints#()V" />
+      <node id="5832719916577197540" at="30,0,34,0" concept="4" trace="hasOwnScopeProvider#()Z" />
+      <node id="5832719916577197540" at="38,0,42,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="5832719916577197540" at="42,0,47,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="5832719916577197540" at="36,56,47,10" concept="6" />
+      <node id="5832719916577197540" at="34,0,49,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="5832719916577197540" at="28,90,49,6" concept="5" />
+      <node id="2985733650897868649" at="27,0,54,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="2985733650897868649" at="23,43,24,42" />
+      <scope id="5832719916577197540" at="31,44,32,20" />
+      <scope id="5832719916577197540" at="39,63,40,57" />
+      <scope id="5832719916577197540" at="43,80,45,62">
+        <var name="scope" id="5832719916577197540" />
+      </scope>
+      <scope id="2985733650897868649" at="23,0,26,0" />
+      <scope id="5832719916577197540" at="30,0,34,0" />
+      <scope id="5832719916577197540" at="38,0,42,0" />
+      <scope id="5832719916577197540" at="42,0,47,0">
+        <var name="_context" id="5832719916577197540" />
+      </scope>
+      <scope id="5832719916577197540" at="36,56,47,10" />
+      <scope id="5832719916577197540" at="34,0,49,0" />
+      <scope id="2985733650897868649" at="28,90,52,22">
+        <var name="d0" id="5832719916577197540" />
+        <var name="references" id="2985733650897868649" />
+      </scope>
+      <scope id="2985733650897868649" at="27,0,54,0" />
+      <unit id="2985733650897868649" at="61,0,64,0" name="AgentLanguage.constraints.AttributeReference_Constraints$LINKS" />
+      <unit id="2985733650897868649" at="56,0,60,0" name="AgentLanguage.constraints.AttributeReference_Constraints$CONCEPTS" />
+      <unit id="5832719916577197540" at="37,19,47,9" name="AgentLanguage.constraints.AttributeReference_Constraints$1$1" />
+      <unit id="5832719916577197540" at="29,48,49,5" name="AgentLanguage.constraints.AttributeReference_Constraints$1" />
+      <unit id="2985733650897868649" at="22,0,65,0" name="AgentLanguage.constraints.AttributeReference_Constraints" />
+    </file>
+  </root>
   <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/33966321881516841">
     <file name="SignalSelectionRule_Constraints.java">
       <node id="33966321881516841" at="19,44,20,43" concept="10" />
@@ -679,54 +727,6 @@
       <unit id="5832719916574256520" at="37,19,47,9" name="AgentLanguage.constraints.BehaviourElementReference_Constraints$1$1" />
       <unit id="5832719916574256520" at="29,48,49,5" name="AgentLanguage.constraints.BehaviourElementReference_Constraints$1" />
       <unit id="5832719916574256519" at="22,0,65,0" name="AgentLanguage.constraints.BehaviourElementReference_Constraints" />
-    </file>
-  </root>
-  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/5832719916577197484">
-    <file name="AttributeReference_Constraints.java">
-      <node id="5832719916577197484" at="23,43,24,42" concept="10" />
-      <node id="5832719916577197540" at="31,44,32,20" concept="6" />
-      <node id="5832719916577197540" at="39,63,40,57" concept="6" />
-      <node id="5832719916577197540" at="43,80,44,146" concept="5" />
-      <node id="5832719916577197540" at="44,146,45,62" concept="6" />
-      <node id="5832719916577197484" at="49,6,50,131" concept="5" />
-      <node id="5832719916577197540" at="50,131,51,42" concept="2" />
-      <node id="5832719916577197484" at="51,42,52,22" concept="6" />
-      <node id="5832719916577197484" at="54,0,55,0" concept="8" trace="breakingNode_imd69v_a0a0a0a0a1a0a0a0c" />
-      <node id="5832719916577197484" at="57,0,58,0" concept="8" trace="AttributeReference$FC" />
-      <node id="5832719916577197484" at="58,0,59,0" concept="8" trace="Attribute$w0" />
-      <node id="5832719916577197484" at="62,0,63,0" concept="8" trace="attribute$$HXZ" />
-      <node id="5832719916577197484" at="23,0,26,0" concept="1" trace="AttributeReference_Constraints#()V" />
-      <node id="5832719916577197540" at="30,0,34,0" concept="4" trace="hasOwnScopeProvider#()Z" />
-      <node id="5832719916577197540" at="38,0,42,0" concept="4" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
-      <node id="5832719916577197540" at="42,0,47,0" concept="4" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
-      <node id="5832719916577197540" at="36,56,47,10" concept="6" />
-      <node id="5832719916577197540" at="34,0,49,0" concept="4" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
-      <node id="5832719916577197540" at="28,90,49,6" concept="5" />
-      <node id="5832719916577197484" at="27,0,54,0" concept="4" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <scope id="5832719916577197484" at="23,43,24,42" />
-      <scope id="5832719916577197540" at="31,44,32,20" />
-      <scope id="5832719916577197540" at="39,63,40,57" />
-      <scope id="5832719916577197540" at="43,80,45,62">
-        <var name="scope" id="5832719916577197540" />
-      </scope>
-      <scope id="5832719916577197484" at="23,0,26,0" />
-      <scope id="5832719916577197540" at="30,0,34,0" />
-      <scope id="5832719916577197540" at="38,0,42,0" />
-      <scope id="5832719916577197540" at="42,0,47,0">
-        <var name="_context" id="5832719916577197540" />
-      </scope>
-      <scope id="5832719916577197540" at="36,56,47,10" />
-      <scope id="5832719916577197540" at="34,0,49,0" />
-      <scope id="5832719916577197484" at="28,90,52,22">
-        <var name="d0" id="5832719916577197540" />
-        <var name="references" id="5832719916577197484" />
-      </scope>
-      <scope id="5832719916577197484" at="27,0,54,0" />
-      <unit id="5832719916577197484" at="61,0,64,0" name="AgentLanguage.constraints.AttributeReference_Constraints$LINKS" />
-      <unit id="5832719916577197484" at="56,0,60,0" name="AgentLanguage.constraints.AttributeReference_Constraints$CONCEPTS" />
-      <unit id="5832719916577197540" at="37,19,47,9" name="AgentLanguage.constraints.AttributeReference_Constraints$1$1" />
-      <unit id="5832719916577197540" at="29,48,49,5" name="AgentLanguage.constraints.AttributeReference_Constraints$1" />
-      <unit id="5832719916577197484" at="22,0,65,0" name="AgentLanguage.constraints.AttributeReference_Constraints" />
     </file>
   </root>
   <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/5832719916577595707">

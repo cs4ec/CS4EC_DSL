@@ -19,7 +19,7 @@
       <unit at="10,0,198,0" name="AgentLanguage.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="20,0,1176,0" name="AgentLanguage.structure.StructureAspectDescriptor" />
+      <unit at="20,0,1177,0" name="AgentLanguage.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/1195759192912732648">
@@ -42,22 +42,22 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1195759192912732648" at="106,0,107,0" concept="2" trace="myConceptWallInstanceDefinition" />
       <node id="1195759192912732648" at="312,56,313,47" concept="6" />
-      <node id="1195759192912732648" at="1163,80,1164,170" concept="5" />
-      <node id="1195759192912732648" at="1164,170,1165,34" concept="1" />
-      <node id="1195759192912732648" at="1165,34,1166,71" concept="1" />
-      <node id="1195759192912732648" at="1166,71,1167,100" concept="1" />
-      <node id="1195759192912732648" at="1167,100,1168,17" concept="1" />
-      <node id="1195759192912732651" at="1168,17,1169,113" concept="1" />
-      <node id="1195759192912732653" at="1169,113,1170,113" concept="1" />
-      <node id="1195759192912732656" at="1170,113,1171,111" concept="1" />
-      <node id="1195759192912732660" at="1171,111,1172,111" concept="1" />
-      <node id="1195759192912732648" at="1172,111,1173,22" concept="6" />
-      <node id="1195759192912732648" at="1163,0,1175,0" concept="8" trace="createDescriptorForWallInstanceDefinition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1195759192912732648" at="1164,80,1165,170" concept="5" />
+      <node id="1195759192912732648" at="1165,170,1166,34" concept="1" />
+      <node id="1195759192912732648" at="1166,34,1167,71" concept="1" />
+      <node id="1195759192912732648" at="1167,71,1168,100" concept="1" />
+      <node id="1195759192912732648" at="1168,100,1169,17" concept="1" />
+      <node id="1195759192912732651" at="1169,17,1170,113" concept="1" />
+      <node id="1195759192912732653" at="1170,113,1171,113" concept="1" />
+      <node id="1195759192912732656" at="1171,113,1172,111" concept="1" />
+      <node id="1195759192912732660" at="1172,111,1173,111" concept="1" />
+      <node id="1195759192912732648" at="1173,111,1174,22" concept="6" />
+      <node id="1195759192912732648" at="1164,0,1176,0" concept="8" trace="createDescriptorForWallInstanceDefinition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1195759192912732648" at="312,56,313,47" />
-      <scope id="1195759192912732648" at="1163,80,1173,22">
+      <scope id="1195759192912732648" at="1164,80,1174,22">
         <var name="b" id="1195759192912732648" />
       </scope>
-      <scope id="1195759192912732648" at="1163,0,1175,0" />
+      <scope id="1195759192912732648" at="1164,0,1176,0" />
     </file>
   </root>
   <root nodeRef="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/1195759192913398353">
@@ -80,18 +80,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1195759192913398353" at="105,0,106,0" concept="2" trace="myConceptWallDefinition" />
       <node id="1195759192913398353" at="310,48,311,39" concept="6" />
-      <node id="1195759192913398353" at="1155,72,1156,162" concept="5" />
-      <node id="1195759192913398353" at="1156,162,1157,33" concept="1" />
-      <node id="1195759192913398353" at="1157,33,1158,100" concept="1" />
-      <node id="1195759192913398353" at="1158,100,1159,17" concept="1" />
-      <node id="1195759192913398356" at="1159,17,1160,197" concept="1" />
-      <node id="1195759192913398353" at="1160,197,1161,22" concept="6" />
-      <node id="1195759192913398353" at="1155,0,1163,0" concept="8" trace="createDescriptorForWallDefinition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1195759192913398353" at="1156,72,1157,162" concept="5" />
+      <node id="1195759192913398353" at="1157,162,1158,33" concept="1" />
+      <node id="1195759192913398353" at="1158,33,1159,100" concept="1" />
+      <node id="1195759192913398353" at="1159,100,1160,17" concept="1" />
+      <node id="1195759192913398356" at="1160,17,1161,197" concept="1" />
+      <node id="1195759192913398353" at="1161,197,1162,22" concept="6" />
+      <node id="1195759192913398353" at="1156,0,1164,0" concept="8" trace="createDescriptorForWallDefinition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1195759192913398353" at="310,48,311,39" />
-      <scope id="1195759192913398353" at="1155,72,1161,22">
+      <scope id="1195759192913398353" at="1156,72,1162,22">
         <var name="b" id="1195759192913398353" />
       </scope>
-      <scope id="1195759192913398353" at="1155,0,1163,0" />
+      <scope id="1195759192913398353" at="1156,0,1164,0" />
     </file>
   </root>
   <root nodeRef="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/2510173949014596229">
@@ -1509,12 +1509,12 @@
       <node id="4334763093659899157" at="615,77,616,167" concept="5" />
       <node id="4334763093659899157" at="616,167,617,34" concept="1" />
       <node id="4334763093659899157" at="617,34,618,113" concept="1" />
-      <node id="4334763093659899157" at="618,113,619,76" concept="1" />
-      <node id="4334763093659899157" at="619,76,620,100" concept="1" />
-      <node id="4334763093659899157" at="620,100,621,17" concept="1" />
-      <node id="4334763093659899247" at="621,17,622,179" concept="1" />
-      <node id="4334763093659899241" at="622,179,623,198" concept="1" />
-      <node id="7454555096515505209" at="623,198,624,199" concept="1" />
+      <node id="4334763093659899157" at="618,113,619,100" concept="1" />
+      <node id="4334763093659899157" at="619,100,620,17" concept="1" />
+      <node id="4334763093659899247" at="620,17,621,179" concept="1" />
+      <node id="2985733650891070134" at="621,179,622,171" concept="1" />
+      <node id="2985733650908180605" at="622,171,623,172" concept="1" />
+      <node id="7454555096515505209" at="623,172,624,199" concept="1" />
       <node id="4334763093659899157" at="624,199,625,34" concept="1" />
       <node id="4334763093659899157" at="625,34,626,22" concept="6" />
       <node id="4334763093659899157" at="615,0,628,0" concept="8" trace="createDescriptorForExpressionCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
@@ -2391,16 +2391,17 @@
       <node id="5832719916577320042" at="1146,113,1147,71" concept="1" />
       <node id="5832719916577320042" at="1147,71,1148,100" concept="1" />
       <node id="5832719916577320042" at="1148,100,1149,17" concept="1" />
-      <node id="768972137554994742" at="1149,17,1150,210" concept="1" />
-      <node id="768972137555555169" at="1150,210,1151,197" concept="1" />
-      <node id="5832719916577320042" at="1151,197,1152,31" concept="1" />
-      <node id="5832719916577320042" at="1152,31,1153,22" concept="6" />
-      <node id="5832719916577320042" at="1143,0,1155,0" concept="8" trace="createDescriptorForUpdateAttributeAction#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="2985733650910570790" at="1149,17,1150,172" concept="1" />
+      <node id="768972137554994742" at="1150,172,1151,210" concept="1" />
+      <node id="768972137555555169" at="1151,210,1152,197" concept="1" />
+      <node id="5832719916577320042" at="1152,197,1153,31" concept="1" />
+      <node id="5832719916577320042" at="1153,31,1154,22" concept="6" />
+      <node id="5832719916577320042" at="1143,0,1156,0" concept="8" trace="createDescriptorForUpdateAttributeAction#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="5832719916577320042" at="308,55,309,46" />
-      <scope id="5832719916577320042" at="1143,79,1153,22">
+      <scope id="5832719916577320042" at="1143,79,1154,22">
         <var name="b" id="5832719916577320042" />
       </scope>
-      <scope id="5832719916577320042" at="1143,0,1155,0" />
+      <scope id="5832719916577320042" at="1143,0,1156,0" />
     </file>
   </root>
   <root nodeRef="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/5832719916577320047">

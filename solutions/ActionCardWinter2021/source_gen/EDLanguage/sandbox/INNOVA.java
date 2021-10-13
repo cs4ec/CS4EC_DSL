@@ -13,7 +13,7 @@ public class INNOVA {
   private INNOVA() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 8;
-    returnMap.put(240, ((Double) (7 / TotalOccurances)));
+    returnMap.put(60, ((Double) (7 / TotalOccurances)));
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 

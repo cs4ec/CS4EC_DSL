@@ -12,6 +12,7 @@ import java.util.List;
 
 public class patient extends Actor {
 
+  public String placeholder = "PlaceholderAttribute";
   public String COVID = "Susceptible";
   public String Flu = "Susceptible";
   public String MRSA = "Susceptible";

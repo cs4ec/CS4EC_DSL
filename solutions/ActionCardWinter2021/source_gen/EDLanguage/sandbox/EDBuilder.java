@@ -61,6 +61,12 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 2; i++) {
       context.add(new Doc(space, grid, context));
     }
+    for (int i = 0; i < 3; i++) {
+      context.add(new Nurse(space, grid, context));
+    }
+    for (int i = 0; i < 5; i++) {
+      context.add(new TriageNurse(space, grid, context));
+    }
 
 
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), mapWidth, mapHeight);

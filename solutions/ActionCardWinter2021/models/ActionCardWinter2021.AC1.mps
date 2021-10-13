@@ -164,7 +164,7 @@
       <property role="TrG5h" value="Triage" />
       <property role="3lFixl" value="true" />
       <property role="2mH1Wk" value="5" />
-      <ref role="3tPpTl" node="av1M7vefIR" resolve="INNOVA" />
+      <ref role="3tPpTl" node="2lOlAdPREM9" resolve="CoughTest" />
       <node concept="2_8ZN7" id="2_JteYPiCGp" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCG6" resolve="TriageNurse" />
       </node>
@@ -684,7 +684,7 @@
     <ref role="1gZIjJ" node="2lOlAdP$iIN" resolve="COVID" />
     <node concept="ldbdM" id="2_JteYQLlrJ" role="ldb0k">
       <node concept="ldb2t" id="2_JteYQLlrL" role="ldb3A">
-        <property role="ldb2L" value="4" />
+        <property role="ldb2L" value="1" />
         <property role="ldb2Z" value="7" />
       </node>
     </node>
@@ -713,7 +713,7 @@
     <ref role="1gZIjJ" node="2lOlAdPRELX" resolve="Flu" />
     <node concept="ldbdM" id="2_JteYQLlry" role="ldb0k">
       <node concept="ldb2t" id="2_JteYQLlr$" role="ldb3A">
-        <property role="ldb2L" value="2" />
+        <property role="ldb2L" value="1" />
         <property role="ldb2Z" value="4" />
       </node>
     </node>
@@ -723,6 +723,14 @@
     <node concept="2_0uwW" id="EFW1mYe4_C" role="2_0uzz">
       <property role="2_0uz2" value="2" />
       <ref role="2_0uz0" node="av1M7vbJYz" resolve="Doc" />
+    </node>
+    <node concept="2_0uwW" id="5Lup6bkacRf" role="2_0uzz">
+      <property role="2_0uz2" value="3" />
+      <ref role="2_0uz0" node="2_JteYPiCHe" resolve="Nurse" />
+    </node>
+    <node concept="2_0uwW" id="5Lup6bkacRn" role="2_0uzz">
+      <property role="2_0uz2" value="5" />
+      <ref role="2_0uz0" node="2_JteYPiCG6" resolve="TriageNurse" />
     </node>
   </node>
   <node concept="2OfScj" id="EFW1mYBKlV">

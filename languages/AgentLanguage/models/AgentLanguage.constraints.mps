@@ -159,15 +159,6 @@
       </node>
     </node>
   </node>
-  <node concept="1M2fIO" id="53LYXLHVwQG">
-    <ref role="1M2myG" to="3751:3KCb14J4_kp" resolve="AttributeReference" />
-    <node concept="1N5Pfh" id="53LYXLHVwR$" role="1Mr941">
-      <ref role="1N5Vy1" to="3751:3KCb14J4_kq" resolve="attribute" />
-      <node concept="1dDu$B" id="53LYXLHVwUd" role="1N6uqs">
-        <ref role="1dDu$A" to="3751:3KCb14J4_km" resolve="Attribute" />
-      </node>
-    </node>
-  </node>
   <node concept="1M2fIO" id="53LYXLHX24V">
     <property role="3GE5qa" value="actions.basic actions" />
     <ref role="1M2myG" to="3751:53LYXLHVYLE" resolve="UpdateAttributeAction" />
@@ -952,6 +943,16 @@
             <property role="3clFbU" value="true" />
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2_JteYRGDtD">
+    <property role="3GE5qa" value="actors.attribute" />
+    <ref role="1M2myG" to="3751:3KCb14J4_kp" resolve="AttributeReference" />
+    <node concept="1N5Pfh" id="53LYXLHVwR$" role="1Mr941">
+      <ref role="1N5Vy1" to="3751:3KCb14J4_kq" resolve="attribute" />
+      <node concept="1dDu$B" id="53LYXLHVwUd" role="1N6uqs">
+        <ref role="1dDu$A" to="3751:3KCb14J4_km" resolve="Attribute" />
       </node>
     </node>
   </node>

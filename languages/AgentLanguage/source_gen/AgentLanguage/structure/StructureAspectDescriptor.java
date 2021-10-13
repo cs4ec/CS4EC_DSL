@@ -616,12 +616,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "ExpressionCondition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125515L);
     b.class_(false, false, false);
     b.super_("AgentLanguage.structure.Condition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ebbb42L);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/4334763093659899157");
     b.version(2);
     b.property("operator", 0x3c282c112f12556fL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125553L)).origin("4334763093659899247").done();
-    b.aggregate("left", 0x3c282c112f125569L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125519L).optional(false).ordered(true).multiple(false).origin("4334763093659899241").done();
-    b.aggregate("right", 0x6773e65d46626c39L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L).optional(false).ordered(true).multiple(false).origin("7454555096515505209").done();
+    b.associate("attrRef", 0x296f74efb74adab6L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125516L).optional(false).origin("2985733650891070134").done();
+    b.associate("actorRef", 0x296f74efb84ff07dL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L).optional(false).origin("2985733650908180605").done();
+    b.aggregate("right", 0x6773e65d46626c39L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("7454555096515505209").done();
     b.alias("compare attributes");
     return b.create();
   }
@@ -1147,6 +1147,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/5832719916577320042");
     b.version(2);
+    b.associate("actorRef", 0x296f74efb8746926L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L).optional(false).origin("2985733650910570790").done();
     b.aggregate("attributeReference", 0xaabf015bd236636L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125519L).optional(false).ordered(true).multiple(false).origin("768972137554994742").done();
     b.aggregate("value", 0xaabf015bd2bf361L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("768972137555555169").done();
     b.alias("updateAttribute");

@@ -2,6 +2,7 @@
 <dependenciesRoot>
   <dependency className="ActionCards.generator.templates.QueriesGenerated">
     <classNode dependClassName="ActionCards.behavior.Action__BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
