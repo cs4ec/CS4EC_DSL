@@ -62,11 +62,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
-  private ConceptPresentation props_ProcessingTimeLine;
-  private ConceptPresentation props_ProcessingTimeTable;
   private ConceptPresentation props_Relationship;
   private ConceptPresentation props_RemoveRelationshipAction;
-  private ConceptPresentation props_ResultCondition;
   private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomDefinition;
   private ConceptPresentation props_RoomInstanceDefinition;
@@ -90,11 +87,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StayAction;
   private ConceptPresentation props_StayForConditionAction;
   private ConceptPresentation props_StayForTimeAction;
+  private ConceptPresentation props_StayForTimeDistributionAction;
   private ConceptPresentation props_StopOrder;
   private ConceptPresentation props_SuitableForSideRoomCondition;
-  private ConceptPresentation props_Test;
-  private ConceptPresentation props_TestAction;
-  private ConceptPresentation props_TestKit;
+  private ConceptPresentation props_TimeDistributionLine;
+  private ConceptPresentation props_TimeDistributionTable;
   private ConceptPresentation props_UpdateAttributeAction;
   private ConceptPresentation props_WallDefinition;
   private ConceptPresentation props_WallInstanceDefinition;
@@ -488,20 +485,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
-      case LanguageConceptSwitch.ProcessingTimeLine:
-        if (props_ProcessingTimeLine == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("ProcessingTimeLine");
-          props_ProcessingTimeLine = cpb.create();
-        }
-        return props_ProcessingTimeLine;
-      case LanguageConceptSwitch.ProcessingTimeTable:
-        if (props_ProcessingTimeTable == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Test processing time table");
-          props_ProcessingTimeTable = cpb.create();
-        }
-        return props_ProcessingTimeTable;
       case LanguageConceptSwitch.Relationship:
         if (props_Relationship == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -517,13 +500,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RemoveRelationshipAction = cpb.create();
         }
         return props_RemoveRelationshipAction;
-      case LanguageConceptSwitch.ResultCondition:
-        if (props_ResultCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("test result condition");
-          props_ResultCondition = cpb.create();
-        }
-        return props_ResultCondition;
       case LanguageConceptSwitch.Room:
         if (props_Room == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -693,6 +669,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StayForTimeAction = cpb.create();
         }
         return props_StayForTimeAction;
+      case LanguageConceptSwitch.StayForTimeDistributionAction:
+        if (props_StayForTimeDistributionAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_StayForTimeDistributionAction = cpb.create();
+        }
+        return props_StayForTimeDistributionAction;
       case LanguageConceptSwitch.StopOrder:
         if (props_StopOrder == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -708,29 +691,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SuitableForSideRoomCondition = cpb.create();
         }
         return props_SuitableForSideRoomCondition;
-      case LanguageConceptSwitch.Test:
-        if (props_Test == null) {
+      case LanguageConceptSwitch.TimeDistributionLine:
+        if (props_TimeDistributionLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("Type of a test");
+          cpb.rawPresentation("TimeDistributionLine");
+          props_TimeDistributionLine = cpb.create();
+        }
+        return props_TimeDistributionLine;
+      case LanguageConceptSwitch.TimeDistributionTable:
+        if (props_TimeDistributionTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          props_Test = cpb.create();
+          props_TimeDistributionTable = cpb.create();
         }
-        return props_Test;
-      case LanguageConceptSwitch.TestAction:
-        if (props_TestAction == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("complete a COVID test");
-          cpb.presentationByName();
-          props_TestAction = cpb.create();
-        }
-        return props_TestAction;
-      case LanguageConceptSwitch.TestKit:
-        if (props_TestKit == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc9a8d3fL, 0x4936c0ffd590128L, "testCategoryType", "", "");
-          props_TestKit = cpb.create();
-        }
-        return props_TestKit;
+        return props_TimeDistributionTable;
       case LanguageConceptSwitch.UpdateAttributeAction:
         if (props_UpdateAttributeAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

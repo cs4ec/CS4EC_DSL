@@ -1335,148 +1335,6 @@
       </node>
     </node>
   </node>
-  <node concept="24kQdi" id="ijr0ZWehMJ">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="3751:ijr0ZWehMB" resolve="Test" />
-    <node concept="3EZMnI" id="ijr0ZWehML" role="2wV5jI">
-      <node concept="3F0ifn" id="ijr0ZWehMS" role="3EZMnx">
-        <property role="3F0ifm" value="Test:" />
-      </node>
-      <node concept="3F0A7n" id="ijr0ZWehMY" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="ijr0ZWehNb" role="3EZMnx">
-        <property role="3F0ifm" value="Sensitivity:" />
-        <node concept="pVoyu" id="ijr0ZWehNi" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="ijr0ZWehNk" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="ijr0ZWehNu" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZWehME" resolve="Sensitivity" />
-      </node>
-      <node concept="3F0ifn" id="4TDP_o3q$A" role="3EZMnx">
-        <property role="3F0ifm" value="%" />
-      </node>
-      <node concept="3F0ifn" id="ijr0ZWehNI" role="3EZMnx">
-        <property role="3F0ifm" value="Specificity:" />
-        <node concept="pVoyu" id="ijr0ZWehNR" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="ijr0ZWehNT" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="ijr0ZWehO7" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZWehMG" resolve="Specificity" />
-      </node>
-      <node concept="3F0ifn" id="4TDP_o3q_a" role="3EZMnx">
-        <property role="3F0ifm" value="%" />
-      </node>
-      <node concept="3F0ifn" id="ijr0ZX$ZHy" role="3EZMnx">
-        <property role="3F0ifm" value="Processing Time:" />
-        <node concept="pVoyu" id="ijr0ZX$ZHJ" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="ijr0ZX$ZHL" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="ijr0ZX$ZI3" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZXzv27" resolve="ProcessingTime" />
-      </node>
-      <node concept="3F0ifn" id="ijr0ZXApAQ" role="3EZMnx">
-        <property role="3F0ifm" value="minutes" />
-      </node>
-      <node concept="3F0ifn" id="1rknCs3SnJz" role="3EZMnx">
-        <node concept="ljvvj" id="1rknCs3SnJR" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="1rknCs3SnKe" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:1rknCs3SeUj" resolve="ProcessingTimeTable" />
-      </node>
-      <node concept="l2Vlx" id="ijr0ZWehMO" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="ijr0ZWh9Pi">
-    <property role="3GE5qa" value="actions.basic actions" />
-    <ref role="1XX52x" to="3751:ijr0ZWh9Pa" resolve="TestAction" />
-    <node concept="3EZMnI" id="ijr0ZWh9Pk" role="2wV5jI">
-      <node concept="3F0ifn" id="ijr0ZWh9Pr" role="3EZMnx">
-        <property role="3F0ifm" value="test" />
-      </node>
-      <node concept="3F1sOY" id="ijr0ZWh9Px" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZWh9Pd" resolve="targetPatient" />
-      </node>
-      <node concept="3F0ifn" id="ijr0ZWr13s" role="3EZMnx">
-        <property role="3F0ifm" value="with" />
-      </node>
-      <node concept="1iCGBv" id="ijr0ZX8oWe" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZWh9Pf" resolve="testkit" />
-        <node concept="1sVBvm" id="ijr0ZX8oWg" role="1sWHZn">
-          <node concept="1iCGBv" id="ijr0ZXmhjc" role="2wV5jI">
-            <ref role="1NtTu8" to="3751:ijr0ZXmg4C" resolve="testCategoryType" />
-            <node concept="1sVBvm" id="ijr0ZXmhje" role="1sWHZn">
-              <node concept="3F0A7n" id="ijr0ZXmhjl" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="ijr0ZXqV4g" role="3EZMnx">
-        <property role="3F0ifm" value="if positive:" />
-        <node concept="pVoyu" id="ijr0ZXqV4r" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="ijr0ZXqV4t" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="ijr0ZXqV4H" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZWADyv" resolve="positiveCase" />
-      </node>
-      <node concept="3F0ifn" id="ijr0ZXqV59" role="3EZMnx">
-        <property role="3F0ifm" value="if negative:" />
-        <node concept="pVoyu" id="ijr0ZXqV5O" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="ijr0ZXqV5Q" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="ijr0ZXqV6a" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZWADyz" resolve="negativeCase" />
-      </node>
-      <node concept="l2Vlx" id="ijr0ZWh9Pn" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="ijr0ZX9Jjs">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="3751:ijr0ZWACOZ" resolve="TestKit" />
-    <node concept="3EZMnI" id="ijr0ZXmg5i" role="2wV5jI">
-      <node concept="l2Vlx" id="ijr0ZXmg5j" role="2iSdaV" />
-      <node concept="3F0ifn" id="ijr0ZXmg5m" role="3EZMnx">
-        <property role="3F0ifm" value="a" />
-      </node>
-      <node concept="1iCGBv" id="ijr0ZXmg5r" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZXmg4C" resolve="testCategoryType" />
-        <node concept="1sVBvm" id="ijr0ZXmg5t" role="1sWHZn">
-          <node concept="3F0A7n" id="ijr0ZXmg5_" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="ijr0ZXmg5I" role="3EZMnx">
-        <property role="3F0ifm" value="test" />
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="ijr0ZXLzp_">
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <ref role="1XX52x" to="3751:ijr0ZXLziU" resolve="InfectionCondition" />
@@ -1672,36 +1530,6 @@
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="l2Vlx" id="4TDP_mqZg_" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="4TDP_nhwDL">
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="1XX52x" to="3751:4TDP_nhwDF" resolve="ResultCondition" />
-    <node concept="3EZMnI" id="4TDP_nhwDN" role="2wV5jI">
-      <node concept="3F0ifn" id="4TDP_nhwDU" role="3EZMnx">
-        <property role="3F0ifm" value="test" />
-      </node>
-      <node concept="1iCGBv" id="4TDP_nhwE0" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:4TDP_nhwDG" resolve="test" />
-        <node concept="1sVBvm" id="4TDP_nhwE2" role="1sWHZn">
-          <node concept="1iCGBv" id="4TDP_nhwEa" role="2wV5jI">
-            <ref role="1NtTu8" to="3751:ijr0ZXmg4C" resolve="testCategoryType" />
-            <node concept="1sVBvm" id="4TDP_nhwEc" role="1sWHZn">
-              <node concept="3F0A7n" id="4TDP_nhwEj" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="4TDP_nhwEu" role="3EZMnx">
-        <property role="3F0ifm" value="gave" />
-      </node>
-      <node concept="3F0A7n" id="4TDP_nkDQs" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:4TDP_nkDQa" resolve="result" />
-      </node>
-      <node concept="l2Vlx" id="4TDP_nhwDQ" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="4TDP_nS6kz">
@@ -1909,41 +1737,6 @@
         <node concept="2reCLy" id="2vFOz$FUEey" role="2reCL6">
           <node concept="3F0A7n" id="2vFOz$FUEeE" role="2reSmM">
             <ref role="1NtTu8" to="3751:2vFOz$FUEcK" resolve="NumAgentsInHour" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="1rknCs3SeUu">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="3751:1rknCs3SeSq" resolve="ProcessingTimeLine" />
-    <node concept="2r0Tta" id="1rknCs3SeUG" role="2wV5jI">
-      <node concept="2reCLk" id="1rknCs3SeUJ" role="2r0Tv6">
-        <node concept="2reCLy" id="1rknCs3SeUL" role="2reCL6">
-          <node concept="3F0A7n" id="1rknCs3VZtm" role="2reSmM">
-            <ref role="1NtTu8" to="3751:1rknCs3SeSQ" resolve="Time" />
-          </node>
-        </node>
-        <node concept="2reCLy" id="1rknCs3VZt_" role="2reCL6">
-          <node concept="3F0A7n" id="1rknCs3VZtH" role="2reSmM">
-            <ref role="1NtTu8" to="3751:1rknCs3SeSS" resolve="Occurances" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="1rknCs3SeVy">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="3751:1rknCs3SeRP" resolve="ProcessingTimeTable" />
-    <node concept="2rfBfz" id="1rknCs3SeVH" role="2wV5jI">
-      <node concept="2reSaE" id="1rknCs3SeVM" role="2rf8GZ">
-        <ref role="2reCK$" to="3751:1rknCs3SeTx" resolve="ProcessingTimeLines" />
-        <node concept="2r3Xtq" id="1rknCs3VJaA" role="2YiT2b">
-          <node concept="2rfbtV" id="1rknCs3VJeQ" role="uCobI">
-            <property role="2rfbtB" value="Processing Time (hours)" />
-          </node>
-          <node concept="2rfbtV" id="1rknCs3VJeW" role="uCobI">
-            <property role="2rfbtB" value="Occurances" />
           </node>
         </node>
       </node>
@@ -2161,6 +1954,66 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2_JteYPogVn">
+    <property role="3GE5qa" value="Structures" />
+    <ref role="1XX52x" to="3751:2_JteYPogUR" resolve="TimeDistributionLine" />
+    <node concept="2r0Tta" id="2_JteYPogVO" role="2wV5jI">
+      <node concept="2reCLk" id="2_JteYPogVP" role="2r0Tv6">
+        <node concept="2reCLy" id="2_JteYPogVQ" role="2reCL6">
+          <node concept="3F0A7n" id="2_JteYPogVR" role="2reSmM">
+            <ref role="1NtTu8" to="3751:2_JteYPogVj" resolve="Time" />
+          </node>
+        </node>
+        <node concept="2reCLy" id="2_JteYPogVS" role="2reCL6">
+          <node concept="3F0A7n" id="2_JteYPogVT" role="2reSmM">
+            <ref role="1NtTu8" to="3751:2_JteYPogVk" resolve="Occurances" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2_JteYPogWt">
+    <property role="3GE5qa" value="Structures" />
+    <ref role="1XX52x" to="3751:2_JteYPogU9" resolve="TimeDistributionTable" />
+    <node concept="3EZMnI" id="2_JteYQFO4B" role="2wV5jI">
+      <node concept="3F0A7n" id="2_JteYQFO4W" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="2iRkQZ" id="2_JteYQFO4C" role="2iSdaV" />
+      <node concept="2rfBfz" id="2_JteYPogWC" role="3EZMnx">
+        <node concept="2reSaE" id="2_JteYPogWD" role="2rf8GZ">
+          <ref role="2reCK$" to="3751:2_JteYPogWr" resolve="lines" />
+          <node concept="2r3Xtq" id="2_JteYPogWE" role="2YiT2b">
+            <node concept="2rfbtV" id="2_JteYPogWF" role="uCobI">
+              <property role="2rfbtB" value="Time (hours)" />
+            </node>
+            <node concept="2rfbtV" id="2_JteYPogWG" role="uCobI">
+              <property role="2rfbtB" value="Occurances" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="2_JteYPoh8E">
+    <property role="3GE5qa" value="actions.basic actions.StayAction" />
+    <ref role="1XX52x" to="3751:2_JteYPof5l" resolve="StayForTimeDistributionAction" />
+    <node concept="3EZMnI" id="2_JteYPoh8P" role="2wV5jI">
+      <node concept="3F0ifn" id="2_JteYPoh8W" role="3EZMnx">
+        <property role="3F0ifm" value="Stay for" />
+      </node>
+      <node concept="1iCGBv" id="2_JteYPoh92" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2_JteYPoh8C" resolve="timeDistributionTable" />
+        <node concept="1sVBvm" id="2_JteYPoh94" role="1sWHZn">
+          <node concept="3F0A7n" id="2_JteYPoh9w" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="2_JteYPoh8S" role="2iSdaV" />
     </node>
   </node>
 </model>

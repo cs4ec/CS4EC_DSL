@@ -15,12 +15,13 @@ public class EnumerationDescriptor_E_SEIR extends EnumerationDescriptorBase {
     super(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab06aL, "E_SEIR", "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061875544170");
   }
 
-  private final EnumerationDescriptor.MemberDescriptor myMember_Susceptible_0 = new EnumerationDescriptor.MemberDescriptor("Susceptible", "Susceptible", 0x25745663758ab06bL, "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061875544171");
-  private final EnumerationDescriptor.MemberDescriptor myMember_Infectious_0 = new EnumerationDescriptor.MemberDescriptor("Infectious", "Infectious", 0x25745663758ab075L, "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061875544181");
+  private final EnumerationDescriptor.MemberDescriptor myMember_Symptomatic_0 = new EnumerationDescriptor.MemberDescriptor("Symptomatic", "Symptomatic", 0x25745663758ab06bL, "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061875544171");
+  private final EnumerationDescriptor.MemberDescriptor myMember_Asymptomatic_0 = new EnumerationDescriptor.MemberDescriptor("Asymptomatic", "Asymptomatic", 0x296f74efb5462729L, "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2985733650857207593");
+  private final EnumerationDescriptor.MemberDescriptor myMember_Susceptible_0 = new EnumerationDescriptor.MemberDescriptor("Susceptible", "Susceptible", 0x25745663758ab075L, "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061875544181");
   private final EnumerationDescriptor.MemberDescriptor myMember_Recovered_0 = new EnumerationDescriptor.MemberDescriptor("Recovered", "Recovered", 0x25745663758ab078L, "r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061875544184");
 
-  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab06aL, 0x25745663758ab06bL, 0x25745663758ab075L, 0x25745663758ab078L);
-  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_Susceptible_0, myMember_Infectious_0, myMember_Recovered_0);
+  private final EnumerationLiteralsIndex myIndex = EnumerationLiteralsIndex.build(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab06aL, 0x25745663758ab06bL, 0x296f74efb5462729L, 0x25745663758ab075L, 0x25745663758ab078L);
+  private final List<EnumerationDescriptor.MemberDescriptor> myMembers = new EnumerationDescriptorBase.MembersList(myIndex, myMember_Symptomatic_0, myMember_Asymptomatic_0, myMember_Susceptible_0, myMember_Recovered_0);
 
   @Nullable
   @Override
@@ -41,10 +42,12 @@ public class EnumerationDescriptor_E_SEIR extends EnumerationDescriptorBase {
       return null;
     }
     switch (memberName) {
+      case "Symptomatic":
+        return myMember_Symptomatic_0;
+      case "Asymptomatic":
+        return myMember_Asymptomatic_0;
       case "Susceptible":
         return myMember_Susceptible_0;
-      case "Infectious":
-        return myMember_Infectious_0;
       case "Recovered":
         return myMember_Recovered_0;
     }

@@ -45,7 +45,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptStaffType = createDescriptorForStaffType();
   /*package*/ final ConceptDescriptor myConceptStaffTypeReference = createDescriptorForStaffTypeReference();
   /*package*/ final ConceptDescriptor myConceptTest = createDescriptorForTest();
-  /*package*/ final ConceptDescriptor myConceptTestActionStep = createDescriptorForTestActionStep();
   /*package*/ final ConceptDescriptor myConceptTestResult = createDescriptorForTestResult();
   /*package*/ final ConceptDescriptor myConceptVariable = createDescriptorForVariable();
   /*package*/ final EnumerationDescriptor myEnumerationE_Result = new EnumerationDescriptor_E_Result();
@@ -67,7 +66,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptAdmissionAction, myConceptAtributeLine, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeTable, myConceptBranch, myConceptCondition, myConceptConditional, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseaseInitialiserLine, myConceptDiseaseInitialiserTable, myConceptDiseaseList, myConceptEDScenario, myConceptGoToAction, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptResource, myConceptSeverity, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptTest, myConceptTestActionStep, myConceptTestResult, myConceptVariable);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptAdmissionAction, myConceptAtributeLine, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeTable, myConceptBranch, myConceptCondition, myConceptConditional, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseaseInitialiserLine, myConceptDiseaseInitialiserTable, myConceptDiseaseList, myConceptEDScenario, myConceptGoToAction, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptResource, myConceptSeverity, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptTest, myConceptTestResult, myConceptVariable);
   }
 
   @Override
@@ -132,8 +131,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptStaffTypeReference;
       case LanguageConceptSwitch.Test:
         return myConceptTest;
-      case LanguageConceptSwitch.TestActionStep:
-        return myConceptTestActionStep;
       case LanguageConceptSwitch.TestResult:
         return myConceptTestResult;
       case LanguageConceptSwitch.Variable:
@@ -237,7 +234,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("toPort", 0x29f0721df719ea7L).type(PrimitiveTypeId.STRING).origin("188877551436930727").done();
     b.associate("targetAction", 0x4f415ebce3f345b2L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(true).origin("5710949967853733298").done();
     b.associate("fromAction", 0x29f0721df71afb6L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(true).origin("188877551436935094").done();
-    b.aggregate("condition", 0x2574566374febfecL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df30720aL).optional(true).ordered(true).multiple(false).origin("2698877061866373100").done();
+    b.aggregate("condition", 0x2574566374febfecL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df30722fL).optional(true).ordered(true).multiple(false).origin("2698877061866373100").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCondition() {
@@ -422,20 +419,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("Sensitivity", 0x4936c0ffc391caaL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("329726013640088746").done();
     b.property("Specificity", 0x4936c0ffc391cacL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("329726013640088748").done();
     b.associate("disease", 0x25745663758ab28cL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(false).origin("2698877061875544716").done();
-    b.aggregate("ProcessingTimeTable", 0x16d45e8703e0ee93L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x16d45e8703e0edf5L).optional(true).ordered(true).multiple(false).origin("1645043697875742355").done();
+    b.aggregate("ProcessingTimeTable", 0x16d45e8703e0ee93L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0edf5L).optional(true).ordered(true).multiple(false).origin("1645043697875742355").done();
     b.alias("test");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForTestActionStep() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TestActionStep", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3f10eb6deabea835L);
-    b.class_(false, false, false);
-    b.super_("ActionCards.structure.ActionStep", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3455bL);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4544390881339156533");
-    b.version(2);
-    b.aggregate("testType", 0x3f10eb6deabea863L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffc9a8d3fL).optional(false).ordered(true).multiple(false).origin("4544390881339156579").done();
-    b.aggregate("IfPositive", 0x3f10eb6deabea865L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(false).ordered(true).multiple(false).origin("4544390881339156581").done();
-    b.aggregate("IfNegative", 0x3f10eb6deabea87aL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(false).ordered(true).multiple(false).origin("4544390881339156602").done();
-    b.alias("Test patient");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTestResult() {

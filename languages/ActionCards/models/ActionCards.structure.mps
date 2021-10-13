@@ -158,7 +158,7 @@
       <property role="IQ2ns" value="2698877061866373100" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
-      <ref role="20lvS9" node="av1M7vc78a" resolve="Conditional" />
+      <ref role="20lvS9" node="av1M7vc78J" resolve="Condition" />
     </node>
     <node concept="1TJgyi" id="av1M7vspU_" role="1TKVEl">
       <property role="IQ2nx" value="188877551436930725" />
@@ -245,33 +245,6 @@
       <property role="20kJfa" value="staff" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="3WgUQREJEwP">
-    <property role="EcuMT" value="4544390881339156533" />
-    <property role="TrG5h" value="TestActionStep" />
-    <property role="34LRSv" value="Test patient" />
-    <ref role="1TJDcQ" node="4X1nFNzWOlr" resolve="ActionStep" />
-    <node concept="1TJgyj" id="3WgUQREJExz" role="1TKVEi">
-      <property role="IQ2ns" value="4544390881339156579" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="testType" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="3751:ijr0ZWACOZ" resolve="TestKit" />
-    </node>
-    <node concept="1TJgyj" id="3WgUQREJEx_" role="1TKVEi">
-      <property role="IQ2ns" value="4544390881339156581" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="IfPositive" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
-    </node>
-    <node concept="1TJgyj" id="3WgUQREJExU" role="1TKVEi">
-      <property role="IQ2ns" value="4544390881339156602" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="IfNegative" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
     </node>
   </node>
   <node concept="1TIwiD" id="av1M7vbNwp">
@@ -397,7 +370,7 @@
       <property role="IQ2ns" value="1645043697875742355" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="ProcessingTimeTable" />
-      <ref role="20lvS9" to="3751:1rknCs3SeRP" resolve="ProcessingTimeTable" />
+      <ref role="20lvS9" node="1rknCs3SeRP" resolve="ProcessingTimeTable" />
     </node>
     <node concept="1TJgyj" id="2lOlAdPyFac" role="1TKVEi">
       <property role="IQ2ns" value="2698877061875544716" />
@@ -433,14 +406,18 @@
     <property role="3F6X1D" value="2698877061875544170" />
     <property role="3GE5qa" value="Attributes" />
     <property role="TrG5h" value="E_SEIR" />
-    <ref role="1H5jkz" node="2lOlAdPyF1F" resolve="Susceptible" />
+    <ref role="1H5jkz" node="2lOlAdPyF1P" resolve="Susceptible" />
     <node concept="25R33" id="2lOlAdPyF1F" role="25R1y">
       <property role="3tVfz5" value="2698877061875544171" />
-      <property role="TrG5h" value="Susceptible" />
+      <property role="TrG5h" value="Symptomatic" />
+    </node>
+    <node concept="25R33" id="2_JteYPhysD" role="25R1y">
+      <property role="3tVfz5" value="2985733650857207593" />
+      <property role="TrG5h" value="Asymptomatic" />
     </node>
     <node concept="25R33" id="2lOlAdPyF1P" role="25R1y">
       <property role="3tVfz5" value="2698877061875544181" />
-      <property role="TrG5h" value="Infectious" />
+      <property role="TrG5h" value="Susceptible" />
     </node>
     <node concept="25R33" id="2lOlAdPyF1S" role="25R1y">
       <property role="3tVfz5" value="2698877061875544184" />

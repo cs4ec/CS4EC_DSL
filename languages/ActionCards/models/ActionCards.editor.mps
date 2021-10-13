@@ -508,45 +508,6 @@
       <node concept="l2Vlx" id="4FTL$vJY2W7" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="3WgUQREJExY">
-    <ref role="1XX52x" to="e88n:3WgUQREJEwP" resolve="TestActionStep" />
-    <node concept="3EZMnI" id="3WgUQREJEy9" role="2wV5jI">
-      <node concept="3F0ifn" id="3WgUQREJEyg" role="3EZMnx">
-        <property role="3F0ifm" value="Conduct" />
-      </node>
-      <node concept="3F1sOY" id="3WgUQREJEym" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:3WgUQREJExz" resolve="testType" />
-      </node>
-      <node concept="3F0ifn" id="3WgUQREJEyu" role="3EZMnx">
-        <property role="3F0ifm" value="..." />
-      </node>
-      <node concept="3F0ifn" id="3WgUQREJEyC" role="3EZMnx">
-        <property role="3F0ifm" value="If Positive:" />
-        <node concept="pVoyu" id="3WgUQREJEyI" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="3WgUQREMCyE" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="3WgUQREJEyR" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:3WgUQREJEx_" resolve="IfPositive" />
-      </node>
-      <node concept="3F0ifn" id="3WgUQREJEz7" role="3EZMnx">
-        <property role="3F0ifm" value="If Negative:" />
-        <node concept="pVoyu" id="3WgUQREJEzg" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="3WgUQREMCyH" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="3WgUQREJEzs" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:3WgUQREJExU" resolve="IfNegative" />
-      </node>
-      <node concept="l2Vlx" id="3WgUQREJEyc" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="7ih0ZFGR6B4">
     <property role="3GE5qa" value="ActionCard" />
     <ref role="1XX52x" to="e88n:2VPlUUsG6x8" resolve="ActionCard" />
@@ -996,12 +957,12 @@
   <node concept="24kQdi" id="av1M7vgRUv">
     <property role="3GE5qa" value="Conditions" />
     <ref role="1XX52x" to="e88n:av1M7vc78J" resolve="Condition" />
-    <node concept="3EZMnI" id="av1M7vgRUE" role="2wV5jI">
-      <node concept="3F2HdR" id="av1M7vgRUR" role="3EZMnx">
+    <node concept="3EZMnI" id="2_JteYPlGRu" role="2wV5jI">
+      <node concept="3F2HdR" id="2_JteYPlGR_" role="3EZMnx">
         <ref role="1NtTu8" to="e88n:av1M7vc78T" resolve="Conditionals" />
-        <node concept="l2Vlx" id="av1M7vgRUT" role="2czzBx" />
+        <node concept="l2Vlx" id="2_JteYPlGRB" role="2czzBx" />
       </node>
-      <node concept="l2Vlx" id="av1M7vgRUH" role="2iSdaV" />
+      <node concept="l2Vlx" id="2_JteYPlGRx" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="av1M7vc7eg">

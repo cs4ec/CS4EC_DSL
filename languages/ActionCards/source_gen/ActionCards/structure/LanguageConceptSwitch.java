@@ -38,9 +38,8 @@ public final class LanguageConceptSwitch {
   public static final int StaffType = 26;
   public static final int StaffTypeReference = 27;
   public static final int Test = 28;
-  public static final int TestActionStep = 29;
-  public static final int TestResult = 30;
-  public static final int Variable = 31;
+  public static final int TestResult = 29;
+  public static final int Variable = 30;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L);
@@ -73,7 +72,6 @@ public final class LanguageConceptSwitch {
     builder.put(0x4f415ebce3f346ecL, StaffType);
     builder.put(0x4af9c647efda3a80L, StaffTypeReference);
     builder.put(0x4936c0ffc391ca7L, Test);
-    builder.put(0x3f10eb6deabea835L, TestActionStep);
     builder.put(0x25745663758ab0afL, TestResult);
     builder.put(0x29f0721df307244L, Variable);
     myIndex = builder.seal();

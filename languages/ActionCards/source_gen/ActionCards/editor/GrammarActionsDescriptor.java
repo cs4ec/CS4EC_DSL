@@ -113,7 +113,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Conditional$ZC) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Condition$P$) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -248,7 +248,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Conditional$ZC) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Condition$P$) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -299,7 +299,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Conditional$ZC) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Condition$P$) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -422,7 +422,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Conditional$ZC) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == true) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Condition$P$) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == true) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -485,7 +485,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
 
             // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Conditional$ZC) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
+            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Condition$P$) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
               TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
               return parentContext;
             }
@@ -616,7 +616,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Branch$sq = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch");
-    /*package*/ static final SConcept Conditional$ZC = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df30720aL, "ActionCards.structure.Conditional");
+    /*package*/ static final SConcept Condition$P$ = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df30722fL, "ActionCards.structure.Condition");
   }
 
   private static final class LINKS {

@@ -38,7 +38,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
   private ConceptPresentation props_Test;
-  private ConceptPresentation props_TestActionStep;
   private ConceptPresentation props_TestResult;
   private ConceptPresentation props_Variable;
 
@@ -258,13 +257,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Test = cpb.create();
         }
         return props_Test;
-      case LanguageConceptSwitch.TestActionStep:
-        if (props_TestActionStep == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Test patient");
-          props_TestActionStep = cpb.create();
-        }
-        return props_TestActionStep;
       case LanguageConceptSwitch.TestResult:
         if (props_TestResult == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
