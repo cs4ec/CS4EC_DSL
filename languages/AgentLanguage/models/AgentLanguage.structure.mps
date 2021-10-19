@@ -1751,5 +1751,19 @@
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
+  <node concept="1TIwiD" id="52K8EjQ82J">
+    <property role="EcuMT" value="90846643919290543" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="KernelFCondition" />
+    <property role="34LRSv" value="kernelF expression" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="52K8EjQ82T" role="1TKVEi">
+      <property role="IQ2ns" value="90846643919290553" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="expression" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
 </model>
 

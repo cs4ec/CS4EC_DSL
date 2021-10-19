@@ -17,21 +17,24 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import com.google.gson.JsonObject;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import org.jetbrains.mps.openapi.language.SEnumerationLiteral;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import org.jetbrains.mps.openapi.language.SProperty;
 import org.jetbrains.mps.openapi.language.SConcept;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
 
 public class ImporterLogic {
+
   public static void ImportJson(String path, SNode targetContainer) throws IOException, JsonFormatException {
 
     try (JsonReader rea = new JsonReader(Files.newBufferedReader(Paths.get(path)))) {
@@ -53,7 +56,30 @@ public class ImporterLogic {
       for (SNode roomType : ListSequence.fromList(SModelOperations.roots(SNodeOperations.getModel(targetContainer), CONCEPTS.RoomType$1b))) {
         MapSequence.fromMap(roomTypesByName).put(SPropertyOperations.getString(roomType, PROPS.name$MnvL), roomType);
       }
-      Map<Integer, SNode> importedRooms = MapSequence.fromMap(new LinkedHashMap<Integer, SNode>(16, (float) 0.75, false));
+
+      // Remove all existing rooms from the model 
+      for (SNode room : ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(targetContainer), CONCEPTS.RoomInstanceDefinition$Jk))) {
+        SNodeOperations.deleteNode(room);
+      }
+
+      List<SNode> importedRooms = ListSequence.fromList(new ArrayList<SNode>());
+
+      int maxY = 0;
+      int preLoopIndex = 0;
+      for (JsonElement item : Sequence.fromIterable(array)) {
+        preLoopIndex++;
+        String prefixForErrors = "item " + preLoopIndex;
+        if (!(item.isJsonObject())) {
+          throw new JsonFormatException(prefixForErrors + ": expected an object in the topmost array, got " + item);
+        }
+        JsonObject object = item.getAsJsonObject();
+        int myY = getInt(object, "y coordinate", prefixForErrors);
+        int myHeight = getInt(object, "height", prefixForErrors);
+
+        if ((myY + myHeight) > maxY) {
+          maxY = (myY + myHeight);
+        }
+      }
 
       int index = 0;
       for (JsonElement item : Sequence.fromIterable(array)) {
@@ -63,25 +89,23 @@ public class ImporterLogic {
           throw new JsonFormatException(prefixForErrors + ": expected an object in the topmost array, got " + item);
         }
         JsonObject object = item.getAsJsonObject();
-        final int id = getInt(object, "ID", prefixForErrors);
-        if (MapSequence.fromMap(importedRooms).containsKey(id)) {
-          throw new JsonFormatException(prefixForErrors + ": duplicate room ID " + id);
-        }
 
-        SNode room = ListSequence.fromList(SLinkOperations.getChildren(targetContainer, LINKS.rooms$Qimv)).findFirst(new IWhereFilter<SNode>() {
+        SNode room = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, "AgentLanguage.structure.RoomInstanceDefinition"));
+        // ReadsimplepropertiesdirectlyfromJSON 
+        final Wrappers._T<String> newRoomName = new Wrappers._T<String>(getString(object, "name of the room", prefixForErrors));
+        Iterable<SNode> roomsWithDuplicateName = ListSequence.fromList(importedRooms).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it) {
-            return SPropertyOperations.getInteger(it, PROPS.ID$gLXG) == id;
+            return SPropertyOperations.getString(it, PROPS.name$MnvL).contains(newRoomName.value);
           }
         });
-        if (room == null) {
-          room = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, "AgentLanguage.structure.RoomInstanceDefinition"));
-          SPropertyOperations.assign(room, PROPS.ID$gLXG, id);
+        int numRoomsWithName = Sequence.fromIterable(roomsWithDuplicateName).count();
+        if (numRoomsWithName > 0) {
+          newRoomName.value += numRoomsWithName;
         }
-        MapSequence.fromMap(importedRooms).put(id, room);
-        // ReadsimplepropertiesdirectlyfromJSON 
+
         SPropertyOperations.assign(room, PROPS.name$MnvL, getString(object, "name of the room", prefixForErrors));
         SPropertyOperations.assign(room, PROPS.x$8h86, getInt(object, "x coordinate", prefixForErrors));
-        SPropertyOperations.assign(room, PROPS.y$8hA8, getInt(object, "y coordinate", prefixForErrors));
+        SPropertyOperations.assign(room, PROPS.y$8hA8, maxY - getInt(object, "y coordinate", prefixForErrors));
         SPropertyOperations.assign(room, PROPS.width$g4wh, getInt(object, "width", prefixForErrors));
         SPropertyOperations.assign(room, PROPS.height$g5sl, getInt(object, "height", prefixForErrors));
         SPropertyOperations.assign(room, PROPS.desks$VmIX, getInt(object, "desks", prefixForErrors));
@@ -91,7 +115,7 @@ public class ImporterLogic {
         String colourName = getString(object, "color", prefixForErrors);
         SEnumerationLiteral colour = SEnumOperations.getMemberForPresentation(MetaAdapterFactory.getEnumeration(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L, "AgentLanguage.structure.Colour"), colourName);
         if (colour == null) {
-          throw new JsonFormatException(prefixForErrors + " unknown colour " + colourName);
+          colour = SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L, "AgentLanguage.structure.Colour"), 0x66029deba11b715eL, "GRAY");
         }
         SPropertyOperations.assignEnum(room, PROPS.colour$7icN, (SEnumerationLiteral) colour);
 
@@ -102,13 +126,26 @@ public class ImporterLogic {
           throw new JsonFormatException(prefixForErrors + "unknown room type" + roomType);
         }
         SLinkOperations.setTarget(room, LINKS.roomType$2uZL, roomType);
+
+        ListSequence.fromList(importedRooms).addElement(room);
       }
 
       ListSequence.fromList(SLinkOperations.getChildren(targetContainer, LINKS.rooms$Qimv)).clear();
-      ListSequence.fromList(SLinkOperations.getChildren(targetContainer, LINKS.rooms$Qimv)).addSequence(Sequence.fromIterable(MapSequence.fromMap(importedRooms).values()));
+      ListSequence.fromList(SLinkOperations.getChildren(targetContainer, LINKS.rooms$Qimv)).addSequence(ListSequence.fromList(importedRooms));
 
     }
   }
+
+
+
+
+
+
+
+
+
+
+
 
   private static int getInt(JsonObject object, String name, String errorPrefix) throws JsonFormatException {
     JsonElement element = object.get(name);
@@ -135,7 +172,6 @@ public class ImporterLogic {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty ID$gLXG = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0xaabf015beeb4a25L, "ID");
     /*package*/ static final SProperty x$8h86 = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x497144425f482c7fL, "x");
     /*package*/ static final SProperty y$8hA8 = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x497144425f482c81L, "y");
     /*package*/ static final SProperty width$g4wh = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x497144425f7f2d45L, "width");
@@ -148,10 +184,11 @@ public class ImporterLogic {
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept RoomType$1b = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L, "AgentLanguage.structure.RoomType");
+    /*package*/ static final SConcept RoomInstanceDefinition$Jk = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, "AgentLanguage.structure.RoomInstanceDefinition");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink rooms$Qimv = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249082L, 0x3c282c112f249083L, "rooms");
     /*package*/ static final SReferenceLink roomType$2uZL = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x5dafd33966edbfc9L, "roomType");
+    /*package*/ static final SContainmentLink rooms$Qimv = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249082L, 0x3c282c112f249083L, "rooms");
   }
 }

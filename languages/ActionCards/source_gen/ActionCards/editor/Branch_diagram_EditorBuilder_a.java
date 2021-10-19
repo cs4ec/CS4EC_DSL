@@ -31,6 +31,7 @@ import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import java.awt.Color;
 import jetbrains.mps.openapi.editor.style.StyleRegistry;
 import jetbrains.mps.nodeEditor.MPSColors;
+import de.itemis.mps.editor.diagram.styles.editor.LineStyle;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
@@ -145,6 +146,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         setCellContext(editorCell.value);
         Style style = new StyleImpl();
         style.set(StyleAttributes.getInstance().<Color>getAttribute("de.itemis.mps.editor.diagram.styles", "__line-color"), StyleRegistry.getInstance().getSimpleColor(MPSColors.black));
+        style.set(StyleAttributes.getInstance().<LineStyle>getAttribute("de.itemis.mps.editor.diagram.styles", "__line-style"), _StyleParameter_QueryFunction_5au6ob_a1a());
+        style.set(StyleAttributes.getInstance().<Float>getAttribute("de.itemis.mps.editor.diagram.styles", "__line-width"), _StyleParameter_QueryFunction_5au6ob_a2a());
         editorCell.value.getStyle().putAll(style);
 
         if (accessor.getLabelCell() != null) {
@@ -163,6 +166,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   }
   private EditorCell createDiagramConnector_1() {
     return createDiagramConnector_0(getEditorContext(), myNode);
+  }
+  private LineStyle _StyleParameter_QueryFunction_5au6ob_a1a() {
+    return LineStyle.SOLID;
+  }
+  private Float _StyleParameter_QueryFunction_5au6ob_a2a() {
+    return 2.0f;
   }
 
   private static final class LINKS {

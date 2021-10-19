@@ -40,7 +40,10 @@ public class Behaviour {
 	}
 	
 	public BehaviourStep getCurrentStep() {
-		return steps.get(currentStep);
+		if(steps.size() < currentStep) {
+			return steps.get(currentStep);
+		}
+		return null;
 	}
 	
 	public void setSteps(List<BehaviourStep> steps) {

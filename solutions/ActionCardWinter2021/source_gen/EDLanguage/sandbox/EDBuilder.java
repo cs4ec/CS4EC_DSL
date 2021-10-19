@@ -33,8 +33,8 @@ public class EDBuilder implements ContextBuilder<Object> {
   public Context build(Context<Object> context) {
 
     context.setId("EDProject");
-    int mapWidth = 924;
-    int mapHeight = 636;
+    int mapWidth = 548;
+    int mapHeight = 308;
 
     Parameters params = RunEnvironment.getInstance().getParameters();
 
@@ -42,7 +42,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Double pProportionSymptomatic = params.getDouble("PercentagePrevSymptomatic");
 
     Boolean pBool = params.getBoolean("UsePathFinding");
-    ModelParameterStore.UsePathFinding = pBool;
+    ModelParameterStore.UsePathFinding = false;
 
     RunEnvironment.getInstance().endAt(86400);
 
@@ -59,10 +59,10 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     // add Agents 
     for (int i = 0; i < 2; i++) {
-      context.add(new Doc(space, grid, context));
+      context.add(new Doctor(space, grid, context));
     }
     for (int i = 0; i < 3; i++) {
-      context.add(new Nurse(space, grid, context));
+      context.add(new CubicleNurse(space, grid, context));
     }
     for (int i = 0; i < 5; i++) {
       context.add(new TriageNurse(space, grid, context));
@@ -73,47 +73,95 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.addValueLayer(vl);
 
     // add Locations here 
-    Room Lab_a = new Room("Lab", context, space, grid, 98, 503, 233, 115, 1, 0, Lab.getInstance(), Color.BLUE);
-    Room Triage_b = new Room("Triage", context, space, grid, 312, 95, 101, 57, 1, 0, TriageDesk.getInstance(), Color.BLUE);
-    Room MajorsCBay_c = new Room("MajorsCBay", context, space, grid, 583, 585, 75, 41, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
-    Room MajorsCBay_d = new Room("MajorsCBay", context, space, grid, 581, 463, 73, 41, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
-    Room MajorsCBay_e = new Room("MajorsCBay", context, space, grid, 842, 466, 72, 41, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
-    Room MajorsCBay_f = new Room("MajorsCBay", context, space, grid, 461, 464, 71, 39, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
-    Room MajorsCBay_g = new Room("MajorsCBay", context, space, grid, 464, 584, 70, 39, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
-    Room MajorsCBay_h = new Room("MajorsCBay", context, space, grid, 843, 585, 70, 38, 1, 0, MajorsCBay.getInstance(), Color.BLUE);
-    Room MainEntrance_i = new Room("MainEntrance", context, space, grid, 264, 21, 47, 19, 1, 0, MainEntrance.getInstance(), Color.BLUE);
-    Room AmberBay1_j = new Room("AmberBay1", context, space, grid, 250, 150, 20, 20, 1, 30, AmberBay.getInstance(), Color.ORANGE);
+    Room AmberBay_a = new Room("AmberBay", context, space, grid, 424, 112, 74, 51, 1, 1000, AmberBay.getInstance(), Color.ORANGE);
+    Room Lab_b = new Room("Lab", context, space, grid, 50, 65, 89, 39, 1, 1000, Labaratory.getInstance(), Color.GRAY);
+    Room NonRespiratoryArea_c = new Room("NonRespiratoryArea", context, space, grid, 82, 114, 56, 43, 1, 1000, NonRespiratoryArea.getInstance(), Color.GREEN);
+    Room RespiratoryArea_d = new Room("RespiratoryArea", context, space, grid, 263, 216, 49, 40, 1, 1000, RespiratoryArea.getInstance(), Color.RED);
+    Room WaitingRoom_e = new Room("WaitingRoom", context, space, grid, 220, 115, 36, 52, 1, 1000, WaitingRoom.getInstance(), Color.BLUE);
+    Room WaitingRoom_f = new Room("WaitingRoom", context, space, grid, 145, 214, 64, 19, 1, 1000, WaitingRoom.getInstance(), Color.BLUE);
+    Room SideRoom_g = new Room("SideRoom", context, space, grid, 214, 16, 37, 16, 1, 1000, SideRoom.getInstance(), Color.YELLOW);
+    Room fluBay_h = new Room("fluBay", context, space, grid, 322, 126, 26, 19, 1, 1000, FluPositiveCohort.getInstance(), Color.BLACK);
+    Room covidBay_i = new Room("covidBay", context, space, grid, 321, 142, 28, 15, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED);
+    Room MainEntrance_j = new Room("MainEntrance", context, space, grid, 86, 246, 33, 12, 1, 1000, MainEntrance.getInstance(), Color.GRAY);
+    Room MajorsCBay_k = new Room("MajorsCBay", context, space, grid, 216, 61, 24, 16, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
+    Room MajorsCBay_l = new Room("MajorsCBay", context, space, grid, 242, 62, 24, 16, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
+    Room MajorsCBay_m = new Room("MajorsCBay", context, space, grid, 215, 43, 26, 13, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
+    Room Triage_n = new Room("Triage", context, space, grid, 167, 189, 24, 14, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
+    Room MajorsCBay_o = new Room("MajorsCBay", context, space, grid, 264, 27, 23, 14, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
+    Room MajorsABBay_p = new Room("MajorsABBay", context, space, grid, 352, 126, 20, 16, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
+    Room Triage_q = new Room("Triage", context, space, grid, 145, 174, 22, 14, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
+    Room MajorsABBay_r = new Room("MajorsABBay", context, space, grid, 352, 142, 22, 14, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
+    Room MajorsABBay_s = new Room("MajorsABBay", context, space, grid, 378, 141, 20, 15, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
+    Room Triage_t = new Room("Triage", context, space, grid, 143, 189, 21, 12, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
+    Room MajorsABBay_u = new Room("MajorsABBay", context, space, grid, 380, 121, 20, 12, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
+    Room MajorsABBay_v = new Room("MajorsABBay", context, space, grid, 322, 103, 24, 12, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
     try {
-      Lab_a.setSeats(0);
-      Triage_b.setSeats(0);
-      MajorsCBay_c.setSeats(0);
-      MajorsCBay_d.setSeats(0);
-      MajorsCBay_e.setSeats(0);
-      MajorsCBay_f.setSeats(0);
-      MajorsCBay_g.setSeats(0);
-      MajorsCBay_h.setSeats(0);
-      MainEntrance_i.setSeats(0);
-      AmberBay1_j.setSeats(0);
-      Lab_a.setDesks(0);
-      Triage_b.setDesks(0);
-      MajorsCBay_c.setDesks(0);
-      MajorsCBay_d.setDesks(0);
-      MajorsCBay_e.setDesks(0);
-      MajorsCBay_f.setDesks(0);
-      MajorsCBay_g.setDesks(0);
-      MajorsCBay_h.setDesks(0);
-      MainEntrance_i.setDesks(0);
-      AmberBay1_j.setDesks(0);
-      Lab_a.setBeds(0);
-      Triage_b.setBeds(0);
-      MajorsCBay_c.setBeds(0);
-      MajorsCBay_d.setBeds(0);
-      MajorsCBay_e.setBeds(0);
-      MajorsCBay_f.setBeds(0);
-      MajorsCBay_g.setBeds(0);
-      MajorsCBay_h.setBeds(0);
-      MainEntrance_i.setBeds(0);
-      AmberBay1_j.setBeds(40);
+      AmberBay_a.setSeats(0);
+      Lab_b.setSeats(0);
+      NonRespiratoryArea_c.setSeats(0);
+      RespiratoryArea_d.setSeats(0);
+      WaitingRoom_e.setSeats(0);
+      WaitingRoom_f.setSeats(0);
+      SideRoom_g.setSeats(0);
+      fluBay_h.setSeats(0);
+      covidBay_i.setSeats(0);
+      MainEntrance_j.setSeats(0);
+      MajorsCBay_k.setSeats(0);
+      MajorsCBay_l.setSeats(0);
+      MajorsCBay_m.setSeats(0);
+      Triage_n.setSeats(0);
+      MajorsCBay_o.setSeats(0);
+      MajorsABBay_p.setSeats(0);
+      Triage_q.setSeats(0);
+      MajorsABBay_r.setSeats(0);
+      MajorsABBay_s.setSeats(0);
+      Triage_t.setSeats(0);
+      MajorsABBay_u.setSeats(0);
+      MajorsABBay_v.setSeats(0);
+      AmberBay_a.setDesks(0);
+      Lab_b.setDesks(0);
+      NonRespiratoryArea_c.setDesks(0);
+      RespiratoryArea_d.setDesks(0);
+      WaitingRoom_e.setDesks(0);
+      WaitingRoom_f.setDesks(0);
+      SideRoom_g.setDesks(0);
+      fluBay_h.setDesks(0);
+      covidBay_i.setDesks(0);
+      MainEntrance_j.setDesks(0);
+      MajorsCBay_k.setDesks(0);
+      MajorsCBay_l.setDesks(0);
+      MajorsCBay_m.setDesks(0);
+      Triage_n.setDesks(0);
+      MajorsCBay_o.setDesks(0);
+      MajorsABBay_p.setDesks(0);
+      Triage_q.setDesks(0);
+      MajorsABBay_r.setDesks(0);
+      MajorsABBay_s.setDesks(0);
+      Triage_t.setDesks(0);
+      MajorsABBay_u.setDesks(0);
+      MajorsABBay_v.setDesks(0);
+      AmberBay_a.setBeds(0);
+      Lab_b.setBeds(0);
+      NonRespiratoryArea_c.setBeds(0);
+      RespiratoryArea_d.setBeds(0);
+      WaitingRoom_e.setBeds(0);
+      WaitingRoom_f.setBeds(0);
+      SideRoom_g.setBeds(0);
+      fluBay_h.setBeds(0);
+      covidBay_i.setBeds(0);
+      MainEntrance_j.setBeds(0);
+      MajorsCBay_k.setBeds(0);
+      MajorsCBay_l.setBeds(0);
+      MajorsCBay_m.setBeds(0);
+      Triage_n.setBeds(0);
+      MajorsCBay_o.setBeds(0);
+      MajorsABBay_p.setBeds(0);
+      Triage_q.setBeds(0);
+      MajorsABBay_r.setBeds(0);
+      MajorsABBay_s.setBeds(0);
+      Triage_t.setBeds(0);
+      MajorsABBay_u.setBeds(0);
+      MajorsABBay_v.setBeds(0);
     } catch (NumberFormatException e) {
     }
 

@@ -31,7 +31,8 @@ public final class Action__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static String getFormattedName_id2lOlAdPvbFq(@NotNull SNode __thisNode__) {
-    return SPropertyOperations.getString(__thisNode__, PROPS.name$MnvL).replaceAll("\\s+", "");
+    String removedSpaces = SPropertyOperations.getString(__thisNode__, PROPS.name$MnvL).replaceAll("\\s+", "");
+    return removedSpaces.replace("-", "");
   }
 
   /*package*/ Action__BehaviorDescriptor() {

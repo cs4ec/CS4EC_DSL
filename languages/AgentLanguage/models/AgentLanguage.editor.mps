@@ -2053,5 +2053,15 @@
       <node concept="l2Vlx" id="2_JteYPoh8S" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="52K8EjQ83d">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:52K8EjQ82J" resolve="KernelFCondition" />
+    <node concept="3EZMnI" id="52K8EjQ83o" role="2wV5jI">
+      <node concept="3F1sOY" id="52K8EjQ83v" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:52K8EjQ82T" resolve="expression" />
+      </node>
+      <node concept="l2Vlx" id="52K8EjQ83r" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

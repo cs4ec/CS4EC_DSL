@@ -10,6 +10,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.generator.template.PropertyMacroContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import AgentLanguage.behavior.Actor__BehaviorDescriptor;
 import AgentLanguage.behavior.BehaviourElement__BehaviorDescriptor;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.Sequence;
@@ -21,7 +22,6 @@ import java.util.Iterator;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.generator.template.ReferenceMacroContext;
-import AgentLanguage.behavior.Actor__BehaviorDescriptor;
 import jetbrains.mps.baseLanguage.behavior.Classifier__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPointerOperations;
 import jetbrains.mps.smodel.SNodePointer;
@@ -78,7 +78,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.patientCapacity$13cR);
   }
   public static Object propertyMacro_GetValue_1_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(_context.getNode());
   }
   public static Object propertyMacro_GetValue_1_2(final PropertyMacroContext _context) {
     return (String) BehaviourElement__BehaviorDescriptor.GetSignalName_id2YIKz$5l9Hf.invoke(_context.getNode());
@@ -87,7 +87,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return (String) BehaviourElement__BehaviorDescriptor.GetSignalName_id2YIKz$5l9Hf.invoke(_context.getNode());
   }
   public static Object propertyMacro_GetValue_1_4(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(_context.getNode());
   }
   public static Object propertyMacro_GetValue_2_0(final PropertyMacroContext _context) {
     return "Init" + SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
@@ -102,23 +102,23 @@ public class QueriesGenerated extends QueryProviderBase {
     int biggestX = 0;
     List<SNode> allRooms = Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.RoomDefinition$Op), LINKS.rooms$Qimv)).toListSequence();
     for (SNode room : ListSequence.fromList(allRooms)) {
-      if (SPropertyOperations.getInteger(room, PROPS.x$8h86) + SPropertyOperations.getInteger(room, PROPS.width$g4wh) > biggestX) {
-        biggestX = SPropertyOperations.getInteger(room, PROPS.x$8h86) + SPropertyOperations.getInteger(room, PROPS.width$g4wh);
+      if ((SPropertyOperations.getInteger(room, PROPS.x$8h86) + SPropertyOperations.getInteger(room, PROPS.width$g4wh)) > biggestX) {
+        biggestX = (SPropertyOperations.getInteger(room, PROPS.x$8h86) + SPropertyOperations.getInteger(room, PROPS.width$g4wh));
       }
     }
 
-    return biggestX + 10;
+    return biggestX + 50;
   }
   public static Object propertyMacro_GetValue_4_1(final PropertyMacroContext _context) {
     int biggestY = 0;
     List<SNode> allRooms = Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.RoomDefinition$Op), LINKS.rooms$Qimv)).toListSequence();
     for (SNode room : ListSequence.fromList(allRooms)) {
-      if (SPropertyOperations.getInteger(room, PROPS.y$8hA8) + SPropertyOperations.getInteger(room, PROPS.height$g5sl) > biggestY) {
-        biggestY = SPropertyOperations.getInteger(room, PROPS.y$8hA8) + SPropertyOperations.getInteger(room, PROPS.height$g5sl);
+      if ((SPropertyOperations.getInteger(room, PROPS.y$8hA8) + SPropertyOperations.getInteger(room, PROPS.height$g5sl)) > biggestY) {
+        biggestY = (SPropertyOperations.getInteger(room, PROPS.y$8hA8) + SPropertyOperations.getInteger(room, PROPS.height$g5sl));
       }
     }
 
-    return biggestY + 10;
+    return biggestY + 50;
   }
   public static Object propertyMacro_GetValue_4_2(final PropertyMacroContext _context) {
     return _context.createUniqueName(SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL).replaceAll(" ", ""), null);
@@ -310,10 +310,10 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.createUniqueName("StayAction", null);
   }
   public static Object propertyMacro_GetValue_45_0(final PropertyMacroContext _context) {
-    return "New" + SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v), PROPS.name$MnvL) + "Arrive";
+    return "New" + Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v)) + "Arrive";
   }
   public static Object propertyMacro_GetValue_45_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v), PROPS.name$MnvL);
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v));
   }
   public static Object propertyMacro_GetValue_45_2(final PropertyMacroContext _context) {
     return SNodeOperations.getIndexInParent(_context.getNode()) + 1;
@@ -322,7 +322,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.NumAgentsInHour$Puav);
   }
   public static Object propertyMacro_GetValue_45_4(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v), PROPS.name$MnvL) + "Generator";
+    return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v)) + "Generator";
   }
   public static Object propertyMacro_GetValue_49_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.relationshipName$8XEt);
@@ -443,14 +443,14 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.signal$M9Fv), PROPS.name$MnvL) + "Signal";
   }
   public static Object referenceMacro_GetReferent_14_0(final ReferenceMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.actorType$_3kr), PROPS.name$MnvL);
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.actorType$_3kr));
   }
   public static Object referenceMacro_GetReferent_22_0(final ReferenceMacroContext _context) {
-    return SPropertyOperations.getString(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return ListSequence.fromList(SNodeOperations.getNodeAncestors(_context.getNode(), null, false)).contains(it);
       }
-    }), PROPS.name$MnvL);
+    }));
   }
   public static Object referenceMacro_GetReferent_25_0(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeReference$cq$C), LINKS.attribute$$HXZ), PROPS.name$MnvL);
@@ -462,18 +462,18 @@ public class QueriesGenerated extends QueryProviderBase {
     return SEnumOperations.getMemberName0(SPropertyOperations.getEnum(SLinkOperations.getTarget(_context.getNode(), LINKS.targetObject$3oE1), PROPS.occupiableType$LraA));
   }
   public static Object referenceMacro_GetReferent_29_1(final ReferenceMacroContext _context) {
-    return SPropertyOperations.getString(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return ListSequence.fromList(SNodeOperations.getNodeAncestors(_context.getNode(), null, false)).contains(it);
       }
-    }), PROPS.name$MnvL);
+    }));
   }
   public static Object referenceMacro_GetReferent_29_2(final ReferenceMacroContext _context) {
-    return SPropertyOperations.getString(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return ListSequence.fromList(SNodeOperations.getNodeAncestors(_context.getNode(), null, false)).contains(it);
       }
-    }), PROPS.name$MnvL);
+    }));
   }
   public static Object referenceMacro_GetReferent_30_0(final ReferenceMacroContext _context) {
     return (String) RoomType__BehaviorDescriptor.getFormattedName_id35fpRuAddNT.invoke(_context.getNode());
@@ -482,7 +482,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return (String) RoomType__BehaviorDescriptor.getFormattedName_id35fpRuAddNT.invoke(_context.getNode());
   }
   public static Object referenceMacro_GetReferent_31_0(final ReferenceMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.roomType$xuJp), PROPS.name$MnvL);
+    return (String) RoomType__BehaviorDescriptor.getFormattedName_id35fpRuAddNT.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.roomType$xuJp));
   }
   public static Object referenceMacro_GetReferent_36_0(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.signal$M9Fv), PROPS.name$MnvL) + "Signal";
@@ -506,10 +506,10 @@ public class QueriesGenerated extends QueryProviderBase {
     return SEnumOperations.getMemberName0(SPropertyOperations.getEnum(SLinkOperations.getTarget(_context.getNode(), LINKS.targetOccupiable$rNKZ), PROPS.occupiableType$LraA));
   }
   public static Object referenceMacro_GetReferent_45_0(final ReferenceMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v), PROPS.name$MnvL);
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v));
   }
   public static Object referenceMacro_GetReferent_45_1(final ReferenceMacroContext _context) {
-    return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v), PROPS.name$MnvL);
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v));
   }
   public static Object referenceMacro_GetReferent_54_0(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), PROPS.attributeName$xNBq);

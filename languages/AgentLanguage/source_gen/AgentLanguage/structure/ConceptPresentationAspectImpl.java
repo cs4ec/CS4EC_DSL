@@ -44,6 +44,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_HumanInstanceFromSignal;
   private ConceptPresentation props_InfectionCondition;
   private ConceptPresentation props_InfectionState;
+  private ConceptPresentation props_KernelFCondition;
   private ConceptPresentation props_MessageSelectionStrategy;
   private ConceptPresentation props_MoveAction;
   private ConceptPresentation props_MoveOrder;
@@ -355,6 +356,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InfectionState = cpb.create();
         }
         return props_InfectionState;
+      case LanguageConceptSwitch.KernelFCondition:
+        if (props_KernelFCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("kernelF expression");
+          props_KernelFCondition = cpb.create();
+        }
+        return props_KernelFCondition;
       case LanguageConceptSwitch.MessageSelectionStrategy:
         if (props_MessageSelectionStrategy == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

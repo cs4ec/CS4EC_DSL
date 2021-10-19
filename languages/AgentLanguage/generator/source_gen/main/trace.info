@@ -121,18 +121,18 @@
       <node id="5328502176957033467" at="1316,66,1317,69" concept="1" />
       <node id="5328502176957033467" at="1388,16,1389,71" concept="6" />
       <node id="5328502176957086250" at="450,0,453,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="5328502176957034256" at="448,94,453,25" concept="6" />
+      <node id="5328502176957034256" at="448,94,453,8" concept="6" />
       <node id="5328502176957033468" at="448,0,455,0" concept="8" trace="referenceMacro_GetReferent_22_0#(Ljetbrains/mps/generator/template/ReferenceMacroContext;)Ljava/lang/Object;" />
       <scope id="5328502176957086251" at="450,39,451,117" />
       <scope id="5328502176957033467" at="1388,16,1389,71" />
       <scope id="5328502176957086250" at="450,0,453,0">
         <var name="it" id="5328502176957086250" />
       </scope>
-      <scope id="5328502176957033469" at="448,94,453,25" />
+      <scope id="5328502176957033469" at="448,94,453,8" />
       <scope id="5328502176957033468" at="448,0,455,0">
         <var name="_context" id="5328502176957033468" />
       </scope>
-      <unit id="5328502176957086250" at="449,146,453,5" name="main.QueriesGenerated$4" />
+      <unit id="5328502176957086250" at="449,188,453,5" name="main.QueriesGenerated$4" />
     </file>
   </root>
   <root nodeRef="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/2838504079048049">
@@ -871,7 +871,7 @@
   <root nodeRef="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750415734858175310">
     <file name="QueriesGenerated.java">
       <node id="6750415734858450686" at="192,89,193,81" concept="6" />
-      <node id="6750415734858277453" at="445,94,446,127" concept="6" />
+      <node id="6750415734858277453" at="445,94,446,152" concept="6" />
       <node id="6750415734858449777" at="996,190,997,174" concept="1" />
       <node id="6750415734858449777" at="1140,16,1141,67" concept="6" />
       <node id="6750415734858277443" at="1315,65,1316,66" concept="1" />
@@ -879,7 +879,7 @@
       <node id="6750415734858449778" at="192,0,195,0" concept="8" trace="propertyMacro_GetValue_14_0#(Ljetbrains/mps/generator/template/PropertyMacroContext;)Ljava/lang/Object;" />
       <node id="6750415734858277446" at="445,0,448,0" concept="8" trace="referenceMacro_GetReferent_14_0#(Ljetbrains/mps/generator/template/ReferenceMacroContext;)Ljava/lang/Object;" />
       <scope id="6750415734858449779" at="192,89,193,81" />
-      <scope id="6750415734858277447" at="445,94,446,127" />
+      <scope id="6750415734858277447" at="445,94,446,152" />
       <scope id="6750415734858449777" at="1140,16,1141,67" />
       <scope id="6750415734858277443" at="1386,16,1387,71" />
       <scope id="6750415734858449778" at="192,0,195,0">
@@ -932,11 +932,11 @@
   </root>
   <root nodeRef="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/6750846609958044736">
     <file name="QueriesGenerated.java">
-      <node id="6750846609958045212" at="484,94,485,126" concept="6" />
+      <node id="6750846609958045212" at="484,94,485,155" concept="6" />
       <node id="6750846609958045202" at="1324,69,1325,67" concept="1" />
       <node id="6750846609958045202" at="1404,16,1405,71" concept="6" />
       <node id="6750846609958045205" at="484,0,487,0" concept="8" trace="referenceMacro_GetReferent_31_0#(Ljetbrains/mps/generator/template/ReferenceMacroContext;)Ljava/lang/Object;" />
-      <scope id="6750846609958045206" at="484,94,485,126" />
+      <scope id="6750846609958045206" at="484,94,485,155" />
       <scope id="6750846609958045202" at="1404,16,1405,71" />
       <scope id="6750846609958045205" at="484,0,487,0">
         <var name="_context" id="6750846609958045205" />
@@ -968,10 +968,10 @@
   <root nodeRef="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/741909832615988754">
     <file name="QueriesGenerated.java">
       <node id="5328502176945513695" at="77,88,78,90" concept="6" />
-      <node id="3981903815701673933" at="80,88,81,78" concept="6" />
+      <node id="90846643910568529" at="80,88,81,103" concept="6" />
       <node id="5009038854072138002" at="83,88,84,112" concept="6" />
       <node id="5328502176953786270" at="86,88,87,112" concept="6" />
-      <node id="741909832615996248" at="89,88,90,78" concept="6" />
+      <node id="741909832615996248" at="89,88,90,103" concept="6" />
       <node id="5009038854072129968" at="396,93,397,96" concept="6" />
       <node id="846692516868596561" at="399,93,400,103" concept="6" />
       <node id="33966321890572098" at="529,78,530,118" concept="6" />
@@ -1020,10 +1020,10 @@
       <node id="5328502176947299773" at="634,0,637,0" concept="8" trace="sourceNodesQuery_1_2#(Ljetbrains/mps/generator/template/SourceSubstituteMacroNodesContext;)Ljava/lang/Iterable;" />
       <node id="5688458963379318038" at="637,0,640,0" concept="8" trace="sourceNodesQuery_1_3#(Ljetbrains/mps/generator/template/SourceSubstituteMacroNodesContext;)Ljava/lang/Iterable;" />
       <scope id="5328502176945513087" at="77,88,78,90" />
-      <scope id="3981903815701673564" at="80,88,81,78" />
+      <scope id="3981903815701673564" at="80,88,81,103" />
       <scope id="5009038854072137945" at="83,88,84,112" />
       <scope id="5328502176953785928" at="86,88,87,112" />
-      <scope id="741909832615995941" at="89,88,90,78" />
+      <scope id="741909832615995941" at="89,88,90,103" />
       <scope id="5009038854072129197" at="396,93,397,96" />
       <scope id="846692516868596555" at="399,93,400,103" />
       <scope id="33966321890571564" at="529,78,530,118" />
@@ -1293,12 +1293,12 @@
     <file name="QueriesGenerated.java">
       <node id="768972137594789168" at="101,88,102,21" concept="5" />
       <node id="768972137594778846" at="102,21,103,191" concept="5" />
-      <node id="768972137594805646" at="105,131,106,127" concept="1" />
+      <node id="768972137594805646" at="105,133,106,129" concept="1" />
       <node id="768972137593973557" at="108,5,109,0" concept="7" />
       <node id="768972137593973860" at="109,0,110,25" concept="6" />
       <node id="768972137594813755" at="112,88,113,21" concept="5" />
       <node id="768972137594813759" at="113,21,114,191" concept="5" />
-      <node id="768972137594813783" at="116,132,117,128" concept="1" />
+      <node id="768972137594813783" at="116,134,117,130" concept="1" />
       <node id="768972137594813793" at="119,5,120,0" concept="7" />
       <node id="768972137594813794" at="120,0,121,25" concept="6" />
       <node id="5292086088995963789" at="123,88,124,131" concept="6" />
@@ -1437,8 +1437,8 @@
       <node id="4474435675145804230" at="417,0,424,0" concept="8" trace="referenceMacro_GetReferent_4_2#(Ljetbrains/mps/generator/template/ReferenceMacroContext;)Ljava/lang/Object;" />
       <node id="768972137593762118" at="101,0,112,0" concept="8" trace="propertyMacro_GetValue_4_0#(Ljetbrains/mps/generator/template/PropertyMacroContext;)Ljava/lang/Object;" />
       <node id="768972137594130205" at="112,0,123,0" concept="8" trace="propertyMacro_GetValue_4_1#(Ljetbrains/mps/generator/template/PropertyMacroContext;)Ljava/lang/Object;" />
-      <scope id="768972137594789646" at="105,131,106,127" />
-      <scope id="768972137594813782" at="116,132,117,128" />
+      <scope id="768972137594789646" at="105,133,106,129" />
+      <scope id="768972137594813782" at="116,134,117,130" />
       <scope id="5292086088995963527" at="123,88,124,131" />
       <scope id="4474435675145776378" at="126,88,127,78" />
       <scope id="4474435675145792903" at="129,88,130,76" />
@@ -1627,13 +1627,13 @@
   </root>
   <root nodeRef="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/768972137576839953">
     <file name="QueriesGenerated.java">
-      <node id="33966321875901811" at="312,89,313,191" concept="6" />
-      <node id="768972137576990070" at="315,89,316,172" concept="6" />
+      <node id="33966321875901811" at="312,89,313,207" concept="6" />
+      <node id="768972137576990070" at="315,89,316,197" concept="6" />
       <node id="768972137580485707" at="318,89,319,68" concept="6" />
       <node id="768972137580493436" at="321,89,322,90" concept="6" />
-      <node id="768972137576841931" at="324,89,325,186" concept="6" />
-      <node id="768972137576935405" at="508,94,509,172" concept="6" />
-      <node id="768972137576926272" at="511,94,512,172" concept="6" />
+      <node id="768972137576841931" at="324,89,325,202" concept="6" />
+      <node id="768972137576935405" at="508,94,509,197" concept="6" />
+      <node id="768972137576926272" at="511,94,512,197" concept="6" />
       <node id="768972137592793165" at="604,93,605,77" concept="6" />
       <node id="768972137576979396" at="607,93,608,92" concept="6" />
       <node id="2985733650845478156" at="697,105,698,85" concept="6" />
@@ -1671,13 +1671,13 @@
       <node id="768972137576979394" at="607,0,610,0" concept="8" trace="sourceNodeQuery_45_1#(Ljetbrains/mps/generator/template/SourceSubstituteMacroNodeContext;)Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="2985733650845478149" at="697,0,700,0" concept="8" trace="sourceNodesQuery_45_0#(Ljetbrains/mps/generator/template/SourceSubstituteMacroNodesContext;)Ljava/lang/Iterable;" />
       <node id="768972137580484682" at="700,0,703,0" concept="8" trace="sourceNodesQuery_45_1#(Ljetbrains/mps/generator/template/SourceSubstituteMacroNodesContext;)Ljava/lang/Iterable;" />
-      <scope id="33966321875901363" at="312,89,313,191" />
-      <scope id="768972137576989161" at="315,89,316,172" />
+      <scope id="33966321875901363" at="312,89,313,207" />
+      <scope id="768972137576989161" at="315,89,316,197" />
       <scope id="768972137580485442" at="318,89,319,68" />
       <scope id="768972137580493085" at="321,89,322,90" />
-      <scope id="768972137576841639" at="324,89,325,186" />
-      <scope id="768972137576932905" at="508,94,509,172" />
-      <scope id="768972137576923918" at="511,94,512,172" />
+      <scope id="768972137576841639" at="324,89,325,202" />
+      <scope id="768972137576932905" at="508,94,509,197" />
+      <scope id="768972137576923918" at="511,94,512,197" />
       <scope id="768972137592793159" at="604,93,605,77" />
       <scope id="768972137576979395" at="607,93,608,92" />
       <scope id="2985733650845478150" at="697,105,698,85" />
@@ -1750,8 +1750,8 @@
       <node id="5328502176961740174" at="461,0,464,0" concept="8" trace="referenceMacro_GetReferent_29_0#(Ljetbrains/mps/generator/template/ReferenceMacroContext;)Ljava/lang/Object;" />
       <node id="5328502176961765578" at="466,0,469,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="2014390094196372858" at="473,0,476,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="5328502176961765568" at="464,94,469,25" concept="6" />
-      <node id="2014390094196372848" at="471,94,476,25" concept="6" />
+      <node id="5328502176961765568" at="464,94,469,8" concept="6" />
+      <node id="2014390094196372848" at="471,94,476,8" concept="6" />
       <node id="5328502176961762754" at="464,0,471,0" concept="8" trace="referenceMacro_GetReferent_29_1#(Ljetbrains/mps/generator/template/ReferenceMacroContext;)Ljava/lang/Object;" />
       <node id="2014390094196372846" at="471,0,478,0" concept="8" trace="referenceMacro_GetReferent_29_2#(Ljetbrains/mps/generator/template/ReferenceMacroContext;)Ljava/lang/Object;" />
       <scope id="5328502176961706004" at="219,89,220,59" />
@@ -1779,16 +1779,16 @@
       <scope id="2014390094196372858" at="473,0,476,0">
         <var name="it" id="2014390094196372858" />
       </scope>
-      <scope id="5328502176961762755" at="464,94,469,25" />
-      <scope id="2014390094196372847" at="471,94,476,25" />
+      <scope id="5328502176961762755" at="464,94,469,8" />
+      <scope id="2014390094196372847" at="471,94,476,8" />
       <scope id="5328502176961762754" at="464,0,471,0">
         <var name="_context" id="5328502176961762754" />
       </scope>
       <scope id="2014390094196372846" at="471,0,478,0">
         <var name="_context" id="2014390094196372846" />
       </scope>
-      <unit id="5328502176961765578" at="465,146,469,5" name="main.QueriesGenerated$5" />
-      <unit id="2014390094196372858" at="472,146,476,5" name="main.QueriesGenerated$6" />
+      <unit id="5328502176961765578" at="465,188,469,5" name="main.QueriesGenerated$5" />
+      <unit id="2014390094196372858" at="472,188,476,5" name="main.QueriesGenerated$6" />
     </file>
   </root>
   <root nodeRef="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/88285669845064447">

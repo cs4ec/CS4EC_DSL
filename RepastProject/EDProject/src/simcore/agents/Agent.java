@@ -77,7 +77,6 @@ public class Agent {
 	}
 	
 	public void stepAction(Behaviour action) {
-		action.step();
 		
 		// If the mission is complete, update my status accordingly
 		if (action.isComplete()) {
@@ -97,6 +96,8 @@ public class Agent {
 			}
 			myActiveAction = null;
 		}
+		
+		action.step();
 	}
 	
 	

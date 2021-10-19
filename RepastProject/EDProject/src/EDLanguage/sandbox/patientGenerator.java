@@ -42,26 +42,20 @@ public class patientGenerator extends AgentGenerator {
     if (rndDouble < 0.24) {
       a.COVID = "Susceptible";
     }
-    if (rndDouble < 0.33999999999999997) {
+    if (rndDouble < 0.54) {
       a.COVID = "Asymptomatic";
     }
-    if (rndDouble < 0.6) {
-      a.COVID = "Susceptible";
+    if (rndDouble < 0.8) {
+      a.COVID = "Symptomatic";
     }
     if (rndDouble < 1.0) {
       a.COVID = "Recovered";
     }
-    if (rndDouble < 0.12) {
-      a.Flu = "Susceptible";
-    }
-    if (rndDouble < 0.2) {
-      a.Flu = "Susceptible";
-    }
     if (rndDouble < 1.0) {
-      a.Flu = "Recovered";
+      a.Flu = "Symptomatic";
     }
     if (rndDouble < 0.67) {
-      a.MRSA = "Susceptible";
+      a.MRSA = "Symptomatic";
     }
     if (rndDouble < 0.7000000000000001) {
       a.MRSA = "Recovered";

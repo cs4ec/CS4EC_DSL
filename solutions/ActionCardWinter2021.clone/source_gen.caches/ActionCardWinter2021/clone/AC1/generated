@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-3kce8wy05s8w1ocgibmrzvyhwavw9hm">
+  <files dir="EDLanguage/sandbox" names="AdmittosideroomTrigger_a3Signal.java:AmberBay.java:COVIDPositiveCohort.java:CohortwithCOVID19patientsTrigger_a1Signal.java:CohortwithamberpatientsTrigger_a4Signal.java:CoughTest.java:Cubicle.java:CubicleNurse.java:Doctor.java:EDBuilder.java:LFT.java:LIAT.java:LIATTrigger_b0Signal.java:Lab.java:LabTechnician.java:MainEntrance.java:MajorsABBay.java:MajorsCBay.java:NonRespiratoryArea.java:PCR.java:PCRTrigger_a0Signal.java:PCRTrigger_c0Signal.java:RespiratoryArea.java:SideRoom.java:TriageDesk.java:TriageNurse.java:WaitingRoom.java:Ward.java:patient.java:patientGenerator.java" />
+</product>
+
