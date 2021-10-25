@@ -10,7 +10,6 @@
       <modulePath path="$PROJECT_DIR$/languages/PatientSelectionStrategy/PatientSelectionStrategy.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/StaffDefinitionLanguage/StaffDefinitionLanguage.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/ActionCardWinter2021.clone/ActionCardWinter2021.clone.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/ActionCardWinter2021/ActionCardWinter2021.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.LanguageDependency/EDLanguage.LanguageDependency.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.Runner/EDLanguage.Runner.msd" folder="runtime" />

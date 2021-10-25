@@ -226,6 +226,22 @@ public class TriageNurse extends Actor {
       }
     }
   }
+  public class StayAction_i0a extends PassiveBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_i0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
   public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -916,7 +932,7 @@ public class TriageNurse extends Actor {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
       sendSignalTemp = new GotoRespiratoryAreaTrigger_a0Signal();
-      sendSignalTemp.AddData("", behaviour.getSignalTrigger().GetData("patient"));
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
@@ -932,7 +948,7 @@ public class TriageNurse extends Actor {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
       sendSignalTemp = new GotoRespiratoryAreaTrigger_a0Signal();
-      sendSignalTemp.AddData("", behaviour.getSignalTrigger().GetData("patient"));
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
@@ -965,7 +981,7 @@ public class TriageNurse extends Actor {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
       sendSignalTemp = new GotononrespiratoryTrigger_b0Signal();
-      sendSignalTemp.AddData("", behaviour.getSignalTrigger().GetData("patient"));
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
@@ -981,9 +997,25 @@ public class TriageNurse extends Actor {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
       sendSignalTemp = new GotononrespiratoryTrigger_b0Signal();
-      sendSignalTemp.AddData("", behaviour.getSignalTrigger().GetData("patient"));
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_i0a_1 extends PassiveBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_i0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
     }
   }
 
@@ -999,6 +1031,7 @@ public class TriageNurse extends Actor {
     plstSteps.add(new Choice_f0a(behaviourBuilder));
     plstSteps.add(new Choice_g0a(behaviourBuilder));
     plstSteps.add(new Choice_h0a(behaviourBuilder));
+    plstSteps.add(new StayAction_i0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

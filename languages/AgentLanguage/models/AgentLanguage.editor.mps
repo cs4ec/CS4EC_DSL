@@ -1760,17 +1760,35 @@
             </node>
           </node>
         </node>
-        <node concept="3F0ifn" id="EFW1mYwZsu" role="3EZMnx">
-          <property role="3F0ifm" value="Agent Type:" />
-        </node>
-        <node concept="3F1sOY" id="EFW1mYwZtq" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:EFW1mYsc5K" resolve="AgentType" />
-        </node>
-        <node concept="3F0ifn" id="EFW1mZoVG$" role="3EZMnx">
-          <property role="3F0ifm" value="Spawn at:" />
-        </node>
-        <node concept="3F1sOY" id="EFW1mZp2zv" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:EFW1mZoVH$" resolve="SpawnAt" />
+        <node concept="3EZMnI" id="74nMeo6B8v2" role="3EZMnx">
+          <node concept="VPM3Z" id="74nMeo6B8v4" role="3F10Kt" />
+          <node concept="3EZMnI" id="74nMeo6B8xn" role="3EZMnx">
+            <node concept="VPM3Z" id="74nMeo6B8xp" role="3F10Kt" />
+            <node concept="3F0ifn" id="EFW1mYwZsu" role="3EZMnx">
+              <property role="3F0ifm" value="Agent Type:" />
+            </node>
+            <node concept="3F1sOY" id="EFW1mYwZtq" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:EFW1mYsc5K" resolve="AgentType" />
+            </node>
+            <node concept="3F0ifn" id="EFW1mZoVG$" role="3EZMnx">
+              <property role="3F0ifm" value="Spawn at:" />
+            </node>
+            <node concept="3F1sOY" id="EFW1mZp2zv" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:EFW1mZoVH$" resolve="SpawnAt" />
+            </node>
+            <node concept="2iRfu4" id="74nMeo6B8xs" role="2iSdaV" />
+          </node>
+          <node concept="3EZMnI" id="74nMeo6B8zG" role="3EZMnx">
+            <node concept="VPM3Z" id="74nMeo6B8zI" role="3F10Kt" />
+            <node concept="3F0ifn" id="74nMeo6B8zK" role="3EZMnx">
+              <property role="3F0ifm" value="Notify:" />
+            </node>
+            <node concept="3F1sOY" id="74nMeo6B8$0" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:74nMeo6B8q1" resolve="Notify" />
+            </node>
+            <node concept="2iRfu4" id="74nMeo6B8zL" role="2iSdaV" />
+          </node>
+          <node concept="2iRkQZ" id="74nMeo6B8v7" role="2iSdaV" />
         </node>
       </node>
       <node concept="3EZMnI" id="2_JteYOEVXP" role="3EZMnx">

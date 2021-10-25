@@ -1487,6 +1487,12 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
+    <node concept="1TJgyj" id="74nMeo6B8q1" role="1TKVEi">
+      <property role="IQ2ns" value="8149202941029156481" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="Notify" />
+      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
+    </node>
     <node concept="1TJgyj" id="2_JteYOEVUw" role="1TKVEi">
       <property role="IQ2ns" value="2985733650847088288" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />

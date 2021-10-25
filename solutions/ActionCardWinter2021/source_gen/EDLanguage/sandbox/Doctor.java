@@ -312,7 +312,7 @@ public class Doctor extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0c(Behaviour behaviour) {
-      target = AmberBay.getInstance();
+      target = NonRespiratoryBay.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -366,7 +366,7 @@ public class Doctor extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0c_1(Behaviour behaviour) {
-      target = AmberBay.getInstance();
+      target = NonRespiratoryBay.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -523,9 +523,40 @@ public class Doctor extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
-  public class OrderAction_a0e extends BehaviourStep {
+  public class MoveAction_a0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_a0e(Behaviour behaviour) {
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0e(Behaviour behaviour) {
+      target = COVIDPositiveCohort.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0e extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -535,9 +566,9 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_b0e extends BehaviourStep {
+  public class RemoveRelationshipAction_c0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_b0e(Behaviour behaviour) {
+    public RemoveRelationshipAction_c0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -546,9 +577,40 @@ public class Doctor extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
-  public class OrderAction_a0e_1 extends BehaviourStep {
+  public class MoveAction_a0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_a0e_1(Behaviour behaviour) {
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0e_1(Behaviour behaviour) {
+      target = COVIDPositiveCohort.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0e_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -558,9 +620,9 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_b0e_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_c0e_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_b0e_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_c0e_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -618,8 +680,9 @@ public class Doctor extends Actor {
   public void InitAdmitActionAdmittoCOVIDbay_k(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new OrderAction_a0e(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_b0e(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0e(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0e(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_c0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

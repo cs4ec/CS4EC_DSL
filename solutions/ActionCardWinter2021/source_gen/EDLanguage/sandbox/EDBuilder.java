@@ -33,8 +33,8 @@ public class EDBuilder implements ContextBuilder<Object> {
   public Context build(Context<Object> context) {
 
     context.setId("EDProject");
-    int mapWidth = 548;
-    int mapHeight = 308;
+    int mapWidth = 777;
+    int mapHeight = 297;
 
     Parameters params = RunEnvironment.getInstance().getParameters();
 
@@ -58,10 +58,10 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.add(new Board());
 
     // add Agents 
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 10; i++) {
       context.add(new Doctor(space, grid, context));
     }
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 20; i++) {
       context.add(new CubicleNurse(space, grid, context));
     }
     for (int i = 0; i < 5; i++) {
@@ -73,95 +73,87 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.addValueLayer(vl);
 
     // add Locations here 
-    Room AmberBay_a = new Room("AmberBay", context, space, grid, 424, 112, 74, 51, 1, 1000, AmberBay.getInstance(), Color.ORANGE);
-    Room Lab_b = new Room("Lab", context, space, grid, 50, 65, 89, 39, 1, 1000, Labaratory.getInstance(), Color.GRAY);
-    Room NonRespiratoryArea_c = new Room("NonRespiratoryArea", context, space, grid, 82, 114, 56, 43, 1, 1000, NonRespiratoryArea.getInstance(), Color.GREEN);
-    Room RespiratoryArea_d = new Room("RespiratoryArea", context, space, grid, 263, 216, 49, 40, 1, 1000, RespiratoryArea.getInstance(), Color.RED);
-    Room WaitingRoom_e = new Room("WaitingRoom", context, space, grid, 220, 115, 36, 52, 1, 1000, WaitingRoom.getInstance(), Color.BLUE);
-    Room WaitingRoom_f = new Room("WaitingRoom", context, space, grid, 145, 214, 64, 19, 1, 1000, WaitingRoom.getInstance(), Color.BLUE);
-    Room SideRoom_g = new Room("SideRoom", context, space, grid, 214, 16, 37, 16, 1, 1000, SideRoom.getInstance(), Color.YELLOW);
-    Room fluBay_h = new Room("fluBay", context, space, grid, 322, 126, 26, 19, 1, 1000, FluPositiveCohort.getInstance(), Color.BLACK);
-    Room covidBay_i = new Room("covidBay", context, space, grid, 321, 142, 28, 15, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED);
-    Room MainEntrance_j = new Room("MainEntrance", context, space, grid, 86, 246, 33, 12, 1, 1000, MainEntrance.getInstance(), Color.GRAY);
-    Room MajorsCBay_k = new Room("MajorsCBay", context, space, grid, 216, 61, 24, 16, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
-    Room MajorsCBay_l = new Room("MajorsCBay", context, space, grid, 242, 62, 24, 16, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
-    Room MajorsCBay_m = new Room("MajorsCBay", context, space, grid, 215, 43, 26, 13, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
-    Room Triage_n = new Room("Triage", context, space, grid, 167, 189, 24, 14, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
-    Room MajorsCBay_o = new Room("MajorsCBay", context, space, grid, 264, 27, 23, 14, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
-    Room MajorsABBay_p = new Room("MajorsABBay", context, space, grid, 352, 126, 20, 16, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
-    Room Triage_q = new Room("Triage", context, space, grid, 145, 174, 22, 14, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
-    Room MajorsABBay_r = new Room("MajorsABBay", context, space, grid, 352, 142, 22, 14, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
-    Room MajorsABBay_s = new Room("MajorsABBay", context, space, grid, 378, 141, 20, 15, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
-    Room Triage_t = new Room("Triage", context, space, grid, 143, 189, 21, 12, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
-    Room MajorsABBay_u = new Room("MajorsABBay", context, space, grid, 380, 121, 20, 12, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
-    Room MajorsABBay_v = new Room("MajorsABBay", context, space, grid, 322, 103, 24, 12, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
+    Room MainEntrance_a = new Room("MainEntrance", context, space, grid, 700, 220, 10, 20, 1, 10000, MainEntrance.getInstance(), Color.GRAY);
+    Room FluPositiveCohort_b = new Room("FluPositiveCohort", context, space, grid, 272, 140, 88, 57, 1, 1000, FluPositiveCohort.getInstance(), Color.BLUE);
+    Room COVIDPositiveCohort_c = new Room("COVIDPositiveCohort", context, space, grid, 272, 56, 87, 56, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED);
+    Room SideRoom_d = new Room("SideRoom", context, space, grid, 129, 136, 97, 50, 1, 1000, SideRoom.getInstance(), Color.GRAY);
+    Room NonRespiratoryBay_e = new Room("NonRespiratoryBay", context, space, grid, 132, 48, 98, 44, 1, 1000, NonRespiratoryBay.getInstance(), Color.GREEN);
+    Room RespiratoryArea_f = new Room("RespiratoryArea", context, space, grid, 550, 61, 84, 47, 1, 1000, RespiratoryArea.getInstance(), Color.RED);
+    Room NonRespiratoryArea_g = new Room("NonRespiratoryArea", context, space, grid, 508, 132, 71, 36, 1, 1000, NonRespiratoryArea.getInstance(), Color.RED);
+    Room WaitingRoom_h = new Room("WaitingRoom", context, space, grid, 664, 187, 61, 38, 1, 1000, WaitingRoom.getInstance(), Color.BLUE);
+    Room RespiratoryCubicle_i = new Room("RespiratoryCubicle", context, space, grid, 702, 95, 22, 21, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle_j = new Room("RespiratoryCubicle", context, space, grid, 645, 24, 23, 17, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
+    Room NonRespiratoryCubicle_k = new Room("NonRespiratoryCubicle", context, space, grid, 470, 116, 20, 19, 1, 3, NonRespiratoryCubicle.getInstance(), Color.GREEN);
+    Room RespiratoryCubicle_l = new Room("RespiratoryCubicle", context, space, grid, 647, 65, 21, 18, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle_m = new Room("RespiratoryCubicle", context, space, grid, 702, 67, 25, 15, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle_n = new Room("RespiratoryCubicle", context, space, grid, 647, 46, 20, 18, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle_o = new Room("RespiratoryCubicle", context, space, grid, 702, 42, 22, 16, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
+    Room NonRespiratoryCubicle_p = new Room("NonRespiratoryCubicle", context, space, grid, 470, 137, 19, 17, 1, 3, NonRespiratoryCubicle.getInstance(), Color.GREEN);
+    Room NonRespiratoryCubicle_q = new Room("NonRespiratoryCubicle", context, space, grid, 471, 156, 14, 16, 1, 3, NonRespiratoryCubicle.getInstance(), Color.GREEN);
+    Room NonRespiratoryCubicle_r = new Room("NonRespiratoryCubicle", context, space, grid, 469, 193, 13, 15, 1, 3, NonRespiratoryCubicle.getInstance(), Color.GREEN);
+    Room NonRespiratoryCubicle_s = new Room("NonRespiratoryCubicle", context, space, grid, 470, 174, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.GREEN);
+    Room Triage_t = new Room("Triage", context, space, grid, 663, 219, 31, 28, 1, 10, TriageDesk.getInstance(), Color.ORANGE);
     try {
-      AmberBay_a.setSeats(0);
-      Lab_b.setSeats(0);
-      NonRespiratoryArea_c.setSeats(0);
-      RespiratoryArea_d.setSeats(0);
-      WaitingRoom_e.setSeats(0);
-      WaitingRoom_f.setSeats(0);
-      SideRoom_g.setSeats(0);
-      fluBay_h.setSeats(0);
-      covidBay_i.setSeats(0);
-      MainEntrance_j.setSeats(0);
-      MajorsCBay_k.setSeats(0);
-      MajorsCBay_l.setSeats(0);
-      MajorsCBay_m.setSeats(0);
-      Triage_n.setSeats(0);
-      MajorsCBay_o.setSeats(0);
-      MajorsABBay_p.setSeats(0);
-      Triage_q.setSeats(0);
-      MajorsABBay_r.setSeats(0);
-      MajorsABBay_s.setSeats(0);
+      MainEntrance_a.setSeats(0);
+      FluPositiveCohort_b.setSeats(0);
+      COVIDPositiveCohort_c.setSeats(0);
+      SideRoom_d.setSeats(0);
+      NonRespiratoryBay_e.setSeats(0);
+      RespiratoryArea_f.setSeats(0);
+      NonRespiratoryArea_g.setSeats(0);
+      WaitingRoom_h.setSeats(0);
+      RespiratoryCubicle_i.setSeats(0);
+      RespiratoryCubicle_j.setSeats(0);
+      NonRespiratoryCubicle_k.setSeats(0);
+      RespiratoryCubicle_l.setSeats(0);
+      RespiratoryCubicle_m.setSeats(0);
+      RespiratoryCubicle_n.setSeats(0);
+      RespiratoryCubicle_o.setSeats(0);
+      NonRespiratoryCubicle_p.setSeats(0);
+      NonRespiratoryCubicle_q.setSeats(0);
+      NonRespiratoryCubicle_r.setSeats(0);
+      NonRespiratoryCubicle_s.setSeats(0);
       Triage_t.setSeats(0);
-      MajorsABBay_u.setSeats(0);
-      MajorsABBay_v.setSeats(0);
-      AmberBay_a.setDesks(0);
-      Lab_b.setDesks(0);
-      NonRespiratoryArea_c.setDesks(0);
-      RespiratoryArea_d.setDesks(0);
-      WaitingRoom_e.setDesks(0);
-      WaitingRoom_f.setDesks(0);
-      SideRoom_g.setDesks(0);
-      fluBay_h.setDesks(0);
-      covidBay_i.setDesks(0);
-      MainEntrance_j.setDesks(0);
-      MajorsCBay_k.setDesks(0);
-      MajorsCBay_l.setDesks(0);
-      MajorsCBay_m.setDesks(0);
-      Triage_n.setDesks(0);
-      MajorsCBay_o.setDesks(0);
-      MajorsABBay_p.setDesks(0);
-      Triage_q.setDesks(0);
-      MajorsABBay_r.setDesks(0);
-      MajorsABBay_s.setDesks(0);
+      MainEntrance_a.setDesks(0);
+      FluPositiveCohort_b.setDesks(0);
+      COVIDPositiveCohort_c.setDesks(0);
+      SideRoom_d.setDesks(0);
+      NonRespiratoryBay_e.setDesks(0);
+      RespiratoryArea_f.setDesks(0);
+      NonRespiratoryArea_g.setDesks(0);
+      WaitingRoom_h.setDesks(0);
+      RespiratoryCubicle_i.setDesks(0);
+      RespiratoryCubicle_j.setDesks(0);
+      NonRespiratoryCubicle_k.setDesks(0);
+      RespiratoryCubicle_l.setDesks(0);
+      RespiratoryCubicle_m.setDesks(0);
+      RespiratoryCubicle_n.setDesks(0);
+      RespiratoryCubicle_o.setDesks(0);
+      NonRespiratoryCubicle_p.setDesks(0);
+      NonRespiratoryCubicle_q.setDesks(0);
+      NonRespiratoryCubicle_r.setDesks(0);
+      NonRespiratoryCubicle_s.setDesks(0);
       Triage_t.setDesks(0);
-      MajorsABBay_u.setDesks(0);
-      MajorsABBay_v.setDesks(0);
-      AmberBay_a.setBeds(0);
-      Lab_b.setBeds(0);
-      NonRespiratoryArea_c.setBeds(0);
-      RespiratoryArea_d.setBeds(0);
-      WaitingRoom_e.setBeds(0);
-      WaitingRoom_f.setBeds(0);
-      SideRoom_g.setBeds(0);
-      fluBay_h.setBeds(0);
-      covidBay_i.setBeds(0);
-      MainEntrance_j.setBeds(0);
-      MajorsCBay_k.setBeds(0);
-      MajorsCBay_l.setBeds(0);
-      MajorsCBay_m.setBeds(0);
-      Triage_n.setBeds(0);
-      MajorsCBay_o.setBeds(0);
-      MajorsABBay_p.setBeds(0);
-      Triage_q.setBeds(0);
-      MajorsABBay_r.setBeds(0);
-      MajorsABBay_s.setBeds(0);
+      MainEntrance_a.setBeds(0);
+      FluPositiveCohort_b.setBeds(0);
+      COVIDPositiveCohort_c.setBeds(0);
+      SideRoom_d.setBeds(0);
+      NonRespiratoryBay_e.setBeds(0);
+      RespiratoryArea_f.setBeds(0);
+      NonRespiratoryArea_g.setBeds(0);
+      WaitingRoom_h.setBeds(0);
+      RespiratoryCubicle_i.setBeds(0);
+      RespiratoryCubicle_j.setBeds(0);
+      NonRespiratoryCubicle_k.setBeds(0);
+      RespiratoryCubicle_l.setBeds(0);
+      RespiratoryCubicle_m.setBeds(0);
+      RespiratoryCubicle_n.setBeds(0);
+      RespiratoryCubicle_o.setBeds(0);
+      NonRespiratoryCubicle_p.setBeds(0);
+      NonRespiratoryCubicle_q.setBeds(0);
+      NonRespiratoryCubicle_r.setBeds(0);
+      NonRespiratoryCubicle_s.setBeds(0);
       Triage_t.setBeds(0);
-      MajorsABBay_u.setBeds(0);
-      MajorsABBay_v.setBeds(0);
     } catch (NumberFormatException e) {
     }
 

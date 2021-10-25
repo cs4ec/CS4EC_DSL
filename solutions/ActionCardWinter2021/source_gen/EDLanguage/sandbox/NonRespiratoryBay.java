@@ -4,16 +4,16 @@ package EDLanguage.sandbox;
 
 import simcore.basicStructures.RoomType;
 
-public class AmberBay extends RoomType {
-  private static AmberBay instance;
+public class NonRespiratoryBay extends RoomType {
+  private static NonRespiratoryBay instance;
 
-  private AmberBay() {
+  private NonRespiratoryBay() {
     super();
   }
 
   public static RoomType getInstance() {
     if (instance == null) {
-      instance = new AmberBay();
+      instance = new NonRespiratoryBay();
     }
     return instance;
   }
