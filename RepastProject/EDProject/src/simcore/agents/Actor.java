@@ -11,6 +11,7 @@ import java.util.Queue;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.TriageNurse;
 import repast.simphony.context.Context;
 import repast.simphony.context.space.graph.NetworkBuilder;
 import repast.simphony.engine.schedule.Schedule;
@@ -127,6 +128,9 @@ public class Actor extends Agent {
 	public void Perceive() {	
 		Board board = ReadBoard();
 		// If I do not have a current active action, then select one
+		if(this instanceof TriageNurse) {
+			System.out.println("");
+		}
 		if (isIdle) {
 			
 			// Have I been given an order?
@@ -212,6 +216,9 @@ public class Actor extends Agent {
 		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
 		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
 		
+		if(this instanceof TriageNurse) {
+			System.out.println("Tr");
+		}
 		if(plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
 			return null;
 		}

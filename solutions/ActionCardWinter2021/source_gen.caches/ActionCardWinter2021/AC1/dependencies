@@ -18,24 +18,8 @@
   <dependency className="ActionCardWinter2021.AC1.AdmittosideroomTrigger_c7Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="ActionCardWinter2021.AC1.AmberBay">
-    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="ActionCardWinter2021.AC1.COVIDPositiveCohort">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="ActionCardWinter2021.AC1.CoughTest">
-    <classNode dependClassName="EDLanguage.sandbox.CoughTest" />
-    <classNode dependClassName="java.lang.Double" />
-    <classNode dependClassName="java.lang.Integer" />
-    <classNode dependClassName="java.util.HashMap" />
-    <classNode dependClassName="java.util.Map" />
-    <classNode dependClassName="simcore.utilities.Distribution" />
-  </dependency>
-  <dependency className="ActionCardWinter2021.AC1.Cubicle">
-    <classNode dependClassName="EDLanguage.sandbox.Cubicle" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="ActionCardWinter2021.AC1.CubicleNurse">
@@ -44,16 +28,16 @@
     <classNode dependClassName="EDLanguage.sandbox.AdmittoFluBayTrigger_b7Signal" />
     <classNode dependClassName="EDLanguage.sandbox.AdmittononrespiratoryTrigger_a9Signal" />
     <classNode dependClassName="EDLanguage.sandbox.AdmittosideroomTrigger_c7Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.Cubicle" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.DoLFDTrigger_a1Signal" />
     <classNode dependClassName="EDLanguage.sandbox.DoLFDTrigger_a6Signal" />
     <classNode dependClassName="EDLanguage.sandbox.DoLIATTrigger_a8Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.LFT" />
+    <classNode dependClassName="EDLanguage.sandbox.LFD" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsABBay" />
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryArea" />
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryArea" />
-    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -86,10 +70,10 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="ActionCardWinter2021.AC1.Doctor">
-    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryBay" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -110,17 +94,16 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="ActionCardWinter2021.AC1.EDBuilder">
-    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
-    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsABBay" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryArea" />
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryBay" />
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryArea" />
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
@@ -162,14 +145,14 @@
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="ActionCardWinter2021.AC1.GotoRespiratoryAreaTrigger_b0Signal">
+  <dependency className="ActionCardWinter2021.AC1.GotoRespiratoryAreaTrigger_a0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="ActionCardWinter2021.AC1.GotononrespiratoryTrigger_a0Signal">
+  <dependency className="ActionCardWinter2021.AC1.GotononrespiratoryTrigger_b0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="ActionCardWinter2021.AC1.LFT">
-    <classNode dependClassName="EDLanguage.sandbox.LFT" />
+  <dependency className="ActionCardWinter2021.AC1.LFD">
+    <classNode dependClassName="EDLanguage.sandbox.LFD" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
@@ -206,10 +189,6 @@
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="ActionCardWinter2021.AC1.MajorsABBay">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsABBay" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="ActionCardWinter2021.AC1.MajorsCBay">
     <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -218,17 +197,29 @@
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryArea" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="ActionCardWinter2021.AC1.PCR">
-    <classNode dependClassName="EDLanguage.sandbox.PCR" />
+  <dependency className="ActionCardWinter2021.AC1.NonRespiratoryBay">
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardWinter2021.AC1.NonRespiratoryCubicle">
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardWinter2021.AC1.RespiratoryArea">
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryArea" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardWinter2021.AC1.RespiratoryCubicle">
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardWinter2021.AC1.RespiratoryTest">
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryTest" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
-  </dependency>
-  <dependency className="ActionCardWinter2021.AC1.RespiratoryArea">
-    <classNode dependClassName="EDLanguage.sandbox.RespiratoryArea" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="ActionCardWinter2021.AC1.SideRoom">
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
@@ -239,9 +230,9 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="ActionCardWinter2021.AC1.TriageNurse">
-    <classNode dependClassName="EDLanguage.sandbox.CoughTest" />
-    <classNode dependClassName="EDLanguage.sandbox.GotoRespiratoryAreaTrigger_b0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.GotononrespiratoryTrigger_a0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.GotoRespiratoryAreaTrigger_a0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.GotononrespiratoryTrigger_b0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryTest" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
@@ -297,6 +288,7 @@
     <classNode dependClassName="repast.simphony.random.RandomHelper" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.ActorTypeSignal" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.ToolBox" />

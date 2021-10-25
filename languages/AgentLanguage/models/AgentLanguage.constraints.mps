@@ -46,6 +46,9 @@
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
       <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
+      <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
+        <child id="1068580123156" name="expression" index="3clFbG" />
+      </concept>
       <concept id="1068580123157" name="jetbrains.mps.baseLanguage.structure.Statement" flags="nn" index="3clFbH" />
       <concept id="1068580123159" name="jetbrains.mps.baseLanguage.structure.IfStatement" flags="nn" index="3clFbJ">
         <child id="1068580123160" name="condition" index="3clFbw" />
@@ -953,6 +956,32 @@
       <ref role="1N5Vy1" to="3751:3KCb14J4_kq" resolve="attribute" />
       <node concept="1dDu$B" id="53LYXLHVwUd" role="1N6uqs">
         <ref role="1dDu$A" to="3751:3KCb14J4_km" resolve="Attribute" />
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="52K8EknvBI">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1M2myG" to="3751:52K8EkgbMX" resolve="BinaryCondition" />
+    <node concept="9S07l" id="52K8EknvBK" role="9Vyp8">
+      <node concept="3clFbS" id="52K8EknvBL" role="2VODD2">
+        <node concept="3clFbF" id="52K8EknvC8" role="3cqZAp">
+          <node concept="3clFbT" id="52K8EknvC7" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="52K8EknvSM">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1M2myG" to="3751:3KCb14J4_kl" resolve="AttributeCondition" />
+    <node concept="9S07l" id="52K8EknvSN" role="9Vyp8">
+      <node concept="3clFbS" id="52K8EknvSO" role="2VODD2">
+        <node concept="3clFbF" id="52K8EknvTb" role="3cqZAp">
+          <node concept="3clFbT" id="52K8EknvTa" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
       </node>
     </node>
   </node>

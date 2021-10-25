@@ -18,7 +18,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AdmitAction;
   private ConceptPresentation props_AgentGenerator;
   private ConceptPresentation props_AgentGeneratorLine;
+  private ConceptPresentation props_AndCondition;
   private ConceptPresentation props_Attribute;
+  private ConceptPresentation props_AttributeCondition;
   private ConceptPresentation props_AttributeDistributionLine;
   private ConceptPresentation props_AttributeDistributionTable;
   private ConceptPresentation props_AttributeExpressionReference;
@@ -28,6 +30,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BehaviourElement;
   private ConceptPresentation props_BehaviourElementReference;
   private ConceptPresentation props_BehaviourSequence;
+  private ConceptPresentation props_BinaryCondition;
   private ConceptPresentation props_Choice;
   private ConceptPresentation props_CompositeOrder;
   private ConceptPresentation props_Condition;
@@ -38,7 +41,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Description;
   private ConceptPresentation props_DirectSignal;
   private ConceptPresentation props_DischargeAction;
-  private ConceptPresentation props_ExpressionCondition;
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
   private ConceptPresentation props_HumanInstanceFromSignal;
@@ -168,6 +170,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AgentGeneratorLine = cpb.create();
         }
         return props_AgentGeneratorLine;
+      case LanguageConceptSwitch.AndCondition:
+        if (props_AndCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("and");
+          props_AndCondition = cpb.create();
+        }
+        return props_AndCondition;
       case LanguageConceptSwitch.Attribute:
         if (props_Attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -175,6 +184,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Attribute = cpb.create();
         }
         return props_Attribute;
+      case LanguageConceptSwitch.AttributeCondition:
+        if (props_AttributeCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("compare attributes");
+          props_AttributeCondition = cpb.create();
+        }
+        return props_AttributeCondition;
       case LanguageConceptSwitch.AttributeDistributionLine:
         if (props_AttributeDistributionLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -239,6 +255,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BehaviourSequence = cpb.create();
         }
         return props_BehaviourSequence;
+      case LanguageConceptSwitch.BinaryCondition:
+        if (props_BinaryCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("BinaryCondition");
+          props_BinaryCondition = cpb.create();
+        }
+        return props_BinaryCondition;
       case LanguageConceptSwitch.Choice:
         if (props_Choice == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -257,7 +280,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Condition:
         if (props_Condition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("condition judgement used in IF statement");
           props_Condition = cpb.create();
         }
         return props_Condition;
@@ -312,14 +334,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DischargeAction = cpb.create();
         }
         return props_DischargeAction;
-      case LanguageConceptSwitch.ExpressionCondition:
-        if (props_ExpressionCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("condition about attribute");
-          cpb.rawPresentation("compare attributes");
-          props_ExpressionCondition = cpb.create();
-        }
-        return props_ExpressionCondition;
       case LanguageConceptSwitch.FollowOrder:
         if (props_FollowOrder == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
