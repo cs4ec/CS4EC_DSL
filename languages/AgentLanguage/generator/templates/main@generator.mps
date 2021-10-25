@@ -9,8 +9,6 @@
     <use id="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" name="org.iets3.core.expr.genjava.simpleTypes" version="0" />
     <use id="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" name="org.iets3.core.expr.genjava.base" version="0" />
     <use id="289fb12b-7f53-4ef7-bc2e-1ed2c6a7c998" name="org.iets3.core.expr.datetime" version="0" />
-    <engage id="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" name="org.iets3.core.expr.genjava.base" />
-    <engage id="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" name="org.iets3.core.expr.genjava.simpleTypes" />
     <devkit ref="a2eb3a43-fcc2-4200-80dc-c60110c4862d(jetbrains.mps.devkit.templates)" />
   </languages>
   <imports>
@@ -933,7 +931,7 @@
       </node>
     </node>
     <node concept="3aamgX" id="2_JteYS3P2X" role="3acgRq">
-      <ref role="30HIoZ" to="3751:3KCb14J4_kl" resolve="ExpressionCondition" />
+      <ref role="30HIoZ" to="3751:3KCb14J4_kl" resolve="AttributeCondition" />
       <node concept="j$656" id="2_JteYS3PeD" role="1lVwrX">
         <ref role="v9R2y" node="6yyWtWVXcdX" resolve="reduce_ExpressionCondition" />
       </node>
@@ -4922,7 +4920,7 @@
   <node concept="13MO4I" id="6yyWtWVXcdX">
     <property role="TrG5h" value="reduce_ExpressionCondition" />
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="3gUMe" to="3751:3KCb14J4_kl" resolve="ExpressionCondition" />
+    <ref role="3gUMe" to="3751:3KCb14J4_kl" resolve="AttributeCondition" />
     <node concept="312cEu" id="6yyWtWVXcyK" role="13RCb5">
       <property role="TrG5h" value="_class_" />
       <node concept="15s5l7" id="4BMD7YjAtVx" role="lGtFl">

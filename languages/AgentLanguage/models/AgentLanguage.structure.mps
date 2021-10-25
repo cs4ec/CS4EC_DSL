@@ -9,8 +9,8 @@
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" implicit="true" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
+    <import index="4kwy" ref="r:657c9fde-2f36-4e61-ae17-20f02b8630ad(org.iets3.core.base.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
@@ -223,7 +223,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
     <node concept="1TJgyj" id="3l6cNjec8lb" role="1TKVEi">
       <property role="IQ2ns" value="3838812034270528843" />
@@ -642,18 +642,15 @@
     <property role="EcuMT" value="4530954867906952002" />
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="Condition" />
-    <property role="34LRSv" value="condition" />
-    <property role="R4oN_" value="condition judgement used in IF statement" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="3KCb14J4_kl">
     <property role="EcuMT" value="4334763093659899157" />
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <property role="TrG5h" value="ExpressionCondition" />
-    <property role="R4oN_" value="condition about attribute" />
+    <property role="TrG5h" value="AttributeCondition" />
     <property role="34LRSv" value="compare attributes" />
-    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyi" id="3KCb14J4_lJ" role="1TKVEl">
       <property role="IQ2nx" value="4334763093659899247" />
       <property role="TrG5h" value="operator" />
@@ -714,7 +711,7 @@
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
     <property role="TrG5h" value="PossibilityCondition" />
     <property role="34LRSv" value="possibility" />
-    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyj" id="6tNT_P6pQaq" role="1TKVEi">
       <property role="IQ2ns" value="7454555096515830426" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -1764,6 +1761,33 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="52K8EkgbMX">
+    <property role="EcuMT" value="90846643926121661" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="BinaryCondition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="52K8EkgbNp" role="1TKVEi">
+      <property role="IQ2ns" value="90846643926121689" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="left" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
+    </node>
+    <node concept="1TJgyj" id="52K8EkgbNr" role="1TKVEi">
+      <property role="IQ2ns" value="90846643926121691" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="right" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="52K8EkgcQF">
+    <property role="EcuMT" value="90846643926125995" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="AndCondition" />
+    <property role="34LRSv" value="and" />
+    <ref role="1TJDcQ" node="52K8EkgbMX" resolve="BinaryCondition" />
   </node>
 </model>
 

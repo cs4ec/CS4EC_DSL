@@ -8,6 +8,7 @@
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
+    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -158,7 +159,7 @@
       <property role="IQ2ns" value="2698877061866373100" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
-      <ref role="20lvS9" node="av1M7vc78J" resolve="Condition" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
     <node concept="1TJgyi" id="av1M7vspU_" role="1TKVEl">
       <property role="IQ2nx" value="188877551436930725" />
@@ -257,30 +258,6 @@
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
-  <node concept="1TIwiD" id="av1M7vc78a">
-    <property role="EcuMT" value="188877551432659466" />
-    <property role="TrG5h" value="Conditional" />
-    <property role="3GE5qa" value="Conditions" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-  </node>
-  <node concept="1TIwiD" id="av1M7vc78J">
-    <property role="EcuMT" value="188877551432659503" />
-    <property role="TrG5h" value="Condition" />
-    <property role="3GE5qa" value="Conditions" />
-    <ref role="1TJDcQ" node="av1M7vc78a" resolve="Conditional" />
-    <node concept="1TJgyj" id="av1M7vc78T" role="1TKVEi">
-      <property role="IQ2ns" value="188877551432659513" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="Conditionals" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="av1M7vc78a" resolve="Conditional" />
-    </node>
-    <node concept="1TJgyi" id="2lOlAdPhCb3" role="1TKVEl">
-      <property role="IQ2nx" value="2698877061871076035" />
-      <property role="TrG5h" value="operator" />
-      <ref role="AX2Wp" node="av1M7vdSz0" resolve="Operators" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="av1M7vc794">
     <property role="EcuMT" value="188877551432659524" />
     <property role="TrG5h" value="Variable" />
@@ -292,12 +269,18 @@
     <property role="TrG5h" value="DiagnosticCondition" />
     <property role="3GE5qa" value="Conditions" />
     <property role="34LRSv" value="diagnostic condition" />
-    <ref role="1TJDcQ" node="av1M7vc78a" resolve="Conditional" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
     <node concept="1TJgyj" id="av1M7vdSwv" role="1TKVEi">
       <property role="IQ2ns" value="188877551433123871" />
       <property role="20kJfa" value="test" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="ijr0ZWehMB" resolve="Test" />
+    </node>
+    <node concept="1TJgyj" id="3WTvlUVugCc" role="1TKVEi">
+      <property role="IQ2ns" value="4555810343887637004" />
+      <property role="20kJfa" value="disease" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
     </node>
     <node concept="1TJgyi" id="2lOlAdPyFhO" role="1TKVEl">
       <property role="IQ2nx" value="2698877061875545204" />
@@ -356,27 +339,18 @@
     <node concept="PrWs8" id="ijr0ZWehMC" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-    <node concept="1TJgyi" id="ijr0ZWehME" role="1TKVEl">
-      <property role="IQ2nx" value="329726013640088746" />
-      <property role="TrG5h" value="Sensitivity" />
-      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
-    </node>
-    <node concept="1TJgyi" id="ijr0ZWehMG" role="1TKVEl">
-      <property role="IQ2nx" value="329726013640088748" />
-      <property role="TrG5h" value="Specificity" />
-      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
-    </node>
     <node concept="1TJgyj" id="1rknCs3SeUj" role="1TKVEi">
       <property role="IQ2ns" value="1645043697875742355" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="ProcessingTimeTable" />
       <ref role="20lvS9" node="1rknCs3SeRP" resolve="ProcessingTimeTable" />
     </node>
-    <node concept="1TJgyj" id="2lOlAdPyFac" role="1TKVEi">
-      <property role="IQ2ns" value="2698877061875544716" />
-      <property role="20kJfa" value="disease" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+    <node concept="1TJgyj" id="5ivS4t6ssT3" role="1TKVEi">
+      <property role="IQ2ns" value="6097839017212104259" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="CapturedDiseases" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" node="5ivS4t6ssOS" resolve="TestCapturedDisease" />
     </node>
   </node>
   <node concept="1TIwiD" id="2lOlAdPyF0i">
@@ -454,28 +428,6 @@
       <property role="TrG5h" value="Mild" />
     </node>
   </node>
-  <node concept="1TIwiD" id="2lOlAdPyF2J">
-    <property role="EcuMT" value="2698877061875544239" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="TrG5h" value="TestResult" />
-    <ref role="1TJDcQ" node="2lOlAdPyF0B" resolve="Attribute" />
-    <node concept="1TJgyi" id="2lOlAdPyF3O" role="1TKVEl">
-      <property role="IQ2nx" value="2698877061875544308" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="2lOlAdPyF2T">
-    <property role="EcuMT" value="2698877061875544249" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="TrG5h" value="Severity" />
-    <ref role="1TJDcQ" node="2lOlAdPyF0B" resolve="Attribute" />
-    <node concept="1TJgyi" id="2lOlAdPyF3D" role="1TKVEl">
-      <property role="IQ2nx" value="2698877061875544297" />
-      <property role="TrG5h" value="value" />
-      <ref role="AX2Wp" node="2lOlAdPyF2t" resolve="E_Severity" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="2lOlAdPyFe9">
     <property role="EcuMT" value="2698877061875544969" />
     <property role="3GE5qa" value="Testing" />
@@ -488,18 +440,6 @@
       <property role="20kJfa" value="diseases" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="2lOlAdPyFjt">
-    <property role="EcuMT" value="2698877061875545309" />
-    <property role="3GE5qa" value="Conditions" />
-    <property role="TrG5h" value="AttributeCondition" />
-    <ref role="1TJDcQ" node="av1M7vc78a" resolve="Conditional" />
-    <node concept="1TJgyj" id="2lOlAdPyFjB" role="1TKVEi">
-      <property role="IQ2ns" value="2698877061875545319" />
-      <property role="20kJfa" value="attribute" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0B" resolve="Attribute" />
     </node>
   </node>
   <node concept="1TIwiD" id="2lOlAdQiLDw">
@@ -633,6 +573,28 @@
       <property role="20kJfa" value="lines" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2_JteYNWs8U" resolve="DiseaseInitialiserLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5ivS4t6ssOS">
+    <property role="EcuMT" value="6097839017212103992" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestCapturedDisease" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="5ivS4t6ssQ5" role="1TKVEi">
+      <property role="IQ2ns" value="6097839017212104069" />
+      <property role="20kJfa" value="disease" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+    </node>
+    <node concept="1TJgyi" id="5ivS4t6ssPJ" role="1TKVEl">
+      <property role="IQ2nx" value="6097839017212104047" />
+      <property role="TrG5h" value="Sensitivity" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyi" id="5ivS4t6ssPK" role="1TKVEl">
+      <property role="IQ2nx" value="6097839017212104048" />
+      <property role="TrG5h" value="Specificity" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
   </node>
 </model>

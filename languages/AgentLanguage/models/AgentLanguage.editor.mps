@@ -123,6 +123,19 @@
       <concept id="5083944728298846680" name="com.mbeddr.mpsutil.grammarcells.structure.OptionalCell" flags="ng" index="_tjkj">
         <child id="5083944728298846681" name="option" index="_tjki" />
       </concept>
+      <concept id="8207263695490893775" name="com.mbeddr.mpsutil.grammarcells.structure.CellBasedRule" flags="ng" index="2ElW$n" />
+      <concept id="7363578995839435357" name="com.mbeddr.mpsutil.grammarcells.structure.WrapperCell" flags="ng" index="1kIj98">
+        <child id="7363578995839435358" name="wrapped" index="1kIj9b" />
+      </concept>
+      <concept id="2862331529394479412" name="com.mbeddr.mpsutil.grammarcells.structure.GrammarConstantQuery" flags="ig" index="1Lj6DC" />
+      <concept id="2862331529394479405" name="com.mbeddr.mpsutil.grammarcells.structure.GrammarConstantQueryCell" flags="ng" index="1Lj6DL">
+        <child id="2862331529394487726" name="query" index="1Lj8FM" />
+      </concept>
+      <concept id="2862331529394480355" name="com.mbeddr.mpsutil.grammarcells.structure.Parameter_SubConcept" flags="ng" index="1Lj6YZ" />
+      <concept id="3011849438420226693" name="com.mbeddr.mpsutil.grammarcells.structure.GrammarInfoCell" flags="ng" index="1WcQYu">
+        <child id="8207263695490916687" name="rules" index="2El2Yn" />
+        <child id="2862331529394260612" name="projection" index="1LiK7o" />
+      </concept>
     </language>
     <language id="7e450f4e-1ac3-41ef-a851-4598161bdb94" name="de.slisson.mps.tables">
       <concept id="1397920687865593407" name="de.slisson.mps.tables.structure.PartialTable" flags="ng" index="2r0Tta">
@@ -159,6 +172,7 @@
         <child id="1883223317721008710" name="nodeExpression" index="JncvB" />
       </concept>
       <concept id="1883223317721008713" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVariable" flags="ng" index="JncvC" />
+      <concept id="6870613620390542976" name="jetbrains.mps.lang.smodel.structure.ConceptAliasOperation" flags="ng" index="3n3YKJ" />
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
@@ -529,15 +543,16 @@
       <node concept="3F0ifn" id="3KCb14J5fgN" role="3EZMnx">
         <property role="3F0ifm" value="if" />
       </node>
-      <node concept="3F1sOY" id="3KCb14J5fgT" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:3l6cNjec8ld" resolve="condition" />
+      <node concept="1kIj98" id="52K8EkiqFv" role="3EZMnx">
+        <node concept="3F1sOY" id="52K8EkiqFQ" role="1kIj9b">
+          <ref role="1NtTu8" to="3751:3l6cNjec8ld" resolve="condition" />
+        </node>
       </node>
-      <node concept="3F0ifn" id="3KCb14J5fh1" role="3EZMnx">
-        <node concept="ljvvj" id="3KCb14J5fh6" role="3F10Kt">
+      <node concept="3XFhqQ" id="3KCb14J5fhv" role="3EZMnx">
+        <node concept="pVoyu" id="52K8Eknw2q" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3XFhqQ" id="3KCb14J5fhv" role="3EZMnx" />
       <node concept="3EZMnI" id="3KCb14J7952" role="3EZMnx">
         <node concept="VPM3Z" id="3KCb14J7955" role="3F10Kt" />
         <node concept="3F1sOY" id="3KCb14J795o" role="3EZMnx">
@@ -569,7 +584,7 @@
   </node>
   <node concept="24kQdi" id="3KCb14J5xBD">
     <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="1XX52x" to="3751:3KCb14J4_kl" resolve="ExpressionCondition" />
+    <ref role="1XX52x" to="3751:3KCb14J4_kl" resolve="AttributeCondition" />
     <node concept="3EZMnI" id="3KCb14J5xBF" role="2wV5jI">
       <node concept="1iCGBv" id="2_JteYSjZ2x" role="3EZMnx">
         <ref role="1NtTu8" to="3751:2_JteYSjZ1X" resolve="actorRef" />
@@ -2061,6 +2076,38 @@
         <ref role="1NtTu8" to="3751:52K8EjQ82T" resolve="expression" />
       </node>
       <node concept="l2Vlx" id="52K8EjQ83r" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="52K8EkgbNu">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:52K8EkgbMX" resolve="BinaryCondition" />
+    <node concept="1WcQYu" id="52K8EkgbTq" role="2wV5jI">
+      <node concept="2ElW$n" id="52K8EkgbTs" role="2El2Yn" />
+      <node concept="3EZMnI" id="52K8EkgbTA" role="1LiK7o">
+        <node concept="1kIj98" id="52K8EkgbTH" role="3EZMnx">
+          <node concept="3F1sOY" id="52K8EkgbTN" role="1kIj9b">
+            <ref role="1NtTu8" to="3751:52K8EkgbNp" resolve="left" />
+          </node>
+        </node>
+        <node concept="1Lj6DL" id="52K8EkgbTU" role="3EZMnx">
+          <node concept="1Lj6DC" id="52K8EkgbTW" role="1Lj8FM">
+            <node concept="3clFbS" id="52K8EkgbTY" role="2VODD2">
+              <node concept="3clFbF" id="52K8EkgbZ0" role="3cqZAp">
+                <node concept="2OqwBi" id="52K8Ekgci0" role="3clFbG">
+                  <node concept="1Lj6YZ" id="52K8EkgbYZ" role="2Oq$k0" />
+                  <node concept="3n3YKJ" id="52K8EkgcGP" role="2OqNvi" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1kIj98" id="52K8EkgbYI" role="3EZMnx">
+          <node concept="3F1sOY" id="52K8EkgbYV" role="1kIj9b">
+            <ref role="1NtTu8" to="3751:52K8EkgbNr" resolve="right" />
+          </node>
+        </node>
+        <node concept="2iRfu4" id="52K8EkgbTD" role="2iSdaV" />
+      </node>
     </node>
   </node>
 </model>

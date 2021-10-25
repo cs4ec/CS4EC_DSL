@@ -2,6 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/devkits/ActionCardWrapper/ActionCardWrapper.devkit" folder="" />
       <modulePath path="$PROJECT_DIR$/gson.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ActionCards/ActionCards.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/AgentLanguage/AgentLanguage.mpl" folder="" />

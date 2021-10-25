@@ -88,13 +88,13 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsCBay_m = new Room("MajorsCBay", context, space, grid, 215, 43, 26, 13, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
     Room Triage_n = new Room("Triage", context, space, grid, 167, 189, 24, 14, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
     Room MajorsCBay_o = new Room("MajorsCBay", context, space, grid, 264, 27, 23, 14, 1, 1000, MajorsCBay.getInstance(), Color.YELLOW);
-    Room MajorsABBay_p = new Room("MajorsABBay", context, space, grid, 352, 126, 20, 16, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
+    Room MajorsABBay_p = new Room("MajorsABBay", context, space, grid, 352, 126, 20, 16, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
     Room Triage_q = new Room("Triage", context, space, grid, 145, 174, 22, 14, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
-    Room MajorsABBay_r = new Room("MajorsABBay", context, space, grid, 352, 142, 22, 14, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
-    Room MajorsABBay_s = new Room("MajorsABBay", context, space, grid, 378, 141, 20, 15, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
+    Room MajorsABBay_r = new Room("MajorsABBay", context, space, grid, 352, 142, 22, 14, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
+    Room MajorsABBay_s = new Room("MajorsABBay", context, space, grid, 378, 141, 20, 15, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
     Room Triage_t = new Room("Triage", context, space, grid, 143, 189, 21, 12, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
-    Room MajorsABBay_u = new Room("MajorsABBay", context, space, grid, 380, 121, 20, 12, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
-    Room MajorsABBay_v = new Room("MajorsABBay", context, space, grid, 322, 103, 24, 12, 1, 1000, MajorsABBay.getInstance(), Color.YELLOW);
+    Room MajorsABBay_u = new Room("MajorsABBay", context, space, grid, 380, 121, 20, 12, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
+    Room MajorsABBay_v = new Room("MajorsABBay", context, space, grid, 322, 103, 24, 12, 1, 1000, RespiratoryCubicle.getInstance(), Color.YELLOW);
     try {
       AmberBay_a.setSeats(0);
       Lab_b.setSeats(0);

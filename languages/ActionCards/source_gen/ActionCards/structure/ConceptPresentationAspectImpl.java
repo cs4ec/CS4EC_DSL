@@ -15,11 +15,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AdmissionAction;
   private ConceptPresentation props_AtributeLine;
   private ConceptPresentation props_Attribute;
-  private ConceptPresentation props_AttributeCondition;
   private ConceptPresentation props_AttributeTable;
   private ConceptPresentation props_Branch;
-  private ConceptPresentation props_Condition;
-  private ConceptPresentation props_Conditional;
   private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_Disease;
   private ConceptPresentation props_DiseaseInitialiserLine;
@@ -33,12 +30,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ProcessingTimeLine;
   private ConceptPresentation props_ProcessingTimeTable;
   private ConceptPresentation props_Resource;
-  private ConceptPresentation props_Severity;
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
   private ConceptPresentation props_Test;
-  private ConceptPresentation props_TestResult;
+  private ConceptPresentation props_TestCapturedDisease;
   private ConceptPresentation props_Variable;
 
   @Override
@@ -91,13 +87,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Attribute = cpb.create();
         }
         return props_Attribute;
-      case LanguageConceptSwitch.AttributeCondition:
-        if (props_AttributeCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab4ddL, 0x25745663758ab4e7L, "attribute", "", "");
-          props_AttributeCondition = cpb.create();
-        }
-        return props_AttributeCondition;
       case LanguageConceptSwitch.AttributeTable:
         if (props_AttributeTable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -113,20 +102,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Branch = cpb.create();
         }
         return props_Branch;
-      case LanguageConceptSwitch.Condition:
-        if (props_Condition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Condition");
-          props_Condition = cpb.create();
-        }
-        return props_Condition;
-      case LanguageConceptSwitch.Conditional:
-        if (props_Conditional == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Conditional");
-          props_Conditional = cpb.create();
-        }
-        return props_Conditional;
       case LanguageConceptSwitch.DiagnosticCondition:
         if (props_DiagnosticCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -220,13 +195,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Resource = cpb.create();
         }
         return props_Resource;
-      case LanguageConceptSwitch.Severity:
-        if (props_Severity == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_Severity = cpb.create();
-        }
-        return props_Severity;
       case LanguageConceptSwitch.StaffNumber:
         if (props_StaffNumber == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -257,13 +225,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Test = cpb.create();
         }
         return props_Test;
-      case LanguageConceptSwitch.TestResult:
-        if (props_TestResult == null) {
+      case LanguageConceptSwitch.TestCapturedDisease:
+        if (props_TestCapturedDisease == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_TestResult = cpb.create();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x549fe0474671cd38L, 0x549fe0474671cd85L, "disease", "", "");
+          props_TestCapturedDisease = cpb.create();
         }
-        return props_TestResult;
+        return props_TestCapturedDisease;
       case LanguageConceptSwitch.Variable:
         if (props_Variable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

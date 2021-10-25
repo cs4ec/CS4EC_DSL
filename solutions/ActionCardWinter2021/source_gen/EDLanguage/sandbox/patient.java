@@ -16,10 +16,11 @@ public class patient extends Actor {
   public String COVID = "Susceptible";
   public String Flu = "Susceptible";
   public String MRSA = "Susceptible";
-  public String LFTResult = "Incomplete";
-  public String CoughTestResult = "Incomplete";
-  public String LIATResult = "Incomplete";
-  public String PCRResult = "Incomplete";
+  public String LFDCOVIDResult = "Incomplete";
+  public String LIATCOVIDResult = "Incomplete";
+  public String LIATFluResult = "Incomplete";
+  public String RespiratoryTestCOVIDResult = "Incomplete";
+  public String RespiratoryTestFluResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
