@@ -52,6 +52,139 @@ public class patient extends Actor {
     return behaviourBuilder;
   }
 
+  public int getLFDCOVIDResultisPositive() {
+    if (this.LFDCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLFDCOVIDResultisNegative() {
+    if (this.LFDCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLIATCOVIDResultisPositive() {
+    if (this.LIATCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLIATCOVIDResultisNegative() {
+    if (this.LIATCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLIATFluResultisPositive() {
+    if (this.LIATFluResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLIATFluResultisNegative() {
+    if (this.LIATFluResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getRespiratoryTestCOVIDResultisPositive() {
+    if (this.RespiratoryTestCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getRespiratoryTestCOVIDResultisNegative() {
+    if (this.RespiratoryTestCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getRespiratoryTestFluResultisPositive() {
+    if (this.RespiratoryTestFluResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getRespiratoryTestFluResultisNegative() {
+    if (this.RespiratoryTestFluResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDisSymptomatic() {
+    if (this.COVID == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDisAsymptomatic() {
+    if (this.COVID == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDisSusceptible() {
+    if (this.COVID == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDisRecovered() {
+    if (this.COVID == "Recovered") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluisSymptomatic() {
+    if (this.Flu == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluisAsymptomatic() {
+    if (this.Flu == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluisSusceptible() {
+    if (this.Flu == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluisRecovered() {
+    if (this.Flu == "Recovered") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getMRSAisSymptomatic() {
+    if (this.MRSA == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getMRSAisAsymptomatic() {
+    if (this.MRSA == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getMRSAisSusceptible() {
+    if (this.MRSA == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getMRSAisRecovered() {
+    if (this.MRSA == "Recovered") {
+      return 1;
+    }
+    return 0;
+  }
+
 
 
 

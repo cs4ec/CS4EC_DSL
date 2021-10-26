@@ -32,6 +32,7 @@
         <dependency reexport="false">30254c5b-f87e-4bb3-a60a-77a7ec6ed411(org.iets3.core.expr.genjava.base)</dependency>
       </dependencies>
       <languageVersions>
+        <language slang="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" version="0" />
         <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="5" />
         <language slang="l:63e0e566-5131-447e-90e3-12ea330e1a00:com.mbeddr.mpsutil.blutil" version="1" />
         <language slang="l:d3a0fd26-445a-466c-900e-10444ddfed52:com.mbeddr.mpsutil.filepicker" version="0" />

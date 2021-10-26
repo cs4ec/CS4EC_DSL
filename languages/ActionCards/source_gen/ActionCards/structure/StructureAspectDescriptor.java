@@ -380,6 +380,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForTestCapturedDisease() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TestCapturedDisease", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x549fe0474671cd38L);
     b.class_(false, false, false);
+    b.super_("ActionCards.structure.Attribute", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab027L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/6097839017212103992");
     b.version(2);
     b.property("Sensitivity", 0x549fe0474671cd6fL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("6097839017212104047").done();

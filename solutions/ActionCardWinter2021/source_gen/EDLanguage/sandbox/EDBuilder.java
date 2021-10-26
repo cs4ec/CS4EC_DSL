@@ -38,9 +38,6 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     Parameters params = RunEnvironment.getInstance().getParameters();
 
-    Double pPrev = params.getDouble("Prevalence");
-    Double pProportionSymptomatic = params.getDouble("PercentagePrevSymptomatic");
-
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = false;
 
@@ -79,7 +76,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room SideRoom_d = new Room("SideRoom", context, space, grid, 129, 136, 97, 50, 1, 1000, SideRoom.getInstance(), Color.GRAY);
     Room NonRespiratoryBay_e = new Room("NonRespiratoryBay", context, space, grid, 132, 48, 98, 44, 1, 1000, NonRespiratoryBay.getInstance(), Color.GREEN);
     Room RespiratoryArea_f = new Room("RespiratoryArea", context, space, grid, 550, 61, 84, 47, 1, 1000, RespiratoryArea.getInstance(), Color.RED);
-    Room NonRespiratoryArea_g = new Room("NonRespiratoryArea", context, space, grid, 508, 132, 71, 36, 1, 1000, NonRespiratoryArea.getInstance(), Color.RED);
+    Room NonRespiratoryArea_g = new Room("NonRespiratoryArea", context, space, grid, 508, 132, 71, 36, 1, 1000, NonRespiratoryArea.getInstance(), Color.GREEN);
     Room WaitingRoom_h = new Room("WaitingRoom", context, space, grid, 664, 187, 61, 38, 1, 1000, WaitingRoom.getInstance(), Color.BLUE);
     Room RespiratoryCubicle_i = new Room("RespiratoryCubicle", context, space, grid, 702, 95, 22, 21, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
     Room RespiratoryCubicle_j = new Room("RespiratoryCubicle", context, space, grid, 645, 24, 23, 17, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
@@ -171,30 +168,30 @@ public class EDBuilder implements ContextBuilder<Object> {
 
   public void CreatePatientArrivalMap() {
     HashMap ArrivalPerHour = new HashMap();
-    ArrivalPerHour.put(1, 5);
-    ArrivalPerHour.put(2, 4);
-    ArrivalPerHour.put(3, 5);
-    ArrivalPerHour.put(4, 6);
-    ArrivalPerHour.put(5, 5);
-    ArrivalPerHour.put(6, 4);
-    ArrivalPerHour.put(7, 5);
-    ArrivalPerHour.put(8, 6);
-    ArrivalPerHour.put(9, 7);
-    ArrivalPerHour.put(10, 3);
-    ArrivalPerHour.put(11, 8);
-    ArrivalPerHour.put(12, 4);
-    ArrivalPerHour.put(13, 6);
-    ArrivalPerHour.put(14, 3);
-    ArrivalPerHour.put(15, 3);
-    ArrivalPerHour.put(16, 3);
-    ArrivalPerHour.put(17, 6);
-    ArrivalPerHour.put(18, 3);
-    ArrivalPerHour.put(19, 4);
-    ArrivalPerHour.put(20, 5);
-    ArrivalPerHour.put(21, 6);
+    ArrivalPerHour.put(1, 4);
+    ArrivalPerHour.put(2, 6);
+    ArrivalPerHour.put(3, 6);
+    ArrivalPerHour.put(4, 3);
+    ArrivalPerHour.put(5, 3);
+    ArrivalPerHour.put(6, 7);
+    ArrivalPerHour.put(7, 2);
+    ArrivalPerHour.put(8, 2);
+    ArrivalPerHour.put(9, 5);
+    ArrivalPerHour.put(10, 10);
+    ArrivalPerHour.put(11, 10);
+    ArrivalPerHour.put(12, 13);
+    ArrivalPerHour.put(13, 13);
+    ArrivalPerHour.put(14, 14);
+    ArrivalPerHour.put(15, 15);
+    ArrivalPerHour.put(16, 16);
+    ArrivalPerHour.put(17, 14);
+    ArrivalPerHour.put(18, 13);
+    ArrivalPerHour.put(19, 9);
+    ArrivalPerHour.put(20, 7);
+    ArrivalPerHour.put(21, 8);
     ArrivalPerHour.put(22, 7);
-    ArrivalPerHour.put(23, 3);
-    ArrivalPerHour.put(24, 4);
+    ArrivalPerHour.put(23, 10);
+    ArrivalPerHour.put(24, 3);
     PatientArrivalStore.Initialise((Map<Integer, Integer>) ArrivalPerHour);
   }
 

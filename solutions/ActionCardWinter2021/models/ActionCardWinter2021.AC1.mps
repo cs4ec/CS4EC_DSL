@@ -890,76 +890,76 @@
     </node>
     <node concept="25k$Xo" id="EFW1mYBKlW" role="2OfIal">
       <node concept="c0n4t" id="EFW1mYBKm6" role="c0n7C">
-        <property role="c0n49" value="5" />
+        <property role="c0n49" value="4" />
       </node>
       <node concept="c0n4t" id="EFW1mYBKm8" role="c0n7C">
-        <property role="c0n49" value="4" />
+        <property role="c0n49" value="6" />
       </node>
       <node concept="c0n4t" id="EFW1mYBKmb" role="c0n7C">
-        <property role="c0n49" value="5" />
+        <property role="c0n49" value="6" />
       </node>
       <node concept="c0n4t" id="EFW1mYBKmf" role="c0n7C">
-        <property role="c0n49" value="6" />
+        <property role="c0n49" value="3" />
       </node>
       <node concept="c0n4t" id="EFW1mYBKmk" role="c0n7C">
-        <property role="c0n49" value="5" />
+        <property role="c0n49" value="3" />
       </node>
       <node concept="c0n4t" id="EFW1mYBKmq" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKmx" role="c0n7C">
-        <property role="c0n49" value="5" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKmD" role="c0n7C">
-        <property role="c0n49" value="6" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKmM" role="c0n7C">
         <property role="c0n49" value="7" />
       </node>
-      <node concept="c0n4t" id="EFW1mYBKmW" role="c0n7C">
-        <property role="c0n49" value="3" />
+      <node concept="c0n4t" id="EFW1mYBKmx" role="c0n7C">
+        <property role="c0n49" value="2" />
       </node>
-      <node concept="c0n4t" id="EFW1mYBKn7" role="c0n7C">
-        <property role="c0n49" value="8" />
+      <node concept="c0n4t" id="EFW1mYBKmD" role="c0n7C">
+        <property role="c0n49" value="2" />
       </node>
-      <node concept="c0n4t" id="EFW1mYBKnj" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKnw" role="c0n7C">
-        <property role="c0n49" value="6" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKnI" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKnX" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKod" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKou" role="c0n7C">
-        <property role="c0n49" value="6" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKoK" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKp3" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="EFW1mYBKpn" role="c0n7C">
+      <node concept="c0n4t" id="EFW1mYBKmM" role="c0n7C">
         <property role="c0n49" value="5" />
       </node>
+      <node concept="c0n4t" id="EFW1mYBKmW" role="c0n7C">
+        <property role="c0n49" value="10" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKn7" role="c0n7C">
+        <property role="c0n49" value="10" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKnj" role="c0n7C">
+        <property role="c0n49" value="13" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKnw" role="c0n7C">
+        <property role="c0n49" value="13" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKnI" role="c0n7C">
+        <property role="c0n49" value="14" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKnX" role="c0n7C">
+        <property role="c0n49" value="15" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKod" role="c0n7C">
+        <property role="c0n49" value="16" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKou" role="c0n7C">
+        <property role="c0n49" value="14" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKoK" role="c0n7C">
+        <property role="c0n49" value="13" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKp3" role="c0n7C">
+        <property role="c0n49" value="9" />
+      </node>
+      <node concept="c0n4t" id="EFW1mYBKpn" role="c0n7C">
+        <property role="c0n49" value="7" />
+      </node>
       <node concept="c0n4t" id="EFW1mYBKpG" role="c0n7C">
-        <property role="c0n49" value="6" />
+        <property role="c0n49" value="8" />
       </node>
       <node concept="c0n4t" id="EFW1mYBKq2" role="c0n7C">
         <property role="c0n49" value="7" />
       </node>
       <node concept="c0n4t" id="EFW1mYBKqp" role="c0n7C">
-        <property role="c0n49" value="3" />
+        <property role="c0n49" value="10" />
       </node>
       <node concept="c0n4t" id="EFW1mYBKqL" role="c0n7C">
-        <property role="c0n49" value="4" />
+        <property role="c0n49" value="3" />
       </node>
       <node concept="UeIYj" id="EFW1mZs4ME" role="2PM4n5">
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
@@ -1072,7 +1072,7 @@
       <property role="1njz$z" value="0" />
       <property role="1njz_o" value="0" />
       <property role="p_dkr" value="0" />
-      <property role="376uKC" value="6o2BuIx6R5m/RED" />
+      <property role="376uKC" value="6o2BuIx6R5n/GREEN" />
       <property role="m3wsY" value="1000" />
       <ref role="VgANK" node="5Lup6bkgRsQ" resolve="NonRespiratoryArea" />
     </node>
@@ -1301,13 +1301,13 @@
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="LFD" />
     <node concept="iVyPZ" id="5ivS4t6wkhW" role="iVyS4">
-      <property role="iVyOC" value="90" />
+      <property role="iVyOC" value="95" />
       <property role="iVyOR" value="89" />
       <ref role="iVyR2" node="2lOlAdP$iIN" resolve="COVID" />
     </node>
     <node concept="ldbdM" id="5ivS4t6wki6" role="ldb0k">
       <node concept="ldb2t" id="5ivS4t6wki8" role="ldb3A">
-        <property role="ldb2L" value="1" />
+        <property role="ldb2L" value="15" />
         <property role="ldb2Z" value="1" />
       </node>
     </node>
@@ -1316,18 +1316,18 @@
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="LIAT" />
     <node concept="iVyPZ" id="5ivS4t6xSC3" role="iVyS4">
-      <property role="iVyOC" value="92" />
-      <property role="iVyOR" value="93" />
+      <property role="iVyOC" value="100" />
+      <property role="iVyOR" value="100" />
       <ref role="iVyR2" node="2lOlAdP$iIN" resolve="COVID" />
     </node>
     <node concept="iVyPZ" id="5ivS4t6xSCh" role="iVyS4">
-      <property role="iVyOC" value="90" />
-      <property role="iVyOR" value="90" />
+      <property role="iVyOC" value="98" />
+      <property role="iVyOR" value="98" />
       <ref role="iVyR2" node="2lOlAdPRELX" resolve="Flu" />
     </node>
     <node concept="ldbdM" id="5ivS4t6xSCd" role="ldb0k">
       <node concept="ldb2t" id="5ivS4t6xSCf" role="ldb3A">
-        <property role="ldb2L" value="1" />
+        <property role="ldb2L" value="60" />
         <property role="ldb2Z" value="1" />
       </node>
     </node>
@@ -1347,7 +1347,7 @@
     </node>
     <node concept="ldbdM" id="5ivS4t6xSFk" role="ldb0k">
       <node concept="ldb2t" id="5ivS4t6xSFm" role="ldb3A">
-        <property role="ldb2L" value="1" />
+        <property role="ldb2L" value="5" />
         <property role="ldb2Z" value="1" />
       </node>
     </node>

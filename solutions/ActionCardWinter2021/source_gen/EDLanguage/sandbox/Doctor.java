@@ -91,6 +91,7 @@ public class Doctor extends Actor {
     return behaviourBuilder;
   }
 
+
   public class MoveAction_a0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;

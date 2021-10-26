@@ -68,6 +68,11 @@
       <property role="TrG5h" value="addr" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="74nMeo8d18t" role="1TKVEl">
+      <property role="IQ2nx" value="8149202941055865373" />
+      <property role="TrG5h" value="BatchRun" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="PrWs8" id="5_FodVJemoL" role="PzmwI">
       <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />
     </node>

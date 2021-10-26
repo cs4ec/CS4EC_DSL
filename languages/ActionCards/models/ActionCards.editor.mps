@@ -903,7 +903,7 @@
           <ref role="2reCK$" to="e88n:1rknCs3SeTx" resolve="ProcessingTimeLines" />
           <node concept="2r3Xtq" id="1rknCs3VJaA" role="2YiT2b">
             <node concept="2rfbtV" id="1rknCs3VJeQ" role="uCobI">
-              <property role="2rfbtB" value="Processing Time (hours)" />
+              <property role="2rfbtB" value="Processing Time (minutes)" />
             </node>
             <node concept="2rfbtV" id="1rknCs3VJeW" role="uCobI">
               <property role="2rfbtB" value="Occurances" />

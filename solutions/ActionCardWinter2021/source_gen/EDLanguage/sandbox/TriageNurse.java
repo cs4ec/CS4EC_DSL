@@ -78,6 +78,7 @@ public class TriageNurse extends Actor {
     return behaviourBuilder;
   }
 
+
   public class MoveAction_a0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;

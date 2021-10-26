@@ -15,6 +15,7 @@ import AgentLanguage.editor.EditorAspectDescriptorImpl;
 import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptPresentationAspect;
 import AgentLanguage.structure.ConceptPresentationAspectImpl;
+import jetbrains.mps.text.rt.TextGenAspectDescriptor;
 import jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor;
 import AgentLanguage.typesystem.TypesystemDescriptor;
 import org.jetbrains.annotations.NotNull;
@@ -68,6 +69,9 @@ public class Language extends LanguageRuntime {
     }
     if (aspectClass == ConceptPresentationAspect.class) {
       return aspectClass.cast(new ConceptPresentationAspectImpl());
+    }
+    if (aspectClass == TextGenAspectDescriptor.class) {
+      return aspectClass.cast(new AgentLanguage.textGen.TextGenAspectDescriptor());
     }
     if (aspectClass == IHelginsDescriptor.class) {
       return aspectClass.cast(new TypesystemDescriptor());

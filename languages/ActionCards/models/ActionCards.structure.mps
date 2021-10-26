@@ -579,7 +579,7 @@
     <property role="EcuMT" value="6097839017212103992" />
     <property role="3GE5qa" value="Testing" />
     <property role="TrG5h" value="TestCapturedDisease" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="2lOlAdPyF0B" resolve="Attribute" />
     <node concept="1TJgyj" id="5ivS4t6ssQ5" role="1TKVEi">
       <property role="IQ2ns" value="6097839017212104069" />
       <property role="20kJfa" value="disease" />

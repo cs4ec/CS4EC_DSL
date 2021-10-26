@@ -12,6 +12,7 @@ import simcore.basicStructures.ToolBox;
 import simcore.Signals.Signal;
 import simcore.Signals.ActorTypeSignal;
 import repast.simphony.random.RandomHelper;
+import repast.simphony.engine.environment.RunEnvironment;
 import java.util.HashMap;
 
 public class patientGenerator extends AgentGenerator {
@@ -41,19 +42,19 @@ public class patientGenerator extends AgentGenerator {
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
-    if (rndDouble < 1.0) {
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSymptomatic")) {
       a.COVID = "Symptomatic";
     }
-    if (rndDouble < 1.0) {
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSymptomatic")) {
       a.Flu = "Symptomatic";
     }
-    if (rndDouble < 0.67) {
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSASymptomatic")) {
       a.MRSA = "Symptomatic";
     }
-    if (rndDouble < 0.7000000000000001) {
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSARecovered")) {
       a.MRSA = "Recovered";
     }
-    if (rndDouble < 1.0) {
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSASusceptible")) {
       a.MRSA = "Susceptible";
     }
 
@@ -64,30 +65,30 @@ public class patientGenerator extends AgentGenerator {
 
   public void initialiseArrivalMap() {
     ArrivalPerHour = new HashMap<Integer, Integer>();
-    ArrivalPerHour.put(1, 5);
-    ArrivalPerHour.put(2, 4);
-    ArrivalPerHour.put(3, 5);
-    ArrivalPerHour.put(4, 6);
-    ArrivalPerHour.put(5, 5);
-    ArrivalPerHour.put(6, 4);
-    ArrivalPerHour.put(7, 5);
-    ArrivalPerHour.put(8, 6);
-    ArrivalPerHour.put(9, 7);
-    ArrivalPerHour.put(10, 3);
-    ArrivalPerHour.put(11, 8);
-    ArrivalPerHour.put(12, 4);
-    ArrivalPerHour.put(13, 6);
-    ArrivalPerHour.put(14, 3);
-    ArrivalPerHour.put(15, 3);
-    ArrivalPerHour.put(16, 3);
-    ArrivalPerHour.put(17, 6);
-    ArrivalPerHour.put(18, 3);
-    ArrivalPerHour.put(19, 4);
-    ArrivalPerHour.put(20, 5);
-    ArrivalPerHour.put(21, 6);
+    ArrivalPerHour.put(1, 4);
+    ArrivalPerHour.put(2, 6);
+    ArrivalPerHour.put(3, 6);
+    ArrivalPerHour.put(4, 3);
+    ArrivalPerHour.put(5, 3);
+    ArrivalPerHour.put(6, 7);
+    ArrivalPerHour.put(7, 2);
+    ArrivalPerHour.put(8, 2);
+    ArrivalPerHour.put(9, 5);
+    ArrivalPerHour.put(10, 10);
+    ArrivalPerHour.put(11, 10);
+    ArrivalPerHour.put(12, 13);
+    ArrivalPerHour.put(13, 13);
+    ArrivalPerHour.put(14, 14);
+    ArrivalPerHour.put(15, 15);
+    ArrivalPerHour.put(16, 16);
+    ArrivalPerHour.put(17, 14);
+    ArrivalPerHour.put(18, 13);
+    ArrivalPerHour.put(19, 9);
+    ArrivalPerHour.put(20, 7);
+    ArrivalPerHour.put(21, 8);
     ArrivalPerHour.put(22, 7);
-    ArrivalPerHour.put(23, 3);
-    ArrivalPerHour.put(24, 4);
+    ArrivalPerHour.put(23, 10);
+    ArrivalPerHour.put(24, 3);
 
 
 

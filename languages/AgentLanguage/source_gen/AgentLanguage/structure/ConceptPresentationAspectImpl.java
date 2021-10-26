@@ -24,6 +24,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AttributeDistributionLine;
   private ConceptPresentation props_AttributeDistributionTable;
   private ConceptPresentation props_AttributeExpressionReference;
+  private ConceptPresentation props_AttributeMonitor;
   private ConceptPresentation props_AttributeReference;
   private ConceptPresentation props_BedAvailableCondition;
   private ConceptPresentation props_Behaviour;
@@ -212,6 +213,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttributeExpressionReference = cpb.create();
         }
         return props_AttributeExpressionReference;
+      case LanguageConceptSwitch.AttributeMonitor:
+        if (props_AttributeMonitor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7117c8e6083740b4L, 0x7117c8e6083740beL, "attribute", "", "");
+          props_AttributeMonitor = cpb.create();
+        }
+        return props_AttributeMonitor;
       case LanguageConceptSwitch.AttributeReference:
         if (props_AttributeReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

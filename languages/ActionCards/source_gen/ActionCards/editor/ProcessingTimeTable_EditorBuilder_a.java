@@ -218,9 +218,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         return style;
       }
     }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Processing Time (hours)", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Processing Time (hours)"), cell);
-    header.setLabel("Processing Time (hours)");
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Processing Time (minutes)", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Processing Time (minutes)"), cell);
+    header.setLabel("Processing Time (minutes)");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);

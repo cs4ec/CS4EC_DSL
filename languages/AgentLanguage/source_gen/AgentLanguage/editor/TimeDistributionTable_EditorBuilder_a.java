@@ -256,9 +256,9 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
         return style;
       }
     }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Time (hours)", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Time (hours)"), cell);
-    header.setLabel("Time (hours)");
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Time (minutes)", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Time (minutes)"), cell);
+    header.setLabel("Time (minutes)");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);

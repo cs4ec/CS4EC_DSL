@@ -93,6 +93,13 @@
       <property role="20kJfa" value="signalselectionstrategy" />
       <ref role="20lvS9" node="1SF32lWRB3" resolve="MessageSelectionStrategy" />
     </node>
+    <node concept="1TJgyj" id="74nMeo8ltN9" role="1TKVEi">
+      <property role="IQ2ns" value="8149202941058079945" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <property role="20kJfa" value="attributeMonitors" />
+      <ref role="20lvS9" node="74nMeo8dO2O" resolve="AttributeMonitor" />
+    </node>
     <node concept="PrWs8" id="3l6cNjec6HS" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -1794,6 +1801,25 @@
     <property role="TrG5h" value="AndCondition" />
     <property role="34LRSv" value="and" />
     <ref role="1TJDcQ" node="52K8EkgbMX" resolve="BinaryCondition" />
+  </node>
+  <node concept="1TIwiD" id="74nMeo8dO2O">
+    <property role="EcuMT" value="8149202941056073908" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="AttributeMonitor" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="74nMeo8dO36" role="1TKVEi">
+      <property role="IQ2ns" value="8149202941056073926" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="possibleValues" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="74nMeo8dO2Y" role="1TKVEi">
+      <property role="IQ2ns" value="8149202941056073918" />
+      <property role="20kJfa" value="attribute" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_km" resolve="Attribute" />
+    </node>
   </node>
 </model>
 

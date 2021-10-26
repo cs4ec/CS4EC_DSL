@@ -228,7 +228,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.TestCapturedDisease:
         if (props_TestCapturedDisease == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x549fe0474671cd38L, 0x549fe0474671cd85L, "disease", "", "");
+          cpb.presentationByName();
           props_TestCapturedDisease = cpb.create();
         }
         return props_TestCapturedDisease;

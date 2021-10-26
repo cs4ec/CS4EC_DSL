@@ -67,6 +67,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createRefNode_0());
     editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createRefNode_1());
+    editorCell.addEditorCell(createConstant_3());
+    editorCell.addEditorCell(createProperty_1());
     return editorCell;
   }
   private EditorCell createConstant_0() {
@@ -228,9 +230,44 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return "<no SourcesFolderAddress>";
     }
   }
+  private EditorCell createConstant_3() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "BatchRun?:");
+    editorCell.setCellId("Constant_ptmqwe_g0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createProperty_1() {
+    getCellFactory().pushCellContext();
+    try {
+      final SProperty property = PROPS.BatchRun$HHlb;
+      getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
+      EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
+      editorCell.setDefaultText("<no BatchRun>");
+      editorCell.setCellId("property_BatchRun");
+      editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
+      setCellContext(editorCell);
+      Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
+      Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
+        }
+      });
+      if (Sequence.fromIterable(currentPropertyAttributes).isNotEmpty()) {
+        EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
+        return manager.createNodeRoleAttributeCell(Sequence.fromIterable(currentPropertyAttributes).first(), AttributeKind.PROPERTY, editorCell);
+      } else
+      return editorCell;
+    } finally {
+      getCellFactory().popCellContext();
+    }
+  }
 
   private static final class PROPS {
     /*package*/ static final SProperty addr$49ha = MetaAdapterFactory.getProperty(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, 0x596b60deef396633L, "addr");
+    /*package*/ static final SProperty BatchRun$HHlb = MetaAdapterFactory.getProperty(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, 0x7117c8e60834121dL, "BatchRun");
   }
 
   private static final class CONCEPTS {

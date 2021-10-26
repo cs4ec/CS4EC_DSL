@@ -94,6 +94,7 @@ public class CubicleNurse extends Actor {
     return behaviourBuilder;
   }
 
+
   public class MoveAction_a0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -709,7 +710,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(92)) {
+      if (Dice(100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -727,7 +728,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(92)) {
+      if (Dice(100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -806,7 +807,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(93)) {
+      if (Dice(100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0b0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -841,7 +842,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(92)) {
+      if (Dice(100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -859,7 +860,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(92)) {
+      if (Dice(100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -921,7 +922,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(93)) {
+      if (Dice(100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0b0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1002,7 +1003,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(98)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1020,7 +1021,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(98)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1099,7 +1100,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(98)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0b0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1134,7 +1135,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(98)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1152,7 +1153,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(98)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1214,7 +1215,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(98)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0b0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1679,7 +1680,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(95)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1697,7 +1698,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(95)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1811,7 +1812,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(95)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1829,7 +1830,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(95)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2283,7 +2284,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(95)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2301,7 +2302,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(95)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2415,7 +2416,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(95)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2433,7 +2434,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (Dice(90)) {
+      if (Dice(95)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);

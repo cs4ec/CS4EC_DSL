@@ -13,10 +13,10 @@ import simcore.agents.Actor;
 
 public class Board {
 	
-	public Set<Signal> board;
+	public ArrayList<Signal> board;
 	
 	public Board() {
-		board = new HashSet<Signal>();
+		board = new ArrayList<Signal>();
 	}
 	
 	public void PushMission(Signal s) {
@@ -43,6 +43,9 @@ public class Board {
 	public List<Signal> GetSignalListBySubject(Class c) {
 		List<Signal> list = new ArrayList<Signal>();
 		for(Signal signal : board){
+			if(signal.getName() == "NewpatientArrive") {
+				System.out.println("Patient arrive");
+			}
 			if(((signal instanceof ActorTypeSignal) && ((ActorTypeSignal)signal).CanBeActorOf(c)) || signal.getSubjects().isEmpty()) {
 				list.add(signal);
 			}
