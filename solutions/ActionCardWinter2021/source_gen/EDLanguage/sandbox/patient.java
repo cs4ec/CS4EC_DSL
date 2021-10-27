@@ -13,6 +13,7 @@ import java.util.List;
 public class patient extends Actor {
 
   public String placeholder = "PlaceholderAttribute";
+  public String admittedTo = "NA";
   public String COVID = "Susceptible";
   public String Flu = "Susceptible";
   public String MRSA = "Susceptible";
@@ -180,6 +181,30 @@ public class patient extends Actor {
   }
   public int getMRSAisRecovered() {
     if (this.MRSA == "Recovered") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohort() {
+    if (this.admittedTo == "COVIDPositiveCohort") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisFluPositiveCohort() {
+    if (this.admittedTo == "FluPositiveCohort") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisNonRespiratoryBay() {
+    if (this.admittedTo == "NonRespiratoryBay") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisSideRoom() {
+    if (this.admittedTo == "SideRoom") {
       return 1;
     }
     return 0;

@@ -19,6 +19,7 @@
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
         <child id="1082485599096" name="statements" index="9aQI4" />
       </concept>
@@ -94,7 +95,6 @@
         <child id="1068580123135" name="body" index="3clF47" />
       </concept>
       <concept id="1068580123165" name="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" flags="ig" index="3clFb_" />
-      <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
@@ -772,22 +772,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="74nMeo7ZBiX" role="3cqZAp">
-          <node concept="1rXfSq" id="74nMeo7ZBiY" role="3clFbG">
-            <ref role="37wK5l" node="2YIKz$5jBvH" resolve="Transfer" />
-            <node concept="37vLTw" id="74nMeo7ZBiZ" role="37wK5m">
-              <ref role="3cqZAo" node="74nMeo7ZBhL" resolve="filePath" />
-            </node>
-            <node concept="3cpWs3" id="74nMeo7ZBj0" role="37wK5m">
-              <node concept="37vLTw" id="74nMeo7ZBj1" role="3uHU7B">
-                <ref role="3cqZAo" node="74nMeo7ZBjb" resolve="baseProjectPath" />
-              </node>
-              <node concept="37vLTw" id="74nMeo7ZBj2" role="3uHU7w">
-                <ref role="3cqZAo" node="74nMeo7ZBi6" resolve="filePathAfter" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbH" id="74nMeo7ZSd_" role="3cqZAp" />
         <node concept="3cpWs8" id="74nMeo7ZSCd" role="3cqZAp">
           <node concept="3cpWsn" id="74nMeo7ZSCe" role="3cpWs9">
@@ -856,24 +840,6 @@
                     </node>
                   </node>
                   <node concept="1Wc70l" id="74nMeo7ZVfs" role="3clFbw">
-                    <node concept="3clFbC" id="74nMeo7ZYzT" role="3uHU7w">
-                      <node concept="Xl_RD" id="74nMeo7ZZ3G" role="3uHU7w">
-                        <property role="Xl_RC" value="parameters.xml" />
-                      </node>
-                      <node concept="2OqwBi" id="74nMeo7ZXp$" role="3uHU7B">
-                        <node concept="AH0OO" id="74nMeo7ZW5q" role="2Oq$k0">
-                          <node concept="37vLTw" id="74nMeo7ZWiQ" role="AHEQo">
-                            <ref role="3cqZAo" node="74nMeo7ZSCN" resolve="i" />
-                          </node>
-                          <node concept="37vLTw" id="74nMeo7ZV_C" role="AHHXb">
-                            <ref role="3cqZAo" node="74nMeo7ZSCk" resolve="baseFiles" />
-                          </node>
-                        </node>
-                        <node concept="liA8E" id="74nMeo7ZXNA" role="2OqNvi">
-                          <ref role="37wK5l" to="guwi:~File.getName()" resolve="getName" />
-                        </node>
-                      </node>
-                    </node>
                     <node concept="2OqwBi" id="74nMeo7ZSCI" role="3uHU7B">
                       <node concept="AH0OO" id="74nMeo7ZSCJ" role="2Oq$k0">
                         <node concept="37vLTw" id="74nMeo7ZSCK" role="AHEQo">
@@ -885,6 +851,75 @@
                       </node>
                       <node concept="liA8E" id="74nMeo7ZSCM" role="2OqNvi">
                         <ref role="37wK5l" to="guwi:~File.isFile()" resolve="isFile" />
+                      </node>
+                    </node>
+                    <node concept="1eOMI4" id="74nMeo9vByh" role="3uHU7w">
+                      <node concept="22lmx$" id="74nMeo9vCZz" role="1eOMHV">
+                        <node concept="22lmx$" id="74nMeo9vBL3" role="3uHU7B">
+                          <node concept="2OqwBi" id="74nMeo9vzwn" role="3uHU7B">
+                            <node concept="2OqwBi" id="74nMeo7ZXp$" role="2Oq$k0">
+                              <node concept="AH0OO" id="74nMeo7ZW5q" role="2Oq$k0">
+                                <node concept="37vLTw" id="74nMeo7ZWiQ" role="AHEQo">
+                                  <ref role="3cqZAo" node="74nMeo7ZSCN" resolve="i" />
+                                </node>
+                                <node concept="37vLTw" id="74nMeo7ZV_C" role="AHHXb">
+                                  <ref role="3cqZAo" node="74nMeo7ZSCk" resolve="baseFiles" />
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="74nMeo7ZXNA" role="2OqNvi">
+                                <ref role="37wK5l" to="guwi:~File.getName()" resolve="getName" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="74nMeo9v$EF" role="2OqNvi">
+                              <ref role="37wK5l" to="wyt6:~String.startsWith(java.lang.String)" resolve="startsWith" />
+                              <node concept="Xl_RD" id="74nMeo9v_aj" role="37wK5m">
+                                <property role="Xl_RC" value="parameters" />
+                              </node>
+                            </node>
+                          </node>
+                          <node concept="2OqwBi" id="74nMeo9vBZV" role="3uHU7w">
+                            <node concept="2OqwBi" id="74nMeo9vBZW" role="2Oq$k0">
+                              <node concept="AH0OO" id="74nMeo9vBZX" role="2Oq$k0">
+                                <node concept="37vLTw" id="74nMeo9vBZY" role="AHEQo">
+                                  <ref role="3cqZAo" node="74nMeo7ZSCN" resolve="i" />
+                                </node>
+                                <node concept="37vLTw" id="74nMeo9vBZZ" role="AHHXb">
+                                  <ref role="3cqZAo" node="74nMeo7ZSCk" resolve="baseFiles" />
+                                </node>
+                              </node>
+                              <node concept="liA8E" id="74nMeo9vC00" role="2OqNvi">
+                                <ref role="37wK5l" to="guwi:~File.getName()" resolve="getName" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="74nMeo9vC01" role="2OqNvi">
+                              <ref role="37wK5l" to="wyt6:~String.startsWith(java.lang.String)" resolve="startsWith" />
+                              <node concept="Xl_RD" id="74nMeo9vC02" role="37wK5m">
+                                <property role="Xl_RC" value="repast.simphony.action.data" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="2OqwBi" id="74nMeo9vD_Z" role="3uHU7w">
+                          <node concept="2OqwBi" id="74nMeo9vDA0" role="2Oq$k0">
+                            <node concept="AH0OO" id="74nMeo9vDA1" role="2Oq$k0">
+                              <node concept="37vLTw" id="74nMeo9vDA2" role="AHEQo">
+                                <ref role="3cqZAo" node="74nMeo7ZSCN" resolve="i" />
+                              </node>
+                              <node concept="37vLTw" id="74nMeo9vDA3" role="AHHXb">
+                                <ref role="3cqZAo" node="74nMeo7ZSCk" resolve="baseFiles" />
+                              </node>
+                            </node>
+                            <node concept="liA8E" id="74nMeo9vDA4" role="2OqNvi">
+                              <ref role="37wK5l" to="guwi:~File.getName()" resolve="getName" />
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="74nMeo9vDA5" role="2OqNvi">
+                            <ref role="37wK5l" to="wyt6:~String.startsWith(java.lang.String)" resolve="startsWith" />
+                            <node concept="Xl_RD" id="74nMeo9vDA6" role="37wK5m">
+                              <property role="Xl_RC" value="repast.simphony.action.file" />
+                            </node>
+                          </node>
+                        </node>
                       </node>
                     </node>
                   </node>

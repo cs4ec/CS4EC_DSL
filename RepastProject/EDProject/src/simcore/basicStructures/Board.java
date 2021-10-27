@@ -43,9 +43,6 @@ public class Board {
 	public List<Signal> GetSignalListBySubject(Class c) {
 		List<Signal> list = new ArrayList<Signal>();
 		for(Signal signal : board){
-			if(signal.getName() == "NewpatientArrive") {
-				System.out.println("Patient arrive");
-			}
 			if(((signal instanceof ActorTypeSignal) && ((ActorTypeSignal)signal).CanBeActorOf(c)) || signal.getSubjects().isEmpty()) {
 				list.add(signal);
 			}

@@ -15,6 +15,7 @@ import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
 import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.InstantBehaviourStep;
 import java.util.ArrayList;
 
 public class Doctor extends Actor {
@@ -135,9 +136,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0a extends BehaviourStep {
+  public class Consequence_c0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0a(Behaviour behaviour) {
+    public Consequence_c0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -189,9 +201,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0a_0 extends BehaviourStep {
+  public class Consequence_c0a_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0a_0(Behaviour behaviour) {
+    public Consequence_c0a_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0a_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -243,9 +266,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0b extends BehaviourStep {
+  public class Consequence_c0b extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0b(Behaviour behaviour) {
+    public Consequence_c0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "FluPositiveCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0b extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -297,9 +331,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0b_0 extends BehaviourStep {
+  public class Consequence_c0b_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0b_0(Behaviour behaviour) {
+    public Consequence_c0b_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "FluPositiveCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0b_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0b_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -351,9 +396,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0c extends BehaviourStep {
+  public class Consequence_c0c extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0c(Behaviour behaviour) {
+    public Consequence_c0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "NonRespiratoryBay";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0c(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -405,9 +461,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0c_0 extends BehaviourStep {
+  public class Consequence_c0c_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0c_0(Behaviour behaviour) {
+    public Consequence_c0c_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "NonRespiratoryBay";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0c_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0c_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -459,9 +526,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0d extends BehaviourStep {
+  public class Consequence_c0d extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0d(Behaviour behaviour) {
+    public Consequence_c0d(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "SideRoom";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0d extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -513,9 +591,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0d_0 extends BehaviourStep {
+  public class Consequence_c0d_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0d_0(Behaviour behaviour) {
+    public Consequence_c0d_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "SideRoom";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0d_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0d_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -567,9 +656,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0e extends BehaviourStep {
+  public class Consequence_c0e extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0e(Behaviour behaviour) {
+    public Consequence_c0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0e extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -621,9 +721,20 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class RemoveRelationshipAction_c0e_0 extends BehaviourStep {
+  public class Consequence_c0e_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_c0e_0(Behaviour behaviour) {
+    public Consequence_c0e_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0e_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0e_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -639,7 +750,8 @@ public class Doctor extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_c0a(behaviourBuilder));
+    plstSteps.add(new Consequence_c0a(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -650,7 +762,8 @@ public class Doctor extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b(behaviourBuilder));
     plstSteps.add(new OrderAction_b0b(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_c0b(behaviourBuilder));
+    plstSteps.add(new Consequence_c0b(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -661,7 +774,8 @@ public class Doctor extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0c(behaviourBuilder));
     plstSteps.add(new OrderAction_b0c(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_c0c(behaviourBuilder));
+    plstSteps.add(new Consequence_c0c(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -672,7 +786,8 @@ public class Doctor extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0d(behaviourBuilder));
     plstSteps.add(new OrderAction_b0d(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_c0d(behaviourBuilder));
+    plstSteps.add(new Consequence_c0d(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -683,7 +798,8 @@ public class Doctor extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0e(behaviourBuilder));
     plstSteps.add(new OrderAction_b0e(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_c0e(behaviourBuilder));
+    plstSteps.add(new Consequence_c0e(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

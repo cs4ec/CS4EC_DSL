@@ -517,7 +517,6 @@ public class CubicleNurse extends Actor {
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0c_3(behaviour));
-        plstSteps.add(new Choice_b0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -536,7 +535,6 @@ public class CubicleNurse extends Actor {
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0f0c_3(behaviour));
-        plstSteps.add(new Choice_b0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -698,7 +696,6 @@ public class CubicleNurse extends Actor {
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0c_3(behaviour));
-        plstSteps.add(new Choice_b0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -796,24 +793,7 @@ public class CubicleNurse extends Actor {
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_b0e0c extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_b0e0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0e0c(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0e0c_1(behaviour));
+        plstSteps.add(new Choice_a0a0e0c_7(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -831,6 +811,7 @@ public class CubicleNurse extends Actor {
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0e0c_7(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -915,27 +896,45 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Choice_b0e0c_1 extends InstantBehaviourStep {
+  public class Choice_a0a0e0c_7 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_b0e0c_1(Behaviour behaviour) {
+    public Choice_a0a0e0c_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (Dice(100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0e0c(behaviour));
+        plstSteps.add(new Consequence_a0a0a0e0c_3(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0e0c_1(behaviour));
+        plstSteps.add(new Consequence_a0a0a0e0c_5(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Consequence_a0b0e0c extends InstantBehaviourStep {
+  public class Choice_a0a0e0c_9 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0e0c(Behaviour behaviour) {
+    public Choice_a0a0e0c_9(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0e0c_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0e0c_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0a0e0c_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0a0e0c_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -944,9 +943,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0e0c_0 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0e0c_4 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0e0c_0(Behaviour behaviour) {
+    public Consequence_a0a0a0e0c_4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -955,9 +954,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0e0c_1 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0e0c_5 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0e0c_1(Behaviour behaviour) {
+    public Consequence_a0a0a0e0c_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -966,9 +965,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0e0c_2 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0e0c_6 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0e0c_2(Behaviour behaviour) {
+    public Consequence_a0a0a0e0c_6(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -991,7 +990,6 @@ public class CubicleNurse extends Actor {
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0f0c_3(behaviour));
-        plstSteps.add(new Choice_b0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -1089,24 +1087,7 @@ public class CubicleNurse extends Actor {
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_b0f0c extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_b0f0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(98)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0f0c(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0f0c_1(behaviour));
+        plstSteps.add(new Choice_a0a0f0c_7(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -1124,6 +1105,7 @@ public class CubicleNurse extends Actor {
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0f0c_7(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -1208,27 +1190,45 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Choice_b0f0c_1 extends InstantBehaviourStep {
+  public class Choice_a0a0f0c_7 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_b0f0c_1(Behaviour behaviour) {
+    public Choice_a0a0f0c_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (Dice(98)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0f0c(behaviour));
+        plstSteps.add(new Consequence_a0a0a0f0c_3(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0f0c_1(behaviour));
+        plstSteps.add(new Consequence_a0a0a0f0c_5(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Consequence_a0b0f0c extends InstantBehaviourStep {
+  public class Choice_a0a0f0c_9 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0f0c(Behaviour behaviour) {
+    public Choice_a0a0f0c_9(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(98)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0f0c_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0f0c_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0a0f0c_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0a0f0c_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1237,9 +1237,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0f0c_0 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0f0c_4 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0f0c_0(Behaviour behaviour) {
+    public Consequence_a0a0a0f0c_4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1248,9 +1248,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0f0c_1 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0f0c_5 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0f0c_1(Behaviour behaviour) {
+    public Consequence_a0a0a0f0c_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1259,9 +1259,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0f0c_2 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0f0c_6 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0f0c_2(Behaviour behaviour) {
+    public Consequence_a0a0a0f0c_6(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1523,7 +1523,6 @@ public class CubicleNurse extends Actor {
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d_3(behaviour));
-        plstSteps.add(new Choice_b0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -1668,7 +1667,6 @@ public class CubicleNurse extends Actor {
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d_3(behaviour));
-        plstSteps.add(new Choice_b0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -1766,24 +1764,7 @@ public class CubicleNurse extends Actor {
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_b0e0d extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_b0e0d(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(89)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0e0d(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0e0d_1(behaviour));
+        plstSteps.add(new Choice_a0a0e0d_7(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -1801,6 +1782,7 @@ public class CubicleNurse extends Actor {
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0e0d_7(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -1885,27 +1867,45 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Choice_b0e0d_1 extends InstantBehaviourStep {
+  public class Choice_a0a0e0d_7 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_b0e0d_1(Behaviour behaviour) {
+    public Choice_a0a0e0d_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (Dice(89)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0e0d(behaviour));
+        plstSteps.add(new Consequence_a0a0a0e0d_3(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0e0d_1(behaviour));
+        plstSteps.add(new Consequence_a0a0a0e0d_5(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Consequence_a0b0e0d extends InstantBehaviourStep {
+  public class Choice_a0a0e0d_9 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0e0d(Behaviour behaviour) {
+    public Choice_a0a0e0d_9(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(89)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0e0d_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0e0d_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0a0e0d_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0a0e0d_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1914,9 +1914,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0e0d_0 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0e0d_4 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0e0d_0(Behaviour behaviour) {
+    public Consequence_a0a0a0e0d_4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1925,9 +1925,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0e0d_1 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0e0d_5 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0e0d_1(Behaviour behaviour) {
+    public Consequence_a0a0a0e0d_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1936,9 +1936,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0e0d_2 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0e0d_6 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0e0d_2(Behaviour behaviour) {
+    public Consequence_a0a0a0e0d_6(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2139,7 +2139,6 @@ public class CubicleNurse extends Actor {
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0d0e_3(behaviour));
-        plstSteps.add(new Choice_b0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -2272,7 +2271,6 @@ public class CubicleNurse extends Actor {
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0d0e_3(behaviour));
-        plstSteps.add(new Choice_b0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -2370,24 +2368,7 @@ public class CubicleNurse extends Actor {
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_b0d0e extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_b0d0e(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(89)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0d0e(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0d0e_1(behaviour));
+        plstSteps.add(new Choice_a0a0d0e_7(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -2405,6 +2386,7 @@ public class CubicleNurse extends Actor {
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0d0e_7(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -2489,27 +2471,45 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Choice_b0d0e_1 extends InstantBehaviourStep {
+  public class Choice_a0a0d0e_7 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_b0d0e_1(Behaviour behaviour) {
+    public Choice_a0a0d0e_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (Dice(89)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0d0e(behaviour));
+        plstSteps.add(new Consequence_a0a0a0d0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0b0d0e_1(behaviour));
+        plstSteps.add(new Consequence_a0a0a0d0e_5(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Consequence_a0b0d0e extends InstantBehaviourStep {
+  public class Choice_a0a0d0e_9 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0d0e(Behaviour behaviour) {
+    public Choice_a0a0d0e_9(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(89)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0d0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0d0e_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0a0d0e_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0a0d0e_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2518,9 +2518,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0d0e_0 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0d0e_4 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0d0e_0(Behaviour behaviour) {
+    public Consequence_a0a0a0d0e_4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2529,9 +2529,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0d0e_1 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0d0e_5 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0d0e_1(Behaviour behaviour) {
+    public Consequence_a0a0a0d0e_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2540,9 +2540,9 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class Consequence_a0b0d0e_2 extends InstantBehaviourStep {
+  public class Consequence_a0a0a0d0e_6 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0b0d0e_2(Behaviour behaviour) {
+    public Consequence_a0a0a0d0e_6(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 

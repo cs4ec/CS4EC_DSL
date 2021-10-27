@@ -69,7 +69,7 @@ public class MyRunner {
 
       baseFiles = targetDir.listFiles();
       for (int i = 0; i < baseFiles.length; i++) {
-        if (baseFiles[i].isFile() && baseFiles[i].getName() == "parameters.xml") {
+        if (baseFiles[i].isFile() && (baseFiles[i].getName().startsWith("parameters") || baseFiles[i].getName().startsWith("repast.simphony.action.data_set_") || baseFiles[i].getName().startsWith("repast.simphony.action.file_sink_"))) {
           baseFiles[i].delete();
         }
       }

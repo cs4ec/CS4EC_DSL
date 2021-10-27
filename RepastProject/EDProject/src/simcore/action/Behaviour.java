@@ -25,7 +25,7 @@ public class Behaviour {
 		
 		while(actionCounter >0) {
 			if(currentStep >= steps.size()) {
-				System.out.println("HELLO");
+		
 			}
 			BehaviourStep currentAction = steps.get(currentStep);
 			
@@ -55,7 +55,7 @@ public class Behaviour {
 	
 	public void injectSteps(List<BehaviourStep> steps) {
 		this.steps.addAll(currentStep+1, steps);
-		System.out.println(steps);
+
 	}
 	
 	public Signal getSignalTrigger() {
@@ -67,9 +67,6 @@ public class Behaviour {
 	}
 
 	public boolean isComplete() {
-		if(currentStep == steps.size()) {
-			System.out.println("DOne");
-		}
 		return currentStep == steps.size();
 	}
 }

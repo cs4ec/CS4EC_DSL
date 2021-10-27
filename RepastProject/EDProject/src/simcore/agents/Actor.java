@@ -128,9 +128,7 @@ public class Actor extends Agent {
 	public void Perceive() {	
 		Board board = ReadBoard();
 		// If I do not have a current active action, then select one
-		if(this instanceof TriageNurse) {
-			System.out.println("");
-		}
+		
 		if (isIdle) {
 			
 			// Have I been given an order?
@@ -216,9 +214,6 @@ public class Actor extends Agent {
 		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
 		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
 		
-		if(this instanceof TriageNurse) {
-			System.out.println("Tr");
-		}
 		if(plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
 			return null;
 		}

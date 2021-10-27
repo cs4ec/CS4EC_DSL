@@ -863,14 +863,28 @@
       <ref role="2qBFuD" node="2lOlAdP$iIN" resolve="COVID" />
       <node concept="2qBFrl" id="2_JteYNZvQp" role="2qBFp8">
         <property role="2qBFqT" value="2lOlAdPyF1F/Symptomatic" />
-        <property role="2qBFqR" value="100" />
+        <property role="2qBFqR" value="2" />
+      </node>
+      <node concept="2qBFrl" id="74nMeo9zkkC" role="2qBFp8">
+        <property role="2qBFqT" value="2_JteYPhysD/Asymptomatic" />
+        <property role="2qBFqR" value="0.5" />
+      </node>
+      <node concept="2qBFrl" id="74nMeo9zkvj" role="2qBFp8">
+        <property role="2qBFqR" value="97.5" />
       </node>
     </node>
     <node concept="2qBFp$" id="2_JteYNZvQ_" role="2qAlLv">
       <ref role="2qBFuD" node="2lOlAdPRELX" resolve="Flu" />
       <node concept="2qBFrl" id="2_JteYNZvQH" role="2qBFp8">
         <property role="2qBFqT" value="2lOlAdPyF1F/Symptomatic" />
-        <property role="2qBFqR" value="100" />
+        <property role="2qBFqR" value="2" />
+      </node>
+      <node concept="2qBFrl" id="74nMeo9zkDQ" role="2qBFp8">
+        <property role="2qBFqR" value="0.5" />
+        <property role="2qBFqT" value="2_JteYPhysD/Asymptomatic" />
+      </node>
+      <node concept="2qBFrl" id="74nMeo9zkKc" role="2qBFp8">
+        <property role="2qBFqR" value="97.5" />
       </node>
     </node>
     <node concept="2qBFp$" id="2_JteYNZvQO" role="2qAlLv">
