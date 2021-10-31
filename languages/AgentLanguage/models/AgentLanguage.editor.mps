@@ -1003,7 +1003,7 @@
           <ref role="1NtTu8" to="3751:74nMeo8ltN9" resolve="attributeMonitors" />
           <node concept="2iRkQZ" id="74nMeo8lvb$" role="2czzBx" />
         </node>
-        <node concept="3F0ifn" id="7o6PzEpEZ$x" role="3EZMnx" />
+        <node concept="3F0ifn" id="6MzSDQOiuI5" role="3EZMnx" />
         <node concept="3EZMnI" id="2_JteYOhd$8" role="3EZMnx">
           <node concept="3F1sOY" id="1SF32lWSJZ" role="3EZMnx">
             <ref role="1NtTu8" to="3751:1SF32lWSJU" resolve="signalselectionstrategy" />
@@ -2162,6 +2162,17 @@
         </node>
       </node>
       <node concept="l2Vlx" id="74nMeo8dO3n" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6MzSDQOabST">
+    <property role="3GE5qa" value="actors.attribute" />
+    <ref role="1XX52x" to="3751:6MzSDQOa74z" resolve="AggregateAttributeMonitor" />
+    <node concept="3EZMnI" id="6MzSDQOabT4" role="2wV5jI">
+      <node concept="3F2HdR" id="6MzSDQOabTh" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6MzSDQOa75g" resolve="attributeMonitorPossibleValues" />
+        <node concept="l2Vlx" id="6MzSDQOabTj" role="2czzBx" />
+      </node>
+      <node concept="l2Vlx" id="6MzSDQOabT7" role="2iSdaV" />
     </node>
   </node>
 </model>

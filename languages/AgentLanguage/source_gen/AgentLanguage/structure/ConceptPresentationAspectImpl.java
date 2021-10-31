@@ -18,6 +18,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AdmitAction;
   private ConceptPresentation props_AgentGenerator;
   private ConceptPresentation props_AgentGeneratorLine;
+  private ConceptPresentation props_AggregateAttributeMonitor;
   private ConceptPresentation props_AndCondition;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeCondition;
@@ -171,6 +172,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AgentGeneratorLine = cpb.create();
         }
         return props_AgentGeneratorLine;
+      case LanguageConceptSwitch.AggregateAttributeMonitor:
+        if (props_AggregateAttributeMonitor == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("aggregate attribute monitor");
+          props_AggregateAttributeMonitor = cpb.create();
+        }
+        return props_AggregateAttributeMonitor;
       case LanguageConceptSwitch.AndCondition:
         if (props_AndCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

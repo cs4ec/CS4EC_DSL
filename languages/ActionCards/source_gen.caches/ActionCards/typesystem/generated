@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-c2mcg17wluno0rkimka4z3z24roq2bb">
-  <files names="TypesystemDescriptor.java:typeof_DiagnosticCondition_InferenceRule.java" />
+<product version="3" modelHash="-8y7kfxzw1oo42uijf9jsornaxwvb2y9">
+  <files names="TypesystemDescriptor.java:typeof_DiagnosticCondition_InferenceRule.java:typeof_ObservationsCondition_InferenceRule.java" />
 </product>
 

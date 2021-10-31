@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class Test_Editor extends DefaultNodeEditor {
+public class DiseaseTest_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new Test_EditorBuilder_a(editorContext, node).createCell();
+    return new DiseaseTest_EditorBuilder_a(editorContext, node).createCell();
   }
 }

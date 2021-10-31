@@ -53,6 +53,26 @@ public class patient extends Actor {
     return behaviourBuilder;
   }
 
+  public int getFluPositiveInCovidBay() { 
+	  boolean isInfectedFlu = (getFluisSymptomatic() == 1 || getFluisAsymptomatic() == 1); 
+	  boolean isInCOVIDBay = getadmittedToisCOVIDPositiveCohort() == 1; 
+	  if (isInfectedFlu && isInCOVIDBay) { 
+	    return 1; 
+	  } else { 
+	    return 0; 
+	  } 
+	}
+  
+  public int getFluPositiveandCovidPositive() { 
+	  boolean isInfectedFlu = (getFluisSymptomatic() == 1 || getFluisAsymptomatic() == 1); 
+	  boolean isInfectedCOVID = (getCOVIDisSymptomatic() == 1 || getCOVIDisAsymptomatic() == 1); 
+	  if (isInfectedFlu && isInfectedCOVID) { 
+	    return 1; 
+	  } else { 
+	    return 0; 
+	  } 
+	}
+
   public int getLFDCOVIDResultisPositive() {
     if (this.LFDCOVIDResult == "Positive") {
       return 1;

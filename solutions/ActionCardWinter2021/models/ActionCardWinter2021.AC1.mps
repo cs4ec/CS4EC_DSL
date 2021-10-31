@@ -82,15 +82,29 @@
       <concept id="2698877061875544969" name="ActionCards.structure.DiseaseList" flags="ng" index="1gZInE">
         <child id="2698877061875544979" name="diseases" index="1gZInK" />
       </concept>
-      <concept id="2698877061875544082" name="ActionCards.structure.Disease" flags="ng" index="1gZIpL" />
+      <concept id="2698877061875544082" name="ActionCards.structure.Disease" flags="ng" index="1gZIpL">
+        <child id="7828349744265630300" name="symptomReferences" index="3oQJ31" />
+      </concept>
+      <concept id="7828349744265634127" name="ActionCards.structure.Test" flags="ng" index="3oQGfi">
+        <child id="7828349744265634184" name="ProcessingTimeTable" index="3oQGcl" />
+      </concept>
+      <concept id="7828349744265630279" name="ActionCards.structure.DiseaseSymptomReference" flags="ng" index="3oQJ3q">
+        <reference id="7828349744265630289" name="symptom" index="3oQJ3c" />
+      </concept>
+      <concept id="7828349744265630119" name="ActionCards.structure.ObservationTest" flags="ng" index="3oQJcU">
+        <child id="7828349744265630405" name="SymptomReference" index="3oQJ1o" />
+      </concept>
+      <concept id="7828349744265630201" name="ActionCards.structure.SymptomList" flags="ng" index="3oQJd$">
+        <child id="7828349744265630211" name="symptoms" index="3oQJ2u" />
+      </concept>
+      <concept id="7828349744265630002" name="ActionCards.structure.DiseaseSymptom" flags="ng" index="3oQJeJ" />
       <concept id="188877551433029388" name="ActionCards.structure.DiagnosticCondition" flags="ng" index="3tEh0H">
         <property id="2698877061875545204" name="outcome" index="1gZI8n" />
         <reference id="4555810343887637004" name="disease" index="24g7ti" />
         <reference id="188877551433123871" name="test" index="3tE8WY" />
       </concept>
-      <concept id="329726013640088743" name="ActionCards.structure.Test" flags="ng" index="3SEB2C">
+      <concept id="329726013640088743" name="ActionCards.structure.DiseaseTest" flags="ng" index="3SEB2C">
         <child id="6097839017212104259" name="CapturedDiseases" index="iVyS4" />
-        <child id="1645043697875742355" name="ProcessingTimeTable" index="ldb0k" />
       </concept>
     </language>
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage">
@@ -833,9 +847,15 @@
     <property role="3GE5qa" value="Tests" />
     <node concept="1gZIpL" id="2lOlAdP$iIN" role="1gZInK">
       <property role="TrG5h" value="COVID" />
+      <node concept="3oQJ3q" id="6MzSDQOvLHX" role="3oQJ31">
+        <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
+      </node>
     </node>
     <node concept="1gZIpL" id="2lOlAdPRELX" role="1gZInK">
       <property role="TrG5h" value="Flu" />
+      <node concept="3oQJ3q" id="6MzSDQOvLHZ" role="3oQJ31">
+        <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
+      </node>
     </node>
     <node concept="1gZIpL" id="EFW1mXV3WN" role="1gZInK">
       <property role="TrG5h" value="MRSA" />
@@ -1315,12 +1335,12 @@
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="LFD" />
     <node concept="iVyPZ" id="5ivS4t6wkhW" role="iVyS4">
-      <property role="iVyOC" value="95" />
-      <property role="iVyOR" value="89" />
+      <property role="iVyOC" value="70" />
+      <property role="iVyOR" value="99" />
       <ref role="iVyR2" node="2lOlAdP$iIN" resolve="COVID" />
     </node>
-    <node concept="ldbdM" id="5ivS4t6wki6" role="ldb0k">
-      <node concept="ldb2t" id="5ivS4t6wki8" role="ldb3A">
+    <node concept="ldbdM" id="6MzSDQOvNej" role="3oQGcl">
+      <node concept="ldb2t" id="6MzSDQOvNel" role="ldb3A">
         <property role="ldb2L" value="15" />
         <property role="ldb2Z" value="1" />
       </node>
@@ -1335,12 +1355,12 @@
       <ref role="iVyR2" node="2lOlAdP$iIN" resolve="COVID" />
     </node>
     <node concept="iVyPZ" id="5ivS4t6xSCh" role="iVyS4">
-      <property role="iVyOC" value="98" />
-      <property role="iVyOR" value="98" />
+      <property role="iVyOC" value="100" />
+      <property role="iVyOR" value="100" />
       <ref role="iVyR2" node="2lOlAdPRELX" resolve="Flu" />
     </node>
-    <node concept="ldbdM" id="5ivS4t6xSCd" role="ldb0k">
-      <node concept="ldb2t" id="5ivS4t6xSCf" role="ldb3A">
+    <node concept="ldbdM" id="6MzSDQOvNew" role="3oQGcl">
+      <node concept="ldb2t" id="6MzSDQOvNey" role="ldb3A">
         <property role="ldb2L" value="60" />
         <property role="ldb2Z" value="1" />
       </node>
@@ -1359,8 +1379,26 @@
       <property role="iVyOR" value="100" />
       <ref role="iVyR2" node="2lOlAdPRELX" resolve="Flu" />
     </node>
-    <node concept="ldbdM" id="5ivS4t6xSFk" role="ldb0k">
-      <node concept="ldb2t" id="5ivS4t6xSFm" role="ldb3A">
+    <node concept="ldbdM" id="6MzSDQOvNeH" role="3oQGcl">
+      <node concept="ldb2t" id="6MzSDQOvNeJ" role="ldb3A">
+        <property role="ldb2L" value="5" />
+        <property role="ldb2Z" value="1" />
+      </node>
+    </node>
+  </node>
+  <node concept="3oQJd$" id="6MzSDQOvLH$">
+    <node concept="3oQJeJ" id="6MzSDQOvLHI" role="3oQJ2u">
+      <property role="TrG5h" value="Cough" />
+    </node>
+  </node>
+  <node concept="3oQJcU" id="6MzSDQOx5uL">
+    <property role="3GE5qa" value="Tests" />
+    <property role="TrG5h" value="triageObs" />
+    <node concept="3oQJ3q" id="6MzSDQOx5uX" role="3oQJ1o">
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
+    </node>
+    <node concept="ldbdM" id="6MzSDQOx5v0" role="3oQGcl">
+      <node concept="ldb2t" id="6MzSDQOx5v2" role="ldb3A">
         <property role="ldb2L" value="5" />
         <property role="ldb2Z" value="1" />
       </node>

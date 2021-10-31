@@ -42,11 +42,11 @@ import jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class Test_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class ObservationTest_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public Test_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public ObservationTest_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -63,7 +63,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_sbg7x_a");
+    editorCell.setCellId("Collection_t27spj_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createConstant_0());
@@ -74,7 +74,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Test:");
-    editorCell.setCellId("Constant_sbg7x_a0");
+    editorCell.setCellId("Constant_t27spj_a0");
     editorCell.setDefaultText("");
     return editorCell;
   }
@@ -105,28 +105,32 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createCollection_1() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
-    editorCell.setCellId("Collection_sbg7x_c0");
+    editorCell.setCellId("Collection_t27spj_c0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefNodeList_0());
     return editorCell;
   }
+  private EditorCell createConstant_1() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Positive if patient has:");
+    editorCell.setCellId("Constant_t27spj_a2a");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new CapturedDiseasesListHandler_sbg7x_a2a(myNode, getEditorContext());
-    EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_CapturedDiseases");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
-    editorCell.getStyle().putAll(style);
+    AbstractCellListHandler handler = new SymptomReferenceListHandler_t27spj_b2a(myNode, getEditorContext());
+    EditorCell_Collection editorCell = handler.createCells(new CellLayout_Vertical(), false);
+    editorCell.setCellId("refNodeList_SymptomReference");
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class CapturedDiseasesListHandler_sbg7x_a2a extends RefNodeListHandler {
+  private static class SymptomReferenceListHandler_t27spj_b2a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public CapturedDiseasesListHandler_sbg7x_a2a(SNode ownerNode, EditorContext context) {
+    public SymptomReferenceListHandler_t27spj_b2a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -136,10 +140,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.CapturedDiseases$9e0A;
+      return LINKS.SymptomReference$jVTD;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.TestCapturedDisease$Wa;
+      return CONCEPTS.DiseaseSymptomReference$jv;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -149,7 +153,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(CapturedDiseasesListHandler_sbg7x_a2a.this.getNode(), LINKS.CapturedDiseases$9e0A));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(SymptomReferenceListHandler_t27spj_b2a.this.getNode(), LINKS.SymptomReference$jVTD));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -190,14 +194,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new ProcessingTimeTableSingleRoleHandler_sbg7x_d0(myNode, LINKS.ProcessingTimeTable$iO6F, getEditorContext());
+    SingleRoleCellProvider provider = new ProcessingTimeTableSingleRoleHandler_t27spj_d0(myNode, LINKS.ProcessingTimeTable$ddGw, getEditorContext());
     return provider.createCell();
   }
-  private static class ProcessingTimeTableSingleRoleHandler_sbg7x_d0 extends SingleRoleCellProvider {
+  private static class ProcessingTimeTableSingleRoleHandler_t27spj_d0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public ProcessingTimeTableSingleRoleHandler_sbg7x_d0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public ProcessingTimeTableSingleRoleHandler_t27spj_d0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -210,8 +214,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.ProcessingTimeTable$iO6F, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.ProcessingTimeTable$iO6F, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.ProcessingTimeTable$ddGw, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.ProcessingTimeTable$ddGw, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -223,7 +227,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.ProcessingTimeTable$iO6F);
+        editorCell.setSRole(LINKS.ProcessingTimeTable$ddGw);
       }
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
@@ -233,7 +237,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.ProcessingTimeTable$iO6F));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.ProcessingTimeTable$ddGw));
       try {
         EditorCell editorCell = super.createEmptyCell();
         editorCell.setCellId("empty_ProcessingTimeTable");
@@ -255,11 +259,11 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SConcept TestCapturedDisease$Wa = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x549fe0474671cd38L, "ActionCards.structure.TestCapturedDisease");
+    /*package*/ static final SConcept DiseaseSymptomReference$jv = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791247L, "ActionCards.structure.DiseaseSymptomReference");
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink CapturedDiseases$9e0A = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4936c0ffc391ca7L, 0x549fe0474671ce43L, "CapturedDiseases");
-    /*package*/ static final SContainmentLink ProcessingTimeTable$iO6F = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4936c0ffc391ca7L, 0x16d45e8703e0ee93L, "ProcessingTimeTable");
+    /*package*/ static final SContainmentLink SymptomReference$jVTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db47911a7L, 0x6ca3e29db47912c5L, "SymptomReference");
+    /*package*/ static final SContainmentLink ProcessingTimeTable$ddGw = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, 0x6ca3e29db4792188L, "ProcessingTimeTable");
   }
 }

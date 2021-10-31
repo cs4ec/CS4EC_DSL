@@ -16,9 +16,16 @@ import repast.simphony.engine.environment.RunEnvironment;
 import java.util.HashMap;
 
 public class patientGenerator extends AgentGenerator {
+
+	public int numCovidSymptomaticPerDay = RunEnvironment.getInstance().getParameters().getInteger("CovidSymptomaticPerDay");
+	public int covidCounter = 0;
+	public double numFluSymptomaticPerDay = RunEnvironment.getInstance().getParameters().getInteger("FluSymptomaticPerDay");
+	public int fluCounter = 0;
+
   public patientGenerator(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
     spawnRoomType = MainEntrance.getInstance();
+//    System.out.println("numFluSymptomaticPerDay: " + numFluSymptomaticPerDay);
     initialiseArrivalMap();
   }
 
@@ -42,24 +49,43 @@ public class patientGenerator extends AgentGenerator {
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSusceptible")) {
-      a.COVID = "Susceptible";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSymptomatic")) {
-      a.COVID = "Symptomatic";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDAsymptomatic")) {
-      a.COVID = "Asymptomatic";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSusceptible")) {
-      a.Flu = "Susceptible";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSymptomatic")) {
-      a.Flu = "Symptomatic";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAsymptomatic")) {
-      a.Flu = "Asymptomatic";
-    }
+    double rndDouble2 = RandomHelper.nextDouble();
+    
+    if(covidCounter < numCovidSymptomaticPerDay) {
+    	covidCounter++;
+        a.COVID = "Symptomatic";
+	    if(rndDouble2 < RunEnvironment.getInstance().getParameters().getDouble("CoInfectionRate")) {
+	    	fluCounter++;
+	    	a.Flu = "Symptomatic";
+	    }
+    } else if( fluCounter < numFluSymptomaticPerDay) {
+    	fluCounter++;
+    	a.Flu = "Symptomatic";
+    } 
+
+//    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSusceptible")) {
+//      a.COVID = "Susceptible";
+//    }
+//    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSymptomatic")) {
+//      a.COVID = "Symptomatic";
+//      if(rndDouble2 < 0.012) {
+//          a.Flu = "Symptomatic";
+//      }
+//    }
+//    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDAsymptomatic")) {
+//      a.COVID = "Asymptomatic";
+//    }
+//    if(a.COVID == "Susceptible") {
+//        if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSusceptible")) {
+//            a.Flu = "Susceptible";
+//          }
+//          if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSymptomatic")) {
+//            a.Flu = "Symptomatic";
+//          }
+//          if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAsymptomatic")) {
+//            a.Flu = "Asymptomatic";
+//          }
+//    }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSASymptomatic")) {
       a.MRSA = "Symptomatic";
     }

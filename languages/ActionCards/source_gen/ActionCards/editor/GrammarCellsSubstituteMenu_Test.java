@@ -50,11 +50,11 @@ public class GrammarCellsSubstituteMenu_Test extends SubstituteMenuBase {
     }
     @Override
     public SAbstractConcept getExpectedOutputConcept() {
-      return CONCEPTS.Test$k4;
+      return CONCEPTS.Test$I1;
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Test$k4 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4936c0ffc391ca7L, "ActionCards.structure.Test");
+    /*package*/ static final SConcept Test$I1 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, "ActionCards.structure.Test");
   }
 }

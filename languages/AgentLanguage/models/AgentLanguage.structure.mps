@@ -1821,5 +1821,19 @@
       <ref role="20lvS9" node="3KCb14J4_km" resolve="Attribute" />
     </node>
   </node>
+  <node concept="1TIwiD" id="6MzSDQOa74z">
+    <property role="EcuMT" value="7828349744260346147" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="AggregateAttributeMonitor" />
+    <property role="34LRSv" value="aggregate attribute monitor" />
+    <ref role="1TJDcQ" node="74nMeo8dO2O" resolve="AttributeMonitor" />
+    <node concept="1TJgyj" id="6MzSDQOa75g" role="1TKVEi">
+      <property role="IQ2ns" value="7828349744260346192" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="attributeMonitorPossibleValues" />
+      <property role="20lbJX" value="fLJekj6/_1__n" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
 </model>
 
