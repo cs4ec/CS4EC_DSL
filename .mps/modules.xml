@@ -21,6 +21,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_EDProject/EDRuntime_EDProject.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_Repast/EDRuntime_Repast.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
+      <modulePath path="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/FluCovidEmergencyPathway.msd" folder="runtime" />
     </projectModules>
   </component>
 </project>

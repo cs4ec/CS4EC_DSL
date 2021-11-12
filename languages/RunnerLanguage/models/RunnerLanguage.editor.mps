@@ -57,6 +57,15 @@
       <node concept="3F1sOY" id="2vFOz$GvkB2" role="3EZMnx">
         <ref role="1NtTu8" to="9ki:2vFOz$GvkAD" resolve="ClassesFolderAddress" />
       </node>
+      <node concept="3F0ifn" id="5R1$QENtWw9" role="3EZMnx">
+        <property role="3F0ifm" value="Repast Source Files:" />
+        <node concept="pVoyu" id="5R1$QENtWwn" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="5R1$QENtWwC" role="3EZMnx">
+        <ref role="1NtTu8" to="9ki:5R1$QENtWvS" resolve="RepastSettingsSourceAddress" />
+      </node>
       <node concept="3F0ifn" id="2vFOz$GxgoQ" role="3EZMnx">
         <property role="3F0ifm" value="Sources Folder Address:" />
         <node concept="pVoyu" id="2vFOz$Gxgpf" role="3F10Kt">

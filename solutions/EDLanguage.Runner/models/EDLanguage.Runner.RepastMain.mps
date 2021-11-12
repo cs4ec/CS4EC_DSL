@@ -11,6 +11,7 @@
         <property id="6443350202496149043" name="addr" index="2QkwrH" />
         <child id="2876623930008077868" name="SourcesFolderAddress" index="brHgl" />
         <child id="2876623930007570857" name="ClassesFolderAddress" index="b_DIg" />
+        <child id="6755843002519242744" name="RepastSettingsSourceAddress" index="3IH_ii" />
       </concept>
     </language>
     <language id="d3a0fd26-445a-466c-900e-10444ddfed52" name="com.mbeddr.mpsutil.filepicker">
@@ -23,10 +24,13 @@
   <node concept="2Qkwg2" id="5_FodVJfsgn">
     <property role="2QkwrH" value="C:\Users\w2037451\Documents\HelloAgent" />
     <node concept="3RfPnX" id="2vFOz$Gxkmp" role="b_DIg">
-      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/ActionCardWinter2021/classes_gen/EDLanguage/sandbox" />
+      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/classes_gen/EDLanguage/sandbox" />
     </node>
     <node concept="3RfPnX" id="2vFOz$Gxn39" role="brHgl">
-      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/ActionCardWinter2021/source_gen/EDLanguage/sandbox" />
+      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox" />
+    </node>
+    <node concept="3RfPnX" id="5R1$QENu8$5" role="3IH_ii">
+      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/classes_gen/FluCovidEmergencyPathway/AC1" />
     </node>
   </node>
 </model>

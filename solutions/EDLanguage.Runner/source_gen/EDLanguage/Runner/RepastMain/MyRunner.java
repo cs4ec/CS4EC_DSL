@@ -55,21 +55,20 @@ public class MyRunner {
 
   public void DoTransferParameters(String baseProjectPath) {
 
-    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\ActionCardWinter2021\\classes_gen\\ActionCardWinter2021\\AC1\\";
+    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\FluCovidEmergencyPathway\\classes_gen\\FluCovidEmergencyPathway\\AC1\\";
     String filePathAfter = "RepastProject\\EDProject\\EDProject.rs\\";
 
     System.out.println("Moving Parameters:");
-    System.out.println(filePath + " to " + filePathAfter);
-    Transfer(filePath, baseProjectPath + filePathAfter);
+    System.out.println(filePath + " to " + baseProjectPath + filePathAfter);
 
-    File targetDir = new File(filePathAfter);
+    File targetDir = new File(baseProjectPath + filePathAfter);
     File[] baseFiles = null;
 
     if (targetDir.isDirectory()) {
 
       baseFiles = targetDir.listFiles();
       for (int i = 0; i < baseFiles.length; i++) {
-        if (baseFiles[i].isFile() && (baseFiles[i].getName().startsWith("parameters") || baseFiles[i].getName().startsWith("repast.simphony.action.data_set_") || baseFiles[i].getName().startsWith("repast.simphony.action.file_sink_"))) {
+        if (baseFiles[i].isFile() && (baseFiles[i].getName().startsWith("parameters") || baseFiles[i].getName().startsWith("repast.simphony.action.data") || baseFiles[i].getName().startsWith("repast.simphony.action.file") || baseFiles[i].getName().startsWith("scenario"))) {
           baseFiles[i].delete();
         }
       }
@@ -94,7 +93,7 @@ public class MyRunner {
           OutputStream out = null;
 
           in = new FileInputStream(aFile);
-          out = new FileOutputStream(new File(filePathAfter + aFile.getName()));
+          out = new FileOutputStream(new File(baseProjectPath + filePathAfter + aFile.getName()));
 
           byte[] buffer = new byte[20480];
           int len;
@@ -129,11 +128,11 @@ public class MyRunner {
     ClearDir(LogNote.GetUniqueLog().GetAddress() + "output\\");
 
     String classPathOld = "languages\\EDLanguage\\sandbox\\classes_gen\\EDLanguage\\sandbox\\";
-    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\ActionCardWinter2021\\classes_gen\\EDLanguage\\sandbox\\";
+    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\FluCovidEmergencyPathway\\classes_gen\\EDLanguage\\sandbox\\";
     String classPathAfter = "RepastProject\\EDProject\\bin\\EDLanguage\\sandbox\\";
 
     String javaPathOld = "languages\\EDLanguage\\sandbox\\source_gen\\EDLanguage\\sandbox\\";
-    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\ActionCardWinter2021\\source_gen\\EDLanguage\\sandbox\\";
+    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\FluCovidEmergencyPathway\\source_gen\\EDLanguage\\sandbox\\";
     String javaPathAfter = "RepastProject\\EDProject\\src\\EDLanguage\\sandbox\\";
 
     System.out.println("Generating files:");

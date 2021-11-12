@@ -30,7 +30,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return (String) Runner__BehaviorDescriptor.GenerateInputString_id1wal9D1amCA.invoke(_context.getNode());
   }
   public static Object propertyMacro_GetValue_1_1(final PropertyMacroContext _context) {
-    return "C:\\\\Users\\\\w2037451\\\\Documents\\\\HelloAgent\\\\solutions\\\\ActionCardWinter2021\\\\classes_gen\\\\ActionCardWinter2021\\\\AC1" + "\\\\";
+    return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.RepastSettingsSourceAddress$4G2F), PROPS.path$VaYg).toString().replace("/", "\\\\") + "\\\\";
   }
   public static Object propertyMacro_GetValue_1_2(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.ClassesFolderAddress$oLYy), PROPS.path$VaYg).toString().replace("/", "\\\\") + "\\\\";
@@ -105,6 +105,7 @@ public class QueriesGenerated extends QueryProviderBase {
   }
 
   private static final class LINKS {
+    /*package*/ static final SContainmentLink RepastSettingsSourceAddress$4G2F = MetaAdapterFactory.getContainmentLink(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, 0x5dc1936ab377c7f8L, "RepastSettingsSourceAddress");
     /*package*/ static final SContainmentLink ClassesFolderAddress$oLYy = MetaAdapterFactory.getContainmentLink(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, 0x27ebd2392c7d49a9L, "ClassesFolderAddress");
     /*package*/ static final SContainmentLink SourcesFolderAddress$d1b1 = MetaAdapterFactory.getContainmentLink(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, 0x27ebd2392c85062cL, "SourcesFolderAddress");
   }

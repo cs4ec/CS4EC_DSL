@@ -1,0 +1,32 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>patientDataSink</name>
+  <dataSet>patientDataSet</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>patientgetLFDCOVIDResultisPositive</string>
+    <string>patientgetLFDCOVIDResultisNegative</string>
+    <string>patientgetLFDFluAResultisPositive</string>
+    <string>patientgetLFDFluAResultisNegative</string>
+    <string>patientgetLFDFluBResultisPositive</string>
+    <string>patientgetLFDFluBResultisNegative</string>
+    <string>patientgetLIATCOVIDResultisPositive</string>
+    <string>patientgetLIATCOVIDResultisNegative</string>
+    <string>patientgetLIATFluAResultisPositive</string>
+    <string>patientgetLIATFluAResultisNegative</string>
+    <string>patientgetLIATFluBResultisPositive</string>
+    <string>patientgetLIATFluBResultisNegative</string>
+    <string>patientgetCOVIDisAsymptomatic</string>
+    <string>patientgetCOVIDisSymptomatic</string>
+    <string>patientgetFluAisAsymptomatic</string>
+    <string>patientgetFluAisSusceptible</string>
+    <string>patientgetFluBisAsymptomatic</string>
+    <string>patientgetFluBisSusceptible</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohort</string>
+    <string>patientgetadmittedToisFluPositiveCohort</string>
+    <string>patientgetadmittedToisNonRespiratoryCohort</string>
+    <string>patientgetadmittedToisSideRoom</string>
+  </sourceIds>
+  <fileName>patientDataOutput.txt</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

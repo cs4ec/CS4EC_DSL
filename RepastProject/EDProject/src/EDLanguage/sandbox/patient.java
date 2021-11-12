@@ -14,15 +14,19 @@ public class patient extends Actor {
 
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
-  public String COVID = "Susceptible";
-  public String Flu = "Susceptible";
-  public String MRSA = "Susceptible";
+  public String COVID = "NotConfigured";
+  public String FluA = "NotConfigured";
+  public String FluB = "NotConfigured";
+  public String COVIDvaccineStatus = "NotConfigured";
+  public String FluAvaccineStatus = "NotConfigured";
+  public String FluBvaccineStatus = "NotConfigured";
   public String LFDCOVIDResult = "Incomplete";
+  public String LFDFluAResult = "Incomplete";
+  public String LFDFluBResult = "Incomplete";
   public String LIATCOVIDResult = "Incomplete";
-  public String LIATFluResult = "Incomplete";
-  public String RespiratoryTestCOVIDResult = "Incomplete";
-  public String RespiratoryTestFluResult = "Incomplete";
-  public String triageObsResult = "Incomplete";
+  public String LIATFluAResult = "Incomplete";
+  public String LIATFluBResult = "Incomplete";
+  public String TriageResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -54,25 +58,7 @@ public class patient extends Actor {
     return behaviourBuilder;
   }
 
-  public int getFluPositiveInCovidBay() { 
-	  boolean isInfectedFlu = (getFluisSymptomatic() == 1 || getFluisAsymptomatic() == 1); 
-	  boolean isInCOVIDBay = getadmittedToisCOVIDPositiveCohort() == 1; 
-	  if (isInfectedFlu && isInCOVIDBay) { 
-	    return 1; 
-	  } else { 
-	    return 0; 
-	  } 
-	}
- 
- public int getFluPositiveandCovidPositive() { 
-	  boolean isInfectedFlu = (getFluisSymptomatic() == 1 || getFluisAsymptomatic() == 1); 
-	  boolean isInfectedCOVID = (getCOVIDisSymptomatic() == 1 || getCOVIDisAsymptomatic() == 1); 
-	  if (isInfectedFlu && isInfectedCOVID) { 
-	    return 1; 
-	  } else { 
-	    return 0; 
-	  } 
-	}
+
 
   public int getLFDCOVIDResultisPositive() {
     if (this.LFDCOVIDResult == "Positive") {
@@ -82,6 +68,30 @@ public class patient extends Actor {
   }
   public int getLFDCOVIDResultisNegative() {
     if (this.LFDCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLFDFluAResultisPositive() {
+    if (this.LFDFluAResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLFDFluAResultisNegative() {
+    if (this.LFDFluAResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLFDFluBResultisPositive() {
+    if (this.LFDFluBResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLFDFluBResultisNegative() {
+    if (this.LFDFluBResult == "Negative") {
       return 1;
     }
     return 0;
@@ -98,44 +108,26 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getLIATFluResultisPositive() {
-    if (this.LIATFluResult == "Positive") {
+  public int getLIATFluAResultisPositive() {
+    if (this.LIATFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLIATFluResultisNegative() {
-    if (this.LIATFluResult == "Negative") {
+  public int getLIATFluAResultisNegative() {
+    if (this.LIATFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getRespiratoryTestCOVIDResultisPositive() {
-    if (this.RespiratoryTestCOVIDResult == "Positive") {
+  public int getLIATFluBResultisPositive() {
+    if (this.LIATFluBResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getRespiratoryTestCOVIDResultisNegative() {
-    if (this.RespiratoryTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getRespiratoryTestFluResultisPositive() {
-    if (this.RespiratoryTestFluResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getRespiratoryTestFluResultisNegative() {
-    if (this.RespiratoryTestFluResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCOVIDisSymptomatic() {
-    if (this.COVID == "Symptomatic") {
+  public int getLIATFluBResultisNegative() {
+    if (this.LIATFluBResult == "Negative") {
       return 1;
     }
     return 0;
@@ -146,62 +138,32 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getCOVIDisSusceptible() {
-    if (this.COVID == "Susceptible") {
+  public int getCOVIDisSymptomatic() {
+    if (this.COVID == "Symptomatic") {
       return 1;
     }
     return 0;
   }
-  public int getCOVIDisRecovered() {
-    if (this.COVID == "Recovered") {
+  public int getFluAisAsymptomatic() {
+    if (this.FluA == "Asymptomatic") {
       return 1;
     }
     return 0;
   }
-  public int getFluisSymptomatic() {
-    if (this.Flu == "Symptomatic") {
+  public int getFluAisSusceptible() {
+    if (this.FluA == "Susceptible") {
       return 1;
     }
     return 0;
   }
-  public int getFluisAsymptomatic() {
-    if (this.Flu == "Asymptomatic") {
+  public int getFluBisAsymptomatic() {
+    if (this.FluB == "Asymptomatic") {
       return 1;
     }
     return 0;
   }
-  public int getFluisSusceptible() {
-    if (this.Flu == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluisRecovered() {
-    if (this.Flu == "Recovered") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getMRSAisSymptomatic() {
-    if (this.MRSA == "Symptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getMRSAisAsymptomatic() {
-    if (this.MRSA == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getMRSAisSusceptible() {
-    if (this.MRSA == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getMRSAisRecovered() {
-    if (this.MRSA == "Recovered") {
+  public int getFluBisSusceptible() {
+    if (this.FluB == "Susceptible") {
       return 1;
     }
     return 0;

@@ -58,6 +58,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("BatchRun", 0x7117c8e60834121dL).type(PrimitiveTypeId.BOOLEAN).origin("8149202941055865373").done();
     b.aggregate("ClassesFolderAddress", 0x27ebd2392c7d49a9L).target(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, 0x43bdbc6ab482e997L).optional(false).ordered(true).multiple(false).origin("2876623930007570857").done();
     b.aggregate("SourcesFolderAddress", 0x27ebd2392c85062cL).target(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, 0x43bdbc6ab482e997L).optional(false).ordered(true).multiple(false).origin("2876623930008077868").done();
+    b.aggregate("RepastSettingsSourceAddress", 0x5dc1936ab377c7f8L).target(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, 0x43bdbc6ab482e997L).optional(false).ordered(true).multiple(false).origin("6755843002519242744").done();
     return b.create();
   }
 }

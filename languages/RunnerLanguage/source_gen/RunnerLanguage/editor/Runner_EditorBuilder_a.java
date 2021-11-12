@@ -68,6 +68,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createRefNode_1());
     editorCell.addEditorCell(createConstant_3());
+    editorCell.addEditorCell(createRefNode_2());
+    editorCell.addEditorCell(createConstant_4());
     editorCell.addEditorCell(createProperty_1());
     return editorCell;
   }
@@ -167,7 +169,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_2() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Sources Folder Address:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Repast Source Files:");
     editorCell.setCellId("Constant_ptmqwe_e0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
@@ -176,14 +178,78 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new SourcesFolderAddressSingleRoleHandler_ptmqwe_f0(myNode, LINKS.SourcesFolderAddress$d1b1, getEditorContext());
+    SingleRoleCellProvider provider = new RepastSettingsSourceAddressSingleRoleHandler_ptmqwe_f0(myNode, LINKS.RepastSettingsSourceAddress$4G2F, getEditorContext());
     return provider.createCell();
   }
-  private static class SourcesFolderAddressSingleRoleHandler_ptmqwe_f0 extends SingleRoleCellProvider {
+  private static class RepastSettingsSourceAddressSingleRoleHandler_ptmqwe_f0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public SourcesFolderAddressSingleRoleHandler_ptmqwe_f0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public RepastSettingsSourceAddressSingleRoleHandler_ptmqwe_f0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+      super(containmentLink, context);
+      myNode = ownerNode;
+    }
+
+    @Override
+    @NotNull
+    public SNode getNode() {
+      return myNode;
+    }
+
+    protected EditorCell createChildCell(SNode child) {
+      EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.RepastSettingsSourceAddress$4G2F, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.RepastSettingsSourceAddress$4G2F, child));
+      installCellInfo(child, editorCell, false);
+      return editorCell;
+    }
+
+
+
+    private void installCellInfo(SNode child, EditorCell editorCell, boolean isEmpty) {
+      if (editorCell.getSubstituteInfo() == null || editorCell.getSubstituteInfo() instanceof DefaultSubstituteInfo) {
+        editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
+      }
+      if (editorCell.getSRole() == null) {
+        editorCell.setSRole(LINKS.RepastSettingsSourceAddress$4G2F);
+      }
+    }
+    @Override
+    protected EditorCell createEmptyCell() {
+      getCellFactory().pushCellContext();
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.RepastSettingsSourceAddress$4G2F));
+      try {
+        EditorCell editorCell = super.createEmptyCell();
+        editorCell.setCellId("empty_RepastSettingsSourceAddress");
+        installCellInfo(null, editorCell, true);
+        setCellContext(editorCell);
+        return editorCell;
+      } finally {
+        getCellFactory().popCellContext();
+      }
+    }
+    protected String getNoTargetText() {
+      return "<no RepastSettingsSourceAddress>";
+    }
+  }
+  private EditorCell createConstant_3() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Sources Folder Address:");
+    editorCell.setCellId("Constant_ptmqwe_g0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
+  private EditorCell createRefNode_2() {
+    SingleRoleCellProvider provider = new SourcesFolderAddressSingleRoleHandler_ptmqwe_h0(myNode, LINKS.SourcesFolderAddress$d1b1, getEditorContext());
+    return provider.createCell();
+  }
+  private static class SourcesFolderAddressSingleRoleHandler_ptmqwe_h0 extends SingleRoleCellProvider {
+    @NotNull
+    private SNode myNode;
+
+    public SourcesFolderAddressSingleRoleHandler_ptmqwe_h0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -230,9 +296,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return "<no SourcesFolderAddress>";
     }
   }
-  private EditorCell createConstant_3() {
+  private EditorCell createConstant_4() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "BatchRun?:");
-    editorCell.setCellId("Constant_ptmqwe_g0");
+    editorCell.setCellId("Constant_ptmqwe_i0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
     editorCell.getStyle().putAll(style);
@@ -276,6 +342,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink ClassesFolderAddress$oLYy = MetaAdapterFactory.getContainmentLink(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, 0x27ebd2392c7d49a9L, "ClassesFolderAddress");
+    /*package*/ static final SContainmentLink RepastSettingsSourceAddress$4G2F = MetaAdapterFactory.getContainmentLink(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, 0x5dc1936ab377c7f8L, "RepastSettingsSourceAddress");
     /*package*/ static final SContainmentLink SourcesFolderAddress$d1b1 = MetaAdapterFactory.getContainmentLink(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, 0x27ebd2392c85062cL, "SourcesFolderAddress");
   }
 }
