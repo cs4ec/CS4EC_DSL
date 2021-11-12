@@ -12,7 +12,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,33,0" name="ActionCards.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,35,0" name="ActionCards.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/188877551433612806">
@@ -136,6 +136,53 @@
       <unit id="5710949967853806224" at="43,0,46,0" name="ActionCards.constraints.GoToAction_Constraints$CONCEPTS" />
       <unit id="5710949967853806224" at="25,15,36,5" name="ActionCards.constraints.GoToAction_Constraints$1" />
       <unit id="5710949967853806224" at="18,0,47,0" name="ActionCards.constraints.GoToAction_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/6755843002508428533">
+    <file name="AttributeCondition_Constraints.java">
+      <node id="6755843002508428533" at="23,43,24,42" concept="9" />
+      <node id="6755843002510680727" at="31,44,32,20" concept="5" />
+      <node id="6755843002510680727" at="39,63,40,57" concept="5" />
+      <node id="6755843002510680727" at="43,80,44,155" concept="4" />
+      <node id="6755843002510680727" at="44,155,45,62" concept="5" />
+      <node id="6755843002508428533" at="49,6,50,131" concept="4" />
+      <node id="6755843002510680727" at="50,131,51,42" concept="1" />
+      <node id="6755843002508428533" at="51,42,52,22" concept="5" />
+      <node id="6755843002508428533" at="54,0,55,0" concept="7" trace="breakingNode_3a0q23_a0a0a0a0a1a0a0a0c" />
+      <node id="6755843002508428533" at="57,0,58,0" concept="7" trace="AttributeCondition$pc" />
+      <node id="6755843002508428533" at="61,0,62,0" concept="7" trace="attributeLine$VNkt" />
+      <node id="6755843002508428533" at="23,0,26,0" concept="0" trace="AttributeCondition_Constraints#()V" />
+      <node id="6755843002510680727" at="30,0,34,0" concept="3" trace="hasOwnScopeProvider#()Z" />
+      <node id="6755843002510680727" at="38,0,42,0" concept="3" trace="getSearchScopeValidatorNode#()Lorg/jetbrains/mps/openapi/model/SNodeReference;" />
+      <node id="6755843002510680727" at="42,0,47,0" concept="3" trace="createScope#(Ljetbrains/mps/smodel/runtime/ReferenceConstraintsContext;)Ljetbrains/mps/scope/Scope;" />
+      <node id="6755843002510680727" at="36,56,47,10" concept="5" />
+      <node id="6755843002510680727" at="34,0,49,0" concept="3" trace="getScopeProvider#()Ljetbrains/mps/smodel/runtime/ReferenceScopeProvider;" />
+      <node id="6755843002510680727" at="28,90,49,6" concept="4" />
+      <node id="6755843002508428533" at="27,0,54,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <scope id="6755843002508428533" at="23,43,24,42" />
+      <scope id="6755843002510680727" at="31,44,32,20" />
+      <scope id="6755843002510680727" at="39,63,40,57" />
+      <scope id="6755843002510680727" at="43,80,45,62">
+        <var name="scope" id="6755843002510680727" />
+      </scope>
+      <scope id="6755843002508428533" at="23,0,26,0" />
+      <scope id="6755843002510680727" at="30,0,34,0" />
+      <scope id="6755843002510680727" at="38,0,42,0" />
+      <scope id="6755843002510680727" at="42,0,47,0">
+        <var name="_context" id="6755843002510680727" />
+      </scope>
+      <scope id="6755843002510680727" at="36,56,47,10" />
+      <scope id="6755843002510680727" at="34,0,49,0" />
+      <scope id="6755843002508428533" at="28,90,52,22">
+        <var name="d0" id="6755843002510680727" />
+        <var name="references" id="6755843002508428533" />
+      </scope>
+      <scope id="6755843002508428533" at="27,0,54,0" />
+      <unit id="6755843002508428533" at="56,0,59,0" name="ActionCards.constraints.AttributeCondition_Constraints$CONCEPTS" />
+      <unit id="6755843002508428533" at="60,0,63,0" name="ActionCards.constraints.AttributeCondition_Constraints$LINKS" />
+      <unit id="6755843002510680727" at="37,19,47,9" name="ActionCards.constraints.AttributeCondition_Constraints$1$1" />
+      <unit id="6755843002510680727" at="29,48,49,5" name="ActionCards.constraints.AttributeCondition_Constraints$1" />
+      <unit id="6755843002508428533" at="22,0,64,0" name="ActionCards.constraints.AttributeCondition_Constraints" />
     </file>
   </root>
 </debug-info>

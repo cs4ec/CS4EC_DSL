@@ -20,15 +20,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptActionCard = createDescriptorForActionCard();
   /*package*/ final ConceptDescriptor myConceptActionStep = createDescriptorForActionStep();
   /*package*/ final ConceptDescriptor myConceptAdmissionAction = createDescriptorForAdmissionAction();
-  /*package*/ final ConceptDescriptor myConceptAtributeLine = createDescriptorForAtributeLine();
   /*package*/ final ConceptDescriptor myConceptAttribute = createDescriptorForAttribute();
+  /*package*/ final ConceptDescriptor myConceptAttributeCondition = createDescriptorForAttributeCondition();
+  /*package*/ final ConceptDescriptor myConceptAttributeLine = createDescriptorForAttributeLine();
   /*package*/ final ConceptDescriptor myConceptAttributeTable = createDescriptorForAttributeTable();
   /*package*/ final ConceptDescriptor myConceptBranch = createDescriptorForBranch();
   /*package*/ final ConceptDescriptor myConceptDiagnosticCondition = createDescriptorForDiagnosticCondition();
   /*package*/ final ConceptDescriptor myConceptDisease = createDescriptorForDisease();
-  /*package*/ final ConceptDescriptor myConceptDiseaseInitialiserLine = createDescriptorForDiseaseInitialiserLine();
-  /*package*/ final ConceptDescriptor myConceptDiseaseInitialiserTable = createDescriptorForDiseaseInitialiserTable();
-  /*package*/ final ConceptDescriptor myConceptDiseaseList = createDescriptorForDiseaseList();
+  /*package*/ final ConceptDescriptor myConceptDiseasePrevalenceLine = createDescriptorForDiseasePrevalenceLine();
+  /*package*/ final ConceptDescriptor myConceptDiseasePrevalenceTable = createDescriptorForDiseasePrevalenceTable();
   /*package*/ final ConceptDescriptor myConceptDiseaseSymptom = createDescriptorForDiseaseSymptom();
   /*package*/ final ConceptDescriptor myConceptDiseaseSymptomReference = createDescriptorForDiseaseSymptomReference();
   /*package*/ final ConceptDescriptor myConceptDiseaseTest = createDescriptorForDiseaseTest();
@@ -66,11 +66,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     deps.extendedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
     deps.aggregatedLanguage(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, "AgentLanguage");
     deps.aggregatedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
+    deps.aggregatedLanguage(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, "DiseaseModel");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptAdmissionAction, myConceptAtributeLine, myConceptAttribute, myConceptAttributeTable, myConceptBranch, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseaseInitialiserLine, myConceptDiseaseInitialiserTable, myConceptDiseaseList, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptGoToAction, myConceptObservationTest, myConceptObservationsCondition, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptResource, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptVariable);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionStep, myConceptAdmissionAction, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeLine, myConceptAttributeTable, myConceptBranch, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseasePrevalenceLine, myConceptDiseasePrevalenceTable, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptGoToAction, myConceptObservationTest, myConceptObservationsCondition, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptResource, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptVariable);
   }
 
   @Override
@@ -85,10 +86,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActionStep;
       case LanguageConceptSwitch.AdmissionAction:
         return myConceptAdmissionAction;
-      case LanguageConceptSwitch.AtributeLine:
-        return myConceptAtributeLine;
       case LanguageConceptSwitch.Attribute:
         return myConceptAttribute;
+      case LanguageConceptSwitch.AttributeCondition:
+        return myConceptAttributeCondition;
+      case LanguageConceptSwitch.AttributeLine:
+        return myConceptAttributeLine;
       case LanguageConceptSwitch.AttributeTable:
         return myConceptAttributeTable;
       case LanguageConceptSwitch.Branch:
@@ -97,12 +100,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDiagnosticCondition;
       case LanguageConceptSwitch.Disease:
         return myConceptDisease;
-      case LanguageConceptSwitch.DiseaseInitialiserLine:
-        return myConceptDiseaseInitialiserLine;
-      case LanguageConceptSwitch.DiseaseInitialiserTable:
-        return myConceptDiseaseInitialiserTable;
-      case LanguageConceptSwitch.DiseaseList:
-        return myConceptDiseaseList;
+      case LanguageConceptSwitch.DiseasePrevalenceLine:
+        return myConceptDiseasePrevalenceLine;
+      case LanguageConceptSwitch.DiseasePrevalenceTable:
+        return myConceptDiseasePrevalenceTable;
       case LanguageConceptSwitch.DiseaseSymptom:
         return myConceptDiseaseSymptom;
       case LanguageConceptSwitch.DiseaseSymptomReference:
@@ -200,14 +201,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("admission action");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForAtributeLine() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "AtributeLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL);
-    b.class_(false, false, false);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061888154236");
-    b.version(2);
-    b.associate("attribute", 0x25745663764b1ac7L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab027L).optional(false).origin("2698877061888154311").done();
-    return b.create();
-  }
   private static ConceptDescriptor createDescriptorForAttribute() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Attribute", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab027L);
     b.class_(false, false, false);
@@ -216,9 +209,32 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForAttributeCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "AttributeCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x5dc1936ab2a14545L);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/6755843002505184581");
+    b.version(2);
+    b.associate("attributeTable", 0x5dc1936ab2a1456aL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L).optional(false).origin("6755843002505184618").done();
+    b.associate("attributeLine", 0x5dc1936ab2d2ea2dL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL).optional(false).origin("6755843002508438061").done();
+    b.alias("check the value of a patient attribute");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAttributeLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "AttributeLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061888154236");
+    b.version(2);
+    b.property("prevalence", 0x5dc1936ab2964870L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("6755843002504464496").done();
+    b.aggregate("value", 0x5dc1936ab296486eL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("6755843002504464494").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForAttributeTable() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "AttributeTable", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L);
     b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061888154208");
     b.version(2);
     b.aggregate("attributeLines", 0x25745663764b1ad2L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL).optional(true).ordered(true).multiple(true).origin("2698877061888154322").done();
@@ -250,39 +266,29 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   }
   private static ConceptDescriptor createDescriptorForDisease() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Disease", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L);
-    b.class_(false, false, false);
+    b.class_(false, false, true);
     b.super_("ActionCards.structure.Attribute", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab027L);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061875544082");
     b.version(2);
-    b.property("value", 0x25745663758ab0deL).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab06aL)).origin("2698877061875544286").done();
     b.aggregate("symptomReferences", 0x6ca3e29db479125cL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791247L).optional(true).ordered(true).multiple(true).origin("7828349744265630300").done();
+    b.aggregate("diseaseTable", 0x5dc1936ab2bd29acL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c28bL).optional(false).ordered(true).multiple(false).origin("6755843002507012524").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForDiseaseInitialiserLine() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiseaseInitialiserLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL);
+  private static ConceptDescriptor createDescriptorForDiseasePrevalenceLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiseasePrevalenceLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL);
     b.class_(false, false, false);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2985733650834899514");
     b.version(2);
-    b.property("Condition", 0x296f74efb3f1c256L).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab06aL)).origin("2985733650834899542").done();
     b.property("Prevalence", 0x296f74efb3f1c258L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("2985733650834899544").done();
+    b.aggregate("status", 0x5dc1936ab324d55fL).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab3111979L).optional(false).ordered(true).multiple(false).origin("6755843002513806687").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForDiseaseInitialiserTable() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiseaseInitialiserTable", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c28bL);
+  private static ConceptDescriptor createDescriptorForDiseasePrevalenceTable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiseasePrevalenceTable", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c28bL);
     b.class_(false, false, false);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2985733650834899595");
     b.version(2);
-    b.associate("Disease", 0x296f74efb3f1c346L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(true).origin("2985733650834899782").done();
     b.aggregate("lines", 0x296f74efb3f1c2a7L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL).optional(true).ordered(true).multiple(true).origin("2985733650834899623").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForDiseaseList() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiseaseList", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab389L);
-    b.class_(false, false, true);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061875544969");
-    b.version(2);
-    b.aggregate("diseases", 0x25745663758ab393L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(true).ordered(true).multiple(true).origin("2698877061875544979").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDiseaseSymptom() {
@@ -376,9 +382,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("ActionCards.structure.StaffType", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/768972137579180806");
     b.version(2);
-    b.aggregate("attributes", 0xaabf015be951259L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab027L).optional(true).ordered(true).multiple(true).origin("768972137579221593").done();
+    b.aggregate("attributes", 0xaabf015be951259L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L).optional(true).ordered(true).multiple(true).origin("768972137579221593").done();
     b.aggregate("arrivalRate", 0xaabf015be951280L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x637eade0e62ce2b8L).optional(false).ordered(true).multiple(false).origin("768972137579221632").done();
-    b.aggregate("diseaseTables", 0x296f74efb3f628b0L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c28bL).optional(true).ordered(true).multiple(true).origin("2985733650835187888").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProcessingTimeLine() {

@@ -207,6 +207,12 @@
         </node>
       </node>
       <node concept="3F0ifn" id="4VcHHLiE1KK" role="3EZMnx" />
+      <node concept="3F0ifn" id="6MzSDQOKwbk" role="3EZMnx">
+        <property role="3F0ifm" value="SecondsPerTick:" />
+      </node>
+      <node concept="3F0A7n" id="6MzSDQOKwbU" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6MzSDQOKwaO" resolve="secondsPerTick" />
+      </node>
       <node concept="3F0ifn" id="4VcHHLiE1Kp" role="3EZMnx">
         <property role="3F0ifm" value="Agents:" />
       </node>
@@ -1004,6 +1010,10 @@
           <node concept="2iRkQZ" id="74nMeo8lvb$" role="2czzBx" />
         </node>
         <node concept="3F0ifn" id="6MzSDQOiuI5" role="3EZMnx" />
+        <node concept="3F0ifn" id="1$Pby2vHkLo" role="3EZMnx">
+          <property role="3F0ifm" value="With Aggregate Attribute Monitors:" />
+        </node>
+        <node concept="3F0ifn" id="1$Pby2vHkLO" role="3EZMnx" />
         <node concept="3EZMnI" id="2_JteYOhd$8" role="3EZMnx">
           <node concept="3F1sOY" id="1SF32lWSJZ" role="3EZMnx">
             <ref role="1NtTu8" to="3751:1SF32lWSJU" resolve="signalselectionstrategy" />

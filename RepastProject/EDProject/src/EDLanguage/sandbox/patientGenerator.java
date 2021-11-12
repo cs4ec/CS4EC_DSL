@@ -16,16 +16,14 @@ import repast.simphony.engine.environment.RunEnvironment;
 import java.util.HashMap;
 
 public class patientGenerator extends AgentGenerator {
-
-	public int numCovidSymptomaticPerDay = RunEnvironment.getInstance().getParameters().getInteger("CovidSymptomaticPerDay");
-	public int covidCounter = 0;
-	public double numFluSymptomaticPerDay = RunEnvironment.getInstance().getParameters().getInteger("FluSymptomaticPerDay");
-	public int fluCounter = 0;
-
+	int numCovidSymptomaticPerDay = RunEnvironment.getInstance().getParameters().getInteger("CovidSymptomaticPerDay");
+	int covidCounter = 0;
+	int numFluSymptomaticPerDay = RunEnvironment.getInstance().getParameters().getInteger("FluSymptomaticPerDay");
+	int fluCounter = 0;
+	
   public patientGenerator(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
     spawnRoomType = MainEntrance.getInstance();
-//    System.out.println("numFluSymptomaticPerDay: " + numFluSymptomaticPerDay);
     initialiseArrivalMap();
   }
 
@@ -45,9 +43,6 @@ public class patientGenerator extends AgentGenerator {
     sendSignalTemp.AddActor("TriageNurse");
 
 
-    // For each agent attribute 
-    // For each attribute value option 
-    // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
     double rndDouble2 = RandomHelper.nextDouble();
     
@@ -61,40 +56,8 @@ public class patientGenerator extends AgentGenerator {
     } else if( fluCounter < numFluSymptomaticPerDay) {
     	fluCounter++;
     	a.Flu = "Symptomatic";
-    } 
+    }
 
-//    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSusceptible")) {
-//      a.COVID = "Susceptible";
-//    }
-//    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSymptomatic")) {
-//      a.COVID = "Symptomatic";
-//      if(rndDouble2 < 0.012) {
-//          a.Flu = "Symptomatic";
-//      }
-//    }
-//    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDAsymptomatic")) {
-//      a.COVID = "Asymptomatic";
-//    }
-//    if(a.COVID == "Susceptible") {
-//        if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSusceptible")) {
-//            a.Flu = "Susceptible";
-//          }
-//          if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSymptomatic")) {
-//            a.Flu = "Symptomatic";
-//          }
-//          if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAsymptomatic")) {
-//            a.Flu = "Asymptomatic";
-//          }
-//    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSASymptomatic")) {
-      a.MRSA = "Symptomatic";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSASusceptible")) {
-      a.MRSA = "Susceptible";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSARecovered")) {
-      a.MRSA = "Recovered";
-    }
 
     b.PushMission(sendSignalTemp);
 

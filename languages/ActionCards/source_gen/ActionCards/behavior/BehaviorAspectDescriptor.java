@@ -13,10 +13,11 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myPatientProfile__BehaviorDescriptor = new PatientProfile__BehaviorDescriptor();
-  private final BHDescriptor myDiseaseList__BehaviorDescriptor = new DiseaseList__BehaviorDescriptor();
-  private final BHDescriptor myDiseaseInitialiserLine__BehaviorDescriptor = new DiseaseInitialiserLine__BehaviorDescriptor();
-  private final BHDescriptor myDiseaseInitialiserTable__BehaviorDescriptor = new DiseaseInitialiserTable__BehaviorDescriptor();
+  private final BHDescriptor myAttributeTable__BehaviorDescriptor = new AttributeTable__BehaviorDescriptor();
+  private final BHDescriptor myAttributeLine__BehaviorDescriptor = new AttributeLine__BehaviorDescriptor();
+  private final BHDescriptor myDiseasePrevalenceLine__BehaviorDescriptor = new DiseasePrevalenceLine__BehaviorDescriptor();
   private final BHDescriptor myAction__BehaviorDescriptor = new Action__BehaviorDescriptor();
+  private final BHDescriptor myAttributeCondition__BehaviorDescriptor = new AttributeCondition__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
   }
@@ -28,16 +29,18 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 0:
         return myAction__BehaviorDescriptor;
       case 1:
-        return myDiseaseInitialiserLine__BehaviorDescriptor;
+        return myAttributeCondition__BehaviorDescriptor;
       case 2:
-        return myDiseaseInitialiserTable__BehaviorDescriptor;
+        return myAttributeLine__BehaviorDescriptor;
       case 3:
-        return myDiseaseList__BehaviorDescriptor;
+        return myAttributeTable__BehaviorDescriptor;
       case 4:
+        return myDiseasePrevalenceLine__BehaviorDescriptor;
+      case 5:
         return myPatientProfile__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c28bL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab389L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x5dc1936ab2a14545L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L)).seal();
 }

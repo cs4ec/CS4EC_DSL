@@ -25,13 +25,13 @@
 									
 		/>
 				<parameter name="CoInfectionRate" displayName="CoInfectionRate" type="double" 
-						defaultValue="0.012" 
+						defaultValue="0.1" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
-				<parameter name="FluSymptomaticPerDay" displayName="FluSymptomaticPerDay" type="int" 
-						defaultValue="0" 
+				<parameter name="FluSymptomaticPerDay" displayName="Flu symptomatic per day" type="int" 
+						defaultValue="10" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									
@@ -55,7 +55,7 @@
 									
 		/>
 				<parameter name="MRSARecovered" displayName="MRSARecovered" type="double" 
-						defaultValue="0.7000000000000001" 
+						defaultValue="0.7" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
@@ -78,8 +78,14 @@
 						converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter"
 									
 		/>
-				<parameter name="CovidSymptomaticPerDay" displayName="CovidSymptomaticPerDay" type="int" 
-						defaultValue="0" 
+				<parameter name="CovidSymptomaticPerDay" displayName="Covid symptomatic per day" type="int" 
+						defaultValue="10" 
+						isReadOnly="false" 
+						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
+									
+		/>
+				<parameter name="SecondsPerTick" displayName="Seconds Per Tick" type="int" 
+						defaultValue="60" 
 						isReadOnly="false" 
 						converter="repast.simphony.parameter.StringConverterFactory$IntConverter"
 									

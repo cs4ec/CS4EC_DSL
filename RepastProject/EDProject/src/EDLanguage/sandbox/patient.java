@@ -22,6 +22,7 @@ public class patient extends Actor {
   public String LIATFluResult = "Incomplete";
   public String RespiratoryTestCOVIDResult = "Incomplete";
   public String RespiratoryTestFluResult = "Incomplete";
+  public String triageObsResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -62,8 +63,8 @@ public class patient extends Actor {
 	    return 0; 
 	  } 
 	}
-  
-  public int getFluPositiveandCovidPositive() { 
+ 
+ public int getFluPositiveandCovidPositive() { 
 	  boolean isInfectedFlu = (getFluisSymptomatic() == 1 || getFluisAsymptomatic() == 1); 
 	  boolean isInfectedCOVID = (getCOVIDisSymptomatic() == 1 || getCOVIDisAsymptomatic() == 1); 
 	  if (isInfectedFlu && isInfectedCOVID) { 

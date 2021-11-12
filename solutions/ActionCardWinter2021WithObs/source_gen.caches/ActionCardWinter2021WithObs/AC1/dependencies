@@ -6,34 +6,33 @@
   <dependency className="ActionCardWinter2021WithObs.AC1.AdmittoCOVIDbayTrigger_b8Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="ActionCardWinter2021WithObs.AC1.AdmittoCOVIDbayTrigger_b9Signal">
+  <dependency className="ActionCardWinter2021WithObs.AC1.AdmittoFluBayTrigger_a01Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="ActionCardWinter2021WithObs.AC1.AdmittoFluBayTrigger_b7Signal">
+  <dependency className="ActionCardWinter2021WithObs.AC1.AdmittononrespiratoryTrigger_a8Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="ActionCardWinter2021WithObs.AC1.AdmittononrespiratoryTrigger_a9Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="ActionCardWinter2021WithObs.AC1.AdmittosideroomTrigger_c7Signal">
+  <dependency className="ActionCardWinter2021WithObs.AC1.AdmittosideroomTrigger_b01Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="ActionCardWinter2021WithObs.AC1.COVIDPositiveCohort">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
+  <dependency className="ActionCardWinter2021WithObs.AC1.CheckVaxStatusTrigger_b7Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="ActionCardWinter2021WithObs.AC1.CubicleNurse">
     <classNode dependClassName="EDLanguage.sandbox.AdmittoCOVIDbayTrigger_a7Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmittoCOVIDbayTrigger_b9Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmittoFluBayTrigger_b7Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmittononrespiratoryTrigger_a9Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmittosideroomTrigger_c7Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmittoCOVIDbayTrigger_b8Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmittoFluBayTrigger_a01Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmittononrespiratoryTrigger_a8Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmittosideroomTrigger_b01Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.CheckVaxStatusTrigger_b7Signal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.DoLFDTrigger_a1Signal" />
     <classNode dependClassName="EDLanguage.sandbox.DoLFDTrigger_a6Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoLIATTrigger_a8Signal" />
     <classNode dependClassName="EDLanguage.sandbox.LFD" />
-    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryArea" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryArea" />
@@ -64,9 +63,6 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="ActionCardWinter2021WithObs.AC1.DoLFDTrigger_a6Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="ActionCardWinter2021WithObs.AC1.DoLIATTrigger_a8Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="ActionCardWinter2021WithObs.AC1.Doctor">
@@ -214,17 +210,17 @@
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="ActionCardWinter2021WithObs.AC1.RespiratoryTest">
-    <classNode dependClassName="EDLanguage.sandbox.RespiratoryTest" />
+  <dependency className="ActionCardWinter2021WithObs.AC1.SideRoom">
+    <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="ActionCardWinter2021WithObs.AC1.Triage">
+    <classNode dependClassName="EDLanguage.sandbox.Triage" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
-  </dependency>
-  <dependency className="ActionCardWinter2021WithObs.AC1.SideRoom">
-    <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="ActionCardWinter2021WithObs.AC1.TriageDesk">
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
@@ -233,6 +229,7 @@
   <dependency className="ActionCardWinter2021WithObs.AC1.TriageNurse">
     <classNode dependClassName="EDLanguage.sandbox.GotoRespiratoryAreaTrigger_a0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.GotononrespiratoryTrigger_b0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.Triage" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />

@@ -100,6 +100,13 @@
       <property role="20kJfa" value="attributeMonitors" />
       <ref role="20lvS9" node="74nMeo8dO2O" resolve="AttributeMonitor" />
     </node>
+    <node concept="1TJgyj" id="1$Pby2vHkLh" role="1TKVEi">
+      <property role="IQ2ns" value="1816408742367153233" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="aggregateAttributeMonitors" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="6MzSDQOa74z" resolve="AggregateAttributeMonitor" />
+    </node>
     <node concept="PrWs8" id="3l6cNjec6HS" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -124,6 +131,11 @@
     <property role="19KtqR" value="true" />
     <property role="R4oN_" value="An emergency department" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="6MzSDQOKwaO" role="1TKVEl">
+      <property role="IQ2nx" value="7828349744270410420" />
+      <property role="TrG5h" value="secondsPerTick" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="3l6cNjec6IF" role="1TKVEi">
       <property role="IQ2ns" value="3838812034270522283" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />

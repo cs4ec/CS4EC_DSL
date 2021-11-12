@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <parameters>
-
+	<parameter name="CoInfectionRate"
+		displayName="CoInfectionRate" type="double" defaultValue="0.01"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+	<parameter name="FluSymptomaticPerDay"
+		displayName="Flu symptomatic per day" type="int" defaultValue="1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="CovidSymptomaticPerDay"
+		displayName="Covid symptomatic per day" type="int" defaultValue="1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="SecondsPerTick"
+		displayName="Seconds Per Tick" type="int" defaultValue="1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 	<parameter name="randomSeed"
 		displayName="Default Random Seed" type="int" defaultValue="__NULL__"
 		isReadOnly="false"
@@ -9,40 +24,68 @@
 		displayName="Use path finding" type="boolean" defaultValue="false"
 		isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
-  	<parameter name="COVIDSymptomatic"
-  		displayName="COVIDSymptomatic" type="double" defaultValue="0.02"
+  	<parameter name="COVIDAsymptomaticVaccinated"
+  		displayName="COVIDAsymptomaticVaccinated" type="double" defaultValue="0.9"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="COVIDAsymptomatic"
-  		displayName="COVIDAsymptomatic" type="double" defaultValue="0.025"
+  	<parameter name="COVIDAsymptomaticUnvaccinated"
+  		displayName="COVIDAsymptomaticUnvaccinated" type="double" defaultValue="0.9500000000000001"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="COVIDSusceptible"
-  		displayName="COVIDSusceptible" type="double" defaultValue="1.0"
+  	<parameter name="COVIDSymptomaticVaccinated"
+  		displayName="COVIDSymptomaticVaccinated" type="double" defaultValue="0.9700000000000001"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="FluSymptomatic"
-  		displayName="FluSymptomatic" type="double" defaultValue="0.02"
+  	<parameter name="COVIDSymptomaticUnvaccinated"
+  		displayName="COVIDSymptomaticUnvaccinated" type="double" defaultValue="1.0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="FluAsymptomatic"
-  		displayName="FluAsymptomatic" type="double" defaultValue="0.025"
+  	<parameter name="FluAAsymptomaticVaccinated"
+  		displayName="FluAAsymptomaticVaccinated" type="double" defaultValue="0.8"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="FluSusceptible"
-  		displayName="FluSusceptible" type="double" defaultValue="1.0"
+  	<parameter name="FluASusceptibleVaccinated"
+  		displayName="FluASusceptibleVaccinated" type="double" defaultValue="1.0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="MRSASymptomatic"
-  		displayName="MRSASymptomatic" type="double" defaultValue="0.67"
+  	<parameter name="FluBAsymptomaticVaccinated"
+  		displayName="FluBAsymptomaticVaccinated" type="double" defaultValue="0.8"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="MRSARecovered"
-  		displayName="MRSARecovered" type="double" defaultValue="0.7000000000000001"
+  	<parameter name="FluBSusceptibleVaccinated"
+  		displayName="FluBSusceptibleVaccinated" type="double" defaultValue="1.0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="MRSASusceptible"
-  		displayName="MRSASusceptible" type="double" defaultValue="1.0"
+  	<parameter name="COVIDAsymptomaticVaccinated"
+  		displayName="COVIDAsymptomaticVaccinated" type="double" defaultValue="0.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="COVIDAsymptomaticUnvaccinated"
+  		displayName="COVIDAsymptomaticUnvaccinated" type="double" defaultValue="0.9500000000000001"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="COVIDSymptomaticVaccinated"
+  		displayName="COVIDSymptomaticVaccinated" type="double" defaultValue="0.9700000000000001"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="COVIDSymptomaticUnvaccinated"
+  		displayName="COVIDSymptomaticUnvaccinated" type="double" defaultValue="1.0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluAAsymptomaticVaccinated"
+  		displayName="FluAAsymptomaticVaccinated" type="double" defaultValue="0.8"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluASusceptibleVaccinated"
+  		displayName="FluASusceptibleVaccinated" type="double" defaultValue="1.0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluBAsymptomaticVaccinated"
+  		displayName="FluBAsymptomaticVaccinated" type="double" defaultValue="0.8"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluBSusceptibleVaccinated"
+  		displayName="FluBSusceptibleVaccinated" type="double" defaultValue="1.0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 </parameters>

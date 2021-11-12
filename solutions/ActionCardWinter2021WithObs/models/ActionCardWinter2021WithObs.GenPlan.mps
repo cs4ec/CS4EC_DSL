@@ -48,6 +48,12 @@
           <property role="20Rdg7" value="ActionCards.generator" />
         </node>
       </node>
+      <node concept="3uMdn$" id="5R1$QENcoxs" role="3uOsAP">
+        <node concept="20RdaH" id="5R1$QENcoxt" role="3uMdmt">
+          <property role="20Rdg5" value="30369e0d-2047-484c-82bf-d567e7d22145" />
+          <property role="20Rdg7" value="DiseaseModel.generator" />
+        </node>
+      </node>
     </node>
     <node concept="3uMcMo" id="5ivS4t6lQPL" role="2VgMA7">
       <node concept="3uMdn$" id="5ivS4t6lQQf" role="3uOsAP">

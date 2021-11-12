@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 import EDLanguage.sandbox.TriageNurse;
 import repast.simphony.context.Context;
 import repast.simphony.context.space.graph.NetworkBuilder;
+import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.query.space.grid.GridCell;

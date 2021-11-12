@@ -296,5 +296,13 @@
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
   </dependency>
+  <dependency className="ActionCardWinter2021.AC1.triageObs">
+    <classNode dependClassName="EDLanguage.sandbox.triageObs" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
+  </dependency>
 </dependenciesRoot>
 

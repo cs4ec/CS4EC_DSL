@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import repast.simphony.context.Context;
+import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -128,57 +129,6 @@ public class Agent {
 		grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 	}
 	
-	public void InitActionFragment(ActionFragment curActionFragment) {
-		if (curActionFragment instanceof OccupyAction) {
-			InitOccpuyAction((OccupyAction) curActionFragment);
-		}
-		if (curActionFragment instanceof MoveAction) {
-			InitMoveAction((MoveAction) curActionFragment);
-		}
-	}
-
-	/**
-	 * If the current Agent action is to move to an occupiable, then process what
-	 * instance of that occupiable I am targeting
-	 * 
-	 * @param stepLogic The current step of the Agent's Mission
-	 */
-	private void InitOccpuyAction(OccupyAction stepLogic) {
-		Class target = stepLogic.getDestinationOccupiable();
-
-		// If already occupying the target, then move on
-		if (curOccupying != null && curOccupying.getClass() == target) {
-			return;
-		}
-
-		Occupiable targetOccupiable = stepLogic.getConcreteDestination();
-		// Otherwise, find an instance of the target occupiable type to head towards
-		if (targetOccupiable == null) {
-			stepLogic.setConcreteDestination(SelectOccupiable(curInside,target));
-		} else if (targetOccupiable.getOccupier() != null && targetOccupiable.getOccupier() != this) {
-			if (targetOccupiable instanceof Seat) {
-				FindAnOccupiable(Seat.class);
-			}
-		}
-	}
-
-	private void InitMoveAction(MoveAction stepLogic) {
-		// If this is a movement to a room type rather than a specific instance of a
-		// room, then we must select a room instance as our concrete target
-		if (stepLogic.getDestinationObject() == null) {
-			stepLogic.setDestination(SelectLocation((RoomType) stepLogic.getTargetDestinationType()));
-		} 
-		else if(stepLogic.getTargetDestinationType() instanceof RoomType) {
-			Room pCurrentTarget = (Room) stepLogic.getDestinationObject();
-			if(EvaluateRoomChoice(pCurrentTarget) == 0.0){
-				stepLogic.setDestination(SelectLocation((RoomType) stepLogic.getTargetDestinationType()));
-			}
-		}
-		
-		stepLogic.setTargetGridPoints(grid.getLocation(stepLogic.getDestinationObject()));
-	}
-	
-	
 	// ----------------------------------- AUX METHODS ---------------------
 	// Given a RoomType, select a Location of that RoomType
 	protected Room SelectLocation(RoomType pRoomType) {
@@ -234,10 +184,16 @@ public class Agent {
 	}
 	
 	public void MoveTowards(GridPoint pt) {
-		if(ModelParameterStore.UsePathFinding) {
-			PathFinding(pt);
-		} else {
-			CrowFlyMovement(pt);
+		int count = 0;
+		int pintSecondsPerTick = RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick");
+		
+		while(count < pintSecondsPerTick) {
+			count++;
+			if(ModelParameterStore.UsePathFinding) {
+				PathFinding(pt);
+			} else {
+				CrowFlyMovement(pt);
+			}
 		}
 	}
 	

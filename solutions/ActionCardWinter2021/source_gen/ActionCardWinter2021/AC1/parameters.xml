@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <parameters>
-
+	<parameter name="CoInfectionRate"
+		displayName="CoInfectionRate" type="double" defaultValue="0.01"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+	<parameter name="FluSymptomaticPerDay"
+		displayName="Flu symptomatic per day" type="int" defaultValue="1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="CovidSymptomaticPerDay"
+		displayName="Covid symptomatic per day" type="int" defaultValue="1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="SecondsPerTick"
+		displayName="Seconds Per Tick" type="int" defaultValue="1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 	<parameter name="randomSeed"
 		displayName="Default Random Seed" type="int" defaultValue="__NULL__"
 		isReadOnly="false"

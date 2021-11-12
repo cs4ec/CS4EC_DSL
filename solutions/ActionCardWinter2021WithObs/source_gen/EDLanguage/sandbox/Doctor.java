@@ -69,21 +69,21 @@ public class Doctor extends Actor {
         behaviourBuilder = new Behaviour("AdmittoCOVIDbayTrigger_a7");
         this.InitAdmitActionAdmittoCOVIDbay_c(s);
         break;
-      case "AdmittoFluBayTrigger_b7":
-        behaviourBuilder = new Behaviour("AdmittoFluBayTrigger_b7");
+      case "AdmittoFluBayTrigger_a01":
+        behaviourBuilder = new Behaviour("AdmittoFluBayTrigger_a01");
         this.InitAdmitActionAdmittoFluBay_d(s);
         break;
-      case "AdmittononrespiratoryTrigger_a9":
-        behaviourBuilder = new Behaviour("AdmittononrespiratoryTrigger_a9");
+      case "AdmittononrespiratoryTrigger_a8":
+        behaviourBuilder = new Behaviour("AdmittononrespiratoryTrigger_a8");
         this.InitAdmitActionAdmittononrespiratory_e(s);
         break;
-      case "AdmittosideroomTrigger_c7":
-        behaviourBuilder = new Behaviour("AdmittosideroomTrigger_c7");
+      case "AdmittosideroomTrigger_b01":
+        behaviourBuilder = new Behaviour("AdmittosideroomTrigger_b01");
         this.InitAdmitActionAdmittosideroom_f(s);
         break;
-      case "AdmittoCOVIDbayTrigger_b9":
-        behaviourBuilder = new Behaviour("AdmittoCOVIDbayTrigger_b9");
-        this.InitAdmitActionAdmittoCOVIDbay_k(s);
+      case "AdmittoCOVIDbayTrigger_b8":
+        behaviourBuilder = new Behaviour("AdmittoCOVIDbayTrigger_b8");
+        this.InitAdmitActionAdmittoCOVIDbay_j(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -795,7 +795,7 @@ public class Doctor extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmittoCOVIDbay_k(Signal s) {
+  public void InitAdmitActionAdmittoCOVIDbay_j(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0e(behaviourBuilder));

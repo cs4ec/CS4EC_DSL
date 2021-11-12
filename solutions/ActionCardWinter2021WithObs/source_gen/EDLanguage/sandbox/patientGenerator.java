@@ -42,32 +42,29 @@ public class patientGenerator extends AgentGenerator {
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSusceptible")) {
-      a.COVID = "Susceptible";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDAsymptomaticVaccinated")) {
+      a.COVID = "AsymptomaticVaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSymptomatic")) {
-      a.COVID = "Symptomatic";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDAsymptomaticUnvaccinated")) {
+      a.COVID = "AsymptomaticUnvaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDAsymptomatic")) {
-      a.COVID = "Asymptomatic";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSymptomaticUnvaccinated")) {
+      a.COVID = "SymptomaticUnvaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSusceptible")) {
-      a.Flu = "Susceptible";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSymptomaticVaccinated")) {
+      a.COVID = "SymptomaticVaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluSymptomatic")) {
-      a.Flu = "Symptomatic";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAAsymptomaticVaccinated")) {
+      a.FluA = "AsymptomaticVaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAsymptomatic")) {
-      a.Flu = "Asymptomatic";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluASusceptibleVaccinated")) {
+      a.FluA = "SusceptibleVaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSASymptomatic")) {
-      a.MRSA = "Symptomatic";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBAsymptomaticVaccinated")) {
+      a.FluB = "AsymptomaticVaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSASusceptible")) {
-      a.MRSA = "Susceptible";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("MRSARecovered")) {
-      a.MRSA = "Recovered";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBSusceptibleVaccinated")) {
+      a.FluB = "SusceptibleVaccinated";
     }
 
     b.PushMission(sendSignalTemp);
