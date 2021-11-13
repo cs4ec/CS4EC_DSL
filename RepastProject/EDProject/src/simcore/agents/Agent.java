@@ -189,7 +189,7 @@ public class Agent {
 		
 		while(count < pintSecondsPerTick) {
 			count++;
-			if(ModelParameterStore.UsePathFinding) {
+			if(RunEnvironment.getInstance().getParameters().getBoolean("UsePathFinding")) {
 				PathFinding(pt);
 			} else {
 				CrowFlyMovement(pt);

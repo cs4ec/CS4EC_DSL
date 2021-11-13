@@ -83,9 +83,9 @@ public class CubicleNurse extends Actor {
         behaviourBuilder = new Behaviour("DoLFDTrigger_a6");
         this.InitDoLFD_i(s);
         break;
-      case "CheckVaxStatusTrigger_b7":
-        behaviourBuilder = new Behaviour("CheckVaxStatusTrigger_b7");
-        this.InitCheckVaxStatus_k(s);
+      case "CheckVaccineStatusTrigger_b7":
+        behaviourBuilder = new Behaviour("CheckVaccineStatusTrigger_b7");
+        this.InitCheckVaccineStatus_k(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -153,7 +153,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 3;
+      return timeExecuted == 180;
     }
   }
   public class SendSignalAction_d0a extends BehaviourStep {
@@ -185,7 +185,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0a_9 extends BehaviourStep {
@@ -244,7 +244,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 3;
+      return timeExecuted == 180;
     }
   }
   public class SendSignalAction_d0a_1 extends BehaviourStep {
@@ -276,7 +276,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0b_3 extends BehaviourStep {
@@ -351,7 +351,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0b_5 extends BehaviourStep {
@@ -426,7 +426,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0c_3 extends BehaviourStep {
@@ -485,7 +485,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 300;
     }
   }
   public class StayAction_d0c extends PassiveBehaviourStep {
@@ -606,7 +606,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0c_5 extends BehaviourStep {
@@ -665,7 +665,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 300;
     }
   }
   public class StayAction_d0c_1 extends PassiveBehaviourStep {
@@ -1295,7 +1295,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new CheckVaxStatusTrigger_b7Signal();
+      sendSignalTemp = new CheckVaccineStatusTrigger_b7Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1311,7 +1311,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new CheckVaxStatusTrigger_b7Signal();
+      sendSignalTemp = new CheckVaccineStatusTrigger_b7Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1330,7 +1330,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0d_3 extends BehaviourStep {
@@ -1389,7 +1389,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 300;
     }
   }
   public class StayAction_d0d extends PassiveBehaviourStep {
@@ -1510,7 +1510,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0d_5 extends BehaviourStep {
@@ -1569,7 +1569,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 300;
     }
   }
   public class StayAction_d0d_1 extends PassiveBehaviourStep {
@@ -2234,7 +2234,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0e_3 extends BehaviourStep {
@@ -2293,7 +2293,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class SendSignalAction_d0e extends BehaviourStep {
@@ -2341,7 +2341,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0e_5 extends BehaviourStep {
@@ -2400,7 +2400,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class SendSignalAction_d0e_1 extends BehaviourStep {
@@ -2448,7 +2448,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
 
@@ -2514,7 +2514,7 @@ public class CubicleNurse extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitCheckVaxStatus_k(Signal s) {
+  public void InitCheckVaccineStatus_k(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0e_3(behaviourBuilder));

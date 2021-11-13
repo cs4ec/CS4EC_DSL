@@ -2760,7 +2760,7 @@
     </node>
   </node>
   <node concept="3VqkwO" id="EFW1mYa2fP">
-    <property role="3oou0D" value="60" />
+    <property role="3oou0D" value="1" />
     <node concept="2mjNtH" id="1SF32mgBAO" role="2mjQn4">
       <property role="TrG5h" value="CurrentPatientAllocations" />
     </node>
@@ -4502,8 +4502,8 @@
             <node concept="3clFbF" id="6MzSDQOup5r" role="3cqZAp">
               <node concept="2OqwBi" id="6MzSDQOup5s" role="3clFbG">
                 <node concept="30H73N" id="6MzSDQOup5t" role="2Oq$k0" />
-                <node concept="3TrcHB" id="6MzSDQOup5u" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                <node concept="2qgKlT" id="5R1$QEO4RQ0" role="2OqNvi">
+                  <ref role="37wK5l" to="uyrv:5R1$QEO4R2C" resolve="getFormattedName" />
                 </node>
               </node>
             </node>

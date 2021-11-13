@@ -13,7 +13,7 @@ public class LFD {
   private LFD() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 2;
-    returnMap.put(15, ((Double) (1 / TotalOccurances)));
+    returnMap.put(900, ((Double) (1 / TotalOccurances)));
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 

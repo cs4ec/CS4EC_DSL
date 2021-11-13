@@ -497,7 +497,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                     for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.Branch$sq, _context.getModel(), Branch_Editor.class, _context.getEditorContext())) {
                       boolean wrapperAllowed = expectedConcept == null || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(subconcept), SNodeOperations.asSConcept(expectedConcept));
                       if (wrapperAllowed) {
-                        final Iterable<String> matchingText = Sequence.<String>singleton("Do");
+                        final Iterable<String> matchingText = Sequence.<String>singleton("Next...");
                         if (Sequence.fromIterable(matchingText).isNotEmpty()) {
                           boolean sideTransformationEnabled = ConstraintsCanBeFacade.checkCanBeParent(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
                           sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeAncestor(new CanBeAncestorContext.Builder().ancestorNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();

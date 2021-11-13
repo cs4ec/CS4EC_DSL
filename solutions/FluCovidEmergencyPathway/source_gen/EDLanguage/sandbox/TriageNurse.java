@@ -137,12 +137,12 @@ public class TriageNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 300;
     }
   }
   public class StayAction_d0a extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = Triage.getInstance().getProcessingTime();
+    /*package*/ int testingTime = TriagingTool.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -164,7 +164,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult = "Negative";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult = "Negative";
 
     }
   }
@@ -226,7 +226,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult == "Positive") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Positive") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0i0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -243,7 +243,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult == "Negative") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Negative") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0j0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -266,7 +266,7 @@ public class TriageNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
   public class MoveAction_a0a_5 extends BehaviourStep {
@@ -325,12 +325,12 @@ public class TriageNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
+      return timeExecuted == 300;
     }
   }
   public class StayAction_d0a_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = Triage.getInstance().getProcessingTime();
+    /*package*/ int testingTime = TriagingTool.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_d0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -352,7 +352,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult = "Negative";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult = "Negative";
 
     }
   }
@@ -380,7 +380,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult = "Positive";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult = "Positive";
 
     }
   }
@@ -391,7 +391,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult = "Positive";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult = "Positive";
 
     }
   }
@@ -419,7 +419,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult = "Positive";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult = "Positive";
 
     }
   }
@@ -430,7 +430,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult = "Positive";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult = "Positive";
 
     }
   }
@@ -458,7 +458,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult = "Positive";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult = "Positive";
 
     }
   }
@@ -469,7 +469,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult = "Positive";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult = "Positive";
 
     }
   }
@@ -480,7 +480,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult == "Positive") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Positive") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0i0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -529,7 +529,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriageResult == "Negative") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Negative") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0j0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -584,7 +584,7 @@ public class TriageNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return timeExecuted == 60;
     }
   }
 

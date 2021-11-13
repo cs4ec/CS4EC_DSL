@@ -19,7 +19,7 @@
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.CheckVaxStatusTrigger_b7Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.CheckVaccineStatusTrigger_b7Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.CubicleNurse">
@@ -28,7 +28,7 @@
     <classNode dependClassName="EDLanguage.sandbox.AdmittoFluBayTrigger_a01Signal" />
     <classNode dependClassName="EDLanguage.sandbox.AdmittononrespiratoryTrigger_a8Signal" />
     <classNode dependClassName="EDLanguage.sandbox.AdmittosideroomTrigger_b01Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.CheckVaxStatusTrigger_b7Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.CheckVaccineStatusTrigger_b7Signal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.DoLFDTrigger_a1Signal" />
     <classNode dependClassName="EDLanguage.sandbox.DoLFDTrigger_a6Signal" />
@@ -230,14 +230,6 @@
     <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.Triage">
-    <classNode dependClassName="EDLanguage.sandbox.Triage" />
-    <classNode dependClassName="java.lang.Double" />
-    <classNode dependClassName="java.lang.Integer" />
-    <classNode dependClassName="java.util.HashMap" />
-    <classNode dependClassName="java.util.Map" />
-    <classNode dependClassName="simcore.utilities.Distribution" />
-  </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.TriageDesk">
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -245,9 +237,9 @@
   <dependency className="FluCovidEmergencyPathway.AC1.TriageNurse">
     <classNode dependClassName="EDLanguage.sandbox.GotoRespiratoryAreaTrigger_a0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.GotononrespiratoryTrigger_b0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.Triage" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.TriagingTool" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -269,6 +261,14 @@
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.TriagingTool">
+    <classNode dependClassName="EDLanguage.sandbox.TriagingTool" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.WaitingRoom">
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />

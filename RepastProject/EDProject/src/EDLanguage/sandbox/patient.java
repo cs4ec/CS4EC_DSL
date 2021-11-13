@@ -26,7 +26,7 @@ public class patient extends Actor {
   public String LIATCOVIDResult = "Incomplete";
   public String LIATFluAResult = "Incomplete";
   public String LIATFluBResult = "Incomplete";
-  public String TriageResult = "Incomplete";
+  public String TriagingToolResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -180,8 +180,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisNonRespiratoryBay() {
-    if (this.admittedTo == "NonRespiratoryBay") {
+  public int getadmittedToisNonRespiratoryCohort() {
+    if (this.admittedTo == "NonRespiratoryCohort") {
       return 1;
     }
     return 0;

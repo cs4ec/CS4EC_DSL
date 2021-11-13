@@ -38,10 +38,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     Parameters params = RunEnvironment.getInstance().getParameters();
 
-    Boolean pBool = params.getBoolean("UsePathFinding");
-    ModelParameterStore.UsePathFinding = false;
-
-    RunEnvironment.getInstance().endAt(1440);
+    RunEnvironment.getInstance().endAt(86400);
 
     CreatePatientArrivalMap();
 
@@ -110,7 +107,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room SideRoom_lb = new Room("SideRoom", context, space, grid, 200, 60, 50, 50, 1, 1000, SideRoom.getInstance(), Color.ORANGE);
     Room CovidCohort_mb = new Room("CovidCohort", context, space, grid, 260, 60, 50, 50, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED);
     Room FluCohort_nb = new Room("FluCohort", context, space, grid, 260, 5, 50, 50, 1, 1000, FluPositiveCohort.getInstance(), Color.RED);
-    Room NonRespiratoryCohort_ob = new Room("NonRespiratoryCohort", context, space, grid, 200, 5, 50, 50, 1, 1000, NonRespiratoryArea.getInstance(), Color.GREEN);
+    Room NonRespiratoryCohort_ob = new Room("NonRespiratoryCohort", context, space, grid, 200, 5, 50, 50, 1, 1000, NonRespiratoryCohort.getInstance(), Color.GREEN);
     try {
       Paedeatrics_a.setSeats(0);
       Lab_b.setSeats(0);

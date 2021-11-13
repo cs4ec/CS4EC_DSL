@@ -218,12 +218,12 @@
     </language>
   </registry>
   <node concept="2MhjZA" id="av1M7vbJXD">
-    <property role="3GE5qa" value="ActionCard" />
+    <property role="3GE5qa" value="Action Cards" />
     <node concept="2MhjZa" id="2lOlAdP0yiq" role="2MhjZp">
       <property role="TrG5h" value="Triage" />
       <property role="3lFixl" value="true" />
       <property role="2mH1Wk" value="5" />
-      <ref role="3tPpTl" node="6MzSDQOx5uL" resolve="Triage" />
+      <ref role="3tPpTl" node="6MzSDQOx5uL" resolve="TriagingTool" />
       <node concept="2_8ZN7" id="2_JteYPiCGp" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCG6" resolve="TriageNurse" />
       </node>
@@ -235,7 +235,7 @@
         <ref role="2GGxGe" node="2lOlAdPhCdg" resolve="Go to Respiratory Area" />
         <node concept="3ocoxY" id="6MzSDQO_XFE" role="1hyIAf">
           <property role="3ocoAY" value="2lOlAdPyF1X/Positive" />
-          <ref role="3ocoAE" node="6MzSDQOx5uL" resolve="Triage" />
+          <ref role="3ocoAE" node="6MzSDQOx5uL" resolve="TriagingTool" />
         </node>
       </node>
       <node concept="2GGxJi" id="17FCIs99e43" role="3tG3Yq">
@@ -243,7 +243,7 @@
         <ref role="2GGxGe" node="2_JteYPiCSH" resolve="Go to non respiratory" />
         <node concept="3ocoxY" id="6MzSDQOBiXq" role="1hyIAf">
           <property role="3ocoAY" value="2lOlAdPyF27/Negative" />
-          <ref role="3ocoAE" node="6MzSDQOx5uL" resolve="Triage" />
+          <ref role="3ocoAE" node="6MzSDQOx5uL" resolve="TriagingTool" />
         </node>
       </node>
     </node>
@@ -522,8 +522,8 @@
       <node concept="37mRIm" id="2_JteYPiCPl" role="37mRID">
         <property role="37mO49" value="2985733650857495864" />
         <node concept="gqqVs" id="2_JteYPiCPk" role="37mO4d">
-          <property role="gqqTZ" value="763.0" />
-          <property role="gqqTW" value="445.0" />
+          <property role="gqqTZ" value="739.0000000000001" />
+          <property role="gqqTW" value="291.3580770590316" />
           <property role="gqqTX" value="242.0" />
           <property role="gqqTy" value="50.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -655,8 +655,8 @@
       <node concept="37mRIm" id="52K8EjSnpZ" role="37mRID">
         <property role="37mO49" value="90846643919877701" />
         <node concept="gqqVs" id="52K8EjSnpY" role="37mO4d">
-          <property role="gqqTZ" value="1028.0" />
-          <property role="gqqTW" value="445.0" />
+          <property role="gqqTZ" value="1004.0000000000001" />
+          <property role="gqqTW" value="291.3580770590316" />
           <property role="gqqTX" value="185.0" />
           <property role="gqqTy" value="49.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -664,7 +664,12 @@
       </node>
       <node concept="37mRIm" id="52K8EjSnrP" role="37mRID">
         <property role="37mO49" value="90846643919877862" />
-        <node concept="2VclpC" id="52K8EjSnrO" role="37mO4d" />
+        <node concept="2VclpC" id="52K8EjSnrO" role="37mO4d">
+          <node concept="2VclrF" id="5R1$QEO6iNW" role="2Vcluh">
+            <property role="2Vclpx" value="1086.7469879518073" />
+            <property role="2Vclpz" value="272.28915662650604" />
+          </node>
+        </node>
       </node>
       <node concept="37mRIm" id="17FCIs99e48" role="37mRID">
         <property role="37mO49" value="1291304831346336003" />
@@ -678,9 +683,9 @@
       <node concept="37mRIm" id="5R1$QEM$eEd" role="37mRID">
         <property role="37mO49" value="6755843002504112723" />
         <node concept="gqqVs" id="5R1$QEM$eEc" role="37mO4d">
-          <property role="gqqTZ" value="437.3128313891836" />
-          <property role="gqqTW" value="291.3580770590316" />
-          <property role="gqqTX" value="166.0" />
+          <property role="gqqTZ" value="437.0" />
+          <property role="gqqTW" value="291.0" />
+          <property role="gqqTX" value="204.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -710,6 +715,16 @@
             <property role="2Vclpx" value="363.4146341463415" />
             <property role="2Vclpz" value="354.8780487804878" />
           </node>
+        </node>
+      </node>
+      <node concept="37mRIm" id="5R1$QEO6iPn" role="37mRID">
+        <property role="37mO49" value="6755843002529819904" />
+        <node concept="gqqVs" id="5R1$QEO6iPm" role="37mO4d">
+          <property role="gqqTZ" value="1047.5" />
+          <property role="gqqTW" value="210.30434782608697" />
+          <property role="gqqTX" value="98.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
     </node>
@@ -801,7 +816,7 @@
       </node>
       <node concept="2GGxJi" id="5R1$QEM$eFZ" role="3tG3Yq">
         <ref role="3tVEyn" node="2_JteYPiCYR" resolve="Do LFD" />
-        <ref role="2GGxGe" node="5R1$QEM$eDj" resolve="Check Vax Status" />
+        <ref role="2GGxGe" node="5R1$QEM$eDj" resolve="Check Vaccine Status" />
         <node concept="30deo4" id="5R1$QEMMkSV" role="1hyIAf">
           <node concept="3tEh0H" id="5R1$QEM$eBV" role="30dEsF">
             <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
@@ -865,7 +880,7 @@
       </node>
     </node>
     <node concept="2MhjZa" id="5R1$QEM$eDj" role="2MhjZp">
-      <property role="TrG5h" value="Check Vax Status" />
+      <property role="TrG5h" value="Check Vaccine Status" />
       <property role="2mH1Wk" value="1" />
       <property role="3lFixl" value="true" />
       <node concept="2_8ZN7" id="5R1$QEM$eE9" role="2_8HaY">
@@ -875,11 +890,11 @@
         <ref role="Udx8D" node="2_JteYPiCGV" resolve="RespiratoryArea" />
       </node>
       <node concept="2GGxJi" id="5R1$QEMDSqh" role="3tG3Yq">
-        <ref role="3tVEyn" node="5R1$QEM$eDj" resolve="Check Vax Status" />
+        <ref role="3tVEyn" node="5R1$QEM$eDj" resolve="Check Vaccine Status" />
         <ref role="2GGxGe" node="2_JteYO0kp4" resolve="Admit to Flu Bay" />
       </node>
       <node concept="2GGxJi" id="5R1$QEMDSuB" role="3tG3Yq">
-        <ref role="3tVEyn" node="5R1$QEM$eDj" resolve="Check Vax Status" />
+        <ref role="3tVEyn" node="5R1$QEM$eDj" resolve="Check Vaccine Status" />
         <ref role="2GGxGe" node="2_JteYPiCQs" resolve="Admit to side room" />
       </node>
     </node>
@@ -890,10 +905,10 @@
   </node>
   <node concept="VhMOw" id="2lOlAdP2IBt">
     <property role="TrG5h" value="Ward" />
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
   </node>
   <node concept="2_0uwh" id="EFW1mYe4_u">
-    <property role="3GE5qa" value="Builder" />
+    <property role="3GE5qa" value="Simulation Scenario" />
     <node concept="2_0uwW" id="EFW1mYe4_C" role="2_0uzz">
       <property role="2_0uz2" value="10" />
       <ref role="2_0uz0" node="av1M7vbJYz" resolve="Doctor" />
@@ -909,7 +924,7 @@
   </node>
   <node concept="2OfScj" id="EFW1mYBKlV">
     <property role="TrG5h" value="patient" />
-    <property role="3GE5qa" value="Builder" />
+    <property role="3GE5qa" value="People" />
     <node concept="1jfOK3" id="5R1$QEMYF7G" role="2OfI9c">
       <property role="TrG5h" value="ImmunoCompromised" />
       <node concept="1jfOKv" id="5R1$QEMYF7N" role="1jfOML">
@@ -1010,27 +1025,27 @@
     </node>
   </node>
   <node concept="VhMOw" id="EFW1mYOHdm">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="TriageDesk" />
   </node>
   <node concept="VhMOw" id="EFW1mYOHdw">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="RespiratoryCubicle" />
   </node>
   <node concept="VhMOw" id="EFW1mYOHdO">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="WaitingRoom" />
   </node>
   <node concept="VhMOw" id="EFW1mYOHdY">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="MajorsCBay" />
   </node>
   <node concept="VhMOw" id="EFW1mYOHez">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="MainEntrance" />
   </node>
   <node concept="j3bMj" id="EFW1mZkn0D">
-    <property role="3GE5qa" value="Builder" />
+    <property role="3GE5qa" value="ED Layout" />
     <node concept="j3bLk" id="h0lK3EyZVB" role="j3bMi">
       <property role="TrG5h" value="Paedeatrics" />
       <property role="memwX" value="5" />
@@ -1491,13 +1506,14 @@
   </node>
   <node concept="2Ovb82" id="EFW1mZonCG">
     <property role="TrG5h" value="EDMapImporter" />
+    <property role="3GE5qa" value="ED Layout" />
     <ref role="2Ovb8z" node="EFW1mZkn0D" />
     <node concept="3VlSI9" id="EFW1mZonD8" role="2PX5YI">
       <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/ActionCardWinter2021/StThomasEDMap2.json" />
     </node>
   </node>
   <node concept="VhMOw" id="2_JteYO1fw4">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="NonRespiratoryCohort" />
   </node>
   <node concept="2GGxxg" id="2_JteYPiCG6">
@@ -1505,7 +1521,7 @@
     <property role="TrG5h" value="TriageNurse" />
   </node>
   <node concept="VhMOw" id="2_JteYPiCGV">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="RespiratoryArea" />
   </node>
   <node concept="2GGxxg" id="2_JteYPiCHe">
@@ -1513,15 +1529,15 @@
     <property role="TrG5h" value="CubicleNurse" />
   </node>
   <node concept="VhMOw" id="5Lup6bkgRsQ">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="NonRespiratoryArea" />
   </node>
   <node concept="VhMOw" id="52K8Ej3Gdk">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="NonRespiratoryCubicle" />
   </node>
   <node concept="VhMOw" id="52K8Ej3GeZ">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="COVIDPositiveCohort" />
   </node>
   <node concept="2GGxxg" id="52K8Ej3GgM">
@@ -1529,15 +1545,15 @@
     <property role="TrG5h" value="LabTechnician" />
   </node>
   <node concept="VhMOw" id="52K8Ej3GjE">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="SideRoom" />
   </node>
   <node concept="VhMOw" id="52K8Ejkjl6">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="Labaratory" />
   </node>
   <node concept="VhMOw" id="52K8EjIB__">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="FluPositiveCohort" />
   </node>
   <node concept="3SEB2C" id="5ivS4t6wkhV">
@@ -1591,13 +1607,26 @@
     </node>
   </node>
   <node concept="3oQJd$" id="6MzSDQOvLH$">
+    <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJeJ" id="6MzSDQOvLHI" role="3oQJ2u">
       <property role="TrG5h" value="Cough" />
+    </node>
+    <node concept="3oQJeJ" id="5R1$QENZiLL" role="3oQJ2u">
+      <property role="TrG5h" value="Sore throat" />
+    </node>
+    <node concept="3oQJeJ" id="5R1$QENZiLO" role="3oQJ2u">
+      <property role="TrG5h" value="Fever" />
+    </node>
+    <node concept="3oQJeJ" id="5R1$QEO4Qbe" role="3oQJ2u">
+      <property role="TrG5h" value="Loss of taste" />
+    </node>
+    <node concept="3oQJeJ" id="5R1$QEO4Qbj" role="3oQJ2u">
+      <property role="TrG5h" value="Loss of smell" />
     </node>
   </node>
   <node concept="3oQJcU" id="6MzSDQOx5uL">
     <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="Triage" />
+    <property role="TrG5h" value="TriagingTool" />
     <node concept="3oQJ3q" id="6MzSDQOx5uX" role="3oQJ1o">
       <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
@@ -1613,6 +1642,18 @@
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJ3q" id="5R1$QEMKFk4" role="3oQJ31">
       <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4Vgs" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4Vhj" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QENZiLL" resolve="Sore throat" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4Vg$" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QEO4Qbe" resolve="Loss of taste" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4VgI" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QEO4Qbj" resolve="Loss of smell" />
     </node>
     <node concept="2qBFp$" id="5R1$QEN9cOR" role="3JvbF6">
       <node concept="2qBFrl" id="5R1$QEN9cOT" role="2qBFp8">
@@ -1667,6 +1708,9 @@
     <node concept="3oQJ3q" id="5R1$QEMKFkP" role="3oQJ31">
       <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
+    <node concept="3oQJ3q" id="5R1$QEO4Vh0" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
+    </node>
   </node>
   <node concept="1gZIpL" id="5R1$QEMMkRG">
     <property role="TrG5h" value="FluB" />
@@ -1692,19 +1736,19 @@
     </node>
   </node>
   <node concept="VhMOw" id="5R1$QENtegU">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="LIATBooth" />
   </node>
   <node concept="VhMOw" id="5R1$QENtehv">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="TaskRoom" />
   </node>
   <node concept="VhMOw" id="5R1$QENtej4">
-    <property role="3GE5qa" value="RoomType" />
+    <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="RadiologyRoom" />
   </node>
   <node concept="2q6JFR" id="5R1$QENteu9">
-    <property role="3GE5qa" value="Builder" />
+    <property role="3GE5qa" value="ED Layout" />
     <node concept="2qS95e" id="5R1$QENteus" role="2q6JFM">
       <property role="2qS95d" value="0" />
       <property role="2qS95b" value="124" />

@@ -2,6 +2,7 @@
 <dependenciesRoot>
   <dependency className="ActionCards.generator.templates.QueriesGenerated">
     <classNode dependClassName="ActionCards.behavior.Action__BehaviorDescriptor" />
+    <classNode dependClassName="ActionCards.behavior.DiseaseSymptom__BehaviorDescriptor" />
     <classNode dependClassName="AgentLanguage.behavior.RoomType__BehaviorDescriptor" />
     <classNode dependClassName="DiseaseModel.behavior.DiseaseStatus__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Iterable" />
