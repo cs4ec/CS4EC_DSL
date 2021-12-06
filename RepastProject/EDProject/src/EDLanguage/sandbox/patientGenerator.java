@@ -42,6 +42,12 @@ public class patientGenerator extends AgentGenerator {
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSusceptibleUnvaccinated")) {
+      a.COVID = "SusceptibleUnvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSusceptibleVaccinated")) {
+      a.COVID = "SusceptibleVaccinated";
+    }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDAsymptomaticVaccinated")) {
       a.COVID = "AsymptomaticVaccinated";
     }
@@ -54,17 +60,17 @@ public class patientGenerator extends AgentGenerator {
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDSymptomaticVaccinated")) {
       a.COVID = "SymptomaticVaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAAsymptomaticVaccinated")) {
-      a.FluA = "AsymptomaticVaccinated";
-    }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluASusceptibleVaccinated")) {
       a.FluA = "SusceptibleVaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBAsymptomaticVaccinated")) {
-      a.FluB = "AsymptomaticVaccinated";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAAsymptomaticVaccinated")) {
+      a.FluA = "AsymptomaticVaccinated";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBSusceptibleVaccinated")) {
       a.FluB = "SusceptibleVaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBAsymptomaticVaccinated")) {
+      a.FluB = "AsymptomaticVaccinated";
     }
 
     b.PushMission(sendSignalTemp);

@@ -14,24 +14,28 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActionStep;
   private ConceptPresentation props_AdmissionAction;
   private ConceptPresentation props_Attribute;
-  private ConceptPresentation props_AttributeCondition;
   private ConceptPresentation props_AttributeLine;
   private ConceptPresentation props_AttributeTable;
   private ConceptPresentation props_Branch;
+  private ConceptPresentation props_BranchConditional;
   private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_Disease;
-  private ConceptPresentation props_DiseasePrevalenceLine;
-  private ConceptPresentation props_DiseasePrevalenceTable;
   private ConceptPresentation props_DiseaseSymptom;
   private ConceptPresentation props_DiseaseSymptomReference;
   private ConceptPresentation props_DiseaseTest;
   private ConceptPresentation props_EDScenario;
-  private ConceptPresentation props_GoToAction;
+  private ConceptPresentation props_FullyVaccinated;
+  private ConceptPresentation props_IPatientProperty;
+  private ConceptPresentation props_InfectionStatusCondition;
+  private ConceptPresentation props_InfectionStatusProperty;
   private ConceptPresentation props_ObservationTest;
   private ConceptPresentation props_ObservationsCondition;
+  private ConceptPresentation props_PartiallyVaccinated;
   private ConceptPresentation props_PatientArrivalLine;
   private ConceptPresentation props_PatientArrivals;
   private ConceptPresentation props_PatientProfile;
+  private ConceptPresentation props_PatientPropertyConditional;
+  private ConceptPresentation props_PatientPropertyReference;
   private ConceptPresentation props_ProcessingTimeLine;
   private ConceptPresentation props_ProcessingTimeTable;
   private ConceptPresentation props_Resource;
@@ -41,6 +45,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SymptomList;
   private ConceptPresentation props_Test;
   private ConceptPresentation props_TestCapturedDisease;
+  private ConceptPresentation props_Unvaccinated;
+  private ConceptPresentation props_VaccinationStatus;
+  private ConceptPresentation props_VaccineStatusCondition;
+  private ConceptPresentation props_VaccineStatusProperty;
   private ConceptPresentation props_Variable;
 
   @Override
@@ -86,13 +94,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Attribute = cpb.create();
         }
         return props_Attribute;
-      case LanguageConceptSwitch.AttributeCondition:
-        if (props_AttributeCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("check the value of a patient attribute");
-          props_AttributeCondition = cpb.create();
-        }
-        return props_AttributeCondition;
       case LanguageConceptSwitch.AttributeLine:
         if (props_AttributeLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -103,7 +104,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.AttributeTable:
         if (props_AttributeTable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
+          cpb.rawPresentation("AttributeTable");
           props_AttributeTable = cpb.create();
         }
         return props_AttributeTable;
@@ -115,6 +116,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Branch = cpb.create();
         }
         return props_Branch;
+      case LanguageConceptSwitch.BranchConditional:
+        if (props_BranchConditional == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("BranchConditional");
+          props_BranchConditional = cpb.create();
+        }
+        return props_BranchConditional;
       case LanguageConceptSwitch.DiagnosticCondition:
         if (props_DiagnosticCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -129,20 +137,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Disease = cpb.create();
         }
         return props_Disease;
-      case LanguageConceptSwitch.DiseasePrevalenceLine:
-        if (props_DiseasePrevalenceLine == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("DiseasePrevalenceLine");
-          props_DiseasePrevalenceLine = cpb.create();
-        }
-        return props_DiseasePrevalenceLine;
-      case LanguageConceptSwitch.DiseasePrevalenceTable:
-        if (props_DiseasePrevalenceTable == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("DiseasePrevalenceTable");
-          props_DiseasePrevalenceTable = cpb.create();
-        }
-        return props_DiseasePrevalenceTable;
       case LanguageConceptSwitch.DiseaseSymptom:
         if (props_DiseaseSymptom == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -172,13 +166,33 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EDScenario = cpb.create();
         }
         return props_EDScenario;
-      case LanguageConceptSwitch.GoToAction:
-        if (props_GoToAction == null) {
+      case LanguageConceptSwitch.FullyVaccinated:
+        if (props_FullyVaccinated == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Go to a place");
-          props_GoToAction = cpb.create();
+          cpb.rawPresentation("fully vaccinated");
+          props_FullyVaccinated = cpb.create();
         }
-        return props_GoToAction;
+        return props_FullyVaccinated;
+      case LanguageConceptSwitch.IPatientProperty:
+        if (props_IPatientProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IPatientProperty = cpb.create();
+        }
+        return props_IPatientProperty;
+      case LanguageConceptSwitch.InfectionStatusCondition:
+        if (props_InfectionStatusCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("check infection status of a patient");
+          props_InfectionStatusCondition = cpb.create();
+        }
+        return props_InfectionStatusCondition;
+      case LanguageConceptSwitch.InfectionStatusProperty:
+        if (props_InfectionStatusProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Infection Status");
+          props_InfectionStatusProperty = cpb.create();
+        }
+        return props_InfectionStatusProperty;
       case LanguageConceptSwitch.ObservationTest:
         if (props_ObservationTest == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -193,6 +207,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObservationsCondition = cpb.create();
         }
         return props_ObservationsCondition;
+      case LanguageConceptSwitch.PartiallyVaccinated:
+        if (props_PartiallyVaccinated == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("partially vaccinated");
+          props_PartiallyVaccinated = cpb.create();
+        }
+        return props_PartiallyVaccinated;
       case LanguageConceptSwitch.PatientArrivalLine:
         if (props_PatientArrivalLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -215,6 +236,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientProfile = cpb.create();
         }
         return props_PatientProfile;
+      case LanguageConceptSwitch.PatientPropertyConditional:
+        if (props_PatientPropertyConditional == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("patient property");
+          props_PatientPropertyConditional = cpb.create();
+        }
+        return props_PatientPropertyConditional;
+      case LanguageConceptSwitch.PatientPropertyReference:
+        if (props_PatientPropertyReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0a06L, 0x18668ef270ed0a07L, "property", "", "");
+          props_PatientPropertyReference = cpb.create();
+        }
+        return props_PatientPropertyReference;
       case LanguageConceptSwitch.ProcessingTimeLine:
         if (props_ProcessingTimeLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -280,6 +315,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TestCapturedDisease = cpb.create();
         }
         return props_TestCapturedDisease;
+      case LanguageConceptSwitch.Unvaccinated:
+        if (props_Unvaccinated == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Unvaccinated");
+          props_Unvaccinated = cpb.create();
+        }
+        return props_Unvaccinated;
+      case LanguageConceptSwitch.VaccinationStatus:
+        if (props_VaccinationStatus == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("VaccinationStatus");
+          props_VaccinationStatus = cpb.create();
+        }
+        return props_VaccinationStatus;
+      case LanguageConceptSwitch.VaccineStatusCondition:
+        if (props_VaccineStatusCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("check vaccine status of patient");
+          props_VaccineStatusCondition = cpb.create();
+        }
+        return props_VaccineStatusCondition;
+      case LanguageConceptSwitch.VaccineStatusProperty:
+        if (props_VaccineStatusProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Vaccine status");
+          props_VaccineStatusProperty = cpb.create();
+        }
+        return props_VaccineStatusProperty;
       case LanguageConceptSwitch.Variable:
         if (props_Variable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

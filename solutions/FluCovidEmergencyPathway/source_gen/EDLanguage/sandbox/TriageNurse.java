@@ -175,7 +175,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Symptomatic") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0f0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -192,7 +192,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Symptomatic") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0g0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -209,7 +209,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Symptomatic") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0h0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -226,7 +226,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Positive") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Negative") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0i0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -243,7 +243,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Negative") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Positive") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0j0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -363,7 +363,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Symptomatic") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0f0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -402,7 +402,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Symptomatic") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0g0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -441,7 +441,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Symptomatic") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0h0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -480,7 +480,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Positive") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Negative") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0i0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -500,7 +500,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new GotoRespiratoryAreaTrigger_a0Signal();
+      sendSignalTemp = new GotononrespiratoryTrigger_a0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -516,7 +516,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new GotoRespiratoryAreaTrigger_a0Signal();
+      sendSignalTemp = new GotononrespiratoryTrigger_a0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -529,7 +529,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Negative") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).TriagingToolResult == "Positive") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0j0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -549,7 +549,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new GotononrespiratoryTrigger_b0Signal();
+      sendSignalTemp = new GotoRespiratoryAreaTrigger_b0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -565,7 +565,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new GotononrespiratoryTrigger_b0Signal();
+      sendSignalTemp = new GotoRespiratoryAreaTrigger_b0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);

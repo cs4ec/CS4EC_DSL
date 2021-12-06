@@ -67,12 +67,12 @@ public class CubicleNurse extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "GotoRespiratoryAreaTrigger_a0":
-        behaviourBuilder = new Behaviour("GotoRespiratoryAreaTrigger_a0");
+      case "GotoRespiratoryAreaTrigger_b0":
+        behaviourBuilder = new Behaviour("GotoRespiratoryAreaTrigger_b0");
         this.InitGotoRespiratoryArea_b(s);
         break;
-      case "GotononrespiratoryTrigger_b0":
-        behaviourBuilder = new Behaviour("GotononrespiratoryTrigger_b0");
+      case "GotononrespiratoryTrigger_a0":
+        behaviourBuilder = new Behaviour("GotononrespiratoryTrigger_a0");
         this.InitGotononrespiratory_g(s);
         break;
       case "DoLFDTrigger_a1":
@@ -322,10 +322,26 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class SendSignalAction_c0b extends BehaviourStep {
+  public class StayAction_c0b extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 120;
+    }
+  }
+  public class SendSignalAction_d0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_c0b(Behaviour behaviour) {
+    public SendSignalAction_d0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -338,10 +354,10 @@ public class CubicleNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_d0b extends BehaviourStep {
+  public class StayAction_e0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0b(Behaviour behaviour) {
+    public StayAction_e0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -397,10 +413,26 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class SendSignalAction_c0b_1 extends BehaviourStep {
+  public class StayAction_c0b_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0b_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 120;
+    }
+  }
+  public class SendSignalAction_d0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_c0b_1(Behaviour behaviour) {
+    public SendSignalAction_d0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -413,10 +445,10 @@ public class CubicleNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_d0b_1 extends BehaviourStep {
+  public class StayAction_e0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0b_1(Behaviour behaviour) {
+    public StayAction_e0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -512,7 +544,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -530,7 +562,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -548,7 +580,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0g0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -692,7 +724,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -870,7 +902,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0f0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1048,7 +1080,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0g0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1416,7 +1448,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1434,7 +1466,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0f0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1452,7 +1484,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0g0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1596,7 +1628,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVID == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1774,7 +1806,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluA == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0f0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1952,7 +1984,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluB == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0g0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2296,36 +2328,38 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 60;
     }
   }
-  public class SendSignalAction_d0e extends BehaviourStep {
+  public class Choice_d0e extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_d0e(Behaviour behaviour) {
+    public Choice_d0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoFluBayTrigger_a01Signal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAVaccineStatus == "<Unvaccinated>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0d0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
-  public class SendSignalAction_e0e extends BehaviourStep {
+  public class Choice_e0e extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_e0e(Behaviour behaviour) {
+    public Choice_e0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittosideroomTrigger_b01Signal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "<Unvaccinated>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0e0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
   public class StayAction_f0e extends BehaviourStep {
@@ -2403,10 +2437,27 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 60;
     }
   }
-  public class SendSignalAction_d0e_1 extends BehaviourStep {
+  public class Choice_d0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_d0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAVaccineStatus == "<Unvaccinated>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0d0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0d0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_d0e_1(Behaviour behaviour) {
+    public SendSignalAction_a0d0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2419,10 +2470,59 @@ public class CubicleNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_e0e_1 extends BehaviourStep {
+  public class SendSignalAction_a0d0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_e0e_1(Behaviour behaviour) {
+    public SendSignalAction_a0d0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoFluBayTrigger_a01Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class Choice_e0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_e0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "<Unvaccinated>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0e0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0e0e extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0e0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittosideroomTrigger_b01Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0e0e_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0e0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2471,8 +2571,9 @@ public class CubicleNurse extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0b_3(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0b(behaviourBuilder));
-    plstSteps.add(new StayAction_d0b(behaviourBuilder));
+    plstSteps.add(new StayAction_c0b(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_d0b(behaviourBuilder));
+    plstSteps.add(new StayAction_e0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2520,8 +2621,8 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new MoveAction_a0e_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0e_3(behaviourBuilder));
     plstSteps.add(new StayAction_c0e(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_d0e(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_e0e(behaviourBuilder));
+    plstSteps.add(new Choice_d0e(behaviourBuilder));
+    plstSteps.add(new Choice_e0e(behaviourBuilder));
     plstSteps.add(new StayAction_f0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

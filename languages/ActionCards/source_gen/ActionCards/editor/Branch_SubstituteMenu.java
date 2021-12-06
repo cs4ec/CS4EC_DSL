@@ -90,7 +90,7 @@ public class Branch_SubstituteMenu extends SubstituteMenuBase {
       public SNode createNode(@NotNull String pattern) {
         SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
         SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, ((SNode) _context.getParentNode()));
-        SPropertyOperations.assign(newBranch, PROPS.fromPort$vu09, "FEHI");
+        SPropertyOperations.assign(newBranch, PROPS.fromPort$vu09, "");
         SLinkOperations.setTarget(newBranch, LINKS.condition$UnEW, null);
         return newBranch;
       }

@@ -146,10 +146,10 @@
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.GotoRespiratoryAreaTrigger_a0Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.GotoRespiratoryAreaTrigger_b0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.GotononrespiratoryTrigger_b0Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.GotononrespiratoryTrigger_a0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.LFD">
@@ -235,8 +235,8 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.TriageNurse">
-    <classNode dependClassName="EDLanguage.sandbox.GotoRespiratoryAreaTrigger_a0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.GotononrespiratoryTrigger_b0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.GotoRespiratoryAreaTrigger_b0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.GotononrespiratoryTrigger_a0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.TriagingTool" />

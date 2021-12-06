@@ -4,6 +4,24 @@
   <delimiter>,</delimiter>
   <format>TABULAR</format>
   <sourceIds class="linked-hash-set">
+    <string>patientgetCOVIDVaccineStatusisUnvaccinated</string>
+    <string>patientgetCOVIDVaccineStatusispartiallyvaccinated</string>
+    <string>patientgetCOVIDVaccineStatusisfullyvaccinated</string>
+    <string>patientgetFluAVaccineStatusisUnvaccinated</string>
+    <string>patientgetFluAVaccineStatusispartiallyvaccinated</string>
+    <string>patientgetFluAVaccineStatusisfullyvaccinated</string>
+    <string>patientgetFluBVaccineStatusisUnvaccinated</string>
+    <string>patientgetFluBVaccineStatusispartiallyvaccinated</string>
+    <string>patientgetFluBVaccineStatusisfullyvaccinated</string>
+    <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
+    <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
+    <string>patientgetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetFluAInfectionStatusisSymptomatic</string>
+    <string>patientgetFluAInfectionStatusisAsymptomatic</string>
+    <string>patientgetFluAInfectionStatusisSusceptible</string>
+    <string>patientgetFluBInfectionStatusisSymptomatic</string>
+    <string>patientgetFluBInfectionStatusisAsymptomatic</string>
+    <string>patientgetFluBInfectionStatusisSusceptible</string>
     <string>patientgetLFDCOVIDResultisPositive</string>
     <string>patientgetLFDCOVIDResultisNegative</string>
     <string>patientgetLFDFluAResultisPositive</string>
@@ -16,12 +34,6 @@
     <string>patientgetLIATFluAResultisNegative</string>
     <string>patientgetLIATFluBResultisPositive</string>
     <string>patientgetLIATFluBResultisNegative</string>
-    <string>patientgetCOVIDisAsymptomatic</string>
-    <string>patientgetCOVIDisSymptomatic</string>
-    <string>patientgetFluAisAsymptomatic</string>
-    <string>patientgetFluAisSusceptible</string>
-    <string>patientgetFluBisAsymptomatic</string>
-    <string>patientgetFluBisSusceptible</string>
     <string>patientgetadmittedToisCOVIDPositiveCohort</string>
     <string>patientgetadmittedToisFluPositiveCohort</string>
     <string>patientgetadmittedToisNonRespiratoryCohort</string>

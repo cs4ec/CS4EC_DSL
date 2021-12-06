@@ -10,25 +10,96 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6cb34ac-6283-4417-93b4-3970d05c4a6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/DiseaseSymptom__BehaviorDescriptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/CheckVaccineStatusTrigger_b7Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/NonRespiratoryCohort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/actions/ActionAspectDescriptorImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/actions/PatientPropertyTableUpdater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/InfectionStatusProperty__BehaviorDescriptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/VaccineStatusProperty__BehaviorDescriptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/Branch_Constraints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/FullyVaccinated_Constraints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/InfectionStatusCondition_Constraints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/PartiallyVaccinated_Constraints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/PatientPropertyConditional_Constraints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/VaccinationStatus_Constraints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/VaccineStatusCondition_Constraints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_FullyVaccinated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_IPatientProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_InfectionStatusCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_InfectionStatusProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_PartiallyVaccinated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_PatientPropertyConditional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_PatientPropertyReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_VaccinationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/InfectionStatusCondition_Editor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/InfectionStatusCondition_TransformationMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/InfectionStatusProperty_EditorBuilder_a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/PatientPropertyConditional_Editor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/PatientPropertyConditional_EditorBuilder_a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/PatientPropertyReference_Editor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/PatientPropertyReference_EditorBuilder_a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/PatientPropertyReference_SubstituteMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/VaccinationStatus_EditorBuilder_a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/VaccineStatusCondition_EditorBuilder_a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/VaccineStatusCondition_TransformationMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/VaccineStatusProperty_EditorBuilder_a.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/typeof_PatientPropertyConditional_InferenceRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/typeof_Unvaccinated_InferenceRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/typeof_VaccinationStatus_InferenceRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/typeof_VaccineStatusCondition_InferenceRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/typesystem/typeof_InfectionStatus_InferenceRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/parameters.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/patientGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/patientGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/ActionCards.mpl" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/ActionCards.mpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/Language.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/actions/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/actions/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/behavior/BehaviorAspectDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/behavior/BehaviorAspectDescriptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/behavior/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/behavior/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_EditorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_EditorBuilder_a.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_InspectorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_InspectorBuilder_a.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_diagram_InspectorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_diagram_InspectorBuilder_a.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/ConstraintsAspectDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/ConstraintsAspectDescriptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/GoToAction_Constraints$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/GoToAction_Constraints$CONCEPTS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/GoToAction_Constraints.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/constraints/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$LINKS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a$LINKS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/AttributeTable_EditorBuilder_a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_SubstituteMenu$SMP_Action_knnu0b_a$Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_SubstituteMenu$SMP_Action_knnu0b_a$Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_TransformationMenu$TMP_IncludeSM_uvl9lu_a0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Branch_TransformationMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Disease_EditorBuilder_a$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Disease_EditorBuilder_a$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Disease_EditorBuilder_a$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Disease_EditorBuilder_a$CONCEPTS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Disease_EditorBuilder_a$PROPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Disease_EditorBuilder_a$PROPS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Disease_EditorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Disease_EditorBuilder_a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EditorAspectDescriptorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EditorAspectDescriptorImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GoToAction_Editor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GoToAction_EditorBuilder_a$LINKS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GoToAction_EditorBuilder_a$destinationSingleRoleHandler_thixyh_b0.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GoToAction_EditorBuilder_a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarCellsSubstituteMenu_GoToAction$CONCEPTS.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarCellsSubstituteMenu_GoToAction$GrammarCellsSubstituteMenuPart_ubntga_a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarCellsSubstituteMenu_GoToAction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/ConceptPresentationAspectImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/ConceptPresentationAspectImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/LanguageConceptSwitch.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/LanguageConceptSwitch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/StructureAspectDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/StructureAspectDescriptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/typesystem/TypesystemDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/typesystem/TypesystemDescriptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/typesystem/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/typesystem/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/typesystem/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/typesystem/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$4$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/classes_gen/ActionCards/generator/templates/QueriesGenerated$CONCEPTS.class" afterDir="false" />
@@ -50,34 +121,127 @@
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/source_gen/ActionCards/generator/templates/QueriesGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/source_gen/ActionCards/generator/templates/QueriesGenerated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/source_gen/ActionCards/generator/templates/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/source_gen/ActionCards/generator/templates/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.actions.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.actions.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.behavior.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.behavior.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.constraints.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.constraints.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.editor.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.structure.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.typesystem.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/models/ActionCards.typesystem.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/actions/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/actions/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/actions/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/actions/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/behavior/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/behavior/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/behavior/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/behavior/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/constraints/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/constraints/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/constraints/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/constraints/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/editor/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/editor/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/editor/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/editor/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/structure/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/structure/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/typesystem/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/typesystem/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/typesystem/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/typesystem/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/actions/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/actions/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/AttributeCondition__BehaviorDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/PatientPropertyConditional__BehaviorDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/AttributeLine__BehaviorDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/IPatientProperty__BehaviorDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/AttributeTable__BehaviorDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/VaccinationStatus__BehaviorDescriptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/BehaviorAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/BehaviorAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/DiseasePrevalenceLine__BehaviorDescriptor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/behavior/trace.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_EditorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_InspectorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_InspectorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_diagram_InspectorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_diagram_InspectorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/DiseaseTest_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/DiseaseTest_EditorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarActionsDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarActionsDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/ObservationTest_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/ObservationTest_EditorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/SymptomList_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/SymptomList_EditorBuilder_a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/AttributeCondition_Constraints.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/ConstraintsAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/ConstraintsAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/GoToAction_Constraints.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/Unvaccinated_Constraints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/constraints/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/AttributeCondition_Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/InfectionStatusProperty_Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/AttributeCondition_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/InfectionStatusCondition_EditorBuilder_a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/AttributeLine_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/AttributeLine_EditorBuilder_a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/AttributeTable_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/AttributeTable_EditorBuilder_a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_SubstituteMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_SubstituteMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Branch_TransformationMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/DiseasePrevalenceLine_Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/VaccineStatusProperty_Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/DiseasePrevalenceLine_EditorBuilder_a.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/DiseasePrevalenceTable_Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/VaccineStatusCondition_Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/DiseasePrevalenceTable_EditorBuilder_a.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Disease_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Disease_EditorBuilder_a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/EditorAspectDescriptorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/EditorAspectDescriptorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GoToAction_Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/VaccinationStatus_Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GoToAction_EditorBuilder_a.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_AttributeCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_BranchConditional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_DiseasePrevalenceLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_VaccineStatusProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_DiseasePrevalenceTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_VaccineStatusCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_GoToAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarCellsSubstituteMenu_Unvaccinated.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/ConceptPresentationAspectImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/ConceptPresentationAspectImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/LanguageConceptSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/LanguageConceptSwitch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/StructureAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/StructureAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/TypesystemDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/TypesystemDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/typesystem/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$CONCEPTS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$IfMC.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$IfMC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$LINKS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$LINKS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$PROPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$PROPS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$PVQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$PVQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$RRC.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$RRC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$RTQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$RTQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$SNQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$SNQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$SNsQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$SNsQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/AgentLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/AgentLanguage/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/main/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/main/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/main/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/main/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen/main/QueriesGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen/main/QueriesGenerated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen/main/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen/main/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/templates/main@generator.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/templates/main@generator.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/DiseaseModel.mpl" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/DiseaseModel.mpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/models/DiseaseModel.behavior.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/models/DiseaseModel.behavior.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/models/DiseaseModel.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/models/DiseaseModel.structure.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/models/DiseaseModel.typesystem.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/models/DiseaseModel.typesystem.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/behavior/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/behavior/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/behavior/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/behavior/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/structure/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/structure/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/typesystem/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/typesystem/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/typesystem/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen.caches/DiseaseModel/typesystem/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/Language.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/behavior/BehaviorAspectDescriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/behavior/DiseaseStatus__BehaviorDescriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/behavior/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/behavior/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/structure/StructureAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/structure/StructureAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/structure/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/typesystem/TypesystemDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/typesystem/TypesystemDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/typesystem/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/typesystem/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/typesystem/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/DiseaseModel/source_gen/DiseaseModel/typesystem/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/EDRuntime_EDProject/lib/simcore.jar" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDRuntime_EDProject/lib/simcore.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/FluCovidEmergencyPathway.msd" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/FluCovidEmergencyPathway.msd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen.caches/FluCovidEmergencyPathway/AC1/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen.caches/FluCovidEmergencyPathway/AC1/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen.caches/FluCovidEmergencyPathway/AC1/generated" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen.caches/FluCovidEmergencyPathway/AC1/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/CheckVaxStatusTrigger_b7Signal.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/CubicleNurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/CubicleNurse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LFD.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LFD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LIAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/Triage.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriagingTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/GotoRespiratoryAreaTrigger_a0Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/GotoRespiratoryAreaTrigger_b0Signal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/GotononrespiratoryTrigger_b0Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/GotononrespiratoryTrigger_a0Signal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageNurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageNurse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/patientGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/patientGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/parameters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/repast.simphony.action.data_set_patient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/repast.simphony.action.data_set_patient.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/repast.simphony.action.file_sink_patient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/repast.simphony.action.file_sink_patient.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/trace.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +263,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="79acddc8-d9e7-46af-ae3a-908d676a8dc5/r:bd47cbf7-76f2-4a5c-84f8-1be38ab3c9ed(TempModule79acddc8-d9e7-46af-ae3a-908d676a8dc5/ConsoleModel_188161528158400)">
+            <model ref="f8e8e748-9d54-4cef-a866-4a9e9408b8c0/r:331bb2a7-4cca-4f8f-8079-937467d12ce5(TempModulef8e8e748-9d54-4cef-a866-4a9e9408b8c0/ConsoleModel_1444552002345200)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -119,11 +283,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="5R1$QEN9cRg">
-                <node concept="3balQm" id="5R1$QEN9cRh" role="aymYE" />
-                <node concept="2Clz$F" id="5R1$QEN9cRi" role="aymYO" />
-                <node concept="2_V_lH" id="5R1$QEN9cRj" role="1PhJh3">
-                  <ref role="2_V_lI" node="5R1$QEN9cRi" resolve="CommandHolder" />
+              <node concept="aymSD" id="1xAzJ9Lamg1">
+                <node concept="3balQm" id="1xAzJ9Lamg2" role="aymYE" />
+                <node concept="2Clz$F" id="1xAzJ9Lamg3" role="aymYO" />
+                <node concept="2_V_lH" id="1xAzJ9Lamg4" role="1PhJh3">
+                  <ref role="2_V_lI" node="1xAzJ9Lamg3" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -558,6 +722,281 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" />
     <panes>
+      <pane id="CustomProjectView_com.mbeddr.mpsutil.favourites.plugin.plugin.FavouritesProjectView">
+        <subPane />
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="People" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgentLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/AgentLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgentLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:c8c492d8-f3d4-4a6d-8ddc-9a212ba71ebe(AgentLanguage.textGen) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/AgentLanguage/models/AgentLanguage.textGen.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Modules Pool" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/DiseaseModel/models/DiseaseModel.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:30217dbd-9533-41ef-b6a7-ddd037873326(DiseaseModel.behavior) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/DiseaseModel/models/DiseaseModel.behavior.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgentLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/AgentLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actors" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="attribute" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AgentLanguage#01" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/AgentLanguage/generator/templates/main@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actors" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <SELECTED>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </SELECTED>
+        </subPane>
+      </pane>
       <pane id="FileSystem">
         <subPane>
           <expand>
@@ -605,242 +1044,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AgentLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards.generator" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards.generator" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AgentLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/AgentLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AgentLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/AgentLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actors" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards.generator" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EDLanguage" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="29af8eae-5649-40f8-acdf-a1edf032cb72" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <SELECTED>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AgentLanguage#01" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/AgentLanguage/generator/templates/main@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="actors" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="8149202941034856766" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </SELECTED>
-        </subPane>
-      </pane>
       <pane id="Scope" />
       <pane id="CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer">
         <subPane />
       </pane>
       <pane id="CustomProjectView_org.iets3.core.expr.doc.plugin.plugin.BookmarkExplorer">
-        <subPane />
-      </pane>
-      <pane id="CustomProjectView_com.mbeddr.mpsutil.favourites.plugin.plugin.FavouritesProjectView">
         <subPane />
       </pane>
       <pane id="CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer">
@@ -864,11 +1072,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/MPSSamples 2020.3/calculator-tutorial" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.generationSettings" />
   </component>
-  <component name="RunManager" selected="Java Application.Node Sanda12.www.MyRunner (1)">
+  <component name="RunManager" selected="MPS.Debug MPS from MPS">
     <configuration name="All Tests in Project" type="JUnit Tests" factoryName="JUnit Tests">
       <myJUnitSettings>
         <MyState>
@@ -1057,6 +1265,25 @@
         <option name="jetbrains.mps.execution.configurations.pluginSolution.plugin.MakeNodePointers_BeforeTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Debug MPS from MPS" type="MPS" factoryName="MPS Instance">
+      <myMpsSettings>
+        <MyState>
+          <option name="myVmOptions" value="" />
+          <option name="myJrePath" value="" />
+          <option name="mySettingsPath" value="$USER_HOME$/AppData/Roaming/JetBrains/MPSInstanceRC" />
+        </MyState>
+      </myMpsSettings>
+      <myPluginsSettings>
+        <MyState>
+          <option name="myPluginsToDeploy">
+            <list />
+          </option>
+        </MyState>
+      </myPluginsSettings>
+      <method v="2">
+        <option name="jetbrains.mps.execution.configurations.implementation.plugin.plugin.AssemblePluginsBeforeTask_BeforeTask" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit Tests.All Tests in Project" />
       <item itemvalue="Java Application.Node EDLanguage.Runner.RepastMain.MyRunner" />
@@ -1065,13 +1292,14 @@
       <item itemvalue="Java Application.Node Sanda12.www.MyRunner" />
       <item itemvalue="Java Application.Node sand2.aaa.HelloTest" />
       <item itemvalue="Java Application.Node sand2.aaa.MyRunner" />
+      <item itemvalue="MPS.Debug MPS from MPS" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Java Application.Node Sanda12.www.MyRunner (1)" />
         <item itemvalue="Java Application.Node sand2.aaa.MyRunner" />
         <item itemvalue="Java Application.Node sand2.aaa.HelloTest" />
         <item itemvalue="Java Application.Node Sanda12.www.MyRunner" />
+        <item itemvalue="Java Application.Node Sanda12.www.MyRunner (1)" />
         <item itemvalue="Java Application.Node EDLanguage.Runner.RepastMain.MyRunner" />
       </list>
     </recent_temporary>
@@ -1087,13 +1315,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587360015058</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Implement more complex pathway with PCR tests">
-      <created>1611186839924</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1611186839924</updated>
     </task>
     <task id="LOCAL-00011" summary="Clean direct signal code generation">
       <created>1611315701602</created>
@@ -1431,7 +1652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636744146220</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Clean up demo case study">
+      <created>1636842806609</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1636842806620</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="UsagesViewTool">
@@ -1446,157 +1674,6 @@
         <query>
           <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
           <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-            <node ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/8149202941056073908" title="AttributeMonitor" />
-          </holder>
-        </query>
-        <usage_view>
-          <tree_wrapper>
-            <view_options>
-              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
-            </view_options>
-            <contents caption="" excluded="false" isresult="false" results_section="false">
-              <role name="main root" />
-              <child caption="Searched nodes" excluded="false" isresult="false" results_section="false">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" />
-                <role name="searched nodes" />
-                <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="AgentLanguage" excluded="false" isresult="false" results_section="false" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="AgentLanguage.structure" excluded="false" isresult="false" results_section="false">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="AttributeMonitor" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/8149202941056073908" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-              <child caption="Usages" excluded="false" isresult="false" results_section="true">
-                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" />
-                <role name="results" />
-                <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
-                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
-                  <role name="category:Category" />
-                  <child caption="AgentLanguage" excluded="false" isresult="false" results_section="true" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="AgentLanguage.editor" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="AttributeMonitor_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(AgentLanguage.editor)/8149202941056073929" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                      </child>
-                      <model uid="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(AgentLanguage.editor)" />
-                    </child>
-                    <child caption="AgentLanguage.structure" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="Actor" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/3838812034270454385" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="attributeMonitors" info="(role: linkDeclaration in: Actor)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/8149202941058079945">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" />
-                    </child>
-                  </child>
-                  <child caption="AgentLanguage#01" excluded="false" isresult="false" results_section="true" module_ref="7b52bc0f-0af6-4ced-b84b-e851110576df(AgentLanguage#01)">
-                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
-                    <role name="module" />
-                    <child caption="main@generator" excluded="false" isresult="false" results_section="true">
-                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
-                      <role name="model" />
-                      <child caption="main" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3838812034270454302" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="map AttributeMonitor" info="(role: rootMappingRule in: main)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941067109318">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                        <child caption="reduce AttributeMonitor" info="(role: reductionMappingRule in: main)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941056074016">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <child caption="reduce_AttributeGetterGenerator" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941056074014" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
-                        <child caption="_class_" info="(role: contentNode in: reduce_AttributeGetterGenerator)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941056074464">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="getterMethod():int" info="(role: member in: _class_)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941056074466">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="root to target" />
-                            <child caption="AttributeMonitor" info="(role: conceptArgument in: concept)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941056092242">
-                              <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                              <role name="target" />
-                            </child>
-                            <child caption="AttributeMonitor" info="(role: conceptArgument in: concept)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941056088004">
-                              <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                              <role name="target" />
-                            </child>
-                          </child>
-                        </child>
-                      </child>
-                      <child caption="repast.simphony.action.data_set_0.xml" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941066874468" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="one" info="(role: words in: &gt;)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941066881135">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="AttributeMonitor" info="(role: conceptArgument in: concept)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941072118532">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="one" info="(role: words in: &gt;)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941066886962">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="AttributeMonitor" info="(role: conceptArgument in: concept)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941072121207">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="ordinal" info="(role: words in: &gt;)" excluded="false" isresult="false" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941072079179">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="root to target" />
-                          <child caption="AttributeMonitor" info="(role: conceptArgument in: concept)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941072122416">
-                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                            <role name="target" />
-                          </child>
-                        </child>
-                        <child caption="RootTemplateAnnotation" info="(role: smodelAttribute in: repast.simphony.action.data_set_0.xml)" excluded="false" isresult="true" results_section="true" nodePtr="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/8149202941066874470">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <model uid="r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)" />
-                    </child>
-                  </child>
-                </child>
-              </child>
-            </contents>
-          </tree_wrapper>
-        </usage_view>
-      </tab>
-      <tab>
-        <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
-          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
-            <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
-          </child>
-        </result_provider>
-        <query>
-          <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
-          <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
             <node ref="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/2985733650882078143" title="ProcesssingTimeTableToTimeDistribution" />
           </holder>
         </query>
@@ -3128,6 +3205,100 @@
                         </child>
                       </child>
                       <model uid="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)" />
+                    </child>
+                  </child>
+                </child>
+              </child>
+            </contents>
+          </tree_wrapper>
+        </usage_view>
+      </tab>
+      <tab>
+        <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
+          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
+            <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
+          </child>
+        </result_provider>
+        <query>
+          <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
+          <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
+            <node ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/513408552829815467" title="ActorReference" />
+          </holder>
+        </query>
+        <usage_view>
+          <tree_wrapper>
+            <view_options>
+              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
+            </view_options>
+            <contents caption="" excluded="false" isresult="false" results_section="false">
+              <role name="main root" />
+              <child caption="Searched nodes" excluded="false" isresult="false" results_section="false">
+                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" />
+                <role name="searched nodes" />
+                <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
+                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
+                  <role name="category:Category" />
+                  <child caption="AgentLanguage" excluded="false" isresult="false" results_section="false" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)">
+                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
+                    <role name="module" />
+                    <child caption="AgentLanguage.structure" excluded="false" isresult="false" results_section="false">
+                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
+                      <role name="model" />
+                      <child caption="ActorReference" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/513408552829815467" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="target" />
+                      </child>
+                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" />
+                    </child>
+                  </child>
+                </child>
+              </child>
+              <child caption="Usages" excluded="false" isresult="false" results_section="true">
+                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" />
+                <role name="results" />
+                <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
+                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
+                  <role name="category:Category" />
+                  <child caption="AgentLanguage" excluded="false" isresult="false" results_section="true" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)">
+                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
+                    <role name="module" />
+                    <child caption="AgentLanguage.editor" excluded="false" isresult="false" results_section="true">
+                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
+                      <role name="model" />
+                      <child caption="ActorReference_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(AgentLanguage.editor)/513408552830889054" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="target" />
+                      </child>
+                      <model uid="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(AgentLanguage.editor)" />
+                    </child>
+                    <child caption="AgentLanguage.structure" excluded="false" isresult="false" results_section="true">
+                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
+                      <role name="model" />
+                      <child caption="AgentGenerator" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/7169358838266389176" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="AgentType" info="(role: linkDeclaration in: AgentGenerator)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/768972137576841584">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                        <child caption="Notify" info="(role: linkDeclaration in: AgentGenerator)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/8149202941029156481">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                      </child>
+                      <child caption="Signal" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/513408552829743914" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="senders" info="(role: linkDeclaration in: Signal)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/4211260315489209511">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                        <child caption="receivers" info="(role: linkDeclaration in: Signal)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/88285669848655863">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                      </child>
+                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" />
                     </child>
                   </child>
                 </child>
@@ -3142,7 +3313,6 @@
     </default_view_options>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="(IN PROGRESS) Refactor generator to directly generate agent actions as inner classes" />
     <MESSAGE value="(IN PROGRESS) Finish refactor generator to directly generate agent actions as inner classes" />
     <MESSAGE value="Refactor conditionals inside Behaviours and incl remove conditionals taking a timestep" />
     <MESSAGE value="Generate new access token" />
@@ -3167,7 +3337,8 @@
     <MESSAGE value="Add generator for parameters and data sinks, file simks" />
     <MESSAGE value="Add disease symptoms and observational tests" />
     <MESSAGE value="Implement ED map. Fix parameter generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement ED map. Fix parameter generation" />
+    <MESSAGE value="Clean up demo case study" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up demo case study" />
   </component>
   <component name="mpsMakeService">
     <option name="makeInBackground" value="true" />

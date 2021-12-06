@@ -13,11 +13,12 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myPatientProfile__BehaviorDescriptor = new PatientProfile__BehaviorDescriptor();
-  private final BHDescriptor myAttributeTable__BehaviorDescriptor = new AttributeTable__BehaviorDescriptor();
-  private final BHDescriptor myAttributeLine__BehaviorDescriptor = new AttributeLine__BehaviorDescriptor();
-  private final BHDescriptor myDiseasePrevalenceLine__BehaviorDescriptor = new DiseasePrevalenceLine__BehaviorDescriptor();
+  private final BHDescriptor myIPatientProperty__BehaviorDescriptor = new IPatientProperty__BehaviorDescriptor();
+  private final BHDescriptor myInfectionStatusProperty__BehaviorDescriptor = new InfectionStatusProperty__BehaviorDescriptor();
+  private final BHDescriptor myVaccineStatusProperty__BehaviorDescriptor = new VaccineStatusProperty__BehaviorDescriptor();
+  private final BHDescriptor myVaccinationStatus__BehaviorDescriptor = new VaccinationStatus__BehaviorDescriptor();
+  private final BHDescriptor myPatientPropertyConditional__BehaviorDescriptor = new PatientPropertyConditional__BehaviorDescriptor();
   private final BHDescriptor myAction__BehaviorDescriptor = new Action__BehaviorDescriptor();
-  private final BHDescriptor myAttributeCondition__BehaviorDescriptor = new AttributeCondition__BehaviorDescriptor();
   private final BHDescriptor myDiseaseSymptom__BehaviorDescriptor = new DiseaseSymptom__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
@@ -30,20 +31,22 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 0:
         return myAction__BehaviorDescriptor;
       case 1:
-        return myAttributeCondition__BehaviorDescriptor;
-      case 2:
-        return myAttributeLine__BehaviorDescriptor;
-      case 3:
-        return myAttributeTable__BehaviorDescriptor;
-      case 4:
-        return myDiseasePrevalenceLine__BehaviorDescriptor;
-      case 5:
         return myDiseaseSymptom__BehaviorDescriptor;
-      case 6:
+      case 2:
+        return myIPatientProperty__BehaviorDescriptor;
+      case 3:
+        return myInfectionStatusProperty__BehaviorDescriptor;
+      case 4:
         return myPatientProfile__BehaviorDescriptor;
+      case 5:
+        return myPatientPropertyConditional__BehaviorDescriptor;
+      case 6:
+        return myVaccinationStatus__BehaviorDescriptor;
+      case 7:
+        return myVaccineStatusProperty__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x5dc1936ab2a14545L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x296f74efb3f1c23aL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791132L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791132L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61141L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f40915dL)).seal();
 }

@@ -60,7 +60,7 @@
   </registry>
   <node concept="1YbPZF" id="5ivS4t5PHrx">
     <property role="TrG5h" value="typeof_DiagnosticCondition" />
-    <property role="3GE5qa" value="Conditions" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
     <node concept="3clFbS" id="5ivS4t5PHry" role="18ibNy">
       <node concept="1Z5TYs" id="5ivS4t5PHF5" role="3cqZAp">
         <node concept="mw_s8" id="5ivS4t5PHF8" role="1ZfhK$">
@@ -86,7 +86,7 @@
   </node>
   <node concept="1YbPZF" id="6MzSDQO$AJb">
     <property role="TrG5h" value="typeof_ObservationsCondition" />
-    <property role="3GE5qa" value="Conditions" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
     <node concept="3clFbS" id="6MzSDQO$AJc" role="18ibNy">
       <node concept="1Z5TYs" id="6MzSDQO$AU7" role="3cqZAp">
         <node concept="mw_s8" id="6MzSDQO$AUr" role="1ZfhKB">
@@ -108,6 +108,110 @@
     <node concept="1YaCAy" id="6MzSDQO$AJe" role="1YuTPh">
       <property role="TrG5h" value="observationsCondition" />
       <ref role="1YaFvo" to="e88n:6MzSDQO$AFz" resolve="ObservationsCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1xAzJ9KEaUD">
+    <property role="TrG5h" value="typeof_VaccinationStatus" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.VaccinatedAttributes" />
+    <node concept="3clFbS" id="1xAzJ9KEaUE" role="18ibNy">
+      <node concept="1Z5TYs" id="1xAzJ9KEbbT" role="3cqZAp">
+        <node concept="mw_s8" id="1xAzJ9KEbbW" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1xAzJ9KEaUK" role="mwGJk">
+            <node concept="1YBJjd" id="1xAzJ9KEaWC" role="1Z2MuG">
+              <ref role="1YBMHb" node="1xAzJ9KEaUG" resolve="vaccinationStatus" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1xAzJ9KEbdy" role="1ZfhKB">
+          <node concept="2pJPEk" id="1xAzJ9KEbej" role="mwGJk">
+            <node concept="2pJPED" id="1xAzJ9LVd4K" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:4rZeNQ6OYR8" resolve="StringLiteral" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1xAzJ9KEaUG" role="1YuTPh">
+      <property role="TrG5h" value="vaccinationStatus" />
+      <ref role="1YaFvo" to="e88n:1xAzJ9JLx51" resolve="VaccinationStatus" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1xAzJ9KFIAn">
+    <property role="TrG5h" value="typeof_VaccineStatusCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="1xAzJ9KFIAo" role="18ibNy">
+      <node concept="1Z5TYs" id="1xAzJ9KFIAu" role="3cqZAp">
+        <node concept="mw_s8" id="1xAzJ9KFIAv" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1xAzJ9KFIAw" role="mwGJk">
+            <node concept="1YBJjd" id="1xAzJ9KFID5" role="1Z2MuG">
+              <ref role="1YBMHb" node="1xAzJ9KFIAq" resolve="vaccineStatusCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1xAzJ9KFIAy" role="1ZfhKB">
+          <node concept="2pJPEk" id="1xAzJ9KFIAz" role="mwGJk">
+            <node concept="2pJPED" id="1xAzJ9KFIEg" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1xAzJ9KFIAq" role="1YuTPh">
+      <property role="TrG5h" value="vaccineStatusCondition" />
+      <ref role="1YaFvo" to="e88n:1xAzJ9JgLT5" resolve="VaccineStatusCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1xAzJ9KVgCX">
+    <property role="TrG5h" value="typeof_PatientPropertyConditional" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="1xAzJ9KVgCY" role="18ibNy">
+      <node concept="1Z5TYs" id="1xAzJ9KVh8C" role="3cqZAp">
+        <node concept="mw_s8" id="1xAzJ9KVh8D" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1xAzJ9KVh8E" role="mwGJk">
+            <node concept="1YBJjd" id="1xAzJ9KVhbd" role="1Z2MuG">
+              <ref role="1YBMHb" node="1xAzJ9KVgD0" resolve="patientPropertyConditional" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1xAzJ9KVh8G" role="1ZfhKB">
+          <node concept="2pJPEk" id="1xAzJ9KVh8H" role="mwGJk">
+            <node concept="2pJPED" id="1xAzJ9KVh8I" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1xAzJ9KVgD0" role="1YuTPh">
+      <property role="TrG5h" value="patientPropertyConditional" />
+      <ref role="1YaFvo" to="e88n:1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1xAzJ9LYdgd">
+    <property role="TrG5h" value="typeof_Unvaccinated" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.VaccinatedAttributes" />
+    <node concept="3clFbS" id="1xAzJ9LYdge" role="18ibNy">
+      <node concept="1Z5TYs" id="1xAzJ9LYdgk" role="3cqZAp">
+        <node concept="mw_s8" id="1xAzJ9LYdgl" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1xAzJ9LYdgm" role="mwGJk">
+            <node concept="1YBJjd" id="1xAzJ9LYdiN" role="1Z2MuG">
+              <ref role="1YBMHb" node="1xAzJ9LYdgg" resolve="unvaccinated" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1xAzJ9LYdgo" role="1ZfhKB">
+          <node concept="2pJPEk" id="1xAzJ9LYdgp" role="mwGJk">
+            <node concept="2pJPED" id="1xAzJ9LYdgq" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:4rZeNQ6OYR8" resolve="StringLiteral" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1xAzJ9LYdgg" role="1YuTPh">
+      <property role="TrG5h" value="unvaccinated" />
+      <ref role="1YaFvo" to="e88n:1xAzJ9JLx5B" resolve="Unvaccinated" />
     </node>
   </node>
 </model>

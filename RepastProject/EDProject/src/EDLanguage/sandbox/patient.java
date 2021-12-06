@@ -144,6 +144,12 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getCOVIDisSusceptible() {
+    if (this.COVID == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
   public int getFluAisAsymptomatic() {
     if (this.FluA == "Asymptomatic") {
       return 1;

@@ -3,8 +3,8 @@
   <dependency className="ActionCards.generator.templates.QueriesGenerated">
     <classNode dependClassName="ActionCards.behavior.Action__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.DiseaseSymptom__BehaviorDescriptor" />
+    <classNode dependClassName="ActionCards.behavior.IPatientProperty__BehaviorDescriptor" />
     <classNode dependClassName="AgentLanguage.behavior.RoomType__BehaviorDescriptor" />
-    <classNode dependClassName="DiseaseModel.behavior.DiseaseStatus__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
@@ -42,6 +42,7 @@
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.BaseConcept__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
