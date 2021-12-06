@@ -178,6 +178,24 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
+        <string>patientgetRecentCovidContactisYes</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetRecentCovidContactisYes</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getRecentCovidContactisYes</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetRecentCovidContactisNo</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetRecentCovidContactisNo</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getRecentCovidContactisNo</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
         <string>patientgetLFDCOVIDResultisPositive</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
           <id>patientgetLFDCOVIDResultisPositive</id>
@@ -282,6 +300,60 @@
           <id>patientgetLIATFluBResultisNegative</id>
           <className>EDLanguage.sandbox.patient</className>
           <methodName>getLIATFluBResultisNegative</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLabPCRCOVIDResultisPositive</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLabPCRCOVIDResultisPositive</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLabPCRCOVIDResultisPositive</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLabPCRCOVIDResultisNegative</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLabPCRCOVIDResultisNegative</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLabPCRCOVIDResultisNegative</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLabPCRFluAResultisPositive</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLabPCRFluAResultisPositive</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLabPCRFluAResultisPositive</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLabPCRFluAResultisNegative</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLabPCRFluAResultisNegative</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLabPCRFluAResultisNegative</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLabPCRFluBResultisPositive</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLabPCRFluBResultisPositive</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLabPCRFluBResultisPositive</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLabPCRFluBResultisNegative</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLabPCRFluBResultisNegative</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLabPCRFluBResultisNegative</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

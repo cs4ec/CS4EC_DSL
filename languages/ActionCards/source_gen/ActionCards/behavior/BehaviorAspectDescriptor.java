@@ -18,6 +18,8 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myVaccineStatusProperty__BehaviorDescriptor = new VaccineStatusProperty__BehaviorDescriptor();
   private final BHDescriptor myVaccinationStatus__BehaviorDescriptor = new VaccinationStatus__BehaviorDescriptor();
   private final BHDescriptor myPatientPropertyConditional__BehaviorDescriptor = new PatientPropertyConditional__BehaviorDescriptor();
+  private final BHDescriptor myRecentCovidContactProperty__BehaviorDescriptor = new RecentCovidContactProperty__BehaviorDescriptor();
+  private final BHDescriptor myRecentCOVIDContactCondition__BehaviorDescriptor = new RecentCOVIDContactCondition__BehaviorDescriptor();
   private final BHDescriptor myAction__BehaviorDescriptor = new Action__BehaviorDescriptor();
   private final BHDescriptor myDiseaseSymptom__BehaviorDescriptor = new DiseaseSymptom__BehaviorDescriptor();
 
@@ -41,12 +43,16 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 5:
         return myPatientPropertyConditional__BehaviorDescriptor;
       case 6:
-        return myVaccinationStatus__BehaviorDescriptor;
+        return myRecentCOVIDContactCondition__BehaviorDescriptor;
       case 7:
+        return myRecentCovidContactProperty__BehaviorDescriptor;
+      case 8:
+        return myVaccinationStatus__BehaviorDescriptor;
+      case 9:
         return myVaccineStatusProperty__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791132L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61141L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f40915dL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791132L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bde64L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732b9054L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61141L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f40915dL)).seal();
 }

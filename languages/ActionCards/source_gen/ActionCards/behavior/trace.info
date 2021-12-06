@@ -13,7 +13,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="14,0,53,0" name="ActionCards.behavior.BehaviorAspectDescriptor" />
+      <unit at="14,0,59,0" name="ActionCards.behavior.BehaviorAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/1758249876434350281">
@@ -370,6 +370,167 @@
         <var name="parameters" id="1758249876490561678" />
       </scope>
       <unit id="1758249876490561678" at="17,0,71,0" name="ActionCards.behavior.VaccinationStatus__BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/1758249876500225330">
+    <file name="RecentCovidContactProperty__BehaviorDescriptor.java">
+      <node id="1758249876500225330" at="28,0,29,0" concept="7" trace="CONCEPT" />
+      <node id="1758249876500225330" at="30,0,31,0" concept="7" trace="getName_id1xAzJ9JgcJZ" />
+      <node id="1758249876500225330" at="32,0,33,0" concept="7" trace="BH_METHODS" />
+      <node id="1758249876500225467" at="34,63,35,264" concept="1" />
+      <node id="1758249876500225476" at="35,264,36,263" concept="1" />
+      <node id="1758249876500225494" at="36,263,37,0" concept="6" />
+      <node id="1758249876500225495" at="37,0,38,84" concept="1" />
+      <node id="1758249876500234730" at="41,80,42,32" concept="5" />
+      <node id="1758249876500225330" at="49,114,50,21" concept="1" />
+      <node id="1758249876500225330" at="54,114,55,49" concept="4" />
+      <node id="1758249876500225330" at="56,26,57,56" concept="10" />
+      <node id="1758249876500225330" at="60,13,61,58" concept="5" />
+      <node id="1758249876500225330" at="62,14,63,58" concept="10" />
+      <node id="1758249876500225330" at="68,128,69,49" concept="4" />
+      <node id="1758249876500225330" at="70,26,71,56" concept="10" />
+      <node id="1758249876500225330" at="74,14,75,58" concept="10" />
+      <node id="1758249876500225330" at="81,48,82,22" concept="5" />
+      <node id="1758249876500225330" at="87,40,88,19" concept="5" />
+      <node id="1758249876500225330" at="92,0,93,0" concept="7" trace="possibleValues$MtIS" />
+      <node id="1758249876500225330" at="96,0,97,0" concept="7" trace="name$iVMV" />
+      <node id="1758249876500225330" at="45,0,47,0" concept="0" trace="RecentCovidContactProperty__BehaviorDescriptor#()V" />
+      <node id="1758249876500225330" at="41,0,44,0" concept="8" trace="getName_id1xAzJ9JgcJZ#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+      <node id="1758249876500225330" at="55,49,58,5" concept="2" />
+      <node id="1758249876500225330" at="69,49,72,5" concept="2" />
+      <node id="1758249876500225330" at="48,0,52,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="1758249876500225330" at="72,5,76,5" concept="9" />
+      <node id="1758249876500225330" at="79,0,84,0" concept="3" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="1758249876500225330" at="85,0,90,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="1758249876500225330" at="34,0,40,0" concept="8" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1758249876500225330" at="58,5,64,5" concept="9" />
+      <node id="1758249876500225330" at="67,0,78,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="1758249876500225330" at="53,0,66,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="1758249876500225330" at="45,64,45,64" />
+      <scope id="1758249876500234727" at="41,80,42,32" />
+      <scope id="1758249876500225330" at="49,114,50,21" />
+      <scope id="1758249876500225330" at="56,26,57,56" />
+      <scope id="1758249876500225330" at="60,13,61,58" />
+      <scope id="1758249876500225330" at="62,14,63,58" />
+      <scope id="1758249876500225330" at="70,26,71,56" />
+      <scope id="1758249876500225330" at="74,14,75,58" />
+      <scope id="1758249876500225330" at="81,48,82,22" />
+      <scope id="1758249876500225330" at="87,40,88,19" />
+      <scope id="1758249876500225330" at="45,0,47,0" />
+      <scope id="1758249876500225330" at="41,0,44,0">
+        <var name="__thisNode__" id="1758249876500225330" />
+      </scope>
+      <scope id="1758249876500225330" at="34,63,38,84" />
+      <scope id="1758249876500225330" at="48,0,52,0">
+        <var name="constructor" id="1758249876500225330" />
+        <var name="node" id="1758249876500225330" />
+        <var name="parameters" id="1758249876500225330" />
+      </scope>
+      <scope id="1758249876500225330" at="79,0,84,0" />
+      <scope id="1758249876500225330" at="85,0,90,0" />
+      <scope id="1758249876500225330" at="34,0,40,0">
+        <var name="__thisNode__" id="1758249876500225330" />
+      </scope>
+      <scope id="1758249876500225330" at="68,128,76,5">
+        <var name="methodIndex" id="1758249876500225330" />
+      </scope>
+      <scope id="1758249876500225330" at="54,114,64,5">
+        <var name="methodIndex" id="1758249876500225330" />
+      </scope>
+      <scope id="1758249876500225330" at="67,0,78,0">
+        <var name="concept" id="1758249876500225330" />
+        <var name="method" id="1758249876500225330" />
+        <var name="parameters" id="1758249876500225330" />
+      </scope>
+      <scope id="1758249876500225330" at="53,0,66,0">
+        <var name="method" id="1758249876500225330" />
+        <var name="node" id="1758249876500225330" />
+        <var name="parameters" id="1758249876500225330" />
+      </scope>
+      <unit id="1758249876500225330" at="91,0,94,0" name="ActionCards.behavior.RecentCovidContactProperty__BehaviorDescriptor$LINKS" />
+      <unit id="1758249876500225330" at="95,0,98,0" name="ActionCards.behavior.RecentCovidContactProperty__BehaviorDescriptor$PROPS" />
+      <unit id="1758249876500225330" at="27,0,99,0" name="ActionCards.behavior.RecentCovidContactProperty__BehaviorDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/1758249876500249005">
+    <file name="RecentCOVIDContactCondition__BehaviorDescriptor.java">
+      <node id="1758249876500249005" at="27,0,28,0" concept="7" trace="CONCEPT" />
+      <node id="1758249876500249005" at="30,0,31,0" concept="7" trace="BH_METHODS" />
+      <node id="1758249876500249028" at="32,63,33,224" concept="1" />
+      <node id="1758249876501533553" at="33,224,34,0" concept="6" />
+      <node id="1758249876501566442" at="36,39,37,143" concept="5" />
+      <node id="1758249876500249005" at="47,114,48,21" concept="1" />
+      <node id="1758249876500249005" at="52,114,53,49" concept="4" />
+      <node id="1758249876500249005" at="54,26,55,56" concept="10" />
+      <node id="1758249876500249005" at="58,14,59,58" concept="10" />
+      <node id="1758249876500249005" at="64,128,65,49" concept="4" />
+      <node id="1758249876500249005" at="66,26,67,56" concept="10" />
+      <node id="1758249876500249005" at="70,14,71,58" concept="10" />
+      <node id="1758249876500249005" at="77,48,78,22" concept="5" />
+      <node id="1758249876500249005" at="83,40,84,19" concept="5" />
+      <node id="1758249876500249005" at="88,0,89,0" concept="7" trace="checkValue$p63D" />
+      <node id="1758249876500249005" at="89,0,90,0" concept="7" trace="patientProperty$FJ4E" />
+      <node id="1758249876500249005" at="90,0,91,0" concept="7" trace="attributes$kiaM" />
+      <node id="1758249876500249005" at="91,0,92,0" concept="7" trace="patientProperty$oTU2" />
+      <node id="1758249876500249005" at="95,0,96,0" concept="7" trace="PatientProfile$ZT" />
+      <node id="1758249876500249005" at="96,0,97,0" concept="7" trace="RecentCovidContactProperty$IY" />
+      <node id="1758249876500249005" at="43,0,45,0" concept="0" trace="RecentCOVIDContactCondition__BehaviorDescriptor#()V" />
+      <node id="1758249876501566202" at="36,0,39,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="1758249876500249005" at="53,49,56,5" concept="2" />
+      <node id="1758249876500249005" at="65,49,68,5" concept="2" />
+      <node id="1758249876500249005" at="46,0,50,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="1758249876500249005" at="56,5,60,5" concept="9" />
+      <node id="1758249876500249005" at="68,5,72,5" concept="9" />
+      <node id="1758249876501102118" at="34,0,39,45" concept="1" />
+      <node id="1758249876500249005" at="75,0,80,0" concept="3" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="1758249876500249005" at="81,0,86,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="1758249876500249005" at="32,0,41,0" concept="8" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1758249876500249005" at="51,0,62,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="1758249876500249005" at="63,0,74,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="1758249876500249005" at="43,65,43,65" />
+      <scope id="1758249876501566203" at="36,39,37,143" />
+      <scope id="1758249876500249005" at="47,114,48,21" />
+      <scope id="1758249876500249005" at="54,26,55,56" />
+      <scope id="1758249876500249005" at="58,14,59,58" />
+      <scope id="1758249876500249005" at="66,26,67,56" />
+      <scope id="1758249876500249005" at="70,14,71,58" />
+      <scope id="1758249876500249005" at="77,48,78,22" />
+      <scope id="1758249876500249005" at="83,40,84,19" />
+      <scope id="1758249876500249005" at="43,0,45,0" />
+      <scope id="1758249876501566202" at="36,0,39,0">
+        <var name="it" id="1758249876501566202" />
+      </scope>
+      <scope id="1758249876500249005" at="46,0,50,0">
+        <var name="constructor" id="1758249876500249005" />
+        <var name="node" id="1758249876500249005" />
+        <var name="parameters" id="1758249876500249005" />
+      </scope>
+      <scope id="1758249876500249005" at="75,0,80,0" />
+      <scope id="1758249876500249005" at="81,0,86,0" />
+      <scope id="1758249876500249005" at="32,63,39,45" />
+      <scope id="1758249876500249005" at="52,114,60,5">
+        <var name="methodIndex" id="1758249876500249005" />
+      </scope>
+      <scope id="1758249876500249005" at="64,128,72,5">
+        <var name="methodIndex" id="1758249876500249005" />
+      </scope>
+      <scope id="1758249876500249005" at="32,0,41,0">
+        <var name="__thisNode__" id="1758249876500249005" />
+      </scope>
+      <scope id="1758249876500249005" at="51,0,62,0">
+        <var name="method" id="1758249876500249005" />
+        <var name="node" id="1758249876500249005" />
+        <var name="parameters" id="1758249876500249005" />
+      </scope>
+      <scope id="1758249876500249005" at="63,0,74,0">
+        <var name="concept" id="1758249876500249005" />
+        <var name="method" id="1758249876500249005" />
+        <var name="parameters" id="1758249876500249005" />
+      </scope>
+      <unit id="1758249876501566202" at="35,274,39,5" name="ActionCards.behavior.RecentCOVIDContactCondition__BehaviorDescriptor$1" />
+      <unit id="1758249876500249005" at="94,0,98,0" name="ActionCards.behavior.RecentCOVIDContactCondition__BehaviorDescriptor$CONCEPTS" />
+      <unit id="1758249876500249005" at="87,0,93,0" name="ActionCards.behavior.RecentCOVIDContactCondition__BehaviorDescriptor$LINKS" />
+      <unit id="1758249876500249005" at="26,0,99,0" name="ActionCards.behavior.RecentCOVIDContactCondition__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/2698877061874629327">

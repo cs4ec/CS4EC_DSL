@@ -192,25 +192,25 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.getOutputNodeByInputNodeAndMappingLabel(test, "ProcesssingTimeTableToTimeDistribution");
   }
   public static Object referenceMacro_GetReferent_3_3(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestDiseaseToAtribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_3_4(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
   }
   public static Object referenceMacro_GetReferent_3_5(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestDiseaseToAtribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_3_6(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
   }
   public static Object referenceMacro_GetReferent_3_7(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestDiseaseToAtribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_3_8(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
   }
   public static Object referenceMacro_GetReferent_3_9(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestDiseaseToAtribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_3_10(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
@@ -236,13 +236,13 @@ public class QueriesGenerated extends QueryProviderBase {
     }).first(), LINKS.patientProperty$oTU2), "PatientPropertyToAttribute");
   }
   public static Object referenceMacro_GetReferent_3_15(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), "ObservationTestToAttribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), "ObservationTestResultToAttribute");
   }
   public static Object referenceMacro_GetReferent_3_16(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
   }
   public static Object referenceMacro_GetReferent_3_17(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(((SNode) _context.getVariable("var:ObservationTest")), "ObservationTestToAttribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(((SNode) _context.getVariable("var:ObservationTest")), "ObservationTestResultToAttribute");
   }
   public static Object referenceMacro_GetReferent_3_18(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
@@ -278,7 +278,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L, "AgentLanguage.structure.RoomType"));
   }
   public static Object referenceMacro_GetReferent_6_2(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb)).first(), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
+    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(final SNode it) {
         return ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Branch$sq)).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it2) {
@@ -311,7 +311,7 @@ public class QueriesGenerated extends QueryProviderBase {
       public boolean accept(SNode it) {
         return Objects.equals(SLinkOperations.getTarget(it, LINKS.disease$elY9), SLinkOperations.getTarget(_context.getNode(), LINKS.disease$UB8o));
       }
-    }), "TestDiseaseToAtribute");
+    }), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_13_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.Action$K5, false, false), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
@@ -320,13 +320,13 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), LINKS.roomType$xuJp);
   }
   public static Object referenceMacro_GetReferent_16_0(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(((SNode) _context.getNode()), "TestDiseaseToAtribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(((SNode) _context.getNode()), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_19_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
   }
   public static Object referenceMacro_GetReferent_19_1(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.test$Tp3g), "ObservationTestToAttribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.test$Tp3g), "ObservationTestResultToAttribute");
   }
   public static Object referenceMacro_GetReferent_21_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");

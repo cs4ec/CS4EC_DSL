@@ -214,5 +214,31 @@
       <ref role="1YaFvo" to="e88n:1xAzJ9JLx5B" resolve="Unvaccinated" />
     </node>
   </node>
+  <node concept="1YbPZF" id="1xAzJ9NaY7n">
+    <property role="TrG5h" value="typeof_RecentCOVIDContactCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="1xAzJ9NaY7o" role="18ibNy">
+      <node concept="1Z5TYs" id="1xAzJ9NaY7u" role="3cqZAp">
+        <node concept="mw_s8" id="1xAzJ9NaY7v" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1xAzJ9NaY7w" role="mwGJk">
+            <node concept="1YBJjd" id="1xAzJ9NaYa4" role="1Z2MuG">
+              <ref role="1YBMHb" node="1xAzJ9NaY7q" resolve="recentCOVIDContactCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1xAzJ9NaY7y" role="1ZfhKB">
+          <node concept="2pJPEk" id="1xAzJ9NaY7z" role="mwGJk">
+            <node concept="2pJPED" id="1xAzJ9NaY7$" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1xAzJ9NaY7q" role="1YuTPh">
+      <property role="TrG5h" value="recentCOVIDContactCondition" />
+      <ref role="1YaFvo" to="e88n:1xAzJ9NaXT$" resolve="RecentCOVIDContactCondition" />
+    </node>
+  </node>
 </model>
 

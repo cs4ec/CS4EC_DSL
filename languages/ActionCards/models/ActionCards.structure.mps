@@ -754,5 +754,42 @@
     <property role="34LRSv" value="check infection status of a patient" />
     <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
   </node>
+  <node concept="1TIwiD" id="1xAzJ9NaT1k">
+    <property role="EcuMT" value="1758249876500222036" />
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <property role="34LRSv" value="Recent COVID contact" />
+    <property role="TrG5h" value="RecentCovidContactProperty" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="1xAzJ9NaT1l" role="PzmwI">
+      <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NaVjy">
+    <property role="EcuMT" value="1758249876500231394" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.Boolean" />
+    <property role="TrG5h" value="Yes" />
+    <property role="34LRSv" value="Yes" />
+    <ref role="1TJDcQ" node="1xAzJ9NaVjz" resolve="BooleanExpression" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NaVjz">
+    <property role="EcuMT" value="1758249876500231395" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.Boolean" />
+    <property role="TrG5h" value="BooleanExpression" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NaVj$">
+    <property role="EcuMT" value="1758249876500231396" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.Boolean" />
+    <property role="TrG5h" value="No" />
+    <property role="34LRSv" value="No" />
+    <ref role="1TJDcQ" node="1xAzJ9NaVjz" resolve="BooleanExpression" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NaXT$">
+    <property role="EcuMT" value="1758249876500242020" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="RecentCOVIDContactCondition" />
+    <property role="34LRSv" value="check if patient had a recent COVID contact" />
+    <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+  </node>
 </model>
 

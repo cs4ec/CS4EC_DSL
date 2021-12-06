@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-aklp10b7jpt7fhrnf5fhgfxdxzdbq2o">
-  <files names="TypesystemDescriptor.java:typeof_DiagnosticCondition_InferenceRule.java:typeof_ObservationsCondition_InferenceRule.java:typeof_PatientPropertyConditional_InferenceRule.java:typeof_Unvaccinated_InferenceRule.java:typeof_VaccinationStatus_InferenceRule.java:typeof_VaccineStatusCondition_InferenceRule.java" />
+<product version="3" modelHash="5afwss9lmd5ysiezqmli1jm85fcodxy">
+  <files names="TypesystemDescriptor.java:typeof_DiagnosticCondition_InferenceRule.java:typeof_ObservationsCondition_InferenceRule.java:typeof_PatientPropertyConditional_InferenceRule.java:typeof_RecentCOVIDContactCondition_InferenceRule.java:typeof_Unvaccinated_InferenceRule.java:typeof_VaccinationStatus_InferenceRule.java:typeof_VaccineStatusCondition_InferenceRule.java" />
 </product>
 

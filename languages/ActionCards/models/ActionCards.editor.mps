@@ -1942,5 +1942,38 @@
     </node>
     <node concept="22hDWj" id="1xAzJ9Ly2$D" role="22hAXT" />
   </node>
+  <node concept="24kQdi" id="1xAzJ9NaT1X">
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <ref role="1XX52x" to="e88n:1xAzJ9NaT1k" resolve="RecentCovidContactProperty" />
+    <node concept="3EZMnI" id="1xAzJ9NaT1p" role="2wV5jI">
+      <node concept="3F0ifn" id="1xAzJ9NaT1w" role="3EZMnx">
+        <property role="3F0ifm" value="Patient has recent COVID contact" />
+      </node>
+      <node concept="2iRfu4" id="1xAzJ9NaT1s" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1xAzJ9NaXTG">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="e88n:1xAzJ9NaXT$" resolve="RecentCOVIDContactCondition" />
+    <node concept="3EZMnI" id="1xAzJ9NaXTI" role="2wV5jI">
+      <node concept="3F0ifn" id="1xAzJ9NaXTP" role="3EZMnx">
+        <property role="3F0ifm" value="Recent COVID contact is" />
+      </node>
+      <node concept="3F1sOY" id="1xAzJ9Nltdv" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
+      </node>
+      <node concept="2iRfu4" id="1xAzJ9NaXTL" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1xAzJ9NjBfx">
+    <property role="3GE5qa" value="Attributes.PatientProperties.Boolean" />
+    <ref role="1XX52x" to="e88n:1xAzJ9NaVjz" resolve="BooleanExpression" />
+    <node concept="3EZMnI" id="1xAzJ9NjBfz" role="2wV5jI">
+      <node concept="PMmxH" id="1xAzJ9NjBfE" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="2iRfu4" id="1xAzJ9NjBfA" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

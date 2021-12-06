@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="1lra6o7dqm3p86amx26hg1a11uhxykr">
-  <files names="ActionAspectDescriptorImpl.java:PatientPropertyTableUpdater.java" />
+<product version="3" modelHash="-erwcuepm2uuok39snf6gwuw03sxgwdx">
+  <files names="ActionAspectDescriptorImpl.java:PatientPropertyTableUpdater.java:RecentContactFactory.java" />
 </product>
 

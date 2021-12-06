@@ -96,6 +96,12 @@ public class patientGenerator extends AgentGenerator {
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible")) {
       a.FluBInfectionStatus = "Susceptible";
     }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes")) {
+      a.RecentCovidContact = "Yes";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo")) {
+      a.RecentCovidContact = "No";
+    }
 
     b.PushMission(sendSignalTemp);
 

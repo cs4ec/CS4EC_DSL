@@ -25,7 +25,7 @@
       <unit at="26,0,98,0" name="ActionCards.editor.DiseaseSymptomReference_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="22,0,228,0" name="ActionCards.editor.EditorAspectDescriptorImpl" />
+      <unit at="22,0,244,0" name="ActionCards.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="GrammarActionsDescriptor.java">
       <unit at="1201,0,1204,0" name="ActionCards.editor.GrammarActionsDescriptor$LINKS" />
@@ -105,6 +105,11 @@
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_AttributeTable$GrammarCellsSubstituteMenuPart_bwcimv_a" />
       <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_AttributeTable" />
     </file>
+    <file name="GrammarCellsSubstituteMenu_BooleanExpression.java">
+      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_BooleanExpression$CONCEPTS" />
+      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_BooleanExpression$GrammarCellsSubstituteMenuPart_sdg5nm_a" />
+      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_BooleanExpression" />
+    </file>
     <file name="GrammarCellsSubstituteMenu_Branch.java">
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Branch$CONCEPTS" />
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Branch$GrammarCellsSubstituteMenuPart_ch0den_a" />
@@ -165,6 +170,11 @@
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_InfectionStatusProperty$GrammarCellsSubstituteMenuPart_rjfgn3_a" />
       <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_InfectionStatusProperty" />
     </file>
+    <file name="GrammarCellsSubstituteMenu_No.java">
+      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_No$CONCEPTS" />
+      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_No$GrammarCellsSubstituteMenuPart_7931m6_a" />
+      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_No" />
+    </file>
     <file name="GrammarCellsSubstituteMenu_ObservationTest.java">
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ObservationTest$CONCEPTS" />
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ObservationTest$GrammarCellsSubstituteMenuPart_tvvqjl_a" />
@@ -214,6 +224,16 @@
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ProcessingTimeTable$CONCEPTS" />
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ProcessingTimeTable$GrammarCellsSubstituteMenuPart_hpq1qh_a" />
       <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ProcessingTimeTable" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_RecentCOVIDContactCondition.java">
+      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_RecentCOVIDContactCondition$CONCEPTS" />
+      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_RecentCOVIDContactCondition$GrammarCellsSubstituteMenuPart_pwosxg_a" />
+      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_RecentCOVIDContactCondition" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_RecentCovidContactProperty.java">
+      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_RecentCovidContactProperty$CONCEPTS" />
+      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_RecentCovidContactProperty$GrammarCellsSubstituteMenuPart_cowlcz_a" />
+      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_RecentCovidContactProperty" />
     </file>
     <file name="GrammarCellsSubstituteMenu_Resource.java">
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Resource$CONCEPTS" />
@@ -274,6 +294,11 @@
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Variable$CONCEPTS" />
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Variable$GrammarCellsSubstituteMenuPart_791gp8_a" />
       <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Variable" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_Yes.java">
+      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Yes$CONCEPTS" />
+      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Yes$GrammarCellsSubstituteMenuPart_bqac6d_a" />
+      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Yes" />
     </file>
     <file name="PatientPropertyReference_SubstituteMenu.java">
       <unit at="90,0,93,0" name="ActionCards.editor.PatientPropertyReference_SubstituteMenu$CONCEPTS" />
@@ -1833,6 +1858,230 @@
       <unit id="1758249876472736050" at="82,0,104,0" name="ActionCards.editor.InfectionStatusCondition_TransformationMenu$TMP_Reference_cve8e0_a0$Item" />
       <unit id="1758249876472736050" at="59,0,109,0" name="ActionCards.editor.InfectionStatusCondition_TransformationMenu$TMP_Reference_cve8e0_a0" />
       <unit id="1758249876472736040" at="30,0,119,0" name="ActionCards.editor.InfectionStatusCondition_TransformationMenu" />
+    </file>
+  </root>
+  <root nodeRef="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/1758249876500222077">
+    <file name="RecentCovidContactProperty_Editor.java">
+      <node id="1758249876500222077" at="11,79,12,92" concept="9" />
+      <node id="1758249876500222077" at="11,0,14,0" concept="7" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876500222077" at="11,79,12,92" />
+      <scope id="1758249876500222077" at="11,0,14,0">
+        <var name="editorContext" id="1758249876500222077" />
+        <var name="node" id="1758249876500222077" />
+      </scope>
+      <unit id="1758249876500222077" at="10,0,15,0" name="ActionCards.editor.RecentCovidContactProperty_Editor" />
+    </file>
+    <file name="RecentCovidContactProperty_EditorBuilder_a.java">
+      <node id="1758249876500222077" at="18,106,19,19" concept="13" />
+      <node id="1758249876500222077" at="19,19,20,18" concept="2" />
+      <node id="1758249876500222077" at="25,26,26,18" concept="9" />
+      <node id="1758249876500222077" at="29,39,30,32" concept="9" />
+      <node id="1758249876500222077" at="33,43,34,122" concept="8" />
+      <node id="1758249876500222077" at="34,122,35,48" concept="2" />
+      <node id="1758249876500222077" at="35,48,36,28" concept="2" />
+      <node id="1758249876500222077" at="36,28,37,31" concept="2" />
+      <node id="1758249876500222048" at="37,31,38,49" concept="2" />
+      <node id="1758249876500222077" at="38,49,39,22" concept="9" />
+      <node id="1758249876500222048" at="41,41,42,125" concept="8" />
+      <node id="1758249876500222048" at="42,125,43,47" concept="2" />
+      <node id="1758249876500222048" at="43,47,44,34" concept="2" />
+      <node id="1758249876500222048" at="44,34,45,22" concept="9" />
+      <node id="1758249876500222077" at="15,0,17,0" concept="3" trace="myNode" />
+      <node id="1758249876500222077" at="29,0,32,0" concept="7" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876500222077" at="18,0,22,0" concept="1" trace="RecentCovidContactProperty_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1758249876500222077" at="23,0,28,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1758249876500222048" at="41,0,47,0" concept="7" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876500222077" at="33,0,41,0" concept="7" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876500222077" at="25,26,26,18" />
+      <scope id="1758249876500222077" at="29,39,30,32" />
+      <scope id="1758249876500222077" at="18,106,20,18" />
+      <scope id="1758249876500222077" at="29,0,32,0" />
+      <scope id="1758249876500222077" at="18,0,22,0">
+        <var name="context" id="1758249876500222077" />
+        <var name="node" id="1758249876500222077" />
+      </scope>
+      <scope id="1758249876500222048" at="41,41,45,22">
+        <var name="editorCell" id="1758249876500222048" />
+      </scope>
+      <scope id="1758249876500222077" at="23,0,28,0" />
+      <scope id="1758249876500222077" at="33,43,39,22">
+        <var name="editorCell" id="1758249876500222077" />
+      </scope>
+      <scope id="1758249876500222048" at="41,0,47,0" />
+      <scope id="1758249876500222077" at="33,0,41,0" />
+      <unit id="1758249876500222077" at="14,0,48,0" name="ActionCards.editor.RecentCovidContactProperty_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/1758249876500242028">
+    <file name="RecentCOVIDContactCondition_Editor.java">
+      <node id="1758249876500242028" at="11,79,12,93" concept="9" />
+      <node id="1758249876500242028" at="11,0,14,0" concept="7" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876500242028" at="11,79,12,93" />
+      <scope id="1758249876500242028" at="11,0,14,0">
+        <var name="editorContext" id="1758249876500242028" />
+        <var name="node" id="1758249876500242028" />
+      </scope>
+      <unit id="1758249876500242028" at="10,0,15,0" name="ActionCards.editor.RecentCOVIDContactCondition_Editor" />
+    </file>
+    <file name="RecentCOVIDContactCondition_EditorBuilder_a.java">
+      <node id="1758249876500242028" at="27,107,28,19" concept="13" />
+      <node id="1758249876500242028" at="28,19,29,18" concept="2" />
+      <node id="1758249876500242028" at="34,26,35,18" concept="9" />
+      <node id="1758249876500242028" at="38,39,39,32" concept="9" />
+      <node id="1758249876500242028" at="42,43,43,122" concept="8" />
+      <node id="1758249876500242028" at="43,122,44,48" concept="2" />
+      <node id="1758249876500242028" at="44,48,45,28" concept="2" />
+      <node id="1758249876500242028" at="45,28,46,31" concept="2" />
+      <node id="1758249876500242037" at="46,31,47,49" concept="2" />
+      <node id="1758249876502991711" at="47,49,48,48" concept="2" />
+      <node id="1758249876500242028" at="48,48,49,22" concept="9" />
+      <node id="1758249876500242037" at="51,41,52,116" concept="8" />
+      <node id="1758249876500242037" at="52,116,53,47" concept="2" />
+      <node id="1758249876500242037" at="53,47,54,34" concept="2" />
+      <node id="1758249876500242037" at="54,34,55,22" concept="9" />
+      <node id="1758249876500242028" at="57,40,58,131" concept="8" />
+      <node id="1758249876500242028" at="58,131,59,33" concept="9" />
+      <node id="1758249876500242028" at="65,124,66,38" concept="13" />
+      <node id="1758249876500242028" at="66,38,67,25" concept="2" />
+      <node id="1758249876500242028" at="72,28,73,20" concept="9" />
+      <node id="1758249876500242028" at="76,55,77,76" concept="8" />
+      <node id="1758249876500242028" at="77,76,78,119" concept="2" />
+      <node id="1758249876500242028" at="78,119,79,122" concept="2" />
+      <node id="1758249876500242028" at="79,122,80,48" concept="2" />
+      <node id="1758249876500242028" at="80,48,81,24" concept="9" />
+      <node id="1758249876500242028" at="87,118,88,137" concept="2" />
+      <node id="1758249876500242028" at="90,42,91,51" concept="2" />
+      <node id="1758249876500242028" at="95,44,96,41" concept="2" />
+      <node id="1758249876500242028" at="96,41,97,110" concept="2" />
+      <node id="1758249876500242028" at="98,11,99,56" concept="8" />
+      <node id="1758249876500242028" at="99,56,100,49" concept="2" />
+      <node id="1758249876500242028" at="100,49,101,48" concept="2" />
+      <node id="1758249876500242028" at="101,48,102,35" concept="2" />
+      <node id="1758249876500242028" at="102,35,103,26" concept="9" />
+      <node id="1758249876500242028" at="104,17,105,42" concept="2" />
+      <node id="1758249876500242028" at="108,40,109,31" concept="9" />
+      <node id="1758249876500242028" at="114,0,115,0" concept="12" trace="checkValue$p63D" />
+      <node id="1758249876500242028" at="24,0,26,0" concept="3" trace="myNode" />
+      <node id="1758249876500242028" at="62,0,64,0" concept="3" trace="myNode" />
+      <node id="1758249876500242028" at="38,0,41,0" concept="7" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876500242028" at="86,87,89,7" concept="6" />
+      <node id="1758249876500242028" at="89,7,92,7" concept="6" />
+      <node id="1758249876500242028" at="108,0,111,0" concept="7" trace="getNoTargetText#()Ljava/lang/String;" />
+      <node id="1758249876500242028" at="27,0,31,0" concept="1" trace="RecentCOVIDContactCondition_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1758249876500242028" at="57,0,61,0" concept="7" trace="createRefNode_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876500242028" at="65,0,69,0" concept="1" trace="checkValueSingleRoleHandler_sor3df_b0#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SContainmentLink;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <node id="1758249876500242028" at="32,0,37,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1758249876500242028" at="70,0,75,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1758249876500242037" at="51,0,57,0" concept="7" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876500242028" at="76,0,83,0" concept="7" trace="createChildCell#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876500242028" at="86,0,94,0" concept="7" trace="installCellInfo#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/cells/EditorCell;Z)V" />
+      <node id="1758249876500242028" at="42,0,51,0" concept="7" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876500242028" at="97,110,106,7" concept="15" />
+      <node id="1758249876500242028" at="94,0,108,0" concept="7" trace="createEmptyCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876500242028" at="34,26,35,18" />
+      <scope id="1758249876500242028" at="38,39,39,32" />
+      <scope id="1758249876500242028" at="72,28,73,20" />
+      <scope id="1758249876500242028" at="87,118,88,137" />
+      <scope id="1758249876500242028" at="90,42,91,51" />
+      <scope id="1758249876500242028" at="104,17,105,42" />
+      <scope id="1758249876500242028" at="108,40,109,31" />
+      <scope id="1758249876500242028" at="27,107,29,18" />
+      <scope id="1758249876500242028" at="57,40,59,33">
+        <var name="provider" id="1758249876500242028" />
+      </scope>
+      <scope id="1758249876500242028" at="65,124,67,25" />
+      <scope id="1758249876500242028" at="38,0,41,0" />
+      <scope id="1758249876500242028" at="108,0,111,0" />
+      <scope id="1758249876500242028" at="27,0,31,0">
+        <var name="context" id="1758249876500242028" />
+        <var name="node" id="1758249876500242028" />
+      </scope>
+      <scope id="1758249876500242037" at="51,41,55,22">
+        <var name="editorCell" id="1758249876500242037" />
+      </scope>
+      <scope id="1758249876500242028" at="57,0,61,0" />
+      <scope id="1758249876500242028" at="65,0,69,0">
+        <var name="containmentLink" id="1758249876500242028" />
+        <var name="context" id="1758249876500242028" />
+        <var name="ownerNode" id="1758249876500242028" />
+      </scope>
+      <scope id="1758249876500242028" at="32,0,37,0" />
+      <scope id="1758249876500242028" at="70,0,75,0" />
+      <scope id="1758249876500242028" at="76,55,81,24">
+        <var name="editorCell" id="1758249876500242028" />
+      </scope>
+      <scope id="1758249876500242028" at="98,11,103,26">
+        <var name="editorCell" id="1758249876500242028" />
+      </scope>
+      <scope id="1758249876500242037" at="51,0,57,0" />
+      <scope id="1758249876500242028" at="86,87,92,7" />
+      <scope id="1758249876500242028" at="42,43,49,22">
+        <var name="editorCell" id="1758249876500242028" />
+      </scope>
+      <scope id="1758249876500242028" at="76,0,83,0">
+        <var name="child" id="1758249876500242028" />
+      </scope>
+      <scope id="1758249876500242028" at="86,0,94,0">
+        <var name="child" id="1758249876500242028" />
+        <var name="editorCell" id="1758249876500242028" />
+        <var name="isEmpty" id="1758249876500242028" />
+      </scope>
+      <scope id="1758249876500242028" at="42,0,51,0" />
+      <scope id="1758249876500242028" at="95,44,106,7" />
+      <scope id="1758249876500242028" at="94,0,108,0" />
+      <unit id="1758249876500242028" at="113,0,116,0" name="ActionCards.editor.RecentCOVIDContactCondition_EditorBuilder_a$LINKS" />
+      <unit id="1758249876500242028" at="61,0,112,0" name="ActionCards.editor.RecentCOVIDContactCondition_EditorBuilder_a$checkValueSingleRoleHandler_sor3df_b0" />
+      <unit id="1758249876500242028" at="23,0,117,0" name="ActionCards.editor.RecentCOVIDContactCondition_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/1758249876502508513">
+    <file name="BooleanExpression_Editor.java">
+      <node id="1758249876502508513" at="11,79,12,83" concept="9" />
+      <node id="1758249876502508513" at="11,0,14,0" concept="7" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876502508513" at="11,79,12,83" />
+      <scope id="1758249876502508513" at="11,0,14,0">
+        <var name="editorContext" id="1758249876502508513" />
+        <var name="node" id="1758249876502508513" />
+      </scope>
+      <unit id="1758249876502508513" at="10,0,15,0" name="ActionCards.editor.BooleanExpression_Editor" />
+    </file>
+    <file name="BooleanExpression_EditorBuilder_a.java">
+      <node id="1758249876502508513" at="17,97,18,19" concept="13" />
+      <node id="1758249876502508513" at="18,19,19,18" concept="2" />
+      <node id="1758249876502508513" at="24,26,25,18" concept="9" />
+      <node id="1758249876502508513" at="28,39,29,32" concept="9" />
+      <node id="1758249876502508513" at="32,43,33,122" concept="8" />
+      <node id="1758249876502508513" at="33,122,34,48" concept="2" />
+      <node id="1758249876502508513" at="34,48,35,28" concept="2" />
+      <node id="1758249876502508513" at="35,28,36,31" concept="2" />
+      <node id="1758249876502508522" at="36,31,37,50" concept="2" />
+      <node id="1758249876502508513" at="37,50,38,22" concept="9" />
+      <node id="1758249876502508522" at="40,42,41,119" concept="8" />
+      <node id="1758249876502508522" at="41,119,42,22" concept="9" />
+      <node id="1758249876502508513" at="14,0,16,0" concept="3" trace="myNode" />
+      <node id="1758249876502508513" at="28,0,31,0" concept="7" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876502508513" at="17,0,21,0" concept="1" trace="BooleanExpression_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1758249876502508522" at="40,0,44,0" concept="7" trace="createComponent_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876502508513" at="22,0,27,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1758249876502508513" at="32,0,40,0" concept="7" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876502508513" at="24,26,25,18" />
+      <scope id="1758249876502508513" at="28,39,29,32" />
+      <scope id="1758249876502508513" at="17,97,19,18" />
+      <scope id="1758249876502508522" at="40,42,42,22">
+        <var name="editorCell" id="1758249876502508522" />
+      </scope>
+      <scope id="1758249876502508513" at="28,0,31,0" />
+      <scope id="1758249876502508513" at="17,0,21,0">
+        <var name="context" id="1758249876502508513" />
+        <var name="node" id="1758249876502508513" />
+      </scope>
+      <scope id="1758249876502508522" at="40,0,44,0" />
+      <scope id="1758249876502508513" at="22,0,27,0" />
+      <scope id="1758249876502508513" at="32,43,38,22">
+        <var name="editorCell" id="1758249876502508513" />
+      </scope>
+      <scope id="1758249876502508513" at="32,0,40,0" />
+      <unit id="1758249876502508513" at="13,0,45,0" name="ActionCards.editor.BooleanExpression_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/188877551429756772">

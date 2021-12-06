@@ -497,5 +497,60 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="1xAzJ9NlrSY">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NaXT$" resolve="RecentCOVIDContactCondition" />
+    <node concept="9SLcT" id="1xAzJ9Nlsh_" role="9SGkU">
+      <node concept="3clFbS" id="1xAzJ9NlshA" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9Nlslw" role="3cqZAp">
+          <node concept="2OqwBi" id="1xAzJ9Nlss4" role="3clFbG">
+            <node concept="2DD5aU" id="1xAzJ9Nlslv" role="2Oq$k0" />
+            <node concept="2Zo12i" id="1xAzJ9NlsAe" role="2OqNvi">
+              <node concept="chp4Y" id="1xAzJ9NlsWp" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:1xAzJ9NaVjz" resolve="BooleanExpression" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1xAzJ9No$YZ">
+    <property role="3GE5qa" value="Attributes.PatientProperties.Boolean" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NaVjz" resolve="BooleanExpression" />
+    <node concept="9S07l" id="1xAzJ9No$Z0" role="9Vyp8">
+      <node concept="3clFbS" id="1xAzJ9No$Z1" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9No_2V" role="3cqZAp">
+          <node concept="3clFbT" id="1xAzJ9No_2U" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1xAzJ9No_77">
+    <property role="3GE5qa" value="Attributes.PatientProperties.Boolean" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NaVj$" resolve="No" />
+    <node concept="9S07l" id="1xAzJ9No_78" role="9Vyp8">
+      <node concept="3clFbS" id="1xAzJ9No_79" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9No_b3" role="3cqZAp">
+          <node concept="3clFbT" id="1xAzJ9No_b2" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1xAzJ9No_ff">
+    <property role="3GE5qa" value="Attributes.PatientProperties.Boolean" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NaVjy" resolve="Yes" />
+    <node concept="9S07l" id="1xAzJ9No_fg" role="9Vyp8">
+      <node concept="3clFbS" id="1xAzJ9No_fh" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9No_fC" role="3cqZAp">
+          <node concept="3clFbT" id="1xAzJ9No_fB" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

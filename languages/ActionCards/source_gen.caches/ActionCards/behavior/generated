@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-6grhmcxjkmxvvb7sqgmobllnn8unrd9">
-  <files names="Action__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:DiseaseSymptom__BehaviorDescriptor.java:IPatientProperty__BehaviorDescriptor.java:InfectionStatusProperty__BehaviorDescriptor.java:PatientProfile__BehaviorDescriptor.java:PatientPropertyConditional__BehaviorDescriptor.java:VaccinationStatus__BehaviorDescriptor.java:VaccineStatusProperty__BehaviorDescriptor.java" />
+<product version="3" modelHash="17krhxcm0rumg7f6s03ob9rvafrwddh">
+  <files names="Action__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:DiseaseSymptom__BehaviorDescriptor.java:IPatientProperty__BehaviorDescriptor.java:InfectionStatusProperty__BehaviorDescriptor.java:PatientProfile__BehaviorDescriptor.java:PatientPropertyConditional__BehaviorDescriptor.java:RecentCOVIDContactCondition__BehaviorDescriptor.java:RecentCovidContactProperty__BehaviorDescriptor.java:VaccinationStatus__BehaviorDescriptor.java:VaccineStatusProperty__BehaviorDescriptor.java" />
 </product>
 

@@ -568,12 +568,12 @@
       <ref role="2rTdP9" to="e88n:6MzSDQOui5f" resolve="Test" />
     </node>
     <node concept="2rT7sh" id="5ivS4t6sBwf" role="2rTMjI">
-      <property role="TrG5h" value="TestDiseaseToAtribute" />
+      <property role="TrG5h" value="TestResultToAtribute" />
       <ref role="2rTdP9" to="e88n:5ivS4t6ssOS" resolve="TestCapturedDisease" />
       <ref role="2rZz_L" to="3751:3KCb14J4_km" resolve="Attribute" />
     </node>
     <node concept="2rT7sh" id="6MzSDQOyEO9" role="2rTMjI">
-      <property role="TrG5h" value="ObservationTestToAttribute" />
+      <property role="TrG5h" value="ObservationTestResultToAttribute" />
       <ref role="2rTdP9" to="e88n:6MzSDQOuh6B" resolve="ObservationTest" />
       <ref role="2rZz_L" to="3751:3KCb14J4_km" resolve="Attribute" />
     </node>
@@ -1226,7 +1226,7 @@
                             <node concept="2OqwBi" id="6MzSDQOsvAo" role="3clFbG">
                               <node concept="1iwH7S" id="6MzSDQOsvAp" role="2Oq$k0" />
                               <node concept="1iwH70" id="6MzSDQOsvAq" role="2OqNvi">
-                                <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestDiseaseToAtribute" />
+                                <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestResultToAtribute" />
                                 <node concept="30H73N" id="6MzSDQOsvAr" role="1iwH7V" />
                               </node>
                             </node>
@@ -1300,7 +1300,7 @@
                             <node concept="2OqwBi" id="6MzSDQOsy9s" role="3clFbG">
                               <node concept="1iwH7S" id="6MzSDQOsy9t" role="2Oq$k0" />
                               <node concept="1iwH70" id="6MzSDQOsy9u" role="2OqNvi">
-                                <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestDiseaseToAtribute" />
+                                <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestResultToAtribute" />
                                 <node concept="30H73N" id="6MzSDQOsy9v" role="1iwH7V" />
                               </node>
                             </node>
@@ -1459,7 +1459,7 @@
                             <node concept="2OqwBi" id="6MzSDQOsAkm" role="3clFbG">
                               <node concept="1iwH7S" id="6MzSDQOsAkn" role="2Oq$k0" />
                               <node concept="1iwH70" id="6MzSDQOsAko" role="2OqNvi">
-                                <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestDiseaseToAtribute" />
+                                <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestResultToAtribute" />
                                 <node concept="30H73N" id="6MzSDQOsAkp" role="1iwH7V" />
                               </node>
                             </node>
@@ -1533,7 +1533,7 @@
                             <node concept="2OqwBi" id="6MzSDQOsAzF" role="3clFbG">
                               <node concept="1iwH7S" id="6MzSDQOsAzG" role="2Oq$k0" />
                               <node concept="1iwH70" id="6MzSDQOsAzH" role="2OqNvi">
-                                <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestDiseaseToAtribute" />
+                                <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestResultToAtribute" />
                                 <node concept="30H73N" id="6MzSDQOsAzI" role="1iwH7V" />
                               </node>
                             </node>
@@ -1915,7 +1915,7 @@
                     <node concept="2OqwBi" id="6MzSDQOyYIJ" role="3clFbG">
                       <node concept="1iwH7S" id="6MzSDQOyYIK" role="2Oq$k0" />
                       <node concept="1iwH70" id="6MzSDQOyYIL" role="2OqNvi">
-                        <ref role="1iwH77" node="6MzSDQOyEO9" resolve="ObservationTestToAttribute" />
+                        <ref role="1iwH77" node="6MzSDQOyEO9" resolve="ObservationTestResultToAttribute" />
                         <node concept="10QFUN" id="6MzSDQOz1Tm" role="1iwH7V">
                           <node concept="3Tqbb2" id="6MzSDQOz1WV" role="10QFUM">
                             <ref role="ehGHo" to="e88n:6MzSDQOuh6B" resolve="ObservationTest" />
@@ -2031,7 +2031,7 @@
                         <node concept="2OqwBi" id="6MzSDQOyKjc" role="3clFbG">
                           <node concept="1iwH7S" id="6MzSDQOyKjd" role="2Oq$k0" />
                           <node concept="1iwH70" id="6MzSDQOyKje" role="2OqNvi">
-                            <ref role="1iwH77" node="6MzSDQOyEO9" resolve="ObservationTestToAttribute" />
+                            <ref role="1iwH77" node="6MzSDQOyEO9" resolve="ObservationTestResultToAttribute" />
                             <node concept="2OqwBi" id="6MzSDQOyUMX" role="1iwH7V">
                               <node concept="1iwH7S" id="6MzSDQOyUDt" role="2Oq$k0" />
                               <node concept="1psM6Z" id="6MzSDQOBxqD" role="2OqNvi">
@@ -2879,20 +2879,17 @@
                     <node concept="2OqwBi" id="74nMeo6EmM1" role="2Oq$k0">
                       <node concept="2OqwBi" id="74nMeo6E6nF" role="2Oq$k0">
                         <node concept="2OqwBi" id="74nMeo6E4dn" role="2Oq$k0">
-                          <node concept="2OqwBi" id="74nMeo6E0OC" role="2Oq$k0">
-                            <node concept="2OqwBi" id="74nMeo6DYTS" role="2Oq$k0">
-                              <node concept="2OqwBi" id="74nMeo6DY_h" role="2Oq$k0">
-                                <node concept="1iwH7S" id="74nMeo6DYso" role="2Oq$k0" />
-                                <node concept="1r8y6K" id="74nMeo6DYGn" role="2OqNvi" />
-                              </node>
-                              <node concept="2RRcyG" id="74nMeo6DZ1i" role="2OqNvi">
-                                <ref role="2RRcyH" to="e88n:2VPlUUsG6x8" resolve="ActionCard" />
-                              </node>
+                          <node concept="2OqwBi" id="74nMeo6DYTS" role="2Oq$k0">
+                            <node concept="2OqwBi" id="74nMeo6DY_h" role="2Oq$k0">
+                              <node concept="1iwH7S" id="74nMeo6DYso" role="2Oq$k0" />
+                              <node concept="1r8y6K" id="74nMeo6DYGn" role="2OqNvi" />
                             </node>
-                            <node concept="1uHKPH" id="74nMeo6E2pI" role="2OqNvi" />
+                            <node concept="2RRcyG" id="74nMeo6DZ1i" role="2OqNvi">
+                              <ref role="2RRcyH" to="e88n:2VPlUUsG6x8" resolve="ActionCard" />
+                            </node>
                           </node>
-                          <node concept="3Tsc0h" id="74nMeo6E4qH" role="2OqNvi">
-                            <ref role="3TtcxE" to="e88n:2VPlUUsG6xR" resolve="Actions" />
+                          <node concept="13MTOL" id="1xAzJ9NaROb" role="2OqNvi">
+                            <ref role="13MTZf" to="e88n:2VPlUUsG6xR" resolve="Actions" />
                           </node>
                         </node>
                         <node concept="1z4cxt" id="74nMeo6Ea5W" role="2OqNvi">
@@ -3851,7 +3848,7 @@
               <node concept="2OqwBi" id="5Lup6bjNYrx" role="3clFbG">
                 <node concept="1iwH7S" id="5Lup6bjNYry" role="2Oq$k0" />
                 <node concept="1iwH70" id="5Lup6bkbMGb" role="2OqNvi">
-                  <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestDiseaseToAtribute" />
+                  <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestResultToAtribute" />
                   <node concept="2OqwBi" id="3WTvlUVzE_X" role="1iwH7V">
                     <node concept="2OqwBi" id="3WTvlUVzCrx" role="2Oq$k0">
                       <node concept="2OqwBi" id="3WTvlUVuhvi" role="2Oq$k0">
@@ -4060,7 +4057,7 @@
         <property role="30bdrQ" value="Incomplete" />
       </node>
       <node concept="raruj" id="5ivS4t6stDj" role="lGtFl">
-        <ref role="2sdACS" node="5ivS4t6sBwf" resolve="TestDiseaseToAtribute" />
+        <ref role="2sdACS" node="5ivS4t6sBwf" resolve="TestResultToAtribute" />
       </node>
       <node concept="17Uvod" id="5ivS4t6stDk" role="lGtFl">
         <property role="2qtEX9" value="name" />
@@ -4240,7 +4237,7 @@
               <node concept="2OqwBi" id="74nMeo8jpuC" role="3cqZAk">
                 <node concept="1iwH7S" id="74nMeo8jpuD" role="2Oq$k0" />
                 <node concept="1iwH70" id="74nMeo8jpuE" role="2OqNvi">
-                  <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestDiseaseToAtribute" />
+                  <ref role="1iwH77" node="5ivS4t6sBwf" resolve="TestResultToAtribute" />
                   <node concept="1eOMI4" id="74nMeo8jpuF" role="1iwH7V">
                     <node concept="10QFUN" id="74nMeo8jpuG" role="1eOMHV">
                       <node concept="3Tqbb2" id="74nMeo8jpuH" role="10QFUM">
@@ -4353,7 +4350,7 @@
         <property role="30bdrQ" value="Incomplete" />
       </node>
       <node concept="raruj" id="6MzSDQOyHkb" role="lGtFl">
-        <ref role="2sdACS" node="6MzSDQOyEO9" resolve="ObservationTestToAttribute" />
+        <ref role="2sdACS" node="6MzSDQOyEO9" resolve="ObservationTestResultToAttribute" />
       </node>
       <node concept="17Uvod" id="6MzSDQOyHkc" role="lGtFl">
         <property role="2qtEX9" value="name" />
@@ -4444,7 +4441,7 @@
               <node concept="2OqwBi" id="6MzSDQO$BfF" role="3clFbG">
                 <node concept="1iwH7S" id="6MzSDQO$BfG" role="2Oq$k0" />
                 <node concept="1iwH70" id="6MzSDQO$BfH" role="2OqNvi">
-                  <ref role="1iwH77" node="6MzSDQOyEO9" resolve="ObservationTestToAttribute" />
+                  <ref role="1iwH77" node="6MzSDQOyEO9" resolve="ObservationTestResultToAttribute" />
                   <node concept="2OqwBi" id="6MzSDQO$BfK" role="1iwH7V">
                     <node concept="30H73N" id="6MzSDQO$BfL" role="2Oq$k0" />
                     <node concept="3TrEf2" id="6MzSDQO$BfM" role="2OqNvi">

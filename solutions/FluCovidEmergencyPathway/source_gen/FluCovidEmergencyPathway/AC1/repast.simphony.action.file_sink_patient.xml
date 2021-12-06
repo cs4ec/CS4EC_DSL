@@ -22,6 +22,8 @@
     <string>patientgetFluBInfectionStatusisSymptomatic</string>
     <string>patientgetFluBInfectionStatusisAsymptomatic</string>
     <string>patientgetFluBInfectionStatusisSusceptible</string>
+    <string>patientgetRecentCovidContactisYes</string>
+    <string>patientgetRecentCovidContactisNo</string>
     <string>patientgetLFDCOVIDResultisPositive</string>
     <string>patientgetLFDCOVIDResultisNegative</string>
     <string>patientgetLFDFluAResultisPositive</string>
@@ -34,6 +36,12 @@
     <string>patientgetLIATFluAResultisNegative</string>
     <string>patientgetLIATFluBResultisPositive</string>
     <string>patientgetLIATFluBResultisNegative</string>
+    <string>patientgetLabPCRCOVIDResultisPositive</string>
+    <string>patientgetLabPCRCOVIDResultisNegative</string>
+    <string>patientgetLabPCRFluAResultisPositive</string>
+    <string>patientgetLabPCRFluAResultisNegative</string>
+    <string>patientgetLabPCRFluBResultisPositive</string>
+    <string>patientgetLabPCRFluBResultisNegative</string>
     <string>patientgetadmittedToisCOVIDPositiveCohort</string>
     <string>patientgetadmittedToisFluPositiveCohort</string>
     <string>patientgetadmittedToisNonRespiratoryCohort</string>

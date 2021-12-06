@@ -16,6 +16,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeLine;
   private ConceptPresentation props_AttributeTable;
+  private ConceptPresentation props_BooleanExpression;
   private ConceptPresentation props_Branch;
   private ConceptPresentation props_BranchConditional;
   private ConceptPresentation props_DiagnosticCondition;
@@ -28,6 +29,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_IPatientProperty;
   private ConceptPresentation props_InfectionStatusCondition;
   private ConceptPresentation props_InfectionStatusProperty;
+  private ConceptPresentation props_No;
   private ConceptPresentation props_ObservationTest;
   private ConceptPresentation props_ObservationsCondition;
   private ConceptPresentation props_PartiallyVaccinated;
@@ -38,6 +40,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PatientPropertyReference;
   private ConceptPresentation props_ProcessingTimeLine;
   private ConceptPresentation props_ProcessingTimeTable;
+  private ConceptPresentation props_RecentCOVIDContactCondition;
+  private ConceptPresentation props_RecentCovidContactProperty;
   private ConceptPresentation props_Resource;
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
@@ -50,6 +54,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_VaccineStatusCondition;
   private ConceptPresentation props_VaccineStatusProperty;
   private ConceptPresentation props_Variable;
+  private ConceptPresentation props_Yes;
 
   @Override
   @Nullable
@@ -108,6 +113,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttributeTable = cpb.create();
         }
         return props_AttributeTable;
+      case LanguageConceptSwitch.BooleanExpression:
+        if (props_BooleanExpression == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("BooleanExpression");
+          props_BooleanExpression = cpb.create();
+        }
+        return props_BooleanExpression;
       case LanguageConceptSwitch.Branch:
         if (props_Branch == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -193,6 +205,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InfectionStatusProperty = cpb.create();
         }
         return props_InfectionStatusProperty;
+      case LanguageConceptSwitch.No:
+        if (props_No == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("No");
+          props_No = cpb.create();
+        }
+        return props_No;
       case LanguageConceptSwitch.ObservationTest:
         if (props_ObservationTest == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -264,6 +283,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ProcessingTimeTable = cpb.create();
         }
         return props_ProcessingTimeTable;
+      case LanguageConceptSwitch.RecentCOVIDContactCondition:
+        if (props_RecentCOVIDContactCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("check if patient had a recent COVID contact");
+          props_RecentCOVIDContactCondition = cpb.create();
+        }
+        return props_RecentCOVIDContactCondition;
+      case LanguageConceptSwitch.RecentCovidContactProperty:
+        if (props_RecentCovidContactProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Recent COVID contact");
+          props_RecentCovidContactProperty = cpb.create();
+        }
+        return props_RecentCovidContactProperty;
       case LanguageConceptSwitch.Resource:
         if (props_Resource == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -350,6 +383,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Variable = cpb.create();
         }
         return props_Variable;
+      case LanguageConceptSwitch.Yes:
+        if (props_Yes == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Yes");
+          props_Yes = cpb.create();
+        }
+        return props_Yes;
     }
     return null;
   }

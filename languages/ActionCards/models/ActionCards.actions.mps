@@ -11,6 +11,9 @@
     <import index="33ny" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.util(JDK/)" implicit="true" />
   </imports>
   <registry>
+    <language id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts">
+      <concept id="1161622665029" name="jetbrains.mps.lang.sharedConcepts.structure.ConceptFunctionParameter_model" flags="nn" index="1Q6Npb" />
+    </language>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
         <child id="1068498886297" name="rValue" index="37vLTx" />
@@ -89,6 +92,18 @@
       <concept id="5584396657084920670" name="jetbrains.mps.lang.actions.structure.NodeSetupFunction_EnclosingNode" flags="nn" index="1r4N1M" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
+        <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
+      </concept>
+      <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
+        <reference id="1171315804605" name="concept" index="2RRcyH" />
+      </concept>
+      <concept id="3562215692195599741" name="jetbrains.mps.lang.smodel.structure.SLinkImplicitSelect" flags="nn" index="13MTOL">
+        <reference id="3562215692195600259" name="link" index="13MTZf" />
+      </concept>
+      <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
+        <child id="1177027386292" name="conceptArgument" index="cj9EA" />
+      </concept>
       <concept id="1180636770613" name="jetbrains.mps.lang.smodel.structure.SNodeCreator" flags="nn" index="3zrR0B">
         <child id="1180636770616" name="createdType" index="3zrR0E" />
       </concept>
@@ -131,6 +146,8 @@
       <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
       <concept id="1160612413312" name="jetbrains.mps.baseLanguage.collections.structure.AddElementOperation" flags="nn" index="TSZUe" />
       <concept id="3055999550620853964" name="jetbrains.mps.baseLanguage.collections.structure.RemoveWhereOperation" flags="nn" index="1aUR6E" />
+      <concept id="1165525191778" name="jetbrains.mps.baseLanguage.collections.structure.GetFirstOperation" flags="nn" index="1uHKPH" />
+      <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
     </language>
   </registry>
   <node concept="37WguZ" id="1xAzJ9Jiv2v">
@@ -277,6 +294,75 @@
                   <node concept="3Tsc0h" id="1xAzJ9JiXaA" role="2OqNvi">
                     <ref role="3TtcxE" to="e88n:1xAzJ9Jg7oB" resolve="possibleValues" />
                   </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="37WguZ" id="1xAzJ9NljbO">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="RecentContactFactory" />
+    <node concept="37WvkG" id="1xAzJ9NljbP" role="37WGs$">
+      <ref role="37XkoT" to="e88n:1xAzJ9NaXT$" resolve="RecentCOVIDContactCondition" />
+      <node concept="37Y9Zx" id="1xAzJ9NljbQ" role="37ZfLb">
+        <node concept="3clFbS" id="1xAzJ9NljbR" role="2VODD2">
+          <node concept="3clFbF" id="1xAzJ9Nljc4" role="3cqZAp">
+            <node concept="37vLTI" id="1xAzJ9NljXU" role="3clFbG">
+              <node concept="2OqwBi" id="1xAzJ9NljsD" role="37vLTJ">
+                <node concept="1r4Lsj" id="1xAzJ9NljfH" role="2Oq$k0" />
+                <node concept="3TrEf2" id="1xAzJ9NljKX" role="2OqNvi">
+                  <ref role="3Tt5mk" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
+                </node>
+              </node>
+              <node concept="2OqwBi" id="1xAzJ9Nlrtc" role="37vLTx">
+                <node concept="2OqwBi" id="1xAzJ9NlqKO" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1xAzJ9NloYI" role="2Oq$k0">
+                    <node concept="2OqwBi" id="1xAzJ9NlmDc" role="2Oq$k0">
+                      <node concept="2OqwBi" id="1xAzJ9Nlkg8" role="2Oq$k0">
+                        <node concept="1Q6Npb" id="1xAzJ9Nlkdv" role="2Oq$k0" />
+                        <node concept="2RRcyG" id="1xAzJ9Nlklr" role="2OqNvi">
+                          <ref role="2RRcyH" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                        </node>
+                      </node>
+                      <node concept="13MTOL" id="1xAzJ9Nloln" role="2OqNvi">
+                        <ref role="13MTZf" to="e88n:EFW1mY_h9p" resolve="attributes" />
+                      </node>
+                    </node>
+                    <node concept="3zZkjj" id="1xAzJ9Nlpay" role="2OqNvi">
+                      <node concept="1bVj0M" id="1xAzJ9Nlpa$" role="23t8la">
+                        <node concept="3clFbS" id="1xAzJ9Nlpa_" role="1bW5cS">
+                          <node concept="3clFbF" id="1xAzJ9Nlpeg" role="3cqZAp">
+                            <node concept="2OqwBi" id="1xAzJ9Nlq0h" role="3clFbG">
+                              <node concept="2OqwBi" id="1xAzJ9Nlpwb" role="2Oq$k0">
+                                <node concept="37vLTw" id="1xAzJ9Nlpef" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="1xAzJ9NlpaA" resolve="it" />
+                                </node>
+                                <node concept="3TrEf2" id="1xAzJ9NlpL8" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="e88n:1xAzJ9JghCa" resolve="patientProperty" />
+                                </node>
+                              </node>
+                              <node concept="1mIQ4w" id="1xAzJ9Nlqe6" role="2OqNvi">
+                                <node concept="chp4Y" id="1xAzJ9Nlqm9" role="cj9EA">
+                                  <ref role="cht4Q" to="e88n:1xAzJ9NaT1k" resolve="RecentCovidContactProperty" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="Rh6nW" id="1xAzJ9NlpaA" role="1bW2Oz">
+                          <property role="TrG5h" value="it" />
+                          <node concept="2jxLKc" id="1xAzJ9NlpaB" role="1tU5fm" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1uHKPH" id="1xAzJ9Nlr0l" role="2OqNvi" />
+                </node>
+                <node concept="3TrEf2" id="1xAzJ9NlrK8" role="2OqNvi">
+                  <ref role="3Tt5mk" to="e88n:1xAzJ9JghCa" resolve="patientProperty" />
                 </node>
               </node>
             </node>

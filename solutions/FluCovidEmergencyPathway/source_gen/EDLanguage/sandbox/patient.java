@@ -20,12 +20,16 @@ public class patient extends Actor {
   public String COVIDInfectionStatus = "NotConfigured";
   public String FluAInfectionStatus = "NotConfigured";
   public String FluBInfectionStatus = "NotConfigured";
+  public String RecentCovidContact = "NotConfigured";
   public String LFDCOVIDResult = "Incomplete";
   public String LFDFluAResult = "Incomplete";
   public String LFDFluBResult = "Incomplete";
   public String LIATCOVIDResult = "Incomplete";
   public String LIATFluAResult = "Incomplete";
   public String LIATFluBResult = "Incomplete";
+  public String LabPCRCOVIDResult = "Incomplete";
+  public String LabPCRFluAResult = "Incomplete";
+  public String LabPCRFluBResult = "Incomplete";
   public String TriagingToolResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
@@ -168,6 +172,18 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getRecentCovidContactisYes() {
+    if (this.RecentCovidContact == "Yes") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getRecentCovidContactisNo() {
+    if (this.RecentCovidContact == "No") {
+      return 1;
+    }
+    return 0;
+  }
   public int getLFDCOVIDResultisPositive() {
     if (this.LFDCOVIDResult == "Positive") {
       return 1;
@@ -236,6 +252,42 @@ public class patient extends Actor {
   }
   public int getLIATFluBResultisNegative() {
     if (this.LIATFluBResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLabPCRCOVIDResultisPositive() {
+    if (this.LabPCRCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLabPCRCOVIDResultisNegative() {
+    if (this.LabPCRCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLabPCRFluAResultisPositive() {
+    if (this.LabPCRFluAResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLabPCRFluAResultisNegative() {
+    if (this.LabPCRFluAResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLabPCRFluBResultisPositive() {
+    if (this.LabPCRFluBResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLabPCRFluBResultisNegative() {
+    if (this.LabPCRFluBResult == "Negative") {
       return 1;
     }
     return 0;

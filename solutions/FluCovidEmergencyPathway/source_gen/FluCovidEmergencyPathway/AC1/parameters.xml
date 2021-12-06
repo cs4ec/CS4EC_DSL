@@ -96,4 +96,12 @@
   		displayName="FluBInfectionStatus<Susceptible>" type="double" defaultValue="0.0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="RecentCovidContact<Yes>"
+  		displayName="RecentCovidContact<Yes>" type="double" defaultValue="0.0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="RecentCovidContact<No>"
+  		displayName="RecentCovidContact<No>" type="double" defaultValue="0.0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 </parameters>
