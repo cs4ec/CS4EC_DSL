@@ -65,29 +65,33 @@ public class Doctor extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "AdmittoCOVIDbayTrigger_a7":
-        behaviourBuilder = new Behaviour("AdmittoCOVIDbayTrigger_a7");
-        this.InitAdmitActionAdmittoCOVIDbay_c(s);
+      case "AdmittoCOVIDCohortTrigger_a7":
+        behaviourBuilder = new Behaviour("AdmittoCOVIDCohortTrigger_a7");
+        this.InitAdmitActionAdmittoCOVIDCohort_c(s);
         break;
-      case "AdmittoFluBayTrigger_a9":
-        behaviourBuilder = new Behaviour("AdmittoFluBayTrigger_a9");
+      case "AdmittoFluBayTrigger_b21":
+        behaviourBuilder = new Behaviour("AdmittoFluBayTrigger_b21");
         this.InitAdmitActionAdmittoFluBay_d(s);
         break;
-      case "AdmittononrespiratoryTrigger_b8":
-        behaviourBuilder = new Behaviour("AdmittononrespiratoryTrigger_b8");
-        this.InitAdmitActionAdmittononrespiratory_e(s);
+      case "AdmittogeneralbayTrigger_b51":
+        behaviourBuilder = new Behaviour("AdmittogeneralbayTrigger_b51");
+        this.InitAdmitActionAdmittogeneralbay_e(s);
         break;
-      case "AdmittosideroomTrigger_b9":
-        behaviourBuilder = new Behaviour("AdmittosideroomTrigger_b9");
-        this.InitAdmitActionAdmittosideroom_f(s);
+      case "AdmittoSRTrigger_b7":
+        behaviourBuilder = new Behaviour("AdmittoSRTrigger_b7");
+        this.InitAdmitActionAdmittoSR_f(s);
         break;
-      case "AdmittoCOVIDCohortTrigger_a01":
-        behaviourBuilder = new Behaviour("AdmittoCOVIDCohortTrigger_a01");
-        this.InitAdmitActionAdmittoCOVIDCohort_l(s);
+      case "AdmittoCOVIDCohortTrigger_a9":
+        behaviourBuilder = new Behaviour("AdmittoCOVIDCohortTrigger_a9");
+        this.InitAdmitActionAdmittoCOVIDCohort_k(s);
         break;
-      case "AdmittoSRTrigger_c8":
-        behaviourBuilder = new Behaviour("AdmittoSRTrigger_c8");
-        this.InitAdmitActionAdmittoSR_m(s);
+      case "AdmittoSRTrigger_a51":
+        behaviourBuilder = new Behaviour("AdmittoSRTrigger_a51");
+        this.InitAdmitActionAdmittoSR_l(s);
+        break;
+      case "AdmittoGeneralBayTrigger_b31":
+        behaviourBuilder = new Behaviour("AdmittoGeneralBayTrigger_b31");
+        this.InitAdmitActionAdmittoGeneralBay_o(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -95,7 +99,6 @@ public class Doctor extends Actor {
     }
     return behaviourBuilder;
   }
-
 
 
 
@@ -879,9 +882,139 @@ public class Doctor extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
+  public class MoveAction_a0g extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0g(Behaviour behaviour) {
+      target = NonRespiratoryCohort.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0g extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
+    }
+  }
+  public class Consequence_c0g extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_c0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "NonRespiratoryCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0g extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
+      network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
+    }
+  }
+  public class MoveAction_a0g_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0g_1(Behaviour behaviour) {
+      target = NonRespiratoryCohort.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0g_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0g_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
+    }
+  }
+  public class Consequence_c0g_0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_c0g_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "NonRespiratoryCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0g_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0g_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
+      network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
+    }
+  }
 
 
-  public void InitAdmitActionAdmittoCOVIDbay_c(Signal s) {
+  public void InitAdmitActionAdmittoCOVIDCohort_c(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
@@ -905,7 +1038,7 @@ public class Doctor extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmittononrespiratory_e(Signal s) {
+  public void InitAdmitActionAdmittogeneralbay_e(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0c(behaviourBuilder));
@@ -917,7 +1050,7 @@ public class Doctor extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmittosideroom_f(Signal s) {
+  public void InitAdmitActionAdmittoSR_f(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0d(behaviourBuilder));
@@ -929,7 +1062,7 @@ public class Doctor extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmittoCOVIDCohort_l(Signal s) {
+  public void InitAdmitActionAdmittoCOVIDCohort_k(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0e(behaviourBuilder));
@@ -941,13 +1074,25 @@ public class Doctor extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmittoSR_m(Signal s) {
+  public void InitAdmitActionAdmittoSR_l(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0f(behaviourBuilder));
     plstSteps.add(new OrderAction_b0f(behaviourBuilder));
     plstSteps.add(new Consequence_c0f(behaviourBuilder));
     plstSteps.add(new RemoveRelationshipAction_d0f(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+  }
+  public void InitAdmitActionAdmittoGeneralBay_o(Signal s) {
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new MoveAction_a0g(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0g(behaviourBuilder));
+    plstSteps.add(new Consequence_c0g(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0g(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

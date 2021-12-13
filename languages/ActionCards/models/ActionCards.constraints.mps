@@ -552,5 +552,101 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="1xAzJ9NxK1O">
+    <property role="3GE5qa" value="ActionCard" />
+    <ref role="1M2myG" to="e88n:2VPlUUsG6x8" resolve="ActionCard" />
+  </node>
+  <node concept="1M2fIO" id="1xAzJ9Nzrk_">
+    <property role="3GE5qa" value="ActionCard" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NxGW2" resolve="ActionCardCondition" />
+    <node concept="9SLcT" id="1xAzJ9NzrkA" role="9SGkU">
+      <node concept="3clFbS" id="1xAzJ9NzrkB" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9NxKIt" role="3cqZAp">
+          <node concept="22lmx$" id="1xAzJ9NxKIu" role="3clFbG">
+            <node concept="2OqwBi" id="1xAzJ9NxKIv" role="3uHU7w">
+              <node concept="2DD5aU" id="1xAzJ9NxKIw" role="2Oq$k0" />
+              <node concept="2Zo12i" id="1xAzJ9NxKIx" role="2OqNvi">
+                <node concept="chp4Y" id="1xAzJ9NxKIy" role="2Zo12j">
+                  <ref role="cht4Q" to="hm2y:4rZeNQ6MpKl" resolve="BinaryExpression" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="1xAzJ9NxKIz" role="3uHU7B">
+              <node concept="2DD5aU" id="1xAzJ9NxKI$" role="2Oq$k0" />
+              <node concept="2Zo12i" id="1xAzJ9NxKI_" role="2OqNvi">
+                <node concept="chp4Y" id="1xAzJ9NxKIA" role="2Zo12j">
+                  <ref role="cht4Q" to="e88n:1xAzJ9JDBLw" resolve="BranchConditional" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1xAzJ9NG9Dy">
+    <property role="3GE5qa" value="Attributes.PatientProperties.AttendanceRoutes" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+    <node concept="9S07l" id="1xAzJ9NG9Dz" role="9Vyp8">
+      <node concept="3clFbS" id="1xAzJ9NG9D$" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9NG9DD" role="3cqZAp">
+          <node concept="3clFbT" id="1xAzJ9NG9DC" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1xAzJ9NG9Lp">
+    <property role="3GE5qa" value="Attributes.PatientProperties.AttendanceRoutes" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NG9Lm" resolve="EmergencyAttendanceRoute" />
+    <node concept="9S07l" id="1xAzJ9NG9Lq" role="9Vyp8">
+      <node concept="3clFbS" id="1xAzJ9NG9Lr" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9NG9Pl" role="3cqZAp">
+          <node concept="3clFbT" id="1xAzJ9NG9Pk" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1xAzJ9NG9TO">
+    <property role="3GE5qa" value="Attributes.PatientProperties.AttendanceRoutes" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NG9TL" resolve="ElectiveAttendanceRoute" />
+    <node concept="9S07l" id="1xAzJ9NG9TP" role="9Vyp8">
+      <node concept="3clFbS" id="1xAzJ9NG9TQ" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9NG9XK" role="3cqZAp">
+          <node concept="3clFbT" id="1xAzJ9NG9XJ" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1xAzJ9NKtNr">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:1xAzJ9NKtIU" resolve="AttendanceRouteCondition" />
+    <node concept="9S07l" id="1xAzJ9NKtNs" role="9Vyp8">
+      <node concept="3clFbS" id="1xAzJ9NKtNt" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9NKtRn" role="3cqZAp">
+          <node concept="3clFbT" id="1xAzJ9NKtRm" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9SLcT" id="1xAzJ9OREA3" role="9SGkU">
+      <node concept="3clFbS" id="1xAzJ9OREA4" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9OREAr" role="3cqZAp">
+          <node concept="2OqwBi" id="1xAzJ9OREL1" role="3clFbG">
+            <node concept="2DD5aU" id="1xAzJ9OREZN" role="2Oq$k0" />
+            <node concept="2Zo12i" id="1xAzJ9ORF9X" role="2OqNvi">
+              <node concept="chp4Y" id="1xAzJ9ORFh1" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

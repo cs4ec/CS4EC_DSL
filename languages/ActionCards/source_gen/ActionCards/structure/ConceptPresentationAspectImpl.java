@@ -11,8 +11,11 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Action;
   private ConceptPresentation props_ActionCard;
+  private ConceptPresentation props_ActionCardCondition;
   private ConceptPresentation props_ActionStep;
   private ConceptPresentation props_AdmissionAction;
+  private ConceptPresentation props_AttendanceRoute;
+  private ConceptPresentation props_AttendanceRouteCondition;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeLine;
   private ConceptPresentation props_AttributeTable;
@@ -25,6 +28,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DiseaseSymptomReference;
   private ConceptPresentation props_DiseaseTest;
   private ConceptPresentation props_EDScenario;
+  private ConceptPresentation props_ElectiveAttendanceRoute;
+  private ConceptPresentation props_EmergencyAttendanceRoute;
   private ConceptPresentation props_FullyVaccinated;
   private ConceptPresentation props_IPatientProperty;
   private ConceptPresentation props_InfectionStatusCondition;
@@ -77,6 +82,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActionCard = cpb.create();
         }
         return props_ActionCard;
+      case LanguageConceptSwitch.ActionCardCondition:
+        if (props_ActionCardCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Condition");
+          props_ActionCardCondition = cpb.create();
+        }
+        return props_ActionCardCondition;
       case LanguageConceptSwitch.ActionStep:
         if (props_ActionStep == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -92,6 +104,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AdmissionAction = cpb.create();
         }
         return props_AdmissionAction;
+      case LanguageConceptSwitch.AttendanceRoute:
+        if (props_AttendanceRoute == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("AttendanceRoute");
+          props_AttendanceRoute = cpb.create();
+        }
+        return props_AttendanceRoute;
+      case LanguageConceptSwitch.AttendanceRouteCondition:
+        if (props_AttendanceRouteCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Check patient attendance route");
+          props_AttendanceRouteCondition = cpb.create();
+        }
+        return props_AttendanceRouteCondition;
       case LanguageConceptSwitch.Attribute:
         if (props_Attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -178,6 +204,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_EDScenario = cpb.create();
         }
         return props_EDScenario;
+      case LanguageConceptSwitch.ElectiveAttendanceRoute:
+        if (props_ElectiveAttendanceRoute == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Elective attendance");
+          props_ElectiveAttendanceRoute = cpb.create();
+        }
+        return props_ElectiveAttendanceRoute;
+      case LanguageConceptSwitch.EmergencyAttendanceRoute:
+        if (props_EmergencyAttendanceRoute == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Emergency Attendance");
+          props_EmergencyAttendanceRoute = cpb.create();
+        }
+        return props_EmergencyAttendanceRoute;
       case LanguageConceptSwitch.FullyVaccinated:
         if (props_FullyVaccinated == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -18,7 +18,6 @@
         <property id="1421157252384165432" name="memberId" index="3tVfz5" />
       </concept>
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
-        <reference id="1075010451642646892" name="defaultMember" index="1H5jkz" />
         <child id="3348158742936976577" name="members" index="25R1y" />
       </concept>
       <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
@@ -81,6 +80,12 @@
       <property role="20kJfa" value="Branches" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
+    </node>
+    <node concept="1TJgyj" id="1xAzJ9NxGe_" role="1TKVEi">
+      <property role="IQ2ns" value="1758249876506198949" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="UsageCondition" />
+      <ref role="20lvS9" node="1xAzJ9NxGW2" resolve="ActionCardCondition" />
     </node>
   </node>
   <node concept="1TIwiD" id="2VPlUUsG6x$">
@@ -354,32 +359,10 @@
   <node concept="1TIwiD" id="2lOlAdPyF0B">
     <property role="EcuMT" value="2698877061875544103" />
     <property role="TrG5h" value="Attribute" />
-    <property role="3GE5qa" value="Attributes" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="2lOlAdPyF13" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
-  <node concept="25R3W" id="2lOlAdPyF1E">
-    <property role="3F6X1D" value="2698877061875544170" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="TrG5h" value="E_SEIR" />
-    <ref role="1H5jkz" node="2lOlAdPyF1P" resolve="Susceptible" />
-    <node concept="25R33" id="2lOlAdPyF1F" role="25R1y">
-      <property role="3tVfz5" value="2698877061875544171" />
-      <property role="TrG5h" value="Symptomatic" />
-    </node>
-    <node concept="25R33" id="2_JteYPhysD" role="25R1y">
-      <property role="3tVfz5" value="2985733650857207593" />
-      <property role="TrG5h" value="Asymptomatic" />
-    </node>
-    <node concept="25R33" id="2lOlAdPyF1P" role="25R1y">
-      <property role="3tVfz5" value="2698877061875544181" />
-      <property role="TrG5h" value="Susceptible" />
-    </node>
-    <node concept="25R33" id="2lOlAdPyF1S" role="25R1y">
-      <property role="3tVfz5" value="2698877061875544184" />
-      <property role="TrG5h" value="Recovered" />
     </node>
   </node>
   <node concept="25R3W" id="2lOlAdPyF1W">
@@ -395,28 +378,10 @@
       <property role="TrG5h" value="Negative" />
     </node>
   </node>
-  <node concept="25R3W" id="2lOlAdPyF2t">
-    <property role="3F6X1D" value="2698877061875544221" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="TrG5h" value="E_Severity" />
-    <node concept="25R33" id="2lOlAdPyF2u" role="25R1y">
-      <property role="3tVfz5" value="2698877061875544222" />
-      <property role="TrG5h" value="Severe" />
-    </node>
-    <node concept="25R33" id="2lOlAdPyF2C" role="25R1y">
-      <property role="3tVfz5" value="2698877061875544232" />
-      <property role="TrG5h" value="Moderate" />
-    </node>
-    <node concept="25R33" id="2lOlAdPyF2F" role="25R1y">
-      <property role="3tVfz5" value="2698877061875544235" />
-      <property role="TrG5h" value="Mild" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="2lOlAdQiLDw">
     <property role="EcuMT" value="2698877061888154208" />
-    <property role="3GE5qa" value="Attributes" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
     <property role="TrG5h" value="AttributeTable" />
-    <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2lOlAdQiLFi" role="1TKVEi">
       <property role="IQ2ns" value="2698877061888154322" />
@@ -438,7 +403,7 @@
   </node>
   <node concept="1TIwiD" id="2lOlAdQiLDW">
     <property role="EcuMT" value="2698877061888154236" />
-    <property role="3GE5qa" value="Attributes" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
     <property role="TrG5h" value="AttributeLine" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="5R1$QEM_$xK" role="1TKVEl">
@@ -494,10 +459,10 @@
   <node concept="1TIwiD" id="EFW1mY_7c6">
     <property role="EcuMT" value="768972137579180806" />
     <property role="TrG5h" value="PatientProfile" />
-    <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="People" />
     <property role="R4oN_" value="The patient profile" />
-    <ref role="1TJDcQ" node="4X1nFNzWOrG" resolve="StaffType" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="EFW1mY_h9p" role="1TKVEi">
       <property role="IQ2ns" value="768972137579221593" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -511,6 +476,16 @@
       <property role="20kJfa" value="arrivalRate" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals" />
+    </node>
+    <node concept="1TJgyj" id="1xAzJ9NBOBv" role="1TKVEi">
+      <property role="IQ2ns" value="1758249876507806175" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="attendanceRoute" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+    </node>
+    <node concept="PrWs8" id="1xAzJ9O2iPR" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="1SF32lRXYq">
@@ -790,6 +765,53 @@
     <property role="TrG5h" value="RecentCOVIDContactCondition" />
     <property role="34LRSv" value="check if patient had a recent COVID contact" />
     <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NxGW2">
+    <property role="EcuMT" value="1758249876506201858" />
+    <property role="3GE5qa" value="ActionCard" />
+    <property role="TrG5h" value="ActionCardCondition" />
+    <property role="34LRSv" value="Condition" />
+    <node concept="1TJgyj" id="1xAzJ9NxGW3" role="1TKVEi">
+      <property role="IQ2ns" value="1758249876506201859" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NG9Dt">
+    <property role="EcuMT" value="1758249876508940893" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.AttendanceRoutes" />
+    <property role="TrG5h" value="AttendanceRoute" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NG9Lm">
+    <property role="EcuMT" value="1758249876508941398" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.AttendanceRoutes" />
+    <property role="TrG5h" value="EmergencyAttendanceRoute" />
+    <property role="34LRSv" value="Emergency Attendance" />
+    <ref role="1TJDcQ" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NG9TL">
+    <property role="EcuMT" value="1758249876508941937" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.AttendanceRoutes" />
+    <property role="TrG5h" value="ElectiveAttendanceRoute" />
+    <property role="34LRSv" value="Elective attendance" />
+    <ref role="1TJDcQ" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9NKtIU">
+    <property role="EcuMT" value="1758249876510071738" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="AttendanceRouteCondition" />
+    <property role="34LRSv" value="Check patient attendance route" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyj" id="1xAzJ9OY5DV" role="1TKVEi">
+      <property role="IQ2ns" value="1758249876530420347" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="attendanceRoute" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+    </node>
   </node>
 </model>
 

@@ -46,6 +46,7 @@
     <string>patientgetadmittedToisFluPositiveCohort</string>
     <string>patientgetadmittedToisNonRespiratoryCohort</string>
     <string>patientgetadmittedToisSideRoom</string>
+    <string>patientgetadmittedToisnull</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

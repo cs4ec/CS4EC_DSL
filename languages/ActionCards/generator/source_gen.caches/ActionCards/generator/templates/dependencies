@@ -23,6 +23,7 @@
     <classNode dependClassName="jetbrains.mps.generator.impl.query.QueryKey" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.ReductionRuleCondition" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.ReferenceTargetQuery" />
+    <classNode dependClassName="jetbrains.mps.generator.impl.query.ScriptCodeBlock" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.SourceNodeQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.SourceNodesQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.VariableValueQuery" />
@@ -31,6 +32,7 @@
     <classNode dependClassName="jetbrains.mps.generator.template.IfMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.InsertMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.LabelKeyQueryContext" />
+    <classNode dependClassName="jetbrains.mps.generator.template.MappingScriptContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.PropertyMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.ReductionRuleQueryContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.ReferenceMacroContext" />

@@ -423,9 +423,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("AgentGeneratorLines", 0x27ebd2392beaa3d1L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x27ebd2392beaa324L).optional(true).ordered(true).multiple(true).origin("2876623929997960145").done();
     b.aggregate("AgentType", 0xaabf015be70c170L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd0118aabL).optional(false).ordered(true).multiple(false).origin("768972137576841584").done();
-    b.aggregate("OnGenerateAnnouncement", 0xaabf015be728ddfL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c93L).optional(true).ordered(true).multiple(false).origin("768972137576959455").done();
     b.aggregate("SpawnAt", 0xaabf015bf63bb64L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(false).ordered(true).multiple(false).origin("768972137592765284").done();
-    b.aggregate("Notify", 0x7117c8e6069c8681L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd0118aabL).optional(true).ordered(true).multiple(false).origin("8149202941029156481").done();
+    b.aggregate("ArrivalMessage", 0x7117c8e6069c8681L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c93L).optional(true).ordered(true).multiple(false).origin("8149202941029156481").done();
     b.aggregate("AttributeMaps", 0x296f74efb4abbea0L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f407L).optional(true).ordered(true).multiple(true).origin("2985733650847088288").done();
     b.alias("Agent Generator");
     return b.create();

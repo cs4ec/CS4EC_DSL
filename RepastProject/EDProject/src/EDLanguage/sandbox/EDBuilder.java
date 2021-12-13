@@ -51,7 +51,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
-    context.add(new patientGenerator(space, grid, context));
+    context.add(new patientGenerator_0(space, grid, context));
+    context.add(new patientGenerator_1(space, grid, context));
     context.add(new Board());
 
     // add Agents 
@@ -63,6 +64,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     }
     for (int i = 0; i < 5; i++) {
       context.add(new TriageNurse(space, grid, context));
+    }
+    for (int i = 0; i < 20; i++) {
+      context.add(new PreAdmissionStaff(space, grid, context));
     }
 
 
@@ -110,7 +114,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room SideRoom_lb = new Room("SideRoom", context, space, grid, 200, 60, 50, 50, 1, 1000, SideRoom.getInstance(), Color.ORANGE);
     Room CovidCohort_mb = new Room("CovidCohort", context, space, grid, 260, 60, 50, 50, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED);
     Room FluCohort_nb = new Room("FluCohort", context, space, grid, 260, 5, 50, 50, 1, 1000, FluPositiveCohort.getInstance(), Color.RED);
-    Room NonRespiratoryCohort_ob = new Room("NonRespiratoryCohort", context, space, grid, 200, 5, 50, 50, 1, 1000, NonRespiratoryCohort.getInstance(), Color.GREEN);
+    Room PreAdmissionArea_ob = new Room("PreAdmissionArea", context, space, grid, 320, 5, 50, 50, 1, 1000, ElectiveAttendanceArea.getInstance(), Color.GRAY);
+    Room NonRespiratoryCohort_pb = new Room("NonRespiratoryCohort", context, space, grid, 200, 5, 50, 50, 1, 1000, NonRespiratoryCohort.getInstance(), Color.GREEN);
     try {
       Paedeatrics_a.setSeats(0);
       Lab_b.setSeats(0);
@@ -152,7 +157,8 @@ public class EDBuilder implements ContextBuilder<Object> {
       SideRoom_lb.setSeats(0);
       CovidCohort_mb.setSeats(0);
       FluCohort_nb.setSeats(0);
-      NonRespiratoryCohort_ob.setSeats(0);
+      PreAdmissionArea_ob.setSeats(0);
+      NonRespiratoryCohort_pb.setSeats(0);
       Paedeatrics_a.setDesks(0);
       Lab_b.setDesks(0);
       MainReception_c.setDesks(0);
@@ -193,7 +199,8 @@ public class EDBuilder implements ContextBuilder<Object> {
       SideRoom_lb.setDesks(0);
       CovidCohort_mb.setDesks(0);
       FluCohort_nb.setDesks(0);
-      NonRespiratoryCohort_ob.setDesks(0);
+      PreAdmissionArea_ob.setDesks(0);
+      NonRespiratoryCohort_pb.setDesks(0);
       Paedeatrics_a.setBeds(0);
       Lab_b.setBeds(0);
       MainReception_c.setBeds(0);
@@ -234,7 +241,8 @@ public class EDBuilder implements ContextBuilder<Object> {
       SideRoom_lb.setBeds(0);
       CovidCohort_mb.setBeds(0);
       FluCohort_nb.setBeds(0);
-      NonRespiratoryCohort_ob.setBeds(0);
+      PreAdmissionArea_ob.setBeds(0);
+      NonRespiratoryCohort_pb.setBeds(0);
     } catch (NumberFormatException e) {
     }
 
@@ -293,6 +301,30 @@ public class EDBuilder implements ContextBuilder<Object> {
     ArrivalPerHour.put(21, 8);
     ArrivalPerHour.put(22, 7);
     ArrivalPerHour.put(23, 10);
+    ArrivalPerHour.put(24, 3);
+    ArrivalPerHour.put(1, 2);
+    ArrivalPerHour.put(2, 3);
+    ArrivalPerHour.put(3, 4);
+    ArrivalPerHour.put(4, 5);
+    ArrivalPerHour.put(5, 6);
+    ArrivalPerHour.put(6, 3);
+    ArrivalPerHour.put(7, 4);
+    ArrivalPerHour.put(8, 3);
+    ArrivalPerHour.put(9, 5);
+    ArrivalPerHour.put(10, 6);
+    ArrivalPerHour.put(11, 5);
+    ArrivalPerHour.put(12, 3);
+    ArrivalPerHour.put(13, 4);
+    ArrivalPerHour.put(14, 3);
+    ArrivalPerHour.put(15, 4);
+    ArrivalPerHour.put(16, 3);
+    ArrivalPerHour.put(17, 4);
+    ArrivalPerHour.put(18, 3);
+    ArrivalPerHour.put(19, 4);
+    ArrivalPerHour.put(20, 3);
+    ArrivalPerHour.put(21, 4);
+    ArrivalPerHour.put(22, 3);
+    ArrivalPerHour.put(23, 4);
     ArrivalPerHour.put(24, 3);
     PatientArrivalStore.Initialise((Map<Integer, Integer>) ArrivalPerHour);
   }

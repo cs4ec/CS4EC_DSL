@@ -1798,10 +1798,10 @@
           <node concept="3EZMnI" id="74nMeo6B8zG" role="3EZMnx">
             <node concept="VPM3Z" id="74nMeo6B8zI" role="3F10Kt" />
             <node concept="3F0ifn" id="74nMeo6B8zK" role="3EZMnx">
-              <property role="3F0ifm" value="Notify:" />
+              <property role="3F0ifm" value="Arrival Message:" />
             </node>
             <node concept="3F1sOY" id="74nMeo6B8$0" role="3EZMnx">
-              <ref role="1NtTu8" to="3751:74nMeo6B8q1" resolve="Notify" />
+              <ref role="1NtTu8" to="3751:74nMeo6B8q1" resolve="ArrivalMessage" />
             </node>
             <node concept="2iRfu4" id="74nMeo6B8zL" role="2iSdaV" />
           </node>

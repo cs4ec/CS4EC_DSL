@@ -14,6 +14,7 @@ public class patient extends Actor {
 
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
+  public String admissionRoute = "UnConfigured";
   public String COVIDVaccineStatus = "NotConfigured";
   public String FluAVaccineStatus = "NotConfigured";
   public String FluBVaccineStatus = "NotConfigured";
@@ -61,7 +62,6 @@ public class patient extends Actor {
     }
     return behaviourBuilder;
   }
-
 
 
   public int getCOVIDVaccineStatusisUnvaccinated() {
@@ -312,6 +312,12 @@ public class patient extends Actor {
   }
   public int getadmittedToisSideRoom() {
     if (this.admittedTo == "SideRoom") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisnull() {
+    if (this.admittedTo == "") {
       return 1;
     }
     return 0;

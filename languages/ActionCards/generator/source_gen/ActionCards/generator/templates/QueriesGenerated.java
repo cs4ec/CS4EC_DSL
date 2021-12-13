@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.ArrayList;
 import AgentLanguage.behavior.RoomType__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.language.SEnumerationLiteral;
+import jetbrains.mps.generator.template.MappingScriptContext;
 import jetbrains.mps.generator.template.InsertMacroContext;
 import jetbrains.mps.generator.template.TemplateVarContext;
 import jetbrains.mps.generator.template.TemplateQueryContext;
@@ -41,6 +42,7 @@ import org.jetbrains.annotations.NotNull;
 import jetbrains.mps.generator.impl.query.QueryKey;
 import jetbrains.mps.generator.template.ReductionRuleQueryContext;
 import jetbrains.mps.generator.impl.GenerationFailureException;
+import jetbrains.mps.generator.impl.query.ScriptCodeBlock;
 import jetbrains.mps.generator.impl.query.SourceNodeQuery;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.generator.impl.query.SourceNodesQuery;
@@ -74,6 +76,9 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object propertyMacro_GetValue_2_0(final PropertyMacroContext _context) {
     return _context.createUniqueName(Action__BehaviorDescriptor.getFormattedName_id2lOlAdPvbFq.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub)) + "Trigger", null);
+  }
+  public static Object propertyMacro_GetValue_2_1(final PropertyMacroContext _context) {
+    return _context.createUniqueName(Action__BehaviorDescriptor.getFormattedName_id2lOlAdPvbFq.invoke(_context.getNode()) + "Trigger", null);
   }
   public static Object propertyMacro_GetValue_3_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.duration$GM1u);
@@ -109,7 +114,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SEnumOperations.getMemberName0(SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab07cL, "ActionCards.structure.E_Result"), 0x25745663758ab07dL, "Positive"));
   }
   public static Object propertyMacro_GetValue_3_11(final PropertyMacroContext _context) {
-    return SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab06aL, "ActionCards.structure.E_SEIR"), 0x25745663758ab06bL, "Symptomatic").getName();
+    return CONCEPTS.Symptomatic$QN.getConceptAlias();
   }
   public static Object propertyMacro_GetValue_3_12(final PropertyMacroContext _context) {
     return _context.createUniqueName(Action__BehaviorDescriptor.getFormattedName_id2lOlAdPvbFq.invoke(_context.getNode()), null);
@@ -127,7 +132,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.number$HYc8);
   }
   public static Object propertyMacro_GetValue_8_0(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL).toLowerCase();
+    return "patient";
   }
   public static Object propertyMacro_GetValue_9_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), LINKS.roomType$xuJp), PROPS.name$MnvL);
@@ -174,11 +179,20 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Object propertyMacro_GetValue_21_0(final PropertyMacroContext _context) {
     return (String) BaseConcept__BehaviorDescriptor.getPresentation_idhEwIMiw.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.checkValue$p63D));
   }
+  public static Object propertyMacro_GetValue_25_0(final PropertyMacroContext _context) {
+    return SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attendanceRoute$Fj$T)).getConceptAlias().replaceAll("\\s+", "");
+  }
   public static Object referenceMacro_GetReferent_2_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
   }
   public static Object referenceMacro_GetReferent_2_1(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.Action$K5, false, false), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
+  }
+  public static Object referenceMacro_GetReferent_2_2(final ReferenceMacroContext _context) {
+    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
+  }
+  public static Object referenceMacro_GetReferent_2_3(final ReferenceMacroContext _context) {
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_0(final ReferenceMacroContext _context) {
     return SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), LINKS.roomType$xuJp);
@@ -195,28 +209,28 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_3_4(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_5(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_3_6(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_7(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_3_8(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_9(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_3_10(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_11(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_12(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).where(new IWhereFilter<SNode>() {
@@ -226,7 +240,7 @@ public class QueriesGenerated extends QueryProviderBase {
     }).first(), LINKS.patientProperty$oTU2), "PatientPropertyToAttribute");
   }
   public static Object referenceMacro_GetReferent_3_13(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_14(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).where(new IWhereFilter<SNode>() {
@@ -239,16 +253,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.getOutputNodeByInputNodeAndMappingLabel((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), "ObservationTestResultToAttribute");
   }
   public static Object referenceMacro_GetReferent_3_16(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_17(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(((SNode) _context.getVariable("var:ObservationTest")), "ObservationTestResultToAttribute");
   }
   public static Object referenceMacro_GetReferent_3_18(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_19(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_3_20(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).where(new IWhereFilter<SNode>() {
@@ -272,13 +286,13 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.getOutputNodeByInputNodeAndMappingLabel(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub)), "SignalReduction");
   }
   public static Object referenceMacro_GetReferent_6_0(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.PatientProfile$ZT, false, false), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_6_1(final ReferenceMacroContext _context) {
     return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L, "AgentLanguage.structure.RoomType"));
   }
   public static Object referenceMacro_GetReferent_6_2(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
+    return _context.getOutputNodeByInputNodeAndMappingLabel(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(final SNode it) {
         return ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Branch$sq)).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it2) {
@@ -286,7 +300,7 @@ public class QueriesGenerated extends QueryProviderBase {
           }
         }).isEmpty();
       }
-    }), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
+    }), "SignalReduction");
   }
   public static Object referenceMacro_GetReferent_7_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.staff$HYEa), "staffReduction");
@@ -295,16 +309,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), LINKS.roomType$xuJp);
   }
   public static Object referenceMacro_GetReferent_9_1(final ReferenceMacroContext _context) {
-    return ListSequence.fromList(SLinkOperations.getChildren(_context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction"), LINKS.attributes$f_y3)).getElement(1);
+    return ListSequence.fromList(SLinkOperations.getChildren(_context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction"), LINKS.attributes$f_y3)).getElement(1);
   }
   public static Object referenceMacro_GetReferent_9_2(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_10_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "SignalReduction");
   }
   public static Object referenceMacro_GetReferent_12_0(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_12_1(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(_context.getNode(), LINKS.test$zhiH), LINKS.CapturedDiseases$9e0A)).findFirst(new IWhereFilter<SNode>() {
@@ -323,19 +337,22 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.getOutputNodeByInputNodeAndMappingLabel(((SNode) _context.getNode()), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_19_0(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_19_1(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.test$Tp3g), "ObservationTestResultToAttribute");
   }
   public static Object referenceMacro_GetReferent_21_0(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT)).first(), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_21_1(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.patientProperty$FJ4E), "PatientPropertyToAttribute");
   }
   public static Object referenceMacro_GetReferent_22_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.patientProperty$oTU2), "PatientPropertyToAttribute");
+  }
+  public static Object referenceMacro_GetReferent_25_0(final ReferenceMacroContext _context) {
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static boolean ifMacro_Condition_3_0(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), null));
@@ -364,13 +381,6 @@ public class QueriesGenerated extends QueryProviderBase {
   public static boolean ifMacro_Condition_3_8(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.condition$UnEW), null));
   }
-  public static boolean ifMacro_Condition_3_9(final IfMacroContext _context) {
-    return ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Branch$sq)).any(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return SLinkOperations.getTarget(it, LINKS.targetAction$Z7ub) == _context.getNode();
-      }
-    });
-  }
   public static boolean ifMacro_Condition_8_0(final IfMacroContext _context) {
     return false;
   }
@@ -392,6 +402,9 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static SNode sourceNodeQuery_3_1(final SourceSubstituteMacroNodeContext _context) {
     return _context.getNode();
+  }
+  public static SNode sourceNodeQuery_8_0(final SourceSubstituteMacroNodeContext _context) {
+    return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc7L, "org.iets3.core.expr.simpleTypes.structure.StringType"));
   }
   public static SNode sourceNodeQuery_15_0(final SourceSubstituteMacroNodeContext _context) {
     return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc7L, "org.iets3.core.expr.simpleTypes.structure.StringType"));
@@ -415,6 +428,9 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Iterable<SNode> sourceNodesQuery_2_0(final SourceSubstituteMacroNodesContext _context) {
     return SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Branch$sq);
   }
+  public static Iterable<SNode> sourceNodesQuery_2_1(final SourceSubstituteMacroNodesContext _context) {
+    return SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G);
+  }
   public static Iterable<SNode> sourceNodesQuery_3_0(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG)), LINKS.CapturedDiseases$9e0A);
   }
@@ -435,7 +451,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.attributeLines$amAy);
   }
   public static Iterable<SNode> sourceNodesQuery_6_1(final SourceSubstituteMacroNodesContext _context) {
-    return SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM);
+    return SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.PatientProfile$ZT, false, false), LINKS.attributes$kiaM);
   }
   public static Iterable<SNode> sourceNodesQuery_6_2(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.PatientArrivalLines$6zwB);
@@ -444,7 +460,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.staffNumbers$IepE);
   }
   public static Iterable<SNode> sourceNodesQuery_8_0(final SourceSubstituteMacroNodesContext _context) {
-    return SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM);
+    return Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).distinct();
   }
   public static Iterable<SNode> sourceNodesQuery_8_1(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.DiseaseTest$k4), LINKS.CapturedDiseases$9e0A);
@@ -497,10 +513,48 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Iterable<SNode> sourceNodesQuery_22_0(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.attributeLines$amAy);
   }
+  public static void mappingScript_CodeBlock_24(final MappingScriptContext _context) {
+    List<SNode> rootActions = Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
+      public boolean accept(final SNode it) {
+        return ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Branch$sq)).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it2) {
+            return Objects.equals(SLinkOperations.getTarget(it2, LINKS.targetAction$Z7ub), it);
+          }
+        }).isEmpty();
+      }
+    }).toListSequence();
+
+    SNode rootActionCard = ListSequence.fromList(rootActions).select(new ISelector<SNode, SNode>() {
+      public SNode select(SNode it) {
+        return SNodeOperations.getNodeAncestor(it, CONCEPTS.ActionCard$eb, false, false);
+      }
+    }).first();
+    SNode newRootAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
+    SPropertyOperations.assign(newRootAction, PROPS.name$MnvL, "PatientArrives");
+    ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Actions$nh$G)).addElement(newRootAction);
+
+    List<SNode> newBranches = new ArrayList<SNode>();
+    for (SNode rootAction : ListSequence.fromList(rootActions)) {
+      SLinkOperations.setTarget(newRootAction, LINKS.staffTypeReference$jtXw, SNodeOperations.copyNode(SLinkOperations.getTarget(rootAction, LINKS.staffTypeReference$jtXw)));
+
+      SNode actionCardCondition = SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(rootAction, CONCEPTS.ActionCard$eb, false, false), LINKS.UsageCondition$srTD);
+      SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
+      SLinkOperations.setTarget(newBranch, LINKS.condition$UnEW, SLinkOperations.getTarget(actionCardCondition, LINKS.condition$HxRE));
+      SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, rootAction);
+      SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, newRootAction);
+      ListSequence.fromList(newBranches).addElement(newBranch);
+      ListSequence.fromList(SLinkOperations.getChildren(newRootAction, LINKS.outgoingBranches$cwqF)).addElement(SNodeOperations.copyNode(newBranch));
+    }
+
+    ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Branches$1fde)).addSequence(ListSequence.fromList(newBranches));
+  }
   public static SNode insertMacro_Query_6_0(final InsertMacroContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.possibleValue$QY6s);
   }
   public static SNode insertMacro_Query_6_1(final InsertMacroContext _context) {
+    return SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.PatientProfile$ZT, false, false), LINKS.attendanceRoute$f8XV);
+  }
+  public static SNode insertMacro_Query_6_2(final InsertMacroContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.ArrivalLocation$5hIS);
   }
   public static SNode insertMacro_Query_8_0(final InsertMacroContext _context) {
@@ -519,6 +573,9 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static SNode labelMapNode2_0(final TemplateQueryContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub);
+  }
+  public static SNode labelMapNode2_1(final TemplateQueryContext _context) {
+    return _context.getNode();
   }
   private final Map<String, ReductionRuleCondition> rrcMethods = new HashMap<String, ReductionRuleCondition>();
   {
@@ -549,11 +606,39 @@ public class QueriesGenerated extends QueryProviderBase {
       }
     }
   }
+  private final Map<String, ScriptCodeBlock> mscbMethods = new HashMap<String, ScriptCodeBlock>();
+  {
+    int i = 0;
+    mscbMethods.put("1758249876526393805", new SCB(i++));
+  }
+  @Override
+  @NotNull
+  public ScriptCodeBlock getScriptCodeBlock(@NotNull QueryKey identity) {
+    ScriptCodeBlock query = identity.forTemplateNode(mscbMethods);
+    return (query != null ? query : super.getScriptCodeBlock(identity));
+  }
+  private static class SCB implements ScriptCodeBlock {
+    private final int methodKey;
+    public SCB(int methodKey) {
+      this.methodKey = methodKey;
+    }
+    @Override
+    public void invoke(MappingScriptContext ctx) throws GenerationFailureException {
+      switch (methodKey) {
+        case 0:
+          QueriesGenerated.mappingScript_CodeBlock_24(ctx);
+          return;
+        default:
+          throw new GenerationFailureException(String.format("There's no code block with method index %d ", methodKey));
+      }
+    }
+  }
   private final Map<String, SourceNodeQuery> snqMethods = new HashMap<String, SourceNodeQuery>();
   {
     int i = 0;
     snqMethods.put("1589537774392946362", new SNQ(i++));
     snqMethods.put("1589537774392947114", new SNQ(i++));
+    snqMethods.put("1758249876512825263", new SNQ(i++));
     snqMethods.put("6097839017212107340", new SNQ(i++));
     snqMethods.put("7828349744265662817", new SNQ(i++));
     snqMethods.put("7828349744266794244", new SNQ(i++));
@@ -578,12 +663,14 @@ public class QueriesGenerated extends QueryProviderBase {
         case 1:
           return QueriesGenerated.sourceNodeQuery_3_1(ctx);
         case 2:
-          return QueriesGenerated.sourceNodeQuery_15_0(ctx);
+          return QueriesGenerated.sourceNodeQuery_8_0(ctx);
         case 3:
-          return QueriesGenerated.sourceNodeQuery_17_0(ctx);
+          return QueriesGenerated.sourceNodeQuery_15_0(ctx);
         case 4:
-          return QueriesGenerated.sourceNodeQuery_18_0(ctx);
+          return QueriesGenerated.sourceNodeQuery_17_0(ctx);
         case 5:
+          return QueriesGenerated.sourceNodeQuery_18_0(ctx);
+        case 6:
           return QueriesGenerated.sourceNodeQuery_20_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -595,6 +682,7 @@ public class QueriesGenerated extends QueryProviderBase {
     int i = 0;
     snsqMethods.put("5402567240274544690", new SNsQ(i++));
     snsqMethods.put("5402567240276588816", new SNsQ(i++));
+    snsqMethods.put("1758249876519822937", new SNsQ(i++));
     snsqMethods.put("6097839017212159764", new SNsQ(i++));
     snsqMethods.put("7828349744266414720", new SNsQ(i++));
     snsqMethods.put("7828349744266466384", new SNsQ(i++));
@@ -633,40 +721,42 @@ public class QueriesGenerated extends QueryProviderBase {
         case 1:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_2_0(ctx));
         case 2:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_3_0(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_2_1(ctx));
         case 3:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_3_1(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_3_0(ctx));
         case 4:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_3_2(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_3_1(ctx));
         case 5:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_3_3(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_3_2(ctx));
         case 6:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_6_0(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_3_3(ctx));
         case 7:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_6_1(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_6_0(ctx));
         case 8:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_6_2(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_6_1(ctx));
         case 9:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_7_0(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_6_2(ctx));
         case 10:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_0(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_7_0(ctx));
         case 11:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_1(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_0(ctx));
         case 12:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_2(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_1(ctx));
         case 13:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_3(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_2(ctx));
         case 14:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_4(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_3(ctx));
         case 15:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_5(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_4(ctx));
         case 16:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_6(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_5(ctx));
         case 17:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_11_0(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_6(ctx));
         case 18:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_16_0(ctx));
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_11_0(ctx));
         case 19:
+          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_16_0(ctx));
+        case 20:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_22_0(ctx));
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -678,6 +768,7 @@ public class QueriesGenerated extends QueryProviderBase {
     int i = 0;
     pvqMethods.put("5402567240274524530", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "map_StaffType"));
     pvqMethods.put("5402567240277091920", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "placeholderName"));
+    pvqMethods.put("1758249876520841014", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "secondPlaceholder"));
     pvqMethods.put("33966321893687228", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f19d52dL, 0x3c282c112f19d52eL, "timeSpan"), "1"));
     pvqMethods.put("7828349744265176449", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0x102cb19a434L, 0x103245d193fL, "value"), "10.4"));
     pvqMethods.put("7828349744265165213", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
@@ -711,6 +802,7 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("1758249876462558920", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), "Hello"));
     pvqMethods.put("1758249876462558926", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "trev"));
     pvqMethods.put("1758249876474504254", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
+    pvqMethods.put("1758249876530422421", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
   }
   @NotNull
   @Override
@@ -732,71 +824,75 @@ public class QueriesGenerated extends QueryProviderBase {
         case 1:
           return QueriesGenerated.propertyMacro_GetValue_2_0(ctx);
         case 2:
-          return QueriesGenerated.propertyMacro_GetValue_3_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_2_1(ctx);
         case 3:
-          return QueriesGenerated.propertyMacro_GetValue_3_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_0(ctx);
         case 4:
-          return QueriesGenerated.propertyMacro_GetValue_3_2(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_1(ctx);
         case 5:
-          return QueriesGenerated.propertyMacro_GetValue_3_3(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_2(ctx);
         case 6:
-          return QueriesGenerated.propertyMacro_GetValue_3_4(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_3(ctx);
         case 7:
-          return QueriesGenerated.propertyMacro_GetValue_3_5(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_4(ctx);
         case 8:
-          return QueriesGenerated.propertyMacro_GetValue_3_6(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_5(ctx);
         case 9:
-          return QueriesGenerated.propertyMacro_GetValue_3_7(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_6(ctx);
         case 10:
-          return QueriesGenerated.propertyMacro_GetValue_3_8(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_7(ctx);
         case 11:
-          return QueriesGenerated.propertyMacro_GetValue_3_9(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_8(ctx);
         case 12:
-          return QueriesGenerated.propertyMacro_GetValue_3_10(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_9(ctx);
         case 13:
-          return QueriesGenerated.propertyMacro_GetValue_3_11(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_10(ctx);
         case 14:
-          return QueriesGenerated.propertyMacro_GetValue_3_12(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_11(ctx);
         case 15:
-          return QueriesGenerated.propertyMacro_GetValue_6_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_3_12(ctx);
         case 16:
-          return QueriesGenerated.propertyMacro_GetValue_6_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_0(ctx);
         case 17:
-          return QueriesGenerated.propertyMacro_GetValue_6_2(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_1(ctx);
         case 18:
-          return QueriesGenerated.propertyMacro_GetValue_7_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_6_2(ctx);
         case 19:
-          return QueriesGenerated.propertyMacro_GetValue_8_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_7_0(ctx);
         case 20:
-          return QueriesGenerated.propertyMacro_GetValue_9_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_8_0(ctx);
         case 21:
-          return QueriesGenerated.propertyMacro_GetValue_9_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_9_0(ctx);
         case 22:
-          return QueriesGenerated.propertyMacro_GetValue_11_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_9_1(ctx);
         case 23:
-          return QueriesGenerated.propertyMacro_GetValue_11_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_11_0(ctx);
         case 24:
-          return QueriesGenerated.propertyMacro_GetValue_11_2(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_11_1(ctx);
         case 25:
-          return QueriesGenerated.propertyMacro_GetValue_12_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_11_2(ctx);
         case 26:
-          return QueriesGenerated.propertyMacro_GetValue_14_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_12_0(ctx);
         case 27:
-          return QueriesGenerated.propertyMacro_GetValue_15_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_14_0(ctx);
         case 28:
-          return QueriesGenerated.propertyMacro_GetValue_17_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_15_0(ctx);
         case 29:
-          return QueriesGenerated.propertyMacro_GetValue_17_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_17_0(ctx);
         case 30:
-          return QueriesGenerated.propertyMacro_GetValue_18_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_17_1(ctx);
         case 31:
-          return QueriesGenerated.propertyMacro_GetValue_19_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_18_0(ctx);
         case 32:
-          return QueriesGenerated.propertyMacro_GetValue_20_0(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_19_0(ctx);
         case 33:
-          return QueriesGenerated.propertyMacro_GetValue_20_1(ctx);
+          return QueriesGenerated.propertyMacro_GetValue_20_0(ctx);
         case 34:
+          return QueriesGenerated.propertyMacro_GetValue_20_1(ctx);
+        case 35:
           return QueriesGenerated.propertyMacro_GetValue_21_0(ctx);
+        case 36:
+          return QueriesGenerated.propertyMacro_GetValue_25_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -814,7 +910,6 @@ public class QueriesGenerated extends QueryProviderBase {
     imcMethods.put("7828349744266874062", new IfMC(i++));
     imcMethods.put("7828349744266758884", new IfMC(i++));
     imcMethods.put("1589537774394613407", new IfMC(i++));
-    imcMethods.put("4544390881338645036", new IfMC(i++));
     imcMethods.put("90846643917005312", new IfMC(i++));
     imcMethods.put("33966321878176064", new IfMC(i++));
     imcMethods.put("33966321878176110", new IfMC(i++));
@@ -853,14 +948,12 @@ public class QueriesGenerated extends QueryProviderBase {
         case 8:
           return QueriesGenerated.ifMacro_Condition_3_8(ctx);
         case 9:
-          return QueriesGenerated.ifMacro_Condition_3_9(ctx);
-        case 10:
           return QueriesGenerated.ifMacro_Condition_8_0(ctx);
-        case 11:
+        case 10:
           return QueriesGenerated.ifMacro_Condition_9_0(ctx);
-        case 12:
+        case 11:
           return QueriesGenerated.ifMacro_Condition_9_1(ctx);
-        case 13:
+        case 12:
           return QueriesGenerated.ifMacro_Condition_14_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for if macro %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -871,48 +964,51 @@ public class QueriesGenerated extends QueryProviderBase {
   {
     rtqMethods.put("5402567240277525408", new RTQ(0, "map_StaffType"));
     rtqMethods.put("5402567240277562787", new RTQ(1, "map_StaffType"));
-    rtqMethods.put("4544390881338980129", new RTQ(2, null));
-    rtqMethods.put("2985733650860384502", new RTQ(3, null));
-    rtqMethods.put("7828349744268830377", new RTQ(4, null));
-    rtqMethods.put("7828349744265165204", new RTQ(5, null));
-    rtqMethods.put("7828349744265165222", new RTQ(6, null));
-    rtqMethods.put("7828349744265175640", new RTQ(7, null));
-    rtqMethods.put("7828349744265175658", new RTQ(8, null));
-    rtqMethods.put("7828349744265192722", new RTQ(9, null));
-    rtqMethods.put("7828349744265192740", new RTQ(10, null));
-    rtqMethods.put("7828349744265193703", new RTQ(11, null));
-    rtqMethods.put("7828349744265193721", new RTQ(12, null));
-    rtqMethods.put("6655867674922862741", new RTQ(13, "map_Patient"));
-    rtqMethods.put("6655867674922863263", new RTQ(14, "placeholder"));
-    rtqMethods.put("6755843002518081978", new RTQ(15, "map_Patient"));
-    rtqMethods.put("6755843002518081992", new RTQ(16, "placeholder"));
-    rtqMethods.put("7828349744266865579", new RTQ(17, null));
-    rtqMethods.put("7828349744266865599", new RTQ(18, null));
-    rtqMethods.put("7828349744266806472", new RTQ(19, null));
-    rtqMethods.put("7828349744266806490", new RTQ(20, null));
-    rtqMethods.put("7828349744266414943", new RTQ(21, "map_Patient"));
-    rtqMethods.put("7828349744266414957", new RTQ(22, "placeholder"));
-    rtqMethods.put("4544390881338585373", new RTQ(23, null));
-    rtqMethods.put("768972137603697489", new RTQ(24, null));
-    rtqMethods.put("4544390881339165999", new RTQ(25, null));
-    rtqMethods.put("768972137579212820", new RTQ(26, "map_StaffType"));
-    rtqMethods.put("768972137593373021", new RTQ(27, null));
-    rtqMethods.put("8149202941029901713", new RTQ(28, "map_Patient"));
-    rtqMethods.put("5402567240278924551", new RTQ(29, "map_StaffType"));
-    rtqMethods.put("33966321878176055", new RTQ(30, null));
-    rtqMethods.put("8149202941061670902", new RTQ(31, null));
-    rtqMethods.put("8149202941061574114", new RTQ(32, null));
-    rtqMethods.put("33966321878180914", new RTQ(33, null));
-    rtqMethods.put("6655867674923359370", new RTQ(34, "map_Patient"));
-    rtqMethods.put("6655867674923361899", new RTQ(35, null));
-    rtqMethods.put("90846643905882625", new RTQ(36, "map_StaffType"));
-    rtqMethods.put("90846643905933051", new RTQ(37, null));
-    rtqMethods.put("8149202941057537954", new RTQ(38, "placeholder"));
-    rtqMethods.put("7828349744267293657", new RTQ(39, "map_Patient"));
-    rtqMethods.put("7828349744267293671", new RTQ(40, null));
-    rtqMethods.put("1758249876474504264", new RTQ(41, "map_Patient"));
-    rtqMethods.put("1758249876474504278", new RTQ(42, null));
-    rtqMethods.put("1758249876496354911", new RTQ(43, "placeholder"));
+    rtqMethods.put("1758249876520837484", new RTQ(2, "map_StaffType"));
+    rtqMethods.put("1758249876520817023", new RTQ(3, "map_Patient"));
+    rtqMethods.put("4544390881338980129", new RTQ(4, null));
+    rtqMethods.put("2985733650860384502", new RTQ(5, null));
+    rtqMethods.put("7828349744268830377", new RTQ(6, null));
+    rtqMethods.put("7828349744265165204", new RTQ(7, null));
+    rtqMethods.put("7828349744265165222", new RTQ(8, null));
+    rtqMethods.put("7828349744265175640", new RTQ(9, null));
+    rtqMethods.put("7828349744265175658", new RTQ(10, null));
+    rtqMethods.put("7828349744265192722", new RTQ(11, null));
+    rtqMethods.put("7828349744265192740", new RTQ(12, null));
+    rtqMethods.put("7828349744265193703", new RTQ(13, null));
+    rtqMethods.put("7828349744265193721", new RTQ(14, null));
+    rtqMethods.put("6655867674922862741", new RTQ(15, "map_Patient"));
+    rtqMethods.put("6655867674922863263", new RTQ(16, "placeholder"));
+    rtqMethods.put("6755843002518081978", new RTQ(17, "map_Patient"));
+    rtqMethods.put("6755843002518081992", new RTQ(18, "placeholder"));
+    rtqMethods.put("7828349744266865579", new RTQ(19, null));
+    rtqMethods.put("7828349744266865599", new RTQ(20, null));
+    rtqMethods.put("7828349744266806472", new RTQ(21, null));
+    rtqMethods.put("7828349744266806490", new RTQ(22, null));
+    rtqMethods.put("7828349744266414943", new RTQ(23, "map_Patient"));
+    rtqMethods.put("7828349744266414957", new RTQ(24, "placeholder"));
+    rtqMethods.put("4544390881338585373", new RTQ(25, null));
+    rtqMethods.put("768972137603697489", new RTQ(26, null));
+    rtqMethods.put("4544390881339165999", new RTQ(27, null));
+    rtqMethods.put("768972137579212820", new RTQ(28, "map_StaffType"));
+    rtqMethods.put("768972137593373021", new RTQ(29, null));
+    rtqMethods.put("1758249876534945954", new RTQ(30, null));
+    rtqMethods.put("5402567240278924551", new RTQ(31, "map_StaffType"));
+    rtqMethods.put("33966321878176055", new RTQ(32, null));
+    rtqMethods.put("8149202941061670902", new RTQ(33, null));
+    rtqMethods.put("8149202941061574114", new RTQ(34, null));
+    rtqMethods.put("33966321878180914", new RTQ(35, null));
+    rtqMethods.put("6655867674923359370", new RTQ(36, "map_Patient"));
+    rtqMethods.put("6655867674923361899", new RTQ(37, null));
+    rtqMethods.put("90846643905882625", new RTQ(38, "map_StaffType"));
+    rtqMethods.put("90846643905933051", new RTQ(39, null));
+    rtqMethods.put("8149202941057537954", new RTQ(40, "placeholder"));
+    rtqMethods.put("7828349744267293657", new RTQ(41, "map_Patient"));
+    rtqMethods.put("7828349744267293671", new RTQ(42, null));
+    rtqMethods.put("1758249876474504264", new RTQ(43, "map_Patient"));
+    rtqMethods.put("1758249876474504278", new RTQ(44, null));
+    rtqMethods.put("1758249876496354911", new RTQ(45, "placeholder"));
+    rtqMethods.put("1758249876530422431", new RTQ(46, "map_Patient"));
   }
   @NotNull
   @Override
@@ -934,89 +1030,95 @@ public class QueriesGenerated extends QueryProviderBase {
         case 1:
           return QueriesGenerated.referenceMacro_GetReferent_2_1(ctx);
         case 2:
-          return QueriesGenerated.referenceMacro_GetReferent_3_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_2_2(ctx);
         case 3:
-          return QueriesGenerated.referenceMacro_GetReferent_3_1(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_2_3(ctx);
         case 4:
-          return QueriesGenerated.referenceMacro_GetReferent_3_2(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_0(ctx);
         case 5:
-          return QueriesGenerated.referenceMacro_GetReferent_3_3(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_1(ctx);
         case 6:
-          return QueriesGenerated.referenceMacro_GetReferent_3_4(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_2(ctx);
         case 7:
-          return QueriesGenerated.referenceMacro_GetReferent_3_5(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_3(ctx);
         case 8:
-          return QueriesGenerated.referenceMacro_GetReferent_3_6(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_4(ctx);
         case 9:
-          return QueriesGenerated.referenceMacro_GetReferent_3_7(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_5(ctx);
         case 10:
-          return QueriesGenerated.referenceMacro_GetReferent_3_8(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_6(ctx);
         case 11:
-          return QueriesGenerated.referenceMacro_GetReferent_3_9(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_7(ctx);
         case 12:
-          return QueriesGenerated.referenceMacro_GetReferent_3_10(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_8(ctx);
         case 13:
-          return QueriesGenerated.referenceMacro_GetReferent_3_11(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_9(ctx);
         case 14:
-          return QueriesGenerated.referenceMacro_GetReferent_3_12(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_10(ctx);
         case 15:
-          return QueriesGenerated.referenceMacro_GetReferent_3_13(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_11(ctx);
         case 16:
-          return QueriesGenerated.referenceMacro_GetReferent_3_14(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_12(ctx);
         case 17:
-          return QueriesGenerated.referenceMacro_GetReferent_3_15(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_13(ctx);
         case 18:
-          return QueriesGenerated.referenceMacro_GetReferent_3_16(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_14(ctx);
         case 19:
-          return QueriesGenerated.referenceMacro_GetReferent_3_17(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_15(ctx);
         case 20:
-          return QueriesGenerated.referenceMacro_GetReferent_3_18(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_16(ctx);
         case 21:
-          return QueriesGenerated.referenceMacro_GetReferent_3_19(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_17(ctx);
         case 22:
-          return QueriesGenerated.referenceMacro_GetReferent_3_20(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_18(ctx);
         case 23:
-          return QueriesGenerated.referenceMacro_GetReferent_4_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_19(ctx);
         case 24:
-          return QueriesGenerated.referenceMacro_GetReferent_5_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_3_20(ctx);
         case 25:
-          return QueriesGenerated.referenceMacro_GetReferent_5_1(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_4_0(ctx);
         case 26:
-          return QueriesGenerated.referenceMacro_GetReferent_6_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_5_0(ctx);
         case 27:
-          return QueriesGenerated.referenceMacro_GetReferent_6_1(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_5_1(ctx);
         case 28:
-          return QueriesGenerated.referenceMacro_GetReferent_6_2(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_6_0(ctx);
         case 29:
-          return QueriesGenerated.referenceMacro_GetReferent_7_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_6_1(ctx);
         case 30:
-          return QueriesGenerated.referenceMacro_GetReferent_9_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_6_2(ctx);
         case 31:
-          return QueriesGenerated.referenceMacro_GetReferent_9_1(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_7_0(ctx);
         case 32:
-          return QueriesGenerated.referenceMacro_GetReferent_9_2(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_9_0(ctx);
         case 33:
-          return QueriesGenerated.referenceMacro_GetReferent_10_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_9_1(ctx);
         case 34:
-          return QueriesGenerated.referenceMacro_GetReferent_12_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_9_2(ctx);
         case 35:
-          return QueriesGenerated.referenceMacro_GetReferent_12_1(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_10_0(ctx);
         case 36:
-          return QueriesGenerated.referenceMacro_GetReferent_13_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_12_0(ctx);
         case 37:
-          return QueriesGenerated.referenceMacro_GetReferent_14_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_12_1(ctx);
         case 38:
-          return QueriesGenerated.referenceMacro_GetReferent_16_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_13_0(ctx);
         case 39:
-          return QueriesGenerated.referenceMacro_GetReferent_19_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_14_0(ctx);
         case 40:
-          return QueriesGenerated.referenceMacro_GetReferent_19_1(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_16_0(ctx);
         case 41:
-          return QueriesGenerated.referenceMacro_GetReferent_21_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_19_0(ctx);
         case 42:
-          return QueriesGenerated.referenceMacro_GetReferent_21_1(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_19_1(ctx);
         case 43:
+          return QueriesGenerated.referenceMacro_GetReferent_21_0(ctx);
+        case 44:
+          return QueriesGenerated.referenceMacro_GetReferent_21_1(ctx);
+        case 45:
           return QueriesGenerated.referenceMacro_GetReferent_22_0(ctx);
+        case 46:
+          return QueriesGenerated.referenceMacro_GetReferent_25_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -1050,10 +1152,11 @@ public class QueriesGenerated extends QueryProviderBase {
   private final Map<String, InsertMacroQuery> imqMethods = new HashMap<String, InsertMacroQuery>();
   {
     imqMethods.put("1758249876481031659", new IMQ(0));
-    imqMethods.put("768972137593340091", new IMQ(1));
-    imqMethods.put("8149202941062595702", new IMQ(2));
-    imqMethods.put("8149202941060134583", new IMQ(3));
-    imqMethods.put("1758249876498210425", new IMQ(4));
+    imqMethods.put("1758249876536287072", new IMQ(1));
+    imqMethods.put("768972137593340091", new IMQ(2));
+    imqMethods.put("8149202941062595702", new IMQ(3));
+    imqMethods.put("8149202941060134583", new IMQ(4));
+    imqMethods.put("1758249876498210425", new IMQ(5));
   }
   @NotNull
   @Override
@@ -1074,10 +1177,12 @@ public class QueriesGenerated extends QueryProviderBase {
         case 1:
           return QueriesGenerated.insertMacro_Query_6_1(ctx);
         case 2:
-          return QueriesGenerated.insertMacro_Query_8_0(ctx);
+          return QueriesGenerated.insertMacro_Query_6_2(ctx);
         case 3:
-          return QueriesGenerated.insertMacro_Query_16_0(ctx);
+          return QueriesGenerated.insertMacro_Query_8_0(ctx);
         case 4:
+          return QueriesGenerated.insertMacro_Query_16_0(ctx);
+        case 5:
           return QueriesGenerated.insertMacro_Query_22_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -1087,6 +1192,7 @@ public class QueriesGenerated extends QueryProviderBase {
   private Map<String, LabelInputQuery> liqMethods = new HashMap<String, LabelInputQuery>();
   {
     liqMethods.put("4544390881339670968", new LIQ(0));
+    liqMethods.put("1758249876519878945", new LIQ(1));
   }
   @NotNull
   @Override
@@ -1105,6 +1211,8 @@ public class QueriesGenerated extends QueryProviderBase {
       switch (methodKey) {
         case 0:
           return QueriesGenerated.labelMapNode2_0(ctx);
+        case 1:
+          return QueriesGenerated.labelMapNode2_1(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -1135,6 +1243,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SReferenceLink roomType$xuJp = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL, 0x5dafd3396799c110L, "roomType");
     /*package*/ static final SReferenceLink disease$elY9 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x549fe0474671cd38L, 0x549fe0474671cd85L, "disease");
     /*package*/ static final SContainmentLink checkValue$p63D = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L, 0x18668ef270ed0a03L, "checkValue");
+    /*package*/ static final SContainmentLink attendanceRoute$Fj$T = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273c1dbbaL, 0x18668ef274f85a7bL, "attendanceRoute");
     /*package*/ static final SContainmentLink staffTypeReference$jtXw = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x4af9c647efdb14f9L, "staffTypeReference");
     /*package*/ static final SReferenceLink staffType$$i7d = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L, 0x4af9c647efda3aa5L, "staffType");
     /*package*/ static final SReferenceLink resource$QlPG = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x29f0721df4a9974L, "resource");
@@ -1158,7 +1267,12 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink staffNumbers$IepE = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e56L, 0x4af9c647eff82ea4L, "staffNumbers");
     /*package*/ static final SContainmentLink ProcessingTimeTable$ddGw = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, 0x6ca3e29db4792188L, "ProcessingTimeTable");
     /*package*/ static final SContainmentLink ProcessingTimeLines$Y13M = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0edf5L, 0x16d45e8703e0ee61L, "ProcessingTimeLines");
+    /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
+    /*package*/ static final SContainmentLink condition$HxRE = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L, 0x18668ef27386cf03L, "condition");
+    /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
+    /*package*/ static final SContainmentLink Branches$1fde = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2574566374fd2551L, "Branches");
     /*package*/ static final SContainmentLink possibleValue$QY6s = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x5dc1936ab296486eL, "possibleValue");
+    /*package*/ static final SContainmentLink attendanceRoute$f8XV = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, 0x18668ef2739f49dfL, "attendanceRoute");
     /*package*/ static final SContainmentLink ArrivalLocation$5hIS = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x637eade0e62ce2b8L, 0xaabf015bf63b5d0L, "ArrivalLocation");
   }
 
@@ -1166,6 +1280,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept Asymptomatic$km = MetaAdapterFactory.getConcept(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab311194bL, "DiseaseModel.structure.Asymptomatic");
     /*package*/ static final SConcept Symptomatic$QN = MetaAdapterFactory.getConcept(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab3111938L, "DiseaseModel.structure.Symptomatic");
     /*package*/ static final SConcept Action$K5 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action");
+    /*package*/ static final SConcept EDScenario$wp = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e56L, "ActionCards.structure.EDScenario");
     /*package*/ static final SConcept PatientProfile$ZT = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, "ActionCards.structure.PatientProfile");
     /*package*/ static final SConcept InfectionStatusProperty$al = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L, "ActionCards.structure.InfectionStatusProperty");
     /*package*/ static final SConcept ActionCard$eb = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, "ActionCards.structure.ActionCard");

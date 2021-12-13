@@ -67,8 +67,8 @@ public class TriageNurse extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "NewpatientArrive":
-        behaviourBuilder = new Behaviour("NewpatientArrive");
+      case "TriageTrigger_a71":
+        behaviourBuilder = new Behaviour("TriageTrigger_a71");
         this.InitTriage_a(s);
         break;
       default:
@@ -77,7 +77,6 @@ public class TriageNurse extends Actor {
     }
     return behaviourBuilder;
   }
-
 
 
 
@@ -500,7 +499,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new GotononrespiratoryTrigger_a0Signal();
+      sendSignalTemp = new RespiratorysymptomsabsentTrigger_a0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -516,7 +515,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new GotononrespiratoryTrigger_a0Signal();
+      sendSignalTemp = new RespiratorysymptomsabsentTrigger_a0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -549,7 +548,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new GotoRespiratoryAreaTrigger_b0Signal();
+      sendSignalTemp = new RespiratorysymptomspresentTrigger_b0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -565,7 +564,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new GotoRespiratoryAreaTrigger_b0Signal();
+      sendSignalTemp = new RespiratorysymptomspresentTrigger_b0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);

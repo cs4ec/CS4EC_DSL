@@ -670,8 +670,14 @@
           </node>
         </node>
       </node>
+      <node concept="aDKH9" id="1xAzJ9NPRFx" role="aCds2">
+        <ref role="aDKIf" to="e88n:1xAzJ9NxGe_" resolve="UsageCondition" />
+      </node>
       <node concept="1RuTs0" id="av1M7v5Xn8" role="1RuSHk">
         <ref role="1RuSHD" to="e88n:2VPlUUsG6xR" resolve="Actions" />
+      </node>
+      <node concept="1RuTs0" id="1xAzJ9NxIFD" role="1RuSHk">
+        <ref role="1RuSHD" to="e88n:1xAzJ9NxGe_" resolve="UsageCondition" />
       </node>
     </node>
   </node>
@@ -1221,7 +1227,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="2lOlAdQiLG1">
-    <property role="3GE5qa" value="Attributes" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
     <ref role="1XX52x" to="e88n:2lOlAdQiLDw" resolve="AttributeTable" />
     <node concept="3EZMnI" id="5R1$QEM_$vU" role="2wV5jI">
       <node concept="3EZMnI" id="5R1$QEM_$vV" role="3EZMnx">
@@ -1250,7 +1256,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="2lOlAdQiLHF">
-    <property role="3GE5qa" value="Attributes" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
     <ref role="1XX52x" to="e88n:2lOlAdQiLDW" resolve="AttributeLine" />
     <node concept="2r0Tta" id="5R1$QEM_$xw" role="2wV5jI">
       <node concept="2reCLk" id="5R1$QEM_$xx" role="2r0Tv6">
@@ -1378,40 +1384,93 @@
   <node concept="24kQdi" id="EFW1mY_7ch">
     <property role="3GE5qa" value="People" />
     <ref role="1XX52x" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
-    <node concept="3EZMnI" id="EFW1mY_7cs" role="2wV5jI">
-      <node concept="l2Vlx" id="EFW1mY_7cv" role="2iSdaV" />
-      <node concept="3F0ifn" id="EFW1mY_h9k" role="3EZMnx">
-        <property role="3F0ifm" value="Patient Profile" />
-      </node>
-      <node concept="3F0ifn" id="EFW1mY_h9F" role="3EZMnx">
-        <property role="3F0ifm" value="Attributes:" />
-        <node concept="pVoyu" id="EFW1mY_h9M" role="3F10Kt">
-          <property role="VOm3f" value="true" />
+    <node concept="3EZMnI" id="1xAzJ9Nswfg" role="2wV5jI">
+      <node concept="2iRkQZ" id="1xAzJ9Nswfh" role="2iSdaV" />
+      <node concept="3EZMnI" id="EFW1mY_7cs" role="3EZMnx">
+        <node concept="l2Vlx" id="EFW1mY_7cv" role="2iSdaV" />
+        <node concept="3F0ifn" id="EFW1mY_h9k" role="3EZMnx">
+          <property role="3F0ifm" value="Patient Profile" />
+          <node concept="VSNWy" id="1xAzJ9NqPO_" role="3F10Kt">
+            <property role="1lJzqX" value="18" />
+          </node>
+          <node concept="Vb9p2" id="1xAzJ9NqQm0" role="3F10Kt">
+            <property role="Vbekb" value="g1_kEg4/ITALIC" />
+          </node>
         </node>
-      </node>
-      <node concept="3F2HdR" id="EFW1mY_h9r" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:EFW1mY_h9p" resolve="attributes" />
-        <node concept="l2Vlx" id="EFW1mY_h9t" role="2czzBx" />
-        <node concept="pVoyu" id="EFW1mY_h9z" role="3F10Kt">
-          <property role="VOm3f" value="true" />
+        <node concept="3F0ifn" id="1xAzJ9NqQlF" role="3EZMnx">
+          <property role="3F0ifm" value="-------------------------------------------------------" />
+          <node concept="pVoyu" id="1xAzJ9NqQlV" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
         </node>
-        <node concept="lj46D" id="EFW1mY_h9O" role="3F10Kt">
-          <property role="VOm3f" value="true" />
+        <node concept="3F0ifn" id="1xAzJ9OWiEv" role="3EZMnx">
+          <property role="3F0ifm" value="Attendance:" />
+          <node concept="pVoyu" id="1xAzJ9OWiEU" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="VSNWy" id="1xAzJ9OY4ju" role="3F10Kt">
+            <property role="1lJzqX" value="14" />
+          </node>
+          <node concept="Vb9p2" id="1xAzJ9OY4jv" role="3F10Kt">
+            <property role="Vbekb" value="g1_tSyq/BOLD_ITALIC" />
+          </node>
         </node>
-      </node>
-      <node concept="3F0ifn" id="EFW1mY_ha3" role="3EZMnx">
-        <property role="3F0ifm" value="Arrival Rate:" />
-        <node concept="pVoyu" id="EFW1mY_had" role="3F10Kt">
-          <property role="VOm3f" value="true" />
+        <node concept="3F1sOY" id="1xAzJ9OWiFn" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:1xAzJ9NBOBv" resolve="attendanceRoute" />
+          <node concept="VSNWy" id="1xAzJ9OY4jz" role="3F10Kt">
+            <property role="1lJzqX" value="14" />
+          </node>
+          <node concept="Vb9p2" id="1xAzJ9OY4j$" role="3F10Kt">
+            <property role="Vbekb" value="g1_tSyq/BOLD_ITALIC" />
+          </node>
         </node>
-      </node>
-      <node concept="3F1sOY" id="EFW1mY_haq" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:EFW1mY_ha0" resolve="arrivalRate" />
-        <node concept="pVoyu" id="EFW1mY_haA" role="3F10Kt">
-          <property role="VOm3f" value="true" />
+        <node concept="3F0ifn" id="EFW1mY_h9F" role="3EZMnx">
+          <property role="3F0ifm" value="Patient Properties:" />
+          <node concept="pVoyu" id="EFW1mY_h9M" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="VSNWy" id="1xAzJ9NqQm7" role="3F10Kt">
+            <property role="1lJzqX" value="14" />
+          </node>
+          <node concept="Vb9p2" id="1xAzJ9NqQmf" role="3F10Kt">
+            <property role="Vbekb" value="g1_tSyq/BOLD_ITALIC" />
+          </node>
         </node>
-        <node concept="lj46D" id="EFW1mY_haC" role="3F10Kt">
-          <property role="VOm3f" value="true" />
+        <node concept="3EZMnI" id="1xAzJ9Nu91I" role="3EZMnx">
+          <node concept="2iRkQZ" id="1xAzJ9Nu91J" role="2iSdaV" />
+          <node concept="3F2HdR" id="EFW1mY_h9r" role="3EZMnx">
+            <ref role="1NtTu8" to="e88n:EFW1mY_h9p" resolve="attributes" />
+            <node concept="l2Vlx" id="EFW1mY_h9t" role="2czzBx" />
+          </node>
+          <node concept="pVoyu" id="1xAzJ9Nu92c" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="1xAzJ9NsweR" role="3EZMnx">
+          <node concept="pVoyu" id="1xAzJ9Nswfe" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="EFW1mY_ha3" role="3EZMnx">
+          <property role="3F0ifm" value="Arrival Rate:" />
+          <node concept="pVoyu" id="EFW1mY_had" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="VSNWy" id="1xAzJ9NqQmn" role="3F10Kt">
+            <property role="1lJzqX" value="14" />
+          </node>
+          <node concept="Vb9p2" id="1xAzJ9NqQmv" role="3F10Kt">
+            <property role="Vbekb" value="g1_tSyq/BOLD_ITALIC" />
+          </node>
+        </node>
+        <node concept="3F1sOY" id="EFW1mY_haq" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:EFW1mY_ha0" resolve="arrivalRate" />
+          <node concept="pVoyu" id="EFW1mY_haA" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="lj46D" id="EFW1mY_haC" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
         </node>
       </node>
     </node>
@@ -1973,6 +2032,66 @@
         <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
       </node>
       <node concept="2iRfu4" id="1xAzJ9NjBfA" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1xAzJ9NxGW5">
+    <property role="3GE5qa" value="ActionCard" />
+    <ref role="1XX52x" to="e88n:1xAzJ9NxGW2" resolve="ActionCardCondition" />
+    <node concept="2aJ2om" id="1xAzJ9NxGWd" role="CpUAK">
+      <ref role="2$4xQ3" node="7ih0ZFGR6CE" resolve="diagram" />
+    </node>
+    <node concept="2ZK4vF" id="1xAzJ9NxGWf" role="2wV5jI">
+      <node concept="38c6YI" id="1xAzJ9NRzfD" role="3F10Kt">
+        <property role="Vb096" value="fLwANPn/red" />
+      </node>
+      <node concept="3EZMnI" id="1xAzJ9NxGWg" role="1ytjkN">
+        <node concept="2iRkQZ" id="1xAzJ9NxGWk" role="2iSdaV" />
+        <node concept="Veino" id="1xAzJ9NxGWl" role="3F10Kt" />
+        <node concept="3EZMnI" id="1xAzJ9NOcr3" role="3EZMnx">
+          <node concept="3F0ifn" id="1xAzJ9NOcrd" role="3EZMnx">
+            <property role="3F0ifm" value="Condition for use:" />
+            <node concept="VSNWy" id="1xAzJ9NRzfP" role="3F10Kt">
+              <property role="1lJzqX" value="12" />
+            </node>
+            <node concept="VechU" id="1xAzJ9NRzfQ" role="3F10Kt">
+              <property role="Vb096" value="6cZGtrcKCoS/black" />
+            </node>
+          </node>
+          <node concept="2iRfu4" id="1xAzJ9NOcr4" role="2iSdaV" />
+          <node concept="3F1sOY" id="1xAzJ9NxGWz" role="3EZMnx">
+            <ref role="1NtTu8" to="e88n:1xAzJ9NxGW3" resolve="condition" />
+            <node concept="VSNWy" id="1xAzJ9NRzfT" role="3F10Kt">
+              <property role="1lJzqX" value="12" />
+            </node>
+            <node concept="VechU" id="1xAzJ9NRzfU" role="3F10Kt">
+              <property role="Vb096" value="6cZGtrcKCoS/black" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1xAzJ9NKtJ4">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="e88n:1xAzJ9NKtIU" resolve="AttendanceRouteCondition" />
+    <node concept="3EZMnI" id="1xAzJ9NKtJ6" role="2wV5jI">
+      <node concept="3F0ifn" id="1xAzJ9NKtJd" role="3EZMnx">
+        <property role="3F0ifm" value="Patient attended by" />
+      </node>
+      <node concept="3F1sOY" id="1xAzJ9OS9Eh" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:1xAzJ9OY5DV" resolve="attendanceRoute" />
+      </node>
+      <node concept="2iRfu4" id="1xAzJ9NKtJ9" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1xAzJ9NMwU5">
+    <property role="3GE5qa" value="Attributes.PatientProperties.AttendanceRoutes" />
+    <ref role="1XX52x" to="e88n:1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+    <node concept="3EZMnI" id="1xAzJ9NG9TC" role="2wV5jI">
+      <node concept="PMmxH" id="1xAzJ9NG9TJ" role="3EZMnx">
+        <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      </node>
+      <node concept="2iRfu4" id="1xAzJ9NG9TF" role="2iSdaV" />
     </node>
   </node>
 </model>

@@ -67,29 +67,41 @@ public class CubicleNurse extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "GotoRespiratoryAreaTrigger_b0":
-        behaviourBuilder = new Behaviour("GotoRespiratoryAreaTrigger_b0");
-        this.InitGotoRespiratoryArea_b(s);
+      case "RespiratorysymptomspresentTrigger_b0":
+        behaviourBuilder = new Behaviour("RespiratorysymptomspresentTrigger_b0");
+        this.InitRespiratorysymptomspresent_b(s);
         break;
-      case "GotononrespiratoryTrigger_a0":
-        behaviourBuilder = new Behaviour("GotononrespiratoryTrigger_a0");
-        this.InitGotononrespiratory_g(s);
+      case "RespiratorysymptomsabsentTrigger_a0":
+        behaviourBuilder = new Behaviour("RespiratorysymptomsabsentTrigger_a0");
+        this.InitRespiratorysymptomsabsent_g(s);
         break;
-      case "DoLFDTrigger_a1":
-        behaviourBuilder = new Behaviour("DoLFDTrigger_a1");
-        this.InitDoLFD_h(s);
+      case "COVIDandFluLFDTrigger_a1":
+        behaviourBuilder = new Behaviour("COVIDandFluLFDTrigger_a1");
+        this.InitCOVIDandFluLFD_h(s);
         break;
-      case "DoLFDTrigger_a6":
-        behaviourBuilder = new Behaviour("DoLFDTrigger_a6");
-        this.InitDoLFD_i(s);
-        break;
-      case "CheckVaccineStatusTrigger_b7":
-        behaviourBuilder = new Behaviour("CheckVaccineStatusTrigger_b7");
-        this.InitCheckVaccineStatus_j(s);
+      case "COVIDLFDTrigger_a6":
+        behaviourBuilder = new Behaviour("COVIDLFDTrigger_a6");
+        this.InitCOVIDLFD_i(s);
         break;
       case "DoConfirmatoryPCRTrigger_a8":
         behaviourBuilder = new Behaviour("DoConfirmatoryPCRTrigger_a8");
-        this.InitDoConfirmatoryPCR_k(s);
+        this.InitDoConfirmatoryPCR_j(s);
+        break;
+      case "SignificantCOVIDcontactTrigger_c7":
+        behaviourBuilder = new Behaviour("SignificantCOVIDcontactTrigger_c7");
+        this.InitSignificantCOVIDcontact_m(s);
+        break;
+      case "SignificantCOVIDContactTrigger_a61":
+        behaviourBuilder = new Behaviour("SignificantCOVIDContactTrigger_a61");
+        this.InitSignificantCOVIDContact_n(s);
+        break;
+      case "SignificantCOVIDContactTrigger_b8":
+        behaviourBuilder = new Behaviour("SignificantCOVIDContactTrigger_b8");
+        this.InitSignificantCOVIDContact_p(s);
+        break;
+      case "ConfirmwithPCRTrigger_d7":
+        behaviourBuilder = new Behaviour("ConfirmwithPCRTrigger_d7");
+        this.InitConfirmwithPCR_q(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -97,7 +109,6 @@ public class CubicleNurse extends Actor {
     }
     return behaviourBuilder;
   }
-
 
 
 
@@ -170,7 +181,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoLFDTrigger_a1Signal();
+      sendSignalTemp = new COVIDandFluLFDTrigger_a1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -261,7 +272,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoLFDTrigger_a1Signal();
+      sendSignalTemp = new COVIDandFluLFDTrigger_a1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -352,7 +363,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoLFDTrigger_a6Signal();
+      sendSignalTemp = new COVIDLFDTrigger_a6Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -443,7 +454,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoLFDTrigger_a6Signal();
+      sendSignalTemp = new COVIDLFDTrigger_a6Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -619,7 +630,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Negative" && (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluAResult == "Positive" || ((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluBResult == "Positive")) {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Positive" && (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluAResult == "Positive" || ((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluBResult == "Positive")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0i0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -629,10 +640,44 @@ public class CubicleNurse extends Actor {
       }
     }
   }
-  public class StayAction_j0c extends BehaviourStep {
+  public class Choice_j0c extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_j0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Negative" && (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluAResult == "Positive" || ((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluBResult == "Positive")) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0j0c(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_k0c extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_k0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Negative" && (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluAResult == "Negative" && ((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluBResult == "Negative")) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0k0c(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class StayAction_l0c extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_j0c(Behaviour behaviour) {
+    public StayAction_l0c(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1282,7 +1327,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoCOVIDbayTrigger_a7Signal();
+      sendSignalTemp = new AdmittoCOVIDCohortTrigger_a7Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1298,7 +1343,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoCOVIDbayTrigger_a7Signal();
+      sendSignalTemp = new AdmittoCOVIDCohortTrigger_a7Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1311,7 +1356,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Negative" && (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluAResult == "Positive" || ((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluBResult == "Positive")) {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Positive" && (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluAResult == "Positive" || ((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluBResult == "Positive")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0i0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1331,7 +1376,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new CheckVaccineStatusTrigger_b7Signal();
+      sendSignalTemp = new AdmittoSRTrigger_b7Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1347,16 +1392,114 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new CheckVaccineStatusTrigger_b7Signal();
+      sendSignalTemp = new AdmittoSRTrigger_b7Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_j0c_1 extends BehaviourStep {
+  public class Choice_j0c_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_j0c_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Negative" && (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluAResult == "Positive" || ((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluBResult == "Positive")) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0j0c(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0j0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0j0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new SignificantCOVIDcontactTrigger_c7Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0j0c_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0j0c_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new SignificantCOVIDcontactTrigger_c7Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class Choice_k0c_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_k0c_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Negative" && (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluAResult == "Negative" && ((patient) behaviour.getSignalTrigger().GetData("patient")).LFDFluBResult == "Negative")) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0k0c(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0k0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0k0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ConfirmwithPCRTrigger_d7Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0k0c_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0k0c_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ConfirmwithPCRTrigger_d7Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_l0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_j0c_1(Behaviour behaviour) {
+    public StayAction_l0c_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1523,7 +1666,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<No>") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Negative") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0i0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1533,27 +1676,10 @@ public class CubicleNurse extends Actor {
       }
     }
   }
-  public class Choice_j0d extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_j0d(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<Yes>") {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0j0d(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class StayAction_k0d extends BehaviourStep {
+  public class StayAction_j0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_k0d(Behaviour behaviour) {
+    public StayAction_j0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2232,7 +2358,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<No>") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LFDCOVIDResult == "Negative") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0i0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2252,7 +2378,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittononrespiratoryTrigger_b8Signal();
+      sendSignalTemp = new SignificantCOVIDContactTrigger_b8Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2268,65 +2394,16 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittononrespiratoryTrigger_b8Signal();
+      sendSignalTemp = new SignificantCOVIDContactTrigger_b8Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_j0d_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_j0d_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<Yes>") {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0j0d(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class SendSignalAction_a0j0d extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0j0d(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoSRTrigger_c8Signal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class SendSignalAction_a0j0d_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0j0d_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoSRTrigger_c8Signal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_k0d_1 extends BehaviourStep {
+  public class StayAction_j0d_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_k0d_1(Behaviour behaviour) {
+    public StayAction_j0d_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2344,7 +2421,7 @@ public class CubicleNurse extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0e_3(Behaviour behaviour) {
-      target = RespiratoryArea.getInstance();
+      target = NonRespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -2382,8 +2459,9 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0e extends BehaviourStep {
+  public class StayAction_c0e extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
+    /*package*/ int testingTime = LabPCR.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_c0e(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -2395,7 +2473,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == testingTime;
     }
   }
   public class Choice_d0e extends InstantBehaviourStep {
@@ -2405,12 +2483,13 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAVaccineStatus == "<Unvaccinated>") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0d0e(behaviour));
+        plstSteps.add(new Choice_a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0d0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -2422,20 +2501,55 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "<Unvaccinated>") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0e0e(behaviour));
+        plstSteps.add(new Choice_a0e0e(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0e0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class StayAction_f0e extends BehaviourStep {
+  public class Choice_f0e extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_f0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0f0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0f0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_g0e extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoCOVIDCohortTrigger_a9Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_h0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_f0e(Behaviour behaviour) {
+    public StayAction_h0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2453,7 +2567,7 @@ public class CubicleNurse extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0e_5(Behaviour behaviour) {
-      target = RespiratoryArea.getInstance();
+      target = NonRespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -2491,8 +2605,9 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0e_1 extends BehaviourStep {
+  public class StayAction_c0e_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
+    /*package*/ int testingTime = LabPCR.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_c0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -2504,7 +2619,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == testingTime;
     }
   }
   public class Choice_d0e_1 extends InstantBehaviourStep {
@@ -2514,46 +2629,175 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAVaccineStatus == "<Unvaccinated>") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0d0e(behaviour));
+        plstSteps.add(new Choice_a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0d0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class SendSignalAction_a0d0e extends BehaviourStep {
+  public class Choice_a0d0e extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0d0e(Behaviour behaviour) {
+    public Choice_a0d0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoFluBayTrigger_a9Signal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0d0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0d0e_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
-  public class SendSignalAction_a0d0e_1 extends BehaviourStep {
+  public class Choice_a0d0e_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0d0e_1(Behaviour behaviour) {
+    public Choice_a0d0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoFluBayTrigger_a9Signal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0d0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0d0e_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0d0e extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0d0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
 
-      b.PushMission(sendSignalTemp);
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0d0e_0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0d0e_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0d0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0d0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0d0e_2 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0d0e_2(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Negative";
+
+    }
+  }
+  public class Choice_a0d0e_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0d0e_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0d0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0d0e_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0d0e_5 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0d0e_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0d0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0d0e_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0d0e_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0d0e_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0d0e_4 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0d0e_4(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0d0e_5 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0d0e_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0d0e_6 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0d0e_6(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Positive";
+
     }
   }
   public class Choice_e0e_1 extends InstantBehaviourStep {
@@ -2563,52 +2807,375 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "<Unvaccinated>") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0e0e(behaviour));
+        plstSteps.add(new Choice_a0e0e(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0e0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class SendSignalAction_a0e0e extends BehaviourStep {
+  public class Choice_a0e0e extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0e0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0e0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0e0e_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0e0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0e0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0e0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0e0e_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0e0e extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0e0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0e0e_0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0e0e_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0e0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0e0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0e0e_2 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0e0e_2(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Negative";
+
+    }
+  }
+  public class Choice_a0e0e_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0e0e_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0e0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0e0e_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0e0e_5 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0e0e_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0e0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0e0e_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0e0e_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0e0e_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0e0e_4 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0e0e_4(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0e0e_5 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0e0e_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0e0e_6 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0e0e_6(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Positive";
+
+    }
+  }
+  public class Choice_f0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_f0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0f0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0f0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0f0e extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0f0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0e_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0f0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0f0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0e(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0e_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0f0e extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0f0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0f0e_0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0f0e_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0f0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0f0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0f0e_2 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0f0e_2(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Negative";
+
+    }
+  }
+  public class Choice_a0f0e_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0f0e_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0e_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0f0e_5 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0f0e_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(100)) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0e_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0e_5(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0f0e_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0f0e_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0f0e_4 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0f0e_4(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Negative";
+
+    }
+  }
+  public class Consequence_a0a0f0e_5 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0f0e_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Positive";
+
+    }
+  }
+  public class Consequence_a0a0f0e_6 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0f0e_6(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Positive";
+
+    }
+  }
+  public class SendSignalAction_g0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0e0e(Behaviour behaviour) {
+    public SendSignalAction_g0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittosideroomTrigger_b9Signal();
+      sendSignalTemp = new AdmittoCOVIDCohortTrigger_a9Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0e0e_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0e0e_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittosideroomTrigger_b9Signal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_f0e_1 extends BehaviourStep {
+  public class StayAction_h0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_f0e_1(Behaviour behaviour) {
+    public StayAction_h0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2626,7 +3193,7 @@ public class CubicleNurse extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0f_3(Behaviour behaviour) {
-      target = NonRespiratoryCubicle.getInstance();
+      target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -2664,9 +3231,8 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0f extends PassiveBehaviourStep {
+  public class StayAction_c0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = LabPCR.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_c0f(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -2678,7 +3244,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == testingTime;
+      return timeExecuted == 60;
     }
   }
   public class Choice_d0f extends InstantBehaviourStep {
@@ -2688,13 +3254,12 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<Yes>") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0d0f(behaviour));
+        plstSteps.add(new SendSignalAction_a0d0f(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0d0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -2706,55 +3271,20 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<No>") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0e0f(behaviour));
+        plstSteps.add(new SendSignalAction_a0e0f(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0e0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Choice_f0f extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_f0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0f0f(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0f0f_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class SendSignalAction_g0f extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_g0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoCOVIDCohortTrigger_a01Signal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_h0f extends BehaviourStep {
+  public class StayAction_f0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_h0f(Behaviour behaviour) {
+    public StayAction_f0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2772,7 +3302,7 @@ public class CubicleNurse extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0f_5(Behaviour behaviour) {
-      target = NonRespiratoryCubicle.getInstance();
+      target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -2810,9 +3340,8 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0f_1 extends PassiveBehaviourStep {
+  public class StayAction_c0f_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = LabPCR.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_c0f_1(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -2824,7 +3353,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == testingTime;
+      return timeExecuted == 60;
     }
   }
   public class Choice_d0f_1 extends InstantBehaviourStep {
@@ -2834,175 +3363,46 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<Yes>") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0d0f(behaviour));
+        plstSteps.add(new SendSignalAction_a0d0f(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0d0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Choice_a0d0f extends InstantBehaviourStep {
+  public class SendSignalAction_a0d0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0d0f(Behaviour behaviour) {
+
+    public SendSignalAction_a0d0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0f(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0f_1(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoSRTrigger_b7Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_a0d0f_1 extends InstantBehaviourStep {
+  public class SendSignalAction_a0d0f_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0d0f_1(Behaviour behaviour) {
+
+    public SendSignalAction_a0d0f_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0f(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0f_1(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Consequence_a0a0d0f extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoSRTrigger_b7Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0d0f_0 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0f_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0d0f_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0f_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0d0f_2 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0f_2(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Negative";
-
-    }
-  }
-  public class Choice_a0d0f_3 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0d0f_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0f_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0f_5(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_a0d0f_5 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0d0f_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0f_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0f_5(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Consequence_a0a0d0f_3 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0f_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0d0f_4 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0f_4(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0d0f_5 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0f_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0d0f_6 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0f_6(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult = "Positive";
-
+      b.PushMission(sendSignalTemp);
     }
   }
   public class Choice_e0f_1 extends InstantBehaviourStep {
@@ -3012,375 +3412,680 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<No>") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0e0f(behaviour));
+        plstSteps.add(new SendSignalAction_a0e0f(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0e0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Choice_a0e0f extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0e0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0e0f(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0e0f_1(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_a0e0f_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0e0f_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0e0f(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0e0f_1(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Consequence_a0a0e0f extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0e0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0e0f_0 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0e0f_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0e0f_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0e0f_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0e0f_2 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0e0f_2(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Negative";
-
-    }
-  }
-  public class Choice_a0e0f_3 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0e0f_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0e0f_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0e0f_5(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_a0e0f_5 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0e0f_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0e0f_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0e0f_5(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Consequence_a0a0e0f_3 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0e0f_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0e0f_4 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0e0f_4(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0e0f_5 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0e0f_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0e0f_6 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0e0f_6(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluAResult = "Positive";
-
-    }
-  }
-  public class Choice_f0f_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_f0f_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0f0f(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0f0f_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_a0f0f extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0f0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0f(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0f_1(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_a0f0f_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0f0f_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0f(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0f_1(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Consequence_a0a0f0f extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0f0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0f0f_0 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0f0f_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0f0f_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0f0f_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0f0f_2 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0f0f_2(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Negative";
-
-    }
-  }
-  public class Choice_a0f0f_3 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0f0f_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0f_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0f_5(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_a0f0f_5 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0f0f_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0f_3(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0f_5(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Consequence_a0a0f0f_3 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0f0f_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0f0f_4 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0f0f_4(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Negative";
-
-    }
-  }
-  public class Consequence_a0a0f0f_5 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0f0f_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Positive";
-
-    }
-  }
-  public class Consequence_a0a0f0f_6 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0f0f_6(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRFluBResult = "Positive";
-
-    }
-  }
-  public class SendSignalAction_g0f_1 extends BehaviourStep {
+  public class SendSignalAction_a0e0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_g0f_1(Behaviour behaviour) {
+    public SendSignalAction_a0e0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new AdmittoCOVIDCohortTrigger_a01Signal();
+      sendSignalTemp = new AdmittoFluBayTrigger_b21Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_h0f_1 extends BehaviourStep {
+  public class SendSignalAction_a0e0f_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0e0f_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoFluBayTrigger_b21Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_f0f_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_h0f_1(Behaviour behaviour) {
+    public StayAction_f0f_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class MoveAction_a0g_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0g_3(Behaviour behaviour) {
+      target = RespiratoryCubicle.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0g_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0g_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+    }
+  }
+  public class StayAction_c0g extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class Choice_d0g extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_d0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<Yes>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0d0g(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_e0g extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_e0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<No>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0e0g(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class StayAction_f0g extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_f0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class MoveAction_a0g_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0g_5(Behaviour behaviour) {
+      target = RespiratoryCubicle.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0g_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0g_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+    }
+  }
+  public class StayAction_c0g_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0g_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class Choice_d0g_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_d0g_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<Yes>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0d0g(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0d0g extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0d0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoSRTrigger_b7Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0d0g_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0d0g_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoSRTrigger_b7Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class Choice_e0g_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_e0g_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<No>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0e0g(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0e0g extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0e0g(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoGeneralBayTrigger_b31Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0e0g_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0e0g_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoGeneralBayTrigger_b31Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_f0g_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_f0g_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class MoveAction_a0h extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0h(Behaviour behaviour) {
+      target = NonRespiratoryCubicle.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0h extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0h(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+    }
+  }
+  public class StayAction_c0h extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0h(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class Choice_d0h extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_d0h(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<Yes>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0d0h(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_e0h extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_e0h(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<No>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0e0h(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class StayAction_f0h extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_f0h(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class MoveAction_a0h_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0h_1(Behaviour behaviour) {
+      target = NonRespiratoryCubicle.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0h_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0h_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+    }
+  }
+  public class StayAction_c0h_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0h_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class Choice_d0h_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_d0h_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<Yes>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0d0h(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0d0h extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0d0h(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoSRTrigger_a51Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0d0h_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0d0h_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittoSRTrigger_a51Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class Choice_e0h_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_e0h_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "<No>") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0e0h(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0e0h extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0e0h(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittogeneralbayTrigger_b51Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0e0h_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0e0h_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new AdmittogeneralbayTrigger_b51Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_f0h_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_f0h_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class SendSignalAction_a0i extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0i(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new SignificantCOVIDContactTrigger_a61Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_b0i extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_b0i(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 60;
+    }
+  }
+  public class SendSignalAction_a0i_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0i_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new SignificantCOVIDContactTrigger_a61Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_b0i_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_b0i_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -3395,7 +4100,7 @@ public class CubicleNurse extends Actor {
   }
 
 
-  public void InitGotoRespiratoryArea_b(Signal s) {
+  public void InitRespiratorysymptomspresent_b(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_7(behaviourBuilder));
@@ -3408,7 +4113,7 @@ public class CubicleNurse extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitGotononrespiratory_g(Signal s) {
+  public void InitRespiratorysymptomsabsent_g(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b_3(behaviourBuilder));
@@ -3421,7 +4126,7 @@ public class CubicleNurse extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitDoLFD_h(Signal s) {
+  public void InitCOVIDandFluLFD_h(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0c_3(behaviourBuilder));
@@ -3433,13 +4138,15 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new Choice_g0c(behaviourBuilder));
     plstSteps.add(new Choice_h0c(behaviourBuilder));
     plstSteps.add(new Choice_i0c(behaviourBuilder));
-    plstSteps.add(new StayAction_j0c(behaviourBuilder));
+    plstSteps.add(new Choice_j0c(behaviourBuilder));
+    plstSteps.add(new Choice_k0c(behaviourBuilder));
+    plstSteps.add(new StayAction_l0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitDoLFD_i(Signal s) {
+  public void InitCOVIDLFD_i(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0d_3(behaviourBuilder));
@@ -3451,14 +4158,13 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new Choice_g0d(behaviourBuilder));
     plstSteps.add(new Choice_h0d(behaviourBuilder));
     plstSteps.add(new Choice_i0d(behaviourBuilder));
-    plstSteps.add(new Choice_j0d(behaviourBuilder));
-    plstSteps.add(new StayAction_k0d(behaviourBuilder));
+    plstSteps.add(new StayAction_j0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitCheckVaccineStatus_j(Signal s) {
+  public void InitDoConfirmatoryPCR_j(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0e_3(behaviourBuilder));
@@ -3466,13 +4172,15 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new StayAction_c0e(behaviourBuilder));
     plstSteps.add(new Choice_d0e(behaviourBuilder));
     plstSteps.add(new Choice_e0e(behaviourBuilder));
-    plstSteps.add(new StayAction_f0e(behaviourBuilder));
+    plstSteps.add(new Choice_f0e(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_g0e(behaviourBuilder));
+    plstSteps.add(new StayAction_h0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitDoConfirmatoryPCR_k(Signal s) {
+  public void InitSignificantCOVIDcontact_m(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0f_3(behaviourBuilder));
@@ -3480,9 +4188,45 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new StayAction_c0f(behaviourBuilder));
     plstSteps.add(new Choice_d0f(behaviourBuilder));
     plstSteps.add(new Choice_e0f(behaviourBuilder));
-    plstSteps.add(new Choice_f0f(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0f(behaviourBuilder));
-    plstSteps.add(new StayAction_h0f(behaviourBuilder));
+    plstSteps.add(new StayAction_f0f(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+  }
+  public void InitSignificantCOVIDContact_n(Signal s) {
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new MoveAction_a0g_3(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0g_3(behaviourBuilder));
+    plstSteps.add(new StayAction_c0g(behaviourBuilder));
+    plstSteps.add(new Choice_d0g(behaviourBuilder));
+    plstSteps.add(new Choice_e0g(behaviourBuilder));
+    plstSteps.add(new StayAction_f0g(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+  }
+  public void InitSignificantCOVIDContact_p(Signal s) {
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new MoveAction_a0h(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0h(behaviourBuilder));
+    plstSteps.add(new StayAction_c0h(behaviourBuilder));
+    plstSteps.add(new Choice_d0h(behaviourBuilder));
+    plstSteps.add(new Choice_e0h(behaviourBuilder));
+    plstSteps.add(new StayAction_f0h(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+  }
+  public void InitConfirmwithPCR_q(Signal s) {
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new SendSignalAction_a0i(behaviourBuilder));
+    plstSteps.add(new StayAction_b0i(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

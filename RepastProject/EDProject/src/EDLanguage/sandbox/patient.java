@@ -14,18 +14,23 @@ public class patient extends Actor {
 
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
-  public String COVID = "NotConfigured";
-  public String FluA = "NotConfigured";
-  public String FluB = "NotConfigured";
-  public String COVIDvaccineStatus = "NotConfigured";
-  public String FluAvaccineStatus = "NotConfigured";
-  public String FluBvaccineStatus = "NotConfigured";
+  public String admissionRoute = "UnConfigured";
+  public String COVIDVaccineStatus = "NotConfigured";
+  public String FluAVaccineStatus = "NotConfigured";
+  public String FluBVaccineStatus = "NotConfigured";
+  public String COVIDInfectionStatus = "NotConfigured";
+  public String FluAInfectionStatus = "NotConfigured";
+  public String FluBInfectionStatus = "NotConfigured";
+  public String RecentCovidContact = "NotConfigured";
   public String LFDCOVIDResult = "Incomplete";
   public String LFDFluAResult = "Incomplete";
   public String LFDFluBResult = "Incomplete";
   public String LIATCOVIDResult = "Incomplete";
   public String LIATFluAResult = "Incomplete";
   public String LIATFluBResult = "Incomplete";
+  public String LabPCRCOVIDResult = "Incomplete";
+  public String LabPCRFluAResult = "Incomplete";
+  public String LabPCRFluBResult = "Incomplete";
   public String TriagingToolResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
@@ -59,7 +64,126 @@ public class patient extends Actor {
   }
 
 
-
+  public int getCOVIDVaccineStatusisUnvaccinated() {
+    if (this.COVIDVaccineStatus == "Unvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDVaccineStatusispartiallyvaccinated() {
+    if (this.COVIDVaccineStatus == "partiallyvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDVaccineStatusisfullyvaccinated() {
+    if (this.COVIDVaccineStatus == "fullyvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluAVaccineStatusisUnvaccinated() {
+    if (this.FluAVaccineStatus == "Unvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluAVaccineStatusispartiallyvaccinated() {
+    if (this.FluAVaccineStatus == "partiallyvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluAVaccineStatusisfullyvaccinated() {
+    if (this.FluAVaccineStatus == "fullyvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBVaccineStatusisUnvaccinated() {
+    if (this.FluBVaccineStatus == "Unvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBVaccineStatusispartiallyvaccinated() {
+    if (this.FluBVaccineStatus == "partiallyvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBVaccineStatusisfullyvaccinated() {
+    if (this.FluBVaccineStatus == "fullyvaccinated") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDInfectionStatusisSymptomatic() {
+    if (this.COVIDInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDInfectionStatusisAsymptomatic() {
+    if (this.COVIDInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDInfectionStatusisSusceptible() {
+    if (this.COVIDInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluAInfectionStatusisSymptomatic() {
+    if (this.FluAInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluAInfectionStatusisAsymptomatic() {
+    if (this.FluAInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluAInfectionStatusisSusceptible() {
+    if (this.FluAInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBInfectionStatusisSymptomatic() {
+    if (this.FluBInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBInfectionStatusisAsymptomatic() {
+    if (this.FluBInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBInfectionStatusisSusceptible() {
+    if (this.FluBInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getRecentCovidContactisYes() {
+    if (this.RecentCovidContact == "Yes") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getRecentCovidContactisNo() {
+    if (this.RecentCovidContact == "No") {
+      return 1;
+    }
+    return 0;
+  }
   public int getLFDCOVIDResultisPositive() {
     if (this.LFDCOVIDResult == "Positive") {
       return 1;
@@ -132,44 +256,38 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getCOVIDisAsymptomatic() {
-    if (this.COVID == "Asymptomatic") {
+  public int getLabPCRCOVIDResultisPositive() {
+    if (this.LabPCRCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getCOVIDisSymptomatic() {
-    if (this.COVID == "Symptomatic") {
+  public int getLabPCRCOVIDResultisNegative() {
+    if (this.LabPCRCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getCOVIDisSusceptible() {
-    if (this.COVID == "Susceptible") {
+  public int getLabPCRFluAResultisPositive() {
+    if (this.LabPCRFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getFluAisAsymptomatic() {
-    if (this.FluA == "Asymptomatic") {
+  public int getLabPCRFluAResultisNegative() {
+    if (this.LabPCRFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getFluAisSusceptible() {
-    if (this.FluA == "Susceptible") {
+  public int getLabPCRFluBResultisPositive() {
+    if (this.LabPCRFluBResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getFluBisAsymptomatic() {
-    if (this.FluB == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBisSusceptible() {
-    if (this.FluB == "Susceptible") {
+  public int getLabPCRFluBResultisNegative() {
+    if (this.LabPCRFluBResult == "Negative") {
       return 1;
     }
     return 0;
@@ -194,6 +312,12 @@ public class patient extends Actor {
   }
   public int getadmittedToisSideRoom() {
     if (this.admittedTo == "SideRoom") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisnull() {
+    if (this.admittedTo == "") {
       return 1;
     }
     return 0;

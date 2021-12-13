@@ -13129,31 +13129,31 @@
       <node id="8149202941029157104" at="789,40,790,49" concept="2" />
       <node id="8149202941029157120" at="790,49,791,48" concept="2" />
       <node id="7169358838268078440" at="791,48,792,22" concept="9" />
-      <node id="8149202941029157104" at="794,41,795,100" concept="8" />
-      <node id="8149202941029157104" at="795,100,796,50" concept="2" />
+      <node id="8149202941029157104" at="794,41,795,109" concept="8" />
+      <node id="8149202941029157104" at="795,109,796,50" concept="2" />
       <node id="8149202941029157104" at="796,50,797,34" concept="2" />
       <node id="8149202941029157104" at="797,34,798,22" concept="9" />
-      <node id="7169358838268078440" at="800,40,801,125" concept="8" />
-      <node id="7169358838268078440" at="801,125,802,33" concept="9" />
-      <node id="7169358838268078440" at="808,123,809,38" concept="13" />
+      <node id="7169358838268078440" at="800,40,801,141" concept="8" />
+      <node id="7169358838268078440" at="801,141,802,33" concept="9" />
+      <node id="7169358838268078440" at="808,131,809,38" concept="13" />
       <node id="7169358838268078440" at="809,38,810,25" concept="2" />
       <node id="7169358838268078440" at="815,28,816,20" concept="9" />
       <node id="7169358838268078440" at="819,55,820,76" concept="8" />
-      <node id="7169358838268078440" at="820,76,821,114" concept="2" />
-      <node id="7169358838268078440" at="821,114,822,117" concept="2" />
-      <node id="7169358838268078440" at="822,117,823,48" concept="2" />
+      <node id="7169358838268078440" at="820,76,821,122" concept="2" />
+      <node id="7169358838268078440" at="821,122,822,125" concept="2" />
+      <node id="7169358838268078440" at="822,125,823,48" concept="2" />
       <node id="7169358838268078440" at="823,48,824,24" concept="9" />
       <node id="7169358838268078440" at="830,118,831,137" concept="2" />
-      <node id="7169358838268078440" at="833,42,834,46" concept="2" />
+      <node id="7169358838268078440" at="833,42,834,54" concept="2" />
       <node id="7169358838268078440" at="838,44,839,41" concept="2" />
-      <node id="7169358838268078440" at="839,41,840,105" concept="2" />
+      <node id="7169358838268078440" at="839,41,840,113" concept="2" />
       <node id="7169358838268078440" at="841,11,842,56" concept="8" />
-      <node id="7169358838268078440" at="842,56,843,45" concept="2" />
-      <node id="7169358838268078440" at="843,45,844,48" concept="2" />
+      <node id="7169358838268078440" at="842,56,843,53" concept="2" />
+      <node id="7169358838268078440" at="843,53,844,48" concept="2" />
       <node id="7169358838268078440" at="844,48,845,35" concept="2" />
       <node id="7169358838268078440" at="845,35,846,26" concept="9" />
       <node id="7169358838268078440" at="847,17,848,42" concept="2" />
-      <node id="7169358838268078440" at="851,40,852,27" concept="9" />
+      <node id="7169358838268078440" at="851,40,852,35" concept="9" />
       <node id="7169358838268078440" at="855,43,856,120" concept="8" />
       <node id="7169358838268078440" at="856,120,857,49" concept="2" />
       <node id="2985733650847088463" at="857,49,858,52" concept="2" />
@@ -13190,7 +13190,7 @@
       <node id="7169358838268078440" at="937,0,938,0" concept="12" trace="AgentGeneratorLines$mElW" />
       <node id="7169358838268078440" at="938,0,939,0" concept="12" trace="AgentType$lBsa" />
       <node id="7169358838268078440" at="939,0,940,0" concept="12" trace="SpawnAt$r0bw" />
-      <node id="7169358838268078440" at="940,0,941,0" concept="12" trace="Notify$$rA" />
+      <node id="7169358838268078440" at="940,0,941,0" concept="12" trace="ArrivalMessage$$rA" />
       <node id="7169358838268078440" at="941,0,942,0" concept="12" trace="AttributeMaps$h_4N" />
       <node id="7169358838268078440" at="945,0,946,0" concept="12" trace="AttributeDistributionTable$$C" />
       <node id="7169358838268078440" at="64,0,66,0" concept="3" trace="myNode" />
@@ -13222,7 +13222,7 @@
       <node id="7169358838268078440" at="729,0,733,0" concept="7" trace="createRefNode_1#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="7169358838268078440" at="737,0,741,0" concept="1" trace="SpawnAtSingleRoleHandler_wa89mn_d0b0a#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SContainmentLink;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
       <node id="7169358838268078440" at="800,0,804,0" concept="7" trace="createRefNode_2#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="7169358838268078440" at="808,0,812,0" concept="1" trace="NotifySingleRoleHandler_wa89mn_b1b0a#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SContainmentLink;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <node id="7169358838268078440" at="808,0,812,0" concept="1" trace="ArrivalMessageSingleRoleHandler_wa89mn_b1b0a#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SContainmentLink;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
       <node id="7169358838268078440" at="872,0,876,0" concept="1" trace="AttributeMapsListHandler_wa89mn_a1a#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
       <node id="7169358838268078440" at="877,0,881,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="7169358838268078440" at="910,97,914,9" concept="6" />
@@ -13304,7 +13304,7 @@
       <node id="7169358838268078440" at="82,0,91,0" concept="7" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="7169358838268078440" at="708,109,717,7" concept="15" />
       <node id="7169358838268078440" at="769,107,778,7" concept="15" />
-      <node id="7169358838268078440" at="840,105,849,7" concept="15" />
+      <node id="7169358838268078440" at="840,113,849,7" concept="15" />
       <node id="7169358838268078440" at="895,154,904,7" concept="15" />
       <node id="7169358838268078440" at="640,0,650,0" concept="7" trace="createCollection_2#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="7169358838268078440" at="784,0,794,0" concept="7" trace="createCollection_4#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
@@ -13367,9 +13367,9 @@
       <scope id="7169358838268078440" at="780,40,781,28" />
       <scope id="7169358838268078440" at="815,28,816,20" />
       <scope id="7169358838268078440" at="830,118,831,137" />
-      <scope id="7169358838268078440" at="833,42,834,46" />
+      <scope id="7169358838268078440" at="833,42,834,54" />
       <scope id="7169358838268078440" at="847,17,848,42" />
-      <scope id="7169358838268078440" at="851,40,852,27" />
+      <scope id="7169358838268078440" at="851,40,852,35" />
       <scope id="7169358838268078440" at="878,28,879,20" />
       <scope id="7169358838268078440" at="881,40,882,38" />
       <scope id="7169358838268078440" at="884,48,885,52" />
@@ -13394,7 +13394,7 @@
       <scope id="7169358838268078440" at="800,40,802,33">
         <var name="provider" id="7169358838268078440" />
       </scope>
-      <scope id="7169358838268078440" at="808,123,810,25" />
+      <scope id="7169358838268078440" at="808,131,810,25" />
       <scope id="7169358838268078440" at="872,88,874,25" />
       <scope id="7169358838268078440" at="911,122,913,146" />
       <scope id="7169358838268078440" at="917,34,919,142" />
@@ -14084,7 +14084,7 @@
       <unit id="7169358838268078440" at="101,45,139,5" name="AgentLanguage.editor.AgentGenerator_EditorBuilder_a$1" />
       <unit id="7169358838268078440" at="672,0,723,0" name="AgentLanguage.editor.AgentGenerator_EditorBuilder_a$AgentTypeSingleRoleHandler_wa89mn_b0b0a" />
       <unit id="7169358838268078440" at="733,0,784,0" name="AgentLanguage.editor.AgentGenerator_EditorBuilder_a$SpawnAtSingleRoleHandler_wa89mn_d0b0a" />
-      <unit id="7169358838268078440" at="804,0,855,0" name="AgentLanguage.editor.AgentGenerator_EditorBuilder_a$NotifySingleRoleHandler_wa89mn_b1b0a" />
+      <unit id="7169358838268078440" at="804,0,855,0" name="AgentLanguage.editor.AgentGenerator_EditorBuilder_a$ArrivalMessageSingleRoleHandler_wa89mn_b1b0a" />
       <unit id="7169358838268078440" at="868,0,935,0" name="AgentLanguage.editor.AgentGenerator_EditorBuilder_a$AttributeMapsListHandler_wa89mn_a1a" />
       <unit id="7169358838268078440" at="63,0,948,0" name="AgentLanguage.editor.AgentGenerator_EditorBuilder_a" />
     </file>

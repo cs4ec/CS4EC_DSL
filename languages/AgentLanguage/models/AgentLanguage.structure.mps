@@ -1493,12 +1493,6 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
     </node>
-    <node concept="1TJgyj" id="EFW1mYsCRv" role="1TKVEi">
-      <property role="IQ2ns" value="768972137576959455" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="OnGenerateAnnouncement" />
-      <ref role="20lvS9" node="3DLpJ7prKMj" resolve="SignalInitReference" />
-    </node>
     <node concept="1TJgyj" id="EFW1mZoVH$" role="1TKVEi">
       <property role="IQ2ns" value="768972137592765284" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -1509,8 +1503,8 @@
     <node concept="1TJgyj" id="74nMeo6B8q1" role="1TKVEi">
       <property role="IQ2ns" value="8149202941029156481" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="Notify" />
-      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
+      <property role="20kJfa" value="ArrivalMessage" />
+      <ref role="20lvS9" node="3DLpJ7prKMj" resolve="SignalInitReference" />
     </node>
     <node concept="1TJgyj" id="2_JteYOEVUw" role="1TKVEi">
       <property role="IQ2ns" value="2985733650847088288" />

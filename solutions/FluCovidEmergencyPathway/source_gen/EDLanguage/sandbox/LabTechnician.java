@@ -71,5 +71,4 @@ public class LabTechnician extends Actor {
 
 
 
-
 }
