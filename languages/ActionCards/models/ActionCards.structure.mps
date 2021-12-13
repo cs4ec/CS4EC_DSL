@@ -813,5 +813,22 @@
       <ref role="20lvS9" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
     </node>
   </node>
+  <node concept="1TIwiD" id="1xAzJ9PnC4u">
+    <property role="EcuMT" value="1758249876537114910" />
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <property role="TrG5h" value="ImmunosuppressedProperty" />
+    <property role="34LRSv" value="ImmunoCompromised" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="1xAzJ9PnC4L" role="PzmwI">
+      <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9PnEa8">
+    <property role="EcuMT" value="1758249876537123464" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="ImmunocompromisedCondition" />
+    <property role="34LRSv" value="check if patient is immuno-compromised" />
+    <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+  </node>
 </model>
 

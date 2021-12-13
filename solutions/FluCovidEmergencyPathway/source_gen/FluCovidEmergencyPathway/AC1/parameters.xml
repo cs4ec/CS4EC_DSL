@@ -108,6 +108,14 @@
   		displayName="admissionRouteEmergencyAttendance" type="double" defaultValue="1.0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="ImmunocompromisedYes"
+  		displayName="ImmunocompromisedYes" type="double" defaultValue="0.05"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="ImmunocompromisedNo"
+  		displayName="ImmunocompromisedNo" type="double" defaultValue="1.0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="admissionRouteElectiveattendance"
   		displayName="admissionRouteElectiveattendance" type="double" defaultValue="1.0"
   		isReadOnly="false"

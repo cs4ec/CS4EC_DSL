@@ -648,5 +648,23 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="1xAzJ9PnEpc">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
+    <node concept="9SLcT" id="1xAzJ9PnEpd" role="9SGkU">
+      <node concept="3clFbS" id="1xAzJ9PnEpe" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9PnEtv" role="3cqZAp">
+          <node concept="2OqwBi" id="1xAzJ9PnEtw" role="3clFbG">
+            <node concept="2DD5aU" id="1xAzJ9PnEtx" role="2Oq$k0" />
+            <node concept="2Zo12i" id="1xAzJ9PnEty" role="2OqNvi">
+              <node concept="chp4Y" id="1xAzJ9PnEtz" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:1xAzJ9NaVjz" resolve="BooleanExpression" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

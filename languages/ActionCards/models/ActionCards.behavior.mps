@@ -866,5 +866,165 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="1xAzJ9PnC5E">
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <ref role="13h7C2" to="e88n:1xAzJ9PnC4u" resolve="ImmunosuppressedProperty" />
+    <node concept="13hLZK" id="1xAzJ9PnC5F" role="13h7CW">
+      <node concept="3clFbS" id="1xAzJ9PnC5G" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9PnC_L" role="3cqZAp">
+          <node concept="2OqwBi" id="1xAzJ9PnC_M" role="3clFbG">
+            <node concept="2OqwBi" id="1xAzJ9PnC_N" role="2Oq$k0">
+              <node concept="13iPFW" id="1xAzJ9PnC_O" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="1xAzJ9PnC_P" role="2OqNvi">
+                <ref role="3TtcxE" to="e88n:1xAzJ9Jg7oB" resolve="possibleValues" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="1xAzJ9PnC_Q" role="2OqNvi">
+              <node concept="2ShNRf" id="1xAzJ9PnC_R" role="25WWJ7">
+                <node concept="3zrR0B" id="1xAzJ9PnC_S" role="2ShVmc">
+                  <node concept="3Tqbb2" id="1xAzJ9PnC_T" role="3zrR0E">
+                    <ref role="ehGHo" to="e88n:1xAzJ9NaVjy" resolve="Yes" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="1xAzJ9PnC_U" role="3cqZAp">
+          <node concept="2OqwBi" id="1xAzJ9PnC_V" role="3clFbG">
+            <node concept="2OqwBi" id="1xAzJ9PnC_W" role="2Oq$k0">
+              <node concept="13iPFW" id="1xAzJ9PnC_X" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="1xAzJ9PnC_Y" role="2OqNvi">
+                <ref role="3TtcxE" to="e88n:1xAzJ9Jg7oB" resolve="possibleValues" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="1xAzJ9PnC_Z" role="2OqNvi">
+              <node concept="2ShNRf" id="1xAzJ9PnCA0" role="25WWJ7">
+                <node concept="3zrR0B" id="1xAzJ9PnCA1" role="2ShVmc">
+                  <node concept="3Tqbb2" id="1xAzJ9PnCA2" role="3zrR0E">
+                    <ref role="ehGHo" to="e88n:1xAzJ9NaVj$" resolve="No" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1xAzJ9PnCA3" role="3cqZAp" />
+        <node concept="3clFbF" id="1xAzJ9PnCA4" role="3cqZAp">
+          <node concept="37vLTI" id="1xAzJ9PnCA5" role="3clFbG">
+            <node concept="2OqwBi" id="1xAzJ9PnCA6" role="37vLTJ">
+              <node concept="13iPFW" id="1xAzJ9PnCA7" role="2Oq$k0" />
+              <node concept="3TrcHB" id="1xAzJ9PnCA8" role="2OqNvi">
+                <ref role="3TsBF5" to="e88n:1xAzJ9KWVQG" resolve="name" />
+              </node>
+            </node>
+            <node concept="Xl_RD" id="1xAzJ9PnCA9" role="37vLTx">
+              <property role="Xl_RC" value="Immunocompromised" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="1xAzJ9PnDyK" role="13h7CS">
+      <property role="TrG5h" value="getName" />
+      <ref role="13i0hy" node="1xAzJ9JgcJZ" resolve="getName" />
+      <node concept="3Tm1VV" id="1xAzJ9PnDyL" role="1B3o_S" />
+      <node concept="3clFbS" id="1xAzJ9PnDyO" role="3clF47">
+        <node concept="3clFbF" id="1xAzJ9PnDyR" role="3cqZAp">
+          <node concept="Xl_RD" id="1xAzJ9PnDyQ" role="3clFbG">
+            <property role="Xl_RC" value="Immunocompromised" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="1xAzJ9PnDyP" role="3clF45" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="1xAzJ9PnEIZ">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="13h7C2" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
+    <node concept="13hLZK" id="1xAzJ9PnEJ0" role="13h7CW">
+      <node concept="3clFbS" id="1xAzJ9PnEJ1" role="2VODD2">
+        <node concept="3clFbF" id="1xAzJ9PnEJs" role="3cqZAp">
+          <node concept="37vLTI" id="1xAzJ9PnEJt" role="3clFbG">
+            <node concept="2ShNRf" id="1xAzJ9PnEJu" role="37vLTx">
+              <node concept="3zrR0B" id="1xAzJ9PnEJv" role="2ShVmc">
+                <node concept="3Tqbb2" id="1xAzJ9PnEJw" role="3zrR0E">
+                  <ref role="ehGHo" to="e88n:1xAzJ9NaVjy" resolve="Yes" />
+                </node>
+              </node>
+            </node>
+            <node concept="2OqwBi" id="1xAzJ9PnEJx" role="37vLTJ">
+              <node concept="13iPFW" id="1xAzJ9PnEJy" role="2Oq$k0" />
+              <node concept="3TrEf2" id="1xAzJ9PnEJz" role="2OqNvi">
+                <ref role="3Tt5mk" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="1xAzJ9PnEJ$" role="3cqZAp" />
+        <node concept="3clFbF" id="1xAzJ9PnEJ_" role="3cqZAp">
+          <node concept="37vLTI" id="1xAzJ9PnEJA" role="3clFbG">
+            <node concept="2OqwBi" id="1xAzJ9PnEJB" role="37vLTJ">
+              <node concept="13iPFW" id="1xAzJ9PnEJC" role="2Oq$k0" />
+              <node concept="3TrEf2" id="1xAzJ9PnEJD" role="2OqNvi">
+                <ref role="3Tt5mk" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
+              </node>
+            </node>
+            <node concept="2OqwBi" id="1xAzJ9PnEJE" role="37vLTx">
+              <node concept="2OqwBi" id="1xAzJ9PnEJF" role="2Oq$k0">
+                <node concept="2OqwBi" id="1xAzJ9PnEJG" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1xAzJ9PnEJH" role="2Oq$k0">
+                    <node concept="2OqwBi" id="1xAzJ9PnEJI" role="2Oq$k0">
+                      <node concept="2OqwBi" id="1xAzJ9PnEJJ" role="2Oq$k0">
+                        <node concept="13iPFW" id="1xAzJ9PnEJK" role="2Oq$k0" />
+                        <node concept="I4A8Y" id="1xAzJ9PnEJL" role="2OqNvi" />
+                      </node>
+                      <node concept="2RRcyG" id="1xAzJ9PnEJM" role="2OqNvi">
+                        <ref role="2RRcyH" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                      </node>
+                    </node>
+                    <node concept="13MTOL" id="1xAzJ9PnEJN" role="2OqNvi">
+                      <ref role="13MTZf" to="e88n:EFW1mY_h9p" resolve="attributes" />
+                    </node>
+                  </node>
+                  <node concept="3zZkjj" id="1xAzJ9PnEJO" role="2OqNvi">
+                    <node concept="1bVj0M" id="1xAzJ9PnEJP" role="23t8la">
+                      <node concept="3clFbS" id="1xAzJ9PnEJQ" role="1bW5cS">
+                        <node concept="3clFbF" id="1xAzJ9PnEJR" role="3cqZAp">
+                          <node concept="2OqwBi" id="1xAzJ9PnEJS" role="3clFbG">
+                            <node concept="2OqwBi" id="1xAzJ9PnEJT" role="2Oq$k0">
+                              <node concept="37vLTw" id="1xAzJ9PnEJU" role="2Oq$k0">
+                                <ref role="3cqZAo" node="1xAzJ9PnEJY" resolve="it" />
+                              </node>
+                              <node concept="3TrEf2" id="1xAzJ9PnEJV" role="2OqNvi">
+                                <ref role="3Tt5mk" to="e88n:1xAzJ9JghCa" resolve="patientProperty" />
+                              </node>
+                            </node>
+                            <node concept="1mIQ4w" id="1xAzJ9PnEJW" role="2OqNvi">
+                              <node concept="chp4Y" id="1xAzJ9PnFg3" role="cj9EA">
+                                <ref role="cht4Q" to="e88n:1xAzJ9PnC4u" resolve="ImmunosuppressedProperty" />
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="Rh6nW" id="1xAzJ9PnEJY" role="1bW2Oz">
+                        <property role="TrG5h" value="it" />
+                        <node concept="2jxLKc" id="1xAzJ9PnEJZ" role="1tU5fm" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="1uHKPH" id="1xAzJ9PnEK0" role="2OqNvi" />
+              </node>
+              <node concept="3TrEf2" id="1xAzJ9PnEK1" role="2OqNvi">
+                <ref role="3Tt5mk" to="e88n:1xAzJ9JghCa" resolve="patientProperty" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

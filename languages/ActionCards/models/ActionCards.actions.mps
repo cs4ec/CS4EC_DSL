@@ -371,5 +371,74 @@
       </node>
     </node>
   </node>
+  <node concept="37WguZ" id="1xAzJ9PnFDT">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="ImmunocompromisedFactory" />
+    <node concept="37WvkG" id="1xAzJ9PnFDU" role="37WGs$">
+      <ref role="37XkoT" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
+      <node concept="37Y9Zx" id="1xAzJ9PnFE4" role="37ZfLb">
+        <node concept="3clFbS" id="1xAzJ9PnFE5" role="2VODD2">
+          <node concept="3clFbF" id="1xAzJ9PnFGi" role="3cqZAp">
+            <node concept="37vLTI" id="1xAzJ9PnFGj" role="3clFbG">
+              <node concept="2OqwBi" id="1xAzJ9PnFGk" role="37vLTJ">
+                <node concept="1r4Lsj" id="1xAzJ9PnFGl" role="2Oq$k0" />
+                <node concept="3TrEf2" id="1xAzJ9PnFGm" role="2OqNvi">
+                  <ref role="3Tt5mk" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
+                </node>
+              </node>
+              <node concept="2OqwBi" id="1xAzJ9PnFGn" role="37vLTx">
+                <node concept="2OqwBi" id="1xAzJ9PnFGo" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1xAzJ9PnFGp" role="2Oq$k0">
+                    <node concept="2OqwBi" id="1xAzJ9PnFGq" role="2Oq$k0">
+                      <node concept="2OqwBi" id="1xAzJ9PnFGr" role="2Oq$k0">
+                        <node concept="1Q6Npb" id="1xAzJ9PnFGs" role="2Oq$k0" />
+                        <node concept="2RRcyG" id="1xAzJ9PnFGt" role="2OqNvi">
+                          <ref role="2RRcyH" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                        </node>
+                      </node>
+                      <node concept="13MTOL" id="1xAzJ9PnFGu" role="2OqNvi">
+                        <ref role="13MTZf" to="e88n:EFW1mY_h9p" resolve="attributes" />
+                      </node>
+                    </node>
+                    <node concept="3zZkjj" id="1xAzJ9PnFGv" role="2OqNvi">
+                      <node concept="1bVj0M" id="1xAzJ9PnFGw" role="23t8la">
+                        <node concept="3clFbS" id="1xAzJ9PnFGx" role="1bW5cS">
+                          <node concept="3clFbF" id="1xAzJ9PnFGy" role="3cqZAp">
+                            <node concept="2OqwBi" id="1xAzJ9PnFGz" role="3clFbG">
+                              <node concept="2OqwBi" id="1xAzJ9PnFG$" role="2Oq$k0">
+                                <node concept="37vLTw" id="1xAzJ9PnFG_" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="1xAzJ9PnFGD" resolve="it" />
+                                </node>
+                                <node concept="3TrEf2" id="1xAzJ9PnFGA" role="2OqNvi">
+                                  <ref role="3Tt5mk" to="e88n:1xAzJ9JghCa" resolve="patientProperty" />
+                                </node>
+                              </node>
+                              <node concept="1mIQ4w" id="1xAzJ9PnFGB" role="2OqNvi">
+                                <node concept="chp4Y" id="1xAzJ9PnG49" role="cj9EA">
+                                  <ref role="cht4Q" to="e88n:1xAzJ9PnC4u" resolve="ImmunosuppressedProperty" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="Rh6nW" id="1xAzJ9PnFGD" role="1bW2Oz">
+                          <property role="TrG5h" value="it" />
+                          <node concept="2jxLKc" id="1xAzJ9PnFGE" role="1tU5fm" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="1uHKPH" id="1xAzJ9PnFGF" role="2OqNvi" />
+                </node>
+                <node concept="3TrEf2" id="1xAzJ9PnFGG" role="2OqNvi">
+                  <ref role="3Tt5mk" to="e88n:1xAzJ9JghCa" resolve="patientProperty" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

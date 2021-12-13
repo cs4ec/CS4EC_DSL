@@ -123,6 +123,7 @@
       <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
         <child id="1758249876506201859" name="condition" index="1FS47L" />
       </concept>
+      <concept id="1758249876537114910" name="ActionCards.structure.ImmunosuppressedProperty" flags="ng" index="1He0ZG" />
       <concept id="1758249876434656837" name="ActionCards.structure.VaccineStatusCondition" flags="ng" index="1R9p2R" />
       <concept id="1758249876434489693" name="ActionCards.structure.VaccineStatusProperty" flags="ng" index="1R9xYJ">
         <reference id="1758249876434501114" name="disease" index="1R9zc8" />
@@ -2507,6 +2508,19 @@
   </node>
   <node concept="2OfScj" id="1xAzJ9NOca1">
     <property role="TrG5h" value="patient" />
+    <node concept="1jfOK3" id="1xAzJ9Prny0" role="2OfI9c">
+      <node concept="1He0ZG" id="1xAzJ9PrnAj" role="1R9TjS">
+        <property role="1C_jdu" value="Immunocompromised" />
+      </node>
+      <node concept="1jfOKv" id="1xAzJ9PrnAn" role="1jfOML">
+        <property role="3JlXGq" value="5" />
+        <node concept="1FjjCg" id="1xAzJ9PrnAk" role="3JlXG4" />
+      </node>
+      <node concept="1jfOKv" id="1xAzJ9PrnAo" role="1jfOML">
+        <property role="3JlXGq" value="95" />
+        <node concept="1FjjCm" id="1xAzJ9PrnAl" role="3JlXG4" />
+      </node>
+    </node>
     <node concept="25k$Xo" id="1xAzJ9NOca2" role="2OfIal">
       <node concept="c0n4t" id="1xAzJ9NOca8" role="c0n7C">
         <property role="c0n49" value="2" />

@@ -22,6 +22,7 @@ public class patient extends Actor {
   public String FluAInfectionStatus = "NotConfigured";
   public String FluBInfectionStatus = "NotConfigured";
   public String RecentCovidContact = "NotConfigured";
+  public String Immunocompromised = "NotConfigured";
   public String LFDCOVIDResult = "Incomplete";
   public String LFDFluAResult = "Incomplete";
   public String LFDFluBResult = "Incomplete";
@@ -180,6 +181,18 @@ public class patient extends Actor {
   }
   public int getRecentCovidContactisNo() {
     if (this.RecentCovidContact == "No") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getImmunocompromisedisYes() {
+    if (this.Immunocompromised == "Yes") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getImmunocompromisedisNo() {
+    if (this.Immunocompromised == "No") {
       return 1;
     }
     return 0;

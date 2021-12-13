@@ -196,6 +196,24 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
+        <string>patientgetImmunocompromisedisYes</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetImmunocompromisedisYes</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getImmunocompromisedisYes</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetImmunocompromisedisNo</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetImmunocompromisedisNo</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getImmunocompromisedisNo</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
         <string>patientgetLFDCOVIDResultisPositive</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
           <id>patientgetLFDCOVIDResultisPositive</id>

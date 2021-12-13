@@ -128,146 +128,146 @@
       <node id="1758249876481485067" at="22,0,23,0" concept="4" trace="FluAInfectionStatus" />
       <node id="1758249876485995896" at="23,0,24,0" concept="4" trace="FluBInfectionStatus" />
       <node id="1758249876504254283" at="24,0,25,0" concept="4" trace="RecentCovidContact" />
-      <node id="1758249876454488448" at="68,52,69,15" concept="10" />
-      <node id="1758249876454488448" at="70,5,71,13" concept="10" />
-      <node id="1758249876454488449" at="74,59,75,15" concept="10" />
-      <node id="1758249876454488449" at="76,5,77,13" concept="10" />
-      <node id="1758249876454488450" at="80,55,81,15" concept="10" />
-      <node id="1758249876454488450" at="82,5,83,13" concept="10" />
-      <node id="1758249876459322992" at="86,51,87,15" concept="10" />
-      <node id="1758249876459322992" at="88,5,89,13" concept="10" />
-      <node id="1758249876459322993" at="92,58,93,15" concept="10" />
-      <node id="1758249876459322993" at="94,5,95,13" concept="10" />
-      <node id="1758249876459322994" at="98,54,99,15" concept="10" />
-      <node id="1758249876459322994" at="100,5,101,13" concept="10" />
-      <node id="1758249876461406980" at="104,51,105,15" concept="10" />
-      <node id="1758249876461406980" at="106,5,107,13" concept="10" />
-      <node id="1758249876461406981" at="110,58,111,15" concept="10" />
-      <node id="1758249876461406981" at="112,5,113,13" concept="10" />
-      <node id="1758249876461406982" at="116,54,117,15" concept="10" />
-      <node id="1758249876461406982" at="118,5,119,13" concept="10" />
-      <node id="1758249876463935980" at="122,53,123,15" concept="10" />
-      <node id="1758249876463935980" at="124,5,125,13" concept="10" />
-      <node id="1758249876463935981" at="128,54,129,15" concept="10" />
-      <node id="1758249876463935981" at="130,5,131,13" concept="10" />
-      <node id="1758249876463935982" at="134,53,135,15" concept="10" />
-      <node id="1758249876463935982" at="136,5,137,13" concept="10" />
-      <node id="1758249876481485072" at="140,52,141,15" concept="10" />
-      <node id="1758249876481485072" at="142,5,143,13" concept="10" />
-      <node id="1758249876481485073" at="146,53,147,15" concept="10" />
-      <node id="1758249876481485073" at="148,5,149,13" concept="10" />
-      <node id="1758249876481485074" at="152,52,153,15" concept="10" />
-      <node id="1758249876481485074" at="154,5,155,13" concept="10" />
-      <node id="1758249876485995901" at="158,52,159,15" concept="10" />
-      <node id="1758249876485995901" at="160,5,161,13" concept="10" />
-      <node id="1758249876485995902" at="164,53,165,15" concept="10" />
-      <node id="1758249876485995902" at="166,5,167,13" concept="10" />
-      <node id="1758249876485995903" at="170,52,171,15" concept="10" />
-      <node id="1758249876485995903" at="172,5,173,13" concept="10" />
-      <node id="1758249876504254287" at="176,43,177,15" concept="10" />
-      <node id="1758249876504254287" at="178,5,179,13" concept="10" />
-      <node id="1758249876504254288" at="182,42,183,15" concept="10" />
-      <node id="1758249876504254288" at="184,5,185,13" concept="10" />
-      <node id="1758249876454488448" at="67,52,70,5" concept="7" />
-      <node id="1758249876454488449" at="73,59,76,5" concept="7" />
-      <node id="1758249876454488450" at="79,55,82,5" concept="7" />
-      <node id="1758249876459322992" at="85,51,88,5" concept="7" />
-      <node id="1758249876459322993" at="91,58,94,5" concept="7" />
-      <node id="1758249876459322994" at="97,54,100,5" concept="7" />
-      <node id="1758249876461406980" at="103,51,106,5" concept="7" />
-      <node id="1758249876461406981" at="109,58,112,5" concept="7" />
-      <node id="1758249876461406982" at="115,54,118,5" concept="7" />
-      <node id="1758249876463935980" at="121,53,124,5" concept="7" />
-      <node id="1758249876463935981" at="127,54,130,5" concept="7" />
-      <node id="1758249876463935982" at="133,53,136,5" concept="7" />
-      <node id="1758249876481485072" at="139,52,142,5" concept="7" />
-      <node id="1758249876481485073" at="145,53,148,5" concept="7" />
-      <node id="1758249876481485074" at="151,52,154,5" concept="7" />
-      <node id="1758249876485995901" at="157,52,160,5" concept="7" />
-      <node id="1758249876485995902" at="163,53,166,5" concept="7" />
-      <node id="1758249876485995903" at="169,52,172,5" concept="7" />
-      <node id="1758249876504254287" at="175,43,178,5" concept="7" />
-      <node id="1758249876504254288" at="181,42,184,5" concept="7" />
-      <node id="1758249876454488448" at="67,0,73,0" concept="8" trace="getCOVIDVaccineStatusisUnvaccinated#()I" />
-      <node id="1758249876454488449" at="73,0,79,0" concept="8" trace="getCOVIDVaccineStatusispartiallyvaccinated#()I" />
-      <node id="1758249876454488450" at="79,0,85,0" concept="8" trace="getCOVIDVaccineStatusisfullyvaccinated#()I" />
-      <node id="1758249876459322992" at="85,0,91,0" concept="8" trace="getFluAVaccineStatusisUnvaccinated#()I" />
-      <node id="1758249876459322993" at="91,0,97,0" concept="8" trace="getFluAVaccineStatusispartiallyvaccinated#()I" />
-      <node id="1758249876459322994" at="97,0,103,0" concept="8" trace="getFluAVaccineStatusisfullyvaccinated#()I" />
-      <node id="1758249876461406980" at="103,0,109,0" concept="8" trace="getFluBVaccineStatusisUnvaccinated#()I" />
-      <node id="1758249876461406981" at="109,0,115,0" concept="8" trace="getFluBVaccineStatusispartiallyvaccinated#()I" />
-      <node id="1758249876461406982" at="115,0,121,0" concept="8" trace="getFluBVaccineStatusisfullyvaccinated#()I" />
-      <node id="1758249876463935980" at="121,0,127,0" concept="8" trace="getCOVIDInfectionStatusisSymptomatic#()I" />
-      <node id="1758249876463935981" at="127,0,133,0" concept="8" trace="getCOVIDInfectionStatusisAsymptomatic#()I" />
-      <node id="1758249876463935982" at="133,0,139,0" concept="8" trace="getCOVIDInfectionStatusisSusceptible#()I" />
-      <node id="1758249876481485072" at="139,0,145,0" concept="8" trace="getFluAInfectionStatusisSymptomatic#()I" />
-      <node id="1758249876481485073" at="145,0,151,0" concept="8" trace="getFluAInfectionStatusisAsymptomatic#()I" />
-      <node id="1758249876481485074" at="151,0,157,0" concept="8" trace="getFluAInfectionStatusisSusceptible#()I" />
-      <node id="1758249876485995901" at="157,0,163,0" concept="8" trace="getFluBInfectionStatusisSymptomatic#()I" />
-      <node id="1758249876485995902" at="163,0,169,0" concept="8" trace="getFluBInfectionStatusisAsymptomatic#()I" />
-      <node id="1758249876485995903" at="169,0,175,0" concept="8" trace="getFluBInfectionStatusisSusceptible#()I" />
-      <node id="1758249876504254287" at="175,0,181,0" concept="8" trace="getRecentCovidContactisYes#()I" />
-      <node id="1758249876504254288" at="181,0,187,0" concept="8" trace="getRecentCovidContactisNo#()I" />
-      <scope id="1758249876454488448" at="68,52,69,15" />
-      <scope id="1758249876454488449" at="74,59,75,15" />
-      <scope id="1758249876454488450" at="80,55,81,15" />
-      <scope id="1758249876459322992" at="86,51,87,15" />
-      <scope id="1758249876459322993" at="92,58,93,15" />
-      <scope id="1758249876459322994" at="98,54,99,15" />
-      <scope id="1758249876461406980" at="104,51,105,15" />
-      <scope id="1758249876461406981" at="110,58,111,15" />
-      <scope id="1758249876461406982" at="116,54,117,15" />
-      <scope id="1758249876463935980" at="122,53,123,15" />
-      <scope id="1758249876463935981" at="128,54,129,15" />
-      <scope id="1758249876463935982" at="134,53,135,15" />
-      <scope id="1758249876481485072" at="140,52,141,15" />
-      <scope id="1758249876481485073" at="146,53,147,15" />
-      <scope id="1758249876481485074" at="152,52,153,15" />
-      <scope id="1758249876485995901" at="158,52,159,15" />
-      <scope id="1758249876485995902" at="164,53,165,15" />
-      <scope id="1758249876485995903" at="170,52,171,15" />
-      <scope id="1758249876504254287" at="176,43,177,15" />
-      <scope id="1758249876504254288" at="182,42,183,15" />
-      <scope id="1758249876454488448" at="67,52,71,13" />
-      <scope id="1758249876454488449" at="73,59,77,13" />
-      <scope id="1758249876454488450" at="79,55,83,13" />
-      <scope id="1758249876459322992" at="85,51,89,13" />
-      <scope id="1758249876459322993" at="91,58,95,13" />
-      <scope id="1758249876459322994" at="97,54,101,13" />
-      <scope id="1758249876461406980" at="103,51,107,13" />
-      <scope id="1758249876461406981" at="109,58,113,13" />
-      <scope id="1758249876461406982" at="115,54,119,13" />
-      <scope id="1758249876463935980" at="121,53,125,13" />
-      <scope id="1758249876463935981" at="127,54,131,13" />
-      <scope id="1758249876463935982" at="133,53,137,13" />
-      <scope id="1758249876481485072" at="139,52,143,13" />
-      <scope id="1758249876481485073" at="145,53,149,13" />
-      <scope id="1758249876481485074" at="151,52,155,13" />
-      <scope id="1758249876485995901" at="157,52,161,13" />
-      <scope id="1758249876485995902" at="163,53,167,13" />
-      <scope id="1758249876485995903" at="169,52,173,13" />
-      <scope id="1758249876504254287" at="175,43,179,13" />
-      <scope id="1758249876504254288" at="181,42,185,13" />
-      <scope id="1758249876454488448" at="67,0,73,0" />
-      <scope id="1758249876454488449" at="73,0,79,0" />
-      <scope id="1758249876454488450" at="79,0,85,0" />
-      <scope id="1758249876459322992" at="85,0,91,0" />
-      <scope id="1758249876459322993" at="91,0,97,0" />
-      <scope id="1758249876459322994" at="97,0,103,0" />
-      <scope id="1758249876461406980" at="103,0,109,0" />
-      <scope id="1758249876461406981" at="109,0,115,0" />
-      <scope id="1758249876461406982" at="115,0,121,0" />
-      <scope id="1758249876463935980" at="121,0,127,0" />
-      <scope id="1758249876463935981" at="127,0,133,0" />
-      <scope id="1758249876463935982" at="133,0,139,0" />
-      <scope id="1758249876481485072" at="139,0,145,0" />
-      <scope id="1758249876481485073" at="145,0,151,0" />
-      <scope id="1758249876481485074" at="151,0,157,0" />
-      <scope id="1758249876485995901" at="157,0,163,0" />
-      <scope id="1758249876485995902" at="163,0,169,0" />
-      <scope id="1758249876485995903" at="169,0,175,0" />
-      <scope id="1758249876504254287" at="175,0,181,0" />
-      <scope id="1758249876504254288" at="181,0,187,0" />
+      <node id="1758249876454488448" at="69,52,70,15" concept="10" />
+      <node id="1758249876454488448" at="71,5,72,13" concept="10" />
+      <node id="1758249876454488449" at="75,59,76,15" concept="10" />
+      <node id="1758249876454488449" at="77,5,78,13" concept="10" />
+      <node id="1758249876454488450" at="81,55,82,15" concept="10" />
+      <node id="1758249876454488450" at="83,5,84,13" concept="10" />
+      <node id="1758249876459322992" at="87,51,88,15" concept="10" />
+      <node id="1758249876459322992" at="89,5,90,13" concept="10" />
+      <node id="1758249876459322993" at="93,58,94,15" concept="10" />
+      <node id="1758249876459322993" at="95,5,96,13" concept="10" />
+      <node id="1758249876459322994" at="99,54,100,15" concept="10" />
+      <node id="1758249876459322994" at="101,5,102,13" concept="10" />
+      <node id="1758249876461406980" at="105,51,106,15" concept="10" />
+      <node id="1758249876461406980" at="107,5,108,13" concept="10" />
+      <node id="1758249876461406981" at="111,58,112,15" concept="10" />
+      <node id="1758249876461406981" at="113,5,114,13" concept="10" />
+      <node id="1758249876461406982" at="117,54,118,15" concept="10" />
+      <node id="1758249876461406982" at="119,5,120,13" concept="10" />
+      <node id="1758249876463935980" at="123,53,124,15" concept="10" />
+      <node id="1758249876463935980" at="125,5,126,13" concept="10" />
+      <node id="1758249876463935981" at="129,54,130,15" concept="10" />
+      <node id="1758249876463935981" at="131,5,132,13" concept="10" />
+      <node id="1758249876463935982" at="135,53,136,15" concept="10" />
+      <node id="1758249876463935982" at="137,5,138,13" concept="10" />
+      <node id="1758249876481485072" at="141,52,142,15" concept="10" />
+      <node id="1758249876481485072" at="143,5,144,13" concept="10" />
+      <node id="1758249876481485073" at="147,53,148,15" concept="10" />
+      <node id="1758249876481485073" at="149,5,150,13" concept="10" />
+      <node id="1758249876481485074" at="153,52,154,15" concept="10" />
+      <node id="1758249876481485074" at="155,5,156,13" concept="10" />
+      <node id="1758249876485995901" at="159,52,160,15" concept="10" />
+      <node id="1758249876485995901" at="161,5,162,13" concept="10" />
+      <node id="1758249876485995902" at="165,53,166,15" concept="10" />
+      <node id="1758249876485995902" at="167,5,168,13" concept="10" />
+      <node id="1758249876485995903" at="171,52,172,15" concept="10" />
+      <node id="1758249876485995903" at="173,5,174,13" concept="10" />
+      <node id="1758249876504254287" at="177,43,178,15" concept="10" />
+      <node id="1758249876504254287" at="179,5,180,13" concept="10" />
+      <node id="1758249876504254288" at="183,42,184,15" concept="10" />
+      <node id="1758249876504254288" at="185,5,186,13" concept="10" />
+      <node id="1758249876454488448" at="68,52,71,5" concept="7" />
+      <node id="1758249876454488449" at="74,59,77,5" concept="7" />
+      <node id="1758249876454488450" at="80,55,83,5" concept="7" />
+      <node id="1758249876459322992" at="86,51,89,5" concept="7" />
+      <node id="1758249876459322993" at="92,58,95,5" concept="7" />
+      <node id="1758249876459322994" at="98,54,101,5" concept="7" />
+      <node id="1758249876461406980" at="104,51,107,5" concept="7" />
+      <node id="1758249876461406981" at="110,58,113,5" concept="7" />
+      <node id="1758249876461406982" at="116,54,119,5" concept="7" />
+      <node id="1758249876463935980" at="122,53,125,5" concept="7" />
+      <node id="1758249876463935981" at="128,54,131,5" concept="7" />
+      <node id="1758249876463935982" at="134,53,137,5" concept="7" />
+      <node id="1758249876481485072" at="140,52,143,5" concept="7" />
+      <node id="1758249876481485073" at="146,53,149,5" concept="7" />
+      <node id="1758249876481485074" at="152,52,155,5" concept="7" />
+      <node id="1758249876485995901" at="158,52,161,5" concept="7" />
+      <node id="1758249876485995902" at="164,53,167,5" concept="7" />
+      <node id="1758249876485995903" at="170,52,173,5" concept="7" />
+      <node id="1758249876504254287" at="176,43,179,5" concept="7" />
+      <node id="1758249876504254288" at="182,42,185,5" concept="7" />
+      <node id="1758249876454488448" at="68,0,74,0" concept="8" trace="getCOVIDVaccineStatusisUnvaccinated#()I" />
+      <node id="1758249876454488449" at="74,0,80,0" concept="8" trace="getCOVIDVaccineStatusispartiallyvaccinated#()I" />
+      <node id="1758249876454488450" at="80,0,86,0" concept="8" trace="getCOVIDVaccineStatusisfullyvaccinated#()I" />
+      <node id="1758249876459322992" at="86,0,92,0" concept="8" trace="getFluAVaccineStatusisUnvaccinated#()I" />
+      <node id="1758249876459322993" at="92,0,98,0" concept="8" trace="getFluAVaccineStatusispartiallyvaccinated#()I" />
+      <node id="1758249876459322994" at="98,0,104,0" concept="8" trace="getFluAVaccineStatusisfullyvaccinated#()I" />
+      <node id="1758249876461406980" at="104,0,110,0" concept="8" trace="getFluBVaccineStatusisUnvaccinated#()I" />
+      <node id="1758249876461406981" at="110,0,116,0" concept="8" trace="getFluBVaccineStatusispartiallyvaccinated#()I" />
+      <node id="1758249876461406982" at="116,0,122,0" concept="8" trace="getFluBVaccineStatusisfullyvaccinated#()I" />
+      <node id="1758249876463935980" at="122,0,128,0" concept="8" trace="getCOVIDInfectionStatusisSymptomatic#()I" />
+      <node id="1758249876463935981" at="128,0,134,0" concept="8" trace="getCOVIDInfectionStatusisAsymptomatic#()I" />
+      <node id="1758249876463935982" at="134,0,140,0" concept="8" trace="getCOVIDInfectionStatusisSusceptible#()I" />
+      <node id="1758249876481485072" at="140,0,146,0" concept="8" trace="getFluAInfectionStatusisSymptomatic#()I" />
+      <node id="1758249876481485073" at="146,0,152,0" concept="8" trace="getFluAInfectionStatusisAsymptomatic#()I" />
+      <node id="1758249876481485074" at="152,0,158,0" concept="8" trace="getFluAInfectionStatusisSusceptible#()I" />
+      <node id="1758249876485995901" at="158,0,164,0" concept="8" trace="getFluBInfectionStatusisSymptomatic#()I" />
+      <node id="1758249876485995902" at="164,0,170,0" concept="8" trace="getFluBInfectionStatusisAsymptomatic#()I" />
+      <node id="1758249876485995903" at="170,0,176,0" concept="8" trace="getFluBInfectionStatusisSusceptible#()I" />
+      <node id="1758249876504254287" at="176,0,182,0" concept="8" trace="getRecentCovidContactisYes#()I" />
+      <node id="1758249876504254288" at="182,0,188,0" concept="8" trace="getRecentCovidContactisNo#()I" />
+      <scope id="1758249876454488448" at="69,52,70,15" />
+      <scope id="1758249876454488449" at="75,59,76,15" />
+      <scope id="1758249876454488450" at="81,55,82,15" />
+      <scope id="1758249876459322992" at="87,51,88,15" />
+      <scope id="1758249876459322993" at="93,58,94,15" />
+      <scope id="1758249876459322994" at="99,54,100,15" />
+      <scope id="1758249876461406980" at="105,51,106,15" />
+      <scope id="1758249876461406981" at="111,58,112,15" />
+      <scope id="1758249876461406982" at="117,54,118,15" />
+      <scope id="1758249876463935980" at="123,53,124,15" />
+      <scope id="1758249876463935981" at="129,54,130,15" />
+      <scope id="1758249876463935982" at="135,53,136,15" />
+      <scope id="1758249876481485072" at="141,52,142,15" />
+      <scope id="1758249876481485073" at="147,53,148,15" />
+      <scope id="1758249876481485074" at="153,52,154,15" />
+      <scope id="1758249876485995901" at="159,52,160,15" />
+      <scope id="1758249876485995902" at="165,53,166,15" />
+      <scope id="1758249876485995903" at="171,52,172,15" />
+      <scope id="1758249876504254287" at="177,43,178,15" />
+      <scope id="1758249876504254288" at="183,42,184,15" />
+      <scope id="1758249876454488448" at="68,52,72,13" />
+      <scope id="1758249876454488449" at="74,59,78,13" />
+      <scope id="1758249876454488450" at="80,55,84,13" />
+      <scope id="1758249876459322992" at="86,51,90,13" />
+      <scope id="1758249876459322993" at="92,58,96,13" />
+      <scope id="1758249876459322994" at="98,54,102,13" />
+      <scope id="1758249876461406980" at="104,51,108,13" />
+      <scope id="1758249876461406981" at="110,58,114,13" />
+      <scope id="1758249876461406982" at="116,54,120,13" />
+      <scope id="1758249876463935980" at="122,53,126,13" />
+      <scope id="1758249876463935981" at="128,54,132,13" />
+      <scope id="1758249876463935982" at="134,53,138,13" />
+      <scope id="1758249876481485072" at="140,52,144,13" />
+      <scope id="1758249876481485073" at="146,53,150,13" />
+      <scope id="1758249876481485074" at="152,52,156,13" />
+      <scope id="1758249876485995901" at="158,52,162,13" />
+      <scope id="1758249876485995902" at="164,53,168,13" />
+      <scope id="1758249876485995903" at="170,52,174,13" />
+      <scope id="1758249876504254287" at="176,43,180,13" />
+      <scope id="1758249876504254288" at="182,42,186,13" />
+      <scope id="1758249876454488448" at="68,0,74,0" />
+      <scope id="1758249876454488449" at="74,0,80,0" />
+      <scope id="1758249876454488450" at="80,0,86,0" />
+      <scope id="1758249876459322992" at="86,0,92,0" />
+      <scope id="1758249876459322993" at="92,0,98,0" />
+      <scope id="1758249876459322994" at="98,0,104,0" />
+      <scope id="1758249876461406980" at="104,0,110,0" />
+      <scope id="1758249876461406981" at="110,0,116,0" />
+      <scope id="1758249876461406982" at="116,0,122,0" />
+      <scope id="1758249876463935980" at="122,0,128,0" />
+      <scope id="1758249876463935981" at="128,0,134,0" />
+      <scope id="1758249876463935982" at="134,0,140,0" />
+      <scope id="1758249876481485072" at="140,0,146,0" />
+      <scope id="1758249876481485073" at="146,0,152,0" />
+      <scope id="1758249876481485074" at="152,0,158,0" />
+      <scope id="1758249876485995901" at="158,0,164,0" />
+      <scope id="1758249876485995902" at="164,0,170,0" />
+      <scope id="1758249876485995903" at="170,0,176,0" />
+      <scope id="1758249876504254287" at="176,0,182,0" />
+      <scope id="1758249876504254288" at="182,0,188,0" />
     </file>
     <file name="patientGenerator_0.java">
       <node id="768972137579873660" at="19,104,20,32" concept="15" />
@@ -594,9 +594,9 @@
       <unit id="1758249876500221279" at="9,0,35,0" name="EDLanguage.sandbox.LabPCR" />
     </file>
     <file name="patient.java">
-      <node id="1758249876500221280" at="31,0,32,0" concept="4" trace="LabPCRCOVIDResult" />
-      <node id="1758249876500221281" at="32,0,33,0" concept="4" trace="LabPCRFluAResult" />
-      <node id="1758249876500221284" at="33,0,34,0" concept="4" trace="LabPCRFluBResult" />
+      <node id="1758249876500221280" at="32,0,33,0" concept="4" trace="LabPCRCOVIDResult" />
+      <node id="1758249876500221281" at="33,0,34,0" concept="4" trace="LabPCRFluAResult" />
+      <node id="1758249876500221284" at="34,0,35,0" concept="4" trace="LabPCRFluBResult" />
     </file>
   </root>
   <root nodeRef="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1)/1758249876506198612">
@@ -3281,6 +3281,23 @@
       </scope>
       <unit id="1758249876511048321" at="13,0,52,0" name="EDLanguage.sandbox.map_PatientProfile" />
     </file>
+    <file name="patient.java">
+      <node id="1758249876538096019" at="25,0,26,0" concept="4" trace="Immunocompromised" />
+      <node id="1758249876538096023" at="189,42,190,15" concept="10" />
+      <node id="1758249876538096023" at="191,5,192,13" concept="10" />
+      <node id="1758249876538096024" at="195,41,196,15" concept="10" />
+      <node id="1758249876538096024" at="197,5,198,13" concept="10" />
+      <node id="1758249876538096023" at="188,42,191,5" concept="7" />
+      <node id="1758249876538096024" at="194,41,197,5" concept="7" />
+      <node id="1758249876538096023" at="188,0,194,0" concept="8" trace="getImmunocompromisedisYes#()I" />
+      <node id="1758249876538096024" at="194,0,200,0" concept="8" trace="getImmunocompromisedisNo#()I" />
+      <scope id="1758249876538096023" at="189,42,190,15" />
+      <scope id="1758249876538096024" at="195,41,196,15" />
+      <scope id="1758249876538096023" at="188,42,192,13" />
+      <scope id="1758249876538096024" at="194,41,198,13" />
+      <scope id="1758249876538096023" at="188,0,194,0" />
+      <scope id="1758249876538096024" at="194,0,200,0" />
+    </file>
     <file name="patientGenerator_1.java">
       <node id="1758249876511048322" at="19,104,20,32" concept="15" />
       <node id="1758249876511048322" at="20,32,21,57" concept="3" />
@@ -3300,46 +3317,52 @@
       <node id="1758249876511048322" at="41,32,42,39" concept="11" />
       <node id="1758249876511048322" at="42,39,43,54" concept="11" />
       <node id="1758249876511048322" at="43,54,44,49" concept="9" />
-      <node id="1758249876511048322" at="45,113,46,46" concept="3" />
-      <node id="1758249876511048322" at="47,5,48,0" concept="12" />
-      <node id="1758249876511048322" at="48,0,49,34" concept="3" />
-      <node id="1758249876511048322" at="49,34,50,0" concept="12" />
-      <node id="1758249876511048322" at="50,0,51,13" concept="10" />
-      <node id="1758249876511048322" at="54,38,55,53" concept="3" />
-      <node id="1758249876511048328" at="55,53,56,29" concept="3" />
-      <node id="1758249876511048330" at="56,29,57,29" concept="3" />
-      <node id="1758249876511048333" at="57,29,58,29" concept="3" />
-      <node id="1758249876511048337" at="58,29,59,29" concept="3" />
-      <node id="1758249876511048342" at="59,29,60,29" concept="3" />
-      <node id="1758249876511048348" at="60,29,61,29" concept="3" />
-      <node id="1758249876511048355" at="61,29,62,29" concept="3" />
-      <node id="1758249876511048363" at="62,29,63,29" concept="3" />
-      <node id="1758249876511048393" at="63,29,64,29" concept="3" />
-      <node id="1758249876511048372" at="64,29,65,30" concept="3" />
-      <node id="1758249876511048382" at="65,30,66,30" concept="3" />
-      <node id="1758249876511048405" at="66,30,67,30" concept="3" />
-      <node id="1758249876511048418" at="67,30,68,30" concept="3" />
-      <node id="1758249876511048432" at="68,30,69,30" concept="3" />
-      <node id="1758249876511048447" at="69,30,70,30" concept="3" />
-      <node id="1758249876511048463" at="70,30,71,30" concept="3" />
-      <node id="1758249876511048480" at="71,30,72,30" concept="3" />
-      <node id="1758249876511048498" at="72,30,73,30" concept="3" />
-      <node id="1758249876511048517" at="73,30,74,30" concept="3" />
-      <node id="1758249876511048537" at="74,30,75,30" concept="3" />
-      <node id="1758249876511048558" at="75,30,76,30" concept="3" />
-      <node id="1758249876511048580" at="76,30,77,30" concept="3" />
-      <node id="1758249876511048603" at="77,30,78,30" concept="3" />
-      <node id="1758249876511048627" at="78,30,79,30" concept="3" />
-      <node id="1758249876511048322" at="79,30,80,0" concept="12" />
-      <node id="1758249876511048322" at="80,0,81,0" concept="12" />
-      <node id="1758249876511048322" at="81,0,82,0" concept="12" />
-      <node id="1758249876511048322" at="44,49,47,5" concept="7" />
+      <node id="1758249876538096024" at="45,100,46,33" concept="3" />
+      <node id="1758249876538096023" at="48,101,49,34" concept="3" />
+      <node id="1758249876511048322" at="51,113,52,46" concept="3" />
+      <node id="1758249876511048322" at="53,5,54,0" concept="12" />
+      <node id="1758249876511048322" at="54,0,55,34" concept="3" />
+      <node id="1758249876511048322" at="55,34,56,0" concept="12" />
+      <node id="1758249876511048322" at="56,0,57,13" concept="10" />
+      <node id="1758249876511048322" at="60,38,61,53" concept="3" />
+      <node id="1758249876511048328" at="61,53,62,29" concept="3" />
+      <node id="1758249876511048330" at="62,29,63,29" concept="3" />
+      <node id="1758249876511048333" at="63,29,64,29" concept="3" />
+      <node id="1758249876511048337" at="64,29,65,29" concept="3" />
+      <node id="1758249876511048342" at="65,29,66,29" concept="3" />
+      <node id="1758249876511048348" at="66,29,67,29" concept="3" />
+      <node id="1758249876511048355" at="67,29,68,29" concept="3" />
+      <node id="1758249876511048363" at="68,29,69,29" concept="3" />
+      <node id="1758249876511048393" at="69,29,70,29" concept="3" />
+      <node id="1758249876511048372" at="70,29,71,30" concept="3" />
+      <node id="1758249876511048382" at="71,30,72,30" concept="3" />
+      <node id="1758249876511048405" at="72,30,73,30" concept="3" />
+      <node id="1758249876511048418" at="73,30,74,30" concept="3" />
+      <node id="1758249876511048432" at="74,30,75,30" concept="3" />
+      <node id="1758249876511048447" at="75,30,76,30" concept="3" />
+      <node id="1758249876511048463" at="76,30,77,30" concept="3" />
+      <node id="1758249876511048480" at="77,30,78,30" concept="3" />
+      <node id="1758249876511048498" at="78,30,79,30" concept="3" />
+      <node id="1758249876511048517" at="79,30,80,30" concept="3" />
+      <node id="1758249876511048537" at="80,30,81,30" concept="3" />
+      <node id="1758249876511048558" at="81,30,82,30" concept="3" />
+      <node id="1758249876511048580" at="82,30,83,30" concept="3" />
+      <node id="1758249876511048603" at="83,30,84,30" concept="3" />
+      <node id="1758249876511048627" at="84,30,85,30" concept="3" />
+      <node id="1758249876511048322" at="85,30,86,0" concept="12" />
+      <node id="1758249876511048322" at="86,0,87,0" concept="12" />
+      <node id="1758249876511048322" at="87,0,88,0" concept="12" />
+      <node id="1758249876538096024" at="44,49,47,5" concept="7" />
+      <node id="1758249876538096023" at="47,5,50,5" concept="7" />
+      <node id="1758249876511048322" at="50,5,53,5" concept="7" />
       <node id="1758249876511048322" at="25,0,29,0" concept="8" trace="step#()V" />
       <node id="1758249876511048322" at="19,0,24,0" concept="2" trace="patientGenerator_1#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
-      <node id="1758249876511048322" at="30,0,53,0" concept="8" trace="onGenerate#()Ljava/lang/Object;" />
-      <node id="1758249876511048322" at="54,0,84,0" concept="8" trace="initialiseArrivalMap#()V" />
+      <node id="1758249876511048322" at="30,0,59,0" concept="8" trace="onGenerate#()Ljava/lang/Object;" />
+      <node id="1758249876511048322" at="60,0,90,0" concept="8" trace="initialiseArrivalMap#()V" />
       <scope id="1758249876511048322" at="26,22,27,11" />
-      <scope id="1758249876511048322" at="45,113,46,46" />
+      <scope id="1758249876538096024" at="45,100,46,33" />
+      <scope id="1758249876538096023" at="48,101,49,34" />
+      <scope id="1758249876511048322" at="51,113,52,46" />
       <scope id="1758249876511048322" at="19,104,22,27" />
       <scope id="1758249876511048322" at="25,0,29,0" />
       <scope id="1758249876511048322" at="19,0,24,0">
@@ -3347,16 +3370,16 @@
         <var name="grid" id="1758249876511048322" />
         <var name="space" id="1758249876511048322" />
       </scope>
-      <scope id="1758249876511048322" at="30,30,51,13">
+      <scope id="1758249876511048322" at="30,30,57,13">
         <var name="a" id="1758249876511048322" />
         <var name="b" id="1758249876511048322" />
         <var name="rndDouble" id="1758249876511048322" />
         <var name="sendSignalTemp" id="1758249876511048322" />
       </scope>
-      <scope id="1758249876511048322" at="30,0,53,0" />
-      <scope id="1758249876511048322" at="54,38,82,0" />
-      <scope id="1758249876511048322" at="54,0,84,0" />
-      <unit id="1758249876511048322" at="18,0,85,0" name="EDLanguage.sandbox.patientGenerator_1" />
+      <scope id="1758249876511048322" at="60,38,88,0" />
+      <scope id="1758249876511048322" at="30,0,59,0" />
+      <scope id="1758249876511048322" at="60,0,90,0" />
+      <unit id="1758249876511048322" at="18,0,91,0" name="EDLanguage.sandbox.patientGenerator_1" />
     </file>
   </root>
   <root nodeRef="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1)/188877551432564585">
@@ -11445,9 +11468,9 @@
       <unit id="6755843002507808258" at="1861,0,1879,0" name="EDLanguage.sandbox.PreAdmissionStaff$Choice_e0g_5" />
     </file>
     <file name="patient.java">
-      <node id="6097839017213117564" at="25,0,26,0" concept="4" trace="LFDCOVIDResult" />
-      <node id="6755843002507808197" at="26,0,27,0" concept="4" trace="LFDFluAResult" />
-      <node id="6755843002507808258" at="27,0,28,0" concept="4" trace="LFDFluBResult" />
+      <node id="6097839017213117564" at="26,0,27,0" concept="4" trace="LFDCOVIDResult" />
+      <node id="6755843002507808197" at="27,0,28,0" concept="4" trace="LFDFluAResult" />
+      <node id="6755843002507808258" at="28,0,29,0" concept="4" trace="LFDFluBResult" />
     </file>
   </root>
   <root nodeRef="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1)/6097839017213528578">
@@ -11483,9 +11506,9 @@
       <unit id="6097839017213528578" at="9,0,36,0" name="EDLanguage.sandbox.LIAT" />
     </file>
     <file name="patient.java">
-      <node id="6097839017213528579" at="28,0,29,0" concept="4" trace="LIATCOVIDResult" />
-      <node id="6097839017213528593" at="29,0,30,0" concept="4" trace="LIATFluAResult" />
-      <node id="6755843002507808280" at="30,0,31,0" concept="4" trace="LIATFluBResult" />
+      <node id="6097839017213528579" at="29,0,30,0" concept="4" trace="LIATCOVIDResult" />
+      <node id="6097839017213528593" at="30,0,31,0" concept="4" trace="LIATFluAResult" />
+      <node id="6755843002507808280" at="31,0,32,0" concept="4" trace="LIATFluBResult" />
     </file>
   </root>
   <root nodeRef="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1)/6655867674930935606">
@@ -11925,207 +11948,207 @@
       <node id="768972137573140830" at="15,0,16,0" concept="4" trace="placeholder" />
       <node id="768972137573140830" at="16,0,17,0" concept="4" trace="admittedTo" />
       <node id="768972137573140830" at="17,0,18,0" concept="4" trace="admissionRoute" />
-      <node id="768972137573140830" at="35,0,36,0" concept="4" trace="behaviourBuilder" />
-      <node id="768972137573140830" at="37,93,38,32" concept="15" />
-      <node id="768972137573140830" at="38,32,39,26" concept="3" />
-      <node id="768972137573140830" at="42,94,43,42" concept="15" />
-      <node id="768972137573140830" at="47,32,48,18" concept="10" />
-      <node id="768972137573140830" at="49,5,50,16" concept="10" />
-      <node id="768972137573140830" at="57,14,58,14" concept="1" />
-      <node id="768972137573140830" at="59,14,60,71" concept="3" />
-      <node id="768972137573140830" at="60,71,61,32" concept="10" />
-      <node id="768972137573140830" at="62,5,63,28" concept="10" />
-      <node id="768972137573140830" at="188,44,189,15" concept="10" />
-      <node id="768972137573140830" at="190,5,191,13" concept="10" />
-      <node id="768972137573140830" at="194,44,195,15" concept="10" />
-      <node id="768972137573140830" at="196,5,197,13" concept="10" />
-      <node id="768972137573140830" at="200,43,201,15" concept="10" />
-      <node id="768972137573140830" at="202,5,203,13" concept="10" />
-      <node id="768972137573140830" at="206,43,207,15" concept="10" />
-      <node id="768972137573140830" at="208,5,209,13" concept="10" />
-      <node id="768972137573140830" at="212,43,213,15" concept="10" />
-      <node id="768972137573140830" at="214,5,215,13" concept="10" />
-      <node id="768972137573140830" at="218,43,219,15" concept="10" />
-      <node id="768972137573140830" at="220,5,221,13" concept="10" />
-      <node id="768972137573140830" at="224,45,225,15" concept="10" />
-      <node id="768972137573140830" at="226,5,227,13" concept="10" />
-      <node id="768972137573140830" at="230,45,231,15" concept="10" />
-      <node id="768972137573140830" at="232,5,233,13" concept="10" />
-      <node id="768972137573140830" at="236,44,237,15" concept="10" />
-      <node id="768972137573140830" at="238,5,239,13" concept="10" />
-      <node id="768972137573140830" at="242,44,243,15" concept="10" />
-      <node id="768972137573140830" at="244,5,245,13" concept="10" />
-      <node id="768972137573140830" at="248,44,249,15" concept="10" />
-      <node id="768972137573140830" at="250,5,251,13" concept="10" />
-      <node id="768972137573140830" at="254,44,255,15" concept="10" />
-      <node id="768972137573140830" at="256,5,257,13" concept="10" />
-      <node id="768972137573140830" at="260,47,261,15" concept="10" />
-      <node id="768972137573140830" at="262,5,263,13" concept="10" />
-      <node id="768972137573140830" at="266,47,267,15" concept="10" />
-      <node id="768972137573140830" at="268,5,269,13" concept="10" />
-      <node id="768972137573140830" at="272,46,273,15" concept="10" />
-      <node id="768972137573140830" at="274,5,275,13" concept="10" />
-      <node id="768972137573140830" at="278,46,279,15" concept="10" />
-      <node id="768972137573140830" at="280,5,281,13" concept="10" />
-      <node id="768972137573140830" at="284,46,285,15" concept="10" />
-      <node id="768972137573140830" at="286,5,287,13" concept="10" />
-      <node id="768972137573140830" at="290,46,291,15" concept="10" />
-      <node id="768972137573140830" at="292,5,293,13" concept="10" />
-      <node id="768972137573140830" at="296,51,297,15" concept="10" />
-      <node id="768972137573140830" at="298,5,299,13" concept="10" />
-      <node id="768972137573140830" at="302,49,303,15" concept="10" />
-      <node id="768972137573140830" at="304,5,305,13" concept="10" />
-      <node id="768972137573140830" at="308,52,309,15" concept="10" />
-      <node id="768972137573140830" at="310,5,311,13" concept="10" />
-      <node id="768972137573140830" at="314,40,315,15" concept="10" />
-      <node id="768972137573140830" at="316,5,317,13" concept="10" />
-      <node id="768972137573140830" at="320,32,321,15" concept="10" />
-      <node id="768972137573140830" at="322,5,323,13" concept="10" />
-      <node id="768972137573140830" at="42,0,45,0" concept="2" trace="patient#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
-      <node id="768972137573140830" at="46,59,49,5" concept="7" />
-      <node id="768972137573140830" at="187,44,190,5" concept="7" />
-      <node id="768972137573140830" at="193,44,196,5" concept="7" />
-      <node id="768972137573140830" at="199,43,202,5" concept="7" />
-      <node id="768972137573140830" at="205,43,208,5" concept="7" />
-      <node id="768972137573140830" at="211,43,214,5" concept="7" />
-      <node id="768972137573140830" at="217,43,220,5" concept="7" />
-      <node id="768972137573140830" at="223,45,226,5" concept="7" />
-      <node id="768972137573140830" at="229,45,232,5" concept="7" />
-      <node id="768972137573140830" at="235,44,238,5" concept="7" />
-      <node id="768972137573140830" at="241,44,244,5" concept="7" />
-      <node id="768972137573140830" at="247,44,250,5" concept="7" />
-      <node id="768972137573140830" at="253,44,256,5" concept="7" />
-      <node id="768972137573140830" at="259,47,262,5" concept="7" />
-      <node id="768972137573140830" at="265,47,268,5" concept="7" />
-      <node id="768972137573140830" at="271,46,274,5" concept="7" />
-      <node id="768972137573140830" at="277,46,280,5" concept="7" />
-      <node id="768972137573140830" at="283,46,286,5" concept="7" />
-      <node id="768972137573140830" at="289,46,292,5" concept="7" />
-      <node id="768972137573140830" at="295,51,298,5" concept="7" />
-      <node id="768972137573140830" at="301,49,304,5" concept="7" />
-      <node id="768972137573140830" at="307,52,310,5" concept="7" />
-      <node id="768972137573140830" at="313,40,316,5" concept="7" />
-      <node id="768972137573140830" at="319,36,322,5" concept="7" />
-      <node id="768972137573140830" at="37,0,41,0" concept="2" trace="patient#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
-      <node id="768972137573140830" at="46,0,52,0" concept="8" trace="selectSignal#(Ljava/util/List;)Lsimcore/Signals/Signal;" />
-      <node id="768972137573140830" at="187,0,193,0" concept="8" trace="getLFDCOVIDResultisPositive#()I" />
-      <node id="768972137573140830" at="193,0,199,0" concept="8" trace="getLFDCOVIDResultisNegative#()I" />
-      <node id="768972137573140830" at="199,0,205,0" concept="8" trace="getLFDFluAResultisPositive#()I" />
-      <node id="768972137573140830" at="205,0,211,0" concept="8" trace="getLFDFluAResultisNegative#()I" />
-      <node id="768972137573140830" at="211,0,217,0" concept="8" trace="getLFDFluBResultisPositive#()I" />
-      <node id="768972137573140830" at="217,0,223,0" concept="8" trace="getLFDFluBResultisNegative#()I" />
-      <node id="768972137573140830" at="223,0,229,0" concept="8" trace="getLIATCOVIDResultisPositive#()I" />
-      <node id="768972137573140830" at="229,0,235,0" concept="8" trace="getLIATCOVIDResultisNegative#()I" />
-      <node id="768972137573140830" at="235,0,241,0" concept="8" trace="getLIATFluAResultisPositive#()I" />
-      <node id="768972137573140830" at="241,0,247,0" concept="8" trace="getLIATFluAResultisNegative#()I" />
-      <node id="768972137573140830" at="247,0,253,0" concept="8" trace="getLIATFluBResultisPositive#()I" />
-      <node id="768972137573140830" at="253,0,259,0" concept="8" trace="getLIATFluBResultisNegative#()I" />
-      <node id="768972137573140830" at="259,0,265,0" concept="8" trace="getLabPCRCOVIDResultisPositive#()I" />
-      <node id="768972137573140830" at="265,0,271,0" concept="8" trace="getLabPCRCOVIDResultisNegative#()I" />
-      <node id="768972137573140830" at="271,0,277,0" concept="8" trace="getLabPCRFluAResultisPositive#()I" />
-      <node id="768972137573140830" at="277,0,283,0" concept="8" trace="getLabPCRFluAResultisNegative#()I" />
-      <node id="768972137573140830" at="283,0,289,0" concept="8" trace="getLabPCRFluBResultisPositive#()I" />
-      <node id="768972137573140830" at="289,0,295,0" concept="8" trace="getLabPCRFluBResultisNegative#()I" />
-      <node id="768972137573140830" at="295,0,301,0" concept="8" trace="getadmittedToisCOVIDPositiveCohort#()I" />
-      <node id="768972137573140830" at="301,0,307,0" concept="8" trace="getadmittedToisFluPositiveCohort#()I" />
-      <node id="768972137573140830" at="307,0,313,0" concept="8" trace="getadmittedToisNonRespiratoryCohort#()I" />
-      <node id="768972137573140830" at="313,0,319,0" concept="8" trace="getadmittedToisSideRoom#()I" />
-      <node id="768972137573140830" at="319,0,325,0" concept="8" trace="getadmittedToisnull#()I" />
-      <node id="768972137573140830" at="55,52,62,5" concept="16" />
-      <node id="768972137573140830" at="55,0,65,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
-      <scope id="768972137573140830" at="42,94,43,42" />
-      <scope id="768972137573140830" at="47,32,48,18" />
-      <scope id="768972137573140830" at="57,14,58,14" />
-      <scope id="768972137573140830" at="188,44,189,15" />
-      <scope id="768972137573140830" at="194,44,195,15" />
-      <scope id="768972137573140830" at="200,43,201,15" />
-      <scope id="768972137573140830" at="206,43,207,15" />
-      <scope id="768972137573140830" at="212,43,213,15" />
-      <scope id="768972137573140830" at="218,43,219,15" />
-      <scope id="768972137573140830" at="224,45,225,15" />
-      <scope id="768972137573140830" at="230,45,231,15" />
-      <scope id="768972137573140830" at="236,44,237,15" />
-      <scope id="768972137573140830" at="242,44,243,15" />
-      <scope id="768972137573140830" at="248,44,249,15" />
-      <scope id="768972137573140830" at="254,44,255,15" />
-      <scope id="768972137573140830" at="260,47,261,15" />
-      <scope id="768972137573140830" at="266,47,267,15" />
-      <scope id="768972137573140830" at="272,46,273,15" />
-      <scope id="768972137573140830" at="278,46,279,15" />
-      <scope id="768972137573140830" at="284,46,285,15" />
-      <scope id="768972137573140830" at="290,46,291,15" />
-      <scope id="768972137573140830" at="296,51,297,15" />
-      <scope id="768972137573140830" at="302,49,303,15" />
-      <scope id="768972137573140830" at="308,52,309,15" />
-      <scope id="768972137573140830" at="314,40,315,15" />
-      <scope id="768972137573140830" at="320,32,321,15" />
-      <scope id="768972137573140830" at="37,93,39,26" />
-      <scope id="768972137573140830" at="59,14,61,32" />
-      <scope id="768972137573140830" at="42,0,45,0">
+      <node id="768972137573140830" at="36,0,37,0" concept="4" trace="behaviourBuilder" />
+      <node id="768972137573140830" at="38,93,39,32" concept="15" />
+      <node id="768972137573140830" at="39,32,40,26" concept="3" />
+      <node id="768972137573140830" at="43,94,44,42" concept="15" />
+      <node id="768972137573140830" at="48,32,49,18" concept="10" />
+      <node id="768972137573140830" at="50,5,51,16" concept="10" />
+      <node id="768972137573140830" at="58,14,59,14" concept="1" />
+      <node id="768972137573140830" at="60,14,61,71" concept="3" />
+      <node id="768972137573140830" at="61,71,62,32" concept="10" />
+      <node id="768972137573140830" at="63,5,64,28" concept="10" />
+      <node id="768972137573140830" at="201,44,202,15" concept="10" />
+      <node id="768972137573140830" at="203,5,204,13" concept="10" />
+      <node id="768972137573140830" at="207,44,208,15" concept="10" />
+      <node id="768972137573140830" at="209,5,210,13" concept="10" />
+      <node id="768972137573140830" at="213,43,214,15" concept="10" />
+      <node id="768972137573140830" at="215,5,216,13" concept="10" />
+      <node id="768972137573140830" at="219,43,220,15" concept="10" />
+      <node id="768972137573140830" at="221,5,222,13" concept="10" />
+      <node id="768972137573140830" at="225,43,226,15" concept="10" />
+      <node id="768972137573140830" at="227,5,228,13" concept="10" />
+      <node id="768972137573140830" at="231,43,232,15" concept="10" />
+      <node id="768972137573140830" at="233,5,234,13" concept="10" />
+      <node id="768972137573140830" at="237,45,238,15" concept="10" />
+      <node id="768972137573140830" at="239,5,240,13" concept="10" />
+      <node id="768972137573140830" at="243,45,244,15" concept="10" />
+      <node id="768972137573140830" at="245,5,246,13" concept="10" />
+      <node id="768972137573140830" at="249,44,250,15" concept="10" />
+      <node id="768972137573140830" at="251,5,252,13" concept="10" />
+      <node id="768972137573140830" at="255,44,256,15" concept="10" />
+      <node id="768972137573140830" at="257,5,258,13" concept="10" />
+      <node id="768972137573140830" at="261,44,262,15" concept="10" />
+      <node id="768972137573140830" at="263,5,264,13" concept="10" />
+      <node id="768972137573140830" at="267,44,268,15" concept="10" />
+      <node id="768972137573140830" at="269,5,270,13" concept="10" />
+      <node id="768972137573140830" at="273,47,274,15" concept="10" />
+      <node id="768972137573140830" at="275,5,276,13" concept="10" />
+      <node id="768972137573140830" at="279,47,280,15" concept="10" />
+      <node id="768972137573140830" at="281,5,282,13" concept="10" />
+      <node id="768972137573140830" at="285,46,286,15" concept="10" />
+      <node id="768972137573140830" at="287,5,288,13" concept="10" />
+      <node id="768972137573140830" at="291,46,292,15" concept="10" />
+      <node id="768972137573140830" at="293,5,294,13" concept="10" />
+      <node id="768972137573140830" at="297,46,298,15" concept="10" />
+      <node id="768972137573140830" at="299,5,300,13" concept="10" />
+      <node id="768972137573140830" at="303,46,304,15" concept="10" />
+      <node id="768972137573140830" at="305,5,306,13" concept="10" />
+      <node id="768972137573140830" at="309,51,310,15" concept="10" />
+      <node id="768972137573140830" at="311,5,312,13" concept="10" />
+      <node id="768972137573140830" at="315,49,316,15" concept="10" />
+      <node id="768972137573140830" at="317,5,318,13" concept="10" />
+      <node id="768972137573140830" at="321,52,322,15" concept="10" />
+      <node id="768972137573140830" at="323,5,324,13" concept="10" />
+      <node id="768972137573140830" at="327,40,328,15" concept="10" />
+      <node id="768972137573140830" at="329,5,330,13" concept="10" />
+      <node id="768972137573140830" at="333,32,334,15" concept="10" />
+      <node id="768972137573140830" at="335,5,336,13" concept="10" />
+      <node id="768972137573140830" at="43,0,46,0" concept="2" trace="patient#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
+      <node id="768972137573140830" at="47,59,50,5" concept="7" />
+      <node id="768972137573140830" at="200,44,203,5" concept="7" />
+      <node id="768972137573140830" at="206,44,209,5" concept="7" />
+      <node id="768972137573140830" at="212,43,215,5" concept="7" />
+      <node id="768972137573140830" at="218,43,221,5" concept="7" />
+      <node id="768972137573140830" at="224,43,227,5" concept="7" />
+      <node id="768972137573140830" at="230,43,233,5" concept="7" />
+      <node id="768972137573140830" at="236,45,239,5" concept="7" />
+      <node id="768972137573140830" at="242,45,245,5" concept="7" />
+      <node id="768972137573140830" at="248,44,251,5" concept="7" />
+      <node id="768972137573140830" at="254,44,257,5" concept="7" />
+      <node id="768972137573140830" at="260,44,263,5" concept="7" />
+      <node id="768972137573140830" at="266,44,269,5" concept="7" />
+      <node id="768972137573140830" at="272,47,275,5" concept="7" />
+      <node id="768972137573140830" at="278,47,281,5" concept="7" />
+      <node id="768972137573140830" at="284,46,287,5" concept="7" />
+      <node id="768972137573140830" at="290,46,293,5" concept="7" />
+      <node id="768972137573140830" at="296,46,299,5" concept="7" />
+      <node id="768972137573140830" at="302,46,305,5" concept="7" />
+      <node id="768972137573140830" at="308,51,311,5" concept="7" />
+      <node id="768972137573140830" at="314,49,317,5" concept="7" />
+      <node id="768972137573140830" at="320,52,323,5" concept="7" />
+      <node id="768972137573140830" at="326,40,329,5" concept="7" />
+      <node id="768972137573140830" at="332,36,335,5" concept="7" />
+      <node id="768972137573140830" at="38,0,42,0" concept="2" trace="patient#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
+      <node id="768972137573140830" at="47,0,53,0" concept="8" trace="selectSignal#(Ljava/util/List;)Lsimcore/Signals/Signal;" />
+      <node id="768972137573140830" at="200,0,206,0" concept="8" trace="getLFDCOVIDResultisPositive#()I" />
+      <node id="768972137573140830" at="206,0,212,0" concept="8" trace="getLFDCOVIDResultisNegative#()I" />
+      <node id="768972137573140830" at="212,0,218,0" concept="8" trace="getLFDFluAResultisPositive#()I" />
+      <node id="768972137573140830" at="218,0,224,0" concept="8" trace="getLFDFluAResultisNegative#()I" />
+      <node id="768972137573140830" at="224,0,230,0" concept="8" trace="getLFDFluBResultisPositive#()I" />
+      <node id="768972137573140830" at="230,0,236,0" concept="8" trace="getLFDFluBResultisNegative#()I" />
+      <node id="768972137573140830" at="236,0,242,0" concept="8" trace="getLIATCOVIDResultisPositive#()I" />
+      <node id="768972137573140830" at="242,0,248,0" concept="8" trace="getLIATCOVIDResultisNegative#()I" />
+      <node id="768972137573140830" at="248,0,254,0" concept="8" trace="getLIATFluAResultisPositive#()I" />
+      <node id="768972137573140830" at="254,0,260,0" concept="8" trace="getLIATFluAResultisNegative#()I" />
+      <node id="768972137573140830" at="260,0,266,0" concept="8" trace="getLIATFluBResultisPositive#()I" />
+      <node id="768972137573140830" at="266,0,272,0" concept="8" trace="getLIATFluBResultisNegative#()I" />
+      <node id="768972137573140830" at="272,0,278,0" concept="8" trace="getLabPCRCOVIDResultisPositive#()I" />
+      <node id="768972137573140830" at="278,0,284,0" concept="8" trace="getLabPCRCOVIDResultisNegative#()I" />
+      <node id="768972137573140830" at="284,0,290,0" concept="8" trace="getLabPCRFluAResultisPositive#()I" />
+      <node id="768972137573140830" at="290,0,296,0" concept="8" trace="getLabPCRFluAResultisNegative#()I" />
+      <node id="768972137573140830" at="296,0,302,0" concept="8" trace="getLabPCRFluBResultisPositive#()I" />
+      <node id="768972137573140830" at="302,0,308,0" concept="8" trace="getLabPCRFluBResultisNegative#()I" />
+      <node id="768972137573140830" at="308,0,314,0" concept="8" trace="getadmittedToisCOVIDPositiveCohort#()I" />
+      <node id="768972137573140830" at="314,0,320,0" concept="8" trace="getadmittedToisFluPositiveCohort#()I" />
+      <node id="768972137573140830" at="320,0,326,0" concept="8" trace="getadmittedToisNonRespiratoryCohort#()I" />
+      <node id="768972137573140830" at="326,0,332,0" concept="8" trace="getadmittedToisSideRoom#()I" />
+      <node id="768972137573140830" at="332,0,338,0" concept="8" trace="getadmittedToisnull#()I" />
+      <node id="768972137573140830" at="56,52,63,5" concept="16" />
+      <node id="768972137573140830" at="56,0,66,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
+      <scope id="768972137573140830" at="43,94,44,42" />
+      <scope id="768972137573140830" at="48,32,49,18" />
+      <scope id="768972137573140830" at="58,14,59,14" />
+      <scope id="768972137573140830" at="201,44,202,15" />
+      <scope id="768972137573140830" at="207,44,208,15" />
+      <scope id="768972137573140830" at="213,43,214,15" />
+      <scope id="768972137573140830" at="219,43,220,15" />
+      <scope id="768972137573140830" at="225,43,226,15" />
+      <scope id="768972137573140830" at="231,43,232,15" />
+      <scope id="768972137573140830" at="237,45,238,15" />
+      <scope id="768972137573140830" at="243,45,244,15" />
+      <scope id="768972137573140830" at="249,44,250,15" />
+      <scope id="768972137573140830" at="255,44,256,15" />
+      <scope id="768972137573140830" at="261,44,262,15" />
+      <scope id="768972137573140830" at="267,44,268,15" />
+      <scope id="768972137573140830" at="273,47,274,15" />
+      <scope id="768972137573140830" at="279,47,280,15" />
+      <scope id="768972137573140830" at="285,46,286,15" />
+      <scope id="768972137573140830" at="291,46,292,15" />
+      <scope id="768972137573140830" at="297,46,298,15" />
+      <scope id="768972137573140830" at="303,46,304,15" />
+      <scope id="768972137573140830" at="309,51,310,15" />
+      <scope id="768972137573140830" at="315,49,316,15" />
+      <scope id="768972137573140830" at="321,52,322,15" />
+      <scope id="768972137573140830" at="327,40,328,15" />
+      <scope id="768972137573140830" at="333,32,334,15" />
+      <scope id="768972137573140830" at="38,93,40,26" />
+      <scope id="768972137573140830" at="60,14,62,32" />
+      <scope id="768972137573140830" at="43,0,46,0">
         <var name="grid" id="768972137573140830" />
         <var name="pstrStartLocation" id="768972137573140830" />
         <var name="space" id="768972137573140830" />
       </scope>
-      <scope id="768972137573140830" at="37,0,41,0">
+      <scope id="768972137573140830" at="38,0,42,0">
         <var name="context" id="768972137573140830" />
         <var name="grid" id="768972137573140830" />
         <var name="space" id="768972137573140830" />
       </scope>
-      <scope id="768972137573140830" at="46,59,50,16" />
-      <scope id="768972137573140830" at="187,44,191,13" />
-      <scope id="768972137573140830" at="193,44,197,13" />
-      <scope id="768972137573140830" at="199,43,203,13" />
-      <scope id="768972137573140830" at="205,43,209,13" />
-      <scope id="768972137573140830" at="211,43,215,13" />
-      <scope id="768972137573140830" at="217,43,221,13" />
-      <scope id="768972137573140830" at="223,45,227,13" />
-      <scope id="768972137573140830" at="229,45,233,13" />
-      <scope id="768972137573140830" at="235,44,239,13" />
-      <scope id="768972137573140830" at="241,44,245,13" />
-      <scope id="768972137573140830" at="247,44,251,13" />
-      <scope id="768972137573140830" at="253,44,257,13" />
-      <scope id="768972137573140830" at="259,47,263,13" />
-      <scope id="768972137573140830" at="265,47,269,13" />
-      <scope id="768972137573140830" at="271,46,275,13" />
-      <scope id="768972137573140830" at="277,46,281,13" />
-      <scope id="768972137573140830" at="283,46,287,13" />
-      <scope id="768972137573140830" at="289,46,293,13" />
-      <scope id="768972137573140830" at="295,51,299,13" />
-      <scope id="768972137573140830" at="301,49,305,13" />
-      <scope id="768972137573140830" at="307,52,311,13" />
-      <scope id="768972137573140830" at="313,40,317,13" />
-      <scope id="768972137573140830" at="319,36,323,13" />
-      <scope id="768972137573140830" at="46,0,52,0">
+      <scope id="768972137573140830" at="47,59,51,16" />
+      <scope id="768972137573140830" at="200,44,204,13" />
+      <scope id="768972137573140830" at="206,44,210,13" />
+      <scope id="768972137573140830" at="212,43,216,13" />
+      <scope id="768972137573140830" at="218,43,222,13" />
+      <scope id="768972137573140830" at="224,43,228,13" />
+      <scope id="768972137573140830" at="230,43,234,13" />
+      <scope id="768972137573140830" at="236,45,240,13" />
+      <scope id="768972137573140830" at="242,45,246,13" />
+      <scope id="768972137573140830" at="248,44,252,13" />
+      <scope id="768972137573140830" at="254,44,258,13" />
+      <scope id="768972137573140830" at="260,44,264,13" />
+      <scope id="768972137573140830" at="266,44,270,13" />
+      <scope id="768972137573140830" at="272,47,276,13" />
+      <scope id="768972137573140830" at="278,47,282,13" />
+      <scope id="768972137573140830" at="284,46,288,13" />
+      <scope id="768972137573140830" at="290,46,294,13" />
+      <scope id="768972137573140830" at="296,46,300,13" />
+      <scope id="768972137573140830" at="302,46,306,13" />
+      <scope id="768972137573140830" at="308,51,312,13" />
+      <scope id="768972137573140830" at="314,49,318,13" />
+      <scope id="768972137573140830" at="320,52,324,13" />
+      <scope id="768972137573140830" at="326,40,330,13" />
+      <scope id="768972137573140830" at="332,36,336,13" />
+      <scope id="768972137573140830" at="47,0,53,0">
         <var name="plstSignals" id="768972137573140830" />
       </scope>
-      <scope id="768972137573140830" at="187,0,193,0" />
-      <scope id="768972137573140830" at="193,0,199,0" />
-      <scope id="768972137573140830" at="199,0,205,0" />
-      <scope id="768972137573140830" at="205,0,211,0" />
-      <scope id="768972137573140830" at="211,0,217,0" />
-      <scope id="768972137573140830" at="217,0,223,0" />
-      <scope id="768972137573140830" at="223,0,229,0" />
-      <scope id="768972137573140830" at="229,0,235,0" />
-      <scope id="768972137573140830" at="235,0,241,0" />
-      <scope id="768972137573140830" at="241,0,247,0" />
-      <scope id="768972137573140830" at="247,0,253,0" />
-      <scope id="768972137573140830" at="253,0,259,0" />
-      <scope id="768972137573140830" at="259,0,265,0" />
-      <scope id="768972137573140830" at="265,0,271,0" />
-      <scope id="768972137573140830" at="271,0,277,0" />
-      <scope id="768972137573140830" at="277,0,283,0" />
-      <scope id="768972137573140830" at="283,0,289,0" />
-      <scope id="768972137573140830" at="289,0,295,0" />
-      <scope id="768972137573140830" at="295,0,301,0" />
-      <scope id="768972137573140830" at="301,0,307,0" />
-      <scope id="768972137573140830" at="307,0,313,0" />
-      <scope id="768972137573140830" at="313,0,319,0" />
-      <scope id="768972137573140830" at="319,0,325,0" />
-      <scope id="768972137573140830" at="55,52,63,28" />
-      <scope id="768972137573140830" at="55,0,65,0">
+      <scope id="768972137573140830" at="200,0,206,0" />
+      <scope id="768972137573140830" at="206,0,212,0" />
+      <scope id="768972137573140830" at="212,0,218,0" />
+      <scope id="768972137573140830" at="218,0,224,0" />
+      <scope id="768972137573140830" at="224,0,230,0" />
+      <scope id="768972137573140830" at="230,0,236,0" />
+      <scope id="768972137573140830" at="236,0,242,0" />
+      <scope id="768972137573140830" at="242,0,248,0" />
+      <scope id="768972137573140830" at="248,0,254,0" />
+      <scope id="768972137573140830" at="254,0,260,0" />
+      <scope id="768972137573140830" at="260,0,266,0" />
+      <scope id="768972137573140830" at="266,0,272,0" />
+      <scope id="768972137573140830" at="272,0,278,0" />
+      <scope id="768972137573140830" at="278,0,284,0" />
+      <scope id="768972137573140830" at="284,0,290,0" />
+      <scope id="768972137573140830" at="290,0,296,0" />
+      <scope id="768972137573140830" at="296,0,302,0" />
+      <scope id="768972137573140830" at="302,0,308,0" />
+      <scope id="768972137573140830" at="308,0,314,0" />
+      <scope id="768972137573140830" at="314,0,320,0" />
+      <scope id="768972137573140830" at="320,0,326,0" />
+      <scope id="768972137573140830" at="326,0,332,0" />
+      <scope id="768972137573140830" at="332,0,338,0" />
+      <scope id="768972137573140830" at="56,52,64,28" />
+      <scope id="768972137573140830" at="56,0,66,0">
         <var name="s" id="768972137573140830" />
       </scope>
-      <unit id="768972137573140830" at="13,0,330,0" name="EDLanguage.sandbox.patient" />
+      <unit id="768972137573140830" at="13,0,343,0" name="EDLanguage.sandbox.patient" />
     </file>
   </root>
   <root nodeRef="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1)/768972137583268694">
@@ -12418,7 +12441,7 @@
       <unit id="7828349744266368945" at="9,0,36,0" name="EDLanguage.sandbox.TriagingTool" />
     </file>
     <file name="patient.java">
-      <node id="7828349744266368945" at="34,0,35,0" concept="4" trace="TriagingToolResult" />
+      <node id="7828349744266368945" at="35,0,36,0" concept="4" trace="TriagingToolResult" />
     </file>
   </root>
   <root nodeRef="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1)/90846643906069332">

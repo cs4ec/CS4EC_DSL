@@ -24,6 +24,8 @@
     <string>patientgetFluBInfectionStatusisSusceptible</string>
     <string>patientgetRecentCovidContactisYes</string>
     <string>patientgetRecentCovidContactisNo</string>
+    <string>patientgetImmunocompromisedisYes</string>
+    <string>patientgetImmunocompromisedisNo</string>
     <string>patientgetLFDCOVIDResultisPositive</string>
     <string>patientgetLFDCOVIDResultisNegative</string>
     <string>patientgetLFDFluAResultisPositive</string>

@@ -42,6 +42,12 @@ public class patientGenerator_1 extends AgentGenerator {
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedNo")) {
+      a.Immunocompromised = "No";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedYes")) {
+      a.Immunocompromised = "Yes";
+    }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("admissionRouteElectiveattendance")) {
       a.admissionRoute = "Electiveattendance";
     }

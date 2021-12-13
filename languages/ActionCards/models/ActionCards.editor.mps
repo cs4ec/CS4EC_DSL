@@ -2094,5 +2094,28 @@
       <node concept="2iRfu4" id="1xAzJ9NG9TF" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="1xAzJ9PnC5l">
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <ref role="1XX52x" to="e88n:1xAzJ9PnC4u" resolve="ImmunosuppressedProperty" />
+    <node concept="3EZMnI" id="1xAzJ9PnC5w" role="2wV5jI">
+      <node concept="3F0ifn" id="1xAzJ9PnC5B" role="3EZMnx">
+        <property role="3F0ifm" value="Patient is immuno-compromised" />
+      </node>
+      <node concept="2iRfu4" id="1xAzJ9PnC5z" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1xAzJ9PnEhu">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
+    <node concept="3EZMnI" id="1xAzJ9PnEhw" role="2wV5jI">
+      <node concept="3F0ifn" id="1xAzJ9PnEhB" role="3EZMnx">
+        <property role="3F0ifm" value="Patient immuno-compomised is" />
+      </node>
+      <node concept="3F1sOY" id="1xAzJ9PnEhH" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
+      </node>
+      <node concept="2iRfu4" id="1xAzJ9PnEhz" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

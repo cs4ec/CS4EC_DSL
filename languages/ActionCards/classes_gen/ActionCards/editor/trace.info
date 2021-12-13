@@ -25,7 +25,7 @@
       <unit at="26,0,98,0" name="ActionCards.editor.DiseaseSymptomReference_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="22,0,260,0" name="ActionCards.editor.EditorAspectDescriptorImpl" />
+      <unit at="22,0,268,0" name="ActionCards.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="GrammarActionsDescriptor.java">
       <unit at="1201,0,1204,0" name="ActionCards.editor.GrammarActionsDescriptor$LINKS" />
@@ -184,6 +184,16 @@
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_IPatientProperty$CONCEPTS" />
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_IPatientProperty$GrammarCellsSubstituteMenuPart_b0zkxi_a" />
       <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_IPatientProperty" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_ImmunocompromisedCondition.java">
+      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ImmunocompromisedCondition$CONCEPTS" />
+      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ImmunocompromisedCondition$GrammarCellsSubstituteMenuPart_sw7na5_a" />
+      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ImmunocompromisedCondition" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_ImmunosuppressedProperty.java">
+      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ImmunosuppressedProperty$CONCEPTS" />
+      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ImmunosuppressedProperty$GrammarCellsSubstituteMenuPart_gs45dl_a" />
+      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ImmunosuppressedProperty" />
     </file>
     <file name="GrammarCellsSubstituteMenu_InfectionStatusCondition.java">
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_InfectionStatusCondition$CONCEPTS" />
@@ -2497,6 +2507,180 @@
       </scope>
       <scope id="1758249876510609029" at="32,0,40,0" />
       <unit id="1758249876510609029" at="13,0,45,0" name="ActionCards.editor.AttendanceRoute_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/1758249876537114965">
+    <file name="ImmunosuppressedProperty_Editor.java">
+      <node id="1758249876537114965" at="11,79,12,90" concept="9" />
+      <node id="1758249876537114965" at="11,0,14,0" concept="7" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876537114965" at="11,79,12,90" />
+      <scope id="1758249876537114965" at="11,0,14,0">
+        <var name="editorContext" id="1758249876537114965" />
+        <var name="node" id="1758249876537114965" />
+      </scope>
+      <unit id="1758249876537114965" at="10,0,15,0" name="ActionCards.editor.ImmunosuppressedProperty_Editor" />
+    </file>
+    <file name="ImmunosuppressedProperty_EditorBuilder_a.java">
+      <node id="1758249876537114965" at="18,104,19,19" concept="13" />
+      <node id="1758249876537114965" at="19,19,20,18" concept="2" />
+      <node id="1758249876537114965" at="25,26,26,18" concept="9" />
+      <node id="1758249876537114965" at="29,39,30,32" concept="9" />
+      <node id="1758249876537114965" at="33,43,34,122" concept="8" />
+      <node id="1758249876537114965" at="34,122,35,48" concept="2" />
+      <node id="1758249876537114965" at="35,48,36,28" concept="2" />
+      <node id="1758249876537114965" at="36,28,37,31" concept="2" />
+      <node id="1758249876537114983" at="37,31,38,49" concept="2" />
+      <node id="1758249876537114965" at="38,49,39,22" concept="9" />
+      <node id="1758249876537114983" at="41,41,42,122" concept="8" />
+      <node id="1758249876537114983" at="42,122,43,47" concept="2" />
+      <node id="1758249876537114983" at="43,47,44,34" concept="2" />
+      <node id="1758249876537114983" at="44,34,45,22" concept="9" />
+      <node id="1758249876537114965" at="15,0,17,0" concept="3" trace="myNode" />
+      <node id="1758249876537114965" at="29,0,32,0" concept="7" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876537114965" at="18,0,22,0" concept="1" trace="ImmunosuppressedProperty_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1758249876537114965" at="23,0,28,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1758249876537114983" at="41,0,47,0" concept="7" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876537114965" at="33,0,41,0" concept="7" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876537114965" at="25,26,26,18" />
+      <scope id="1758249876537114965" at="29,39,30,32" />
+      <scope id="1758249876537114965" at="18,104,20,18" />
+      <scope id="1758249876537114965" at="29,0,32,0" />
+      <scope id="1758249876537114965" at="18,0,22,0">
+        <var name="context" id="1758249876537114965" />
+        <var name="node" id="1758249876537114965" />
+      </scope>
+      <scope id="1758249876537114983" at="41,41,45,22">
+        <var name="editorCell" id="1758249876537114983" />
+      </scope>
+      <scope id="1758249876537114965" at="23,0,28,0" />
+      <scope id="1758249876537114965" at="33,43,39,22">
+        <var name="editorCell" id="1758249876537114965" />
+      </scope>
+      <scope id="1758249876537114983" at="41,0,47,0" />
+      <scope id="1758249876537114965" at="33,0,41,0" />
+      <unit id="1758249876537114965" at="14,0,48,0" name="ActionCards.editor.ImmunosuppressedProperty_EditorBuilder_a" />
+    </file>
+  </root>
+  <root nodeRef="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/1758249876537123934">
+    <file name="ImmunocompromisedCondition_Editor.java">
+      <node id="1758249876537123934" at="11,79,12,92" concept="9" />
+      <node id="1758249876537123934" at="11,0,14,0" concept="7" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876537123934" at="11,79,12,92" />
+      <scope id="1758249876537123934" at="11,0,14,0">
+        <var name="editorContext" id="1758249876537123934" />
+        <var name="node" id="1758249876537123934" />
+      </scope>
+      <unit id="1758249876537123934" at="10,0,15,0" name="ActionCards.editor.ImmunocompromisedCondition_Editor" />
+    </file>
+    <file name="ImmunocompromisedCondition_EditorBuilder_a.java">
+      <node id="1758249876537123934" at="27,106,28,19" concept="13" />
+      <node id="1758249876537123934" at="28,19,29,18" concept="2" />
+      <node id="1758249876537123934" at="34,26,35,18" concept="9" />
+      <node id="1758249876537123934" at="38,39,39,32" concept="9" />
+      <node id="1758249876537123934" at="42,43,43,122" concept="8" />
+      <node id="1758249876537123934" at="43,122,44,47" concept="2" />
+      <node id="1758249876537123934" at="44,47,45,28" concept="2" />
+      <node id="1758249876537123934" at="45,28,46,31" concept="2" />
+      <node id="1758249876537123943" at="46,31,47,49" concept="2" />
+      <node id="1758249876537123949" at="47,49,48,48" concept="2" />
+      <node id="1758249876537123934" at="48,48,49,22" concept="9" />
+      <node id="1758249876537123943" at="51,41,52,121" concept="8" />
+      <node id="1758249876537123943" at="52,121,53,46" concept="2" />
+      <node id="1758249876537123943" at="53,46,54,34" concept="2" />
+      <node id="1758249876537123943" at="54,34,55,22" concept="9" />
+      <node id="1758249876537123934" at="57,40,58,130" concept="8" />
+      <node id="1758249876537123934" at="58,130,59,33" concept="9" />
+      <node id="1758249876537123934" at="65,123,66,38" concept="13" />
+      <node id="1758249876537123934" at="66,38,67,25" concept="2" />
+      <node id="1758249876537123934" at="72,28,73,20" concept="9" />
+      <node id="1758249876537123934" at="76,55,77,76" concept="8" />
+      <node id="1758249876537123934" at="77,76,78,119" concept="2" />
+      <node id="1758249876537123934" at="78,119,79,122" concept="2" />
+      <node id="1758249876537123934" at="79,122,80,48" concept="2" />
+      <node id="1758249876537123934" at="80,48,81,24" concept="9" />
+      <node id="1758249876537123934" at="87,118,88,137" concept="2" />
+      <node id="1758249876537123934" at="90,42,91,51" concept="2" />
+      <node id="1758249876537123934" at="95,44,96,41" concept="2" />
+      <node id="1758249876537123934" at="96,41,97,110" concept="2" />
+      <node id="1758249876537123934" at="98,11,99,56" concept="8" />
+      <node id="1758249876537123934" at="99,56,100,49" concept="2" />
+      <node id="1758249876537123934" at="100,49,101,48" concept="2" />
+      <node id="1758249876537123934" at="101,48,102,35" concept="2" />
+      <node id="1758249876537123934" at="102,35,103,26" concept="9" />
+      <node id="1758249876537123934" at="104,17,105,42" concept="2" />
+      <node id="1758249876537123934" at="108,40,109,31" concept="9" />
+      <node id="1758249876537123934" at="114,0,115,0" concept="12" trace="checkValue$p63D" />
+      <node id="1758249876537123934" at="24,0,26,0" concept="3" trace="myNode" />
+      <node id="1758249876537123934" at="62,0,64,0" concept="3" trace="myNode" />
+      <node id="1758249876537123934" at="38,0,41,0" concept="7" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876537123934" at="86,87,89,7" concept="6" />
+      <node id="1758249876537123934" at="89,7,92,7" concept="6" />
+      <node id="1758249876537123934" at="108,0,111,0" concept="7" trace="getNoTargetText#()Ljava/lang/String;" />
+      <node id="1758249876537123934" at="27,0,31,0" concept="1" trace="ImmunocompromisedCondition_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="1758249876537123934" at="57,0,61,0" concept="7" trace="createRefNode_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876537123934" at="65,0,69,0" concept="1" trace="checkValueSingleRoleHandler_i3653_b0#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SContainmentLink;Ljetbrains/mps/openapi/editor/EditorContext;)V" />
+      <node id="1758249876537123934" at="32,0,37,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1758249876537123934" at="70,0,75,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1758249876537123943" at="51,0,57,0" concept="7" trace="createConstant_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876537123934" at="76,0,83,0" concept="7" trace="createChildCell#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876537123934" at="86,0,94,0" concept="7" trace="installCellInfo#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/openapi/editor/cells/EditorCell;Z)V" />
+      <node id="1758249876537123934" at="42,0,51,0" concept="7" trace="createCollection_0#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="1758249876537123934" at="97,110,106,7" concept="15" />
+      <node id="1758249876537123934" at="94,0,108,0" concept="7" trace="createEmptyCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="1758249876537123934" at="34,26,35,18" />
+      <scope id="1758249876537123934" at="38,39,39,32" />
+      <scope id="1758249876537123934" at="72,28,73,20" />
+      <scope id="1758249876537123934" at="87,118,88,137" />
+      <scope id="1758249876537123934" at="90,42,91,51" />
+      <scope id="1758249876537123934" at="104,17,105,42" />
+      <scope id="1758249876537123934" at="108,40,109,31" />
+      <scope id="1758249876537123934" at="27,106,29,18" />
+      <scope id="1758249876537123934" at="57,40,59,33">
+        <var name="provider" id="1758249876537123934" />
+      </scope>
+      <scope id="1758249876537123934" at="65,123,67,25" />
+      <scope id="1758249876537123934" at="38,0,41,0" />
+      <scope id="1758249876537123934" at="108,0,111,0" />
+      <scope id="1758249876537123934" at="27,0,31,0">
+        <var name="context" id="1758249876537123934" />
+        <var name="node" id="1758249876537123934" />
+      </scope>
+      <scope id="1758249876537123943" at="51,41,55,22">
+        <var name="editorCell" id="1758249876537123943" />
+      </scope>
+      <scope id="1758249876537123934" at="57,0,61,0" />
+      <scope id="1758249876537123934" at="65,0,69,0">
+        <var name="containmentLink" id="1758249876537123934" />
+        <var name="context" id="1758249876537123934" />
+        <var name="ownerNode" id="1758249876537123934" />
+      </scope>
+      <scope id="1758249876537123934" at="32,0,37,0" />
+      <scope id="1758249876537123934" at="70,0,75,0" />
+      <scope id="1758249876537123934" at="76,55,81,24">
+        <var name="editorCell" id="1758249876537123934" />
+      </scope>
+      <scope id="1758249876537123934" at="98,11,103,26">
+        <var name="editorCell" id="1758249876537123934" />
+      </scope>
+      <scope id="1758249876537123943" at="51,0,57,0" />
+      <scope id="1758249876537123934" at="86,87,92,7" />
+      <scope id="1758249876537123934" at="42,43,49,22">
+        <var name="editorCell" id="1758249876537123934" />
+      </scope>
+      <scope id="1758249876537123934" at="76,0,83,0">
+        <var name="child" id="1758249876537123934" />
+      </scope>
+      <scope id="1758249876537123934" at="86,0,94,0">
+        <var name="child" id="1758249876537123934" />
+        <var name="editorCell" id="1758249876537123934" />
+        <var name="isEmpty" id="1758249876537123934" />
+      </scope>
+      <scope id="1758249876537123934" at="42,0,51,0" />
+      <scope id="1758249876537123934" at="95,44,106,7" />
+      <scope id="1758249876537123934" at="94,0,108,0" />
+      <unit id="1758249876537123934" at="113,0,116,0" name="ActionCards.editor.ImmunocompromisedCondition_EditorBuilder_a$LINKS" />
+      <unit id="1758249876537123934" at="61,0,112,0" name="ActionCards.editor.ImmunocompromisedCondition_EditorBuilder_a$checkValueSingleRoleHandler_i3653_b0" />
+      <unit id="1758249876537123934" at="23,0,117,0" name="ActionCards.editor.ImmunocompromisedCondition_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/188877551429756772">
