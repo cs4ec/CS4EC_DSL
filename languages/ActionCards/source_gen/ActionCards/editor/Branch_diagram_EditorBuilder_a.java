@@ -18,6 +18,10 @@ import de.itemis.mps.editor.diagram.shapes.ArrowHead;
 import de.itemis.mps.editor.diagram.runtime.model.IConnectionEndpointReference;
 import de.itemis.mps.editor.diagram.runtime.model.EndpointUtil;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import java.util.Objects;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
 import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
 import de.itemis.mps.editor.diagram.runtime.model.IConnectionEndpoint_Internal;
@@ -34,6 +38,8 @@ import jetbrains.mps.nodeEditor.MPSColors;
 import de.itemis.mps.editor.diagram.styles.editor.LineStyle;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SContainmentLink;
+import org.jetbrains.mps.openapi.language.SConcept;
 
 /*package*/ class Branch_diagram_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -69,7 +75,11 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
           private IShape startShape = null;
 
           private IConnectionEndpointReference endpointFrom = EndpointUtil.createEndpointReferenceForNodeSafe(SLinkOperations.getTarget(((SNode) _variablesContext.getValue("thisNode")), LINKS.fromAction$DE5P));
-          private IConnectionEndpointReference endpointTo = EndpointUtil.createEndpointReferenceForNodeSafe(SLinkOperations.getTarget(((SNode) _variablesContext.getValue("thisNode")), LINKS.targetAction$Z7ub));
+          private IConnectionEndpointReference endpointTo = (Objects.equals(SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(((SNode) _variablesContext.getValue("thisNode")), LINKS.fromAction$DE5P), CONCEPTS.ActionCard$eb, false, false), SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(((SNode) _variablesContext.getValue("thisNode")), LINKS.targetAction$Z7ub), CONCEPTS.ActionCard$eb, false, false)) ? EndpointUtil.createEndpointReferenceForNodeSafe(SLinkOperations.getTarget(((SNode) _variablesContext.getValue("thisNode")), LINKS.targetAction$Z7ub)) : EndpointUtil.createEndpointReferenceForNodeSafe(ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(((SNode) _variablesContext.getValue("thisNode")), CONCEPTS.ActionCard$eb, false, false), LINKS.ActionCardReferences$o2ug)).where(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it) {
+              return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(it, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).contains(SLinkOperations.getTarget(((SNode) _variablesContext.getValue("thisNode")), LINKS.targetAction$Z7ub));
+            }
+          }).first()));
 
           {
             boolean reverse = false;
@@ -177,5 +187,12 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
   private static final class LINKS {
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
     /*package*/ static final SReferenceLink targetAction$Z7ub = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x4f415ebce3f345b2L, "targetAction");
+    /*package*/ static final SContainmentLink ActionCardReferences$o2ug = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27581757bL, "ActionCardReferences");
+    /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
+    /*package*/ static final SContainmentLink Actions$nh$G = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2ef557ae9cb06877L, "Actions");
+  }
+
+  private static final class CONCEPTS {
+    /*package*/ static final SConcept ActionCard$eb = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, "ActionCards.structure.ActionCard");
   }
 }

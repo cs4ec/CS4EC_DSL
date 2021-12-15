@@ -12,6 +12,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Action;
   private ConceptPresentation props_ActionCard;
   private ConceptPresentation props_ActionCardCondition;
+  private ConceptPresentation props_ActionCardReference;
   private ConceptPresentation props_ActionStep;
   private ConceptPresentation props_AdmissionAction;
   private ConceptPresentation props_AttendanceRoute;
@@ -23,6 +24,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Branch;
   private ConceptPresentation props_BranchConditional;
   private ConceptPresentation props_DiagnosticCondition;
+  private ConceptPresentation props_DischargeAction;
   private ConceptPresentation props_Disease;
   private ConceptPresentation props_DiseaseSymptom;
   private ConceptPresentation props_DiseaseSymptomReference;
@@ -80,7 +82,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_ActionCard == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("Overall Description of a patient pathway");
-          cpb.rawPresentation("Action Card");
+          cpb.presentationByName();
           props_ActionCard = cpb.create();
         }
         return props_ActionCard;
@@ -91,6 +93,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActionCardCondition = cpb.create();
         }
         return props_ActionCardCondition;
+      case LanguageConceptSwitch.ActionCardReference:
+        if (props_ActionCardReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard", "", "");
+          props_ActionCardReference = cpb.create();
+        }
+        return props_ActionCardReference;
       case LanguageConceptSwitch.ActionStep:
         if (props_ActionStep == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -170,6 +179,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DiagnosticCondition = cpb.create();
         }
         return props_DiagnosticCondition;
+      case LanguageConceptSwitch.DischargeAction:
+        if (props_DischargeAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_DischargeAction = cpb.create();
+        }
+        return props_DischargeAction;
       case LanguageConceptSwitch.Disease:
         if (props_Disease == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

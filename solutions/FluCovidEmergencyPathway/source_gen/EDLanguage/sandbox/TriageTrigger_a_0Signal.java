@@ -7,7 +7,7 @@ import simcore.Signals.ActorTypeSignal;
 public class TriageTrigger_a_0Signal extends ActorTypeSignal {
   public TriageTrigger_a_0Signal() {
     this.setName("TriageTrigger_a_0");
-    this.setDescription("SecondPlaceholderSignal");
+    this.setDescription("h");
     this.AddActor("TriageNurse");
   }
 

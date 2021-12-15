@@ -87,6 +87,16 @@
       <property role="20kJfa" value="UsageCondition" />
       <ref role="20lvS9" node="1xAzJ9NxGW2" resolve="ActionCardCondition" />
     </node>
+    <node concept="1TJgyj" id="1xAzJ9PwnlV" role="1TKVEi">
+      <property role="IQ2ns" value="1758249876539405691" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ActionCardReferences" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1xAzJ9Pwlb8" resolve="ActionCardReference" />
+    </node>
+    <node concept="PrWs8" id="1xAzJ9Pwlc_" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
   <node concept="1TIwiD" id="2VPlUUsG6x$">
     <property role="EcuMT" value="3383707102503528548" />
@@ -829,6 +839,24 @@
     <property role="TrG5h" value="ImmunocompromisedCondition" />
     <property role="34LRSv" value="check if patient is immuno-compromised" />
     <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9PrV5c">
+    <property role="EcuMT" value="1758249876538241356" />
+    <property role="3GE5qa" value="ActionCard" />
+    <property role="TrG5h" value="DischargeAction" />
+    <property role="34LRSv" value="discharge action" />
+    <ref role="1TJDcQ" node="2VPlUUsG6x$" resolve="Action" />
+  </node>
+  <node concept="1TIwiD" id="1xAzJ9Pwlb8">
+    <property role="EcuMT" value="1758249876539396808" />
+    <property role="3GE5qa" value="ActionCard" />
+    <property role="TrG5h" value="ActionCardReference" />
+    <node concept="1TJgyj" id="1xAzJ9PwlbS" role="1TKVEi">
+      <property role="IQ2ns" value="1758249876539396856" />
+      <property role="20kJfa" value="actionCard" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2VPlUUsG6x8" resolve="ActionCard" />
+    </node>
   </node>
 </model>
 

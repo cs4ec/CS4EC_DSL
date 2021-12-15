@@ -22,6 +22,7 @@ public class patient extends Actor {
   public String FluAInfectionStatus = "NotConfigured";
   public String FluBInfectionStatus = "NotConfigured";
   public String RecentCovidContact = "NotConfigured";
+  public String Immunocompromised = "NotConfigured";
   public String LFDCOVIDResult = "Incomplete";
   public String LFDFluAResult = "Incomplete";
   public String LFDFluBResult = "Incomplete";
@@ -184,6 +185,18 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getImmunocompromisedisYes() {
+    if (this.Immunocompromised == "Yes") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getImmunocompromisedisNo() {
+    if (this.Immunocompromised == "No") {
+      return 1;
+    }
+    return 0;
+  }
   public int getLFDCOVIDResultisPositive() {
     if (this.LFDCOVIDResult == "Positive") {
       return 1;
@@ -292,32 +305,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohort() {
-    if (this.admittedTo == "COVIDPositiveCohort") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisFluPositiveCohort() {
-    if (this.admittedTo == "FluPositiveCohort") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisNonRespiratoryCohort() {
-    if (this.admittedTo == "NonRespiratoryCohort") {
-      return 1;
-    }
-    return 0;
-  }
   public int getadmittedToisSideRoom() {
     if (this.admittedTo == "SideRoom") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisnull() {
-    if (this.admittedTo == "") {
       return 1;
     }
     return 0;

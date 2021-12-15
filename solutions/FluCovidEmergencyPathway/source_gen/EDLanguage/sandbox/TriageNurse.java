@@ -67,8 +67,8 @@ public class TriageNurse extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "TriageTrigger_a71":
-        behaviourBuilder = new Behaviour("TriageTrigger_a71");
+      case "TriageTrigger_a01":
+        behaviourBuilder = new Behaviour("TriageTrigger_a01");
         this.InitTriage_a(s);
         break;
       default:
@@ -80,11 +80,11 @@ public class TriageNurse extends Actor {
 
 
 
-  public class MoveAction_a0a_3 extends BehaviourStep {
+  public class MoveAction_a0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_3(Behaviour behaviour) {
+    public MoveAction_a0a(Behaviour behaviour) {
       target = TriageDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -111,9 +111,9 @@ public class TriageNurse extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0a_3 extends BehaviourStep {
+  public class OrderAction_b0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_3(Behaviour behaviour) {
+    public OrderAction_b0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -268,11 +268,11 @@ public class TriageNurse extends Actor {
       return timeExecuted == 60;
     }
   }
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
+    public MoveAction_a0a_1(Behaviour behaviour) {
       target = TriageDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -299,9 +299,9 @@ public class TriageNurse extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0a_5 extends BehaviourStep {
+  public class OrderAction_b0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_5(Behaviour behaviour) {
+    public OrderAction_b0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -591,8 +591,8 @@ public class TriageNurse extends Actor {
   public void InitTriage_a(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0a_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     plstSteps.add(new StayAction_c0a(behaviourBuilder));
     plstSteps.add(new StayAction_d0a(behaviourBuilder));
     plstSteps.add(new Consequence_e0a(behaviourBuilder));

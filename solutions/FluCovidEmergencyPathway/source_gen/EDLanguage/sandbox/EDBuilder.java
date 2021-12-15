@@ -68,6 +68,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 20; i++) {
       context.add(new PreAdmissionStaff(space, grid, context));
     }
+    for (int i = 0; i < 50; i++) {
+      context.add(new WardStaff(space, grid, context));
+    }
 
 
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), mapWidth, mapHeight);
@@ -81,15 +84,15 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsTriage_e = new Room("MajorsTriage", context, space, grid, 110, 100, 10, 10, 1, 1000, TriageDesk.getInstance(), Color.BLUE);
     Room LIATBoothOne_f = new Room("LIATBoothOne", context, space, grid, 111, 92, 5, 5, 1, 1000, LIATBooth.getInstance(), Color.RED);
     Room MajorsWaitingRoom_g = new Room("MajorsWaitingRoom", context, space, grid, 140, 90, 20, 40, 1, 1000, NonRespiratoryArea.getInstance(), Color.GRAY);
-    Room RespiratoryCubicle1_h = new Room("RespiratoryCubicle1", context, space, grid, 110, 80, 10, 10, 1, 1000, RespiratoryCubicle.getInstance(), Color.RED);
-    Room RespiratoryCubicle2_i = new Room("RespiratoryCubicle2", context, space, grid, 110, 60, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
-    Room RespiratoryCubicle3_j = new Room("RespiratoryCubicle3", context, space, grid, 120, 80, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
-    Room RespiratoryCubicle4_k = new Room("RespiratoryCubicle4", context, space, grid, 120, 60, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
-    Room RespiratoryCubicle5_l = new Room("RespiratoryCubicle5", context, space, grid, 140, 80, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
-    Room RespiratoryCubicle6_m = new Room("RespiratoryCubicle6", context, space, grid, 130, 60, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
-    Room RespiratoryCubicle7_n = new Room("RespiratoryCubicle7", context, space, grid, 150, 80, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
-    Room RespiratoryCubicle8_o = new Room("RespiratoryCubicle8", context, space, grid, 140, 60, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
-    Room RespiratoryCubicle9_p = new Room("RespiratoryCubicle9", context, space, grid, 150, 60, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle1_h = new Room("RespiratoryCubicle1", context, space, grid, 110, 80, 10, 10, 1, 1000, NonRespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle2_i = new Room("RespiratoryCubicle2", context, space, grid, 110, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle3_j = new Room("RespiratoryCubicle3", context, space, grid, 120, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle4_k = new Room("RespiratoryCubicle4", context, space, grid, 120, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle5_l = new Room("RespiratoryCubicle5", context, space, grid, 140, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle6_m = new Room("RespiratoryCubicle6", context, space, grid, 130, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle7_n = new Room("RespiratoryCubicle7", context, space, grid, 150, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle8_o = new Room("RespiratoryCubicle8", context, space, grid, 140, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED);
+    Room RespiratoryCubicle9_p = new Room("RespiratoryCubicle9", context, space, grid, 150, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED);
     Room TaskRoom1_q = new Room("TaskRoom1", context, space, grid, 120, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE);
     Room TaskRoom2_r = new Room("TaskRoom2", context, space, grid, 125, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE);
     Room TaskRoom3_s = new Room("TaskRoom3", context, space, grid, 130, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE);
@@ -99,18 +102,18 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room TriageWaitingRoom_w = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 0, WaitingRoom.getInstance(), Color.GRAY);
     Room MajorsABReception_x = new Room("MajorsABReception", context, space, grid, 200, 168, 20, 10, 1, 15, Ward.getInstance(), Color.GRAY);
     Room LIATBooth2_y = new Room("LIATBooth2", context, space, grid, 220, 169, 5, 8, 1, 0, LIATBooth.getInstance(), Color.RED);
-    Room MajorsBayA_z = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayB_ab = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayC_bb = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayD_cb = new Room("MajorsBayD", context, space, grid, 235, 175, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayE_db = new Room("MajorsBayE", context, space, grid, 235, 160, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayF_eb = new Room("MajorsBayF", context, space, grid, 235, 145, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayG_fb = new Room("MajorsBayG", context, space, grid, 220, 145, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayH_gb = new Room("MajorsBayH", context, space, grid, 205, 145, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayI_hb = new Room("MajorsBayI", context, space, grid, 190, 145, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayJ_ib = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayK_jb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
-    Room MajorsBayL_kb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 0, NonRespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayA_z = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayB_ab = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayC_bb = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayD_cb = new Room("MajorsBayD", context, space, grid, 235, 175, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayE_db = new Room("MajorsBayE", context, space, grid, 235, 160, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayF_eb = new Room("MajorsBayF", context, space, grid, 235, 145, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayG_fb = new Room("MajorsBayG", context, space, grid, 220, 145, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayH_gb = new Room("MajorsBayH", context, space, grid, 205, 145, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayI_hb = new Room("MajorsBayI", context, space, grid, 190, 145, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayJ_ib = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayK_jb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
+    Room MajorsBayL_kb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN);
     Room SideRoom_lb = new Room("SideRoom", context, space, grid, 200, 60, 50, 50, 1, 1000, SideRoom.getInstance(), Color.ORANGE);
     Room CovidCohort_mb = new Room("CovidCohort", context, space, grid, 260, 60, 50, 50, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED);
     Room FluCohort_nb = new Room("FluCohort", context, space, grid, 260, 5, 50, 50, 1, 1000, FluPositiveCohort.getInstance(), Color.RED);

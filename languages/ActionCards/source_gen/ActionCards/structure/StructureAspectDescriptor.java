@@ -19,6 +19,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAction = createDescriptorForAction();
   /*package*/ final ConceptDescriptor myConceptActionCard = createDescriptorForActionCard();
   /*package*/ final ConceptDescriptor myConceptActionCardCondition = createDescriptorForActionCardCondition();
+  /*package*/ final ConceptDescriptor myConceptActionCardReference = createDescriptorForActionCardReference();
   /*package*/ final ConceptDescriptor myConceptActionStep = createDescriptorForActionStep();
   /*package*/ final ConceptDescriptor myConceptAdmissionAction = createDescriptorForAdmissionAction();
   /*package*/ final ConceptDescriptor myConceptAttendanceRoute = createDescriptorForAttendanceRoute();
@@ -30,6 +31,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBranch = createDescriptorForBranch();
   /*package*/ final ConceptDescriptor myConceptBranchConditional = createDescriptorForBranchConditional();
   /*package*/ final ConceptDescriptor myConceptDiagnosticCondition = createDescriptorForDiagnosticCondition();
+  /*package*/ final ConceptDescriptor myConceptDischargeAction = createDescriptorForDischargeAction();
   /*package*/ final ConceptDescriptor myConceptDisease = createDescriptorForDisease();
   /*package*/ final ConceptDescriptor myConceptDiseaseSymptom = createDescriptorForDiseaseSymptom();
   /*package*/ final ConceptDescriptor myConceptDiseaseSymptomReference = createDescriptorForDiseaseSymptomReference();
@@ -88,7 +90,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResource, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptVariable, myConceptYes);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardReference, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResource, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptVariable, myConceptYes);
   }
 
   @Override
@@ -101,6 +103,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActionCard;
       case LanguageConceptSwitch.ActionCardCondition:
         return myConceptActionCardCondition;
+      case LanguageConceptSwitch.ActionCardReference:
+        return myConceptActionCardReference;
       case LanguageConceptSwitch.ActionStep:
         return myConceptActionStep;
       case LanguageConceptSwitch.AdmissionAction:
@@ -123,6 +127,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBranchConditional;
       case LanguageConceptSwitch.DiagnosticCondition:
         return myConceptDiagnosticCondition;
+      case LanguageConceptSwitch.DischargeAction:
+        return myConceptDischargeAction;
       case LanguageConceptSwitch.Disease:
         return myConceptDisease;
       case LanguageConceptSwitch.DiseaseSymptom:
@@ -235,11 +241,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForActionCard() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ActionCard", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L);
     b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528520");
     b.version(2);
     b.aggregate("Actions", 0x2ef557ae9cb06877L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(false).ordered(true).multiple(true).origin("3383707102503528567").done();
     b.aggregate("Branches", 0x2574566374fd2551L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(true).ordered(true).multiple(true).origin("2698877061866267985").done();
     b.aggregate("UsageCondition", 0x18668ef27386c3a5L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L).optional(true).ordered(true).multiple(false).origin("1758249876506198949").done();
+    b.aggregate("ActionCardReferences", 0x18668ef27581757bL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L).optional(true).ordered(true).multiple(true).origin("1758249876539405691").done();
     b.alias("Action Card");
     return b.create();
   }
@@ -250,6 +258,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("condition", 0x18668ef27386cf03L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1758249876506201859").done();
     b.alias("Condition");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForActionCardReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ActionCardReference", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876539396808");
+    b.version(2);
+    b.associate("actionCard", 0x18668ef2758152f8L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L).optional(false).origin("1758249876539396856").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForActionStep() {
@@ -351,6 +367,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.associate("test", 0x29f0721df37881fL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4936c0ffc391ca7L).optional(false).origin("188877551433123871").done();
     b.associate("disease", 0x3f397d5ebb790a0cL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(false).origin("4555810343887637004").done();
     b.alias("diagnostic condition");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForDischargeAction() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DischargeAction", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2756fb14cL);
+    b.class_(false, false, false);
+    b.super_("ActionCards.structure.Action", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876538241356");
+    b.version(2);
+    b.alias("discharge action");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDisease() {

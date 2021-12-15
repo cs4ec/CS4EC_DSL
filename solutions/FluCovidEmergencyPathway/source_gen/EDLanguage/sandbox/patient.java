@@ -305,32 +305,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohort() {
-    if (this.admittedTo == "COVIDPositiveCohort") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisFluPositiveCohort() {
-    if (this.admittedTo == "FluPositiveCohort") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisNonRespiratoryCohort() {
-    if (this.admittedTo == "NonRespiratoryCohort") {
-      return 1;
-    }
-    return 0;
-  }
   public int getadmittedToisSideRoom() {
     if (this.admittedTo == "SideRoom") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisnull() {
-    if (this.admittedTo == "") {
       return 1;
     }
     return 0;

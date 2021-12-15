@@ -33,7 +33,7 @@ public class patientGenerator_0 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("PatientArrivesTrigger_r");
+    sendSignalTemp.setName("PatientArrivesTrigger_k");
     sendSignalTemp.AddData("patient", a);
     sendSignalTemp.AddActor("PreAdmissionStaff");
 
@@ -42,32 +42,35 @@ public class patientGenerator_0 extends AgentGenerator {
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusfullyvaccinated")) {
+      a.COVIDVaccineStatus = "fullyvaccinated";
+    }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusUnvaccinated")) {
       a.COVIDVaccineStatus = "Unvaccinated";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatuspartiallyvaccinated")) {
       a.COVIDVaccineStatus = "partiallyvaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusfullyvaccinated")) {
-      a.COVIDVaccineStatus = "fullyvaccinated";
-    }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusUnvaccinated")) {
       a.FluAVaccineStatus = "Unvaccinated";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatuspartiallyvaccinated")) {
-      a.FluAVaccineStatus = "partiallyvaccinated";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusfullyvaccinated")) {
       a.FluAVaccineStatus = "fullyvaccinated";
     }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatuspartiallyvaccinated")) {
+      a.FluAVaccineStatus = "partiallyvaccinated";
+    }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusUnvaccinated")) {
       a.FluBVaccineStatus = "Unvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusfullyvaccinated")) {
+      a.FluBVaccineStatus = "fullyvaccinated";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatuspartiallyvaccinated")) {
       a.FluBVaccineStatus = "partiallyvaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusfullyvaccinated")) {
-      a.FluBVaccineStatus = "fullyvaccinated";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSusceptible")) {
+      a.COVIDInfectionStatus = "Susceptible";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic")) {
       a.COVIDInfectionStatus = "Symptomatic";
@@ -75,8 +78,8 @@ public class patientGenerator_0 extends AgentGenerator {
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic")) {
       a.COVIDInfectionStatus = "Asymptomatic";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSusceptible")) {
-      a.COVIDInfectionStatus = "Susceptible";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSusceptible")) {
+      a.FluAInfectionStatus = "Susceptible";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic")) {
       a.FluAInfectionStatus = "Symptomatic";
@@ -84,8 +87,8 @@ public class patientGenerator_0 extends AgentGenerator {
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic")) {
       a.FluAInfectionStatus = "Asymptomatic";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSusceptible")) {
-      a.FluAInfectionStatus = "Susceptible";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible")) {
+      a.FluBInfectionStatus = "Susceptible";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic")) {
       a.FluBInfectionStatus = "Symptomatic";
@@ -93,14 +96,11 @@ public class patientGenerator_0 extends AgentGenerator {
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic")) {
       a.FluBInfectionStatus = "Asymptomatic";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible")) {
-      a.FluBInfectionStatus = "Susceptible";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo")) {
+      a.RecentCovidContact = "No";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes")) {
       a.RecentCovidContact = "Yes";
-    }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo")) {
-      a.RecentCovidContact = "No";
     }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("admissionRouteEmergencyAttendance")) {
       a.admissionRoute = "EmergencyAttendance";

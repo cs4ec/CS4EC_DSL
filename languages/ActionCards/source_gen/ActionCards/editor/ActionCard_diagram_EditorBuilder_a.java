@@ -99,6 +99,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
                         for (SNode e : ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.UsageCondition$srTD))) {
                           elements.addAll(accessorFactory.fromSNode(e));
                         }
+                        for (SNode e : ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.ActionCardReferences$o2ug))) {
+                          elements.addAll(accessorFactory.fromSNode(e));
+                        }
                         return elements;
                       }
                       @Override
@@ -148,7 +151,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
                     DiagramModel model = DiagramModel.getModel(editorContext, node, "8399499156273261182", accessor);
 
-                    IPaletteEntryProvider paletteEntryProvider = new CompositePaletteEntryProvider(new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.Actions$nh$G))), new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.UsageCondition$srTD))));
+                    IPaletteEntryProvider paletteEntryProvider = new CompositePaletteEntryProvider(new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.Actions$nh$G))), new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.UsageCondition$srTD))), new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.ActionCardReferences$o2ug))));
                     model.setPaletteEntryProvider(paletteEntryProvider);
 
                     if (DiagramCreationContext.isSubdiagram()) {
@@ -184,6 +187,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     /*package*/ static final SContainmentLink Actions$nh$G = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2ef557ae9cb06877L, "Actions");
     /*package*/ static final SContainmentLink outgoingBranches$cwqF = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x29f0721df2f38bbL, "outgoingBranches");
     /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
+    /*package*/ static final SContainmentLink ActionCardReferences$o2ug = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27581757bL, "ActionCardReferences");
     /*package*/ static final SContainmentLink Branches$1fde = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2574566374fd2551L, "Branches");
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
     /*package*/ static final SReferenceLink targetAction$Z7ub = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x4f415ebce3f345b2L, "targetAction");
