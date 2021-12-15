@@ -421,7 +421,7 @@
         </node>
       </node>
       <node concept="3F0A7n" id="1SF32mNbke" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1SF32mNbc$" resolve="duration" />
+        <ref role="1NtTu8" to="e88n:1SF32mNbc$" resolve="minDuration" />
       </node>
       <node concept="3F0ifn" id="1SF32mNfEO" role="3EZMnx">
         <property role="3F0ifm" value="minutes" />
@@ -747,6 +747,7 @@
     <node concept="2ZK4vF" id="7ih0ZFGR7f5" role="2wV5jI">
       <node concept="3EZMnI" id="av1M7v3P5d" role="1ytjkN">
         <node concept="3F0A7n" id="av1M7v3P5q" role="3EZMnx">
+          <property role="1Intyy" value="true" />
           <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
           <node concept="VSNWy" id="av1M7v3P8q" role="3F10Kt">
             <property role="1lJzqX" value="16" />
@@ -779,11 +780,35 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F0A7n" id="1SF32mNbmo" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1SF32mNbc$" resolve="duration" />
+      <node concept="3F0A7n" id="4Y2SMts3zvZ" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:1SF32mNbc$" resolve="minDuration" />
       </node>
-      <node concept="3F0ifn" id="1SF32mNfF_" role="3EZMnx">
+      <node concept="3F0ifn" id="4Y2SMts3z$x" role="3EZMnx">
         <property role="3F0ifm" value="minutes" />
+      </node>
+      <node concept="_tjkj" id="4Y2SMtsbTTk" role="3EZMnx">
+        <node concept="3EZMnI" id="4Y2SMtsbTTL" role="_tjki">
+          <node concept="3F0ifn" id="4Y2SMtsbTTU" role="3EZMnx">
+            <property role="3F0ifm" value="to" />
+          </node>
+          <node concept="3F1sOY" id="4Y2SMtsbTU0" role="3EZMnx">
+            <ref role="1NtTu8" to="e88n:4Y2SMts7FTW" resolve="maxDuration" />
+          </node>
+          <node concept="3F0ifn" id="4Y2SMtsbTU8" role="3EZMnx">
+            <property role="3F0ifm" value="minutes" />
+          </node>
+          <node concept="2iRfu4" id="4Y2SMtsbTTO" role="2iSdaV" />
+          <node concept="VPM3Z" id="4Y2SMtsbTTP" role="3F10Kt" />
+        </node>
+        <node concept="ZYGn8" id="4Y2SMtsbTUd" role="ZWbT9">
+          <node concept="3clFbS" id="4Y2SMtsbTUe" role="2VODD2">
+            <node concept="3clFbF" id="4Y2SMtsbTUR" role="3cqZAp">
+              <node concept="Xl_RD" id="4Y2SMtsbTUQ" role="3clFbG">
+                <property role="Xl_RC" value="to" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="3F0ifn" id="2lOlAdPnZO2" role="3EZMnx">
         <property role="3F0ifm" value="Location:" />

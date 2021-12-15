@@ -10,6 +10,7 @@
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
@@ -131,6 +132,12 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
     </node>
+    <node concept="1TJgyj" id="4Y2SMts7FTW" role="1TKVEi">
+      <property role="IQ2ns" value="5729391434157440636" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="maxDuration" />
+      <ref role="20lvS9" to="tpee:fzcmrck" resolve="IntegerConstant" />
+    </node>
     <node concept="PrWs8" id="4X1nFNzWQUs" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -151,13 +158,18 @@
     </node>
     <node concept="1TJgyi" id="1SF32mNbc$" role="1TKVEl">
       <property role="IQ2nx" value="33966321893684004" />
-      <property role="TrG5h" value="duration" />
+      <property role="TrG5h" value="minDuration" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyj" id="av1M7viD_O" role="1TKVEi">
       <property role="IQ2ns" value="188877551434373492" />
       <property role="20kJfa" value="resource" />
       <ref role="20lvS9" node="av1M7vbNwp" resolve="Resource" />
+    </node>
+    <node concept="1TJgyj" id="4Y2SMttqqWk" role="1TKVEi">
+      <property role="IQ2ns" value="5729391434179129108" />
+      <property role="20kJfa" value="timeDistributionTable" />
+      <ref role="20lvS9" to="3751:2_JteYPogU9" resolve="TimeDistributionTable" />
     </node>
   </node>
   <node concept="1TIwiD" id="4X1nFNzWOlr">

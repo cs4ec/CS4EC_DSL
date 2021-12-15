@@ -832,20 +832,20 @@ public class PreAdmissionStaff extends Actor {
       return timeExecuted == testingTime;
     }
   }
-  public class Choice_d0e_3 extends InstantBehaviourStep {
+  public class Choice_d0e extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_d0e_3(Behaviour behaviour) {
+    public Choice_d0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0d0e_7(behaviour));
+        plstSteps.add(new Choice_a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0d0e_11(behaviour));
+        plstSteps.add(new Choice_a0d0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -886,10 +886,10 @@ public class PreAdmissionStaff extends Actor {
       }
     }
   }
-  public class SendSignalAction_g0e_3 extends BehaviourStep {
+  public class SendSignalAction_g0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_g0e_3(Behaviour behaviour) {
+    public SendSignalAction_g0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -902,10 +902,10 @@ public class PreAdmissionStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_h0e_3 extends BehaviourStep {
+  public class StayAction_h0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_h0e_3(Behaviour behaviour) {
+    public StayAction_h0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -982,63 +982,63 @@ public class PreAdmissionStaff extends Actor {
       return timeExecuted == testingTime;
     }
   }
-  public class Choice_d0e_5 extends InstantBehaviourStep {
+  public class Choice_d0e_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_d0e_5(Behaviour behaviour) {
+    public Choice_d0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0d0e_7(behaviour));
+        plstSteps.add(new Choice_a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0d0e_11(behaviour));
+        plstSteps.add(new Choice_a0d0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Choice_a0d0e_7 extends InstantBehaviourStep {
+  public class Choice_a0d0e extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0d0e_7(Behaviour behaviour) {
+    public Choice_a0d0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (Dice(70)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0e_7(behaviour));
+        plstSteps.add(new Consequence_a0a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0e_9(behaviour));
+        plstSteps.add(new Consequence_a0a0d0e_1(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Choice_a0d0e_9 extends InstantBehaviourStep {
+  public class Choice_a0d0e_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0d0e_9(Behaviour behaviour) {
+    public Choice_a0d0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (Dice(70)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0e_7(behaviour));
+        plstSteps.add(new Consequence_a0a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0e_9(behaviour));
+        plstSteps.add(new Consequence_a0a0d0e_1(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Consequence_a0a0d0e_7 extends InstantBehaviourStep {
+  public class Consequence_a0a0d0e extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0e_7(Behaviour behaviour) {
+    public Consequence_a0a0d0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1047,9 +1047,9 @@ public class PreAdmissionStaff extends Actor {
 
     }
   }
-  public class Consequence_a0a0d0e_8 extends InstantBehaviourStep {
+  public class Consequence_a0a0d0e_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0e_8(Behaviour behaviour) {
+    public Consequence_a0a0d0e_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1058,9 +1058,9 @@ public class PreAdmissionStaff extends Actor {
 
     }
   }
-  public class Consequence_a0a0d0e_9 extends InstantBehaviourStep {
+  public class Consequence_a0a0d0e_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0e_9(Behaviour behaviour) {
+    public Consequence_a0a0d0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1069,9 +1069,9 @@ public class PreAdmissionStaff extends Actor {
 
     }
   }
-  public class Consequence_a0a0d0e_10 extends InstantBehaviourStep {
+  public class Consequence_a0a0d0e_2 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0e_10(Behaviour behaviour) {
+    public Consequence_a0a0d0e_2(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1080,45 +1080,45 @@ public class PreAdmissionStaff extends Actor {
 
     }
   }
-  public class Choice_a0d0e_11 extends InstantBehaviourStep {
+  public class Choice_a0d0e_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0d0e_11(Behaviour behaviour) {
+    public Choice_a0d0e_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (Dice(99)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0e_11(behaviour));
+        plstSteps.add(new Consequence_a0a0d0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0e_13(behaviour));
+        plstSteps.add(new Consequence_a0a0d0e_5(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Choice_a0d0e_13 extends InstantBehaviourStep {
+  public class Choice_a0d0e_5 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0d0e_13(Behaviour behaviour) {
+    public Choice_a0d0e_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (Dice(99)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0e_11(behaviour));
+        plstSteps.add(new Consequence_a0a0d0e_3(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0d0e_13(behaviour));
+        plstSteps.add(new Consequence_a0a0d0e_5(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Consequence_a0a0d0e_11 extends InstantBehaviourStep {
+  public class Consequence_a0a0d0e_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0e_11(Behaviour behaviour) {
+    public Consequence_a0a0d0e_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1127,9 +1127,9 @@ public class PreAdmissionStaff extends Actor {
 
     }
   }
-  public class Consequence_a0a0d0e_12 extends InstantBehaviourStep {
+  public class Consequence_a0a0d0e_4 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0e_12(Behaviour behaviour) {
+    public Consequence_a0a0d0e_4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1138,9 +1138,9 @@ public class PreAdmissionStaff extends Actor {
 
     }
   }
-  public class Consequence_a0a0d0e_13 extends InstantBehaviourStep {
+  public class Consequence_a0a0d0e_5 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0e_13(Behaviour behaviour) {
+    public Consequence_a0a0d0e_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1149,9 +1149,9 @@ public class PreAdmissionStaff extends Actor {
 
     }
   }
-  public class Consequence_a0a0d0e_14 extends InstantBehaviourStep {
+  public class Consequence_a0a0d0e_6 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_a0a0d0e_14(Behaviour behaviour) {
+    public Consequence_a0a0d0e_6(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1516,10 +1516,10 @@ public class PreAdmissionStaff extends Actor {
 
     }
   }
-  public class SendSignalAction_g0e_5 extends BehaviourStep {
+  public class SendSignalAction_g0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_g0e_5(Behaviour behaviour) {
+    public SendSignalAction_g0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1532,10 +1532,10 @@ public class PreAdmissionStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_h0e_5 extends BehaviourStep {
+  public class StayAction_h0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_h0e_5(Behaviour behaviour) {
+    public StayAction_h0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2543,11 +2543,11 @@ public class PreAdmissionStaff extends Actor {
     plstSteps.add(new MoveAction_a0e_3(behaviourBuilder));
     plstSteps.add(new StayAction_b0e(behaviourBuilder));
     plstSteps.add(new StayAction_c0e_3(behaviourBuilder));
-    plstSteps.add(new Choice_d0e_3(behaviourBuilder));
+    plstSteps.add(new Choice_d0e(behaviourBuilder));
     plstSteps.add(new Choice_e0e_3(behaviourBuilder));
     plstSteps.add(new Choice_f0e_3(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0e_3(behaviourBuilder));
-    plstSteps.add(new StayAction_h0e_3(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_g0e(behaviourBuilder));
+    plstSteps.add(new StayAction_h0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

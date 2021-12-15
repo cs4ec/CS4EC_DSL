@@ -152,76 +152,76 @@
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_0Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_10Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_10Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_11Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_11Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_12Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_12Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_13Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_13Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_14Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_14Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_15Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_15Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_16Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_16Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_17Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_17Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_18Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_18Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_19Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_19Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_1Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_1Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_20Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_20Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_21Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_21Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_22Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_22Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_2Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_2Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_3Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_3Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_4Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_4Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_5Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_5Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_6Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_6Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_7Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_7Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_8Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_8Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a2_9Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DischargeTrigger_a1_9Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.DoConfirmatoryPCRTrigger_a4Signal">
@@ -242,76 +242,76 @@
   <dependency className="FluCovidEmergencyPathway.AC1.DoConfirmatoryPCRTrigger_a4_4Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_0Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_10Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_10Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_11Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_11Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_12Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_12Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_13Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_13Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_14Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_14Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_15Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_15Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_16Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_16Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_17Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_17Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_18Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_18Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_19Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_19Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_1Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_1Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_20Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_20Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_21Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_21Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_22Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_22Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_2Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_2Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_3Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_3Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_4Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_4Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_5Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_5Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_6Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_6Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_7Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_7Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_8Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_8Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a1_9Signal">
+  <dependency className="FluCovidEmergencyPathway.AC1.DoPCRTrigger_a3_9Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.Doctor">
@@ -585,6 +585,30 @@
     <classNode dependClassName="EDLanguage.sandbox.RadiologyRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTimeDistribution_0">
+    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTimeDistribution_0" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTimeDistribution_1">
+    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTimeDistribution_1" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTimeDistribution_2">
+    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTimeDistribution_2" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
+  </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
@@ -612,25 +636,7 @@
   <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_16Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_17Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_18Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_19Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_1Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_20Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_21Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_22Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.ReceiveTreatmentTrigger_a0_2Signal">
@@ -943,6 +949,32 @@
     <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.TreatmentTimeDistribution_0">
+    <classNode dependClassName="EDLanguage.sandbox.TreatmentTimeDistribution_0" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.TreatmentTrigger_a0Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.TreatmentTrigger_a0_0Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.TreatmentTrigger_a0_1Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.TreatmentTrigger_a0_2Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.TreatmentTrigger_a0_3Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.AC1.TreatmentTrigger_a0_4Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.TriageDesk">
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -1029,23 +1061,27 @@
   </dependency>
   <dependency className="FluCovidEmergencyPathway.AC1.WardStaff">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a2Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a2_0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a2_1Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a2_2Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a1Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a1_0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a1_1Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a1_2Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a1Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a1_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a1_1Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a1_2Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a3Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a3_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a3_1Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a3_2Signal" />
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCohort" />
+    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTimeDistribution_0" />
+    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTimeDistribution_1" />
+    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTimeDistribution_2" />
     <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_a0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_a0_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_a0_1Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_a0_2Signal" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.TreatmentTimeDistribution_0" />
+    <classNode dependClassName="EDLanguage.sandbox.TreatmentTrigger_a0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.WardStaff" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Object" />

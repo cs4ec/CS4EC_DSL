@@ -20,6 +20,11 @@
     <import index="2jw" ref="r:89d28cee-e63f-45c3-83da-f519738636d8(org.iets3.core.expr.genjava.simpleTypes.typesystem)" />
   </imports>
   <registry>
+    <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
+        <property id="1068580320021" name="value" index="3cmrfH" />
+      </concept>
+    </language>
     <language id="b3cac82c-d024-46bc-b485-624ad80c3cc2" name="ActionCards">
       <concept id="7169358838266389176" name="ActionCards.structure.PatientArrivals" flags="ng" index="25k$Xo">
         <child id="2876623929997960145" name="PatientArrivalLines" index="c0n7C" />
@@ -58,9 +63,10 @@
         <child id="2698877061866373100" name="condition" index="1hyIAf" />
       </concept>
       <concept id="3383707102503528548" name="ActionCards.structure.Action" flags="ng" index="2MhjZa">
-        <property id="33966321893684004" name="duration" index="2mH1Wk" />
+        <property id="33966321893684004" name="minDuration" index="2mH1Wk" />
         <property id="4544390881339097912" name="requiresPatient" index="3lFixl" />
         <reference id="188877551434373492" name="resource" index="3tPpTl" />
+        <child id="5729391434157440636" name="maxDuration" index="jB5Pr" />
         <child id="5402567240276710649" name="staffTypeReference" index="2_8HaY" />
         <child id="4544390881338972165" name="location" index="3lENdC" />
         <child id="188877551432579259" name="outgoingBranches" index="3tG3Yq" />
@@ -1078,7 +1084,7 @@
     <node concept="2MhjZa" id="2_JteYPiCSH" role="2MhjZp">
       <property role="TrG5h" value="Respiratory symptoms absent" />
       <property role="3lFixl" value="true" />
-      <property role="2mH1Wk" value="2" />
+      <property role="2mH1Wk" value="5" />
       <node concept="2_8ZN7" id="2_JteYPiCUg" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -1235,6 +1241,7 @@
     <node concept="2MhjZa" id="1xAzJ9NaSOs" role="2MhjZp">
       <property role="TrG5h" value="Do Confirmatory PCR" />
       <property role="3lFixl" value="true" />
+      <property role="2mH1Wk" value="5" />
       <ref role="3tPpTl" node="1xAzJ9NaSPv" resolve="LabPCR" />
       <node concept="2_8ZN7" id="1xAzJ9NaSPs" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
@@ -2767,6 +2774,26 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="4Y2SMtsdXQy" role="37mRID">
+        <property role="37mO49" value="5729391434158546273" />
+        <node concept="gqqVs" id="4Y2SMtsdXQx" role="37mO4d">
+          <property role="gqqTZ" value="109.0" />
+          <property role="gqqTW" value="100.0" />
+          <property role="gqqTX" value="98.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="4Y2SMtsg166" role="37mRID">
+        <property role="37mO49" value="5729391434159624489" />
+        <node concept="gqqVs" id="4Y2SMtsg165" role="37mO4d">
+          <property role="gqqTZ" value="113.0" />
+          <property role="gqqTW" value="100.0" />
+          <property role="gqqTX" value="98.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9P_e76" role="2MhjZp">
       <property role="TrG5h" value="Take a bed" />
@@ -2775,26 +2802,12 @@
       <node concept="2_8ZN7" id="1xAzJ9PBb8d" role="2_8HaY">
         <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
       </node>
-      <node concept="2GGxJi" id="1xAzJ9P_e8l" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9P_e76" resolve="Take a bed" />
-        <ref role="2GGxGe" node="1xAzJ9P_e7h" resolve="Receive Treatment" />
-      </node>
       <node concept="UeIYj" id="1xAzJ9PBbM1" role="3lENdC">
         <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
       </node>
-    </node>
-    <node concept="2MhjZa" id="1xAzJ9P_e7h" role="2MhjZp">
-      <property role="TrG5h" value="Receive Treatment" />
-      <property role="2mH1Wk" value="4320" />
-      <node concept="2_8ZN7" id="1xAzJ9PBb8g" role="2_8HaY">
-        <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
-      </node>
-      <node concept="2GGxJi" id="1xAzJ9P_e8n" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9P_e7h" resolve="Receive Treatment" />
-        <ref role="2GGxGe" node="1xAzJ9P_e7D" resolve="Do PCR" />
-      </node>
-      <node concept="UeIYj" id="1xAzJ9PBbM3" role="3lENdC">
-        <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
+      <node concept="2GGxJi" id="4Y2SMtsg16m" role="3tG3Yq">
+        <ref role="3tVEyn" node="1xAzJ9P_e76" resolve="Take a bed" />
+        <ref role="2GGxGe" node="4Y2SMtsg14D" resolve="Treatment" />
       </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9P_e7D" role="2MhjZp">
@@ -2819,6 +2832,23 @@
       </node>
       <node concept="UeIYj" id="1xAzJ9P_e86" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
+      </node>
+    </node>
+    <node concept="2MhjZa" id="4Y2SMtsg14D" role="2MhjZp">
+      <property role="TrG5h" value="Treatment" />
+      <property role="2mH1Wk" value="4320" />
+      <node concept="2_8ZN7" id="4Y2SMtsg16t" role="2_8HaY">
+        <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
+      </node>
+      <node concept="3cmrfG" id="4Y2SMtsg14V" role="jB5Pr">
+        <property role="3cmrfH" value="21600" />
+      </node>
+      <node concept="2GGxJi" id="4Y2SMtsg16o" role="3tG3Yq">
+        <ref role="3tVEyn" node="4Y2SMtsg14D" resolve="Treatment" />
+        <ref role="2GGxGe" node="1xAzJ9P_e7D" resolve="Do PCR" />
+      </node>
+      <node concept="UeIYj" id="4Y2SMtsg1c7" role="3lENdC">
+        <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
       </node>
     </node>
   </node>
@@ -2920,6 +2950,16 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="4Y2SMtsg19S" role="37mRID">
+        <property role="37mO49" value="5729391434159624761" />
+        <node concept="gqqVs" id="4Y2SMtsg19R" role="37mO4d">
+          <property role="gqqTZ" value="51.5" />
+          <property role="gqqTW" value="56.0" />
+          <property role="gqqTX" value="175.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9PBbaT" role="2MhjZp">
       <property role="TrG5h" value="Take a bed" />
@@ -2928,26 +2968,12 @@
       <node concept="2_8ZN7" id="1xAzJ9PBbaU" role="2_8HaY">
         <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
       </node>
-      <node concept="2GGxJi" id="1xAzJ9PBbaV" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9PBbaT" resolve="Take a bed" />
-        <ref role="2GGxGe" node="1xAzJ9PBbaW" resolve="Receive Treatment" />
-      </node>
       <node concept="UeIYj" id="1xAzJ9PBbMv" role="3lENdC">
         <ref role="Udx8D" node="2_JteYO1fw4" resolve="NonRespiratoryCohort" />
       </node>
-    </node>
-    <node concept="2MhjZa" id="1xAzJ9PBbaW" role="2MhjZp">
-      <property role="TrG5h" value="Receive Treatment" />
-      <property role="2mH1Wk" value="4320" />
-      <node concept="2_8ZN7" id="1xAzJ9PBbaX" role="2_8HaY">
-        <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
-      </node>
-      <node concept="2GGxJi" id="1xAzJ9PBbaY" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9PBbaW" resolve="Receive Treatment" />
-        <ref role="2GGxGe" node="1xAzJ9PBbaZ" resolve="Do PCR" />
-      </node>
-      <node concept="UeIYj" id="1xAzJ9PBbMx" role="3lENdC">
-        <ref role="Udx8D" node="2_JteYO1fw4" resolve="NonRespiratoryCohort" />
+      <node concept="2GGxJi" id="4Y2SMtsg1ae" role="3tG3Yq">
+        <ref role="3tVEyn" node="1xAzJ9PBbaT" resolve="Take a bed" />
+        <ref role="2GGxGe" node="4Y2SMtsg18T" resolve="Receive Treatment" />
       </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9PBbaZ" role="2MhjZp">
@@ -2972,6 +2998,23 @@
       </node>
       <node concept="UeIYj" id="1xAzJ9PBbb4" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
+      </node>
+    </node>
+    <node concept="2MhjZa" id="4Y2SMtsg18T" role="2MhjZp">
+      <property role="2mH1Wk" value="4350" />
+      <property role="TrG5h" value="Receive Treatment" />
+      <node concept="2_8ZN7" id="4Y2SMtsg19O" role="2_8HaY">
+        <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
+      </node>
+      <node concept="3cmrfG" id="4Y2SMtsg19D" role="jB5Pr">
+        <property role="3cmrfH" value="21600" />
+      </node>
+      <node concept="2GGxJi" id="4Y2SMtsg1ah" role="3tG3Yq">
+        <ref role="3tVEyn" node="4Y2SMtsg18T" resolve="Receive Treatment" />
+        <ref role="2GGxGe" node="1xAzJ9PBbaZ" resolve="Do PCR" />
+      </node>
+      <node concept="UeIYj" id="4Y2SMtsg1ct" role="3lENdC">
+        <ref role="Udx8D" node="2_JteYO1fw4" resolve="NonRespiratoryCohort" />
       </node>
     </node>
   </node>
@@ -3069,6 +3112,16 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="4Y2SMtsg189" role="37mRID">
+        <property role="37mO49" value="5729391434159624621" />
+        <node concept="gqqVs" id="4Y2SMtsg188" role="37mO4d">
+          <property role="gqqTZ" value="38.5" />
+          <property role="gqqTW" value="54.0" />
+          <property role="gqqTX" value="175.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9PBbbS" role="2MhjZp">
       <property role="TrG5h" value="Take a bed" />
@@ -3077,26 +3130,12 @@
       <node concept="2_8ZN7" id="1xAzJ9PBbbT" role="2_8HaY">
         <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
       </node>
-      <node concept="2GGxJi" id="1xAzJ9PBbbU" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9PBbbS" resolve="Take a bed" />
-        <ref role="2GGxGe" node="1xAzJ9PBbbV" resolve="Receive Treatment" />
-      </node>
       <node concept="UeIYj" id="1xAzJ9PBbMg" role="3lENdC">
         <ref role="Udx8D" node="52K8EjIB__" resolve="FluPositiveCohort" />
       </node>
-    </node>
-    <node concept="2MhjZa" id="1xAzJ9PBbbV" role="2MhjZp">
-      <property role="TrG5h" value="Receive Treatment" />
-      <property role="2mH1Wk" value="4320" />
-      <node concept="2_8ZN7" id="1xAzJ9PBbbW" role="2_8HaY">
-        <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
-      </node>
-      <node concept="2GGxJi" id="1xAzJ9PBbbX" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9PBbbV" resolve="Receive Treatment" />
-        <ref role="2GGxGe" node="1xAzJ9PBbbY" resolve="Do PCR" />
-      </node>
-      <node concept="UeIYj" id="1xAzJ9PBbMi" role="3lENdC">
-        <ref role="Udx8D" node="52K8EjIB__" resolve="FluPositiveCohort" />
+      <node concept="2GGxJi" id="4Y2SMtsg18G" role="3tG3Yq">
+        <ref role="3tVEyn" node="1xAzJ9PBbbS" resolve="Take a bed" />
+        <ref role="2GGxGe" node="4Y2SMtsg16H" resolve="Receive Treatment" />
       </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9PBbbY" role="2MhjZp">
@@ -3121,6 +3160,23 @@
       </node>
       <node concept="UeIYj" id="1xAzJ9PBbc3" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
+      </node>
+    </node>
+    <node concept="2MhjZa" id="4Y2SMtsg16H" role="2MhjZp">
+      <property role="TrG5h" value="Receive Treatment" />
+      <property role="2mH1Wk" value="4350" />
+      <node concept="2_8ZN7" id="4Y2SMtsg185" role="2_8HaY">
+        <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
+      </node>
+      <node concept="3cmrfG" id="4Y2SMtsg174" role="jB5Pr">
+        <property role="3cmrfH" value="21600" />
+      </node>
+      <node concept="2GGxJi" id="4Y2SMtsg18I" role="3tG3Yq">
+        <ref role="3tVEyn" node="4Y2SMtsg16H" resolve="Receive Treatment" />
+        <ref role="2GGxGe" node="1xAzJ9PBbbY" resolve="Do PCR" />
+      </node>
+      <node concept="UeIYj" id="4Y2SMtsg1ci" role="3lENdC">
+        <ref role="Udx8D" node="52K8EjIB__" resolve="FluPositiveCohort" />
       </node>
     </node>
   </node>
@@ -3218,6 +3274,16 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="4Y2SMtsg1bl" role="37mRID">
+        <property role="37mO49" value="5729391434159624876" />
+        <node concept="gqqVs" id="4Y2SMtsg1bk" role="37mO4d">
+          <property role="gqqTZ" value="63.5" />
+          <property role="gqqTW" value="55.0" />
+          <property role="gqqTX" value="175.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9PBbhV" role="2MhjZp">
       <property role="TrG5h" value="Take a bed" />
@@ -3226,26 +3292,12 @@
       <node concept="2_8ZN7" id="1xAzJ9PBbhW" role="2_8HaY">
         <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
       </node>
-      <node concept="2GGxJi" id="1xAzJ9PBbhX" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9PBbhV" resolve="Take a bed" />
-        <ref role="2GGxGe" node="1xAzJ9PBbhY" resolve="Receive Treatment" />
-      </node>
       <node concept="UeIYj" id="1xAzJ9PBbMI" role="3lENdC">
         <ref role="Udx8D" node="52K8Ej3GjE" resolve="SideRoom" />
       </node>
-    </node>
-    <node concept="2MhjZa" id="1xAzJ9PBbhY" role="2MhjZp">
-      <property role="TrG5h" value="Receive Treatment" />
-      <property role="2mH1Wk" value="4320" />
-      <node concept="2_8ZN7" id="1xAzJ9PBbhZ" role="2_8HaY">
-        <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
-      </node>
-      <node concept="2GGxJi" id="1xAzJ9PBbi0" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9PBbhY" resolve="Receive Treatment" />
-        <ref role="2GGxGe" node="1xAzJ9PBbi1" resolve="Do PCR" />
-      </node>
-      <node concept="UeIYj" id="1xAzJ9PBbMK" role="3lENdC">
-        <ref role="Udx8D" node="52K8Ej3GjE" resolve="SideRoom" />
+      <node concept="2GGxJi" id="4Y2SMtsg1bS" role="3tG3Yq">
+        <ref role="3tVEyn" node="1xAzJ9PBbhV" resolve="Take a bed" />
+        <ref role="2GGxGe" node="4Y2SMtsg1aG" resolve="Receive Treatment" />
       </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9PBbi1" role="2MhjZp">
@@ -3270,6 +3322,23 @@
       </node>
       <node concept="UeIYj" id="1xAzJ9PBbi6" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
+      </node>
+    </node>
+    <node concept="2MhjZa" id="4Y2SMtsg1aG" role="2MhjZp">
+      <property role="TrG5h" value="Receive Treatment" />
+      <property role="2mH1Wk" value="4350" />
+      <node concept="2_8ZN7" id="4Y2SMtsg1bh" role="2_8HaY">
+        <ref role="2_8ZNy" node="1xAzJ9PBb7$" resolve="WardStaff" />
+      </node>
+      <node concept="3cmrfG" id="4Y2SMtsg1b3" role="jB5Pr">
+        <property role="3cmrfH" value="21600" />
+      </node>
+      <node concept="2GGxJi" id="4Y2SMtsg1bU" role="3tG3Yq">
+        <ref role="3tVEyn" node="4Y2SMtsg1aG" resolve="Receive Treatment" />
+        <ref role="2GGxGe" node="1xAzJ9PBbi1" resolve="Do PCR" />
+      </node>
+      <node concept="UeIYj" id="4Y2SMtsg1bW" role="3lENdC">
+        <ref role="Udx8D" node="52K8Ej3GjE" resolve="SideRoom" />
       </node>
     </node>
   </node>
