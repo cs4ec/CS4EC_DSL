@@ -582,7 +582,6 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="d21bbad3-87ff-4ac5-a5c6-39686302c6aa/r:3593308e-4609-43a8-bd82-20e5c773389a(TempModuled21bbad3-87ff-4ac5-a5c6-39686302c6aa/ConsoleModel_3467187746710000)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
