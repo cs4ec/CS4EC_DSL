@@ -247,6 +247,11 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4FTL$vJY2TV" resolve="StaffNumber" />
     </node>
+    <node concept="1TJgyi" id="4Y2SMttz1js" role="1TKVEl">
+      <property role="IQ2nx" value="5729391434181383388" />
+      <property role="TrG5h" value="runDuration" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4FTL$vJY2TV">
     <property role="EcuMT" value="5402567240278617723" />

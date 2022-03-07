@@ -13,7 +13,7 @@ public class TriagingTool {
   private TriagingTool() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 2;
-    returnMap.put(300, ((Double) (1 / TotalOccurances)));
+    returnMap.put(5, ((Double) (1 / TotalOccurances)));
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 

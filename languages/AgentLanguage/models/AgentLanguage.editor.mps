@@ -213,6 +213,18 @@
       <node concept="3F0A7n" id="6MzSDQOKwbU" role="3EZMnx">
         <ref role="1NtTu8" to="3751:6MzSDQOKwaO" resolve="secondsPerTick" />
       </node>
+      <node concept="3F0ifn" id="4Y2SMttz1DG" role="3EZMnx">
+        <property role="3F0ifm" value="RunDuration:" />
+      </node>
+      <node concept="3EZMnI" id="4Y2SMttz7fQ" role="3EZMnx">
+        <node concept="2iRfu4" id="4Y2SMttz7fR" role="2iSdaV" />
+        <node concept="3F0A7n" id="4Y2SMttz1Em" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:4Y2SMttz1Dl" resolve="runDuration" />
+        </node>
+        <node concept="3F0ifn" id="4Y2SMttz7gi" role="3EZMnx">
+          <property role="3F0ifm" value="days" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="4VcHHLiE1Kp" role="3EZMnx">
         <property role="3F0ifm" value="Agents:" />
       </node>

@@ -3605,15 +3605,35 @@
                   <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
                   <node concept="3zFVjK" id="1$Pby2vGFTy" role="3zH0cK">
                     <node concept="3clFbS" id="1$Pby2vGFTz" role="2VODD2">
-                      <node concept="3clFbF" id="1$Pby2vGGTD" role="3cqZAp">
-                        <node concept="FJ1c_" id="1$Pby2vGIeB" role="3clFbG">
-                          <node concept="3cmrfG" id="1$Pby2vGIkE" role="3uHU7B">
-                            <property role="3cmrfH" value="86400" />
-                          </node>
-                          <node concept="2OqwBi" id="1$Pby2vGHf5" role="3uHU7w">
-                            <node concept="30H73N" id="1$Pby2vGHXP" role="2Oq$k0" />
-                            <node concept="3TrcHB" id="1$Pby2vGHBR" role="2OqNvi">
+                      <node concept="3clFbF" id="4Y2SMttzc87" role="3cqZAp">
+                        <node concept="FJ1c_" id="4Y2SMttzeDE" role="3clFbG">
+                          <node concept="2OqwBi" id="4Y2SMttzffX" role="3uHU7w">
+                            <node concept="30H73N" id="4Y2SMttzeL_" role="2Oq$k0" />
+                            <node concept="3TrcHB" id="4Y2SMttzfBB" role="2OqNvi">
                               <ref role="3TsBF5" to="3751:6MzSDQOKwaO" resolve="secondsPerTick" />
+                            </node>
+                          </node>
+                          <node concept="1eOMI4" id="4Y2SMttzeBP" role="3uHU7B">
+                            <node concept="17qRlL" id="4Y2SMttzgNw" role="1eOMHV">
+                              <node concept="2OqwBi" id="4Y2SMttzhje" role="3uHU7w">
+                                <node concept="30H73N" id="4Y2SMttzgS8" role="2Oq$k0" />
+                                <node concept="3TrcHB" id="4Y2SMttzhML" role="2OqNvi">
+                                  <ref role="3TsBF5" to="3751:4Y2SMttz1Dl" resolve="runDuration" />
+                                </node>
+                              </node>
+                              <node concept="17qRlL" id="4Y2SMttzdoK" role="3uHU7B">
+                                <node concept="17qRlL" id="4Y2SMttzdcu" role="3uHU7B">
+                                  <node concept="3cmrfG" id="4Y2SMttzc86" role="3uHU7B">
+                                    <property role="3cmrfH" value="24" />
+                                  </node>
+                                  <node concept="3cmrfG" id="4Y2SMttzdfF" role="3uHU7w">
+                                    <property role="3cmrfH" value="60" />
+                                  </node>
+                                </node>
+                                <node concept="3cmrfG" id="4Y2SMttzdC0" role="3uHU7w">
+                                  <property role="3cmrfH" value="60" />
+                                </node>
+                              </node>
                             </node>
                           </node>
                         </node>
@@ -12575,180 +12595,6 @@
       </node>
       <node concept="356sEK" id="74nMeo7czr4" role="383Ya9">
         <node concept="356WMU" id="74nMeo7fV1L" role="356sEH">
-          <node concept="356sEK" id="6MzSDQOThDU" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThDV" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThDW" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThDX" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThDY" role="356sEH">
-              <property role="TrG5h" value="&lt;parameter name=&quot;" />
-            </node>
-            <node concept="356sEF" id="6MzSDQOThDZ" role="356sEH">
-              <property role="TrG5h" value="CoInfectionRate" />
-            </node>
-            <node concept="356sEF" id="6MzSDQOThE0" role="356sEH">
-              <property role="TrG5h" value="&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThE1" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThE2" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThE3" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThE4" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThE5" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThE6" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThE7" role="356sEH">
-              <property role="TrG5h" value="displayName=&quot;CoInfectionRate&quot; type=&quot;double&quot; defaultValue=&quot;0.01&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThE8" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThE9" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThEa" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThEb" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThEc" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThEd" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThEe" role="356sEH">
-              <property role="TrG5h" value="isReadOnly=&quot;false&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThEf" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThEg" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThEh" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThEi" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThEj" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThEk" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThEl" role="356sEH">
-              <property role="TrG5h" value="converter=&quot;repast.simphony.parameter.StringConverterFactory$DoubleConverter&quot; /&gt;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThBM" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThBN" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThBO" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThBP" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThBQ" role="356sEH">
-              <property role="TrG5h" value="&lt;parameter name=&quot;" />
-            </node>
-            <node concept="356sEF" id="6MzSDQOThBR" role="356sEH">
-              <property role="TrG5h" value="FluSymptomaticPerDay" />
-            </node>
-            <node concept="356sEF" id="6MzSDQOThBS" role="356sEH">
-              <property role="TrG5h" value="&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThBT" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThBU" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThBV" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThBW" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThBX" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThBY" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThBZ" role="356sEH">
-              <property role="TrG5h" value="displayName=&quot;Flu symptomatic per day&quot; type=&quot;int&quot; defaultValue=&quot;1&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThC0" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThC1" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThC2" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThC3" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThC4" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThC5" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThC6" role="356sEH">
-              <property role="TrG5h" value="isReadOnly=&quot;false&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThC7" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThC8" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThC9" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThCa" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThCb" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThCc" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThCd" role="356sEH">
-              <property role="TrG5h" value="converter=&quot;repast.simphony.parameter.StringConverterFactory$IntConverter&quot; /&gt;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThuX" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThuY" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThuZ" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThv0" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThv1" role="356sEH">
-              <property role="TrG5h" value="&lt;parameter name=&quot;" />
-            </node>
-            <node concept="356sEF" id="6MzSDQOThv2" role="356sEH">
-              <property role="TrG5h" value="CovidSymptomaticPerDay" />
-            </node>
-            <node concept="356sEF" id="6MzSDQOThv3" role="356sEH">
-              <property role="TrG5h" value="&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThv4" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThv5" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThv6" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThv7" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThv8" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThv9" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThva" role="356sEH">
-              <property role="TrG5h" value="displayName=&quot;Covid symptomatic per day&quot; type=&quot;int&quot; defaultValue=&quot;1&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThvb" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThvc" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThvd" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThve" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThvf" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThvg" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThvh" role="356sEH">
-              <property role="TrG5h" value="isReadOnly=&quot;false&quot;" />
-            </node>
-          </node>
-          <node concept="356sEK" id="6MzSDQOThvi" role="383Ya9">
-            <node concept="2EixSi" id="6MzSDQOThvj" role="2EinRH" />
-            <node concept="356sEF" id="6MzSDQOThvk" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThvl" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThvm" role="356sEH">
-              <property role="TrG5h" value="" />
-            </node>
-            <node concept="373pV1" id="6MzSDQOThvn" role="356sEH" />
-            <node concept="356sEF" id="6MzSDQOThvo" role="356sEH">
-              <property role="TrG5h" value="converter=&quot;repast.simphony.parameter.StringConverterFactory$IntConverter&quot; /&gt;" />
-            </node>
-          </node>
           <node concept="356sEK" id="6MzSDQOKxIo" role="383Ya9">
             <node concept="2EixSi" id="6MzSDQOKxIp" role="2EinRH" />
             <node concept="356sEF" id="6MzSDQOKxIq" role="356sEH">
@@ -12776,7 +12622,34 @@
             </node>
             <node concept="373pV1" id="6MzSDQOKxI$" role="356sEH" />
             <node concept="356sEF" id="6MzSDQOKxI_" role="356sEH">
-              <property role="TrG5h" value="displayName=&quot;Seconds Per Tick&quot; type=&quot;int&quot; defaultValue=&quot;1&quot;" />
+              <property role="TrG5h" value="displayName=&quot;Seconds Per Tick&quot; type=&quot;int&quot; defaultValue=&quot;" />
+            </node>
+            <node concept="356sEF" id="4Y2SMttziWY" role="356sEH">
+              <property role="TrG5h" value="1" />
+              <node concept="17Uvod" id="4Y2SMttziX7" role="lGtFl">
+                <property role="2qtEX9" value="name" />
+                <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+                <node concept="3zFVjK" id="4Y2SMttziX8" role="3zH0cK">
+                  <node concept="3clFbS" id="4Y2SMttziX9" role="2VODD2">
+                    <node concept="3clFbF" id="4Y2SMttzj1I" role="3cqZAp">
+                      <node concept="3cpWs3" id="4Y2SMttzkgj" role="3clFbG">
+                        <node concept="Xl_RD" id="4Y2SMttzkgn" role="3uHU7w">
+                          <property role="Xl_RC" value="" />
+                        </node>
+                        <node concept="2OqwBi" id="4Y2SMttzjdU" role="3uHU7B">
+                          <node concept="30H73N" id="4Y2SMttzj1H" role="2Oq$k0" />
+                          <node concept="3TrcHB" id="4Y2SMttzjox" role="2OqNvi">
+                            <ref role="3TsBF5" to="3751:6MzSDQOKwaO" resolve="secondsPerTick" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="356sEF" id="4Y2SMttziWZ" role="356sEH">
+              <property role="TrG5h" value="&quot;" />
             </node>
           </node>
           <node concept="356sEK" id="6MzSDQOKxIA" role="383Ya9">

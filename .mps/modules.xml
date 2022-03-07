@@ -23,6 +23,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/FluCovidEmergencyPathway.clone.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/FluCovidEmergencyPathway.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/FluCovidEmergencyPathwayoptimise.msd" folder="runtime" />
     </projectModules>
   </component>
 </project>

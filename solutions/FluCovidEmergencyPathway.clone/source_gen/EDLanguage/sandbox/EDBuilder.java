@@ -41,7 +41,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = false;
 
-    RunEnvironment.getInstance().endAt(86400);
+    RunEnvironment.getInstance().endAt(0);
 
     CreatePatientArrivalMap();
 

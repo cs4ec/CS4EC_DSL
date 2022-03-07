@@ -47,6 +47,7 @@
       </concept>
       <concept id="33966321878163354" name="ActionCards.structure.AdmissionAction" flags="ng" index="2lDReE" />
       <concept id="5402567240278617686" name="ActionCards.structure.EDScenario" flags="ng" index="2_0uwh">
+        <property id="5729391434181383388" name="runDuration" index="i3JvV" />
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
       </concept>
       <concept id="5402567240278617723" name="ActionCards.structure.StaffNumber" flags="ng" index="2_0uwW">
@@ -1388,6 +1389,7 @@
   </node>
   <node concept="2_0uwh" id="EFW1mYe4_u">
     <property role="3GE5qa" value="Simulation Scenario" />
+    <property role="i3JvV" value="7" />
     <node concept="2_0uwW" id="EFW1mYe4_C" role="2_0uzz">
       <property role="2_0uz2" value="10" />
       <ref role="2_0uz0" node="av1M7vbJYz" resolve="Doctor" />
@@ -1678,9 +1680,9 @@
     <node concept="j3bLk" id="1ofb2Ww6WVc" role="j3bMi">
       <property role="TrG5h" value="Entrance" />
       <property role="memwX" value="95" />
-      <property role="memz3" value="197" />
+      <property role="memz3" value="193" />
       <property role="m3A$7" value="10" />
-      <property role="m3A$b" value="2" />
+      <property role="m3A$b" value="5" />
       <property role="1njz$z" value="0" />
       <property role="1njz_o" value="0" />
       <property role="p_dkr" value="0" />

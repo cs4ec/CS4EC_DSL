@@ -67,8 +67,8 @@ public class TriageNurse extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "TriageTrigger_a01":
-        behaviourBuilder = new Behaviour("TriageTrigger_a01");
+      case "TriageTrigger_a":
+        behaviourBuilder = new Behaviour("TriageTrigger_a");
         this.InitTriage_a(s);
         break;
       default:
@@ -136,7 +136,7 @@ public class TriageNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
   public class StayAction_d0a extends PassiveBehaviourStep {
@@ -265,14 +265,14 @@ public class TriageNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0a_1 extends BehaviourStep {
+  public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_1(Behaviour behaviour) {
+    public MoveAction_a0a_5(Behaviour behaviour) {
       target = TriageDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -299,9 +299,9 @@ public class TriageNurse extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0a_1 extends BehaviourStep {
+  public class OrderAction_b0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_1(Behaviour behaviour) {
+    public OrderAction_b0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -311,10 +311,10 @@ public class TriageNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(TriageNurse.this));
     }
   }
-  public class StayAction_c0a_1 extends BehaviourStep {
+  public class StayAction_c0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_1(Behaviour behaviour) {
+    public StayAction_c0a_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -324,7 +324,7 @@ public class TriageNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
   public class StayAction_d0a_1 extends PassiveBehaviourStep {
@@ -499,7 +499,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new RespiratorysymptomsabsentTrigger_a0Signal();
+      sendSignalTemp = new RespiratorysymptomsabsentTrigger_cSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -515,7 +515,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new RespiratorysymptomsabsentTrigger_a0Signal();
+      sendSignalTemp = new RespiratorysymptomsabsentTrigger_cSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -548,7 +548,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new RespiratorysymptomspresentTrigger_b0Signal();
+      sendSignalTemp = new RespiratorysymptomspresentTrigger_bSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -564,7 +564,7 @@ public class TriageNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new RespiratorysymptomspresentTrigger_b0Signal();
+      sendSignalTemp = new RespiratorysymptomspresentTrigger_bSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -583,7 +583,7 @@ public class TriageNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
 

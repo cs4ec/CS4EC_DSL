@@ -67,68 +67,68 @@ public class WardStaff extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "TakeabedTrigger_a3":
-        behaviourBuilder = new Behaviour("TakeabedTrigger_a3");
+      case "TakeabedTrigger_a_0":
+        behaviourBuilder = new Behaviour("TakeabedTrigger_a_0");
         this.InitTakeabed_a(s);
         break;
-      case "DoPCRTrigger_a3":
-        behaviourBuilder = new Behaviour("DoPCRTrigger_a3");
+      case "DoPCRTrigger_b":
+        behaviourBuilder = new Behaviour("DoPCRTrigger_b");
         this.InitDoPCR_b(s);
         break;
-      case "DischargeTrigger_a1":
-        behaviourBuilder = new Behaviour("DischargeTrigger_a1");
+      case "DischargeTrigger_c":
+        behaviourBuilder = new Behaviour("DischargeTrigger_c");
         this.InitDischargeActionDischarge_c(s);
         break;
-      case "TreatmentTrigger_a0":
-        behaviourBuilder = new Behaviour("TreatmentTrigger_a0");
+      case "TreatmentTrigger_d":
+        behaviourBuilder = new Behaviour("TreatmentTrigger_d");
         this.InitTreatment_d(s);
         break;
-      case "TakeabedTrigger_b7":
-        behaviourBuilder = new Behaviour("TakeabedTrigger_b7");
+      case "TakeabedTrigger_a":
+        behaviourBuilder = new Behaviour("TakeabedTrigger_a");
         this.InitTakeabed_a_0(s);
         break;
-      case "DoPCRTrigger_a3_0":
-        behaviourBuilder = new Behaviour("DoPCRTrigger_a3_0");
+      case "DoPCRTrigger_b_0":
+        behaviourBuilder = new Behaviour("DoPCRTrigger_b_0");
         this.InitDoPCR_b_0(s);
         break;
-      case "DischargeTrigger_a1_0":
-        behaviourBuilder = new Behaviour("DischargeTrigger_a1_0");
+      case "DischargeTrigger_c_0":
+        behaviourBuilder = new Behaviour("DischargeTrigger_c_0");
         this.InitDischargeActionDischarge_c_0(s);
         break;
-      case "ReceiveTreatmentTrigger_a0":
-        behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_a0");
+      case "ReceiveTreatmentTrigger_d":
+        behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_d");
         this.InitReceiveTreatment_d(s);
         break;
-      case "TakeabedTrigger_b6":
-        behaviourBuilder = new Behaviour("TakeabedTrigger_b6");
+      case "TakeabedTrigger_a_1":
+        behaviourBuilder = new Behaviour("TakeabedTrigger_a_1");
         this.InitTakeabed_a_1(s);
         break;
-      case "DoPCRTrigger_a3_1":
-        behaviourBuilder = new Behaviour("DoPCRTrigger_a3_1");
+      case "DoPCRTrigger_b_1":
+        behaviourBuilder = new Behaviour("DoPCRTrigger_b_1");
         this.InitDoPCR_b_1(s);
         break;
-      case "DischargeTrigger_a1_1":
-        behaviourBuilder = new Behaviour("DischargeTrigger_a1_1");
+      case "DischargeTrigger_c_1":
+        behaviourBuilder = new Behaviour("DischargeTrigger_c_1");
         this.InitDischargeActionDischarge_c_1(s);
         break;
-      case "ReceiveTreatmentTrigger_a0_0":
-        behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_a0_0");
+      case "ReceiveTreatmentTrigger_d_0":
+        behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_d_0");
         this.InitReceiveTreatment_d_0(s);
         break;
-      case "TakeabedTrigger_b3":
-        behaviourBuilder = new Behaviour("TakeabedTrigger_b3");
+      case "TakeabedTrigger_a_2":
+        behaviourBuilder = new Behaviour("TakeabedTrigger_a_2");
         this.InitTakeabed_a_2(s);
         break;
-      case "DoPCRTrigger_a3_2":
-        behaviourBuilder = new Behaviour("DoPCRTrigger_a3_2");
+      case "DoPCRTrigger_b_2":
+        behaviourBuilder = new Behaviour("DoPCRTrigger_b_2");
         this.InitDoPCR_b_2(s);
         break;
-      case "DischargeTrigger_a1_2":
-        behaviourBuilder = new Behaviour("DischargeTrigger_a1_2");
+      case "DischargeTrigger_c_2":
+        behaviourBuilder = new Behaviour("DischargeTrigger_c_2");
         this.InitDischargeActionDischarge_c_2(s);
         break;
-      case "ReceiveTreatmentTrigger_a0_1":
-        behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_a0_1");
+      case "ReceiveTreatmentTrigger_d_1":
+        behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_d_1");
         this.InitReceiveTreatment_d_1(s);
         break;
       default:
@@ -196,7 +196,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 600;
+      return timeExecuted == 10;
     }
   }
   public class SendSignalAction_d0a_3 extends BehaviourStep {
@@ -209,7 +209,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TreatmentTrigger_a0Signal();
+      sendSignalTemp = new TreatmentTrigger_dSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -228,7 +228,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0a_9 extends BehaviourStep {
@@ -287,7 +287,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 600;
+      return timeExecuted == 10;
     }
   }
   public class SendSignalAction_d0a_5 extends BehaviourStep {
@@ -300,7 +300,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TreatmentTrigger_a0Signal();
+      sendSignalTemp = new TreatmentTrigger_dSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -319,7 +319,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0b_7 extends BehaviourStep {
@@ -366,7 +366,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
   public class StayAction_c0b_7 extends PassiveBehaviourStep {
@@ -450,7 +450,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_a1Signal();
+      sendSignalTemp = new DischargeTrigger_cSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -469,7 +469,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0b_9 extends BehaviourStep {
@@ -516,7 +516,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
   public class StayAction_c0b_9 extends PassiveBehaviourStep {
@@ -1080,7 +1080,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_a1Signal();
+      sendSignalTemp = new DischargeTrigger_cSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1099,7 +1099,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0c_7 extends BehaviourStep {
@@ -1107,37 +1107,6 @@ public class WardStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0c_7(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_b0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0c(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -1164,9 +1133,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_c0c extends BehaviourStep {
+  public class OrderAction_b0c_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_c0c(Behaviour behaviour) {
+    public OrderAction_b0c_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1176,9 +1145,9 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class Consequence_d0c extends InstantBehaviourStep {
+  public class Consequence_c0c extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0c(Behaviour behaviour) {
+    public Consequence_c0c(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1187,9 +1156,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0c extends BehaviourStep {
+  public class RemoveRelationshipAction_d0c extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0c(Behaviour behaviour) {
+    public RemoveRelationshipAction_d0c(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1203,37 +1172,6 @@ public class WardStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0c_9(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_b0c_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0c_1(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -1260,9 +1198,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_c0c_1 extends BehaviourStep {
+  public class OrderAction_b0c_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_c0c_1(Behaviour behaviour) {
+    public OrderAction_b0c_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1272,9 +1210,9 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class Consequence_d0c_0 extends InstantBehaviourStep {
+  public class Consequence_c0c_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0c_0(Behaviour behaviour) {
+    public Consequence_c0c_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1283,9 +1221,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0c_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_d0c_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0c_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_d0c_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1294,11 +1232,11 @@ public class WardStaff extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
-  public class MoveAction_a0d_7 extends BehaviourStep {
+  public class MoveAction_a0d_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0d_7(Behaviour behaviour) {
+    public MoveAction_a0d_3(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -1352,16 +1290,16 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_a3Signal();
+      sendSignalTemp = new DoPCRTrigger_bSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_d0d_3 extends BehaviourStep {
+  public class StayAction_d0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0d_3(Behaviour behaviour) {
+    public StayAction_d0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1371,14 +1309,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0d_9 extends BehaviourStep {
+  public class MoveAction_a0d_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0d_9(Behaviour behaviour) {
+    public MoveAction_a0d_5(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -1432,7 +1370,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_a3Signal();
+      sendSignalTemp = new DoPCRTrigger_bSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1451,14 +1389,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0e_7 extends BehaviourStep {
+  public class MoveAction_a0e_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0e_7(Behaviour behaviour) {
+    public MoveAction_a0e_3(Behaviour behaviour) {
       target = NonRespiratoryCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -1485,9 +1423,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0e_3 extends BehaviourStep {
+  public class OrderAction_b0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0e_3(Behaviour behaviour) {
+    public OrderAction_b0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1497,10 +1435,10 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class StayAction_c0e_7 extends BehaviourStep {
+  public class StayAction_c0e_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0e_7(Behaviour behaviour) {
+    public StayAction_c0e_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1510,7 +1448,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 600;
+      return timeExecuted == 10;
     }
   }
   public class SendSignalAction_d0e extends BehaviourStep {
@@ -1523,7 +1461,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_a0Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_dSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1542,14 +1480,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0e_9 extends BehaviourStep {
+  public class MoveAction_a0e_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0e_9(Behaviour behaviour) {
+    public MoveAction_a0e_5(Behaviour behaviour) {
       target = NonRespiratoryCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -1576,9 +1514,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0e_5 extends BehaviourStep {
+  public class OrderAction_b0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0e_5(Behaviour behaviour) {
+    public OrderAction_b0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1588,10 +1526,10 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class StayAction_c0e_9 extends BehaviourStep {
+  public class StayAction_c0e_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0e_9(Behaviour behaviour) {
+    public StayAction_c0e_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1601,7 +1539,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 600;
+      return timeExecuted == 10;
     }
   }
   public class SendSignalAction_d0e_1 extends BehaviourStep {
@@ -1614,7 +1552,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_a0Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_dSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1633,14 +1571,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0f_7 extends BehaviourStep {
+  public class MoveAction_a0f_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0f_7(Behaviour behaviour) {
+    public MoveAction_a0f_3(Behaviour behaviour) {
       target = NonRespiratoryCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -1680,14 +1618,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
-  public class StayAction_c0f_3 extends PassiveBehaviourStep {
+  public class StayAction_c0f extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LabPCR.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0f_3(Behaviour behaviour) {
+    public StayAction_c0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1700,9 +1638,9 @@ public class WardStaff extends Actor {
       return timeExecuted == testingTime;
     }
   }
-  public class Choice_d0f_5 extends InstantBehaviourStep {
+  public class Choice_d0f_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_d0f_5(Behaviour behaviour) {
+    public Choice_d0f_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1718,9 +1656,9 @@ public class WardStaff extends Actor {
       }
     }
   }
-  public class Choice_e0f_3 extends InstantBehaviourStep {
+  public class Choice_e0f extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0f_3(Behaviour behaviour) {
+    public Choice_e0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1764,7 +1702,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_a1_0Signal();
+      sendSignalTemp = new DischargeTrigger_c_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1783,14 +1721,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0f_9 extends BehaviourStep {
+  public class MoveAction_a0f_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0f_9(Behaviour behaviour) {
+    public MoveAction_a0f_5(Behaviour behaviour) {
       target = NonRespiratoryCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -1830,14 +1768,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
-  public class StayAction_c0f_5 extends PassiveBehaviourStep {
+  public class StayAction_c0f_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LabPCR.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0f_5(Behaviour behaviour) {
+    public StayAction_c0f_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1850,9 +1788,9 @@ public class WardStaff extends Actor {
       return timeExecuted == testingTime;
     }
   }
-  public class Choice_d0f_7 extends InstantBehaviourStep {
+  public class Choice_d0f_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_d0f_7(Behaviour behaviour) {
+    public Choice_d0f_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2028,9 +1966,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class Choice_e0f_5 extends InstantBehaviourStep {
+  public class Choice_e0f_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0f_5(Behaviour behaviour) {
+    public Choice_e0f_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2394,7 +2332,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_a1_0Signal();
+      sendSignalTemp = new DischargeTrigger_c_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2413,45 +2351,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0g_7 extends BehaviourStep {
+  public class MoveAction_a0g_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0g_7(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_b0g extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0g(Behaviour behaviour) {
+    public MoveAction_a0g_3(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -2478,9 +2385,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_c0g extends BehaviourStep {
+  public class OrderAction_b0g extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_c0g(Behaviour behaviour) {
+    public OrderAction_b0g(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2490,9 +2397,9 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class Consequence_d0g extends InstantBehaviourStep {
+  public class Consequence_c0g extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0g(Behaviour behaviour) {
+    public Consequence_c0g(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2501,9 +2408,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0g extends BehaviourStep {
+  public class RemoveRelationshipAction_d0g extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0g(Behaviour behaviour) {
+    public RemoveRelationshipAction_d0g(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2512,42 +2419,11 @@ public class WardStaff extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
-  public class MoveAction_a0g_9 extends BehaviourStep {
+  public class MoveAction_a0g_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0g_9(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_b0g_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0g_1(Behaviour behaviour) {
+    public MoveAction_a0g_5(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -2574,9 +2450,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_c0g_1 extends BehaviourStep {
+  public class OrderAction_b0g_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_c0g_1(Behaviour behaviour) {
+    public OrderAction_b0g_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2586,9 +2462,9 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class Consequence_d0g_0 extends InstantBehaviourStep {
+  public class Consequence_c0g_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0g_0(Behaviour behaviour) {
+    public Consequence_c0g_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2597,9 +2473,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0g_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_d0g_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0g_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_d0g_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2608,11 +2484,11 @@ public class WardStaff extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
-  public class MoveAction_a0h_3 extends BehaviourStep {
+  public class MoveAction_a0h extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0h_3(Behaviour behaviour) {
+    public MoveAction_a0h(Behaviour behaviour) {
       target = NonRespiratoryCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -2666,7 +2542,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_a3_0Signal();
+      sendSignalTemp = new DoPCRTrigger_b_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2685,14 +2561,14 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0h_5 extends BehaviourStep {
+  public class MoveAction_a0h_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0h_5(Behaviour behaviour) {
+    public MoveAction_a0h_1(Behaviour behaviour) {
       target = NonRespiratoryCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -2746,7 +2622,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_a3_0Signal();
+      sendSignalTemp = new DoPCRTrigger_b_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2765,7 +2641,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0i extends BehaviourStep {
@@ -2824,7 +2700,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 600;
+      return timeExecuted == 10;
     }
   }
   public class SendSignalAction_d0i extends BehaviourStep {
@@ -2837,7 +2713,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_a0_0Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_d_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2856,7 +2732,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0i_1 extends BehaviourStep {
@@ -2915,7 +2791,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 600;
+      return timeExecuted == 10;
     }
   }
   public class SendSignalAction_d0i_1 extends BehaviourStep {
@@ -2928,7 +2804,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_a0_0Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_d_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2947,7 +2823,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0j extends BehaviourStep {
@@ -2994,7 +2870,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
   public class StayAction_c0j extends PassiveBehaviourStep {
@@ -3078,7 +2954,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_a1_1Signal();
+      sendSignalTemp = new DischargeTrigger_c_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3097,7 +2973,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0j_1 extends BehaviourStep {
@@ -3144,7 +3020,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
   public class StayAction_c0j_1 extends PassiveBehaviourStep {
@@ -3708,7 +3584,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_a1_1Signal();
+      sendSignalTemp = new DischargeTrigger_c_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3727,7 +3603,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0k extends BehaviourStep {
@@ -3735,37 +3611,6 @@ public class WardStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0k(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_b0k extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0k(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -3792,9 +3637,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_c0k extends BehaviourStep {
+  public class OrderAction_b0k extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_c0k(Behaviour behaviour) {
+    public OrderAction_b0k(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -3804,9 +3649,9 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class Consequence_d0k extends InstantBehaviourStep {
+  public class Consequence_c0k extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0k(Behaviour behaviour) {
+    public Consequence_c0k(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -3815,9 +3660,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0k extends BehaviourStep {
+  public class RemoveRelationshipAction_d0k extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0k(Behaviour behaviour) {
+    public RemoveRelationshipAction_d0k(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -3831,37 +3676,6 @@ public class WardStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0k_1(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_b0k_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0k_1(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -3888,9 +3702,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_c0k_1 extends BehaviourStep {
+  public class OrderAction_b0k_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_c0k_1(Behaviour behaviour) {
+    public OrderAction_b0k_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -3900,9 +3714,9 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class Consequence_d0k_0 extends InstantBehaviourStep {
+  public class Consequence_c0k_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0k_0(Behaviour behaviour) {
+    public Consequence_c0k_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -3911,9 +3725,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0k_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_d0k_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0k_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_d0k_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -3980,7 +3794,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_a3_1Signal();
+      sendSignalTemp = new DoPCRTrigger_b_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3999,7 +3813,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0l_1 extends BehaviourStep {
@@ -4060,7 +3874,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_a3_1Signal();
+      sendSignalTemp = new DoPCRTrigger_b_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -4079,7 +3893,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0m extends BehaviourStep {
@@ -4138,7 +3952,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 600;
+      return timeExecuted == 10;
     }
   }
   public class SendSignalAction_d0m extends BehaviourStep {
@@ -4151,7 +3965,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_a0_1Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_d_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -4170,7 +3984,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0m_1 extends BehaviourStep {
@@ -4229,7 +4043,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 600;
+      return timeExecuted == 10;
     }
   }
   public class SendSignalAction_d0m_1 extends BehaviourStep {
@@ -4242,7 +4056,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_a0_1Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_d_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -4261,7 +4075,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0n extends BehaviourStep {
@@ -4308,7 +4122,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
   public class StayAction_c0n extends PassiveBehaviourStep {
@@ -4392,7 +4206,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_a1_2Signal();
+      sendSignalTemp = new DischargeTrigger_c_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -4411,7 +4225,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0n_1 extends BehaviourStep {
@@ -4458,7 +4272,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 300;
+      return timeExecuted == 5;
     }
   }
   public class StayAction_c0n_1 extends PassiveBehaviourStep {
@@ -5022,7 +4836,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_a1_2Signal();
+      sendSignalTemp = new DischargeTrigger_c_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -5041,7 +4855,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0o extends BehaviourStep {
@@ -5049,37 +4863,6 @@ public class WardStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0o(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_b0o extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0o(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -5106,9 +4889,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_c0o extends BehaviourStep {
+  public class OrderAction_b0o extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_c0o(Behaviour behaviour) {
+    public OrderAction_b0o(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -5118,9 +4901,9 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class Consequence_d0o extends InstantBehaviourStep {
+  public class Consequence_c0o extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0o(Behaviour behaviour) {
+    public Consequence_c0o(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -5129,9 +4912,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0o extends BehaviourStep {
+  public class RemoveRelationshipAction_d0o extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0o(Behaviour behaviour) {
+    public RemoveRelationshipAction_d0o(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -5145,37 +4928,6 @@ public class WardStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0o_1(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class MoveAction_b0o_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0o_1(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -5202,9 +4954,9 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_c0o_1 extends BehaviourStep {
+  public class OrderAction_b0o_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_c0o_1(Behaviour behaviour) {
+    public OrderAction_b0o_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -5214,9 +4966,9 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class Consequence_d0o_0 extends InstantBehaviourStep {
+  public class Consequence_c0o_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0o_0(Behaviour behaviour) {
+    public Consequence_c0o_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -5225,9 +4977,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0o_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_d0o_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0o_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_d0o_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -5294,7 +5046,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_a3_2Signal();
+      sendSignalTemp = new DoPCRTrigger_b_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -5313,7 +5065,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
   public class MoveAction_a0p_1 extends BehaviourStep {
@@ -5374,7 +5126,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_a3_2Signal();
+      sendSignalTemp = new DoPCRTrigger_b_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -5393,7 +5145,7 @@ public class WardStaff extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 60;
+      return timeExecuted == 1;
     }
   }
 
@@ -5431,10 +5183,9 @@ public class WardStaff extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0c_7(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0c(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0c(behaviourBuilder));
-    plstSteps.add(new Consequence_d0c(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0c(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0c_3(behaviourBuilder));
+    plstSteps.add(new Consequence_c0c(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -5443,10 +5194,10 @@ public class WardStaff extends Actor {
   public void InitTreatment_d(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0d_7(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0d_3(behaviourBuilder));
     plstSteps.add(new StayAction_b0d(behaviourBuilder));
     plstSteps.add(new SendSignalAction_c0d(behaviourBuilder));
-    plstSteps.add(new StayAction_d0d_3(behaviourBuilder));
+    plstSteps.add(new StayAction_d0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -5455,9 +5206,9 @@ public class WardStaff extends Actor {
   public void InitTakeabed_a_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0e_7(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0e_3(behaviourBuilder));
-    plstSteps.add(new StayAction_c0e_7(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0e_3(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0e(behaviourBuilder));
+    plstSteps.add(new StayAction_c0e_3(behaviourBuilder));
     plstSteps.add(new SendSignalAction_d0e(behaviourBuilder));
     plstSteps.add(new StayAction_e0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
@@ -5468,11 +5219,11 @@ public class WardStaff extends Actor {
   public void InitDoPCR_b_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0f_7(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0f_3(behaviourBuilder));
     plstSteps.add(new StayAction_b0f(behaviourBuilder));
-    plstSteps.add(new StayAction_c0f_3(behaviourBuilder));
-    plstSteps.add(new Choice_d0f_5(behaviourBuilder));
-    plstSteps.add(new Choice_e0f_3(behaviourBuilder));
+    plstSteps.add(new StayAction_c0f(behaviourBuilder));
+    plstSteps.add(new Choice_d0f_1(behaviourBuilder));
+    plstSteps.add(new Choice_e0f(behaviourBuilder));
     plstSteps.add(new Choice_f0f(behaviourBuilder));
     plstSteps.add(new SendSignalAction_g0f(behaviourBuilder));
     plstSteps.add(new StayAction_h0f(behaviourBuilder));
@@ -5484,11 +5235,10 @@ public class WardStaff extends Actor {
   public void InitDischargeActionDischarge_c_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0g_7(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0g(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0g(behaviourBuilder));
-    plstSteps.add(new Consequence_d0g(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0g(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0g_3(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0g(behaviourBuilder));
+    plstSteps.add(new Consequence_c0g(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0g(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -5497,7 +5247,7 @@ public class WardStaff extends Actor {
   public void InitReceiveTreatment_d(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0h_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0h(behaviourBuilder));
     plstSteps.add(new StayAction_b0h(behaviourBuilder));
     plstSteps.add(new SendSignalAction_c0h(behaviourBuilder));
     plstSteps.add(new StayAction_d0h(behaviourBuilder));
@@ -5539,10 +5289,9 @@ public class WardStaff extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0k(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0k(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0k(behaviourBuilder));
-    plstSteps.add(new Consequence_d0k(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0k(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0k(behaviourBuilder));
+    plstSteps.add(new Consequence_c0k(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0k(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -5593,10 +5342,9 @@ public class WardStaff extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0o(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0o(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0o(behaviourBuilder));
-    plstSteps.add(new Consequence_d0o(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0o(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0o(behaviourBuilder));
+    plstSteps.add(new Consequence_c0o(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_d0o(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

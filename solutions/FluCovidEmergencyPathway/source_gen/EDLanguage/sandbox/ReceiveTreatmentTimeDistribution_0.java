@@ -13,8 +13,8 @@ public class ReceiveTreatmentTimeDistribution_0 {
   private ReceiveTreatmentTimeDistribution_0() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
-    returnMap.put(261000, ((Double) (1 / TotalOccurances)));
-    returnMap.put(1296000, ((Double) (1 / TotalOccurances)));
+    returnMap.put(4350, ((Double) (1 / TotalOccurances)));
+    returnMap.put(21600, ((Double) (1 / TotalOccurances)));
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 

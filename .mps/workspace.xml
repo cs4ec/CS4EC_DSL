@@ -10,143 +10,191 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6cb34ac-6283-4417-93b4-3970d05c4a6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/FluCovidEmergencyPathway.clone.msd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/models/FluCovidEmergencyPathway.clone.AC1.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/models/FluCovidEmergencyPathway.clone.GenPlan.mps" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen.caches/FluCovidEmergencyPathway/clone/AC1/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen.caches/FluCovidEmergencyPathway/clone/AC1/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen.caches/FluCovidEmergencyPathway/clone/GenPlan/dependencies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen.caches/FluCovidEmergencyPathway/clone/GenPlan/generated" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/COVIDPositiveCohort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/CubicleNurse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/Doctor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/ElectiveAttendanceArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/FluPositiveCohort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LFD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LIATBooth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LabPCR.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LabTechnician.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/Labaratory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/MainEntrance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/MajorsCBay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/NonRespiratoryArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/NonRespiratoryCohort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/NonRespiratoryCubicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_eSignal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/PreAdmissionStaff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/RadiologyRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/RespiratoryArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/RespiratoryCubicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/SideRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TakeabedTrigger_a4Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TaskRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TreatmentTimeDistribution_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TriageDesk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TriageNurse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TriagingTool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/WaitingRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/Ward.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/WardStaff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/map_PatientProfile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/patient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/patientGenerator_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/patientGenerator_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/parameters.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/repast.simphony.action.data_set_patient.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/repast.simphony.action.file_sink_patient.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/scenario.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/GenPlan/trace.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_13Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_20Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_21Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_22Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_4Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_5Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_6Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_7Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_8Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_9Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_10Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_14Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_15Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_16Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_17Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_18Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_19Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_1Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_20Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_21Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_22Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_2Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_3Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_4Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_5Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_6Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_7Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_8Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_9Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTimeDistribution_0.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_0Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_1Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_2Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_3Signal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_4Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/DischargeTrigger_cSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/DoPCRTrigger_bSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_hSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TreatmentTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/avsvewcwTrigger_eSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/cweewvTrigger_jSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/deTrigger_gSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/ewTrigger_fSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/fewfvTrigger_iSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/fweTrigger_hSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/onTrigger_eSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/rfqTrigger_aSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/wefacTrigger_kSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/wefvvescTrigger_fSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/wevcaTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/wevweTrigger_gSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/wveaeTrigger_cSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDLFDTrigger_eSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDandFluLFDTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ConfirmwithPCRTrigger_jSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_cSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_c_0Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_c_1Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_c_2Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoConfirmatoryPCRTrigger_fSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_bSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_b_0Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_b_1Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_b_2Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PCRTestTrigger_cSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_aSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_d_0Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_d_1Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomsabsentTrigger_cSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomspresentTrigger_bSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_hSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_iSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDcontactTrigger_gSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_aSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a_0Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a_1Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a_2Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/FluCovidEmergencyPathway2.msd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/models/FluCovidEmergencyPathway2.AC1.mps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/models/FluCovidEmergencyPathway2.GenPlan.mps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen.caches/FluCovidEmergencyPathway2/AC1/dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen.caches/FluCovidEmergencyPathway2/AC1/generated" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen.caches/FluCovidEmergencyPathway2/GenPlan/dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen.caches/FluCovidEmergencyPathway2/GenPlan/generated" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/COVIDLFDTrigger_eSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/COVIDPositiveCohort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/COVIDandFluLFDTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/CubicleNurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/ElectiveAttendanceArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/FluPositiveCohort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/LFD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/LIATBooth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/LabPCR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/LabTechnician.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/Labaratory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/MainEntrance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/MajorsCBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/NonRespiratoryArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/NonRespiratoryCohort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/NonRespiratoryCubicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_hSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/PreAdmissionStaff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/RadiologyRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/RespiratoryArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/RespiratoryCubicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/RespiratorysymptomsabsentTrigger_cSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/RespiratorysymptomspresentTrigger_bSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/SideRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/SignificantCOVIDcontactTrigger_fSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/TaskRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/TriageDesk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/TriageNurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/TriagingTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/WaitingRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/Ward.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/WardStaff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/map_PatientProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/patientGenerator_0.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/patientGenerator_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/FluCovidEmergencyPathway2/AC1/parameters.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/FluCovidEmergencyPathway2/AC1/repast.simphony.action.data_set_patient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/FluCovidEmergencyPathway2/AC1/repast.simphony.action.file_sink_patient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/FluCovidEmergencyPathway2/AC1/repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/FluCovidEmergencyPathway2/AC1/scenario.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/FluCovidEmergencyPathway2/AC1/trace.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/FluCovidEmergencyPathway2/GenPlan/trace.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/FluCovidEmergencyPathwayoptimise.msd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/models/FluCovidEmergencyPathwayoptimise.AC1.mps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/models/FluCovidEmergencyPathwayoptimise.GenPlan.mps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen.caches/FluCovidEmergencyPathwayoptimise/AC1/dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen.caches/FluCovidEmergencyPathwayoptimise/AC1/generated" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen.caches/FluCovidEmergencyPathwayoptimise/GenPlan/dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen.caches/FluCovidEmergencyPathwayoptimise/GenPlan/generated" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_fSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/AdmittoSRTrigger_eSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/COVIDPositiveCohort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/CubicleNurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/DischargeTrigger_cSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/DischargeTrigger_c_0Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/DischargeTrigger_c_1Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/DischargeTrigger_c_2Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/DoPCRTrigger_bSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/DoPCRTrigger_b_0Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/DoPCRTrigger_b_1Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/DoPCRTrigger_b_2Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/Doctor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/ElectiveAttendanceArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/FluPositiveCohort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/IsolationPeriodTrigger_bSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/LFD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/LIATBooth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/LabPCR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/LabTechnician.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/Labaratory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/MainEntrance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/MajorsCBay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/NonRespiratoryArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/NonRespiratoryCohort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/NonRespiratoryCubicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/PCRTestTrigger_cSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/PreAdmissionStaff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_aSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/RadiologyRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_d_0Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_d_1Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/RespiratoryArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/RespiratoryCubicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/SideRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TakeabedTrigger_aSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TakeabedTrigger_a_0Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TakeabedTrigger_a_1Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TakeabedTrigger_a_2Signal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TaskRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TreatmentTrigger_dSignal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TriageDesk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TriageNurse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TriagingTool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/WaitingRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/Ward.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/WardStaff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/map_PatientProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/patient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/patientGenerator_0.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/patientGenerator_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/FluCovidEmergencyPathwayoptimise/AC1/parameters.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/FluCovidEmergencyPathwayoptimise/AC1/repast.simphony.action.data_set_patient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/FluCovidEmergencyPathwayoptimise/AC1/repast.simphony.action.file_sink_patient.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/FluCovidEmergencyPathwayoptimise/AC1/repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/FluCovidEmergencyPathwayoptimise/AC1/scenario.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/FluCovidEmergencyPathwayoptimise/AC1/trace.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/FluCovidEmergencyPathwayoptimise/GenPlan/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/parameters.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/bin/EDLanguage/sandbox/EDBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_InspectorBuilder_a$PROPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_InspectorBuilder_a$PROPS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_InspectorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_InspectorBuilder_a.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_EditorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_EditorBuilder_a.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$CONCEPTS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$Inline_Builder0$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$Inline_Builder0$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$Inline_Builder0.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$Inline_Builder0.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$LINKS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$LINKS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$PROPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a$PROPS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$10$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$10$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$18$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$18$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$26.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$27.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$28$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$28$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$29$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$29$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$30.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$31.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$CONCEPTS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$LINKS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$LINKS.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/Behaviour.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/action/Behaviour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/simcore/agents/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EDScenario_EditorBuilder_a$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EDScenario_EditorBuilder_a$CONCEPTS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EDScenario_EditorBuilder_a$LINKS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EDScenario_EditorBuilder_a$LINKS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EDScenario_EditorBuilder_a$staffNumbersListHandler_pb020u_a3a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EDScenario_EditorBuilder_a$staffNumbersListHandler_pb020u_a3a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EDScenario_EditorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/EDScenario_EditorBuilder_a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$10$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$12$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$18$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$23$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/GrammarActionsDescriptor$29$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/editor/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/StructureAspectDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/StructureAspectDescriptor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/classes_gen/ActionCards/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
@@ -181,74 +229,338 @@
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/editor/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/editor/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/generated" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/structure/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen.caches/ActionCards/structure/generated" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Action_InspectorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Action_InspectorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Action_diagram_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Action_diagram_EditorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/Action_diagram_InspectorBuilder_a.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarActionsDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/GrammarActionsDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/EDScenario_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/EDScenario_EditorBuilder_a.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/editor/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/StructureAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/StructureAspectDescriptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/ActionCards/source_gen/ActionCards/structure/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/editor/ScenarioBuilder_EditorBuilder_a$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/editor/ScenarioBuilder_EditorBuilder_a$CONCEPTS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/editor/ScenarioBuilder_EditorBuilder_a$LINKS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/editor/ScenarioBuilder_EditorBuilder_a$LINKS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/editor/ScenarioBuilder_EditorBuilder_a.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/editor/ScenarioBuilder_EditorBuilder_a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/editor/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/structure/StructureAspectDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/structure/StructureAspectDescriptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/classes_gen/AgentLanguage/structure/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$CONCEPTS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$CONCEPTS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$IfMC.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$IfMC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$LINKS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$LINKS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$PROPS.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$PROPS.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$PVQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$PVQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$RRC.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$RRC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$RTQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$RTQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$SNQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$SNQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$SNsQ.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated$SNsQ.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated.class" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/QueriesGenerated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/classes_gen/main/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/AgentLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/AgentLanguage/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/main/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen.caches/main/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen/main/QueriesGenerated.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen/main/QueriesGenerated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen/main/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/source_gen/main/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/generator/templates/main@generator.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/generator/templates/main@generator.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/models/AgentLanguage.editor.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/models/AgentLanguage.editor.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/models/AgentLanguage.structure.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/models/AgentLanguage.structure.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen.caches/AgentLanguage/editor/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen.caches/AgentLanguage/editor/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen.caches/AgentLanguage/editor/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen.caches/AgentLanguage/editor/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen.caches/AgentLanguage/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen.caches/AgentLanguage/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen.caches/AgentLanguage/structure/generated" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen.caches/AgentLanguage/structure/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/editor/ScenarioBuilder_EditorBuilder_a.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/editor/ScenarioBuilder_EditorBuilder_a.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/editor/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/editor/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/structure/StructureAspectDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/structure/StructureAspectDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/structure/aspectcps-descriptorclasses.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/structure/aspectcps-descriptorclasses.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/structure/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/languages/AgentLanguage/source_gen/AgentLanguage/structure/trace.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/models/FluCovidEmergencyPathway.clone.AC1.mps" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/models/FluCovidEmergencyPathway.clone.AC1.mps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen.caches/FluCovidEmergencyPathway/clone/AC1/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen.caches/FluCovidEmergencyPathway/clone/AC1/dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen.caches/FluCovidEmergencyPathway/clone/AC1/generated" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen.caches/FluCovidEmergencyPathway/clone/AC1/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/CubicleNurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/CubicleNurse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/DischargeTrigger_a1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TakeabedTrigger_cSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LFD.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LFD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LIAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LabPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LabPCR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LabTechnician.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/LabTechnician.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_eSignal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_gSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TakeabedTrigger_a4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TakeabedTrigger_aSignal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TakeabedTrigger_aSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TreatmentTimeDistribution_0.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TreatmentTimeDistribution_0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TriageNurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TriageNurse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TriagingTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TriagingTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/WardStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/WardStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/patientGenerator_0.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/patientGenerator_0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/patientGenerator_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/patientGenerator_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/parameters.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/FluCovidEmergencyPathway/clone/AC1/trace.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen.caches/FluCovidEmergencyPathway/AC1/dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen.caches/FluCovidEmergencyPathway/AC1/dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen.caches/FluCovidEmergencyPathway/AC1/generated" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen.caches/FluCovidEmergencyPathway/AC1/generated" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_a2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_a2_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_a2_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_a2_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_a2_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_a2_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_b0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_b0_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_b0_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_b0_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_b0_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_b0_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmittoSRTrigger_a3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmittoSRTrigger_a3_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmittoSRTrigger_a3_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmittoSRTrigger_a3_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmittoSRTrigger_a3_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmittoSRTrigger_a3_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDLFDTrigger_a2Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/ESaaTrigger_aSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDLFDTrigger_a2_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDLFDTrigger_a2_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDLFDTrigger_a2_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDLFDTrigger_a2_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDLFDTrigger_a2_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDandFluLFDTrigger_a1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDandFluLFDTrigger_a1_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDandFluLFDTrigger_a1_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDandFluLFDTrigger_a1_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDandFluLFDTrigger_a1_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/COVIDandFluLFDTrigger_a1_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ConfirmwithPCRTrigger_d3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ConfirmwithPCRTrigger_d3_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ConfirmwithPCRTrigger_d3_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ConfirmwithPCRTrigger_d3_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ConfirmwithPCRTrigger_d3_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ConfirmwithPCRTrigger_d3_4Signal.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/CubicleNurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/CubicleNurse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/DischargeTrigger_a1Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_0Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_1Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_10Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_11Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_11Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_12Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_12Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_10Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_13Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_11Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_14Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_12Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_15Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_16Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_17Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_18Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_13Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_19Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_1Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_2Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_20Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_21Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_22Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_2Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_3Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_3Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_0Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_4Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_5Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_6Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_7Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_8Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a2_9Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_0Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_10Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_14Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_11Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_15Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_12Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_16Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_13Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_17Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_14Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_18Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_15Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_19Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_16Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_17Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_18Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_19Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_1Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/source_gen/EDLanguage/sandbox/TakeabedTrigger_aSignal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_20Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_21Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_22Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_2Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_0Signal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_3Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_4Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_5Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_6Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_7Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_8Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a1_9Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_10Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_11Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_12Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_13Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_14Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_15Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_16Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_17Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_18Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_19Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_20Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_21Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_22Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_5Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_6Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_7Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_8Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DischargeTrigger_a1_9Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoConfirmatoryPCRTrigger_a4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoConfirmatoryPCRTrigger_a4_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoConfirmatoryPCRTrigger_a4_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoConfirmatoryPCRTrigger_a4_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoConfirmatoryPCRTrigger_a4_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoConfirmatoryPCRTrigger_a4_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TakeabedTrigger_bSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_0Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TakeabedTrigger_dSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_10Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_11Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_12Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_13Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_14Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_15Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_16Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_17Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_18Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_19Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_1Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/source_gen/EDLanguage/sandbox/TakeabedTrigger_eSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_20Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_21Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_22Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_5Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_6Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_7Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_8Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/DoPCRTrigger_a3_9Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/EDBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/EDBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/IsolationPeriodTrigger_a0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/IsolationPeriodTrigger_a0_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/IsolationPeriodTrigger_a0_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/IsolationPeriodTrigger_a0_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/IsolationPeriodTrigger_a0_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/IsolationPeriodTrigger_a0_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LFD.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LFD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LIAT.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LIAT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LabPCR.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/LabPCR.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PCRTestTrigger_a1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PCRTestTrigger_a1_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PCRTestTrigger_a1_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PCRTestTrigger_a1_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PCRTestTrigger_a1_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PCRTestTrigger_a1_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_k_0Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_dSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_k_1Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmissionTriageTrigger_fSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_k_2Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/IsolationPeriodTrigger_bSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_k_3Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/AdmittoSRTrigger_eSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PatientArrivesTrigger_k_4Signal.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionStaff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_17Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_18Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_19Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_20Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_21Signal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_22Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b01Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b01_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b01_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b01_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b01_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b01_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/PreAdmissionTriageTrigger_b_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_0.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTimeDistribution_2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_10Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_11Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_12Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_13Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_14Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_15Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_16Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_5Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_6Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_7Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_8Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/ReceiveTreatmentTrigger_a0_9Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomsabsentTrigger_a0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomsabsentTrigger_a0_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomsabsentTrigger_a0_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomsabsentTrigger_a0_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomsabsentTrigger_a0_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomsabsentTrigger_a0_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomspresentTrigger_b0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomspresentTrigger_b0_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomspresentTrigger_b0_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomspresentTrigger_b0_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomspresentTrigger_b0_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/RespiratorysymptomspresentTrigger_b0_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_a9Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_a9_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_a9_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_a9_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_a9_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_a9_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_b4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_b4_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_b4_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_b4_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_b4_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDContactTrigger_b4_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDcontactTrigger_c3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDcontactTrigger_c3_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDcontactTrigger_c3_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDcontactTrigger_c3_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDcontactTrigger_c3_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/SignificantCOVIDcontactTrigger_c3_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a3_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a3_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a3_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a3_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a3_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a5Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a5_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a5_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a5_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a5_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a5_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a6Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a6_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a6_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a6_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a6_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a6_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a7Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a7_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a7_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a7_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a7_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a7_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a8Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a8_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a8_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a8_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a8_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_a8_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b3_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b3_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b3_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b3_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b3_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b6Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b6_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b6_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b6_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b6_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b6_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b7Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b7_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b7_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b7_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b7_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b7_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b8Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b8_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b8_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b8_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b8_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b8_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b9Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b9_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b9_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b9_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b9_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TakeabedTrigger_b9_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTimeDistribution_0.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTimeDistribution_0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TreatmentTrigger_a0_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageNurse.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageNurse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a01Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a01_0Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a01_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a01_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a01_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a01_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a_0Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway2/source_gen/EDLanguage/sandbox/TriageTrigger_aSignal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a_1Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a_2Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a_3Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriageTrigger_a_4Signal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriagingTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/TriagingTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/WardStaff.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/WardStaff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/patientGenerator_0.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/patientGenerator_0.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/patientGenerator_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/EDLanguage/sandbox/patientGenerator_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/parameters.xml" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/parameters.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/source_gen/FluCovidEmergencyPathway/AC1/trace.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -270,7 +582,7 @@
         <TabState>
           <option name="title" value="Console" />
           <tab>
-            <model ref="10d9131f-b773-4fe6-ba74-c8f288af629d/r:2458a8f8-fbef-43aa-97cd-e8de2f1bbc11(TempModule10d9131f-b773-4fe6-ba74-c8f288af629d/ConsoleModel_2561044704579400)">
+            <model ref="d21bbad3-87ff-4ac5-a5c6-39686302c6aa/r:3593308e-4609-43a8-bd82-20e5c773389a(TempModuled21bbad3-87ff-4ac5-a5c6-39686302c6aa/ConsoleModel_3467187746710000)">
               <persistence version="9" />
               <languages>
                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
@@ -290,11 +602,11 @@
                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
                 </language>
               </registry>
-              <node concept="aymSD" id="4Y2SMtrQs2X">
-                <node concept="3balQm" id="4Y2SMtrQs2Y" role="aymYE" />
-                <node concept="2Clz$F" id="4Y2SMtrQs2Z" role="aymYO" />
-                <node concept="2_V_lH" id="4Y2SMtrQs30" role="1PhJh3">
-                  <ref role="2_V_lI" node="4Y2SMtrQs2Z" resolve="CommandHolder" />
+              <node concept="aymSD" id="51uOcp26lsC">
+                <node concept="3balQm" id="51uOcp26lsD" role="aymYE" />
+                <node concept="2Clz$F" id="51uOcp26lsE" role="aymYO" />
+                <node concept="2_V_lH" id="51uOcp26lsF" role="1PhJh3">
+                  <ref role="2_V_lI" node="51uOcp26lsE" resolve="CommandHolder" />
                 </node>
               </node>
             </model>
@@ -730,7 +1042,6 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" />
     <panes>
-      <pane id="Scope" />
       <pane id="FileSystem">
         <subPane>
           <expand>
@@ -790,13 +1101,51 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
+              <option name="myItemId" value="7b231e0f-0b71-40a0-97e2-0c4f2be864f2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FluCovidEmergencyPathwayoptimise" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:dcfaa4c8-5115-447c-9ba0-69fefcb7c4fe(FluCovidEmergencyPathwayoptimise.AC1) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathwayoptimise/models/FluCovidEmergencyPathwayoptimise.AC1.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FluCovidEmergencyPathway" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Action Cards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -819,16 +1168,166 @@
               <option name="myItemId" value="HelloAgentProject" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7b231e0f-0b71-40a0-97e2-0c4f2be864f2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FluCovidEmergencyPathwayoptimise" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemId" value="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.structure.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards" />
+              <option name="myItemId" value="ActionCard" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7b231e0f-0b71-40a0-97e2-0c4f2be864f2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FluCovidEmergencyPathwayoptimise" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:dcfaa4c8-5115-447c-9ba0-69fefcb7c4fe(FluCovidEmergencyPathwayoptimise.AC1) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathwayoptimise/models/FluCovidEmergencyPathwayoptimise.AC1.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Action Cards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Attributes" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/DiseaseModel/models/DiseaseModel.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="People" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="7b231e0f-0b71-40a0-97e2-0c4f2be864f2" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FluCovidEmergencyPathway" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Simulation Scenario" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -878,7 +1377,149 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="r:3f78898a-73f8-49a6-a57c-1e88b13ff241(ActionCards.actions) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.actions.mps]" />
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FluCovidEmergencyPathway" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runtime" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FluCovidEmergencyPathway" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCard" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.structure.mps]" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Attributes" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PatientProperties" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HelloAgentProject" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards.generator" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ActionCards" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps]" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -906,199 +1547,7 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Testing" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FluCovidEmergencyPathway" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Action Cards" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FluCovidEmergencyPathway" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards.generator" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="People" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards.generator" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/models/ActionCards.structure.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCard" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FluCovidEmergencyPathway" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HelloAgentProject" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards.generator" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCards" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/ActionCards/generator/templates/ActionCards.generator.templates@generator.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ActionCard" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
@@ -1112,28 +1561,13 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="5de97ff8-977d-4bec-a3b1-510f31cfa79f" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="FluCovidEmergencyPathway" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="r:34eb3112-0975-4230-b4c5-b64c4e97b139(FluCovidEmergencyPathway.AC1) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/solutions/FluCovidEmergencyPathway/models/FluCovidEmergencyPathway.AC1.mps]" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Action Cards" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1758249876541190892" />
+              <option name="myItemId" value="7b231e0f-0b71-40a0-97e2-0c4f2be864f2" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </SELECTED>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer">
         <subPane />
       </pane>
@@ -1388,10 +1822,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Java Application.Node Sanda12.www.MyRunner (1)" />
         <item itemvalue="Java Application.Node sand2.aaa.MyRunner" />
         <item itemvalue="Java Application.Node sand2.aaa.HelloTest" />
         <item itemvalue="Java Application.Node Sanda12.www.MyRunner" />
+        <item itemvalue="Java Application.Node Sanda12.www.MyRunner (1)" />
         <item itemvalue="Java Application.Node EDLanguage.Runner.RepastMain.MyRunner" />
       </list>
     </recent_temporary>
@@ -1407,13 +1841,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587360015058</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Add parameters to EDBuilder">
-      <created>1613594587970</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1613594587972</updated>
     </task>
     <task id="LOCAL-00017" summary="#19 Add patient arrival table using mbeddr table components">
       <created>1614620510347</created>
@@ -1751,7 +2178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639565051494</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Implement time distribution option for action duration">
+      <created>1639596831125</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1639596831125</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="UsagesViewTool">
@@ -1766,7 +2200,7 @@
         <query>
           <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
           <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-            <node ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500231395" title="BooleanExpression" />
+            <node ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733230" title="Branch" />
           </holder>
         </query>
         <usage_view>
@@ -1788,7 +2222,7 @@
                     <child caption="ActionCards.structure" excluded="false" isresult="false" results_section="false">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="BooleanExpression" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500231395" isRoot="true">
+                      <child caption="Branch" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733230" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                         <role name="target" />
                       </child>
@@ -1809,32 +2243,64 @@
                     <child caption="ActionCards.constraints" excluded="false" isresult="false" results_section="true">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="BooleanExpression_Constraints" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876503809983" isRoot="true">
+                      <child caption="Branch_Constraints" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876474056403" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                         <role name="target" />
-                      </child>
-                      <child caption="ImmunocompromisedCondition_Constraints" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876537124428" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="BooleanExpression" info="(role: conceptArgument in: isSubConceptOf)" excluded="false" isresult="true" results_section="true" nodePtr="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876537124707">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
-                      </child>
-                      <child caption="RecentCOVIDContactCondition_Constraints" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876502986302" isRoot="true">
-                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="root" />
-                        <child caption="BooleanExpression" info="(role: conceptArgument in: isSubConceptOf)" excluded="false" isresult="true" results_section="true" nodePtr="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876502990617">
-                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                          <role name="target" />
-                        </child>
                       </child>
                       <model uid="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)" />
                     </child>
                     <child caption="ActionCards.editor" excluded="false" isresult="false" results_section="true">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="BooleanExpression_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/1758249876502508513" isRoot="true">
+                      <child caption="ActionCard_diagram_Editor" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/8399499156273260996" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="newBranch" info="(role: localVariableDeclaration in: &lt;type&gt; &lt;var&gt;;)" excluded="false" isresult="false" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061867005233">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="node&lt;Branch&gt;" info="(role: type in: newBranch)" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061867005229">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                        <child caption="newList" info="(role: localVariableDeclaration in: &lt;type&gt; &lt;var&gt;;)" excluded="false" isresult="false" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061867229142">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="node&lt;Branch&gt;" info="(role: elementType in: list&lt;node&lt;Branch&gt;&gt;)" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061867236701">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                          <child caption="node&lt;Branch&gt;" info="(role: elementType in: arraylist)" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061867256746">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                      </child>
+                      <child caption="Branch_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061866074205" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="target" />
+                      </child>
+                      <child caption="Branch_SubstituteMenu" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061868642763" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="target" />
+                        <child caption="substitute action" info="(role: parts in: Branch_SubstituteMenu)" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061868642795">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                        <child caption="newBranch" info="(role: localVariableDeclaration in: &lt;type&gt; &lt;var&gt;;)" excluded="false" isresult="false" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061869411302">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="node&lt;Branch&gt;" info="(role: type in: newBranch)" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061869411297">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                          <child caption="node&lt;Branch&gt;" info="(role: createdType in: node&lt;&gt;)" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/2698877061869412483">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                      </child>
+                      <child caption="Branch_diagram_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)/188877551429756772" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
                         <role name="target" />
                       </child>
@@ -1843,15 +2309,136 @@
                     <child caption="ActionCards.structure" excluded="false" isresult="false" results_section="true">
                       <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
                       <role name="model" />
-                      <child caption="No" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500231396" isRoot="true">
+                      <child caption="Action" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528548" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
+                        <role name="root" />
+                        <child caption="outgoingBranches" info="(role: linkDeclaration in: Action)" excluded="false" isresult="true" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551432579259">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                        <child caption="incomingBranches" info="(role: linkDeclaration in: Action)" excluded="false" isresult="true" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551436930748">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
                       </child>
-                      <child caption="Yes" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500231394" isRoot="true">
+                      <child caption="ActionCard" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528520" isRoot="true">
                         <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
-                        <role name="target" />
+                        <role name="root" />
+                        <child caption="Branches" info="(role: linkDeclaration in: ActionCard)" excluded="false" isresult="true" results_section="true" nodePtr="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/2698877061866267985">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
                       </child>
                       <model uid="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
+                    </child>
+                  </child>
+                  <child caption="ActionCards.generator" excluded="false" isresult="false" results_section="true" module_ref="18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)">
+                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
+                    <role name="module" />
+                    <child caption="ActionCards.generator.templates@generator" excluded="false" isresult="false" results_section="true">
+                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
+                      <role name="model" />
+                      <child caption="Agent Generator" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/768972137570393277" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="Branch" info="(role: conceptArgument in: nodes)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/8149202941029959609">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                      </child>
+                      <child caption="CreateBaseActionsScript" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526393805" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="rootActions" info="(role: localVariableDeclaration in: &lt;type&gt; &lt;var&gt;;)" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526393829">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="Branch" info="(role: conceptArgument in: nodes)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526425336">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                        <child caption="newBranches" info="(role: localVariableDeclaration in: &lt;type&gt; &lt;var&gt;;)" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526450708">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="nlist&lt;Branch&gt;" info="(role: type in: newBranches)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526450703">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                          <child caption="nlist&lt;Branch&gt;" info="(role: createdType in: nlist)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526450861">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                        <child caption="newBranch" info="(role: localVariableDeclaration in: &lt;type&gt; &lt;var&gt;;)" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526466748">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="node&lt;Branch&gt;" info="(role: type in: newBranch)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526466743">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                          <child caption="node&lt;Branch&gt;" info="(role: createdType in: node&lt;&gt;)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876526466837">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                      </child>
+                      <child caption="Signals" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/5402567240276586623" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="placeholderName" info="(role: signals in: Signals)" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/5402567240276586635">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="Branch" info="(role: conceptArgument in: nodes)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/4544390881339585620">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                        <child caption="secondPlaceholder" info="(role: signals in: Signals)" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876519822845">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="Branch" info="(role: conceptArgument in: nodes)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876542638618">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                      </child>
+                      <child caption="main" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/3383707102503528444" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="reduce Branch" info="(role: reductionMappingRule in: main)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/4544390881339165201">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="target" />
+                        </child>
+                      </child>
+                      <child caption="reduce_AdmissionAction" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/33966321878176036" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="test" info="(role: contentNode in: reduce_AdmissionAction)" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/33966321878176051">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="Branch" info="(role: conceptArgument in: nodes)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/33966321878176120">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                      </child>
+                      <child caption="reduce_Branch" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/4544390881339165213" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="target" />
+                      </child>
+                      <child caption="reduce_DischargeAction" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876538244819" isRoot="true">
+                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                        <role name="root" />
+                        <child caption="test" info="(role: contentNode in: reduce_DischargeAction)" excluded="false" isresult="false" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876538244877">
+                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                          <role name="root to target" />
+                          <child caption="Branch" info="(role: conceptArgument in: nodes)" excluded="false" isresult="true" results_section="true" nodePtr="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/1758249876538244976">
+                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
+                            <role name="target" />
+                          </child>
+                        </child>
+                      </child>
+                      <model uid="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)" />
                     </child>
                   </child>
                 </child>
@@ -1866,7 +2453,6 @@
     </default_view_options>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add actioncard branching in graphical editor" />
     <MESSAGE value="Add default branch creation on hit enter" />
     <MESSAGE value="Add inspector editor for actioncard and custom edge shape" />
     <MESSAGE value="Add patient profiler to ActionCard Language" />
@@ -1891,7 +2477,8 @@
     <MESSAGE value="Implement multi-action cards" />
     <MESSAGE value="Add immunocompromised attribute" />
     <MESSAGE value="Implement basic post-admission action card" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement basic post-admission action card" />
+    <MESSAGE value="Implement time distribution option for action duration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement time distribution option for action duration" />
   </component>
   <component name="mpsMakeService">
     <option name="makeInBackground" value="true" />

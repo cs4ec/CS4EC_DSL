@@ -43,7 +43,7 @@ public class Behaviour {
 	}
 	
 	public BehaviourStep getCurrentStep() {
-		if(steps.size() < currentStep) {
+		if(steps.size() > currentStep) {
 			return steps.get(currentStep);
 		}
 		return null;

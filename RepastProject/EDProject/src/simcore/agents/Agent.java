@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.WardStaff;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.random.RandomHelper;
@@ -16,6 +17,7 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import simcore.action.ActionFragment;
 import simcore.action.Behaviour;
+import simcore.action.BehaviourStep;
 import simcore.action.Consequence;
 import simcore.action.PassiveBehaviourStep;
 import simcore.action.basicAction.MoveAction;
@@ -63,6 +65,14 @@ public class Agent {
 //		System.out.println("-----------------------------------------");
 //		LogMission();
 		
+		if(this instanceof WardStaff) {
+			System.out.println(myCurrentActions);
+			if(myCurrentActions.size() > 0) {
+				BehaviourStep b = myCurrentActions.get(0).getCurrentStep();
+				int i =0;
+			}	
+		}
+		
 		// Tick through all my passive actions
 		List<Behaviour> currentPassiveActions = myCurrentActions.stream().filter(a -> a.getCurrentStep() instanceof PassiveBehaviourStep).collect(Collectors.toList());
 		for (Behaviour action : currentPassiveActions) {
@@ -90,7 +100,7 @@ public class Agent {
 		} 
 		
 		// If my active action has turned passive, set myself as idle and add it to my current actions backlog
-		if(action.getCurrentStep() instanceof PassiveBehaviourStep) {
+		if(action == myActiveAction && action.getCurrentStep() instanceof PassiveBehaviourStep) {
 			isIdle = true;
 			if(!myCurrentActions.contains(action)) {
 				myCurrentActions.add(action);

@@ -41,7 +41,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = false;
 
-    RunEnvironment.getInstance().endAt(86400);
+    RunEnvironment.getInstance().endAt(10080);
 
     CreatePatientArrivalMap();
 
@@ -51,8 +51,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
-    context.add(new patientGenerator_0(space, grid, context));
     context.add(new patientGenerator_1(space, grid, context));
+    context.add(new patientGenerator_0(space, grid, context));
     context.add(new Board());
 
     // add Agents 
@@ -96,7 +96,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room TaskRoom1_q = new Room("TaskRoom1", context, space, grid, 120, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE);
     Room TaskRoom2_r = new Room("TaskRoom2", context, space, grid, 125, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE);
     Room TaskRoom3_s = new Room("TaskRoom3", context, space, grid, 130, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE);
-    Room Entrance_t = new Room("Entrance", context, space, grid, 95, 197, 10, 2, 1, 10, MainEntrance.getInstance(), Color.GRAY);
+    Room Entrance_t = new Room("Entrance", context, space, grid, 95, 193, 10, 5, 1, 10, MainEntrance.getInstance(), Color.GRAY);
     Room XRayRoom1_u = new Room("XRayRoom1", context, space, grid, 140, 155, 5, 5, 1, 3, RadiologyRoom.getInstance(), Color.ORANGE);
     Room XRayRoom2_v = new Room("XRayRoom2", context, space, grid, 145, 155, 5, 5, 1, 3, RadiologyRoom.getInstance(), Color.ORANGE);
     Room TriageWaitingRoom_w = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 0, WaitingRoom.getInstance(), Color.GRAY);

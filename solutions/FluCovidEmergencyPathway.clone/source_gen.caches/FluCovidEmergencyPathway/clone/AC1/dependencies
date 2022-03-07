@@ -5,9 +5,19 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.CubicleNurse">
+    <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.ESaaTrigger_aSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_aSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.deTrigger_gSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.fewfvTrigger_iSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.fweTrigger_hSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="EDLanguage.sandbox.wefvvescTrigger_fSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.wevweTrigger_gSignal" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -16,18 +26,25 @@
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.clone.AC1.DischargeTrigger_a1Signal">
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.DischargeTrigger_cSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.clone.AC1.DoPCRTrigger_a3Signal">
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.DoPCRTrigger_bSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.Doctor">
+    <classNode dependClassName="EDLanguage.sandbox.Doctor" />
+    <classNode dependClassName="EDLanguage.sandbox.avsvewcwTrigger_eSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.wveaeTrigger_cSignal" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -36,6 +53,8 @@
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.EDBuilder">
@@ -93,6 +112,9 @@
     <classNode dependClassName="simcore.utilities.StaffAdder" />
     <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
   </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.ESaaTrigger_aSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.ElectiveAttendanceArea">
     <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -130,9 +152,13 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.LabTechnician">
+    <classNode dependClassName="EDLanguage.sandbox.LabTechnician" />
+    <classNode dependClassName="EDLanguage.sandbox.cweewvTrigger_jSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.wevcaTrigger_dSignal" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -141,6 +167,8 @@
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.Labaratory">
@@ -167,7 +195,7 @@
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.clone.AC1.PatientArrivesTrigger_eSignal">
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.PatientArrivesTrigger_hSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.PreAdmissionStaff">
@@ -200,9 +228,6 @@
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.clone.AC1.TakeabedTrigger_a4Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.TakeabedTrigger_aSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
@@ -218,7 +243,7 @@
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathway.clone.AC1.TreatmentTrigger_a0Signal">
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.TreatmentTrigger_dSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.TriageDesk">
@@ -226,9 +251,13 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.TriageNurse">
+    <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.fewfvTrigger_iSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.rfqTrigger_aSignal" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -237,6 +266,8 @@
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.TriagingTool">
@@ -257,15 +288,19 @@
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.WardStaff">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_a1Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_a3Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_cSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_a4Signal" />
     <classNode dependClassName="EDLanguage.sandbox.TreatmentTimeDistribution_0" />
-    <classNode dependClassName="EDLanguage.sandbox.TreatmentTrigger_a0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.TreatmentTrigger_dSignal" />
     <classNode dependClassName="EDLanguage.sandbox.WardStaff" />
+    <classNode dependClassName="EDLanguage.sandbox.deTrigger_gSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ewTrigger_fSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.fweTrigger_hSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.onTrigger_eSignal" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="EDLanguage.sandbox.wefacTrigger_kSignal" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -287,6 +322,24 @@
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.avsvewcwTrigger_eSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.cweewvTrigger_jSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.deTrigger_gSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.ewTrigger_fSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.fewfvTrigger_iSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.fweTrigger_hSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.map_PatientProfile">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -298,6 +351,9 @@
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.onTrigger_eSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.patient">
     <classNode dependClassName="java.lang.Object" />
@@ -346,6 +402,24 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.rfqTrigger_aSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.wefacTrigger_kSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.wefvvescTrigger_fSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.wevcaTrigger_dSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.wevweTrigger_gSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathway.clone.AC1.wveaeTrigger_cSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
 </dependenciesRoot>
 

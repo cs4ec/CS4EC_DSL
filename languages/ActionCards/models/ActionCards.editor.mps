@@ -519,7 +519,7 @@
         <node concept="2iRkQZ" id="4FTL$vJYrhR" role="2iSdaV" />
         <node concept="3F2HdR" id="4FTL$vJY2Vx" role="3EZMnx">
           <ref role="1NtTu8" to="e88n:4FTL$vJY2U$" resolve="staffNumbers" />
-          <node concept="l2Vlx" id="4FTL$vJY2Vz" role="2czzBx" />
+          <node concept="2iRkQZ" id="4Y2SMttz1jW" role="2czzBx" />
           <node concept="pVoyu" id="4FTL$vJY2VF" role="3F10Kt">
             <property role="VOm3f" value="true" />
           </node>
@@ -527,6 +527,18 @@
             <property role="VOm3f" value="true" />
           </node>
         </node>
+      </node>
+      <node concept="3F0ifn" id="4Y2SMttz1ke" role="3EZMnx">
+        <property role="3F0ifm" value="Run Duration:" />
+        <node concept="pVoyu" id="4Y2SMttz1kt" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="4Y2SMttz1kI" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:4Y2SMttz1js" resolve="runDuration" />
+      </node>
+      <node concept="3F0ifn" id="4Y2SMttz1le" role="3EZMnx">
+        <property role="3F0ifm" value="days" />
       </node>
       <node concept="l2Vlx" id="4FTL$vJY2UX" role="2iSdaV" />
     </node>
