@@ -63,10 +63,22 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="68mc:4eXJ6EOwIAn" resolve="FileSystemDirPicker" />
     </node>
+    <node concept="1TJgyj" id="5R1$QENtWvS" role="1TKVEi">
+      <property role="IQ2ns" value="6755843002519242744" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="RepastSettingsSourceAddress" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="68mc:4eXJ6EOwIAn" resolve="FileSystemDirPicker" />
+    </node>
     <node concept="1TJgyi" id="5_FodVJemoN" role="1TKVEl">
       <property role="IQ2nx" value="6443350202496149043" />
       <property role="TrG5h" value="addr" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="74nMeo8d18t" role="1TKVEl">
+      <property role="IQ2nx" value="8149202941055865373" />
+      <property role="TrG5h" value="BatchRun" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
     <node concept="PrWs8" id="5_FodVJemoL" role="PzmwI">
       <ref role="PrY4T" to="4fqr:431DWIovi3l" resolve="IMainClass" />

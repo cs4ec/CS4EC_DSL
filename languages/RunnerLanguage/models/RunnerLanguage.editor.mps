@@ -57,6 +57,15 @@
       <node concept="3F1sOY" id="2vFOz$GvkB2" role="3EZMnx">
         <ref role="1NtTu8" to="9ki:2vFOz$GvkAD" resolve="ClassesFolderAddress" />
       </node>
+      <node concept="3F0ifn" id="5R1$QENtWw9" role="3EZMnx">
+        <property role="3F0ifm" value="Repast Source Files:" />
+        <node concept="pVoyu" id="5R1$QENtWwn" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="5R1$QENtWwC" role="3EZMnx">
+        <ref role="1NtTu8" to="9ki:5R1$QENtWvS" resolve="RepastSettingsSourceAddress" />
+      </node>
       <node concept="3F0ifn" id="2vFOz$GxgoQ" role="3EZMnx">
         <property role="3F0ifm" value="Sources Folder Address:" />
         <node concept="pVoyu" id="2vFOz$Gxgpf" role="3F10Kt">
@@ -65,6 +74,15 @@
       </node>
       <node concept="3F1sOY" id="2vFOz$Gxgp6" role="3EZMnx">
         <ref role="1NtTu8" to="9ki:2vFOz$GxgoG" resolve="SourcesFolderAddress" />
+      </node>
+      <node concept="3F0ifn" id="74nMeo8d18E" role="3EZMnx">
+        <property role="3F0ifm" value="BatchRun?:" />
+        <node concept="pVoyu" id="74nMeo8d18P" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="74nMeo8d193" role="3EZMnx">
+        <ref role="1NtTu8" to="9ki:74nMeo8d18t" resolve="BatchRun" />
       </node>
       <node concept="l2Vlx" id="7bnUeyP1kiw" role="2iSdaV" />
     </node>

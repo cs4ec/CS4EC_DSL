@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <root>
+    <file name="ConstraintsAspectDescriptor.java">
+      <unit at="13,0,43,0" name="DiseaseModel.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:5ea0c119-3427-443f-a640-b7f5d321a2c8(DiseaseModel.constraints)/6755843002514227681">
+    <file name="VaccineStatus_Constraints.java">
+      <node id="6755843002514227681" at="19,38,20,37" concept="9" />
+      <node id="6755843002514227681" at="27,127,28,128" concept="4" />
+      <node id="6755843002514227681" at="28,128,29,0" concept="6" />
+      <node id="6755843002514227681" at="30,55,31,71" concept="1" />
+      <node id="6755843002514227681" at="32,9,33,0" concept="6" />
+      <node id="6755843002514227681" at="33,0,34,22" concept="5" />
+      <node id="6755843002514227933" at="38,128,39,17" concept="5" />
+      <node id="6755843002514227681" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="6755843002514227681" at="44,0,45,0" concept="7" trace="VaccineStatus$Kl" />
+      <node id="6755843002514227681" at="19,0,22,0" concept="0" trace="VaccineStatus_Constraints#()V" />
+      <node id="6755843002514227681" at="29,0,32,9" concept="2" />
+      <node id="6755843002514227681" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6755843002514227681" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6755843002514227681" at="24,103,36,6" concept="5" />
+      <node id="6755843002514227681" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6755843002514227681" at="19,38,20,37" />
+      <scope id="6755843002514227681" at="30,55,31,71" />
+      <scope id="6755843002514227683" at="38,128,39,17" />
+      <scope id="6755843002514227681" at="19,0,22,0" />
+      <scope id="6755843002514227681" at="38,0,41,0">
+        <var name="childConcept" id="6755843002514227681" />
+        <var name="link" id="6755843002514227681" />
+        <var name="node" id="6755843002514227681" />
+        <var name="parentNode" id="6755843002514227681" />
+      </scope>
+      <scope id="6755843002514227681" at="27,127,34,22">
+        <var name="result" id="6755843002514227681" />
+      </scope>
+      <scope id="6755843002514227681" at="26,0,36,0">
+        <var name="checkingNodeContext" id="6755843002514227681" />
+        <var name="context" id="6755843002514227681" />
+      </scope>
+      <scope id="6755843002514227681" at="24,103,36,6" />
+      <scope id="6755843002514227681" at="23,0,38,0" />
+      <unit id="6755843002514227681" at="43,0,46,0" name="DiseaseModel.constraints.VaccineStatus_Constraints$CONCEPTS" />
+      <unit id="6755843002514227681" at="25,15,36,5" name="DiseaseModel.constraints.VaccineStatus_Constraints$1" />
+      <unit id="6755843002514227681" at="18,0,47,0" name="DiseaseModel.constraints.VaccineStatus_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:5ea0c119-3427-443f-a640-b7f5d321a2c8(DiseaseModel.constraints)/6755843002514228228">
+    <file name="InfectionStatus_Constraints.java">
+      <node id="6755843002514228228" at="19,40,20,39" concept="9" />
+      <node id="6755843002514228228" at="27,127,28,128" concept="4" />
+      <node id="6755843002514228228" at="28,128,29,0" concept="6" />
+      <node id="6755843002514228228" at="30,55,31,71" concept="1" />
+      <node id="6755843002514228228" at="32,9,33,0" concept="6" />
+      <node id="6755843002514228228" at="33,0,34,22" concept="5" />
+      <node id="6755843002514228235" at="38,128,39,17" concept="5" />
+      <node id="6755843002514228228" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="6755843002514228228" at="44,0,45,0" concept="7" trace="InfectionStatus$wT" />
+      <node id="6755843002514228228" at="19,0,22,0" concept="0" trace="InfectionStatus_Constraints#()V" />
+      <node id="6755843002514228228" at="29,0,32,9" concept="2" />
+      <node id="6755843002514228228" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6755843002514228228" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6755843002514228228" at="24,103,36,6" concept="5" />
+      <node id="6755843002514228228" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6755843002514228228" at="19,40,20,39" />
+      <scope id="6755843002514228228" at="30,55,31,71" />
+      <scope id="6755843002514228230" at="38,128,39,17" />
+      <scope id="6755843002514228228" at="19,0,22,0" />
+      <scope id="6755843002514228228" at="38,0,41,0">
+        <var name="childConcept" id="6755843002514228228" />
+        <var name="link" id="6755843002514228228" />
+        <var name="node" id="6755843002514228228" />
+        <var name="parentNode" id="6755843002514228228" />
+      </scope>
+      <scope id="6755843002514228228" at="27,127,34,22">
+        <var name="result" id="6755843002514228228" />
+      </scope>
+      <scope id="6755843002514228228" at="26,0,36,0">
+        <var name="checkingNodeContext" id="6755843002514228228" />
+        <var name="context" id="6755843002514228228" />
+      </scope>
+      <scope id="6755843002514228228" at="24,103,36,6" />
+      <scope id="6755843002514228228" at="23,0,38,0" />
+      <unit id="6755843002514228228" at="43,0,46,0" name="DiseaseModel.constraints.InfectionStatus_Constraints$CONCEPTS" />
+      <unit id="6755843002514228228" at="25,15,36,5" name="DiseaseModel.constraints.InfectionStatus_Constraints$1" />
+      <unit id="6755843002514228228" at="18,0,47,0" name="DiseaseModel.constraints.InfectionStatus_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:5ea0c119-3427-443f-a640-b7f5d321a2c8(DiseaseModel.constraints)/6755843002514228739">
+    <file name="Asymptomatic_Constraints.java">
+      <node id="6755843002514228739" at="19,37,20,36" concept="9" />
+      <node id="6755843002514228739" at="27,127,28,128" concept="4" />
+      <node id="6755843002514228739" at="28,128,29,0" concept="6" />
+      <node id="6755843002514228739" at="30,55,31,71" concept="1" />
+      <node id="6755843002514228739" at="32,9,33,0" concept="6" />
+      <node id="6755843002514228739" at="33,0,34,22" concept="5" />
+      <node id="6755843002514228764" at="38,128,39,16" concept="5" />
+      <node id="6755843002514228739" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="6755843002514228739" at="44,0,45,0" concept="7" trace="Asymptomatic$km" />
+      <node id="6755843002514228739" at="19,0,22,0" concept="0" trace="Asymptomatic_Constraints#()V" />
+      <node id="6755843002514228739" at="29,0,32,9" concept="2" />
+      <node id="6755843002514228739" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6755843002514228739" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6755843002514228739" at="24,103,36,6" concept="5" />
+      <node id="6755843002514228739" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6755843002514228739" at="19,37,20,36" />
+      <scope id="6755843002514228739" at="30,55,31,71" />
+      <scope id="6755843002514228741" at="38,128,39,16" />
+      <scope id="6755843002514228739" at="19,0,22,0" />
+      <scope id="6755843002514228739" at="38,0,41,0">
+        <var name="childConcept" id="6755843002514228739" />
+        <var name="link" id="6755843002514228739" />
+        <var name="node" id="6755843002514228739" />
+        <var name="parentNode" id="6755843002514228739" />
+      </scope>
+      <scope id="6755843002514228739" at="27,127,34,22">
+        <var name="result" id="6755843002514228739" />
+      </scope>
+      <scope id="6755843002514228739" at="26,0,36,0">
+        <var name="checkingNodeContext" id="6755843002514228739" />
+        <var name="context" id="6755843002514228739" />
+      </scope>
+      <scope id="6755843002514228739" at="24,103,36,6" />
+      <scope id="6755843002514228739" at="23,0,38,0" />
+      <unit id="6755843002514228739" at="43,0,46,0" name="DiseaseModel.constraints.Asymptomatic_Constraints$CONCEPTS" />
+      <unit id="6755843002514228739" at="25,15,36,5" name="DiseaseModel.constraints.Asymptomatic_Constraints$1" />
+      <unit id="6755843002514228739" at="18,0,47,0" name="DiseaseModel.constraints.Asymptomatic_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:5ea0c119-3427-443f-a640-b7f5d321a2c8(DiseaseModel.constraints)/6755843002514229268">
+    <file name="Infected_Constraints.java">
+      <node id="6755843002514229268" at="19,33,20,32" concept="9" />
+      <node id="6755843002514229268" at="27,127,28,128" concept="4" />
+      <node id="6755843002514229268" at="28,128,29,0" concept="6" />
+      <node id="6755843002514229268" at="30,55,31,71" concept="1" />
+      <node id="6755843002514229268" at="32,9,33,0" concept="6" />
+      <node id="6755843002514229268" at="33,0,34,22" concept="5" />
+      <node id="6755843002514229275" at="38,128,39,16" concept="5" />
+      <node id="6755843002514229268" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="6755843002514229268" at="44,0,45,0" concept="7" trace="Infected$Zq" />
+      <node id="6755843002514229268" at="19,0,22,0" concept="0" trace="Infected_Constraints#()V" />
+      <node id="6755843002514229268" at="29,0,32,9" concept="2" />
+      <node id="6755843002514229268" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6755843002514229268" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6755843002514229268" at="24,103,36,6" concept="5" />
+      <node id="6755843002514229268" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6755843002514229268" at="19,33,20,32" />
+      <scope id="6755843002514229268" at="30,55,31,71" />
+      <scope id="6755843002514229270" at="38,128,39,16" />
+      <scope id="6755843002514229268" at="19,0,22,0" />
+      <scope id="6755843002514229268" at="38,0,41,0">
+        <var name="childConcept" id="6755843002514229268" />
+        <var name="link" id="6755843002514229268" />
+        <var name="node" id="6755843002514229268" />
+        <var name="parentNode" id="6755843002514229268" />
+      </scope>
+      <scope id="6755843002514229268" at="27,127,34,22">
+        <var name="result" id="6755843002514229268" />
+      </scope>
+      <scope id="6755843002514229268" at="26,0,36,0">
+        <var name="checkingNodeContext" id="6755843002514229268" />
+        <var name="context" id="6755843002514229268" />
+      </scope>
+      <scope id="6755843002514229268" at="24,103,36,6" />
+      <scope id="6755843002514229268" at="23,0,38,0" />
+      <unit id="6755843002514229268" at="43,0,46,0" name="DiseaseModel.constraints.Infected_Constraints$CONCEPTS" />
+      <unit id="6755843002514229268" at="25,15,36,5" name="DiseaseModel.constraints.Infected_Constraints$1" />
+      <unit id="6755843002514229268" at="18,0,47,0" name="DiseaseModel.constraints.Infected_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:5ea0c119-3427-443f-a640-b7f5d321a2c8(DiseaseModel.constraints)/6755843002514229779">
+    <file name="Susceptible_Constraints.java">
+      <node id="6755843002514229779" at="19,36,20,35" concept="9" />
+      <node id="6755843002514229779" at="27,127,28,128" concept="4" />
+      <node id="6755843002514229779" at="28,128,29,0" concept="6" />
+      <node id="6755843002514229779" at="30,55,31,71" concept="1" />
+      <node id="6755843002514229779" at="32,9,33,0" concept="6" />
+      <node id="6755843002514229779" at="33,0,34,22" concept="5" />
+      <node id="6755843002514229804" at="38,128,39,16" concept="5" />
+      <node id="6755843002514229779" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="6755843002514229779" at="44,0,45,0" concept="7" trace="Susceptible$pg" />
+      <node id="6755843002514229779" at="19,0,22,0" concept="0" trace="Susceptible_Constraints#()V" />
+      <node id="6755843002514229779" at="29,0,32,9" concept="2" />
+      <node id="6755843002514229779" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6755843002514229779" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6755843002514229779" at="24,103,36,6" concept="5" />
+      <node id="6755843002514229779" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6755843002514229779" at="19,36,20,35" />
+      <scope id="6755843002514229779" at="30,55,31,71" />
+      <scope id="6755843002514229781" at="38,128,39,16" />
+      <scope id="6755843002514229779" at="19,0,22,0" />
+      <scope id="6755843002514229779" at="38,0,41,0">
+        <var name="childConcept" id="6755843002514229779" />
+        <var name="link" id="6755843002514229779" />
+        <var name="node" id="6755843002514229779" />
+        <var name="parentNode" id="6755843002514229779" />
+      </scope>
+      <scope id="6755843002514229779" at="27,127,34,22">
+        <var name="result" id="6755843002514229779" />
+      </scope>
+      <scope id="6755843002514229779" at="26,0,36,0">
+        <var name="checkingNodeContext" id="6755843002514229779" />
+        <var name="context" id="6755843002514229779" />
+      </scope>
+      <scope id="6755843002514229779" at="24,103,36,6" />
+      <scope id="6755843002514229779" at="23,0,38,0" />
+      <unit id="6755843002514229779" at="43,0,46,0" name="DiseaseModel.constraints.Susceptible_Constraints$CONCEPTS" />
+      <unit id="6755843002514229779" at="25,15,36,5" name="DiseaseModel.constraints.Susceptible_Constraints$1" />
+      <unit id="6755843002514229779" at="18,0,47,0" name="DiseaseModel.constraints.Susceptible_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:5ea0c119-3427-443f-a640-b7f5d321a2c8(DiseaseModel.constraints)/6755843002514230081">
+    <file name="Symptomatic_Constraints.java">
+      <node id="6755843002514230081" at="19,36,20,35" concept="9" />
+      <node id="6755843002514230081" at="27,127,28,128" concept="4" />
+      <node id="6755843002514230081" at="28,128,29,0" concept="6" />
+      <node id="6755843002514230081" at="30,55,31,71" concept="1" />
+      <node id="6755843002514230081" at="32,9,33,0" concept="6" />
+      <node id="6755843002514230081" at="33,0,34,22" concept="5" />
+      <node id="6755843002514230333" at="38,128,39,16" concept="5" />
+      <node id="6755843002514230081" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="6755843002514230081" at="44,0,45,0" concept="7" trace="Symptomatic$QN" />
+      <node id="6755843002514230081" at="19,0,22,0" concept="0" trace="Symptomatic_Constraints#()V" />
+      <node id="6755843002514230081" at="29,0,32,9" concept="2" />
+      <node id="6755843002514230081" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6755843002514230081" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6755843002514230081" at="24,103,36,6" concept="5" />
+      <node id="6755843002514230081" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6755843002514230081" at="19,36,20,35" />
+      <scope id="6755843002514230081" at="30,55,31,71" />
+      <scope id="6755843002514230083" at="38,128,39,16" />
+      <scope id="6755843002514230081" at="19,0,22,0" />
+      <scope id="6755843002514230081" at="38,0,41,0">
+        <var name="childConcept" id="6755843002514230081" />
+        <var name="link" id="6755843002514230081" />
+        <var name="node" id="6755843002514230081" />
+        <var name="parentNode" id="6755843002514230081" />
+      </scope>
+      <scope id="6755843002514230081" at="27,127,34,22">
+        <var name="result" id="6755843002514230081" />
+      </scope>
+      <scope id="6755843002514230081" at="26,0,36,0">
+        <var name="checkingNodeContext" id="6755843002514230081" />
+        <var name="context" id="6755843002514230081" />
+      </scope>
+      <scope id="6755843002514230081" at="24,103,36,6" />
+      <scope id="6755843002514230081" at="23,0,38,0" />
+      <unit id="6755843002514230081" at="43,0,46,0" name="DiseaseModel.constraints.Symptomatic_Constraints$CONCEPTS" />
+      <unit id="6755843002514230081" at="25,15,36,5" name="DiseaseModel.constraints.Symptomatic_Constraints$1" />
+      <unit id="6755843002514230081" at="18,0,47,0" name="DiseaseModel.constraints.Symptomatic_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:5ea0c119-3427-443f-a640-b7f5d321a2c8(DiseaseModel.constraints)/6755843002514230610">
+    <file name="Unvaccinated_Constraints.java">
+      <node id="6755843002514230610" at="19,37,20,36" concept="9" />
+      <node id="6755843002514230610" at="27,127,28,128" concept="4" />
+      <node id="6755843002514230610" at="28,128,29,0" concept="6" />
+      <node id="6755843002514230610" at="30,55,31,71" concept="1" />
+      <node id="6755843002514230610" at="32,9,33,0" concept="6" />
+      <node id="6755843002514230610" at="33,0,34,22" concept="5" />
+      <node id="6755843002514230617" at="38,128,39,16" concept="5" />
+      <node id="6755843002514230610" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="6755843002514230610" at="44,0,45,0" concept="7" trace="Unvaccinated$YU" />
+      <node id="6755843002514230610" at="19,0,22,0" concept="0" trace="Unvaccinated_Constraints#()V" />
+      <node id="6755843002514230610" at="29,0,32,9" concept="2" />
+      <node id="6755843002514230610" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6755843002514230610" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6755843002514230610" at="24,103,36,6" concept="5" />
+      <node id="6755843002514230610" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6755843002514230610" at="19,37,20,36" />
+      <scope id="6755843002514230610" at="30,55,31,71" />
+      <scope id="6755843002514230612" at="38,128,39,16" />
+      <scope id="6755843002514230610" at="19,0,22,0" />
+      <scope id="6755843002514230610" at="38,0,41,0">
+        <var name="childConcept" id="6755843002514230610" />
+        <var name="link" id="6755843002514230610" />
+        <var name="node" id="6755843002514230610" />
+        <var name="parentNode" id="6755843002514230610" />
+      </scope>
+      <scope id="6755843002514230610" at="27,127,34,22">
+        <var name="result" id="6755843002514230610" />
+      </scope>
+      <scope id="6755843002514230610" at="26,0,36,0">
+        <var name="checkingNodeContext" id="6755843002514230610" />
+        <var name="context" id="6755843002514230610" />
+      </scope>
+      <scope id="6755843002514230610" at="24,103,36,6" />
+      <scope id="6755843002514230610" at="23,0,38,0" />
+      <unit id="6755843002514230610" at="43,0,46,0" name="DiseaseModel.constraints.Unvaccinated_Constraints$CONCEPTS" />
+      <unit id="6755843002514230610" at="25,15,36,5" name="DiseaseModel.constraints.Unvaccinated_Constraints$1" />
+      <unit id="6755843002514230610" at="18,0,47,0" name="DiseaseModel.constraints.Unvaccinated_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:5ea0c119-3427-443f-a640-b7f5d321a2c8(DiseaseModel.constraints)/6755843002514230894">
+    <file name="Vaccinated_Constraints.java">
+      <node id="6755843002514230894" at="19,35,20,34" concept="9" />
+      <node id="6755843002514230894" at="27,127,28,128" concept="4" />
+      <node id="6755843002514230894" at="28,128,29,0" concept="6" />
+      <node id="6755843002514230894" at="30,55,31,71" concept="1" />
+      <node id="6755843002514230894" at="32,9,33,0" concept="6" />
+      <node id="6755843002514230894" at="33,0,34,22" concept="5" />
+      <node id="6755843002514230901" at="38,128,39,16" concept="5" />
+      <node id="6755843002514230894" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="6755843002514230894" at="44,0,45,0" concept="7" trace="Vaccinated$xn" />
+      <node id="6755843002514230894" at="19,0,22,0" concept="0" trace="Vaccinated_Constraints#()V" />
+      <node id="6755843002514230894" at="29,0,32,9" concept="2" />
+      <node id="6755843002514230894" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="6755843002514230894" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="6755843002514230894" at="24,103,36,6" concept="5" />
+      <node id="6755843002514230894" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="6755843002514230894" at="19,35,20,34" />
+      <scope id="6755843002514230894" at="30,55,31,71" />
+      <scope id="6755843002514230896" at="38,128,39,16" />
+      <scope id="6755843002514230894" at="19,0,22,0" />
+      <scope id="6755843002514230894" at="38,0,41,0">
+        <var name="childConcept" id="6755843002514230894" />
+        <var name="link" id="6755843002514230894" />
+        <var name="node" id="6755843002514230894" />
+        <var name="parentNode" id="6755843002514230894" />
+      </scope>
+      <scope id="6755843002514230894" at="27,127,34,22">
+        <var name="result" id="6755843002514230894" />
+      </scope>
+      <scope id="6755843002514230894" at="26,0,36,0">
+        <var name="checkingNodeContext" id="6755843002514230894" />
+        <var name="context" id="6755843002514230894" />
+      </scope>
+      <scope id="6755843002514230894" at="24,103,36,6" />
+      <scope id="6755843002514230894" at="23,0,38,0" />
+      <unit id="6755843002514230894" at="43,0,46,0" name="DiseaseModel.constraints.Vaccinated_Constraints$CONCEPTS" />
+      <unit id="6755843002514230894" at="25,15,36,5" name="DiseaseModel.constraints.Vaccinated_Constraints$1" />
+      <unit id="6755843002514230894" at="18,0,47,0" name="DiseaseModel.constraints.Vaccinated_Constraints" />
+    </file>
+  </root>
+</debug-info>
+

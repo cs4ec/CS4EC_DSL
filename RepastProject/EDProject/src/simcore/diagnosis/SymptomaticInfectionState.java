@@ -1,6 +1,5 @@
 package simcore.diagnosis;
 
-import EDLanguage.sandbox.office;
 import repast.simphony.random.RandomHelper;
 import simcore.agents.Agent;
 import simcore.basicStructures.RoomType;

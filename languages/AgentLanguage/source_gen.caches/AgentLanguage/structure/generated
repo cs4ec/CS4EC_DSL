@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="c8ed55kdmoz1h2do00pd77abgvrtz8m">
+  <files names="ConceptPresentationAspectImpl.java:EnumerationDescriptor_BaseType.java:EnumerationDescriptor_Colour.java:EnumerationDescriptor_Direction.java:EnumerationDescriptor_InfectionStateType.java:EnumerationDescriptor_JudgeOperator.java:EnumerationDescriptor_ModifyOperator.java:EnumerationDescriptor_OccupiableTypes.java:EnumerationDescriptor_PatientOutcomes.java:EnumerationDescriptor_SeverityScore.java:LanguageConceptSwitch.java:StructureAspectDescriptor.java" />
+</product>
+

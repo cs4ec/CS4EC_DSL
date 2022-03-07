@@ -11,7 +11,11 @@ import java.util.Queue;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.TriageNurse;
 import repast.simphony.context.Context;
+import repast.simphony.context.space.graph.NetworkBuilder;
+import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.query.space.grid.GridCell;
 import repast.simphony.query.space.grid.GridCellNgh;
@@ -19,16 +23,23 @@ import repast.simphony.random.RandomHelper;
 import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.continuous.NdPoint;
+import repast.simphony.space.graph.Network;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import repast.simphony.util.ContextUtils;
 import simcore.Signals.Signal;
+import simcore.Signals.Orders.FollowOrder;
+import simcore.Signals.Orders.MoveToOrder;
+import simcore.Signals.Orders.OccupyOrder;
 import simcore.Signals.Orders.Order;
+import simcore.Signals.Orders.StopOrder;
 import simcore.action.Action;
 import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
+import simcore.action.Behaviour;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
+import simcore.action.PassiveBehaviourStep;
 import simcore.action.basicAction.AdmitAction;
 import simcore.action.basicAction.DischargeAction;
 import simcore.action.basicAction.MoveAction;
@@ -39,6 +50,7 @@ import simcore.action.basicAction.StayAction;
 import simcore.action.basicAction.StayForConditionAction;
 import simcore.action.basicAction.StayForTimeAction;
 import simcore.action.basicAction.TestAction;
+import simcore.action.basicAction.WaitAction;
 import simcore.action.basicAction.conditions.Condition;
 import simcore.action.basicAction.conditions.PossibilityCondition;
 import simcore.action.basicAction.conditions.SpaceatCondition;
@@ -57,17 +69,17 @@ import simcore.utilities.AStar;
  * These types of agents have the capacity to give orders to patients etc. 
  */
 public class Actor extends Agent {
-	  protected List<Patient> mlstMyPatients = new ArrayList<Patient>();
-	  protected List<Patient> mlstSeenPatients = new ArrayList<Patient>();
 	  protected int mintMyMaxPatients = 1;
-	
-	public Actor(ContinuousSpace<Object> space, Grid<Object> grid) {
-		super(space, grid);
-		this.isIdle = true;
-		this.curTimeCount = 0;
-		this.curCondition = null;
+	  protected Schedule schedule;
+	  protected Order curOrder;
 
-		// Traverse the ancestors of class to record all the Fields
+	
+	public Actor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
+		super(space, grid, context);
+		this.isIdle = true;
+		schedule = new Schedule();
+		
+	    // Traverse the ancestors of class to record all the Fields
 		fields = new ArrayList<Field>();
 
 		Class c = this.getClass();
@@ -89,8 +101,6 @@ public class Actor extends Agent {
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
 		super(space, grid, pstrStartLocation);
 		this.isIdle = true;
-		this.curTimeCount = 0;
-		this.curCondition = null;
 
 		// Traverse the ancestors of class to record all the Fields
 		fields = new ArrayList<Field>();
@@ -115,33 +125,107 @@ public class Actor extends Agent {
 	public void step() {
 		Perceive();
 	}
-
-	public void Perceive() {
-		// Read the Board
+	
+	public void Perceive() {	
 		Board board = ReadBoard();
-
+		// If I do not have a current active action, then select one
+		
 		if (isIdle) {
-			List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
-			List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
 			
-			// First see if there are any direct messages for me and prioritise those
-			Signal s = selectSignal(plstDirectSignals);
-			if(s == null) { // If none, select a generic message for my class type
-				s = selectSignal(plstSignals);
-			} else {
-				int iewv = 0;
-			}
-			
-			if (s == null) {
+			// Have I been given an order?
+			if(curOrder != null) {
+				myActiveAction = null; // Reset/Remove any independent actions, orders take priority
+				ExecOrder(curOrder);
 				return;
+			} 
+
+			List<Behaviour> plstReadyActions = myCurrentActions.stream().filter(a -> !(a.getCurrentStep() instanceof PassiveBehaviourStep)).collect(Collectors.toList());
+			
+			// If no active actions ongoing, then look for new signals
+			if(plstReadyActions.isEmpty()) {
+				Signal s = searchForSignals(board);
+				// If we now have a signal, build the action for which this signal is a trigger
+				if (s != null) {
+					board.board.remove(s);
+					isIdle = false;
+					Behaviour signalAction = BuildActionFromSignal(s);
+					if(signalAction != null && !(signalAction.getCurrentStep() instanceof PassiveBehaviourStep)) {
+						myCurrentActions.add(signalAction);
+						myActiveAction = signalAction;
+					}
+				}
+			} else {
+				Behaviour myCurrentAction = plstReadyActions.get(0);
+				myActiveAction = myCurrentAction;
 			}
-			board.board.remove(s);
-			isIdle = false;
-			SetMission(s);
-			InitMission();
-		} else {
-			ExecMission();
 		}
+
+		executeCurrentActions();
+	}
+	
+	public void TakeOrder(Order o) {
+		curOrder = o;
+	}
+
+	// Process an order given by a staff member
+	private void ExecOrder(Order order) {
+		if (order instanceof MoveToOrder) {
+			Object destination = ((MoveToOrder) order).getTarget();
+
+			MoveTowards(destination);
+
+			if (destination instanceof Room) {
+				Room targetLocation = (Room) destination;
+				
+				// if this agent is in the room..
+				if (targetLocation.WithInside(this)) {
+						if (((MoveToOrder) order).getOccupiable() != null) {
+						FindAnOccupiable(((MoveToOrder) order).getOccupiable());
+					}
+					iterateOrder();
+				}
+			} else {
+				if (ImAt(destination)) {
+					iterateOrder();
+				}
+			}
+
+		} else if (order instanceof FollowOrder) {
+			// follow the target
+			Object target = ((FollowOrder) order).getFollowTarget();
+			MoveTowards(target);
+		} else if (order instanceof StopOrder) {
+			iterateOrder();
+		} else if (order instanceof OccupyOrder) {
+			FindAnOccupiable(((OccupyOrder) order).getOccupiable());
+			iterateOrder();
+		}
+	}
+	
+	/**
+	 * Go to the next step in the Order - this may involve taking on a new order
+	 * This is used in cases of 'composite orders' e.g. Go to the DocOffice AND Take a Seat
+	 */
+	private void iterateOrder() {
+		curOrder = curOrder.getNextStep();
+	}
+
+	private Signal searchForSignals(Board board) {
+		// Read the board for signals, and find ones for me
+		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
+		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
+		
+		if(plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
+			return null;
+		}
+		
+		// First see if there are any direct messages for me and prioritise those
+		Signal s = selectSignal(plstDirectSignals);
+		if(s == null) { // If none, select a message for my class type
+			s = selectSignal(plstSignals);
+		}
+		
+		return s;
 	}
 	
 	// Behaviour to select signals. To be overridden in Actor subclasses
@@ -150,22 +234,26 @@ public class Actor extends Agent {
 			return null;
 		}
 				
-		// If I cant assign patient to myself, then I can just choose the first signal 
+		// If I can't assign patient to myself, then I can just choose the first signal 
 		if(mintMyMaxPatients == 0) {
 			return plstSignals.get(0);
 		}	
 		
-		Map<Signal, Patient> pMapSignalsWithMyPastPatients = new HashMap<Signal,Patient>();
-		Map<Signal, Patient> pMapSignalsWithFreePatients = new HashMap<Signal,Patient>();
-		Map<Signal, Patient> pMapSignalsWithMyPatients = new HashMap<Signal,Patient>();
+		Map<Signal, Object> pMapSignalsWithMyPastPatients = new HashMap<Signal,Object>();
+		Map<Signal, Object> pMapSignalsWithFreePatients = new HashMap<Signal,Object>();
+		Map<Signal, Object> pMapSignalsWithMyPatients = new HashMap<Signal,Object>();
+		
+		Network patientNetwork = (Network)context.getProjection("MyPatients");
+		Network seenPatientNetwork = (Network)context.getProjection("MySeenPatients");
 
 		for (Signal signal : plstSignals) {
-			Patient p = (Patient) signal.getDataOfType(Patient.class);
-			if(p != null && mlstMyPatients.contains(p)) {
+			Object p = signal.GetData("patient");
+			if(p != null && (patientNetwork.getEdge(this, p) != null) && patientNetwork.isAdjacent(this, p)) {
 				pMapSignalsWithMyPatients.put(signal, p);
-			} else if(p != null && mlstSeenPatients.contains(p)) {
+			} else if(p != null && (patientNetwork.getEdge(this, p) != null) && seenPatientNetwork.isAdjacent(this, p)) {
 				pMapSignalsWithMyPastPatients.put(signal, p);
-			} else if(p != null && p.getMyAssignedStaffOfType(this.getClass()).isEmpty()) {
+			} 
+			else if(p != null /**&& p.getMyAssignedStaffOfType(this.getClass()).isEmpty()*/) {
 				pMapSignalsWithFreePatients.put(signal, p);
 			}
 		}
@@ -180,11 +268,11 @@ public class Actor extends Agent {
 				return (Signal) pMapSignalsWithMyPastPatients.keySet().toArray()[0];
 			}
 			//Otherwise, I am waiting and see if I can take a new case in the meantime...
-			if(!pMapSignalsWithFreePatients.isEmpty() && mlstMyPatients.size() != mintMyMaxPatients) {
+			if(!pMapSignalsWithFreePatients.isEmpty() && patientNetwork.size() != mintMyMaxPatients) {
 				Signal pSignalNext = (Signal) pMapSignalsWithFreePatients.keySet().toArray()[0];
-				Patient pSignalPatient = pMapSignalsWithFreePatients.get(pSignalNext);
-				mlstMyPatients.add(pSignalPatient);
-				pSignalPatient.assignStaff(this);
+				Object pSignalPatient = pMapSignalsWithFreePatients.get(pSignalNext);
+				seenPatientNetwork.addEdge(this, pSignalPatient);
+//				pSignalPatient.assignStaff(this);
 				return pSignalNext;
 			}
 		}
@@ -193,124 +281,15 @@ public class Actor extends Agent {
 		return null;
 	}
 	
-	@Override
-	public void ExecMission() {
-//		System.out.println("-----------------------------------------");
-//		LogMission();
-		ActionStep curStep = curMission.getSteps().get(curActionStep);
+	public void removeRelationship(Agent target) {
+		Network patientNetwork = (Network)context.getProjection("MyPatients");
+		Network seenPatientNetwork = (Network)context.getProjection("MySeenPatients");
 
-		if (curStep instanceof ConsequenceStep) {
-			UpdateState(((ConsequenceStep) curStep).getConsequence());
-			NextStep();
-//			ExecMission();   //Removed because not sure why this is here - I think because we call next step() we should be able to carry on here. Maybe if there are multiple consequences this wouldnt work
-		}
-
-		// Get the current logic step and initialise it
-		ActionFragment stepLogic = curStep.getStepLogic();
-		InitActionFragment(stepLogic);
 		
-		// Discharge, End Visit Action
-		if(stepLogic instanceof DischargeAction) {
-			Patient p = ((DischargeAction)stepLogic).getPatient();
-			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
-			for (Actor actor : plstAssignedStaff) {
-				actor.deAssignPatient(p);
-			}
-			p.setDischarged();
-			NextStep();
-		}
-		
-		// Admit, End Visit Action
-		if(stepLogic instanceof AdmitAction) {
-			Patient p = ((AdmitAction)stepLogic).getPatient();
-			ArrayList<Actor> plstAssignedStaff = (ArrayList<Actor>) p.getMyAssignedStaff();
-			for (Actor actor : plstAssignedStaff) {
-				actor.deAssignPatient(p);
-			}
-			
-//			AdmissionBay pAdmisionBay = ((AdmitAction)stepLogic).getAdmissionBay();
-//			pAdmisionBay.admitPatient(p);
-			NextStep();
-		}
-		
-		// Move action
-		if (stepLogic instanceof MoveAction) {
-			MoveTo(((MoveAction) stepLogic).getDestinationObject());
-		}
-		
-		if(stepLogic instanceof OccupyAction) {
-			// If there is an occupiable free, move towards it
-			if(((OccupyAction) stepLogic).getConcreteDestination() != null) {
-				MoveTo(((OccupyAction) stepLogic).getConcreteDestination());
-			} else { // Otherwise, ToDO: Add behaviour here
-				NextStep();
-			}
-		}
-		
-		//Test Action
-//		if(stepLogic instanceof TestAction) {
-//			TestResult pTestResult = ((TestAction) stepLogic).getTest().TestPatient(((TestAction) stepLogic).getPatient(), 0.0);
-//			if(pTestResult.isInfected()) {
-//				
-//			}
-//			System.out.println("TEST RESULT: " + pTestResult);
-//			NextStep();
-//		}
-
-		// Stay Action
-		if (stepLogic instanceof StayAction) {
-			// Stay for some set time
-			if (stepLogic instanceof StayForTimeAction) {
-				curTimeCount--;
-				if (curTimeCount == 0) {
-					NextStep();
-					return;
-				} else {
-					return;
-				}
-			}
-
-			// Stay until some condition met
-			if (stepLogic instanceof StayForConditionAction) {
-				UpdateState(((StayForConditionAction) stepLogic).getConsequence());
-				if (CheckCondition(curCondition)) {
-					NextStep();
-					return;
-				} else {
-					return;
-				}
-			}
-		}
-
-		// Send Signal Action
-		if (stepLogic instanceof SendSignalAction) {
-			Signal s = ((SendSignalAction) stepLogic).getSignal();
-			Board b = ReadBoard();
-			b.PushMission(s);
-			NextStep();
-			return;
-		}
-
-		// Order Action
-		if (stepLogic instanceof OrderAction) {
-			Patient p = ((OrderAction) stepLogic).getOrderTarget();
-			Order o = ((OrderAction) stepLogic).getOrderContent();
-
-//			System.out.println("Order " + p + " To " + o);
-
-			p.TakeOrder(o);
-			NextStep();
-			return;
-		}
-//		System.out.println("-----------------------------------------");
-	}
-	
-	
-	private void deAssignPatient(Patient p) {
-		if(mlstMyPatients.contains(p)) {
-			mlstMyPatients.remove(p);
-			if(!mlstSeenPatients.contains(p)) {
-				mlstSeenPatients.add(p);
+		if(patientNetwork.isAdjacent(this, target)) {
+			patientNetwork.removeEdge(patientNetwork.getEdge(this, target));
+			if(!seenPatientNetwork.isAdjacent(this, target)) {
+				seenPatientNetwork.addEdge(this,target);
 			}
 		}
 	}
@@ -319,7 +298,8 @@ public class Actor extends Agent {
 	 * ToDo: Add more complex behaviour when assigning a new mission to myself
 	 * @param s Incoming signal to trigger a new Behaviour
 	 */
-	public void SetMission(Signal s) {
+	public Behaviour BuildActionFromSignal(Signal s) {
+		return null;
 
 	}
 

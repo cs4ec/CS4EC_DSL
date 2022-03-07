@@ -2,9 +2,8 @@ package simcore.action;
 
 public class ActionStep {
 	
-	private String name;
-	
-	private ActionFragment stepLogic;
+	protected String name;
+	protected ActionFragment stepLogic;
 	
 	public ActionStep() {
 		
@@ -25,6 +24,11 @@ public class ActionStep {
 		return this;
 	}
 	
+	// Is it possible for me to do something else whilst I complete this action step
+	// E.g. Waiting for a test result
+	public boolean isPassive() {
+		return stepLogic.isPassive;
+	}
 
 	public String getName() {
 		return name;

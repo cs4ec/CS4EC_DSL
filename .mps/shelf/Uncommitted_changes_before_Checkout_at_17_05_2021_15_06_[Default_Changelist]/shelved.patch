@@ -1,0 +1,1343 @@
+Index: RepastProject/EDProject/EDProject.rs/repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_2.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/EDProject.rs/repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_2.xml b/RepastProject/EDProject/EDProject.rs/repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_2.xml
+deleted file mode 100644
+--- a/RepastProject/EDProject/EDProject.rs/repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_2.xml	
++++ /dev/null	
+@@ -1,1 +0,0 @@
+-<string>EDLanguage.sandbox.EDBuilder</string>
+\ No newline at end of file
+Index: RepastProject/EDProject/EDProject.rs/repast.simphony.action.data_set_0.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/EDProject.rs/repast.simphony.action.data_set_0.xml b/RepastProject/EDProject/EDProject.rs/repast.simphony.action.data_set_0.xml
+deleted file mode 100644
+--- a/RepastProject/EDProject/EDProject.rs/repast.simphony.action.data_set_0.xml	
++++ /dev/null	
+@@ -1,328 +0,0 @@
+-<repast.simphony.data2.engine.DataSetDescriptor simphonyVersion="2.7.0">
+-  <name>A Data Set</name>
+-  <type>AGGREGATE</type>
+-  <inclTick>true</inclTick>
+-  <inclBatchRun>false</inclBatchRun>
+-  <inclRandomSeed>false</inclRandomSeed>
+-  <scheduleParams>
+-    <start>Infinity</start>
+-    <interval>0.0</interval>
+-    <priority>-Infinity</priority>
+-    <pType>LAST</pType>
+-    <duration>-1.0</duration>
+-    <frequency>ONE_TIME</frequency>
+-    <hashCode>1968132782</hashCode>
+-  </scheduleParams>
+-  <atEnd>false</atEnd>
+-  <methodDataSources class="linked-hash-map">
+-    <entry>
+-      <string>PositiveLFT</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>PositiveLFT</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>LFDPositive</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>NegativeLFT</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>NegativeLFT</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>LFDNegative</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Positive_Amber</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Positive_Amber</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>positiveAndAdmittedToAmber</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Negative_Amber</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Negative_Amber</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>negativeAndAdmittedToAmber</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Positive_Red</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Positive_Red</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>positiveAndAdmittedToRed</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Negative_Red</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Negative_Red</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>negativeAndAdmittedToRed</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Positive_Green</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Positive_Green</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>positiveAndAdmittedToGreen</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Negative_Green</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Negative_Green</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>negativeAndAdmittedToGreen</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Positive_SideRoom</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Positive_SideRoom</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>positiveAndAdmittedToSideRoom</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Negative_SideRoom</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Negative_SideRoom</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>negativeAndAdmittedToSIDEROOM</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Positive_Discharged</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Positive_Discharged</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>positiveAndDischarged</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Negative_Discharged</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Negative_Discharged</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>negativeAndDischarged</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>LFT_Total</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>LFT_Total</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>receivedLFD</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>LIAT_Total</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>LIAT_Total</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>receivedLIAT</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>PCR_Total</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>PCR_Total</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>receivedPCR</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Num_Symptomatic</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Num_Symptomatic</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>isSymptomatic</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Num_Asymptomatic</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Num_Asymptomatic</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>isAsymptomatic</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>TotalPatients</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>TotalPatients</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>getTotalPatients</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>CovPlusLFTPos</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>CovPlusLFTPos</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>COVPosLFTPos</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>CovNegLFTNeg</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>CovNegLFTNeg</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>CovNegLFTNeg</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>CovPosLFTNeg</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>CovPosLFTNeg</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>CovPosLFTNeg</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>CovNegLFTPos</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>CovNegLFTPos</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>CovNegLFTPos</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>LFTPosRed</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>LFTPosRed</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>LFDPositiveAndRed</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>LFTPosSideRoom</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>LFTPosSideRoom</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>LFDPositiveAndSideRoom</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>LFTNegRed</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>LFTNegRed</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>LFDNegativeAndRed</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>LFTNegSideRoom</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>LFTNegSideRoom</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>LFDNegativeAndSideRoom</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>LIATPositive</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>LIATPositive</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>LIATPositive</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>LIATNegative</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>LIATNegative</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>LIATNegative</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>COVPlusLIATPos</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>COVPlusLIATPos</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>COVPosLIATPos</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>COVPlusLIATNeg</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>COVPlusLIATNeg</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>CovPosLIATNeg</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>COVNegLIATPos</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>COVNegLIATPos</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>CovNegLIATPos</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>COVNegLIATNeg</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>COVNegLIATNeg</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>CovNegLIATNeg</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>InSideRoom</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>InSideRoom</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>isAdmittedToSideRoom</methodName>
+-        <aggType>SUM</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-    <entry>
+-      <string>Prevalence</string>
+-      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+-        <id>Prevalence</id>
+-        <className>simcore.agents.Patient</className>
+-        <methodName>Prevalence</methodName>
+-        <aggType>MEAN</aggType>
+-      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+-    </entry>
+-  </methodDataSources>
+-  <countSources class="linked-hash-map"/>
+-  <customNADataSources class="linked-hash-map"/>
+-  <customAggDataSources class="linked-hash-map"/>
+-</repast.simphony.data2.engine.DataSetDescriptor>
+\ No newline at end of file
+Index: RepastProject/EDProject/EDProject.rs/repast.simphony.action.file_sink_1.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/EDProject.rs/repast.simphony.action.file_sink_1.xml b/RepastProject/EDProject/EDProject.rs/repast.simphony.action.file_sink_1.xml
+deleted file mode 100644
+--- a/RepastProject/EDProject/EDProject.rs/repast.simphony.action.file_sink_1.xml	
++++ /dev/null	
+@@ -1,44 +0,0 @@
+-<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+-  <name>A File Sink</name>
+-  <dataSet>A Data Set</dataSet>
+-  <delimiter>,</delimiter>
+-  <format>TABULAR</format>
+-  <sourceIds class="linked-hash-set">
+-    <string>PositiveLFT</string>
+-    <string>NegativeLFT</string>
+-    <string>Positive_Amber</string>
+-    <string>Negative_Amber</string>
+-    <string>Positive_Red</string>
+-    <string>Negative_Red</string>
+-    <string>Positive_Green</string>
+-    <string>Negative_Green</string>
+-    <string>Positive_SideRoom</string>
+-    <string>Negative_SideRoom</string>
+-    <string>Positive_Discharged</string>
+-    <string>Negative_Discharged</string>
+-    <string>LFT_Total</string>
+-    <string>LIAT_Total</string>
+-    <string>PCR_Total</string>
+-    <string>Num_Symptomatic</string>
+-    <string>Num_Asymptomatic</string>
+-    <string>TotalPatients</string>
+-    <string>CovPlusLFTPos</string>
+-    <string>CovNegLFTNeg</string>
+-    <string>CovPosLFTNeg</string>
+-    <string>CovNegLFTPos</string>
+-    <string>LFTPosRed</string>
+-    <string>LFTPosSideRoom</string>
+-    <string>LFTNegRed</string>
+-    <string>LFTNegSideRoom</string>
+-    <string>LIATPositive</string>
+-    <string>LIATNegative</string>
+-    <string>COVPlusLIATPos</string>
+-    <string>COVPlusLIATNeg</string>
+-    <string>COVNegLIATPos</string>
+-    <string>COVNegLIATNeg</string>
+-    <string>InSideRoom</string>
+-    <string>Prevalence</string>
+-  </sourceIds>
+-  <fileName>PatientOutcomes</fileName>
+-  <addTimeStamp>false</addTimeStamp>
+-</repast.simphony.data2.engine.FileSinkDescriptor>
+\ No newline at end of file
+Index: RepastProject/EDProject/velocity.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>2021-03-29 20:28:50,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse\r\n2021-03-29 20:28:50,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Include\r\n2021-03-29 20:28:50,730 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach\r\n2021-03-29 20:28:50,745 - Created: 20 parsers.\r\n2021-03-29 20:28:50,745 - Velocimacro : initialization starting.\r\n2021-03-29 20:28:50,745 - Velocimacro : adding VMs from VM library template : VM_global_library.vm\r\n2021-03-29 20:28:50,745 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.\r\n2021-03-29 20:28:50,745 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'\r\n2021-03-29 20:28:50,745 - Velocimacro :  VM library template macro registration complete.\r\n2021-03-29 20:28:50,745 - Velocimacro : allowInline = true : VMs can be defined inline in templates\r\n2021-03-29 20:28:50,745 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions\r\n2021-03-29 20:28:50,745 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.\r\n2021-03-29 20:28:50,745 - Velocimacro : messages on  : VM system will output logging messages\r\n2021-03-29 20:28:50,745 - Velocimacro : autoload off  : VM system will not automatically reload global library macros\r\n2021-03-29 20:28:50,745 - Velocimacro : initialization complete.\r\n2021-03-29 20:28:50,745 - Velocity successfully started.\r\n2021-03-29 22:18:11,367 - SimpleLog4JLogSystem initialized using logfile 'velocity.log'\r\n2021-03-29 22:18:11,367 - ************************************************************** \r\n2021-03-29 22:18:11,367 - Starting Jakarta Velocity v1.4\r\n2021-03-29 22:18:11,367 - RuntimeInstance initializing.\r\n2021-03-29 22:18:11,367 - Default Properties File: org\\apache\\velocity\\runtime\\defaults\\velocity.properties\r\n2021-03-29 22:18:11,367 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem\r\n2021-03-29 22:18:11,367 - Using logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem\r\n2021-03-29 22:18:11,367 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)\r\n2021-03-29 22:18:11,378 - Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader\r\n2021-03-29 22:18:11,378 - ClasspathResourceLoader : initialization starting.\r\n2021-03-29 22:18:11,378 - ClasspathResourceLoader : initialization complete.\r\n2021-03-29 22:18:11,378 - ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)\r\n2021-03-29 22:18:11,378 - Default ResourceManager initialization complete.\r\n2021-03-29 22:18:11,378 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal\r\n2021-03-29 22:18:11,378 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro\r\n2021-03-29 22:18:11,378 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse\r\n2021-03-29 22:18:11,378 - Loaded System Directive: org.apache.velocity.runtime.directive.Include\r\n2021-03-29 22:18:11,383 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach\r\n2021-03-29 22:18:11,397 - Created: 20 parsers.\r\n2021-03-29 22:18:11,405 - Velocimacro : initialization starting.\r\n2021-03-29 22:18:11,405 - Velocimacro : adding VMs from VM library template : VM_global_library.vm\r\n2021-03-29 22:18:11,405 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.\r\n2021-03-29 22:18:11,405 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'\r\n2021-03-29 22:18:11,405 - Velocimacro :  VM library template macro registration complete.\r\n2021-03-29 22:18:11,405 - Velocimacro : allowInline = true : VMs can be defined inline in templates\r\n2021-03-29 22:18:11,405 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions\r\n2021-03-29 22:18:11,405 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.\r\n2021-03-29 22:18:11,405 - Velocimacro : messages on  : VM system will output logging messages\r\n2021-03-29 22:18:11,405 - Velocimacro : autoload off  : VM system will not automatically reload global library macros\r\n2021-03-29 22:18:11,405 - Velocimacro : initialization complete.\r\n2021-03-29 22:18:11,405 - Velocity successfully started.\r\n2021-03-30 16:00:26,953 - SimpleLog4JLogSystem initialized using logfile 'velocity.log'\r\n2021-03-30 16:00:26,953 - ************************************************************** \r\n2021-03-30 16:00:26,953 - Starting Jakarta Velocity v1.4\r\n2021-03-30 16:00:26,953 - RuntimeInstance initializing.\r\n2021-03-30 16:00:26,953 - Default Properties File: org\\apache\\velocity\\runtime\\defaults\\velocity.properties\r\n2021-03-30 16:00:26,953 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem\r\n2021-03-30 16:00:26,953 - Using logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem\r\n2021-03-30 16:00:26,955 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)\r\n2021-03-30 16:00:26,956 - Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader\r\n2021-03-30 16:00:26,956 - ClasspathResourceLoader : initialization starting.\r\n2021-03-30 16:00:26,956 - ClasspathResourceLoader : initialization complete.\r\n2021-03-30 16:00:26,957 - ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)\r\n2021-03-30 16:00:26,957 - Default ResourceManager initialization complete.\r\n2021-03-30 16:00:26,958 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal\r\n2021-03-30 16:00:26,958 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro\r\n2021-03-30 16:00:26,959 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse\r\n2021-03-30 16:00:26,960 - Loaded System Directive: org.apache.velocity.runtime.directive.Include\r\n2021-03-30 16:00:26,960 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach\r\n2021-03-30 16:00:26,974 - Created: 20 parsers.\r\n2021-03-30 16:00:26,976 - Velocimacro : initialization starting.\r\n2021-03-30 16:00:26,976 - Velocimacro : adding VMs from VM library template : VM_global_library.vm\r\n2021-03-30 16:00:26,978 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.\r\n2021-03-30 16:00:26,978 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'\r\n2021-03-30 16:00:26,978 - Velocimacro :  VM library template macro registration complete.\r\n2021-03-30 16:00:26,978 - Velocimacro : allowInline = true : VMs can be defined inline in templates\r\n2021-03-30 16:00:26,978 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions\r\n2021-03-30 16:00:26,978 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.\r\n2021-03-30 16:00:26,978 - Velocimacro : messages on  : VM system will output logging messages\r\n2021-03-30 16:00:26,978 - Velocimacro : autoload off  : VM system will not automatically reload global library macros\r\n2021-03-30 16:00:26,978 - Velocimacro : initialization complete.\r\n2021-03-30 16:00:26,978 - Velocity successfully started.\r\n2021-03-30 18:10:59,749 - SimpleLog4JLogSystem initialized using logfile 'velocity.log'\r\n2021-03-30 18:10:59,749 - ************************************************************** \r\n2021-03-30 18:10:59,749 - Starting Jakarta Velocity v1.4\r\n2021-03-30 18:10:59,749 - RuntimeInstance initializing.\r\n2021-03-30 18:10:59,749 - Default Properties File: org\\apache\\velocity\\runtime\\defaults\\velocity.properties\r\n2021-03-30 18:10:59,749 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem\r\n2021-03-30 18:10:59,749 - Using logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem\r\n2021-03-30 18:10:59,754 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)\r\n2021-03-30 18:10:59,754 - Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader\r\n2021-03-30 18:10:59,754 - ClasspathResourceLoader : initialization starting.\r\n2021-03-30 18:10:59,754 - ClasspathResourceLoader : initialization complete.\r\n2021-03-30 18:10:59,754 - ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)\r\n2021-03-30 18:10:59,754 - Default ResourceManager initialization complete.\r\n2021-03-30 18:10:59,754 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal\r\n2021-03-30 18:10:59,754 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro\r\n2021-03-30 18:10:59,759 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse\r\n2021-03-30 18:10:59,759 - Loaded System Directive: org.apache.velocity.runtime.directive.Include\r\n2021-03-30 18:10:59,759 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach\r\n2021-03-30 18:10:59,774 - Created: 20 parsers.\r\n2021-03-30 18:10:59,774 - Velocimacro : initialization starting.\r\n2021-03-30 18:10:59,774 - Velocimacro : adding VMs from VM library template : VM_global_library.vm\r\n2021-03-30 18:10:59,779 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.\r\n2021-03-30 18:10:59,779 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'\r\n2021-03-30 18:10:59,779 - Velocimacro :  VM library template macro registration complete.\r\n2021-03-30 18:10:59,779 - Velocimacro : allowInline = true : VMs can be defined inline in templates\r\n2021-03-30 18:10:59,779 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions\r\n2021-03-30 18:10:59,779 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.\r\n2021-03-30 18:10:59,779 - Velocimacro : messages on  : VM system will output logging messages\r\n2021-03-30 18:10:59,779 - Velocimacro : autoload off  : VM system will not automatically reload global library macros\r\n2021-03-30 18:10:59,779 - Velocimacro : initialization complete.\r\n2021-03-30 18:10:59,779 - Velocity successfully started.\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/velocity.log b/RepastProject/EDProject/velocity.log
+--- a/RepastProject/EDProject/velocity.log	
++++ b/RepastProject/EDProject/velocity.log	
+@@ -107,3 +107,96 @@
+ 2021-03-30 18:10:59,779 - Velocimacro : autoload off  : VM system will not automatically reload global library macros
+ 2021-03-30 18:10:59,779 - Velocimacro : initialization complete.
+ 2021-03-30 18:10:59,779 - Velocity successfully started.
++2021-05-17 12:15:22,854 - SimpleLog4JLogSystem initialized using logfile 'velocity.log'
++2021-05-17 12:15:22,854 - ************************************************************** 
++2021-05-17 12:15:22,854 - Starting Jakarta Velocity v1.4
++2021-05-17 12:15:22,854 - RuntimeInstance initializing.
++2021-05-17 12:15:22,854 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
++2021-05-17 12:15:22,854 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
++2021-05-17 12:15:22,854 - Using logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
++2021-05-17 12:15:22,862 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
++2021-05-17 12:15:22,862 - Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
++2021-05-17 12:15:22,862 - ClasspathResourceLoader : initialization starting.
++2021-05-17 12:15:22,862 - ClasspathResourceLoader : initialization complete.
++2021-05-17 12:15:22,862 - ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
++2021-05-17 12:15:22,862 - Default ResourceManager initialization complete.
++2021-05-17 12:15:22,862 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
++2021-05-17 12:15:22,862 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
++2021-05-17 12:15:22,862 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
++2021-05-17 12:15:22,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
++2021-05-17 12:15:22,870 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
++2021-05-17 12:15:22,894 - Created: 20 parsers.
++2021-05-17 12:15:22,894 - Velocimacro : initialization starting.
++2021-05-17 12:15:22,894 - Velocimacro : adding VMs from VM library template : VM_global_library.vm
++2021-05-17 12:15:22,894 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
++2021-05-17 12:15:22,894 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
++2021-05-17 12:15:22,894 - Velocimacro :  VM library template macro registration complete.
++2021-05-17 12:15:22,894 - Velocimacro : allowInline = true : VMs can be defined inline in templates
++2021-05-17 12:15:22,894 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
++2021-05-17 12:15:22,894 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
++2021-05-17 12:15:22,894 - Velocimacro : messages on  : VM system will output logging messages
++2021-05-17 12:15:22,894 - Velocimacro : autoload off  : VM system will not automatically reload global library macros
++2021-05-17 12:15:22,894 - Velocimacro : initialization complete.
++2021-05-17 12:15:22,894 - Velocity successfully started.
++2021-05-17 12:15:25,111 - SimpleLog4JLogSystem initialized using logfile 'velocity.log'
++2021-05-17 12:15:25,111 - ************************************************************** 
++2021-05-17 12:15:25,111 - Starting Jakarta Velocity v1.4
++2021-05-17 12:15:25,111 - RuntimeInstance initializing.
++2021-05-17 12:15:25,111 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
++2021-05-17 12:15:25,111 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
++2021-05-17 12:15:25,111 - Using logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
++2021-05-17 12:15:25,111 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
++2021-05-17 12:15:25,119 - Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
++2021-05-17 12:15:25,119 - ClasspathResourceLoader : initialization starting.
++2021-05-17 12:15:25,119 - ClasspathResourceLoader : initialization complete.
++2021-05-17 12:15:25,119 - ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
++2021-05-17 12:15:25,119 - Default ResourceManager initialization complete.
++2021-05-17 12:15:25,119 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
++2021-05-17 12:15:25,119 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
++2021-05-17 12:15:25,119 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
++2021-05-17 12:15:25,119 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
++2021-05-17 12:15:25,127 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
++2021-05-17 12:15:25,159 - Created: 20 parsers.
++2021-05-17 12:15:25,159 - Velocimacro : initialization starting.
++2021-05-17 12:15:25,159 - Velocimacro : adding VMs from VM library template : VM_global_library.vm
++2021-05-17 12:15:25,167 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
++2021-05-17 12:15:25,167 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
++2021-05-17 12:15:25,167 - Velocimacro :  VM library template macro registration complete.
++2021-05-17 12:15:25,167 - Velocimacro : allowInline = true : VMs can be defined inline in templates
++2021-05-17 12:15:25,167 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
++2021-05-17 12:15:25,167 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
++2021-05-17 12:15:25,167 - Velocimacro : messages on  : VM system will output logging messages
++2021-05-17 12:15:25,167 - Velocimacro : autoload off  : VM system will not automatically reload global library macros
++2021-05-17 12:15:25,167 - Velocimacro : initialization complete.
++2021-05-17 12:15:25,167 - Velocity successfully started.
++2021-05-17 12:15:53,312 - SimpleLog4JLogSystem initialized using logfile 'velocity.log'
++2021-05-17 12:15:53,312 - ************************************************************** 
++2021-05-17 12:15:53,312 - Starting Jakarta Velocity v1.4
++2021-05-17 12:15:53,312 - RuntimeInstance initializing.
++2021-05-17 12:15:53,312 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
++2021-05-17 12:15:53,320 - Trying to use logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
++2021-05-17 12:15:53,320 - Using logger class org.apache.velocity.runtime.log.SimpleLog4JLogSystem
++2021-05-17 12:15:53,320 - Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
++2021-05-17 12:15:53,320 - Resource Loader Instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
++2021-05-17 12:15:53,320 - ClasspathResourceLoader : initialization starting.
++2021-05-17 12:15:53,320 - ClasspathResourceLoader : initialization complete.
++2021-05-17 12:15:53,320 - ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
++2021-05-17 12:15:53,320 - Default ResourceManager initialization complete.
++2021-05-17 12:15:53,320 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
++2021-05-17 12:15:53,320 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
++2021-05-17 12:15:53,328 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
++2021-05-17 12:15:53,328 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
++2021-05-17 12:15:53,328 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
++2021-05-17 12:15:53,344 - Created: 20 parsers.
++2021-05-17 12:15:53,352 - Velocimacro : initialization starting.
++2021-05-17 12:15:53,352 - Velocimacro : adding VMs from VM library template : VM_global_library.vm
++2021-05-17 12:15:53,352 - ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
++2021-05-17 12:15:53,352 - Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
++2021-05-17 12:15:53,352 - Velocimacro :  VM library template macro registration complete.
++2021-05-17 12:15:53,352 - Velocimacro : allowInline = true : VMs can be defined inline in templates
++2021-05-17 12:15:53,352 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
++2021-05-17 12:15:53,352 - Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
++2021-05-17 12:15:53,352 - Velocimacro : messages on  : VM system will output logging messages
++2021-05-17 12:15:53,352 - Velocimacro : autoload off  : VM system will not automatically reload global library macros
++2021-05-17 12:15:53,352 - Velocimacro : initialization complete.
++2021-05-17 12:15:53,352 - Velocity successfully started.
+Index: solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package EDLanguage.Runner.RepastMain;\r\n\r\n/*Generated by MPS */\r\n\r\nimport repast.simphony.runtime.RepastMain;\r\nimport edHello.logNote.LogNote;\r\nimport java.io.File;\r\nimport java.io.InputStream;\r\nimport java.io.OutputStream;\r\nimport java.io.FileInputStream;\r\nimport java.io.FileOutputStream;\r\n\r\npublic class MyRunner {\r\n  public static void main(String[] args) {\r\n\r\n    String[] argos = new String[1];\r\n\r\n    String inputPath = \"C:\\\\Users\\\\w2037451\\\\Documents\\\\HelloAgent\\\\\";\r\n\r\n    String projectPath = \"\";\r\n\r\n\r\n    String[] paths = inputPath.split(\"\\\\\\\\\");\r\n    for (int i = 0; i < paths.length; i++) {\r\n      projectPath += paths[i];\r\n      projectPath += \"\\\\\";\r\n    }\r\n\r\n    System.out.println(\"Execution start on: \" + projectPath);\r\n\r\n    try {\r\n\r\n      System.out.println(\"--------------------------------------------------------------------\");\r\n      System.out.println(\"Generate Repast project:\");\r\n      new MyRunner().DoGenerateProject(projectPath);\r\n      System.out.println(\"Repast generation success;\");\r\n      System.out.println(\"--------------------------------------------------------------------\");\r\n      System.out.println(\"\");\r\n      System.out.println(\"--------------------------------------------------------------------\");\r\n      System.out.println(\"Call Repast Main function:\");\r\n      argos[0] = MyRunner.GeneratePath(projectPath) + \"RepastProject/EDProject/EDProject.rs\";\r\n      RepastMain.main(argos);\r\n      System.out.println(\"Success; initialization finished.\");\r\n      System.out.println(\"Project start running.\");\r\n      System.out.println(\"--------------------------------------------------------------------\");\r\n\r\n    } catch (Exception e) {\r\n      System.out.println(\"Fail\");\r\n\r\n      e.printStackTrace();\r\n    }\r\n\r\n  }\r\n\r\n  public void DoGenerateProject(String baseProjectPath) {\r\n\r\n    // Set log path \r\n    LogNote.GetUniqueLog().SetAddress(baseProjectPath);\r\n    System.out.println(\"Log generated at: \" + LogNote.GetUniqueLog().GetAddress() + \"output\\\\\");\r\n\r\n    // clear former logs \r\n    ClearDir(LogNote.GetUniqueLog().GetAddress() + \"output\\\\\");\r\n\r\n    String classPathOld = \"languages\\\\EDLanguage\\\\sandbox\\\\classes_gen\\\\EDLanguage\\\\sandbox\\\\\";\r\n    String classPath = \"C:\\\\Users\\\\w2037451\\\\Documents\\\\HelloAgent\\\\languages\\\\EDLanguage\\\\EDLanguage.sandbox.LFTOnly\\\\classes_gen\\\\EDLanguage\\\\sandbox\\\\\";\r\n    String classPathAfter = \"RepastProject\\\\EDProject\\\\bin\\\\EDLanguage\\\\sandbox\\\\\";\r\n\r\n    String javaPathOld = \"languages\\\\EDLanguage\\\\sandbox\\\\source_gen\\\\EDLanguage\\\\sandbox\\\\\";\r\n    String javaPath = \"C:\\\\Users\\\\w2037451\\\\Documents\\\\HelloAgent\\\\languages\\\\EDLanguage\\\\EDLanguage.sandbox.LFTOnly\\\\source_gen\\\\EDLanguage\\\\sandbox\\\\\";\r\n    String javaPathAfter = \"RepastProject\\\\EDProject\\\\src\\\\EDLanguage\\\\sandbox\\\\\";\r\n\r\n    System.out.println(\"Generating files:\");\r\n    System.out.println(\"ClassPath: \" + classPath);\r\n    System.out.println(\"Base+After: \" + baseProjectPath + classPathOld);\r\n    Transfer(classPath, baseProjectPath + classPathAfter);\r\n    Transfer(javaPath, baseProjectPath + javaPathAfter);\r\n  }\r\n\r\n  public static String GeneratePath(String s) {\r\n    String GeneratedPath = \"\";\r\n    String[] args = s.split(\"\\\\\\\\\");\r\n    for (int i = 0; i < args.length; i++) {\r\n      GeneratedPath += args[i];\r\n      GeneratedPath += \"/\";\r\n    }\r\n\r\n    return GeneratedPath;\r\n  }\r\n\r\n\r\n  public void Transfer(String before, String after) {\r\n    File targetDir = new File(after);\r\n    File[] baseFiles = null;\r\n\r\n    if (targetDir.isDirectory()) {\r\n\r\n      if (after.endsWith(\"EDLanguage\\\\sandbox\\\\\")) {\r\n        baseFiles = targetDir.listFiles();\r\n        for (int i = 0; i < baseFiles.length; i++) {\r\n          if (baseFiles[i].isFile()) {\r\n            baseFiles[i].delete();\r\n          }\r\n        }\r\n      } else {\r\n        System.out.println(\"Clear dir failed!\");\r\n      }\r\n\r\n      File file = new File(before);\r\n      File[] files = null;\r\n\r\n      if (file.isDirectory()) {\r\n        files = file.listFiles();\r\n      }\r\n\r\n\r\n      try {\r\n\r\n        for (int i = 0; i < files.length; i++) {\r\n          File aFile = new File(files[i].getPath());\r\n          if (aFile.isDirectory()) {\r\n            continue;\r\n          }\r\n\r\n          InputStream in = null;\r\n          OutputStream out = null;\r\n\r\n          in = new FileInputStream(aFile);\r\n          out = new FileOutputStream(new File(after + aFile.getName()));\r\n\r\n          byte[] buffer = new byte[20480];\r\n          int len;\r\n\r\n          while ((len = in.read(buffer)) > 0) {\r\n            out.write(buffer, 0, len);\r\n          }\r\n\r\n          in.close();\r\n          out.close();\r\n          System.out.print(aFile.getName() + \"; \");\r\n\r\n        }\r\n        System.out.println(\"\");\r\n      } catch (Exception e) {\r\n        System.out.println(\"File failed to move!\");\r\n        e.printStackTrace();\r\n      }\r\n\r\n    }\r\n\r\n\r\n  }\r\n\r\n\r\n  public void ClearDir(String addr) {\r\n    if (!(addr.endsWith(\"output\\\\\"))) {\r\n      System.out.println(\"Clear failed: Stop\");\r\n      return;\r\n    }\r\n\r\n    try {\r\n      File targetDir = new File(addr);\r\n      File[] baseFiles = null;\r\n      if (targetDir.isDirectory()) {\r\n        baseFiles = targetDir.listFiles();\r\n        for (int i = 0; i < baseFiles.length; i++) {\r\n          if (baseFiles[i].isFile()) {\r\n            baseFiles[i].delete();\r\n          }\r\n        }\r\n\r\n      }\r\n\r\n    } catch (Exception e) {\r\n      e.printStackTrace();\r\n    }\r\n  }\r\n\r\n\r\n\r\n\r\n\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java b/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java
+--- a/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java	
++++ b/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java	
+@@ -62,11 +62,11 @@
+     ClearDir(LogNote.GetUniqueLog().GetAddress() + "output\\");
+ 
+     String classPathOld = "languages\\EDLanguage\\sandbox\\classes_gen\\EDLanguage\\sandbox\\";
+-    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\languages\\EDLanguage\\EDLanguage.sandbox.LFTOnly\\classes_gen\\EDLanguage\\sandbox\\";
++    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\languages\\EDLanguage\\EDLanguage.sandbox.OnlyLFT\\classes_gen\\EDLanguage\\sandbox\\";
+     String classPathAfter = "RepastProject\\EDProject\\bin\\EDLanguage\\sandbox\\";
+ 
+     String javaPathOld = "languages\\EDLanguage\\sandbox\\source_gen\\EDLanguage\\sandbox\\";
+-    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\languages\\EDLanguage\\EDLanguage.sandbox.LFTOnly\\source_gen\\EDLanguage\\sandbox\\";
++    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\languages\\EDLanguage\\EDLanguage.sandbox.OnlyLFT\\source_gen\\EDLanguage\\sandbox\\";
+     String javaPathAfter = "RepastProject\\EDProject\\src\\EDLanguage\\sandbox\\";
+ 
+     System.out.println("Generating files:");
+Index: RepastProject/EDProject/src/EDLanguage/sandbox/Doctor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package EDLanguage.sandbox;\r\n\r\n/*Generated by MPS */\r\n\r\nimport repast.simphony.space.continuous.ContinuousSpace;\r\nimport repast.simphony.space.grid.Grid;\r\nimport simcore.Signals.Signal;\r\nimport simcore.action.Action;\r\nimport simcore.action.ActionStep;\r\nimport simcore.action.basicAction.MoveAction;\r\nimport simcore.action.basicAction.OccupyAction;\r\nimport simcore.basicStructures.Desk;\r\nimport simcore.action.basicAction.OrderAction;\r\nimport simcore.agents.Patient;\r\nimport simcore.Signals.Orders.MoveToOrder;\r\nimport simcore.action.basicAction.StayForTimeAction;\r\nimport simcore.action.basicAction.SendSignalAction;\r\nimport simcore.action.basicAction.conditions.PossibilityCondition;\r\nimport simcore.action.basicAction.conditions.InfectionCondition;\r\nimport simcore.diagnosis.InfectionStatus;\r\nimport simcore.action.basicAction.conditions.ResultCondition;\r\nimport simcore.action.basicAction.conditions.SuitableForSideRoomCondition;\r\nimport simcore.basicStructures.Room;\r\nimport simcore.action.basicAction.DischargeAction;\r\n\r\npublic class Doctor extends Staff {\r\n\r\n  public double groupStress = Double.parseDouble(\"\" + \"0\");\r\n\r\n  public Doctor(ContinuousSpace<Object> space, Grid<Object> grid) {\r\n    super(space, grid);\r\n    mintMyMaxPatients = 3;\r\n  }\r\n\r\n  public Doctor(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {\r\n    super(space, grid, pstrStartLocation);\r\n  }\r\n\r\n  public void SetMission(Signal s) {\r\n    switch (s.getName()) {\r\n      case \"\":\r\n        break;\r\n      case \"PatientWaitingForDoctor\":\r\n        curMission = new Action(\"InitialObsevations\");\r\n        this.InitInitialObsevations(s);\r\n        break;\r\n      case \"PatientNeedsFinalConsutlation\":\r\n        curMission = new Action(\"GiveConsultation\");\r\n        this.InitGiveConsultation(s);\r\n        break;\r\n      case \"LFDComplete\":\r\n        curMission = new Action(\"LFDCompleted\");\r\n        this.InitLFDCompleted(s);\r\n        break;\r\n      case \"LIATComplete\":\r\n        curMission = new Action(\"LIATResult\");\r\n        this.InitLIATResult(s);\r\n        break;\r\n      default:\r\n        System.out.println(\"Set mission: \" + s.getName() + \" failed!\");\r\n        return;\r\n    }\r\n    curActionStep = 0;\r\n  }\r\n\r\n  public void InitInitialObsevations(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OccupyAction().WithTarget(Desk.class)));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OrderAction().WithPatient(((Patient) s.GetData(\"patient\"))).WithOrder(new MoveToOrder().WithDestination(this))));\r\n    curMission.WithStep(new ActionStep().WithName(\"Inspect the patient\").WithAction(new StayForTimeAction().WithTimeSpan(300)));\r\n    this.InitDecideOnPatientPathway(s);\r\n\r\n  }\r\n  public void InitOrderXRay(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OrderAction().WithPatient(((Patient) s.GetData(\"patient\"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace(\"MajorsWaitingRoom\")))));\r\n    sendSignalTemp = new XRaySignal();\r\n    sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n    sendSignalTemp.AddData(\"returnTo\", ReadMap().FindPlace(\"MajorsWaitingRoom\"));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n\r\n  }\r\n  public void InitDecideOnPatientPathway(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    if (CheckCondition(new PossibilityCondition().WithPossibility(70))) {\r\n      this.InitOrderBloodTest(s);\r\n    } else {\r\n      this.InitOrderXRay(s);\r\n    }\r\n\r\n  }\r\n  public void InitOrderBloodTest(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OrderAction().WithPatient(((Patient) s.GetData(\"patient\"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace(\"MajorsWaitingRoom\")))));\r\n    sendSignalTemp = new PatientNeedsBloodTestSignal();\r\n    sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n    sendSignalTemp.AddData(\"returnTo\", ReadMap().FindPlace(\"MajorsWaitingRoom\"));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n\r\n  }\r\n  public void InitGiveConsultation(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(DoctorOffice.getInstance())));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OccupyAction().WithTarget(Desk.class)));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OrderAction().WithPatient(((Patient) s.GetData(\"patient\"))).WithOrder(new MoveToOrder().WithDestination(this))));\r\n    curMission.WithStep(new ActionStep().WithName(\"The Doctor gives a final consultation with the Patient for 5 minutes\").WithAction(new StayForTimeAction().WithTimeSpan(300)));\r\n    if (CheckCondition(new PossibilityCondition().WithPossibility(18))) {\r\n      if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData(\"patient\")).WithTest(InfectionStatus.Symptomatic))) {\r\n        sendSignalTemp = new ConductLIATSignal();\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        sendSignalTemp.AddData(\"replyTo\", this);\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      } else {\r\n        sendSignalTemp = new ConductLFDSignal();\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        sendSignalTemp.AddData(\"replyTo\", this);\r\n        curMission.WithStep(new ActionStep().WithName(\"18% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      }\r\n    } else {\r\n      this.InitDischargePatient(s);\r\n    }\r\n\r\n  }\r\n  public void InitLFDCompleted(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(s.GetData(\"patient\"))));\r\n    curMission.WithStep(new ActionStep().WithName(\"Consult with patient on LFT result\").WithAction(new StayForTimeAction().WithTimeSpan(180)));\r\n    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData(\"patient\")).WithTest(SURESCREEN.getInstance()).WithResult(true))) {\r\n      curMission.WithStep(new ActionStep().WithName(\"Take a LIAT swab\").WithAction(new StayForTimeAction().WithTimeSpan(120)));\r\n      curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));\r\n      sendSignalTemp = new ConductLIATSignal();\r\n      sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n      sendSignalTemp.AddData(\"replyTo\", this);\r\n      curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n    } else {\r\n      sendSignalTemp = new AdmitPatientSignal();\r\n      sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"AmberBay\"));\r\n      sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n      curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n    }\r\n\r\n  }\r\n  public void InitLIATResult(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));\r\n    curMission.WithStep(new ActionStep().WithName(\"Collect the sample\").WithAction(new StayForTimeAction().WithTimeSpan(60)));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(s.GetData(\"patient\"))));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OccupyAction().WithTarget(Desk.class)));\r\n    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData(\"patient\")).WithTest(LIAT.getInstance()).WithResult(true))) {\r\n      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData(\"patient\")).WithAlternativeBay((Room) ReadMap().FindPlace(\"RedBay\")))) {\r\n        sendSignalTemp = new AdmitPatientSignal();\r\n        sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"SideRoom\"));\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      } else {\r\n        sendSignalTemp = new AdmitPatientSignal();\r\n        sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"RedBay\"));\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      }\r\n    } else {\r\n      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData(\"patient\")).WithAlternativeBay((Room) ReadMap().FindPlace(\"AmberBay\")))) {\r\n        sendSignalTemp = new AdmitPatientSignal();\r\n        sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"SideRoom\"));\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      } else {\r\n        sendSignalTemp = new AdmitPatientSignal();\r\n        sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"AmberBay\"));\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      }\r\n    }\r\n\r\n  }\r\n  public void InitDischargePatient(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData(\"patient\")))));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OrderAction().WithPatient(((Patient) s.GetData(\"patient\"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace(\"Entrance\")))));\r\n\r\n  }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/src/EDLanguage/sandbox/Doctor.java b/RepastProject/EDProject/src/EDLanguage/sandbox/Doctor.java
+--- a/RepastProject/EDProject/src/EDLanguage/sandbox/Doctor.java	
++++ b/RepastProject/EDProject/src/EDLanguage/sandbox/Doctor.java	
+@@ -19,8 +19,6 @@
+ import simcore.action.basicAction.conditions.InfectionCondition;
+ import simcore.diagnosis.InfectionStatus;
+ import simcore.action.basicAction.conditions.ResultCondition;
+-import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
+-import simcore.basicStructures.Room;
+ import simcore.action.basicAction.DischargeAction;
+ 
+ public class Doctor extends Staff {
+@@ -52,9 +50,13 @@
+         curMission = new Action("LFDCompleted");
+         this.InitLFDCompleted(s);
+         break;
+-      case "LIATComplete":
+-        curMission = new Action("LIATResult");
+-        this.InitLIATResult(s);
++      case "PCRComplete":
++        curMission = new Action("PCRResult");
++        this.InitPCRResult(s);
++        break;
++      case "LIATCompleteTrackAndTrace":
++        curMission = new Action("LIATTrackAndTrace");
++        this.InitLIATTrackAndTrace(s);
+         break;
+       default:
+         System.out.println("Set mission: " + s.getName() + " failed!");
+@@ -117,7 +119,7 @@
+     curMission.WithStep(new ActionStep().WithName("The Doctor gives a final consultation with the Patient for 5 minutes").WithAction(new StayForTimeAction().WithTimeSpan(300)));
+     if (CheckCondition(new PossibilityCondition().WithPossibility(18))) {
+       if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
+-        sendSignalTemp = new ConductLIATSignal();
++        sendSignalTemp = new RequestPCRSignal();
+         sendSignalTemp.AddData("patient", s.GetData("patient"));
+         sendSignalTemp.AddData("replyTo", this);
+         curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+@@ -128,7 +130,16 @@
+         curMission.WithStep(new ActionStep().WithName("18% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+       }
+     } else {
+-      this.InitDischargePatient(s);
++      if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
++        curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
++        curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
++        sendSignalTemp = new ConductLIATTrackAndTraceSignal();
++        sendSignalTemp.AddData("patient", s.GetData("patient"));
++        sendSignalTemp.AddData("replyTo", this);
++        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
++      } else {
++        this.InitDischargePatient(s);
++      }
+     }
+ 
+   }
+@@ -140,52 +151,36 @@
+     curMission.WithStep(new ActionStep().WithName("Consult with patient on LFT result").WithAction(new StayForTimeAction().WithTimeSpan(180)));
+     if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(SURESCREEN.getInstance()).WithResult(true))) {
+       curMission.WithStep(new ActionStep().WithName("Take a LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+-      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+-      sendSignalTemp = new ConductLIATSignal();
++      sendSignalTemp = new RequestPCRSignal();
+       sendSignalTemp.AddData("patient", s.GetData("patient"));
+       sendSignalTemp.AddData("replyTo", this);
+       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-    } else {
+       sendSignalTemp = new AdmitPatientSignal();
+-      sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
+       sendSignalTemp.AddData("patient", s.GetData("patient"));
+-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-    }
+-
+-  }
+-  public void InitLIATResult(Signal s) {
+-
+-    Signal sendSignalTemp = new Signal();
+-
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+-    curMission.WithStep(new ActionStep().WithName("Collect the sample").WithAction(new StayForTimeAction().WithTimeSpan(60)));
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+-    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
+-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("RedBay")))) {
+-        sendSignalTemp = new AdmitPatientSignal();
+-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+-        sendSignalTemp.AddData("patient", s.GetData("patient"));
+-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-      } else {
+-        sendSignalTemp = new AdmitPatientSignal();
+-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("RedBay"));
+-        sendSignalTemp.AddData("patient", s.GetData("patient"));
+-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-      }
++      sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
++      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+     } else {
+-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("AmberBay")))) {
+-        sendSignalTemp = new AdmitPatientSignal();
+-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+-        sendSignalTemp.AddData("patient", s.GetData("patient"));
+-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-      } else {
+-        sendSignalTemp = new AdmitPatientSignal();
+-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
+-        sendSignalTemp.AddData("patient", s.GetData("patient"));
+-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-      }
+-    }
++      sendSignalTemp = new AdmitPatientSignal();
++      sendSignalTemp.AddData("patient", s.GetData("patient"));
++      sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
++      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
++    }
++
++  }
++  public void InitPCRResult(Signal s) {
++
++    Signal sendSignalTemp = new Signal();
++
++    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
++
++  }
++  public void InitLIATTrackAndTrace(Signal s) {
++
++    Signal sendSignalTemp = new Signal();
++
++    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
++    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
++    this.InitDischargePatient(s);
+ 
+   }
+   public void InitDischargePatient(Signal s) {
+Index: .mps/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"BookmarksTool\">\r\n    <option name=\"myTreeState\">\r\n      <TreeState />\r\n    </option>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"d6cb34ac-6283-4417-93b4-3970d05c4a6a\" name=\"Default Changelist\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.mps/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.mps/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/batch/batch_params.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/batch/batch_params.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/bin/.gitignore\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/bin/.gitignore\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/debug.log\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/debug.log\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/debug.log.1\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/debug.log.1\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/output/complete_model.jar\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/output/complete_model.jar\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/RepastProject/EDProject/velocity.log\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/RepastProject/EDProject/velocity.log\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/trace.info\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/trace.info\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ConceptEditorHintSettings\">\r\n    <option name=\"enabledHints\">\r\n      <set>\r\n        <option value=\"de.slisson.mps.conditionalEditor.hints.editor.conditionalEditorHints.conditionalEditor\" />\r\n        <option value=\"de.slisson.mps.conditionalEditor.hints.editor.conditionalEditorHints.conditionalEditor_doNotUseThisHint\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"ConsoleHistory\">\r\n    <option name=\"tabs\">\r\n      <list>\r\n        <TabState>\r\n          <option name=\"title\" value=\"Console\" />\r\n          <tab>\r\n            <model ref=\"bff5823c-8695-47cd-a399-7b6ec2cb96fa/r:adc3de62-18f1-46c6-ac0c-37c6b696b775(TempModulebff5823c-8695-47cd-a399-7b6ec2cb96fa/ConsoleModel_235938835916900)\">\r\n              <persistence version=\"9\" />\r\n              <languages>\r\n                <devkit ref=\"70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)\" />\r\n              </languages>\r\n              <imports />\r\n              <registry>\r\n                <language id=\"de1ad86d-6e50-4a02-b306-d4d17f64c375\" name=\"jetbrains.mps.console.base\">\r\n                  <concept id=\"1583916890557930028\" name=\"jetbrains.mps.console.base.structure.ConsoleRoot\" flags=\"ng\" index=\"aymSD\">\r\n                    <child id=\"1583916890557930415\" name=\"history\" index=\"aymYE\" />\r\n                    <child id=\"1583916890557930417\" name=\"commandHolder\" index=\"aymYO\" />\r\n                    <child id=\"9025248442620242919\" name=\"cursor\" index=\"1PhJh3\" />\r\n                  </concept>\r\n                  <concept id=\"5758176878586720817\" name=\"jetbrains.mps.console.base.structure.CommandHolderRef\" flags=\"ng\" index=\"2_V_lH\">\r\n                    <reference id=\"5758176878586720818\" name=\"target\" index=\"2_V_lI\" />\r\n                  </concept>\r\n                  <concept id=\"351968380916615243\" name=\"jetbrains.mps.console.base.structure.CommandHolder\" flags=\"ng\" index=\"2Clz$F\" />\r\n                  <concept id=\"757553790980850366\" name=\"jetbrains.mps.console.base.structure.History\" flags=\"ng\" index=\"3balQm\" />\r\n                </language>\r\n              </registry>\r\n              <node concept=\"aymSD\" id=\"35fpRu_I3B1\">\r\n                <node concept=\"3balQm\" id=\"35fpRu_I3B2\" role=\"aymYE\" />\r\n                <node concept=\"2Clz$F\" id=\"35fpRu_I3B3\" role=\"aymYO\" />\r\n                <node concept=\"2_V_lH\" id=\"35fpRu_I3B4\" role=\"1PhJh3\">\r\n                  <ref role=\"2_V_lI\" node=\"35fpRu_I3B3\" resolve=\"CommandHolder\" />\r\n                </node>\r\n              </node>\r\n            </model>\r\n          </tab>\r\n        </TabState>\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"DefaultSearchOptions3\">\r\n    <search_options>\r\n      <finders>\r\n        <finders />\r\n      </finders>\r\n      <scope>\r\n        <scope_type scope_type=\"PROJECT\" module=\"&lt;default&gt;\" model=\"&lt;default&gt;\" />\r\n      </scope>\r\n      <view>\r\n        <flags show_one_result=\"true\" new_tab=\"false\" />\r\n      </view>\r\n    </search_options>\r\n  </component>\r\n  <component name=\"Git.Rebase.Settings\">\r\n    <option name=\"NEW_BASE\" value=\"master\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"LFTOnly\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"MPSBookmarkManager\">\r\n    <option name=\"myBookmarkInfos\">\r\n      <array>\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n        <BookmarkInfo />\r\n      </array>\r\n    </option>\r\n    <option name=\"myUnnumberedBookmarkInfos\">\r\n      <array>\r\n        <BookmarkInfo>\r\n          <option name=\"nodeRef\" value=\"r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/4211260315489433948\" />\r\n          <option name=\"myNumber\" value=\"-1\" />\r\n          <option name=\"myIsNull\" value=\"false\" />\r\n        </BookmarkInfo>\r\n        <BookmarkInfo>\r\n          <option name=\"nodeRef\" value=\"r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/4334763093660653328\" />\r\n          <option name=\"myNumber\" value=\"-1\" />\r\n          <option name=\"myIsNull\" value=\"false\" />\r\n        </BookmarkInfo>\r\n        <BookmarkInfo>\r\n          <option name=\"nodeRef\" value=\"r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox)/2480088909321776240\" />\r\n          <option name=\"myNumber\" value=\"-1\" />\r\n          <option name=\"myIsNull\" value=\"false\" />\r\n        </BookmarkInfo>\r\n        <BookmarkInfo>\r\n          <option name=\"nodeRef\" value=\"r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox)/7454555096513728629\" />\r\n          <option name=\"myNumber\" value=\"-1\" />\r\n          <option name=\"myIsNull\" value=\"false\" />\r\n        </BookmarkInfo>\r\n        <BookmarkInfo>\r\n          <option name=\"nodeRef\" value=\"r:0d4701ca-7580-4b66-9d05-5cecf24427b5(main@generator)/3435897115887425054\" />\r\n          <option name=\"myNumber\" value=\"-1\" />\r\n          <option name=\"myIsNull\" value=\"false\" />\r\n        </BookmarkInfo>\r\n      </array>\r\n    </option>\r\n  </component>\r\n  <component name=\"MessagesViewTool\">\r\n    <option name=\"defaultListState\">\r\n      <MessageListState>\r\n        <option name=\"autoscrollToSource\" value=\"true\" />\r\n        <option name=\"info\" value=\"true\" />\r\n        <option name=\"warnings\" value=\"true\" />\r\n      </MessageListState>\r\n    </option>\r\n  </component>\r\n  <component name=\"NodeEditorSearchHistory\">\r\n    <option name=\"searches\">\r\n      <list>\r\n        <option value=\"choice\" />\r\n        <option value=\"behaviou\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"OverrideImplementMethodComponent\">\r\n    <option name=\"addReturnsOnImplement\" value=\"true\" />\r\n    <option name=\"addOverrideAnnotation\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1an8UqrmFO7gfXYt47vXr4zAsFp\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectPluginManager\">\r\n    <option name=\"pluginsState\">\r\n      <option name=\"com.mbddr.core.buildconfig.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState>\r\n            <option name=\"myComponentsState\">\r\n              <list>\r\n                <ComponentState>\r\n                  <option name=\"first\" value=\"com.mbddr.core.buildconfig.pluginSolution.plugin.PluginSolution_ProjectPlugin$2\" />\r\n                </ComponentState>\r\n              </list>\r\n            </option>\r\n          </PluginState>\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.analyses.cbmc.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState>\r\n            <option name=\"myComponentsState\">\r\n              <list>\r\n                <ComponentState>\r\n                  <option name=\"first\" value=\"com.mbeddr.analyses.cbmc.pluginSolution.plugin.cproverPreferences_PreferencesComponent\" />\r\n                  <params>\r\n                    <option name=\"numberOfThreads\" value=\"3\" />\r\n                    <option name=\"timeoutForPartialAnalysis\" value=\"600\" />\r\n                    <option name=\"timeoutForAnAnalysis\" value=\"600\" />\r\n                    <option name=\"usedPreprocessor\" value=\"GCC\" />\r\n                    <option name=\"rebuildModelsBeforeAnalysis\" value=\"true\" />\r\n                    <option name=\"sliceFormula\" value=\"true\" />\r\n                    <option name=\"unwindingDepth\" value=\"10\" />\r\n                    <option name=\"objectBits\" value=\"12\" />\r\n                    <option name=\"unwindingAssertions\" value=\"false\" />\r\n                    <option name=\"partialLoops\" value=\"true\" />\r\n                    <option name=\"useRefinement\" value=\"false\" />\r\n                    <option name=\"wordWidth\" value=\"default\" />\r\n                    <option name=\"cStandard\" value=\"C89\" />\r\n                    <option name=\"usedCBMCVersion\" value=\"5.8\" />\r\n                    <option name=\"saveRawCBMCResults\" value=\"false\" />\r\n                  </params>\r\n                </ComponentState>\r\n              </list>\r\n            </option>\r\n          </PluginState>\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.analyses.sat4j.fm.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.analyses.spin.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.core.base.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.core.codereview.plugin.Codereview_ProjectPlugin\">\r\n        <value>\r\n          <PluginState>\r\n            <option name=\"myComponentsState\">\r\n              <list>\r\n                <ComponentState>\r\n                  <option name=\"first\" value=\"com.mbeddr.core.codereview.plugin.Codereview_ProjectPlugin$2\" />\r\n                </ComponentState>\r\n              </list>\r\n            </option>\r\n          </PluginState>\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.core.runconfiguration.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.doc.aspect.ui.plugin.Ui_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.doc.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.asynccell.plugin.Asynccell_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.breadcrumb.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.ccmenu.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.contextactions.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.ecore.ui.plugin.Ui_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.editingGuide.execution.plugin.Execution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.genreview.plugin.Genreview_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.httpserver.plugin.Httpserver_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.hyperlink.plugin.Hyperlink_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.intentions.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.jfreechart.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.jung.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.multilingual.concept.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.multilingual.settings.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.plantuml.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.projectview.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.projectview.vcs.plugin.Vcs_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.traceExplorer.plugin.TraceExplorer_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddr.mpsutil.userstyles.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"com.mbeddt.core.expressions.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState>\r\n            <option name=\"myComponentsState\">\r\n              <list>\r\n                <ComponentState>\r\n                  <option name=\"first\" value=\"com.mbeddt.core.expressions.pluginSolution.plugin.PluginSolution_ProjectPlugin$2\" />\r\n                </ComponentState>\r\n              </list>\r\n            </option>\r\n          </PluginState>\r\n        </value>\r\n      </option>\r\n      <option name=\"de.itemis.mps.editor.celllayout.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"de.itemis.mps.editor.diagram.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"de.itemis.mps.mouselistener.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"de.itemis.mps.selection.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"de.itemis.mps.tooltips.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"de.q60.mps.explorer.plugin.Explorer_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"de.q60.mps.shadowmodels.modelcheck.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"de.q60.mps.shadowmodels.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"de.slisson.mps.conditionalEditor.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.baseLanguage.lightweightdsl.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.editor.contextActionsTool.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.execution.configurations.implementation.plugin.plugin.Plugin_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.execution.configurations.pluginSolution.plugin.PluginSolution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.ide.actions.Ide_ProjectPlugin\">\r\n        <value>\r\n          <PluginState>\r\n            <option name=\"myComponentsState\">\r\n              <list>\r\n                <ComponentState>\r\n                  <option name=\"first\" value=\"jetbrains.mps.ide.actions.BehaviorDialogsPersistentOptions_PreferencesComponent\" />\r\n                  <params>\r\n                    <option name=\"addReturnsOnImplement\" value=\"false\" />\r\n                    <option name=\"sortAlphabetically\" value=\"false\" />\r\n                    <option name=\"removeAttributes\" value=\"true\" />\r\n                  </params>\r\n                </ComponentState>\r\n              </list>\r\n            </option>\r\n          </PluginState>\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.ide.devkit.actions.Mpsdevkit_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.ide.make.actions.Make_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.lang.editor.tooltips.runtime.plugin.Runtime_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"jetbrains.mps.vcs.mergehints.plugin.plugin.Plugin_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"org.iets3.core.expr.plugin.plugin.Plugin_ProjectPlugin\">\r\n        <value>\r\n          <PluginState />\r\n        </value>\r\n      </option>\r\n      <option name=\"org.iets3.core.expr.testExecution.plugin.TestExecution_ProjectPlugin\">\r\n        <value>\r\n          <PluginState>\r\n            <option name=\"myComponentsState\">\r\n              <list>\r\n                <ComponentState>\r\n                  <option name=\"first\" value=\"org.iets3.core.expr.testExecution.plugin.TestExecution_ProjectPlugin$2\" />\r\n                </ComponentState>\r\n              </list>\r\n            </option>\r\n          </PluginState>\r\n        </value>\r\n      </option>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectView\">\r\n    <navigator currentView=\"ProjectPane\" proportions=\"\" version=\"1\" />\r\n    <panes>\r\n      <pane id=\"Scope\" />\r\n      <pane id=\"FileSystem\">\r\n        <subPane>\r\n          <expand>\r\n            <path>\r\n              <item name=\"\" type=\"\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"dependencies\" type=\"cbb8eebc:String\" user=\"dependencies\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"dependencies\" type=\"cbb8eebc:String\" user=\"dependencies\" />\r\n              <item name=\"\" type=\"\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"dependencies\" type=\"cbb8eebc:String\" user=\"dependencies\" />\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"\" type=\"\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"dependencies\" type=\"cbb8eebc:String\" user=\"dependencies\" />\r\n              <item name=\"\" type=\"\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"dependencies\" type=\"cbb8eebc:String\" user=\"dependencies\" />\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"\" type=\"\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"dependencies\" type=\"cbb8eebc:String\" user=\"dependencies\" />\r\n              <item name=\"\" type=\"\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"dependencies\" type=\"cbb8eebc:String\" user=\"dependencies\" />\r\n              <item name=\"\" type=\"\" />\r\n              <item name=\"\" type=\"\" />\r\n            </path>\r\n          </expand>\r\n          <select />\r\n        </subPane>\r\n      </pane>\r\n      <pane id=\"ProjectPane\">\r\n        <subPane>\r\n          <PATH>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"a3289199-9625-4aca-a9f6-4b175ad83afd\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"EDLanguage\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"r:2042c10c-dbe6-4906-9092-937b921f1765(EDLanguage.sandbox.OnlyLFT) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps]\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </PATH>\r\n          <PATH>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </PATH>\r\n          <PATH>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </PATH>\r\n          <PATH>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"a3289199-9625-4aca-a9f6-4b175ad83afd\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </PATH>\r\n          <PATH>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"a3289199-9625-4aca-a9f6-4b175ad83afd\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"EDLanguage\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </PATH>\r\n          <PATH>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"a3289199-9625-4aca-a9f6-4b175ad83afd\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"EDLanguage\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"r:2042c10c-dbe6-4906-9092-937b921f1765(EDLanguage.sandbox.OnlyLFT) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps]\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"StaffDefinition\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </PATH>\r\n          <PATH>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </PATH>\r\n          <PATH>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </PATH>\r\n          <SELECTED>\r\n            <PATH_ELEMENT>\r\n              <option name=\"myItemId\" value=\"HelloAgentProject\" />\r\n              <option name=\"myItemType\" value=\"\" />\r\n            </PATH_ELEMENT>\r\n          </SELECTED>\r\n        </subPane>\r\n      </pane>\r\n      <pane id=\"CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer\">\r\n        <subPane />\r\n      </pane>\r\n      <pane id=\"CustomProjectView_org.iets3.core.expr.doc.plugin.plugin.BookmarkExplorer\">\r\n        <subPane />\r\n      </pane>\r\n      <pane id=\"CustomProjectView_com.mbeddr.mpsutil.favourites.plugin.plugin.FavouritesProjectView\">\r\n        <subPane />\r\n      </pane>\r\n      <pane id=\"CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer\">\r\n        <subPane />\r\n      </pane>\r\n      <pane id=\"CustomProjectView_org.iets3.core.expr.doc.plugin.plugin.BookmarkExplorer\">\r\n        <subPane />\r\n      </pane>\r\n      <pane id=\"CustomProjectView_com.mbeddr.mpsutil.favourites.plugin.plugin.FavouritesProjectView\">\r\n        <subPane />\r\n      </pane>\r\n    </panes>\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"restartRequiresConfirmation\" value=\"false\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.settingsdialog.IDE.editor.colors\" />\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Java Application.Node Sanda12.www.MyRunner (1)\">\r\n    <configuration name=\"Node EDLanguage.Runner.RepastMain.MyRunner\" type=\"Java Application\" factoryName=\"Java\" temporary=\"true\">\r\n      <myNode>\r\n        <MyState>\r\n          <option name=\"myNodePointer\" value=\"r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain)/2876623930008070039\" />\r\n          <option name=\"myNodeText\" value=\"EDLanguage.Runner.RepastMain.2876623930008070039\" />\r\n        </MyState>\r\n      </myNode>\r\n      <myRunParameters>\r\n        <MyState>\r\n          <option name=\"myJavaParameters\">\r\n            <JavaRunParameters>\r\n              <option name=\"jrePath\" />\r\n              <option name=\"programParameters\" />\r\n              <option name=\"useAlternativeJre\" value=\"false\" />\r\n              <option name=\"vmOptions\" />\r\n              <option name=\"workingDirectory\" value=\"C:\\Program Files\\JetBrains\\MPS 2020.3\" />\r\n            </JavaRunParameters>\r\n          </option>\r\n        </MyState>\r\n      </myRunParameters>\r\n      <method v=\"2\">\r\n        <option name=\"jetbrains.mps.execution.configurations.pluginSolution.plugin.MakeNodePointers_BeforeTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Node Runner\" type=\"Java Application\" factoryName=\"Java\">\r\n      <myNode>\r\n        <MyState>\r\n          <option name=\"myNodePointer\" value=\"r:6a827773-8c66-440b-ba0c-5eb4d77c8d3b(EDLanguage.sandbox)/8275338926484026242\" />\r\n          <option name=\"myNodeText\" value=\"EDLanguage.sandbox.8275338926484026242\" />\r\n        </MyState>\r\n      </myNode>\r\n      <myRunParameters>\r\n        <MyState>\r\n          <option name=\"myJavaParameters\">\r\n            <JavaRunParameters>\r\n              <option name=\"jrePath\" value=\"\" />\r\n              <option name=\"programParameters\" value=\"\" />\r\n              <option name=\"useAlternativeJre\" value=\"false\" />\r\n              <option name=\"vmOptions\" value=\"\" />\r\n              <option name=\"workingDirectory\" value=\"E:\\program\\mps\\installSpace\\MPS 2019.3\" />\r\n            </JavaRunParameters>\r\n          </option>\r\n        </MyState>\r\n      </myRunParameters>\r\n      <method v=\"2\">\r\n        <option name=\"jetbrains.mps.execution.configurations.pluginSolution.plugin.MakeNodePointers_BeforeTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Node Sanda12.www.MyRunner (1)\" type=\"Java Application\" factoryName=\"Java\" temporary=\"true\">\r\n      <myNode>\r\n        <MyState>\r\n          <option name=\"myNodePointer\" value=\"r:78ddd31e-67bb-474a-95f1-a5c630148fe2(Sanda12.www)/6443350202496435223\" />\r\n          <option name=\"myNodeText\" value=\"Sanda12.www.6443350202496435223\" />\r\n        </MyState>\r\n      </myNode>\r\n      <myRunParameters>\r\n        <MyState>\r\n          <option name=\"myJavaParameters\">\r\n            <JavaRunParameters>\r\n              <option name=\"jrePath\" value=\"\" />\r\n              <option name=\"programParameters\" value=\"\" />\r\n              <option name=\"useAlternativeJre\" value=\"false\" />\r\n              <option name=\"vmOptions\" value=\"\" />\r\n              <option name=\"workingDirectory\" value=\"$APPLICATION_HOME_DIR$\" />\r\n            </JavaRunParameters>\r\n          </option>\r\n        </MyState>\r\n      </myRunParameters>\r\n      <method v=\"2\">\r\n        <option name=\"jetbrains.mps.execution.configurations.pluginSolution.plugin.MakeNodePointers_BeforeTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Node Sanda12.www.MyRunner\" type=\"Java Application\" factoryName=\"Java\" temporary=\"true\">\r\n      <myNode>\r\n        <MyState>\r\n          <option name=\"myNodePointer\" value=\"r:78ddd31e-67bb-474a-95f1-a5c630148fe2(Sanda12.www)/119879601135641416\" />\r\n          <option name=\"myNodeText\" value=\"Sanda12.www.119879601135641416\" />\r\n        </MyState>\r\n      </myNode>\r\n      <myRunParameters>\r\n        <MyState>\r\n          <option name=\"myJavaParameters\">\r\n            <JavaRunParameters>\r\n              <option name=\"jrePath\" />\r\n              <option name=\"programParameters\" />\r\n              <option name=\"useAlternativeJre\" value=\"false\" />\r\n              <option name=\"vmOptions\" />\r\n              <option name=\"workingDirectory\" value=\"E:\\program\\mps\\installSpace\\MPS 2019.3\" />\r\n            </JavaRunParameters>\r\n          </option>\r\n        </MyState>\r\n      </myRunParameters>\r\n      <method v=\"2\">\r\n        <option name=\"jetbrains.mps.execution.configurations.pluginSolution.plugin.MakeNodePointers_BeforeTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Node sand2.aaa.HelloTest\" type=\"Java Application\" factoryName=\"Java\" temporary=\"true\">\r\n      <myNode>\r\n        <MyState>\r\n          <option name=\"myNodePointer\" value=\"r:c004b198-8b12-4785-8968-182dfaa197f8(sand2.aaa)/119879601135489411\" />\r\n          <option name=\"myNodeText\" value=\"sand2.aaa.119879601135489411\" />\r\n        </MyState>\r\n      </myNode>\r\n      <myRunParameters>\r\n        <MyState>\r\n          <option name=\"myJavaParameters\">\r\n            <JavaRunParameters>\r\n              <option name=\"jrePath\" />\r\n              <option name=\"programParameters\" />\r\n              <option name=\"useAlternativeJre\" value=\"false\" />\r\n              <option name=\"vmOptions\" />\r\n              <option name=\"workingDirectory\" value=\"E:\\program\\mps\\installSpace\\MPS 2019.3\" />\r\n            </JavaRunParameters>\r\n          </option>\r\n        </MyState>\r\n      </myRunParameters>\r\n      <method v=\"2\">\r\n        <option name=\"jetbrains.mps.execution.configurations.pluginSolution.plugin.MakeNodePointers_BeforeTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"Node sand2.aaa.MyRunner\" type=\"Java Application\" factoryName=\"Java\" temporary=\"true\">\r\n      <myNode>\r\n        <MyState>\r\n          <option name=\"myNodePointer\" value=\"r:c004b198-8b12-4785-8968-182dfaa197f8(sand2.aaa)/119879601135489410\" />\r\n          <option name=\"myNodeText\" value=\"sand2.aaa.119879601135489410\" />\r\n        </MyState>\r\n      </myNode>\r\n      <myRunParameters>\r\n        <MyState>\r\n          <option name=\"myJavaParameters\">\r\n            <JavaRunParameters>\r\n              <option name=\"jrePath\" />\r\n              <option name=\"programParameters\" />\r\n              <option name=\"useAlternativeJre\" value=\"false\" />\r\n              <option name=\"vmOptions\" />\r\n              <option name=\"workingDirectory\" value=\"E:\\program\\mps\\installSpace\\MPS 2019.3\" />\r\n            </JavaRunParameters>\r\n          </option>\r\n        </MyState>\r\n      </myRunParameters>\r\n      <method v=\"2\">\r\n        <option name=\"jetbrains.mps.execution.configurations.pluginSolution.plugin.MakeNodePointers_BeforeTask\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Java Application.Node EDLanguage.Runner.RepastMain.MyRunner\" />\r\n      <item itemvalue=\"Java Application.Node Runner\" />\r\n      <item itemvalue=\"Java Application.Node Sanda12.www.MyRunner (1)\" />\r\n      <item itemvalue=\"Java Application.Node Sanda12.www.MyRunner\" />\r\n      <item itemvalue=\"Java Application.Node sand2.aaa.HelloTest\" />\r\n      <item itemvalue=\"Java Application.Node sand2.aaa.MyRunner\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Java Application.Node Sanda12.www.MyRunner (1)\" />\r\n        <item itemvalue=\"Java Application.Node sand2.aaa.MyRunner\" />\r\n        <item itemvalue=\"Java Application.Node sand2.aaa.HelloTest\" />\r\n        <item itemvalue=\"Java Application.Node Sanda12.www.MyRunner\" />\r\n        <item itemvalue=\"Java Application.Node EDLanguage.Runner.RepastMain.MyRunner\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration>C:\\Users\\w2037451\\AppData\\Roaming\\Subversion</configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"d6cb34ac-6283-4417-93b4-3970d05c4a6a\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1587360015058</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1587360015058</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Implement test result conditions for behaviour branching\">\r\n      <created>1610378717249</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610378717249</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Implement Patient Infection Status condition\">\r\n      <created>1610472498113</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610472498113</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Add MajorsAB Area\">\r\n      <created>1610636466395</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610636466395</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Add MajorsAB staff and patient severity score\">\r\n      <created>1610645367122</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1610645367122</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Implement and clean baseline staff behaviours pre intervention\">\r\n      <created>1611063339195</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611063339195</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Implement admit and discharge actions and fixes to double values\">\r\n      <created>1611086741327</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611086741327</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Implement direct signals\">\r\n      <created>1611164186693</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611164186694</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Implement test result condition\">\r\n      <created>1611181923723</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611181923723</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Implement basic pathway for Doctors\">\r\n      <created>1611183733876</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611183733876</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Implement more complex pathway with PCR tests\">\r\n      <created>1611186839924</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611186839924</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Clean direct signal code generation\">\r\n      <created>1611315701602</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611315701602</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Implement accurate workflow and lab PCR testing\">\r\n      <created>1611777522285</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611777522285</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Add side room option to admissions\">\r\n      <created>1611781640659</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1611781640659</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Make admission bays a full concept with capacity\">\r\n      <created>1612377375259</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1612377375260</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Implement cohort bay decision making\">\r\n      <created>1612461530673</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1612461530673</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Add parameters to EDBuilder\">\r\n      <created>1613594587970</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1613594587972</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"#19 Add patient arrival table using mbeddr table components\">\r\n      <created>1614620510347</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1614620510347</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Update runner to include fields for classes/sources in generated files (in hope of allowing multiple models at one time)\">\r\n      <created>1614706324992</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1614706324992</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"clean up pre branching\">\r\n      <created>1615200046218</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1615200046218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"Migrate to 2020.03\">\r\n      <created>1615201002032</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1615201002032</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"Implement 'low prevalence' workflow\">\r\n      <created>1615227552782</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1615227552782</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Implement Test Processing Time Table\">\r\n      <created>1615818595439</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1615818595439</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"Add cohort bays as rooms, update side room decision process and admit action\">\r\n      <created>1615980317935</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1615980317935</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"Implement patients occupying beds in admission wards\">\r\n      <created>1615986575212</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1615986575212</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"#27 Implement using side rooms when available, selecting cohort otherwise\">\r\n      <created>1616020992663</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1616020992663</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00026\" summary=\"Finalise LIAT Only\">\r\n      <created>1616413104813</created>\r\n      <option name=\"number\" value=\"00026\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1616413104813</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"27\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"UsagesViewTool\">\r\n    <version id=\"1\" />\r\n    <tabs>\r\n      <tab>\r\n        <result_provider class_name=\"jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode\">\r\n          <child rpn=\"jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode\">\r\n            <generated_finder class_name=\"jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder\" />\r\n          </child>\r\n        </result_provider>\r\n        <query>\r\n          <scope scope_class=\"jetbrains.mps.ide.findusages.model.scopes.ProjectScope\" />\r\n          <holder holder_class=\"jetbrains.mps.ide.findusages.model.holders.NodeHolder\">\r\n            <node ref=\"r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093661302211\" title=\"PlaceInstanceReference\" />\r\n          </holder>\r\n        </query>\r\n        <usage_view>\r\n          <tree_wrapper>\r\n            <view_options>\r\n              <options category_option=\"false\" module_option=\"true\" model_option=\"true\" root_option=\"true\" path_option=\"false\" count_option=\"true\" info_option=\"true\" view_searched_nodes_option=\"true\" group_searched_nodes_option=\"true\" autoscroll_option=\"false\" />\r\n            </view_options>\r\n            <contents caption=\"\" excluded=\"false\" isresult=\"false\" results_section=\"false\">\r\n              <role name=\"main root\" />\r\n              <child caption=\"Searched nodes\" excluded=\"false\" isresult=\"false\" results_section=\"false\">\r\n                <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData\" />\r\n                <role name=\"searched nodes\" />\r\n                <child caption=\"Searched nodes\" excluded=\"false\" isresult=\"false\" results_section=\"false\" category=\"Searched nodes\" category_kind=\"Category\">\r\n                  <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData\" />\r\n                  <role name=\"category:Category\" />\r\n                  <child caption=\"EDLanguage\" excluded=\"false\" isresult=\"false\" results_section=\"false\" module_ref=\"7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)\">\r\n                    <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData\" />\r\n                    <role name=\"module\" />\r\n                    <child caption=\"EDLanguage.structure\" excluded=\"false\" isresult=\"false\" results_section=\"false\">\r\n                      <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData\" />\r\n                      <role name=\"model\" />\r\n                      <child caption=\"PlaceInstanceReference\" info=\"\" excluded=\"false\" isresult=\"true\" results_section=\"false\" nodePtr=\"r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093661302211\" isRoot=\"true\">\r\n                        <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData\" />\r\n                        <role name=\"target\" />\r\n                      </child>\r\n                      <model uid=\"r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)\" />\r\n                    </child>\r\n                  </child>\r\n                </child>\r\n              </child>\r\n              <child caption=\"Usages\" excluded=\"false\" isresult=\"false\" results_section=\"true\">\r\n                <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData\" />\r\n                <role name=\"results\" />\r\n                <child caption=\"Node Usages\" excluded=\"false\" isresult=\"false\" results_section=\"true\" category=\"Node Usages\" category_kind=\"Category\">\r\n                  <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData\" />\r\n                  <role name=\"category:Category\" />\r\n                  <child caption=\"EDLanguage\" excluded=\"false\" isresult=\"false\" results_section=\"true\" module_ref=\"7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)\">\r\n                    <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData\" />\r\n                    <role name=\"module\" />\r\n                    <child caption=\"EDLanguage.editor\" excluded=\"false\" isresult=\"false\" results_section=\"true\">\r\n                      <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData\" />\r\n                      <role name=\"model\" />\r\n                      <child caption=\"PlaceInstanceReference_Editor\" info=\"\" excluded=\"false\" isresult=\"true\" results_section=\"true\" nodePtr=\"r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/4334763093661302222\" isRoot=\"true\">\r\n                        <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData\" />\r\n                        <role name=\"target\" />\r\n                      </child>\r\n                      <model uid=\"r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)\" />\r\n                    </child>\r\n                    <child caption=\"EDLanguage.structure\" excluded=\"false\" isresult=\"false\" results_section=\"true\">\r\n                      <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData\" />\r\n                      <role name=\"model\" />\r\n                      <child caption=\"PlaceInstanceCollection\" info=\"\" excluded=\"false\" isresult=\"false\" results_section=\"true\" nodePtr=\"r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2838504078745189\" isRoot=\"true\">\r\n                        <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData\" />\r\n                        <role name=\"root\" />\r\n                        <child caption=\"place\" info=\"(role: linkDeclaration in: PlaceInstanceCollection)\" excluded=\"false\" isresult=\"true\" results_section=\"true\" nodePtr=\"r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2838504078745190\">\r\n                          <instance qcn=\"jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData\" />\r\n                          <role name=\"target\" />\r\n                        </child>\r\n                      </child>\r\n                      <model uid=\"r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)\" />\r\n                    </child>\r\n                  </child>\r\n                </child>\r\n              </child>\r\n            </contents>\r\n          </tree_wrapper>\r\n        </usage_view>\r\n      </tab>\r\n    </tabs>\r\n    <default_view_options>\r\n      <options category_option=\"false\" module_option=\"true\" model_option=\"true\" root_option=\"true\" path_option=\"false\" count_option=\"true\" info_option=\"true\" view_searched_nodes_option=\"true\" group_searched_nodes_option=\"true\" autoscroll_option=\"false\" />\r\n    </default_view_options>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Implement Patient Infection Status condition\" />\r\n    <MESSAGE value=\"Add MajorsAB Area\" />\r\n    <MESSAGE value=\"Add MajorsAB staff and patient severity score\" />\r\n    <MESSAGE value=\"Implement and clean baseline staff behaviours pre intervention\" />\r\n    <MESSAGE value=\"Implement admit and discharge actions and fixes to double values\" />\r\n    <MESSAGE value=\"Implement direct signals\" />\r\n    <MESSAGE value=\"Implement test result condition\" />\r\n    <MESSAGE value=\"Implement basic pathway for Doctors\" />\r\n    <MESSAGE value=\"Implement more complex pathway with PCR tests\" />\r\n    <MESSAGE value=\"Clean direct signal code generation\" />\r\n    <MESSAGE value=\"Implement accurate workflow and lab PCR testing\" />\r\n    <MESSAGE value=\"Add side room option to admissions\" />\r\n    <MESSAGE value=\"Make admission bays a full concept with capacity\" />\r\n    <MESSAGE value=\"Implement cohort bay decision making\" />\r\n    <MESSAGE value=\"Add parameters to EDBuilder\" />\r\n    <MESSAGE value=\"#19 Add patient arrival table using mbeddr table components\" />\r\n    <MESSAGE value=\"Update runner to include fields for classes/sources in generated files (in hope of allowing multiple models at one time)\" />\r\n    <MESSAGE value=\"clean up pre branching\" />\r\n    <MESSAGE value=\"Migrate to 2020.03\" />\r\n    <MESSAGE value=\"Implement 'low prevalence' workflow\" />\r\n    <MESSAGE value=\"Implement Test Processing Time Table\" />\r\n    <MESSAGE value=\"Add cohort bays as rooms, update side room decision process and admit action\" />\r\n    <MESSAGE value=\"Implement patients occupying beds in admission wards\" />\r\n    <MESSAGE value=\"#27 Implement using side rooms when available, selecting cohort otherwise\" />\r\n    <MESSAGE value=\"Finalise LIAT Only\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Finalise LIAT Only\" />\r\n  </component>\r\n  <component name=\"mpsMakeService\">\r\n    <option name=\"makeInBackground\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.mps/workspace.xml b/.mps/workspace.xml
+--- a/.mps/workspace.xml	
++++ b/.mps/workspace.xml	
+@@ -10,21 +10,22 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="d6cb34ac-6283-4417-93b4-3970d05c4a6a" name="Default Changelist" comment="">
++      <change beforePath="$PROJECT_DIR$/.mps/shelf/Shelve_pre_master_pull.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/shelf/Shelve_pre_master_pull.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.mps/shelf/Uncommitted_changes_before_Checkout_at_09_03_2021_17_47__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/shelf/Uncommitted_changes_before_Checkout_at_09_03_2021_17_47__Default_Changelist_.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.mps/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.mps/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/batch/batch_params.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/batch/batch_params.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/bin/.gitignore" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/debug.log" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/debug.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/debug.log.1" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/output/complete_model.jar" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/output/complete_model.jar" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.data_set_0.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.display_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.display_3.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.action.file_sink_1.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_2.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/scenario.xml" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/EDProject.rs/scenario.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/Doctor.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" beforeDir="false" afterPath="$PROJECT_DIR$/RepastProject/EDProject/velocity.log" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps" beforeDir="false" afterPath="$PROJECT_DIR$/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/MyRunner.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/trace.info" beforeDir="false" afterPath="$PROJECT_DIR$/solutions/EDLanguage.Runner/source_gen/EDLanguage/Runner/RepastMain/trace.info" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -45,7 +46,7 @@
+         <TabState>
+           <option name="title" value="Console" />
+           <tab>
+-            <model ref="bff5823c-8695-47cd-a399-7b6ec2cb96fa/r:adc3de62-18f1-46c6-ac0c-37c6b696b775(TempModulebff5823c-8695-47cd-a399-7b6ec2cb96fa/ConsoleModel_235938835916900)">
++            <model ref="9a2c62be-daf4-4955-a823-54b7baf922f6/r:e9d42d67-6ccc-4048-abcc-2bf86b1a500d(TempModule9a2c62be-daf4-4955-a823-54b7baf922f6/ConsoleModel_1119331520683100)">
+               <persistence version="9" />
+               <languages>
+                 <devkit ref="70d3d6da-af63-483d-a75f-9c8acf8de332(jetbrains.mps.console.devkit)" />
+@@ -65,11 +66,11 @@
+                   <concept id="757553790980850366" name="jetbrains.mps.console.base.structure.History" flags="ng" index="3balQm" />
+                 </language>
+               </registry>
+-              <node concept="aymSD" id="35fpRu_I3B1">
+-                <node concept="3balQm" id="35fpRu_I3B2" role="aymYE" />
+-                <node concept="2Clz$F" id="35fpRu_I3B3" role="aymYO" />
+-                <node concept="2_V_lH" id="35fpRu_I3B4" role="1PhJh3">
+-                  <ref role="2_V_lI" node="35fpRu_I3B3" resolve="CommandHolder" />
++              <node concept="aymSD" id="4FTL$vJ9Tfx">
++                <node concept="3balQm" id="4FTL$vJ9Tfy" role="aymYE" />
++                <node concept="2Clz$F" id="4FTL$vJ9Tfz" role="aymYO" />
++                <node concept="2_V_lH" id="4FTL$vJ9Tf$" role="1PhJh3">
++                  <ref role="2_V_lI" node="4FTL$vJ9Tfz" resolve="CommandHolder" />
+                 </node>
+               </node>
+             </model>
+@@ -502,7 +503,26 @@
+   <component name="ProjectView">
+     <navigator currentView="ProjectPane" proportions="" version="1" />
+     <panes>
+-      <pane id="Scope" />
++      <pane id="ProjectPane">
++        <subPane>
++          <PATH>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="HelloAgentProject" />
++              <option name="myItemType" value="" />
++            </PATH_ELEMENT>
++          </PATH>
++          <SELECTED>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="HelloAgentProject" />
++              <option name="myItemType" value="" />
++            </PATH_ELEMENT>
++            <PATH_ELEMENT>
++              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
++              <option name="myItemType" value="" />
++            </PATH_ELEMENT>
++          </SELECTED>
++        </subPane>
++      </pane>
+       <pane id="FileSystem">
+         <subPane>
+           <expand>
+@@ -550,120 +570,7 @@
+           <select />
+         </subPane>
+       </pane>
+-      <pane id="ProjectPane">
+-        <subPane>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="EDLanguage" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="r:2042c10c-dbe6-4906-9092-937b921f1765(EDLanguage.sandbox.OnlyLFT) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps]" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="3fb39b69-f96e-474b-a5f6-477776571ddf(RunnerLanguage)" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="EDLanguage" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="a3289199-9625-4aca-a9f6-4b175ad83afd" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="EDLanguage" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="r:2042c10c-dbe6-4906-9092-937b921f1765(EDLanguage.sandbox.OnlyLFT) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/models/EDLanguage.sandbox.OnlyLFT.mps]" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="StaffDefinition" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <PATH>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure) in IdeaFile[path: C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/models/EDLanguage.structure.mps]" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </PATH>
+-          <SELECTED>
+-            <PATH_ELEMENT>
+-              <option name="myItemId" value="HelloAgentProject" />
+-              <option name="myItemType" value="" />
+-            </PATH_ELEMENT>
+-          </SELECTED>
+-        </subPane>
+-      </pane>
++      <pane id="Scope" />
+       <pane id="CustomProjectView_org.iets3.core.plugin.plugin.SpecExplorer">
+         <subPane />
+       </pane>
+@@ -1060,6 +967,173 @@
+   <component name="UsagesViewTool">
+     <version id="1" />
+     <tabs>
++      <tab>
++        <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
++          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
++            <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
++          </child>
++        </result_provider>
++        <query>
++          <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
++          <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
++            <node ref="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/88285669864745724" title="PatientWaitingForDoctor" />
++          </holder>
++        </query>
++        <usage_view>
++          <tree_wrapper>
++            <view_options>
++              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
++            </view_options>
++            <contents caption="" excluded="false" isresult="false" results_section="false">
++              <role name="main root" />
++              <child caption="Searched nodes" excluded="false" isresult="false" results_section="false">
++                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" />
++                <role name="searched nodes" />
++                <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
++                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
++                  <role name="category:Category" />
++                  <child caption="EDLanguage.sandbox.CurrentProcess" excluded="false" isresult="false" results_section="false" module_ref="e7540802-219b-4b2e-bd91-549f46382c92(EDLanguage.sandbox.CurrentProcess)">
++                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
++                    <role name="module" />
++                    <child caption="EDLanguage.sandbox.CurrentProcess" excluded="false" isresult="false" results_section="false">
++                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
++                      <role name="model" />
++                      <child caption="Signals" info="" excluded="false" isresult="false" results_section="false" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/513408552829927009" isRoot="true">
++                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                        <role name="root" />
++                        <child caption="PatientWaitingForDoctor" info="(role: signals in: Signals)" excluded="false" isresult="true" results_section="false" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/88285669864745724">
++                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                          <role name="target" />
++                        </child>
++                      </child>
++                      <model uid="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)" />
++                    </child>
++                  </child>
++                </child>
++              </child>
++              <child caption="Usages" excluded="false" isresult="false" results_section="true">
++                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" />
++                <role name="results" />
++                <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
++                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
++                  <role name="category:Category" />
++                  <child caption="EDLanguage.sandbox.CurrentProcess" excluded="false" isresult="false" results_section="true" module_ref="e7540802-219b-4b2e-bd91-549f46382c92(EDLanguage.sandbox.CurrentProcess)">
++                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
++                    <role name="module" />
++                    <child caption="EDLanguage.sandbox.CurrentProcess" excluded="false" isresult="false" results_section="true">
++                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
++                      <role name="model" />
++                      <child caption="Doctor" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/3838812034270748689" isRoot="true">
++                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                        <role name="root" />
++                        <child caption="InitialObsevations" info="(role: behaviours in: Doctor)" excluded="false" isresult="false" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/527226734336992924">
++                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                          <role name="root to target" />
++                          <child caption="PatientWaitingForDoctor" info="(role: signal in: InitialObsevations)" excluded="false" isresult="true" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/88285669864750772">
++                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                            <role name="target" />
++                          </child>
++                        </child>
++                      </child>
++                      <child caption="MajorsTriageNurse" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/3031028417298158392" isRoot="true">
++                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                        <role name="root" />
++                        <child caption="TriagePatient" info="(role: behaviours in: MajorsTriageNurse)" excluded="false" isresult="false" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/3031028417298158393">
++                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                          <role name="root to target" />
++                          <child caption="signal initialize" info="(role: signalInitReference in: send signal)" excluded="false" isresult="true" results_section="true" nodePtr="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)/3031028417298158624">
++                            <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                            <role name="target" />
++                          </child>
++                        </child>
++                      </child>
++                      <model uid="r:0dff6980-e083-49a7-82ba-87819213151a(EDLanguage.sandbox.CurrentProcess)" />
++                    </child>
++                  </child>
++                </child>
++              </child>
++            </contents>
++          </tree_wrapper>
++        </usage_view>
++      </tab>
++      <tab>
++        <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
++          <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
++            <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
++          </child>
++        </result_provider>
++        <query>
++          <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
++          <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
++            <node ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093661302211" title="PlaceInstanceReference" />
++          </holder>
++        </query>
++        <usage_view>
++          <tree_wrapper>
++            <view_options>
++              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
++            </view_options>
++            <contents caption="" excluded="false" isresult="false" results_section="false">
++              <role name="main root" />
++              <child caption="Searched nodes" excluded="false" isresult="false" results_section="false">
++                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" />
++                <role name="searched nodes" />
++                <child caption="Searched nodes" excluded="false" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
++                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
++                  <role name="category:Category" />
++                  <child caption="EDLanguage" excluded="false" isresult="false" results_section="false" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)">
++                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
++                    <role name="module" />
++                    <child caption="EDLanguage.structure" excluded="false" isresult="false" results_section="false">
++                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
++                      <role name="model" />
++                      <child caption="PlaceInstanceReference" info="" excluded="false" isresult="true" results_section="false" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/4334763093661302211" isRoot="true">
++                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                        <role name="target" />
++                      </child>
++                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" />
++                    </child>
++                  </child>
++                </child>
++              </child>
++              <child caption="Usages" excluded="false" isresult="false" results_section="true">
++                <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" />
++                <role name="results" />
++                <child caption="Node Usages" excluded="false" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
++                  <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" />
++                  <role name="category:Category" />
++                  <child caption="EDLanguage" excluded="false" isresult="false" results_section="true" module_ref="7dcff301-ba01-414e-8574-a8f6da31876b(EDLanguage)">
++                    <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" />
++                    <role name="module" />
++                    <child caption="EDLanguage.editor" excluded="false" isresult="false" results_section="true">
++                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
++                      <role name="model" />
++                      <child caption="PlaceInstanceReference_Editor" info="" excluded="false" isresult="true" results_section="true" nodePtr="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)/4334763093661302222" isRoot="true">
++                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                        <role name="target" />
++                      </child>
++                      <model uid="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(EDLanguage.editor)" />
++                    </child>
++                    <child caption="EDLanguage.structure" excluded="false" isresult="false" results_section="true">
++                      <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" />
++                      <role name="model" />
++                      <child caption="PlaceInstanceCollection" info="" excluded="false" isresult="false" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2838504078745189" isRoot="true">
++                        <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                        <role name="root" />
++                        <child caption="place" info="(role: linkDeclaration in: PlaceInstanceCollection)" excluded="false" isresult="true" results_section="true" nodePtr="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)/2838504078745190">
++                          <instance qcn="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" />
++                          <role name="target" />
++                        </child>
++                      </child>
++                      <model uid="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" />
++                    </child>
++                  </child>
++                </child>
++              </child>
++            </contents>
++          </tree_wrapper>
++        </usage_view>
++      </tab>
+       <tab>
+         <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
+           <child rpn="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode">
+Index: RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package EDLanguage.sandbox;\r\n\r\n/*Generated by MPS */\r\n\r\nimport repast.simphony.space.continuous.ContinuousSpace;\r\nimport repast.simphony.space.grid.Grid;\r\nimport simcore.Signals.Signal;\r\nimport simcore.action.Action;\r\nimport simcore.action.ActionStep;\r\nimport simcore.action.basicAction.SendSignalAction;\r\nimport simcore.action.basicAction.StayForTimeAction;\r\nimport simcore.action.basicAction.conditions.TestResultCondition;\r\nimport simcore.agents.Patient;\r\nimport simcore.Signals.DirectSignal;\r\nimport simcore.action.basicAction.DischargeAction;\r\nimport simcore.action.basicAction.OrderAction;\r\nimport simcore.Signals.Orders.MoveToOrder;\r\n\r\npublic class LIATMachine extends Staff {\r\n\r\n  public double groupStress = Double.parseDouble(\"\" + \"0\");\r\n\r\n  public LIATMachine(ContinuousSpace<Object> space, Grid<Object> grid) {\r\n    super(space, grid);\r\n    mintMyMaxPatients = 0;\r\n  }\r\n\r\n  public LIATMachine(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {\r\n    super(space, grid, pstrStartLocation);\r\n  }\r\n\r\n  public void SetMission(Signal s) {\r\n    switch (s.getName()) {\r\n      case \"\":\r\n        break;\r\n      case \"IsLIATReady\":\r\n        curMission = new Action(\"StateFree\");\r\n        this.InitStateFree(s);\r\n        break;\r\n      case \"ConductLIAT\":\r\n        curMission = new Action(\"TestPatientGeneral\");\r\n        this.InitTestPatientGeneral(s);\r\n        break;\r\n      default:\r\n        System.out.println(\"Set mission: \" + s.getName() + \" failed!\");\r\n        return;\r\n    }\r\n    curActionStep = 0;\r\n  }\r\n\r\n  public void InitStateFree(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    sendSignalTemp = new LIATIsReadySignal();\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n\r\n  }\r\n  public void InitTestPatientGeneral(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new StayForTimeAction().WithTimeSpan(LIAT.getInstance().getProcessingTime())));\r\n    if (CheckCondition(new TestResultCondition().WithTest(LIAT.getInstance()).WithPatient((Patient) s.GetData(\"patient\")))) {\r\n      sendSignalTemp = new LIATCompleteSignal();\r\n      ((DirectSignal) sendSignalTemp).setTarget(s.GetData(\"replyTo\"));\r\n      sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n      curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n    } else {\r\n      sendSignalTemp = new LIATCompleteSignal();\r\n      ((DirectSignal) sendSignalTemp).setTarget(s.GetData(\"replyTo\"));\r\n      sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n      curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n    }\r\n\r\n  }\r\n  public void InitDischargePatient(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData(\"patient\")))));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OrderAction().WithPatient(((Patient) s.GetData(\"patient\"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace(\"Entrance\")))));\r\n\r\n  }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java b/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java
+--- a/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java	
++++ b/RepastProject/EDProject/src/EDLanguage/sandbox/LIATMachine.java	
+@@ -41,6 +41,10 @@
+         curMission = new Action("TestPatientGeneral");
+         this.InitTestPatientGeneral(s);
+         break;
++      case "ConductLIATTrackAndTrace":
++        curMission = new Action("TestPatientTrackAndTrace");
++        this.InitTestPatientTrackAndTrace(s);
++        break;
+       default:
+         System.out.println("Set mission: " + s.getName() + " failed!");
+         return;
+@@ -72,6 +76,24 @@
+       sendSignalTemp.AddData("patient", s.GetData("patient"));
+       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+     }
++
++  }
++  public void InitTestPatientTrackAndTrace(Signal s) {
++
++    Signal sendSignalTemp = new Signal();
++
++    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(LIAT.getInstance().getProcessingTime())));
++    if (CheckCondition(new TestResultCondition().WithTest(LIAT.getInstance()).WithPatient((Patient) s.GetData("patient")))) {
++      sendSignalTemp = new LIATCompleteTrackAndTraceSignal();
++      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
++      sendSignalTemp.AddData("patient", s.GetData("patient"));
++      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
++    } else {
++      sendSignalTemp = new LIATCompleteTrackAndTraceSignal();
++      ((DirectSignal) sendSignalTemp).setTarget(s.GetData("replyTo"));
++      sendSignalTemp.AddData("patient", s.GetData("patient"));
++      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
++    }
+ 
+   }
+   public void InitDischargePatient(Signal s) {
+Index: solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<model ref=\"r:78ddd31e-67bb-474a-95f1-a5c630148fe2(EDLanguage.Runner.RepastMain)\">\r\n  <persistence version=\"9\" />\r\n  <languages>\r\n    <use id=\"3fb39b69-f96e-474b-a5f6-477776571ddf\" name=\"RunnerLanguage\" version=\"0\" />\r\n  </languages>\r\n  <imports />\r\n  <registry>\r\n    <language id=\"3fb39b69-f96e-474b-a5f6-477776571ddf\" name=\"RunnerLanguage\">\r\n      <concept id=\"6443350202496148700\" name=\"RunnerLanguage.structure.Runner\" flags=\"ng\" index=\"2Qkwg2\">\r\n        <property id=\"6443350202496149043\" name=\"addr\" index=\"2QkwrH\" />\r\n        <child id=\"2876623930008077868\" name=\"SourcesFolderAddress\" index=\"brHgl\" />\r\n        <child id=\"2876623930007570857\" name=\"ClassesFolderAddress\" index=\"b_DIg\" />\r\n      </concept>\r\n    </language>\r\n    <language id=\"d3a0fd26-445a-466c-900e-10444ddfed52\" name=\"com.mbeddr.mpsutil.filepicker\">\r\n      <concept id=\"6156524541422549000\" name=\"com.mbeddr.mpsutil.filepicker.structure.AbstractPicker\" flags=\"ng\" index=\"3N1QpV\">\r\n        <property id=\"6156524541422553710\" name=\"path\" index=\"3N1Lgt\" />\r\n      </concept>\r\n      <concept id=\"4881264737620519319\" name=\"com.mbeddr.mpsutil.filepicker.structure.FileSystemDirPicker\" flags=\"ng\" index=\"3RfPnX\" />\r\n    </language>\r\n  </registry>\r\n  <node concept=\"2Qkwg2\" id=\"5_FodVJfsgn\">\r\n    <property role=\"2QkwrH\" value=\"C:\\Users\\w2037451\\Documents\\HelloAgent\" />\r\n    <node concept=\"3RfPnX\" id=\"2vFOz$Gxkmp\" role=\"b_DIg\">\r\n      <property role=\"3N1Lgt\" value=\"C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.LFTOnly/classes_gen/EDLanguage/sandbox\" />\r\n    </node>\r\n    <node concept=\"3RfPnX\" id=\"2vFOz$Gxn39\" role=\"brHgl\">\r\n      <property role=\"3N1Lgt\" value=\"C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.LFTOnly/source_gen/EDLanguage/sandbox\" />\r\n    </node>\r\n  </node>\r\n</model>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps b/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps
+--- a/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps	
++++ b/solutions/EDLanguage.Runner/models/EDLanguage.Runner.RepastMain.mps	
+@@ -23,10 +23,10 @@
+   <node concept="2Qkwg2" id="5_FodVJfsgn">
+     <property role="2QkwrH" value="C:\Users\w2037451\Documents\HelloAgent" />
+     <node concept="3RfPnX" id="2vFOz$Gxkmp" role="b_DIg">
+-      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.LFTOnly/classes_gen/EDLanguage/sandbox" />
++      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox" />
+     </node>
+     <node concept="3RfPnX" id="2vFOz$Gxn39" role="brHgl">
+-      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.LFTOnly/source_gen/EDLanguage/sandbox" />
++      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/source_gen/EDLanguage/sandbox" />
+     </node>
+   </node>
+ </model>
+Index: solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<product version=\"3\" modelHash=\"6xm0oht3uvztkw1hg5154nco456ndqc\">\r\n  <files names=\"MyRunner.java\" />\r\n</product>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated b/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated
+--- a/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated	
++++ b/solutions/EDLanguage.Runner/source_gen.caches/EDLanguage/Runner/RepastMain/generated	
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<product version="3" modelHash="6xm0oht3uvztkw1hg5154nco456ndqc">
++<product version="3" modelHash="-dnklggu0sn1qdj9y0wm5gbl2rej7j1v">
+   <files names="MyRunner.java" />
+ </product>
+ 
+Index: RepastProject/EDProject/EDProject.rs/scenario.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<Scenario simphonyVersion=\"2.7.0\">\r\n<repast.simphony.action.data_set context=\"EDProject\" file=\"repast.simphony.action.data_set_0.xml\" />\r\n<repast.simphony.action.file_sink context=\"EDProject\" file=\"repast.simphony.action.file_sink_1.xml\" />\r\n<repast.simphony.dataLoader.engine.ClassNameDataLoaderAction context=\"EDProject\" file=\"repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_2.xml\" />\r\n<repast.simphony.action.display context=\"EDProject\" file=\"repast.simphony.action.display_3.xml\" />\r\n</Scenario>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/EDProject.rs/scenario.xml b/RepastProject/EDProject/EDProject.rs/scenario.xml
+--- a/RepastProject/EDProject/EDProject.rs/scenario.xml	
++++ b/RepastProject/EDProject/EDProject.rs/scenario.xml	
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+ <Scenario simphonyVersion="2.7.0">
+-<repast.simphony.action.data_set context="EDProject" file="repast.simphony.action.data_set_0.xml" />
+-<repast.simphony.action.file_sink context="EDProject" file="repast.simphony.action.file_sink_1.xml" />
+-<repast.simphony.dataLoader.engine.ClassNameDataLoaderAction context="EDProject" file="repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_2.xml" />
++<repast.simphony.dataLoader.engine.ClassNameDataLoaderAction context="EDProject" file="repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml" />
++<repast.simphony.action.data_set context="EDProject" file="repast.simphony.action.data_set_1.xml" />
++<repast.simphony.action.file_sink context="EDProject" file="repast.simphony.action.file_sink_2.xml" />
+ <repast.simphony.action.display context="EDProject" file="repast.simphony.action.display_3.xml" />
+ </Scenario>
+\ No newline at end of file
+Index: RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package EDLanguage.sandbox;\r\n\r\n/*Generated by MPS */\r\n\r\nimport simcore.Signals.DirectSignal;\r\n\r\npublic class LFDTrackAndTraceSignal extends DirectSignal {\r\n  public LFDTrackAndTraceSignal() {\r\n    this.setName(\"LFDTrackAndTrace\");\r\n    this.setDescription(\"\");\r\n    this.AddActor(\"Receptionist\");\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java b/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java
+--- a/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java	
++++ b/RepastProject/EDProject/src/EDLanguage/sandbox/LFDTrackAndTraceSignal.java	
+@@ -7,7 +7,7 @@
+ public class LFDTrackAndTraceSignal extends DirectSignal {
+   public LFDTrackAndTraceSignal() {
+     this.setName("LFDTrackAndTrace");
+-    this.setDescription("");
++    this.setDescription("Do an FD for discharged patient");
+     this.AddActor("Receptionist");
+   }
+ }
+Index: RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package EDLanguage.sandbox;\r\n\r\n/*Generated by MPS */\r\n\r\nimport repast.simphony.space.continuous.ContinuousSpace;\r\nimport repast.simphony.space.grid.Grid;\r\nimport simcore.Signals.Signal;\r\nimport simcore.action.Action;\r\nimport simcore.action.ActionStep;\r\nimport simcore.action.basicAction.MoveAction;\r\nimport simcore.action.basicAction.StayForTimeAction;\r\nimport simcore.action.basicAction.conditions.PossibilityCondition;\r\nimport simcore.action.basicAction.conditions.InfectionCondition;\r\nimport simcore.agents.Patient;\r\nimport simcore.diagnosis.InfectionStatus;\r\nimport simcore.action.basicAction.SendSignalAction;\r\nimport simcore.action.basicAction.OccupyAction;\r\nimport simcore.basicStructures.Desk;\r\nimport simcore.action.basicAction.conditions.ResultCondition;\r\nimport simcore.action.basicAction.conditions.SuitableForSideRoomCondition;\r\nimport simcore.basicStructures.Room;\r\nimport simcore.action.basicAction.DischargeAction;\r\nimport simcore.action.basicAction.OrderAction;\r\nimport simcore.Signals.Orders.MoveToOrder;\r\n\r\npublic class MajorsABDoctor extends Staff {\r\n\r\n  public double groupStress = Double.parseDouble(\"\" + \"0\");\r\n\r\n  public MajorsABDoctor(ContinuousSpace<Object> space, Grid<Object> grid) {\r\n    super(space, grid);\r\n    mintMyMaxPatients = 2;\r\n  }\r\n\r\n  public MajorsABDoctor(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {\r\n    super(space, grid, pstrStartLocation);\r\n  }\r\n\r\n  public void SetMission(Signal s) {\r\n    switch (s.getName()) {\r\n      case \"\":\r\n        break;\r\n      case \"PatientWaitingForMajorsABDoctor\":\r\n        curMission = new Action(\"SeePatient\");\r\n        this.InitSeePatient(s);\r\n        break;\r\n      case \"LFDComplete\":\r\n        curMission = new Action(\"LFDCompleted\");\r\n        this.InitLFDCompleted(s);\r\n        break;\r\n      case \"LIATComplete\":\r\n        curMission = new Action(\"LIATResult\");\r\n        this.InitLIATResult(s);\r\n        break;\r\n      default:\r\n        System.out.println(\"Set mission: \" + s.getName() + \" failed!\");\r\n        return;\r\n    }\r\n    curActionStep = 0;\r\n  }\r\n\r\n  public void InitSeePatient(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(s.GetData(\"patient\"))));\r\n    curMission.WithStep(new ActionStep().WithName(\"Inspect the patient\").WithAction(new StayForTimeAction().WithTimeSpan(300)));\r\n    curMission.WithStep(new ActionStep().WithName(\"Administer the test\").WithAction(new StayForTimeAction().WithTimeSpan(120)));\r\n    if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {\r\n      if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData(\"patient\")).WithTest(InfectionStatus.Symptomatic))) {\r\n        sendSignalTemp = new ConductLIATSignal();\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        sendSignalTemp.AddData(\"replyTo\", this);\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      } else {\r\n        sendSignalTemp = new ConductLFDSignal();\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        sendSignalTemp.AddData(\"replyTo\", this);\r\n        curMission.WithStep(new ActionStep().WithName(\"50% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      }\r\n    } else {\r\n      this.InitDischargePatient(s);\r\n    }\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace(\"MajorsABReception\"))));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OccupyAction().WithTarget(Desk.class)));\r\n\r\n  }\r\n  public void InitLFDCompleted(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(s.GetData(\"patient\"))));\r\n    curMission.WithStep(new ActionStep().WithName(\"Consult with patient on LFT result\").WithAction(new StayForTimeAction().WithTimeSpan(180)));\r\n    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData(\"patient\")).WithTest(SURESCREEN.getInstance()).WithResult(true))) {\r\n      curMission.WithStep(new ActionStep().WithName(\"Take a LIAT swab\").WithAction(new StayForTimeAction().WithTimeSpan(120)));\r\n      curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));\r\n      sendSignalTemp = new ConductLIATSignal();\r\n      sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n      sendSignalTemp.AddData(\"replyTo\", this);\r\n      curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n    } else {\r\n      sendSignalTemp = new AdmitPatientSignal();\r\n      sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"AmberBay\"));\r\n      sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n      curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n    }\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace(\"MajorsABReception\"))));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OccupyAction().WithTarget(Desk.class)));\r\n\r\n  }\r\n  public void InitLIATResult(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));\r\n    curMission.WithStep(new ActionStep().WithName(\"Collect the sample\").WithAction(new StayForTimeAction().WithTimeSpan(60)));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(s.GetData(\"patient\"))));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OccupyAction().WithTarget(Desk.class)));\r\n    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData(\"patient\")).WithTest(LIAT.getInstance()).WithResult(true))) {\r\n      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData(\"patient\")).WithAlternativeBay((Room) ReadMap().FindPlace(\"RedBay\")))) {\r\n        sendSignalTemp = new AdmitPatientSignal();\r\n        sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"SideRoom\"));\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      } else {\r\n        sendSignalTemp = new AdmitPatientSignal();\r\n        sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"RedBay\"));\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      }\r\n    } else {\r\n      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData(\"patient\")).WithAlternativeBay((Room) ReadMap().FindPlace(\"AmberBay\")))) {\r\n        sendSignalTemp = new AdmitPatientSignal();\r\n        sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"SideRoom\"));\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      } else {\r\n        sendSignalTemp = new AdmitPatientSignal();\r\n        sendSignalTemp.AddData(\"targetWard\", ReadMap().FindPlace(\"AmberBay\"));\r\n        sendSignalTemp.AddData(\"patient\", s.GetData(\"patient\"));\r\n        curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));\r\n      }\r\n    }\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace(\"MajorsABReception\"))));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OccupyAction().WithTarget(Desk.class)));\r\n\r\n  }\r\n  public void InitDischargePatient(Signal s) {\r\n\r\n    Signal sendSignalTemp = new Signal();\r\n\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new DischargeAction().WithPatient(((Patient) s.GetData(\"patient\")))));\r\n    curMission.WithStep(new ActionStep().WithName(\"\").WithAction(new OrderAction().WithPatient(((Patient) s.GetData(\"patient\"))).WithOrder(new MoveToOrder().WithDestination(ReadMap().FindPlace(\"Entrance\")))));\r\n\r\n  }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java b/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java
+--- a/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java	
++++ b/RepastProject/EDProject/src/EDLanguage/sandbox/MajorsABDoctor.java	
+@@ -17,8 +17,6 @@
+ import simcore.action.basicAction.OccupyAction;
+ import simcore.basicStructures.Desk;
+ import simcore.action.basicAction.conditions.ResultCondition;
+-import simcore.action.basicAction.conditions.SuitableForSideRoomCondition;
+-import simcore.basicStructures.Room;
+ import simcore.action.basicAction.DischargeAction;
+ import simcore.action.basicAction.OrderAction;
+ import simcore.Signals.Orders.MoveToOrder;
+@@ -48,9 +46,13 @@
+         curMission = new Action("LFDCompleted");
+         this.InitLFDCompleted(s);
+         break;
+-      case "LIATComplete":
+-        curMission = new Action("LIATResult");
+-        this.InitLIATResult(s);
++      case "PCRComplete":
++        curMission = new Action("PCRResult");
++        this.InitPCRResult(s);
++        break;
++      case "LIATCompleteTrackAndTrace":
++        curMission = new Action("LIATTrackAndTrace");
++        this.InitLIATTrackAndTrace(s);
+         break;
+       default:
+         System.out.println("Set mission: " + s.getName() + " failed!");
+@@ -68,7 +70,7 @@
+     curMission.WithStep(new ActionStep().WithName("Administer the test").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+     if (CheckCondition(new PossibilityCondition().WithPossibility(50))) {
+       if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
+-        sendSignalTemp = new ConductLIATSignal();
++        sendSignalTemp = new RequestPCRSignal();
+         sendSignalTemp.AddData("patient", s.GetData("patient"));
+         sendSignalTemp.AddData("replyTo", this);
+         curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+@@ -76,10 +78,19 @@
+         sendSignalTemp = new ConductLFDSignal();
+         sendSignalTemp.AddData("patient", s.GetData("patient"));
+         sendSignalTemp.AddData("replyTo", this);
+-        curMission.WithStep(new ActionStep().WithName("50% chance of patient in MajorsC being admitted. If COVID suspected, then LIAT, else LFD").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
++        curMission.WithStep(new ActionStep().WithName("50% chance of patient in MajorsAB being admitted. If COVID suspected, then LIAT, else LFD").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+       }
+     } else {
+-      this.InitDischargePatient(s);
++      if (CheckCondition(new InfectionCondition().WithPatient((Patient) s.GetData("patient")).WithTest(InfectionStatus.Symptomatic))) {
++        curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
++        curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
++        sendSignalTemp = new ConductLIATTrackAndTraceSignal();
++        sendSignalTemp.AddData("patient", s.GetData("patient"));
++        sendSignalTemp.AddData("replyTo", this);
++        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
++      } else {
++        this.InitDischargePatient(s);
++      }
+     }
+     curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
+     curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+@@ -93,56 +104,36 @@
+     curMission.WithStep(new ActionStep().WithName("Consult with patient on LFT result").WithAction(new StayForTimeAction().WithTimeSpan(180)));
+     if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(SURESCREEN.getInstance()).WithResult(true))) {
+       curMission.WithStep(new ActionStep().WithName("Take a LIAT swab").WithAction(new StayForTimeAction().WithTimeSpan(120)));
+-      curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+-      sendSignalTemp = new ConductLIATSignal();
++      sendSignalTemp = new RequestPCRSignal();
+       sendSignalTemp.AddData("patient", s.GetData("patient"));
+       sendSignalTemp.AddData("replyTo", this);
+       curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-    } else {
+       sendSignalTemp = new AdmitPatientSignal();
+-      sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
+       sendSignalTemp.AddData("patient", s.GetData("patient"));
+-      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-    }
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+-
+-  }
+-  public void InitLIATResult(Signal s) {
+-
+-    Signal sendSignalTemp = new Signal();
+-
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(LIATBooth.getInstance())));
+-    curMission.WithStep(new ActionStep().WithName("Collect the sample").WithAction(new StayForTimeAction().WithTimeSpan(60)));
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
+-    if (CheckCondition(new ResultCondition().WithPatient((Patient) s.GetData("patient")).WithTest(LIAT.getInstance()).WithResult(true))) {
+-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("RedBay")))) {
+-        sendSignalTemp = new AdmitPatientSignal();
+-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+-        sendSignalTemp.AddData("patient", s.GetData("patient"));
+-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-      } else {
+-        sendSignalTemp = new AdmitPatientSignal();
+-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("RedBay"));
+-        sendSignalTemp.AddData("patient", s.GetData("patient"));
+-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-      }
+-    } else {
+-      if (CheckCondition(new SuitableForSideRoomCondition().WithPatient((Patient) s.GetData("patient")).WithAlternativeBay((Room) ReadMap().FindPlace("AmberBay")))) {
+-        sendSignalTemp = new AdmitPatientSignal();
+-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
+-        sendSignalTemp.AddData("patient", s.GetData("patient"));
+-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-      } else {
+-        sendSignalTemp = new AdmitPatientSignal();
+-        sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
+-        sendSignalTemp.AddData("patient", s.GetData("patient"));
+-        curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
+-      }
+-    }
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(ReadMap().FindPlace("MajorsABReception"))));
+-    curMission.WithStep(new ActionStep().WithName("").WithAction(new OccupyAction().WithTarget(Desk.class)));
++      sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("SideRoom"));
++      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
++    } else {
++      sendSignalTemp = new AdmitPatientSignal();
++      sendSignalTemp.AddData("patient", s.GetData("patient"));
++      sendSignalTemp.AddData("targetWard", ReadMap().FindPlace("AmberBay"));
++      curMission.WithStep(new ActionStep().WithName("").WithAction(new SendSignalAction().WithSignal(sendSignalTemp)));
++    }
++
++  }
++  public void InitPCRResult(Signal s) {
++
++    Signal sendSignalTemp = new Signal();
++
++    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(60)));
++
++  }
++  public void InitLIATTrackAndTrace(Signal s) {
++
++    Signal sendSignalTemp = new Signal();
++
++    curMission.WithStep(new ActionStep().WithName("").WithAction(new MoveAction().WithTarget(s.GetData("patient"))));
++    curMission.WithStep(new ActionStep().WithName("").WithAction(new StayForTimeAction().WithTimeSpan(120)));
++    this.InitDischargePatient(s);
+ 
+   }
+   public void InitDischargePatient(Signal s) {
