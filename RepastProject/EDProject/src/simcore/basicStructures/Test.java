@@ -1,7 +1,7 @@
 package simcore.basicStructures;
 
 import repast.simphony.random.RandomHelper;
-import simcore.agents.Patient;
+import simcore.agents.Agent;
 import simcore.diagnosis.InfectionStatus;
 import simcore.diagnosis.TestResult;
 import simcore.utilities.Distribution;
@@ -32,28 +32,28 @@ public class Test {
 		return instance;
 	}
 	
-	public TestResult TestPatient(Patient pPatient, Double pdblCurrentTimestamp) {
-		boolean patientIsInfected = (pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Asymptomatic
-										|| pPatient.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic);
-		TestResult ptestResult = null;
-		Double pdblRand = RandomHelper.nextDouble();
-		if (patientIsInfected) { // Sensitivity value used
-			if (pdblRand < sensitivity) {
-				ptestResult = new TestResult(true, this);
-			} else {
-				ptestResult = new TestResult(false, this);
-			}
-		} else { // Specificity value used
-			if (pdblRand < specificity) {
-				ptestResult = new TestResult(false, this);
-			} else {
-				ptestResult = new TestResult(true, this);
-			}
-		} 
-		
-		pPatient.addTestResult(ptestResult);
-		return ptestResult;
-	}
+//	public TestResult TestAgent(Agent pAgent) {
+//		boolean patientIsInfected = (pAgent.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Asymptomatic
+//										|| pAgent.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic);
+//		TestResult ptestResult = null;
+//		Double pdblRand = RandomHelper.nextDouble();
+//		if (patientIsInfected) { // Sensitivity value used
+//			if (pdblRand < sensitivity) {
+//				ptestResult = new TestResult(true, this);
+//			} else {
+//				ptestResult = new TestResult(false, this);
+//			}
+//		} else { // Specificity value used
+//			if (pdblRand < specificity) {
+//				ptestResult = new TestResult(false, this);
+//			} else {
+//				ptestResult = new TestResult(true, this);
+//			}
+//		} 
+//		
+//		pPatient.addTestResult(ptestResult);
+//		return ptestResult;
+//	}
 	
 	public double getSensitivity() {
 		return sensitivity;

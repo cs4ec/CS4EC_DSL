@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="couvysjpo7nisanv5tmt9crbxbxzgfx">
+  <files names="parameters.xml:repast.simphony.action.data_set_patient.xml:repast.simphony.action.file_sink_patient.xml:repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml:scenario.xml" />
+  <files dir="EDLanguage/sandbox" names="COVIDLFDTrigger_eSignal.java:COVIDPositiveCohort.java:COVIDandFluLFDTrigger_dSignal.java:CubicleNurse.java:Doctor.java:EDBuilder.java:ElectiveAttendanceArea.java:FluPositiveCohort.java:LFD.java:LIAT.java:LIATBooth.java:LabPCR.java:LabTechnician.java:Labaratory.java:MainEntrance.java:MajorsCBay.java:NonRespiratoryArea.java:NonRespiratoryCohort.java:NonRespiratoryCubicle.java:PatientArrivesTrigger_hSignal.java:PreAdmissionStaff.java:RadiologyRoom.java:RespiratoryArea.java:RespiratoryCubicle.java:RespiratorysymptomsabsentTrigger_cSignal.java:RespiratorysymptomspresentTrigger_bSignal.java:SideRoom.java:SignificantCOVIDContactTrigger_gSignal.java:SignificantCOVIDcontactTrigger_fSignal.java:TaskRoom.java:TriageDesk.java:TriageNurse.java:TriageTrigger_aSignal.java:TriagingTool.java:WaitingRoom.java:Ward.java:WardStaff.java:map_PatientProfile.java:patient.java:patientGenerator_0.java:patientGenerator_1.java" />
+</product>
+

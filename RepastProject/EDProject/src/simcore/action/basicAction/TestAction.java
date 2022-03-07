@@ -1,11 +1,11 @@
 package simcore.action.basicAction;
 
 import simcore.action.ActionFragment;
-import simcore.agents.Patient;
+import simcore.agents.Agent;
 import simcore.basicStructures.Test;
 
 public class TestAction extends ActionFragment {
-	private Patient testTarget;
+	private Agent testTarget;
 	private Test test;
 	private ActionFragment ifPositive;
 	private ActionFragment ifNegative;
@@ -13,7 +13,7 @@ public class TestAction extends ActionFragment {
 
 	public TestAction() {}
 	
-	public TestAction WithPatient(Patient p) {
+	public TestAction WithPatient(Agent p) {
 		testTarget = p;
 		return this;
 	}
@@ -35,7 +35,7 @@ public class TestAction extends ActionFragment {
 		return test;
 	}
 	
-	public Patient getPatient() {
+	public Agent getPatient() {
 		return testTarget;
 	}
 	

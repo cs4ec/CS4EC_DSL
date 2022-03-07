@@ -11,7 +11,6 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.valueLayer.GridValueLayer;
 import simcore.agents.Agent;
-import simcore.agents.Patient;
 import simcore.utilities.Cellbox;
 
 public class Seat extends Occupiable{

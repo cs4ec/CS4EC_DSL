@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1144226303539:jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123159:jetbrains.mps.baseLanguage.structure.IfStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/6329021646629104954:jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123157:jetbrains.mps.baseLanguage.structure.Statement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/5351203823916750322:jetbrains.mps.baseLanguage.structure.TryUniversalStatement" />
+  <root nodeRef="r:afaf0659-ef62-4984-81f3-c225993a086b(MapImporter.plugin)/768972137591582625">
+    <file name="ImportedLogic.java">
+      <node id="768972137586744078" at="36,109,37,0" concept="8" />
+      <node id="768972137586750726" at="38,85,39,0" concept="8" />
+      <node id="768972137586744416" at="40,5,41,0" concept="8" />
+      <node id="768972137584569492" at="42,88,43,59" concept="5" />
+      <node id="768972137584572240" at="43,59,44,0" concept="8" />
+      <node id="768972137584573798" at="45,37,46,99" concept="12" />
+      <node id="768972137584581414" at="46,99,47,0" concept="8" />
+      <node id="768972137584572303" at="48,7,49,0" concept="8" />
+      <node id="768972137584579748" at="49,0,50,49" concept="5" />
+      <node id="768972137584583097" at="50,49,51,0" concept="8" />
+      <node id="768972137584583554" at="51,0,52,93" concept="5" />
+      <node id="768972137584595659" at="52,93,53,0" concept="8" />
+      <node id="768972137584661226" at="54,141,55,117" concept="1" />
+      <node id="768972137584670623" at="56,7,57,122" concept="5" />
+      <node id="768972137584581514" at="57,122,58,0" concept="8" />
+      <node id="768972137584676209" at="58,0,59,20" concept="5" />
+      <node id="768972137584676220" at="60,61,61,16" concept="1" />
+      <node id="768972137584676224" at="61,16,62,49" concept="5" />
+      <node id="768972137584676240" at="63,37,64,116" concept="12" />
+      <node id="768972137584676242" at="65,9,66,51" concept="5" />
+      <node id="768972137584676246" at="66,51,67,75" concept="5" />
+      <node id="768972137584676263" at="68,65,69,87" concept="12" />
+      <node id="768972137584833211" at="70,9,71,0" concept="8" />
+      <node id="768972137584867221" at="73,43,74,75" concept="6" />
+      <node id="768972137584899717" at="77,27,78,194" concept="1" />
+      <node id="768972137584895023" at="78,194,79,62" concept="1" />
+      <node id="768972137584917923" at="80,9,81,57" concept="1" />
+      <node id="768972137584904531" at="81,57,82,48" concept="7" />
+      <node id="768972137584904475" at="82,48,83,128" concept="1" />
+      <node id="768972137584904482" at="83,128,84,118" concept="1" />
+      <node id="768972137584904489" at="84,118,85,118" concept="1" />
+      <node id="768972137584904496" at="85,118,86,115" concept="1" />
+      <node id="768972137584904503" at="86,115,87,117" concept="1" />
+      <node id="768972137584904510" at="87,117,88,115" concept="1" />
+      <node id="768972137584904517" at="88,115,89,115" concept="1" />
+      <node id="768972137584904524" at="89,115,90,113" concept="1" />
+      <node id="768972137584892892" at="90,113,91,0" concept="8" />
+      <node id="768972137584935326" at="91,0,92,86" concept="5" />
+      <node id="768972137584942293" at="92,86,93,222" concept="5" />
+      <node id="768972137584958674" at="94,29,95,58" concept="12" />
+      <node id="768972137584966373" at="96,9,97,94" concept="1" />
+      <node id="768972137584975650" at="97,94,98,0" concept="8" />
+      <node id="768972137584975856" at="98,0,99,0" concept="8" />
+      <node id="768972137584977562" at="99,0,100,99" concept="5" />
+      <node id="768972137585126659" at="100,99,101,80" concept="5" />
+      <node id="768972137585140148" at="102,31,103,90" concept="12" />
+      <node id="768972137585144923" at="104,9,105,71" concept="1" />
+      <node id="768972137585061695" at="106,7,107,0" concept="8" />
+      <node id="768972137584978984" at="107,0,108,100" concept="1" />
+      <node id="768972137586482153" at="108,100,109,172" concept="1" />
+      <node id="768972137584675304" at="109,172,110,0" concept="8" />
+      <node id="768972137584766744" at="116,108,117,43" concept="5" />
+      <node id="768972137584766762" at="118,26,119,94" concept="12" />
+      <node id="768972137584766783" at="121,85,122,113" concept="12" />
+      <node id="768972137584766784" at="123,5,124,30" concept="6" />
+      <node id="768972137584792323" at="127,114,128,43" concept="5" />
+      <node id="768972137584792341" at="129,26,130,94" concept="12" />
+      <node id="768972137584792362" at="132,85,133,113" concept="12" />
+      <node id="768972137584792363" at="134,5,135,33" concept="6" />
+      <node id="768972137591582625" at="140,0,141,0" concept="9" trace="name$MnvL" />
+      <node id="768972137591582625" at="141,0,142,0" concept="9" trace="ID$gLXG" />
+      <node id="768972137591582625" at="142,0,143,0" concept="9" trace="x$8h86" />
+      <node id="768972137591582625" at="143,0,144,0" concept="9" trace="y$8hA8" />
+      <node id="768972137591582625" at="144,0,145,0" concept="9" trace="width$g4wh" />
+      <node id="768972137591582625" at="145,0,146,0" concept="9" trace="height$g5sl" />
+      <node id="768972137591582625" at="146,0,147,0" concept="9" trace="desks$VmIX" />
+      <node id="768972137591582625" at="147,0,148,0" concept="9" trace="seats$VfGv" />
+      <node id="768972137591582625" at="148,0,149,0" concept="9" trace="beds$zE0I" />
+      <node id="768972137591582625" at="149,0,150,0" concept="9" trace="colour$7icN" />
+      <node id="768972137591582625" at="153,0,154,0" concept="9" trace="RoomType$1b" />
+      <node id="768972137591582625" at="157,0,158,0" concept="9" trace="rooms$Qimv" />
+      <node id="768972137591582625" at="158,0,159,0" concept="9" trace="roomType$2uZL" />
+      <node id="768972137586750725" at="37,0,40,5" concept="13" />
+      <node id="768972137584596526" at="53,0,56,7" concept="2" />
+      <node id="768972137584676229" at="62,49,65,9" concept="3" />
+      <node id="768972137584676252" at="67,75,70,9" concept="3" />
+      <node id="768972137584865696" at="73,0,76,0" concept="4" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="768972137584955901" at="93,222,96,9" concept="3" />
+      <node id="768972137585136928" at="101,80,104,9" concept="3" />
+      <node id="768972137584766748" at="117,43,120,5" concept="3" />
+      <node id="768972137584766763" at="120,5,123,5" concept="3" />
+      <node id="768972137584792327" at="128,43,131,5" concept="3" />
+      <node id="768972137584792342" at="131,5,134,5" concept="3" />
+      <node id="768972137584571010" at="44,0,48,7" concept="3" />
+      <node id="768972137584895012" at="76,11,80,9" concept="3" />
+      <node id="768972137584836572" at="71,0,76,11" concept="5" />
+      <node id="768972137584766734" at="116,0,126,0" concept="10" trace="getInt#(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/lang/String;)I" />
+      <node id="768972137584792313" at="127,0,137,0" concept="10" trace="getString#(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;" />
+      <node id="768972137584701644" at="59,20,106,7" concept="2" />
+      <node id="768972137584550536" at="41,0,111,5" concept="13" />
+      <node id="768972137584492487" at="36,0,113,0" concept="10" trace="ImportJson#(Ljava/lang/String;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <scope id="768972137586750727" at="38,85,39,0" />
+      <scope id="768972137584596532" at="54,141,55,117" />
+      <scope id="768972137584676233" at="63,37,64,116" />
+      <scope id="768972137584676256" at="68,65,69,87" />
+      <scope id="768972137584865697" at="73,43,74,75" />
+      <scope id="768972137584955903" at="94,29,95,58" />
+      <scope id="768972137585136930" at="102,31,103,90" />
+      <scope id="768972137584766753" at="118,26,119,94" />
+      <scope id="768972137584766772" at="121,85,122,113" />
+      <scope id="768972137584792332" at="129,26,130,94" />
+      <scope id="768972137584792351" at="132,85,133,113" />
+      <scope id="768972137584571012" at="45,37,47,0" />
+      <scope id="768972137584895017" at="77,27,79,62" />
+      <scope id="768972137584596526" at="53,0,56,7">
+        <var name="roomType" id="768972137584596528" />
+      </scope>
+      <scope id="768972137584865696" at="73,0,76,0">
+        <var name="it" id="768972137584865696" />
+      </scope>
+      <scope id="768972137584766742" at="116,108,124,30">
+        <var name="element" id="768972137584766743" />
+      </scope>
+      <scope id="768972137584792321" at="127,114,135,33">
+        <var name="element" id="768972137584792322" />
+      </scope>
+      <scope id="768972137584766734" at="116,0,126,0">
+        <var name="errorPrefix" id="768972137584766739" />
+        <var name="name" id="768972137584766737" />
+        <var name="object" id="768972137584766735" />
+      </scope>
+      <scope id="768972137584792313" at="127,0,137,0">
+        <var name="errorPrefix" id="768972137584792318" />
+        <var name="name" id="768972137584792316" />
+        <var name="object" id="768972137584792314" />
+      </scope>
+      <scope id="768972137584701650" at="60,61,105,71">
+        <var name="colour" id="768972137584942296" />
+        <var name="colourName" id="768972137584935329" />
+        <var name="id" id="768972137584676245" />
+        <var name="object" id="768972137584676241" />
+        <var name="prefixForErrors" id="768972137584676223" />
+        <var name="room" id="768972137584836575" />
+        <var name="roomType" id="768972137585126662" />
+        <var name="roomTypeName" id="768972137584977565" />
+      </scope>
+      <scope id="768972137584701644" at="59,20,106,7">
+        <var name="item" id="768972137584701646" />
+      </scope>
+      <scope id="768972137584550537" at="42,88,110,0">
+        <var name="array" id="768972137584579749" />
+        <var name="element" id="768972137584569493" />
+        <var name="importedRooms" id="768972137584670626" />
+        <var name="index" id="768972137584676208" />
+        <var name="roomTypesByName" id="768972137584583560" />
+      </scope>
+      <scope id="768972137584492491" at="36,109,111,5" />
+      <scope id="768972137584492487" at="36,0,113,0">
+        <var name="path" id="768972137584492767" />
+        <var name="targetContainer" id="768972137584492804" />
+      </scope>
+      <unit id="768972137591582625" at="152,0,155,0" name="MapImporter.plugin.ImportedLogic$CONCEPTS" />
+      <unit id="768972137584865696" at="72,121,76,9" name="MapImporter.plugin.ImportedLogic$1" />
+      <unit id="768972137591582625" at="156,0,160,0" name="MapImporter.plugin.ImportedLogic$LINKS" />
+      <unit id="768972137591582625" at="139,0,151,0" name="MapImporter.plugin.ImportedLogic$PROPS" />
+      <unit id="768972137591582625" at="34,0,161,0" name="MapImporter.plugin.ImportedLogic" />
+    </file>
+  </root>
+  <root nodeRef="r:afaf0659-ef62-4984-81f3-c225993a086b(MapImporter.plugin)/768972137591606744">
+    <file name="JsonFormatException.java">
+      <node id="768972137591607995" at="7,46,8,19" concept="11" />
+      <node id="768972137591607326" at="7,0,10,0" concept="0" trace="JsonFormatException#(Ljava/lang/String;)V" />
+      <scope id="768972137591607330" at="7,46,8,19" />
+      <scope id="768972137591607326" at="7,0,10,0">
+        <var name="message" id="768972137591607569" />
+      </scope>
+      <unit id="768972137591606744" at="6,0,11,0" name="MapImporter.plugin.JsonFormatException" />
+    </file>
+  </root>
+</debug-info>
+
