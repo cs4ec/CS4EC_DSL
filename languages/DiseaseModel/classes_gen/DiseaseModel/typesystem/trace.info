@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1082485599095:jetbrains.mps.baseLanguage.structure.BlockStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123155:jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123165:jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242864:jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068581242878:jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
+  <root>
+    <file name="TypesystemDescriptor.java">
+      <unit at="8,0,16,0" name="DiseaseModel.typesystem.TypesystemDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:3e3e0a0a-2e13-4726-a4c2-e92e9edde51f(DiseaseModel.typesystem)/1758249876488589145">
+    <file name="TypesystemDescriptor.java">
+      <node id="1758249876488589145" at="10,5,11,87" concept="4" />
+      <node id="1758249876488589145" at="11,87,12,47" concept="2" />
+      <node id="1758249876488589145" at="9,33,13,5" concept="0" />
+      <scope id="1758249876488589145" at="10,5,12,47">
+        <var name="inferenceRule" id="1758249876488589145" />
+      </scope>
+    </file>
+    <file name="typeof_InfectionStatus_InferenceRule.java">
+      <node id="1758249876488592465" at="19,84,20,16" concept="5" />
+      <node id="1589537774397033404" at="23,5,24,57" concept="4" />
+      <node id="1589537774397033404" at="24,57,25,189" concept="4" />
+      <node id="1589537774397033404" at="25,189,26,268" concept="2" />
+      <node id="1758249876488589145" at="29,50,30,39" concept="5" />
+      <node id="1758249876488589145" at="32,68,33,102" concept="5" />
+      <node id="1589537774397033420" at="35,63,36,73" concept="4" />
+      <node id="1589537774397033420" at="36,73,37,26" concept="5" />
+      <node id="1758249876488589145" at="41,0,42,0" concept="6" trace="InfectionStatus$wT" />
+      <node id="1758249876488589145" at="42,0,43,0" concept="6" trace="StringLiteral$By" />
+      <node id="1758249876488589145" at="17,0,19,0" concept="1" trace="typeof_InfectionStatus_InferenceRule#()V" />
+      <node id="1758249876488589145" at="19,0,22,0" concept="3" trace="overrides#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)Z" />
+      <node id="1758249876488589145" at="29,0,32,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="1758249876488589145" at="32,0,35,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="1589537774397033420" at="35,0,39,0" concept="7" trace="createStringLiteral_nbe3h2_a1a0c0a0c#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1589537774397033404" at="22,128,27,5" concept="0" />
+      <node id="1758249876488589145" at="22,0,29,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="1758249876488589145" at="17,49,17,49" />
+      <scope id="1758249876488592443" at="19,84,20,16" />
+      <scope id="1758249876488589145" at="29,50,30,39" />
+      <scope id="1758249876488589145" at="32,68,33,102" />
+      <scope id="1758249876488589145" at="17,0,19,0" />
+      <scope id="1589537774397033420" at="35,63,37,26">
+        <var name="n0" id="1589537774397033420" />
+      </scope>
+      <scope id="1758249876488589145" at="19,0,22,0">
+        <var name="infectionStatus" id="1758249876488589145" />
+        <var name="status" id="1758249876488589145" />
+      </scope>
+      <scope id="1589537774397033404" at="23,5,26,268">
+        <var name="_info_12389875345" id="1589537774397033404" />
+        <var name="_nodeToCheck_1029348928467" id="1589537774397033404" />
+      </scope>
+      <scope id="1758249876488589145" at="29,0,32,0" />
+      <scope id="1758249876488589145" at="32,0,35,0">
+        <var name="argument" id="1758249876488589145" />
+      </scope>
+      <scope id="1589537774397033420" at="35,0,39,0" />
+      <scope id="1758249876488589146" at="22,128,27,5" />
+      <scope id="1758249876488589145" at="22,0,29,0">
+        <var name="infectionStatus" id="1758249876488589145" />
+        <var name="status" id="1758249876488589145" />
+        <var name="typeCheckingContext" id="1758249876488589145" />
+      </scope>
+      <unit id="1758249876488589145" at="40,0,44,0" name="DiseaseModel.typesystem.typeof_InfectionStatus_InferenceRule$CONCEPTS" />
+      <unit id="1758249876488589145" at="16,0,45,0" name="DiseaseModel.typesystem.typeof_InfectionStatus_InferenceRule" />
+    </file>
+  </root>
+</debug-info>
+

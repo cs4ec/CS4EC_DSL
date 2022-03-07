@@ -1,0 +1,174 @@
+<changelist name="Default_Changelist" date="1646665056823" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.mps/shelf/Default_Changelist/shelved.patch" />
+  <option name="DESCRIPTION" value="Default Changelist" />
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/Doctor.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/Doctor.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/Doctor.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/EDBuilder.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/EDBuilder.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/EDBuilder.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LabTech.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LabTech.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LabTech.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LFDDevice.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LFDDevice.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LFDDevice.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/LIATMachine.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/LIATMachine.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/LIATMachine.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/MajorsABDoctor.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/MajorsABDoctor.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/MajorsABDoctor.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/MajorsABNurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/MajorsABNurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/MajorsABNurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/MajorsTriageNurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/MajorsTriageNurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/MajorsTriageNurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/Nurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/Nurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/Nurse.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/Receptionist.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/Receptionist.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/Receptionist.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="solutions/EDRuntime_EDProject/lib/simcore.jar" />
+    <option name="AFTER_PATH" value="solutions/EDRuntime_EDProject/lib/simcore.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.mps/shelf/Default_Changelist/simcore.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.CurrentProcess/classes_gen/EDLanguage/sandbox/Staff.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLFT/classes_gen/EDLanguage/sandbox/Staff.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="languages/EDLanguage/EDLanguage.sandbox.OnlyLIAT/classes_gen/EDLanguage/sandbox/Staff.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
