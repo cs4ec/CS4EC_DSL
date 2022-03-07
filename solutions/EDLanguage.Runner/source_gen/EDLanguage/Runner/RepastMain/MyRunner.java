@@ -68,7 +68,7 @@ public class MyRunner {
 
       baseFiles = targetDir.listFiles();
       for (int i = 0; i < baseFiles.length; i++) {
-        if (baseFiles[i].isFile() && (baseFiles[i].getName().startsWith("parameters") || baseFiles[i].getName().startsWith("repast.simphony.action.data") || baseFiles[i].getName().startsWith("repast.simphony.action.file") || baseFiles[i].getName().startsWith("scenario"))) {
+        if (baseFiles[i].isFile() && (baseFiles[i].getName().startsWith("parameters") || baseFiles[i].getName().startsWith("repast.simphony.action.data") || baseFiles[i].getName().startsWith("repast.simphony.action.file") || baseFiles[i].getName().startsWith("scenario") || baseFiles[i].getName().startsWith("repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0"))) {
           baseFiles[i].delete();
         }
       }

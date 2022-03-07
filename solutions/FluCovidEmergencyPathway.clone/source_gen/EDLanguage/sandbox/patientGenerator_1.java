@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class patientGenerator_1 extends AgentGenerator {
   public patientGenerator_1(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
-    spawnRoomType = ElectiveAttendanceArea.getInstance();
+    spawnRoomType = MainEntrance.getInstance();
     initialiseArrivalMap();
   }
 
@@ -42,14 +42,68 @@ public class patientGenerator_1 extends AgentGenerator {
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedNo")) {
-      a.Immunocompromised = "No";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusfullyvaccinated")) {
+      a.COVIDVaccineStatus = "fullyvaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedYes")) {
-      a.Immunocompromised = "Yes";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusUnvaccinated")) {
+      a.COVIDVaccineStatus = "Unvaccinated";
     }
-    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("admissionRouteElectiveattendance")) {
-      a.admissionRoute = "Electiveattendance";
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatuspartiallyvaccinated")) {
+      a.COVIDVaccineStatus = "partiallyvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusUnvaccinated")) {
+      a.FluAVaccineStatus = "Unvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusfullyvaccinated")) {
+      a.FluAVaccineStatus = "fullyvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatuspartiallyvaccinated")) {
+      a.FluAVaccineStatus = "partiallyvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusUnvaccinated")) {
+      a.FluBVaccineStatus = "Unvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusfullyvaccinated")) {
+      a.FluBVaccineStatus = "fullyvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatuspartiallyvaccinated")) {
+      a.FluBVaccineStatus = "partiallyvaccinated";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSusceptible")) {
+      a.COVIDInfectionStatus = "Susceptible";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic")) {
+      a.COVIDInfectionStatus = "Symptomatic";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic")) {
+      a.COVIDInfectionStatus = "Asymptomatic";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSusceptible")) {
+      a.FluAInfectionStatus = "Susceptible";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic")) {
+      a.FluAInfectionStatus = "Symptomatic";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic")) {
+      a.FluAInfectionStatus = "Asymptomatic";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible")) {
+      a.FluBInfectionStatus = "Susceptible";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic")) {
+      a.FluBInfectionStatus = "Symptomatic";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic")) {
+      a.FluBInfectionStatus = "Asymptomatic";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo")) {
+      a.RecentCovidContact = "No";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes")) {
+      a.RecentCovidContact = "Yes";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("admissionRouteEmergencyAttendance")) {
+      a.admissionRoute = "EmergencyAttendance";
     }
 
     b.PushMission(sendSignalTemp);
@@ -59,29 +113,29 @@ public class patientGenerator_1 extends AgentGenerator {
 
   public void initialiseArrivalMap() {
     ArrivalPerHour = new HashMap<Integer, Integer>();
-    ArrivalPerHour.put(1, 2);
-    ArrivalPerHour.put(2, 3);
-    ArrivalPerHour.put(3, 4);
-    ArrivalPerHour.put(4, 5);
-    ArrivalPerHour.put(5, 6);
-    ArrivalPerHour.put(6, 3);
-    ArrivalPerHour.put(7, 4);
-    ArrivalPerHour.put(8, 3);
+    ArrivalPerHour.put(1, 4);
+    ArrivalPerHour.put(2, 6);
+    ArrivalPerHour.put(3, 6);
+    ArrivalPerHour.put(4, 3);
+    ArrivalPerHour.put(5, 3);
+    ArrivalPerHour.put(6, 7);
+    ArrivalPerHour.put(7, 2);
+    ArrivalPerHour.put(8, 2);
     ArrivalPerHour.put(9, 5);
-    ArrivalPerHour.put(10, 6);
-    ArrivalPerHour.put(11, 5);
-    ArrivalPerHour.put(12, 3);
-    ArrivalPerHour.put(13, 4);
-    ArrivalPerHour.put(14, 3);
-    ArrivalPerHour.put(15, 4);
-    ArrivalPerHour.put(16, 3);
-    ArrivalPerHour.put(17, 4);
-    ArrivalPerHour.put(18, 3);
-    ArrivalPerHour.put(19, 4);
-    ArrivalPerHour.put(20, 3);
-    ArrivalPerHour.put(21, 4);
-    ArrivalPerHour.put(22, 3);
-    ArrivalPerHour.put(23, 4);
+    ArrivalPerHour.put(10, 10);
+    ArrivalPerHour.put(11, 10);
+    ArrivalPerHour.put(12, 13);
+    ArrivalPerHour.put(13, 13);
+    ArrivalPerHour.put(14, 14);
+    ArrivalPerHour.put(15, 15);
+    ArrivalPerHour.put(16, 16);
+    ArrivalPerHour.put(17, 14);
+    ArrivalPerHour.put(18, 13);
+    ArrivalPerHour.put(19, 9);
+    ArrivalPerHour.put(20, 7);
+    ArrivalPerHour.put(21, 8);
+    ArrivalPerHour.put(22, 7);
+    ArrivalPerHour.put(23, 10);
     ArrivalPerHour.put(24, 3);
 
 

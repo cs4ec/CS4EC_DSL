@@ -112,10 +112,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 2;
     }
   }
-  public class SendSignalAction_b0a_3 extends BehaviourStep {
+  public class SendSignalAction_b0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_3(Behaviour behaviour) {
+    public SendSignalAction_b0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -144,10 +144,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0a_6 extends BehaviourStep {
+  public class StayAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0a_6(Behaviour behaviour) {
+    public StayAction_a0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -160,10 +160,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 2;
     }
   }
-  public class SendSignalAction_b0a_6 extends BehaviourStep {
+  public class SendSignalAction_b0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_6(Behaviour behaviour) {
+    public SendSignalAction_b0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -192,10 +192,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0b_2 extends BehaviourStep {
+  public class StayAction_a0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0b_2(Behaviour behaviour) {
+    public StayAction_a0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -208,10 +208,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 4;
     }
   }
-  public class SendSignalAction_b0b_3 extends BehaviourStep {
+  public class SendSignalAction_b0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0b_3(Behaviour behaviour) {
+    public SendSignalAction_b0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -256,10 +256,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0b_9 extends BehaviourStep {
+  public class StayAction_a0b_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0b_9(Behaviour behaviour) {
+    public StayAction_a0b_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -272,10 +272,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 4;
     }
   }
-  public class SendSignalAction_b0b_9 extends BehaviourStep {
+  public class SendSignalAction_b0b_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0b_9(Behaviour behaviour) {
+    public SendSignalAction_b0b_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -712,7 +712,7 @@ public class CubicleNurse extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new StayAction_a0a_3(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0a_3(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_b0a_1(behaviourBuilder));
     plstSteps.add(new StayAction_c0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -722,8 +722,8 @@ public class CubicleNurse extends Actor {
   public void Initew_f(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new StayAction_a0b_2(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0b_3(behaviourBuilder));
+    plstSteps.add(new StayAction_a0b(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_b0b(behaviourBuilder));
     plstSteps.add(new SendSignalAction_c0b(behaviourBuilder));
     plstSteps.add(new StayAction_d0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
