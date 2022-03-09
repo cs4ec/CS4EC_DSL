@@ -15,10 +15,10 @@ import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.basicStructures.Board;
-import simcore.action.PassiveBehaviourStep;
 import simcore.action.InstantBehaviourStep;
 import java.util.ArrayList;
+import simcore.basicStructures.Board;
+import simcore.action.PassiveBehaviourStep;
 
 public class WardStaff extends Actor {
 
@@ -151,20 +151,21 @@ public class WardStaff extends Actor {
       return timeExecuted == 10;
     }
   }
-  public class SendSignalAction_d0a extends BehaviourStep {
+  public class Choice_d0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_d0a(Behaviour behaviour) {
+    public Choice_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TreatmentTrigger_dSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "partiallyvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "fullyvaccinated") || ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0d0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
   public class SendSignalAction_e0a extends BehaviourStep {
@@ -183,20 +184,21 @@ public class WardStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_f0a extends BehaviourStep {
+  public class Choice_f0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_f0a(Behaviour behaviour) {
+    public Choice_f0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ewTrigger_fSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0f0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
   public class StayAction_g0a extends BehaviourStep {
@@ -274,10 +276,43 @@ public class WardStaff extends Actor {
       return timeExecuted == 10;
     }
   }
-  public class SendSignalAction_d0a_1 extends BehaviourStep {
+  public class Choice_d0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_d0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "partiallyvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "fullyvaccinated") || ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0d0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0d0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_d0a_1(Behaviour behaviour) {
+    public SendSignalAction_a0d0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new TreatmentTrigger_dSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0d0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0d0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -306,10 +341,43 @@ public class WardStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_f0a_1 extends BehaviourStep {
+  public class Choice_f0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_f0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0f0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0f0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_f0a_1(Behaviour behaviour) {
+    public SendSignalAction_a0f0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ewTrigger_fSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0f0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0f0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1544,9 +1612,9 @@ public class WardStaff extends Actor {
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     plstSteps.add(new StayAction_c0a_15(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
+    plstSteps.add(new Choice_d0a(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_f0a(behaviourBuilder));
+    plstSteps.add(new Choice_f0a(behaviourBuilder));
     plstSteps.add(new StayAction_g0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

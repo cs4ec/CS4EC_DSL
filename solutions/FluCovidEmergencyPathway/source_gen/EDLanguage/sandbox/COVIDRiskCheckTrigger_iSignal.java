@@ -4,9 +4,9 @@ package EDLanguage.sandbox;
 
 import simcore.Signals.ActorTypeSignal;
 
-public class SignificantCOVIDContactTrigger_iSignal extends ActorTypeSignal {
-  public SignificantCOVIDContactTrigger_iSignal() {
-    this.setName("SignificantCOVIDContactTrigger_i");
+public class COVIDRiskCheckTrigger_iSignal extends ActorTypeSignal {
+  public COVIDRiskCheckTrigger_iSignal() {
+    this.setName("COVIDRiskCheckTrigger_i");
     this.setDescription("SecondPlaceholderSignal");
     this.AddActor("CubicleNurse");
   }

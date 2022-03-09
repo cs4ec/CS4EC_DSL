@@ -2276,7 +2276,7 @@
     <ref role="1XX52x" to="e88n:1xAzJ9PnC4u" resolve="ImmunosuppressedProperty" />
     <node concept="3EZMnI" id="1xAzJ9PnC5w" role="2wV5jI">
       <node concept="3F0ifn" id="1xAzJ9PnC5B" role="3EZMnx">
-        <property role="3F0ifm" value="Patient is immuno-compromised" />
+        <property role="3F0ifm" value="Patient is immunosuppressed" />
       </node>
       <node concept="2iRfu4" id="1xAzJ9PnC5z" role="2iSdaV" />
     </node>

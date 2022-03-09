@@ -79,10 +79,10 @@ public class Doctor extends Actor {
 
 
 
-  public class StayAction_a0a extends BehaviourStep {
+  public class StayAction_a0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0a(Behaviour behaviour) {
+    public StayAction_a0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -127,10 +127,10 @@ public class Doctor extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0a_8 extends BehaviourStep {
+  public class StayAction_a0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0a_8(Behaviour behaviour) {
+    public StayAction_a0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -143,10 +143,10 @@ public class Doctor extends Actor {
       return timeExecuted == 5;
     }
   }
-  public class SendSignalAction_b0a_6 extends BehaviourStep {
+  public class SendSignalAction_b0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_6(Behaviour behaviour) {
+    public SendSignalAction_b0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -159,10 +159,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a_6 extends BehaviourStep {
+  public class StayAction_c0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_6(Behaviour behaviour) {
+    public StayAction_c0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -175,10 +175,10 @@ public class Doctor extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0b_0 extends BehaviourStep {
+  public class StayAction_a0b_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0b_0(Behaviour behaviour) {
+    public StayAction_a0b_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -191,10 +191,10 @@ public class Doctor extends Actor {
       return timeExecuted == 2;
     }
   }
-  public class SendSignalAction_b0b_0 extends BehaviourStep {
+  public class SendSignalAction_b0b_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0b_0(Behaviour behaviour) {
+    public SendSignalAction_b0b_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -207,10 +207,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0b extends BehaviourStep {
+  public class StayAction_c0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0b(Behaviour behaviour) {
+    public StayAction_c0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -223,10 +223,10 @@ public class Doctor extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0b_5 extends BehaviourStep {
+  public class StayAction_a0b_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0b_5(Behaviour behaviour) {
+    public StayAction_a0b_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -239,10 +239,10 @@ public class Doctor extends Actor {
       return timeExecuted == 2;
     }
   }
-  public class SendSignalAction_b0b_5 extends BehaviourStep {
+  public class SendSignalAction_b0b_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0b_5(Behaviour behaviour) {
+    public SendSignalAction_b0b_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -255,10 +255,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0b_3 extends BehaviourStep {
+  public class StayAction_c0b_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0b_3(Behaviour behaviour) {
+    public StayAction_c0b_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -276,7 +276,7 @@ public class Doctor extends Actor {
   public void Initwefvvesc_f(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new StayAction_a0a(behaviourBuilder));
+    plstSteps.add(new StayAction_a0a_0(behaviourBuilder));
     plstSteps.add(new SendSignalAction_b0a_0(behaviourBuilder));
     plstSteps.add(new StayAction_c0a_1(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
@@ -287,9 +287,9 @@ public class Doctor extends Actor {
   public void Initwevwe_g(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new StayAction_a0b_0(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0b_0(behaviourBuilder));
-    plstSteps.add(new StayAction_c0b(behaviourBuilder));
+    plstSteps.add(new StayAction_a0b_3(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_b0b_3(behaviourBuilder));
+    plstSteps.add(new StayAction_c0b_1(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

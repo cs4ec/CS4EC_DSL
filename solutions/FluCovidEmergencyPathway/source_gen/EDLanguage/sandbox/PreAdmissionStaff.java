@@ -138,10 +138,10 @@ public class PreAdmissionStaff extends Actor {
       }
     }
   }
-  public class StayAction_c0a_3 extends BehaviourStep {
+  public class StayAction_c0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_3(Behaviour behaviour) {
+    public StayAction_c0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -252,10 +252,10 @@ public class PreAdmissionStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a_5 extends BehaviourStep {
+  public class StayAction_c0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_5(Behaviour behaviour) {
+    public StayAction_c0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -376,11 +376,11 @@ public class PreAdmissionStaff extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0b_1 extends BehaviourStep {
+  public class MoveAction_a0b_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_1(Behaviour behaviour) {
+    public MoveAction_a0b_5(Behaviour behaviour) {
       target = ElectiveAttendanceArea.getInstance();
       this.behaviour = behaviour;
     }
@@ -407,9 +407,9 @@ public class PreAdmissionStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0b_1 extends BehaviourStep {
+  public class OrderAction_b0b_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0b_1(Behaviour behaviour) {
+    public OrderAction_b0b_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -419,10 +419,10 @@ public class PreAdmissionStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(PreAdmissionStaff.this));
     }
   }
-  public class StayAction_c0b_1 extends BehaviourStep {
+  public class StayAction_c0b_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0b_1(Behaviour behaviour) {
+    public StayAction_c0b_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -516,11 +516,11 @@ public class PreAdmissionStaff extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0c extends BehaviourStep {
+  public class MoveAction_a0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0c(Behaviour behaviour) {
+    public MoveAction_a0c_1(Behaviour behaviour) {
       target = ElectiveAttendanceArea.getInstance();
       this.behaviour = behaviour;
     }
@@ -563,10 +563,10 @@ public class PreAdmissionStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0c extends BehaviourStep {
+  public class StayAction_c0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0c(Behaviour behaviour) {
+    public StayAction_c0c_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -579,11 +579,11 @@ public class PreAdmissionStaff extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0c_1 extends BehaviourStep {
+  public class MoveAction_a0c_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0c_1(Behaviour behaviour) {
+    public MoveAction_a0c_3(Behaviour behaviour) {
       target = ElectiveAttendanceArea.getInstance();
       this.behaviour = behaviour;
     }
@@ -626,10 +626,10 @@ public class PreAdmissionStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0c_1 extends BehaviourStep {
+  public class StayAction_c0c_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0c_1(Behaviour behaviour) {
+    public StayAction_c0c_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2495,7 +2495,7 @@ public class PreAdmissionStaff extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new Choice_a0a(behaviourBuilder));
     plstSteps.add(new Choice_b0a(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a_3(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a_5(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2518,9 +2518,9 @@ public class PreAdmissionStaff extends Actor {
   public void InitIsolationPeriod_b(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0c(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0c_1(behaviourBuilder));
     plstSteps.add(new SendSignalAction_b0c(behaviourBuilder));
-    plstSteps.add(new StayAction_c0c(behaviourBuilder));
+    plstSteps.add(new StayAction_c0c_1(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

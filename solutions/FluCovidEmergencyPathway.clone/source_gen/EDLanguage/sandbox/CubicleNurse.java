@@ -112,10 +112,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 2;
     }
   }
-  public class SendSignalAction_b0a_1 extends BehaviourStep {
+  public class SendSignalAction_b0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_1(Behaviour behaviour) {
+    public SendSignalAction_b0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -256,10 +256,10 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0b_7 extends BehaviourStep {
+  public class StayAction_a0b_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0b_7(Behaviour behaviour) {
+    public StayAction_a0b_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -615,7 +615,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).admissionRoute == "Electiveattendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0a0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -648,7 +648,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).admissionRoute == "Electiveattendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0a0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -712,7 +712,7 @@ public class CubicleNurse extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new StayAction_a0a_3(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0a_1(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_b0a(behaviourBuilder));
     plstSteps.add(new StayAction_c0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

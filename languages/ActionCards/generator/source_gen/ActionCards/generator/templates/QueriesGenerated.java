@@ -25,9 +25,9 @@ import java.util.Objects;
 import jetbrains.mps.generator.template.IfMacroContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext;
 import jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext;
-import jetbrains.mps.internal.collections.runtime.ISelector;
 import java.util.List;
 import java.util.ArrayList;
+import jetbrains.mps.internal.collections.runtime.ISelector;
 import AgentLanguage.behavior.RoomType__BehaviorDescriptor;
 import org.jetbrains.mps.openapi.language.SEnumerationLiteral;
 import jetbrains.mps.generator.template.MappingScriptContext;
@@ -504,7 +504,23 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.staffNumbers$IepE);
   }
   public static Iterable<SNode> sourceNodesQuery_8_0(final SourceSubstituteMacroNodesContext _context) {
-    return Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).distinct();
+    List<String> foundNames = ListSequence.fromList(new ArrayList<String>());
+    List<SNode> retList = ListSequence.fromList(new ArrayList<SNode>());
+
+    for (SNode attribute : Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM))) {
+      String attributeName = IPatientProperty__BehaviorDescriptor.getName_id1xAzJ9JgcJZ.invoke(SLinkOperations.getTarget(attribute, LINKS.patientProperty$oTU2));
+
+
+      if (!(ListSequence.fromList(foundNames).contains(attributeName))) {
+        ListSequence.fromList(retList).addElement(attribute);
+        ListSequence.fromList(foundNames).addElement(attributeName);
+      }
+    }
+
+    return retList;
+
+
+
   }
   public static Iterable<SNode> sourceNodesQuery_8_1(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.DiseaseTest$k4), LINKS.CapturedDiseases$9e0A);
@@ -532,7 +548,21 @@ public class QueriesGenerated extends QueryProviderBase {
     });
   }
   public static Iterable<SNode> sourceNodesQuery_8_4(final SourceSubstituteMacroNodesContext _context) {
-    return Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM), LINKS.patientProperty$oTU2)).distinct();
+    List<String> foundNames = ListSequence.fromList(new ArrayList<String>());
+    List<SNode> retList = ListSequence.fromList(new ArrayList<SNode>());
+
+    for (SNode patientProperty : Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM), LINKS.patientProperty$oTU2))) {
+      String attributeName = IPatientProperty__BehaviorDescriptor.getName_id1xAzJ9JgcJZ.invoke(patientProperty);
+
+
+      if (!(ListSequence.fromList(foundNames).contains(attributeName))) {
+        ListSequence.fromList(retList).addElement(patientProperty);
+        ListSequence.fromList(foundNames).addElement(attributeName);
+      }
+    }
+
+    return retList;
+
   }
   public static Iterable<SNode> sourceNodesQuery_8_5(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.DiseaseTest$k4), LINKS.CapturedDiseases$9e0A);

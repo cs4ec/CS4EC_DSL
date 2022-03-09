@@ -133,6 +133,7 @@
       </concept>
       <concept id="1758249876538241356" name="ActionCards.structure.DischargeAction" flags="ng" index="1H2jYY" />
       <concept id="1758249876537114910" name="ActionCards.structure.ImmunosuppressedProperty" flags="ng" index="1He0ZG" />
+      <concept id="1758249876537123464" name="ActionCards.structure.ImmunocompromisedCondition" flags="ng" index="1He2LU" />
       <concept id="1758249876539396808" name="ActionCards.structure.ActionCardReference" flags="ng" index="1HTXKU">
         <reference id="1758249876539396856" name="actionCard" index="1HTXKa" />
       </concept>
@@ -932,9 +933,9 @@
       <node concept="37mRIm" id="1xAzJ9Nxt5k" role="37mRID">
         <property role="37mO49" value="1758249876506136802" />
         <node concept="gqqVs" id="1xAzJ9Nxt5j" role="37mO4d">
-          <property role="gqqTZ" value="27.0" />
+          <property role="gqqTZ" value="71.92753623188406" />
           <property role="gqqTW" value="286.55555555555554" />
-          <property role="gqqTX" value="262.0" />
+          <property role="gqqTX" value="178.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -1231,7 +1232,7 @@
       </node>
       <node concept="2GGxJi" id="1xAzJ9Nxt89" role="3tG3Yq">
         <ref role="3tVEyn" node="52K8EjSnmf" resolve="COVID LFD" />
-        <ref role="2GGxGe" node="1xAzJ9Nxt3y" resolve="Significant COVID Contact" />
+        <ref role="2GGxGe" node="1xAzJ9Nxt3y" resolve="COVID Risk Check" />
         <node concept="3tEh0H" id="1xAzJ9Nxt8h" role="1hyIAf">
           <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
           <ref role="3tE8WY" node="5ivS4t6wkhV" resolve="LFD" />
@@ -1268,17 +1269,37 @@
       <node concept="2GGxJi" id="1xAzJ9NxsKL" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9NxsAm" resolve="Significant COVID contact" />
         <ref role="2GGxGe" node="1xAzJ9PBbhV" resolve="Take a bed" />
-        <node concept="1Fjl2m" id="1xAzJ9NxsNr" role="1hyIAf">
-          <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
-          <node concept="1FjjCg" id="1xAzJ9NxsNs" role="1CySjL" />
+        <node concept="30deu6" id="4EKCctwq3R2" role="1hyIAf">
+          <node concept="1R9p2R" id="4EKCctwq3R4" role="30dEsF">
+            <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+            <node concept="1RC9Yl" id="4EKCctwq3R5" role="1CySjL" />
+          </node>
+          <node concept="1Fjl2m" id="4EKCctwq3R8" role="30dEs_">
+            <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
+            <node concept="1FjjCg" id="4EKCctwq3R9" role="1CySjL" />
+          </node>
         </node>
       </node>
       <node concept="2GGxJi" id="1xAzJ9NxsN$" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9NxsAm" resolve="Significant COVID contact" />
         <ref role="2GGxGe" node="1xAzJ9PBbbS" resolve="Take a bed" />
-        <node concept="1Fjl2m" id="1xAzJ9NxsNH" role="1hyIAf">
-          <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
-          <node concept="1FjjCm" id="1xAzJ9NxsNQ" role="1CySjL" />
+        <node concept="30deo4" id="4EKCctwq3PO" role="1hyIAf">
+          <node concept="30bsCy" id="4EKCctwq3PP" role="30dEsF">
+            <node concept="30deu6" id="4EKCctwq3PQ" role="30bsDf">
+              <node concept="1R9p2R" id="4EKCctwq3PR" role="30dEsF">
+                <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                <node concept="1RC9YA" id="4EKCctwq3PS" role="1CySjL" />
+              </node>
+              <node concept="1R9p2R" id="4EKCctwq3PT" role="30dEs_">
+                <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                <node concept="1RC9Z5" id="4EKCctwq3PU" role="1CySjL" />
+              </node>
+            </node>
+          </node>
+          <node concept="1Fjl2m" id="4EKCctwq3PV" role="30dEs_">
+            <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
+            <node concept="1FjjCm" id="4EKCctwq3PW" role="1CySjL" />
+          </node>
         </node>
       </node>
     </node>
@@ -1295,22 +1316,54 @@
       <node concept="2GGxJi" id="1xAzJ9Nxt0a" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9NxsNX" resolve="Significant COVID Contact" />
         <ref role="2GGxGe" node="1xAzJ9PBbhV" resolve="Take a bed" />
-        <node concept="1Fjl2m" id="1xAzJ9Nxt2Y" role="1hyIAf">
-          <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
-          <node concept="1FjjCg" id="1xAzJ9Nxt2Z" role="1CySjL" />
+        <node concept="30deu6" id="4EKCctwPbI_" role="1hyIAf">
+          <node concept="30deu6" id="4EKCctwPbIA" role="30dEsF">
+            <node concept="1R9p2R" id="4EKCctwq3RW" role="30dEsF">
+              <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+              <node concept="1RC9Yl" id="4EKCctwq3RX" role="1CySjL" />
+            </node>
+            <node concept="1He2LU" id="4EKCctwPbIX" role="30dEs_">
+              <ref role="1DsR7o" node="4EKCctwqvfB" />
+              <node concept="1FjjCg" id="4EKCctwPbIY" role="1CySjL" />
+            </node>
+          </node>
+          <node concept="1Fjl2m" id="4EKCctwq3S0" role="30dEs_">
+            <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
+            <node concept="1FjjCg" id="4EKCctwq3S1" role="1CySjL" />
+          </node>
         </node>
       </node>
       <node concept="2GGxJi" id="1xAzJ9Nxt37" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9NxsNX" resolve="Significant COVID Contact" />
         <ref role="2GGxGe" node="1xAzJ9PBbaT" resolve="Take a bed" />
-        <node concept="1Fjl2m" id="1xAzJ9Nxt3g" role="1hyIAf">
-          <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
-          <node concept="1FjjCm" id="1xAzJ9Nxt3p" role="1CySjL" />
+        <node concept="30deo4" id="4EKCctwPbJz" role="1hyIAf">
+          <node concept="30deo4" id="4EKCctwPbJ$" role="30dEsF">
+            <node concept="30bsCy" id="4EKCctwPbJ_" role="30dEsF">
+              <node concept="30deu6" id="4EKCctwPbJA" role="30bsDf">
+                <node concept="1R9p2R" id="4EKCctwq3OI" role="30dEsF">
+                  <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                  <node concept="1RC9YA" id="4EKCctwq3OJ" role="1CySjL" />
+                </node>
+                <node concept="1R9p2R" id="4EKCctwq3OK" role="30dEs_">
+                  <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                  <node concept="1RC9Z5" id="4EKCctwq3OL" role="1CySjL" />
+                </node>
+              </node>
+            </node>
+            <node concept="1He2LU" id="4EKCctwPbKe" role="30dEs_">
+              <ref role="1DsR7o" node="4EKCctwqvfB" />
+              <node concept="1FjjCm" id="4EKCctwPbKU" role="1CySjL" />
+            </node>
+          </node>
+          <node concept="1Fjl2m" id="4EKCctwq3OM" role="30dEs_">
+            <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
+            <node concept="1FjjCm" id="4EKCctwq3ON" role="1CySjL" />
+          </node>
         </node>
       </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9Nxt3y" role="2MhjZp">
-      <property role="TrG5h" value="Significant COVID Contact" />
+      <property role="TrG5h" value="COVID Risk Check" />
       <property role="2mH1Wk" value="1" />
       <property role="3lFixl" value="true" />
       <node concept="2_8ZN7" id="1xAzJ9Nxt5g" role="2_8HaY">
@@ -1320,19 +1373,51 @@
         <ref role="Udx8D" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
       </node>
       <node concept="2GGxJi" id="1xAzJ9Nxt8w" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9Nxt3y" resolve="Significant COVID Contact" />
+        <ref role="3tVEyn" node="1xAzJ9Nxt3y" resolve="COVID Risk Check" />
         <ref role="2GGxGe" node="1xAzJ9PBbhV" resolve="Take a bed" />
-        <node concept="1Fjl2m" id="1xAzJ9Nxt8A" role="1hyIAf">
-          <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
-          <node concept="1FjjCg" id="1xAzJ9Nxt8B" role="1CySjL" />
+        <node concept="30deu6" id="4EKCctwOlmE" role="1hyIAf">
+          <node concept="30deu6" id="4EKCctwOlmF" role="30dEsF">
+            <node concept="1R9p2R" id="4EKCctwpC$w" role="30dEsF">
+              <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+              <node concept="1RC9Yl" id="4EKCctwpC_i" role="1CySjL" />
+            </node>
+            <node concept="1He2LU" id="4EKCctwOln2" role="30dEs_">
+              <ref role="1DsR7o" node="4EKCctwqvfB" />
+              <node concept="1FjjCg" id="4EKCctwOln3" role="1CySjL" />
+            </node>
+          </node>
+          <node concept="1Fjl2m" id="1xAzJ9Nxt8A" role="30dEs_">
+            <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
+            <node concept="1FjjCg" id="1xAzJ9Nxt8B" role="1CySjL" />
+          </node>
         </node>
       </node>
       <node concept="2GGxJi" id="1xAzJ9Nxt8J" role="3tG3Yq">
-        <ref role="3tVEyn" node="1xAzJ9Nxt3y" resolve="Significant COVID Contact" />
+        <ref role="3tVEyn" node="1xAzJ9Nxt3y" resolve="COVID Risk Check" />
         <ref role="2GGxGe" node="1xAzJ9PBbaT" resolve="Take a bed" />
-        <node concept="1Fjl2m" id="1xAzJ9Nxtex" role="1hyIAf">
-          <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
-          <node concept="1FjjCm" id="1xAzJ9NxteE" role="1CySjL" />
+        <node concept="30deo4" id="4EKCctwOKwD" role="1hyIAf">
+          <node concept="30deo4" id="4EKCctwOKwE" role="30dEsF">
+            <node concept="30bsCy" id="4EKCctwOKwF" role="30dEsF">
+              <node concept="30deu6" id="4EKCctwOKwG" role="30bsDf">
+                <node concept="1R9p2R" id="4EKCctwq3IY" role="30dEsF">
+                  <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                  <node concept="1RC9YA" id="4EKCctwq3Ki" role="1CySjL" />
+                </node>
+                <node concept="1R9p2R" id="4EKCctwq3Gy" role="30dEs_">
+                  <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                  <node concept="1RC9Z5" id="4EKCctwq3HN" role="1CySjL" />
+                </node>
+              </node>
+            </node>
+            <node concept="1He2LU" id="4EKCctwOKxk" role="30dEs_">
+              <ref role="1DsR7o" node="4EKCctwqvfB" />
+              <node concept="1FjjCm" id="4EKCctwOKy0" role="1CySjL" />
+            </node>
+          </node>
+          <node concept="1Fjl2m" id="4EKCctwq3N1" role="30dEs_">
+            <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
+            <node concept="1FjjCm" id="4EKCctwq3NH" role="1CySjL" />
+          </node>
         </node>
       </node>
     </node>
@@ -2311,6 +2396,19 @@
       <node concept="1jfOKv" id="1xAzJ9Nqhtg" role="1jfOML">
         <property role="3JlXGq" value="95" />
         <node concept="1FjjCm" id="1xAzJ9Nqhtd" role="3JlXG4" />
+      </node>
+    </node>
+    <node concept="1jfOK3" id="4EKCctwqveH" role="2OfI9c">
+      <node concept="1He0ZG" id="4EKCctwqvfB" role="1R9TjS">
+        <property role="1C_jdu" value="Immunocompromised" />
+      </node>
+      <node concept="1jfOKv" id="4EKCctwqvfF" role="1jfOML">
+        <property role="3JlXGq" value="5" />
+        <node concept="1FjjCg" id="4EKCctwqvfC" role="3JlXG4" />
+      </node>
+      <node concept="1jfOKv" id="4EKCctwqvfG" role="1jfOML">
+        <property role="3JlXGq" value="95" />
+        <node concept="1FjjCm" id="4EKCctwqvfD" role="3JlXG4" />
       </node>
     </node>
     <node concept="25k$Xo" id="EFW1mYBKlW" role="2OfIal">

@@ -59,6 +59,7 @@
       <concept id="5710949967853733230" name="ActionCards.structure.Branch" flags="ng" index="2GGxJi">
         <reference id="5710949967853733298" name="targetAction" index="2GGxGe" />
         <reference id="188877551436935094" name="fromAction" index="3tVEyn" />
+        <child id="2698877061866373100" name="condition" index="1hyIAf" />
       </concept>
       <concept id="3383707102503528548" name="ActionCards.structure.Action" flags="ng" index="2MhjZa">
         <property id="33966321893684004" name="minDuration" index="2mH1Wk" />
@@ -110,7 +111,9 @@
       <concept id="1758249876500222036" name="ActionCards.structure.RecentCovidContactProperty" flags="ng" index="1FjhUA" />
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
-      <concept id="1758249876500242020" name="ActionCards.structure.RecentCOVIDContactCondition" flags="ng" index="1Fjl2m" />
+      <concept id="1758249876510071738" name="ActionCards.structure.AttendanceRouteCondition" flags="ng" index="1FDPl8">
+        <child id="1758249876530420347" name="attendanceRoute" index="1GBHi9" />
+      </concept>
       <concept id="1758249876508941937" name="ActionCards.structure.ElectiveAttendanceRoute" flags="ng" index="1FPx23" />
       <concept id="1758249876508941398" name="ActionCards.structure.EmergencyAttendanceRoute" flags="ng" index="1FPxa$" />
       <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
@@ -118,9 +121,11 @@
       </concept>
       <concept id="1758249876538241356" name="ActionCards.structure.DischargeAction" flags="ng" index="1H2jYY" />
       <concept id="1758249876537114910" name="ActionCards.structure.ImmunosuppressedProperty" flags="ng" index="1He0ZG" />
+      <concept id="1758249876537123464" name="ActionCards.structure.ImmunocompromisedCondition" flags="ng" index="1He2LU" />
       <concept id="1758249876539396808" name="ActionCards.structure.ActionCardReference" flags="ng" index="1HTXKU">
         <reference id="1758249876539396856" name="actionCard" index="1HTXKa" />
       </concept>
+      <concept id="1758249876434656837" name="ActionCards.structure.VaccineStatusCondition" flags="ng" index="1R9p2R" />
       <concept id="1758249876434489693" name="ActionCards.structure.VaccineStatusProperty" flags="ng" index="1R9xYJ">
         <reference id="1758249876434501114" name="disease" index="1R9zc8" />
       </concept>
@@ -166,6 +171,16 @@
         <reference id="6750846609956389136" name="roomType" index="Udx8D" />
       </concept>
       <concept id="6750846609944804889" name="AgentLanguage.structure.RoomType" flags="ng" index="VhMOw" />
+    </language>
+    <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
+      <concept id="5115872837157187871" name="org.iets3.core.expr.base.structure.ParensExpression" flags="ng" index="30bsCy">
+        <child id="5115872837157187954" name="expr" index="30bsDf" />
+      </concept>
+      <concept id="5115872837156723899" name="org.iets3.core.expr.base.structure.LogicalOrExpression" flags="ng" index="30deu6" />
+      <concept id="5115872837156576277" name="org.iets3.core.expr.base.structure.BinaryExpression" flags="ng" index="30dEsC">
+        <child id="5115872837156576280" name="right" index="30dEs_" />
+        <child id="5115872837156576278" name="left" index="30dEsF" />
+      </concept>
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
       <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
@@ -1150,6 +1165,19 @@
         <node concept="1FjjCm" id="1xAzJ9Nqhtd" role="3JlXG4" />
       </node>
     </node>
+    <node concept="1jfOK3" id="4EKCctwEL2U" role="2OfI9c">
+      <node concept="1He0ZG" id="4EKCctwEL3O" role="1R9TjS">
+        <property role="1C_jdu" value="Immunocompromised" />
+      </node>
+      <node concept="1jfOKv" id="4EKCctwEL3S" role="1jfOML">
+        <property role="3JlXGq" value="5" />
+        <node concept="1FjjCg" id="4EKCctwEL3P" role="3JlXG4" />
+      </node>
+      <node concept="1jfOKv" id="4EKCctwEL3T" role="1jfOML">
+        <property role="3JlXGq" value="95" />
+        <node concept="1FjjCm" id="4EKCctwEL3Q" role="3JlXG4" />
+      </node>
+    </node>
     <node concept="25k$Xo" id="EFW1mYBKlW" role="2OfIal">
       <node concept="c0n4t" id="EFW1mYBKm6" role="c0n7C">
         <property role="c0n49" value="4" />
@@ -1500,6 +1528,16 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="4EKCctwN3N$" role="37mRID">
+        <property role="37mO49" value="5381978332890220430" />
+        <node concept="gqqVs" id="4EKCctwN3Nz" role="37mO4d">
+          <property role="gqqTZ" value="369.0" />
+          <property role="gqqTW" value="-10.0" />
+          <property role="gqqTX" value="439.0" />
+          <property role="gqqTy" value="31.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9P_e76" role="2MhjZp">
       <property role="TrG5h" value="Take a bed" />
@@ -1514,6 +1552,24 @@
       <node concept="2GGxJi" id="4Y2SMtsg16m" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9P_e76" resolve="Take a bed" />
         <ref role="2GGxGe" node="4Y2SMtsg14D" resolve="Treatment" />
+        <node concept="30deu6" id="4EKCctwN3Of" role="1hyIAf">
+          <node concept="1He2LU" id="4EKCctwKIOL" role="30dEs_">
+            <ref role="1DsR7o" node="4EKCctwEL3O" />
+            <node concept="1FjjCm" id="4EKCctwKIOU" role="1CySjL" />
+          </node>
+          <node concept="30bsCy" id="4EKCctwNEmN" role="30dEsF">
+            <node concept="30deu6" id="4EKCctwNEo2" role="30bsDf">
+              <node concept="1R9p2R" id="4EKCctwNEou" role="30dEsF">
+                <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                <node concept="1RC9YA" id="4EKCctwNEps" role="1CySjL" />
+              </node>
+              <node concept="1R9p2R" id="4EKCctwNEn1" role="30dEs_">
+                <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                <node concept="1RC9Z5" id="4EKCctwNEn_" role="1CySjL" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="2GGxJi" id="51uOcp2j3sb" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9P_e76" resolve="Take a bed" />
@@ -1522,6 +1578,10 @@
       <node concept="2GGxJi" id="51uOcp2j3se" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9P_e76" resolve="Take a bed" />
         <ref role="2GGxGe" node="51uOcp27Qth" resolve="ew" />
+        <node concept="1He2LU" id="4EKCctwKvYq" role="1hyIAf">
+          <ref role="1DsR7o" node="4EKCctwEL3O" />
+          <node concept="1FjjCg" id="4EKCctwKvYr" role="1CySjL" />
+        </node>
       </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9P_e7D" role="2MhjZp">
@@ -1648,6 +1708,11 @@
       <property role="2mH1Wk" value="6" />
       <node concept="2_8ZN7" id="51uOcp27QyM" role="2_8HaY">
         <ref role="2_8ZNy" node="52K8Ej3GgM" resolve="LabTechnician" />
+      </node>
+    </node>
+    <node concept="1FS47K" id="4EKCctwLkue" role="1FS4Pn">
+      <node concept="1FDPl8" id="4EKCctwLkui" role="1FS47L">
+        <node concept="1FPxa$" id="4EKCctwLkur" role="1GBHi9" />
       </node>
     </node>
   </node>
@@ -1797,9 +1862,8 @@
       </node>
     </node>
     <node concept="1FS47K" id="51uOcp2iPok" role="1FS4Pn">
-      <node concept="1Fjl2m" id="51uOcp2iPoo" role="1FS47L">
-        <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
-        <node concept="1FjjCg" id="51uOcp2iPop" role="1CySjL" />
+      <node concept="1FDPl8" id="4EKCctwLkuG" role="1FS47L">
+        <node concept="1FPx23" id="4EKCctwLkuP" role="1GBHi9" />
       </node>
     </node>
     <node concept="2MhjZa" id="51uOcp2jhEW" role="2MhjZp">
