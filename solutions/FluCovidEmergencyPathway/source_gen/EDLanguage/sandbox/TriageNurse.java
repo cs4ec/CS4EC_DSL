@@ -268,11 +268,11 @@ public class TriageNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0a_3 extends BehaviourStep {
+  public class MoveAction_a0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_3(Behaviour behaviour) {
+    public MoveAction_a0a_1(Behaviour behaviour) {
       target = TriageDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -299,9 +299,9 @@ public class TriageNurse extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0a_2 extends BehaviourStep {
+  public class OrderAction_b0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_2(Behaviour behaviour) {
+    public OrderAction_b0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 

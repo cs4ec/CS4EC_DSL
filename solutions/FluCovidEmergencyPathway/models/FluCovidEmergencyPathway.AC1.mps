@@ -1269,10 +1269,16 @@
       <node concept="2GGxJi" id="1xAzJ9NxsKL" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9NxsAm" resolve="Significant COVID contact" />
         <ref role="2GGxGe" node="1xAzJ9PBbhV" resolve="Take a bed" />
-        <node concept="30deu6" id="4EKCctwq3R2" role="1hyIAf">
-          <node concept="1R9p2R" id="4EKCctwq3R4" role="30dEsF">
-            <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
-            <node concept="1RC9Yl" id="4EKCctwq3R5" role="1CySjL" />
+        <node concept="30deu6" id="4EKCctwPXvv" role="1hyIAf">
+          <node concept="30deu6" id="4EKCctwPXvw" role="30dEsF">
+            <node concept="1R9p2R" id="4EKCctwq3R4" role="30dEsF">
+              <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+              <node concept="1RC9Yl" id="4EKCctwq3R5" role="1CySjL" />
+            </node>
+            <node concept="1He2LU" id="4EKCctwPXvR" role="30dEs_">
+              <ref role="1DsR7o" node="4EKCctwqvfB" />
+              <node concept="1FjjCg" id="4EKCctwPXvS" role="1CySjL" />
+            </node>
           </node>
           <node concept="1Fjl2m" id="4EKCctwq3R8" role="30dEs_">
             <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
@@ -1283,17 +1289,23 @@
       <node concept="2GGxJi" id="1xAzJ9NxsN$" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9NxsAm" resolve="Significant COVID contact" />
         <ref role="2GGxGe" node="1xAzJ9PBbbS" resolve="Take a bed" />
-        <node concept="30deo4" id="4EKCctwq3PO" role="1hyIAf">
-          <node concept="30bsCy" id="4EKCctwq3PP" role="30dEsF">
-            <node concept="30deu6" id="4EKCctwq3PQ" role="30bsDf">
-              <node concept="1R9p2R" id="4EKCctwq3PR" role="30dEsF">
-                <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
-                <node concept="1RC9YA" id="4EKCctwq3PS" role="1CySjL" />
+        <node concept="30deo4" id="4EKCctwPXwt" role="1hyIAf">
+          <node concept="30deo4" id="4EKCctwPXwu" role="30dEsF">
+            <node concept="30bsCy" id="4EKCctwPXwv" role="30dEsF">
+              <node concept="30deu6" id="4EKCctwPXww" role="30bsDf">
+                <node concept="1R9p2R" id="4EKCctwq3PR" role="30dEsF">
+                  <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                  <node concept="1RC9YA" id="4EKCctwq3PS" role="1CySjL" />
+                </node>
+                <node concept="1R9p2R" id="4EKCctwq3PT" role="30dEs_">
+                  <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
+                  <node concept="1RC9Z5" id="4EKCctwq3PU" role="1CySjL" />
+                </node>
               </node>
-              <node concept="1R9p2R" id="4EKCctwq3PT" role="30dEs_">
-                <ref role="1DsR7o" node="1xAzJ9Ksr_V" />
-                <node concept="1RC9Z5" id="4EKCctwq3PU" role="1CySjL" />
-              </node>
+            </node>
+            <node concept="1He2LU" id="4EKCctwPXxq" role="30dEs_">
+              <ref role="1DsR7o" node="4EKCctwqvfB" />
+              <node concept="1FjjCm" id="4EKCctwPXyo" role="1CySjL" />
             </node>
           </node>
           <node concept="1Fjl2m" id="4EKCctwq3PV" role="30dEs_">
