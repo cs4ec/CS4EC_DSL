@@ -83,36 +83,36 @@ public class WardStaff extends Actor {
         behaviourBuilder = new Behaviour("TreatmentTrigger_d");
         this.InitTreatment_d(s);
         break;
-      case "TakeabedTrigger_a_1":
-        behaviourBuilder = new Behaviour("TakeabedTrigger_a_1");
-        this.InitTakeabed_a_0(s);
-        break;
-      case "DoPCRTrigger_b_1":
-        behaviourBuilder = new Behaviour("DoPCRTrigger_b_1");
-        this.InitDoPCR_b_0(s);
-        break;
-      case "DischargeTrigger_c_1":
-        behaviourBuilder = new Behaviour("DischargeTrigger_c_1");
-        this.InitDischargeActionDischarge_c_0(s);
-        break;
-      case "ReceiveTreatmentTrigger_d_0":
-        behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_d_0");
-        this.InitReceiveTreatment_d(s);
-        break;
       case "TakeabedTrigger_a_0":
         behaviourBuilder = new Behaviour("TakeabedTrigger_a_0");
-        this.InitTakeabed_a_1(s);
+        this.InitTakeabed_a_0(s);
         break;
       case "DoPCRTrigger_b_0":
         behaviourBuilder = new Behaviour("DoPCRTrigger_b_0");
-        this.InitDoPCR_b_1(s);
+        this.InitDoPCR_b_0(s);
         break;
       case "DischargeTrigger_c_0":
         behaviourBuilder = new Behaviour("DischargeTrigger_c_0");
-        this.InitDischargeActionDischarge_c_1(s);
+        this.InitDischargeActionDischarge_c_0(s);
         break;
       case "ReceiveTreatmentTrigger_d":
         behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_d");
+        this.InitReceiveTreatment_d(s);
+        break;
+      case "TakeabedTrigger_a_1":
+        behaviourBuilder = new Behaviour("TakeabedTrigger_a_1");
+        this.InitTakeabed_a_1(s);
+        break;
+      case "DoPCRTrigger_b_1":
+        behaviourBuilder = new Behaviour("DoPCRTrigger_b_1");
+        this.InitDoPCR_b_1(s);
+        break;
+      case "DischargeTrigger_c_1":
+        behaviourBuilder = new Behaviour("DischargeTrigger_c_1");
+        this.InitDischargeActionDischarge_c_1(s);
+        break;
+      case "ReceiveTreatmentTrigger_d_0":
+        behaviourBuilder = new Behaviour("ReceiveTreatmentTrigger_d_0");
         this.InitReceiveTreatment_d_0(s);
         break;
       case "TakeabedTrigger_a_2":
@@ -1461,7 +1461,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_d_0Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_dSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1552,7 +1552,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_d_0Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_dSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1702,7 +1702,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_c_1Signal();
+      sendSignalTemp = new DischargeTrigger_c_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2332,7 +2332,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_c_1Signal();
+      sendSignalTemp = new DischargeTrigger_c_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2542,7 +2542,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_b_1Signal();
+      sendSignalTemp = new DoPCRTrigger_b_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2622,7 +2622,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_b_1Signal();
+      sendSignalTemp = new DoPCRTrigger_b_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2713,7 +2713,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_dSignal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_d_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2804,7 +2804,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_dSignal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_d_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2954,7 +2954,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_c_0Signal();
+      sendSignalTemp = new DischargeTrigger_c_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3584,7 +3584,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_c_0Signal();
+      sendSignalTemp = new DischargeTrigger_c_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3794,7 +3794,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_b_0Signal();
+      sendSignalTemp = new DoPCRTrigger_b_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3874,7 +3874,7 @@ public class WardStaff extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoPCRTrigger_b_0Signal();
+      sendSignalTemp = new DoPCRTrigger_b_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);

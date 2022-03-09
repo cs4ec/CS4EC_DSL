@@ -55,6 +55,10 @@
       <concept id="5402567240276654720" name="ActionCards.structure.StaffTypeReference" flags="ng" index="2_8ZN7">
         <reference id="5402567240276654757" name="staffType" index="2_8ZNy" />
       </concept>
+      <concept id="5381978332891550188" name="ActionCards.structure.LocationCapacityCondition" flags="ng" index="Eqj4F">
+        <property id="5381978332891550308" name="minCapacity" index="Eqjaz" />
+        <child id="5381978332891550252" name="location" index="EqjbF" />
+      </concept>
       <concept id="5710949967853733612" name="ActionCards.structure.StaffType" flags="ng" index="2GGxxg" />
       <concept id="5710949967853733230" name="ActionCards.structure.Branch" flags="ng" index="2GGxJi">
         <reference id="5710949967853733298" name="targetAction" index="2GGxGe" />
@@ -1650,6 +1654,12 @@
       <node concept="2GGxJi" id="51uOcp2j3s_" role="3tG3Yq">
         <ref role="3tVEyn" node="51uOcp27QsV" resolve="on" />
         <ref role="2GGxGe" node="51uOcp27Qvo" resolve="fewfv" />
+        <node concept="Eqj4F" id="4EKCctwUE2W" role="1hyIAf">
+          <property role="Eqjaz" value="6" />
+          <node concept="UeIYj" id="4EKCctwUE32" role="EqjbF">
+            <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2MhjZa" id="51uOcp27Qth" role="2MhjZp">

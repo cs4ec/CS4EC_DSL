@@ -107,10 +107,10 @@ public class LabTechnician extends Actor {
       return timeExecuted == 6;
     }
   }
-  public class SendSignalAction_b0a_11 extends BehaviourStep {
+  public class SendSignalAction_b0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_11(Behaviour behaviour) {
+    public SendSignalAction_b0a_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -155,10 +155,10 @@ public class LabTechnician extends Actor {
       return timeExecuted == 6;
     }
   }
-  public class SendSignalAction_b0a_13 extends BehaviourStep {
+  public class SendSignalAction_b0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_13(Behaviour behaviour) {
+    public SendSignalAction_b0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -411,10 +411,10 @@ public class LabTechnician extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0e_3 extends BehaviourStep {
+  public class StayAction_a0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0e_3(Behaviour behaviour) {
+    public StayAction_a0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -427,10 +427,10 @@ public class LabTechnician extends Actor {
       return timeExecuted == 7;
     }
   }
-  public class SendSignalAction_b0e_3 extends BehaviourStep {
+  public class SendSignalAction_b0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0e_3(Behaviour behaviour) {
+    public SendSignalAction_b0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -513,7 +513,7 @@ public class LabTechnician extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new StayAction_a0a_11(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0a_11(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_b0a_7(behaviourBuilder));
     plstSteps.add(new StayAction_c0a_11(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -554,8 +554,8 @@ public class LabTechnician extends Actor {
   public void Initavsvewcw_e(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new StayAction_a0e_3(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0e_3(behaviourBuilder));
+    plstSteps.add(new StayAction_a0e_1(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_b0e_1(behaviourBuilder));
     plstSteps.add(new StayAction_c0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

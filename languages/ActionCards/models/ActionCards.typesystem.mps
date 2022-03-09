@@ -292,5 +292,31 @@
       <ref role="1YaFvo" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="4EKCctwQqDu">
+    <property role="TrG5h" value="typeof_LocationCapacityCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="4EKCctwQqDv" role="18ibNy">
+      <node concept="1Z5TYs" id="4EKCctwQqDR" role="3cqZAp">
+        <node concept="mw_s8" id="4EKCctwQqDS" role="1ZfhK$">
+          <node concept="1Z2H0r" id="4EKCctwQqDT" role="mwGJk">
+            <node concept="1YBJjd" id="4EKCctwQqEp" role="1Z2MuG">
+              <ref role="1YBMHb" node="4EKCctwQqDx" resolve="locationCapacityCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="4EKCctwQqDV" role="1ZfhKB">
+          <node concept="2pJPEk" id="4EKCctwQqDW" role="mwGJk">
+            <node concept="2pJPED" id="4EKCctwQqDX" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4EKCctwQqDx" role="1YuTPh">
+      <property role="TrG5h" value="locationCapacityCondition" />
+      <ref role="1YaFvo" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
+    </node>
+  </node>
 </model>
 

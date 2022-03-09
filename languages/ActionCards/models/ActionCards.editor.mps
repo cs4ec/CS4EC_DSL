@@ -2402,5 +2402,24 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="4EKCctwQp8Y">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
+    <node concept="3EZMnI" id="4EKCctwQp99" role="2wV5jI">
+      <node concept="3F0ifn" id="4EKCctwQp9g" role="3EZMnx">
+        <property role="3F0ifm" value="Capacity of" />
+      </node>
+      <node concept="3F1sOY" id="4EKCctwQp9G" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:4EKCctwQp8G" resolve="location" />
+      </node>
+      <node concept="3F0ifn" id="4EKCctwQp9q" role="3EZMnx">
+        <property role="3F0ifm" value="is at least" />
+      </node>
+      <node concept="3F0A7n" id="4EKCctwQp9A" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:4EKCctwQp9$" resolve="minCapacity" />
+      </node>
+      <node concept="2iRfu4" id="4EKCctwQp9c" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

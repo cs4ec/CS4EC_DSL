@@ -850,189 +850,237 @@
   </root>
   <root nodeRef="r:16c7abcd-7449-4307-bda8-baac94df571f(FluCovidEmergencyPathway.clone.AC1)/1758249876540678577">
     <file name="CubicleNurse.java">
-      <node id="5791295720776492859" at="66,25,67,56" concept="3" />
-      <node id="5791295720776492859" at="67,56,68,25" concept="3" />
-      <node id="5791295720776492859" at="68,25,69,14" concept="1" />
-      <node id="5791295720776492881" at="70,25,71,56" concept="3" />
-      <node id="5791295720776492881" at="71,56,72,25" concept="3" />
-      <node id="5791295720776492881" at="72,25,73,14" concept="1" />
-      <node id="5791295720776492922" at="74,25,75,56" concept="3" />
-      <node id="5791295720776492922" at="75,56,76,25" concept="3" />
-      <node id="5791295720776492922" at="76,25,77,14" concept="1" />
-      <node id="5791295720779429669" at="116,0,117,0" concept="4" trace="behaviour" />
-      <node id="5791295720779429669" at="118,54,119,33" concept="3" />
-      <node id="5791295720779429669" at="122,27,123,28" concept="9" />
-      <node id="5791295720779429669" at="123,28,124,43" concept="9" />
-      <node id="5791295720779429669" at="124,43,125,50" concept="3" />
-      <node id="5791295720779429669" at="125,50,126,89" concept="3" />
-      <node id="5791295720779429669" at="126,89,127,0" concept="12" />
-      <node id="5791295720779429669" at="127,0,128,36" concept="3" />
-      <node id="5791295720779429669" at="164,0,165,0" concept="4" trace="behaviour" />
-      <node id="5791295720779429669" at="166,56,167,33" concept="3" />
-      <node id="5791295720779429669" at="170,27,171,28" concept="9" />
-      <node id="5791295720779429669" at="171,28,172,43" concept="9" />
-      <node id="5791295720779429669" at="172,43,173,50" concept="3" />
-      <node id="5791295720779429669" at="173,50,174,89" concept="3" />
-      <node id="5791295720779429669" at="174,89,175,0" concept="12" />
-      <node id="5791295720779429669" at="175,0,176,36" concept="3" />
-      <node id="5791295720779429664" at="212,0,213,0" concept="4" trace="behaviour" />
-      <node id="5791295720779429664" at="214,54,215,33" concept="3" />
-      <node id="5791295720779429664" at="218,27,219,28" concept="9" />
-      <node id="5791295720779429664" at="219,28,220,43" concept="9" />
-      <node id="5791295720779429664" at="220,43,221,47" concept="3" />
-      <node id="5791295720779429664" at="221,47,222,89" concept="3" />
-      <node id="5791295720779429664" at="222,89,223,0" concept="12" />
-      <node id="5791295720779429664" at="223,0,224,36" concept="3" />
-      <node id="5791295720779429666" at="228,0,229,0" concept="4" trace="behaviour" />
-      <node id="5791295720779429666" at="230,54,231,33" concept="3" />
-      <node id="5791295720779429666" at="234,27,235,28" concept="9" />
-      <node id="5791295720779429666" at="235,28,236,43" concept="9" />
-      <node id="5791295720779429666" at="236,43,237,48" concept="3" />
-      <node id="5791295720779429666" at="237,48,238,89" concept="3" />
-      <node id="5791295720779429666" at="238,89,239,0" concept="12" />
-      <node id="5791295720779429666" at="239,0,240,36" concept="3" />
-      <node id="5791295720779429664" at="276,0,277,0" concept="4" trace="behaviour" />
-      <node id="5791295720779429664" at="278,56,279,33" concept="3" />
-      <node id="5791295720779429664" at="282,27,283,28" concept="9" />
-      <node id="5791295720779429664" at="283,28,284,43" concept="9" />
-      <node id="5791295720779429664" at="284,43,285,47" concept="3" />
-      <node id="5791295720779429664" at="285,47,286,89" concept="3" />
-      <node id="5791295720779429664" at="286,89,287,0" concept="12" />
-      <node id="5791295720779429664" at="287,0,288,36" concept="3" />
-      <node id="5791295720779429666" at="292,0,293,0" concept="4" trace="behaviour" />
-      <node id="5791295720779429666" at="294,56,295,33" concept="3" />
-      <node id="5791295720779429666" at="298,27,299,28" concept="9" />
-      <node id="5791295720779429666" at="299,28,300,43" concept="9" />
-      <node id="5791295720779429666" at="300,43,301,48" concept="3" />
-      <node id="5791295720779429666" at="301,48,302,89" concept="3" />
-      <node id="5791295720779429666" at="302,89,303,0" concept="12" />
-      <node id="5791295720779429666" at="303,0,304,36" concept="3" />
-      <node id="5791295720776492859" at="711,34,712,41" concept="3" />
-      <node id="5791295720776492859" at="712,41,713,57" concept="9" />
-      <node id="5791295720776492859" at="713,57,714,58" concept="3" />
-      <node id="5791295720779429669" at="714,58,715,62" concept="3" />
-      <node id="5791295720776492859" at="715,62,716,56" concept="3" />
-      <node id="5791295720776492859" at="716,56,717,41" concept="3" />
-      <node id="5791295720776492859" at="717,41,718,0" concept="12" />
-      <node id="5791295720776492859" at="718,0,719,41" concept="9" />
-      <node id="5791295720776492859" at="719,41,720,0" concept="12" />
-      <node id="5791295720776492881" at="722,34,723,41" concept="3" />
-      <node id="5791295720776492881" at="723,41,724,57" concept="9" />
-      <node id="5791295720776492881" at="724,57,725,56" concept="3" />
-      <node id="5791295720779429664" at="725,56,726,62" concept="3" />
-      <node id="5791295720779429666" at="726,62,727,62" concept="3" />
-      <node id="5791295720776492881" at="727,62,728,56" concept="3" />
-      <node id="5791295720776492881" at="728,56,729,41" concept="3" />
-      <node id="5791295720776492881" at="729,41,730,0" concept="12" />
-      <node id="5791295720776492881" at="730,0,731,41" concept="9" />
-      <node id="5791295720776492881" at="731,41,732,0" concept="12" />
-      <node id="5791295720776492922" at="734,34,735,41" concept="3" />
-      <node id="5791295720776492922" at="735,41,736,57" concept="9" />
-      <node id="5791295720776492922" at="736,57,737,56" concept="3" />
-      <node id="5791295720776492922" at="737,56,738,56" concept="3" />
-      <node id="5791295720776492922" at="738,56,739,41" concept="3" />
-      <node id="5791295720776492922" at="739,41,740,0" concept="12" />
-      <node id="5791295720776492922" at="740,0,741,41" concept="9" />
-      <node id="5791295720776492922" at="741,41,742,0" concept="12" />
-      <node id="5791295720779429669" at="118,0,121,0" concept="2" trace="SendSignalAction_b0a#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779429669" at="166,0,169,0" concept="2" trace="SendSignalAction_b0a_5#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779429664" at="214,0,217,0" concept="2" trace="SendSignalAction_b0b#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779429666" at="230,0,233,0" concept="2" trace="SendSignalAction_c0b#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779429664" at="278,0,281,0" concept="2" trace="SendSignalAction_b0b_7#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779429666" at="294,0,297,0" concept="2" trace="SendSignalAction_c0b_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779429669" at="122,0,130,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779429669" at="170,0,178,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779429664" at="218,0,226,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779429666" at="234,0,242,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779429664" at="282,0,290,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779429666" at="298,0,306,0" concept="8" trace="execute#()V" />
-      <node id="5791295720776492922" at="734,0,744,0" concept="8" trace="Initde_g#(Lsimcore/Signals/Signal;)V" />
-      <node id="5791295720776492859" at="711,0,722,0" concept="8" trace="Initon_e#(Lsimcore/Signals/Signal;)V" />
-      <node id="5791295720776492881" at="722,0,734,0" concept="8" trace="Initew_f#(Lsimcore/Signals/Signal;)V" />
-      <scope id="5791295720779429669" at="118,54,119,33" />
-      <scope id="5791295720779429669" at="166,56,167,33" />
-      <scope id="5791295720779429664" at="214,54,215,33" />
-      <scope id="5791295720779429666" at="230,54,231,33" />
-      <scope id="5791295720779429664" at="278,56,279,33" />
-      <scope id="5791295720779429666" at="294,56,295,33" />
-      <scope id="5791295720776492859" at="66,25,69,14" />
-      <scope id="5791295720776492881" at="70,25,73,14" />
-      <scope id="5791295720776492922" at="74,25,77,14" />
+      <node id="5791295720776492859" at="67,25,68,56" concept="3" />
+      <node id="5791295720776492859" at="68,56,69,25" concept="3" />
+      <node id="5791295720776492859" at="69,25,70,14" concept="1" />
+      <node id="5791295720776492881" at="71,25,72,56" concept="3" />
+      <node id="5791295720776492881" at="72,56,73,25" concept="3" />
+      <node id="5791295720776492881" at="73,25,74,14" concept="1" />
+      <node id="5791295720776492922" at="75,25,76,56" concept="3" />
+      <node id="5791295720776492922" at="76,56,77,25" concept="3" />
+      <node id="5791295720776492922" at="77,25,78,14" concept="1" />
+      <node id="5791295720779429669" at="117,0,118,0" concept="4" trace="behaviour" />
+      <node id="5791295720779429669" at="118,44,119,33" concept="3" />
+      <node id="5791295720779429669" at="123,115,124,61" concept="9" />
+      <node id="5791295720779429669" at="124,61,125,61" concept="3" />
+      <node id="5791295720779429669" at="125,61,126,41" concept="3" />
+      <node id="5791295720779429669" at="127,14,128,61" concept="9" />
+      <node id="5791295720779429669" at="128,61,129,41" concept="3" />
+      <node id="5791295720779429669" at="166,0,167,0" concept="4" trace="behaviour" />
+      <node id="5791295720779429669" at="167,46,168,33" concept="3" />
+      <node id="5791295720779429669" at="172,115,173,61" concept="9" />
+      <node id="5791295720779429669" at="173,61,174,61" concept="3" />
+      <node id="5791295720779429669" at="174,61,175,41" concept="3" />
+      <node id="5791295720779429669" at="176,14,177,61" concept="9" />
+      <node id="5791295720779429669" at="177,61,178,41" concept="3" />
+      <node id="5791295720779429669" at="183,0,184,0" concept="4" trace="behaviour" />
+      <node id="5791295720779429669" at="185,56,186,33" concept="3" />
+      <node id="5791295720779429669" at="189,27,190,28" concept="9" />
+      <node id="5791295720779429669" at="190,28,191,43" concept="9" />
+      <node id="5791295720779429669" at="191,43,192,50" concept="3" />
+      <node id="5791295720779429669" at="192,50,193,89" concept="3" />
+      <node id="5791295720779429669" at="193,89,194,0" concept="12" />
+      <node id="5791295720779429669" at="194,0,195,36" concept="3" />
+      <node id="5791295720779429669" at="199,0,200,0" concept="4" trace="behaviour" />
+      <node id="5791295720779429669" at="201,58,202,33" concept="3" />
+      <node id="5791295720779429669" at="205,27,206,28" concept="9" />
+      <node id="5791295720779429669" at="206,28,207,43" concept="9" />
+      <node id="5791295720779429669" at="207,43,208,50" concept="3" />
+      <node id="5791295720779429669" at="208,50,209,89" concept="3" />
+      <node id="5791295720779429669" at="209,89,210,0" concept="12" />
+      <node id="5791295720779429669" at="210,0,211,36" concept="3" />
+      <node id="5791295720779429664" at="247,0,248,0" concept="4" trace="behaviour" />
+      <node id="5791295720779429664" at="249,56,250,33" concept="3" />
+      <node id="5791295720779429664" at="253,27,254,28" concept="9" />
+      <node id="5791295720779429664" at="254,28,255,43" concept="9" />
+      <node id="5791295720779429664" at="255,43,256,47" concept="3" />
+      <node id="5791295720779429664" at="256,47,257,89" concept="3" />
+      <node id="5791295720779429664" at="257,89,258,0" concept="12" />
+      <node id="5791295720779429664" at="258,0,259,36" concept="3" />
+      <node id="5791295720779429666" at="263,0,264,0" concept="4" trace="behaviour" />
+      <node id="5791295720779429666" at="265,54,266,33" concept="3" />
+      <node id="5791295720779429666" at="269,27,270,28" concept="9" />
+      <node id="5791295720779429666" at="270,28,271,43" concept="9" />
+      <node id="5791295720779429666" at="271,43,272,48" concept="3" />
+      <node id="5791295720779429666" at="272,48,273,89" concept="3" />
+      <node id="5791295720779429666" at="273,89,274,0" concept="12" />
+      <node id="5791295720779429666" at="274,0,275,36" concept="3" />
+      <node id="5791295720779429664" at="311,0,312,0" concept="4" trace="behaviour" />
+      <node id="5791295720779429664" at="313,56,314,33" concept="3" />
+      <node id="5791295720779429664" at="317,27,318,28" concept="9" />
+      <node id="5791295720779429664" at="318,28,319,43" concept="9" />
+      <node id="5791295720779429664" at="319,43,320,47" concept="3" />
+      <node id="5791295720779429664" at="320,47,321,89" concept="3" />
+      <node id="5791295720779429664" at="321,89,322,0" concept="12" />
+      <node id="5791295720779429664" at="322,0,323,36" concept="3" />
+      <node id="5791295720779429666" at="327,0,328,0" concept="4" trace="behaviour" />
+      <node id="5791295720779429666" at="329,56,330,33" concept="3" />
+      <node id="5791295720779429666" at="333,27,334,28" concept="9" />
+      <node id="5791295720779429666" at="334,28,335,43" concept="9" />
+      <node id="5791295720779429666" at="335,43,336,48" concept="3" />
+      <node id="5791295720779429666" at="336,48,337,89" concept="3" />
+      <node id="5791295720779429666" at="337,89,338,0" concept="12" />
+      <node id="5791295720779429666" at="338,0,339,36" concept="3" />
+      <node id="5791295720776492859" at="746,34,747,41" concept="3" />
+      <node id="5791295720776492859" at="747,41,748,57" concept="9" />
+      <node id="5791295720776492859" at="748,57,749,58" concept="3" />
+      <node id="5791295720779429669" at="749,58,750,52" concept="3" />
+      <node id="5791295720776492859" at="750,52,751,58" concept="3" />
+      <node id="5791295720776492859" at="751,58,752,41" concept="3" />
+      <node id="5791295720776492859" at="752,41,753,0" concept="12" />
+      <node id="5791295720776492859" at="753,0,754,41" concept="9" />
+      <node id="5791295720776492859" at="754,41,755,0" concept="12" />
+      <node id="5791295720776492881" at="757,34,758,41" concept="3" />
+      <node id="5791295720776492881" at="758,41,759,57" concept="9" />
+      <node id="5791295720776492881" at="759,57,760,58" concept="3" />
+      <node id="5791295720779429664" at="760,58,761,64" concept="3" />
+      <node id="5791295720779429666" at="761,64,762,62" concept="3" />
+      <node id="5791295720776492881" at="762,62,763,56" concept="3" />
+      <node id="5791295720776492881" at="763,56,764,41" concept="3" />
+      <node id="5791295720776492881" at="764,41,765,0" concept="12" />
+      <node id="5791295720776492881" at="765,0,766,41" concept="9" />
+      <node id="5791295720776492881" at="766,41,767,0" concept="12" />
+      <node id="5791295720776492922" at="769,34,770,41" concept="3" />
+      <node id="5791295720776492922" at="770,41,771,57" concept="9" />
+      <node id="5791295720776492922" at="771,57,772,56" concept="3" />
+      <node id="5791295720776492922" at="772,56,773,56" concept="3" />
+      <node id="5791295720776492922" at="773,56,774,41" concept="3" />
+      <node id="5791295720776492922" at="774,41,775,0" concept="12" />
+      <node id="5791295720776492922" at="775,0,776,41" concept="9" />
+      <node id="5791295720776492922" at="776,41,777,0" concept="12" />
+      <node id="5791295720779429669" at="118,0,121,0" concept="2" trace="Choice_b0a#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429669" at="127,12,130,7" concept="0" />
+      <node id="5791295720779429669" at="167,0,170,0" concept="2" trace="Choice_b0a_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429669" at="176,12,179,7" concept="0" />
+      <node id="5791295720779429669" at="185,0,188,0" concept="2" trace="SendSignalAction_a0b0a#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429669" at="201,0,204,0" concept="2" trace="SendSignalAction_a0b0a_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429664" at="249,0,252,0" concept="2" trace="SendSignalAction_b0b_7#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429666" at="265,0,268,0" concept="2" trace="SendSignalAction_c0b#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429664" at="313,0,316,0" concept="2" trace="SendSignalAction_b0b_9#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429666" at="329,0,332,0" concept="2" trace="SendSignalAction_c0b_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429669" at="122,27,130,7" concept="7" />
+      <node id="5791295720779429669" at="171,27,179,7" concept="7" />
+      <node id="5791295720779429669" at="189,0,197,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779429669" at="205,0,213,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779429664" at="253,0,261,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779429666" at="269,0,277,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779429664" at="317,0,325,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779429666" at="333,0,341,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779429669" at="122,0,132,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779429669" at="171,0,181,0" concept="8" trace="execute#()V" />
+      <node id="5791295720776492922" at="769,0,779,0" concept="8" trace="Initde_g#(Lsimcore/Signals/Signal;)V" />
+      <node id="5791295720776492859" at="746,0,757,0" concept="8" trace="Initon_e#(Lsimcore/Signals/Signal;)V" />
+      <node id="5791295720776492881" at="757,0,769,0" concept="8" trace="Initew_f#(Lsimcore/Signals/Signal;)V" />
+      <scope id="5791295720779429669" at="118,44,119,33" />
+      <scope id="5791295720779429669" at="167,46,168,33" />
+      <scope id="5791295720779429669" at="185,56,186,33" />
+      <scope id="5791295720779429669" at="201,58,202,33" />
+      <scope id="5791295720779429664" at="249,56,250,33" />
+      <scope id="5791295720779429666" at="265,54,266,33" />
+      <scope id="5791295720779429664" at="313,56,314,33" />
+      <scope id="5791295720779429666" at="329,56,330,33" />
+      <scope id="5791295720779429669" at="127,14,129,41">
+        <var name="plstSteps" id="5791295720779429669" />
+      </scope>
+      <scope id="5791295720779429669" at="176,14,178,41">
+        <var name="plstSteps" id="5791295720779429669" />
+      </scope>
+      <scope id="5791295720776492859" at="67,25,70,14" />
+      <scope id="5791295720776492881" at="71,25,74,14" />
+      <scope id="5791295720776492922" at="75,25,78,14" />
       <scope id="5791295720779429669" at="118,0,121,0">
         <var name="behaviour" id="5791295720779429669" />
       </scope>
-      <scope id="5791295720779429669" at="166,0,169,0">
+      <scope id="5791295720779429669" at="123,115,126,41">
+        <var name="plstSteps" id="5791295720779429669" />
+      </scope>
+      <scope id="5791295720779429669" at="167,0,170,0">
         <var name="behaviour" id="5791295720779429669" />
       </scope>
-      <scope id="5791295720779429664" at="214,0,217,0">
+      <scope id="5791295720779429669" at="172,115,175,41">
+        <var name="plstSteps" id="5791295720779429669" />
+      </scope>
+      <scope id="5791295720779429669" at="185,0,188,0">
+        <var name="behaviour" id="5791295720779429669" />
+      </scope>
+      <scope id="5791295720779429669" at="201,0,204,0">
+        <var name="behaviour" id="5791295720779429669" />
+      </scope>
+      <scope id="5791295720779429664" at="249,0,252,0">
         <var name="behaviour" id="5791295720779429664" />
       </scope>
-      <scope id="5791295720779429666" at="230,0,233,0">
+      <scope id="5791295720779429666" at="265,0,268,0">
         <var name="behaviour" id="5791295720779429666" />
       </scope>
-      <scope id="5791295720779429664" at="278,0,281,0">
+      <scope id="5791295720779429664" at="313,0,316,0">
         <var name="behaviour" id="5791295720779429664" />
       </scope>
-      <scope id="5791295720779429666" at="294,0,297,0">
+      <scope id="5791295720779429666" at="329,0,332,0">
         <var name="behaviour" id="5791295720779429666" />
       </scope>
-      <scope id="5791295720779429669" at="122,27,128,36">
+      <scope id="5791295720779429669" at="189,27,195,36">
         <var name="b" id="5791295720779429669" />
         <var name="sendSignalTemp" id="5791295720779429669" />
       </scope>
-      <scope id="5791295720779429669" at="170,27,176,36">
+      <scope id="5791295720779429669" at="205,27,211,36">
         <var name="b" id="5791295720779429669" />
         <var name="sendSignalTemp" id="5791295720779429669" />
       </scope>
-      <scope id="5791295720779429664" at="218,27,224,36">
+      <scope id="5791295720779429664" at="253,27,259,36">
         <var name="b" id="5791295720779429664" />
         <var name="sendSignalTemp" id="5791295720779429664" />
       </scope>
-      <scope id="5791295720779429666" at="234,27,240,36">
+      <scope id="5791295720779429666" at="269,27,275,36">
         <var name="b" id="5791295720779429666" />
         <var name="sendSignalTemp" id="5791295720779429666" />
       </scope>
-      <scope id="5791295720779429664" at="282,27,288,36">
+      <scope id="5791295720779429664" at="317,27,323,36">
         <var name="b" id="5791295720779429664" />
         <var name="sendSignalTemp" id="5791295720779429664" />
       </scope>
-      <scope id="5791295720779429666" at="298,27,304,36">
+      <scope id="5791295720779429666" at="333,27,339,36">
         <var name="b" id="5791295720779429666" />
         <var name="sendSignalTemp" id="5791295720779429666" />
       </scope>
-      <scope id="5791295720779429669" at="122,0,130,0" />
-      <scope id="5791295720779429669" at="170,0,178,0" />
-      <scope id="5791295720779429664" at="218,0,226,0" />
-      <scope id="5791295720779429666" at="234,0,242,0" />
-      <scope id="5791295720779429664" at="282,0,290,0" />
-      <scope id="5791295720779429666" at="298,0,306,0" />
-      <scope id="5791295720776492922" at="734,34,742,0">
+      <scope id="5791295720779429669" at="122,27,130,7" />
+      <scope id="5791295720779429669" at="171,27,179,7" />
+      <scope id="5791295720779429669" at="189,0,197,0" />
+      <scope id="5791295720779429669" at="205,0,213,0" />
+      <scope id="5791295720779429664" at="253,0,261,0" />
+      <scope id="5791295720779429666" at="269,0,277,0" />
+      <scope id="5791295720779429664" at="317,0,325,0" />
+      <scope id="5791295720779429666" at="333,0,341,0" />
+      <scope id="5791295720776492922" at="769,34,777,0">
         <var name="plstSteps" id="5791295720776492922" />
         <var name="sendSignalTemp" id="5791295720776492922" />
       </scope>
-      <scope id="5791295720776492859" at="711,34,720,0">
+      <scope id="5791295720776492859" at="746,34,755,0">
         <var name="plstSteps" id="5791295720776492859" />
         <var name="sendSignalTemp" id="5791295720776492859" />
       </scope>
-      <scope id="5791295720776492881" at="722,34,732,0">
+      <scope id="5791295720779429669" at="122,0,132,0" />
+      <scope id="5791295720779429669" at="171,0,181,0" />
+      <scope id="5791295720776492881" at="757,34,767,0">
         <var name="plstSteps" id="5791295720776492881" />
         <var name="sendSignalTemp" id="5791295720776492881" />
       </scope>
-      <scope id="5791295720776492922" at="734,0,744,0">
+      <scope id="5791295720776492922" at="769,0,779,0">
         <var name="s" id="5791295720776492922" />
       </scope>
-      <scope id="5791295720776492859" at="711,0,722,0">
+      <scope id="5791295720776492859" at="746,0,757,0">
         <var name="s" id="5791295720776492859" />
       </scope>
-      <scope id="5791295720776492881" at="722,0,734,0">
+      <scope id="5791295720776492881" at="757,0,769,0">
         <var name="s" id="5791295720776492881" />
       </scope>
-      <unit id="5791295720779429669" at="115,0,131,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0a" />
-      <unit id="5791295720779429669" at="163,0,179,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0a_5" />
-      <unit id="5791295720779429664" at="211,0,227,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0b" />
-      <unit id="5791295720779429666" at="227,0,243,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0b" />
-      <unit id="5791295720779429664" at="275,0,291,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0b_7" />
-      <unit id="5791295720779429666" at="291,0,307,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0b_1" />
+      <unit id="5791295720779429669" at="182,0,198,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_a0b0a" />
+      <unit id="5791295720779429669" at="198,0,214,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_a0b0a_1" />
+      <unit id="5791295720779429664" at="246,0,262,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0b_7" />
+      <unit id="5791295720779429666" at="262,0,278,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0b" />
+      <unit id="5791295720779429664" at="310,0,326,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0b_9" />
+      <unit id="5791295720779429666" at="326,0,342,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0b_1" />
+      <unit id="5791295720779429669" at="116,0,133,0" name="EDLanguage.sandbox.CubicleNurse$Choice_b0a" />
+      <unit id="5791295720779429669" at="165,0,182,0" name="EDLanguage.sandbox.CubicleNurse$Choice_b0a_1" />
     </file>
     <file name="DischargeTrigger_cSignal.java">
       <node id="1758249876540678643" at="8,37,9,39" concept="3" />
@@ -1063,7 +1111,7 @@
       <node id="5791295720776493126" at="74,59,75,28" concept="3" />
       <node id="5791295720776493126" at="75,28,76,14" concept="1" />
       <node id="5791295720779429671" at="111,0,112,0" concept="4" trace="behaviour" />
-      <node id="5791295720779429671" at="113,57,114,33" concept="3" />
+      <node id="5791295720779429671" at="113,56,114,33" concept="3" />
       <node id="5791295720779429671" at="117,27,118,28" concept="9" />
       <node id="5791295720779429671" at="118,28,119,43" concept="9" />
       <node id="5791295720779429671" at="119,43,120,51" concept="3" />
@@ -1071,7 +1119,7 @@
       <node id="5791295720779429671" at="121,89,122,0" concept="12" />
       <node id="5791295720779429671" at="122,0,123,36" concept="3" />
       <node id="5791295720779429671" at="159,0,160,0" concept="4" trace="behaviour" />
-      <node id="5791295720779429671" at="161,57,162,33" concept="3" />
+      <node id="5791295720779429671" at="161,56,162,33" concept="3" />
       <node id="5791295720779429671" at="165,27,166,28" concept="9" />
       <node id="5791295720779429671" at="166,28,167,43" concept="9" />
       <node id="5791295720779429671" at="167,43,168,51" concept="3" />
@@ -1081,8 +1129,8 @@
       <node id="5791295720776492967" at="512,35,513,41" concept="3" />
       <node id="5791295720776492967" at="513,41,514,57" concept="9" />
       <node id="5791295720776492967" at="514,57,515,59" concept="3" />
-      <node id="5791295720779429671" at="515,59,516,65" concept="3" />
-      <node id="5791295720776492967" at="516,65,517,59" concept="3" />
+      <node id="5791295720779429671" at="515,59,516,64" concept="3" />
+      <node id="5791295720776492967" at="516,64,517,59" concept="3" />
       <node id="5791295720776492967" at="517,59,518,41" concept="3" />
       <node id="5791295720776492967" at="518,41,519,0" concept="12" />
       <node id="5791295720776492967" at="519,0,520,41" concept="9" />
@@ -1103,15 +1151,15 @@
       <node id="5791295720776493126" at="538,41,539,0" concept="12" />
       <node id="5791295720776493126" at="539,0,540,41" concept="9" />
       <node id="5791295720776493126" at="540,41,541,0" concept="12" />
-      <node id="5791295720779429671" at="113,0,116,0" concept="2" trace="SendSignalAction_b0a_11#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779429671" at="161,0,164,0" concept="2" trace="SendSignalAction_b0a_13#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429671" at="113,0,116,0" concept="2" trace="SendSignalAction_b0a_7#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429671" at="161,0,164,0" concept="2" trace="SendSignalAction_b0a_9#(Lsimcore/action/Behaviour;)V" />
       <node id="5791295720779429671" at="117,0,125,0" concept="8" trace="execute#()V" />
       <node id="5791295720779429671" at="165,0,173,0" concept="8" trace="execute#()V" />
       <node id="5791295720776493016" at="523,0,533,0" concept="8" trace="Initfewfv_i#(Lsimcore/Signals/Signal;)V" />
       <node id="5791295720776493126" at="533,0,543,0" concept="8" trace="Initwefac_k#(Lsimcore/Signals/Signal;)V" />
       <node id="5791295720776492967" at="512,0,523,0" concept="8" trace="Initfwe_h#(Lsimcore/Signals/Signal;)V" />
-      <scope id="5791295720779429671" at="113,57,114,33" />
-      <scope id="5791295720779429671" at="161,57,162,33" />
+      <scope id="5791295720779429671" at="113,56,114,33" />
+      <scope id="5791295720779429671" at="161,56,162,33" />
       <scope id="5791295720776492967" at="65,26,68,14" />
       <scope id="5791295720776493016" at="69,28,72,14" />
       <scope id="5791295720776493126" at="73,28,76,14" />
@@ -1152,8 +1200,8 @@
       <scope id="5791295720776492967" at="512,0,523,0">
         <var name="s" id="5791295720776492967" />
       </scope>
-      <unit id="5791295720779429671" at="110,0,126,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0a_11" />
-      <unit id="5791295720779429671" at="158,0,174,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0a_13" />
+      <unit id="5791295720779429671" at="110,0,126,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0a_7" />
+      <unit id="5791295720779429671" at="158,0,174,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0a_9" />
     </file>
     <file name="TakeabedTrigger_aSignal.java">
       <node id="1758249876540678598" at="8,36,9,38" concept="3" />
@@ -1195,15 +1243,15 @@
       <node id="5791295720779429673" at="158,0,159,36" concept="3" />
       <node id="5791295720776493069" at="276,38,277,41" concept="3" />
       <node id="5791295720776493069" at="277,41,278,57" concept="9" />
-      <node id="5791295720776493069" at="278,57,279,56" concept="3" />
-      <node id="5791295720779429673" at="279,56,280,64" concept="3" />
+      <node id="5791295720776493069" at="278,57,279,58" concept="3" />
+      <node id="5791295720779429673" at="279,58,280,64" concept="3" />
       <node id="5791295720776493069" at="280,64,281,58" concept="3" />
       <node id="5791295720776493069" at="281,58,282,41" concept="3" />
       <node id="5791295720776493069" at="282,41,283,0" concept="12" />
       <node id="5791295720776493069" at="283,0,284,41" concept="9" />
       <node id="5791295720776493069" at="284,41,285,0" concept="12" />
       <node id="5791295720779429673" at="101,0,104,0" concept="2" trace="SendSignalAction_b0a_3#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779429673" at="149,0,152,0" concept="2" trace="SendSignalAction_b0a_7#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779429673" at="149,0,152,0" concept="2" trace="SendSignalAction_b0a_5#(Lsimcore/action/Behaviour;)V" />
       <node id="5791295720779429673" at="105,0,113,0" concept="8" trace="execute#()V" />
       <node id="5791295720779429673" at="153,0,161,0" concept="8" trace="execute#()V" />
       <node id="5791295720776493069" at="276,0,287,0" concept="8" trace="Initcweewv_j#(Lsimcore/Signals/Signal;)V" />
@@ -1234,7 +1282,7 @@
         <var name="s" id="5791295720776493069" />
       </scope>
       <unit id="5791295720779429673" at="98,0,114,0" name="EDLanguage.sandbox.TriageNurse$SendSignalAction_b0a_3" />
-      <unit id="5791295720779429673" at="146,0,162,0" name="EDLanguage.sandbox.TriageNurse$SendSignalAction_b0a_7" />
+      <unit id="5791295720779429673" at="146,0,162,0" name="EDLanguage.sandbox.TriageNurse$SendSignalAction_b0a_5" />
     </file>
     <file name="WardStaff.java">
       <node id="1758249876540678598" at="70,31,71,62" concept="3" />
@@ -3208,13 +3256,13 @@
       <node id="188877551432564643" at="76,5,77,28" concept="10" />
       <node id="188877551432564643" at="83,0,84,0" concept="4" trace="behaviour" />
       <node id="188877551432564643" at="84,0,85,0" concept="4" trace="timeExecuted" />
-      <node id="188877551432564643" at="85,50,86,33" concept="3" />
+      <node id="188877551432564643" at="85,48,86,33" concept="3" />
       <node id="188877551432564643" at="89,27,90,20" concept="11" />
       <node id="188877551432564643" at="90,20,91,21" concept="3" />
       <node id="188877551432564643" at="94,38,95,31" concept="10" />
       <node id="188877551432564643" at="115,0,116,0" concept="4" trace="behaviour" />
       <node id="188877551432564643" at="116,0,117,0" concept="4" trace="timeExecuted" />
-      <node id="188877551432564643" at="117,50,118,33" concept="3" />
+      <node id="188877551432564643" at="117,48,118,33" concept="3" />
       <node id="188877551432564643" at="121,27,122,20" concept="11" />
       <node id="188877551432564643" at="122,20,123,21" concept="3" />
       <node id="188877551432564643" at="126,38,127,31" concept="10" />
@@ -3232,13 +3280,13 @@
       <node id="188877551432564643" at="174,38,175,31" concept="10" />
       <node id="188877551432564643" at="179,0,180,0" concept="4" trace="behaviour" />
       <node id="188877551432564643" at="180,0,181,0" concept="4" trace="timeExecuted" />
-      <node id="188877551432564643" at="181,50,182,33" concept="3" />
+      <node id="188877551432564643" at="181,48,182,33" concept="3" />
       <node id="188877551432564643" at="185,27,186,20" concept="11" />
       <node id="188877551432564643" at="186,20,187,21" concept="3" />
       <node id="188877551432564643" at="190,38,191,31" concept="10" />
       <node id="188877551432564643" at="211,0,212,0" concept="4" trace="behaviour" />
       <node id="188877551432564643" at="212,0,213,0" concept="4" trace="timeExecuted" />
-      <node id="188877551432564643" at="213,50,214,33" concept="3" />
+      <node id="188877551432564643" at="213,48,214,33" concept="3" />
       <node id="188877551432564643" at="217,27,218,20" concept="11" />
       <node id="188877551432564643" at="218,20,219,21" concept="3" />
       <node id="188877551432564643" at="222,38,223,31" concept="10" />
@@ -3259,21 +3307,21 @@
       <node id="188877551432564643" at="39,0,42,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
       <node id="188877551432564643" at="45,0,48,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
       <node id="188877551432564643" at="50,0,53,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
-      <node id="188877551432564643" at="85,0,88,0" concept="2" trace="StayAction_a0a_0#(Lsimcore/action/Behaviour;)V" />
+      <node id="188877551432564643" at="85,0,88,0" concept="2" trace="StayAction_a0a#(Lsimcore/action/Behaviour;)V" />
       <node id="188877551432564643" at="94,0,97,0" concept="8" trace="finishCondition#()Z" />
-      <node id="188877551432564643" at="117,0,120,0" concept="2" trace="StayAction_c0a_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="188877551432564643" at="117,0,120,0" concept="2" trace="StayAction_c0a#(Lsimcore/action/Behaviour;)V" />
       <node id="188877551432564643" at="126,0,129,0" concept="8" trace="finishCondition#()Z" />
-      <node id="188877551432564643" at="133,0,136,0" concept="2" trace="StayAction_a0a_9#(Lsimcore/action/Behaviour;)V" />
+      <node id="188877551432564643" at="133,0,136,0" concept="2" trace="StayAction_a0a_1#(Lsimcore/action/Behaviour;)V" />
       <node id="188877551432564643" at="142,0,145,0" concept="8" trace="finishCondition#()Z" />
-      <node id="188877551432564643" at="165,0,168,0" concept="2" trace="StayAction_c0a_9#(Lsimcore/action/Behaviour;)V" />
+      <node id="188877551432564643" at="165,0,168,0" concept="2" trace="StayAction_c0a_1#(Lsimcore/action/Behaviour;)V" />
       <node id="188877551432564643" at="174,0,177,0" concept="8" trace="finishCondition#()Z" />
-      <node id="188877551432564643" at="181,0,184,0" concept="2" trace="StayAction_a0b_3#(Lsimcore/action/Behaviour;)V" />
+      <node id="188877551432564643" at="181,0,184,0" concept="2" trace="StayAction_a0b#(Lsimcore/action/Behaviour;)V" />
       <node id="188877551432564643" at="190,0,193,0" concept="8" trace="finishCondition#()Z" />
-      <node id="188877551432564643" at="213,0,216,0" concept="2" trace="StayAction_c0b_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="188877551432564643" at="213,0,216,0" concept="2" trace="StayAction_c0b#(Lsimcore/action/Behaviour;)V" />
       <node id="188877551432564643" at="222,0,225,0" concept="8" trace="finishCondition#()Z" />
-      <node id="188877551432564643" at="229,0,232,0" concept="2" trace="StayAction_a0b_9#(Lsimcore/action/Behaviour;)V" />
+      <node id="188877551432564643" at="229,0,232,0" concept="2" trace="StayAction_a0b_1#(Lsimcore/action/Behaviour;)V" />
       <node id="188877551432564643" at="238,0,241,0" concept="8" trace="finishCondition#()Z" />
-      <node id="188877551432564643" at="261,0,264,0" concept="2" trace="StayAction_c0b_5#(Lsimcore/action/Behaviour;)V" />
+      <node id="188877551432564643" at="261,0,264,0" concept="2" trace="StayAction_c0b_1#(Lsimcore/action/Behaviour;)V" />
       <node id="188877551432564643" at="270,0,273,0" concept="8" trace="finishCondition#()Z" />
       <node id="188877551432564643" at="22,0,26,0" concept="2" trace="Doctor#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
       <node id="188877551432564643" at="89,0,93,0" concept="8" trace="execute#()V" />
@@ -3298,17 +3346,17 @@
       <scope id="188877551432564643" at="45,39,46,119" />
       <scope id="188877551432564643" at="50,41,51,121" />
       <scope id="188877551432564643" at="63,14,64,14" />
-      <scope id="188877551432564643" at="85,50,86,33" />
+      <scope id="188877551432564643" at="85,48,86,33" />
       <scope id="188877551432564643" at="94,38,95,31" />
-      <scope id="188877551432564643" at="117,50,118,33" />
+      <scope id="188877551432564643" at="117,48,118,33" />
       <scope id="188877551432564643" at="126,38,127,31" />
       <scope id="188877551432564643" at="133,50,134,33" />
       <scope id="188877551432564643" at="142,38,143,31" />
       <scope id="188877551432564643" at="165,50,166,33" />
       <scope id="188877551432564643" at="174,38,175,31" />
-      <scope id="188877551432564643" at="181,50,182,33" />
+      <scope id="188877551432564643" at="181,48,182,33" />
       <scope id="188877551432564643" at="190,38,191,31" />
-      <scope id="188877551432564643" at="213,50,214,33" />
+      <scope id="188877551432564643" at="213,48,214,33" />
       <scope id="188877551432564643" at="222,38,223,31" />
       <scope id="188877551432564643" at="229,50,230,33" />
       <scope id="188877551432564643" at="238,38,239,31" />
@@ -3401,14 +3449,14 @@
       <unit id="188877551432564643" at="38,47,42,9" name="EDLanguage.sandbox.Doctor$1" />
       <unit id="188877551432564643" at="44,42,48,7" name="EDLanguage.sandbox.Doctor$4" />
       <unit id="188877551432564643" at="49,47,53,9" name="EDLanguage.sandbox.Doctor$3" />
-      <unit id="188877551432564643" at="82,0,98,0" name="EDLanguage.sandbox.Doctor$StayAction_a0a_0" />
-      <unit id="188877551432564643" at="114,0,130,0" name="EDLanguage.sandbox.Doctor$StayAction_c0a_1" />
-      <unit id="188877551432564643" at="130,0,146,0" name="EDLanguage.sandbox.Doctor$StayAction_a0a_9" />
-      <unit id="188877551432564643" at="162,0,178,0" name="EDLanguage.sandbox.Doctor$StayAction_c0a_9" />
-      <unit id="188877551432564643" at="178,0,194,0" name="EDLanguage.sandbox.Doctor$StayAction_a0b_3" />
-      <unit id="188877551432564643" at="210,0,226,0" name="EDLanguage.sandbox.Doctor$StayAction_c0b_1" />
-      <unit id="188877551432564643" at="226,0,242,0" name="EDLanguage.sandbox.Doctor$StayAction_a0b_9" />
-      <unit id="188877551432564643" at="258,0,274,0" name="EDLanguage.sandbox.Doctor$StayAction_c0b_5" />
+      <unit id="188877551432564643" at="82,0,98,0" name="EDLanguage.sandbox.Doctor$StayAction_a0a" />
+      <unit id="188877551432564643" at="114,0,130,0" name="EDLanguage.sandbox.Doctor$StayAction_c0a" />
+      <unit id="188877551432564643" at="130,0,146,0" name="EDLanguage.sandbox.Doctor$StayAction_a0a_1" />
+      <unit id="188877551432564643" at="162,0,178,0" name="EDLanguage.sandbox.Doctor$StayAction_c0a_1" />
+      <unit id="188877551432564643" at="178,0,194,0" name="EDLanguage.sandbox.Doctor$StayAction_a0b" />
+      <unit id="188877551432564643" at="210,0,226,0" name="EDLanguage.sandbox.Doctor$StayAction_c0b" />
+      <unit id="188877551432564643" at="226,0,242,0" name="EDLanguage.sandbox.Doctor$StayAction_a0b_1" />
+      <unit id="188877551432564643" at="258,0,274,0" name="EDLanguage.sandbox.Doctor$StayAction_c0b_1" />
       <unit id="188877551432564643" at="18,0,300,0" name="EDLanguage.sandbox.Doctor" />
     </file>
   </root>
@@ -3463,7 +3511,7 @@
       <node id="2985733650857495302" at="76,5,77,28" concept="10" />
       <node id="2985733650857495302" at="83,0,84,0" concept="4" trace="behaviour" />
       <node id="2985733650857495302" at="84,0,85,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495302" at="85,48,86,33" concept="3" />
+      <node id="2985733650857495302" at="85,50,86,33" concept="3" />
       <node id="2985733650857495302" at="89,27,90,20" concept="11" />
       <node id="2985733650857495302" at="90,20,91,21" concept="3" />
       <node id="2985733650857495302" at="94,38,95,31" concept="10" />
@@ -3493,7 +3541,7 @@
       <node id="2985733650857495302" at="190,38,191,31" concept="10" />
       <node id="2985733650857495302" at="211,0,212,0" concept="4" trace="behaviour" />
       <node id="2985733650857495302" at="212,0,213,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495302" at="213,48,214,33" concept="3" />
+      <node id="2985733650857495302" at="213,50,214,33" concept="3" />
       <node id="2985733650857495302" at="217,27,218,20" concept="11" />
       <node id="2985733650857495302" at="218,20,219,21" concept="3" />
       <node id="2985733650857495302" at="222,38,223,31" concept="10" />
@@ -3514,21 +3562,21 @@
       <node id="2985733650857495302" at="39,0,42,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
       <node id="2985733650857495302" at="45,0,48,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
       <node id="2985733650857495302" at="50,0,53,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
-      <node id="2985733650857495302" at="85,0,88,0" concept="2" trace="StayAction_a0a#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495302" at="85,0,88,0" concept="2" trace="StayAction_a0a_3#(Lsimcore/action/Behaviour;)V" />
       <node id="2985733650857495302" at="94,0,97,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495302" at="117,0,120,0" concept="2" trace="StayAction_c0a_0#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495302" at="117,0,120,0" concept="2" trace="StayAction_c0a_3#(Lsimcore/action/Behaviour;)V" />
       <node id="2985733650857495302" at="126,0,129,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495302" at="133,0,136,0" concept="2" trace="StayAction_a0a_6#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495302" at="133,0,136,0" concept="2" trace="StayAction_a0a_5#(Lsimcore/action/Behaviour;)V" />
       <node id="2985733650857495302" at="142,0,145,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495302" at="165,0,168,0" concept="2" trace="StayAction_c0a_7#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495302" at="165,0,168,0" concept="2" trace="StayAction_c0a_5#(Lsimcore/action/Behaviour;)V" />
       <node id="2985733650857495302" at="174,0,177,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495302" at="181,0,184,0" concept="2" trace="StayAction_a0b_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495302" at="181,0,184,0" concept="2" trace="StayAction_a0b_3#(Lsimcore/action/Behaviour;)V" />
       <node id="2985733650857495302" at="190,0,193,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495302" at="213,0,216,0" concept="2" trace="StayAction_c0b#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495302" at="213,0,216,0" concept="2" trace="StayAction_c0b_3#(Lsimcore/action/Behaviour;)V" />
       <node id="2985733650857495302" at="222,0,225,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495302" at="229,0,232,0" concept="2" trace="StayAction_a0b_6#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495302" at="229,0,232,0" concept="2" trace="StayAction_a0b_5#(Lsimcore/action/Behaviour;)V" />
       <node id="2985733650857495302" at="238,0,241,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495302" at="261,0,264,0" concept="2" trace="StayAction_c0b_3#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495302" at="261,0,264,0" concept="2" trace="StayAction_c0b_5#(Lsimcore/action/Behaviour;)V" />
       <node id="2985733650857495302" at="270,0,273,0" concept="8" trace="finishCondition#()Z" />
       <node id="2985733650857495302" at="22,0,26,0" concept="2" trace="TriageNurse#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
       <node id="2985733650857495302" at="89,0,93,0" concept="8" trace="execute#()V" />
@@ -3553,7 +3601,7 @@
       <scope id="2985733650857495302" at="45,39,46,119" />
       <scope id="2985733650857495302" at="50,41,51,121" />
       <scope id="2985733650857495302" at="63,14,64,14" />
-      <scope id="2985733650857495302" at="85,48,86,33" />
+      <scope id="2985733650857495302" at="85,50,86,33" />
       <scope id="2985733650857495302" at="94,38,95,31" />
       <scope id="2985733650857495302" at="117,50,118,33" />
       <scope id="2985733650857495302" at="126,38,127,31" />
@@ -3563,7 +3611,7 @@
       <scope id="2985733650857495302" at="174,38,175,31" />
       <scope id="2985733650857495302" at="181,50,182,33" />
       <scope id="2985733650857495302" at="190,38,191,31" />
-      <scope id="2985733650857495302" at="213,48,214,33" />
+      <scope id="2985733650857495302" at="213,50,214,33" />
       <scope id="2985733650857495302" at="222,38,223,31" />
       <scope id="2985733650857495302" at="229,50,230,33" />
       <scope id="2985733650857495302" at="238,38,239,31" />
@@ -3656,14 +3704,14 @@
       <unit id="2985733650857495302" at="38,47,42,9" name="EDLanguage.sandbox.TriageNurse$1" />
       <unit id="2985733650857495302" at="44,42,48,7" name="EDLanguage.sandbox.TriageNurse$4" />
       <unit id="2985733650857495302" at="49,47,53,9" name="EDLanguage.sandbox.TriageNurse$3" />
-      <unit id="2985733650857495302" at="82,0,98,0" name="EDLanguage.sandbox.TriageNurse$StayAction_a0a" />
-      <unit id="2985733650857495302" at="114,0,130,0" name="EDLanguage.sandbox.TriageNurse$StayAction_c0a_0" />
-      <unit id="2985733650857495302" at="130,0,146,0" name="EDLanguage.sandbox.TriageNurse$StayAction_a0a_6" />
-      <unit id="2985733650857495302" at="162,0,178,0" name="EDLanguage.sandbox.TriageNurse$StayAction_c0a_7" />
-      <unit id="2985733650857495302" at="178,0,194,0" name="EDLanguage.sandbox.TriageNurse$StayAction_a0b_1" />
-      <unit id="2985733650857495302" at="210,0,226,0" name="EDLanguage.sandbox.TriageNurse$StayAction_c0b" />
-      <unit id="2985733650857495302" at="226,0,242,0" name="EDLanguage.sandbox.TriageNurse$StayAction_a0b_6" />
-      <unit id="2985733650857495302" at="258,0,274,0" name="EDLanguage.sandbox.TriageNurse$StayAction_c0b_3" />
+      <unit id="2985733650857495302" at="82,0,98,0" name="EDLanguage.sandbox.TriageNurse$StayAction_a0a_3" />
+      <unit id="2985733650857495302" at="114,0,130,0" name="EDLanguage.sandbox.TriageNurse$StayAction_c0a_3" />
+      <unit id="2985733650857495302" at="130,0,146,0" name="EDLanguage.sandbox.TriageNurse$StayAction_a0a_5" />
+      <unit id="2985733650857495302" at="162,0,178,0" name="EDLanguage.sandbox.TriageNurse$StayAction_c0a_5" />
+      <unit id="2985733650857495302" at="178,0,194,0" name="EDLanguage.sandbox.TriageNurse$StayAction_a0b_3" />
+      <unit id="2985733650857495302" at="210,0,226,0" name="EDLanguage.sandbox.TriageNurse$StayAction_c0b_3" />
+      <unit id="2985733650857495302" at="226,0,242,0" name="EDLanguage.sandbox.TriageNurse$StayAction_a0b_5" />
+      <unit id="2985733650857495302" at="258,0,274,0" name="EDLanguage.sandbox.TriageNurse$StayAction_c0b_5" />
       <unit id="2985733650857495302" at="18,0,300,0" name="EDLanguage.sandbox.TriageNurse" />
     </file>
   </root>
@@ -3686,750 +3734,750 @@
   </root>
   <root nodeRef="r:16c7abcd-7449-4307-bda8-baac94df571f(FluCovidEmergencyPathway.clone.AC1)/2985733650857495374">
     <file name="CubicleNurse.java">
-      <node id="2985733650857495374" at="21,0,22,0" concept="4" trace="behaviourBuilder" />
-      <node id="2985733650857495374" at="23,98,24,32" concept="15" />
-      <node id="2985733650857495374" at="24,32,25,26" concept="3" />
-      <node id="2985733650857495374" at="28,99,29,42" concept="15" />
-      <node id="2985733650857495374" at="35,39,36,137" concept="10" />
-      <node id="2985733650857495374" at="40,41,41,139" concept="10" />
-      <node id="2985733650857495374" at="46,39,47,119" concept="10" />
-      <node id="2985733650857495374" at="51,41,52,121" concept="10" />
-      <node id="2985733650857495374" at="56,5,57,16" concept="10" />
-      <node id="2985733650857495374" at="64,14,65,14" concept="1" />
-      <node id="2985733650857495374" at="86,37,87,68" concept="3" />
-      <node id="2985733650857495374" at="87,68,88,37" concept="3" />
-      <node id="2985733650857495374" at="88,37,89,14" concept="1" />
-      <node id="2985733650857495374" at="90,14,91,71" concept="3" />
-      <node id="2985733650857495374" at="91,71,92,32" concept="10" />
-      <node id="2985733650857495374" at="93,5,94,28" concept="10" />
-      <node id="2985733650857495374" at="100,0,101,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="101,0,102,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="102,50,103,33" concept="3" />
-      <node id="2985733650857495374" at="106,27,107,20" concept="11" />
-      <node id="2985733650857495374" at="107,20,108,21" concept="3" />
-      <node id="2985733650857495374" at="111,38,112,31" concept="10" />
-      <node id="2985733650857495374" at="132,0,133,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="133,0,134,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="134,48,135,33" concept="3" />
-      <node id="2985733650857495374" at="138,27,139,20" concept="11" />
-      <node id="2985733650857495374" at="139,20,140,21" concept="3" />
-      <node id="2985733650857495374" at="143,38,144,31" concept="10" />
-      <node id="2985733650857495374" at="148,0,149,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="149,0,150,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="150,50,151,33" concept="3" />
-      <node id="2985733650857495374" at="154,27,155,20" concept="11" />
-      <node id="2985733650857495374" at="155,20,156,21" concept="3" />
-      <node id="2985733650857495374" at="159,38,160,31" concept="10" />
-      <node id="2985733650857495374" at="180,0,181,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="181,0,182,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="182,50,183,33" concept="3" />
-      <node id="2985733650857495374" at="186,27,187,20" concept="11" />
-      <node id="2985733650857495374" at="187,20,188,21" concept="3" />
-      <node id="2985733650857495374" at="191,38,192,31" concept="10" />
-      <node id="2985733650857495374" at="196,0,197,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="197,0,198,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="198,48,199,33" concept="3" />
-      <node id="2985733650857495374" at="202,27,203,20" concept="11" />
-      <node id="2985733650857495374" at="203,20,204,21" concept="3" />
-      <node id="2985733650857495374" at="207,38,208,31" concept="10" />
-      <node id="2985733650857495374" at="244,0,245,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="245,0,246,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="246,48,247,33" concept="3" />
-      <node id="2985733650857495374" at="250,27,251,20" concept="11" />
-      <node id="2985733650857495374" at="251,20,252,21" concept="3" />
-      <node id="2985733650857495374" at="255,38,256,31" concept="10" />
-      <node id="2985733650857495374" at="260,0,261,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="261,0,262,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="262,50,263,33" concept="3" />
-      <node id="2985733650857495374" at="266,27,267,20" concept="11" />
-      <node id="2985733650857495374" at="267,20,268,21" concept="3" />
-      <node id="2985733650857495374" at="271,38,272,31" concept="10" />
-      <node id="2985733650857495374" at="308,0,309,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="309,0,310,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="310,50,311,33" concept="3" />
-      <node id="2985733650857495374" at="314,27,315,20" concept="11" />
-      <node id="2985733650857495374" at="315,20,316,21" concept="3" />
-      <node id="2985733650857495374" at="319,38,320,31" concept="10" />
-      <node id="2985733650857495374" at="324,0,325,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="325,0,326,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="326,48,327,33" concept="3" />
-      <node id="2985733650857495374" at="330,27,331,20" concept="11" />
-      <node id="2985733650857495374" at="331,20,332,21" concept="3" />
-      <node id="2985733650857495374" at="335,38,336,31" concept="10" />
-      <node id="2985733650857495374" at="340,0,341,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="341,0,342,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="342,48,343,33" concept="3" />
-      <node id="2985733650857495374" at="346,27,347,20" concept="11" />
-      <node id="2985733650857495374" at="347,20,348,21" concept="3" />
-      <node id="2985733650857495374" at="351,38,352,31" concept="10" />
-      <node id="2985733650857495374" at="356,0,357,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="357,0,358,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="358,50,359,33" concept="3" />
-      <node id="2985733650857495374" at="362,27,363,20" concept="11" />
-      <node id="2985733650857495374" at="363,20,364,21" concept="3" />
-      <node id="2985733650857495374" at="367,38,368,31" concept="10" />
-      <node id="2985733650857495374" at="372,0,373,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="373,0,374,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="374,50,375,33" concept="3" />
-      <node id="2985733650857495374" at="378,27,379,20" concept="11" />
-      <node id="2985733650857495374" at="379,20,380,21" concept="3" />
-      <node id="2985733650857495374" at="383,38,384,31" concept="10" />
-      <node id="2985733650857495374" at="388,0,389,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="389,0,390,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="390,48,391,33" concept="3" />
-      <node id="2985733650857495374" at="394,27,395,20" concept="11" />
-      <node id="2985733650857495374" at="395,20,396,21" concept="3" />
-      <node id="2985733650857495374" at="399,38,400,31" concept="10" />
-      <node id="2985733650857495374" at="420,0,421,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="421,0,422,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="422,48,423,33" concept="3" />
-      <node id="2985733650857495374" at="426,27,427,20" concept="11" />
-      <node id="2985733650857495374" at="427,20,428,21" concept="3" />
-      <node id="2985733650857495374" at="431,38,432,31" concept="10" />
-      <node id="2985733650857495374" at="436,0,437,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="437,0,438,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="438,50,439,33" concept="3" />
-      <node id="2985733650857495374" at="442,27,443,20" concept="11" />
-      <node id="2985733650857495374" at="443,20,444,21" concept="3" />
-      <node id="2985733650857495374" at="447,38,448,31" concept="10" />
-      <node id="2985733650857495374" at="468,0,469,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="469,0,470,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="470,50,471,33" concept="3" />
-      <node id="2985733650857495374" at="474,27,475,20" concept="11" />
-      <node id="2985733650857495374" at="475,20,476,21" concept="3" />
-      <node id="2985733650857495374" at="479,38,480,31" concept="10" />
-      <node id="2985733650857495374" at="484,0,485,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="485,0,486,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="486,48,487,33" concept="3" />
-      <node id="2985733650857495374" at="490,27,491,20" concept="11" />
-      <node id="2985733650857495374" at="491,20,492,21" concept="3" />
-      <node id="2985733650857495374" at="495,38,496,32" concept="10" />
-      <node id="2985733650857495374" at="532,0,533,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="533,0,534,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="534,48,535,33" concept="3" />
-      <node id="2985733650857495374" at="538,27,539,20" concept="11" />
-      <node id="2985733650857495374" at="539,20,540,21" concept="3" />
-      <node id="2985733650857495374" at="543,38,544,31" concept="10" />
-      <node id="2985733650857495374" at="548,0,549,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="549,0,550,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="550,50,551,33" concept="3" />
-      <node id="2985733650857495374" at="554,27,555,20" concept="11" />
-      <node id="2985733650857495374" at="555,20,556,21" concept="3" />
-      <node id="2985733650857495374" at="559,38,560,32" concept="10" />
-      <node id="2985733650857495374" at="596,0,597,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="597,0,598,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="598,50,599,33" concept="3" />
-      <node id="2985733650857495374" at="602,27,603,20" concept="11" />
-      <node id="2985733650857495374" at="603,20,604,21" concept="3" />
-      <node id="2985733650857495374" at="607,38,608,31" concept="10" />
-      <node id="2985733650857495374" at="612,0,613,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="613,44,614,33" concept="3" />
-      <node id="2985733650857495374" at="618,111,619,61" concept="9" />
-      <node id="2985733650857495374" at="619,61,620,61" concept="3" />
-      <node id="2985733650857495374" at="620,61,621,41" concept="3" />
-      <node id="2985733650857495374" at="622,14,623,61" concept="9" />
-      <node id="2985733650857495374" at="623,61,624,41" concept="3" />
-      <node id="2985733650857495374" at="629,0,630,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="630,0,631,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="631,48,632,33" concept="3" />
-      <node id="2985733650857495374" at="635,27,636,20" concept="11" />
-      <node id="2985733650857495374" at="636,20,637,21" concept="3" />
-      <node id="2985733650857495374" at="640,38,641,31" concept="10" />
-      <node id="2985733650857495374" at="645,0,646,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="646,46,647,33" concept="3" />
-      <node id="2985733650857495374" at="651,111,652,61" concept="9" />
-      <node id="2985733650857495374" at="652,61,653,61" concept="3" />
-      <node id="2985733650857495374" at="653,61,654,41" concept="3" />
-      <node id="2985733650857495374" at="655,14,656,61" concept="9" />
-      <node id="2985733650857495374" at="656,61,657,41" concept="3" />
-      <node id="2985733650857495374" at="662,0,663,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="664,56,665,33" concept="3" />
-      <node id="2985733650857495374" at="668,27,669,28" concept="9" />
-      <node id="2985733650857495374" at="669,28,670,43" concept="9" />
-      <node id="2985733650857495374" at="670,43,671,49" concept="3" />
-      <node id="2985733650857495374" at="671,49,672,89" concept="3" />
-      <node id="2985733650857495374" at="672,89,673,0" concept="12" />
-      <node id="2985733650857495374" at="673,0,674,36" concept="3" />
-      <node id="2985733650857495374" at="678,0,679,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="680,58,681,33" concept="3" />
-      <node id="2985733650857495374" at="684,27,685,28" concept="9" />
-      <node id="2985733650857495374" at="685,28,686,43" concept="9" />
-      <node id="2985733650857495374" at="686,43,687,49" concept="3" />
-      <node id="2985733650857495374" at="687,49,688,89" concept="3" />
-      <node id="2985733650857495374" at="688,89,689,0" concept="12" />
-      <node id="2985733650857495374" at="689,0,690,36" concept="3" />
-      <node id="2985733650857495374" at="694,0,695,0" concept="4" trace="behaviour" />
-      <node id="2985733650857495374" at="695,0,696,0" concept="4" trace="timeExecuted" />
-      <node id="2985733650857495374" at="696,50,697,33" concept="3" />
-      <node id="2985733650857495374" at="700,27,701,20" concept="11" />
-      <node id="2985733650857495374" at="701,20,702,21" concept="3" />
-      <node id="2985733650857495374" at="705,38,706,31" concept="10" />
-      <node id="2985733650857495374" at="767,46,768,41" concept="3" />
-      <node id="2985733650857495374" at="768,41,769,57" concept="9" />
-      <node id="2985733650857495374" at="769,57,770,52" concept="3" />
-      <node id="2985733650857495374" at="770,52,771,56" concept="3" />
-      <node id="2985733650857495374" at="771,56,772,41" concept="3" />
-      <node id="2985733650857495374" at="772,41,773,0" concept="12" />
-      <node id="2985733650857495374" at="773,0,774,41" concept="9" />
-      <node id="2985733650857495374" at="774,41,775,0" concept="12" />
-      <node id="2985733650857495374" at="28,0,31,0" concept="2" trace="CubicleNurse#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
-      <node id="2985733650857495374" at="35,0,38,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
-      <node id="2985733650857495374" at="40,0,43,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
-      <node id="2985733650857495374" at="46,0,49,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
-      <node id="2985733650857495374" at="51,0,54,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
-      <node id="2985733650857495374" at="102,0,105,0" concept="2" trace="StayAction_a0a_3#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="111,0,114,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="134,0,137,0" concept="2" trace="StayAction_c0a#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="143,0,146,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="150,0,153,0" concept="2" trace="StayAction_a0a_5#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="159,0,162,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="182,0,185,0" concept="2" trace="StayAction_c0a_5#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="191,0,194,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="198,0,201,0" concept="2" trace="StayAction_a0b#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="207,0,210,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="246,0,249,0" concept="2" trace="StayAction_d0b#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="255,0,258,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="262,0,265,0" concept="2" trace="StayAction_a0b_5#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="271,0,274,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="310,0,313,0" concept="2" trace="StayAction_d0b_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="319,0,322,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="326,0,329,0" concept="2" trace="StayAction_a0c#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="335,0,338,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="342,0,345,0" concept="2" trace="StayAction_b0c#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="351,0,354,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="358,0,361,0" concept="2" trace="StayAction_a0c_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="367,0,370,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="374,0,377,0" concept="2" trace="StayAction_b0c_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="383,0,386,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="390,0,393,0" concept="2" trace="StayAction_a0d#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="399,0,402,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="422,0,425,0" concept="2" trace="StayAction_c0d#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="431,0,434,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="438,0,441,0" concept="2" trace="StayAction_a0d_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="447,0,450,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="470,0,473,0" concept="2" trace="StayAction_c0d_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="479,0,482,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="486,0,489,0" concept="2" trace="StayAction_a0e#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="495,0,498,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="534,0,537,0" concept="2" trace="StayAction_d0e#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="543,0,546,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="550,0,553,0" concept="2" trace="StayAction_a0e_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="559,0,562,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="598,0,601,0" concept="2" trace="StayAction_d0e_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="607,0,610,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="613,0,616,0" concept="2" trace="Choice_a0f#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="622,12,625,7" concept="0" />
-      <node id="2985733650857495374" at="631,0,634,0" concept="2" trace="StayAction_b0f#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="640,0,643,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="646,0,649,0" concept="2" trace="Choice_a0f_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="655,12,658,7" concept="0" />
-      <node id="2985733650857495374" at="664,0,667,0" concept="2" trace="SendSignalAction_a0a0f#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="680,0,683,0" concept="2" trace="SendSignalAction_a0a0f_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="696,0,699,0" concept="2" trace="StayAction_b0f_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="2985733650857495374" at="705,0,708,0" concept="8" trace="finishCondition#()Z" />
-      <node id="2985733650857495374" at="23,0,27,0" concept="2" trace="CubicleNurse#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
-      <node id="2985733650857495374" at="106,0,110,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="138,0,142,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="154,0,158,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="186,0,190,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="202,0,206,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="250,0,254,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="266,0,270,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="314,0,318,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="330,0,334,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="346,0,350,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="362,0,366,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="378,0,382,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="394,0,398,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="426,0,430,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="442,0,446,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="474,0,478,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="490,0,494,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="538,0,542,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="554,0,558,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="602,0,606,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="635,0,639,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="700,0,704,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="38,44,43,36" concept="10" />
-      <node id="2985733650857495374" at="49,44,54,36" concept="10" />
-      <node id="2985733650857495374" at="617,27,625,7" concept="7" />
-      <node id="2985733650857495374" at="650,27,658,7" concept="7" />
-      <node id="2985733650857495374" at="668,0,676,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="684,0,692,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="617,0,627,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="650,0,660,0" concept="8" trace="execute#()V" />
-      <node id="2985733650857495374" at="767,0,777,0" concept="8" trace="InitPatientArrives_h#(Lsimcore/Signals/Signal;)V" />
-      <node id="2985733650857495374" at="33,35,44,7" concept="7" />
-      <node id="2985733650857495374" at="44,7,55,7" concept="7" />
-      <node id="2985733650857495374" at="32,59,56,5" concept="7" />
-      <node id="2985733650857495374" at="32,0,59,0" concept="8" trace="selectSignal#(Ljava/util/List;)Lsimcore/Signals/Signal;" />
-      <node id="2985733650857495374" at="62,52,93,5" concept="16" />
-      <node id="2985733650857495374" at="62,0,96,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
-      <scope id="2985733650857495374" at="28,99,29,42" />
-      <scope id="2985733650857495374" at="35,39,36,137" />
-      <scope id="2985733650857495374" at="40,41,41,139" />
-      <scope id="2985733650857495374" at="46,39,47,119" />
-      <scope id="2985733650857495374" at="51,41,52,121" />
-      <scope id="2985733650857495374" at="64,14,65,14" />
-      <scope id="2985733650857495374" at="102,50,103,33" />
-      <scope id="2985733650857495374" at="111,38,112,31" />
-      <scope id="2985733650857495374" at="134,48,135,33" />
-      <scope id="2985733650857495374" at="143,38,144,31" />
-      <scope id="2985733650857495374" at="150,50,151,33" />
-      <scope id="2985733650857495374" at="159,38,160,31" />
-      <scope id="2985733650857495374" at="182,50,183,33" />
-      <scope id="2985733650857495374" at="191,38,192,31" />
-      <scope id="2985733650857495374" at="198,48,199,33" />
-      <scope id="2985733650857495374" at="207,38,208,31" />
-      <scope id="2985733650857495374" at="246,48,247,33" />
-      <scope id="2985733650857495374" at="255,38,256,31" />
-      <scope id="2985733650857495374" at="262,50,263,33" />
-      <scope id="2985733650857495374" at="271,38,272,31" />
-      <scope id="2985733650857495374" at="310,50,311,33" />
-      <scope id="2985733650857495374" at="319,38,320,31" />
-      <scope id="2985733650857495374" at="326,48,327,33" />
-      <scope id="2985733650857495374" at="335,38,336,31" />
-      <scope id="2985733650857495374" at="342,48,343,33" />
-      <scope id="2985733650857495374" at="351,38,352,31" />
-      <scope id="2985733650857495374" at="358,50,359,33" />
-      <scope id="2985733650857495374" at="367,38,368,31" />
-      <scope id="2985733650857495374" at="374,50,375,33" />
-      <scope id="2985733650857495374" at="383,38,384,31" />
-      <scope id="2985733650857495374" at="390,48,391,33" />
-      <scope id="2985733650857495374" at="399,38,400,31" />
-      <scope id="2985733650857495374" at="422,48,423,33" />
-      <scope id="2985733650857495374" at="431,38,432,31" />
-      <scope id="2985733650857495374" at="438,50,439,33" />
-      <scope id="2985733650857495374" at="447,38,448,31" />
-      <scope id="2985733650857495374" at="470,50,471,33" />
-      <scope id="2985733650857495374" at="479,38,480,31" />
-      <scope id="2985733650857495374" at="486,48,487,33" />
-      <scope id="2985733650857495374" at="495,38,496,32" />
-      <scope id="2985733650857495374" at="534,48,535,33" />
-      <scope id="2985733650857495374" at="543,38,544,31" />
-      <scope id="2985733650857495374" at="550,50,551,33" />
-      <scope id="2985733650857495374" at="559,38,560,32" />
-      <scope id="2985733650857495374" at="598,50,599,33" />
-      <scope id="2985733650857495374" at="607,38,608,31" />
-      <scope id="2985733650857495374" at="613,44,614,33" />
-      <scope id="2985733650857495374" at="631,48,632,33" />
-      <scope id="2985733650857495374" at="640,38,641,31" />
-      <scope id="2985733650857495374" at="646,46,647,33" />
-      <scope id="2985733650857495374" at="664,56,665,33" />
-      <scope id="2985733650857495374" at="680,58,681,33" />
-      <scope id="2985733650857495374" at="696,50,697,33" />
-      <scope id="2985733650857495374" at="705,38,706,31" />
-      <scope id="2985733650857495374" at="23,98,25,26" />
-      <scope id="2985733650857495374" at="90,14,92,32" />
-      <scope id="2985733650857495374" at="106,27,108,21" />
-      <scope id="2985733650857495374" at="138,27,140,21" />
-      <scope id="2985733650857495374" at="154,27,156,21" />
-      <scope id="2985733650857495374" at="186,27,188,21" />
-      <scope id="2985733650857495374" at="202,27,204,21" />
-      <scope id="2985733650857495374" at="250,27,252,21" />
-      <scope id="2985733650857495374" at="266,27,268,21" />
-      <scope id="2985733650857495374" at="314,27,316,21" />
-      <scope id="2985733650857495374" at="330,27,332,21" />
-      <scope id="2985733650857495374" at="346,27,348,21" />
-      <scope id="2985733650857495374" at="362,27,364,21" />
-      <scope id="2985733650857495374" at="378,27,380,21" />
-      <scope id="2985733650857495374" at="394,27,396,21" />
-      <scope id="2985733650857495374" at="426,27,428,21" />
-      <scope id="2985733650857495374" at="442,27,444,21" />
-      <scope id="2985733650857495374" at="474,27,476,21" />
-      <scope id="2985733650857495374" at="490,27,492,21" />
-      <scope id="2985733650857495374" at="538,27,540,21" />
-      <scope id="2985733650857495374" at="554,27,556,21" />
-      <scope id="2985733650857495374" at="602,27,604,21" />
-      <scope id="2985733650857495374" at="622,14,624,41">
+      <node id="2985733650857495374" at="22,0,23,0" concept="4" trace="behaviourBuilder" />
+      <node id="2985733650857495374" at="24,98,25,32" concept="15" />
+      <node id="2985733650857495374" at="25,32,26,26" concept="3" />
+      <node id="2985733650857495374" at="29,99,30,42" concept="15" />
+      <node id="2985733650857495374" at="36,39,37,137" concept="10" />
+      <node id="2985733650857495374" at="41,41,42,139" concept="10" />
+      <node id="2985733650857495374" at="47,39,48,119" concept="10" />
+      <node id="2985733650857495374" at="52,41,53,121" concept="10" />
+      <node id="2985733650857495374" at="57,5,58,16" concept="10" />
+      <node id="2985733650857495374" at="65,14,66,14" concept="1" />
+      <node id="2985733650857495374" at="87,37,88,68" concept="3" />
+      <node id="2985733650857495374" at="88,68,89,37" concept="3" />
+      <node id="2985733650857495374" at="89,37,90,14" concept="1" />
+      <node id="2985733650857495374" at="91,14,92,71" concept="3" />
+      <node id="2985733650857495374" at="92,71,93,32" concept="10" />
+      <node id="2985733650857495374" at="94,5,95,28" concept="10" />
+      <node id="2985733650857495374" at="101,0,102,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="102,0,103,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="103,50,104,33" concept="3" />
+      <node id="2985733650857495374" at="107,27,108,20" concept="11" />
+      <node id="2985733650857495374" at="108,20,109,21" concept="3" />
+      <node id="2985733650857495374" at="112,38,113,31" concept="10" />
+      <node id="2985733650857495374" at="134,0,135,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="135,0,136,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="136,50,137,33" concept="3" />
+      <node id="2985733650857495374" at="140,27,141,20" concept="11" />
+      <node id="2985733650857495374" at="141,20,142,21" concept="3" />
+      <node id="2985733650857495374" at="145,38,146,31" concept="10" />
+      <node id="2985733650857495374" at="150,0,151,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="151,0,152,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="152,50,153,33" concept="3" />
+      <node id="2985733650857495374" at="156,27,157,20" concept="11" />
+      <node id="2985733650857495374" at="157,20,158,21" concept="3" />
+      <node id="2985733650857495374" at="161,38,162,31" concept="10" />
+      <node id="2985733650857495374" at="215,0,216,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="216,0,217,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="217,50,218,33" concept="3" />
+      <node id="2985733650857495374" at="221,27,222,20" concept="11" />
+      <node id="2985733650857495374" at="222,20,223,21" concept="3" />
+      <node id="2985733650857495374" at="226,38,227,31" concept="10" />
+      <node id="2985733650857495374" at="231,0,232,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="232,0,233,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="233,50,234,33" concept="3" />
+      <node id="2985733650857495374" at="237,27,238,20" concept="11" />
+      <node id="2985733650857495374" at="238,20,239,21" concept="3" />
+      <node id="2985733650857495374" at="242,38,243,31" concept="10" />
+      <node id="2985733650857495374" at="279,0,280,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="280,0,281,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="281,48,282,33" concept="3" />
+      <node id="2985733650857495374" at="285,27,286,20" concept="11" />
+      <node id="2985733650857495374" at="286,20,287,21" concept="3" />
+      <node id="2985733650857495374" at="290,38,291,31" concept="10" />
+      <node id="2985733650857495374" at="295,0,296,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="296,0,297,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="297,50,298,33" concept="3" />
+      <node id="2985733650857495374" at="301,27,302,20" concept="11" />
+      <node id="2985733650857495374" at="302,20,303,21" concept="3" />
+      <node id="2985733650857495374" at="306,38,307,31" concept="10" />
+      <node id="2985733650857495374" at="343,0,344,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="344,0,345,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="345,50,346,33" concept="3" />
+      <node id="2985733650857495374" at="349,27,350,20" concept="11" />
+      <node id="2985733650857495374" at="350,20,351,21" concept="3" />
+      <node id="2985733650857495374" at="354,38,355,31" concept="10" />
+      <node id="2985733650857495374" at="359,0,360,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="360,0,361,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="361,48,362,33" concept="3" />
+      <node id="2985733650857495374" at="365,27,366,20" concept="11" />
+      <node id="2985733650857495374" at="366,20,367,21" concept="3" />
+      <node id="2985733650857495374" at="370,38,371,31" concept="10" />
+      <node id="2985733650857495374" at="375,0,376,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="376,0,377,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="377,48,378,33" concept="3" />
+      <node id="2985733650857495374" at="381,27,382,20" concept="11" />
+      <node id="2985733650857495374" at="382,20,383,21" concept="3" />
+      <node id="2985733650857495374" at="386,38,387,31" concept="10" />
+      <node id="2985733650857495374" at="391,0,392,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="392,0,393,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="393,50,394,33" concept="3" />
+      <node id="2985733650857495374" at="397,27,398,20" concept="11" />
+      <node id="2985733650857495374" at="398,20,399,21" concept="3" />
+      <node id="2985733650857495374" at="402,38,403,31" concept="10" />
+      <node id="2985733650857495374" at="407,0,408,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="408,0,409,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="409,50,410,33" concept="3" />
+      <node id="2985733650857495374" at="413,27,414,20" concept="11" />
+      <node id="2985733650857495374" at="414,20,415,21" concept="3" />
+      <node id="2985733650857495374" at="418,38,419,31" concept="10" />
+      <node id="2985733650857495374" at="423,0,424,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="424,0,425,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="425,48,426,33" concept="3" />
+      <node id="2985733650857495374" at="429,27,430,20" concept="11" />
+      <node id="2985733650857495374" at="430,20,431,21" concept="3" />
+      <node id="2985733650857495374" at="434,38,435,31" concept="10" />
+      <node id="2985733650857495374" at="455,0,456,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="456,0,457,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="457,48,458,33" concept="3" />
+      <node id="2985733650857495374" at="461,27,462,20" concept="11" />
+      <node id="2985733650857495374" at="462,20,463,21" concept="3" />
+      <node id="2985733650857495374" at="466,38,467,31" concept="10" />
+      <node id="2985733650857495374" at="471,0,472,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="472,0,473,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="473,50,474,33" concept="3" />
+      <node id="2985733650857495374" at="477,27,478,20" concept="11" />
+      <node id="2985733650857495374" at="478,20,479,21" concept="3" />
+      <node id="2985733650857495374" at="482,38,483,31" concept="10" />
+      <node id="2985733650857495374" at="503,0,504,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="504,0,505,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="505,50,506,33" concept="3" />
+      <node id="2985733650857495374" at="509,27,510,20" concept="11" />
+      <node id="2985733650857495374" at="510,20,511,21" concept="3" />
+      <node id="2985733650857495374" at="514,38,515,31" concept="10" />
+      <node id="2985733650857495374" at="519,0,520,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="520,0,521,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="521,48,522,33" concept="3" />
+      <node id="2985733650857495374" at="525,27,526,20" concept="11" />
+      <node id="2985733650857495374" at="526,20,527,21" concept="3" />
+      <node id="2985733650857495374" at="530,38,531,32" concept="10" />
+      <node id="2985733650857495374" at="567,0,568,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="568,0,569,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="569,48,570,33" concept="3" />
+      <node id="2985733650857495374" at="573,27,574,20" concept="11" />
+      <node id="2985733650857495374" at="574,20,575,21" concept="3" />
+      <node id="2985733650857495374" at="578,38,579,31" concept="10" />
+      <node id="2985733650857495374" at="583,0,584,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="584,0,585,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="585,50,586,33" concept="3" />
+      <node id="2985733650857495374" at="589,27,590,20" concept="11" />
+      <node id="2985733650857495374" at="590,20,591,21" concept="3" />
+      <node id="2985733650857495374" at="594,38,595,32" concept="10" />
+      <node id="2985733650857495374" at="631,0,632,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="632,0,633,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="633,50,634,33" concept="3" />
+      <node id="2985733650857495374" at="637,27,638,20" concept="11" />
+      <node id="2985733650857495374" at="638,20,639,21" concept="3" />
+      <node id="2985733650857495374" at="642,38,643,31" concept="10" />
+      <node id="2985733650857495374" at="647,0,648,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="648,44,649,33" concept="3" />
+      <node id="2985733650857495374" at="653,111,654,61" concept="9" />
+      <node id="2985733650857495374" at="654,61,655,61" concept="3" />
+      <node id="2985733650857495374" at="655,61,656,41" concept="3" />
+      <node id="2985733650857495374" at="657,14,658,61" concept="9" />
+      <node id="2985733650857495374" at="658,61,659,41" concept="3" />
+      <node id="2985733650857495374" at="664,0,665,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="665,0,666,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="666,48,667,33" concept="3" />
+      <node id="2985733650857495374" at="670,27,671,20" concept="11" />
+      <node id="2985733650857495374" at="671,20,672,21" concept="3" />
+      <node id="2985733650857495374" at="675,38,676,31" concept="10" />
+      <node id="2985733650857495374" at="680,0,681,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="681,46,682,33" concept="3" />
+      <node id="2985733650857495374" at="686,111,687,61" concept="9" />
+      <node id="2985733650857495374" at="687,61,688,61" concept="3" />
+      <node id="2985733650857495374" at="688,61,689,41" concept="3" />
+      <node id="2985733650857495374" at="690,14,691,61" concept="9" />
+      <node id="2985733650857495374" at="691,61,692,41" concept="3" />
+      <node id="2985733650857495374" at="697,0,698,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="699,56,700,33" concept="3" />
+      <node id="2985733650857495374" at="703,27,704,28" concept="9" />
+      <node id="2985733650857495374" at="704,28,705,43" concept="9" />
+      <node id="2985733650857495374" at="705,43,706,49" concept="3" />
+      <node id="2985733650857495374" at="706,49,707,89" concept="3" />
+      <node id="2985733650857495374" at="707,89,708,0" concept="12" />
+      <node id="2985733650857495374" at="708,0,709,36" concept="3" />
+      <node id="2985733650857495374" at="713,0,714,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="715,58,716,33" concept="3" />
+      <node id="2985733650857495374" at="719,27,720,28" concept="9" />
+      <node id="2985733650857495374" at="720,28,721,43" concept="9" />
+      <node id="2985733650857495374" at="721,43,722,49" concept="3" />
+      <node id="2985733650857495374" at="722,49,723,89" concept="3" />
+      <node id="2985733650857495374" at="723,89,724,0" concept="12" />
+      <node id="2985733650857495374" at="724,0,725,36" concept="3" />
+      <node id="2985733650857495374" at="729,0,730,0" concept="4" trace="behaviour" />
+      <node id="2985733650857495374" at="730,0,731,0" concept="4" trace="timeExecuted" />
+      <node id="2985733650857495374" at="731,50,732,33" concept="3" />
+      <node id="2985733650857495374" at="735,27,736,20" concept="11" />
+      <node id="2985733650857495374" at="736,20,737,21" concept="3" />
+      <node id="2985733650857495374" at="740,38,741,31" concept="10" />
+      <node id="2985733650857495374" at="802,46,803,41" concept="3" />
+      <node id="2985733650857495374" at="803,41,804,57" concept="9" />
+      <node id="2985733650857495374" at="804,57,805,52" concept="3" />
+      <node id="2985733650857495374" at="805,52,806,56" concept="3" />
+      <node id="2985733650857495374" at="806,56,807,41" concept="3" />
+      <node id="2985733650857495374" at="807,41,808,0" concept="12" />
+      <node id="2985733650857495374" at="808,0,809,41" concept="9" />
+      <node id="2985733650857495374" at="809,41,810,0" concept="12" />
+      <node id="2985733650857495374" at="29,0,32,0" concept="2" trace="CubicleNurse#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Ljava/lang/String;)V" />
+      <node id="2985733650857495374" at="36,0,39,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
+      <node id="2985733650857495374" at="41,0,44,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
+      <node id="2985733650857495374" at="47,0,50,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
+      <node id="2985733650857495374" at="52,0,55,0" concept="8" trace="test#(Lsimcore/Signals/Signal;)Z" />
+      <node id="2985733650857495374" at="103,0,106,0" concept="2" trace="StayAction_a0a_7#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="112,0,115,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="136,0,139,0" concept="2" trace="StayAction_c0a_7#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="145,0,148,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="152,0,155,0" concept="2" trace="StayAction_a0a_9#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="161,0,164,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="217,0,220,0" concept="2" trace="StayAction_c0a_9#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="226,0,229,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="233,0,236,0" concept="2" trace="StayAction_a0b_7#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="242,0,245,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="281,0,284,0" concept="2" trace="StayAction_d0b#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="290,0,293,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="297,0,300,0" concept="2" trace="StayAction_a0b_9#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="306,0,309,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="345,0,348,0" concept="2" trace="StayAction_d0b_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="354,0,357,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="361,0,364,0" concept="2" trace="StayAction_a0c#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="370,0,373,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="377,0,380,0" concept="2" trace="StayAction_b0c#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="386,0,389,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="393,0,396,0" concept="2" trace="StayAction_a0c_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="402,0,405,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="409,0,412,0" concept="2" trace="StayAction_b0c_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="418,0,421,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="425,0,428,0" concept="2" trace="StayAction_a0d#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="434,0,437,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="457,0,460,0" concept="2" trace="StayAction_c0d#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="466,0,469,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="473,0,476,0" concept="2" trace="StayAction_a0d_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="482,0,485,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="505,0,508,0" concept="2" trace="StayAction_c0d_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="514,0,517,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="521,0,524,0" concept="2" trace="StayAction_a0e#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="530,0,533,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="569,0,572,0" concept="2" trace="StayAction_d0e#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="578,0,581,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="585,0,588,0" concept="2" trace="StayAction_a0e_3#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="594,0,597,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="633,0,636,0" concept="2" trace="StayAction_d0e_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="642,0,645,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="648,0,651,0" concept="2" trace="Choice_a0f#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="657,12,660,7" concept="0" />
+      <node id="2985733650857495374" at="666,0,669,0" concept="2" trace="StayAction_b0f#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="675,0,678,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="681,0,684,0" concept="2" trace="Choice_a0f_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="690,12,693,7" concept="0" />
+      <node id="2985733650857495374" at="699,0,702,0" concept="2" trace="SendSignalAction_a0a0f#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="715,0,718,0" concept="2" trace="SendSignalAction_a0a0f_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="731,0,734,0" concept="2" trace="StayAction_b0f_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="2985733650857495374" at="740,0,743,0" concept="8" trace="finishCondition#()Z" />
+      <node id="2985733650857495374" at="24,0,28,0" concept="2" trace="CubicleNurse#(Lrepast/simphony/space/continuous/ContinuousSpace;Lrepast/simphony/space/grid/Grid;Lrepast/simphony/context/Context;)V" />
+      <node id="2985733650857495374" at="107,0,111,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="140,0,144,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="156,0,160,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="221,0,225,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="237,0,241,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="285,0,289,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="301,0,305,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="349,0,353,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="365,0,369,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="381,0,385,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="397,0,401,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="413,0,417,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="429,0,433,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="461,0,465,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="477,0,481,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="509,0,513,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="525,0,529,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="573,0,577,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="589,0,593,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="637,0,641,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="670,0,674,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="735,0,739,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="39,44,44,36" concept="10" />
+      <node id="2985733650857495374" at="50,44,55,36" concept="10" />
+      <node id="2985733650857495374" at="652,27,660,7" concept="7" />
+      <node id="2985733650857495374" at="685,27,693,7" concept="7" />
+      <node id="2985733650857495374" at="703,0,711,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="719,0,727,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="652,0,662,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="685,0,695,0" concept="8" trace="execute#()V" />
+      <node id="2985733650857495374" at="802,0,812,0" concept="8" trace="InitPatientArrives_h#(Lsimcore/Signals/Signal;)V" />
+      <node id="2985733650857495374" at="34,35,45,7" concept="7" />
+      <node id="2985733650857495374" at="45,7,56,7" concept="7" />
+      <node id="2985733650857495374" at="33,59,57,5" concept="7" />
+      <node id="2985733650857495374" at="33,0,60,0" concept="8" trace="selectSignal#(Ljava/util/List;)Lsimcore/Signals/Signal;" />
+      <node id="2985733650857495374" at="63,52,94,5" concept="16" />
+      <node id="2985733650857495374" at="63,0,97,0" concept="8" trace="BuildActionFromSignal#(Lsimcore/Signals/Signal;)Lsimcore/action/Behaviour;" />
+      <scope id="2985733650857495374" at="29,99,30,42" />
+      <scope id="2985733650857495374" at="36,39,37,137" />
+      <scope id="2985733650857495374" at="41,41,42,139" />
+      <scope id="2985733650857495374" at="47,39,48,119" />
+      <scope id="2985733650857495374" at="52,41,53,121" />
+      <scope id="2985733650857495374" at="65,14,66,14" />
+      <scope id="2985733650857495374" at="103,50,104,33" />
+      <scope id="2985733650857495374" at="112,38,113,31" />
+      <scope id="2985733650857495374" at="136,50,137,33" />
+      <scope id="2985733650857495374" at="145,38,146,31" />
+      <scope id="2985733650857495374" at="152,50,153,33" />
+      <scope id="2985733650857495374" at="161,38,162,31" />
+      <scope id="2985733650857495374" at="217,50,218,33" />
+      <scope id="2985733650857495374" at="226,38,227,31" />
+      <scope id="2985733650857495374" at="233,50,234,33" />
+      <scope id="2985733650857495374" at="242,38,243,31" />
+      <scope id="2985733650857495374" at="281,48,282,33" />
+      <scope id="2985733650857495374" at="290,38,291,31" />
+      <scope id="2985733650857495374" at="297,50,298,33" />
+      <scope id="2985733650857495374" at="306,38,307,31" />
+      <scope id="2985733650857495374" at="345,50,346,33" />
+      <scope id="2985733650857495374" at="354,38,355,31" />
+      <scope id="2985733650857495374" at="361,48,362,33" />
+      <scope id="2985733650857495374" at="370,38,371,31" />
+      <scope id="2985733650857495374" at="377,48,378,33" />
+      <scope id="2985733650857495374" at="386,38,387,31" />
+      <scope id="2985733650857495374" at="393,50,394,33" />
+      <scope id="2985733650857495374" at="402,38,403,31" />
+      <scope id="2985733650857495374" at="409,50,410,33" />
+      <scope id="2985733650857495374" at="418,38,419,31" />
+      <scope id="2985733650857495374" at="425,48,426,33" />
+      <scope id="2985733650857495374" at="434,38,435,31" />
+      <scope id="2985733650857495374" at="457,48,458,33" />
+      <scope id="2985733650857495374" at="466,38,467,31" />
+      <scope id="2985733650857495374" at="473,50,474,33" />
+      <scope id="2985733650857495374" at="482,38,483,31" />
+      <scope id="2985733650857495374" at="505,50,506,33" />
+      <scope id="2985733650857495374" at="514,38,515,31" />
+      <scope id="2985733650857495374" at="521,48,522,33" />
+      <scope id="2985733650857495374" at="530,38,531,32" />
+      <scope id="2985733650857495374" at="569,48,570,33" />
+      <scope id="2985733650857495374" at="578,38,579,31" />
+      <scope id="2985733650857495374" at="585,50,586,33" />
+      <scope id="2985733650857495374" at="594,38,595,32" />
+      <scope id="2985733650857495374" at="633,50,634,33" />
+      <scope id="2985733650857495374" at="642,38,643,31" />
+      <scope id="2985733650857495374" at="648,44,649,33" />
+      <scope id="2985733650857495374" at="666,48,667,33" />
+      <scope id="2985733650857495374" at="675,38,676,31" />
+      <scope id="2985733650857495374" at="681,46,682,33" />
+      <scope id="2985733650857495374" at="699,56,700,33" />
+      <scope id="2985733650857495374" at="715,58,716,33" />
+      <scope id="2985733650857495374" at="731,50,732,33" />
+      <scope id="2985733650857495374" at="740,38,741,31" />
+      <scope id="2985733650857495374" at="24,98,26,26" />
+      <scope id="2985733650857495374" at="91,14,93,32" />
+      <scope id="2985733650857495374" at="107,27,109,21" />
+      <scope id="2985733650857495374" at="140,27,142,21" />
+      <scope id="2985733650857495374" at="156,27,158,21" />
+      <scope id="2985733650857495374" at="221,27,223,21" />
+      <scope id="2985733650857495374" at="237,27,239,21" />
+      <scope id="2985733650857495374" at="285,27,287,21" />
+      <scope id="2985733650857495374" at="301,27,303,21" />
+      <scope id="2985733650857495374" at="349,27,351,21" />
+      <scope id="2985733650857495374" at="365,27,367,21" />
+      <scope id="2985733650857495374" at="381,27,383,21" />
+      <scope id="2985733650857495374" at="397,27,399,21" />
+      <scope id="2985733650857495374" at="413,27,415,21" />
+      <scope id="2985733650857495374" at="429,27,431,21" />
+      <scope id="2985733650857495374" at="461,27,463,21" />
+      <scope id="2985733650857495374" at="477,27,479,21" />
+      <scope id="2985733650857495374" at="509,27,511,21" />
+      <scope id="2985733650857495374" at="525,27,527,21" />
+      <scope id="2985733650857495374" at="573,27,575,21" />
+      <scope id="2985733650857495374" at="589,27,591,21" />
+      <scope id="2985733650857495374" at="637,27,639,21" />
+      <scope id="2985733650857495374" at="657,14,659,41">
         <var name="plstSteps" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="635,27,637,21" />
-      <scope id="2985733650857495374" at="655,14,657,41">
+      <scope id="2985733650857495374" at="670,27,672,21" />
+      <scope id="2985733650857495374" at="690,14,692,41">
         <var name="plstSteps" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="700,27,702,21" />
-      <scope id="2985733650857495374" at="28,0,31,0">
+      <scope id="2985733650857495374" at="735,27,737,21" />
+      <scope id="2985733650857495374" at="29,0,32,0">
         <var name="grid" id="2985733650857495374" />
         <var name="pstrStartLocation" id="2985733650857495374" />
         <var name="space" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="35,0,38,0">
+      <scope id="2985733650857495374" at="36,0,39,0">
         <var name="s" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="40,0,43,0">
+      <scope id="2985733650857495374" at="41,0,44,0">
         <var name="s" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="46,0,49,0">
+      <scope id="2985733650857495374" at="47,0,50,0">
         <var name="s" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="51,0,54,0">
+      <scope id="2985733650857495374" at="52,0,55,0">
         <var name="s" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="86,37,89,14" />
-      <scope id="2985733650857495374" at="102,0,105,0">
+      <scope id="2985733650857495374" at="87,37,90,14" />
+      <scope id="2985733650857495374" at="103,0,106,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="111,0,114,0" />
-      <scope id="2985733650857495374" at="134,0,137,0">
+      <scope id="2985733650857495374" at="112,0,115,0" />
+      <scope id="2985733650857495374" at="136,0,139,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="143,0,146,0" />
-      <scope id="2985733650857495374" at="150,0,153,0">
+      <scope id="2985733650857495374" at="145,0,148,0" />
+      <scope id="2985733650857495374" at="152,0,155,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="159,0,162,0" />
-      <scope id="2985733650857495374" at="182,0,185,0">
+      <scope id="2985733650857495374" at="161,0,164,0" />
+      <scope id="2985733650857495374" at="217,0,220,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="191,0,194,0" />
-      <scope id="2985733650857495374" at="198,0,201,0">
+      <scope id="2985733650857495374" at="226,0,229,0" />
+      <scope id="2985733650857495374" at="233,0,236,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="207,0,210,0" />
-      <scope id="2985733650857495374" at="246,0,249,0">
+      <scope id="2985733650857495374" at="242,0,245,0" />
+      <scope id="2985733650857495374" at="281,0,284,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="255,0,258,0" />
-      <scope id="2985733650857495374" at="262,0,265,0">
+      <scope id="2985733650857495374" at="290,0,293,0" />
+      <scope id="2985733650857495374" at="297,0,300,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="271,0,274,0" />
-      <scope id="2985733650857495374" at="310,0,313,0">
+      <scope id="2985733650857495374" at="306,0,309,0" />
+      <scope id="2985733650857495374" at="345,0,348,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="319,0,322,0" />
-      <scope id="2985733650857495374" at="326,0,329,0">
+      <scope id="2985733650857495374" at="354,0,357,0" />
+      <scope id="2985733650857495374" at="361,0,364,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="335,0,338,0" />
-      <scope id="2985733650857495374" at="342,0,345,0">
+      <scope id="2985733650857495374" at="370,0,373,0" />
+      <scope id="2985733650857495374" at="377,0,380,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="351,0,354,0" />
-      <scope id="2985733650857495374" at="358,0,361,0">
+      <scope id="2985733650857495374" at="386,0,389,0" />
+      <scope id="2985733650857495374" at="393,0,396,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="367,0,370,0" />
-      <scope id="2985733650857495374" at="374,0,377,0">
+      <scope id="2985733650857495374" at="402,0,405,0" />
+      <scope id="2985733650857495374" at="409,0,412,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="383,0,386,0" />
-      <scope id="2985733650857495374" at="390,0,393,0">
+      <scope id="2985733650857495374" at="418,0,421,0" />
+      <scope id="2985733650857495374" at="425,0,428,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="399,0,402,0" />
-      <scope id="2985733650857495374" at="422,0,425,0">
+      <scope id="2985733650857495374" at="434,0,437,0" />
+      <scope id="2985733650857495374" at="457,0,460,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="431,0,434,0" />
-      <scope id="2985733650857495374" at="438,0,441,0">
+      <scope id="2985733650857495374" at="466,0,469,0" />
+      <scope id="2985733650857495374" at="473,0,476,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="447,0,450,0" />
-      <scope id="2985733650857495374" at="470,0,473,0">
+      <scope id="2985733650857495374" at="482,0,485,0" />
+      <scope id="2985733650857495374" at="505,0,508,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="479,0,482,0" />
-      <scope id="2985733650857495374" at="486,0,489,0">
+      <scope id="2985733650857495374" at="514,0,517,0" />
+      <scope id="2985733650857495374" at="521,0,524,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="495,0,498,0" />
-      <scope id="2985733650857495374" at="534,0,537,0">
+      <scope id="2985733650857495374" at="530,0,533,0" />
+      <scope id="2985733650857495374" at="569,0,572,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="543,0,546,0" />
-      <scope id="2985733650857495374" at="550,0,553,0">
+      <scope id="2985733650857495374" at="578,0,581,0" />
+      <scope id="2985733650857495374" at="585,0,588,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="559,0,562,0" />
-      <scope id="2985733650857495374" at="598,0,601,0">
+      <scope id="2985733650857495374" at="594,0,597,0" />
+      <scope id="2985733650857495374" at="633,0,636,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="607,0,610,0" />
-      <scope id="2985733650857495374" at="613,0,616,0">
+      <scope id="2985733650857495374" at="642,0,645,0" />
+      <scope id="2985733650857495374" at="648,0,651,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="618,111,621,41">
+      <scope id="2985733650857495374" at="653,111,656,41">
         <var name="plstSteps" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="631,0,634,0">
+      <scope id="2985733650857495374" at="666,0,669,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="640,0,643,0" />
-      <scope id="2985733650857495374" at="646,0,649,0">
+      <scope id="2985733650857495374" at="675,0,678,0" />
+      <scope id="2985733650857495374" at="681,0,684,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="651,111,654,41">
+      <scope id="2985733650857495374" at="686,111,689,41">
         <var name="plstSteps" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="664,0,667,0">
+      <scope id="2985733650857495374" at="699,0,702,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="680,0,683,0">
+      <scope id="2985733650857495374" at="715,0,718,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="696,0,699,0">
+      <scope id="2985733650857495374" at="731,0,734,0">
         <var name="behaviour" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="705,0,708,0" />
-      <scope id="2985733650857495374" at="23,0,27,0">
+      <scope id="2985733650857495374" at="740,0,743,0" />
+      <scope id="2985733650857495374" at="24,0,28,0">
         <var name="context" id="2985733650857495374" />
         <var name="grid" id="2985733650857495374" />
         <var name="space" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="106,0,110,0" />
-      <scope id="2985733650857495374" at="138,0,142,0" />
-      <scope id="2985733650857495374" at="154,0,158,0" />
-      <scope id="2985733650857495374" at="186,0,190,0" />
-      <scope id="2985733650857495374" at="202,0,206,0" />
-      <scope id="2985733650857495374" at="250,0,254,0" />
-      <scope id="2985733650857495374" at="266,0,270,0" />
-      <scope id="2985733650857495374" at="314,0,318,0" />
-      <scope id="2985733650857495374" at="330,0,334,0" />
-      <scope id="2985733650857495374" at="346,0,350,0" />
-      <scope id="2985733650857495374" at="362,0,366,0" />
-      <scope id="2985733650857495374" at="378,0,382,0" />
-      <scope id="2985733650857495374" at="394,0,398,0" />
-      <scope id="2985733650857495374" at="426,0,430,0" />
-      <scope id="2985733650857495374" at="442,0,446,0" />
-      <scope id="2985733650857495374" at="474,0,478,0" />
-      <scope id="2985733650857495374" at="490,0,494,0" />
-      <scope id="2985733650857495374" at="538,0,542,0" />
-      <scope id="2985733650857495374" at="554,0,558,0" />
-      <scope id="2985733650857495374" at="602,0,606,0" />
-      <scope id="2985733650857495374" at="635,0,639,0" />
-      <scope id="2985733650857495374" at="700,0,704,0" />
-      <scope id="2985733650857495374" at="38,44,43,36" />
-      <scope id="2985733650857495374" at="49,44,54,36" />
-      <scope id="2985733650857495374" at="668,27,674,36">
+      <scope id="2985733650857495374" at="107,0,111,0" />
+      <scope id="2985733650857495374" at="140,0,144,0" />
+      <scope id="2985733650857495374" at="156,0,160,0" />
+      <scope id="2985733650857495374" at="221,0,225,0" />
+      <scope id="2985733650857495374" at="237,0,241,0" />
+      <scope id="2985733650857495374" at="285,0,289,0" />
+      <scope id="2985733650857495374" at="301,0,305,0" />
+      <scope id="2985733650857495374" at="349,0,353,0" />
+      <scope id="2985733650857495374" at="365,0,369,0" />
+      <scope id="2985733650857495374" at="381,0,385,0" />
+      <scope id="2985733650857495374" at="397,0,401,0" />
+      <scope id="2985733650857495374" at="413,0,417,0" />
+      <scope id="2985733650857495374" at="429,0,433,0" />
+      <scope id="2985733650857495374" at="461,0,465,0" />
+      <scope id="2985733650857495374" at="477,0,481,0" />
+      <scope id="2985733650857495374" at="509,0,513,0" />
+      <scope id="2985733650857495374" at="525,0,529,0" />
+      <scope id="2985733650857495374" at="573,0,577,0" />
+      <scope id="2985733650857495374" at="589,0,593,0" />
+      <scope id="2985733650857495374" at="637,0,641,0" />
+      <scope id="2985733650857495374" at="670,0,674,0" />
+      <scope id="2985733650857495374" at="735,0,739,0" />
+      <scope id="2985733650857495374" at="39,44,44,36" />
+      <scope id="2985733650857495374" at="50,44,55,36" />
+      <scope id="2985733650857495374" at="703,27,709,36">
         <var name="b" id="2985733650857495374" />
         <var name="sendSignalTemp" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="684,27,690,36">
+      <scope id="2985733650857495374" at="719,27,725,36">
         <var name="b" id="2985733650857495374" />
         <var name="sendSignalTemp" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="617,27,625,7" />
-      <scope id="2985733650857495374" at="650,27,658,7" />
-      <scope id="2985733650857495374" at="668,0,676,0" />
-      <scope id="2985733650857495374" at="684,0,692,0" />
-      <scope id="2985733650857495374" at="767,46,775,0">
+      <scope id="2985733650857495374" at="652,27,660,7" />
+      <scope id="2985733650857495374" at="685,27,693,7" />
+      <scope id="2985733650857495374" at="703,0,711,0" />
+      <scope id="2985733650857495374" at="719,0,727,0" />
+      <scope id="2985733650857495374" at="802,46,810,0">
         <var name="plstSteps" id="2985733650857495374" />
         <var name="sendSignalTemp" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="617,0,627,0" />
-      <scope id="2985733650857495374" at="650,0,660,0" />
-      <scope id="2985733650857495374" at="767,0,777,0">
+      <scope id="2985733650857495374" at="652,0,662,0" />
+      <scope id="2985733650857495374" at="685,0,695,0" />
+      <scope id="2985733650857495374" at="802,0,812,0">
         <var name="s" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="33,35,55,7" />
-      <scope id="2985733650857495374" at="32,59,57,16" />
-      <scope id="2985733650857495374" at="32,0,59,0">
+      <scope id="2985733650857495374" at="34,35,56,7" />
+      <scope id="2985733650857495374" at="33,59,58,16" />
+      <scope id="2985733650857495374" at="33,0,60,0">
         <var name="plstSignals" id="2985733650857495374" />
       </scope>
-      <scope id="2985733650857495374" at="62,52,94,28" />
-      <scope id="2985733650857495374" at="62,0,96,0">
+      <scope id="2985733650857495374" at="63,52,95,28" />
+      <scope id="2985733650857495374" at="63,0,97,0">
         <var name="s" id="2985733650857495374" />
       </scope>
-      <unit id="2985733650857495374" at="34,42,38,7" name="EDLanguage.sandbox.CubicleNurse$2" />
-      <unit id="2985733650857495374" at="39,47,43,9" name="EDLanguage.sandbox.CubicleNurse$1" />
-      <unit id="2985733650857495374" at="45,42,49,7" name="EDLanguage.sandbox.CubicleNurse$4" />
-      <unit id="2985733650857495374" at="50,47,54,9" name="EDLanguage.sandbox.CubicleNurse$3" />
-      <unit id="2985733650857495374" at="99,0,115,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0a_3" />
-      <unit id="2985733650857495374" at="131,0,147,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_c0a" />
-      <unit id="2985733650857495374" at="147,0,163,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0a_5" />
-      <unit id="2985733650857495374" at="179,0,195,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_c0a_5" />
-      <unit id="2985733650857495374" at="195,0,211,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0b" />
-      <unit id="2985733650857495374" at="243,0,259,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_d0b" />
-      <unit id="2985733650857495374" at="259,0,275,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0b_5" />
-      <unit id="2985733650857495374" at="307,0,323,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_d0b_1" />
-      <unit id="2985733650857495374" at="323,0,339,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0c" />
-      <unit id="2985733650857495374" at="339,0,355,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_b0c" />
-      <unit id="2985733650857495374" at="355,0,371,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0c_1" />
-      <unit id="2985733650857495374" at="371,0,387,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_b0c_1" />
-      <unit id="2985733650857495374" at="387,0,403,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0d" />
-      <unit id="2985733650857495374" at="419,0,435,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_c0d" />
-      <unit id="2985733650857495374" at="435,0,451,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0d_1" />
-      <unit id="2985733650857495374" at="467,0,483,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_c0d_1" />
-      <unit id="2985733650857495374" at="483,0,499,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0e" />
-      <unit id="2985733650857495374" at="531,0,547,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_d0e" />
-      <unit id="2985733650857495374" at="547,0,563,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0e_1" />
-      <unit id="2985733650857495374" at="595,0,611,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_d0e_1" />
-      <unit id="2985733650857495374" at="628,0,644,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_b0f" />
-      <unit id="2985733650857495374" at="661,0,677,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_a0a0f" />
-      <unit id="2985733650857495374" at="677,0,693,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_a0a0f_1" />
-      <unit id="2985733650857495374" at="693,0,709,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_b0f_1" />
-      <unit id="2985733650857495374" at="611,0,628,0" name="EDLanguage.sandbox.CubicleNurse$Choice_a0f" />
-      <unit id="2985733650857495374" at="644,0,661,0" name="EDLanguage.sandbox.CubicleNurse$Choice_a0f_1" />
-      <unit id="2985733650857495374" at="19,0,779,0" name="EDLanguage.sandbox.CubicleNurse" />
+      <unit id="2985733650857495374" at="35,42,39,7" name="EDLanguage.sandbox.CubicleNurse$2" />
+      <unit id="2985733650857495374" at="40,47,44,9" name="EDLanguage.sandbox.CubicleNurse$1" />
+      <unit id="2985733650857495374" at="46,42,50,7" name="EDLanguage.sandbox.CubicleNurse$4" />
+      <unit id="2985733650857495374" at="51,47,55,9" name="EDLanguage.sandbox.CubicleNurse$3" />
+      <unit id="2985733650857495374" at="100,0,116,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0a_7" />
+      <unit id="2985733650857495374" at="133,0,149,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_c0a_7" />
+      <unit id="2985733650857495374" at="149,0,165,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0a_9" />
+      <unit id="2985733650857495374" at="214,0,230,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_c0a_9" />
+      <unit id="2985733650857495374" at="230,0,246,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0b_7" />
+      <unit id="2985733650857495374" at="278,0,294,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_d0b" />
+      <unit id="2985733650857495374" at="294,0,310,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0b_9" />
+      <unit id="2985733650857495374" at="342,0,358,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_d0b_1" />
+      <unit id="2985733650857495374" at="358,0,374,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0c" />
+      <unit id="2985733650857495374" at="374,0,390,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_b0c" />
+      <unit id="2985733650857495374" at="390,0,406,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0c_1" />
+      <unit id="2985733650857495374" at="406,0,422,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_b0c_1" />
+      <unit id="2985733650857495374" at="422,0,438,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0d" />
+      <unit id="2985733650857495374" at="454,0,470,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_c0d" />
+      <unit id="2985733650857495374" at="470,0,486,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0d_1" />
+      <unit id="2985733650857495374" at="502,0,518,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_c0d_1" />
+      <unit id="2985733650857495374" at="518,0,534,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0e" />
+      <unit id="2985733650857495374" at="566,0,582,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_d0e" />
+      <unit id="2985733650857495374" at="582,0,598,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_a0e_3" />
+      <unit id="2985733650857495374" at="630,0,646,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_d0e_1" />
+      <unit id="2985733650857495374" at="663,0,679,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_b0f" />
+      <unit id="2985733650857495374" at="696,0,712,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_a0a0f" />
+      <unit id="2985733650857495374" at="712,0,728,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_a0a0f_1" />
+      <unit id="2985733650857495374" at="728,0,744,0" name="EDLanguage.sandbox.CubicleNurse$StayAction_b0f_1" />
+      <unit id="2985733650857495374" at="646,0,663,0" name="EDLanguage.sandbox.CubicleNurse$Choice_a0f" />
+      <unit id="2985733650857495374" at="679,0,696,0" name="EDLanguage.sandbox.CubicleNurse$Choice_a0f_1" />
+      <unit id="2985733650857495374" at="20,0,814,0" name="EDLanguage.sandbox.CubicleNurse" />
     </file>
   </root>
   <root nodeRef="r:16c7abcd-7449-4307-bda8-baac94df571f(FluCovidEmergencyPathway.clone.AC1)/5791295720779257396">
     <file name="CubicleNurse.java">
-      <node id="5791295720779257397" at="78,26,79,57" concept="3" />
-      <node id="5791295720779257397" at="79,57,80,26" concept="3" />
-      <node id="5791295720779257397" at="80,26,81,14" concept="1" />
-      <node id="5791295720779314305" at="82,27,83,58" concept="3" />
-      <node id="5791295720779314305" at="83,58,84,27" concept="3" />
-      <node id="5791295720779314305" at="84,27,85,14" concept="1" />
-      <node id="5791295720779314323" at="404,0,405,0" concept="4" trace="behaviour" />
-      <node id="5791295720779314323" at="406,54,407,33" concept="3" />
-      <node id="5791295720779314323" at="410,27,411,28" concept="9" />
-      <node id="5791295720779314323" at="411,28,412,43" concept="9" />
-      <node id="5791295720779314323" at="412,43,413,53" concept="3" />
-      <node id="5791295720779314323" at="413,53,414,89" concept="3" />
-      <node id="5791295720779314323" at="414,89,415,0" concept="12" />
-      <node id="5791295720779314323" at="415,0,416,36" concept="3" />
-      <node id="5791295720779314323" at="452,0,453,0" concept="4" trace="behaviour" />
-      <node id="5791295720779314323" at="454,56,455,33" concept="3" />
-      <node id="5791295720779314323" at="458,27,459,28" concept="9" />
-      <node id="5791295720779314323" at="459,28,460,43" concept="9" />
-      <node id="5791295720779314323" at="460,43,461,53" concept="3" />
-      <node id="5791295720779314323" at="461,53,462,89" concept="3" />
-      <node id="5791295720779314323" at="462,89,463,0" concept="12" />
-      <node id="5791295720779314323" at="463,0,464,36" concept="3" />
-      <node id="5791295720779488122" at="500,0,501,0" concept="4" trace="behaviour" />
-      <node id="5791295720779488122" at="502,54,503,33" concept="3" />
-      <node id="5791295720779488122" at="506,27,507,28" concept="9" />
-      <node id="5791295720779488122" at="507,28,508,43" concept="9" />
-      <node id="5791295720779488122" at="508,43,509,50" concept="3" />
-      <node id="5791295720779488122" at="509,50,510,89" concept="3" />
-      <node id="5791295720779488122" at="510,89,511,0" concept="12" />
-      <node id="5791295720779488122" at="511,0,512,36" concept="3" />
-      <node id="5791295720779488124" at="516,0,517,0" concept="4" trace="behaviour" />
-      <node id="5791295720779488124" at="518,54,519,33" concept="3" />
-      <node id="5791295720779488124" at="522,27,523,28" concept="9" />
-      <node id="5791295720779488124" at="523,28,524,43" concept="9" />
-      <node id="5791295720779488124" at="524,43,525,53" concept="3" />
-      <node id="5791295720779488124" at="525,53,526,89" concept="3" />
-      <node id="5791295720779488124" at="526,89,527,0" concept="12" />
-      <node id="5791295720779488124" at="527,0,528,36" concept="3" />
-      <node id="5791295720779488122" at="564,0,565,0" concept="4" trace="behaviour" />
-      <node id="5791295720779488122" at="566,56,567,33" concept="3" />
-      <node id="5791295720779488122" at="570,27,571,28" concept="9" />
-      <node id="5791295720779488122" at="571,28,572,43" concept="9" />
-      <node id="5791295720779488122" at="572,43,573,50" concept="3" />
-      <node id="5791295720779488122" at="573,50,574,89" concept="3" />
-      <node id="5791295720779488122" at="574,89,575,0" concept="12" />
-      <node id="5791295720779488122" at="575,0,576,36" concept="3" />
-      <node id="5791295720779488124" at="580,0,581,0" concept="4" trace="behaviour" />
-      <node id="5791295720779488124" at="582,56,583,33" concept="3" />
-      <node id="5791295720779488124" at="586,27,587,28" concept="9" />
-      <node id="5791295720779488124" at="587,28,588,43" concept="9" />
-      <node id="5791295720779488124" at="588,43,589,53" concept="3" />
-      <node id="5791295720779488124" at="589,53,590,89" concept="3" />
-      <node id="5791295720779488124" at="590,89,591,0" concept="12" />
-      <node id="5791295720779488124" at="591,0,592,36" concept="3" />
-      <node id="5791295720779257397" at="744,35,745,41" concept="3" />
-      <node id="5791295720779257397" at="745,41,746,57" concept="9" />
-      <node id="5791295720779257397" at="746,57,747,56" concept="3" />
-      <node id="5791295720779314323" at="747,56,748,62" concept="3" />
-      <node id="5791295720779257397" at="748,62,749,56" concept="3" />
-      <node id="5791295720779257397" at="749,56,750,41" concept="3" />
-      <node id="5791295720779257397" at="750,41,751,0" concept="12" />
-      <node id="5791295720779257397" at="751,0,752,41" concept="9" />
-      <node id="5791295720779257397" at="752,41,753,0" concept="12" />
-      <node id="5791295720779314305" at="755,36,756,41" concept="3" />
-      <node id="5791295720779314305" at="756,41,757,57" concept="9" />
-      <node id="5791295720779314305" at="757,57,758,56" concept="3" />
-      <node id="5791295720779488122" at="758,56,759,62" concept="3" />
-      <node id="5791295720779488124" at="759,62,760,62" concept="3" />
-      <node id="5791295720779314305" at="760,62,761,56" concept="3" />
-      <node id="5791295720779314305" at="761,56,762,41" concept="3" />
-      <node id="5791295720779314305" at="762,41,763,0" concept="12" />
-      <node id="5791295720779314305" at="763,0,764,41" concept="9" />
-      <node id="5791295720779314305" at="764,41,765,0" concept="12" />
-      <node id="5791295720779314323" at="406,0,409,0" concept="2" trace="SendSignalAction_b0d#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779314323" at="454,0,457,0" concept="2" trace="SendSignalAction_b0d_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779488122" at="502,0,505,0" concept="2" trace="SendSignalAction_b0e#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779488124" at="518,0,521,0" concept="2" trace="SendSignalAction_c0e#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779488122" at="566,0,569,0" concept="2" trace="SendSignalAction_b0e_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779488124" at="582,0,585,0" concept="2" trace="SendSignalAction_c0e_1#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779314323" at="410,0,418,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779314323" at="458,0,466,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779488122" at="506,0,514,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779488124" at="522,0,530,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779488122" at="570,0,578,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779488124" at="586,0,594,0" concept="8" trace="execute#()V" />
-      <node id="5791295720779257397" at="744,0,755,0" concept="8" trace="Initrfq_a#(Lsimcore/Signals/Signal;)V" />
-      <node id="5791295720779314305" at="755,0,767,0" concept="8" trace="InitESaa_b#(Lsimcore/Signals/Signal;)V" />
-      <scope id="5791295720779314323" at="406,54,407,33" />
-      <scope id="5791295720779314323" at="454,56,455,33" />
-      <scope id="5791295720779488122" at="502,54,503,33" />
-      <scope id="5791295720779488124" at="518,54,519,33" />
-      <scope id="5791295720779488122" at="566,56,567,33" />
-      <scope id="5791295720779488124" at="582,56,583,33" />
-      <scope id="5791295720779257397" at="78,26,81,14" />
-      <scope id="5791295720779314305" at="82,27,85,14" />
-      <scope id="5791295720779314323" at="406,0,409,0">
+      <node id="5791295720779257397" at="79,26,80,57" concept="3" />
+      <node id="5791295720779257397" at="80,57,81,26" concept="3" />
+      <node id="5791295720779257397" at="81,26,82,14" concept="1" />
+      <node id="5791295720779314305" at="83,27,84,58" concept="3" />
+      <node id="5791295720779314305" at="84,58,85,27" concept="3" />
+      <node id="5791295720779314305" at="85,27,86,14" concept="1" />
+      <node id="5791295720779314323" at="439,0,440,0" concept="4" trace="behaviour" />
+      <node id="5791295720779314323" at="441,54,442,33" concept="3" />
+      <node id="5791295720779314323" at="445,27,446,28" concept="9" />
+      <node id="5791295720779314323" at="446,28,447,43" concept="9" />
+      <node id="5791295720779314323" at="447,43,448,53" concept="3" />
+      <node id="5791295720779314323" at="448,53,449,89" concept="3" />
+      <node id="5791295720779314323" at="449,89,450,0" concept="12" />
+      <node id="5791295720779314323" at="450,0,451,36" concept="3" />
+      <node id="5791295720779314323" at="487,0,488,0" concept="4" trace="behaviour" />
+      <node id="5791295720779314323" at="489,56,490,33" concept="3" />
+      <node id="5791295720779314323" at="493,27,494,28" concept="9" />
+      <node id="5791295720779314323" at="494,28,495,43" concept="9" />
+      <node id="5791295720779314323" at="495,43,496,53" concept="3" />
+      <node id="5791295720779314323" at="496,53,497,89" concept="3" />
+      <node id="5791295720779314323" at="497,89,498,0" concept="12" />
+      <node id="5791295720779314323" at="498,0,499,36" concept="3" />
+      <node id="5791295720779488122" at="535,0,536,0" concept="4" trace="behaviour" />
+      <node id="5791295720779488122" at="537,54,538,33" concept="3" />
+      <node id="5791295720779488122" at="541,27,542,28" concept="9" />
+      <node id="5791295720779488122" at="542,28,543,43" concept="9" />
+      <node id="5791295720779488122" at="543,43,544,50" concept="3" />
+      <node id="5791295720779488122" at="544,50,545,89" concept="3" />
+      <node id="5791295720779488122" at="545,89,546,0" concept="12" />
+      <node id="5791295720779488122" at="546,0,547,36" concept="3" />
+      <node id="5791295720779488124" at="551,0,552,0" concept="4" trace="behaviour" />
+      <node id="5791295720779488124" at="553,54,554,33" concept="3" />
+      <node id="5791295720779488124" at="557,27,558,28" concept="9" />
+      <node id="5791295720779488124" at="558,28,559,43" concept="9" />
+      <node id="5791295720779488124" at="559,43,560,53" concept="3" />
+      <node id="5791295720779488124" at="560,53,561,89" concept="3" />
+      <node id="5791295720779488124" at="561,89,562,0" concept="12" />
+      <node id="5791295720779488124" at="562,0,563,36" concept="3" />
+      <node id="5791295720779488122" at="599,0,600,0" concept="4" trace="behaviour" />
+      <node id="5791295720779488122" at="601,56,602,33" concept="3" />
+      <node id="5791295720779488122" at="605,27,606,28" concept="9" />
+      <node id="5791295720779488122" at="606,28,607,43" concept="9" />
+      <node id="5791295720779488122" at="607,43,608,50" concept="3" />
+      <node id="5791295720779488122" at="608,50,609,89" concept="3" />
+      <node id="5791295720779488122" at="609,89,610,0" concept="12" />
+      <node id="5791295720779488122" at="610,0,611,36" concept="3" />
+      <node id="5791295720779488124" at="615,0,616,0" concept="4" trace="behaviour" />
+      <node id="5791295720779488124" at="617,56,618,33" concept="3" />
+      <node id="5791295720779488124" at="621,27,622,28" concept="9" />
+      <node id="5791295720779488124" at="622,28,623,43" concept="9" />
+      <node id="5791295720779488124" at="623,43,624,53" concept="3" />
+      <node id="5791295720779488124" at="624,53,625,89" concept="3" />
+      <node id="5791295720779488124" at="625,89,626,0" concept="12" />
+      <node id="5791295720779488124" at="626,0,627,36" concept="3" />
+      <node id="5791295720779257397" at="779,35,780,41" concept="3" />
+      <node id="5791295720779257397" at="780,41,781,57" concept="9" />
+      <node id="5791295720779257397" at="781,57,782,56" concept="3" />
+      <node id="5791295720779314323" at="782,56,783,62" concept="3" />
+      <node id="5791295720779257397" at="783,62,784,56" concept="3" />
+      <node id="5791295720779257397" at="784,56,785,41" concept="3" />
+      <node id="5791295720779257397" at="785,41,786,0" concept="12" />
+      <node id="5791295720779257397" at="786,0,787,41" concept="9" />
+      <node id="5791295720779257397" at="787,41,788,0" concept="12" />
+      <node id="5791295720779314305" at="790,36,791,41" concept="3" />
+      <node id="5791295720779314305" at="791,41,792,57" concept="9" />
+      <node id="5791295720779314305" at="792,57,793,56" concept="3" />
+      <node id="5791295720779488122" at="793,56,794,62" concept="3" />
+      <node id="5791295720779488124" at="794,62,795,62" concept="3" />
+      <node id="5791295720779314305" at="795,62,796,56" concept="3" />
+      <node id="5791295720779314305" at="796,56,797,41" concept="3" />
+      <node id="5791295720779314305" at="797,41,798,0" concept="12" />
+      <node id="5791295720779314305" at="798,0,799,41" concept="9" />
+      <node id="5791295720779314305" at="799,41,800,0" concept="12" />
+      <node id="5791295720779314323" at="441,0,444,0" concept="2" trace="SendSignalAction_b0d#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779314323" at="489,0,492,0" concept="2" trace="SendSignalAction_b0d_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488122" at="537,0,540,0" concept="2" trace="SendSignalAction_b0e#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488124" at="553,0,556,0" concept="2" trace="SendSignalAction_c0e#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488122" at="601,0,604,0" concept="2" trace="SendSignalAction_b0e_3#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488124" at="617,0,620,0" concept="2" trace="SendSignalAction_c0e_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779314323" at="445,0,453,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779314323" at="493,0,501,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779488122" at="541,0,549,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779488124" at="557,0,565,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779488122" at="605,0,613,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779488124" at="621,0,629,0" concept="8" trace="execute#()V" />
+      <node id="5791295720779257397" at="779,0,790,0" concept="8" trace="Initrfq_a#(Lsimcore/Signals/Signal;)V" />
+      <node id="5791295720779314305" at="790,0,802,0" concept="8" trace="InitESaa_b#(Lsimcore/Signals/Signal;)V" />
+      <scope id="5791295720779314323" at="441,54,442,33" />
+      <scope id="5791295720779314323" at="489,56,490,33" />
+      <scope id="5791295720779488122" at="537,54,538,33" />
+      <scope id="5791295720779488124" at="553,54,554,33" />
+      <scope id="5791295720779488122" at="601,56,602,33" />
+      <scope id="5791295720779488124" at="617,56,618,33" />
+      <scope id="5791295720779257397" at="79,26,82,14" />
+      <scope id="5791295720779314305" at="83,27,86,14" />
+      <scope id="5791295720779314323" at="441,0,444,0">
         <var name="behaviour" id="5791295720779314323" />
       </scope>
-      <scope id="5791295720779314323" at="454,0,457,0">
+      <scope id="5791295720779314323" at="489,0,492,0">
         <var name="behaviour" id="5791295720779314323" />
       </scope>
-      <scope id="5791295720779488122" at="502,0,505,0">
+      <scope id="5791295720779488122" at="537,0,540,0">
         <var name="behaviour" id="5791295720779488122" />
       </scope>
-      <scope id="5791295720779488124" at="518,0,521,0">
+      <scope id="5791295720779488124" at="553,0,556,0">
         <var name="behaviour" id="5791295720779488124" />
       </scope>
-      <scope id="5791295720779488122" at="566,0,569,0">
+      <scope id="5791295720779488122" at="601,0,604,0">
         <var name="behaviour" id="5791295720779488122" />
       </scope>
-      <scope id="5791295720779488124" at="582,0,585,0">
+      <scope id="5791295720779488124" at="617,0,620,0">
         <var name="behaviour" id="5791295720779488124" />
       </scope>
-      <scope id="5791295720779314323" at="410,27,416,36">
+      <scope id="5791295720779314323" at="445,27,451,36">
         <var name="b" id="5791295720779314323" />
         <var name="sendSignalTemp" id="5791295720779314323" />
       </scope>
-      <scope id="5791295720779314323" at="458,27,464,36">
+      <scope id="5791295720779314323" at="493,27,499,36">
         <var name="b" id="5791295720779314323" />
         <var name="sendSignalTemp" id="5791295720779314323" />
       </scope>
-      <scope id="5791295720779488122" at="506,27,512,36">
+      <scope id="5791295720779488122" at="541,27,547,36">
         <var name="b" id="5791295720779488122" />
         <var name="sendSignalTemp" id="5791295720779488122" />
       </scope>
-      <scope id="5791295720779488124" at="522,27,528,36">
+      <scope id="5791295720779488124" at="557,27,563,36">
         <var name="b" id="5791295720779488124" />
         <var name="sendSignalTemp" id="5791295720779488124" />
       </scope>
-      <scope id="5791295720779488122" at="570,27,576,36">
+      <scope id="5791295720779488122" at="605,27,611,36">
         <var name="b" id="5791295720779488122" />
         <var name="sendSignalTemp" id="5791295720779488122" />
       </scope>
-      <scope id="5791295720779488124" at="586,27,592,36">
+      <scope id="5791295720779488124" at="621,27,627,36">
         <var name="b" id="5791295720779488124" />
         <var name="sendSignalTemp" id="5791295720779488124" />
       </scope>
-      <scope id="5791295720779314323" at="410,0,418,0" />
-      <scope id="5791295720779314323" at="458,0,466,0" />
-      <scope id="5791295720779488122" at="506,0,514,0" />
-      <scope id="5791295720779488124" at="522,0,530,0" />
-      <scope id="5791295720779488122" at="570,0,578,0" />
-      <scope id="5791295720779488124" at="586,0,594,0" />
-      <scope id="5791295720779257397" at="744,35,753,0">
+      <scope id="5791295720779314323" at="445,0,453,0" />
+      <scope id="5791295720779314323" at="493,0,501,0" />
+      <scope id="5791295720779488122" at="541,0,549,0" />
+      <scope id="5791295720779488124" at="557,0,565,0" />
+      <scope id="5791295720779488122" at="605,0,613,0" />
+      <scope id="5791295720779488124" at="621,0,629,0" />
+      <scope id="5791295720779257397" at="779,35,788,0">
         <var name="plstSteps" id="5791295720779257397" />
         <var name="sendSignalTemp" id="5791295720779257397" />
       </scope>
-      <scope id="5791295720779314305" at="755,36,765,0">
+      <scope id="5791295720779314305" at="790,36,800,0">
         <var name="plstSteps" id="5791295720779314305" />
         <var name="sendSignalTemp" id="5791295720779314305" />
       </scope>
-      <scope id="5791295720779257397" at="744,0,755,0">
+      <scope id="5791295720779257397" at="779,0,790,0">
         <var name="s" id="5791295720779257397" />
       </scope>
-      <scope id="5791295720779314305" at="755,0,767,0">
+      <scope id="5791295720779314305" at="790,0,802,0">
         <var name="s" id="5791295720779314305" />
       </scope>
-      <unit id="5791295720779314323" at="403,0,419,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0d" />
-      <unit id="5791295720779314323" at="451,0,467,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0d_1" />
-      <unit id="5791295720779488122" at="499,0,515,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0e" />
-      <unit id="5791295720779488124" at="515,0,531,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0e" />
-      <unit id="5791295720779488122" at="563,0,579,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0e_1" />
-      <unit id="5791295720779488124" at="579,0,595,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0e_1" />
+      <unit id="5791295720779314323" at="438,0,454,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0d" />
+      <unit id="5791295720779314323" at="486,0,502,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0d_1" />
+      <unit id="5791295720779488122" at="534,0,550,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0e" />
+      <unit id="5791295720779488124" at="550,0,566,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0e" />
+      <unit id="5791295720779488122" at="598,0,614,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_b0e_3" />
+      <unit id="5791295720779488124" at="614,0,630,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0e_1" />
     </file>
     <file name="Doctor.java">
       <node id="5791295720779488005" at="65,31,66,62" concept="3" />
@@ -4439,7 +4487,7 @@
       <node id="5791295720779488042" at="70,59,71,28" concept="3" />
       <node id="5791295720779488042" at="71,28,72,14" concept="1" />
       <node id="5791295720779488129" at="99,0,100,0" concept="4" trace="behaviour" />
-      <node id="5791295720779488129" at="101,56,102,33" concept="3" />
+      <node id="5791295720779488129" at="101,54,102,33" concept="3" />
       <node id="5791295720779488129" at="105,27,106,28" concept="9" />
       <node id="5791295720779488129" at="106,28,107,43" concept="9" />
       <node id="5791295720779488129" at="107,43,108,50" concept="3" />
@@ -4455,7 +4503,7 @@
       <node id="5791295720779488129" at="157,89,158,0" concept="12" />
       <node id="5791295720779488129" at="158,0,159,36" concept="3" />
       <node id="5791295720779488127" at="195,0,196,0" concept="4" trace="behaviour" />
-      <node id="5791295720779488127" at="197,56,198,33" concept="3" />
+      <node id="5791295720779488127" at="197,54,198,33" concept="3" />
       <node id="5791295720779488127" at="201,27,202,28" concept="9" />
       <node id="5791295720779488127" at="202,28,203,43" concept="9" />
       <node id="5791295720779488127" at="203,43,204,53" concept="3" />
@@ -4472,35 +4520,35 @@
       <node id="5791295720779488127" at="254,0,255,36" concept="3" />
       <node id="5791295720779488005" at="276,40,277,41" concept="3" />
       <node id="5791295720779488005" at="277,41,278,57" concept="9" />
-      <node id="5791295720779488005" at="278,57,279,58" concept="3" />
-      <node id="5791295720779488129" at="279,58,280,64" concept="3" />
-      <node id="5791295720779488005" at="280,64,281,58" concept="3" />
-      <node id="5791295720779488005" at="281,58,282,41" concept="3" />
+      <node id="5791295720779488005" at="278,57,279,56" concept="3" />
+      <node id="5791295720779488129" at="279,56,280,62" concept="3" />
+      <node id="5791295720779488005" at="280,62,281,56" concept="3" />
+      <node id="5791295720779488005" at="281,56,282,41" concept="3" />
       <node id="5791295720779488005" at="282,41,283,0" concept="12" />
       <node id="5791295720779488005" at="283,0,284,41" concept="9" />
       <node id="5791295720779488005" at="284,41,285,0" concept="12" />
       <node id="5791295720779488042" at="287,37,288,41" concept="3" />
       <node id="5791295720779488042" at="288,41,289,57" concept="9" />
-      <node id="5791295720779488042" at="289,57,290,58" concept="3" />
-      <node id="5791295720779488127" at="290,58,291,64" concept="3" />
-      <node id="5791295720779488042" at="291,64,292,58" concept="3" />
-      <node id="5791295720779488042" at="292,58,293,41" concept="3" />
+      <node id="5791295720779488042" at="289,57,290,56" concept="3" />
+      <node id="5791295720779488127" at="290,56,291,62" concept="3" />
+      <node id="5791295720779488042" at="291,62,292,56" concept="3" />
+      <node id="5791295720779488042" at="292,56,293,41" concept="3" />
       <node id="5791295720779488042" at="293,41,294,0" concept="12" />
       <node id="5791295720779488042" at="294,0,295,41" concept="9" />
       <node id="5791295720779488042" at="295,41,296,0" concept="12" />
-      <node id="5791295720779488129" at="101,0,104,0" concept="2" trace="SendSignalAction_b0a_0#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779488129" at="149,0,152,0" concept="2" trace="SendSignalAction_b0a_9#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779488127" at="197,0,200,0" concept="2" trace="SendSignalAction_b0b_3#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779488127" at="245,0,248,0" concept="2" trace="SendSignalAction_b0b_9#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488129" at="101,0,104,0" concept="2" trace="SendSignalAction_b0a#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488129" at="149,0,152,0" concept="2" trace="SendSignalAction_b0a_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488127" at="197,0,200,0" concept="2" trace="SendSignalAction_b0b#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488127" at="245,0,248,0" concept="2" trace="SendSignalAction_b0b_1#(Lsimcore/action/Behaviour;)V" />
       <node id="5791295720779488129" at="105,0,113,0" concept="8" trace="execute#()V" />
       <node id="5791295720779488129" at="153,0,161,0" concept="8" trace="execute#()V" />
       <node id="5791295720779488127" at="201,0,209,0" concept="8" trace="execute#()V" />
       <node id="5791295720779488127" at="249,0,257,0" concept="8" trace="execute#()V" />
       <node id="5791295720779488005" at="276,0,287,0" concept="8" trace="Initwefvvesc_f#(Lsimcore/Signals/Signal;)V" />
       <node id="5791295720779488042" at="287,0,298,0" concept="8" trace="Initwevwe_g#(Lsimcore/Signals/Signal;)V" />
-      <scope id="5791295720779488129" at="101,56,102,33" />
+      <scope id="5791295720779488129" at="101,54,102,33" />
       <scope id="5791295720779488129" at="149,56,150,33" />
-      <scope id="5791295720779488127" at="197,56,198,33" />
+      <scope id="5791295720779488127" at="197,54,198,33" />
       <scope id="5791295720779488127" at="245,56,246,33" />
       <scope id="5791295720779488005" at="65,31,68,14" />
       <scope id="5791295720779488042" at="69,28,72,14" />
@@ -4550,10 +4598,10 @@
       <scope id="5791295720779488042" at="287,0,298,0">
         <var name="s" id="5791295720779488042" />
       </scope>
-      <unit id="5791295720779488129" at="98,0,114,0" name="EDLanguage.sandbox.Doctor$SendSignalAction_b0a_0" />
-      <unit id="5791295720779488129" at="146,0,162,0" name="EDLanguage.sandbox.Doctor$SendSignalAction_b0a_9" />
-      <unit id="5791295720779488127" at="194,0,210,0" name="EDLanguage.sandbox.Doctor$SendSignalAction_b0b_3" />
-      <unit id="5791295720779488127" at="242,0,258,0" name="EDLanguage.sandbox.Doctor$SendSignalAction_b0b_9" />
+      <unit id="5791295720779488129" at="98,0,114,0" name="EDLanguage.sandbox.Doctor$SendSignalAction_b0a" />
+      <unit id="5791295720779488129" at="146,0,162,0" name="EDLanguage.sandbox.Doctor$SendSignalAction_b0a_1" />
+      <unit id="5791295720779488127" at="194,0,210,0" name="EDLanguage.sandbox.Doctor$SendSignalAction_b0b" />
+      <unit id="5791295720779488127" at="242,0,258,0" name="EDLanguage.sandbox.Doctor$SendSignalAction_b0b_1" />
     </file>
     <file name="LabTechnician.java">
       <node id="5791295720779487932" at="77,28,78,59" concept="3" />
@@ -4614,7 +4662,7 @@
       <node id="5791295720779487972" at="562,41,563,0" concept="12" />
       <node id="5791295720779488131" at="337,0,340,0" concept="2" trace="SendSignalAction_b0d_3#(Lsimcore/action/Behaviour;)V" />
       <node id="5791295720779488131" at="385,0,388,0" concept="2" trace="SendSignalAction_b0d_5#(Lsimcore/action/Behaviour;)V" />
-      <node id="5791295720779488135" at="433,0,436,0" concept="2" trace="SendSignalAction_b0e_3#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488135" at="433,0,436,0" concept="2" trace="SendSignalAction_b0e_1#(Lsimcore/action/Behaviour;)V" />
       <node id="5791295720779488135" at="481,0,484,0" concept="2" trace="SendSignalAction_b0e_5#(Lsimcore/action/Behaviour;)V" />
       <node id="5791295720779488131" at="341,0,349,0" concept="8" trace="execute#()V" />
       <node id="5791295720779488131" at="389,0,397,0" concept="8" trace="execute#()V" />
@@ -4676,7 +4724,7 @@
       </scope>
       <unit id="5791295720779488131" at="334,0,350,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0d_3" />
       <unit id="5791295720779488131" at="382,0,398,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0d_5" />
-      <unit id="5791295720779488135" at="430,0,446,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0e_3" />
+      <unit id="5791295720779488135" at="430,0,446,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0e_1" />
       <unit id="5791295720779488135" at="478,0,494,0" name="EDLanguage.sandbox.LabTechnician$SendSignalAction_b0e_5" />
     </file>
     <file name="TriageNurse.java">
@@ -4703,12 +4751,12 @@
       <node id="5791295720779487943" at="288,41,289,57" concept="9" />
       <node id="5791295720779487943" at="289,57,290,58" concept="3" />
       <node id="5791295720779488133" at="290,58,291,64" concept="3" />
-      <node id="5791295720779487943" at="291,64,292,56" concept="3" />
-      <node id="5791295720779487943" at="292,56,293,41" concept="3" />
+      <node id="5791295720779487943" at="291,64,292,58" concept="3" />
+      <node id="5791295720779487943" at="292,58,293,41" concept="3" />
       <node id="5791295720779487943" at="293,41,294,0" concept="12" />
       <node id="5791295720779487943" at="294,0,295,41" concept="9" />
       <node id="5791295720779487943" at="295,41,296,0" concept="12" />
-      <node id="5791295720779488133" at="197,0,200,0" concept="2" trace="SendSignalAction_b0b_1#(Lsimcore/action/Behaviour;)V" />
+      <node id="5791295720779488133" at="197,0,200,0" concept="2" trace="SendSignalAction_b0b_3#(Lsimcore/action/Behaviour;)V" />
       <node id="5791295720779488133" at="245,0,248,0" concept="2" trace="SendSignalAction_b0b_5#(Lsimcore/action/Behaviour;)V" />
       <node id="5791295720779488133" at="201,0,209,0" concept="8" trace="execute#()V" />
       <node id="5791295720779488133" at="249,0,257,0" concept="8" trace="execute#()V" />
@@ -4739,7 +4787,7 @@
       <scope id="5791295720779487943" at="287,0,298,0">
         <var name="s" id="5791295720779487943" />
       </scope>
-      <unit id="5791295720779488133" at="194,0,210,0" name="EDLanguage.sandbox.TriageNurse$SendSignalAction_b0b_1" />
+      <unit id="5791295720779488133" at="194,0,210,0" name="EDLanguage.sandbox.TriageNurse$SendSignalAction_b0b_3" />
       <unit id="5791295720779488133" at="242,0,258,0" name="EDLanguage.sandbox.TriageNurse$SendSignalAction_b0b_5" />
     </file>
     <file name="avsvewcwTrigger_eSignal.java">
@@ -5824,7 +5872,7 @@
       <node id="90846643906069554" at="378,0,381,0" concept="8" trace="finishCondition#()Z" />
       <node id="90846643906069554" at="401,0,404,0" concept="2" trace="StayAction_c0d_5#(Lsimcore/action/Behaviour;)V" />
       <node id="90846643906069554" at="410,0,413,0" concept="8" trace="finishCondition#()Z" />
-      <node id="90846643906069554" at="417,0,420,0" concept="2" trace="StayAction_a0e_3#(Lsimcore/action/Behaviour;)V" />
+      <node id="90846643906069554" at="417,0,420,0" concept="2" trace="StayAction_a0e_1#(Lsimcore/action/Behaviour;)V" />
       <node id="90846643906069554" at="426,0,429,0" concept="8" trace="finishCondition#()Z" />
       <node id="90846643906069554" at="449,0,452,0" concept="2" trace="StayAction_c0e#(Lsimcore/action/Behaviour;)V" />
       <node id="90846643906069554" at="458,0,461,0" concept="8" trace="finishCondition#()Z" />
@@ -6082,7 +6130,7 @@
       <unit id="90846643906069554" at="350,0,366,0" name="EDLanguage.sandbox.LabTechnician$StayAction_c0d_3" />
       <unit id="90846643906069554" at="366,0,382,0" name="EDLanguage.sandbox.LabTechnician$StayAction_a0d_5" />
       <unit id="90846643906069554" at="398,0,414,0" name="EDLanguage.sandbox.LabTechnician$StayAction_c0d_5" />
-      <unit id="90846643906069554" at="414,0,430,0" name="EDLanguage.sandbox.LabTechnician$StayAction_a0e_3" />
+      <unit id="90846643906069554" at="414,0,430,0" name="EDLanguage.sandbox.LabTechnician$StayAction_a0e_1" />
       <unit id="90846643906069554" at="446,0,462,0" name="EDLanguage.sandbox.LabTechnician$StayAction_c0e" />
       <unit id="90846643906069554" at="462,0,478,0" name="EDLanguage.sandbox.LabTechnician$StayAction_a0e_5" />
       <unit id="90846643906069554" at="494,0,510,0" name="EDLanguage.sandbox.LabTechnician$StayAction_c0e_1" />

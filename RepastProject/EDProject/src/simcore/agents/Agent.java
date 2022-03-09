@@ -152,6 +152,15 @@ public class Agent {
 		}
 	}
 	
+	public List<Occupiable> getAllEmptyOcupiablesOfType(Class c, RoomType roomType) {
+		ArrayList<Occupiable> plstAllEmptyOccupiables = new ArrayList<Occupiable>();
+		
+		for (Room room : ReadMap().FindInstancesOfRoomType(roomType)) {
+			plstAllEmptyOccupiables.addAll(room.getAllEmptyOcupiablesOfType(c));
+		}
+		return plstAllEmptyOccupiables;
+	}
+	
 	// Create an action plan to select and occupy an object of the specified type
 	protected void FindAnOccupiable(Class occupiableType) {
 //		myActiveAction = new Action("TakeOccupiable").WithStep(

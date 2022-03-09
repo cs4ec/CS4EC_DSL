@@ -55,6 +55,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_NewPatientSignal;
   private ConceptPresentation props_NumericExpression;
   private ConceptPresentation props_ObjectInstance;
+  private ConceptPresentation props_OccupiableAvailabilityCondition;
   private ConceptPresentation props_OccupiableInstance;
   private ConceptPresentation props_OccupyAction;
   private ConceptPresentation props_OccupyOrder;
@@ -436,6 +437,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObjectInstance = cpb.create();
         }
         return props_ObjectInstance;
+      case LanguageConceptSwitch.OccupiableAvailabilityCondition:
+        if (props_OccupiableAvailabilityCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Check if a particular type of occupiable is available in a specified room");
+          cpb.rawPresentation("Occupiable type is available condition");
+          props_OccupiableAvailabilityCondition = cpb.create();
+        }
+        return props_OccupiableAvailabilityCondition;
       case LanguageConceptSwitch.OccupiableInstance:
         if (props_OccupiableInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

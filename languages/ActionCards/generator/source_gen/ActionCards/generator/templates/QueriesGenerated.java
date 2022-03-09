@@ -190,6 +190,9 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Object propertyMacro_GetValue_26_1(final PropertyMacroContext _context) {
     return _context.createUniqueName("DischargeAction" + Action__BehaviorDescriptor.getFormattedName_id2lOlAdPvbFq.invoke(_context.getNode()), null);
   }
+  public static Object propertyMacro_GetValue_29_0(final PropertyMacroContext _context) {
+    return SPropertyOperations.getInteger(_context.getNode(), PROPS.minCapacity$Jq$N);
+  }
   public static Object referenceMacro_GetReferent_2_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
   }
@@ -376,6 +379,9 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static Object referenceMacro_GetReferent_27_0(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "SignalReduction");
+  }
+  public static Object referenceMacro_GetReferent_29_0(final ReferenceMacroContext _context) {
+    return SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.location$Gs47), LINKS.roomType$xuJp);
   }
   public static boolean ifMacro_Condition_3_0(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), null));
@@ -915,6 +921,7 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("1758249876530422421", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
     pvqMethods.put("1758249876538244925", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
     pvqMethods.put("1758249876538244953", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "test"));
+    pvqMethods.put("5381978332892104085", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4ab0a0c760d9b8f3L, 0x4ab0a0c760d9e3cdL, "minCapacity"), "1"));
   }
   @NotNull
   @Override
@@ -1011,6 +1018,8 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.propertyMacro_GetValue_26_0(ctx);
         case 39:
           return QueriesGenerated.propertyMacro_GetValue_26_1(ctx);
+        case 40:
+          return QueriesGenerated.propertyMacro_GetValue_29_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -1138,6 +1147,7 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("1758249876538244905", new RTQ(49, null));
     rtqMethods.put("1758249876538244936", new RTQ(50, null));
     rtqMethods.put("1758249876538251463", new RTQ(51, null));
+    rtqMethods.put("5381978332892110160", new RTQ(52, null));
   }
   @NotNull
   @Override
@@ -1258,6 +1268,8 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.referenceMacro_GetReferent_26_2(ctx);
         case 51:
           return QueriesGenerated.referenceMacro_GetReferent_27_0(ctx);
+        case 52:
+          return QueriesGenerated.referenceMacro_GetReferent_29_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -1371,6 +1383,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty Occurances$VgPA = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0ee1aL, 0x16d45e8703e0ee38L, "Occurances");
     /*package*/ static final SProperty outcome$4Ox3 = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df36170cL, 0x25745663758ab474L, "outcome");
     /*package*/ static final SProperty outcome$Tawi = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4926ae3L, 0x6ca3e29db4926b23L, "outcome");
+    /*package*/ static final SProperty minCapacity$Jq$N = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4ab0a0c760d991ecL, 0x4ab0a0c760d99264L, "minCapacity");
     /*package*/ static final SProperty valueType$F2s2 = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c96L, 0x3a7166f1d9709f4eL, "valueType");
     /*package*/ static final SProperty requiresPatient$9L4w = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x3f10eb6deabdc338L, "requiresPatient");
     /*package*/ static final SProperty value$zwlK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value");
@@ -1401,6 +1414,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SReferenceLink disease$UB8o = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df36170cL, 0x3f397d5ebb790a0cL, "disease");
     /*package*/ static final SReferenceLink test$Tp3g = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4926ae3L, 0x6ca3e29db4926b37L, "test");
     /*package*/ static final SReferenceLink patientProperty$FJ4E = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L, 0x18668ef27115ff2aL, "patientProperty");
+    /*package*/ static final SContainmentLink location$Gs47 = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4ab0a0c760d991ecL, 0x4ab0a0c760d9922cL, "location");
     /*package*/ static final SContainmentLink maxDuration$BlMG = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x4f82e3275c1ebe7cL, "maxDuration");
     /*package*/ static final SContainmentLink condition$UnEW = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x2574566374febfecL, "condition");
     /*package*/ static final SContainmentLink Branches$1fde = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2574566374fd2551L, "Branches");

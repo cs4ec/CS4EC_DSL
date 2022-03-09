@@ -1,5 +1,10 @@
 package simcore.basicStructures;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+
 public class RoomType {
 	public String name;
 	private static RoomType instance;

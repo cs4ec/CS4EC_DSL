@@ -79,10 +79,10 @@ public class TriageNurse extends Actor {
 
 
 
-  public class StayAction_a0a extends BehaviourStep {
+  public class StayAction_a0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0a(Behaviour behaviour) {
+    public StayAction_a0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -111,10 +111,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a_0 extends BehaviourStep {
+  public class StayAction_c0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_0(Behaviour behaviour) {
+    public StayAction_c0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -127,10 +127,10 @@ public class TriageNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0a_6 extends BehaviourStep {
+  public class StayAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0a_6(Behaviour behaviour) {
+    public StayAction_a0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -143,10 +143,10 @@ public class TriageNurse extends Actor {
       return timeExecuted == 7;
     }
   }
-  public class SendSignalAction_b0a_7 extends BehaviourStep {
+  public class SendSignalAction_b0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_7(Behaviour behaviour) {
+    public SendSignalAction_b0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -159,10 +159,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a_7 extends BehaviourStep {
+  public class StayAction_c0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_7(Behaviour behaviour) {
+    public StayAction_c0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -175,10 +175,10 @@ public class TriageNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0b_1 extends BehaviourStep {
+  public class StayAction_a0b_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0b_1(Behaviour behaviour) {
+    public StayAction_a0b_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -191,58 +191,10 @@ public class TriageNurse extends Actor {
       return timeExecuted == 9;
     }
   }
-  public class SendSignalAction_b0b_1 extends BehaviourStep {
+  public class SendSignalAction_b0b_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0b_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new rfqTrigger_aSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_c0b extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_c0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 1;
-    }
-  }
-  public class StayAction_a0b_6 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_a0b_6(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 9;
-    }
-  }
-  public class SendSignalAction_b0b_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_b0b_5(Behaviour behaviour) {
+    public SendSignalAction_b0b_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -271,14 +223,62 @@ public class TriageNurse extends Actor {
       return timeExecuted == 1;
     }
   }
+  public class StayAction_a0b_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_a0b_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 9;
+    }
+  }
+  public class SendSignalAction_b0b_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_b0b_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new rfqTrigger_aSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_c0b_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0b_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 1;
+    }
+  }
 
 
   public void Initcweewv_j(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new StayAction_a0a(behaviourBuilder));
+    plstSteps.add(new StayAction_a0a_3(behaviourBuilder));
     plstSteps.add(new SendSignalAction_b0a_3(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a_0(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -287,9 +287,9 @@ public class TriageNurse extends Actor {
   public void Initwevca_d(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new StayAction_a0b_1(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0b_1(behaviourBuilder));
-    plstSteps.add(new StayAction_c0b(behaviourBuilder));
+    plstSteps.add(new StayAction_a0b_3(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_b0b_3(behaviourBuilder));
+    plstSteps.add(new StayAction_c0b_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

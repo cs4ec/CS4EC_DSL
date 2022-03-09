@@ -875,5 +875,23 @@
       <ref role="20lvS9" node="2VPlUUsG6x8" resolve="ActionCard" />
     </node>
   </node>
+  <node concept="1TIwiD" id="4EKCctwQp7G">
+    <property role="EcuMT" value="5381978332891550188" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="LocationCapacityCondition" />
+    <property role="34LRSv" value="Check capacity of a room" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyi" id="4EKCctwQp9$" role="1TKVEl">
+      <property role="IQ2nx" value="5381978332891550308" />
+      <property role="TrG5h" value="minCapacity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="4EKCctwQp8G" role="1TKVEi">
+      <property role="IQ2ns" value="5381978332891550252" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="location" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+  </node>
 </model>
 

@@ -2197,5 +2197,27 @@
       <node concept="l2Vlx" id="6MzSDQOabT7" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="4EKCctwQr$R">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:4EKCctwQrzN" resolve="OccupiableAvailabilityCondition" />
+    <node concept="3EZMnI" id="4EKCctwQr_b" role="2wV5jI">
+      <node concept="3F0ifn" id="4EKCctwQr_i" role="3EZMnx">
+        <property role="3F0ifm" value="There are at least" />
+      </node>
+      <node concept="3F0A7n" id="4EKCctwQufl" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4EKCctwQufd" resolve="minCapacity" />
+      </node>
+      <node concept="3F1sOY" id="4EKCctwQr_o" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4EKCctwQr$E" resolve="targetObject" />
+      </node>
+      <node concept="3F0ifn" id="4EKCctwQr_w" role="3EZMnx">
+        <property role="3F0ifm" value="'s available in" />
+      </node>
+      <node concept="3F1sOY" id="4EKCctwQr_E" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4EKCctwQr$f" resolve="targetRoom" />
+      </node>
+      <node concept="2iRfu4" id="4EKCctwQr_e" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

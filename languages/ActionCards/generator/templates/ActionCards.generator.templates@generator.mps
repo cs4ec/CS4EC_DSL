@@ -179,6 +179,11 @@
       <concept id="4973502446685367656" name="AgentLanguage.structure.DataInstanceMap" flags="ng" index="2_cGdR">
         <child id="4973502446685367659" name="objectInstance" index="2_cGdO" />
       </concept>
+      <concept id="5381978332891560179" name="AgentLanguage.structure.OccupiableAvailabilityCondition" flags="ng" index="EqhwO">
+        <property id="5381978332891571149" name="minCapacity" index="Eqkca" />
+        <child id="5381978332891560207" name="targetRoom" index="EqhB8" />
+        <child id="5381978332891560234" name="targetObject" index="EqhBH" />
+      </concept>
       <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
       <concept id="8910807539222190210" name="AgentLanguage.structure.Description" flags="ng" index="2IBTiW" />
       <concept id="768972137568225409" name="AgentLanguage.structure.RemoveRelationshipAction" flags="ng" index="2RhFyk">
@@ -189,6 +194,9 @@
       <concept id="5832719916577320042" name="AgentLanguage.structure.UpdateAttributeAction" flags="ng" index="X7xuQ">
         <child id="768972137555555169" name="value" index="2Rw0dO" />
         <child id="768972137554994742" name="attributeReference" index="2Ry9oz" />
+      </concept>
+      <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableInstance" flags="ng" index="1kHjla">
+        <property id="8465466444625393872" name="occupiableType" index="1kAtwL" />
       </concept>
       <concept id="513408552829965726" name="AgentLanguage.structure.SignalReference" flags="ng" index="3n32J5" />
       <concept id="513408552829815467" name="AgentLanguage.structure.ActorReference" flags="ng" index="3n3BjK">
@@ -742,6 +750,12 @@
       <ref role="30HIoZ" to="e88n:1xAzJ9PrV5c" resolve="DischargeAction" />
       <node concept="j$656" id="1xAzJ9PrXwh" role="1lVwrX">
         <ref role="v9R2y" node="1xAzJ9PrXwe" resolve="reduce_DischargeAction_To_Signal_Trigger" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4EKCctwQqEP" role="3acgRq">
+      <ref role="30HIoZ" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
+      <node concept="j$656" id="4EKCctwQqEQ" role="1lVwrX">
+        <ref role="v9R2y" node="4EKCctwQqEN" resolve="reduce_LocationCapacityCondition" />
       </node>
     </node>
   </node>
@@ -6475,6 +6489,57 @@
             <node concept="3clFbH" id="4Y2SMtt0$aD" role="3cqZAp" />
             <node concept="3clFbH" id="4Y2SMtt0$ch" role="3cqZAp" />
             <node concept="3clFbH" id="4Y2SMtsMdHI" role="3cqZAp" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4EKCctwQqEN">
+    <property role="TrG5h" value="reduce_LocationCapacityCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="3gUMe" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
+    <node concept="EqhwO" id="4EKCctwSw4b" role="13RCb5">
+      <property role="Eqkca" value="1" />
+      <node concept="UeIYj" id="4EKCctwSxkN" role="EqhB8">
+        <node concept="1ZhdrF" id="4EKCctwSxPg" role="lGtFl">
+          <property role="2qtEX8" value="roomType" />
+          <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/6750846609956093098/6750846609956389136" />
+          <node concept="3$xsQk" id="4EKCctwSxPh" role="3$ytzL">
+            <node concept="3clFbS" id="4EKCctwSxPi" role="2VODD2">
+              <node concept="3clFbF" id="4EKCctwSxPQ" role="3cqZAp">
+                <node concept="2OqwBi" id="4EKCctwSyGo" role="3clFbG">
+                  <node concept="2OqwBi" id="4EKCctwSy6l" role="2Oq$k0">
+                    <node concept="30H73N" id="4EKCctwSxPP" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="4EKCctwSypC" role="2OqNvi">
+                      <ref role="3Tt5mk" to="e88n:4EKCctwQp8G" resolve="location" />
+                    </node>
+                  </node>
+                  <node concept="3TrEf2" id="4EKCctwSyZT" role="2OqNvi">
+                    <ref role="3Tt5mk" to="3751:5QJON_BAs4g" resolve="roomType" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1kHjla" id="4EKCctwSw4d" role="EqhBH">
+        <property role="1kAtwL" value="5QJON_BPEyz/Bed" />
+      </node>
+      <node concept="raruj" id="4EKCctwSwmk" role="lGtFl" />
+      <node concept="17Uvod" id="4EKCctwSwml" role="lGtFl">
+        <property role="2qtEX9" value="minCapacity" />
+        <property role="P4ACc" value="7dcff301-ba01-414e-8574-a8f6da31876b/5381978332891560179/5381978332891571149" />
+        <node concept="3zFVjK" id="4EKCctwSwmm" role="3zH0cK">
+          <node concept="3clFbS" id="4EKCctwSwmn" role="2VODD2">
+            <node concept="3clFbF" id="4EKCctwSwvu" role="3cqZAp">
+              <node concept="2OqwBi" id="4EKCctwSwPV" role="3clFbG">
+                <node concept="30H73N" id="4EKCctwSwvt" role="2Oq$k0" />
+                <node concept="3TrcHB" id="4EKCctwSx8Y" role="2OqNvi">
+                  <ref role="3TsBF5" to="e88n:4EKCctwQp9$" resolve="minCapacity" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
       </node>

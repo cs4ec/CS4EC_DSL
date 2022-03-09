@@ -38,6 +38,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ImmunosuppressedProperty;
   private ConceptPresentation props_InfectionStatusCondition;
   private ConceptPresentation props_InfectionStatusProperty;
+  private ConceptPresentation props_LocationCapacityCondition;
   private ConceptPresentation props_No;
   private ConceptPresentation props_ObservationTest;
   private ConceptPresentation props_ObservationsCondition;
@@ -277,6 +278,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InfectionStatusProperty = cpb.create();
         }
         return props_InfectionStatusProperty;
+      case LanguageConceptSwitch.LocationCapacityCondition:
+        if (props_LocationCapacityCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Check capacity of a room");
+          props_LocationCapacityCondition = cpb.create();
+        }
+        return props_LocationCapacityCondition;
       case LanguageConceptSwitch.No:
         if (props_No == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

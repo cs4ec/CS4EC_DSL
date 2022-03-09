@@ -20,6 +20,7 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" implicit="true" />
+    <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -133,6 +134,9 @@
       </concept>
       <concept id="1182511038748" name="jetbrains.mps.lang.smodel.structure.Model_NodesIncludingImportedOperation" flags="nn" index="1j9C0f">
         <reference id="1182511038750" name="concept" index="1j9C0d" />
+      </concept>
+      <concept id="1172326502327" name="jetbrains.mps.lang.smodel.structure.Concept_IsExactlyOperation" flags="nn" index="3O6GUB">
+        <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
       </concept>
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
@@ -659,6 +663,33 @@
             <node concept="2Zo12i" id="1xAzJ9PnEty" role="2OqNvi">
               <node concept="chp4Y" id="1xAzJ9PnEtz" role="2Zo12j">
                 <ref role="cht4Q" to="e88n:1xAzJ9NaVjz" resolve="BooleanExpression" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4EKCctwQpin">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
+    <node concept="9S07l" id="4EKCctwQpio" role="9Vyp8">
+      <node concept="3clFbS" id="4EKCctwQpip" role="2VODD2">
+        <node concept="3clFbF" id="4EKCctwQpiW" role="3cqZAp">
+          <node concept="3clFbT" id="4EKCctwQpiV" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9SLcT" id="4EKCctwQpnl" role="9SGkU">
+      <node concept="3clFbS" id="4EKCctwQpnm" role="2VODD2">
+        <node concept="3clFbF" id="4EKCctwQpnZ" role="3cqZAp">
+          <node concept="2OqwBi" id="4EKCctwQpB2" role="3clFbG">
+            <node concept="2DD5aU" id="4EKCctwQpnY" role="2Oq$k0" />
+            <node concept="3O6GUB" id="4EKCctwQqj2" role="2OqNvi">
+              <node concept="chp4Y" id="4EKCctwQqzd" role="3QVz_e">
+                <ref role="cht4Q" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
               </node>
             </node>
           </node>
