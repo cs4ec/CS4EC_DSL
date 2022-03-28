@@ -55,7 +55,7 @@ public class MyRunner {
 
   public void DoTransferParameters(String baseProjectPath) {
 
-    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\FluCovidEmergencyPathway\\classes_gen\\FluCovidEmergencyPathway\\AC1\\";
+    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\HighPrevalenceSurgeCOVIDTestingFlowchart\\classes_gen\\HighPrevalenceSurgeCOVIDTestingFlowchart\\AC1\\";
     String filePathAfter = "RepastProject\\EDProject\\EDProject.rs\\";
 
     System.out.println("Moving Parameters:");
@@ -128,11 +128,11 @@ public class MyRunner {
     ClearDir(LogNote.GetUniqueLog().GetAddress() + "output\\");
 
     String classPathOld = "languages\\EDLanguage\\sandbox\\classes_gen\\EDLanguage\\sandbox\\";
-    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\FluCovidEmergencyPathway\\classes_gen\\EDLanguage\\sandbox\\";
+    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\HighPrevalenceSurgeCOVIDTestingFlowchart\\classes_gen\\EDLanguage\\sandbox\\";
     String classPathAfter = "RepastProject\\EDProject\\bin\\EDLanguage\\sandbox\\";
 
     String javaPathOld = "languages\\EDLanguage\\sandbox\\source_gen\\EDLanguage\\sandbox\\";
-    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\FluCovidEmergencyPathway\\source_gen\\EDLanguage\\sandbox\\";
+    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\HighPrevalenceSurgeCOVIDTestingFlowchart\\source_gen\\EDLanguage\\sandbox\\";
     String javaPathAfter = "RepastProject\\EDProject\\src\\EDLanguage\\sandbox\\";
 
     System.out.println("Generating files:");

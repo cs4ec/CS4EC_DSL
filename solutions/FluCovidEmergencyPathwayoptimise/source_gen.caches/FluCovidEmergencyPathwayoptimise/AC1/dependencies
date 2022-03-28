@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.AdmissionTriageTrigger_dSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.AdmissionTriageTrigger_fSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.AdmittoSRTrigger_eSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.COVIDPositiveCohort">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -30,25 +21,7 @@
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.DischargeTrigger_cSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.DischargeTrigger_c_0Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.DischargeTrigger_c_1Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.DischargeTrigger_c_2Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.DoPCRTrigger_bSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.DoPCRTrigger_b_0Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.DoPCRTrigger_b_1Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.DoPCRTrigger_b_2Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.Doctor">
@@ -128,9 +101,6 @@
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.IsolationPeriodTrigger_bSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LFD">
     <classNode dependClassName="EDLanguage.sandbox.LFD" />
     <classNode dependClassName="java.lang.Double" />
@@ -197,58 +167,28 @@
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.PCRTestTrigger_cSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.PatientArrivesTrigger_gSignal">
+  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.PatientArrivesTrigger_eSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.PreAdmissionStaff">
-    <classNode dependClassName="EDLanguage.sandbox.AdmissionTriageTrigger_dSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmissionTriageTrigger_fSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmittoSRTrigger_eSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
-    <classNode dependClassName="EDLanguage.sandbox.IsolationPeriodTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.LFD" />
-    <classNode dependClassName="EDLanguage.sandbox.PCRTestTrigger_cSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.PreAdmissionStaff" />
-    <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
-    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
-    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
-    <classNode dependClassName="simcore.action.BehaviourStep" />
-    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
-    <classNode dependClassName="simcore.action.PassiveBehaviourStep" />
-    <classNode dependClassName="simcore.basicStructures.Board" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.PreAdmissionTriageTrigger_aSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.RadiologyRoom">
     <classNode dependClassName="EDLanguage.sandbox.RadiologyRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.ReceiveTreatmentTrigger_dSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.ReceiveTreatmentTrigger_d_0Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.ReceiveTreatmentTrigger_d_1Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.RespiratoryArea">
@@ -266,33 +206,9 @@
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TakeabedTrigger_aSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TakeabedTrigger_a_0Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TakeabedTrigger_a_1Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TakeabedTrigger_a_2Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TakeabedTrigger_bSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TakeabedTrigger_cSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TakeabedTrigger_dSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TakeabedTrigger_eSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TaskRoom">
     <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TreatmentTrigger_dSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TriageDesk">
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
@@ -329,29 +245,13 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.WardStaff">
-    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_cSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_c_0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_c_1Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_c_2Signal" />
     <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_b_0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_b_1Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_b_2Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCohort" />
-    <classNode dependClassName="EDLanguage.sandbox.PreAdmissionTriageTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_dSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_d_0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_d_1Signal" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_cSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_dSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_eSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.TreatmentTrigger_dSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.WardStaff" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Object" />
@@ -400,7 +300,7 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.patientGenerator_0">
-    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />
@@ -418,7 +318,7 @@
     <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.patientGenerator_1">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />

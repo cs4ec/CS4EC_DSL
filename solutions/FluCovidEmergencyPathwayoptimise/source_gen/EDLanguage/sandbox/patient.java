@@ -305,12 +305,6 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisSideRoom() {
-    if (this.admittedTo == "SideRoom") {
-      return 1;
-    }
-    return 0;
-  }
 
 
 

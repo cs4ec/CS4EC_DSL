@@ -2906,6 +2906,19 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="4EKCctx99na" role="37mRID">
+        <property role="37mO49" value="5381978332896466374" />
+        <node concept="2VclpC" id="4EKCctx99n9" role="37mO4d">
+          <node concept="2VclrF" id="4EKCctx99nb" role="2Vcluh">
+            <property role="2Vclpx" value="248.40120615630278" />
+            <property role="2Vclpz" value="204.0" />
+          </node>
+          <node concept="2VclrF" id="4EKCctx99nw" role="2Vcluh">
+            <property role="2Vclpx" value="248.40120615630278" />
+            <property role="2Vclpz" value="112.80241231260555" />
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="1xAzJ9P_e76" role="2MhjZp">
       <property role="TrG5h" value="Take a bed" />

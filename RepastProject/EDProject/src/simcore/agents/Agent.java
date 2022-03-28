@@ -66,7 +66,7 @@ public class Agent {
 //		LogMission();
 		
 		if(this instanceof WardStaff) {
-			System.out.println(myCurrentActions);
+//			System.out.println(myCurrentActions);
 			if(myCurrentActions.size() > 0) {
 				BehaviourStep b = myCurrentActions.get(0).getCurrentStep();
 				int i =0;
@@ -262,14 +262,14 @@ public class Agent {
 	/**
 	 * Print out the status of the Agent's current active mission
 	 */
-	protected void LogMission() {
-		System.out.println(this);
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
-		System.out.println("current mission: " + myActiveAction + ": " + myActiveAction);
-		System.out.println(
-				"cur action step: " + myActiveAction.getCurrentStep() + ": " + myActiveAction.getCurrentStep());
-	}
+//	protected void LogMission() {
+//		System.out.println(this);
+//		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+//		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
+//		System.out.println("current mission: " + myActiveAction + ": " + myActiveAction);
+//		System.out.println(
+//				"cur action step: " + myActiveAction.getCurrentStep() + ": " + myActiveAction.getCurrentStep());
+//	}
 
 	// Consequence of this Action
 	public void UpdateState(Consequence c) {

@@ -44,7 +44,6 @@
     <string>patientgetLabPCRFluAResultisNegative</string>
     <string>patientgetLabPCRFluBResultisPositive</string>
     <string>patientgetLabPCRFluBResultisNegative</string>
-    <string>patientgetadmittedToisSideRoom</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

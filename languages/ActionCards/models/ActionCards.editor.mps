@@ -1980,6 +1980,27 @@
       </node>
       <node concept="2iRfu4" id="1xAzJ9KQP68" role="2iSdaV" />
     </node>
+    <node concept="3EZMnI" id="4EKCctx9E5u" role="6VMZX">
+      <node concept="2iRfu4" id="4EKCctx9E5v" role="2iSdaV" />
+      <node concept="3F0ifn" id="4EKCctx9E5y" role="3EZMnx">
+        <property role="3F0ifm" value="vax status for" />
+      </node>
+      <node concept="1iCGBv" id="5_AWs3O39bB" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
+        <node concept="1sVBvm" id="5_AWs3O39bD" role="1sWHZn">
+          <node concept="3F0A7n" id="5_AWs3O39bL" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="e88n:1xAzJ9KWVQG" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="5_AWs3O39bU" role="3EZMnx">
+        <property role="3F0ifm" value="is" />
+      </node>
+      <node concept="3F1sOY" id="5_AWs3O39c8" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
+      </node>
+    </node>
   </node>
   <node concept="24kQdi" id="1xAzJ9KbPwf">
     <property role="3GE5qa" value="Attributes.PatientProperties.VaccinatedAttributes" />
