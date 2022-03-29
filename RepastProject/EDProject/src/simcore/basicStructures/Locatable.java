@@ -1,6 +1,7 @@
 package simcore.basicStructures;
 
 import java.awt.Color;
+import java.util.List;
 
 import repast.simphony.context.Context;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -17,7 +18,8 @@ public class Locatable {
 	protected ContinuousSpace<Object> space;
 	protected Grid<Object> grid;
 	protected Color mColor;
-	
+
+
 	public Locatable(Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int pintXCoordinate, int pintYCoordinate, int pintWidth ,int pintHeight, Color pColor) {
 		this.locX = pintXCoordinate;
 		this.locY = pintYCoordinate;

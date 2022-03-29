@@ -437,6 +437,10 @@ public class Agent {
 	public void SetInside(Room l) {
 		curInside = l;
 	}
+	
+	public Room getRoom() {
+		return curInside;
+	}
 
 	public void SetOccupying(Occupiable o) {
 		curOccupying = o;

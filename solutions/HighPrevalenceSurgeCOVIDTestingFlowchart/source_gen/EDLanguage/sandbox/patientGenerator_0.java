@@ -35,7 +35,7 @@ public class patientGenerator_0 extends AgentGenerator {
 
     sendSignalTemp.setName("PatientArrivesTrigger_h");
     sendSignalTemp.AddData("patient", a);
-    sendSignalTemp.AddActor("TriageNurse");
+    sendSignalTemp.AddActor("CubicleNurse");
 
 
     // For each agent attribute 

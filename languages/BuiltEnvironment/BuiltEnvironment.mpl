@@ -108,7 +108,7 @@
     <language slang="l:696c1165-4a59-463b-bc5d-902caab85dd0:jetbrains.mps.make.facet" version="0" />
   </languageVersions>
   <dependencyVersions>
-    <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="0" />
+    <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
     <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
@@ -148,6 +148,8 @@
     <module reference="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" version="1" />
     <module reference="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" version="1" />
   </dependencyVersions>
-  <extendedLanguages />
+  <extendedLanguages>
+    <extendedLanguage>7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)</extendedLanguage>
+  </extendedLanguages>
 </language>
 

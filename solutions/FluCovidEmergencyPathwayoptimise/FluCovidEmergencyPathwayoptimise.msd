@@ -9,6 +9,7 @@
     <facet type="java">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
+    <facet planModel="r:32c556b8-26a8-4157-a249-7d5a4c644e6a(FluCovidEmergencyPathwayoptimise.GenPlan)" type="generator" />
   </facets>
   <sourcePath />
   <dependencies>

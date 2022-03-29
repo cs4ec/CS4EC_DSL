@@ -85,6 +85,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
     deps.extendedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
+    deps.extendedLanguage(0x1a0150acdda54129L, 0x824e01dce96fdea4L, "BuiltEnvironment");
     deps.aggregatedLanguage(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, "AgentLanguage");
     deps.aggregatedLanguage(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, "jetbrains.mps.baseLanguage");
     deps.aggregatedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
@@ -235,7 +236,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("xPos", 0x749103faecdc6bd7L).type(PrimitiveTypeId.INTEGER).origin("8399499156273261527").done();
     b.property("yPos", 0x749103faecdc6bdaL).type(PrimitiveTypeId.INTEGER).origin("8399499156273261530").done();
     b.property("minDuration", 0x78ac3096ccb324L).type(PrimitiveTypeId.INTEGER).origin("33966321893684004").done();
-    b.associate("resource", 0x29f0721df4a9974L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df2f3819L).optional(true).origin("188877551434373492").done();
+    b.associate("resource", 0x29f0721df4a9974L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f032c8d7L).optional(true).origin("188877551434373492").done();
     b.associate("timeDistributionTable", 0x4f82e3275d69af14L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610e89L).optional(true).origin("5729391434179129108").done();
     b.aggregate("staffTypeReference", 0x4af9c647efdb14f9L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L).optional(false).ordered(true).multiple(false).origin("5402567240276710649").done();
     b.aggregate("location", 0x3f10eb6deabbd805L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(true).ordered(true).multiple(false).origin("4544390881338972165").done();
@@ -683,7 +684,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForTest() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Test", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL);
     b.class_(false, false, false);
-    b.super_("ActionCards.structure.Resource", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df2f3819L);
+    b.super_("BuiltEnvironment.structure.Resource", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f032c8d7L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/7828349744265634127");
     b.version(2);

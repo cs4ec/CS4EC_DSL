@@ -5,12 +5,14 @@
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
     <use id="71934284-d7d1-45ee-a054-8c072591085f" name="org.iets3.core.expr.toplevel" version="4" />
     <use id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel" version="0" />
+    <use id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment" version="0" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
+    <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" implicit="true" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
@@ -164,7 +166,7 @@
     <node concept="1TJgyj" id="av1M7viD_O" role="1TKVEi">
       <property role="IQ2ns" value="188877551434373492" />
       <property role="20kJfa" value="resource" />
-      <ref role="20lvS9" node="av1M7vbNwp" resolve="Resource" />
+      <ref role="20lvS9" to="3z3g:3JSrgvKcGzn" resolve="Resource" />
     </node>
     <node concept="1TJgyj" id="4Y2SMttqqWk" role="1TKVEi">
       <property role="IQ2ns" value="5729391434179129108" />
@@ -268,16 +270,6 @@
       <property role="20kJfa" value="staff" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="av1M7vbNwp">
-    <property role="EcuMT" value="188877551432579097" />
-    <property role="TrG5h" value="Resource" />
-    <property role="R4oN_" value="A resource in the hospital" />
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="av1M7vbNwC" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="av1M7vc794">
@@ -597,7 +589,7 @@
     <property role="3GE5qa" value="Testing" />
     <property role="TrG5h" value="Test" />
     <property role="34LRSv" value="test" />
-    <ref role="1TJDcQ" node="av1M7vbNwp" resolve="Resource" />
+    <ref role="1TJDcQ" to="3z3g:3JSrgvKcGzn" resolve="Resource" />
     <node concept="1TJgyj" id="6MzSDQOui68" role="1TKVEi">
       <property role="IQ2ns" value="7828349744265634184" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -891,6 +883,16 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="location" />
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="av1M7vbNwp">
+    <property role="EcuMT" value="188877551432579097" />
+    <property role="TrG5h" value="Resource" />
+    <property role="R4oN_" value="A resource in the hospital" />
+    <property role="3GE5qa" value="ActionCard" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="av1M7vbNwC" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

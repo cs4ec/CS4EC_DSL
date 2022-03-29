@@ -10,11 +10,8 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Actor;
-  private ConceptPresentation props_ActorInstantiation;
   private ConceptPresentation props_ActorReference;
   private ConceptPresentation props_ActorTypeSignal;
-  private ConceptPresentation props_AdmissionBay;
-  private ConceptPresentation props_AdmissionBayList;
   private ConceptPresentation props_AdmitAction;
   private ConceptPresentation props_AgentGenerator;
   private ConceptPresentation props_AgentGeneratorLine;
@@ -70,12 +67,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PossibilityCondition;
   private ConceptPresentation props_Relationship;
   private ConceptPresentation props_RemoveRelationshipAction;
-  private ConceptPresentation props_Room;
-  private ConceptPresentation props_RoomDefinition;
-  private ConceptPresentation props_RoomInstanceDefinition;
-  private ConceptPresentation props_RoomType;
   private ConceptPresentation props_RoomTypeReference;
-  private ConceptPresentation props_ScenarioBuilder;
   private ConceptPresentation props_SelectFirstSignal;
   private ConceptPresentation props_SelectNotRelationshipDataSignal;
   private ConceptPresentation props_SelectRandomSignal;
@@ -99,8 +91,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_TimeDistributionLine;
   private ConceptPresentation props_TimeDistributionTable;
   private ConceptPresentation props_UpdateAttributeAction;
-  private ConceptPresentation props_WallDefinition;
-  private ConceptPresentation props_WallInstanceDefinition;
+  private ConceptPresentation props_UseResourceAction;
 
   @Override
   @Nullable
@@ -115,14 +106,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Actor = cpb.create();
         }
         return props_Actor;
-      case LanguageConceptSwitch.ActorInstantiation:
-        if (props_ActorInstantiation == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("A number of actors of the same type in an emergency department");
-          cpb.rawPresentation("actor");
-          props_ActorInstantiation = cpb.create();
-        }
-        return props_ActorInstantiation;
       case LanguageConceptSwitch.ActorReference:
         if (props_ActorReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -137,20 +120,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActorTypeSignal = cpb.create();
         }
         return props_ActorTypeSignal;
-      case LanguageConceptSwitch.AdmissionBay:
-        if (props_AdmissionBay == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_AdmissionBay = cpb.create();
-        }
-        return props_AdmissionBay;
-      case LanguageConceptSwitch.AdmissionBayList:
-        if (props_AdmissionBayList == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("AdmissionBayList");
-          props_AdmissionBayList = cpb.create();
-        }
-        return props_AdmissionBayList;
       case LanguageConceptSwitch.AdmitAction:
         if (props_AdmitAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -547,35 +516,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RemoveRelationshipAction = cpb.create();
         }
         return props_RemoveRelationshipAction;
-      case LanguageConceptSwitch.Room:
-        if (props_Room == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_Room = cpb.create();
-        }
-        return props_Room;
-      case LanguageConceptSwitch.RoomDefinition:
-        if (props_RoomDefinition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("RoomDefinition");
-          props_RoomDefinition = cpb.create();
-        }
-        return props_RoomDefinition;
-      case LanguageConceptSwitch.RoomInstanceDefinition:
-        if (props_RoomInstanceDefinition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_RoomInstanceDefinition = cpb.create();
-        }
-        return props_RoomInstanceDefinition;
-      case LanguageConceptSwitch.RoomType:
-        if (props_RoomType == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("The type of a room instance");
-          cpb.presentationByName();
-          props_RoomType = cpb.create();
-        }
-        return props_RoomType;
       case LanguageConceptSwitch.RoomTypeReference:
         if (props_RoomTypeReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -584,14 +524,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RoomTypeReference = cpb.create();
         }
         return props_RoomTypeReference;
-      case LanguageConceptSwitch.ScenarioBuilder:
-        if (props_ScenarioBuilder == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("An emergency department");
-          cpb.rawPresentation("ScenarioBuilder");
-          props_ScenarioBuilder = cpb.create();
-        }
-        return props_ScenarioBuilder;
       case LanguageConceptSwitch.SelectFirstSignal:
         if (props_SelectFirstSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -759,20 +691,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_UpdateAttributeAction = cpb.create();
         }
         return props_UpdateAttributeAction;
-      case LanguageConceptSwitch.WallDefinition:
-        if (props_WallDefinition == null) {
+      case LanguageConceptSwitch.UseResourceAction:
+        if (props_UseResourceAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("WallDefinition");
-          props_WallDefinition = cpb.create();
-        }
-        return props_WallDefinition;
-      case LanguageConceptSwitch.WallInstanceDefinition:
-        if (props_WallInstanceDefinition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Use a resource");
           cpb.presentationByName();
-          props_WallInstanceDefinition = cpb.create();
+          props_UseResourceAction = cpb.create();
         }
-        return props_WallInstanceDefinition;
+        return props_UseResourceAction;
     }
     return null;
   }

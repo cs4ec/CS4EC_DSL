@@ -30,9 +30,11 @@
         <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
         <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
         <dependency reexport="false">bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)</dependency>
+        <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:7dcff301-ba01-414e-8574-a8f6da31876b:AgentLanguage" version="0" />
+        <language slang="l:1a0150ac-dda5-4129-824e-01dce96fdea4:BuiltEnvironment" version="0" />
         <language slang="l:bb69d087-96cc-48ca-aeb6-c2cb27e532b0:DiseaseModel" version="0" />
         <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="5" />
         <language slang="l:63e0e566-5131-447e-90e3-12ea330e1a00:com.mbeddr.mpsutil.blutil" version="1" />
@@ -65,8 +67,9 @@
       <dependencyVersions>
         <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="0" />
         <module reference="18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)" version="0" />
-        <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="0" />
+        <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
+        <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="0" />
         <module reference="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" version="0" />
         <module reference="4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
@@ -123,6 +126,7 @@
     <dependency reexport="false">99a71636-4380-4f69-8ffd-d4b1190320d6(EDRuntime_RepastMainProvider)</dependency>
     <dependency reexport="false">71934284-d7d1-45ee-a054-8c072591085f(org.iets3.core.expr.toplevel)</dependency>
     <dependency reexport="false">bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)</dependency>
+    <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:bb69d087-96cc-48ca-aeb6-c2cb27e532b0:DiseaseModel" version="0" />
@@ -182,7 +186,7 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="0" />
-    <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="0" />
+    <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
     <module reference="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" version="0" />
     <module reference="99a71636-4380-4f69-8ffd-d4b1190320d6(EDRuntime_RepastMainProvider)" version="0" />
@@ -230,6 +234,7 @@
   </dependencyVersions>
   <extendedLanguages>
     <extendedLanguage>cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</extendedLanguage>
+    <extendedLanguage>1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</extendedLanguage>
   </extendedLanguages>
 </language>
 

@@ -429,15 +429,6 @@
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
-      <entry>
-        <string>patientgetadmittedToisSideRoom</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisSideRoom</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisSideRoom</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
     <entry>
       <string>two</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>

@@ -50,7 +50,6 @@
     <string>patientgetCepheidFluAResultisNegative</string>
     <string>patientgetCepheidFluBResultisPositive</string>
     <string>patientgetCepheidFluBResultisNegative</string>
-    <string>patientgetadmittedToisSideRoom</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

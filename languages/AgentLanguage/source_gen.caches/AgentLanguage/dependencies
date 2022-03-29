@@ -4,6 +4,7 @@
     <classNode dependClassName="AgentLanguage.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="AgentLanguage.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="AgentLanguage.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="AgentLanguage.migration.MigrationDescriptor" />
     <classNode dependClassName="AgentLanguage.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="AgentLanguage.structure.StructureAspectDescriptor" />
     <classNode dependClassName="AgentLanguage.textGen.TextGenAspectDescriptor" />
@@ -12,6 +13,7 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="jetbrains.mps.lang.migration.runtime.base.MigrationAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />

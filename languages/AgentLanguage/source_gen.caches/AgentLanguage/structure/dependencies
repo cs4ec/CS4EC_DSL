@@ -31,16 +31,6 @@
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
   </dependency>
-  <dependency className="AgentLanguage.structure.EnumerationDescriptor_Direction">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.EnumerationLiteralsIndex" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptor" />
-    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
-    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
-  </dependency>
   <dependency className="AgentLanguage.structure.EnumerationDescriptor_InfectionStateType">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -62,16 +52,6 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
   </dependency>
   <dependency className="AgentLanguage.structure.EnumerationDescriptor_ModifyOperator">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.EnumerationLiteralsIndex" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptor" />
-    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
-    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
-  </dependency>
-  <dependency className="AgentLanguage.structure.EnumerationDescriptor_OccupiableTypes">
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.List" />
@@ -110,11 +90,9 @@
   <dependency className="AgentLanguage.structure.StructureAspectDescriptor">
     <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_BaseType" />
     <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_Colour" />
-    <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_Direction" />
     <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_InfectionStateType" />
     <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_JudgeOperator" />
     <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_ModifyOperator" />
-    <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_OccupiableTypes" />
     <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_PatientOutcomes" />
     <classNode dependClassName="AgentLanguage.structure.EnumerationDescriptor_SeverityScore" />
     <classNode dependClassName="AgentLanguage.structure.LanguageConceptSwitch" />

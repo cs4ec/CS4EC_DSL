@@ -4,7 +4,7 @@
     <classNode dependClassName="ActionCards.behavior.Action__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.DiseaseSymptom__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.IPatientProperty__BehaviorDescriptor" />
-    <classNode dependClassName="AgentLanguage.behavior.RoomType__BehaviorDescriptor" />
+    <classNode dependClassName="BuiltEnvironment.behavior.RoomType__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />

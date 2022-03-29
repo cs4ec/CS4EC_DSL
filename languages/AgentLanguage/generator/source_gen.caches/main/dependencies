@@ -3,7 +3,7 @@
   <dependency className="main.QueriesGenerated">
     <classNode dependClassName="AgentLanguage.behavior.Actor__BehaviorDescriptor" />
     <classNode dependClassName="AgentLanguage.behavior.BehaviourElement__BehaviorDescriptor" />
-    <classNode dependClassName="AgentLanguage.behavior.RoomType__BehaviorDescriptor" />
+    <classNode dependClassName="BuiltEnvironment.behavior.RoomType__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Iterable" />

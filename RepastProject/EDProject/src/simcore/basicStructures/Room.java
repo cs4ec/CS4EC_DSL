@@ -44,20 +44,22 @@ public class Room extends Locatable{
 	protected List<Seat> seats;		
 	protected List<Desk> desks;	
 	protected List<Bed> beds;	
-
+	protected Area parentArea;
 	protected List<Occupiable> occupiables;
 
 	// Alternative constructor omitting the roomType (while roomType functionality
 	// is in development)
 	public Room(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x,
 			int y, int w, int h, int colorID, Integer capacity, Color pColor) {
-		this(name, context, space, grid, x, y, w, h, colorID, capacity, null, pColor);
+		this(name, context, space, grid, x, y, w, h, colorID, capacity, null, pColor,null);
 	}
+	
 
 	public Room(String name, Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x,
-			int y, int w, int h, int colorID, Integer capacity, RoomType pRoomType, Color pColor) {
+			int y, int w, int h, int colorID, Integer capacity, RoomType pRoomType, Color pColor, Area parentArea) {
 		super(context, space, grid, x, y, w, h, Color.GRAY);
 
+		this.parentArea = parentArea;
 		this.locName = name;
 		this.roomType = pRoomType;
 		this.colorID = colorID;
@@ -281,5 +283,9 @@ public class Room extends Locatable{
 	@Override
 	public String toString() {
 		return name();
+	}
+	
+	public Area getParentArea() {
+		return parentArea;
 	}
 }

@@ -45,6 +45,7 @@
     <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryArea" />
@@ -85,6 +86,7 @@
     <classNode dependClassName="repast.simphony.space.grid.SimpleGridAdder" />
     <classNode dependClassName="repast.simphony.space.grid.StrictBorders" />
     <classNode dependClassName="repast.simphony.valueLayer.GridValueLayer" />
+    <classNode dependClassName="simcore.basicStructures.Area" />
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.Wall" />
@@ -103,6 +105,10 @@
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LFD">
     <classNode dependClassName="EDLanguage.sandbox.LFD" />
+    <classNode extendsClassName="simcore.basicStructures.Resource" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LFDExecutionTimeMap">
+    <classNode dependClassName="EDLanguage.sandbox.LFDExecutionTimeMap" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
@@ -111,18 +117,26 @@
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LIAT">
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
+    <classNode extendsClassName="simcore.basicStructures.Resource" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LIATBooth">
+    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LIATExecutionTimeMap">
+    <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
-  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LIATBooth">
-    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LabPCR">
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
+    <classNode extendsClassName="simcore.basicStructures.Resource" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.LabPCRExecutionTimeMap">
+    <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
@@ -230,6 +244,10 @@
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TriagingTool">
     <classNode dependClassName="EDLanguage.sandbox.TriagingTool" />
+    <classNode extendsClassName="simcore.basicStructures.Resource" />
+  </dependency>
+  <dependency className="FluCovidEmergencyPathwayoptimise.AC1.TriagingToolExecutionTimeMap">
+    <classNode dependClassName="EDLanguage.sandbox.TriagingToolExecutionTimeMap" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
@@ -248,6 +266,7 @@
     <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_dSignal" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />

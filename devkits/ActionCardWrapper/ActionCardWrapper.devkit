@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dev-kit name="ActionCardWrapper" uuid="406aa7d4-b98b-4d69-82c1-6161cd86e812">
-  <exported-language name="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" />
-  <exported-language name="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" />
-  <exported-language name="5e1e5d68-a147-4fce-8920-2ed523701f78(PatientSelectionStrategy)" />
-  <exported-language name="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
-  <exported-solutions>
-    <exported-solution>bb2e6412-1c7a-4784-ba11-0fa17c48151d(ActionCardWinter2021)</exported-solution>
-  </exported-solutions>
-  <generation-plan model="r:9f543ac7-f084-4c32-b26e-22dbb75a5c29(ActionCardWinter2021.GenPlan)" />
-</dev-kit>
+<dev-kit name="ActionCardWrapper" uuid="406aa7d4-b98b-4d69-82c1-6161cd86e812" />
 
