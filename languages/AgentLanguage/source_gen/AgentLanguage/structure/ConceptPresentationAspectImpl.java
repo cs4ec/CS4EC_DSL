@@ -45,6 +45,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_HumanInstanceFromSignal;
   private ConceptPresentation props_InfectionCondition;
   private ConceptPresentation props_InfectionState;
+  private ConceptPresentation props_IsExactlyOperator;
+  private ConceptPresentation props_IsLessThanOperator;
   private ConceptPresentation props_KernelFCondition;
   private ConceptPresentation props_MessageSelectionStrategy;
   private ConceptPresentation props_MoveAction;
@@ -56,6 +58,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_OccupiableInstance;
   private ConceptPresentation props_OccupyAction;
   private ConceptPresentation props_OccupyOrder;
+  private ConceptPresentation props_Operator;
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_PatientAdmissionOutcomeCondition;
@@ -67,6 +70,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PossibilityCondition;
   private ConceptPresentation props_Relationship;
   private ConceptPresentation props_RemoveRelationshipAction;
+  private ConceptPresentation props_ResourceAvailableCondition;
   private ConceptPresentation props_RoomTypeReference;
   private ConceptPresentation props_SelectFirstSignal;
   private ConceptPresentation props_SelectNotRelationshipDataSignal;
@@ -356,6 +360,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InfectionState = cpb.create();
         }
         return props_InfectionState;
+      case LanguageConceptSwitch.IsExactlyOperator:
+        if (props_IsExactlyOperator == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("IsExactlyOperator");
+          props_IsExactlyOperator = cpb.create();
+        }
+        return props_IsExactlyOperator;
+      case LanguageConceptSwitch.IsLessThanOperator:
+        if (props_IsLessThanOperator == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("IsLessThanOperator");
+          props_IsLessThanOperator = cpb.create();
+        }
+        return props_IsLessThanOperator;
       case LanguageConceptSwitch.KernelFCondition:
         if (props_KernelFCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -437,6 +455,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OccupyOrder = cpb.create();
         }
         return props_OccupyOrder;
+      case LanguageConceptSwitch.Operator:
+        if (props_Operator == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Operator");
+          props_Operator = cpb.create();
+        }
+        return props_Operator;
       case LanguageConceptSwitch.Order:
         if (props_Order == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -516,6 +541,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RemoveRelationshipAction = cpb.create();
         }
         return props_RemoveRelationshipAction;
+      case LanguageConceptSwitch.ResourceAvailableCondition:
+        if (props_ResourceAvailableCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ResourceAvailableCondition");
+          props_ResourceAvailableCondition = cpb.create();
+        }
+        return props_ResourceAvailableCondition;
       case LanguageConceptSwitch.RoomTypeReference:
         if (props_RoomTypeReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

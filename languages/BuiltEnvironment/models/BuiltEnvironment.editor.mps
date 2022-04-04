@@ -689,7 +689,25 @@
         <property role="3F0ifm" value="x" />
       </node>
       <node concept="3F0A7n" id="3JSrgvJlcrD" role="3EZMnx">
-        <ref role="1NtTu8" to="3z3g:3JSrgvJlcqS" resolve="number" />
+        <ref role="1NtTu8" to="3z3g:3JSrgvJlcqS" resolve="startingNumber" />
+      </node>
+      <node concept="3F0ifn" id="3JSrgvM3S2C" role="3EZMnx">
+        <property role="3F0ifm" value="... Replenish" />
+      </node>
+      <node concept="3F0ifn" id="3JSrgvM3S2S" role="3EZMnx">
+        <property role="3F0ifm" value="x" />
+      </node>
+      <node concept="3F0A7n" id="3JSrgvM3S3a" role="3EZMnx">
+        <ref role="1NtTu8" to="3z3g:3JSrgvM3S2t" resolve="replenishAmount" />
+      </node>
+      <node concept="3F0ifn" id="3JSrgvM3S3u" role="3EZMnx">
+        <property role="3F0ifm" value="every" />
+      </node>
+      <node concept="3F0A7n" id="3JSrgvM3S3O" role="3EZMnx">
+        <ref role="1NtTu8" to="3z3g:3JSrgvM3S2q" resolve="replenishFrequency" />
+      </node>
+      <node concept="3F0ifn" id="3JSrgvM3S4c" role="3EZMnx">
+        <property role="3F0ifm" value="days" />
       </node>
       <node concept="l2Vlx" id="3JSrgvJlcr8" role="2iSdaV" />
     </node>
@@ -939,6 +957,25 @@
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
       </node>
       <node concept="2iRfu4" id="3JSrgvKcGzM" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3JSrgvMHnXY">
+    <property role="3GE5qa" value="ED" />
+    <ref role="1XX52x" to="3z3g:3JSrgvMHnXF" resolve="ResourceAvailabilityVariable" />
+    <node concept="3EZMnI" id="3JSrgvMHnY0" role="2wV5jI">
+      <node concept="1iCGBv" id="3JSrgvMHnY7" role="3EZMnx">
+        <ref role="1NtTu8" to="3z3g:3JSrgvMHnXP" resolve="resource" />
+        <node concept="1sVBvm" id="3JSrgvMHnY9" role="1sWHZn">
+          <node concept="3F0A7n" id="3JSrgvMHnYg" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3JSrgvMHnYo" role="3EZMnx">
+        <property role="3F0ifm" value="availability" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvMHnY3" role="2iSdaV" />
     </node>
   </node>
 </model>

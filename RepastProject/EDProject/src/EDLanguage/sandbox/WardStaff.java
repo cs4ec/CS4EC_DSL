@@ -14,6 +14,7 @@ import repast.simphony.space.graph.Network;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
+import simcore.basicStructures.Locatable;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.basicStructures.Board;
 import simcore.action.PassiveBehaviourStep;
@@ -140,11 +141,11 @@ public class WardStaff extends Actor {
 
 
 
-  public class MoveAction_a0a extends BehaviourStep {
+  public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a(Behaviour behaviour) {
+    public MoveAction_a0a_5(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -164,6 +165,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -174,6 +176,98 @@ public class WardStaff extends Actor {
   public class OrderAction_b0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     public OrderAction_b0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
+    }
+  }
+  public class StayAction_c0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 10;
+    }
+  }
+  public class SendSignalAction_d0a_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_d0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new TreatmentTrigger_dSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_e0a_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_e0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 1;
+    }
+  }
+  public class MoveAction_a0a_7 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0a_7(Behaviour behaviour) {
+      target = COVIDPositiveCohort.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -199,10 +293,10 @@ public class WardStaff extends Actor {
       return timeExecuted == 10;
     }
   }
-  public class SendSignalAction_d0a extends BehaviourStep {
+  public class SendSignalAction_d0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_d0a(Behaviour behaviour) {
+    public SendSignalAction_d0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -215,101 +309,10 @@ public class WardStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_e0a extends BehaviourStep {
+  public class StayAction_e0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_e0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 1;
-    }
-  }
-  public class MoveAction_a0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0a_1(Behaviour behaviour) {
-      target = COVIDPositiveCohort.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_b0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
-
-      a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
-    }
-  }
-  public class StayAction_c0a_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 10;
-    }
-  }
-  public class SendSignalAction_d0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_d0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TreatmentTrigger_dSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_e0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_e0a_1(Behaviour behaviour) {
+    public StayAction_e0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -346,6 +349,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -353,10 +357,10 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class StayAction_b0b_1 extends BehaviourStep {
+  public class StayAction_b0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_b0b_1(Behaviour behaviour) {
+    public StayAction_b0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -388,29 +392,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0b extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0b extends InstantBehaviourStep {
@@ -523,6 +510,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -530,10 +518,10 @@ public class WardStaff extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class StayAction_b0b_5 extends BehaviourStep {
+  public class StayAction_b0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_b0b_5(Behaviour behaviour) {
+    public StayAction_b0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -565,29 +553,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0b_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0b_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0b_1 extends InstantBehaviourStep {
@@ -1180,6 +1151,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1245,6 +1217,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1286,11 +1259,11 @@ public class WardStaff extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
-  public class MoveAction_a0d_3 extends BehaviourStep {
+  public class MoveAction_a0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0d_3(Behaviour behaviour) {
+    public MoveAction_a0d(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -1310,6 +1283,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1350,10 +1324,10 @@ public class WardStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_d0d_3 extends BehaviourStep {
+  public class StayAction_d0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0d_3(Behaviour behaviour) {
+    public StayAction_d0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1366,11 +1340,11 @@ public class WardStaff extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0d_5 extends BehaviourStep {
+  public class MoveAction_a0d_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0d_5(Behaviour behaviour) {
+    public MoveAction_a0d_1(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -1390,6 +1364,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1430,10 +1405,10 @@ public class WardStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_d0d_5 extends BehaviourStep {
+  public class StayAction_d0d_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0d_5(Behaviour behaviour) {
+    public StayAction_d0d_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1470,6 +1445,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1561,6 +1537,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1652,6 +1629,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1694,29 +1672,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0f extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = NonRespiratoryCohort.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0f extends InstantBehaviourStep {
@@ -1829,6 +1790,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1871,29 +1833,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0f_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0f_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = NonRespiratoryCohort.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0f_1 extends InstantBehaviourStep {
@@ -2486,6 +2431,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -2551,6 +2497,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -2616,6 +2563,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -2696,6 +2644,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -2776,6 +2725,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -2867,6 +2817,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -2958,6 +2909,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -3000,29 +2952,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0j extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0j(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = SideRoom.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0j extends InstantBehaviourStep {
@@ -3135,6 +3070,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -3177,29 +3113,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0j_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0j_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = SideRoom.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0j_1 extends InstantBehaviourStep {
@@ -3792,6 +3711,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -3857,6 +3777,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -3922,6 +3843,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -4002,6 +3924,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -4082,6 +4005,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -4173,6 +4097,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -4264,6 +4189,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -4306,29 +4232,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0n extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0n(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = AmberBay.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0n extends InstantBehaviourStep {
@@ -4441,6 +4350,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -4483,29 +4393,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0n_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0n_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = AmberBay.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0n_1 extends InstantBehaviourStep {
@@ -5098,6 +4991,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -5163,6 +5057,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -5228,6 +5123,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -5308,6 +5204,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -5369,11 +5266,11 @@ public class WardStaff extends Actor {
   public void InitTakeabed_a(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_5(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a_3(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
-    plstSteps.add(new StayAction_e0a(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a_1(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_d0a_3(behaviourBuilder));
+    plstSteps.add(new StayAction_e0a_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -5383,7 +5280,7 @@ public class WardStaff extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b(behaviourBuilder));
-    plstSteps.add(new StayAction_b0b_1(behaviourBuilder));
+    plstSteps.add(new StayAction_b0b(behaviourBuilder));
     plstSteps.add(new StayAction_c0b(behaviourBuilder));
     plstSteps.add(new UseAction_d0b(behaviourBuilder));
     plstSteps.add(new Choice_e0b(behaviourBuilder));
@@ -5411,10 +5308,10 @@ public class WardStaff extends Actor {
   public void InitTreatment_d(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0d_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0d(behaviourBuilder));
     plstSteps.add(new StayAction_b0d(behaviourBuilder));
     plstSteps.add(new SendSignalAction_c0d(behaviourBuilder));
-    plstSteps.add(new StayAction_d0d_3(behaviourBuilder));
+    plstSteps.add(new StayAction_d0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

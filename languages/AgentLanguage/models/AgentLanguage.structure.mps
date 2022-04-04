@@ -1624,5 +1624,36 @@
       <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
     </node>
   </node>
+  <node concept="1TIwiD" id="3JSrgvMap3Q">
+    <property role="EcuMT" value="4321323723356999926" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="ResourceAvailableCondition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="3JSrgvMMqXR" role="1TKVEi">
+      <property role="IQ2ns" value="4321323723367493495" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="availabilityExpression" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3JSrgvMqo2V">
+    <property role="EcuMT" value="4321323723361190075" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="Operator" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3JSrgvMqo35">
+    <property role="EcuMT" value="4321323723361190085" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="IsExactlyOperator" />
+    <ref role="1TJDcQ" node="3JSrgvMqo2V" resolve="Operator" />
+  </node>
+  <node concept="1TIwiD" id="3JSrgvMqo3y">
+    <property role="EcuMT" value="4321323723361190114" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="IsLessThanOperator" />
+    <ref role="1TJDcQ" node="3JSrgvMqo2V" resolve="Operator" />
+  </node>
 </model>
 

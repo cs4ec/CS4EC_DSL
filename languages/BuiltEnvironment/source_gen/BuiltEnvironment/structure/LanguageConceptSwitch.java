@@ -16,12 +16,13 @@ public final class LanguageConceptSwitch {
   public static final int MapImporter = 4;
   public static final int Resource = 5;
   public static final int ResourceAllocation = 6;
-  public static final int Room = 7;
-  public static final int RoomInstanceDefinition = 8;
-  public static final int RoomType = 9;
-  public static final int ScenarioBuilder = 10;
-  public static final int WallDefinition = 11;
-  public static final int WallInstanceDefinition = 12;
+  public static final int ResourceAvailabilityVariable = 7;
+  public static final int Room = 8;
+  public static final int RoomInstanceDefinition = 9;
+  public static final int RoomType = 10;
+  public static final int ScenarioBuilder = 11;
+  public static final int WallDefinition = 12;
+  public static final int WallInstanceDefinition = 13;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1a0150acdda54129L, 0x824e01dce96fdea4L);
@@ -32,6 +33,7 @@ public final class LanguageConceptSwitch {
     builder.put(0xaabf015bed74217L, MapImporter);
     builder.put(0x3bf86d07f032c8d7L, Resource);
     builder.put(0x3bf86d07ef54c6b7L, ResourceAllocation);
+    builder.put(0x3bf86d07f2b57f6bL, ResourceAvailabilityVariable);
     builder.put(0x3c282c112f249042L, Room);
     builder.put(0x3c282c112f249045L, RoomInstanceDefinition);
     builder.put(0x5dafd33966e8fe19L, RoomType);

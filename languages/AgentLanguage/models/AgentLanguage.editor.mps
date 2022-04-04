@@ -1878,5 +1878,35 @@
       <node concept="l2Vlx" id="3JSrgvKC7dm" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="3JSrgvMapnh">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:3JSrgvMap3Q" resolve="ResourceAvailableCondition" />
+    <node concept="3EZMnI" id="3JSrgvMapq$" role="2wV5jI">
+      <node concept="l2Vlx" id="3JSrgvMapqB" role="2iSdaV" />
+      <node concept="3F1sOY" id="3JSrgvMMqXY" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3JSrgvMMqXR" resolve="availabilityExpression" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="3JSrgvMqo3m">
+    <property role="3GE5qa" value="Structures" />
+    <ref role="1XX52x" to="3751:3JSrgvMqo35" resolve="IsExactlyOperator" />
+    <node concept="3EZMnI" id="3JSrgvMqo3o" role="2wV5jI">
+      <node concept="3F0ifn" id="3JSrgvMqo3v" role="3EZMnx">
+        <property role="3F0ifm" value="is" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvMqo3r" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3JSrgvMqo3N">
+    <property role="3GE5qa" value="Structures" />
+    <ref role="1XX52x" to="3751:3JSrgvMqo3y" resolve="IsLessThanOperator" />
+    <node concept="3EZMnI" id="3JSrgvMqo3P" role="2wV5jI">
+      <node concept="3F0ifn" id="3JSrgvMqo3W" role="3EZMnx">
+        <property role="3F0ifm" value="is less than" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvMqo3S" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

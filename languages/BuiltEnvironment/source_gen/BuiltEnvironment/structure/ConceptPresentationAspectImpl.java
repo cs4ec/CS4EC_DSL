@@ -16,6 +16,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_MapImporter;
   private ConceptPresentation props_Resource;
   private ConceptPresentation props_ResourceAllocation;
+  private ConceptPresentation props_ResourceAvailabilityVariable;
   private ConceptPresentation props_Room;
   private ConceptPresentation props_RoomInstanceDefinition;
   private ConceptPresentation props_RoomType;
@@ -78,6 +79,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ResourceAllocation = cpb.create();
         }
         return props_ResourceAllocation;
+      case LanguageConceptSwitch.ResourceAvailabilityVariable:
+        if (props_ResourceAvailabilityVariable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f2b57f6bL, 0x3bf86d07f2b57f75L, "resource", "", "");
+          props_ResourceAvailabilityVariable = cpb.create();
+        }
+        return props_ResourceAvailabilityVariable;
       case LanguageConceptSwitch.Room:
         if (props_Room == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

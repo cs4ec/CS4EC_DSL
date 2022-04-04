@@ -272,12 +272,6 @@
       <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
     </node>
   </node>
-  <node concept="1TIwiD" id="av1M7vc794">
-    <property role="EcuMT" value="188877551432659524" />
-    <property role="TrG5h" value="Variable" />
-    <property role="3GE5qa" value="Expressions" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-  </node>
   <node concept="1TIwiD" id="av1M7vdxsc">
     <property role="EcuMT" value="188877551433029388" />
     <property role="TrG5h" value="DiagnosticCondition" />
@@ -300,15 +294,6 @@
       <property role="IQ2nx" value="2698877061875545204" />
       <property role="TrG5h" value="outcome" />
       <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
-    </node>
-  </node>
-  <node concept="25R3W" id="av1M7vdSz0">
-    <property role="3F6X1D" value="188877551433124032" />
-    <property role="TrG5h" value="Operators" />
-    <property role="3GE5qa" value="Expressions" />
-    <node concept="25R33" id="av1M7vdSz1" role="25R1y">
-      <property role="3tVfz5" value="188877551433124033" />
-      <property role="TrG5h" value="and" />
     </node>
   </node>
   <node concept="1TIwiD" id="1rknCs3SeRP">
@@ -885,14 +870,18 @@
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
   </node>
-  <node concept="1TIwiD" id="av1M7vbNwp">
-    <property role="EcuMT" value="188877551432579097" />
-    <property role="TrG5h" value="Resource" />
-    <property role="R4oN_" value="A resource in the hospital" />
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="av1M7vbNwC" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+  <node concept="1TIwiD" id="3JSrgvMff0N">
+    <property role="EcuMT" value="4321323723358269491" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="ResourceAvailableCondition" />
+    <property role="34LRSv" value="resource availability condition" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyj" id="3JSrgvMocHY" role="1TKVEi">
+      <property role="IQ2ns" value="4321323723360619390" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="availabilityExpression" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
 </model>

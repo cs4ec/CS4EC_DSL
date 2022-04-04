@@ -10,6 +10,7 @@
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="68mc" ref="r:2a10821d-612f-4a73-b7b0-ed6b57106321(com.mbeddr.mpsutil.filepicker.structure)" implicit="true" />
+    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -216,7 +217,17 @@
     </node>
     <node concept="1TJgyi" id="3JSrgvJlcqS" role="1TKVEl">
       <property role="IQ2nx" value="4321323723309500088" />
-      <property role="TrG5h" value="number" />
+      <property role="TrG5h" value="startingNumber" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="3JSrgvM3S2q" role="1TKVEl">
+      <property role="IQ2nx" value="4321323723355291802" />
+      <property role="TrG5h" value="replenishFrequency" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="3JSrgvM3S2t" role="1TKVEl">
+      <property role="IQ2nx" value="4321323723355291805" />
+      <property role="TrG5h" value="replenishAmount" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
@@ -390,6 +401,18 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="3JSrgvKcGzx" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3JSrgvMHnXF">
+    <property role="EcuMT" value="4321323723366170475" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="ResourceAvailabilityVariable" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyj" id="3JSrgvMHnXP" role="1TKVEi">
+      <property role="IQ2ns" value="4321323723366170485" />
+      <property role="20kJfa" value="resource" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3JSrgvKcGzn" resolve="Resource" />
     </node>
   </node>
 </model>

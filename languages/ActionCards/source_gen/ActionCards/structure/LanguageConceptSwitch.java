@@ -52,7 +52,7 @@ public final class LanguageConceptSwitch {
   public static final int ProcessingTimeTable = 40;
   public static final int RecentCOVIDContactCondition = 41;
   public static final int RecentCovidContactProperty = 42;
-  public static final int Resource = 43;
+  public static final int ResourceAvailableCondition = 43;
   public static final int StaffNumber = 44;
   public static final int StaffType = 45;
   public static final int StaffTypeReference = 46;
@@ -63,8 +63,7 @@ public final class LanguageConceptSwitch {
   public static final int VaccinationStatus = 51;
   public static final int VaccineStatusCondition = 52;
   public static final int VaccineStatusProperty = 53;
-  public static final int Variable = 54;
-  public static final int Yes = 55;
+  public static final int Yes = 54;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L);
@@ -111,7 +110,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x16d45e8703e0edf5L, ProcessingTimeTable);
     builder.put(0x18668ef2732bde64L, RecentCOVIDContactCondition);
     builder.put(0x18668ef2732b9054L, RecentCovidContactProperty);
-    builder.put(0x29f0721df2f3819L, Resource);
+    builder.put(0x3bf86d07f23cf033L, ResourceAvailableCondition);
     builder.put(0x4af9c647eff82e7bL, StaffNumber);
     builder.put(0x4f415ebce3f346ecL, StaffType);
     builder.put(0x4af9c647efda3a80L, StaffTypeReference);
@@ -122,7 +121,6 @@ public final class LanguageConceptSwitch {
     builder.put(0x18668ef26fc61141L, VaccinationStatus);
     builder.put(0x18668ef26f431e45L, VaccineStatusCondition);
     builder.put(0x18668ef26f40915dL, VaccineStatusProperty);
-    builder.put(0x29f0721df307244L, Variable);
     builder.put(0x18668ef2732bb4e2L, Yes);
     myIndex = builder.seal();
   }

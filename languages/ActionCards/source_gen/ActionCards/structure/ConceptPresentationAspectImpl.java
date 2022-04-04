@@ -52,7 +52,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ProcessingTimeTable;
   private ConceptPresentation props_RecentCOVIDContactCondition;
   private ConceptPresentation props_RecentCovidContactProperty;
-  private ConceptPresentation props_Resource;
+  private ConceptPresentation props_ResourceAvailableCondition;
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
@@ -63,7 +63,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_VaccinationStatus;
   private ConceptPresentation props_VaccineStatusCondition;
   private ConceptPresentation props_VaccineStatusProperty;
-  private ConceptPresentation props_Variable;
   private ConceptPresentation props_Yes;
 
   @Override
@@ -377,14 +376,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RecentCovidContactProperty = cpb.create();
         }
         return props_RecentCovidContactProperty;
-      case LanguageConceptSwitch.Resource:
-        if (props_Resource == null) {
+      case LanguageConceptSwitch.ResourceAvailableCondition:
+        if (props_ResourceAvailableCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("A resource in the hospital");
-          cpb.presentationByName();
-          props_Resource = cpb.create();
+          cpb.rawPresentation("resource availability condition");
+          props_ResourceAvailableCondition = cpb.create();
         }
-        return props_Resource;
+        return props_ResourceAvailableCondition;
       case LanguageConceptSwitch.StaffNumber:
         if (props_StaffNumber == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -456,13 +454,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VaccineStatusProperty = cpb.create();
         }
         return props_VaccineStatusProperty;
-      case LanguageConceptSwitch.Variable:
-        if (props_Variable == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Variable");
-          props_Variable = cpb.create();
-        }
-        return props_Variable;
       case LanguageConceptSwitch.Yes:
         if (props_Yes == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

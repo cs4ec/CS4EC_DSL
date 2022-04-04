@@ -187,7 +187,6 @@
         <child id="5381978332891560234" name="targetObject" index="EqhBH" />
       </concept>
       <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
-      <concept id="6442102128031377105" name="AgentLanguage.structure.Resource" flags="ng" index="2HvXsh" />
       <concept id="8910807539222190210" name="AgentLanguage.structure.Description" flags="ng" index="2IBTiW" />
       <concept id="768972137568225409" name="AgentLanguage.structure.RemoveRelationshipAction" flags="ng" index="2RhFyk">
         <property id="33966321878433161" name="relationshipName" index="2lAP6T" />
@@ -767,10 +766,10 @@
         <ref role="v9R2y" node="4EKCctwQqEN" resolve="reduce_LocationCapacityCondition" />
       </node>
     </node>
-    <node concept="3aamgX" id="3JSrgvJirmb" role="3acgRq">
-      <ref role="30HIoZ" to="e88n:av1M7vbNwp" resolve="Resource" />
-      <node concept="j$656" id="3JSrgvJirmc" role="1lVwrX">
-        <ref role="v9R2y" node="3JSrgvJirm9" resolve="reduce_Resource" />
+    <node concept="3aamgX" id="3JSrgvMM1wF" role="3acgRq">
+      <ref role="30HIoZ" to="e88n:3JSrgvMff0N" resolve="ResourceAvailableCondition" />
+      <node concept="j$656" id="3JSrgvMM1wG" role="1lVwrX">
+        <ref role="v9R2y" node="3JSrgvMM1wD" resolve="reduce_ResourceAvailableCondition" />
       </node>
     </node>
   </node>
@@ -1702,13 +1701,28 @@
             <node concept="3IZrLx" id="3JSrgvL2a7s" role="3IZSJc">
               <node concept="3clFbS" id="3JSrgvL2a7t" role="2VODD2">
                 <node concept="3clFbF" id="3JSrgvL2acv" role="3cqZAp">
-                  <node concept="17QLQc" id="3JSrgvL2aNt" role="3clFbG">
-                    <node concept="10Nm6u" id="3JSrgvL2aND" role="3uHU7w" />
-                    <node concept="2OqwBi" id="3JSrgvL2aqL" role="3uHU7B">
-                      <node concept="30H73N" id="3JSrgvL2acu" role="2Oq$k0" />
-                      <node concept="3TrEf2" id="3JSrgvL2aBW" role="2OqNvi">
-                        <ref role="3Tt5mk" to="e88n:av1M7viD_O" resolve="resource" />
+                  <node concept="1Wc70l" id="3JSrgvM1owL" role="3clFbG">
+                    <node concept="2OqwBi" id="3JSrgvM1pfT" role="3uHU7w">
+                      <node concept="2OqwBi" id="3JSrgvM1oQc" role="2Oq$k0">
+                        <node concept="30H73N" id="3JSrgvM1oB_" role="2Oq$k0" />
+                        <node concept="3TrEf2" id="3JSrgvM1p4h" role="2OqNvi">
+                          <ref role="3Tt5mk" to="e88n:av1M7viD_O" resolve="resource" />
+                        </node>
                       </node>
+                      <node concept="1mIQ4w" id="3JSrgvM1puR" role="2OqNvi">
+                        <node concept="chp4Y" id="3JSrgvM1pBO" role="cj9EA">
+                          <ref role="cht4Q" to="e88n:ijr0ZWehMB" resolve="DiseaseTest" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="17QLQc" id="3JSrgvL2aNt" role="3uHU7B">
+                      <node concept="2OqwBi" id="3JSrgvL2aqL" role="3uHU7B">
+                        <node concept="30H73N" id="3JSrgvL2acu" role="2Oq$k0" />
+                        <node concept="3TrEf2" id="3JSrgvL2aBW" role="2OqNvi">
+                          <ref role="3Tt5mk" to="e88n:av1M7viD_O" resolve="resource" />
+                        </node>
+                      </node>
+                      <node concept="10Nm6u" id="3JSrgvL2aND" role="3uHU7w" />
                     </node>
                   </node>
                 </node>
@@ -6640,22 +6654,20 @@
       </node>
     </node>
   </node>
-  <node concept="13MO4I" id="3JSrgvJirm9">
-    <property role="TrG5h" value="reduce_Resource" />
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="3gUMe" to="e88n:av1M7vbNwp" resolve="Resource" />
-    <node concept="2HvXsh" id="3JSrgvJkTkT" role="13RCb5">
-      <node concept="raruj" id="3JSrgvJkTkV" role="lGtFl" />
-      <node concept="17Uvod" id="3JSrgvJkTkW" role="lGtFl">
-        <property role="2qtEX9" value="name" />
-        <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-        <node concept="3zFVjK" id="3JSrgvJkTkX" role="3zH0cK">
-          <node concept="3clFbS" id="3JSrgvJkTkY" role="2VODD2">
-            <node concept="3clFbF" id="3JSrgvJkTvP" role="3cqZAp">
-              <node concept="2OqwBi" id="3JSrgvJkTGT" role="3clFbG">
-                <node concept="30H73N" id="3JSrgvJkTvO" role="2Oq$k0" />
-                <node concept="3TrcHB" id="3JSrgvJkU1X" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+  <node concept="13MO4I" id="3JSrgvMM1wD">
+    <property role="TrG5h" value="reduce_ResourceAvailableCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="3gUMe" to="e88n:3JSrgvMff0N" resolve="ResourceAvailableCondition" />
+    <node concept="2vmvVl" id="3JSrgvMMqnO" role="13RCb5">
+      <node concept="raruj" id="3JSrgvMMqnR" role="lGtFl" />
+      <node concept="3_AbJx" id="3JSrgvMMqnV" role="lGtFl">
+        <node concept="3_AbJw" id="3JSrgvMMqnW" role="3_A0Ny">
+          <node concept="3clFbS" id="3JSrgvMMqnX" role="2VODD2">
+            <node concept="3clFbF" id="3JSrgvMMqpW" role="3cqZAp">
+              <node concept="2OqwBi" id="3JSrgvMMqBa" role="3clFbG">
+                <node concept="30H73N" id="3JSrgvMMqpV" role="2Oq$k0" />
+                <node concept="3TrEf2" id="3JSrgvMMqUd" role="2OqNvi">
+                  <ref role="3Tt5mk" to="e88n:3JSrgvMocHY" resolve="availabilityExpression" />
                 </node>
               </node>
             </node>

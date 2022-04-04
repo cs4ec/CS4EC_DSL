@@ -59,7 +59,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptProcessingTimeTable = createDescriptorForProcessingTimeTable();
   /*package*/ final ConceptDescriptor myConceptRecentCOVIDContactCondition = createDescriptorForRecentCOVIDContactCondition();
   /*package*/ final ConceptDescriptor myConceptRecentCovidContactProperty = createDescriptorForRecentCovidContactProperty();
-  /*package*/ final ConceptDescriptor myConceptResource = createDescriptorForResource();
+  /*package*/ final ConceptDescriptor myConceptResourceAvailableCondition = createDescriptorForResourceAvailableCondition();
   /*package*/ final ConceptDescriptor myConceptStaffNumber = createDescriptorForStaffNumber();
   /*package*/ final ConceptDescriptor myConceptStaffType = createDescriptorForStaffType();
   /*package*/ final ConceptDescriptor myConceptStaffTypeReference = createDescriptorForStaffTypeReference();
@@ -70,10 +70,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptVaccinationStatus = createDescriptorForVaccinationStatus();
   /*package*/ final ConceptDescriptor myConceptVaccineStatusCondition = createDescriptorForVaccineStatusCondition();
   /*package*/ final ConceptDescriptor myConceptVaccineStatusProperty = createDescriptorForVaccineStatusProperty();
-  /*package*/ final ConceptDescriptor myConceptVariable = createDescriptorForVariable();
   /*package*/ final ConceptDescriptor myConceptYes = createDescriptorForYes();
   /*package*/ final EnumerationDescriptor myEnumerationE_Result = new EnumerationDescriptor_E_Result();
-  /*package*/ final EnumerationDescriptor myEnumerationOperators = new EnumerationDescriptor_Operators();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -93,7 +91,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardReference, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResource, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptVariable, myConceptYes);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardReference, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
   }
 
   @Override
@@ -186,8 +184,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptRecentCOVIDContactCondition;
       case LanguageConceptSwitch.RecentCovidContactProperty:
         return myConceptRecentCovidContactProperty;
-      case LanguageConceptSwitch.Resource:
-        return myConceptResource;
+      case LanguageConceptSwitch.ResourceAvailableCondition:
+        return myConceptResourceAvailableCondition;
       case LanguageConceptSwitch.StaffNumber:
         return myConceptStaffNumber;
       case LanguageConceptSwitch.StaffType:
@@ -208,8 +206,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptVaccineStatusCondition;
       case LanguageConceptSwitch.VaccineStatusProperty:
         return myConceptVaccineStatusProperty;
-      case LanguageConceptSwitch.Variable:
-        return myConceptVariable;
       case LanguageConceptSwitch.Yes:
         return myConceptYes;
       default:
@@ -219,7 +215,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationE_Result, myEnumerationOperators);
+    return Arrays.asList(myEnumerationE_Result);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -639,12 +635,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("Recent COVID contact");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForResource() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Resource", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df2f3819L);
+  private static ConceptDescriptor createDescriptorForResourceAvailableCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ResourceAvailableCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3bf86d07f23cf033L);
     b.class_(false, false, false);
-    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551432579097");
+    b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4321323723358269491");
     b.version(2);
+    b.aggregate("availabilityExpression", 0x3bf86d07f260cb7eL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("4321323723360619390").done();
+    b.alias("resource availability condition");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForStaffNumber() {
@@ -737,13 +735,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.associate("disease", 0x18668ef26f40bdfaL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(false).origin("1758249876434501114").done();
     b.alias("Vaccine status");
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForVariable() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Variable", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df307244L);
-    b.class_(false, false, false);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551432659524");
-    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForYes() {

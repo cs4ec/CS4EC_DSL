@@ -4,11 +4,13 @@ import java.util.List;
 
 import repast.simphony.engine.schedule.IAction;
 import simcore.Signals.Signal;
+import simcore.basicStructures.Locatable;
 
 public class Behaviour {
 
 	protected Signal signalTrigger;
 	protected String name;
+	protected Locatable behaviourLocation;
 	protected List<BehaviourStep> steps;
 	protected int currentStep = 0;
 	
@@ -68,5 +70,13 @@ public class Behaviour {
 
 	public boolean isComplete() {
 		return currentStep == steps.size();
+	}
+	
+	public Locatable getBehaviourLocation() {
+		return behaviourLocation;
+	}
+	
+	public void setBheaviourLocation(Locatable loc) {
+		this.behaviourLocation = loc;
 	}
 }

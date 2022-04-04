@@ -2432,14 +2432,20 @@
       <node concept="2iRfu4" id="4EKCctwQp9c" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="av1M7vbNAZ">
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="1XX52x" to="e88n:av1M7vbNwp" resolve="Resource" />
-    <node concept="3EZMnI" id="av1M7vbNBa" role="2wV5jI">
-      <node concept="3F0A7n" id="av1M7vbNBh" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+  <node concept="24kQdi" id="3JSrgvMff1Y">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="e88n:3JSrgvMff0N" resolve="ResourceAvailableCondition" />
+    <node concept="3EZMnI" id="3JSrgvMocHP" role="6VMZX">
+      <node concept="l2Vlx" id="3JSrgvMocHQ" role="2iSdaV" />
+      <node concept="3F1sOY" id="3JSrgvMv2o_" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3JSrgvMocHY" resolve="availabilityExpression" />
       </node>
-      <node concept="2iRfu4" id="av1M7vbNBd" role="2iSdaV" />
+    </node>
+    <node concept="3EZMnI" id="3JSrgvMv2oq" role="2wV5jI">
+      <node concept="3F1sOY" id="3JSrgvMv2ox" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3JSrgvMocHY" resolve="availabilityExpression" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvMv2ot" role="2iSdaV" />
     </node>
   </node>
 </model>

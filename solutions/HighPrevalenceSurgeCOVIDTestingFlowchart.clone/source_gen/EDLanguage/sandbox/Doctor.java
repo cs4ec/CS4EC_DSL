@@ -12,8 +12,14 @@ import java.util.List;
 import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
 import simcore.action.BehaviourStep;
-import simcore.basicStructures.Board;
+import simcore.basicStructures.RoomType;
+import simcore.basicStructures.Room;
+import simcore.basicStructures.Locatable;
+import simcore.action.InstantBehaviourStep;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import java.math.BigInteger;
 import java.util.ArrayList;
+import simcore.basicStructures.Board;
 
 public class Doctor extends Actor {
 
@@ -75,10 +81,42 @@ public class Doctor extends Actor {
 
 
 
-  public class StayAction_a0a extends BehaviourStep {
+  public class MoveAction_a0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0a(Behaviour behaviour) {
+      target = RespiratoryCubicle.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class StayAction_b0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0a(Behaviour behaviour) {
+    public StayAction_b0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -91,26 +129,43 @@ public class Doctor extends Actor {
       return timeExecuted == 5;
     }
   }
-  public class SendSignalAction_b0a extends BehaviourStep {
+  public class Choice_c0a extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_c0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (AH.isLess(((Room) behaviour.getBehaviourLocation()).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("10")))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0c0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_d0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a(Behaviour behaviour) {
+    public SendSignalAction_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LIATTrigger_dSignal();
+      sendSignalTemp = new LabPCRTestTrigger_eSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a extends BehaviourStep {
+  public class StayAction_e0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a(Behaviour behaviour) {
+    public StayAction_e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -123,10 +178,42 @@ public class Doctor extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class StayAction_a0a_3 extends BehaviourStep {
+  public class MoveAction_a0a_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0a_3(Behaviour behaviour) {
+      target = RespiratoryCubicle.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class StayAction_b0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_a0a_3(Behaviour behaviour) {
+    public StayAction_b0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -139,10 +226,27 @@ public class Doctor extends Actor {
       return timeExecuted == 5;
     }
   }
-  public class SendSignalAction_b0a_1 extends BehaviourStep {
+  public class Choice_c0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_c0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (AH.isLess(((Room) behaviour.getBehaviourLocation()).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("10")))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0c0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0c0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_1(Behaviour behaviour) {
+    public SendSignalAction_a0c0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -155,10 +259,42 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a_1 extends BehaviourStep {
+  public class SendSignalAction_a0c0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0c0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new LIATTrigger_dSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_d0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_d0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new LabPCRTestTrigger_eSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_e0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_1(Behaviour behaviour) {
+    public StayAction_e0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -176,9 +312,11 @@ public class Doctor extends Actor {
   public void InitDecideonPoCTest_f(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new StayAction_a0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a(behaviourBuilder));
+    plstSteps.add(new StayAction_b0a(behaviourBuilder));
+    plstSteps.add(new Choice_c0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
+    plstSteps.add(new StayAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

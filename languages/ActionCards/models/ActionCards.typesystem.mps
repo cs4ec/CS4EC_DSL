@@ -318,5 +318,31 @@
       <ref role="1YaFvo" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="3JSrgvMffwG">
+    <property role="TrG5h" value="typeof_ResourceAvailableCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="3JSrgvMffwH" role="18ibNy">
+      <node concept="1Z5TYs" id="3JSrgvMffwN" role="3cqZAp">
+        <node concept="mw_s8" id="3JSrgvMffwO" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3JSrgvMffwP" role="mwGJk">
+            <node concept="1YBJjd" id="3JSrgvMffxS" role="1Z2MuG">
+              <ref role="1YBMHb" node="3JSrgvMffwJ" resolve="resourceAvailableCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3JSrgvMffwR" role="1ZfhKB">
+          <node concept="2pJPEk" id="3JSrgvMffwS" role="mwGJk">
+            <node concept="2pJPED" id="3JSrgvMffwT" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3JSrgvMffwJ" role="1YuTPh">
+      <property role="TrG5h" value="resourceAvailableCondition" />
+      <ref role="1YaFvo" to="e88n:3JSrgvMff0N" resolve="ResourceAvailableCondition" />
+    </node>
+  </node>
 </model>
 

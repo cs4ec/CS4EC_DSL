@@ -12,7 +12,6 @@ import repast.simphony.engine.schedule.ScheduledMethod;
 public class TimeKeeper {
     LocalDateTime date;
     LocalDateTime startDate;
-    private int hourCount = 0;
     private int secondsPerTick = 1;
     private static TimeKeeper instance = new TimeKeeper();
 

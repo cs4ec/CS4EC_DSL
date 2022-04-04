@@ -23,6 +23,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptMapImporter = createDescriptorForMapImporter();
   /*package*/ final ConceptDescriptor myConceptResource = createDescriptorForResource();
   /*package*/ final ConceptDescriptor myConceptResourceAllocation = createDescriptorForResourceAllocation();
+  /*package*/ final ConceptDescriptor myConceptResourceAvailabilityVariable = createDescriptorForResourceAvailabilityVariable();
   /*package*/ final ConceptDescriptor myConceptRoom = createDescriptorForRoom();
   /*package*/ final ConceptDescriptor myConceptRoomInstanceDefinition = createDescriptorForRoomInstanceDefinition();
   /*package*/ final ConceptDescriptor myConceptRoomType = createDescriptorForRoomType();
@@ -41,13 +42,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
     deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
+    deps.extendedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
     deps.aggregatedLanguage(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, "com.mbeddr.mpsutil.filepicker");
     deps.aggregatedLanguage(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, "AgentLanguage");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptMapImporter, myConceptResource, myConceptResourceAllocation, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptWallDefinition, myConceptWallInstanceDefinition);
+    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptMapImporter, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -68,6 +70,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptResource;
       case LanguageConceptSwitch.ResourceAllocation:
         return myConceptResourceAllocation;
+      case LanguageConceptSwitch.ResourceAvailabilityVariable:
+        return myConceptResourceAvailabilityVariable;
       case LanguageConceptSwitch.Room:
         return myConceptRoom;
       case LanguageConceptSwitch.RoomInstanceDefinition:
@@ -156,8 +160,19 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/4321323723309500087");
     b.version(2);
-    b.property("number", 0x3bf86d07ef54c6b8L).type(PrimitiveTypeId.INTEGER).origin("4321323723309500088").done();
+    b.property("startingNumber", 0x3bf86d07ef54c6b8L).type(PrimitiveTypeId.INTEGER).origin("4321323723309500088").done();
+    b.property("replenishFrequency", 0x3bf86d07f20f809aL).type(PrimitiveTypeId.INTEGER).origin("4321323723355291802").done();
+    b.property("replenishAmount", 0x3bf86d07f20f809dL).type(PrimitiveTypeId.INTEGER).origin("4321323723355291805").done();
     b.associate("resource", 0x3bf86d07ef54c6baL).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f032c8d7L).optional(false).origin("4321323723309500090").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForResourceAvailabilityVariable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "ResourceAvailabilityVariable", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f2b57f6bL);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/4321323723366170475");
+    b.version(2);
+    b.associate("resource", 0x3bf86d07f2b57f75L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f032c8d7L).optional(false).origin("4321323723366170485").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForRoom() {
