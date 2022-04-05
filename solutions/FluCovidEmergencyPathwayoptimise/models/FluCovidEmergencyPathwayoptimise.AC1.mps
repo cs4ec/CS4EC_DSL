@@ -73,6 +73,12 @@
         <child id="768972137579221632" name="arrivalRate" index="2OfIal" />
         <child id="1758249876507806175" name="attendanceRoute" index="1FYssH" />
       </concept>
+      <concept id="4321323723358269491" name="ActionCards.structure.ResourceAvailableCondition" flags="ng" index="39L9OO">
+        <child id="4321323723360619390" name="availabilityExpression" index="39AapT" />
+      </concept>
+      <concept id="4321323723389465661" name="ActionCards.structure.TimeOfDayCondition" flags="ng" index="3fS9$U">
+        <child id="4321323723398463336" name="expression" index="3fm_9J" />
+      </concept>
       <concept id="2698877061875544082" name="ActionCards.structure.Disease" flags="ng" index="1gZIpL">
         <child id="7828349744265630300" name="symptomReferences" index="3oQJ31" />
       </concept>
@@ -97,11 +103,6 @@
         <child id="7828349744265630211" name="symptoms" index="3oQJ2u" />
       </concept>
       <concept id="7828349744265630002" name="ActionCards.structure.DiseaseSymptom" flags="ng" index="3oQJeJ" />
-      <concept id="1758249876462569833" name="ActionCards.structure.PatientPropertyConditional" flags="ng" index="1CySur">
-        <reference id="1758249876465254186" name="patientProperty" index="1DsR7o" />
-        <child id="1758249876462569987" name="checkValue" index="1CySjL" />
-      </concept>
-      <concept id="1758249876463936250" name="ActionCards.structure.InfectionStatusCondition" flags="ng" index="1DpQK8" />
       <concept id="1758249876500222036" name="ActionCards.structure.RecentCovidContactProperty" flags="ng" index="1FjhUA" />
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
@@ -128,6 +129,13 @@
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage">
       <concept id="6750846609956093098" name="AgentLanguage.structure.RoomTypeReference" flags="ng" index="UeIYj">
         <reference id="6750846609956389136" name="roomType" index="Udx8D" />
+      </concept>
+    </language>
+    <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
+      <concept id="5115872837156687890" name="org.iets3.core.expr.base.structure.LessExpression" flags="ng" index="30d6GJ" />
+      <concept id="5115872837156576277" name="org.iets3.core.expr.base.structure.BinaryExpression" flags="ng" index="30dEsC">
+        <child id="5115872837156576280" name="right" index="30dEs_" />
+        <child id="5115872837156576278" name="left" index="30dEsF" />
       </concept>
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
@@ -166,8 +174,15 @@
         <child id="768972137592500155" name="sourceFile" index="2PX5YI" />
       </concept>
       <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw" />
+      <concept id="4321323723398463303" name="BuiltEnvironment.structure.TimeOfDayWrapper" flags="ng" index="3fm_90">
+        <child id="4321323723398463304" name="time" index="3fm_9f" />
+      </concept>
+      <concept id="4321323723391132909" name="BuiltEnvironment.structure.DateTimeNowVariable" flags="ng" index="3fMwBE" />
+      <concept id="4321323723390573056" name="BuiltEnvironment.structure.TimeOfDayVariable" flags="ng" index="3fOrs7">
+        <property id="4321323723390573057" name="time" index="3fOrs6" />
+      </concept>
       <concept id="4321323723309500087" name="BuiltEnvironment.structure.ResourceAllocation" flags="ng" index="3kFaIK">
-        <property id="4321323723309500088" name="number" index="3kFaIZ" />
+        <property id="4321323723309500088" name="startingNumber" index="3kFaIZ" />
         <reference id="4321323723309500090" name="resource" index="3kFaIX" />
       </concept>
     </language>
@@ -832,9 +847,17 @@
       <node concept="2GGxJi" id="4Y2SMtsg1bS" role="3tG3Yq">
         <ref role="3tVEyn" node="1xAzJ9PBbhV" resolve="Take a bed" />
         <ref role="2GGxGe" node="4Y2SMtsg1aG" resolve="Receive Treatment" />
-        <node concept="1DpQK8" id="3JSrgvJNudH" role="1hyIAf">
-          <ref role="1DsR7o" node="1xAzJ9L0u7B" />
-          <node concept="3IO8Cx" id="3JSrgvJNudT" role="1CySjL" />
+        <node concept="39L9OO" id="3JSrgvPWBK7" role="1hyIAf">
+          <node concept="3fS9$U" id="3JSrgvPWPMQ" role="39AapT">
+            <node concept="30d6GJ" id="3JSrgvPWPNh" role="3fm_9J">
+              <node concept="3fm_90" id="3JSrgvPWPN$" role="30dEs_">
+                <node concept="3fOrs7" id="3JSrgvPWPNA" role="3fm_9f">
+                  <property role="3fOrs6" value="03:00" />
+                </node>
+              </node>
+              <node concept="3fMwBE" id="3JSrgvPWPN5" role="30dEsF" />
+            </node>
+          </node>
         </node>
       </node>
     </node>

@@ -11,11 +11,12 @@
     <use id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts" version="0" />
     <use id="3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7" name="jetbrains.mps.lang.context" version="0" />
     <use id="ad93155d-79b2-4759-b10c-55123e763903" name="jetbrains.mps.lang.messages" version="0" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
     <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
-    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" implicit="true" />
+    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
@@ -704,6 +705,19 @@
       <node concept="3clFbS" id="3JSrgvMffbz" role="2VODD2">
         <node concept="3clFbF" id="3JSrgvMffbU" role="3cqZAp">
           <node concept="3clFbT" id="3JSrgvMffbT" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3JSrgvO6fl$">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:3JSrgvO6fgX" resolve="TimeOfDayCondition" />
+    <node concept="9S07l" id="3JSrgvO6fl_" role="9Vyp8">
+      <node concept="3clFbS" id="3JSrgvO6flA" role="2VODD2">
+        <node concept="3clFbF" id="3JSrgvO6flX" role="3cqZAp">
+          <node concept="3clFbT" id="3JSrgvO6flW" role="3clFbG">
             <property role="3clFbU" value="true" />
           </node>
         </node>

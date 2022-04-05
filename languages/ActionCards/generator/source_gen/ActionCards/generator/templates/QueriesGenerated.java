@@ -694,6 +694,9 @@ public class QueriesGenerated extends QueryProviderBase {
   public static SNode insertMacro_Query_30_0(final InsertMacroContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.availabilityExpression$49$l);
   }
+  public static SNode insertMacro_Query_31_0(final InsertMacroContext _context) {
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.expression$OeHI);
+  }
   public static Object varMacro_Value_3_0(final TemplateVarContext _context) {
     return (SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG);
   }
@@ -1336,6 +1339,7 @@ public class QueriesGenerated extends QueryProviderBase {
     imqMethods.put("8149202941060134583", new IMQ(4));
     imqMethods.put("1758249876498210425", new IMQ(5));
     imqMethods.put("4321323723367491067", new IMQ(6));
+    imqMethods.put("4321323723389467240", new IMQ(7));
   }
   @NotNull
   @Override
@@ -1365,6 +1369,8 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.insertMacro_Query_21_0(ctx);
         case 6:
           return QueriesGenerated.insertMacro_Query_30_0(ctx);
+        case 7:
+          return QueriesGenerated.insertMacro_Query_31_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -1465,6 +1471,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink attendanceRoute$f8XV = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, 0x18668ef2739f49dfL, "attendanceRoute");
     /*package*/ static final SContainmentLink ArrivalLocation$5hIS = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x637eade0e62ce2b8L, 0xaabf015bf63b5d0L, "ArrivalLocation");
     /*package*/ static final SContainmentLink availabilityExpression$49$l = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3bf86d07f23cf033L, 0x3bf86d07f260cb7eL, "availabilityExpression");
+    /*package*/ static final SContainmentLink expression$OeHI = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3bf86d07f418f43dL, 0x3bf86d07f4a23f68L, "expression");
   }
 
   private static final class CONCEPTS {

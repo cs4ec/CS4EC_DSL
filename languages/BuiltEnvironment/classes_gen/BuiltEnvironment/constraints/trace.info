@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debug-info version="2">
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123140:jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070462154015:jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" />
+  <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="10,0,20,0" name="BuiltEnvironment.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,29,0" name="BuiltEnvironment.constraints.ConstraintsAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:fc240a57-b816-482c-873a-1f70dcfe2c1d(BuiltEnvironment.constraints)/4321323723391692983">
+    <file name="TimeOfDayVariable_Constraints.java">
+      <node id="4321323723391692983" at="10,42,11,41" concept="2" />
+      <node id="4321323723391692983" at="15,0,16,0" concept="1" trace="TimeOfDayVariable$X4" />
+      <node id="4321323723391692983" at="10,0,13,0" concept="0" trace="TimeOfDayVariable_Constraints#()V" />
+      <scope id="4321323723391692983" at="10,42,11,41" />
+      <scope id="4321323723391692983" at="10,0,13,0" />
+      <unit id="4321323723391692983" at="14,0,17,0" name="BuiltEnvironment.constraints.TimeOfDayVariable_Constraints$CONCEPTS" />
+      <unit id="4321323723391692983" at="9,0,18,0" name="BuiltEnvironment.constraints.TimeOfDayVariable_Constraints" />
     </file>
   </root>
 </debug-info>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="ActionCards" uuid="b3cac82c-d024-46bc-b485-624ad80c3cc2" languageVersion="0" moduleVersion="0">
+<language namespace="ActionCards" uuid="b3cac82c-d024-46bc-b485-624ad80c3cc2" languageVersion="1" moduleVersion="1">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -65,11 +65,11 @@
         <language slang="l:6b277d9a-d52d-416f-a209-1919bd737f50:org.iets3.core.expr.simpleTypes" version="1" />
       </languageVersions>
       <dependencyVersions>
-        <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="0" />
+        <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="1" />
         <module reference="18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)" version="0" />
         <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-        <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="0" />
+        <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
         <module reference="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" version="0" />
         <module reference="4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
@@ -185,7 +185,7 @@
     <language slang="l:71934284-d7d1-45ee-a054-8c072591085f:org.iets3.core.expr.toplevel" version="4" />
   </languageVersions>
   <dependencyVersions>
-    <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="0" />
+    <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="1" />
     <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
     <module reference="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" version="0" />

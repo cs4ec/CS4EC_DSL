@@ -27,7 +27,9 @@
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
-      <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi" />
+      <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi">
+        <child id="1078153129734" name="inspectedCellModel" index="6VMZX" />
+      </concept>
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
         <child id="1140524464359" name="emptyCellModel" index="2czzBI" />
@@ -62,6 +64,7 @@
       <concept id="1215007883204" name="jetbrains.mps.lang.editor.structure.PaddingLeftStyleClassItem" flags="ln" index="3$7fVu" />
       <concept id="1215007897487" name="jetbrains.mps.lang.editor.structure.PaddingRightStyleClassItem" flags="ln" index="3$7jql" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
@@ -976,6 +979,50 @@
         <property role="3F0ifm" value="availability" />
       </node>
       <node concept="l2Vlx" id="3JSrgvMHnY3" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3JSrgvOcAjP">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="3z3g:3JSrgvOcAjH" resolve="DateTimeNowVariable" />
+    <node concept="3EZMnI" id="3JSrgvOcAjR" role="2wV5jI">
+      <node concept="3F0ifn" id="3JSrgvOcAjY" role="3EZMnx">
+        <property role="3F0ifm" value="current time" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvOcAjU" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3JSrgvOatCh">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="3z3g:3JSrgvOatC0" resolve="TimeOfDayVariable" />
+    <node concept="3EZMnI" id="3JSrgvOatCj" role="2wV5jI">
+      <node concept="3F0A7n" id="3JSrgvOatCq" role="3EZMnx">
+        <property role="1$x2rV" value="00:00" />
+        <ref role="1NtTu8" to="3z3g:3JSrgvOatC1" resolve="time" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvOatCm" role="2iSdaV" />
+    </node>
+    <node concept="3EZMnI" id="3JSrgvOgU0i" role="6VMZX">
+      <node concept="3F0A7n" id="3JSrgvOgU0p" role="3EZMnx">
+        <property role="1$x2rV" value="00:00" />
+        <ref role="1NtTu8" to="3z3g:3JSrgvOatC1" resolve="time" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvOgU0l" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3JSrgvOCzXh">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="3z3g:3JSrgvOCzX7" resolve="TimeOfDayWrapper" />
+    <node concept="3EZMnI" id="3JSrgvOCzXj" role="2wV5jI">
+      <node concept="3F1sOY" id="3JSrgvOCzXt" role="3EZMnx">
+        <ref role="1NtTu8" to="3z3g:3JSrgvOCzX8" resolve="time" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvOCzXm" role="2iSdaV" />
+    </node>
+    <node concept="3EZMnI" id="3JSrgvOCzXy" role="6VMZX">
+      <node concept="3F1sOY" id="3JSrgvOCzXz" role="3EZMnx">
+        <ref role="1NtTu8" to="3z3g:3JSrgvOCzX8" resolve="time" />
+      </node>
+      <node concept="l2Vlx" id="3JSrgvOCzX$" role="2iSdaV" />
     </node>
   </node>
 </model>

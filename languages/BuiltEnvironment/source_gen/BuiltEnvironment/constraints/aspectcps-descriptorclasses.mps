@@ -8,8 +8,10 @@
   <imports>
     <import index="9kwm" ref="r:fc240a57-b816-482c-873a-1f70dcfe2c1d(BuiltEnvironment.constraints)" />
     <import index="ze1i" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.runtime(MPS.Core/)" />
+    <import index="2k9e" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.adapter.structure(MPS.Core/)" />
     <import index="79pl" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.runtime.base(MPS.Core/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
+    <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -23,6 +25,13 @@
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
+      <concept id="1070475587102" name="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" flags="nn" index="XkiVB" />
+      <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
+        <property id="1070475926801" name="value" index="Xl_RC" />
+      </concept>
+      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
+        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
+      </concept>
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
         <child id="1165602531693" name="superclass" index="1zkMxy" />
       </concept>
@@ -32,6 +41,9 @@
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
+      </concept>
+      <concept id="4269842503726207156" name="jetbrains.mps.baseLanguage.structure.LongLiteral" flags="nn" index="1adDum">
+        <property id="4269842503726207157" name="value" index="1adDun" />
       </concept>
       <concept id="1068580123132" name="jetbrains.mps.baseLanguage.structure.BaseMethodDeclaration" flags="ng" index="3clF44">
         <property id="1181808852946" name="isFinal" index="DiZV1" />
@@ -82,10 +94,29 @@
         <reference id="3864140621129713363" name="node" index="39e2AS" />
       </concept>
     </language>
+    <language id="df345b11-b8c7-4213-ac66-48d2a9b75d88" name="jetbrains.mps.baseLanguageInternal">
+      <concept id="1173996401517" name="jetbrains.mps.baseLanguageInternal.structure.InternalNewExpression" flags="nn" index="1nCR9W">
+        <property id="1173996588177" name="fqClassName" index="1nD$Q0" />
+        <child id="1179332974947" name="type" index="2lIhxL" />
+      </concept>
+      <concept id="4927083583736784422" name="jetbrains.mps.baseLanguageInternal.structure.ExtractToSingleConstantExpression" flags="ng" index="1BaE9c">
+        <property id="3566113306135792467" name="baseContainerName" index="1ouuDV" />
+        <property id="4927083583736815155" name="uniqueFieldName" index="1BaxDp" />
+        <child id="4927083583736819744" name="expression" index="1Bazha" />
+      </concept>
+    </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="6677504323281689838" name="jetbrains.mps.lang.smodel.structure.SConceptType" flags="in" index="3bZ5Sz" />
+      <concept id="1154546950173" name="jetbrains.mps.lang.smodel.structure.ConceptReference" flags="ng" index="3gn64h">
+        <reference id="1154546997487" name="concept" index="3gnhBz" />
+      </concept>
+      <concept id="6039268229364358244" name="jetbrains.mps.lang.smodel.structure.ExactConceptCase" flags="ng" index="1pnPoh">
+        <child id="6039268229364358388" name="body" index="1pnPq1" />
+        <child id="6039268229364358387" name="concept" index="1pnPq6" />
+      </concept>
       <concept id="5944356402132808749" name="jetbrains.mps.lang.smodel.structure.ConceptSwitchStatement" flags="nn" index="1_3QMa">
         <child id="6039268229365417680" name="defaultBlock" index="1prKM_" />
+        <child id="5944356402132808753" name="case" index="1_3QMm" />
         <child id="5944356402132808752" name="expression" index="1_3QMn" />
       </concept>
     </language>
@@ -131,13 +162,28 @@
           <node concept="37vLTw" id="h" role="1_3QMn">
             <ref role="3cqZAo" node="c" resolve="concept" />
           </node>
-          <node concept="3clFbS" id="i" role="1prKM_" />
+          <node concept="1pnPoh" id="i" role="1_3QMm">
+            <node concept="3clFbS" id="k" role="1pnPq1">
+              <node concept="3cpWs6" id="m" role="3cqZAp">
+                <node concept="1nCR9W" id="n" role="3cqZAk">
+                  <property role="1nD$Q0" value="BuiltEnvironment.constraints.TimeOfDayVariable_Constraints" />
+                  <node concept="3uibUv" id="o" role="2lIhxL">
+                    <ref role="3uigEE" to="ze1i:~ConstraintsDescriptor" resolve="ConstraintsDescriptor" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3gn64h" id="l" role="1pnPq6">
+              <ref role="3gnhBz" to="3z3g:3JSrgvOatC0" resolve="TimeOfDayVariable" />
+            </node>
+          </node>
+          <node concept="3clFbS" id="j" role="1prKM_" />
         </node>
         <node concept="3cpWs6" id="g" role="3cqZAp">
-          <node concept="2ShNRf" id="j" role="3cqZAk">
-            <node concept="1pGfFk" id="k" role="2ShVmc">
+          <node concept="2ShNRf" id="p" role="3cqZAk">
+            <node concept="1pGfFk" id="q" role="2ShVmc">
               <ref role="37wK5l" to="79pl:~BaseConstraintsDescriptor.&lt;init&gt;(org.jetbrains.mps.openapi.language.SAbstractConcept)" resolve="BaseConstraintsDescriptor" />
-              <node concept="37vLTw" id="l" role="37wK5m">
+              <node concept="37vLTw" id="r" role="37wK5m">
                 <ref role="3cqZAo" node="c" resolve="concept" />
               </node>
             </node>
@@ -146,15 +192,72 @@
       </node>
     </node>
   </node>
-  <node concept="39dXUE" id="m">
-    <node concept="39e2AJ" id="n" role="39e2AI">
+  <node concept="39dXUE" id="s">
+    <node concept="39e2AJ" id="t" role="39e2AI">
       <property role="39e3Y2" value="aspectDescriptorClass" />
-      <node concept="39e2AG" id="o" role="39e3Y0">
+      <node concept="39e2AG" id="u" role="39e3Y0">
         <property role="2mV_xN" value="true" />
-        <node concept="39e2AT" id="p" role="39e2AY">
+        <node concept="39e2AT" id="v" role="39e2AY">
           <ref role="39e2AS" node="0" resolve="ConstraintsAspectDescriptor" />
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="312cEu" id="w">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="TimeOfDayVariable_Constraints" />
+    <uo k="s:originTrace" v="n:4321323723391692983" />
+    <node concept="3Tm1VV" id="x" role="1B3o_S">
+      <uo k="s:originTrace" v="n:4321323723391692983" />
+    </node>
+    <node concept="3uibUv" id="y" role="1zkMxy">
+      <ref role="3uigEE" to="79pl:~BaseConstraintsDescriptor" resolve="BaseConstraintsDescriptor" />
+      <uo k="s:originTrace" v="n:4321323723391692983" />
+    </node>
+    <node concept="3clFbW" id="z" role="jymVt">
+      <uo k="s:originTrace" v="n:4321323723391692983" />
+      <node concept="3cqZAl" id="_" role="3clF45">
+        <uo k="s:originTrace" v="n:4321323723391692983" />
+      </node>
+      <node concept="3clFbS" id="A" role="3clF47">
+        <uo k="s:originTrace" v="n:4321323723391692983" />
+        <node concept="XkiVB" id="C" role="3cqZAp">
+          <ref role="37wK5l" to="79pl:~BaseConstraintsDescriptor.&lt;init&gt;(org.jetbrains.mps.openapi.language.SAbstractConcept)" resolve="BaseConstraintsDescriptor" />
+          <uo k="s:originTrace" v="n:4321323723391692983" />
+          <node concept="1BaE9c" id="D" role="37wK5m">
+            <property role="1ouuDV" value="CONCEPTS" />
+            <property role="1BaxDp" value="TimeOfDayVariable$X4" />
+            <uo k="s:originTrace" v="n:4321323723391692983" />
+            <node concept="2YIFZM" id="E" role="1Bazha">
+              <ref role="1Pybhc" to="2k9e:~MetaAdapterFactory" resolve="MetaAdapterFactory" />
+              <ref role="37wK5l" to="2k9e:~MetaAdapterFactory.getConcept(long,long,long,java.lang.String)" resolve="getConcept" />
+              <uo k="s:originTrace" v="n:4321323723391692983" />
+              <node concept="1adDum" id="F" role="37wK5m">
+                <property role="1adDun" value="0x1a0150acdda54129L" />
+                <uo k="s:originTrace" v="n:4321323723391692983" />
+              </node>
+              <node concept="1adDum" id="G" role="37wK5m">
+                <property role="1adDun" value="0x824e01dce96fdea4L" />
+                <uo k="s:originTrace" v="n:4321323723391692983" />
+              </node>
+              <node concept="1adDum" id="H" role="37wK5m">
+                <property role="1adDun" value="0x3bf86d07f429da00L" />
+                <uo k="s:originTrace" v="n:4321323723391692983" />
+              </node>
+              <node concept="Xl_RD" id="I" role="37wK5m">
+                <property role="Xl_RC" value="BuiltEnvironment.structure.TimeOfDayVariable" />
+                <uo k="s:originTrace" v="n:4321323723391692983" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm1VV" id="B" role="1B3o_S">
+        <uo k="s:originTrace" v="n:4321323723391692983" />
+      </node>
+    </node>
+    <node concept="2tJIrI" id="$" role="jymVt">
+      <uo k="s:originTrace" v="n:4321323723391692983" />
     </node>
   </node>
 </model>

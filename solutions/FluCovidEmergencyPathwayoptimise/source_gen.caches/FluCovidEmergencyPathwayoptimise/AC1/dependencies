@@ -279,6 +279,7 @@
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
@@ -290,8 +291,10 @@
     <classNode dependClassName="simcore.action.InstantBehaviourStep" />
     <classNode dependClassName="simcore.action.PassiveBehaviourStep" />
     <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Locatable" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.map_PatientProfile">
@@ -319,7 +322,7 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.patientGenerator_0">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />
@@ -337,7 +340,7 @@
     <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
   </dependency>
   <dependency className="FluCovidEmergencyPathwayoptimise.AC1.patientGenerator_1">
-    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />

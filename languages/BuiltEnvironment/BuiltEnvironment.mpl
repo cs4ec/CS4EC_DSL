@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="BuiltEnvironment" uuid="1a0150ac-dda5-4129-824e-01dce96fdea4" languageVersion="0" moduleVersion="0">
+<language namespace="BuiltEnvironment" uuid="1a0150ac-dda5-4129-824e-01dce96fdea4" languageVersion="1" moduleVersion="1">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -44,7 +44,7 @@
       </languageVersions>
       <dependencyVersions>
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-        <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="0" />
+        <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
         <module reference="4516f195-edd3-4fc4-aad3-8381d7fff80a(BuiltEnvironment.generator00)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
@@ -110,7 +110,7 @@
   <dependencyVersions>
     <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-    <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="0" />
+    <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" version="0" />
@@ -150,6 +150,7 @@
   </dependencyVersions>
   <extendedLanguages>
     <extendedLanguage>7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)</extendedLanguage>
+    <extendedLanguage>b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)</extendedLanguage>
   </extendedLanguages>
 </language>
 

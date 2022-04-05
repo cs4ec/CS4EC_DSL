@@ -5,6 +5,8 @@ package BuiltEnvironment.structure;
 import jetbrains.mps.smodel.runtime.BaseStructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptDescriptor;
 import jetbrains.mps.smodel.runtime.EnumerationDescriptor;
+import jetbrains.mps.smodel.runtime.ConstrainedStringDatatypeDescriptor;
+import jetbrains.mps.smodel.runtime.ConstrainedStringDatatypeDescriptorImpl;
 import java.util.Collection;
 import java.util.Arrays;
 import org.jetbrains.annotations.Nullable;
@@ -20,6 +22,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAdmissionBay = createDescriptorForAdmissionBay();
   /*package*/ final ConceptDescriptor myConceptAdmissionBayList = createDescriptorForAdmissionBayList();
   /*package*/ final ConceptDescriptor myConceptArea = createDescriptorForArea();
+  /*package*/ final ConceptDescriptor myConceptDateTimeNowVariable = createDescriptorForDateTimeNowVariable();
   /*package*/ final ConceptDescriptor myConceptMapImporter = createDescriptorForMapImporter();
   /*package*/ final ConceptDescriptor myConceptResource = createDescriptorForResource();
   /*package*/ final ConceptDescriptor myConceptResourceAllocation = createDescriptorForResourceAllocation();
@@ -28,10 +31,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptRoomInstanceDefinition = createDescriptorForRoomInstanceDefinition();
   /*package*/ final ConceptDescriptor myConceptRoomType = createDescriptorForRoomType();
   /*package*/ final ConceptDescriptor myConceptScenarioBuilder = createDescriptorForScenarioBuilder();
+  /*package*/ final ConceptDescriptor myConceptTimeOfDayVariable = createDescriptorForTimeOfDayVariable();
+  /*package*/ final ConceptDescriptor myConceptTimeOfDayWrapper = createDescriptorForTimeOfDayWrapper();
   /*package*/ final ConceptDescriptor myConceptWallDefinition = createDescriptorForWallDefinition();
   /*package*/ final ConceptDescriptor myConceptWallInstanceDefinition = createDescriptorForWallInstanceDefinition();
   /*package*/ final EnumerationDescriptor myEnumerationDirection = new EnumerationDescriptor_Direction();
   /*package*/ final EnumerationDescriptor myEnumerationOccupiableTypes = new EnumerationDescriptor_OccupiableTypes();
+  /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypetimeOfDay = new ConstrainedStringDatatypeDescriptorImpl(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f4217ae0L, "timeOfDay", "r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/4321323723390024416", "[0-9][0-9]:[0-9][0-9]");
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -49,7 +55,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptMapImporter, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptWallDefinition, myConceptWallInstanceDefinition);
+    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptDateTimeNowVariable, myConceptMapImporter, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptTimeOfDayVariable, myConceptTimeOfDayWrapper, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -64,6 +70,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAdmissionBayList;
       case LanguageConceptSwitch.Area:
         return myConceptArea;
+      case LanguageConceptSwitch.DateTimeNowVariable:
+        return myConceptDateTimeNowVariable;
       case LanguageConceptSwitch.MapImporter:
         return myConceptMapImporter;
       case LanguageConceptSwitch.Resource:
@@ -80,6 +88,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptRoomType;
       case LanguageConceptSwitch.ScenarioBuilder:
         return myConceptScenarioBuilder;
+      case LanguageConceptSwitch.TimeOfDayVariable:
+        return myConceptTimeOfDayVariable;
+      case LanguageConceptSwitch.TimeOfDayWrapper:
+        return myConceptTimeOfDayWrapper;
       case LanguageConceptSwitch.WallDefinition:
         return myConceptWallDefinition;
       case LanguageConceptSwitch.WallInstanceDefinition:
@@ -91,7 +103,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationDirection, myEnumerationOccupiableTypes);
+    return Arrays.asList(myEnumerationDirection, myEnumerationOccupiableTypes, myCSDatatypetimeOfDay);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -134,6 +146,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("rooms", 0x3c282c112f249083L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L).optional(true).ordered(true).multiple(true).origin("4334763093661094019").done();
     b.aggregate("resourceNumbers", 0x5966f1c0f4192c8bL).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07ef54c6b7L).optional(true).ordered(true).multiple(true).origin("6442102128031378571").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForDateTimeNowVariable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "DateTimeNowVariable", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f43264edL);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/4321323723391132909");
+    b.version(2);
+    b.alias("current time");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForMapImporter() {
@@ -220,6 +241,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("runDuration", 0x4f82e3275d8c1a55L).type(PrimitiveTypeId.INTEGER).origin("5729391434181384789").done();
     b.aggregate("agents", 0x35463334ce306babL).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x35463334ce2f7b02L).optional(true).ordered(true).multiple(true).origin("3838812034270522283").done();
     b.aggregate("relationships", 0x78ac309637c9f4L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x78ac3096379b5dL).optional(true).ordered(true).multiple(true).origin("33966321883924980").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTimeOfDayVariable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "TimeOfDayVariable", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f429da00L);
+    b.class_(false, false, false);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/4321323723390573056");
+    b.version(2);
+    b.property("time", 0x3bf86d07f429da01L).type(MetaIdFactory.dataTypeId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f4217ae0L)).origin("4321323723390573057").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTimeOfDayWrapper() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "TimeOfDayWrapper", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f4a23f47L);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/4321323723398463303");
+    b.version(2);
+    b.aggregate("time", 0x3bf86d07f4a23f48L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f429da00L).optional(false).ordered(true).multiple(false).origin("4321323723398463304").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForWallDefinition() {

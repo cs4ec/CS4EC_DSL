@@ -13,6 +13,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AdmissionBay;
   private ConceptPresentation props_AdmissionBayList;
   private ConceptPresentation props_Area;
+  private ConceptPresentation props_DateTimeNowVariable;
   private ConceptPresentation props_MapImporter;
   private ConceptPresentation props_Resource;
   private ConceptPresentation props_ResourceAllocation;
@@ -21,6 +22,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RoomInstanceDefinition;
   private ConceptPresentation props_RoomType;
   private ConceptPresentation props_ScenarioBuilder;
+  private ConceptPresentation props_TimeOfDayVariable;
+  private ConceptPresentation props_TimeOfDayWrapper;
   private ConceptPresentation props_WallDefinition;
   private ConceptPresentation props_WallInstanceDefinition;
 
@@ -58,6 +61,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Area = cpb.create();
         }
         return props_Area;
+      case LanguageConceptSwitch.DateTimeNowVariable:
+        if (props_DateTimeNowVariable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("current time");
+          props_DateTimeNowVariable = cpb.create();
+        }
+        return props_DateTimeNowVariable;
       case LanguageConceptSwitch.MapImporter:
         if (props_MapImporter == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -116,6 +126,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ScenarioBuilder = cpb.create();
         }
         return props_ScenarioBuilder;
+      case LanguageConceptSwitch.TimeOfDayVariable:
+        if (props_TimeOfDayVariable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("TimeOfDayVariable");
+          props_TimeOfDayVariable = cpb.create();
+        }
+        return props_TimeOfDayVariable;
+      case LanguageConceptSwitch.TimeOfDayWrapper:
+        if (props_TimeOfDayWrapper == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("TimeOfDayWrapper");
+          props_TimeOfDayWrapper = cpb.create();
+        }
+        return props_TimeOfDayWrapper;
       case LanguageConceptSwitch.WallDefinition:
         if (props_WallDefinition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

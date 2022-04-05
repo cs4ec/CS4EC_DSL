@@ -484,7 +484,7 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.patientGenerator_0">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />
@@ -502,7 +502,7 @@
     <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.patientGenerator_1">
-    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />

@@ -13,16 +13,19 @@ public final class LanguageConceptSwitch {
   public static final int AdmissionBay = 1;
   public static final int AdmissionBayList = 2;
   public static final int Area = 3;
-  public static final int MapImporter = 4;
-  public static final int Resource = 5;
-  public static final int ResourceAllocation = 6;
-  public static final int ResourceAvailabilityVariable = 7;
-  public static final int Room = 8;
-  public static final int RoomInstanceDefinition = 9;
-  public static final int RoomType = 10;
-  public static final int ScenarioBuilder = 11;
-  public static final int WallDefinition = 12;
-  public static final int WallInstanceDefinition = 13;
+  public static final int DateTimeNowVariable = 4;
+  public static final int MapImporter = 5;
+  public static final int Resource = 6;
+  public static final int ResourceAllocation = 7;
+  public static final int ResourceAvailabilityVariable = 8;
+  public static final int Room = 9;
+  public static final int RoomInstanceDefinition = 10;
+  public static final int RoomType = 11;
+  public static final int ScenarioBuilder = 12;
+  public static final int TimeOfDayVariable = 13;
+  public static final int TimeOfDayWrapper = 14;
+  public static final int WallDefinition = 15;
+  public static final int WallInstanceDefinition = 16;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1a0150acdda54129L, 0x824e01dce96fdea4L);
@@ -30,6 +33,7 @@ public final class LanguageConceptSwitch {
     builder.put(0xc489c6b16b4a524L, AdmissionBay);
     builder.put(0xc489c6b16b4a529L, AdmissionBayList);
     builder.put(0x3c282c112f249082L, Area);
+    builder.put(0x3bf86d07f43264edL, DateTimeNowVariable);
     builder.put(0xaabf015bed74217L, MapImporter);
     builder.put(0x3bf86d07f032c8d7L, Resource);
     builder.put(0x3bf86d07ef54c6b7L, ResourceAllocation);
@@ -38,6 +42,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x3c282c112f249045L, RoomInstanceDefinition);
     builder.put(0x5dafd33966e8fe19L, RoomType);
     builder.put(0x35463334ce2f7b00L, ScenarioBuilder);
+    builder.put(0x3bf86d07f429da00L, TimeOfDayVariable);
+    builder.put(0x3bf86d07f4a23f47L, TimeOfDayWrapper);
     builder.put(0x109830a68a82ca51L, WallDefinition);
     builder.put(0x109830a68a78a1e8L, WallInstanceDefinition);
     myIndex = builder.seal();

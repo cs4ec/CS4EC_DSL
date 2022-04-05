@@ -13,6 +13,7 @@ import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
+import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.Locatable;
 import simcore.action.PassiveBehaviourStep;

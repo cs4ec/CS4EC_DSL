@@ -9,6 +9,5 @@
 	<classpathentry kind="con" path="GROOVY_SUPPORT"/>
 	<classpathentry kind="con" path="GROOVY_DSL_SUPPORT"/>
 	<classpathentry kind="con" path="REPAST_SIMPHONY_SUPPORT"/>
-	<classpathentry kind="lib" path="C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/org.iets3.core.expr.genjava/org.iets3.core.expr.genjava.simpleTypes.rt.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

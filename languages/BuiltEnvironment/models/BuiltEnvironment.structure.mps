@@ -9,8 +9,9 @@
   <imports>
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
+    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="68mc" ref="r:2a10821d-612f-4a73-b7b0-ed6b57106321(com.mbeddr.mpsutil.filepicker.structure)" implicit="true" />
-    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -23,6 +24,9 @@
       </concept>
       <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
         <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
+      </concept>
+      <concept id="1082978499127" name="jetbrains.mps.lang.structure.structure.ConstrainedDataTypeDeclaration" flags="ng" index="Az7Fb">
+        <property id="1083066089218" name="constraint" index="FLfZY" />
       </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
@@ -413,6 +417,43 @@
       <property role="20kJfa" value="resource" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3JSrgvKcGzn" resolve="Resource" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3JSrgvOcAjH">
+    <property role="EcuMT" value="4321323723391132909" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="DateTimeNowVariable" />
+    <property role="34LRSv" value="current time" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="Az7Fb" id="3JSrgvO8nFw">
+    <property role="3F6X1D" value="4321323723390024416" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="timeOfDay" />
+    <property role="FLfZY" value="[0-9][0-9]:[0-9][0-9]" />
+  </node>
+  <node concept="1TIwiD" id="3JSrgvOatC0">
+    <property role="EcuMT" value="4321323723390573056" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="TimeOfDayVariable" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3JSrgvOatC1" role="1TKVEl">
+      <property role="IQ2nx" value="4321323723390573057" />
+      <property role="TrG5h" value="time" />
+      <ref role="AX2Wp" node="3JSrgvO8nFw" resolve="timeOfDay" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3JSrgvOCzX7">
+    <property role="EcuMT" value="4321323723398463303" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="TimeOfDayWrapper" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyj" id="3JSrgvOCzX8" role="1TKVEi">
+      <property role="IQ2ns" value="4321323723398463304" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="time" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3JSrgvOatC0" resolve="TimeOfDayVariable" />
     </node>
   </node>
 </model>

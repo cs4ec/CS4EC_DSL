@@ -59,11 +59,12 @@ public final class LanguageConceptSwitch {
   public static final int SymptomList = 47;
   public static final int Test = 48;
   public static final int TestCapturedDisease = 49;
-  public static final int Unvaccinated = 50;
-  public static final int VaccinationStatus = 51;
-  public static final int VaccineStatusCondition = 52;
-  public static final int VaccineStatusProperty = 53;
-  public static final int Yes = 54;
+  public static final int TimeOfDayCondition = 50;
+  public static final int Unvaccinated = 51;
+  public static final int VaccinationStatus = 52;
+  public static final int VaccineStatusCondition = 53;
+  public static final int VaccineStatusProperty = 54;
+  public static final int Yes = 55;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L);
@@ -117,6 +118,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x6ca3e29db47911f9L, SymptomList);
     builder.put(0x6ca3e29db479214fL, Test);
     builder.put(0x549fe0474671cd38L, TestCapturedDisease);
+    builder.put(0x3bf86d07f418f43dL, TimeOfDayCondition);
     builder.put(0x18668ef26fc61167L, Unvaccinated);
     builder.put(0x18668ef26fc61141L, VaccinationStatus);
     builder.put(0x18668ef26f431e45L, VaccineStatusCondition);

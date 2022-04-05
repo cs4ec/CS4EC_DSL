@@ -14,8 +14,11 @@ import repast.simphony.space.graph.Network;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
+import simcore.basicStructures.Locatable;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import simcore.basicStructures.TimeKeeper;
 import java.util.ArrayList;
 import simcore.basicStructures.Board;
 import simcore.action.PassiveBehaviourStep;
@@ -120,6 +123,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -162,7 +166,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic") {
+      if (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 3) + (60 * 0)))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -212,6 +216,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -254,7 +259,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Asymptomatic") {
+      if (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 3) + (60 * 0)))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -336,6 +341,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -378,29 +384,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0b extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = SideRoom.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0b extends InstantBehaviourStep {
@@ -513,6 +502,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -555,29 +545,12 @@ public class WardStaff extends Actor {
   }
   public class UseAction_d0b_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
     public UseAction_d0b_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-      target = SideRoom.getInstance();
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-      ((Room) concreteTarget).getParentArea().decrementResource(LabPCR.getInstance());
+      ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
   public class Choice_e0b_1 extends InstantBehaviourStep {
@@ -1170,6 +1143,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1235,6 +1209,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1300,6 +1275,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 
@@ -1379,6 +1355,7 @@ public class WardStaff extends Actor {
         }
       }
 
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
       MoveTowards(concreteTarget);
     }
 

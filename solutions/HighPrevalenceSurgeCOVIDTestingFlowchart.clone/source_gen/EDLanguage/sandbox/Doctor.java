@@ -178,11 +178,11 @@ public class Doctor extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_6 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
+    public MoveAction_a0a_6(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }

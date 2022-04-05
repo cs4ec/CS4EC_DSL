@@ -772,6 +772,12 @@
         <ref role="v9R2y" node="3JSrgvMM1wD" resolve="reduce_ResourceAvailableCondition" />
       </node>
     </node>
+    <node concept="3aamgX" id="3JSrgvO6fCE" role="3acgRq">
+      <ref role="30HIoZ" to="e88n:3JSrgvO6fgX" resolve="TimeOfDayCondition" />
+      <node concept="j$656" id="3JSrgvO6fCF" role="1lVwrX">
+        <ref role="v9R2y" node="3JSrgvO6fCC" resolve="reduce_TimeOfDayCondition" />
+      </node>
+    </node>
   </node>
   <node concept="3Vql55" id="4FTL$vJIr_A">
     <property role="TrG5h" value="map_StaffType" />
@@ -6668,6 +6674,28 @@
                 <node concept="30H73N" id="3JSrgvMMqpV" role="2Oq$k0" />
                 <node concept="3TrEf2" id="3JSrgvMMqUd" role="2OqNvi">
                   <ref role="3Tt5mk" to="e88n:3JSrgvMocHY" resolve="availabilityExpression" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="3JSrgvO6fCC">
+    <property role="TrG5h" value="reduce_TimeOfDayCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="3gUMe" to="e88n:3JSrgvO6fgX" resolve="TimeOfDayCondition" />
+    <node concept="2vmvVl" id="3JSrgvO6fDx" role="13RCb5">
+      <node concept="raruj" id="3JSrgvO6fD$" role="lGtFl" />
+      <node concept="3_AbJx" id="3JSrgvO6fDC" role="lGtFl">
+        <node concept="3_AbJw" id="3JSrgvO6fDD" role="3_A0Ny">
+          <node concept="3clFbS" id="3JSrgvO6fDE" role="2VODD2">
+            <node concept="3clFbF" id="3JSrgvOGQAy" role="3cqZAp">
+              <node concept="2OqwBi" id="3JSrgvOGQNK" role="3clFbG">
+                <node concept="30H73N" id="3JSrgvOGQAx" role="2Oq$k0" />
+                <node concept="3TrEf2" id="3JSrgvOGR6N" role="2OqNvi">
+                  <ref role="3Tt5mk" to="e88n:3JSrgvOCzXC" resolve="expression" />
                 </node>
               </node>
             </node>

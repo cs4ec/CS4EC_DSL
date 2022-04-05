@@ -66,6 +66,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptSymptomList = createDescriptorForSymptomList();
   /*package*/ final ConceptDescriptor myConceptTest = createDescriptorForTest();
   /*package*/ final ConceptDescriptor myConceptTestCapturedDisease = createDescriptorForTestCapturedDisease();
+  /*package*/ final ConceptDescriptor myConceptTimeOfDayCondition = createDescriptorForTimeOfDayCondition();
   /*package*/ final ConceptDescriptor myConceptUnvaccinated = createDescriptorForUnvaccinated();
   /*package*/ final ConceptDescriptor myConceptVaccinationStatus = createDescriptorForVaccinationStatus();
   /*package*/ final ConceptDescriptor myConceptVaccineStatusCondition = createDescriptorForVaccineStatusCondition();
@@ -91,7 +92,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardReference, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
+    return Arrays.asList(myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardReference, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
   }
 
   @Override
@@ -198,6 +199,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptTest;
       case LanguageConceptSwitch.TestCapturedDisease:
         return myConceptTestCapturedDisease;
+      case LanguageConceptSwitch.TimeOfDayCondition:
+        return myConceptTimeOfDayCondition;
       case LanguageConceptSwitch.Unvaccinated:
         return myConceptUnvaccinated;
       case LanguageConceptSwitch.VaccinationStatus:
@@ -699,6 +702,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("Sensitivity", 0x549fe0474671cd6fL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("6097839017212104047").done();
     b.property("Specificity", 0x549fe0474671cd70L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("6097839017212104048").done();
     b.associate("disease", 0x549fe0474671cd85L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(false).origin("6097839017212104069").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTimeOfDayCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TimeOfDayCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3bf86d07f418f43dL);
+    b.class_(false, false, false);
+    b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4321323723389465661");
+    b.version(2);
+    b.aggregate("expression", 0x3bf86d07f4a23f68L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("4321323723398463336").done();
+    b.alias("time of day condition");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForUnvaccinated() {

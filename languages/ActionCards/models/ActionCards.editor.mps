@@ -16,7 +16,7 @@
     <import index="uubw" ref="r:57494669-3aca-4a91-9957-81c283ecd636(jetbrains.mps.lang.core.util)" />
     <import index="tpcq" ref="r:00000000-0000-4000-0000-011c89590286(jetbrains.mps.lang.core.plugin)" />
     <import index="wo6c" ref="r:de91083f-90a8-4dd4-83b1-8a92d65ab81d(de.itemis.mps.editor.diagram.shapes)" />
-    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" implicit="true" />
+    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
   <registry>
@@ -2446,6 +2446,22 @@
         <ref role="1NtTu8" to="e88n:3JSrgvMocHY" resolve="availabilityExpression" />
       </node>
       <node concept="l2Vlx" id="3JSrgvMv2ot" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3JSrgvO6fh7">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="e88n:3JSrgvO6fgX" resolve="TimeOfDayCondition" />
+    <node concept="3EZMnI" id="3JSrgvO6fh9" role="2wV5jI">
+      <node concept="l2Vlx" id="3JSrgvO6fhc" role="2iSdaV" />
+      <node concept="3F1sOY" id="3JSrgvOCzXH" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3JSrgvOCzXC" resolve="expression" />
+      </node>
+    </node>
+    <node concept="3EZMnI" id="3JSrgvOy56f" role="6VMZX">
+      <node concept="l2Vlx" id="3JSrgvOy56j" role="2iSdaV" />
+      <node concept="3F1sOY" id="3JSrgvOCzXO" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3JSrgvOCzXC" resolve="expression" />
+      </node>
     </node>
   </node>
 </model>

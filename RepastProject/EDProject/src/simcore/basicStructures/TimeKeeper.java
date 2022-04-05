@@ -32,4 +32,13 @@ public class TimeKeeper {
 	public LocalDateTime getTime() {
 		return date.plusSeconds(((int)new ToolBox(this).getTime()) * secondsPerTick);
 	}
+	
+	public LocalDateTime getTimeAfterAdjustment(int hours, int minutes) {
+		
+		return date.plusSeconds(((int)new ToolBox(this).getTime()) * secondsPerTick).plusMinutes(minutes).plusHours(hours);
+	}
+	
+	public int getTimeOfDayAsInt(LocalDateTime dt) {
+		return (dt.getHour() * 3600) + (dt.getMinute()*60) + (dt.getSecond());
+	}
 }

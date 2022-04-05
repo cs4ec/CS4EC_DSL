@@ -3,11 +3,13 @@
   <persistence version="9" />
   <languages>
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="5" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
+    <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="5" />
     <devkit ref="00000000-0000-4000-0000-1de82b3a4936(jetbrains.mps.devkit.aspect.typesystem)" />
   </languages>
   <imports>
-    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
-    <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" implicit="true" />
+    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
+    <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -82,6 +84,58 @@
     <node concept="1YaCAy" id="3JSrgvMVXaC" role="1YuTPh">
       <property role="TrG5h" value="resourceAvailabilityVariable" />
       <ref role="1YaFvo" to="3z3g:3JSrgvMHnXF" resolve="ResourceAvailabilityVariable" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3JSrgvOcAk7">
+    <property role="TrG5h" value="typeof_DateTimeNowVariable" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="3JSrgvOcAk8" role="18ibNy">
+      <node concept="1Z5TYs" id="3JSrgvOcAke" role="3cqZAp">
+        <node concept="mw_s8" id="3JSrgvOcAkf" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3JSrgvOcAkg" role="mwGJk">
+            <node concept="1YBJjd" id="3JSrgvOcAli" role="1Z2MuG">
+              <ref role="1YBMHb" node="3JSrgvOcAka" resolve="dateTimeNowVariable" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3JSrgvOcAkh" role="1ZfhKB">
+          <node concept="2pJPEk" id="3JSrgvOcAki" role="mwGJk">
+            <node concept="2pJPED" id="3JSrgvOcAkj" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:78hTg1$P0UC" resolve="NumberType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3JSrgvOcAka" role="1YuTPh">
+      <property role="TrG5h" value="dateTimeNowVariable" />
+      <ref role="1YaFvo" to="3z3g:3JSrgvOcAjH" resolve="DateTimeNowVariable" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3JSrgvOEGK8">
+    <property role="TrG5h" value="typeof_TimeOfDayWrapper" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="3JSrgvOEGK9" role="18ibNy">
+      <node concept="1Z5TYs" id="3JSrgvOEGKf" role="3cqZAp">
+        <node concept="mw_s8" id="3JSrgvOEGKg" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3JSrgvOEGKh" role="mwGJk">
+            <node concept="1YBJjd" id="3JSrgvOEGKL" role="1Z2MuG">
+              <ref role="1YBMHb" node="3JSrgvOEGKb" resolve="timeOfDayWrapper" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3JSrgvOEGKj" role="1ZfhKB">
+          <node concept="2pJPEk" id="3JSrgvOEGKk" role="mwGJk">
+            <node concept="2pJPED" id="3JSrgvOEGKl" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:78hTg1$P0UC" resolve="NumberType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3JSrgvOEGKb" role="1YuTPh">
+      <property role="TrG5h" value="timeOfDayWrapper" />
+      <ref role="1YaFvo" to="3z3g:3JSrgvOCzX7" resolve="TimeOfDayWrapper" />
     </node>
   </node>
 </model>

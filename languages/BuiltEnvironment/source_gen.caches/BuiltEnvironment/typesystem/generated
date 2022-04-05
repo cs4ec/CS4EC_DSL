@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="e1e5gpvneqeqkbr1q5naxwe7rz511om">
-  <files names="TypesystemDescriptor.java:typeof_ResourceAvailabilityVariable_InferenceRule.java" />
+<product version="3" modelHash="c3k8urvte852g8rh0xvbr0uhtak1o4c">
+  <files names="TypesystemDescriptor.java:typeof_DateTimeNowVariable_InferenceRule.java:typeof_ResourceAvailabilityVariable_InferenceRule.java:typeof_TimeOfDayWrapper_InferenceRule.java" />
 </product>
 
