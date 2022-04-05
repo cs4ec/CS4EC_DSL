@@ -178,11 +178,11 @@ public class Doctor extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0a_3 extends BehaviourStep {
+  public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_3(Behaviour behaviour) {
+    public MoveAction_a0a_5(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -275,10 +275,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_d0a_1 extends BehaviourStep {
+  public class SendSignalAction_d0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_d0a_1(Behaviour behaviour) {
+    public SendSignalAction_d0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -291,10 +291,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_e0a_1 extends BehaviourStep {
+  public class StayAction_e0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_e0a_1(Behaviour behaviour) {
+    public StayAction_e0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
