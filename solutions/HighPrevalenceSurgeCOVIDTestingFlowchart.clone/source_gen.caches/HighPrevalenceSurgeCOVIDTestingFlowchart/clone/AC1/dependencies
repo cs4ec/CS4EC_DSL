@@ -42,6 +42,7 @@
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlowTestTrigger_aSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.PHEThreeExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_a_0Signal" />
@@ -124,6 +125,7 @@
     <classNode dependClassName="simcore.basicStructures.Locatable" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.EDBuilder">
