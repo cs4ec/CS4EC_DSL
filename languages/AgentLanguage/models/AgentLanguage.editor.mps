@@ -1007,10 +1007,19 @@
   </node>
   <node concept="24kQdi" id="6tNT_P6nIfh">
     <property role="3GE5qa" value="Structures" />
-    <ref role="1XX52x" to="3751:6tNT_P6ny7D" resolve="NumericExpression" />
+    <ref role="1XX52x" to="3751:6tNT_P6ny7D" resolve="ExpressionWrapper" />
     <node concept="3EZMnI" id="6tNT_P6nIfo" role="2wV5jI">
-      <node concept="3F1sOY" id="6tNT_P6nIfv" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:6tNT_P6nIf7" resolve="expression" />
+      <node concept="3F0A7n" id="3cDB1MUiygD" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3cDB1MUiy7S" resolve="value" />
+      </node>
+      <node concept="3F0ifn" id="3cDB1MTM3Bx" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+      </node>
+      <node concept="3F0A7n" id="3cDB1MTM3BD" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3cDB1MTM3Bq" resolve="repastVariableName" />
+      </node>
+      <node concept="3F0ifn" id="3cDB1MTM3BN" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
       </node>
       <node concept="l2Vlx" id="6tNT_P6nIfr" role="2iSdaV" />
     </node>
@@ -1906,6 +1915,22 @@
         <property role="3F0ifm" value="is less than" />
       </node>
       <node concept="l2Vlx" id="3JSrgvMqo3S" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2XblIMS1PMz">
+    <property role="3GE5qa" value="Structures" />
+    <ref role="1XX52x" to="3751:2XblIMS1PMe" resolve="RepastParam" />
+    <node concept="3EZMnI" id="2XblIMS1PM_" role="2wV5jI">
+      <node concept="3F0ifn" id="2XblIMS1PMG" role="3EZMnx">
+        <property role="3F0ifm" value="&lt;--(" />
+      </node>
+      <node concept="3F0A7n" id="2XblIMS1PMM" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="2XblIMS1PMU" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+      </node>
+      <node concept="l2Vlx" id="2XblIMS1PMC" role="2iSdaV" />
     </node>
   </node>
 </model>

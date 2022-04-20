@@ -18,15 +18,15 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class GrammarCellsSubstituteMenu_NumericExpression extends SubstituteMenuBase {
-  public GrammarCellsSubstituteMenu_NumericExpression() {
+public class GrammarCellsSubstituteMenu_RepastParam extends SubstituteMenuBase {
+  public GrammarCellsSubstituteMenu_RepastParam() {
     super(true);
   }
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new GrammarCellsSubstituteMenuPart_xi56us_a());
+    result.add(new GrammarCellsSubstituteMenuPart_aju906_a());
     return result;
   }
 
@@ -34,7 +34,7 @@ public class GrammarCellsSubstituteMenu_NumericExpression extends SubstituteMenu
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "NumericExpression", null));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "RepastParam", null));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -43,18 +43,18 @@ public class GrammarCellsSubstituteMenu_NumericExpression extends SubstituteMenu
   }
 
 
-  private class GrammarCellsSubstituteMenuPart_xi56us_a extends GrammarCellsSubstituteMenuPart {
+  private class GrammarCellsSubstituteMenuPart_aju906_a extends GrammarCellsSubstituteMenuPart {
     @Override
     public SModule getModule(SRepository repository) {
       return PersistenceFacade.getInstance().createModuleReference("7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)").resolve(repository);
     }
     @Override
     public SAbstractConcept getExpectedOutputConcept() {
-      return CONCEPTS.NumericExpression$uy;
+      return CONCEPTS.RepastParam$dA;
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept NumericExpression$uy = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, "AgentLanguage.structure.NumericExpression");
+    /*package*/ static final SConcept RepastParam$dA = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x2f4b56ecb8075c8eL, "AgentLanguage.structure.RepastParam");
   }
 }

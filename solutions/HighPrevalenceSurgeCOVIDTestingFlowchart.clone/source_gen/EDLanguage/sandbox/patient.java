@@ -35,6 +35,7 @@ public class patient extends Actor {
   public String CepheidCOVIDResult = "Incomplete";
   public String CepheidFluAResult = "Incomplete";
   public String CepheidFluBResult = "Incomplete";
+  public String PHEThreeAltCOVIDResult = "Incomplete";
   public String PHEThreeResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
@@ -340,6 +341,18 @@ public class patient extends Actor {
   }
   public int getCepheidFluBResultisNegative() {
     if (this.CepheidFluBResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getPHEThreeAltCOVIDResultisPositive() {
+    if (this.PHEThreeAltCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getPHEThreeAltCOVIDResultisNegative() {
+    if (this.PHEThreeAltCOVIDResult == "Negative") {
       return 1;
     }
     return 0;

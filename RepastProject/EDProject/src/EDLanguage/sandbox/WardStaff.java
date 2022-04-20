@@ -20,6 +20,7 @@ import simcore.basicStructures.Board;
 import simcore.action.PassiveBehaviourStep;
 import simcore.action.InstantBehaviourStep;
 import java.util.ArrayList;
+import repast.simphony.engine.environment.RunEnvironment;
 
 public class WardStaff extends Actor {
 
@@ -141,11 +142,11 @@ public class WardStaff extends Actor {
 
 
 
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
+    public MoveAction_a0a_3(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -185,10 +186,10 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class StayAction_c0a_3 extends BehaviourStep {
+  public class StayAction_c0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_3(Behaviour behaviour) {
+    public StayAction_c0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -233,11 +234,11 @@ public class WardStaff extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0a_7 extends BehaviourStep {
+  public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_7(Behaviour behaviour) {
+    public MoveAction_a0a_5(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -277,10 +278,10 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class StayAction_c0a_5 extends BehaviourStep {
+  public class StayAction_c0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_5(Behaviour behaviour) {
+    public StayAction_c0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -418,38 +419,38 @@ public class WardStaff extends Actor {
       }
     }
   }
-  public class Choice_f0b_1 extends InstantBehaviourStep {
+  public class Choice_f0b extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_f0b_1(Behaviour behaviour) {
+    public Choice_f0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0f0b_1(behaviour));
+        plstSteps.add(new Choice_a0f0b(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0f0b_5(behaviour));
+        plstSteps.add(new Choice_a0f0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
   }
-  public class Choice_g0b_1 extends InstantBehaviourStep {
+  public class Choice_g0b extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0b_1(Behaviour behaviour) {
+    public Choice_g0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0g0b_1(behaviour));
+        plstSteps.add(new Choice_a0g0b(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0g0b_5(behaviour));
+        plstSteps.add(new Choice_a0g0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -486,11 +487,11 @@ public class WardStaff extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0b_5 extends BehaviourStep {
+  public class MoveAction_a0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_5(Behaviour behaviour) {
+    public MoveAction_a0b_1(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -534,11 +535,11 @@ public class WardStaff extends Actor {
       return timeExecuted == 5;
     }
   }
-  public class StayAction_c0b_5 extends PassiveBehaviourStep {
+  public class StayAction_c0b_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LabPCRExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0b_5(Behaviour behaviour) {
+    public StayAction_c0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -561,9 +562,9 @@ public class WardStaff extends Actor {
       ((Room) behaviour.getBehaviourLocation()).getParentArea().decrementResource(LabPCR.getInstance());
     }
   }
-  public class Choice_e0b_3 extends InstantBehaviourStep {
+  public class Choice_e0b_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0b_3(Behaviour behaviour) {
+    public Choice_e0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -586,7 +587,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -604,7 +605,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -666,7 +667,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -684,7 +685,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -739,20 +740,38 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class Choice_f0b_5 extends InstantBehaviourStep {
+  public class Choice_f0b_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_f0b_5(Behaviour behaviour) {
+    public Choice_f0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluAInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0f0b_1(behaviour));
+        plstSteps.add(new Choice_a0f0b(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0f0b_5(behaviour));
+        plstSteps.add(new Choice_a0f0b_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0f0b extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0f0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0b(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0f0b_1(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -764,25 +783,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0b(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0f0b_1(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_a0f0b_3 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0f0b_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -837,14 +838,14 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class Choice_a0f0b_5 extends InstantBehaviourStep {
+  public class Choice_a0f0b_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0f0b_5(Behaviour behaviour) {
+    public Choice_a0f0b_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -855,14 +856,14 @@ public class WardStaff extends Actor {
       }
     }
   }
-  public class Choice_a0f0b_7 extends InstantBehaviourStep {
+  public class Choice_a0f0b_5 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0f0b_7(Behaviour behaviour) {
+    public Choice_a0f0b_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -917,20 +918,38 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class Choice_g0b_5 extends InstantBehaviourStep {
+  public class Choice_g0b_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0b_5(Behaviour behaviour) {
+    public Choice_g0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0g0b_1(behaviour));
+        plstSteps.add(new Choice_a0g0b(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Choice_a0g0b_5(behaviour));
+        plstSteps.add(new Choice_a0g0b_3(behaviour));
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0g0b extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0g0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0g0b(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0g0b_1(behaviour));
         behaviour.injectSteps(plstSteps);
       }
     }
@@ -942,25 +961,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0g0b(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0g0b_1(behaviour));
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class Choice_a0g0b_3 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0g0b_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1015,14 +1016,14 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class Choice_a0g0b_5 extends InstantBehaviourStep {
+  public class Choice_a0g0b_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0g0b_5(Behaviour behaviour) {
+    public Choice_a0g0b_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1033,14 +1034,14 @@ public class WardStaff extends Actor {
       }
     }
   }
-  public class Choice_a0g0b_7 extends InstantBehaviourStep {
+  public class Choice_a0g0b_5 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_a0g0b_7(Behaviour behaviour) {
+    public Choice_a0g0b_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1127,6 +1128,72 @@ public class WardStaff extends Actor {
       return timeExecuted == 1;
     }
   }
+  public class MoveAction_a0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0c(Behaviour behaviour) {
+      target = MainEntrance.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      behaviour.setBheaviourLocation((Locatable) concreteTarget);
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
+    }
+  }
+  public class Consequence_c0c extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_c0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "MainEntrance";
+
+    }
+  }
+  public class RemoveRelationshipAction_d0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_d0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
+      network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
+    }
+  }
   public class MoveAction_a0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -1162,72 +1229,6 @@ public class WardStaff extends Actor {
   public class OrderAction_b0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     public OrderAction_b0c_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
-
-      a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
-    }
-  }
-  public class Consequence_c0c extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_c0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "MainEntrance";
-
-    }
-  }
-  public class RemoveRelationshipAction_d0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_d0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
-      network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
-    }
-  }
-  public class MoveAction_a0c_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0c_5(Behaviour behaviour) {
-      target = MainEntrance.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_b0c_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1866,7 +1867,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1884,7 +1885,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1946,7 +1947,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1964,7 +1965,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2044,7 +2045,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2062,7 +2063,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2124,7 +2125,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2142,7 +2143,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2222,7 +2223,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2240,7 +2241,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2302,7 +2303,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2320,7 +2321,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0f_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3146,7 +3147,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0j(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3164,7 +3165,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0j(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3226,7 +3227,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0j_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3244,7 +3245,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0j_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3324,7 +3325,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0j(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3342,7 +3343,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0j(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3404,7 +3405,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0j_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3422,7 +3423,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0j_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3502,7 +3503,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0j(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3520,7 +3521,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0j(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3582,7 +3583,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0j_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3600,7 +3601,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0j_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4426,7 +4427,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0n(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4444,7 +4445,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0n(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4506,7 +4507,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0n_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4524,7 +4525,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0n_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4604,7 +4605,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0n(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4622,7 +4623,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0n(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4684,7 +4685,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0n_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4702,7 +4703,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0n_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4782,7 +4783,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0n(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4800,7 +4801,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0n(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4862,7 +4863,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0n_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4880,7 +4881,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0n_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -5266,9 +5267,9 @@ public class WardStaff extends Actor {
   public void InitTakeabed_a(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_5(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a_3(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a_1(behaviourBuilder));
     plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
     plstSteps.add(new StayAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
@@ -5284,8 +5285,8 @@ public class WardStaff extends Actor {
     plstSteps.add(new StayAction_c0b(behaviourBuilder));
     plstSteps.add(new UseAction_d0b(behaviourBuilder));
     plstSteps.add(new Choice_e0b(behaviourBuilder));
-    plstSteps.add(new Choice_f0b_1(behaviourBuilder));
-    plstSteps.add(new Choice_g0b_1(behaviourBuilder));
+    plstSteps.add(new Choice_f0b(behaviourBuilder));
+    plstSteps.add(new Choice_g0b(behaviourBuilder));
     plstSteps.add(new SendSignalAction_h0b(behaviourBuilder));
     plstSteps.add(new StayAction_i0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
@@ -5296,8 +5297,8 @@ public class WardStaff extends Actor {
   public void InitDischargeActionDischarge_c(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0c_1(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0c_1(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0c(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0c(behaviourBuilder));
     plstSteps.add(new Consequence_c0c(behaviourBuilder));
     plstSteps.add(new RemoveRelationshipAction_d0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);

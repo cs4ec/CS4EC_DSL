@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class NumericExpression_Editor extends DefaultNodeEditor {
+public class ExpressionWrapper_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new NumericExpression_EditorBuilder_a(editorContext, node).createCell();
+    return new ExpressionWrapper_EditorBuilder_a(editorContext, node).createCell();
   }
 }

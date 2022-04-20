@@ -602,7 +602,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="possibility" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6tNT_P6ny7D" resolve="NumericExpression" />
+      <ref role="20lvS9" node="6tNT_P6ny7D" resolve="ExpressionWrapper" />
     </node>
   </node>
   <node concept="1TIwiD" id="3KCb14J4_lS">
@@ -868,14 +868,17 @@
   <node concept="1TIwiD" id="6tNT_P6ny7D">
     <property role="EcuMT" value="7454555096515224041" />
     <property role="3GE5qa" value="Structures" />
-    <property role="TrG5h" value="NumericExpression" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="6tNT_P6nIf7" role="1TKVEi">
-      <property role="IQ2ns" value="7454555096515273671" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="expression" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    <property role="TrG5h" value="ExpressionWrapper" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyi" id="3cDB1MTM3Bq" role="1TKVEl">
+      <property role="IQ2nx" value="3686649417169385946" />
+      <property role="TrG5h" value="repastVariableName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="3cDB1MUiy7S" role="1TKVEl">
+      <property role="IQ2nx" value="3686649417177899512" />
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
   </node>
   <node concept="1TIwiD" id="6tNT_P6oBvW">
@@ -1654,6 +1657,22 @@
     <property role="3GE5qa" value="Structures" />
     <property role="TrG5h" value="IsLessThanOperator" />
     <ref role="1TJDcQ" node="3JSrgvMqo2V" resolve="Operator" />
+  </node>
+  <node concept="1TIwiD" id="2XblIMS1PMe">
+    <property role="EcuMT" value="3407913117735672974" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="RepastParam" />
+    <property role="34LRSv" value="Repast Parameter" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3cDB1MTjUPg" role="1TKVEi">
+      <property role="IQ2ns" value="3686649417161485648" />
+      <property role="20kJfa" value="parameterValue" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6tNT_P6ny7D" resolve="ExpressionWrapper" />
+    </node>
+    <node concept="PrWs8" id="2XblIMS1PMo" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
   </node>
 </model>
 

@@ -16,12 +16,11 @@ import simcore.basicStructures.RoomType;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.Locatable;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.action.InstantBehaviourStep;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import simcore.basicStructures.TimeKeeper;
-import java.util.ArrayList;
 import simcore.basicStructures.Board;
 import simcore.action.PassiveBehaviourStep;
+import simcore.action.InstantBehaviourStep;
+import java.util.ArrayList;
+import repast.simphony.engine.environment.RunEnvironment;
 
 public class WardStaff extends Actor {
 
@@ -159,21 +158,20 @@ public class WardStaff extends Actor {
       return timeExecuted == 10;
     }
   }
-  public class Choice_d0a extends InstantBehaviourStep {
+  public class SendSignalAction_d0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_d0a(Behaviour behaviour) {
+
+    public SendSignalAction_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 3) + (60 * 0)))) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0d0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new ReceiveTreatmentTrigger_dSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class StayAction_e0a extends BehaviourStep {
@@ -252,43 +250,10 @@ public class WardStaff extends Actor {
       return timeExecuted == 10;
     }
   }
-  public class Choice_d0a_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_d0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 3) + (60 * 0)))) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0d0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class SendSignalAction_a0d0a extends BehaviourStep {
+  public class SendSignalAction_d0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0d0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ReceiveTreatmentTrigger_dSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class SendSignalAction_a0d0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0d0a_1(Behaviour behaviour) {
+    public SendSignalAction_d0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -446,20 +411,21 @@ public class WardStaff extends Actor {
       }
     }
   }
-  public class SendSignalAction_h0b extends BehaviourStep {
+  public class Choice_h0b extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_h0b(Behaviour behaviour) {
+    public Choice_h0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_cSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult == "Positive") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0h0b(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
   public class StayAction_i0b extends BehaviourStep {
@@ -578,7 +544,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -596,7 +562,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -658,7 +624,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -676,7 +642,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRCOVIDSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0e0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -756,7 +722,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -774,7 +740,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -836,7 +802,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -854,7 +820,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluASpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0f0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -934,7 +900,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -952,7 +918,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSensitivity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1014,7 +980,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1032,7 +998,7 @@ public class WardStaff extends Actor {
     }
 
     public void execute() {
-      if (Dice(100)) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("LabPCRFluBSpecificity"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0g0b_3(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1087,10 +1053,43 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class SendSignalAction_h0b_1 extends BehaviourStep {
+  public class Choice_h0b_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_h0b_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).LabPCRCOVIDResult == "Positive") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0h0b(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class SendSignalAction_a0h0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_h0b_1(Behaviour behaviour) {
+    public SendSignalAction_a0h0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DischargeTrigger_cSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0h0b_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0h0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1483,7 +1482,7 @@ public class WardStaff extends Actor {
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     plstSteps.add(new StayAction_c0a(behaviourBuilder));
-    plstSteps.add(new Choice_d0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
     plstSteps.add(new StayAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -1500,7 +1499,7 @@ public class WardStaff extends Actor {
     plstSteps.add(new Choice_e0b(behaviourBuilder));
     plstSteps.add(new Choice_f0b(behaviourBuilder));
     plstSteps.add(new Choice_g0b(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_h0b(behaviourBuilder));
+    plstSteps.add(new Choice_h0b(behaviourBuilder));
     plstSteps.add(new StayAction_i0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
