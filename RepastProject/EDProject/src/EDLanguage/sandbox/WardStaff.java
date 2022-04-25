@@ -186,10 +186,10 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class StayAction_c0a_1 extends BehaviourStep {
+  public class StayAction_c0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_1(Behaviour behaviour) {
+    public StayAction_c0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -5269,7 +5269,7 @@ public class WardStaff extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a_1(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a(behaviourBuilder));
     plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
     plstSteps.add(new StayAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);

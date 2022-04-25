@@ -186,10 +186,10 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class StayAction_c0a_3 extends BehaviourStep {
+  public class StayAction_c0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_3(Behaviour behaviour) {
+    public StayAction_c0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -234,11 +234,11 @@ public class WardStaff extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0a_7 extends BehaviourStep {
+  public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_7(Behaviour behaviour) {
+    public MoveAction_a0a_5(Behaviour behaviour) {
       target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
@@ -278,10 +278,10 @@ public class WardStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WardStaff.this));
     }
   }
-  public class StayAction_c0a_5 extends BehaviourStep {
+  public class StayAction_c0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_5(Behaviour behaviour) {
+    public StayAction_c0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -918,9 +918,9 @@ public class WardStaff extends Actor {
 
     }
   }
-  public class Choice_g0b_3 extends InstantBehaviourStep {
+  public class Choice_g0b_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0b_3(Behaviour behaviour) {
+    public Choice_g0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1112,10 +1112,10 @@ public class WardStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_i0b_3 extends BehaviourStep {
+  public class StayAction_i0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_i0b_3(Behaviour behaviour) {
+    public StayAction_i0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -5269,7 +5269,7 @@ public class WardStaff extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a_3(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a(behaviourBuilder));
     plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
     plstSteps.add(new StayAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);

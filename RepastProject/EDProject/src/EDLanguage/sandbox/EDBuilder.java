@@ -80,17 +80,17 @@ public class EDBuilder implements ContextBuilder<Object> {
     // add Locations here 
     Area EmergencyDepartment_0 = new Area(context, space, grid, 5, 5, 370, 195, Color.WHITE);
     EmergencyDepartment_0.addResource(LabPCR.getInstance(), 100);
-    EmergencyDepartment_0.addResource(PHEThreeAlt.getInstance(), 1000);
     EmergencyDepartment_0.addResource(LFD.getInstance(), 100);
     EmergencyDepartment_0.addResource(LIAT.getInstance(), 22);
+    EmergencyDepartment_0.addResource(PHEThreeAlt.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishAmount(LabPCR.getInstance(), 100);
-    EmergencyDepartment_0.setReplenishAmount(PHEThreeAlt.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishAmount(LFD.getInstance(), 100);
     EmergencyDepartment_0.setReplenishAmount(LIAT.getInstance(), 22);
+    EmergencyDepartment_0.setReplenishAmount(PHEThreeAlt.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishFrequency(LabPCR.getInstance(), 1);
-    EmergencyDepartment_0.setReplenishFrequency(PHEThreeAlt.getInstance(), 1);
     EmergencyDepartment_0.setReplenishFrequency(LFD.getInstance(), 1);
     EmergencyDepartment_0.setReplenishFrequency(LIAT.getInstance(), 1);
+    EmergencyDepartment_0.setReplenishFrequency(PHEThreeAlt.getInstance(), 1);
     Room Paedeatrics_a = new Room("Paedeatrics", context, space, grid, 5, 145, 50, 50, 1, 10000, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room Lab_b = new Room("Lab", context, space, grid, 5, 5, 30, 30, 1, 1000, Labaratory.getInstance(), Color.YELLOW, EmergencyDepartment_0);
     Room MainReception_c = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);

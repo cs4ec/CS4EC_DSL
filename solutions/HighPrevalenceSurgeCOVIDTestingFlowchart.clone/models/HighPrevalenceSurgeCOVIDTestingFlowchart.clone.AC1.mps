@@ -95,10 +95,6 @@
         <property id="6755843002504464496" name="prevalence" index="3JlXGq" />
         <child id="6755843002504464494" name="possibleValue" index="3JlXG4" />
       </concept>
-      <concept id="7828349744267291363" name="ActionCards.structure.ObservationsCondition" flags="ng" index="3ocoxY">
-        <property id="7828349744267291427" name="outcome" index="3ocoAY" />
-        <reference id="7828349744267291447" name="test" index="3ocoAE" />
-      </concept>
       <concept id="7828349744265634127" name="ActionCards.structure.Test" flags="ng" index="3oQGfi">
         <child id="7828349744265634184" name="ProcessingTimeTable" index="3oQGcl" />
       </concept>
@@ -1301,9 +1297,10 @@
             <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
             <node concept="1FjjCm" id="7$JgZMbkITl" role="1CySjL" />
           </node>
-          <node concept="3ocoxY" id="7$JgZMbkIS_" role="30dEsF">
-            <property role="3ocoAY" value="2lOlAdPyF27/Negative" />
-            <ref role="3ocoAE" node="6MzSDQOx5uL" resolve="PHEThree" />
+          <node concept="3tEh0H" id="3cDB1MUZyWO" role="30dEsF">
+            <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
+            <ref role="3tE8WY" node="2XblIMS17kI" resolve="PHEThreeAlt" />
+            <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
           </node>
         </node>
       </node>
@@ -1315,9 +1312,10 @@
             <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
             <node concept="1FjjCg" id="7$JgZMbkPmT" role="1CySjL" />
           </node>
-          <node concept="3ocoxY" id="7$JgZMbkPms" role="30dEsF">
-            <property role="3ocoAY" value="2lOlAdPyF1X/Positive" />
-            <ref role="3ocoAE" node="6MzSDQOx5uL" resolve="PHEThree" />
+          <node concept="3tEh0H" id="3cDB1MUZyY8" role="30dEsF">
+            <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
+            <ref role="3tE8WY" node="2XblIMS17kI" resolve="PHEThreeAlt" />
+            <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
           </node>
         </node>
       </node>
@@ -1336,17 +1334,19 @@
       <node concept="2GGxJi" id="7$JgZMbkITA" role="3tG3Yq">
         <ref role="3tVEyn" node="7$JgZMbkIon" resolve="Check Symptoms" />
         <ref role="2GGxGe" node="7$JgZMbkIO4" resolve="Decide on PoC Test" />
-        <node concept="3ocoxY" id="7$JgZMbkITG" role="1hyIAf">
-          <property role="3ocoAY" value="2lOlAdPyF1X/Positive" />
-          <ref role="3ocoAE" node="6MzSDQOx5uL" resolve="PHEThree" />
+        <node concept="3tEh0H" id="3cDB1MUZyW7" role="1hyIAf">
+          <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
+          <ref role="3tE8WY" node="2XblIMS17kI" resolve="PHEThreeAlt" />
+          <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
         </node>
       </node>
       <node concept="2GGxJi" id="7$JgZMbkIY7" role="3tG3Yq">
         <ref role="3tVEyn" node="7$JgZMbkIon" resolve="Check Symptoms" />
         <ref role="2GGxGe" node="7$JgZMbkITS" resolve="Check COVID Contact" />
-        <node concept="3ocoxY" id="7$JgZMbkIYf" role="1hyIAf">
-          <property role="3ocoAY" value="2lOlAdPyF27/Negative" />
-          <ref role="3ocoAE" node="6MzSDQOx5uL" resolve="PHEThree" />
+        <node concept="3tEh0H" id="3cDB1MUZyWq" role="1hyIAf">
+          <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
+          <ref role="3tE8WY" node="2XblIMS17kI" resolve="PHEThreeAlt" />
+          <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
         </node>
       </node>
       <node concept="UeIYj" id="3JSrgvMYTXJ" role="3lENdC">
@@ -1718,7 +1718,7 @@
     </node>
     <node concept="ldbdM" id="6MzSDQOvNew" role="3oQGcl">
       <node concept="ldb2t" id="6MzSDQOvNey" role="ldb3A">
-        <property role="ldb2L" value="60" />
+        <property role="ldb2L" value="30" />
         <property role="ldb2Z" value="1" />
       </node>
     </node>
@@ -3550,7 +3550,7 @@
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="PHEThreeAlt" />
     <node concept="iVyPZ" id="2XblIMS17kJ" role="iVyS4">
-      <property role="iVyOC" value="90" />
+      <property role="iVyOC" value="95" />
       <property role="iVyOR" value="80" />
       <ref role="iVyR2" node="5R1$QEMKFjT" resolve="COVID" />
     </node>

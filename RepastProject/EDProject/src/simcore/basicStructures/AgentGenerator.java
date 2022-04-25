@@ -21,7 +21,7 @@ public class AgentGenerator {
 	protected ContinuousSpace<Object> space;
 	protected Grid<Object> grid;
 	protected Context<Object> context;
-	protected static Map<Integer,Integer> ArrivalPerHour;
+	protected Map<Integer,Integer> ArrivalPerHour;
 	protected int k;
 	protected double lambda;
 	protected RoomType spawnRoomType;
