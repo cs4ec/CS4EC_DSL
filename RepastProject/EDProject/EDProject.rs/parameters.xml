@@ -37,7 +37,7 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeAltCOVIDSensitivity"
-  		displayName="PHEThreeAltCOVIDSensitivity" type="double" defaultValue="90"
+  		displayName="PHEThreeAltCOVIDSensitivity" type="double" defaultValue="95"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeAltCOVIDSpecificity"
@@ -45,7 +45,7 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeAltCOVIDSensitivity"
-  		displayName="PHEThreeAltCOVIDSensitivity" type="double" defaultValue="90"
+  		displayName="PHEThreeAltCOVIDSensitivity" type="double" defaultValue="95"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeAltCOVIDSpecificity"

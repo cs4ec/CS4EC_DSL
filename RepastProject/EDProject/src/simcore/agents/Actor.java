@@ -171,11 +171,27 @@ public class Actor extends Agent {
 	private void ExecOrder(Order order) {
 		if (order instanceof MoveToOrder) {
 			Object destination = ((MoveToOrder) order).getTarget();
+			
+			Object concreteDestination = ((MoveToOrder)order).getConcreteTarget();
+			
+		      if (concreteDestination == null) {
+		          if (destination instanceof RoomType) {
+		        	  concreteDestination = SelectLocation(((RoomType) destination));
+		          } else {
+		        	  concreteDestination = destination;
+		          }
+		        }
+			
+		    if (destination instanceof RoomType) {
+		        if (EvaluateRoomChoice(((Room) concreteDestination)) == 0) {
+		        	concreteDestination = SelectLocation(((RoomType) destination));
+		        }
+		      }
 
-			MoveTowards(destination);
-
-			if (destination instanceof Room) {
-				Room targetLocation = (Room) destination;
+			MoveTowards(concreteDestination);
+			
+			if (concreteDestination instanceof Room) {
+				Room targetLocation = (Room) concreteDestination;
 				
 				// if this agent is in the room..
 				if (targetLocation.WithInside(this)) {
@@ -185,7 +201,7 @@ public class Actor extends Agent {
 					iterateOrder();
 				}
 			} else {
-				if (ImAt(destination)) {
+				if (ImAt(concreteDestination)) {
 					iterateOrder();
 				}
 			}

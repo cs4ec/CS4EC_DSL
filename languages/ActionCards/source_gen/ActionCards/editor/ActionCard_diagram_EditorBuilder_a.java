@@ -144,6 +144,43 @@ import org.jetbrains.mps.openapi.language.SConcept;
                             return true;
                           }
                         }));
+                        connectionTypes.addAll(Collections.singletonList(new GeneratedConnectionType() {
+                          public String getName() {
+                            return "Reference Action Card";
+                          }
+                          @Override
+                          public void create(final IConnectionEndpoint from, final IConnectionEndpoint to) {
+                            final SNode fromNode = SNodeOperations.cast(from.getSNode(), CONCEPTS.Action$K5);
+                            final SNode toNode = SNodeOperations.cast(to.getSNode(), CONCEPTS.ActionCardReference$CD);
+                            final String fromPort = from.getPortName();
+                            final String toPort = to.getPortName();
+
+                            {
+                              SNode newBranch = SLinkOperations.addNewChild(((SNode) _variablesContext.getValue("thisNode")), LINKS.Branches$1fde, null);
+                              SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, fromNode);
+                              ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(newBranch, LINKS.fromAction$DE5P), LINKS.outgoingBranches$cwqF)).addElement(newBranch);
+                              SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(toNode, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).first());
+                            }
+                          }
+                          @Override
+                          public boolean isValidStart(IConnectionEndpoint from) {
+                            final SNode fromNode = SNodeOperations.as(from.getSNode(), CONCEPTS.Action$K5);
+                            if (fromNode == null) {
+                              return false;
+                            }
+                            final String fromPort = from.getPortName();
+                            return true;
+                          }
+                          @Override
+                          public boolean isValidEnd(IConnectionEndpoint to) {
+                            final SNode toNode = SNodeOperations.as(to.getSNode(), CONCEPTS.ActionCardReference$CD);
+                            if (toNode == null) {
+                              return false;
+                            }
+                            final String toPort = to.getPortName();
+                            return true;
+                          }
+                        }));
                         return connectionTypes;
                       }
 
@@ -191,9 +228,11 @@ import org.jetbrains.mps.openapi.language.SConcept;
     /*package*/ static final SContainmentLink Branches$1fde = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2574566374fd2551L, "Branches");
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
     /*package*/ static final SReferenceLink targetAction$Z7ub = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x4f415ebce3f345b2L, "targetAction");
+    /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Action$K5 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action");
+    /*package*/ static final SConcept ActionCardReference$CD = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, "ActionCards.structure.ActionCardReference");
   }
 }

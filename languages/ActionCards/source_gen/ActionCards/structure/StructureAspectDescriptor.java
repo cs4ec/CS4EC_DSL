@@ -239,6 +239,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.associate("timeDistributionTable", 0x4f82e3275d69af14L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610e89L).optional(true).origin("5729391434179129108").done();
     b.aggregate("staffTypeReference", 0x4af9c647efdb14f9L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L).optional(false).ordered(true).multiple(false).origin("5402567240276710649").done();
     b.aggregate("location", 0x3f10eb6deabbd805L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(true).ordered(true).multiple(false).origin("4544390881338972165").done();
+    b.aggregate("orderPatientLocation", 0x348ff1b011050997L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(true).ordered(true).multiple(false).origin("3787511550143957399").done();
     b.aggregate("outgoingBranches", 0x29f0721df2f38bbL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(true).ordered(true).multiple(true).origin("188877551432579259").done();
     b.aggregate("incomingBranches", 0x29f0721df719ebcL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(true).ordered(true).multiple(true).origin("188877551436930748").done();
     b.aggregate("maxDuration", 0x4f82e3275c1ebe7cL).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L).optional(true).ordered(true).multiple(false).origin("5729391434157440636").done();
@@ -250,6 +251,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528520");
     b.version(2);
+    b.property("showDiagramView", 0x7ce22f405c59c5feL).type(PrimitiveTypeId.BOOLEAN).origin("8998806958913471998").done();
     b.aggregate("Actions", 0x2ef557ae9cb06877L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(false).ordered(true).multiple(true).origin("3383707102503528567").done();
     b.aggregate("Branches", 0x2574566374fd2551L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(true).ordered(true).multiple(true).origin("2698877061866267985").done();
     b.aggregate("UsageCondition", 0x18668ef27386c3a5L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L).optional(true).ordered(true).multiple(false).origin("1758249876506198949").done();
@@ -426,6 +428,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240278617686");
     b.version(2);
     b.property("runDuration", 0x4f82e3275d8c14dcL).type(PrimitiveTypeId.INTEGER).origin("5729391434181383388").done();
+    b.property("secondsPerTick", 0x7ce22f405c238da3L).type(PrimitiveTypeId.INTEGER).origin("8998806958909918627").done();
     b.aggregate("staffNumbers", 0x4af9c647eff82ea4L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e7bL).optional(true).ordered(true).multiple(true).origin("5402567240278617764").done();
     return b.create();
   }

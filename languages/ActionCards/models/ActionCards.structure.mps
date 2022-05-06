@@ -71,6 +71,11 @@
     <property role="34LRSv" value="Action Card" />
     <property role="R4oN_" value="Overall Description of a patient pathway" />
     <property role="3GE5qa" value="ActionCard" />
+    <node concept="1TJgyi" id="7NybO1smsnY" role="1TKVEl">
+      <property role="IQ2nx" value="8998806958913471998" />
+      <property role="TrG5h" value="showDiagramView" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="2VPlUUsG6xR" role="1TKVEi">
       <property role="IQ2ns" value="3383707102503528567" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -119,6 +124,12 @@
       <property role="IQ2ns" value="4544390881338972165" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="location" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+    <node concept="1TJgyj" id="3ifWr0h1gAn" role="1TKVEi">
+      <property role="IQ2ns" value="3787511550143957399" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="orderPatientLocation" />
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
     <node concept="1TJgyj" id="av1M7vbNyV" role="1TKVEi">
@@ -253,6 +264,11 @@
     <node concept="1TJgyi" id="4Y2SMttz1js" role="1TKVEl">
       <property role="IQ2nx" value="5729391434181383388" />
       <property role="TrG5h" value="runDuration" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7NybO1s8SQz" role="1TKVEl">
+      <property role="IQ2nx" value="8998806958909918627" />
+      <property role="TrG5h" value="secondsPerTick" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>

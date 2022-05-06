@@ -18,9 +18,9 @@ import simcore.basicStructures.Locatable;
 import simcore.action.PassiveBehaviourStep;
 import simcore.action.InstantBehaviourStep;
 import java.util.ArrayList;
+import simcore.Signals.Orders.MoveToOrder;
 import repast.simphony.engine.environment.RunEnvironment;
 import simcore.basicStructures.Board;
-import simcore.Signals.Orders.MoveToOrder;
 
 public class CubicleNurse extends Actor {
 
@@ -154,11 +154,11 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 5;
     }
   }
-  public class StayAction_c0a_1 extends PassiveBehaviourStep {
+  public class StayAction_c0a extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LFDExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_1(Behaviour behaviour) {
+    public StayAction_c0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -269,10 +269,22 @@ public class CubicleNurse extends Actor {
       }
     }
   }
-  public class StayAction_j0a extends BehaviourStep {
+  public class OrderAction_j0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_j0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+    }
+  }
+  public class StayAction_k0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_j0a(Behaviour behaviour) {
+    public StayAction_k0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -992,10 +1004,22 @@ public class CubicleNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_j0a_1 extends BehaviourStep {
+  public class OrderAction_j0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_j0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+    }
+  }
+  public class StayAction_k0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_j0a_1(Behaviour behaviour) {
+    public StayAction_k0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -4249,14 +4273,15 @@ public class CubicleNurse extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
     plstSteps.add(new StayAction_b0a_0(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a_1(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a(behaviourBuilder));
     plstSteps.add(new UseAction_d0a(behaviourBuilder));
     plstSteps.add(new Choice_e0a(behaviourBuilder));
     plstSteps.add(new Choice_f0a(behaviourBuilder));
     plstSteps.add(new Choice_g0a(behaviourBuilder));
     plstSteps.add(new Choice_h0a(behaviourBuilder));
     plstSteps.add(new Choice_i0a(behaviourBuilder));
-    plstSteps.add(new StayAction_j0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_j0a(behaviourBuilder));
+    plstSteps.add(new StayAction_k0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
