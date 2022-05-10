@@ -1741,10 +1741,10 @@
   </node>
   <node concept="24kQdi" id="2_JteYPoh8E">
     <property role="3GE5qa" value="actions.basic actions.StayAction" />
-    <ref role="1XX52x" to="3751:2_JteYPof5l" resolve="StayForTimeDistributionAction" />
+    <ref role="1XX52x" to="3751:2_JteYPof5l" resolve="PassiveWaitAction" />
     <node concept="3EZMnI" id="2_JteYPoh8P" role="2wV5jI">
       <node concept="3F0ifn" id="2_JteYPoh8W" role="3EZMnx">
-        <property role="3F0ifm" value="Stay for" />
+        <property role="3F0ifm" value="Passive wait for" />
       </node>
       <node concept="1iCGBv" id="2_JteYPoh92" role="3EZMnx">
         <ref role="1NtTu8" to="3751:2_JteYPoh8C" resolve="timeDistributionTable" />

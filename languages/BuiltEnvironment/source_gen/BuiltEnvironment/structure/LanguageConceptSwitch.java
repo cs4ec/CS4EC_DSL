@@ -13,19 +13,20 @@ public final class LanguageConceptSwitch {
   public static final int AdmissionBay = 1;
   public static final int AdmissionBayList = 2;
   public static final int Area = 3;
-  public static final int DateTimeNowVariable = 4;
-  public static final int MapImporter = 5;
-  public static final int Resource = 6;
-  public static final int ResourceAllocation = 7;
-  public static final int ResourceAvailabilityVariable = 8;
-  public static final int Room = 9;
-  public static final int RoomInstanceDefinition = 10;
-  public static final int RoomType = 11;
-  public static final int ScenarioBuilder = 12;
-  public static final int TimeOfDayVariable = 13;
-  public static final int TimeOfDayWrapper = 14;
-  public static final int WallDefinition = 15;
-  public static final int WallInstanceDefinition = 16;
+  public static final int BlueprintMap = 4;
+  public static final int DateTimeNowVariable = 5;
+  public static final int MapImporter = 6;
+  public static final int Resource = 7;
+  public static final int ResourceAllocation = 8;
+  public static final int ResourceAvailabilityVariable = 9;
+  public static final int Room = 10;
+  public static final int RoomInstanceDefinition = 11;
+  public static final int RoomType = 12;
+  public static final int ScenarioBuilder = 13;
+  public static final int TimeOfDayVariable = 14;
+  public static final int TimeOfDayWrapper = 15;
+  public static final int WallDefinition = 16;
+  public static final int WallInstanceDefinition = 17;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1a0150acdda54129L, 0x824e01dce96fdea4L);
@@ -33,6 +34,7 @@ public final class LanguageConceptSwitch {
     builder.put(0xc489c6b16b4a524L, AdmissionBay);
     builder.put(0xc489c6b16b4a529L, AdmissionBayList);
     builder.put(0x3c282c112f249082L, Area);
+    builder.put(0x348ff1b011c19a5fL, BlueprintMap);
     builder.put(0x3bf86d07f43264edL, DateTimeNowVariable);
     builder.put(0xaabf015bed74217L, MapImporter);
     builder.put(0x3bf86d07f032c8d7L, Resource);

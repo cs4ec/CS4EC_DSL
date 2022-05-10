@@ -63,6 +63,7 @@
     <dependency reexport="false">7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)</dependency>
     <dependency reexport="false">44e82148-5a09-47bc-8eb0-6e257bdf20d7(gson)</dependency>
     <dependency reexport="false">d3a0fd26-445a-466c-900e-10444ddfed52(com.mbeddr.mpsutil.filepicker)</dependency>
+    <dependency reexport="false">f7ad14aa-a3e2-4301-8822-d919845c8bcf(de.itemis.mps.editor.diagram.shapes)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:d3a0fd26-445a-466c-900e-10444ddfed52:com.mbeddr.mpsutil.filepicker" version="0" />

@@ -61,6 +61,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Operator;
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
+  private ConceptPresentation props_PassiveWaitAction;
   private ConceptPresentation props_PatientAdmissionOutcomeCondition;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PlaceInstance;
@@ -90,7 +91,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StayAction;
   private ConceptPresentation props_StayForConditionAction;
   private ConceptPresentation props_StayForTimeAction;
-  private ConceptPresentation props_StayForTimeDistributionAction;
   private ConceptPresentation props_StopOrder;
   private ConceptPresentation props_SuitableForSideRoomCondition;
   private ConceptPresentation props_TimeDistributionLine;
@@ -477,6 +477,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OrderPatientAction = cpb.create();
         }
         return props_OrderPatientAction;
+      case LanguageConceptSwitch.PassiveWaitAction:
+        if (props_PassiveWaitAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_PassiveWaitAction = cpb.create();
+        }
+        return props_PassiveWaitAction;
       case LanguageConceptSwitch.PatientAdmissionOutcomeCondition:
         if (props_PatientAdmissionOutcomeCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -688,13 +695,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StayForTimeAction = cpb.create();
         }
         return props_StayForTimeAction;
-      case LanguageConceptSwitch.StayForTimeDistributionAction:
-        if (props_StayForTimeDistributionAction == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_StayForTimeDistributionAction = cpb.create();
-        }
-        return props_StayForTimeDistributionAction;
       case LanguageConceptSwitch.StopOrder:
         if (props_StopOrder == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

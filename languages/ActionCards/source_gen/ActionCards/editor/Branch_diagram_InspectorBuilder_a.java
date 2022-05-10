@@ -586,114 +586,18 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createCollection_3() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
     editorCell.setCellId("Collection_5au6ob_3");
-    if (nodeCondition_5au6ob_a0a0a0()) {
-      editorCell.addEditorCell(createCustomFactory_13());
-    }
-    return editorCell;
-  }
-  private boolean nodeCondition_5au6ob_a0a0a0() {
-    return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(myNode, LINKS.condition$UnEW)).isNotEmpty();
-  }
-  private EditorCell createCustomFactory_12(final EditorContext editorContext, final SNode node) {
-
-    if (!(new Object() {
-      public boolean showWrapped() {
-        return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(myNode, LINKS.condition$UnEW)).isNotEmpty();
-      }
-    }.showWrapped())) {
-      return EditorCell_Collection.createVertical(editorContext, node);
-    }
-
-    final EditorCell cell = createCustomFactory_15();
-    EditorCell editorCell = new _FunctionTypes._return_P0_E0<EditorCell>() {
-      public EditorCell invoke() {
-        cell.setAction(CellActionType.BACKSPACE, new CellActionWithReadAccess() {
-          public void execute(EditorContext editorContext) {
-            SavedCaretPosition caretPosition = new SavedCaretPosition(editorContext);
-            caretPosition.save();
-            SNodeOperations.deleteNode(SLinkOperations.getTarget(node, LINKS.condition$UnEW));
-            editorContext.flushEvents();
-            caretPosition.restore(true);
-          }
-        });
-        cell.setAction(CellActionType.DELETE, new CellActionWithReadAccess() {
-          public void execute(EditorContext editorContext) {
-            SavedCaretPosition caretPosition = new SavedCaretPosition(editorContext);
-            caretPosition.save();
-            SNodeOperations.deleteNode(SLinkOperations.getTarget(node, LINKS.condition$UnEW));
-            editorContext.flushEvents();
-            caretPosition.restore(false);
-          }
-        });
-        return cell;
-      }
-    }.invoke();
-    return editorCell;
-  }
-  private EditorCell createCustomFactory_13() {
-    return createCustomFactory_12(getEditorContext(), myNode);
-  }
-  private EditorCell createCustomFactory_14(final EditorContext editorContext, final SNode node) {
-
-    if (!(new Object() {
-      public boolean showWrapped() {
-        return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(myNode, LINKS.condition$UnEW)).isNotEmpty();
-      }
-    }.showWrapped())) {
-      return EditorCell_Collection.createVertical(editorContext, node);
-    }
-
-    final EditorCell cell = createCollection_4();
-    EditorCell editorCell = new _FunctionTypes._return_P0_E0<EditorCell>() {
-      public EditorCell invoke() {
-        final SNode childNode = SLinkOperations.getTarget(myNode, LINKS.condition$UnEW);
-        new Object() {
-          public void removeDeleteAction(EditorCell descendantCell) {
-            if (descendantCell.getSNode() == childNode) {
-              descendantCell.setAction(CellActionType.DELETE, new DelegateToParentCellAction(descendantCell, CellActionType.DELETE));
-              descendantCell.setAction(CellActionType.BACKSPACE, new DelegateToParentCellAction(descendantCell, CellActionType.BACKSPACE));
-            } else {
-              if (descendantCell instanceof jetbrains.mps.openapi.editor.cells.EditorCell_Collection) {
-                for (EditorCell childCell : Sequence.fromIterable(((jetbrains.mps.openapi.editor.cells.EditorCell_Collection) descendantCell))) {
-                  removeDeleteAction(childCell);
-                }
-              }
-            }
-          }
-        }.removeDeleteAction(cell);
-        return cell;
-      }
-    }.invoke();
-    return editorCell;
-  }
-  private EditorCell createCustomFactory_15() {
-    return createCustomFactory_14(getEditorContext(), myNode);
-  }
-  private EditorCell createCollection_4() {
-    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_5au6ob_4");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
-    editorCell.getStyle().putAll(style);
-    editorCell.addEditorCell(createConstant_2());
     editorCell.addEditorCell(createRefNode_1());
     return editorCell;
   }
-  private EditorCell createConstant_2() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "if");
-    editorCell.setCellId("Constant_5au6ob_2");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new conditionSingleRoleHandler_5au6ob_b0a0a0a0(myNode, LINKS.condition$UnEW, getEditorContext());
+    SingleRoleCellProvider provider = new conditionSingleRoleHandler_5au6ob_a0a0a(myNode, LINKS.condition$UnEW, getEditorContext());
     return provider.createCell();
   }
-  private static class conditionSingleRoleHandler_5au6ob_b0a0a0a0 extends SingleRoleCellProvider {
+  private static class conditionSingleRoleHandler_5au6ob_a0a0a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public conditionSingleRoleHandler_5au6ob_b0a0a0a0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public conditionSingleRoleHandler_5au6ob_a0a0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }

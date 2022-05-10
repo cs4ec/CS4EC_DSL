@@ -1160,7 +1160,7 @@
       </node>
     </node>
     <node concept="3aamgX" id="2_JteYPoi5k" role="3acgRq">
-      <ref role="30HIoZ" to="3751:2_JteYPof5l" resolve="StayForTimeDistributionAction" />
+      <ref role="30HIoZ" to="3751:2_JteYPof5l" resolve="PassiveWaitAction" />
       <node concept="j$656" id="2_JteYPoi5l" role="1lVwrX">
         <ref role="v9R2y" node="2_JteYPoi5i" resolve="reduce_StayForTimeDistributionAction" />
       </node>
@@ -13192,7 +13192,7 @@
   <node concept="13MO4I" id="2_JteYPoi5i">
     <property role="TrG5h" value="reduce_StayForTimeDistributionAction" />
     <property role="3GE5qa" value="actions.basic actions.StayAction" />
-    <ref role="3gUMe" to="3751:2_JteYPof5l" resolve="StayForTimeDistributionAction" />
+    <ref role="3gUMe" to="3751:2_JteYPof5l" resolve="PassiveWaitAction" />
     <node concept="312cEu" id="2_JteYPoi7r" role="13RCb5">
       <property role="TrG5h" value="_class_" />
       <node concept="15s5l7" id="2_JteYPoi7s" role="lGtFl">

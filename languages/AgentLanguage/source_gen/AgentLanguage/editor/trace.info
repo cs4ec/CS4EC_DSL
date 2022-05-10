@@ -351,6 +351,11 @@
       <unit at="46,0,56,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_OrderPatientAction$GrammarCellsSubstituteMenuPart_kfuy6c_a" />
       <unit at="21,0,61,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_OrderPatientAction" />
     </file>
+    <file name="GrammarCellsSubstituteMenu_PassiveWaitAction.java">
+      <unit at="57,0,60,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_PassiveWaitAction$CONCEPTS" />
+      <unit at="46,0,56,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_PassiveWaitAction$GrammarCellsSubstituteMenuPart_r35qij_a" />
+      <unit at="21,0,61,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_PassiveWaitAction" />
+    </file>
     <file name="GrammarCellsSubstituteMenu_PatientAdmissionOutcomeCondition.java">
       <unit at="57,0,60,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_PatientAdmissionOutcomeCondition$CONCEPTS" />
       <unit at="46,0,56,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_PatientAdmissionOutcomeCondition$GrammarCellsSubstituteMenuPart_lcgb84_a" />
@@ -495,11 +500,6 @@
       <unit at="57,0,60,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_StayForTimeAction$CONCEPTS" />
       <unit at="46,0,56,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_StayForTimeAction$GrammarCellsSubstituteMenuPart_gd9v4b_a" />
       <unit at="21,0,61,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_StayForTimeAction" />
-    </file>
-    <file name="GrammarCellsSubstituteMenu_StayForTimeDistributionAction.java">
-      <unit at="57,0,60,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_StayForTimeDistributionAction$CONCEPTS" />
-      <unit at="46,0,56,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_StayForTimeDistributionAction$GrammarCellsSubstituteMenuPart_4y9azh_a" />
-      <unit at="21,0,61,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_StayForTimeDistributionAction" />
     </file>
     <file name="GrammarCellsSubstituteMenu_StopOrder.java">
       <unit at="57,0,60,0" name="AgentLanguage.editor.GrammarCellsSubstituteMenu_StopOrder$CONCEPTS" />
@@ -2413,18 +2413,18 @@
     </file>
   </root>
   <root nodeRef="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(AgentLanguage.editor)/2985733650858971690">
-    <file name="StayForTimeDistributionAction_Editor.java">
-      <node id="2985733650858971690" at="11,79,12,95" concept="9" />
+    <file name="PassiveWaitAction_Editor.java">
+      <node id="2985733650858971690" at="11,79,12,83" concept="9" />
       <node id="2985733650858971690" at="11,0,14,0" concept="7" trace="createEditorCell#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <scope id="2985733650858971690" at="11,79,12,95" />
+      <scope id="2985733650858971690" at="11,79,12,83" />
       <scope id="2985733650858971690" at="11,0,14,0">
         <var name="editorContext" id="2985733650858971690" />
         <var name="node" id="2985733650858971690" />
       </scope>
-      <unit id="2985733650858971690" at="10,0,15,0" name="AgentLanguage.editor.StayForTimeDistributionAction_Editor" />
+      <unit id="2985733650858971690" at="10,0,15,0" name="AgentLanguage.editor.PassiveWaitAction_Editor" />
     </file>
-    <file name="StayForTimeDistributionAction_EditorBuilder_a.java">
-      <node id="2985733650858971690" at="39,109,40,19" concept="13" />
+    <file name="PassiveWaitAction_EditorBuilder_a.java">
+      <node id="2985733650858971690" at="39,97,40,19" concept="13" />
       <node id="2985733650858971690" at="40,19,41,18" concept="2" />
       <node id="2985733650858971690" at="46,26,47,18" concept="9" />
       <node id="2985733650858971690" at="50,39,51,32" concept="9" />
@@ -2435,8 +2435,8 @@
       <node id="2985733650858971708" at="58,31,59,49" concept="2" />
       <node id="2985733650858971714" at="59,49,60,48" concept="2" />
       <node id="2985733650858971690" at="60,48,61,22" concept="9" />
-      <node id="2985733650858971708" at="63,41,64,101" concept="8" />
-      <node id="2985733650858971708" at="64,101,65,47" concept="2" />
+      <node id="2985733650858971708" at="63,41,64,109" concept="8" />
+      <node id="2985733650858971708" at="64,109,65,47" concept="2" />
       <node id="2985733650858971708" at="65,47,66,34" concept="2" />
       <node id="2985733650858971708" at="66,34,67,22" concept="9" />
       <node id="2985733650858971690" at="69,40,70,74" concept="8" />
@@ -2488,7 +2488,7 @@
       <node id="2985733650858971690" at="95,0,98,0" concept="7" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="2985733650858971716" at="116,0,119,0" concept="7" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
       <node id="2985733650858971744" at="138,0,141,0" concept="7" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-      <node id="2985733650858971690" at="39,0,43,0" concept="1" trace="StayForTimeDistributionAction_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="2985733650858971690" at="39,0,43,0" concept="1" trace="PassiveWaitAction_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="2985733650858971690" at="87,0,91,5" concept="6" />
       <node id="2985733650858971690" at="44,0,49,0" concept="7" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
       <node id="2985733650858971690" at="72,72,77,57" concept="8" />
@@ -2513,7 +2513,7 @@
       <scope id="2985733650858971716" at="122,28,123,20" />
       <scope id="2985733650858971744" at="138,43,139,120" />
       <scope id="2985733650858971744" at="147,17,148,42" />
-      <scope id="2985733650858971690" at="39,109,41,18" />
+      <scope id="2985733650858971690" at="39,97,41,18" />
       <scope id="2985733650858971690" at="88,40,90,60" />
       <scope id="2985733650858971690" at="99,73,101,145">
         <var name="manager" id="2985733650858971690" />
@@ -2572,15 +2572,15 @@
         <var name="referenceLink" id="2985733650858971690" />
       </scope>
       <scope id="2985733650858971690" at="69,0,105,0" />
-      <unit id="2985733650858971690" at="153,0,156,0" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a$LINKS" />
-      <unit id="2985733650858971690" at="162,0,165,0" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a$PROPS" />
-      <unit id="2985733650858971690" at="73,74,77,9" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a$1$1" />
-      <unit id="2985733650858971690" at="94,102,98,5" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a$2" />
-      <unit id="2985733650858971744" at="137,104,141,9" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a$Inline_Builder0$1" />
-      <unit id="2985733650858971690" at="157,0,161,0" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a$CONCEPTS" />
-      <unit id="2985733650858971690" at="71,42,83,5" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a$1" />
-      <unit id="2985733650858971716" at="105,0,152,0" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a$Inline_Builder0" />
-      <unit id="2985733650858971690" at="35,0,166,0" name="AgentLanguage.editor.StayForTimeDistributionAction_EditorBuilder_a" />
+      <unit id="2985733650858971690" at="153,0,156,0" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a$LINKS" />
+      <unit id="2985733650858971690" at="162,0,165,0" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a$PROPS" />
+      <unit id="2985733650858971690" at="73,74,77,9" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a$1$1" />
+      <unit id="2985733650858971690" at="94,102,98,5" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a$2" />
+      <unit id="2985733650858971744" at="137,104,141,9" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a$Inline_Builder0$1" />
+      <unit id="2985733650858971690" at="157,0,161,0" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a$CONCEPTS" />
+      <unit id="2985733650858971690" at="71,42,83,5" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a$1" />
+      <unit id="2985733650858971716" at="105,0,152,0" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a$Inline_Builder0" />
+      <unit id="2985733650858971690" at="35,0,166,0" name="AgentLanguage.editor.PassiveWaitAction_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:95c0b0eb-dcf6-42e6-beaa-085ce5a76ca6(AgentLanguage.editor)/329726013666113125">

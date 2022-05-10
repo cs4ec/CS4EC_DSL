@@ -23,6 +23,7 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myImmunosuppressedProperty__BehaviorDescriptor = new ImmunosuppressedProperty__BehaviorDescriptor();
   private final BHDescriptor myImmunocompromisedCondition__BehaviorDescriptor = new ImmunocompromisedCondition__BehaviorDescriptor();
   private final BHDescriptor myAction__BehaviorDescriptor = new Action__BehaviorDescriptor();
+  private final BHDescriptor myActionCardElement__BehaviorDescriptor = new ActionCardElement__BehaviorDescriptor();
   private final BHDescriptor myDiseaseSymptom__BehaviorDescriptor = new DiseaseSymptom__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
@@ -35,30 +36,32 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 0:
         return myAction__BehaviorDescriptor;
       case 1:
-        return myDiseaseSymptom__BehaviorDescriptor;
+        return myActionCardElement__BehaviorDescriptor;
       case 2:
-        return myIPatientProperty__BehaviorDescriptor;
+        return myDiseaseSymptom__BehaviorDescriptor;
       case 3:
-        return myImmunocompromisedCondition__BehaviorDescriptor;
+        return myIPatientProperty__BehaviorDescriptor;
       case 4:
-        return myImmunosuppressedProperty__BehaviorDescriptor;
+        return myImmunocompromisedCondition__BehaviorDescriptor;
       case 5:
-        return myInfectionStatusProperty__BehaviorDescriptor;
+        return myImmunosuppressedProperty__BehaviorDescriptor;
       case 6:
-        return myPatientProfile__BehaviorDescriptor;
+        return myInfectionStatusProperty__BehaviorDescriptor;
       case 7:
-        return myPatientPropertyConditional__BehaviorDescriptor;
+        return myPatientProfile__BehaviorDescriptor;
       case 8:
-        return myRecentCOVIDContactCondition__BehaviorDescriptor;
+        return myPatientPropertyConditional__BehaviorDescriptor;
       case 9:
-        return myRecentCovidContactProperty__BehaviorDescriptor;
+        return myRecentCOVIDContactCondition__BehaviorDescriptor;
       case 10:
-        return myVaccinationStatus__BehaviorDescriptor;
+        return myRecentCovidContactProperty__BehaviorDescriptor;
       case 11:
+        return myVaccinationStatus__BehaviorDescriptor;
+      case 12:
         return myVaccineStatusProperty__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791132L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2755ea288L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2755e811eL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bde64L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732b9054L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61141L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f40915dL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b011fd1debL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791132L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2755ea288L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2755e811eL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bde64L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732b9054L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61141L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f40915dL)).seal();
 }

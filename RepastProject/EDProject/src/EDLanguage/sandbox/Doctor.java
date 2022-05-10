@@ -182,11 +182,11 @@ public class Doctor extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0a_9 extends BehaviourStep {
+  public class MoveAction_a0a_13 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_9(Behaviour behaviour) {
+    public MoveAction_a0a_13(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -214,10 +214,10 @@ public class Doctor extends Actor {
       return ImAt(concreteTarget);
     }
   }
-  public class StayAction_b0a_5 extends BehaviourStep {
+  public class StayAction_b0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_b0a_5(Behaviour behaviour) {
+    public StayAction_b0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 

@@ -8,6 +8,8 @@
     <use id="63650c59-16c8-498a-99c8-005c7ee9515d" name="jetbrains.mps.lang.access" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
+    <use id="fa13cc63-c476-4d46-9c96-d53670abe7bc" name="de.itemis.mps.editor.diagram" version="0" />
+    <use id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment" version="1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -23,12 +25,18 @@
     <import index="o9kk" ref="r:edb719f9-05c9-4e78-8eb0-99ada6856758(BuiltEnvironment.plugin)" />
     <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <import index="wo6c" ref="r:de91083f-90a8-4dd4-83b1-8a92d65ab81d(de.itemis.mps.editor.diagram.shapes)" />
+    <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" />
     <import index="68mc" ref="r:2a10821d-612f-4a73-b7b0-ed6b57106321(com.mbeddr.mpsutil.filepicker.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
       <concept id="1071666914219" name="jetbrains.mps.lang.editor.structure.ConceptEditorDeclaration" flags="ig" index="24kQdi">
         <child id="1078153129734" name="inspectedCellModel" index="6VMZX" />
+        <child id="2597348684684069742" name="contextHints" index="CpUAK" />
+      </concept>
+      <concept id="6822301196700715228" name="jetbrains.mps.lang.editor.structure.ConceptEditorHintDeclarationReference" flags="ig" index="2aJ2om">
+        <reference id="5944657839026714445" name="hint" index="2$4xQ3" />
       </concept>
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
@@ -45,6 +53,13 @@
       <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
+      </concept>
+      <concept id="5944657839000868711" name="jetbrains.mps.lang.editor.structure.ConceptEditorContextHints" flags="ig" index="2ABfQD">
+        <child id="5944657839000877563" name="hints" index="2ABdcP" />
+      </concept>
+      <concept id="5944657839003601246" name="jetbrains.mps.lang.editor.structure.ConceptEditorHintDeclaration" flags="ig" index="2BsEeg">
+        <property id="168363875802087287" name="showInUI" index="2gpH_U" />
+        <property id="5944657839012629576" name="presentation" index="2BUmq6" />
       </concept>
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
@@ -218,6 +233,23 @@
     <language id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures">
       <concept id="1199569711397" name="jetbrains.mps.baseLanguage.closures.structure.ClosureLiteral" flags="nn" index="1bVj0M">
         <child id="1199569916463" name="body" index="1bW5cS" />
+      </concept>
+    </language>
+    <language id="fa13cc63-c476-4d46-9c96-d53670abe7bc" name="de.itemis.mps.editor.diagram">
+      <concept id="1110129820007229393" name="de.itemis.mps.editor.diagram.structure.CellModel_Diagram" flags="ng" index="27vDVx">
+        <child id="1981294357059564524" name="paletteSources" index="1RuSHk" />
+      </concept>
+      <concept id="3155126767689025629" name="de.itemis.mps.editor.diagram.structure.Content_Childs" flags="ng" index="aDKH9">
+        <reference id="3155126767689025691" name="linkDeclaration" index="aDKIf" />
+      </concept>
+      <concept id="5383048119156619323" name="de.itemis.mps.editor.diagram.structure.IDiagramElementsProvider" flags="ng" index="HB_m5">
+        <child id="3155126767688717334" name="contentList" index="aCds2" />
+      </concept>
+      <concept id="6237710625713195816" name="de.itemis.mps.editor.diagram.structure.CellModel_DiagramNode" flags="ng" index="2ZK4vF">
+        <child id="1315262826372527521" name="editor" index="1ytjkN" />
+      </concept>
+      <concept id="1981294357059563448" name="de.itemis.mps.editor.diagram.structure.ChildRolePaletteSource" flags="ng" index="1RuTs0">
+        <reference id="1981294357059564497" name="linkDeclaration" index="1RuSHD" />
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
@@ -1023,6 +1055,42 @@
         <ref role="1NtTu8" to="3z3g:3JSrgvOCzX8" resolve="time" />
       </node>
       <node concept="l2Vlx" id="3JSrgvOCzX$" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3ifWr0hKpF9">
+    <property role="3GE5qa" value="ED" />
+    <ref role="1XX52x" to="3z3g:3KCb14J9922" resolve="Area" />
+    <node concept="27vDVx" id="3ifWr0hKD4L" role="2wV5jI">
+      <node concept="1RuTs0" id="3ifWr0hKD7E" role="1RuSHk">
+        <ref role="1RuSHD" to="3z3g:3KCb14J9923" resolve="rooms" />
+      </node>
+      <node concept="aDKH9" id="3ifWr0hKD4O" role="aCds2">
+        <ref role="aDKIf" to="3z3g:3KCb14J9923" resolve="rooms" />
+      </node>
+    </node>
+    <node concept="2aJ2om" id="3ifWr0hKBo_" role="CpUAK">
+      <ref role="2$4xQ3" node="3ifWr0hKBnZ" resolve="diagram" />
+    </node>
+  </node>
+  <node concept="2ABfQD" id="3ifWr0hKBnG">
+    <property role="3GE5qa" value="" />
+    <property role="TrG5h" value="views" />
+    <node concept="2BsEeg" id="3ifWr0hKBnZ" role="2ABdcP">
+      <property role="2gpH_U" value="true" />
+      <property role="TrG5h" value="diagram" />
+      <property role="2BUmq6" value="Diagram View" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3ifWr0hKD7Q">
+    <property role="3GE5qa" value="ED" />
+    <ref role="1XX52x" to="3z3g:3KCb14J9912" resolve="Room" />
+    <node concept="2aJ2om" id="3ifWr0hKD81" role="CpUAK">
+      <ref role="2$4xQ3" node="3ifWr0hKBnZ" resolve="diagram" />
+    </node>
+    <node concept="2ZK4vF" id="3ifWr0hNE9y" role="2wV5jI">
+      <node concept="3F0A7n" id="3ifWr0hNE9I" role="1ytjkN">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
     </node>
   </node>
 </model>

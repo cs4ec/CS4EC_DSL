@@ -22,6 +22,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAdmissionBay = createDescriptorForAdmissionBay();
   /*package*/ final ConceptDescriptor myConceptAdmissionBayList = createDescriptorForAdmissionBayList();
   /*package*/ final ConceptDescriptor myConceptArea = createDescriptorForArea();
+  /*package*/ final ConceptDescriptor myConceptBlueprintMap = createDescriptorForBlueprintMap();
   /*package*/ final ConceptDescriptor myConceptDateTimeNowVariable = createDescriptorForDateTimeNowVariable();
   /*package*/ final ConceptDescriptor myConceptMapImporter = createDescriptorForMapImporter();
   /*package*/ final ConceptDescriptor myConceptResource = createDescriptorForResource();
@@ -55,7 +56,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptDateTimeNowVariable, myConceptMapImporter, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptTimeOfDayVariable, myConceptTimeOfDayWrapper, myConceptWallDefinition, myConceptWallInstanceDefinition);
+    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptBlueprintMap, myConceptDateTimeNowVariable, myConceptMapImporter, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptTimeOfDayVariable, myConceptTimeOfDayWrapper, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -70,6 +71,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptAdmissionBayList;
       case LanguageConceptSwitch.Area:
         return myConceptArea;
+      case LanguageConceptSwitch.BlueprintMap:
+        return myConceptBlueprintMap;
       case LanguageConceptSwitch.DateTimeNowVariable:
         return myConceptDateTimeNowVariable;
       case LanguageConceptSwitch.MapImporter:
@@ -144,8 +147,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/4334763093661094018");
     b.version(2);
+    b.property("showDiagramView", 0x348ff1b011c19abeL).type(PrimitiveTypeId.BOOLEAN).origin("3787511550156315326").done();
     b.aggregate("rooms", 0x3c282c112f249083L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L).optional(true).ordered(true).multiple(true).origin("4334763093661094019").done();
     b.aggregate("resourceNumbers", 0x5966f1c0f4192c8bL).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07ef54c6b7L).optional(true).ordered(true).multiple(true).origin("6442102128031378571").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForBlueprintMap() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "BlueprintMap", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x348ff1b011c19a5fL);
+    b.class_(false, false, true);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/3787511550156315231");
+    b.version(2);
+    b.property("showDiagramView", 0x348ff1b011c19a98L).type(PrimitiveTypeId.BOOLEAN).origin("3787511550156315288").done();
+    b.alias("ED Drawer");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDateTimeNowVariable() {

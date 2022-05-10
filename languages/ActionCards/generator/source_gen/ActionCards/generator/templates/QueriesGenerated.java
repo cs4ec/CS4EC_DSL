@@ -7,11 +7,12 @@ import jetbrains.mps.generator.impl.query.QueryProviderBase;
 import jetbrains.mps.generator.template.BaseMappingRuleContext;
 import jetbrains.mps.generator.template.PropertyMacroContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import ActionCards.behavior.Action__BehaviorDescriptor;
+import ActionCards.behavior.ActionCardElement__BehaviorDescriptor;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import ActionCards.behavior.Action__BehaviorDescriptor;
+import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SEnumOperations;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import ActionCards.behavior.IPatientProperty__BehaviorDescriptor;
 import ActionCards.behavior.DiseaseSymptom__BehaviorDescriptor;
@@ -74,13 +75,13 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_2_0(final PropertyMacroContext _context) {
-    return _context.createUniqueName(Action__BehaviorDescriptor.getFormattedName_id2lOlAdPvbFq.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub)) + "Trigger", null);
+    return _context.createUniqueName(ActionCardElement__BehaviorDescriptor.getFormattedName_id3ifWr0i0u$Q.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub)) + "Trigger", null);
   }
   public static Object propertyMacro_GetValue_2_1(final PropertyMacroContext _context) {
     return _context.createUniqueName(Action__BehaviorDescriptor.getFormattedName_id2lOlAdPvbFq.invoke(_context.getNode()) + "Trigger", null);
   }
   public static Object propertyMacro_GetValue_3_0(final PropertyMacroContext _context) {
-    return SPropertyOperations.getInteger(_context.getNode(), PROPS.minDuration$GM1u);
+    return SPropertyOperations.getInteger(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.duration$_Gwm)), PROPS.duration$LuEa);
   }
   public static Object propertyMacro_GetValue_3_1(final PropertyMacroContext _context) {
     return SEnumOperations.getMemberName0(SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab07cL, "ActionCards.structure.E_Result"), 0x25745663758ab07dL, "Positive"));
@@ -197,7 +198,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.number$HYc8);
   }
   public static Object referenceMacro_GetReferent_2_0(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.targetAction$Z7ub)), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
   }
   public static Object referenceMacro_GetReferent_2_1(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.Action$K5, false, false), LINKS.staffTypeReference$jtXw), LINKS.staffType$$i7d), "staffReduction");
@@ -212,15 +213,15 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), LINKS.roomType$xuJp);
   }
   public static Object referenceMacro_GetReferent_3_1(final ReferenceMacroContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.timeDistributionTable$nf94);
+    return _context.getOutputNodeByInputNodeAndMappingLabel((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.duration$_Gwm), "ProcesssingTimeTableToTimeDistribution");
   }
   public static Object referenceMacro_GetReferent_3_2(final ReferenceMacroContext _context) {
     SNode test = (SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG);
-    return _context.getOutputNodeByInputNodeAndMappingLabel(test, "ProcesssingTimeTableToTimeDistribution");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(test, "TesttoTimeDistr");
   }
   public static Object referenceMacro_GetReferent_3_3(final ReferenceMacroContext _context) {
     SNode test = (SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG);
-    return _context.getOutputNodeByInputNodeAndMappingLabel(test, "ProcesssingTimeTableToTimeDistribution");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(test, "TesttoTimeDistr");
   }
   public static Object referenceMacro_GetReferent_3_4(final ReferenceMacroContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG);
@@ -402,10 +403,10 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getBoolean(_context.getNode(), PROPS.requiresPatient$9L4w);
   }
   public static boolean ifMacro_Condition_3_2(final IfMacroContext _context) {
-    return SPropertyOperations.getInteger(_context.getNode(), PROPS.minDuration$GM1u) != 0 && Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.maxDuration$BlMG), null);
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.duration$_Gwm), CONCEPTS.ActionDurationMinutes$_m);
   }
   public static boolean ifMacro_Condition_3_3(final IfMacroContext _context) {
-    return SPropertyOperations.getInteger(_context.getNode(), PROPS.minDuration$GM1u) != 0 && !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.maxDuration$BlMG), null));
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.duration$_Gwm), CONCEPTS.ProcessingTimeTable$CA);
   }
   public static boolean ifMacro_Condition_3_4(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), CONCEPTS.DiseaseTest$k4);
@@ -513,7 +514,7 @@ public class QueriesGenerated extends QueryProviderBase {
     });
   }
   public static Iterable<SNode> sourceNodesQuery_3_3(final SourceSubstituteMacroNodesContext _context) {
-    return SLinkOperations.getChildren(_context.getNode(), LINKS.outgoingBranches$cwqF);
+    return SLinkOperations.getChildren(_context.getNode(), LINKS.outgoingBranches$JI4V);
   }
   public static Iterable<SNode> sourceNodesQuery_6_0(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.attributeLines$amAy);
@@ -641,41 +642,55 @@ public class QueriesGenerated extends QueryProviderBase {
       SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, rootAction);
       SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, newRootAction);
       ListSequence.fromList(newBranches).addElement(newBranch);
-      ListSequence.fromList(SLinkOperations.getChildren(newRootAction, LINKS.outgoingBranches$cwqF)).addElement(SNodeOperations.copyNode(newBranch));
+      ListSequence.fromList(SLinkOperations.getChildren(newRootAction, LINKS.outgoingBranches$JI4V)).addElement(SNodeOperations.copyNode(newBranch));
     }
 
     ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Branches$1fde)).addSequence(ListSequence.fromList(newBranches));
   }
   public static void mappingScript_CodeBlock_27(final MappingScriptContext _context) {
+  }
+  public static void mappingScript_CodeBlock_32(final MappingScriptContext _context) {
+    // For all test resources in the model (that contain sub-procedure action cards) 
+    List<SNode> allTests = SModelOperations.roots(_context.getInputModel(), CONCEPTS.Test$I1);
+    for (SNode test : ListSequence.fromList(allTests)) {
+      // Find all sub-process action cards 
+      SNode subProcess = SLinkOperations.getTarget(test, LINKS.TestingProcess$hIgq);
 
-    List<SNode> timeDistActions = ListSequence.fromList(new ArrayList<SNode>());
-    timeDistActions = Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return SPropertyOperations.getInteger(it, PROPS.minDuration$GM1u) != 0 && !(Objects.equals(SLinkOperations.getTarget(it, LINKS.maxDuration$BlMG), null));
+      // Create a dummy 'funnel' action at the end of the action card to merge all actions into one  
+      SNode newDummyAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
+      SPropertyOperations.assign(newDummyAction, PROPS.name$MnvL, "Get Test Result");
+      SLinkOperations.setTarget(newDummyAction, LINKS.resource$QlPG, test);
+      ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(subProcess, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).addElement(newDummyAction);
+
+      // Copy the staff type of the action 
+      SLinkOperations.setTarget(newDummyAction, LINKS.staffTypeReference$jtXw, SNodeOperations.copyNode(SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(subProcess, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return true;
+        }
+      }), LINKS.staffTypeReference$jtXw)));
+
+      // Merge all of the existing terminating actions into the new funnel action by adding branches 
+      List<SNode> terminatingActionCardElements = ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(subProcess, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return ListSequence.fromList(SLinkOperations.getChildren(it, LINKS.outgoingBranches$JI4V)).isEmpty();
+        }
+      }).toListSequence();
+      for (SNode terminatingAction : ListSequence.fromList(terminatingActionCardElements)) {
+        SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
+        SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, newDummyAction);
+        SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, terminatingAction);
+        ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(subProcess, LINKS.actionCard$QzY2), LINKS.Branches$1fde)).addElement(newBranch);
+        ListSequence.fromList(SLinkOperations.getChildren(terminatingAction, LINKS.outgoingBranches$JI4V)).addElement(SNodeOperations.copyNode(newBranch));
       }
-    }).toListSequence();
 
-    for (SNode action : ListSequence.fromList(timeDistActions)) {
-      SNode table = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610e89L, "AgentLanguage.structure.TimeDistributionTable"));
-      SNode lineOne = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610eb7L, "AgentLanguage.structure.TimeDistributionLine"));
-      SPropertyOperations.assign(lineOne, PROPS.Time$2ecp, SPropertyOperations.getInteger(action, PROPS.minDuration$GM1u) + "");
-      SPropertyOperations.assign(lineOne, PROPS.Occurances$2erq, 1);
-      SNode lineTwo = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610eb7L, "AgentLanguage.structure.TimeDistributionLine"));
-      SPropertyOperations.assign(lineTwo, PROPS.Time$2ecp, SPropertyOperations.getInteger(SLinkOperations.getTarget(action, LINKS.maxDuration$BlMG), PROPS.value$jgCM) + "");
-      SPropertyOperations.assign(lineTwo, PROPS.Occurances$2erq, 1);
-
-      SPropertyOperations.assign(table, PROPS.name$MnvL, _context.createUniqueName(Action__BehaviorDescriptor.getFormattedName_id2lOlAdPvbFq.invoke(action) + "TimeDistribution", null));
-      ListSequence.fromList(SLinkOperations.getChildren(table, LINKS.lines$5kpG)).addElement(lineOne);
-      ListSequence.fromList(SLinkOperations.getChildren(table, LINKS.lines$5kpG)).addElement(lineTwo);
-      SNode tableCopy = SNodeOperations.copyNode(table);
-      SLinkOperations.setTarget(action, LINKS.timeDistributionTable$nf94, tableCopy);
-
-      SModelOperations.addRootNode(_context.getInputModel(), tableCopy);
-
-
-
-
+      // Get all outgoing branches from this action card reference, update the 'from action' reference to the new dummy action 
+      List<SNode> existingOutgoingBranches = SLinkOperations.getChildren(subProcess, LINKS.outgoingBranches$JI4V);
+      for (SNode existingBranch : ListSequence.fromList(existingOutgoingBranches)) {
+        SLinkOperations.setTarget(existingBranch, LINKS.fromAction$DE5P, newDummyAction);
+      }
     }
+
+
   }
   public static SNode insertMacro_Query_6_0(final InsertMacroContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.possibleValue$QY6s);
@@ -746,6 +761,7 @@ public class QueriesGenerated extends QueryProviderBase {
     int i = 0;
     mscbMethods.put("1758249876526393805", new SCB(i++));
     mscbMethods.put("5729391434160732916", new SCB(i++));
+    mscbMethods.put("3787511550168649561", new SCB(i++));
   }
   @Override
   @NotNull
@@ -766,6 +782,9 @@ public class QueriesGenerated extends QueryProviderBase {
           return;
         case 1:
           QueriesGenerated.mappingScript_CodeBlock_27(ctx);
+          return;
+        case 2:
+          QueriesGenerated.mappingScript_CodeBlock_32(ctx);
           return;
         default:
           throw new GenerationFailureException(String.format("There's no code block with method index %d ", methodKey));
@@ -908,7 +927,7 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("5402567240274524530", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "map_StaffType"));
     pvqMethods.put("5402567240277091920", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "placeholderName"));
     pvqMethods.put("1758249876520841014", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "secondPlaceholder"));
-    pvqMethods.put("33966321893687228", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f19d52dL, 0x3c282c112f19d52eL, "timeSpan"), "1"));
+    pvqMethods.put("6963522544239149050", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f19d52dL, 0x3c282c112f19d52eL, "timeSpan"), null));
     pvqMethods.put("7828349744265165213", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
     pvqMethods.put("7828349744265175649", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
     pvqMethods.put("3686649417185244692", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, 0x33299c1cba4a21f8L, "value"), "10.4"));
@@ -1057,8 +1076,8 @@ public class QueriesGenerated extends QueryProviderBase {
     int i = 0;
     imcMethods.put("4544390881338977963", new IfMC(i++));
     imcMethods.put("4544390881339156271", new IfMC(i++));
-    imcMethods.put("33966321893692820", new IfMC(i++));
-    imcMethods.put("5729391434159779645", new IfMC(i++));
+    imcMethods.put("6963522544239144565", new IfMC(i++));
+    imcMethods.put("6963522544239183625", new IfMC(i++));
     imcMethods.put("2985733650865846916", new IfMC(i++));
     imcMethods.put("7828349744268830393", new IfMC(i++));
     imcMethods.put("4321323723338064347", new IfMC(i++));
@@ -1133,7 +1152,7 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("1758249876520837484", new RTQ(2, "map_StaffType"));
     rtqMethods.put("1758249876520817023", new RTQ(3, "map_Patient"));
     rtqMethods.put("4544390881338980129", new RTQ(4, null));
-    rtqMethods.put("5729391434159661769", new RTQ(5, "map_Test"));
+    rtqMethods.put("6963522544239183587", new RTQ(5, null));
     rtqMethods.put("2985733650860384502", new RTQ(6, null));
     rtqMethods.put("7828349744268830377", new RTQ(7, null));
     rtqMethods.put("4321323723338062232", new RTQ(8, null));
@@ -1420,7 +1439,7 @@ public class QueriesGenerated extends QueryProviderBase {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty minDuration$GM1u = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x78ac3096ccb324L, "minDuration");
+    /*package*/ static final SProperty duration$LuEa = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x60a366dc12ac1225L, 0x60a366dc12ac1226L, "duration");
     /*package*/ static final SProperty Sensitivity$e6X9 = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x549fe0474671cd38L, 0x549fe0474671cd6fL, "Sensitivity");
     /*package*/ static final SProperty Specificity$e7ca = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x549fe0474671cd38L, 0x549fe0474671cd70L, "Specificity");
     /*package*/ static final SProperty prevalence$QY$u = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x5dc1936ab2964870L, "prevalence");
@@ -1434,13 +1453,11 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty valueType$F2s2 = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c96L, 0x3a7166f1d9709f4eL, "valueType");
     /*package*/ static final SProperty requiresPatient$9L4w = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x3f10eb6deabdc338L, "requiresPatient");
     /*package*/ static final SProperty value$zwlK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value");
-    /*package*/ static final SProperty Time$2ecp = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610eb7L, 0x296f74efb5610ed3L, "Time");
-    /*package*/ static final SProperty Occurances$2erq = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610eb7L, 0x296f74efb5610ed4L, "Occurances");
-    /*package*/ static final SProperty value$jgCM = MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value");
   }
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink targetAction$Z7ub = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x4f415ebce3f345b2L, "targetAction");
+    /*package*/ static final SContainmentLink duration$_Gwm = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x60a366dc12abf609L, "duration");
     /*package*/ static final SReferenceLink disease$elY9 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x549fe0474671cd38L, 0x549fe0474671cd85L, "disease");
     /*package*/ static final SContainmentLink patientProperty$oTU2 = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L, 0x18668ef26f411a0aL, "patientProperty");
     /*package*/ static final SContainmentLink location$2x_J = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x3f10eb6deabbd805L, "location");
@@ -1449,7 +1466,6 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink attendanceRoute$Fj$T = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273c1dbbaL, 0x18668ef274f85a7bL, "attendanceRoute");
     /*package*/ static final SContainmentLink staffTypeReference$jtXw = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x4af9c647efdb14f9L, "staffTypeReference");
     /*package*/ static final SReferenceLink staffType$$i7d = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L, 0x4af9c647efda3aa5L, "staffType");
-    /*package*/ static final SReferenceLink timeDistributionTable$nf94 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x4f82e3275d69af14L, "timeDistributionTable");
     /*package*/ static final SReferenceLink resource$QlPG = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x29f0721df4a9974L, "resource");
     /*package*/ static final SContainmentLink attributes$kiaM = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, 0xaabf015be951259L, "attributes");
     /*package*/ static final SReferenceLink disease$NZ2B = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L, 0x18668ef26f40918bL, "disease");
@@ -1463,13 +1479,12 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SReferenceLink patientProperty$FJ4E = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L, 0x18668ef27115ff2aL, "patientProperty");
     /*package*/ static final SContainmentLink location$Gs47 = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4ab0a0c760d991ecL, 0x4ab0a0c760d9922cL, "location");
     /*package*/ static final SReferenceLink staff$HYEa = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e7bL, 0x4af9c647eff82e87L, "staff");
-    /*package*/ static final SContainmentLink maxDuration$BlMG = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x4f82e3275c1ebe7cL, "maxDuration");
     /*package*/ static final SContainmentLink condition$UnEW = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x2574566374febfecL, "condition");
     /*package*/ static final SContainmentLink Branches$1fde = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2574566374fd2551L, "Branches");
     /*package*/ static final SContainmentLink SymptomReference$jVTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db47911a7L, 0x6ca3e29db47912c5L, "SymptomReference");
     /*package*/ static final SReferenceLink symptom$dWL8 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791247L, 0x6ca3e29db4791251L, "symptom");
     /*package*/ static final SContainmentLink symptomReferences$_8Iv = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L, 0x6ca3e29db479125cL, "symptomReferences");
-    /*package*/ static final SContainmentLink outgoingBranches$cwqF = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x29f0721df2f38bbL, "outgoingBranches");
+    /*package*/ static final SContainmentLink outgoingBranches$JI4V = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b011fd1debL, 0x348ff1b012835312L, "outgoingBranches");
     /*package*/ static final SContainmentLink attributeLines$amAy = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L, 0x25745663764b1ad2L, "attributeLines");
     /*package*/ static final SContainmentLink PatientArrivalLines$6zwB = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x637eade0e62ce2b8L, 0x27ebd2392beaa3d1L, "PatientArrivalLines");
     /*package*/ static final SContainmentLink ProcessingTimeTable$ddGw = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, 0x6ca3e29db4792188L, "ProcessingTimeTable");
@@ -1478,7 +1493,8 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
     /*package*/ static final SContainmentLink condition$HxRE = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L, 0x18668ef27386cf03L, "condition");
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
-    /*package*/ static final SContainmentLink lines$5kpG = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610e89L, 0x296f74efb5610f1bL, "lines");
+    /*package*/ static final SContainmentLink TestingProcess$hIgq = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, 0x348ff1b011d7b149L, "TestingProcess");
+    /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
     /*package*/ static final SContainmentLink possibleValue$QY6s = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x5dc1936ab296486eL, "possibleValue");
     /*package*/ static final SContainmentLink attendanceRoute$f8XV = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, 0x18668ef2739f49dfL, "attendanceRoute");
     /*package*/ static final SContainmentLink ArrivalLocation$5hIS = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x637eade0e62ce2b8L, 0xaabf015bf63b5d0L, "ArrivalLocation");
@@ -1495,9 +1511,12 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept InfectionStatusProperty$al = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L, "ActionCards.structure.InfectionStatusProperty");
     /*package*/ static final SConcept ActionCard$eb = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, "ActionCards.structure.ActionCard");
     /*package*/ static final SConcept Branch$sq = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch");
+    /*package*/ static final SConcept ActionDurationMinutes$_m = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x60a366dc12ac1225L, "ActionCards.structure.ActionDurationMinutes");
+    /*package*/ static final SConcept ProcessingTimeTable$CA = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0edf5L, "ActionCards.structure.ProcessingTimeTable");
     /*package*/ static final SConcept DiseaseTest$k4 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4936c0ffc391ca7L, "ActionCards.structure.DiseaseTest");
     /*package*/ static final SConcept ObservationTest$BU = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db47911a7L, "ActionCards.structure.ObservationTest");
     /*package*/ static final SConcept Disease$5Q = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L, "ActionCards.structure.Disease");
     /*package*/ static final SConcept AdmissionAction$VB = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x78ac3095dfdf9aL, "ActionCards.structure.AdmissionAction");
+    /*package*/ static final SConcept Test$I1 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, "ActionCards.structure.Test");
   }
 }

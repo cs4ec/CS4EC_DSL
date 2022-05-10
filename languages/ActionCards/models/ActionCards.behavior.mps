@@ -1026,5 +1026,58 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="3ifWr0i0u$F">
+    <property role="3GE5qa" value="ActionCard" />
+    <ref role="13h7C2" to="e88n:3ifWr0hZhRF" resolve="ActionCardElement" />
+    <node concept="13i0hz" id="3ifWr0i0u$Q" role="13h7CS">
+      <property role="TrG5h" value="getFormattedName" />
+      <node concept="3Tm1VV" id="3ifWr0i0u$R" role="1B3o_S" />
+      <node concept="17QB3L" id="3ifWr0i0u_6" role="3clF45" />
+      <node concept="3clFbS" id="3ifWr0i0u$T" role="3clF47">
+        <node concept="3cpWs8" id="3ifWr0i0u_D" role="3cqZAp">
+          <node concept="3cpWsn" id="3ifWr0i0u_E" role="3cpWs9">
+            <property role="TrG5h" value="removedSpaces" />
+            <node concept="17QB3L" id="3ifWr0i0u_F" role="1tU5fm" />
+            <node concept="2OqwBi" id="3ifWr0i0u_G" role="33vP2m">
+              <node concept="2OqwBi" id="3ifWr0i0u_H" role="2Oq$k0">
+                <node concept="13iPFW" id="3ifWr0i0u_I" role="2Oq$k0" />
+                <node concept="3TrcHB" id="3ifWr0i0u_J" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+              <node concept="liA8E" id="3ifWr0i0u_K" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.replaceAll(java.lang.String,java.lang.String)" resolve="replaceAll" />
+                <node concept="Xl_RD" id="3ifWr0i0u_L" role="37wK5m">
+                  <property role="Xl_RC" value="\\s+" />
+                </node>
+                <node concept="Xl_RD" id="3ifWr0i0u_M" role="37wK5m">
+                  <property role="Xl_RC" value="" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="3ifWr0i0u_N" role="3cqZAp">
+          <node concept="2OqwBi" id="3ifWr0i0u_O" role="3cqZAk">
+            <node concept="37vLTw" id="3ifWr0i0u_P" role="2Oq$k0">
+              <ref role="3cqZAo" node="3ifWr0i0u_E" resolve="removedSpaces" />
+            </node>
+            <node concept="liA8E" id="3ifWr0i0u_Q" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
+              <node concept="Xl_RD" id="3ifWr0i0u_R" role="37wK5m">
+                <property role="Xl_RC" value="-" />
+              </node>
+              <node concept="Xl_RD" id="3ifWr0i0u_S" role="37wK5m">
+                <property role="Xl_RC" value="" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="3ifWr0i0u$G" role="13h7CW">
+      <node concept="3clFbS" id="3ifWr0i0u$H" role="2VODD2" />
+    </node>
+  </node>
 </model>
 

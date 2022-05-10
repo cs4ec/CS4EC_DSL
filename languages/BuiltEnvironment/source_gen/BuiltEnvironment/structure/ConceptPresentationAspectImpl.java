@@ -13,6 +13,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AdmissionBay;
   private ConceptPresentation props_AdmissionBayList;
   private ConceptPresentation props_Area;
+  private ConceptPresentation props_BlueprintMap;
   private ConceptPresentation props_DateTimeNowVariable;
   private ConceptPresentation props_MapImporter;
   private ConceptPresentation props_Resource;
@@ -61,6 +62,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Area = cpb.create();
         }
         return props_Area;
+      case LanguageConceptSwitch.BlueprintMap:
+        if (props_BlueprintMap == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Draw ED map here");
+          cpb.rawPresentation("ED Drawer");
+          props_BlueprintMap = cpb.create();
+        }
+        return props_BlueprintMap;
       case LanguageConceptSwitch.DateTimeNowVariable:
         if (props_DateTimeNowVariable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

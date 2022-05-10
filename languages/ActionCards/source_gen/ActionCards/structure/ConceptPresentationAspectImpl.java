@@ -9,10 +9,14 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
+  private ConceptPresentation props_AbstractDurationLine;
   private ConceptPresentation props_Action;
   private ConceptPresentation props_ActionCard;
   private ConceptPresentation props_ActionCardCondition;
+  private ConceptPresentation props_ActionCardElement;
   private ConceptPresentation props_ActionCardReference;
+  private ConceptPresentation props_ActionDurationEmptyLine;
+  private ConceptPresentation props_ActionDurationMinutes;
   private ConceptPresentation props_ActionStep;
   private ConceptPresentation props_AdmissionAction;
   private ConceptPresentation props_AttendanceRoute;
@@ -56,6 +60,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
+  private ConceptPresentation props_SubProcessActionCard;
+  private ConceptPresentation props_SubProcessActionCardReference;
   private ConceptPresentation props_SymptomList;
   private ConceptPresentation props_Test;
   private ConceptPresentation props_TestCapturedDisease;
@@ -71,6 +77,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   public ConceptPresentation getDescriptor(SAbstractConcept c) {
     StructureAspectDescriptor structureDescriptor = (StructureAspectDescriptor) myLanguageRuntime.getAspect(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.class);
     switch (structureDescriptor.internalIndex(c)) {
+      case LanguageConceptSwitch.AbstractDurationLine:
+        if (props_AbstractDurationLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("AbstractDurationLine");
+          props_AbstractDurationLine = cpb.create();
+        }
+        return props_AbstractDurationLine;
       case LanguageConceptSwitch.Action:
         if (props_Action == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -94,13 +107,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActionCardCondition = cpb.create();
         }
         return props_ActionCardCondition;
+      case LanguageConceptSwitch.ActionCardElement:
+        if (props_ActionCardElement == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ActionCardElement = cpb.create();
+        }
+        return props_ActionCardElement;
       case LanguageConceptSwitch.ActionCardReference:
         if (props_ActionCardReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard", "", "");
+          cpb.presentationByName();
           props_ActionCardReference = cpb.create();
         }
         return props_ActionCardReference;
+      case LanguageConceptSwitch.ActionDurationEmptyLine:
+        if (props_ActionDurationEmptyLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ActionDurationEmptyLine");
+          props_ActionDurationEmptyLine = cpb.create();
+        }
+        return props_ActionDurationEmptyLine;
+      case LanguageConceptSwitch.ActionDurationMinutes:
+        if (props_ActionDurationMinutes == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ActionDurationMinutes");
+          props_ActionDurationMinutes = cpb.create();
+        }
+        return props_ActionDurationMinutes;
       case LanguageConceptSwitch.ActionStep:
         if (props_ActionStep == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -406,6 +440,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StaffTypeReference = cpb.create();
         }
         return props_StaffTypeReference;
+      case LanguageConceptSwitch.SubProcessActionCard:
+        if (props_SubProcessActionCard == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_SubProcessActionCard = cpb.create();
+        }
+        return props_SubProcessActionCard;
+      case LanguageConceptSwitch.SubProcessActionCardReference:
+        if (props_SubProcessActionCardReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_SubProcessActionCardReference = cpb.create();
+        }
+        return props_SubProcessActionCardReference;
       case LanguageConceptSwitch.SymptomList:
         if (props_SymptomList == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -1455,7 +1455,7 @@
   <node concept="1TIwiD" id="2_JteYPof5l">
     <property role="EcuMT" value="2985733650858963285" />
     <property role="3GE5qa" value="actions.basic actions.StayAction" />
-    <property role="TrG5h" value="StayForTimeDistributionAction" />
+    <property role="TrG5h" value="PassiveWaitAction" />
     <property role="34LRSv" value="stay for time distribution" />
     <ref role="1TJDcQ" node="3DLpJ7prLyf" resolve="StayAction" />
     <node concept="PrWs8" id="2_JteYPof63" role="PzmwI">

@@ -162,6 +162,11 @@
     <node concept="PrWs8" id="3JSrgvJlcs1" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="1TJgyi" id="3ifWr0hKpEY" role="1TKVEl">
+      <property role="IQ2nx" value="3787511550156315326" />
+      <property role="TrG5h" value="showDiagramView" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
   </node>
   <node concept="25R3W" id="4_Lh49vymo3">
     <property role="3F6X1D" value="5292086088998413827" />
@@ -454,6 +459,19 @@
       <property role="20kJfa" value="time" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3JSrgvOatC0" resolve="TimeOfDayVariable" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3ifWr0hKpDv">
+    <property role="EcuMT" value="3787511550156315231" />
+    <property role="TrG5h" value="BlueprintMap" />
+    <property role="34LRSv" value="ED Drawer" />
+    <property role="R4oN_" value="Draw ED map here" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3ifWr0hKpEo" role="1TKVEl">
+      <property role="IQ2nx" value="3787511550156315288" />
+      <property role="TrG5h" value="showDiagramView" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
   </node>
 </model>
