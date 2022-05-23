@@ -65,6 +65,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SymptomList;
   private ConceptPresentation props_Test;
   private ConceptPresentation props_TestCapturedDisease;
+  private ConceptPresentation props_TimeDistributionLine;
+  private ConceptPresentation props_TimeDistributionTable;
   private ConceptPresentation props_TimeOfDayCondition;
   private ConceptPresentation props_Unvaccinated;
   private ConceptPresentation props_VaccinationStatus;
@@ -475,6 +477,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TestCapturedDisease = cpb.create();
         }
         return props_TestCapturedDisease;
+      case LanguageConceptSwitch.TimeDistributionLine:
+        if (props_TimeDistributionLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("TimeDistributionLine");
+          props_TimeDistributionLine = cpb.create();
+        }
+        return props_TimeDistributionLine;
+      case LanguageConceptSwitch.TimeDistributionTable:
+        if (props_TimeDistributionTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Time distribution table");
+          props_TimeDistributionTable = cpb.create();
+        }
+        return props_TimeDistributionTable;
       case LanguageConceptSwitch.TimeOfDayCondition:
         if (props_TimeOfDayCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

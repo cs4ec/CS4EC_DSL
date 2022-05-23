@@ -682,6 +682,11 @@
       <ref role="2rTdP9" to="e88n:1xAzJ9JfzHc" resolve="IPatientProperty" />
       <ref role="2rZz_L" to="3751:3KCb14J4_km" resolve="Attribute" />
     </node>
+    <node concept="2rT7sh" id="8bhHoBJK3x" role="2rTMjI">
+      <property role="TrG5h" value="ReduceTimeDistributionTable" />
+      <ref role="2rTdP9" to="e88n:8bhHoBICAE" resolve="TimeDistributionTable" />
+      <ref role="2rZz_L" to="3751:2_JteYPogU9" resolve="TimeDistributionTable" />
+    </node>
     <node concept="3aamgX" id="3WgUQREHuSZ" role="3acgRq">
       <ref role="30HIoZ" to="e88n:2VPlUUsG6x$" resolve="Action" />
       <node concept="j$656" id="3WgUQREHuT0" role="1lVwrX">
@@ -705,6 +710,10 @@
     <node concept="3lhOvk" id="7NybO1sfYLY" role="3lj3bC">
       <ref role="30HIoZ" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
       <ref role="3lhOvi" node="7NybO1sfYM7" />
+    </node>
+    <node concept="3lhOvk" id="8bhHoBYbj3" role="3lj3bC">
+      <ref role="30HIoZ" to="e88n:8bhHoBICAE" resolve="TimeDistributionTable" />
+      <ref role="3lhOvi" node="8bhHoBYbjc" resolve="map_TimeDistributionTable" />
     </node>
     <node concept="3aamgX" id="1SF32lS14A" role="3acgRq">
       <ref role="30HIoZ" to="e88n:1SF32lRXYq" resolve="AdmissionAction" />
@@ -1531,10 +1540,10 @@
                   <node concept="2OqwBi" id="62zpHKiNjln" role="3clFbG">
                     <node concept="1iwH7S" id="62zpHKiNjbe" role="2Oq$k0" />
                     <node concept="1iwH70" id="62zpHKiNjs0" role="2OqNvi">
-                      <ref role="1iwH77" node="2_JteYQKqmZ" resolve="ProcesssingTimeTableToTimeDistribution" />
+                      <ref role="1iwH77" node="8bhHoBJK3x" resolve="ReduceTimeDistributionTable" />
                       <node concept="10QFUN" id="62zpHKiNk4O" role="1iwH7V">
                         <node concept="3Tqbb2" id="62zpHKiNk84" role="10QFUM">
-                          <ref role="ehGHo" to="e88n:1rknCs3SeRP" resolve="ProcessingTimeTable" />
+                          <ref role="ehGHo" to="e88n:8bhHoBICAE" resolve="TimeDistributionTable" />
                         </node>
                         <node concept="2OqwBi" id="62zpHKiNjHS" role="10QFUP">
                           <node concept="30H73N" id="62zpHKiNjxw" role="2Oq$k0" />
@@ -1561,8 +1570,8 @@
                       </node>
                     </node>
                     <node concept="1mIQ4w" id="8bhHoBy6M1" role="2OqNvi">
-                      <node concept="chp4Y" id="8bhHoBy6OM" role="cj9EA">
-                        <ref role="cht4Q" to="e88n:1rknCs3SeRP" resolve="ProcessingTimeTable" />
+                      <node concept="chp4Y" id="8bhHoBJdPo" role="cj9EA">
+                        <ref role="cht4Q" to="e88n:8bhHoBICAE" resolve="TimeDistributionTable" />
                       </node>
                     </node>
                   </node>
@@ -7474,6 +7483,81 @@
         <node concept="3clFbH" id="3ifWr0iwu_w" role="3cqZAp" />
         <node concept="3clFbH" id="3ifWr0ivth6" role="3cqZAp" />
       </node>
+    </node>
+  </node>
+  <node concept="2s3BDA" id="8bhHoBYbjc">
+    <property role="TrG5h" value="map_TimeDistributionTable" />
+    <node concept="2s3BDo" id="8bhHoBYbVX" role="2s3BJO">
+      <node concept="1WS0z7" id="8bhHoBYbW3" role="lGtFl">
+        <node concept="3JmXsc" id="8bhHoBYbW6" role="3Jn$fo">
+          <node concept="3clFbS" id="8bhHoBYbW7" role="2VODD2">
+            <node concept="3clFbF" id="8bhHoBYbWd" role="3cqZAp">
+              <node concept="2OqwBi" id="8bhHoBYbW8" role="3clFbG">
+                <node concept="3Tsc0h" id="8bhHoBYbWb" role="2OqNvi">
+                  <ref role="3TtcxE" to="e88n:8bhHoBICAF" resolve="timeLines" />
+                </node>
+                <node concept="30H73N" id="8bhHoBYbWc" role="2Oq$k0" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17Uvod" id="8bhHoBYc9x" role="lGtFl">
+        <property role="2qtEX9" value="Time" />
+        <property role="P4ACc" value="7dcff301-ba01-414e-8574-a8f6da31876b/2985733650858970807/2985733650858970835" />
+        <node concept="3zFVjK" id="8bhHoBYc9y" role="3zH0cK">
+          <node concept="3clFbS" id="8bhHoBYc9z" role="2VODD2">
+            <node concept="3clFbF" id="8bhHoBYcfa" role="3cqZAp">
+              <node concept="2OqwBi" id="8bhHoBYcrX" role="3clFbG">
+                <node concept="30H73N" id="8bhHoBYcf9" role="2Oq$k0" />
+                <node concept="3TrcHB" id="8bhHoBYcNd" role="2OqNvi">
+                  <ref role="3TsBF5" to="e88n:8bhHoBICAI" resolve="Time" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="17Uvod" id="8bhHoBYcXa" role="lGtFl">
+        <property role="2qtEX9" value="Occurances" />
+        <property role="P4ACc" value="7dcff301-ba01-414e-8574-a8f6da31876b/2985733650858970807/2985733650858970836" />
+        <node concept="3zFVjK" id="8bhHoBYcXb" role="3zH0cK">
+          <node concept="3clFbS" id="8bhHoBYcXc" role="2VODD2">
+            <node concept="3clFbF" id="8bhHoBYdcR" role="3cqZAp">
+              <node concept="2OqwBi" id="8bhHoBYdtB" role="3clFbG">
+                <node concept="30H73N" id="8bhHoBYdcQ" role="2Oq$k0" />
+                <node concept="3TrcHB" id="8bhHoBYdxB" role="2OqNvi">
+                  <ref role="3TsBF5" to="e88n:8bhHoBICAK" resolve="Occurances" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="n94m4" id="8bhHoBYbjd" role="lGtFl">
+      <ref role="n9lRv" to="e88n:8bhHoBICAE" resolve="TimeDistributionTable" />
+    </node>
+    <node concept="17Uvod" id="8bhHoBYbjf" role="lGtFl">
+      <property role="2qtEX9" value="name" />
+      <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
+      <node concept="3zFVjK" id="8bhHoBYbjg" role="3zH0cK">
+        <node concept="3clFbS" id="8bhHoBYbjh" role="2VODD2">
+          <node concept="3clFbF" id="8bhHoBYbnR" role="3cqZAp">
+            <node concept="2OqwBi" id="8bhHoBYbza" role="3clFbG">
+              <node concept="1iwH7S" id="8bhHoBYbnQ" role="2Oq$k0" />
+              <node concept="2piZGk" id="8bhHoBYbHK" role="2OqNvi">
+                <node concept="Xl_RD" id="8bhHoBYbIq" role="2piZGb">
+                  <property role="Xl_RC" value="TimeDistributionTable" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2ZBi8u" id="8bhHoBYe26" role="lGtFl">
+      <ref role="2rW$FS" node="8bhHoBJK3x" resolve="ReduceTimeDistributionTable" />
     </node>
   </node>
 </model>

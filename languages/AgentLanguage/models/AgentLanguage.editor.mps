@@ -1111,19 +1111,6 @@
       </node>
     </node>
   </node>
-  <node concept="24kQdi" id="ijr0ZXLzp_">
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="1XX52x" to="3751:ijr0ZXLziU" resolve="InfectionCondition" />
-    <node concept="3EZMnI" id="ijr0ZXLzpB" role="2wV5jI">
-      <node concept="3F0ifn" id="ijr0ZXLztM" role="3EZMnx">
-        <property role="3F0ifm" value="I think the patient is" />
-      </node>
-      <node concept="3F0A7n" id="ijr0ZXLztY" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:ijr0ZXLzpz" resolve="InfectionStatus" />
-      </node>
-      <node concept="l2Vlx" id="ijr0ZXLzpE" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="4TDP_lRPmT">
     <property role="3GE5qa" value="actions.basic actions" />
     <ref role="1XX52x" to="3751:4TDP_lRPmO" resolve="DischargeAction" />
@@ -1319,32 +1306,6 @@
         <ref role="1NtTu8" to="3751:4TDP_nS6kx" resolve="targetOccupiable" />
       </node>
       <node concept="l2Vlx" id="4TDP_nS6kC" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="2Rfu8e4We7E">
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="1XX52x" to="3751:2Rfu8e4We5v" resolve="PatientAdmissionOutcomeCondition" />
-    <node concept="3EZMnI" id="2Rfu8e4We7G" role="2wV5jI">
-      <node concept="3F0ifn" id="2Rfu8e4We7N" role="3EZMnx">
-        <property role="3F0ifm" value="The patient has been" />
-      </node>
-      <node concept="3F0A7n" id="2Rfu8e4We7T" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:2Rfu8e4We7C" resolve="outcome" />
-      </node>
-      <node concept="l2Vlx" id="2Rfu8e4We7J" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="L8B6GnjfRa">
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="1XX52x" to="3751:L8B6GnjfR9" resolve="SuitableForSideRoomCondition" />
-    <node concept="3EZMnI" id="L8B6GnjfRc" role="2wV5jI">
-      <node concept="3F0ifn" id="2blVuwUUSWA" role="3EZMnx">
-        <property role="3F0ifm" value="the patient can be placed in a side room rather than " />
-      </node>
-      <node concept="3F1sOY" id="2blVuwUXD_N" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:2blVuwUXD_C" resolve="alternativeBay" />
-      </node>
-      <node concept="l2Vlx" id="L8B6GnjfRf" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="6dYFu3AhE_C">
@@ -1885,16 +1846,6 @@
         <ref role="1NtTu8" to="3751:3JSrgvLbur4" resolve="targetLocation" />
       </node>
       <node concept="l2Vlx" id="3JSrgvKC7dm" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="3JSrgvMapnh">
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="1XX52x" to="3751:3JSrgvMap3Q" resolve="ResourceAvailableCondition" />
-    <node concept="3EZMnI" id="3JSrgvMapq$" role="2wV5jI">
-      <node concept="l2Vlx" id="3JSrgvMapqB" role="2iSdaV" />
-      <node concept="3F1sOY" id="3JSrgvMMqXY" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:3JSrgvMMqXR" resolve="availabilityExpression" />
-      </node>
     </node>
   </node>
   <node concept="24kQdi" id="3JSrgvMqo3m">

@@ -101,10 +101,6 @@
       <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
         <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
-      <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
-        <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
-        <reference id="1144432896254" name="enumClass" index="1Px2BO" />
-      </concept>
       <concept id="1145552977093" name="jetbrains.mps.baseLanguage.structure.GenericNewExpression" flags="nn" index="2ShNRf">
         <child id="1145553007750" name="creator" index="2ShVmc" />
       </concept>
@@ -1073,12 +1069,6 @@
       <ref role="30HIoZ" to="3751:3DLpJ7prKMj" resolve="SignalInitReference" />
       <node concept="j$656" id="4TDP_nGF1n" role="1lVwrX">
         <ref role="v9R2y" node="4TDP_nGF1k" resolve="reduce_DirectSignalInitReference" />
-      </node>
-    </node>
-    <node concept="3aamgX" id="2Rfu8e4WeoZ" role="3acgRq">
-      <ref role="30HIoZ" to="3751:2Rfu8e4We5v" resolve="PatientAdmissionOutcomeCondition" />
-      <node concept="j$656" id="2Rfu8e4Wep0" role="1lVwrX">
-        <ref role="v9R2y" node="2Rfu8e4WeoX" resolve="reduce_PatientAdmissionOutcomeCondition" />
       </node>
     </node>
     <node concept="3aamgX" id="2blVuwVt5Gq" role="3acgRq">
@@ -9840,108 +9830,6 @@
       </node>
       <node concept="2tJIrI" id="4TDP_nGFuA" role="jymVt" />
       <node concept="3Tm1VV" id="4TDP_nGFtV" role="1B3o_S" />
-    </node>
-  </node>
-  <node concept="13MO4I" id="2Rfu8e4WeoX">
-    <property role="TrG5h" value="reduce_PatientAdmissionOutcomeCondition" />
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="3gUMe" to="3751:2Rfu8e4We5v" resolve="PatientAdmissionOutcomeCondition" />
-    <node concept="312cEu" id="4BMD7YjBDnw" role="13RCb5">
-      <property role="TrG5h" value="_class_" />
-      <node concept="15s5l7" id="4BMD7YjBDnx" role="lGtFl">
-        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: There is no default constructor available in super class simcore.agents.Agent&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/8974945326827961340]&quot;;" />
-        <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Agent" />
-      </node>
-      <node concept="2tJIrI" id="4BMD7YjBDny" role="jymVt" />
-      <node concept="312cEg" id="4BMD7YjBDnz" role="jymVt">
-        <property role="TrG5h" value="curMission" />
-        <node concept="3Tm6S6" id="4BMD7YjBDn$" role="1B3o_S" />
-        <node concept="3uibUv" id="4BMD7YjBDn_" role="1tU5fm">
-          <ref role="3uigEE" to="x5im:~Action" resolve="Action" />
-        </node>
-      </node>
-      <node concept="2tJIrI" id="4BMD7YjBDnA" role="jymVt" />
-      <node concept="312cEu" id="4BMD7YjBDnB" role="jymVt">
-        <property role="2bfB8j" value="true" />
-        <property role="TrG5h" value="inner" />
-        <node concept="3clFb_" id="4BMD7YjBDnC" role="jymVt">
-          <property role="TrG5h" value="InitFunction" />
-          <node concept="3clFbS" id="4BMD7YjBDnD" role="3clF47">
-            <node concept="3cpWs8" id="4BMD7YjBDnE" role="3cqZAp">
-              <node concept="3cpWsn" id="4BMD7YjBDnF" role="3cpWs9">
-                <property role="TrG5h" value="behaviour" />
-                <node concept="3uibUv" id="4BMD7YjBDnG" role="1tU5fm">
-                  <ref role="3uigEE" to="x5im:~Behaviour" resolve="Behaviour" />
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbH" id="4BMD7YjBDnH" role="3cqZAp" />
-            <node concept="3clFbH" id="4BMD7YjBDnI" role="3cqZAp" />
-            <node concept="3clFbJ" id="4BMD7YjBDnJ" role="3cqZAp">
-              <node concept="15s5l7" id="4BMD7YjBDnK" role="lGtFl">
-                <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: Variable 'behaviour' might not have been initialized&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/1529050434900907669]&quot;;" />
-                <property role="huDt6" value="Error: Variable 'behaviour' might not have been initialized" />
-              </node>
-              <node concept="3clFbS" id="4BMD7YjBDnL" role="3clFbx">
-                <node concept="3clFbH" id="4BMD7YjBDnM" role="3cqZAp" />
-              </node>
-              <node concept="3clFbC" id="4BMD7YjBEzs" role="3clFbw">
-                <node concept="Rm8GO" id="4BMD7YjBF00" role="3uHU7w">
-                  <ref role="Rm8GQ" to="9axu:~PatientOutcomes.ADMITTEDAMBER" resolve="ADMITTEDAMBER" />
-                  <ref role="1Px2BO" to="9axu:~PatientOutcomes" resolve="PatientOutcomes" />
-                  <node concept="1ZhdrF" id="4BMD7YjBF13" role="lGtFl">
-                    <property role="2qtEX8" value="enumConstantDeclaration" />
-                    <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1083260308424/1083260308426" />
-                    <node concept="3$xsQk" id="4BMD7YjBF14" role="3$ytzL">
-                      <node concept="3clFbS" id="4BMD7YjBF15" role="2VODD2">
-                        <node concept="3clFbF" id="4BMD7YjBF4g" role="3cqZAp">
-                          <node concept="2OqwBi" id="4BMD7YjBFBU" role="3clFbG">
-                            <node concept="2OqwBi" id="4BMD7YjBFhr" role="2Oq$k0">
-                              <node concept="30H73N" id="4BMD7YjBF4f" role="2Oq$k0" />
-                              <node concept="3TrcHB" id="4BMD7YjBFsH" role="2OqNvi">
-                                <ref role="3TsBF5" to="3751:2Rfu8e4We7C" resolve="outcome" />
-                              </node>
-                            </node>
-                            <node concept="24Tkf9" id="4BMD7YjBFLL" role="2OqNvi" />
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-                <node concept="2OqwBi" id="4BMD7YjBDXD" role="3uHU7B">
-                  <node concept="2OqwBi" id="4BMD7YjBDHd" role="2Oq$k0">
-                    <node concept="37vLTw" id="4BMD7YjBD$s" role="2Oq$k0">
-                      <ref role="3cqZAo" node="4BMD7YjBDnF" resolve="behaviour" />
-                    </node>
-                    <node concept="liA8E" id="4BMD7YjBDN4" role="2OqNvi">
-                      <ref role="37wK5l" to="x5im:~Behaviour.getPatient()" resolve="getPatient" />
-                    </node>
-                  </node>
-                  <node concept="liA8E" id="4BMD7YjBE7M" role="2OqNvi">
-                    <ref role="37wK5l" to="uux2:~Patient.getOutcome()" resolve="getOutcome" />
-                  </node>
-                </node>
-                <node concept="raruj" id="4BMD7YjBFV9" role="lGtFl" />
-              </node>
-            </node>
-          </node>
-          <node concept="3Tm1VV" id="4BMD7YjBDo2" role="1B3o_S" />
-          <node concept="3cqZAl" id="4BMD7YjBDo3" role="3clF45" />
-          <node concept="37vLTG" id="4BMD7YjBDo4" role="3clF46">
-            <property role="TrG5h" value="s" />
-            <node concept="3uibUv" id="4BMD7YjBDo5" role="1tU5fm">
-              <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
-            </node>
-          </node>
-        </node>
-        <node concept="2tJIrI" id="4BMD7YjBDo6" role="jymVt" />
-        <node concept="3Tm1VV" id="4BMD7YjBDo7" role="1B3o_S" />
-      </node>
-      <node concept="3Tm1VV" id="4BMD7YjBDo8" role="1B3o_S" />
-      <node concept="3uibUv" id="4BMD7YjBDo9" role="1zkMxy">
-        <ref role="3uigEE" to="uux2:~Agent" resolve="Agent" />
-      </node>
     </node>
   </node>
   <node concept="312cEu" id="L8B6GmTVp7">

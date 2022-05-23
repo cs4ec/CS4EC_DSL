@@ -3057,5 +3057,40 @@
       <node concept="2iRfu4" id="62zpHKiF226" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="8bhHoBICAU">
+    <property role="3GE5qa" value="Attributes" />
+    <ref role="1XX52x" to="e88n:8bhHoBICAH" resolve="TimeDistributionLine" />
+    <node concept="2r0Tta" id="8bhHoBICB2" role="2wV5jI">
+      <node concept="2reCLk" id="8bhHoBICB4" role="2r0Tv6">
+        <node concept="2reCLy" id="8bhHoBICB6" role="2reCL6">
+          <node concept="3F0A7n" id="8bhHoBICBa" role="2reSmM">
+            <ref role="1NtTu8" to="e88n:8bhHoBICAI" resolve="Time" />
+          </node>
+        </node>
+        <node concept="2reCLy" id="8bhHoBICBh" role="2reCL6">
+          <node concept="3F0A7n" id="8bhHoBICBs" role="2reSmM">
+            <ref role="1NtTu8" to="e88n:8bhHoBICAK" resolve="Occurances" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="8bhHoBICBA">
+    <property role="3GE5qa" value="Attributes" />
+    <ref role="1XX52x" to="e88n:8bhHoBICAE" resolve="TimeDistributionTable" />
+    <node concept="2rfBfz" id="8bhHoBICBC" role="2wV5jI">
+      <node concept="2reSaE" id="8bhHoBICBH" role="2rf8GZ">
+        <ref role="2reCK$" to="e88n:8bhHoBICAF" resolve="timeLines" />
+        <node concept="2r3Xtq" id="8bhHoBICBP" role="2YiT2b">
+          <node concept="2rfbtV" id="8bhHoBICBT" role="uCobI">
+            <property role="2rfbtB" value="Duration (minutes)" />
+          </node>
+          <node concept="2rfbtV" id="8bhHoBICBZ" role="uCobI">
+            <property role="2rfbtB" value="Occurances" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

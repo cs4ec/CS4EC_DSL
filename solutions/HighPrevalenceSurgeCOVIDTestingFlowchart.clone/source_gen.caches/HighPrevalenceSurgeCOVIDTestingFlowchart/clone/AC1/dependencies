@@ -45,6 +45,7 @@
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeAlt" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeAltExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a5" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Object" />
@@ -318,6 +319,14 @@
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.TaskRoom">
     <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.TimeDistributionTable_a5">
+    <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a5" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.TriageDesk">
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />

@@ -299,7 +299,7 @@
     <property role="TrG5h" value="ProcessingTimeTable" />
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="Test processing time table" />
-    <ref role="1TJDcQ" node="62zpHKiHExK" resolve="AbstractDurationLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1rknCs3SeTx" role="1TKVEi">
       <property role="IQ2ns" value="1645043697875742305" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -960,6 +960,37 @@
     <property role="3GE5qa" value="Attributes" />
     <property role="TrG5h" value="AbstractDurationLine" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="8bhHoBICAE">
+    <property role="EcuMT" value="147289298423155114" />
+    <property role="3GE5qa" value="Attributes" />
+    <property role="TrG5h" value="TimeDistributionTable" />
+    <property role="34LRSv" value="Time distribution table" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="62zpHKiHExK" resolve="AbstractDurationLine" />
+    <node concept="1TJgyj" id="8bhHoBICAF" role="1TKVEi">
+      <property role="IQ2ns" value="147289298423155115" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="timeLines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="8bhHoBICAH" resolve="TimeDistributionLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="8bhHoBICAH">
+    <property role="EcuMT" value="147289298423155117" />
+    <property role="3GE5qa" value="Attributes" />
+    <property role="TrG5h" value="TimeDistributionLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="8bhHoBICAI" role="1TKVEl">
+      <property role="IQ2nx" value="147289298423155118" />
+      <property role="TrG5h" value="Time" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyi" id="8bhHoBICAK" role="1TKVEl">
+      <property role="IQ2nx" value="147289298423155120" />
+      <property role="TrG5h" value="Occurances" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
 </model>
 

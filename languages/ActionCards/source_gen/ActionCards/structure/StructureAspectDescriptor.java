@@ -72,6 +72,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptSymptomList = createDescriptorForSymptomList();
   /*package*/ final ConceptDescriptor myConceptTest = createDescriptorForTest();
   /*package*/ final ConceptDescriptor myConceptTestCapturedDisease = createDescriptorForTestCapturedDisease();
+  /*package*/ final ConceptDescriptor myConceptTimeDistributionLine = createDescriptorForTimeDistributionLine();
+  /*package*/ final ConceptDescriptor myConceptTimeDistributionTable = createDescriptorForTimeDistributionTable();
   /*package*/ final ConceptDescriptor myConceptTimeOfDayCondition = createDescriptorForTimeOfDayCondition();
   /*package*/ final ConceptDescriptor myConceptUnvaccinated = createDescriptorForUnvaccinated();
   /*package*/ final ConceptDescriptor myConceptVaccinationStatus = createDescriptorForVaccinationStatus();
@@ -97,7 +99,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSubProcessActionCard, myConceptSubProcessActionCardReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
+    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSubProcessActionCard, myConceptSubProcessActionCardReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
   }
 
   @Override
@@ -216,6 +218,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptTest;
       case LanguageConceptSwitch.TestCapturedDisease:
         return myConceptTestCapturedDisease;
+      case LanguageConceptSwitch.TimeDistributionLine:
+        return myConceptTimeDistributionLine;
+      case LanguageConceptSwitch.TimeDistributionTable:
+        return myConceptTimeDistributionTable;
       case LanguageConceptSwitch.TimeOfDayCondition:
         return myConceptTimeOfDayCondition;
       case LanguageConceptSwitch.Unvaccinated:
@@ -668,7 +674,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForProcessingTimeTable() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ProcessingTimeTable", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0edf5L);
     b.class_(false, false, true);
-    b.super_("ActionCards.structure.AbstractDurationLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x60a366dc12b6a870L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1645043697875742197");
     b.version(2);
     b.aggregate("ProcessingTimeLines", 0x16d45e8703e0ee61L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0ee1aL).optional(true).ordered(true).multiple(true).origin("1645043697875742305").done();
@@ -774,6 +779,25 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("Sensitivity", 0x549fe0474671cd6fL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("6097839017212104047").done();
     b.property("Specificity", 0x549fe0474671cd70L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("6097839017212104048").done();
     b.associate("disease", 0x549fe0474671cd85L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(false).origin("6097839017212104069").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTimeDistributionLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TimeDistributionLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x20b46d627ba89adL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/147289298423155117");
+    b.version(2);
+    b.property("Time", 0x20b46d627ba89aeL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("147289298423155118").done();
+    b.property("Occurances", 0x20b46d627ba89b0L).type(PrimitiveTypeId.INTEGER).origin("147289298423155120").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTimeDistributionTable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TimeDistributionTable", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x20b46d627ba89aaL);
+    b.class_(false, false, true);
+    b.super_("ActionCards.structure.AbstractDurationLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x60a366dc12b6a870L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/147289298423155114");
+    b.version(2);
+    b.aggregate("timeLines", 0x20b46d627ba89abL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x20b46d627ba89adL).optional(true).ordered(true).multiple(true).origin("147289298423155115").done();
+    b.alias("Time distribution table");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTimeOfDayCondition() {

@@ -1037,18 +1037,6 @@
       <property role="1L1pqM" value="Susceptible" />
     </node>
   </node>
-  <node concept="1TIwiD" id="ijr0ZXLziU">
-    <property role="EcuMT" value="329726013666112698" />
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <property role="TrG5h" value="InfectionCondition" />
-    <property role="34LRSv" value="infection status condition" />
-    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
-    <node concept="1TJgyi" id="ijr0ZXLzpz" role="1TKVEl">
-      <property role="IQ2nx" value="329726013666113123" />
-      <property role="TrG5h" value="InfectionStatus" />
-      <ref role="AX2Wp" node="ijr0ZXLzgH" resolve="InfectionStateType" />
-    </node>
-  </node>
   <node concept="25R3W" id="$2vkoOOycN">
     <property role="3F6X1D" value="649219036782142259" />
     <property role="3GE5qa" value="actors.attribute" />
@@ -1152,18 +1140,6 @@
       <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
     </node>
   </node>
-  <node concept="1TIwiD" id="2Rfu8e4We5v">
-    <property role="EcuMT" value="3300989558152290655" />
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <property role="TrG5h" value="PatientAdmissionOutcomeCondition" />
-    <property role="34LRSv" value="Patient outcome condition" />
-    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
-    <node concept="1TJgyi" id="2Rfu8e4We7C" role="1TKVEl">
-      <property role="IQ2nx" value="3300989558152290792" />
-      <property role="TrG5h" value="outcome" />
-      <ref role="AX2Wp" node="2Rfu8e4We78" resolve="PatientOutcomes" />
-    </node>
-  </node>
   <node concept="25R3W" id="2Rfu8e4We78">
     <property role="3F6X1D" value="3300989558152290760" />
     <property role="3GE5qa" value="actors.attribute" />
@@ -1192,20 +1168,6 @@
       <property role="3tVfz5" value="3300989558152290774" />
       <property role="TrG5h" value="DISCHARGED" />
       <property role="1L1pqM" value="Discharged" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="L8B6GnjfR9">
-    <property role="EcuMT" value="885129310544657865" />
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <property role="TrG5h" value="SuitableForSideRoomCondition" />
-    <property role="34LRSv" value="suitable for side room condition" />
-    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
-    <node concept="1TJgyj" id="2blVuwUXD_C" role="1TKVEi">
-      <property role="IQ2ns" value="2510173949006354792" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="alternativeBay" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
     </node>
   </node>
   <node concept="1TIwiD" id="6dYFu3AbeaS">
@@ -1625,19 +1587,6 @@
       <property role="20kJfa" value="targetLocation" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="3JSrgvMap3Q">
-    <property role="EcuMT" value="4321323723356999926" />
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <property role="TrG5h" value="ResourceAvailableCondition" />
-    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
-    <node concept="1TJgyj" id="3JSrgvMMqXR" role="1TKVEi">
-      <property role="IQ2ns" value="4321323723367493495" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="availabilityExpression" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
   </node>
   <node concept="1TIwiD" id="3JSrgvMqo2V">
