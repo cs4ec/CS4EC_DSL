@@ -189,6 +189,20 @@
       </concept>
       <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
       <concept id="8910807539222190210" name="AgentLanguage.structure.Description" flags="ng" index="2IBTiW" />
+      <concept id="7942748223969203381" name="AgentLanguage.structure.SelectRoomByRelationshipToOccupier" flags="ng" index="KdHJo">
+        <property id="7942748223969203475" name="relationshipName" index="KdHDY" />
+        <child id="7942748223970427929" name="AgentType" index="K9gHO" />
+      </concept>
+      <concept id="7942748223948114341" name="AgentLanguage.structure.SelectRoomWithNoAgentsOfType" flags="ng" index="MW8r8">
+        <child id="7942748223948118951" name="AgentType" index="MW9ja" />
+      </concept>
+      <concept id="7942748223948107616" name="AgentLanguage.structure.RoomSelectionStrategyLine" flags="ng" index="MWe0d">
+        <child id="7942748223948109783" name="rule" index="MWfyU" />
+      </concept>
+      <concept id="7942748223948105583" name="AgentLanguage.structure.RoomSelectionStrategy" flags="ng" index="MWew2">
+        <child id="7942748223948107301" name="rules" index="MWe58" />
+      </concept>
+      <concept id="7942748223966936640" name="AgentLanguage.structure.SelectClosestRoom" flags="ng" index="NOV4H" />
       <concept id="768972137568225409" name="AgentLanguage.structure.RemoveRelationshipAction" flags="ng" index="2RhFyk">
         <property id="33966321878433161" name="relationshipName" index="2lAP6T" />
         <child id="768972137599000891" name="target" index="2Pqh4I" />
@@ -246,6 +260,7 @@
       <concept id="3838812034270454385" name="AgentLanguage.structure.Actor" flags="ng" index="3Vql55">
         <property id="8465466444634577437" name="patientCapacity" index="1n5rFW" />
         <child id="33966321879452666" name="signalselectionstrategy" index="2lyMva" />
+        <child id="7942748223948104476" name="roomSelectionStrategy" index="MWeLL" />
         <child id="2814466787070108702" name="behaviours" index="2Ov1EZ" />
         <child id="2701765455131303424" name="attributes" index="3eYOtt" />
         <child id="8149202941058079945" name="attributeMonitors" index="1TgxgJ" />
@@ -916,6 +931,80 @@
           <property role="2lzR30" value="patient" />
           <property role="2lzR3u" value="CurrentPatientAllocations" />
         </node>
+      </node>
+    </node>
+    <node concept="MWew2" id="6SUjQPsW9Si" role="MWeLL">
+      <node concept="MWe0d" id="6SUjQPuclB0" role="MWe58">
+        <node concept="KdHJo" id="6SUjQPuclBn" role="MWfyU">
+          <property role="KdHDY" value="CurrentPatientAllocations" />
+          <node concept="3n3BjK" id="6SUjQPuclBp" role="K9gHO">
+            <node concept="1ZhdrF" id="6SUjQPuclBt" role="lGtFl">
+              <property role="2qtEX8" value="actor" />
+              <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/513408552829815467/513408552829815468" />
+              <node concept="3$xsQk" id="6SUjQPuclBu" role="3$ytzL">
+                <node concept="3clFbS" id="6SUjQPuclBv" role="2VODD2">
+                  <node concept="3clFbF" id="6SUjQPuclEh" role="3cqZAp">
+                    <node concept="2OqwBi" id="6SUjQPuclEi" role="3clFbG">
+                      <node concept="1iwH7S" id="6SUjQPuclEj" role="2Oq$k0" />
+                      <node concept="1iwH70" id="6SUjQPuclEk" role="2OqNvi">
+                        <ref role="1iwH77" node="1xAzJ9O2jGr" resolve="PatientProfileReduction" />
+                        <node concept="2OqwBi" id="6SUjQPuclEl" role="1iwH7V">
+                          <node concept="2OqwBi" id="6SUjQPuclEm" role="2Oq$k0">
+                            <node concept="2OqwBi" id="6SUjQPuclEn" role="2Oq$k0">
+                              <node concept="1iwH7S" id="6SUjQPuclEo" role="2Oq$k0" />
+                              <node concept="1r8y6K" id="6SUjQPuclEp" role="2OqNvi" />
+                            </node>
+                            <node concept="2RRcyG" id="6SUjQPuclEq" role="2OqNvi">
+                              <ref role="2RRcyH" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
+                            </node>
+                          </node>
+                          <node concept="1uHKPH" id="6SUjQPuclEr" role="2OqNvi" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="MWe0d" id="6SUjQPsW9W5" role="MWe58">
+        <node concept="MW8r8" id="6SUjQPt51qO" role="MWfyU">
+          <node concept="3n3BjK" id="6SUjQPt51qQ" role="MW9ja">
+            <node concept="1ZhdrF" id="6SUjQPt51qU" role="lGtFl">
+              <property role="2qtEX8" value="actor" />
+              <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/513408552829815467/513408552829815468" />
+              <node concept="3$xsQk" id="6SUjQPt51qV" role="3$ytzL">
+                <node concept="3clFbS" id="6SUjQPt51qW" role="2VODD2">
+                  <node concept="3clFbF" id="6SUjQPt51wp" role="3cqZAp">
+                    <node concept="2OqwBi" id="6SUjQPt51Ex" role="3clFbG">
+                      <node concept="1iwH7S" id="6SUjQPt51wo" role="2Oq$k0" />
+                      <node concept="1iwH70" id="6SUjQPt51La" role="2OqNvi">
+                        <ref role="1iwH77" node="1xAzJ9O2jGr" resolve="PatientProfileReduction" />
+                        <node concept="2OqwBi" id="6SUjQPt56lN" role="1iwH7V">
+                          <node concept="2OqwBi" id="6SUjQPt56lO" role="2Oq$k0">
+                            <node concept="2OqwBi" id="6SUjQPt56lP" role="2Oq$k0">
+                              <node concept="1iwH7S" id="6SUjQPt56lQ" role="2Oq$k0" />
+                              <node concept="1r8y6K" id="6SUjQPt56lR" role="2OqNvi" />
+                            </node>
+                            <node concept="2RRcyG" id="6SUjQPt56lS" role="2OqNvi">
+                              <ref role="2RRcyH" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
+                            </node>
+                          </node>
+                          <node concept="1uHKPH" id="6SUjQPt56lT" role="2OqNvi" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="MWe0d" id="6SUjQPu0bL3" role="MWe58">
+        <node concept="NOV4H" id="6SUjQPu0bLo" role="MWfyU" />
       </node>
     </node>
   </node>

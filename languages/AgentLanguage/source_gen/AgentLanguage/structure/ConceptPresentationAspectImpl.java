@@ -44,7 +44,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
   private ConceptPresentation props_HumanInstanceFromSignal;
-  private ConceptPresentation props_InfectionCondition;
   private ConceptPresentation props_InfectionState;
   private ConceptPresentation props_IsExactlyOperator;
   private ConceptPresentation props_IsLessThanOperator;
@@ -62,7 +61,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_PassiveWaitAction;
-  private ConceptPresentation props_PatientAdmissionOutcomeCondition;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PlaceInstance;
   private ConceptPresentation props_PlaceInstanceCollection;
@@ -72,12 +70,18 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Relationship;
   private ConceptPresentation props_RemoveRelationshipAction;
   private ConceptPresentation props_RepastParam;
-  private ConceptPresentation props_ResourceAvailableCondition;
+  private ConceptPresentation props_RoomSelectionRule;
+  private ConceptPresentation props_RoomSelectionStrategy;
+  private ConceptPresentation props_RoomSelectionStrategyLine;
+  private ConceptPresentation props_RoomTypeIsAvailableCondition;
   private ConceptPresentation props_RoomTypeReference;
+  private ConceptPresentation props_SelectClosestRoom;
   private ConceptPresentation props_SelectFirstSignal;
   private ConceptPresentation props_SelectNotRelationshipDataSignal;
   private ConceptPresentation props_SelectRandomSignal;
   private ConceptPresentation props_SelectRelationshipDataSignal;
+  private ConceptPresentation props_SelectRoomByRelationshipToOccupier;
+  private ConceptPresentation props_SelectRoomWithNoAgentsOfType;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
   private ConceptPresentation props_Signal;
@@ -92,7 +96,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StayForConditionAction;
   private ConceptPresentation props_StayForTimeAction;
   private ConceptPresentation props_StopOrder;
-  private ConceptPresentation props_SuitableForSideRoomCondition;
   private ConceptPresentation props_TimeDistributionLine;
   private ConceptPresentation props_TimeDistributionTable;
   private ConceptPresentation props_UpdateAttributeAction;
@@ -354,13 +357,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_HumanInstanceFromSignal = cpb.create();
         }
         return props_HumanInstanceFromSignal;
-      case LanguageConceptSwitch.InfectionCondition:
-        if (props_InfectionCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("infection status condition");
-          props_InfectionCondition = cpb.create();
-        }
-        return props_InfectionCondition;
       case LanguageConceptSwitch.InfectionState:
         if (props_InfectionState == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -484,13 +480,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PassiveWaitAction = cpb.create();
         }
         return props_PassiveWaitAction;
-      case LanguageConceptSwitch.PatientAdmissionOutcomeCondition:
-        if (props_PatientAdmissionOutcomeCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Patient outcome condition");
-          props_PatientAdmissionOutcomeCondition = cpb.create();
-        }
-        return props_PatientAdmissionOutcomeCondition;
       case LanguageConceptSwitch.PatientInstance:
         if (props_PatientInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -556,13 +545,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RepastParam = cpb.create();
         }
         return props_RepastParam;
-      case LanguageConceptSwitch.ResourceAvailableCondition:
-        if (props_ResourceAvailableCondition == null) {
+      case LanguageConceptSwitch.RoomSelectionRule:
+        if (props_RoomSelectionRule == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("ResourceAvailableCondition");
-          props_ResourceAvailableCondition = cpb.create();
+          cpb.rawPresentation("RoomSelectionRule");
+          props_RoomSelectionRule = cpb.create();
         }
-        return props_ResourceAvailableCondition;
+        return props_RoomSelectionRule;
+      case LanguageConceptSwitch.RoomSelectionStrategy:
+        if (props_RoomSelectionStrategy == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("room selection strategy");
+          props_RoomSelectionStrategy = cpb.create();
+        }
+        return props_RoomSelectionStrategy;
+      case LanguageConceptSwitch.RoomSelectionStrategyLine:
+        if (props_RoomSelectionStrategyLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("RoomSelectionStrategyLine");
+          props_RoomSelectionStrategyLine = cpb.create();
+        }
+        return props_RoomSelectionStrategyLine;
+      case LanguageConceptSwitch.RoomTypeIsAvailableCondition:
+        if (props_RoomTypeIsAvailableCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Room type is available condition");
+          props_RoomTypeIsAvailableCondition = cpb.create();
+        }
+        return props_RoomTypeIsAvailableCondition;
       case LanguageConceptSwitch.RoomTypeReference:
         if (props_RoomTypeReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -571,6 +581,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RoomTypeReference = cpb.create();
         }
         return props_RoomTypeReference;
+      case LanguageConceptSwitch.SelectClosestRoom:
+        if (props_SelectClosestRoom == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select closest room");
+          props_SelectClosestRoom = cpb.create();
+        }
+        return props_SelectClosestRoom;
       case LanguageConceptSwitch.SelectFirstSignal:
         if (props_SelectFirstSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -599,6 +616,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SelectRelationshipDataSignal = cpb.create();
         }
         return props_SelectRelationshipDataSignal;
+      case LanguageConceptSwitch.SelectRoomByRelationshipToOccupier:
+        if (props_SelectRoomByRelationshipToOccupier == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select room based on relationship to occupier");
+          props_SelectRoomByRelationshipToOccupier = cpb.create();
+        }
+        return props_SelectRoomByRelationshipToOccupier;
+      case LanguageConceptSwitch.SelectRoomWithNoAgentsOfType:
+        if (props_SelectRoomWithNoAgentsOfType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select room containing no x type agents");
+          props_SelectRoomWithNoAgentsOfType = cpb.create();
+        }
+        return props_SelectRoomWithNoAgentsOfType;
       case LanguageConceptSwitch.SelfInstance:
         if (props_SelfInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -703,13 +734,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StopOrder = cpb.create();
         }
         return props_StopOrder;
-      case LanguageConceptSwitch.SuitableForSideRoomCondition:
-        if (props_SuitableForSideRoomCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("suitable for side room condition");
-          props_SuitableForSideRoomCondition = cpb.create();
-        }
-        return props_SuitableForSideRoomCondition;
       case LanguageConceptSwitch.TimeDistributionLine:
         if (props_TimeDistributionLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

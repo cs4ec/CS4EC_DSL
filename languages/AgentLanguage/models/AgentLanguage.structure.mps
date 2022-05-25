@@ -94,6 +94,12 @@
       <property role="20kJfa" value="signalselectionstrategy" />
       <ref role="20lvS9" node="1SF32lWRB3" resolve="MessageSelectionStrategy" />
     </node>
+    <node concept="1TJgyj" id="6SUjQPsMEcs" role="1TKVEi">
+      <property role="IQ2ns" value="7942748223948104476" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="roomSelectionStrategy" />
+      <ref role="20lvS9" node="6SUjQPsMEtJ" resolve="RoomSelectionStrategy" />
+    </node>
     <node concept="1TJgyj" id="74nMeo8ltN9" role="1TKVEi">
       <property role="IQ2ns" value="8149202941058079945" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -1621,6 +1627,99 @@
     </node>
     <node concept="PrWs8" id="2XblIMS1PMo" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="8bhHoC7_QQ">
+    <property role="EcuMT" value="147289298429697462" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="RoomTypeIsAvailableCondition" />
+    <property role="34LRSv" value="Room type is available condition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="8bhHoC7_R$" role="1TKVEi">
+      <property role="IQ2ns" value="147289298429697508" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetRoomType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6SUjQPsMEtJ">
+    <property role="EcuMT" value="7942748223948105583" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="RoomSelectionStrategy" />
+    <property role="34LRSv" value="room selection strategy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6SUjQPsMES_" role="1TKVEi">
+      <property role="IQ2ns" value="7942748223948107301" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rules" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="6SUjQPsMEXw" resolve="RoomSelectionStrategyLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6SUjQPsMEXw">
+    <property role="EcuMT" value="7942748223948107616" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="RoomSelectionStrategyLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6SUjQPsMFq_" role="1TKVEi">
+      <property role="IQ2ns" value="7942748223948109477" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
+    </node>
+    <node concept="1TJgyj" id="6SUjQPsMFvn" role="1TKVEi">
+      <property role="IQ2ns" value="7942748223948109783" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rule" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6SUjQPsMF$a">
+    <property role="EcuMT" value="7942748223948110090" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="RoomSelectionRule" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="6SUjQPsMGA_">
+    <property role="EcuMT" value="7942748223948114341" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="SelectRoomWithNoAgentsOfType" />
+    <property role="34LRSv" value="select room containing no x type agents" />
+    <ref role="1TJDcQ" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
+    <node concept="1TJgyj" id="6SUjQPsMHIB" role="1TKVEi">
+      <property role="IQ2ns" value="7942748223948118951" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="AgentType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6SUjQPtUvT0">
+    <property role="EcuMT" value="7942748223966936640" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="SelectClosestRoom" />
+    <property role="34LRSv" value="select closest room" />
+    <ref role="1TJDcQ" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
+  </node>
+  <node concept="1TIwiD" id="6SUjQPu39iP">
+    <property role="EcuMT" value="7942748223969203381" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="SelectRoomByRelationshipToOccupier" />
+    <property role="34LRSv" value="select room based on relationship to occupier" />
+    <ref role="1TJDcQ" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
+    <node concept="1TJgyj" id="6SUjQPu7Ogp" role="1TKVEi">
+      <property role="IQ2ns" value="7942748223970427929" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="AgentType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
+    </node>
+    <node concept="1TJgyi" id="6SUjQPu39kj" role="1TKVEl">
+      <property role="IQ2nx" value="7942748223969203475" />
+      <property role="TrG5h" value="relationshipName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

@@ -209,3 +209,75 @@ Caused by: java.util.NoSuchElementException: No value present
 	at simcore.agents.Actor.Perceive(Actor.java:163)
 	at simcore.agents.Actor.step(Actor.java:126)
 	... 10 more
+FATAL [Thread-2] 2022-05-23 14:57:06,572 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (69.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.NullPointerException
+	at simcore.agents.Agent.EvaluateRoomChoice(Agent.java:257)
+	at simcore.agents.Actor.ExecOrder(Actor.java:186)
+	at simcore.agents.Actor.Perceive(Actor.java:138)
+	at simcore.agents.Actor.step(Actor.java:126)
+	... 10 more
+FATAL [Thread-2] 2022-05-23 15:02:42,282 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (34.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.lang.NullPointerException
+	at simcore.agents.Agent.CalcDistance(Agent.java:501)
+	at simcore.agents.Agent.ImAt(Agent.java:493)
+	at simcore.agents.Agent.ImAt(Agent.java:482)
+	at EDLanguage.sandbox.CubicleNurse$MoveAction_a0a_1.finishCondition(CubicleNurse.java:141)
+	at simcore.action.Behaviour.step(Behaviour.java:41)
+	at simcore.agents.Agent.stepAction(Agent.java:111)
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:84)
+	at simcore.agents.Actor.Perceive(Actor.java:163)
+	at simcore.agents.Actor.step(Actor.java:126)
+	... 10 more
+FATAL [Thread-2] 2022-05-23 16:51:04,814 repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (35.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72)
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:333)
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38)
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205)
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231)
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:352)
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>)
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53)
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69)
+	... 7 more
+Caused by: java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:148)
+	at simcore.agents.Agent.SelectLocation(Agent.java:151)
+	at simcore.agents.Actor.ExecOrder(Actor.java:179)
+	at simcore.agents.Actor.Perceive(Actor.java:138)
+	at simcore.agents.Actor.step(Actor.java:126)
+	... 10 more

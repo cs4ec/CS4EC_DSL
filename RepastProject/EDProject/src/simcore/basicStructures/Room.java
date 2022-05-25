@@ -13,6 +13,9 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.MajorsCBay;
+import EDLanguage.sandbox.RespiratoryCubicle;
+import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ISchedule;
@@ -101,6 +104,13 @@ public class Room extends Locatable{
 				person.SetInside(this);
 				contentPeople.add(person);
 				curCap++;
+			}
+		}
+		
+		if(this.roomType == RespiratoryCubicle.getInstance()) {
+			System.out.println(this.name() + "contains :");
+			for (Agent agent : contentPeople) {
+				System.out.println(agent);
 			}
 		}
 	}

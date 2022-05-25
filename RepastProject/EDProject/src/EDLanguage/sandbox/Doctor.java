@@ -14,14 +14,15 @@ import java.util.function.Predicate;
 import org.iet3.core.expr.genjava.simpleTypes.rt.rt.AH;
 
 import repast.simphony.space.graph.Network;
+import simcore.basicStructures.Room;
+import java.util.ArrayList;
+import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
-import simcore.basicStructures.Room;
 import simcore.basicStructures.Locatable;
 import simcore.action.InstantBehaviourStep;
 import simcore.basicStructures.TimeKeeper;
 import java.math.BigInteger;
-import java.util.ArrayList;
 import simcore.basicStructures.Board;
 
 public class Doctor extends Actor {
@@ -65,6 +66,35 @@ public class Doctor extends Actor {
     return null;
   }
 
+  protected double EvaluateRoomChoice(Room pRoom) {
+    ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
+
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(Doctor.this, a) != null;
+        }
+      })) {
+        return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class;
+        }
+      })) {
+        return Double.MAX_VALUE;
+      }
+    }
+    if (true) {
+      return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
+    }
+    return 0;
+
+  }
+
+
 
 
   public Behaviour BuildActionFromSignal(Signal s) {
@@ -102,18 +132,21 @@ public class Doctor extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class Choice_b0a extends InstantBehaviourStep {
@@ -183,18 +216,21 @@ public class Doctor extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class Choice_b0a_1 extends InstantBehaviourStep {

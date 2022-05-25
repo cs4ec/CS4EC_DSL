@@ -985,5 +985,55 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="6SUjQPsMGuS">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPsMF$a" resolve="RoomSelectionRule" />
+    <node concept="9S07l" id="6SUjQPsMG__" role="9Vyp8">
+      <node concept="3clFbS" id="6SUjQPsMG_A" role="2VODD2">
+        <node concept="3cpWs6" id="6SUjQPsMG_W" role="3cqZAp">
+          <node concept="3clFbT" id="6SUjQPsMGA4" role="3cqZAk" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="6SUjQPsMH7c">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPsMGA_" resolve="SelectRoomWithNoAgentsOfType" />
+    <node concept="9S07l" id="6SUjQPsMHbx" role="9Vyp8">
+      <node concept="3clFbS" id="6SUjQPsMHby" role="2VODD2">
+        <node concept="3cpWs6" id="6SUjQPsMHc4" role="3cqZAp">
+          <node concept="3clFbT" id="6SUjQPsMHcc" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="6SUjQPtUwI$">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPtUvT0" resolve="SelectClosestRoom" />
+    <node concept="9S07l" id="6SUjQPtUwI_" role="9Vyp8">
+      <node concept="3clFbS" id="6SUjQPtUwIA" role="2VODD2">
+        <node concept="3cpWs6" id="6SUjQPtUwJ8" role="3cqZAp">
+          <node concept="3clFbT" id="6SUjQPtUwJM" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="6SUjQPu39ld">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPu39iP" resolve="SelectRoomByRelationshipToOccupier" />
+    <node concept="9S07l" id="6SUjQPu39le" role="9Vyp8">
+      <node concept="3clFbS" id="6SUjQPu39lf" role="2VODD2">
+        <node concept="3clFbF" id="6SUjQPu39p9" role="3cqZAp">
+          <node concept="3clFbT" id="6SUjQPu39p8" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

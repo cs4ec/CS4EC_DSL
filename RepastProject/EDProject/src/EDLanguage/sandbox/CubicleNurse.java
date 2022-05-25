@@ -11,13 +11,14 @@ import simcore.Signals.Signal;
 import java.util.List;
 import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
+import simcore.basicStructures.Room;
+import java.util.ArrayList;
+import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
-import simcore.basicStructures.Room;
 import simcore.basicStructures.Locatable;
 import simcore.action.PassiveBehaviourStep;
 import simcore.action.InstantBehaviourStep;
-import java.util.ArrayList;
 import simcore.Signals.Orders.MoveToOrder;
 import repast.simphony.engine.environment.RunEnvironment;
 import simcore.basicStructures.Board;
@@ -62,6 +63,35 @@ public class CubicleNurse extends Actor {
     }
     return null;
   }
+
+  protected double EvaluateRoomChoice(Room pRoom) {
+    ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
+
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(CubicleNurse.this, a) != null;
+        }
+      })) {
+        return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class;
+        }
+      })) {
+        return Double.MAX_VALUE;
+      }
+    }
+    if (true) {
+      return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
+    }
+    return 0;
+
+  }
+
 
 
 
@@ -124,18 +154,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class StayAction_b0a extends PassiveBehaviourStep {
@@ -299,18 +332,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class StayAction_b0a_1 extends PassiveBehaviourStep {
@@ -1018,18 +1054,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0b extends BehaviourStep {
@@ -1156,18 +1195,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0b_1 extends BehaviourStep {
@@ -1486,18 +1528,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0c extends BehaviourStep {
@@ -1625,18 +1670,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0c_1 extends BehaviourStep {
@@ -1988,18 +2036,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0d extends BehaviourStep {
@@ -2129,18 +2180,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0d_1 extends BehaviourStep {
@@ -2750,18 +2804,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0e extends BehaviourStep {
@@ -2908,18 +2965,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0e_1 extends BehaviourStep {
@@ -3546,18 +3606,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0f extends BehaviourStep {
@@ -3606,18 +3669,21 @@ public class CubicleNurse extends Actor {
         }
       }
 
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+            concreteTarget = SelectLocation(((RoomType) target));
+          }
         }
-      }
 
-      behaviour.setBheaviourLocation((Locatable) concreteTarget);
-      MoveTowards(concreteTarget);
+        behaviour.setBheaviourLocation((Locatable) concreteTarget);
+        MoveTowards(concreteTarget);
+
+      }
     }
 
     public boolean finishCondition() {
-      return ImAt(concreteTarget);
+      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
   public class OrderAction_b0f_1 extends BehaviourStep {

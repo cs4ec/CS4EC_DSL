@@ -11,6 +11,9 @@ import simcore.Signals.Signal;
 import java.util.List;
 import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
+import simcore.basicStructures.Room;
+import java.util.ArrayList;
+import simcore.agents.Agent;
 
 public class LabTechnician extends Actor {
 
@@ -52,6 +55,35 @@ public class LabTechnician extends Actor {
     }
     return null;
   }
+
+  protected double EvaluateRoomChoice(Room pRoom) {
+    ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
+
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(LabTechnician.this, a) != null;
+        }
+      })) {
+        return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class;
+        }
+      })) {
+        return Double.MAX_VALUE;
+      }
+    }
+    if (true) {
+      return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
+    }
+    return 0;
+
+  }
+
 
 
 

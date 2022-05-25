@@ -182,29 +182,31 @@ public class Actor extends Agent {
 		          }
 		        }
 			
-		    if (destination instanceof RoomType) {
-		        if (EvaluateRoomChoice(((Room) concreteDestination)) == 0) {
-		        	concreteDestination = SelectLocation(((RoomType) destination));
-		        }
-		      }
+		      if(concreteDestination != null) {
+				    if (destination instanceof RoomType) {
+				        if (EvaluateRoomChoice(((Room) concreteDestination)) == 0) {
+				        	concreteDestination = SelectLocation(((RoomType) destination));
+				        }
+				      }
 
-			MoveTowards(concreteDestination);
-			
-			if (concreteDestination instanceof Room) {
-				Room targetLocation = (Room) concreteDestination;
-				
-				// if this agent is in the room..
-				if (targetLocation.WithInside(this)) {
-						if (((MoveToOrder) order).getOccupiable() != null) {
-						FindAnOccupiable(((MoveToOrder) order).getOccupiable());
+					MoveTowards(concreteDestination);
+					
+					if (concreteDestination instanceof Room) {
+						Room targetLocation = (Room) concreteDestination;
+						
+						// if this agent is in the room..
+						if (targetLocation.WithInside(this)) {
+								if (((MoveToOrder) order).getOccupiable() != null) {
+								FindAnOccupiable(((MoveToOrder) order).getOccupiable());
+							}
+							iterateOrder();
+						}
+					} else {
+						if (ImAt(concreteDestination)) {
+							iterateOrder();
+						}
 					}
-					iterateOrder();
-				}
-			} else {
-				if (ImAt(concreteDestination)) {
-					iterateOrder();
-				}
-			}
+		      }
 
 		} else if (order instanceof FollowOrder) {
 			// follow the target

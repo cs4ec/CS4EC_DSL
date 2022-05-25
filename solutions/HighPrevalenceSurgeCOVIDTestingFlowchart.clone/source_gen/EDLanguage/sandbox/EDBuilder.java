@@ -52,8 +52,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
-    context.add(new patientGenerator_1(space, grid, context));
     context.add(new patientGenerator_0(space, grid, context));
+    context.add(new patientGenerator_1(space, grid, context));
     context.add(new Board());
 
     // add Agents 

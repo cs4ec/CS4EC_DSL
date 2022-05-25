@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import EDLanguage.sandbox.WardStaff;
+import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.random.RandomHelper;
@@ -143,10 +144,13 @@ public class Agent {
 	// Given a RoomType, select a Location of that RoomType
 	protected Room SelectLocation(RoomType pRoomType) {
 		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
+
 		// find an instance of the room we want
 		// By default select the one that is most empty
 		try {
-			return pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2))).findFirst().get();
+			Room selectedRoom = pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2))).filter(r -> EvaluateRoomChoice(r) != Double.MAX_VALUE).findFirst().orElse(null);
+
+			return selectedRoom;
 		} catch (ArrayIndexOutOfBoundsException e) {
 			return null;
 		}
@@ -249,13 +253,15 @@ public class Agent {
 	// Utility method to evaluate the utility of a room for selection
 	protected double EvaluateRoomChoice(Room pRoom) {
 		int pRoomCapacity = pRoom.getCurrentCapacity();
-		if(pRoom.getOccupiers().contains(this)) {
-			pRoomCapacity--;
-		}
-		if(pRoomCapacity > 0) {
+		
+		if(pRoom.getOccupiers().stream().anyMatch(a -> a.getClass() == patient.class)) {
 			return Double.MAX_VALUE;
-		} else {
-			return CalcDistance(grid.getLocation(this), grid.getLocation(pRoom));
+		}
+		if(pRoom.getOccupiers().contains(this)) {
+			return -Double.MAX_VALUE;
+		}
+		else {
+			return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
 		}
 	}
 	

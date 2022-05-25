@@ -760,6 +760,13 @@
           </node>
           <node concept="2iRfu4" id="2_JteYOhd$9" role="2iSdaV" />
         </node>
+        <node concept="3EZMnI" id="6SUjQPsRMQY" role="3EZMnx">
+          <node concept="VPM3Z" id="6SUjQPsRMR0" role="3F10Kt" />
+          <node concept="3F1sOY" id="6SUjQPsRMR_" role="3EZMnx">
+            <ref role="1NtTu8" to="3751:6SUjQPsMEcs" resolve="roomSelectionStrategy" />
+          </node>
+          <node concept="2iRfu4" id="6SUjQPsRMR3" role="2iSdaV" />
+        </node>
         <node concept="3F0ifn" id="7o6PzEpEZAC" role="3EZMnx">
           <property role="3F0ifm" value="who" />
         </node>
@@ -1882,6 +1889,103 @@
         <property role="3F0ifm" value=")" />
       </node>
       <node concept="l2Vlx" id="2XblIMS1PMC" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="8bhHoC7_RH">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:8bhHoC7_QQ" resolve="RoomTypeIsAvailableCondition" />
+    <node concept="3EZMnI" id="8bhHoC7_S1" role="2wV5jI">
+      <node concept="3F0ifn" id="8bhHoC7_S8" role="3EZMnx">
+        <property role="3F0ifm" value="Room type:" />
+      </node>
+      <node concept="3F1sOY" id="8bhHoC7_Se" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:8bhHoC7_R$" resolve="targetRoomType" />
+      </node>
+      <node concept="3F0ifn" id="8bhHoC7_Sm" role="3EZMnx">
+        <property role="3F0ifm" value="is" />
+      </node>
+      <node concept="3F0ifn" id="8bhHoC7_Sw" role="3EZMnx">
+        <property role="3F0ifm" value="empty" />
+      </node>
+      <node concept="l2Vlx" id="8bhHoC7_S4" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6SUjQPsMH1$">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:6SUjQPsMGA_" resolve="SelectRoomWithNoAgentsOfType" />
+    <node concept="3EZMnI" id="6SUjQPsMH3Y" role="2wV5jI">
+      <node concept="3F0ifn" id="6SUjQPsMH6J" role="3EZMnx">
+        <property role="3F0ifm" value="Select room containing no agents of type" />
+      </node>
+      <node concept="3F1sOY" id="6SUjQPsMHIG" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6SUjQPsMHIB" resolve="AgentType" />
+      </node>
+      <node concept="l2Vlx" id="6SUjQPsMH41" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6SUjQPsRMSy">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:6SUjQPsMEtJ" resolve="RoomSelectionStrategy" />
+    <node concept="3EZMnI" id="6SUjQPsRMS$" role="2wV5jI">
+      <node concept="3F0ifn" id="6SUjQPsRMSF" role="3EZMnx">
+        <property role="3F0ifm" value="Room Selection Strategy" />
+      </node>
+      <node concept="3F0ifn" id="6SUjQPsRMSI" role="3EZMnx">
+        <property role="3F0ifm" value="------------------------" />
+      </node>
+      <node concept="3F2HdR" id="6SUjQPsRMSP" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6SUjQPsMES_" resolve="rules" />
+        <node concept="2iRkQZ" id="6SUjQPsRMSR" role="2czzBx" />
+      </node>
+      <node concept="2iRkQZ" id="6SUjQPsRMSB" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6SUjQPsRMTl">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:6SUjQPsMEXw" resolve="RoomSelectionStrategyLine" />
+    <node concept="3EZMnI" id="6SUjQPsRMTn" role="2wV5jI">
+      <node concept="3F0ifn" id="6SUjQPsRMTu" role="3EZMnx">
+        <property role="3F0ifm" value="if" />
+      </node>
+      <node concept="3F1sOY" id="6SUjQPsRMT$" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6SUjQPsMFq_" resolve="condition" />
+      </node>
+      <node concept="3F0ifn" id="6SUjQPsRMTL" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F1sOY" id="6SUjQPsRMTV" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6SUjQPsMFvn" resolve="rule" />
+      </node>
+      <node concept="l2Vlx" id="6SUjQPsRMTq" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6SUjQPtUvTa">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:6SUjQPtUvT0" resolve="SelectClosestRoom" />
+    <node concept="3EZMnI" id="6SUjQPtUvTl" role="2wV5jI">
+      <node concept="3F0ifn" id="6SUjQPtUvTs" role="3EZMnx">
+        <property role="3F0ifm" value="Select the closest room" />
+      </node>
+      <node concept="l2Vlx" id="6SUjQPtUvTo" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="6SUjQPu39jq">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:6SUjQPu39iP" resolve="SelectRoomByRelationshipToOccupier" />
+    <node concept="3EZMnI" id="6SUjQPu39js" role="2wV5jI">
+      <node concept="3F0ifn" id="6SUjQPu39l5" role="3EZMnx">
+        <property role="3F0ifm" value="Select room where I have relationship:" />
+      </node>
+      <node concept="3F0A7n" id="6SUjQPu7RHL" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6SUjQPu39kj" resolve="relationshipName" />
+      </node>
+      <node concept="3F0ifn" id="6SUjQPu7RHV" role="3EZMnx">
+        <property role="3F0ifm" value="with occupier of type" />
+      </node>
+      <node concept="3F1sOY" id="6SUjQPu7RH9" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6SUjQPu7Ogp" resolve="AgentType" />
+      </node>
+      <node concept="l2Vlx" id="6SUjQPu39jv" role="2iSdaV" />
     </node>
   </node>
 </model>
