@@ -67,8 +67,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptStaffNumber = createDescriptorForStaffNumber();
   /*package*/ final ConceptDescriptor myConceptStaffType = createDescriptorForStaffType();
   /*package*/ final ConceptDescriptor myConceptStaffTypeReference = createDescriptorForStaffTypeReference();
-  /*package*/ final ConceptDescriptor myConceptSubProcessActionCard = createDescriptorForSubProcessActionCard();
-  /*package*/ final ConceptDescriptor myConceptSubProcessActionCardReference = createDescriptorForSubProcessActionCardReference();
   /*package*/ final ConceptDescriptor myConceptSymptomList = createDescriptorForSymptomList();
   /*package*/ final ConceptDescriptor myConceptTest = createDescriptorForTest();
   /*package*/ final ConceptDescriptor myConceptTestCapturedDisease = createDescriptorForTestCapturedDisease();
@@ -99,7 +97,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSubProcessActionCard, myConceptSubProcessActionCardReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
+    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
   }
 
   @Override
@@ -208,10 +206,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptStaffType;
       case LanguageConceptSwitch.StaffTypeReference:
         return myConceptStaffTypeReference;
-      case LanguageConceptSwitch.SubProcessActionCard:
-        return myConceptSubProcessActionCard;
-      case LanguageConceptSwitch.SubProcessActionCardReference:
-        return myConceptSubProcessActionCardReference;
       case LanguageConceptSwitch.SymptomList:
         return myConceptSymptomList;
       case LanguageConceptSwitch.Test:
@@ -280,6 +274,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3383707102503528520");
     b.version(2);
     b.property("showDiagramView", 0x7ce22f405c59c5feL).type(PrimitiveTypeId.BOOLEAN).origin("8998806958913471998").done();
+    b.property("isSubProcess", 0x4f871b6380a37071L).type(PrimitiveTypeId.BOOLEAN).origin("5730579165026152561").done();
     b.aggregate("Actions", 0x2ef557ae9cb06877L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(false).ordered(true).multiple(true).origin("3383707102503528567").done();
     b.aggregate("Branches", 0x2574566374fd2551L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(true).ordered(true).multiple(true).origin("2698877061866267985").done();
     b.aggregate("UsageCondition", 0x18668ef27386c3a5L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L).optional(true).ordered(true).multiple(false).origin("1758249876506198949").done();
@@ -733,22 +728,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.associate("staffType", 0x4af9c647efda3aa5L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL).optional(false).origin("5402567240276654757").done();
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForSubProcessActionCard() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "SubProcessActionCard", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b0120fde24L);
-    b.class_(false, false, false);
-    b.super_("ActionCards.structure.ActionCard", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3787511550161444388");
-    b.version(2);
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForSubProcessActionCardReference() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "SubProcessActionCardReference", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b0120fde25L);
-    b.class_(false, false, false);
-    b.super_("ActionCards.structure.ActionCardReference", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3787511550161444389");
-    b.version(2);
-    return b.create();
-  }
   private static ConceptDescriptor createDescriptorForSymptomList() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "SymptomList", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db47911f9L);
     b.class_(false, false, true);
@@ -766,7 +745,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/7828349744265634127");
     b.version(2);
     b.aggregate("ProcessingTimeTable", 0x6ca3e29db4792188L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0edf5L).optional(true).ordered(true).multiple(false).origin("7828349744265634184").done();
-    b.aggregate("TestingProcess", 0x348ff1b011d7b149L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b0120fde25L).optional(true).ordered(true).multiple(false).origin("3787511550157762889").done();
+    b.aggregate("TestingProcess", 0x348ff1b011d7b149L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L).optional(true).ordered(true).multiple(false).origin("3787511550157762889").done();
     b.alias("test");
     return b.create();
   }

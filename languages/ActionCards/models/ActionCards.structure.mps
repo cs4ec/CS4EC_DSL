@@ -66,13 +66,18 @@
   <node concept="1TIwiD" id="2VPlUUsG6x8">
     <property role="EcuMT" value="3383707102503528520" />
     <property role="TrG5h" value="ActionCard" />
-    <property role="19KtqR" value="true" />
     <property role="34LRSv" value="Action Card" />
     <property role="R4oN_" value="Overall Description of a patient pathway" />
     <property role="3GE5qa" value="ActionCard" />
+    <property role="19KtqR" value="true" />
     <node concept="1TJgyi" id="7NybO1smsnY" role="1TKVEl">
       <property role="IQ2nx" value="8998806958913471998" />
       <property role="TrG5h" value="showDiagramView" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="4Y76Qe0CR1L" role="1TKVEl">
+      <property role="IQ2nx" value="5730579165026152561" />
+      <property role="TrG5h" value="isSubProcess" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
     <node concept="1TJgyj" id="2VPlUUsG6xR" role="1TKVEi">
@@ -582,7 +587,7 @@
       <property role="IQ2ns" value="3787511550157762889" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="TestingProcess" />
-      <ref role="20lvS9" node="3ifWr0i3XS_" resolve="SubProcessActionCardReference" />
+      <ref role="20lvS9" node="1xAzJ9Pwlb8" resolve="ActionCardReference" />
     </node>
     <node concept="PrWs8" id="6MzSDQOui5O" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -925,18 +930,6 @@
     <node concept="PrWs8" id="3ifWr0hZhWK" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="3ifWr0i3XS$">
-    <property role="EcuMT" value="3787511550161444388" />
-    <property role="3GE5qa" value="ActionCard" />
-    <property role="TrG5h" value="SubProcessActionCard" />
-    <ref role="1TJDcQ" node="2VPlUUsG6x8" resolve="ActionCard" />
-  </node>
-  <node concept="1TIwiD" id="3ifWr0i3XS_">
-    <property role="EcuMT" value="3787511550161444389" />
-    <property role="3GE5qa" value="ActionCard" />
-    <property role="TrG5h" value="SubProcessActionCardReference" />
-    <ref role="1TJDcQ" node="1xAzJ9Pwlb8" resolve="ActionCardReference" />
   </node>
   <node concept="1TIwiD" id="62zpHKiEZo8">
     <property role="EcuMT" value="6963522544237016584" />

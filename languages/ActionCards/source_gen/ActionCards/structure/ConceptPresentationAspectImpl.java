@@ -60,8 +60,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
-  private ConceptPresentation props_SubProcessActionCard;
-  private ConceptPresentation props_SubProcessActionCardReference;
   private ConceptPresentation props_SymptomList;
   private ConceptPresentation props_Test;
   private ConceptPresentation props_TestCapturedDisease;
@@ -442,20 +440,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_StaffTypeReference = cpb.create();
         }
         return props_StaffTypeReference;
-      case LanguageConceptSwitch.SubProcessActionCard:
-        if (props_SubProcessActionCard == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_SubProcessActionCard = cpb.create();
-        }
-        return props_SubProcessActionCard;
-      case LanguageConceptSwitch.SubProcessActionCardReference:
-        if (props_SubProcessActionCardReference == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_SubProcessActionCardReference = cpb.create();
-        }
-        return props_SubProcessActionCardReference;
       case LanguageConceptSwitch.SymptomList:
         if (props_SymptomList == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

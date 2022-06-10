@@ -252,17 +252,7 @@ public class Agent {
 	
 	// Utility method to evaluate the utility of a room for selection
 	protected double EvaluateRoomChoice(Room pRoom) {
-		int pRoomCapacity = pRoom.getCurrentCapacity();
-		
-		if(pRoom.getOccupiers().stream().anyMatch(a -> a.getClass() == patient.class)) {
-			return Double.MAX_VALUE;
-		}
-		if(pRoom.getOccupiers().contains(this)) {
-			return -Double.MAX_VALUE;
-		}
-		else {
-			return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
-		}
+		return Double.MAX_VALUE;
 	}
 	
 	/**

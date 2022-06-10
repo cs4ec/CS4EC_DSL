@@ -60,19 +60,17 @@ public final class LanguageConceptSwitch {
   public static final int StaffNumber = 48;
   public static final int StaffType = 49;
   public static final int StaffTypeReference = 50;
-  public static final int SubProcessActionCard = 51;
-  public static final int SubProcessActionCardReference = 52;
-  public static final int SymptomList = 53;
-  public static final int Test = 54;
-  public static final int TestCapturedDisease = 55;
-  public static final int TimeDistributionLine = 56;
-  public static final int TimeDistributionTable = 57;
-  public static final int TimeOfDayCondition = 58;
-  public static final int Unvaccinated = 59;
-  public static final int VaccinationStatus = 60;
-  public static final int VaccineStatusCondition = 61;
-  public static final int VaccineStatusProperty = 62;
-  public static final int Yes = 63;
+  public static final int SymptomList = 51;
+  public static final int Test = 52;
+  public static final int TestCapturedDisease = 53;
+  public static final int TimeDistributionLine = 54;
+  public static final int TimeDistributionTable = 55;
+  public static final int TimeOfDayCondition = 56;
+  public static final int Unvaccinated = 57;
+  public static final int VaccinationStatus = 58;
+  public static final int VaccineStatusCondition = 59;
+  public static final int VaccineStatusProperty = 60;
+  public static final int Yes = 61;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L);
@@ -127,8 +125,6 @@ public final class LanguageConceptSwitch {
     builder.put(0x4af9c647eff82e7bL, StaffNumber);
     builder.put(0x4f415ebce3f346ecL, StaffType);
     builder.put(0x4af9c647efda3a80L, StaffTypeReference);
-    builder.put(0x348ff1b0120fde24L, SubProcessActionCard);
-    builder.put(0x348ff1b0120fde25L, SubProcessActionCardReference);
     builder.put(0x6ca3e29db47911f9L, SymptomList);
     builder.put(0x6ca3e29db479214fL, Test);
     builder.put(0x549fe0474671cd38L, TestCapturedDisease);

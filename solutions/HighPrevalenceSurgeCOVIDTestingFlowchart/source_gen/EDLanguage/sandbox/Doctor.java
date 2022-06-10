@@ -11,9 +11,10 @@ import simcore.Signals.Signal;
 import java.util.List;
 import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
-import simcore.action.BehaviourStep;
-import simcore.basicStructures.Board;
+import simcore.basicStructures.Room;
 import java.util.ArrayList;
+import simcore.agents.Agent;
+import simcore.action.BehaviourStep;
 
 public class Doctor extends Actor {
 
@@ -56,6 +57,35 @@ public class Doctor extends Actor {
     return null;
   }
 
+  protected double EvaluateRoomChoice(Room pRoom) {
+    ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
+
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(Doctor.this, a) != null;
+        }
+      })) {
+        return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class;
+        }
+      })) {
+        return Double.MAX_VALUE;
+      }
+    }
+    if (true) {
+      return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
+    }
+    return 0;
+
+  }
+
+
 
 
   public Behaviour BuildActionFromSignal(Signal s) {
@@ -88,38 +118,6 @@ public class Doctor extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 5;
-    }
-  }
-  public class SendSignalAction_b0a extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_b0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LIATTrigger_dSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_c0a extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_c0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
       return timeExecuted == 1;
     }
   }
@@ -127,38 +125,6 @@ public class Doctor extends Actor {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
     public StayAction_a0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 5;
-    }
-  }
-  public class SendSignalAction_b0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_b0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LIATTrigger_dSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_c0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -177,8 +143,6 @@ public class Doctor extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new StayAction_a0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

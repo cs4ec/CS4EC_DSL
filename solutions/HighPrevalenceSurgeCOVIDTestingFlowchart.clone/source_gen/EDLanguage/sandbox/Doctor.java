@@ -164,10 +164,10 @@ public class Doctor extends Actor {
       }
     }
   }
-  public class SendSignalAction_c0a extends BehaviourStep {
+  public class SendSignalAction_c0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_c0a(Behaviour behaviour) {
+    public SendSignalAction_c0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -280,10 +280,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_c0a_1 extends BehaviourStep {
+  public class SendSignalAction_c0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_c0a_1(Behaviour behaviour) {
+    public SendSignalAction_c0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -319,7 +319,7 @@ public class Doctor extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
     plstSteps.add(new Choice_b0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_c0a_3(behaviourBuilder));
     plstSteps.add(new StayAction_d0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

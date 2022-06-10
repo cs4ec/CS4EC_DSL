@@ -52,8 +52,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
-    context.add(new patientGenerator_0(space, grid, context));
     context.add(new patientGenerator_1(space, grid, context));
+    context.add(new patientGenerator_0(space, grid, context));
     context.add(new Board());
 
     // add Agents 
@@ -79,7 +79,9 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     // add Locations here 
     Area EmergencyDepartment_0 = new Area(context, space, grid, 5, 5, 370, 195, Color.WHITE);
-    EmergencyDepartment_0.addResource(.getInstance(), 0);
+    EmergencyDepartment_0.addResource(Cepheid.getInstance(), 5);
+    EmergencyDepartment_0.setReplenishAmount(Cepheid.getInstance(), 0);
+    EmergencyDepartment_0.setReplenishFrequency(Cepheid.getInstance(), 0);
     Room Paedeatrics_a = new Room("Paedeatrics", context, space, grid, 5, 145, 50, 50, 1, 10000, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room Lab_b = new Room("Lab", context, space, grid, 5, 5, 30, 30, 1, 1000, Labaratory.getInstance(), Color.YELLOW, EmergencyDepartment_0);
     Room MainReception_c = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);

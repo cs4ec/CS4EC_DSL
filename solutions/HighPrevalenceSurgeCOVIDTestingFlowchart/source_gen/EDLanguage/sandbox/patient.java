@@ -9,6 +9,9 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
 import simcore.Signals.Signal;
 import java.util.List;
+import simcore.basicStructures.Room;
+import java.util.ArrayList;
+import simcore.agents.Agent;
 
 public class patient extends Actor {
 
@@ -53,6 +56,17 @@ public class patient extends Actor {
     }
     return null;
   }
+
+  protected double EvaluateRoomChoice(Room pRoom) {
+    ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
+
+    if (pRoom == null) {
+      return 0;
+    }
+    return 0;
+
+  }
+
 
 
 

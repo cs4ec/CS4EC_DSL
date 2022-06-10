@@ -35,6 +35,8 @@
     <classNode dependClassName="EDLanguage.sandbox.CheckSymptomsTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.DecideonPOCTestTrigger_dSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoneTrigger_bSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.GetTestResultTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LFD" />
     <classNode dependClassName="EDLanguage.sandbox.LFDExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LFTTrigger_bSignal" />
@@ -46,6 +48,7 @@
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeAltExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a5" />
+    <classNode dependClassName="EDLanguage.sandbox.Wait5Trigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
@@ -108,6 +111,9 @@
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.DoneTrigger_bSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.EDBuilder">
     <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
@@ -176,6 +182,9 @@
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.FluPositiveCohort">
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.GetTestResultTrigger_aSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.LFD">
     <classNode dependClassName="EDLanguage.sandbox.LFD" />
@@ -365,6 +374,9 @@
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.Wait5Trigger_aSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.WaitingRoom">
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />

@@ -512,8 +512,6 @@ public class QueriesGenerated extends QueryProviderBase {
         }).isEmpty();
       }
     });
-
-
   }
   public static Iterable<SNode> sourceNodesQuery_3_0(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.getChildren(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG)), LINKS.CapturedDiseases$9e0A);
@@ -646,67 +644,109 @@ public class QueriesGenerated extends QueryProviderBase {
         return SNodeOperations.getNodeAncestor(it, CONCEPTS.ActionCard$eb, false, false);
       }
     }).first();
-    SNode newRootAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
-    SPropertyOperations.assign(newRootAction, PROPS.name$MnvL, "PatientArrives");
-    ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Actions$nh$G)).addElement(newRootAction);
 
-    List<SNode> newBranches = new ArrayList<SNode>();
-    for (SNode rootAction : ListSequence.fromList(rootActions)) {
-      SLinkOperations.setTarget(newRootAction, LINKS.staffTypeReference$jtXw, SNodeOperations.copyNode(SLinkOperations.getTarget(rootAction, LINKS.staffTypeReference$jtXw)));
+    // Do not include testing sub-process action cards 
+    if (!(Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collect(SModelOperations.roots(_context.getInputModel(), CONCEPTS.DiseaseTest$k4), LINKS.TestingProcess$hIgq), LINKS.actionCard$QzY2)).contains(rootActionCard))) {
+      SNode newRootAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
+      SPropertyOperations.assign(newRootAction, PROPS.name$MnvL, "PatientArrives");
+      ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Actions$nh$G)).addElement(newRootAction);
 
-      SNode actionCardCondition = SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(rootAction, CONCEPTS.ActionCard$eb, false, false), LINKS.UsageCondition$srTD);
-      SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
-      SLinkOperations.setTarget(newBranch, LINKS.condition$UnEW, SLinkOperations.getTarget(actionCardCondition, LINKS.condition$HxRE));
-      SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, rootAction);
-      SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, newRootAction);
-      ListSequence.fromList(newBranches).addElement(newBranch);
-      ListSequence.fromList(SLinkOperations.getChildren(newRootAction, LINKS.outgoingBranches$JI4V)).addElement(SNodeOperations.copyNode(newBranch));
+      List<SNode> newBranches = new ArrayList<SNode>();
+      for (SNode rootAction : ListSequence.fromList(rootActions)) {
+        SLinkOperations.setTarget(newRootAction, LINKS.staffTypeReference$jtXw, SNodeOperations.copyNode(SLinkOperations.getTarget(rootAction, LINKS.staffTypeReference$jtXw)));
+
+        SNode actionCardCondition = SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(rootAction, CONCEPTS.ActionCard$eb, false, false), LINKS.UsageCondition$srTD);
+        SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
+        SLinkOperations.setTarget(newBranch, LINKS.condition$UnEW, SLinkOperations.getTarget(actionCardCondition, LINKS.condition$HxRE));
+        SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, rootAction);
+        SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, newRootAction);
+        ListSequence.fromList(newBranches).addElement(newBranch);
+        ListSequence.fromList(SLinkOperations.getChildren(newRootAction, LINKS.outgoingBranches$JI4V)).addElement(SNodeOperations.copyNode(newBranch));
+      }
+
+      ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Branches$1fde)).addSequence(ListSequence.fromList(newBranches));
+
     }
-
-    ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Branches$1fde)).addSequence(ListSequence.fromList(newBranches));
   }
   public static void mappingScript_CodeBlock_27(final MappingScriptContext _context) {
   }
   public static void mappingScript_CodeBlock_32(final MappingScriptContext _context) {
-    // For all test resources in the model (that contain sub-procedure action cards) 
-    List<SNode> allTests = SModelOperations.roots(_context.getInputModel(), CONCEPTS.Test$I1);
-    for (SNode test : ListSequence.fromList(allTests)) {
-      // Find all sub-process action cards 
-      SNode subProcess = SLinkOperations.getTarget(test, LINKS.TestingProcess$hIgq);
+
+    List<SNode> ActionsUsingTest = Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return !(Objects.equals(SLinkOperations.getTarget(it, LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.resource$QlPG), CONCEPTS.Test$I1) && !(Objects.equals(SLinkOperations.getTarget(((SNode) SLinkOperations.getTarget(it, LINKS.resource$QlPG)), LINKS.TestingProcess$hIgq), null));
+      }
+    }).toListSequence();
+
+    for (SNode parentAction : ListSequence.fromList(ActionsUsingTest)) {
+      SNode test = (SNode) SLinkOperations.getTarget(parentAction, LINKS.resource$QlPG);
+      SNode subProcess = SLinkOperations.getTarget(SLinkOperations.getTarget(test, LINKS.TestingProcess$hIgq), LINKS.actionCard$QzY2);
 
       // Create a dummy 'funnel' action at the end of the action card to merge all actions into one  
-      SNode newDummyAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
+      final SNode newDummyAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
       SPropertyOperations.assign(newDummyAction, PROPS.name$MnvL, "Get Test Result");
       SLinkOperations.setTarget(newDummyAction, LINKS.resource$QlPG, test);
-      ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(subProcess, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).addElement(newDummyAction);
+      ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G)).addElement(newDummyAction);
 
       // Copy the staff type of the action 
-      SLinkOperations.setTarget(newDummyAction, LINKS.staffTypeReference$jtXw, SNodeOperations.copyNode(SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(subProcess, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
+      SLinkOperations.setTarget(newDummyAction, LINKS.staffTypeReference$jtXw, SNodeOperations.copyNode(SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return true;
         }
       }), LINKS.staffTypeReference$jtXw)));
 
       // Merge all of the existing terminating actions into the new funnel action by adding branches 
-      List<SNode> terminatingActionCardElements = ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(subProcess, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
+      List<SNode> terminatingActionCardElements = ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
-          return ListSequence.fromList(SLinkOperations.getChildren(it, LINKS.outgoingBranches$JI4V)).isEmpty();
+          return ListSequence.fromList(SLinkOperations.getChildren(it, LINKS.outgoingBranches$JI4V)).isEmpty() && !(Objects.equals(it, newDummyAction));
         }
       }).toListSequence();
       for (SNode terminatingAction : ListSequence.fromList(terminatingActionCardElements)) {
         SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
         SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, newDummyAction);
         SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, terminatingAction);
-        ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(subProcess, LINKS.actionCard$QzY2), LINKS.Branches$1fde)).addElement(newBranch);
+        ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Branches$1fde)).addElement(newBranch);
         ListSequence.fromList(SLinkOperations.getChildren(terminatingAction, LINKS.outgoingBranches$JI4V)).addElement(SNodeOperations.copyNode(newBranch));
       }
 
       // Get all outgoing branches from this action card reference, update the 'from action' reference to the new dummy action 
-      List<SNode> existingOutgoingBranches = SLinkOperations.getChildren(subProcess, LINKS.outgoingBranches$JI4V);
+      List<SNode> existingOutgoingBranches = SLinkOperations.getChildren(parentAction, LINKS.outgoingBranches$JI4V);
       for (SNode existingBranch : ListSequence.fromList(existingOutgoingBranches)) {
         SLinkOperations.setTarget(existingBranch, LINKS.fromAction$DE5P, newDummyAction);
+        ListSequence.fromList(SLinkOperations.getChildren(newDummyAction, LINKS.outgoingBranches$JI4V)).addElement(existingBranch);
       }
+
+      SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
+      SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, parentAction);
+      SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return true;
+        }
+      }));
+      SNode duration = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x60a366dc12ac1225L, "ActionCards.structure.ActionDurationMinutes"));
+      SPropertyOperations.assign(duration, PROPS.duration$LuEa, 1);
+      SLinkOperations.setTarget(parentAction, LINKS.duration$_Gwm, duration);
+      SLinkOperations.setTarget(parentAction, LINKS.resource$QlPG, null);
+      ListSequence.fromList(SLinkOperations.getChildren(parentAction, LINKS.outgoingBranches$JI4V)).removeWhere(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return true;
+        }
+      });
+      ListSequence.fromList(SLinkOperations.getChildren(parentAction, LINKS.outgoingBranches$JI4V)).addElement(newBranch);
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   }

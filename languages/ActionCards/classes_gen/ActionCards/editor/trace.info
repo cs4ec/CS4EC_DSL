@@ -32,7 +32,7 @@
       <unit at="26,0,98,0" name="ActionCards.editor.DiseaseSymptomReference_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="22,0,308,0" name="ActionCards.editor.EditorAspectDescriptorImpl" />
+      <unit at="22,0,304,0" name="ActionCards.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="GrammarActionsDescriptor.java">
       <unit at="1201,0,1204,0" name="ActionCards.editor.GrammarActionsDescriptor$LINKS" />
@@ -332,16 +332,6 @@
       <unit at="47,0,57,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_StaffTypeReference$GrammarCellsSubstituteMenuPart_e219uu_a" />
       <unit at="22,0,62,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_StaffTypeReference" />
     </file>
-    <file name="GrammarCellsSubstituteMenu_SubProcessActionCard.java">
-      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_SubProcessActionCard$CONCEPTS" />
-      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_SubProcessActionCard$GrammarCellsSubstituteMenuPart_72bji0_a" />
-      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_SubProcessActionCard" />
-    </file>
-    <file name="GrammarCellsSubstituteMenu_SubProcessActionCardReference.java">
-      <unit at="58,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_SubProcessActionCardReference$CONCEPTS" />
-      <unit at="47,0,57,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_SubProcessActionCardReference$GrammarCellsSubstituteMenuPart_8x4iwd_a" />
-      <unit at="22,0,62,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_SubProcessActionCardReference" />
-    </file>
     <file name="GrammarCellsSubstituteMenu_SymptomList.java">
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_SymptomList$CONCEPTS" />
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_SymptomList$GrammarCellsSubstituteMenuPart_hhavad_a" />
@@ -420,13 +410,6 @@
       <unit at="49,0,68,0" name="ActionCards.editor.StaffTypeReference_SubstituteMenu$SMP_ReferenceScope_osz14j_a" />
       <unit at="68,0,89,0" name="ActionCards.editor.StaffTypeReference_SubstituteMenu$SMP_Subconcepts_osz14j_b" />
       <unit at="26,0,98,0" name="ActionCards.editor.StaffTypeReference_SubstituteMenu" />
-    </file>
-    <file name="SubProcessActionCardReference_SubstituteMenu.java">
-      <unit at="90,0,93,0" name="ActionCards.editor.SubProcessActionCardReference_SubstituteMenu$CONCEPTS" />
-      <unit at="94,0,97,0" name="ActionCards.editor.SubProcessActionCardReference_SubstituteMenu$LINKS" />
-      <unit at="49,0,68,0" name="ActionCards.editor.SubProcessActionCardReference_SubstituteMenu$SMP_ReferenceScope_oq7u8x_a" />
-      <unit at="68,0,89,0" name="ActionCards.editor.SubProcessActionCardReference_SubstituteMenu$SMP_Subconcepts_oq7u8x_b" />
-      <unit at="26,0,98,0" name="ActionCards.editor.SubProcessActionCardReference_SubstituteMenu" />
     </file>
     <file name="TestCapturedDisease_SubstituteMenu.java">
       <unit at="90,0,93,0" name="ActionCards.editor.TestCapturedDisease_SubstituteMenu$CONCEPTS" />
