@@ -796,9 +796,23 @@ public class QueriesGenerated extends QueryProviderBase {
     }));
   }
   public static Object referenceMacro_GetReferent_65_0(final ReferenceMacroContext _context) {
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return ListSequence.fromList(SNodeOperations.getNodeAncestors(_context.getNode(), null, false)).contains(it);
+      }
+    }));
+  }
+  public static Object referenceMacro_GetReferent_65_1(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.targetResource$Pgtu), PROPS.name$MnvL);
   }
   public static Object referenceMacro_GetReferent_66_0(final ReferenceMacroContext _context) {
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return ListSequence.fromList(SNodeOperations.getNodeAncestors(_context.getNode(), null, false)).contains(it);
+      }
+    }));
+  }
+  public static Object referenceMacro_GetReferent_66_1(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$pXZ9), PROPS.name$MnvL);
   }
   public static Object referenceMacro_GetReferent_70_0(final ReferenceMacroContext _context) {
@@ -1946,10 +1960,12 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("7828349744260446239", new RTQ(47, "getPlaceholder"));
     rtqMethods.put("5381978332892749251", new RTQ(48, "Bed"));
     rtqMethods.put("5381978332893903121", new RTQ(49, "_class_"));
-    rtqMethods.put("4321323723340549836", new RTQ(50, "Resource"));
-    rtqMethods.put("4321323723367524557", new RTQ(51, "Resource"));
-    rtqMethods.put("7942748223948182124", new RTQ(52, "MyActor"));
-    rtqMethods.put("7942748223969208924", new RTQ(53, "MyActor"));
+    rtqMethods.put("5730579165042200830", new RTQ(50, "_class_"));
+    rtqMethods.put("4321323723340549836", new RTQ(51, "Resource"));
+    rtqMethods.put("5730579165045590282", new RTQ(52, "_class_"));
+    rtqMethods.put("5730579165045583559", new RTQ(53, "Resource"));
+    rtqMethods.put("7942748223948182124", new RTQ(54, "MyActor"));
+    rtqMethods.put("7942748223969208924", new RTQ(55, "MyActor"));
   }
   @NotNull
   @Override
@@ -2069,10 +2085,14 @@ public class QueriesGenerated extends QueryProviderBase {
         case 50:
           return QueriesGenerated.referenceMacro_GetReferent_65_0(ctx);
         case 51:
-          return QueriesGenerated.referenceMacro_GetReferent_66_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_65_1(ctx);
         case 52:
-          return QueriesGenerated.referenceMacro_GetReferent_70_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_66_0(ctx);
         case 53:
+          return QueriesGenerated.referenceMacro_GetReferent_66_1(ctx);
+        case 54:
+          return QueriesGenerated.referenceMacro_GetReferent_70_0(ctx);
+        case 55:
           return QueriesGenerated.referenceMacro_GetReferent_74_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));

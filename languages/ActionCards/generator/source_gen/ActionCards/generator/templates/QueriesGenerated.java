@@ -686,6 +686,7 @@ public class QueriesGenerated extends QueryProviderBase {
       final SNode newDummyAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
       SPropertyOperations.assign(newDummyAction, PROPS.name$MnvL, "Get Test Result");
       SLinkOperations.setTarget(newDummyAction, LINKS.resource$QlPG, test);
+      SLinkOperations.setTarget(newDummyAction, LINKS.location$2x_J, SLinkOperations.getTarget(parentAction, LINKS.location$2x_J));
       ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G)).addElement(newDummyAction);
 
       // Copy the staff type of the action 

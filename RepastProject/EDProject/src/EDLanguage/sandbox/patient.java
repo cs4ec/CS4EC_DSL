@@ -371,6 +371,12 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getadmittedToisAmberBay() {
+    if (this.admittedTo == "AmberBay") {
+      return 1;
+    }
+    return 0;
+  }
 
 
 

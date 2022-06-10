@@ -12,30 +12,6 @@
 		displayName="Use path finding" type="boolean" defaultValue="false"
 		isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
-  	<parameter name="LFDCOVIDSensitivity"
-  		displayName="LFDCOVIDSensitivity" type="double" defaultValue="70"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDCOVIDSpecificity"
-  		displayName="LFDCOVIDSpecificity" type="double" defaultValue="99"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDFluASensitivity"
-  		displayName="LFDFluASensitivity" type="double" defaultValue="88"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDFluASpecificity"
-  		displayName="LFDFluASpecificity" type="double" defaultValue="95"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDFluBSensitivity"
-  		displayName="LFDFluBSensitivity" type="double" defaultValue="93"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDFluBSpecificity"
-  		displayName="LFDFluBSpecificity" type="double" defaultValue="98"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeAltCOVIDSensitivity"
   		displayName="PHEThreeAltCOVIDSensitivity" type="double" defaultValue="95"
   		isReadOnly="false"
