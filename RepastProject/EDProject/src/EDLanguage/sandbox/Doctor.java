@@ -10,9 +10,6 @@ import repast.simphony.context.Context;
 import simcore.Signals.Signal;
 import java.util.List;
 import java.util.function.Predicate;
-
-import org.iet3.core.expr.genjava.simpleTypes.rt.rt.AH;
-
 import repast.simphony.space.graph.Network;
 import simcore.basicStructures.Room;
 import java.util.ArrayList;
@@ -20,6 +17,7 @@ import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
 import simcore.basicStructures.RoomType;
 import simcore.action.InstantBehaviourStep;
+import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import simcore.basicStructures.TimeKeeper;
 import java.math.BigInteger;
 import simcore.basicStructures.Board;
@@ -69,24 +67,24 @@ public class Doctor extends Actor {
   protected double EvaluateRoomChoice(Room pRoom) {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
-//    if (true) {
-//      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-//        public boolean test(Agent a) {
-//          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(Doctor.this, a) != null;
-//        }
-//      })) {
-//        return Double.MIN_VALUE;
-//      }
-//    }
-//    if (true) {
-//      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-//        public boolean test(Agent a) {
-//          return a.getClass() == patient.class;
-//        }
-//      })) {
-//        return Double.MAX_VALUE;
-//      }
-//    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(Doctor.this, a) != null;
+        }
+      })) {
+        return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class;
+        }
+      })) {
+        return Double.MAX_VALUE;
+      }
+    }
     if (true) {
       return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
     }

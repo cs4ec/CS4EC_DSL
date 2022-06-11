@@ -4,6 +4,7 @@ import java.util.Date;
 
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.space.gis.Geography;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.util.ContextUtils;
 import repast.simphony.util.collections.IndexedIterable;

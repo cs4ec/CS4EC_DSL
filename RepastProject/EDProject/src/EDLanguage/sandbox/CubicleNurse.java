@@ -18,7 +18,7 @@ import simcore.action.BehaviourStep;
 import simcore.basicStructures.Board;
 import simcore.basicStructures.RoomType;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.action.BehaviourStep;
+import simcore.action.PassiveBehaviourStep;
 import simcore.action.InstantBehaviourStep;
 import repast.simphony.engine.environment.RunEnvironment;
 
@@ -66,24 +66,24 @@ public class CubicleNurse extends Actor {
   protected double EvaluateRoomChoice(Room pRoom) {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
-//    if (true) {
-//      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-//        public boolean test(Agent a) {
-//          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(CubicleNurse.this, a) != null;
-//        }
-//      })) {
-//        return Double.MIN_VALUE;
-//      }
-//    }
-//    if (true) {
-//      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-//        public boolean test(Agent a) {
-//          return a.getClass() == patient.class;
-//        }
-//      })) {
-//        return Double.MAX_VALUE;
-//      }
-//    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(CubicleNurse.this, a) != null;
+        }
+      })) {
+        return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class;
+        }
+      })) {
+        return Double.MAX_VALUE;
+      }
+    }
     if (true) {
       return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
     }
@@ -304,7 +304,7 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 4;
     }
   }
-  public class StayAction_d0b extends BehaviourStep {
+  public class StayAction_d0b extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = PHEThreeAltExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -444,7 +444,7 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 4;
     }
   }
-  public class StayAction_d0b_1 extends BehaviourStep {
+  public class StayAction_d0b_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = PHEThreeAltExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -776,7 +776,7 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 4;
     }
   }
-  public class StayAction_d0c extends BehaviourStep {
+  public class StayAction_d0c extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = PHEThreeAltExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -933,7 +933,7 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 4;
     }
   }
-  public class StayAction_d0c_1 extends BehaviourStep {
+  public class StayAction_d0c_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = PHEThreeAltExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -1298,7 +1298,7 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0d extends BehaviourStep {
+  public class StayAction_c0d extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LabPCRExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -1457,7 +1457,7 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0d_1 extends BehaviourStep {
+  public class StayAction_c0d_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LabPCRExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -2096,7 +2096,7 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0e extends BehaviourStep {
+  public class StayAction_c0e extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = TimeDistributionTable_a5.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -2113,7 +2113,7 @@ public class CubicleNurse extends Actor {
       return timeExecuted == testingTime;
     }
   }
-  public class StayAction_d0e extends BehaviourStep {
+  public class StayAction_d0e extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LIATExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -2272,7 +2272,7 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0e_1 extends BehaviourStep {
+  public class StayAction_c0e_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = TimeDistributionTable_a5.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -2289,7 +2289,7 @@ public class CubicleNurse extends Actor {
       return timeExecuted == testingTime;
     }
   }
-  public class StayAction_d0e_1 extends BehaviourStep {
+  public class StayAction_d0e_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LIATExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -3540,7 +3540,7 @@ public class CubicleNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class StayAction_b0j extends BehaviourStep {
+  public class StayAction_b0j extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LFDExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
@@ -3705,7 +3705,7 @@ public class CubicleNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class StayAction_b0j_1 extends BehaviourStep {
+  public class StayAction_b0j_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = LFDExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;

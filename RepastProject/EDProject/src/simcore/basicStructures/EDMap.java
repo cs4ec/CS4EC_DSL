@@ -13,6 +13,7 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import repast.simphony.util.collections.IndexedIterable;
 import repast.simphony.valueLayer.GridValueLayer;
+import simcore.agents.Agent;
 import simcore.utilities.aStarPathFinder;
 
 public class EDMap {
@@ -43,6 +44,10 @@ public class EDMap {
 	public EDMap WithGrid(Grid g) {
 		grid = g;
 		return this;
+	}
+	
+	public Room getCurrentRoom(Agent a) {
+		return places.stream().filter(r -> a.ImAt(r)).findFirst().orElse(null);
 	}
 	
 	public Room FindPlace(String roomName) {

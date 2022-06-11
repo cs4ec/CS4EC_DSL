@@ -72,9 +72,9 @@ public class Behaviour {
 		return currentStep == steps.size();
 	}
 	
-	public Locatable getBehaviourLocation() {
-		return behaviourLocation;
-	}
+//	public Locatable getBehaviourLocation() {
+//		return behaviourLocation;
+//	}
 	
 	public void setBheaviourLocation(Locatable loc) {
 		this.behaviourLocation = loc;
