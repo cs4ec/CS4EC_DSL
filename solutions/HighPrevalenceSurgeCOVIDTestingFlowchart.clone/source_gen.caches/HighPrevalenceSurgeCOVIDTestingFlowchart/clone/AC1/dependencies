@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.AdmitAmberTrigger_hSignal">
+    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.AmberBay">
@@ -24,12 +29,27 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.CheckCOVIDContactTrigger_gSignal">
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.CheckSymptomsTrigger_bSignal">
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.CheckSymptomsTrigger_cSignal">
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.CubicleNurse">
@@ -46,19 +66,24 @@
     <classNode dependClassName="EDLanguage.sandbox.LFTTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATTrigger_fSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
+    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeAlt" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeAltExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a5" />
     <classNode dependClassName="EDLanguage.sandbox.Wait5Trigger_aSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -79,6 +104,11 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.DecideonPOCTestTrigger_dSignal">
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.Doctor">
@@ -96,6 +126,7 @@
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.math.BigInteger" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH" />
@@ -116,6 +147,11 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.DoneTrigger_bSignal">
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.EDBuilder">
@@ -143,7 +179,6 @@
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.Ward" />
-    <classNode dependClassName="EDLanguage.sandbox.WardStaff" />
     <classNode dependClassName="EDLanguage.sandbox.patientGenerator_0" />
     <classNode dependClassName="EDLanguage.sandbox.patientGenerator_1" />
     <classNode dependClassName="java.awt.Color" />
@@ -221,6 +256,11 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.LIATTrigger_fSignal">
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.LabPCR">
@@ -236,6 +276,11 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.LabPCRTestTrigger_eSignal">
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.LabTechnician">
@@ -245,6 +290,7 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -255,6 +301,7 @@
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.Labaratory">
@@ -315,6 +362,7 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -325,6 +373,7 @@
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.RadiologyRoom">
@@ -366,6 +415,7 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -376,9 +426,15 @@
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.Wait5Trigger_aSignal">
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.WaitingRoom">
@@ -389,49 +445,37 @@
     <classNode dependClassName="EDLanguage.sandbox.Ward" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.WardStaff">
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
+  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.map_PatientProfile">
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode extendsClassName="simcore.agents.Actor" />
-  </dependency>
-  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.map_PatientProfile">
-    <classNode dependClassName="java.lang.Object" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.lang.System" />
-    <classNode dependClassName="java.util.ArrayList" />
-    <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
-    <classNode dependClassName="repast.simphony.space.grid.Grid" />
-    <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.action.Behaviour" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.nullTrigger_aSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.patient">
+    <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
     <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
@@ -439,6 +483,7 @@
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.patientGenerator_0">

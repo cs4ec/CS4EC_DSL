@@ -24,7 +24,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AttributeExpressionReference;
   private ConceptPresentation props_AttributeMonitor;
   private ConceptPresentation props_AttributeReference;
-  private ConceptPresentation props_BedAvailableCondition;
   private ConceptPresentation props_Behaviour;
   private ConceptPresentation props_BehaviourElement;
   private ConceptPresentation props_BehaviourElementReference;
@@ -80,6 +79,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SelectNotRelationshipDataSignal;
   private ConceptPresentation props_SelectRandomSignal;
   private ConceptPresentation props_SelectRelationshipDataSignal;
+  private ConceptPresentation props_SelectRoomByCapacity;
   private ConceptPresentation props_SelectRoomByRelationshipToOccupier;
   private ConceptPresentation props_SelectRoomWithNoAgentsOfType;
   private ConceptPresentation props_SelfInstance;
@@ -213,13 +213,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttributeReference = cpb.create();
         }
         return props_AttributeReference;
-      case LanguageConceptSwitch.BedAvailableCondition:
-        if (props_BedAvailableCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Bed is available condition");
-          props_BedAvailableCondition = cpb.create();
-        }
-        return props_BedAvailableCondition;
       case LanguageConceptSwitch.Behaviour:
         if (props_Behaviour == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -616,6 +609,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SelectRelationshipDataSignal = cpb.create();
         }
         return props_SelectRelationshipDataSignal;
+      case LanguageConceptSwitch.SelectRoomByCapacity:
+        if (props_SelectRoomByCapacity == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select room by has capacity");
+          props_SelectRoomByCapacity = cpb.create();
+        }
+        return props_SelectRoomByCapacity;
       case LanguageConceptSwitch.SelectRoomByRelationshipToOccupier:
         if (props_SelectRoomByRelationshipToOccupier == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

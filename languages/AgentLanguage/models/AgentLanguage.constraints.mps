@@ -1035,5 +1035,18 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="3QFgDmIMra5">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:3QFgDmIMr4_" resolve="SelectRoomByCapacity" />
+    <node concept="9S07l" id="3QFgDmIMra6" role="9Vyp8">
+      <node concept="3clFbS" id="3QFgDmIMra7" role="2VODD2">
+        <node concept="3clFbF" id="3QFgDmIMrau" role="3cqZAp">
+          <node concept="3clFbT" id="3QFgDmIMrat" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

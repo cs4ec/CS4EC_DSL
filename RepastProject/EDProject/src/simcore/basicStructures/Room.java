@@ -106,13 +106,6 @@ public class Room extends Locatable{
 				curCap++;
 			}
 		}
-		
-		if(this.roomType == RespiratoryCubicle.getInstance()) {
-			System.out.println(this.name() + "contains :");
-			for (Agent agent : contentPeople) {
-				System.out.println(agent);
-			}
-		}
 	}
 	
 	public Set<Agent> getOccupiers(){
@@ -288,6 +281,10 @@ public class Room extends Locatable{
 	
 	public int getCurrentCapacity() {
 		return this.curCap;
+	}
+	
+	public int getMaxCapacity() {
+		return this.maxCap;
 	}
 
 	@Override

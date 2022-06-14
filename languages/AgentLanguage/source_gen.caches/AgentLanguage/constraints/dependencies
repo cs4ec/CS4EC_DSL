@@ -124,6 +124,7 @@
     <classNode dependClassName="AgentLanguage.constraints.SelectNotRelationshipDataSignal_Constraints" />
     <classNode dependClassName="AgentLanguage.constraints.SelectRandomSignal_Constraints" />
     <classNode dependClassName="AgentLanguage.constraints.SelectRelationshipDataSignal_Constraints" />
+    <classNode dependClassName="AgentLanguage.constraints.SelectRoomByCapacity_Constraints" />
     <classNode dependClassName="AgentLanguage.constraints.SelectRoomByRelationshipToOccupier_Constraints" />
     <classNode dependClassName="AgentLanguage.constraints.SelectRoomWithNoAgentsOfType_Constraints" />
     <classNode dependClassName="AgentLanguage.constraints.SelfInstance_Constraints" />
@@ -336,6 +337,22 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
   <dependency className="AgentLanguage.constraints.SelectRelationshipDataSignal_Constraints">
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintContext_CanBeChild" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintFunction" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+  </dependency>
+  <dependency className="AgentLanguage.constraints.SelectRoomByCapacity_Constraints">
     <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />

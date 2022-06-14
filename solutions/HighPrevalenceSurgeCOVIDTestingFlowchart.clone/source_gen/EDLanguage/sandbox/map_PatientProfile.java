@@ -10,7 +10,10 @@ import repast.simphony.context.Context;
 import simcore.Signals.Signal;
 import java.util.List;
 import simcore.basicStructures.Room;
+import simcore.basicStructures.RoomType;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.function.Predicate;
 import simcore.agents.Agent;
 
 public class map_PatientProfile extends Actor {
@@ -33,6 +36,28 @@ public class map_PatientProfile extends Actor {
     return null;
   }
 
+  protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
+    ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
+    // First, select the room that contains my patient (if my current action involves the patient) 
+    for (Room pRoom : pRooms) {
+      if (behaviour.getSignalTrigger() != null && behaviour.getSignalTrigger().GetData("patient") != null && pRoom.getOccupiers().contains(behaviour.getSignalTrigger().GetData("patient"))) {
+        return pRoom;
+      }
+    }
+    // If my patient isn't currently in that room, then consider other options 
+    Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
+      public int compare(Room r1, Room r2) {
+        return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
+      }
+    }).filter(new Predicate<Room>() {
+      public boolean test(Room r) {
+        return EvaluateRoomChoice(r) != Double.MAX_VALUE;
+      }
+    }).findFirst().orElse(null);
+    return selectedRoom;
+  }
+
+
   protected double EvaluateRoomChoice(Room pRoom) {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
@@ -42,6 +67,7 @@ public class map_PatientProfile extends Actor {
     return 0;
 
   }
+
 
 
 

@@ -12,6 +12,11 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import EDLanguage.sandbox.TriageNurse;
+import EDLanguage.sandbox.CubicleNurse.MoveAction_a0i;
+import EDLanguage.sandbox.CubicleNurse.OrderAction_b0i;
+import EDLanguage.sandbox.CubicleNurse.SendSignalAction_d0i;
+import EDLanguage.sandbox.CubicleNurse.StayAction_c0i;
+import EDLanguage.sandbox.CubicleNurse.StayAction_e0i;
 import repast.simphony.context.Context;
 import repast.simphony.context.space.graph.NetworkBuilder;
 import repast.simphony.engine.environment.RunEnvironment;
@@ -37,6 +42,7 @@ import simcore.action.Action;
 import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
 import simcore.action.Behaviour;
+import simcore.action.BehaviourStep;
 import simcore.action.Consequence;
 import simcore.action.ConsequenceStep;
 import simcore.action.PassiveBehaviourStep;
@@ -120,6 +126,12 @@ public class Actor extends Agent {
 			fields.add(fs[i]);
 		}
 	}
+	
+	// The default action for this agent to be overriden by sub-types. Only completed if the agent 'isIdle'
+	  public Behaviour isIdleAction(Signal s) {
+		  // Do Nothing
+		  return null;
+	  }
 
 	@ScheduledMethod(start = 1, interval = 1)
 	public void step() {
@@ -143,6 +155,7 @@ public class Actor extends Agent {
 			
 			// If no active actions ongoing, then look for new signals
 			if(plstReadyActions.isEmpty()) {
+
 				Signal s = searchForSignals(board);
 				// If we now have a signal, build the action for which this signal is a trigger
 				if (s != null) {
@@ -152,6 +165,13 @@ public class Actor extends Agent {
 					if(signalAction != null && !(signalAction.getCurrentStep() instanceof PassiveBehaviourStep)) {
 						myCurrentActions.add(signalAction);
 						myActiveAction = signalAction;
+					}
+				} else {
+					// If there are no no signals yet, then I can do my 'isIdleAction' if one exists
+					Behaviour idleBehaviour = this.isIdleAction(s);
+					if(idleBehaviour != null) {
+						myCurrentActions.add(idleBehaviour);
+						myActiveAction = idleBehaviour;
 					}
 				}
 			} else {
@@ -229,9 +249,9 @@ public class Actor extends Agent {
 	}
 
 	private Signal searchForSignals(Board board) {
-		// Read the board for signals, and find ones for me
-		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this);
-		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass());
+		// Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for
+		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(s-> s.checkPreCondition(context)).collect(Collectors.toList());
+		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(s-> s.checkPreCondition(context)).collect(Collectors.toList());
 		
 		if(plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
 			return null;
@@ -263,6 +283,9 @@ public class Actor extends Agent {
 		
 		Network patientNetwork = (Network)context.getProjection("MyPatients");
 		Network seenPatientNetwork = (Network)context.getProjection("MySeenPatients");
+		
+		// Filter only those signals that I meet the pre-condition for
+		plstSignals = plstSignals.stream().filter(s -> s.checkPreCondition(context)).collect(Collectors.toList());
 
 		for (Signal signal : plstSignals) {
 			Object p = signal.GetData("patient");

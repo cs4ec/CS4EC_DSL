@@ -218,6 +218,12 @@
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="People.Staff" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3QFgDmJ3g8u" role="1TKVEi">
+      <property role="IQ2ns" value="4443718667985551902" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="idleLocation" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
     <node concept="PrWs8" id="4X1nFNzWPeB" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>

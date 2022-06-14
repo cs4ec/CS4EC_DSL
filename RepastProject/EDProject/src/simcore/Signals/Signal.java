@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import repast.simphony.context.Context;
+
 public class Signal {
 
 	protected String name;
@@ -17,6 +19,10 @@ public class Signal {
 	public Signal() {
 		data = new HashMap<String, Object>();
 		subjects = new ArrayList<String>();
+	}
+	
+	public boolean checkPreCondition(Context c) {
+		return true;
 	}
 
 	public String getName() {
@@ -80,4 +86,6 @@ public class Signal {
 		}
 		return false;
 	}
+	
+	
 }

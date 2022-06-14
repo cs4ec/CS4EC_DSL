@@ -12,10 +12,11 @@ import java.util.List;
 import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
 import simcore.basicStructures.Room;
+import simcore.basicStructures.RoomType;
 import java.util.ArrayList;
+import java.util.Comparator;
 import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
-import simcore.basicStructures.RoomType;
 import simcore.action.InstantBehaviourStep;
 import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import simcore.basicStructures.TimeKeeper;
@@ -64,6 +65,28 @@ public class Doctor extends Actor {
     return null;
   }
 
+  protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
+    ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
+    // First, select the room that contains my patient (if my current action involves the patient) 
+    for (Room pRoom : pRooms) {
+      if (behaviour.getSignalTrigger() != null && behaviour.getSignalTrigger().GetData("patient") != null && pRoom.getOccupiers().contains(behaviour.getSignalTrigger().GetData("patient"))) {
+        return pRoom;
+      }
+    }
+    // If my patient isn't currently in that room, then consider other options 
+    Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
+      public int compare(Room r1, Room r2) {
+        return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
+      }
+    }).filter(new Predicate<Room>() {
+      public boolean test(Room r) {
+        return EvaluateRoomChoice(r) != Double.MAX_VALUE;
+      }
+    }).findFirst().orElse(null);
+    return selectedRoom;
+  }
+
+
   protected double EvaluateRoomChoice(Room pRoom) {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
@@ -77,20 +100,12 @@ public class Doctor extends Actor {
       }
     }
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-        public boolean test(Agent a) {
-          return a.getClass() == patient.class;
-        }
-      })) {
-        return Double.MAX_VALUE;
-      }
-    }
-    if (true) {
       return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
     }
     return 0;
 
   }
+
 
 
 
@@ -128,7 +143,7 @@ public class Doctor extends Actor {
     public void execute() {
       if (concreteTarget == null) {
         if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
         } else {
           concreteTarget = target;
         }
@@ -136,8 +151,8 @@ public class Doctor extends Actor {
 
       if (concreteTarget != null) {
         if (target instanceof RoomType) {
-          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-            concreteTarget = SelectLocation(((RoomType) target));
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
           }
         }
         MoveTowards(concreteTarget);
@@ -156,7 +171,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      if (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 7) + (60 * 59)))) && (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 15) + (60 * 0)))) && (AH.isLess(ToolBox().ReadMap(grid).getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("15"))))) || (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 14) + (60 * 59)))) || (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 8) + (60 * 0))))) && (AH.isLess(ToolBox().ReadMap(grid).getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("1")))))) {
+      if (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 7) + (60 * 59)))) && (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 15) + (60 * 0)))) && (AH.isLess(ToolBox().ReadMap().getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("15"))))) || (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 14) + (60 * 59)))) || (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 8) + (60 * 0))))) && (AH.isLess(ToolBox().ReadMap().getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("1")))))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0b0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -210,7 +225,7 @@ public class Doctor extends Actor {
     public void execute() {
       if (concreteTarget == null) {
         if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
         } else {
           concreteTarget = target;
         }
@@ -218,8 +233,8 @@ public class Doctor extends Actor {
 
       if (concreteTarget != null) {
         if (target instanceof RoomType) {
-          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-            concreteTarget = SelectLocation(((RoomType) target));
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
           }
         }
         MoveTowards(concreteTarget);
@@ -238,7 +253,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      if (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 7) + (60 * 59)))) && (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 15) + (60 * 0)))) && (AH.isLess(ToolBox().ReadMap(grid).getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("15"))))) || (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 14) + (60 * 59)))) || (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 8) + (60 * 0))))) && (AH.isLess(ToolBox().ReadMap(grid).getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("1")))))) {
+      if (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 7) + (60 * 59)))) && (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 15) + (60 * 0)))) && (AH.isLess(ToolBox().ReadMap().getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("15"))))) || (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 14) + (60 * 59)))) || (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 8) + (60 * 0))))) && (AH.isLess(ToolBox().ReadMap().getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("1")))))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0b0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -324,7 +339,7 @@ public class Doctor extends Actor {
     public void execute() {
       if (concreteTarget == null) {
         if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
         } else {
           concreteTarget = target;
         }
@@ -332,8 +347,8 @@ public class Doctor extends Actor {
 
       if (concreteTarget != null) {
         if (target instanceof RoomType) {
-          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-            concreteTarget = SelectLocation(((RoomType) target));
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
           }
         }
         MoveTowards(concreteTarget);
@@ -357,7 +372,7 @@ public class Doctor extends Actor {
     public void execute() {
       if (concreteTarget == null) {
         if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
         } else {
           concreteTarget = target;
         }
@@ -365,8 +380,8 @@ public class Doctor extends Actor {
 
       if (concreteTarget != null) {
         if (target instanceof RoomType) {
-          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-            concreteTarget = SelectLocation(((RoomType) target));
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
           }
         }
         MoveTowards(concreteTarget);
@@ -424,7 +439,7 @@ public class Doctor extends Actor {
     public void execute() {
       if (concreteTarget == null) {
         if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
         } else {
           concreteTarget = target;
         }
@@ -432,8 +447,8 @@ public class Doctor extends Actor {
 
       if (concreteTarget != null) {
         if (target instanceof RoomType) {
-          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-            concreteTarget = SelectLocation(((RoomType) target));
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
           }
         }
         MoveTowards(concreteTarget);
@@ -457,7 +472,7 @@ public class Doctor extends Actor {
     public void execute() {
       if (concreteTarget == null) {
         if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
         } else {
           concreteTarget = target;
         }
@@ -465,8 +480,8 @@ public class Doctor extends Actor {
 
       if (concreteTarget != null) {
         if (target instanceof RoomType) {
-          if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-            concreteTarget = SelectLocation(((RoomType) target));
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
           }
         }
         MoveTowards(concreteTarget);

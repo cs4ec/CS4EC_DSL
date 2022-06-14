@@ -718,6 +718,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733612");
     b.version(2);
+    b.aggregate("idleLocation", 0x3dab4295af0d021eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(true).ordered(true).multiple(false).origin("4443718667985551902").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForStaffTypeReference() {

@@ -69,9 +69,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 20; i++) {
       context.add(new PreAdmissionStaff(space, grid, context));
     }
-    for (int i = 0; i < 50; i++) {
-      context.add(new WardStaff(space, grid, context));
-    }
 
 
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), mapWidth, mapHeight);
@@ -116,18 +113,18 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room TriageWaitingRoom_w = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 0, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room MajorsABReception_x = new Room("MajorsABReception", context, space, grid, 200, 168, 20, 10, 1, 15, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room LIATBooth2_y = new Room("LIATBooth2", context, space, grid, 220, 169, 5, 8, 1, 0, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room MajorsBayA_z = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayB_ab = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayC_bb = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayD_cb = new Room("MajorsBayD", context, space, grid, 235, 175, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayE_db = new Room("MajorsBayE", context, space, grid, 235, 160, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayF_eb = new Room("MajorsBayF", context, space, grid, 235, 145, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayG_fb = new Room("MajorsBayG", context, space, grid, 220, 145, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayH_gb = new Room("MajorsBayH", context, space, grid, 205, 145, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayI_hb = new Room("MajorsBayI", context, space, grid, 190, 145, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayJ_ib = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayK_jb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayL_kb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 0, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayA_z = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayB_ab = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayC_bb = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayD_cb = new Room("MajorsBayD", context, space, grid, 235, 175, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayE_db = new Room("MajorsBayE", context, space, grid, 235, 160, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayF_eb = new Room("MajorsBayF", context, space, grid, 235, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayG_fb = new Room("MajorsBayG", context, space, grid, 220, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayH_gb = new Room("MajorsBayH", context, space, grid, 205, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayI_hb = new Room("MajorsBayI", context, space, grid, 190, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayJ_ib = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayK_jb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsBayL_kb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
     Room SideRoom_lb = new Room("SideRoom", context, space, grid, 200, 60, 50, 50, 1, 1000, SideRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room CovidCohort_mb = new Room("CovidCohort", context, space, grid, 260, 60, 50, 50, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
     Room AmberBay_nb = new Room("AmberBay", context, space, grid, 260, 5, 50, 50, 1, 1000, AmberBay.getInstance(), Color.ORANGE, EmergencyDepartment_0);

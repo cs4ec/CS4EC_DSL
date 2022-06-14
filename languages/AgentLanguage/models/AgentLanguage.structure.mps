@@ -114,6 +114,12 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="6MzSDQOa74z" resolve="AggregateAttributeMonitor" />
     </node>
+    <node concept="1TJgyj" id="3QFgDmIWw1y" role="1TKVEi">
+      <property role="IQ2ns" value="4443718667983781986" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="isIdleBehaviour" />
+      <ref role="20lvS9" node="3l6cNjec6HU" resolve="BehaviourElement" />
+    </node>
     <node concept="PrWs8" id="3l6cNjec6HS" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -686,6 +692,12 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3DLpJ7prKMm" resolve="DataMap" />
     </node>
+    <node concept="1TJgyj" id="3QFgDmJICkr" role="1TKVEi">
+      <property role="IQ2ns" value="4443718667996923163" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="preCondition" />
+      <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
+    </node>
     <node concept="1TJgyi" id="svZ_Jg47iz" role="1TKVEl">
       <property role="IQ2nx" value="513408552829744291" />
       <property role="TrG5h" value="description" />
@@ -1232,20 +1244,6 @@
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
-  <node concept="1TIwiD" id="2blVuwVt5E5">
-    <property role="EcuMT" value="2510173949014596229" />
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <property role="TrG5h" value="BedAvailableCondition" />
-    <property role="34LRSv" value="Bed is available condition" />
-    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
-    <node concept="1TJgyj" id="2blVuwVt5EX" role="1TKVEi">
-      <property role="IQ2ns" value="2510173949014596285" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="targetWard" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="35fpRuAlrfU">
     <property role="EcuMT" value="3553172394608014330" />
     <property role="3GE5qa" value="actions.basic actions.OrderPatientAction.Orders" />
@@ -1721,6 +1719,13 @@
       <property role="TrG5h" value="relationshipName" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="3QFgDmIMr4_">
+    <property role="EcuMT" value="4443718667981140261" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="SelectRoomByCapacity" />
+    <property role="34LRSv" value="select room by has capacity" />
+    <ref role="1TJDcQ" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
   </node>
 </model>
 

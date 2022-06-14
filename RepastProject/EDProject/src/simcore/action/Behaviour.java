@@ -26,9 +26,6 @@ public class Behaviour {
 		int actionCounter = 1; // I can only do one action that takes a timestep
 		
 		while(actionCounter >0) {
-			if(currentStep >= steps.size()) {
-		
-			}
 			BehaviourStep currentAction = steps.get(currentStep);
 			
 			currentAction.execute();

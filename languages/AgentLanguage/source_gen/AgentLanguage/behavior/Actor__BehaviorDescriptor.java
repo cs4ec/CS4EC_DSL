@@ -25,6 +25,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.scopes.runtime.NamedElementsScope;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import java.util.Objects;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -47,8 +48,9 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
   public static final SMethod<Boolean> BehaviourSignalIsIn_id4EinDJV_e0e = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("BehaviourSignalIsIn").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4EinDJV_e0e").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
   public static final SMethod<Boolean> AttributeIsIn_id4aMsku86oa7 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("AttributeIsIn").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4aMsku86oa7").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
   public static final SMethod<String> GetSuperTypeName_idJ03_IHVUJg = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetSuperTypeName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("J03_IHVUJg").build();
+  public static final SMethod<SNode> getIsIdleBehaviour_id3QFgDmIWQJk = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getIsIdleBehaviour").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3QFgDmIWQJk").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getFormattedName_id52K8EjkEtU, getScope_id52_Geb4QDV$, GetInheritedBehaviourElement_id29F2V$jvuup, GetInheritedAttributes_id6tNT_P6mjyK, GetConstructBehaviourElement_id7IDz3VlgFrn, GetAllBehaviours_id4BMD7YivWul, searhBehaviourSequence_id4BMD7YiwBKD, GetAllInheritanceList_id29F2V$jrHY3, BehaviourSignalIsIn_id4EinDJV_e0e, AttributeIsIn_id4aMsku86oa7, GetSuperTypeName_idJ03_IHVUJg);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getFormattedName_id52K8EjkEtU, getScope_id52_Geb4QDV$, GetInheritedBehaviourElement_id29F2V$jvuup, GetInheritedAttributes_id6tNT_P6mjyK, GetConstructBehaviourElement_id7IDz3VlgFrn, GetAllBehaviours_id4BMD7YivWul, searhBehaviourSequence_id4BMD7YiwBKD, GetAllInheritanceList_id29F2V$jrHY3, BehaviourSignalIsIn_id4EinDJV_e0e, AttributeIsIn_id4aMsku86oa7, GetSuperTypeName_idJ03_IHVUJg, getIsIdleBehaviour_id3QFgDmIWQJk);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -228,6 +230,13 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     return SPropertyOperations.getString(SLinkOperations.getTarget(__thisNode__, LINKS.superType$2Qmm), PROPS.name$MnvL);
 
   }
+  /*package*/ static SNode getIsIdleBehaviour_id3QFgDmIWQJk(@NotNull SNode __thisNode__) {
+    if (!(Objects.equals(SLinkOperations.getTarget(__thisNode__, LINKS.isIdleBehaviour$pDqV), null))) {
+      SPropertyOperations.assign(SLinkOperations.getTarget(__thisNode__, LINKS.isIdleBehaviour$pDqV), PROPS.name$MnvL, "isIdleAction");
+      return SLinkOperations.getTarget(__thisNode__, LINKS.isIdleBehaviour$pDqV);
+    }
+    return null;
+  }
 
   /*package*/ Actor__BehaviorDescriptor() {
   }
@@ -266,6 +275,8 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
         return (T) ((Boolean) AttributeIsIn_id4aMsku86oa7(node, (SNode) parameters[0], (List<SNode>) parameters[1]));
       case 10:
         return (T) ((String) GetSuperTypeName_idJ03_IHVUJg(node));
+      case 11:
+        return (T) ((SNode) getIsIdleBehaviour_id3QFgDmIWQJk(node));
       default:
         throw new BHMethodNotFoundException(this, method);
     }
@@ -313,5 +324,6 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SReferenceLink superType$2Qmm = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x35463334ce306ba8L, "superType");
     /*package*/ static final SContainmentLink description$Kute = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L, 0x7ba98c3ed53618a0L, "description");
     /*package*/ static final SContainmentLink steps$BnuP = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L, 0x35463334ce308548L, "steps");
+    /*package*/ static final SContainmentLink isIdleBehaviour$pDqV = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x3dab4295aef20062L, "isIdleBehaviour");
   }
 }

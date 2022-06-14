@@ -770,6 +770,13 @@
         <node concept="3F0ifn" id="7o6PzEpEZAC" role="3EZMnx">
           <property role="3F0ifm" value="who" />
         </node>
+        <node concept="3F0ifn" id="3QFgDmIWw1F" role="3EZMnx" />
+        <node concept="3F0ifn" id="3QFgDmIWw2d" role="3EZMnx">
+          <property role="3F0ifm" value="When idle will:" />
+        </node>
+        <node concept="3F1sOY" id="3QFgDmIWw3k" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:3QFgDmIWw1y" resolve="isIdleBehaviour" />
+        </node>
         <node concept="3F0ifn" id="7o6PzEpEZBf" role="3EZMnx" />
         <node concept="3F2HdR" id="7o6PzEpEZBU" role="3EZMnx">
           <ref role="1NtTu8" to="3751:2seZE6jsIgu" resolve="behaviours" />
@@ -1289,6 +1296,15 @@
         </node>
       </node>
       <node concept="3F0ifn" id="3DLpJ7prKUf" role="3EZMnx" />
+      <node concept="3F0ifn" id="3d01st$BtAZ" role="3EZMnx">
+        <property role="3F0ifm" value="Pre-Condition:" />
+        <node concept="pVoyu" id="3d01st$BtBu" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="3d01st$BtC0" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3QFgDmJICkr" resolve="preCondition" />
+      </node>
       <node concept="l2Vlx" id="4TDP_m5yw7" role="2iSdaV" />
     </node>
   </node>
@@ -1298,6 +1314,21 @@
     <node concept="3EZMnI" id="4TDP_mqZgy" role="2wV5jI">
       <node concept="3F0A7n" id="4TDP_mqZgD" role="3EZMnx">
         <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="3QFgDmJIClc" role="3EZMnx">
+        <property role="3F0ifm" value="-----------------------" />
+        <node concept="pVoyu" id="3QFgDmJIClj" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3QFgDmJICkP" role="3EZMnx">
+        <property role="3F0ifm" value="Pre-condition:" />
+        <node concept="pVoyu" id="3QFgDmJICkT" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="3QFgDmJICl0" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3QFgDmJICkr" resolve="preCondition" />
       </node>
       <node concept="l2Vlx" id="4TDP_mqZg_" role="2iSdaV" />
     </node>
@@ -1449,19 +1480,6 @@
             <ref role="1NtTu8" to="3751:2vFOz$FUEcK" resolve="NumAgentsInHour" />
           </node>
         </node>
-      </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="2blVuwVt5Fh">
-    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
-    <ref role="1XX52x" to="3751:2blVuwVt5E5" resolve="BedAvailableCondition" />
-    <node concept="3EZMnI" id="2blVuwVt5Fs" role="2wV5jI">
-      <node concept="2iRfu4" id="2blVuwVt5Ft" role="2iSdaV" />
-      <node concept="3F0ifn" id="2blVuwVt5Fy" role="3EZMnx">
-        <property role="3F0ifm" value="Bed is available in ward" />
-      </node>
-      <node concept="3F1sOY" id="2blVuwVt5FC" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:2blVuwVt5EX" resolve="targetWard" />
       </node>
     </node>
   </node>
@@ -1986,6 +2004,16 @@
         <ref role="1NtTu8" to="3751:6SUjQPu7Ogp" resolve="AgentType" />
       </node>
       <node concept="l2Vlx" id="6SUjQPu39jv" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3QFgDmIMr5G">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:3QFgDmIMr4_" resolve="SelectRoomByCapacity" />
+    <node concept="3EZMnI" id="3QFgDmIMr5I" role="2wV5jI">
+      <node concept="3F0ifn" id="3QFgDmIMr5P" role="3EZMnx">
+        <property role="3F0ifm" value="Select room that has capacity" />
+      </node>
+      <node concept="l2Vlx" id="3QFgDmIMr5L" role="2iSdaV" />
     </node>
   </node>
 </model>

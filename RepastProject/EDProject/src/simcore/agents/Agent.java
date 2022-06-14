@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.WardStaff;
 import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
@@ -16,6 +15,7 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
+import simcore.Signals.Signal;
 import simcore.action.ActionFragment;
 import simcore.action.Behaviour;
 import simcore.action.BehaviourStep;
@@ -65,14 +65,6 @@ public class Agent {
 	public void executeCurrentActions() {
 //		System.out.println("-----------------------------------------");
 //		LogMission();
-		
-		if(this instanceof WardStaff) {
-//			System.out.println(myCurrentActions);
-			if(myCurrentActions.size() > 0) {
-				BehaviourStep b = myCurrentActions.get(0).getCurrentStep();
-				int i =0;
-			}	
-		}
 		
 		// Tick through all my passive actions
 		List<Behaviour> currentPassiveActions = myCurrentActions.stream().filter(a -> a.getCurrentStep() instanceof PassiveBehaviourStep).collect(Collectors.toList());
@@ -144,16 +136,17 @@ public class Agent {
 	// Given a RoomType, select a Location of that RoomType
 	protected Room SelectLocation(RoomType pRoomType) {
 		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
-
-		// find an instance of the room we want
-		// By default select the one that is most empty
-		try {
-			Room selectedRoom = pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2))).filter(r -> EvaluateRoomChoice(r) != Double.MAX_VALUE).findFirst().orElse(null);
-
-			return selectedRoom;
-		} catch (ArrayIndexOutOfBoundsException e) {
-			return null;
-		}
+		// If my patient isn't currently in that room, then consider other options
+		Room selectedRoom = pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2))).filter(r -> EvaluateRoomChoice(r) != Double.MAX_VALUE).findFirst().orElse(null);
+		return selectedRoom;
+	}
+	
+	// Given a RoomType, select a Location of that RoomType
+	protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
+		ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
+		// If my patient isn't currently in that room, then consider other options
+		Room selectedRoom = pRooms.stream().sorted((r1,r2) -> Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2))).filter(r -> EvaluateRoomChoice(r) != Double.MAX_VALUE).findFirst().orElse(null);
+		return selectedRoom;
 	}
 	
 	public List<Occupiable> getAllEmptyOcupiablesOfType(Class c, RoomType roomType) {
@@ -337,59 +330,6 @@ public class Agent {
 		return false;
 	}
 	
-	
-//	public boolean EvaluateInfectionCondition(InfectionStatus comparisonStatus, Patient p) {
-//		
-//		// Introduce stochasticity in whether patient is correctly identified as symptomatic 
-//	    Parameters params = RunEnvironment.getInstance().getParameters();
-//	    Double pdblFalsePositiveSymptomatic = params.getDouble("FalsePositiveSymptomatic");
-//	    		
-//	    // margin of error comes when patient is susceptible, but doc thinks they are actually symptomatic
-//		// so when deciding if a patient is symptomatic, there is a 7% chance that the doc says YES, but patient actual infection status is susc
-//	    if(comparisonStatus == InfectionStatus.Symptomatic && p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Susceptible) {
-//	    	if (RandomHelper.nextDouble() < pdblFalsePositiveSymptomatic) {
-//	    		return true;
-//	    	} else {
-//	    		return false;
-//	    	}
-//	    } else {
-//			return (comparisonStatus == p.getActualInfectionState().stateType.getInfectionStatus());
-//	    }
-//	}
-	
-//	public boolean EvaluateSuitableForSideRoomCondition(Patient p, RoomType alternativeBay) throws Exception {		
-//		// Calculate the current occupancy of side rooms
-//		ArrayList<Room> plstSideRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(SideRoomAdmissionBay.getInstance());
-//		int maxSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllOcupiablesOfType(Bed.class).size()).sum();
-//		int curSRCapacity = plstSideRooms.stream().mapToInt(o -> o.getAllEmptyOcupiablesOfType(Bed.class).size()).sum();
-//		double pdblChanceUseSideRoom = (double)curSRCapacity / (double)maxSRCapacity;
-//		
-//		if(alternativeBay == RedAdmissionBay.getInstance()) {
-//			if(p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
-//				//Patient is symptomatic, and so could go in either a red bay or a side room. Decision will be informed by SR availability
-//				if(curSRCapacity > 0) {
-//					return true;
-//				} else {
-//					return false;
-//				}
-//			} else {
-//				return true; // Patient can go to a SR
-//			}
-//		} else {
-//			if(p.getActualInfectionState().stateType.getInfectionStatus() == InfectionStatus.Symptomatic) {
-//				return true; // Patient can go to a SR
-//			} else {
-//				if(curSRCapacity > 0) {
-//					return true;
-//				} else {
-//					return false;
-//				}				
-//			}
-//		}
-//		throw new Exception("METHOD EVALUATESUITABLEFORSIDEROOM REMOVED");
-
-//	}
-
 	public boolean Dice(double possibility) {
 		double dice = 100 * RandomHelper.nextDouble();
 		return dice < possibility;
@@ -423,7 +363,7 @@ public class Agent {
 	}
 
 	public EDMap ReadMap() {
-		return ToolBox().ReadMap(grid);
+		return ToolBox().ReadMap();
 	}
 
 	public ToolBox ToolBox() {
@@ -454,12 +394,10 @@ public class Agent {
 
 		if (curPoint.getX() > pdblBottomLeft.x && curPoint.getX() < pdblBottomRight.x) {
 			if (curPoint.getY() > pdblBottomLeft.y && curPoint.getY() < pdblTopLeft.y) {
-//				System.out.println(this + " I am in " + pLoc);
 				return true;
 			}
 		}
 
-//		System.out.println(this + " I am not in " + pLoc);
 		return false;
 	}
 
@@ -493,5 +431,10 @@ public class Agent {
 		x = (x < 0) ? -x : x;
 		y = (y < 0) ? -y : y;
 		return Math.pow((x * x + y * y), 0.5);
+	}
+
+	public Behaviour isIdleAction(Signal s) {
+		// Do Nothing
+		return null;
 	}
 }
