@@ -22,6 +22,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import simcore.basicStructures.TimeKeeper;
 import java.math.BigInteger;
 import simcore.basicStructures.Board;
+import repast.simphony.engine.environment.RunEnvironment;
 import simcore.Signals.Orders.MoveToOrder;
 
 public class Doctor extends Actor {
@@ -97,6 +98,15 @@ public class Doctor extends Actor {
         }
       })) {
         return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class;
+        }
+      })) {
+        return Double.MAX_VALUE;
       }
     }
     if (true) {
@@ -210,7 +220,8 @@ public class Doctor extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class MoveAction_a0a_1 extends BehaviourStep {
@@ -324,7 +335,8 @@ public class Doctor extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class MoveAction_a0b_3 extends BehaviourStep {
@@ -405,9 +417,24 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class Consequence_d0b extends InstantBehaviourStep {
+  public class StayForConditionAction_d0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0b(Behaviour behaviour) {
+
+    public StayForConditionAction_d0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+    }
+
+    public boolean finishCondition() {
+      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+    }
+  }
+  public class Consequence_e0b extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_e0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -416,9 +443,9 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0b extends BehaviourStep {
+  public class RemoveRelationshipAction_f0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0b(Behaviour behaviour) {
+    public RemoveRelationshipAction_f0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -505,9 +532,24 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class Consequence_d0b_0 extends InstantBehaviourStep {
+  public class StayForConditionAction_d0b_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0b_0(Behaviour behaviour) {
+
+    public StayForConditionAction_d0b_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+    }
+
+    public boolean finishCondition() {
+      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+    }
+  }
+  public class Consequence_e0b_0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_e0b_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -516,9 +558,9 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0b_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_f0b_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0b_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_f0b_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -547,8 +589,9 @@ public class Doctor extends Actor {
     plstSteps.add(new MoveAction_a0b_3(behaviourBuilder));
     plstSteps.add(new MoveAction_b0b(behaviourBuilder));
     plstSteps.add(new OrderAction_c0b(behaviourBuilder));
-    plstSteps.add(new Consequence_d0b(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0b(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_d0b(behaviourBuilder));
+    plstSteps.add(new Consequence_e0b(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_f0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

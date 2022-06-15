@@ -1664,7 +1664,7 @@
       <property role="IQ2ns" value="7942748223948109477" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
-      <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
     <node concept="1TJgyj" id="6SUjQPsMFvn" role="1TKVEi">
       <property role="IQ2ns" value="7942748223948109783" />
@@ -1672,6 +1672,9 @@
       <property role="20kJfa" value="rule" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
+    </node>
+    <node concept="PrWs8" id="3d01stBeq16" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="6SUjQPsMF$a">
@@ -1726,6 +1729,43 @@
     <property role="TrG5h" value="SelectRoomByCapacity" />
     <property role="34LRSv" value="select room by has capacity" />
     <ref role="1TJDcQ" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
+  </node>
+  <node concept="1TIwiD" id="3d01st_AyuY">
+    <property role="EcuMT" value="3692958048405039038" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="IAmAtCondition" />
+    <property role="34LRSv" value="I am at location condition" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="3d01st_AyvP" role="1TKVEi">
+      <property role="IQ2ns" value="3692958048405039093" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3d01stAf2dN">
+    <property role="EcuMT" value="3692958048415654771" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="RoomSelectionCondition" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="3d01stB0Hjt" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3d01stAf2m5">
+    <property role="EcuMT" value="3692958048415655301" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="RoomTypeCondition" />
+    <property role="34LRSv" value="Check room type" />
+    <ref role="1TJDcQ" node="3d01stAf2dN" resolve="RoomSelectionCondition" />
+    <node concept="1TJgyj" id="3d01stAf2mh" role="1TKVEi">
+      <property role="IQ2ns" value="3692958048415655313" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="roomType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
   </node>
 </model>
 

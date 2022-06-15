@@ -53,7 +53,7 @@ public class AgentGenerator {
 	    	// Add the new agent to the context
 	    	context.add(a);	 	    	
 	    		    	
-	    	EDMap map = new ToolBox(this).ReadMap(grid);
+	    	EDMap map = new ToolBox(this).ReadMap();
 	    
 	    	Room spawnLocation = map.FindInstancesOfRoomType(spawnRoomType).stream().findFirst().get();
 	    	NdPoint spacePt = space.getLocation(spawnLocation);

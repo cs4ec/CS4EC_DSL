@@ -43,6 +43,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
   private ConceptPresentation props_HumanInstanceFromSignal;
+  private ConceptPresentation props_IAmAtCondition;
   private ConceptPresentation props_InfectionState;
   private ConceptPresentation props_IsExactlyOperator;
   private ConceptPresentation props_IsLessThanOperator;
@@ -69,9 +70,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Relationship;
   private ConceptPresentation props_RemoveRelationshipAction;
   private ConceptPresentation props_RepastParam;
+  private ConceptPresentation props_RoomSelectionCondition;
   private ConceptPresentation props_RoomSelectionRule;
   private ConceptPresentation props_RoomSelectionStrategy;
   private ConceptPresentation props_RoomSelectionStrategyLine;
+  private ConceptPresentation props_RoomTypeCondition;
   private ConceptPresentation props_RoomTypeIsAvailableCondition;
   private ConceptPresentation props_RoomTypeReference;
   private ConceptPresentation props_SelectClosestRoom;
@@ -350,6 +353,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_HumanInstanceFromSignal = cpb.create();
         }
         return props_HumanInstanceFromSignal;
+      case LanguageConceptSwitch.IAmAtCondition:
+        if (props_IAmAtCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("I am at location condition");
+          props_IAmAtCondition = cpb.create();
+        }
+        return props_IAmAtCondition;
       case LanguageConceptSwitch.InfectionState:
         if (props_InfectionState == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -538,6 +548,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RepastParam = cpb.create();
         }
         return props_RepastParam;
+      case LanguageConceptSwitch.RoomSelectionCondition:
+        if (props_RoomSelectionCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_RoomSelectionCondition = cpb.create();
+        }
+        return props_RoomSelectionCondition;
       case LanguageConceptSwitch.RoomSelectionRule:
         if (props_RoomSelectionRule == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -559,6 +576,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RoomSelectionStrategyLine = cpb.create();
         }
         return props_RoomSelectionStrategyLine;
+      case LanguageConceptSwitch.RoomTypeCondition:
+        if (props_RoomTypeCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_RoomTypeCondition = cpb.create();
+        }
+        return props_RoomTypeCondition;
       case LanguageConceptSwitch.RoomTypeIsAvailableCondition:
         if (props_RoomTypeIsAvailableCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

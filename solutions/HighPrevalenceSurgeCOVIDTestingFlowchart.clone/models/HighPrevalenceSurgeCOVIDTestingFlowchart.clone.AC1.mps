@@ -2939,6 +2939,7 @@
       <property role="m3A$b" value="20" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
       <property role="1njz_o" value="20" />
+      <property role="m3wsY" value="100" />
       <ref role="VgANK" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
     <node concept="j3bLk" id="5R1$QENtek6" role="j3bMi">
@@ -2959,6 +2960,7 @@
       <property role="m3A$7" value="5" />
       <property role="m3A$b" value="8" />
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
+      <property role="m3wsY" value="5" />
       <ref role="VgANK" node="5R1$QENtegU" resolve="LIATBooth" />
     </node>
     <node concept="j3bLk" id="5R1$QENtekT" role="j3bMi">

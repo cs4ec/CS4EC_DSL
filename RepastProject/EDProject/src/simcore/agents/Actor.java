@@ -15,7 +15,6 @@ import EDLanguage.sandbox.TriageNurse;
 import EDLanguage.sandbox.CubicleNurse.MoveAction_a0i;
 import EDLanguage.sandbox.CubicleNurse.OrderAction_b0i;
 import EDLanguage.sandbox.CubicleNurse.SendSignalAction_d0i;
-import EDLanguage.sandbox.CubicleNurse.StayAction_c0i;
 import EDLanguage.sandbox.CubicleNurse.StayAction_e0i;
 import repast.simphony.context.Context;
 import repast.simphony.context.space.graph.NetworkBuilder;
@@ -166,7 +165,8 @@ public class Actor extends Agent {
 						myCurrentActions.add(signalAction);
 						myActiveAction = signalAction;
 					}
-				} else {
+				} 
+				else {
 					// If there are no no signals yet, then I can do my 'isIdleAction' if one exists
 					Behaviour idleBehaviour = this.isIdleAction(s);
 					if(idleBehaviour != null) {

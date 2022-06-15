@@ -57,6 +57,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RecentCOVIDContactCondition;
   private ConceptPresentation props_RecentCovidContactProperty;
   private ConceptPresentation props_ResourceAvailableCondition;
+  private ConceptPresentation props_RoomSelection;
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
@@ -418,6 +419,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ResourceAvailableCondition = cpb.create();
         }
         return props_ResourceAvailableCondition;
+      case LanguageConceptSwitch.RoomSelection:
+        if (props_RoomSelection == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("RoomSelection");
+          props_RoomSelection = cpb.create();
+        }
+        return props_RoomSelection;
       case LanguageConceptSwitch.StaffNumber:
         if (props_StaffNumber == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

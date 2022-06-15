@@ -2016,5 +2016,31 @@
       <node concept="l2Vlx" id="3QFgDmIMr5L" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="3d01st_AyvY">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:3d01st_AyuY" resolve="IAmAtCondition" />
+    <node concept="3EZMnI" id="3d01st_Aywi" role="2wV5jI">
+      <node concept="3F0ifn" id="3d01st_Aywp" role="3EZMnx">
+        <property role="3F0ifm" value="I am at" />
+      </node>
+      <node concept="3F1sOY" id="3d01st_Aywv" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3d01st_AyvP" resolve="target" />
+      </node>
+      <node concept="l2Vlx" id="3d01st_Aywl" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3d01stAf2mq">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:3d01stAf2m5" resolve="RoomTypeCondition" />
+    <node concept="3EZMnI" id="3d01stAf2ms" role="2wV5jI">
+      <node concept="3F0ifn" id="3d01stAf2mz" role="3EZMnx">
+        <property role="3F0ifm" value="Room is a" />
+      </node>
+      <node concept="3F1sOY" id="3d01stAf2mD" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3d01stAf2mh" resolve="roomType" />
+      </node>
+      <node concept="l2Vlx" id="3d01stAf2mv" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

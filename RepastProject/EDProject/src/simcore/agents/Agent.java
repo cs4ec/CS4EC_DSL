@@ -63,9 +63,6 @@ public class Agent {
 	}
 
 	public void executeCurrentActions() {
-//		System.out.println("-----------------------------------------");
-//		LogMission();
-		
 		// Tick through all my passive actions
 		List<Behaviour> currentPassiveActions = myCurrentActions.stream().filter(a -> a.getCurrentStep() instanceof PassiveBehaviourStep).collect(Collectors.toList());
 		for (Behaviour action : currentPassiveActions) {
@@ -75,13 +72,10 @@ public class Agent {
 		// Then do my `active' action 
 		if(myActiveAction != null) {
 			stepAction(myActiveAction);
-		}
-		
-//		System.out.println("-----------------------------------------");
+		}		
 	}
 	
 	public void stepAction(Behaviour action) {
-		
 		// If the mission is complete, update my status accordingly
 		if (action.isComplete()) {
 			if(action == myActiveAction) {
@@ -91,7 +85,7 @@ public class Agent {
 			}
 			return;
 		} 
-		
+		 
 		// If my active action has turned passive, set myself as idle and add it to my current actions backlog
 		if(action == myActiveAction && action.getCurrentStep() instanceof PassiveBehaviourStep) {
 			isIdle = true;
@@ -248,17 +242,6 @@ public class Agent {
 		return Double.MAX_VALUE;
 	}
 	
-	/**
-	 * Print out the status of the Agent's current active mission
-	 */
-//	protected void LogMission() {
-//		System.out.println(this);
-//		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-//		System.out.println("Time: " + TimeKeeper.getInstance().getTime().format(formatter));
-//		System.out.println("current mission: " + myActiveAction + ": " + myActiveAction);
-//		System.out.println(
-//				"cur action step: " + myActiveAction.getCurrentStep() + ": " + myActiveAction.getCurrentStep());
-//	}
 
 	// Consequence of this Action
 	public void UpdateState(Consequence c) {

@@ -22,6 +22,7 @@ import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
 import simcore.basicStructures.TimeKeeper;
 import java.math.BigInteger;
 import simcore.basicStructures.Board;
+import repast.simphony.engine.environment.RunEnvironment;
 import simcore.Signals.Orders.MoveToOrder;
 
 public class Doctor extends Actor {
@@ -97,6 +98,11 @@ public class Doctor extends Actor {
         }
       })) {
         return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.getCurrentCapacity() >= pRoom.getMaxCapacity()) {
+        return Double.MAX_VALUE;
       }
     }
     if (true) {
@@ -210,7 +216,8 @@ public class Doctor extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class MoveAction_a0a_1 extends BehaviourStep {
@@ -324,7 +331,8 @@ public class Doctor extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == 1;
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class MoveAction_a0b_3 extends BehaviourStep {

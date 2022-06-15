@@ -4,6 +4,7 @@ package EDLanguage.sandbox;
 
 import simcore.utilities.Distribution;
 import java.util.HashMap;
+import repast.simphony.engine.environment.RunEnvironment;
 import java.util.Map;
 
 public class TimeDistributionTable_a5 {
@@ -13,8 +14,9 @@ public class TimeDistributionTable_a5 {
   private TimeDistributionTable_a5() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 4;
-    returnMap.put(3, ((Double) (2 / TotalOccurances)));
-    returnMap.put(5, ((Double) (1 / TotalOccurances)));
+    returnMap.put(180 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (2 / TotalOccurances)));
+    returnMap.put(300 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (1 / TotalOccurances)));
+
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 

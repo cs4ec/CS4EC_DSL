@@ -131,6 +131,9 @@
       <concept id="4334763093660390701" name="AgentLanguage.structure.StayForTimeAction" flags="ng" index="jcv$W">
         <property id="4334763093660390702" name="timeSpan" index="jcv$Z" />
       </concept>
+      <concept id="4334763093660390794" name="AgentLanguage.structure.StayForConditionAction" flags="ng" index="jcvAr">
+        <child id="4334763093660390795" name="condition" index="jcvAq" />
+      </concept>
       <concept id="4334763093659899157" name="AgentLanguage.structure.AttributeCondition" flags="ng" index="jeB$4">
         <property id="4334763093659899247" name="operator" index="jeB_Y" />
         <reference id="2985733650908180605" name="actorRef" index="2h88ii" />
@@ -196,6 +199,9 @@
         <property id="7942748223969203475" name="relationshipName" index="KdHDY" />
         <child id="7942748223970427929" name="AgentType" index="K9gHO" />
       </concept>
+      <concept id="7942748223948114341" name="AgentLanguage.structure.SelectRoomWithNoAgentsOfType" flags="ng" index="MW8r8">
+        <child id="7942748223948118951" name="AgentType" index="MW9ja" />
+      </concept>
       <concept id="7942748223948107616" name="AgentLanguage.structure.RoomSelectionStrategyLine" flags="ng" index="MWe0d">
         <child id="7942748223948109783" name="rule" index="MWfyU" />
       </concept>
@@ -217,6 +223,9 @@
       </concept>
       <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableInstance" flags="ng" index="1kHjla">
         <property id="8465466444625393872" name="occupiableType" index="1kAtwL" />
+      </concept>
+      <concept id="3692958048405039038" name="AgentLanguage.structure.IAmAtCondition" flags="ng" index="1mQy9T">
+        <child id="3692958048405039093" name="target" index="1mQy8M" />
       </concept>
       <concept id="513408552829965726" name="AgentLanguage.structure.SignalReference" flags="ng" index="3n32J5" />
       <concept id="513408552829815467" name="AgentLanguage.structure.ActorReference" flags="ng" index="3n3BjK">
@@ -972,6 +981,41 @@
           </node>
         </node>
       </node>
+      <node concept="MWe0d" id="3d01stAf24R" role="MWe58">
+        <node concept="MW8r8" id="3d01stAf25e" role="MWfyU">
+          <node concept="3n3BjK" id="3d01stAf25k" role="MW9ja">
+            <ref role="3n3BjR" node="EFW1mY_7M0" resolve="map_Patient" />
+            <node concept="1ZhdrF" id="3d01stAf27z" role="lGtFl">
+              <property role="2qtEX8" value="actor" />
+              <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/513408552829815467/513408552829815468" />
+              <node concept="3$xsQk" id="3d01stAf27$" role="3$ytzL">
+                <node concept="3clFbS" id="3d01stAf27_" role="2VODD2">
+                  <node concept="3clFbF" id="3d01stAf288" role="3cqZAp">
+                    <node concept="2OqwBi" id="3d01stAf289" role="3clFbG">
+                      <node concept="1iwH7S" id="3d01stAf28a" role="2Oq$k0" />
+                      <node concept="1iwH70" id="3d01stAf28b" role="2OqNvi">
+                        <ref role="1iwH77" node="1xAzJ9O2jGr" resolve="PatientProfileReduction" />
+                        <node concept="2OqwBi" id="3d01stAf28c" role="1iwH7V">
+                          <node concept="2OqwBi" id="3d01stAf28d" role="2Oq$k0">
+                            <node concept="2OqwBi" id="3d01stAf28e" role="2Oq$k0">
+                              <node concept="1iwH7S" id="3d01stAf28f" role="2Oq$k0" />
+                              <node concept="1r8y6K" id="3d01stAf28g" role="2OqNvi" />
+                            </node>
+                            <node concept="2RRcyG" id="3d01stAf28h" role="2OqNvi">
+                              <ref role="2RRcyH" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
+                            </node>
+                          </node>
+                          <node concept="1uHKPH" id="3d01stAf28i" role="2OqNvi" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="MWe0d" id="6SUjQPu0bL3" role="MWe58">
         <node concept="NOV4H" id="6SUjQPu0bLo" role="MWfyU" />
       </node>
@@ -1525,7 +1569,35 @@
           </node>
           <node concept="2IBTiW" id="62zpHKiN2OR" role="2IBTiu" />
         </node>
+        <node concept="jcvAr" id="3d01st_GLza" role="3VtFpW">
+          <node concept="1mQy9T" id="3d01st_GNRH" role="jcvAq">
+            <node concept="3JJFmu" id="3d01st_GNRN" role="1mQy8M" />
+          </node>
+          <node concept="1W57fq" id="3d01st_KvhR" role="lGtFl">
+            <node concept="3IZrLx" id="3d01st_KvhS" role="3IZSJc">
+              <node concept="3clFbS" id="3d01st_KvhT" role="2VODD2">
+                <node concept="3clFbF" id="3d01st_KvlO" role="3cqZAp">
+                  <node concept="2OqwBi" id="3d01st_Kv_d" role="3clFbG">
+                    <node concept="30H73N" id="3d01st_KvlN" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="3d01st_KvSk" role="2OqNvi">
+                      <ref role="3TsBF5" to="e88n:3WgUQREJscS" resolve="requiresPatient" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="jcv$W" id="62zpHKiN4Pp" role="3VtFpW">
+          <node concept="1W57fq" id="3d01st_GOeX" role="lGtFl">
+            <node concept="3IZrLx" id="3d01st_GOeY" role="3IZSJc">
+              <node concept="3clFbS" id="3d01st_GOeZ" role="2VODD2">
+                <node concept="3clFbF" id="3d01st_GOhb" role="3cqZAp">
+                  <node concept="3clFbT" id="3d01st_GOha" role="3clFbG" />
+                </node>
+              </node>
+            </node>
+          </node>
           <node concept="1W57fq" id="62zpHKiN6TP" role="lGtFl">
             <node concept="3IZrLx" id="62zpHKiN6TS" role="3IZSJc">
               <node concept="3clFbS" id="62zpHKiN6TT" role="2VODD2">
@@ -4418,6 +4490,12 @@
           <node concept="3JG_m7" id="1SF32lS15b" role="3JG_nW">
             <node concept="3JGL$I" id="52K8EjHpZ6" role="3JG_nS" />
           </node>
+          <node concept="2IBTiW" id="3d01stA2iak" role="2IBTiu" />
+        </node>
+        <node concept="jcvAr" id="3d01stA2idY" role="3VtFpW">
+          <node concept="1mQy9T" id="3d01stA2ihD" role="jcvAq">
+            <node concept="3JJFmu" id="3d01stA2ihJ" role="1mQy8M" />
+          </node>
         </node>
         <node concept="X7xuQ" id="74nMeo8yMRe" role="3VtFpW">
           <node concept="jeB$8" id="74nMeo8yMRf" role="2Ry9oz">
@@ -6199,6 +6277,12 @@
           <node concept="3JG_m7" id="1xAzJ9PrVW_" role="3JG_nW">
             <node concept="3JGL$I" id="1xAzJ9PrVWA" role="3JG_nS" />
           </node>
+          <node concept="2IBTiW" id="3d01stA2j5x" role="2IBTiu" />
+        </node>
+        <node concept="jcvAr" id="3d01stA2j8q" role="3VtFpW">
+          <node concept="1mQy9T" id="3d01stA2jmB" role="jcvAq">
+            <node concept="3JJFmu" id="3d01stA2jmH" role="1mQy8M" />
+          </node>
         </node>
         <node concept="X7xuQ" id="1xAzJ9PrVWB" role="3VtFpW">
           <node concept="jeB$8" id="1xAzJ9PrVWC" role="2Ry9oz">
@@ -6906,7 +6990,7 @@
     </node>
   </node>
   <node concept="3VqkwO" id="7NybO1sfYM7">
-    <property role="3oou0D" value="60" />
+    <property role="3oou0D" value="1" />
     <property role="i3J_M" value="7" />
     <node concept="2mjNtH" id="7NybO1sg0Xa" role="2mjQn4">
       <property role="TrG5h" value="CurrentPatientAllocations" />

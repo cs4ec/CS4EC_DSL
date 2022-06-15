@@ -42,7 +42,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = false;
 
-    RunEnvironment.getInstance().endAt(10080);
+    RunEnvironment.getInstance().endAt(604800 / params.getInteger("SecondsPerTick"));
 
     CreatePatientArrivalMap();
 
@@ -52,8 +52,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
-    context.add(new patientGenerator_1(space, grid, context));
     context.add(new patientGenerator_0(space, grid, context));
+    context.add(new patientGenerator_1(space, grid, context));
     context.add(new Board());
 
     // add Agents 
@@ -110,9 +110,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room Entrance_t = new Room("Entrance", context, space, grid, 95, 193, 10, 5, 1, 10, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room XRayRoom1_u = new Room("XRayRoom1", context, space, grid, 140, 155, 5, 5, 1, 3, RadiologyRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room XRayRoom2_v = new Room("XRayRoom2", context, space, grid, 145, 155, 5, 5, 1, 3, RadiologyRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room TriageWaitingRoom_w = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 0, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room TriageWaitingRoom_w = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 100, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room MajorsABReception_x = new Room("MajorsABReception", context, space, grid, 200, 168, 20, 10, 1, 15, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room LIATBooth2_y = new Room("LIATBooth2", context, space, grid, 220, 169, 5, 8, 1, 0, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room LIATBooth2_y = new Room("LIATBooth2", context, space, grid, 220, 169, 5, 8, 1, 5, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsBayA_z = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
     Room MajorsBayB_ab = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
     Room MajorsBayC_bb = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);

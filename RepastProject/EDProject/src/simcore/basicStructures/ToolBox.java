@@ -15,8 +15,12 @@ public class ToolBox {
 	Context context;
 	
 	public ToolBox(Object o) {
-		Context c = ContextUtils.getContext(o);
-		context = c;
+		if(!(o instanceof Context)) {
+			Context c = ContextUtils.getContext(o);
+			context = c;
+		} else {
+			context = (Context) o;
+		}
 	}
 	
 	public Board ReadBoard() {
@@ -24,8 +28,8 @@ public class ToolBox {
 		return (Board) (collection.get(0));
 	}
 	
-	public EDMap ReadMap(Grid<Object> grid) {
-    	return new EDMap(context).WithGrid(grid);
+	public EDMap ReadMap() {
+    	return new EDMap(context);
     }
 	
 	public double getTime() {

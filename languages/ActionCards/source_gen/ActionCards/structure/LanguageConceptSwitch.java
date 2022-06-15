@@ -57,20 +57,21 @@ public final class LanguageConceptSwitch {
   public static final int RecentCOVIDContactCondition = 45;
   public static final int RecentCovidContactProperty = 46;
   public static final int ResourceAvailableCondition = 47;
-  public static final int StaffNumber = 48;
-  public static final int StaffType = 49;
-  public static final int StaffTypeReference = 50;
-  public static final int SymptomList = 51;
-  public static final int Test = 52;
-  public static final int TestCapturedDisease = 53;
-  public static final int TimeDistributionLine = 54;
-  public static final int TimeDistributionTable = 55;
-  public static final int TimeOfDayCondition = 56;
-  public static final int Unvaccinated = 57;
-  public static final int VaccinationStatus = 58;
-  public static final int VaccineStatusCondition = 59;
-  public static final int VaccineStatusProperty = 60;
-  public static final int Yes = 61;
+  public static final int RoomSelection = 48;
+  public static final int StaffNumber = 49;
+  public static final int StaffType = 50;
+  public static final int StaffTypeReference = 51;
+  public static final int SymptomList = 52;
+  public static final int Test = 53;
+  public static final int TestCapturedDisease = 54;
+  public static final int TimeDistributionLine = 55;
+  public static final int TimeDistributionTable = 56;
+  public static final int TimeOfDayCondition = 57;
+  public static final int Unvaccinated = 58;
+  public static final int VaccinationStatus = 59;
+  public static final int VaccineStatusCondition = 60;
+  public static final int VaccineStatusProperty = 61;
+  public static final int Yes = 62;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L);
@@ -122,6 +123,7 @@ public final class LanguageConceptSwitch {
     builder.put(0x18668ef2732bde64L, RecentCOVIDContactCondition);
     builder.put(0x18668ef2732b9054L, RecentCovidContactProperty);
     builder.put(0x3bf86d07f23cf033L, ResourceAvailableCondition);
+    builder.put(0x334005c766547220L, RoomSelection);
     builder.put(0x4af9c647eff82e7bL, StaffNumber);
     builder.put(0x4f415ebce3f346ecL, StaffType);
     builder.put(0x4af9c647efda3a80L, StaffTypeReference);

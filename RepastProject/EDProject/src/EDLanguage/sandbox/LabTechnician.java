@@ -93,6 +93,11 @@ public class LabTechnician extends Actor {
       }
     }
     if (true) {
+      if (pRoom.getCurrentCapacity() >= pRoom.getMaxCapacity()) {
+        return Double.MAX_VALUE;
+      }
+    }
+    if (true) {
       return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
     }
     return 0;

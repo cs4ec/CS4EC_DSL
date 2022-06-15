@@ -37,10 +37,9 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
 
   public static final SMethod<Scope> getScope_id52_Geb4QDV$ = new SMethodBuilder<Scope>(new SJavaCompoundTypeImpl(Scope.class)).name("getScope").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("52_Geb4QDV$").build(SMethodBuilder.createJavaParameter((Class<SAbstractConcept>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<Boolean> IsIn_id29F2V$jyINI = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("IsIn").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("29F2V$jyINI").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
-  public static final SMethod<Boolean> NotYetBeenUsed_id6tNT_P6vKBg = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("NotYetBeenUsed").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6tNT_P6vKBg").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
   public static final SMethod<String> GetSignalName_id2YIKz$5l9Hf = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetSignalName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2YIKz$5l9Hf").build();
 
-  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getScope_id52_Geb4QDV$, IsIn_id29F2V$jyINI, NotYetBeenUsed_id6tNT_P6vKBg, GetSignalName_id2YIKz$5l9Hf);
+  private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getScope_id52_Geb4QDV$, IsIn_id29F2V$jyINI, GetSignalName_id2YIKz$5l9Hf);
 
   private static void ___init___(@NotNull SNode __thisNode__) {
   }
@@ -53,7 +52,6 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
       {
         final SNode sr = child;
         if (SNodeOperations.isInstanceOf(sr, CONCEPTS.SignalReference$qb)) {
-
           return new NamedElementsScope(signals);
         }
       }
@@ -65,7 +63,6 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
         if (((boolean) BehaviourElement__BehaviorDescriptor.IsIn_id29F2V$jyINI.invoke(__thisNode__, signal, actorList))) {
           ListSequence.fromList(nli).addElement(signal);
         }
-
       }
 
       return new NamedElementsScope(nli);
@@ -81,22 +78,6 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
       }
     }
     return false;
-  }
-  /*package*/ static boolean NotYetBeenUsed_id6tNT_P6vKBg(@NotNull SNode __thisNode__, SNode signal) {
-
-    SNode baseActor = SNodeOperations.getNodeAncestor(__thisNode__, CONCEPTS.Actor$CU, false, false);
-    List<SNode> behaviours = SLinkOperations.getChildren(baseActor, LINKS.behaviours$zTMQ);
-
-    for (SNode behaviour : ListSequence.fromList(behaviours)) {
-      if ((SLinkOperations.getTarget(behaviour, LINKS.signal$k9aw) != null)) {
-        if (BehaviourElement__BehaviorDescriptor.GetSignalName_id2YIKz$5l9Hf.invoke(behaviour).equals(SPropertyOperations.getString(signal, PROPS.name$MnvL))) {
-          return false;
-        }
-      }
-    }
-
-
-    return true;
   }
   /*package*/ static String GetSignalName_id2YIKz$5l9Hf(@NotNull SNode __thisNode__) {
     {
@@ -136,8 +117,6 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
       case 1:
         return (T) ((Boolean) IsIn_id29F2V$jyINI(node, (SNode) parameters[0], (List<SNode>) parameters[1]));
       case 2:
-        return (T) ((Boolean) NotYetBeenUsed_id6tNT_P6vKBg(node, (SNode) parameters[0]));
-      case 3:
         return (T) ((String) GetSignalName_id2YIKz$5l9Hf(node));
       default:
         throw new BHMethodNotFoundException(this, method);
@@ -182,7 +161,6 @@ public final class BehaviourElement__BehaviorDescriptor extends BaseBHDescriptor
   private static final class LINKS {
     /*package*/ static final SReferenceLink actor$ls$v = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd0118aabL, 0x71ffe5bd0118aacL, "actor");
     /*package*/ static final SContainmentLink receivers$HQLn = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL, 0x139a759561627f7L, "receivers");
-    /*package*/ static final SContainmentLink behaviours$zTMQ = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x270efea19372e41eL, "behaviours");
     /*package*/ static final SContainmentLink signal$k9aw = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, 0x71ffe5bd0133e89L, "signal");
     /*package*/ static final SReferenceLink signal$j_fv = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd013d59eL, 0x71ffe5bd013d59fL, "signal");
   }
