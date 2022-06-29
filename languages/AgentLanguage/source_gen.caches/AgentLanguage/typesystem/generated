@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="ehak1ric3uqsaz0flie4610t071vghu">
-  <files names="TypesystemDescriptor.java:typeof_AttributeCondition_InferenceRule.java:typeof_AttributeExpressionReference_InferenceRule.java:typeof_AttributeReference_InferenceRule.java" />
+<product version="3" modelHash="-37cssh1lphxqacxkizmzbxfhztcm5a3">
+  <files names="TypesystemDescriptor.java:typeof_AttributeCondition_InferenceRule.java:typeof_AttributeExpressionReference_InferenceRule.java:typeof_AttributeReference_InferenceRule.java:typeof_RoomTypeCondition_InferenceRule.java" />
 </product>
 
