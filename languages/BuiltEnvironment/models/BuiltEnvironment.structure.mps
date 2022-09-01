@@ -193,26 +193,6 @@
       <property role="1L1pqM" value="East" />
     </node>
   </node>
-  <node concept="25R3W" id="7lVoe4xN_rL">
-    <property role="3F6X1D" value="8465466444624058097" />
-    <property role="3GE5qa" value="ED" />
-    <property role="TrG5h" value="OccupiableTypes" />
-    <node concept="25R33" id="7lVoe4xN_rM" role="25R1y">
-      <property role="3tVfz5" value="8465466444624058098" />
-      <property role="TrG5h" value="Seat" />
-      <property role="1L1pqM" value="seat" />
-    </node>
-    <node concept="25R33" id="7lVoe4xN_rN" role="25R1y">
-      <property role="3tVfz5" value="8465466444624058099" />
-      <property role="TrG5h" value="Desk" />
-      <property role="1L1pqM" value="desk" />
-    </node>
-    <node concept="25R33" id="5QJON_BPEyz" role="25R1y">
-      <property role="3tVfz5" value="6750846609960380579" />
-      <property role="TrG5h" value="Bed" />
-      <property role="1L1pqM" value="bed" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="3JSrgvJlcqR">
     <property role="EcuMT" value="4321323723309500087" />
     <property role="3GE5qa" value="ED" />
@@ -255,6 +235,13 @@
     <property role="TrG5h" value="RoomInstanceDefinition" />
     <property role="3GE5qa" value="ED" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="34hhAWw0ET2" role="1TKVEi">
+      <property role="IQ2ns" value="3535684625554910786" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="occupiables" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="34hhAWw0EPj" resolve="OccupiableAllocation" />
+    </node>
     <node concept="PrWs8" id="3KCb14J9918" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -472,6 +459,55 @@
       <property role="IQ2nx" value="3787511550156315288" />
       <property role="TrG5h" value="showDiagramView" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="34hhAWvBY13">
+    <property role="EcuMT" value="3535684625548435523" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="OccupiableDefinition" />
+    <property role="34LRSv" value="occupiable definition" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="34hhAWvBY1f" role="1TKVEl">
+      <property role="IQ2nx" value="3535684625548435535" />
+      <property role="TrG5h" value="name" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="34hhAWvM1oE">
+    <property role="EcuMT" value="3535684625551070762" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="OccupiablesList" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="34hhAWvM1oO" role="1TKVEi">
+      <property role="IQ2ns" value="3535684625551070772" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="occupiables" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="34hhAWvBY13" resolve="OccupiableDefinition" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="34hhAWw0EPj">
+    <property role="EcuMT" value="3535684625554910547" />
+    <property role="3GE5qa" value="ED" />
+    <property role="TrG5h" value="OccupiableAllocation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="34hhAWw0EPJ" role="1TKVEl">
+      <property role="IQ2nx" value="3535684625554910575" />
+      <property role="TrG5h" value="x" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="34hhAWw4oiX" role="1TKVEl">
+      <property role="IQ2nx" value="3535684625555883197" />
+      <property role="TrG5h" value="y" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="34hhAWw0EPL" role="1TKVEi">
+      <property role="IQ2ns" value="3535684625554910577" />
+      <property role="20kJfa" value="occupiable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="34hhAWvBY13" resolve="OccupiableDefinition" />
     </node>
   </node>
 </model>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-74wvs9iki87zfvcnmvxu72ia67q791s">
-  <files names="BehaviorAspectDescriptor.java:RoomType__BehaviorDescriptor.java" />
+<product version="3" modelHash="8pryswumzc8s4m1ahhd29ta1qisz057">
+  <files names="BehaviorAspectDescriptor.java:OccupiableDefinition__BehaviorDescriptor.java:RoomType__BehaviorDescriptor.java" />
 </product>
 

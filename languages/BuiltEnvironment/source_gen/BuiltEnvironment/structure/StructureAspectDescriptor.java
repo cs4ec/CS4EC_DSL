@@ -25,6 +25,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBlueprintMap = createDescriptorForBlueprintMap();
   /*package*/ final ConceptDescriptor myConceptDateTimeNowVariable = createDescriptorForDateTimeNowVariable();
   /*package*/ final ConceptDescriptor myConceptMapImporter = createDescriptorForMapImporter();
+  /*package*/ final ConceptDescriptor myConceptOccupiableAllocation = createDescriptorForOccupiableAllocation();
+  /*package*/ final ConceptDescriptor myConceptOccupiableDefinition = createDescriptorForOccupiableDefinition();
+  /*package*/ final ConceptDescriptor myConceptOccupiablesList = createDescriptorForOccupiablesList();
   /*package*/ final ConceptDescriptor myConceptResource = createDescriptorForResource();
   /*package*/ final ConceptDescriptor myConceptResourceAllocation = createDescriptorForResourceAllocation();
   /*package*/ final ConceptDescriptor myConceptResourceAvailabilityVariable = createDescriptorForResourceAvailabilityVariable();
@@ -37,7 +40,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptWallDefinition = createDescriptorForWallDefinition();
   /*package*/ final ConceptDescriptor myConceptWallInstanceDefinition = createDescriptorForWallInstanceDefinition();
   /*package*/ final EnumerationDescriptor myEnumerationDirection = new EnumerationDescriptor_Direction();
-  /*package*/ final EnumerationDescriptor myEnumerationOccupiableTypes = new EnumerationDescriptor_OccupiableTypes();
   /*package*/ final ConstrainedStringDatatypeDescriptor myCSDatatypetimeOfDay = new ConstrainedStringDatatypeDescriptorImpl(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f4217ae0L, "timeOfDay", "r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/4321323723390024416", "[0-9][0-9]:[0-9][0-9]");
   private final LanguageConceptSwitch myIndexSwitch;
 
@@ -56,7 +58,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptBlueprintMap, myConceptDateTimeNowVariable, myConceptMapImporter, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptTimeOfDayVariable, myConceptTimeOfDayWrapper, myConceptWallDefinition, myConceptWallInstanceDefinition);
+    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptBlueprintMap, myConceptDateTimeNowVariable, myConceptMapImporter, myConceptOccupiableAllocation, myConceptOccupiableDefinition, myConceptOccupiablesList, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptTimeOfDayVariable, myConceptTimeOfDayWrapper, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -77,6 +79,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDateTimeNowVariable;
       case LanguageConceptSwitch.MapImporter:
         return myConceptMapImporter;
+      case LanguageConceptSwitch.OccupiableAllocation:
+        return myConceptOccupiableAllocation;
+      case LanguageConceptSwitch.OccupiableDefinition:
+        return myConceptOccupiableDefinition;
+      case LanguageConceptSwitch.OccupiablesList:
+        return myConceptOccupiablesList;
       case LanguageConceptSwitch.Resource:
         return myConceptResource;
       case LanguageConceptSwitch.ResourceAllocation:
@@ -106,7 +114,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<DataTypeDescriptor> getDataTypeDescriptors() {
-    return Arrays.asList(myEnumerationDirection, myEnumerationOccupiableTypes, myCSDatatypetimeOfDay);
+    return Arrays.asList(myEnumerationDirection, myCSDatatypetimeOfDay);
   }
 
   /*package*/ int internalIndex(SAbstractConcept c) {
@@ -181,6 +189,33 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("Map Importer");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForOccupiableAllocation() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "OccupiableAllocation", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f2002ad53L);
+    b.class_(false, false, false);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/3535684625554910547");
+    b.version(2);
+    b.property("x", 0x3111466f2002ad6fL).type(PrimitiveTypeId.INTEGER).origin("3535684625554910575").done();
+    b.property("y", 0x3111466f201184bdL).type(PrimitiveTypeId.INTEGER).origin("3535684625555883197").done();
+    b.associate("occupiable", 0x3111466f2002ad71L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L).optional(false).origin("3535684625554910577").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOccupiableDefinition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "OccupiableDefinition", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L);
+    b.class_(false, false, true);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/3535684625548435523");
+    b.version(2);
+    b.property("name", 0x3111466f1f9fe04fL).type(PrimitiveTypeId.STRING).origin("3535684625548435535").done();
+    b.alias("occupiable definition");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOccupiablesList() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "OccupiablesList", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1fc8162aL);
+    b.class_(false, false, true);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/3535684625551070762");
+    b.version(2);
+    b.aggregate("occupiables", 0x3111466f1fc81634L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L).optional(true).ordered(true).multiple(true).origin("3535684625551070772").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForResource() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "Resource", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f032c8d7L);
     b.class_(false, false, true);
@@ -234,6 +269,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("beds", 0x22d5ede83b4138f3L).type(PrimitiveTypeId.INTEGER).origin("2510173949011245299").done();
     b.property("ID", 0xaabf015beeb4a25L).type(PrimitiveTypeId.INTEGER).origin("768972137584871973").done();
     b.associate("roomType", 0x5dafd33966edbfc9L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x5dafd33966e8fe19L).optional(false).origin("6750846609945116617").done();
+    b.aggregate("occupiables", 0x3111466f2002ae42L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f2002ad53L).optional(true).ordered(true).multiple(true).origin("3535684625554910786").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForRoomType() {

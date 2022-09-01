@@ -215,6 +215,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createIndentCell_1() {
     EditorCell_Indent editorCell = new EditorCell_Indent(getEditorContext(), myNode);
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
     return editorCell;
   }
   private EditorCell createCollection_2() {

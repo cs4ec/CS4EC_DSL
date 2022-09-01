@@ -9,10 +9,11 @@
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" implicit="true" />
+    <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
+    <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -550,7 +551,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3KCb14J6tml">
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction" />
     <ref role="1XX52x" to="3751:3KCb14J6tma" resolve="StayForConditionAction" />
     <node concept="3EZMnI" id="3KCb14J6tmn" role="2wV5jI">
       <node concept="3F0ifn" id="3KCb14J6tmu" role="3EZMnx">
@@ -620,7 +621,11 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3XFhqQ" id="3KCb14J7trF" role="3EZMnx" />
+      <node concept="3XFhqQ" id="3KCb14J7trF" role="3EZMnx">
+        <node concept="pVoyu" id="34hhAWvzrN5" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="3EZMnI" id="3KCb14J87Cp" role="3EZMnx">
         <node concept="VPM3Z" id="3KCb14J87Cs" role="3F10Kt" />
         <node concept="3F0ifn" id="3KCb14J87Cu" role="3EZMnx">
@@ -1101,8 +1106,14 @@
       <node concept="3F0ifn" id="7lVoe4xUirw" role="3EZMnx">
         <property role="3F0ifm" value="a" />
       </node>
-      <node concept="3F0A7n" id="7lVoe4xTbQu" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:7lVoe4xSFzg" resolve="occupiableType" />
+      <node concept="1iCGBv" id="34hhAWvUvNe" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:34hhAWvUvMQ" resolve="occupiable" />
+        <node concept="1sVBvm" id="34hhAWvUvNg" role="1sWHZn">
+          <node concept="3F0A7n" id="34hhAWvUvNo" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="3z3g:34hhAWvBY1f" resolve="name" />
+          </node>
+        </node>
       </node>
     </node>
   </node>
@@ -1865,7 +1876,7 @@
         </node>
       </node>
       <node concept="3F0ifn" id="3JSrgvLbvSj" role="3EZMnx">
-        <property role="3F0ifm" value="in" />
+        <property role="3F0ifm" value="on" />
       </node>
       <node concept="3F1sOY" id="3JSrgvLbvSx" role="3EZMnx">
         <ref role="1NtTu8" to="3751:3JSrgvLbur4" resolve="targetLocation" />
@@ -2040,6 +2051,19 @@
         <ref role="1NtTu8" to="3751:3d01stAf2mh" resolve="roomType" />
       </node>
       <node concept="l2Vlx" id="3d01stAf2mv" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="34hhAWvBScq">
+    <property role="3GE5qa" value="actions.basic actions.StayAction" />
+    <ref role="1XX52x" to="3751:34hhAWvBQiY" resolve="PassiveWaitUntil" />
+    <node concept="3EZMnI" id="34hhAWvBSc_" role="2wV5jI">
+      <node concept="3F0ifn" id="34hhAWvBScG" role="3EZMnx">
+        <property role="3F0ifm" value="Passive wait until" />
+      </node>
+      <node concept="3F1sOY" id="34hhAWvBScM" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:34hhAWvBSc8" resolve="condition" />
+      </node>
+      <node concept="l2Vlx" id="34hhAWvBScC" role="2iSdaV" />
     </node>
   </node>
 </model>

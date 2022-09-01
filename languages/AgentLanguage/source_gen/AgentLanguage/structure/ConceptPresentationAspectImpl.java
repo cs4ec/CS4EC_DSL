@@ -61,6 +61,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Order;
   private ConceptPresentation props_OrderPatientAction;
   private ConceptPresentation props_PassiveWaitAction;
+  private ConceptPresentation props_PassiveWaitUntil;
   private ConceptPresentation props_PatientInstance;
   private ConceptPresentation props_PlaceInstance;
   private ConceptPresentation props_PlaceInstanceCollection;
@@ -483,6 +484,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PassiveWaitAction = cpb.create();
         }
         return props_PassiveWaitAction;
+      case LanguageConceptSwitch.PassiveWaitUntil:
+        if (props_PassiveWaitUntil == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_PassiveWaitUntil = cpb.create();
+        }
+        return props_PassiveWaitUntil;
       case LanguageConceptSwitch.PatientInstance:
         if (props_PatientInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

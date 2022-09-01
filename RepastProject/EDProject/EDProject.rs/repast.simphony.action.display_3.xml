@@ -71,7 +71,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-1029003683</hashCode>
+    <hashCode>-1615781745</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>space</layoutProjection>
@@ -79,31 +79,31 @@
   <layerOrder>
     <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <int>1</int>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Room</string>
-      <int>3</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.TriageNurse</string>
       <int>4</int>
     </entry>
     <entry>
-      <string>simcore.basicStructures.Wall</string>
-      <int>5</int>
+      <string>simcore.basicStructures.Room</string>
+      <int>0</int>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.LabTechnician</string>
-      <int>2</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.patient</string>
+      <string>EDLanguage.sandbox.TriageNurse</string>
       <int>6</int>
     </entry>
     <entry>
+      <string>simcore.basicStructures.Wall</string>
+      <int>1</int>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.LabTechnician</string>
+      <int>5</int>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.patient</string>
+      <int>2</int>
+    </entry>
+    <entry>
       <string>EDLanguage.sandbox.CubicleNurse</string>
-      <int>0</int>
+      <int>3</int>
     </entry>
   </layerOrder>
   <projections>

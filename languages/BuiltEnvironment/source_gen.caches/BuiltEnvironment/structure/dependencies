@@ -21,16 +21,6 @@
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
   </dependency>
-  <dependency className="BuiltEnvironment.structure.EnumerationDescriptor_OccupiableTypes">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.EnumerationLiteralsIndex" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptor" />
-    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
-    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.EnumerationDescriptorBase" />
-  </dependency>
   <dependency className="BuiltEnvironment.structure.LanguageConceptSwitch">
     <classNode dependClassName="jetbrains.mps.lang.smodel.LanguageConceptIndex" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.LanguageConceptIndexBuilder" />
@@ -39,7 +29,6 @@
   </dependency>
   <dependency className="BuiltEnvironment.structure.StructureAspectDescriptor">
     <classNode dependClassName="BuiltEnvironment.structure.EnumerationDescriptor_Direction" />
-    <classNode dependClassName="BuiltEnvironment.structure.EnumerationDescriptor_OccupiableTypes" />
     <classNode dependClassName="BuiltEnvironment.structure.LanguageConceptSwitch" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Arrays" />

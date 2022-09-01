@@ -188,11 +188,6 @@
       <concept id="147289298429697462" name="AgentLanguage.structure.RoomTypeIsAvailableCondition" flags="ng" index="E5hHw">
         <child id="147289298429697508" name="targetRoomType" index="E5hGM" />
       </concept>
-      <concept id="5381978332891560179" name="AgentLanguage.structure.OccupiableAvailabilityCondition" flags="ng" index="EqhwO">
-        <property id="5381978332891571149" name="minCapacity" index="Eqkca" />
-        <child id="5381978332891560207" name="targetRoom" index="EqhB8" />
-        <child id="5381978332891560234" name="targetObject" index="EqhBH" />
-      </concept>
       <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
       <concept id="8910807539222190210" name="AgentLanguage.structure.Description" flags="ng" index="2IBTiW" />
       <concept id="7942748223969203381" name="AgentLanguage.structure.SelectRoomByRelationshipToOccupier" flags="ng" index="KdHJo">
@@ -204,10 +199,12 @@
       </concept>
       <concept id="7942748223948107616" name="AgentLanguage.structure.RoomSelectionStrategyLine" flags="ng" index="MWe0d">
         <child id="7942748223948109783" name="rule" index="MWfyU" />
+        <child id="7942748223948109477" name="condition" index="MWfB8" />
       </concept>
       <concept id="7942748223948105583" name="AgentLanguage.structure.RoomSelectionStrategy" flags="ng" index="MWew2">
         <child id="7942748223948107301" name="rules" index="MWe58" />
       </concept>
+      <concept id="7942748223948110090" name="AgentLanguage.structure.RoomSelectionRule" flags="ng" index="MWfpB" />
       <concept id="7942748223966936640" name="AgentLanguage.structure.SelectClosestRoom" flags="ng" index="NOV4H" />
       <concept id="768972137568225409" name="AgentLanguage.structure.RemoveRelationshipAction" flags="ng" index="2RhFyk">
         <property id="33966321878433161" name="relationshipName" index="2lAP6T" />
@@ -220,9 +217,6 @@
       </concept>
       <concept id="4321323723331232502" name="AgentLanguage.structure.UseResourceAction" flags="ng" index="3bm0ZL">
         <child id="4321323723340506820" name="targetLocation" index="3aPoJ3" />
-      </concept>
-      <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableInstance" flags="ng" index="1kHjla">
-        <property id="8465466444625393872" name="occupiableType" index="1kAtwL" />
       </concept>
       <concept id="3692958048405039038" name="AgentLanguage.structure.IAmAtCondition" flags="ng" index="1mQy9T">
         <child id="3692958048405039093" name="target" index="1mQy8M" />
@@ -816,12 +810,6 @@
         <ref role="v9R2y" node="1xAzJ9PrXwe" resolve="reduce_DischargeAction_To_Signal_Trigger" />
       </node>
     </node>
-    <node concept="3aamgX" id="4EKCctwQqEP" role="3acgRq">
-      <ref role="30HIoZ" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
-      <node concept="j$656" id="4EKCctwQqEQ" role="1lVwrX">
-        <ref role="v9R2y" node="4EKCctwQqEN" resolve="reduce_LocationCapacityCondition" />
-      </node>
-    </node>
     <node concept="3aamgX" id="3JSrgvMM1wF" role="3acgRq">
       <ref role="30HIoZ" to="e88n:3JSrgvMff0N" resolve="ResourceAvailableCondition" />
       <node concept="j$656" id="3JSrgvMM1wG" role="1lVwrX">
@@ -832,6 +820,18 @@
       <ref role="30HIoZ" to="e88n:3JSrgvO6fgX" resolve="TimeOfDayCondition" />
       <node concept="j$656" id="3JSrgvO6fCF" role="1lVwrX">
         <ref role="v9R2y" node="3JSrgvO6fCC" resolve="reduce_TimeOfDayCondition" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4ePomJhOfwd" role="3acgRq">
+      <ref role="30HIoZ" to="e88n:4ePomJhObTO" resolve="RoomSelectionLine" />
+      <node concept="j$656" id="4ePomJhOfwe" role="1lVwrX">
+        <ref role="v9R2y" node="4ePomJhOfwb" resolve="reduce_RoomSelectionLine" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4ePomJhOiDd" role="3acgRq">
+      <ref role="30HIoZ" to="e88n:4ePomJhOfGV" resolve="SelectEmptyRoom" />
+      <node concept="j$656" id="4ePomJhOiDe" role="1lVwrX">
+        <ref role="v9R2y" node="4ePomJhOiDb" resolve="reduce_SelectEmptyRoom" />
       </node>
     </node>
   </node>
@@ -6882,57 +6882,6 @@
       </node>
     </node>
   </node>
-  <node concept="13MO4I" id="4EKCctwQqEN">
-    <property role="TrG5h" value="reduce_LocationCapacityCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="3gUMe" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
-    <node concept="EqhwO" id="4EKCctwSw4b" role="13RCb5">
-      <property role="Eqkca" value="1" />
-      <node concept="UeIYj" id="4EKCctwSxkN" role="EqhB8">
-        <node concept="1ZhdrF" id="4EKCctwSxPg" role="lGtFl">
-          <property role="2qtEX8" value="roomType" />
-          <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/6750846609956093098/6750846609956389136" />
-          <node concept="3$xsQk" id="4EKCctwSxPh" role="3$ytzL">
-            <node concept="3clFbS" id="4EKCctwSxPi" role="2VODD2">
-              <node concept="3clFbF" id="4EKCctwSxPQ" role="3cqZAp">
-                <node concept="2OqwBi" id="4EKCctwSyGo" role="3clFbG">
-                  <node concept="2OqwBi" id="4EKCctwSy6l" role="2Oq$k0">
-                    <node concept="30H73N" id="4EKCctwSxPP" role="2Oq$k0" />
-                    <node concept="3TrEf2" id="4EKCctwSypC" role="2OqNvi">
-                      <ref role="3Tt5mk" to="e88n:4EKCctwQp8G" resolve="location" />
-                    </node>
-                  </node>
-                  <node concept="3TrEf2" id="4EKCctwSyZT" role="2OqNvi">
-                    <ref role="3Tt5mk" to="3751:5QJON_BAs4g" resolve="roomType" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1kHjla" id="4EKCctwSw4d" role="EqhBH">
-        <property role="1kAtwL" value="5QJON_BPEyz/Bed" />
-      </node>
-      <node concept="raruj" id="4EKCctwSwmk" role="lGtFl" />
-      <node concept="17Uvod" id="4EKCctwSwml" role="lGtFl">
-        <property role="2qtEX9" value="minCapacity" />
-        <property role="P4ACc" value="7dcff301-ba01-414e-8574-a8f6da31876b/5381978332891560179/5381978332891571149" />
-        <node concept="3zFVjK" id="4EKCctwSwmm" role="3zH0cK">
-          <node concept="3clFbS" id="4EKCctwSwmn" role="2VODD2">
-            <node concept="3clFbF" id="4EKCctwSwvu" role="3cqZAp">
-              <node concept="2OqwBi" id="4EKCctwSwPV" role="3clFbG">
-                <node concept="30H73N" id="4EKCctwSwvt" role="2Oq$k0" />
-                <node concept="3TrcHB" id="4EKCctwSx8Y" role="2OqNvi">
-                  <ref role="3TsBF5" to="e88n:4EKCctwQp9$" resolve="minCapacity" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="13MO4I" id="3JSrgvMM1wD">
     <property role="TrG5h" value="reduce_ResourceAvailableCondition" />
     <property role="3GE5qa" value="Expressions.Conditions" />
@@ -8928,6 +8877,57 @@
     </node>
     <node concept="2ZBi8u" id="8bhHoBYe26" role="lGtFl">
       <ref role="2rW$FS" node="8bhHoBJK3x" resolve="ReduceTimeDistributionTable" />
+    </node>
+  </node>
+  <node concept="13MO4I" id="4ePomJhOfwb">
+    <property role="TrG5h" value="reduce_RoomSelectionLine" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="3gUMe" to="e88n:4ePomJhObTO" resolve="RoomSelectionLine" />
+    <node concept="MWe0d" id="4ePomJhOfwh" role="13RCb5">
+      <node concept="MWfpB" id="4ePomJhOfwi" role="MWfyU">
+        <node concept="29HgVG" id="4ePomJhOfBw" role="lGtFl">
+          <node concept="3NFfHV" id="4ePomJhOfBx" role="3NFExx">
+            <node concept="3clFbS" id="4ePomJhOfBy" role="2VODD2">
+              <node concept="3clFbF" id="4ePomJhOfBC" role="3cqZAp">
+                <node concept="2OqwBi" id="4ePomJhOfBz" role="3clFbG">
+                  <node concept="3TrEf2" id="4ePomJhOfBA" role="2OqNvi">
+                    <ref role="3Tt5mk" to="e88n:4ePomJhOe6t" resolve="rule" />
+                  </node>
+                  <node concept="30H73N" id="4ePomJhOfBB" role="2Oq$k0" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2vmvVl" id="4ePomJhOfAr" role="MWfB8">
+        <node concept="29HgVG" id="4ePomJhOfAw" role="lGtFl">
+          <node concept="3NFfHV" id="4ePomJhOfAx" role="3NFExx">
+            <node concept="3clFbS" id="4ePomJhOfAy" role="2VODD2">
+              <node concept="3clFbF" id="4ePomJhOfAC" role="3cqZAp">
+                <node concept="2OqwBi" id="4ePomJhOfAz" role="3clFbG">
+                  <node concept="3TrEf2" id="4ePomJhOfAA" role="2OqNvi">
+                    <ref role="3Tt5mk" to="e88n:4ePomJhOe6r" resolve="condition" />
+                  </node>
+                  <node concept="30H73N" id="4ePomJhOfAB" role="2Oq$k0" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="raruj" id="34hhAWv8zR9" role="lGtFl" />
+    </node>
+  </node>
+  <node concept="13MO4I" id="4ePomJhOiDb">
+    <property role="TrG5h" value="reduce_SelectEmptyRoom" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="3gUMe" to="e88n:4ePomJhOfGV" resolve="SelectEmptyRoom" />
+    <node concept="MW8r8" id="4ePomJhOiE8" role="13RCb5">
+      <node concept="3n3BjK" id="4ePomJhOjhe" role="MW9ja">
+        <ref role="3n3BjR" node="EFW1mY_7M0" resolve="map_Patient" />
+      </node>
+      <node concept="raruj" id="4ePomJhOjhg" role="lGtFl" />
     </node>
   </node>
 </model>

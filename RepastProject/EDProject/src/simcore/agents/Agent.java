@@ -185,7 +185,7 @@ public class Agent {
 		GridPoint pointOfTarget = grid.getLocation(o);
 
 		if (o instanceof Room) {
-			pointOfTarget = ((Room) o).getEntryPoint();
+			pointOfTarget = ((Room) o).getCenterCoordinates();
 		}
 
 		if (pointOfTarget != null) {
@@ -239,7 +239,7 @@ public class Agent {
 	
 	// Utility method to evaluate the utility of a room for selection
 	protected double EvaluateRoomChoice(Room pRoom) {
-		return Double.MAX_VALUE;
+		return Double.MIN_VALUE;
 	}
 	
 

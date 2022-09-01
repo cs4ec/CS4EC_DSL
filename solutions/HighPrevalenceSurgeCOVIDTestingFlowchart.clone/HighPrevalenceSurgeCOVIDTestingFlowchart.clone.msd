@@ -9,6 +9,7 @@
     <facet type="java">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
+    <facet planModel="r:7f268a0c-4939-4da8-9cc9-b1cfd43f3bcd(HighPrevalenceSurgeCOVIDTestingFlowchart.clone.GenPlan)" type="generator" />
   </facets>
   <sourcePath />
   <dependencies>
@@ -18,6 +19,7 @@
     <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
     <dependency reexport="false">30254c5b-f87e-4bb3-a60a-77a7ec6ed411(org.iets3.core.expr.genjava.base)</dependency>
     <dependency reexport="false">5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40(org.iets3.core.expr.genjava.simpleTypes)</dependency>
+    <dependency reexport="false">68431102-8c53-4b26-b93f-2e7c57674ca6(NewDevkit)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:b3cac82c-d024-46bc-b485-624ad80c3cc2:ActionCards" version="0" />

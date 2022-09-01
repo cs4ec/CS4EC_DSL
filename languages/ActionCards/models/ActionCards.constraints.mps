@@ -167,17 +167,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="1M2fIO" id="4X1nFNzX3nr">
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="1M2myG" to="e88n:4X1nFNzWOlr" resolve="ActionStep" />
-    <node concept="9S07l" id="4X1nFNzX3ns" role="9Vyp8">
-      <node concept="3clFbS" id="4X1nFNzX3nt" role="2VODD2">
-        <node concept="3cpWs6" id="4X1nFNzX3rm" role="3cqZAp">
-          <node concept="3clFbT" id="4X1nFNzX3rK" role="3cqZAk" />
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="1M2fIO" id="av1M7vfJS6">
     <property role="3GE5qa" value="Expressions.Conditions" />
     <ref role="1M2myG" to="e88n:av1M7vdxsc" resolve="DiagnosticCondition" />
@@ -718,6 +707,58 @@
       <node concept="3clFbS" id="3JSrgvO6flA" role="2VODD2">
         <node concept="3clFbF" id="3JSrgvO6flX" role="3cqZAp">
           <node concept="3clFbT" id="3JSrgvO6flW" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOdM$">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:3d01stAl78w" resolve="RoomSelectionRule" />
+    <node concept="9S07l" id="4ePomJhOdM_" role="9Vyp8">
+      <node concept="3clFbS" id="4ePomJhOdMA" role="2VODD2">
+        <node concept="3clFbF" id="4ePomJhOdQw" role="3cqZAp">
+          <node concept="3clFbT" id="4ePomJhOdQv" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOebi">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:4ePomJhObTO" resolve="RoomSelectionLine" />
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOfLj">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:4ePomJhOfGV" resolve="SelectEmptyRoom" />
+    <node concept="9S07l" id="4ePomJhOfLk" role="9Vyp8">
+      <node concept="3clFbS" id="4ePomJhOfLl" role="2VODD2">
+        <node concept="3clFbF" id="4ePomJhOfLq" role="3cqZAp">
+          <node concept="3clFbT" id="4ePomJhOfLp" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOliL">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:4ePomJhOliI" resolve="RoomSelectionCondition" />
+    <node concept="9S07l" id="4ePomJhOliM" role="9Vyp8">
+      <node concept="3clFbS" id="4ePomJhOliN" role="2VODD2">
+        <node concept="3clFbF" id="4ePomJhOlmH" role="3cqZAp">
+          <node concept="3clFbT" id="4ePomJhOlmG" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOlqT">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:4ePomJhOliH" resolve="RoomTypeCondition" />
+    <node concept="9S07l" id="4ePomJhOlqU" role="9Vyp8">
+      <node concept="3clFbS" id="4ePomJhOlqV" role="2VODD2">
+        <node concept="3clFbF" id="4ePomJhOlr0" role="3cqZAp">
+          <node concept="3clFbT" id="4ePomJhOlqZ" role="3clFbG">
             <property role="3clFbU" value="true" />
           </node>
         </node>

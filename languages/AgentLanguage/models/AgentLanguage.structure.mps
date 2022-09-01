@@ -402,7 +402,7 @@
   </node>
   <node concept="1TIwiD" id="3KCb14J6tma">
     <property role="EcuMT" value="4334763093660390794" />
-    <property role="3GE5qa" value="actions.basic actions.StayAction.StayForConditionAction" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction" />
     <property role="TrG5h" value="StayForConditionAction" />
     <property role="34LRSv" value="stay until" />
     <property role="R4oN_" value="stop until a condition is met" />
@@ -1005,11 +1005,12 @@
     <property role="3GE5qa" value="Structures.Class" />
     <property role="TrG5h" value="OccupiableInstance" />
     <property role="34LRSv" value="occupiable" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyi" id="7lVoe4xSFzg" role="1TKVEl">
-      <property role="IQ2nx" value="8465466444625393872" />
-      <property role="TrG5h" value="occupiableType" />
-      <ref role="AX2Wp" to="3z3g:7lVoe4xN_rL" resolve="OccupiableTypes" />
+    <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
+    <node concept="1TJgyj" id="34hhAWvUvMQ" role="1TKVEi">
+      <property role="IQ2ns" value="3535684625553292470" />
+      <property role="20kJfa" value="occupiable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="3z3g:34hhAWvBY13" resolve="OccupiableDefinition" />
     </node>
     <node concept="PrWs8" id="7lVoe4xSFzi" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -1765,6 +1766,20 @@
       <property role="20kJfa" value="roomType" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="34hhAWvBQiY">
+    <property role="EcuMT" value="3535684625548403902" />
+    <property role="3GE5qa" value="actions.basic actions.StayAction" />
+    <property role="TrG5h" value="PassiveWaitUntil" />
+    <property role="34LRSv" value="passively wait until condition is met" />
+    <ref role="1TJDcQ" node="2_JteYPof5l" resolve="PassiveWaitAction" />
+    <node concept="1TJgyj" id="34hhAWvBSc8" role="1TKVEi">
+      <property role="IQ2ns" value="3535684625548411656" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
     </node>
   </node>
 </model>

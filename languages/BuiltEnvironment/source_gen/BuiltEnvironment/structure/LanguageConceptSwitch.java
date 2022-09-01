@@ -16,17 +16,20 @@ public final class LanguageConceptSwitch {
   public static final int BlueprintMap = 4;
   public static final int DateTimeNowVariable = 5;
   public static final int MapImporter = 6;
-  public static final int Resource = 7;
-  public static final int ResourceAllocation = 8;
-  public static final int ResourceAvailabilityVariable = 9;
-  public static final int Room = 10;
-  public static final int RoomInstanceDefinition = 11;
-  public static final int RoomType = 12;
-  public static final int ScenarioBuilder = 13;
-  public static final int TimeOfDayVariable = 14;
-  public static final int TimeOfDayWrapper = 15;
-  public static final int WallDefinition = 16;
-  public static final int WallInstanceDefinition = 17;
+  public static final int OccupiableAllocation = 7;
+  public static final int OccupiableDefinition = 8;
+  public static final int OccupiablesList = 9;
+  public static final int Resource = 10;
+  public static final int ResourceAllocation = 11;
+  public static final int ResourceAvailabilityVariable = 12;
+  public static final int Room = 13;
+  public static final int RoomInstanceDefinition = 14;
+  public static final int RoomType = 15;
+  public static final int ScenarioBuilder = 16;
+  public static final int TimeOfDayVariable = 17;
+  public static final int TimeOfDayWrapper = 18;
+  public static final int WallDefinition = 19;
+  public static final int WallInstanceDefinition = 20;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1a0150acdda54129L, 0x824e01dce96fdea4L);
@@ -37,6 +40,9 @@ public final class LanguageConceptSwitch {
     builder.put(0x348ff1b011c19a5fL, BlueprintMap);
     builder.put(0x3bf86d07f43264edL, DateTimeNowVariable);
     builder.put(0xaabf015bed74217L, MapImporter);
+    builder.put(0x3111466f2002ad53L, OccupiableAllocation);
+    builder.put(0x3111466f1f9fe043L, OccupiableDefinition);
+    builder.put(0x3111466f1fc8162aL, OccupiablesList);
     builder.put(0x3bf86d07f032c8d7L, Resource);
     builder.put(0x3bf86d07ef54c6b7L, ResourceAllocation);
     builder.put(0x3bf86d07f2b57f6bL, ResourceAvailabilityVariable);

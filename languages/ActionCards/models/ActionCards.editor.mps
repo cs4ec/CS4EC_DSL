@@ -3107,5 +3107,51 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="4ePomJhOe6B">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1XX52x" to="e88n:4ePomJhObTO" resolve="RoomSelectionLine" />
+    <node concept="3EZMnI" id="4ePomJhOe6D" role="2wV5jI">
+      <node concept="l2Vlx" id="4ePomJhOe6G" role="2iSdaV" />
+      <node concept="3F0ifn" id="4ePomJhOeaN" role="3EZMnx">
+        <property role="3F0ifm" value="if" />
+      </node>
+      <node concept="3F1sOY" id="4ePomJhOeaS" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:4ePomJhOe6r" resolve="condition" />
+      </node>
+      <node concept="3F0ifn" id="4ePomJhOeb0" role="3EZMnx">
+        <property role="3F0ifm" value="then" />
+      </node>
+      <node concept="3F1sOY" id="4ePomJhOeba" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:4ePomJhOe6t" resolve="rule" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="4ePomJhOfH3">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1XX52x" to="e88n:4ePomJhOfGV" resolve="SelectEmptyRoom" />
+    <node concept="3EZMnI" id="4ePomJhOfH5" role="2wV5jI">
+      <node concept="3F0ifn" id="4ePomJhOfHc" role="3EZMnx">
+        <property role="3F0ifm" value="Room contains no patients" />
+      </node>
+      <node concept="l2Vlx" id="4ePomJhOfH8" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4ePomJhOlyQ">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1XX52x" to="e88n:4ePomJhOliH" resolve="RoomTypeCondition" />
+    <node concept="3EZMnI" id="4ePomJhOlyS" role="2wV5jI">
+      <node concept="3F0ifn" id="4ePomJhOlyZ" role="3EZMnx">
+        <property role="3F0ifm" value="Room is a" />
+      </node>
+      <node concept="3EZMnI" id="4ePomJhOlz5" role="3EZMnx">
+        <node concept="2iRkQZ" id="4ePomJhOlz6" role="2iSdaV" />
+        <node concept="3F2HdR" id="4ePomJhOlzc" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:4ePomJhOlyH" resolve="AllowedRooms" />
+          <node concept="2iRkQZ" id="4ePomJhOlze" role="2czzBx" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="4ePomJhOlyV" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

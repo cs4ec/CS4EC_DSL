@@ -16,6 +16,9 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BlueprintMap;
   private ConceptPresentation props_DateTimeNowVariable;
   private ConceptPresentation props_MapImporter;
+  private ConceptPresentation props_OccupiableAllocation;
+  private ConceptPresentation props_OccupiableDefinition;
+  private ConceptPresentation props_OccupiablesList;
   private ConceptPresentation props_Resource;
   private ConceptPresentation props_ResourceAllocation;
   private ConceptPresentation props_ResourceAvailabilityVariable;
@@ -84,6 +87,27 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MapImporter = cpb.create();
         }
         return props_MapImporter;
+      case LanguageConceptSwitch.OccupiableAllocation:
+        if (props_OccupiableAllocation == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f2002ad53L, 0x3111466f2002ad71L, "occupiable", "", "");
+          props_OccupiableAllocation = cpb.create();
+        }
+        return props_OccupiableAllocation;
+      case LanguageConceptSwitch.OccupiableDefinition:
+        if (props_OccupiableDefinition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("occupiable definition");
+          props_OccupiableDefinition = cpb.create();
+        }
+        return props_OccupiableDefinition;
+      case LanguageConceptSwitch.OccupiablesList:
+        if (props_OccupiablesList == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("OccupiablesList");
+          props_OccupiablesList = cpb.create();
+        }
+        return props_OccupiablesList;
       case LanguageConceptSwitch.Resource:
         if (props_Resource == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

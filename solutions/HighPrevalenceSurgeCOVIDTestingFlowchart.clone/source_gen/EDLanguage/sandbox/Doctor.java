@@ -17,13 +17,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
-import simcore.action.InstantBehaviourStep;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
-import simcore.basicStructures.TimeKeeper;
-import java.math.BigInteger;
 import simcore.basicStructures.Board;
 import repast.simphony.engine.environment.RunEnvironment;
 import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.InstantBehaviourStep;
 
 public class Doctor extends Actor {
 
@@ -116,6 +113,18 @@ public class Doctor extends Actor {
 
   }
 
+  public Behaviour isIdleAction(Signal s) {
+    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
+    plstSteps.add(new StayAction_b0a_3(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+    return behaviourBuilder;
+  }
 
 
 
@@ -128,9 +137,9 @@ public class Doctor extends Actor {
         behaviourBuilder = new Behaviour("DecideonPOCTestTrigger_d");
         this.InitDecideonPOCTest_d(s);
         break;
-      case "AdmitAmberTrigger_h":
-        behaviourBuilder = new Behaviour("AdmitAmberTrigger_h");
-        this.InitAdmitActionAdmitAmber_h(s);
+      case "AdmitAmberTrigger_g":
+        behaviourBuilder = new Behaviour("AdmitAmberTrigger_g");
+        this.InitAdmitActionAdmitAmber_g(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -174,43 +183,26 @@ public class Doctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class Choice_b0a extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_b0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 7) + (60 * 59)))) && (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 15) + (60 * 0)))) && (AH.isLess(ToolBox().ReadMap().getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("15"))))) || (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 14) + (60 * 59)))) || (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 8) + (60 * 0))))) && (AH.isLess(ToolBox().ReadMap().getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("1")))))) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0b0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class SendSignalAction_c0a extends BehaviourStep {
+  public class SendSignalAction_b0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_c0a(Behaviour behaviour) {
+    public SendSignalAction_b0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LIATTrigger_fSignal();
+      sendSignalTemp = new LIATTrigger_eSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_d0a extends BehaviourStep {
+  public class StayAction_c0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a(Behaviour behaviour) {
+    public StayAction_c0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -257,75 +249,26 @@ public class Doctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class Choice_b0a_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_b0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 7) + (60 * 59)))) && (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 15) + (60 * 0)))) && (AH.isLess(ToolBox().ReadMap().getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("15"))))) || (((AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 14) + (60 * 59)))) || (AH.isLess(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 8) + (60 * 0))))) && (AH.isLess(ToolBox().ReadMap().getCurrentRoom(Doctor.this).getParentArea().getAvilabilityofResource(LIAT.getInstance()), ((Number) new BigInteger("1")))))) {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0b0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class SendSignalAction_a0b0a extends BehaviourStep {
+  public class SendSignalAction_b0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0b0a(Behaviour behaviour) {
+    public SendSignalAction_b0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LabPCRTestTrigger_eSignal();
+      sendSignalTemp = new LIATTrigger_eSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0b0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0b0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LabPCRTestTrigger_eSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class SendSignalAction_c0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_c0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LIATTrigger_fSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_d0a_1 extends BehaviourStep {
+  public class StayAction_c0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_1(Behaviour behaviour) {
+    public StayAction_c0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -339,11 +282,11 @@ public class Doctor extends Actor {
 
     }
   }
-  public class MoveAction_a0b_3 extends BehaviourStep {
+  public class MoveAction_a0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_3(Behaviour behaviour) {
+    public MoveAction_a0b(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -454,11 +397,11 @@ public class Doctor extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
-  public class MoveAction_a0b_5 extends BehaviourStep {
+  public class MoveAction_a0b_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_5(Behaviour behaviour) {
+    public MoveAction_a0b_3(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -569,24 +512,123 @@ public class Doctor extends Actor {
       network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
     }
   }
+  public class MoveAction_a0a_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0a_3(Behaviour behaviour) {
+      target = Labaratory.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
+          }
+        }
+        MoveTowards(concreteTarget);
+
+      }
+    }
+
+    public boolean finishCondition() {
+      return concreteTarget != null && ImAt(concreteTarget);
+    }
+  }
+  public class StayAction_b0a_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_b0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
+    }
+  }
+  public class MoveAction_a0a_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0a_5(Behaviour behaviour) {
+      target = Labaratory.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
+          }
+        }
+        MoveTowards(concreteTarget);
+
+      }
+    }
+
+    public boolean finishCondition() {
+      return concreteTarget != null && ImAt(concreteTarget);
+    }
+  }
+  public class StayAction_b0a_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_b0a_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
+    }
+  }
 
 
   public void InitDecideonPOCTest_d(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
-    plstSteps.add(new Choice_b0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0a(behaviourBuilder));
-    plstSteps.add(new StayAction_d0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_b0a(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmitAmber_h(Signal s) {
+  public void InitAdmitActionAdmitAmber_g(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0b(behaviourBuilder));
     plstSteps.add(new MoveAction_b0b(behaviourBuilder));
     plstSteps.add(new OrderAction_c0b(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0b(behaviourBuilder));

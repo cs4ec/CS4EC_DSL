@@ -14,6 +14,7 @@
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
+    <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -170,13 +171,6 @@
       <property role="20kJfa" value="timeDistributionTable" />
       <ref role="20lvS9" to="3751:2_JteYPogU9" resolve="TimeDistributionTable" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="4X1nFNzWOlr">
-    <property role="EcuMT" value="5710949967853733211" />
-    <property role="TrG5h" value="ActionStep" />
-    <property role="R4oN_" value="Individual steps of an Action" />
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="4X1nFNzWOlI">
     <property role="EcuMT" value="5710949967853733230" />
@@ -993,8 +987,56 @@
   </node>
   <node concept="1TIwiD" id="3d01stAl78w">
     <property role="EcuMT" value="3692958048417247776" />
-    <property role="TrG5h" value="RoomSelection" />
+    <property role="TrG5h" value="RoomSelectionRule" />
+    <property role="3GE5qa" value="RoomSelection" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="4ePomJhObTO">
+    <property role="EcuMT" value="4878912887035313780" />
+    <property role="TrG5h" value="RoomSelectionLine" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4ePomJhOe6r" role="1TKVEi">
+      <property role="IQ2ns" value="4878912887035322779" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="4ePomJhOe6t" role="1TKVEi">
+      <property role="IQ2ns" value="4878912887035322781" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rule" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3d01stAl78w" resolve="RoomSelectionRule" />
+    </node>
+    <node concept="PrWs8" id="4ePomJhOe6p" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4ePomJhOfGV">
+    <property role="EcuMT" value="4878912887035329339" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <property role="TrG5h" value="SelectEmptyRoom" />
+    <ref role="1TJDcQ" node="3d01stAl78w" resolve="RoomSelectionRule" />
+  </node>
+  <node concept="1TIwiD" id="4ePomJhOliH">
+    <property role="EcuMT" value="4878912887035352237" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <property role="TrG5h" value="RoomTypeCondition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4ePomJhOlyH" role="1TKVEi">
+      <property role="IQ2ns" value="4878912887035353261" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="AllowedRooms" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4ePomJhOliI">
+    <property role="EcuMT" value="4878912887035352238" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <property role="TrG5h" value="RoomSelectionCondition" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
   </node>
 </model>
 

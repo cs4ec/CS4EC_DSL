@@ -10,26 +10,14 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Set;
-import java.util.Stack;
 import java.util.stream.Collectors;
-
-import EDLanguage.sandbox.MajorsCBay;
-import EDLanguage.sandbox.RespiratoryCubicle;
-import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
-import repast.simphony.engine.environment.RunEnvironment;
-import repast.simphony.engine.schedule.ISchedule;
-import repast.simphony.engine.schedule.ScheduleParameters;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.continuous.ContinuousSpace;
-import repast.simphony.space.continuous.NdPoint;
-import repast.simphony.space.graph.Network;
 import repast.simphony.space.grid.Grid;
-import repast.simphony.space.grid.GridDimensions;
 import repast.simphony.space.grid.GridPoint;
 import repast.simphony.ui.probe.ProbeID;
-import repast.simphony.util.ContextUtils;
 import repast.simphony.valueLayer.GridValueLayer;
 import simcore.agents.Agent;
 import simcore.utilities.Cellbox;
@@ -43,10 +31,7 @@ public class Room extends Locatable{
 	private Integer maxCap;
 	private Integer curCap;
 	private Queue<Agent> waitList;
-	protected Set<Agent> contentPeople;
-	protected List<Seat> seats;		
-	protected List<Desk> desks;	
-	protected List<Bed> beds;	
+	protected Set<Agent> contentPeople;	
 	protected Area parentArea;
 	protected List<Occupiable> occupiables;
 
@@ -111,19 +96,8 @@ public class Room extends Locatable{
 	public Set<Agent> getOccupiers(){
 		return contentPeople;
 	}
-	
-//	public void addPerson(Agent a) {
-//		contentPeople.add(a);
-//		curCap++;
-//	}
-//	
-//	public void removePerson(Agent a) {
-//		contentPeople.remove(a);
-//		curCap--;
-//	}
 
 	private void createLayoutStyle() {
-
 		// loc box filled
 		for (int x = locX; x < locX + (width); x++) {
 			for (int y = locY; y < locY + (height); y++) {
@@ -141,65 +115,34 @@ public class Room extends Locatable{
 		space.moveTo(this, locX + width / 2, locY + height / 2);
 	}
 
-	// get the entry or exit pos
-	public GridPoint getEntryPoint() {
+	// get the center coordinates of this room
+	public GridPoint getCenterCoordinates() {
 		return this.entry;
 	}
 	
 	//---------------------------------------------------------- Occupiables -----------------------------------------------------------
 	public void setSeats(int pintNumSeats) {
-		seats = new ArrayList<Seat>();
 		for(int i = 0; i < pintNumSeats; i++) {
 			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
 			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
-			seats.add(new Seat(context, space, grid, rndXCoord, rndYCoord, this));
+			occupiables.add(new Seat(context, space, grid, rndXCoord, rndYCoord, this));
 		}
-		occupiables.addAll(seats);
 	}
 	
 	public void setDesks(int pintNumDesks) {
-		desks = new ArrayList<Desk>();
-		if(pintNumDesks == 1) {
-			desks.add(new Desk(context, space, grid, (locX+(width/2)), (locY+(height/2)), this));
-		} else {
-			for(int i = 0; i < pintNumDesks; i++) {
-				int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
-				int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
-				desks.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
-			}
+		for(int i = 0; i < pintNumDesks; i++) {
+			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
+			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
+			occupiables.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
 		}
-
-		occupiables.addAll(desks);
 	}
 	
 	public void setBeds(int pintNumBeds) {
-		beds = new ArrayList<Bed>();
 		for(int i = 0; i < pintNumBeds; i++) {
 			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
 			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
-			beds.add(new Bed(context, space, grid, rndXCoord, rndYCoord, this));
+			occupiables.add(new Bed(context, space, grid, rndXCoord, rndYCoord, this));
 		}
-		occupiables.addAll(beds);
-	}
-	
-//	public List<Seat> getEmptySeats(){
-//		return seats.stream().filter(s -> !s.isOccupied()).collect(Collectors.toList());
-//	}
-//	
-//	public List<Desk> getEmptyDesks(){
-//		return desks.stream().filter(s -> !s.isOccupied()).collect(Collectors.toList());
-//	}
-//	
-//	public List<Bed> getEmptyBeds() {
-//		return beds.stream().filter(s -> !s.isOccupied()).collect(Collectors.toList());
-//	}
-	
-	public boolean hasSeats() {
-		return seats != null && seats.size() > 0;
-	}
-	
-	public List<Seat> getAllSeats(){
-		return seats;
 	}
 	
 	public List<Occupiable> getAllOccupiables(){
@@ -212,6 +155,10 @@ public class Room extends Locatable{
 	
 	public List<Occupiable> getAllEmptyOcupiablesOfType(Class c) {
 		return occupiables.stream().filter(o -> o.getClass() == c && !o.isOccupied()).collect(Collectors.toList());
+	}
+	
+	public void addOccupiable(Occupiable occupiable) {
+		occupiables.add(occupiable);
 	}
 	//-----------------------------------------------------------------------------------------------------------------------------------
 	
@@ -244,6 +191,11 @@ public class Room extends Locatable{
 	// check if loc is full
 	public boolean isFull() {
 		return curCap == maxCap;
+	}
+	
+	// check if loc is full
+	public boolean hasCapacityFor(Agent a) {
+		return getAllOccupiables().stream().anyMatch(o->!o.isOccupied());
 	}
 
 	// check if loc is empty

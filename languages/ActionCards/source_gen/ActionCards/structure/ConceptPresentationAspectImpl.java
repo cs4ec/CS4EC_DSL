@@ -17,7 +17,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActionCardReference;
   private ConceptPresentation props_ActionDurationEmptyLine;
   private ConceptPresentation props_ActionDurationMinutes;
-  private ConceptPresentation props_ActionStep;
   private ConceptPresentation props_AdmissionAction;
   private ConceptPresentation props_AttendanceRoute;
   private ConceptPresentation props_AttendanceRouteCondition;
@@ -57,7 +56,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RecentCOVIDContactCondition;
   private ConceptPresentation props_RecentCovidContactProperty;
   private ConceptPresentation props_ResourceAvailableCondition;
-  private ConceptPresentation props_RoomSelection;
+  private ConceptPresentation props_RoomSelectionCondition;
+  private ConceptPresentation props_RoomSelectionLine;
+  private ConceptPresentation props_RoomSelectionRule;
+  private ConceptPresentation props_RoomTypeCondition;
+  private ConceptPresentation props_SelectEmptyRoom;
   private ConceptPresentation props_StaffNumber;
   private ConceptPresentation props_StaffType;
   private ConceptPresentation props_StaffTypeReference;
@@ -136,14 +139,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActionDurationMinutes = cpb.create();
         }
         return props_ActionDurationMinutes;
-      case LanguageConceptSwitch.ActionStep:
-        if (props_ActionStep == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("Individual steps of an Action");
-          cpb.rawPresentation("ActionStep");
-          props_ActionStep = cpb.create();
-        }
-        return props_ActionStep;
       case LanguageConceptSwitch.AdmissionAction:
         if (props_AdmissionAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -419,13 +414,41 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ResourceAvailableCondition = cpb.create();
         }
         return props_ResourceAvailableCondition;
-      case LanguageConceptSwitch.RoomSelection:
-        if (props_RoomSelection == null) {
+      case LanguageConceptSwitch.RoomSelectionCondition:
+        if (props_RoomSelectionCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("RoomSelection");
-          props_RoomSelection = cpb.create();
+          cpb.rawPresentation("RoomSelectionCondition");
+          props_RoomSelectionCondition = cpb.create();
         }
-        return props_RoomSelection;
+        return props_RoomSelectionCondition;
+      case LanguageConceptSwitch.RoomSelectionLine:
+        if (props_RoomSelectionLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("RoomSelectionLine");
+          props_RoomSelectionLine = cpb.create();
+        }
+        return props_RoomSelectionLine;
+      case LanguageConceptSwitch.RoomSelectionRule:
+        if (props_RoomSelectionRule == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("RoomSelectionRule");
+          props_RoomSelectionRule = cpb.create();
+        }
+        return props_RoomSelectionRule;
+      case LanguageConceptSwitch.RoomTypeCondition:
+        if (props_RoomTypeCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("RoomTypeCondition");
+          props_RoomTypeCondition = cpb.create();
+        }
+        return props_RoomTypeCondition;
+      case LanguageConceptSwitch.SelectEmptyRoom:
+        if (props_SelectEmptyRoom == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SelectEmptyRoom");
+          props_SelectEmptyRoom = cpb.create();
+        }
+        return props_SelectEmptyRoom;
       case LanguageConceptSwitch.StaffNumber:
         if (props_StaffNumber == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

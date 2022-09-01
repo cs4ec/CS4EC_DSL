@@ -4,9 +4,5 @@
   <exported-language name="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" />
   <exported-language name="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" />
   <exported-language name="5e1e5d68-a147-4fce-8920-2ed523701f78(PatientSelectionStrategy)" />
-  <exported-solutions>
-    <exported-solution>7b231e0f-0b71-40a0-97e2-0c4f2be864f2(FluCovidEmergencyPathwayoptimise)</exported-solution>
-  </exported-solutions>
-  <generation-plan model="r:32c556b8-26a8-4157-a249-7d5a4c644e6a(FluCovidEmergencyPathwayoptimise.GenPlan)" />
 </dev-kit>
 

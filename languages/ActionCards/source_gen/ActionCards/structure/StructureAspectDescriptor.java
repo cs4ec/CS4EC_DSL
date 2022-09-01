@@ -24,7 +24,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptActionCardReference = createDescriptorForActionCardReference();
   /*package*/ final ConceptDescriptor myConceptActionDurationEmptyLine = createDescriptorForActionDurationEmptyLine();
   /*package*/ final ConceptDescriptor myConceptActionDurationMinutes = createDescriptorForActionDurationMinutes();
-  /*package*/ final ConceptDescriptor myConceptActionStep = createDescriptorForActionStep();
   /*package*/ final ConceptDescriptor myConceptAdmissionAction = createDescriptorForAdmissionAction();
   /*package*/ final ConceptDescriptor myConceptAttendanceRoute = createDescriptorForAttendanceRoute();
   /*package*/ final ConceptDescriptor myConceptAttendanceRouteCondition = createDescriptorForAttendanceRouteCondition();
@@ -64,7 +63,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptRecentCOVIDContactCondition = createDescriptorForRecentCOVIDContactCondition();
   /*package*/ final ConceptDescriptor myConceptRecentCovidContactProperty = createDescriptorForRecentCovidContactProperty();
   /*package*/ final ConceptDescriptor myConceptResourceAvailableCondition = createDescriptorForResourceAvailableCondition();
-  /*package*/ final ConceptDescriptor myConceptRoomSelection = createDescriptorForRoomSelection();
+  /*package*/ final ConceptDescriptor myConceptRoomSelectionCondition = createDescriptorForRoomSelectionCondition();
+  /*package*/ final ConceptDescriptor myConceptRoomSelectionLine = createDescriptorForRoomSelectionLine();
+  /*package*/ final ConceptDescriptor myConceptRoomSelectionRule = createDescriptorForRoomSelectionRule();
+  /*package*/ final ConceptDescriptor myConceptRoomTypeCondition = createDescriptorForRoomTypeCondition();
+  /*package*/ final ConceptDescriptor myConceptSelectEmptyRoom = createDescriptorForSelectEmptyRoom();
   /*package*/ final ConceptDescriptor myConceptStaffNumber = createDescriptorForStaffNumber();
   /*package*/ final ConceptDescriptor myConceptStaffType = createDescriptorForStaffType();
   /*package*/ final ConceptDescriptor myConceptStaffTypeReference = createDescriptorForStaffTypeReference();
@@ -94,11 +97,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     deps.extendedLanguage(0x1a0150acdda54129L, 0x824e01dce96fdea4L, "BuiltEnvironment");
     deps.aggregatedLanguage(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, "AgentLanguage");
     deps.aggregatedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
+    deps.aggregatedLanguage(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, "jetbrains.mps.baseLanguage");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptActionStep, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptRoomSelection, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
+    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptRoomSelectionCondition, myConceptRoomSelectionLine, myConceptRoomSelectionRule, myConceptRoomTypeCondition, myConceptSelectEmptyRoom, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
   }
 
   @Override
@@ -121,8 +125,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActionDurationEmptyLine;
       case LanguageConceptSwitch.ActionDurationMinutes:
         return myConceptActionDurationMinutes;
-      case LanguageConceptSwitch.ActionStep:
-        return myConceptActionStep;
       case LanguageConceptSwitch.AdmissionAction:
         return myConceptAdmissionAction;
       case LanguageConceptSwitch.AttendanceRoute:
@@ -201,8 +203,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptRecentCovidContactProperty;
       case LanguageConceptSwitch.ResourceAvailableCondition:
         return myConceptResourceAvailableCondition;
-      case LanguageConceptSwitch.RoomSelection:
-        return myConceptRoomSelection;
+      case LanguageConceptSwitch.RoomSelectionCondition:
+        return myConceptRoomSelectionCondition;
+      case LanguageConceptSwitch.RoomSelectionLine:
+        return myConceptRoomSelectionLine;
+      case LanguageConceptSwitch.RoomSelectionRule:
+        return myConceptRoomSelectionRule;
+      case LanguageConceptSwitch.RoomTypeCondition:
+        return myConceptRoomTypeCondition;
+      case LanguageConceptSwitch.SelectEmptyRoom:
+        return myConceptSelectEmptyRoom;
       case LanguageConceptSwitch.StaffNumber:
         return myConceptStaffNumber;
       case LanguageConceptSwitch.StaffType:
@@ -329,13 +339,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/6963522544237023781");
     b.version(2);
     b.property("duration", 0x60a366dc12ac1226L).type(PrimitiveTypeId.INTEGER).origin("6963522544237023782").done();
-    return b.create();
-  }
-  private static ConceptDescriptor createDescriptorForActionStep() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ActionStep", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3455bL);
-    b.class_(false, false, false);
-    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733211");
-    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAdmissionAction() {
@@ -706,10 +709,44 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("resource availability condition");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForRoomSelection() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "RoomSelection", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x334005c766547220L);
+  private static ConceptDescriptor createDescriptorForRoomSelectionCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "RoomSelectionCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x43b5616bd1d154aeL);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4878912887035352238");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRoomSelectionLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "RoomSelectionLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x43b5616bd1d0be74L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4878912887035313780");
+    b.version(2);
+    b.aggregate("condition", 0x43b5616bd1d0e19bL).target(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8c37f506fL).optional(true).ordered(true).multiple(false).origin("4878912887035322779").done();
+    b.aggregate("rule", 0x43b5616bd1d0e19dL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x334005c766547220L).optional(false).ordered(true).multiple(false).origin("4878912887035322781").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRoomSelectionRule() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "RoomSelectionRule", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x334005c766547220L);
     b.class_(false, false, false);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3692958048417247776");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForRoomTypeCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "RoomTypeCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x43b5616bd1d154adL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4878912887035352237");
+    b.version(2);
+    b.aggregate("AllowedRooms", 0x43b5616bd1d158adL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(true).ordered(true).multiple(true).origin("4878912887035353261").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForSelectEmptyRoom() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "SelectEmptyRoom", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x43b5616bd1d0fb3bL);
+    b.class_(false, false, false);
+    b.super_("ActionCards.structure.RoomSelectionRule", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x334005c766547220L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4878912887035329339");
     b.version(2);
     return b.create();
   }

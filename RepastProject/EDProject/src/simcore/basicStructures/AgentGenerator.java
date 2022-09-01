@@ -57,7 +57,7 @@ public class AgentGenerator {
 	    
 	    	Room spawnLocation = map.FindInstancesOfRoomType(spawnRoomType).stream().findFirst().get();
 	    	NdPoint spacePt = space.getLocation(spawnLocation);
-	    	GridPoint pt = spawnLocation.getEntryPoint();
+	    	GridPoint pt = spawnLocation.getCenterCoordinates();
 	    	
 	    	space.moveTo(a, spacePt.getX(), spacePt.getY());
 	    	grid.moveTo(a, (int)(pt.getX()), (int)(pt.getY() ));

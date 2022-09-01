@@ -1079,5 +1079,12 @@
       <node concept="3clFbS" id="3ifWr0i0u$H" role="2VODD2" />
     </node>
   </node>
+  <node concept="13h7C7" id="4ePomJhOdUM">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="13h7C2" to="e88n:3d01stAl78w" resolve="RoomSelectionRule" />
+    <node concept="13hLZK" id="4ePomJhOdUN" role="13h7CW">
+      <node concept="3clFbS" id="4ePomJhOdUO" role="2VODD2" />
+    </node>
+  </node>
 </model>
 

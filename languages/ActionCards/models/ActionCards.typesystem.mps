@@ -372,5 +372,31 @@
       <ref role="1YaFvo" to="e88n:3JSrgvO6fgX" resolve="TimeOfDayCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="4ePomJhOlQa">
+    <property role="TrG5h" value="typeof_RoomTypeCondition" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <node concept="3clFbS" id="4ePomJhOlQb" role="18ibNy">
+      <node concept="1Z5TYs" id="3d01stCgWV5" role="3cqZAp">
+        <node concept="mw_s8" id="3d01stCgWV6" role="1ZfhKB">
+          <node concept="2pJPEk" id="3d01stCgWV7" role="mwGJk">
+            <node concept="2pJPED" id="3d01stCgWV8" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3d01stCgWV9" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3d01stCgWVa" role="mwGJk">
+            <node concept="1YBJjd" id="4ePomJhOlRu" role="1Z2MuG">
+              <ref role="1YBMHb" node="4ePomJhOlQd" resolve="roomTypeCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4ePomJhOlQd" role="1YuTPh">
+      <property role="TrG5h" value="roomTypeCondition" />
+      <ref role="1YaFvo" to="e88n:4ePomJhOliH" resolve="RoomTypeCondition" />
+    </node>
+  </node>
 </model>
 
