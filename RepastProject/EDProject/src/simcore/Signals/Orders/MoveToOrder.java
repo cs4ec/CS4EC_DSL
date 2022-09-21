@@ -6,17 +6,17 @@ public class MoveToOrder extends Order{
 	
 	private Object Target;
 	private Object ConcreteTarget;
-	private Class targetOccupiable;
+//	private Class targetOccupiable;
 	
 	public MoveToOrder WithDestination(Object o) {
 		Target = o;
 		return this;
 	}
 	
-	public MoveToOrder WithOccupiable(Class o) {
-		targetOccupiable = o;
-		return this;
-	}
+//	public MoveToOrder WithOccupiable(Class o) {
+//		targetOccupiable = o;
+//		return this;
+//	}
 
 	public Object getTarget() {
 		return Target;
@@ -26,9 +26,9 @@ public class MoveToOrder extends Order{
 		return ConcreteTarget;
 	}
 	
-	public Class getOccupiable() {
-		return targetOccupiable;
-	}
+//	public Class getOccupiable() {
+//		return targetOccupiable;
+//	}
 
 	public void setTarget(Object target) {
 		Target = target;
@@ -38,8 +38,8 @@ public class MoveToOrder extends Order{
 		ConcreteTarget = target;
 	}
 	
-	public void setTargetOccupiable(Class pTargetOccupiable) {
-		targetOccupiable = pTargetOccupiable;
-	}
+//	public void setTargetOccupiable(Class pTargetOccupiable) {
+//		targetOccupiable = pTargetOccupiable;
+//	}
 
 }

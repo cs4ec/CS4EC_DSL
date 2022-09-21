@@ -1100,7 +1100,7 @@
   </node>
   <node concept="24kQdi" id="7lVoe4xQDQM">
     <property role="3GE5qa" value="Structures.Class" />
-    <ref role="1XX52x" to="3751:7lVoe4xN_mF" resolve="OccupiableInstance" />
+    <ref role="1XX52x" to="3751:7lVoe4xN_mF" resolve="OccupiableReference" />
     <node concept="3EZMnI" id="7lVoe4xQDQO" role="2wV5jI">
       <node concept="l2Vlx" id="7lVoe4xQDQR" role="2iSdaV" />
       <node concept="3F0ifn" id="7lVoe4xUirw" role="3EZMnx">
@@ -2064,6 +2064,29 @@
         <ref role="1NtTu8" to="3751:34hhAWvBSc8" resolve="condition" />
       </node>
       <node concept="l2Vlx" id="34hhAWvBScC" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4Skof6wwmFu">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:4Skof6wwmET" resolve="InSameRoomCondition" />
+    <node concept="3EZMnI" id="4Skof6wwmFw" role="2wV5jI">
+      <node concept="3F0ifn" id="4Skof6wwmFB" role="3EZMnx">
+        <property role="3F0ifm" value="I am in the same room as" />
+      </node>
+      <node concept="3F1sOY" id="4Skof6wwmFH" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:4Skof6wwmFl" resolve="target" />
+      </node>
+      <node concept="l2Vlx" id="4Skof6wwmFz" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4Skof6wY8E1">
+    <property role="3GE5qa" value="Structures.Class" />
+    <ref role="1XX52x" to="3751:4Skof6wY8pa" resolve="MyRoomInstance" />
+    <node concept="3EZMnI" id="4Skof6wY8ED" role="2wV5jI">
+      <node concept="3F0ifn" id="4Skof6wY8Fm" role="3EZMnx">
+        <property role="3F0ifm" value="the room I am in" />
+      </node>
+      <node concept="l2Vlx" id="4Skof6wY8EG" role="2iSdaV" />
     </node>
   </node>
 </model>

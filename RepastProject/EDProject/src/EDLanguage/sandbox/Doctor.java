@@ -17,9 +17,9 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
+import simcore.Signals.Orders.MoveToOrder;
 import simcore.basicStructures.Board;
 import repast.simphony.engine.environment.RunEnvironment;
-import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
 
 public class Doctor extends Actor {
@@ -29,10 +29,6 @@ public class Doctor extends Actor {
   public Doctor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
     mintMyMaxPatients = 1;
-  }
-
-  public Doctor(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
-    super(space, grid, pstrStartLocation);
   }
 
   protected Signal selectSignal(List<Signal> plstSignals) {
@@ -63,53 +59,49 @@ public class Doctor extends Actor {
     return null;
   }
 
-//  protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
-//    ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
-//    // First, select the room that contains my patient (if my current action involves the patient) 
-//    for (Room pRoom : pRooms) {
-//      if (behaviour.getSignalTrigger() != null && behaviour.getSignalTrigger().GetData("patient") != null && pRoom.getOccupiers().contains(behaviour.getSignalTrigger().GetData("patient"))) {
-//        return pRoom;
-//      }
-//    }
-//    // If my patient isn't currently in that room, then consider other options 
-//    Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
-//      public int compare(Room r1, Room r2) {
-//        return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
-//      }
-//    }).filter(new Predicate<Room>() {
-//      public boolean test(Room r) {
-//        return EvaluateRoomChoice(r) != Double.MAX_VALUE;
-//      }
-//    }).findFirst().orElse(null);
-//    return selectedRoom;
-//  }
+  protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
+    ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
+    // First, select the room that contains my patient (if my current action involves the patient) 
+    for (Room pRoom : pRooms) {
+      if (behaviour.getSignalTrigger() != null && behaviour.getSignalTrigger().GetData("patient") != null && pRoom.getOccupiers().contains(behaviour.getSignalTrigger().GetData("patient"))) {
+        return pRoom;
+      }
+    }
+    // If my patient isn't currently in that room, then consider other options 
+    Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
+      public int compare(Room r1, Room r2) {
+        return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
+      }
+    }).filter(new Predicate<Room>() {
+      public boolean test(Room r) {
+        return EvaluateRoomChoice(r) != Double.MAX_VALUE;
+      }
+    }).findFirst().orElse(null);
+    return selectedRoom;
+  }
 
 
   protected double EvaluateRoomChoice(Room pRoom) {
-//    ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
-//
-//    if (true) {
-//      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-//        public boolean test(Agent a) {
-//          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(Doctor.this, a) != null;
-//        }
-//      })) {
-//        return Double.MIN_VALUE;
-//      }
-//    }
-//    if (true) {
-//      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-//        public boolean test(Agent a) {
-//          return a.getClass() == patient.class;
-//        }
-//      })) {
-//        return Double.MAX_VALUE;
-//      }
-//    }
-//    if (true) {
+    ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
+
+    if (true) {
+      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+        public boolean test(Agent a) {
+          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(Doctor.this, a) != null;
+        }
+      })) {
+        return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
+      if (pRoom.hasCapacity()) {
+        return Double.MIN_VALUE;
+      }
+    }
+    if (true) {
       return (CalcDistance(grid.getLocation(this), grid.getLocation(pRoom)));
-//    }
-//    return 0;
+    }
+    return 0;
 
   }
 
@@ -183,10 +175,37 @@ public class Doctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class SendSignalAction_b0a extends BehaviourStep {
+  public class OrderAction_b0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+    }
+  }
+  public class StayForConditionAction_c0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a(Behaviour behaviour) {
+    public StayForConditionAction_c0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+    }
+
+    public boolean finishCondition() {
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
+    }
+  }
+  public class SendSignalAction_d0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -199,10 +218,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a extends BehaviourStep {
+  public class StayAction_e0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a(Behaviour behaviour) {
+    public StayAction_e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -249,10 +268,37 @@ public class Doctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class SendSignalAction_b0a_1 extends BehaviourStep {
+  public class OrderAction_b0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+    }
+  }
+  public class StayForConditionAction_c0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_b0a_1(Behaviour behaviour) {
+    public StayForConditionAction_c0a_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+    }
+
+    public boolean finishCondition() {
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
+    }
+  }
+  public class SendSignalAction_d0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_d0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -265,10 +311,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a_1 extends BehaviourStep {
+  public class StayAction_e0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_1(Behaviour behaviour) {
+    public StayAction_e0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -618,8 +664,10 @@ public class Doctor extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0a(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
+    plstSteps.add(new StayAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

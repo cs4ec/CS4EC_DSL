@@ -214,56 +214,56 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetLFDCOVIDResultisPositive</string>
+        <string>patientgetLFTCOVIDResultisPositive</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetLFDCOVIDResultisPositive</id>
+          <id>patientgetLFTCOVIDResultisPositive</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getLFDCOVIDResultisPositive</methodName>
+          <methodName>getLFTCOVIDResultisPositive</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetLFDCOVIDResultisNegative</string>
+        <string>patientgetLFTCOVIDResultisNegative</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetLFDCOVIDResultisNegative</id>
+          <id>patientgetLFTCOVIDResultisNegative</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getLFDCOVIDResultisNegative</methodName>
+          <methodName>getLFTCOVIDResultisNegative</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetLFDFluAResultisPositive</string>
+        <string>patientgetLFTFluAResultisPositive</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetLFDFluAResultisPositive</id>
+          <id>patientgetLFTFluAResultisPositive</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getLFDFluAResultisPositive</methodName>
+          <methodName>getLFTFluAResultisPositive</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetLFDFluAResultisNegative</string>
+        <string>patientgetLFTFluAResultisNegative</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetLFDFluAResultisNegative</id>
+          <id>patientgetLFTFluAResultisNegative</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getLFDFluAResultisNegative</methodName>
+          <methodName>getLFTFluAResultisNegative</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetLFDFluBResultisPositive</string>
+        <string>patientgetLFTFluBResultisPositive</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetLFDFluBResultisPositive</id>
+          <id>patientgetLFTFluBResultisPositive</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getLFDFluBResultisPositive</methodName>
+          <methodName>getLFTFluBResultisPositive</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetLFDFluBResultisNegative</string>
+        <string>patientgetLFTFluBResultisNegative</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetLFDFluBResultisNegative</id>
+          <id>patientgetLFTFluBResultisNegative</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getLFDFluBResultisNegative</methodName>
+          <methodName>getLFTFluBResultisNegative</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

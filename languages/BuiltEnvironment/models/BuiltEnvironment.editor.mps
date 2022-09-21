@@ -1194,5 +1194,30 @@
       </node>
     </node>
   </node>
+  <node concept="24kQdi" id="4Skof6wbvoA">
+    <property role="3GE5qa" value="ED" />
+    <ref role="1XX52x" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
+    <node concept="3EZMnI" id="4Skof6wbvoC" role="2wV5jI">
+      <node concept="3F0ifn" id="4Skof6wbvoJ" role="3EZMnx">
+        <property role="3F0ifm" value="Room Type:" />
+      </node>
+      <node concept="3F0A7n" id="4Skof6wbvoP" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="4Skof6wbvpd" role="3EZMnx">
+        <property role="3F0ifm" value="contains..." />
+      </node>
+      <node concept="3F1sOY" id="4Skof6wbvoZ" role="3EZMnx">
+        <ref role="1NtTu8" to="3z3g:4Skof6wbvot" resolve="PatientOccupiable" />
+        <node concept="pVoyu" id="4Skof6wbvp5" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4Skof6wbvpr" role="3EZMnx">
+        <property role="3F0ifm" value="for patients" />
+      </node>
+      <node concept="l2Vlx" id="4Skof6wbvoF" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

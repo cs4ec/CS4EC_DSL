@@ -32,10 +32,6 @@ public class CubicleNurse extends Actor {
     mintMyMaxPatients = 1;
   }
 
-  public CubicleNurse(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
-    super(space, grid, pstrStartLocation);
-  }
-
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (!(plstSignals.isEmpty())) {
       if (plstSignals.stream().filter(new Predicate<Signal>() {
@@ -99,12 +95,8 @@ public class CubicleNurse extends Actor {
       }
     }
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-        public boolean test(Agent a) {
-          return a.getClass() == patient.class;
-        }
-      })) {
-        return Double.MAX_VALUE;
+      if (pRoom.hasCapacity()) {
+        return Double.MIN_VALUE;
       }
     }
     if (true) {
@@ -245,11 +237,11 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class MoveAction_a0b_1 extends BehaviourStep {
+  public class MoveAction_a0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_1(Behaviour behaviour) {
+    public MoveAction_a0b(Behaviour behaviour) {
       target = NonRespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -287,7 +279,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
   public class StayForConditionAction_c0b extends BehaviourStep {
@@ -302,7 +294,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class UseAction_d0b extends InstantBehaviourStep {
@@ -358,7 +350,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).PHEThreeAltCOVIDResult == "Negative" && ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).PHEThreeAltCOVIDResult == "Negative") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0g0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -444,7 +436,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
   public class StayForConditionAction_c0b_0 extends BehaviourStep {
@@ -459,7 +451,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class UseAction_d0b_0 extends InstantBehaviourStep {
@@ -675,7 +667,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).PHEThreeAltCOVIDResult == "Negative" && ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).PHEThreeAltCOVIDResult == "Negative") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0g0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -825,7 +817,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
   public class StayForConditionAction_c0c extends BehaviourStep {
@@ -840,7 +832,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class UseAction_d0c extends InstantBehaviourStep {
@@ -982,7 +974,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
   public class StayForConditionAction_c0c_0 extends BehaviourStep {
@@ -997,7 +989,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class UseAction_d0c_0 extends InstantBehaviourStep {
@@ -1363,7 +1355,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
   public class StayForConditionAction_c0d extends BehaviourStep {
@@ -1378,7 +1370,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class UseAction_d0d extends InstantBehaviourStep {
@@ -1538,7 +1530,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
   public class StayForConditionAction_c0d_0 extends BehaviourStep {
@@ -1553,7 +1545,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class UseAction_d0d_0 extends InstantBehaviourStep {
@@ -2193,7 +2185,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
   public class StayForConditionAction_c0e extends BehaviourStep {
@@ -2208,7 +2200,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class SendSignalAction_d0e extends BehaviourStep {
@@ -2286,7 +2278,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
   public class StayForConditionAction_c0e_0 extends BehaviourStep {
@@ -2301,7 +2293,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class SendSignalAction_d0e_1 extends BehaviourStep {
@@ -2479,7 +2471,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside));
     }
   }
   public class StayForConditionAction_c0g extends BehaviourStep {
@@ -2494,7 +2486,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class SendSignalAction_d0g extends BehaviourStep {
@@ -2572,7 +2564,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside));
     }
   }
   public class StayForConditionAction_c0g_0 extends BehaviourStep {
@@ -2587,7 +2579,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class SendSignalAction_d0g_1 extends BehaviourStep {
@@ -2665,7 +2657,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside));
     }
   }
   public class StayForConditionAction_c0h extends BehaviourStep {
@@ -2680,7 +2672,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class SendSignalAction_d0h extends BehaviourStep {
@@ -2758,7 +2750,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside));
     }
   }
   public class StayForConditionAction_c0h_0 extends BehaviourStep {
@@ -2773,7 +2765,7 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
   public class SendSignalAction_d0h_1 extends BehaviourStep {
@@ -3800,7 +3792,7 @@ public class CubicleNurse extends Actor {
   public void InitCheckSymptoms_b(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_1(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0b(behaviourBuilder));
     plstSteps.add(new OrderAction_b0b(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0b(behaviourBuilder));
     plstSteps.add(new UseAction_d0b(behaviourBuilder));

@@ -26,12 +26,12 @@
     <string>patientgetRecentCovidContactisNo</string>
     <string>patientgetImmunocompromisedisYes</string>
     <string>patientgetImmunocompromisedisNo</string>
-    <string>patientgetLFDCOVIDResultisPositive</string>
-    <string>patientgetLFDCOVIDResultisNegative</string>
-    <string>patientgetLFDFluAResultisPositive</string>
-    <string>patientgetLFDFluAResultisNegative</string>
-    <string>patientgetLFDFluBResultisPositive</string>
-    <string>patientgetLFDFluBResultisNegative</string>
+    <string>patientgetLFTCOVIDResultisPositive</string>
+    <string>patientgetLFTCOVIDResultisNegative</string>
+    <string>patientgetLFTFluAResultisPositive</string>
+    <string>patientgetLFTFluAResultisNegative</string>
+    <string>patientgetLFTFluBResultisPositive</string>
+    <string>patientgetLFTFluBResultisNegative</string>
     <string>patientgetLIATCOVIDResultisPositive</string>
     <string>patientgetLIATCOVIDResultisNegative</string>
     <string>patientgetLIATFluAResultisPositive</string>

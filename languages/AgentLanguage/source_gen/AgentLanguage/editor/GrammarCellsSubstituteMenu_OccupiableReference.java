@@ -18,15 +18,15 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class GrammarCellsSubstituteMenu_OccupiableInstance extends SubstituteMenuBase {
-  public GrammarCellsSubstituteMenu_OccupiableInstance() {
+public class GrammarCellsSubstituteMenu_OccupiableReference extends SubstituteMenuBase {
+  public GrammarCellsSubstituteMenu_OccupiableReference() {
     super(true);
   }
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new GrammarCellsSubstituteMenuPart_kwf8hh_a());
+    result.add(new GrammarCellsSubstituteMenuPart_r1c3v_a());
     return result;
   }
 
@@ -34,7 +34,7 @@ public class GrammarCellsSubstituteMenu_OccupiableInstance extends SubstituteMen
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "OccupiableInstance", null));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "OccupiableReference", null));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -43,18 +43,18 @@ public class GrammarCellsSubstituteMenu_OccupiableInstance extends SubstituteMen
   }
 
 
-  private class GrammarCellsSubstituteMenuPart_kwf8hh_a extends GrammarCellsSubstituteMenuPart {
+  private class GrammarCellsSubstituteMenuPart_r1c3v_a extends GrammarCellsSubstituteMenuPart {
     @Override
     public SModule getModule(SRepository repository) {
       return PersistenceFacade.getInstance().createModuleReference("7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)").resolve(repository);
     }
     @Override
     public SAbstractConcept getExpectedOutputConcept() {
-      return CONCEPTS.OccupiableInstance$j4;
+      return CONCEPTS.OccupiableReference$j4;
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept OccupiableInstance$j4 = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL, "AgentLanguage.structure.OccupiableInstance");
+    /*package*/ static final SConcept OccupiableReference$j4 = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL, "AgentLanguage.structure.OccupiableReference");
   }
 }

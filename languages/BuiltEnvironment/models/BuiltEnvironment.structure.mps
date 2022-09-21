@@ -310,6 +310,12 @@
     <property role="34LRSv" value="roomtype" />
     <property role="R4oN_" value="The type of a room instance" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4Skof6wbvot" role="1TKVEi">
+      <property role="IQ2ns" value="5626228425383343645" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="PatientOccupiable" />
+      <ref role="20lvS9" to="3751:7lVoe4xN_mF" resolve="OccupiableReference" />
+    </node>
     <node concept="PrWs8" id="5QJON_BqFe7" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>

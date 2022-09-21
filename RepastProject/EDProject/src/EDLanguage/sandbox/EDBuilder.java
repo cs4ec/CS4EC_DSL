@@ -4,6 +4,7 @@ package EDLanguage.sandbox;
 
 import repast.simphony.dataLoader.ContextBuilder;
 import repast.simphony.context.Context;
+import simcore.basicStructures.ToolBox;
 import repast.simphony.parameter.Parameters;
 import repast.simphony.engine.environment.RunEnvironment;
 import simcore.utilities.ModelParameterStore;
@@ -33,6 +34,9 @@ public class EDBuilder implements ContextBuilder<Object> {
 
   public Context build(Context<Object> context) {
 
+    // Reset log contents 
+    new ToolBox(this).GetLog().clearOldContents();
+
     context.setId("EDProject");
     int mapWidth = 449;
     int mapHeight = 250;
@@ -52,21 +56,21 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
-    context.add(new patientGenerator_1(space, grid, context));
     context.add(new patientGenerator_0(space, grid, context));
+    context.add(new patientGenerator_1(space, grid, context));
     context.add(new Board());
 
     // add Agents 
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 7; i++) {
       context.add(new Doctor(space, grid, context));
     }
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 12; i++) {
       context.add(new CubicleNurse(space, grid, context));
     }
     for (int i = 0; i < 5; i++) {
       context.add(new TriageNurse(space, grid, context));
     }
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 5; i++) {
       context.add(new PreAdmissionStaff(space, grid, context));
     }
 
@@ -75,6 +79,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     context.addValueLayer(vl);
 
     // add Locations here 
+
     Area EmergencyDepartment_0 = new Area(context, space, grid, 5, 5, 370, 195, Color.WHITE);
     EmergencyDepartment_0.addResource(LabPCR.getInstance(), 100);
     EmergencyDepartment_0.addResource(LFD.getInstance(), 100);
@@ -95,168 +100,65 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsTriage_e = new Room("MajorsTriage", context, space, grid, 110, 100, 10, 10, 1, 1000, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
     Room LIATBoothOne_f = new Room("LIATBoothOne", context, space, grid, 111, 92, 5, 5, 1, 1000, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsWaitingRoom_g = new Room("MajorsWaitingRoom", context, space, grid, 140, 90, 20, 40, 1, 1000, NonRespiratoryArea.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room RespiratoryCubicle1_h = new Room("RespiratoryCubicle1", context, space, grid, 110, 80, 10, 10, 1, 1000, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle2_i = new Room("RespiratoryCubicle2", context, space, grid, 110, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle3_j = new Room("RespiratoryCubicle3", context, space, grid, 120, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle4_k = new Room("RespiratoryCubicle4", context, space, grid, 120, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle5_l = new Room("RespiratoryCubicle5", context, space, grid, 140, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle6_m = new Room("RespiratoryCubicle6", context, space, grid, 130, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle7_n = new Room("RespiratoryCubicle7", context, space, grid, 150, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle8_o = new Room("RespiratoryCubicle8", context, space, grid, 140, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle9_p = new Room("RespiratoryCubicle9", context, space, grid, 150, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle1_h = new Room("NonRespiratoryCubicle1", context, space, grid, 110, 80, 10, 10, 1, 1000, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle2_i = new Room("NonRespiratoryCubicle2", context, space, grid, 110, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle3_j = new Room("NonRespiratoryCubicle3", context, space, grid, 120, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle4_k = new Room("NonRespiratoryCubicle4", context, space, grid, 120, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle5_l = new Room("NonRespiratoryCubicle5", context, space, grid, 140, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle6_m = new Room("NonRespiratoryCubicle6", context, space, grid, 130, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle7_n = new Room("NonRespiratoryCubicle7", context, space, grid, 150, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle8_o = new Room("NonRespiratoryCubicle8", context, space, grid, 140, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle9_p = new Room("NonRespiratoryCubicle9", context, space, grid, 150, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room TaskRoom1_q = new Room("TaskRoom1", context, space, grid, 120, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room TaskRoom2_r = new Room("TaskRoom2", context, space, grid, 125, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room TaskRoom3_s = new Room("TaskRoom3", context, space, grid, 130, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room Entrance_t = new Room("Entrance", context, space, grid, 95, 193, 10, 5, 1, 10, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room Entrance_t = new Room("Entrance", context, space, grid, 95, 193, 10, 5, 1, 10000, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room XRayRoom1_u = new Room("XRayRoom1", context, space, grid, 140, 155, 5, 5, 1, 3, RadiologyRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room XRayRoom2_v = new Room("XRayRoom2", context, space, grid, 145, 155, 5, 5, 1, 3, RadiologyRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room TriageWaitingRoom_w = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 100, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room MajorsABReception_x = new Room("MajorsABReception", context, space, grid, 200, 168, 20, 10, 1, 15, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room LIATBooth2_y = new Room("LIATBooth2", context, space, grid, 220, 169, 5, 8, 1, 5, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room MajorsBayA_z = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayB_ab = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayC_bb = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayD_cb = new Room("MajorsBayD", context, space, grid, 235, 175, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayE_db = new Room("MajorsBayE", context, space, grid, 235, 160, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayF_eb = new Room("MajorsBayF", context, space, grid, 235, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayG_fb = new Room("MajorsBayG", context, space, grid, 220, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayH_gb = new Room("MajorsBayH", context, space, grid, 205, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayI_hb = new Room("MajorsBayI", context, space, grid, 190, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayJ_ib = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayK_jb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayL_kb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleA_z = new Room("RespiratoryCubicleA", context, space, grid, 205, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleB_ab = new Room("RespiratoryCubicleB", context, space, grid, 220, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleC_bb = new Room("RespiratoryCubicleC", context, space, grid, 235, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleD_cb = new Room("RespiratoryCubicleD", context, space, grid, 235, 175, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleE_db = new Room("RespiratoryCubicleE", context, space, grid, 235, 160, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleF_eb = new Room("RespiratoryCubicleF", context, space, grid, 235, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleG_fb = new Room("RespiratoryCubicleG", context, space, grid, 220, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleH_gb = new Room("RespiratoryCubicleH", context, space, grid, 205, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleI_hb = new Room("RespiratoryCubicleI", context, space, grid, 190, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleJ_ib = new Room("RespiratoryCubicleJ", context, space, grid, 175, 175, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleK_jb = new Room("RespiratoryCubicleK", context, space, grid, 175, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room RespiratoryCubicleL_kb = new Room("RespiratoryCubicleL", context, space, grid, 190, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
     Room SideRoom_lb = new Room("SideRoom", context, space, grid, 200, 60, 50, 50, 1, 1000, SideRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room CovidCohort_mb = new Room("CovidCohort", context, space, grid, 260, 60, 50, 50, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
     Room AmberBay_nb = new Room("AmberBay", context, space, grid, 260, 5, 50, 50, 1, 1000, AmberBay.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room PreAdmissionArea_ob = new Room("PreAdmissionArea", context, space, grid, 320, 5, 50, 50, 1, 1000, ElectiveAttendanceArea.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room NonRespiratoryCohort_pb = new Room("NonRespiratoryCohort", context, space, grid, 200, 5, 50, 50, 1, 1000, NonRespiratoryCohort.getInstance(), Color.GREEN, EmergencyDepartment_0);
+
     try {
-      Paedeatrics_a.setSeats(0);
-      Lab_b.setSeats(0);
-      MainReception_c.setSeats(0);
-      Triage_d.setSeats(0);
-      MajorsTriage_e.setSeats(0);
-      LIATBoothOne_f.setSeats(0);
-      MajorsWaitingRoom_g.setSeats(0);
-      RespiratoryCubicle1_h.setSeats(0);
-      RespiratoryCubicle2_i.setSeats(0);
-      RespiratoryCubicle3_j.setSeats(0);
-      RespiratoryCubicle4_k.setSeats(0);
-      RespiratoryCubicle5_l.setSeats(0);
-      RespiratoryCubicle6_m.setSeats(0);
-      RespiratoryCubicle7_n.setSeats(0);
-      RespiratoryCubicle8_o.setSeats(0);
-      RespiratoryCubicle9_p.setSeats(0);
-      TaskRoom1_q.setSeats(0);
-      TaskRoom2_r.setSeats(0);
-      TaskRoom3_s.setSeats(0);
-      Entrance_t.setSeats(0);
-      XRayRoom1_u.setSeats(0);
-      XRayRoom2_v.setSeats(0);
-      TriageWaitingRoom_w.setSeats(20);
-      MajorsABReception_x.setSeats(0);
-      LIATBooth2_y.setSeats(0);
-      MajorsBayA_z.setSeats(0);
-      MajorsBayB_ab.setSeats(0);
-      MajorsBayC_bb.setSeats(0);
-      MajorsBayD_cb.setSeats(0);
-      MajorsBayE_db.setSeats(0);
-      MajorsBayF_eb.setSeats(0);
-      MajorsBayG_fb.setSeats(0);
-      MajorsBayH_gb.setSeats(0);
-      MajorsBayI_hb.setSeats(0);
-      MajorsBayJ_ib.setSeats(0);
-      MajorsBayK_jb.setSeats(0);
-      MajorsBayL_kb.setSeats(0);
-      SideRoom_lb.setSeats(0);
-      CovidCohort_mb.setSeats(0);
-      AmberBay_nb.setSeats(0);
-      PreAdmissionArea_ob.setSeats(0);
-      NonRespiratoryCohort_pb.setSeats(0);
-      Paedeatrics_a.setDesks(0);
-      Lab_b.setDesks(0);
-      MainReception_c.setDesks(0);
-      Triage_d.setDesks(0);
-      MajorsTriage_e.setDesks(0);
-      LIATBoothOne_f.setDesks(0);
-      MajorsWaitingRoom_g.setDesks(0);
-      RespiratoryCubicle1_h.setDesks(0);
-      RespiratoryCubicle2_i.setDesks(0);
-      RespiratoryCubicle3_j.setDesks(0);
-      RespiratoryCubicle4_k.setDesks(0);
-      RespiratoryCubicle5_l.setDesks(0);
-      RespiratoryCubicle6_m.setDesks(0);
-      RespiratoryCubicle7_n.setDesks(0);
-      RespiratoryCubicle8_o.setDesks(0);
-      RespiratoryCubicle9_p.setDesks(0);
-      TaskRoom1_q.setDesks(0);
-      TaskRoom2_r.setDesks(0);
-      TaskRoom3_s.setDesks(0);
-      Entrance_t.setDesks(0);
-      XRayRoom1_u.setDesks(1);
-      XRayRoom2_v.setDesks(1);
-      TriageWaitingRoom_w.setDesks(0);
-      MajorsABReception_x.setDesks(11);
-      LIATBooth2_y.setDesks(0);
-      MajorsBayA_z.setDesks(0);
-      MajorsBayB_ab.setDesks(0);
-      MajorsBayC_bb.setDesks(0);
-      MajorsBayD_cb.setDesks(0);
-      MajorsBayE_db.setDesks(0);
-      MajorsBayF_eb.setDesks(0);
-      MajorsBayG_fb.setDesks(0);
-      MajorsBayH_gb.setDesks(0);
-      MajorsBayI_hb.setDesks(0);
-      MajorsBayJ_ib.setDesks(0);
-      MajorsBayK_jb.setDesks(0);
-      MajorsBayL_kb.setDesks(0);
-      SideRoom_lb.setDesks(0);
-      CovidCohort_mb.setDesks(0);
-      AmberBay_nb.setDesks(0);
-      PreAdmissionArea_ob.setDesks(0);
-      NonRespiratoryCohort_pb.setDesks(0);
-      Paedeatrics_a.setBeds(0);
-      Lab_b.setBeds(0);
-      MainReception_c.setBeds(0);
-      Triage_d.setBeds(0);
-      MajorsTriage_e.setBeds(0);
-      LIATBoothOne_f.setBeds(0);
-      MajorsWaitingRoom_g.setBeds(0);
-      RespiratoryCubicle1_h.setBeds(0);
-      RespiratoryCubicle2_i.setBeds(0);
-      RespiratoryCubicle3_j.setBeds(0);
-      RespiratoryCubicle4_k.setBeds(0);
-      RespiratoryCubicle5_l.setBeds(0);
-      RespiratoryCubicle6_m.setBeds(0);
-      RespiratoryCubicle7_n.setBeds(0);
-      RespiratoryCubicle8_o.setBeds(0);
-      RespiratoryCubicle9_p.setBeds(0);
-      TaskRoom1_q.setBeds(0);
-      TaskRoom2_r.setBeds(0);
-      TaskRoom3_s.setBeds(0);
-      Entrance_t.setBeds(0);
-      XRayRoom1_u.setBeds(0);
-      XRayRoom2_v.setBeds(0);
-      TriageWaitingRoom_w.setBeds(0);
-      MajorsABReception_x.setBeds(0);
-      LIATBooth2_y.setBeds(0);
-      MajorsBayA_z.setBeds(0);
-      MajorsBayB_ab.setBeds(0);
-      MajorsBayC_bb.setBeds(0);
-      MajorsBayD_cb.setBeds(0);
-      MajorsBayE_db.setBeds(0);
-      MajorsBayF_eb.setBeds(0);
-      MajorsBayG_fb.setBeds(0);
-      MajorsBayH_gb.setBeds(0);
-      MajorsBayI_hb.setBeds(0);
-      MajorsBayJ_ib.setBeds(0);
-      MajorsBayK_jb.setBeds(0);
-      MajorsBayL_kb.setBeds(0);
-      SideRoom_lb.setBeds(0);
-      CovidCohort_mb.setBeds(0);
-      AmberBay_nb.setBeds(0);
-      PreAdmissionArea_ob.setBeds(0);
-      NonRespiratoryCohort_pb.setBeds(0);
+      NonRespiratoryCubicle1_h.addOccupiable(new Bed(context, space, grid, 115, 85, NonRespiratoryCubicle1_h));
+      NonRespiratoryCubicle2_i.addOccupiable(new Bed(context, space, grid, 115, 65, NonRespiratoryCubicle2_i));
+      NonRespiratoryCubicle3_j.addOccupiable(new Bed(context, space, grid, 125, 85, NonRespiratoryCubicle3_j));
+      NonRespiratoryCubicle4_k.addOccupiable(new Bed(context, space, grid, 125, 65, NonRespiratoryCubicle4_k));
+      NonRespiratoryCubicle5_l.addOccupiable(new Bed(context, space, grid, 145, 85, NonRespiratoryCubicle5_l));
+      NonRespiratoryCubicle6_m.addOccupiable(new Bed(context, space, grid, 135, 65, NonRespiratoryCubicle6_m));
+      NonRespiratoryCubicle7_n.addOccupiable(new Bed(context, space, grid, 155, 85, NonRespiratoryCubicle7_n));
+      NonRespiratoryCubicle8_o.addOccupiable(new Bed(context, space, grid, 145, 65, NonRespiratoryCubicle8_o));
+      NonRespiratoryCubicle9_p.addOccupiable(new Bed(context, space, grid, 155, 65, NonRespiratoryCubicle9_p));
+      RespiratoryCubicleA_z.addOccupiable(new Bed(context, space, grid, 210, 195, RespiratoryCubicleA_z));
+      RespiratoryCubicleB_ab.addOccupiable(new Bed(context, space, grid, 225, 195, RespiratoryCubicleB_ab));
+      RespiratoryCubicleC_bb.addOccupiable(new Bed(context, space, grid, 240, 195, RespiratoryCubicleC_bb));
+      RespiratoryCubicleD_cb.addOccupiable(new Bed(context, space, grid, 240, 180, RespiratoryCubicleD_cb));
+      RespiratoryCubicleE_db.addOccupiable(new Bed(context, space, grid, 240, 165, RespiratoryCubicleE_db));
+      RespiratoryCubicleF_eb.addOccupiable(new Bed(context, space, grid, 240, 150, RespiratoryCubicleF_eb));
+      RespiratoryCubicleG_fb.addOccupiable(new Bed(context, space, grid, 225, 150, RespiratoryCubicleG_fb));
+      RespiratoryCubicleH_gb.addOccupiable(new Bed(context, space, grid, 210, 150, RespiratoryCubicleH_gb));
+      RespiratoryCubicleI_hb.addOccupiable(new Bed(context, space, grid, 195, 150, RespiratoryCubicleI_hb));
+      RespiratoryCubicleJ_ib.addOccupiable(new Bed(context, space, grid, 180, 180, RespiratoryCubicleJ_ib));
+      RespiratoryCubicleK_jb.addOccupiable(new Bed(context, space, grid, 180, 195, RespiratoryCubicleK_jb));
+      RespiratoryCubicleL_kb.addOccupiable(new Bed(context, space, grid, 195, 195, RespiratoryCubicleL_kb));
+
     } catch (NumberFormatException e) {
     }
 

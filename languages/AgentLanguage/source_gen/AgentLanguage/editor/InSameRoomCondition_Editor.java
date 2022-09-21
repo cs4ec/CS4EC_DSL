@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class OccupiableInstance_Editor extends DefaultNodeEditor {
+public class InSameRoomCondition_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new OccupiableInstance_EditorBuilder_a(editorContext, node).createCell();
+    return new InSameRoomCondition_EditorBuilder_a(editorContext, node).createCell();
   }
 }

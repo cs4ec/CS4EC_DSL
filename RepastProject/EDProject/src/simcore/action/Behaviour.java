@@ -1,25 +1,30 @@
 package simcore.action;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import EDLanguage.sandbox.patient;
 import repast.simphony.engine.schedule.IAction;
 import simcore.Signals.Signal;
+import simcore.agents.Agent;
 import simcore.basicStructures.Locatable;
+import simcore.basicStructures.TimeKeeper;
+import simcore.basicStructures.ToolBox;
 
 public class Behaviour {
 
 	protected Signal signalTrigger;
 	protected String name;
+	protected LocalDateTime startTime;
+	protected LocalDateTime endTime;
 	protected Locatable behaviourLocation;
 	protected List<BehaviourStep> steps;
 	protected int currentStep = 0;
 	
 	public Behaviour(String s){
 		name = s;
-	}
-	
-	public Behaviour(List<BehaviourStep> steps) {
-		this.steps = steps;	
+		startTime = TimeKeeper.getInstance().getTime();
 	}
 	
 	public void step() {
@@ -69,11 +74,28 @@ public class Behaviour {
 		return currentStep == steps.size();
 	}
 	
-//	public Locatable getBehaviourLocation() {
-//		return behaviourLocation;
-//	}
+	public void recordEnd() {
+		endTime = TimeKeeper.getInstance().getTime();
+
+	}
 	
-	public void setBheaviourLocation(Locatable loc) {
-		this.behaviourLocation = loc;
+	public String getDescription() {
+		String content = "";
+		content+= name;
+		if(signalTrigger != null && signalTrigger.GetData("patient") != null) {
+			content+= " with patient " + ((Agent)signalTrigger.GetData("patient")).agentName();
+		}
+		content+= " started at: " + startTime.format(DateTimeFormatter.ofPattern("HH:mm"));
+		if(endTime != null) {
+			content+= " and end at: " + endTime.format(DateTimeFormatter.ofPattern("HH:mm"));
+
+		}
+		return content;
+	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return name + ", step " + currentStep;
 	}
 }

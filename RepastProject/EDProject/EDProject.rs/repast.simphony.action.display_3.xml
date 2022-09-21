@@ -1,5 +1,5 @@
 <repast.simphony.visualization.engine.CartesianDisplayDescriptor simphonyVersion="2.7.0">
-  <name>New Display</name>
+  <name>Map_Display</name>
   <type>2D</type>
   <styles>
     <entry>
@@ -12,6 +12,10 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.TriageNurse</string>
+      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Occupiable</string>
       <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
     </entry>
     <entry>
@@ -45,6 +49,10 @@
       <string>EDLanguage.sandbox.TriageNurse.style_2.xml</string>
     </entry>
     <entry>
+      <string>simcore.basicStructures.Occupiable</string>
+      <string>simcore.basicStructures.Occupiable.style_1.xml</string>
+    </entry>
+    <entry>
       <string>simcore.basicStructures.Wall</string>
       <null/>
     </entry>
@@ -71,7 +79,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-1615781745</hashCode>
+    <hashCode>-1134506585</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>space</layoutProjection>
@@ -79,7 +87,7 @@
   <layerOrder>
     <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <int>4</int>
+      <int>5</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Room</string>
@@ -87,7 +95,11 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.TriageNurse</string>
-      <int>6</int>
+      <int>7</int>
+    </entry>
+    <entry>
+      <string>simcore.basicStructures.Occupiable</string>
+      <int>2</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
@@ -95,15 +107,15 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.LabTechnician</string>
-      <int>5</int>
+      <int>6</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.patient</string>
-      <int>2</int>
+      <int>3</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.CubicleNurse</string>
-      <int>3</int>
+      <int>4</int>
     </entry>
   </layerOrder>
   <projections>

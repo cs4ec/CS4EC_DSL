@@ -50,10 +50,6 @@ public class patient extends Actor {
     mintMyMaxPatients = 1;
   }
 
-  public patient(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
-    super(space, grid, pstrStartLocation);
-  }
-
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (plstSignals.isEmpty()) {
       return null;

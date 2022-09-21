@@ -29,9 +29,9 @@ public class patient extends Actor {
   public String FluBInfectionStatus = "NotConfigured";
   public String RecentCovidContact = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
-  public String LFDCOVIDResult = "Incomplete";
-  public String LFDFluAResult = "Incomplete";
-  public String LFDFluBResult = "Incomplete";
+  public String LFTCOVIDResult = "Incomplete";
+  public String LFTFluAResult = "Incomplete";
+  public String LFTFluBResult = "Incomplete";
   public String LIATCOVIDResult = "Incomplete";
   public String LIATFluAResult = "Incomplete";
   public String LIATFluBResult = "Incomplete";
@@ -241,38 +241,38 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getLFDCOVIDResultisPositive() {
-    if (this.LFDCOVIDResult == "Positive") {
+  public int getLFTCOVIDResultisPositive() {
+    if (this.LFTCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLFDCOVIDResultisNegative() {
-    if (this.LFDCOVIDResult == "Negative") {
+  public int getLFTCOVIDResultisNegative() {
+    if (this.LFTCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getLFDFluAResultisPositive() {
-    if (this.LFDFluAResult == "Positive") {
+  public int getLFTFluAResultisPositive() {
+    if (this.LFTFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLFDFluAResultisNegative() {
-    if (this.LFDFluAResult == "Negative") {
+  public int getLFTFluAResultisNegative() {
+    if (this.LFTFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getLFDFluBResultisPositive() {
-    if (this.LFDFluBResult == "Positive") {
+  public int getLFTFluBResultisPositive() {
+    if (this.LFTFluBResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLFDFluBResultisNegative() {
-    if (this.LFDFluBResult == "Negative") {
+  public int getLFTFluBResultisNegative() {
+    if (this.LFTFluBResult == "Negative") {
       return 1;
     }
     return 0;

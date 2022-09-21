@@ -7,11 +7,11 @@ import java.util.HashMap;
 import repast.simphony.engine.environment.RunEnvironment;
 import java.util.Map;
 
-public class LFDExecutionTimeMap {
+public class LFTExecutionTimeMap {
   protected Distribution<Integer> processingTimeDistribution;
-  protected static LFDExecutionTimeMap instance;
+  protected static LFTExecutionTimeMap instance;
 
-  private LFDExecutionTimeMap() {
+  private LFTExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
     returnMap.put(600 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (1 / TotalOccurances)));
@@ -20,9 +20,9 @@ public class LFDExecutionTimeMap {
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 
-  public static LFDExecutionTimeMap getInstance() {
+  public static LFTExecutionTimeMap getInstance() {
     if (instance == null) {
-      instance = new LFDExecutionTimeMap();
+      instance = new LFTExecutionTimeMap();
     }
     return instance;
   }

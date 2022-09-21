@@ -108,14 +108,9 @@
         <reference id="4555810343887637004" name="disease" index="24g7ti" />
         <reference id="188877551433123871" name="test" index="3tE8WY" />
       </concept>
-      <concept id="1758249876462569833" name="ActionCards.structure.PatientPropertyConditional" flags="ng" index="1CySur">
-        <reference id="1758249876465254186" name="patientProperty" index="1DsR7o" />
-        <child id="1758249876462569987" name="checkValue" index="1CySjL" />
-      </concept>
       <concept id="1758249876500222036" name="ActionCards.structure.RecentCovidContactProperty" flags="ng" index="1FjhUA" />
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
-      <concept id="1758249876500242020" name="ActionCards.structure.RecentCOVIDContactCondition" flags="ng" index="1Fjl2m" />
       <concept id="1758249876510071738" name="ActionCards.structure.AttendanceRouteCondition" flags="ng" index="1FDPl8">
         <child id="1758249876530420347" name="attendanceRoute" index="1GBHi9" />
       </concept>
@@ -151,12 +146,8 @@
       <concept id="6750846609956093098" name="AgentLanguage.structure.RoomTypeReference" flags="ng" index="UeIYj">
         <reference id="6750846609956389136" name="roomType" index="Udx8D" />
       </concept>
-    </language>
-    <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
-      <concept id="5115872837156724025" name="org.iets3.core.expr.base.structure.LogicalAndExpression" flags="ng" index="30deo4" />
-      <concept id="5115872837156576277" name="org.iets3.core.expr.base.structure.BinaryExpression" flags="ng" index="30dEsC">
-        <child id="5115872837156576280" name="right" index="30dEs_" />
-        <child id="5115872837156576278" name="left" index="30dEsF" />
+      <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableReference" flags="ng" index="1kHjla">
+        <reference id="3535684625553292470" name="occupiable" index="IYbFp" />
       </concept>
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
@@ -203,7 +194,9 @@
         <reference id="768972137583559222" name="targetContainer" index="2Ovb8z" />
         <child id="768972137592500155" name="sourceFile" index="2PX5YI" />
       </concept>
-      <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw" />
+      <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw">
+        <child id="5626228425383343645" name="PatientOccupiable" index="3IeprG" />
+      </concept>
       <concept id="4321323723309500087" name="BuiltEnvironment.structure.ResourceAllocation" flags="ng" index="3kFaIK">
         <property id="4321323723355291805" name="replenishAmount" index="39XYQq" />
         <property id="4321323723355291802" name="replenishFrequency" index="39XYQt" />
@@ -1803,16 +1796,10 @@
       <node concept="2GGxJi" id="8bhHoBogV1" role="A3aay">
         <ref role="3tVEyn" node="8bhHoBogyX" resolve="Check Symptoms" />
         <ref role="2GGxGe" node="8bhHoBogN1" resolve="Decide on POC Test" />
-        <node concept="30deo4" id="8bhHoBogV8" role="1hyIAf">
-          <node concept="1Fjl2m" id="8bhHoBogV9" role="30dEs_">
-            <ref role="1DsR7o" node="1xAzJ9Nqhtb" />
-            <node concept="1FjjCm" id="8bhHoBogVa" role="1CySjL" />
-          </node>
-          <node concept="3tEh0H" id="8bhHoBogVb" role="30dEsF">
-            <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-            <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
-            <ref role="3tE8WY" node="2XblIMS17kI" resolve="PHEThreeAlt" />
-          </node>
+        <node concept="3tEh0H" id="8bhHoBogVb" role="1hyIAf">
+          <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
+          <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
+          <ref role="3tE8WY" node="2XblIMS17kI" resolve="PHEThreeAlt" />
         </node>
       </node>
       <node concept="1M3RjT" id="8bhHoBxLHB" role="1M293l">
@@ -1862,6 +1849,7 @@
     </node>
     <node concept="2MhjZa" id="8bhHoBogN1" role="2MhjZp">
       <property role="TrG5h" value="Decide on POC Test" />
+      <property role="3lFixl" value="true" />
       <node concept="2_8ZN7" id="8bhHoBogUY" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
       </node>
@@ -1871,6 +1859,9 @@
       <node concept="2GGxJi" id="8bhHoBoh$V" role="A3aay">
         <ref role="3tVEyn" node="8bhHoBogN1" resolve="Decide on POC Test" />
         <ref role="2GGxGe" node="8bhHoBohrT" resolve="LIAT" />
+      </node>
+      <node concept="1M3RjT" id="4Skof6wvHfJ" role="1M293l">
+        <property role="1M3RjU" value="2" />
       </node>
     </node>
     <node concept="2MhjZa" id="8bhHoBohrT" role="2MhjZp">
@@ -1901,6 +1892,9 @@
         <ref role="3tVEyn" node="8bhHoBoi3f" resolve="Check COVID Contact" />
         <ref role="2GGxGe" node="4Y76Qe1wPcx" resolve="Admit Amber" />
       </node>
+      <node concept="1M3RjT" id="4Skof6ww0um" role="1M293l">
+        <property role="1M3RjU" value="2" />
+      </node>
     </node>
     <node concept="2lDReE" id="4Y76Qe1wPcx" role="2MhjZp">
       <property role="TrG5h" value="Admit Amber" />
@@ -1924,11 +1918,11 @@
     <property role="i3JvV" value="7" />
     <property role="wKqbz" value="60" />
     <node concept="2_0uwW" id="EFW1mYe4_C" role="2_0uzz">
-      <property role="2_0uz2" value="10" />
+      <property role="2_0uz2" value="7" />
       <ref role="2_0uz0" node="av1M7vbJYz" resolve="Doctor" />
     </node>
     <node concept="2_0uwW" id="5Lup6bkacRf" role="2_0uzz">
-      <property role="2_0uz2" value="20" />
+      <property role="2_0uz2" value="12" />
       <ref role="2_0uz0" node="2_JteYPiCHe" resolve="CubicleNurse" />
     </node>
     <node concept="2_0uwW" id="5Lup6bkacRn" role="2_0uzz">
@@ -1936,7 +1930,7 @@
       <ref role="2_0uz0" node="2_JteYPiCG6" resolve="TriageNurse" />
     </node>
     <node concept="2_0uwW" id="1xAzJ9P173A" role="2_0uzz">
-      <property role="2_0uz2" value="20" />
+      <property role="2_0uz2" value="5" />
       <ref role="2_0uz0" node="1xAzJ9NxGdV" resolve="PreAdmissionStaff" />
     </node>
   </node>
@@ -2530,11 +2524,6 @@
       <property role="m3wsY" value="10000" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
       <ref role="VgANK" node="2lOlAdP2IBt" resolve="Ward" />
-      <node concept="h4YGW" id="34hhAWw9VRQ" role="h4YwH">
-        <property role="h4YG0" value="25" />
-        <property role="h0cbi" value="165" />
-        <ref role="h4YGu" node="34hhAWxKdrf" />
-      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WUU" role="j3bMi">
       <property role="TrG5h" value="Lab" />
@@ -2557,7 +2546,7 @@
       <property role="m3A$b" value="20" />
       <property role="m3wsY" value="40" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
-      <property role="1njz_o" value="25" />
+      <property role="1njz_o" value="2" />
       <property role="1njz$z" value="0" />
       <property role="p_dkr" value="0" />
       <ref role="VgANK" node="2lOlAdP2IBt" resolve="Ward" />
@@ -2609,7 +2598,7 @@
       <property role="m3A$b" value="40" />
       <property role="m3wsY" value="1000" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
-      <property role="1njz_o" value="50" />
+      <property role="1njz_o" value="5" />
       <property role="1njz$z" value="0" />
       <property role="p_dkr" value="0" />
       <ref role="VgANK" node="5Lup6bkgRsQ" resolve="NonRespiratoryArea" />
@@ -2624,8 +2613,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf31" role="h4YwH">
+        <property role="h4YG0" value="115" />
+        <property role="h0cbi" value="85" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV1" role="j3bMi">
       <property role="TrG5h" value="NonRespiratoryCubicle2" />
@@ -2637,8 +2631,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf33" role="h4YwH">
+        <property role="h4YG0" value="115" />
+        <property role="h0cbi" value="65" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV2" role="j3bMi">
       <property role="TrG5h" value="NonRespiratoryCubicle3" />
@@ -2650,8 +2649,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf35" role="h4YwH">
+        <property role="h4YG0" value="125" />
+        <property role="h0cbi" value="85" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV3" role="j3bMi">
       <property role="TrG5h" value="NonRespiratoryCubicle4" />
@@ -2663,8 +2667,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf37" role="h4YwH">
+        <property role="h4YG0" value="125" />
+        <property role="h0cbi" value="65" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV4" role="j3bMi">
       <property role="TrG5h" value="NonRespiratoryCubicle5" />
@@ -2676,8 +2685,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf39" role="h4YwH">
+        <property role="h4YG0" value="145" />
+        <property role="h0cbi" value="85" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV5" role="j3bMi">
       <property role="TrG5h" value="NonRespiratoryCubicle6" />
@@ -2689,8 +2703,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3b" role="h4YwH">
+        <property role="h4YG0" value="135" />
+        <property role="h0cbi" value="65" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV6" role="j3bMi">
       <property role="TrG5h" value="NonRespiratoryCubicle7" />
@@ -2702,8 +2721,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3d" role="h4YwH">
+        <property role="h4YG0" value="155" />
+        <property role="h0cbi" value="85" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV7" role="j3bMi">
       <property role="TrG5h" value="NonRespiratoryCubicle8" />
@@ -2715,8 +2739,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3f" role="h4YwH">
+        <property role="h4YG0" value="145" />
+        <property role="h0cbi" value="65" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV8" role="j3bMi">
       <property role="TrG5h" value="NonRespiratoryCubicle9" />
@@ -2728,8 +2757,13 @@
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
-      <property role="p_dkr" value="1" />
+      <property role="p_dkr" value="0" />
       <ref role="VgANK" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3h" role="h4YwH">
+        <property role="h4YG0" value="155" />
+        <property role="h0cbi" value="65" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="1ofb2Ww6WV9" role="j3bMi">
       <property role="TrG5h" value="TaskRoom1" />
@@ -2776,7 +2810,7 @@
       <property role="memz3" value="193" />
       <property role="m3A$7" value="10" />
       <property role="m3A$b" value="5" />
-      <property role="m3wsY" value="10" />
+      <property role="m3wsY" value="10000" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
       <property role="1njz_o" value="0" />
       <property role="1njz$z" value="0" />
@@ -2791,7 +2825,7 @@
       <property role="m3A$b" value="5" />
       <property role="m3wsY" value="3" />
       <property role="376uKC" value="2blVuwUK9bq/ORANGE" />
-      <property role="1njz$z" value="1" />
+      <property role="1njz$z" value="0" />
       <ref role="VgANK" node="5R1$QENtej4" resolve="RadiologyRoom" />
     </node>
     <node concept="j3bLk" id="5R1$QENtejn" role="j3bMi">
@@ -2812,7 +2846,7 @@
       <property role="m3A$7" value="50" />
       <property role="m3A$b" value="20" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
-      <property role="1njz_o" value="20" />
+      <property role="1njz_o" value="2" />
       <property role="m3wsY" value="100" />
       <ref role="VgANK" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -2824,7 +2858,7 @@
       <property role="m3A$b" value="10" />
       <property role="m3wsY" value="15" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
-      <property role="1njz$z" value="11" />
+      <property role="1njz$z" value="1" />
       <ref role="VgANK" node="2lOlAdP2IBt" resolve="Ward" />
     </node>
     <node concept="j3bLk" id="5R1$QENtekv" role="j3bMi">
@@ -2847,6 +2881,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3j" role="h4YwH">
+        <property role="h4YG0" value="210" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENtelk" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleB" />
@@ -2858,6 +2897,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3l" role="h4YwH">
+        <property role="h4YG0" value="225" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENtelK" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleC" />
@@ -2869,6 +2913,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3n" role="h4YwH">
+        <property role="h4YG0" value="240" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENtemd" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleD" />
@@ -2880,6 +2929,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3p" role="h4YwH">
+        <property role="h4YG0" value="240" />
+        <property role="h0cbi" value="180" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENtemF" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleE" />
@@ -2891,6 +2945,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3r" role="h4YwH">
+        <property role="h4YG0" value="240" />
+        <property role="h0cbi" value="165" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENtena" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleF" />
@@ -2902,6 +2961,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3t" role="h4YwH">
+        <property role="h4YG0" value="240" />
+        <property role="h0cbi" value="150" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENtenE" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleG" />
@@ -2913,6 +2977,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3v" role="h4YwH">
+        <property role="h4YG0" value="225" />
+        <property role="h0cbi" value="150" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENteob" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleH" />
@@ -2924,6 +2993,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3x" role="h4YwH">
+        <property role="h4YG0" value="210" />
+        <property role="h0cbi" value="150" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENteoH" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleI" />
@@ -2935,6 +3009,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3z" role="h4YwH">
+        <property role="h4YG0" value="195" />
+        <property role="h0cbi" value="150" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENtepg" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleJ" />
@@ -2946,6 +3025,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3_" role="h4YwH">
+        <property role="h4YG0" value="180" />
+        <property role="h0cbi" value="180" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENtepO" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleK" />
@@ -2957,6 +3041,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3B" role="h4YwH">
+        <property role="h4YG0" value="180" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENteqp" role="j3bMi">
       <property role="TrG5h" value="RespiratoryCubicleL" />
@@ -2968,6 +3057,11 @@
       <property role="m3wsY" value="3" />
       <property role="p_dkr" value="1" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
+      <node concept="h4YGW" id="4Skof6vmf3D" role="h4YwH">
+        <property role="h4YG0" value="195" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
     </node>
     <node concept="j3bLk" id="5R1$QENteqZ" role="j3bMi">
       <property role="TrG5h" value="SideRoom" />
@@ -3453,6 +3547,9 @@
   <node concept="VhMOw" id="EFW1mYOHdw">
     <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="RespiratoryCubicle" />
+    <node concept="1kHjla" id="4Skof6wcCdG" role="3IeprG">
+      <ref role="IYbFp" node="34hhAWxKdrf" />
+    </node>
   </node>
   <node concept="VhMOw" id="EFW1mYOHdO">
     <property role="3GE5qa" value="ED Layout.RoomType" />
@@ -3481,6 +3578,9 @@
   <node concept="VhMOw" id="52K8Ej3Gdk">
     <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="NonRespiratoryCubicle" />
+    <node concept="1kHjla" id="4Skof6wcCdx" role="3IeprG">
+      <ref role="IYbFp" node="34hhAWxKdrf" />
+    </node>
   </node>
   <node concept="VhMOw" id="52K8Ej3GeZ">
     <property role="3GE5qa" value="ED Layout.RoomType" />
@@ -3715,7 +3815,7 @@
     </node>
   </node>
   <node concept="IzEoG" id="34hhAWxKdrf">
-    <property role="IzEow" value="Chair" />
+    <property role="IzEow" value="Bed" />
   </node>
 </model>
 

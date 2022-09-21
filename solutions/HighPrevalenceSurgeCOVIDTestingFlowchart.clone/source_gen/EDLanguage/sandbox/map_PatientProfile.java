@@ -25,10 +25,6 @@ public class map_PatientProfile extends Actor {
     mintMyMaxPatients = 0;
   }
 
-  public map_PatientProfile(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
-    super(space, grid, pstrStartLocation);
-  }
-
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (plstSignals.isEmpty()) {
       return null;

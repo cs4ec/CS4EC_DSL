@@ -26,10 +26,6 @@ public class TriageNurse extends Actor {
     mintMyMaxPatients = 1;
   }
 
-  public TriageNurse(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
-    super(space, grid, pstrStartLocation);
-  }
-
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (!(plstSignals.isEmpty())) {
       if (plstSignals.stream().filter(new Predicate<Signal>() {
@@ -93,12 +89,8 @@ public class TriageNurse extends Actor {
       }
     }
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-        public boolean test(Agent a) {
-          return a.getClass() == patient.class;
-        }
-      })) {
-        return Double.MAX_VALUE;
+      if (pRoom.hasCapacity()) {
+        return Double.MIN_VALUE;
       }
     }
     if (true) {

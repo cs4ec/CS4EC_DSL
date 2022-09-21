@@ -53,6 +53,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptHumanInstance = createDescriptorForHumanInstance();
   /*package*/ final ConceptDescriptor myConceptHumanInstanceFromSignal = createDescriptorForHumanInstanceFromSignal();
   /*package*/ final ConceptDescriptor myConceptIAmAtCondition = createDescriptorForIAmAtCondition();
+  /*package*/ final ConceptDescriptor myConceptInSameRoomCondition = createDescriptorForInSameRoomCondition();
   /*package*/ final ConceptDescriptor myConceptInfectionState = createDescriptorForInfectionState();
   /*package*/ final ConceptDescriptor myConceptIsExactlyOperator = createDescriptorForIsExactlyOperator();
   /*package*/ final ConceptDescriptor myConceptIsLessThanOperator = createDescriptorForIsLessThanOperator();
@@ -60,10 +61,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptMessageSelectionStrategy = createDescriptorForMessageSelectionStrategy();
   /*package*/ final ConceptDescriptor myConceptMoveAction = createDescriptorForMoveAction();
   /*package*/ final ConceptDescriptor myConceptMoveOrder = createDescriptorForMoveOrder();
+  /*package*/ final ConceptDescriptor myConceptMyRoomInstance = createDescriptorForMyRoomInstance();
   /*package*/ final ConceptDescriptor myConceptNewPatientSignal = createDescriptorForNewPatientSignal();
   /*package*/ final ConceptDescriptor myConceptObjectInstance = createDescriptorForObjectInstance();
   /*package*/ final ConceptDescriptor myConceptOccupiableAvailabilityCondition = createDescriptorForOccupiableAvailabilityCondition();
-  /*package*/ final ConceptDescriptor myConceptOccupiableInstance = createDescriptorForOccupiableInstance();
+  /*package*/ final ConceptDescriptor myConceptOccupiableReference = createDescriptorForOccupiableReference();
   /*package*/ final ConceptDescriptor myConceptOccupyAction = createDescriptorForOccupyAction();
   /*package*/ final ConceptDescriptor myConceptOccupyOrder = createDescriptorForOccupyOrder();
   /*package*/ final ConceptDescriptor myConceptOperator = createDescriptorForOperator();
@@ -138,7 +140,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActor, myConceptActorReference, myConceptActorTypeSignal, myConceptAdmitAction, myConceptAgentGenerator, myConceptAgentGeneratorLine, myConceptAggregateAttributeMonitor, myConceptAndCondition, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeDistributionLine, myConceptAttributeDistributionTable, myConceptAttributeExpressionReference, myConceptAttributeMonitor, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptBinaryCondition, myConceptChoice, myConceptCompositeOrder, myConceptCondition, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptDirectSignal, myConceptDischargeAction, myConceptExpressionWrapper, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptIAmAtCondition, myConceptInfectionState, myConceptIsExactlyOperator, myConceptIsLessThanOperator, myConceptKernelFCondition, myConceptMessageSelectionStrategy, myConceptMoveAction, myConceptMoveOrder, myConceptNewPatientSignal, myConceptObjectInstance, myConceptOccupiableAvailabilityCondition, myConceptOccupiableInstance, myConceptOccupyAction, myConceptOccupyOrder, myConceptOperator, myConceptOrder, myConceptOrderPatientAction, myConceptPassiveWaitAction, myConceptPassiveWaitUntil, myConceptPatientInstance, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRelationship, myConceptRemoveRelationshipAction, myConceptRepastParam, myConceptRoomSelectionCondition, myConceptRoomSelectionRule, myConceptRoomSelectionStrategy, myConceptRoomSelectionStrategyLine, myConceptRoomTypeCondition, myConceptRoomTypeIsAvailableCondition, myConceptRoomTypeReference, myConceptSelectClosestRoom, myConceptSelectFirstSignal, myConceptSelectNotRelationshipDataSignal, myConceptSelectRandomSignal, myConceptSelectRelationshipDataSignal, myConceptSelectRoomByCapacity, myConceptSelectRoomByRelationshipToOccupier, myConceptSelectRoomWithNoAgentsOfType, myConceptSelfInstance, myConceptSendSignalAction, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalSelectionRule, myConceptSignalSelectionRuleLine, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptUpdateAttributeAction, myConceptUseResourceAction);
+    return Arrays.asList(myConceptActor, myConceptActorReference, myConceptActorTypeSignal, myConceptAdmitAction, myConceptAgentGenerator, myConceptAgentGeneratorLine, myConceptAggregateAttributeMonitor, myConceptAndCondition, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeDistributionLine, myConceptAttributeDistributionTable, myConceptAttributeExpressionReference, myConceptAttributeMonitor, myConceptAttributeReference, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptBinaryCondition, myConceptChoice, myConceptCompositeOrder, myConceptCondition, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDescription, myConceptDirectSignal, myConceptDischargeAction, myConceptExpressionWrapper, myConceptFollowOrder, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptIAmAtCondition, myConceptInSameRoomCondition, myConceptInfectionState, myConceptIsExactlyOperator, myConceptIsLessThanOperator, myConceptKernelFCondition, myConceptMessageSelectionStrategy, myConceptMoveAction, myConceptMoveOrder, myConceptMyRoomInstance, myConceptNewPatientSignal, myConceptObjectInstance, myConceptOccupiableAvailabilityCondition, myConceptOccupiableReference, myConceptOccupyAction, myConceptOccupyOrder, myConceptOperator, myConceptOrder, myConceptOrderPatientAction, myConceptPassiveWaitAction, myConceptPassiveWaitUntil, myConceptPatientInstance, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptRelationship, myConceptRemoveRelationshipAction, myConceptRepastParam, myConceptRoomSelectionCondition, myConceptRoomSelectionRule, myConceptRoomSelectionStrategy, myConceptRoomSelectionStrategyLine, myConceptRoomTypeCondition, myConceptRoomTypeIsAvailableCondition, myConceptRoomTypeReference, myConceptSelectClosestRoom, myConceptSelectFirstSignal, myConceptSelectNotRelationshipDataSignal, myConceptSelectRandomSignal, myConceptSelectRelationshipDataSignal, myConceptSelectRoomByCapacity, myConceptSelectRoomByRelationshipToOccupier, myConceptSelectRoomWithNoAgentsOfType, myConceptSelfInstance, myConceptSendSignalAction, myConceptSignal, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalSelectionRule, myConceptSignalSelectionRuleLine, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptUpdateAttributeAction, myConceptUseResourceAction);
   }
 
   @Override
@@ -215,6 +217,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptHumanInstanceFromSignal;
       case LanguageConceptSwitch.IAmAtCondition:
         return myConceptIAmAtCondition;
+      case LanguageConceptSwitch.InSameRoomCondition:
+        return myConceptInSameRoomCondition;
       case LanguageConceptSwitch.InfectionState:
         return myConceptInfectionState;
       case LanguageConceptSwitch.IsExactlyOperator:
@@ -229,14 +233,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptMoveAction;
       case LanguageConceptSwitch.MoveOrder:
         return myConceptMoveOrder;
+      case LanguageConceptSwitch.MyRoomInstance:
+        return myConceptMyRoomInstance;
       case LanguageConceptSwitch.NewPatientSignal:
         return myConceptNewPatientSignal;
       case LanguageConceptSwitch.ObjectInstance:
         return myConceptObjectInstance;
       case LanguageConceptSwitch.OccupiableAvailabilityCondition:
         return myConceptOccupiableAvailabilityCondition;
-      case LanguageConceptSwitch.OccupiableInstance:
-        return myConceptOccupiableInstance;
+      case LanguageConceptSwitch.OccupiableReference:
+        return myConceptOccupiableReference;
       case LanguageConceptSwitch.OccupyAction:
         return myConceptOccupyAction;
       case LanguageConceptSwitch.OccupyOrder:
@@ -700,6 +706,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("I am at location condition");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForInSameRoomCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "InSameRoomCondition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4e1460f1a0816ab9L);
+    b.class_(false, false, false);
+    b.super_("AgentLanguage.structure.Condition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ebbb42L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/5626228425388812985");
+    b.version(2);
+    b.aggregate("target", 0x4e1460f1a0816ad5L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a2L).optional(false).ordered(true).multiple(false).origin("5626228425388813013").done();
+    b.alias("I am in same room as");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForInfectionState() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "InfectionState", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4936c0ffdc6342bL);
     b.class_(false, false, false);
@@ -763,6 +779,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("go to");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForMyRoomInstance() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "MyRoomInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4e1460f1a0f8864aL);
+    b.class_(false, false, false);
+    b.super_("AgentLanguage.structure.PlaceInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a3L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/5626228425396618826");
+    b.version(2);
+    b.alias("my room");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForNewPatientSignal() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "NewPatientSignal", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x2faec239055220ccL);
     b.class_(false, false, false);
@@ -792,8 +817,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("Occupiable type is available condition");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForOccupiableInstance() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "OccupiableInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL);
+  private static ConceptDescriptor createDescriptorForOccupiableReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "OccupiableReference", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL);
     b.class_(false, false, false);
     b.super_("AgentLanguage.structure.PlaceInstance", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a3L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);

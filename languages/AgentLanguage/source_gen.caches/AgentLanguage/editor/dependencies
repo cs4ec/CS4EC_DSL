@@ -1452,6 +1452,7 @@
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_HumanInstance" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_HumanInstanceFromSignal" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_IAmAtCondition" />
+    <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_InSameRoomCondition" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_InfectionState" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_IsExactlyOperator" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_IsLessThanOperator" />
@@ -1459,10 +1460,11 @@
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_MessageSelectionStrategy" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_MoveAction" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_MoveOrder" />
+    <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_MyRoomInstance" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_NewPatientSignal" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_ObjectInstance" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_OccupiableAvailabilityCondition" />
-    <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_OccupiableInstance" />
+    <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_OccupiableReference" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_OccupyAction" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_OccupyOrder" />
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_Operator" />
@@ -1514,16 +1516,18 @@
     <classNode dependClassName="AgentLanguage.editor.GrammarCellsSubstituteMenu_UseResourceAction" />
     <classNode dependClassName="AgentLanguage.editor.HumanInstanceFromSignal_Editor" />
     <classNode dependClassName="AgentLanguage.editor.IAmAtCondition_Editor" />
+    <classNode dependClassName="AgentLanguage.editor.InSameRoomCondition_Editor" />
     <classNode dependClassName="AgentLanguage.editor.IsExactlyOperator_Editor" />
     <classNode dependClassName="AgentLanguage.editor.IsLessThanOperator_Editor" />
     <classNode dependClassName="AgentLanguage.editor.KernelFCondition_Editor" />
     <classNode dependClassName="AgentLanguage.editor.MessageSelectionStrategy_Editor" />
     <classNode dependClassName="AgentLanguage.editor.MoveAction_Editor" />
     <classNode dependClassName="AgentLanguage.editor.MoveOrder_Editor" />
+    <classNode dependClassName="AgentLanguage.editor.MyRoomInstance_Editor" />
     <classNode dependClassName="AgentLanguage.editor.NewPatientSignal_Editor" />
     <classNode dependClassName="AgentLanguage.editor.ObjectInstance_Editor" />
     <classNode dependClassName="AgentLanguage.editor.OccupiableAvailabilityCondition_Editor" />
-    <classNode dependClassName="AgentLanguage.editor.OccupiableInstance_Editor" />
+    <classNode dependClassName="AgentLanguage.editor.OccupiableReference_Editor" />
     <classNode dependClassName="AgentLanguage.editor.OccupyAction_Editor" />
     <classNode dependClassName="AgentLanguage.editor.OccupyOrder_Editor" />
     <classNode dependClassName="AgentLanguage.editor.OrderPatientAction_Editor" />
@@ -2354,6 +2358,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
+  <dependency className="AgentLanguage.editor.GrammarCellsSubstituteMenu_InSameRoomCondition">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
   <dependency className="AgentLanguage.editor.GrammarCellsSubstituteMenu_InfectionState">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
@@ -2480,6 +2502,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
+  <dependency className="AgentLanguage.editor.GrammarCellsSubstituteMenu_MyRoomInstance">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
   <dependency className="AgentLanguage.editor.GrammarCellsSubstituteMenu_NewPatientSignal">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
@@ -2534,7 +2574,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
-  <dependency className="AgentLanguage.editor.GrammarCellsSubstituteMenu_OccupiableInstance">
+  <dependency className="AgentLanguage.editor.GrammarCellsSubstituteMenu_OccupiableReference">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -3498,6 +3538,34 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
+  <dependency className="AgentLanguage.editor.InSameRoomCondition_Editor">
+    <classNode dependClassName="AgentLanguage.editor.InSameRoomCondition_EditorBuilder_a" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="AgentLanguage.editor.InSameRoomCondition_EditorBuilder_a">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.impl.cellActions.CellAction_DeleteSmart" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SChildSubstituteInfo" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellMenu.SEmptyContainmentSubstituteInfo" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.CellActionType" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.DefaultSubstituteInfo" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.transformation.SNodeLocation" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SContainmentLink" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
+  </dependency>
   <dependency className="AgentLanguage.editor.IsExactlyOperator_Editor">
     <classNode dependClassName="AgentLanguage.editor.IsExactlyOperator_EditorBuilder_a" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
@@ -3649,6 +3717,24 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
+  <dependency className="AgentLanguage.editor.MyRoomInstance_Editor">
+    <classNode dependClassName="AgentLanguage.editor.MyRoomInstance_EditorBuilder_a" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
+  </dependency>
+  <dependency className="AgentLanguage.editor.MyRoomInstance_EditorBuilder_a">
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Constant" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
+  </dependency>
   <dependency className="AgentLanguage.editor.NewPatientSignal_Editor">
     <classNode dependClassName="AgentLanguage.editor.NewPatientSignal_EditorBuilder_a" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
@@ -3741,14 +3827,14 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.editor.runtime.descriptor.AbstractEditorBuilder" />
   </dependency>
-  <dependency className="AgentLanguage.editor.OccupiableInstance_Editor">
-    <classNode dependClassName="AgentLanguage.editor.OccupiableInstance_EditorBuilder_a" />
+  <dependency className="AgentLanguage.editor.OccupiableReference_Editor">
+    <classNode dependClassName="AgentLanguage.editor.OccupiableReference_EditorBuilder_a" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
-  <dependency className="AgentLanguage.editor.OccupiableInstance_EditorBuilder_a">
+  <dependency className="AgentLanguage.editor.OccupiableReference_EditorBuilder_a">
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Objects" />

@@ -40,8 +40,8 @@
   <dependency className="SimpleActionCard.AC1.CubicleNurse">
     <classNode dependClassName="EDLanguage.sandbox.AmberBayTrigger_eSignal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.LFD" />
-    <classNode dependClassName="EDLanguage.sandbox.LFDExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.LFT" />
+    <classNode dependClassName="EDLanguage.sandbox.LFTExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LIATTrigger_dSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlowTestTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
@@ -113,7 +113,7 @@
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
-    <classNode dependClassName="EDLanguage.sandbox.LFD" />
+    <classNode dependClassName="EDLanguage.sandbox.LFT" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
@@ -174,12 +174,12 @@
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="SimpleActionCard.AC1.LFD">
-    <classNode dependClassName="EDLanguage.sandbox.LFD" />
+  <dependency className="SimpleActionCard.AC1.LFT">
+    <classNode dependClassName="EDLanguage.sandbox.LFT" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
   </dependency>
-  <dependency className="SimpleActionCard.AC1.LFDExecutionTimeMap">
-    <classNode dependClassName="EDLanguage.sandbox.LFDExecutionTimeMap" />
+  <dependency className="SimpleActionCard.AC1.LFTExecutionTimeMap">
+    <classNode dependClassName="EDLanguage.sandbox.LFTExecutionTimeMap" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />
@@ -274,7 +274,7 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.Nurse">
-    <classNode dependClassName="EDLanguage.sandbox.LFD" />
+    <classNode dependClassName="EDLanguage.sandbox.LFT" />
     <classNode dependClassName="EDLanguage.sandbox.Nurse" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
@@ -464,7 +464,7 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.patientGenerator_0">
-    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />
@@ -482,7 +482,7 @@
     <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.patientGenerator_1">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />

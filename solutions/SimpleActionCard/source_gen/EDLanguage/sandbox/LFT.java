@@ -4,16 +4,16 @@ package EDLanguage.sandbox;
 
 import simcore.basicStructures.Resource;
 
-public class LFD extends Resource {
-  private static LFD instance;
+public class LFT extends Resource {
+  private static LFT instance;
 
-  private LFD() {
+  private LFT() {
     super();
   }
 
-  public static LFD getInstance() {
+  public static LFT getInstance() {
     if (instance == null) {
-      instance = new LFD();
+      instance = new LFT();
     }
     return instance;
   }

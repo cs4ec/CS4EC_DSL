@@ -68,6 +68,7 @@
         <property id="4544390881339097912" name="requiresPatient" index="3lFixl" />
         <reference id="188877551434373492" name="resource" index="3tPpTl" />
         <child id="5402567240276710649" name="staffTypeReference" index="2_8HaY" />
+        <child id="3787511550143957399" name="orderPatientLocation" index="_yJwB" />
         <child id="4544390881338972165" name="location" index="3lENdC" />
         <child id="6963522544237016585" name="duration" index="1M293l" />
       </concept>
@@ -143,6 +144,9 @@
         <reference id="4321323723335586258" name="targetResource" index="3b6FNl" />
         <child id="4321323723340506820" name="targetLocation" index="3aPoJ3" />
       </concept>
+      <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableReference" flags="ng" index="1kHjla">
+        <reference id="3535684625553292470" name="occupiable" index="IYbFp" />
+      </concept>
       <concept id="8504720493510951867" name="AgentLanguage.structure.OrderPatientAction" flags="ng" index="3JG_m1">
         <child id="8504720493510951967" name="targetPatient" index="3JG_8_" />
         <child id="8504720493510951878" name="orderContent" index="3JG_nW" />
@@ -176,8 +180,6 @@
     </language>
     <language id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment">
       <concept id="3535684625554910547" name="BuiltEnvironment.structure.OccupiableAllocation" flags="ng" index="h4YGW">
-        <property id="3535684625555883197" name="y" index="h0cbi" />
-        <property id="3535684625554910575" name="x" index="h4YG0" />
         <reference id="3535684625554910577" name="occupiable" index="h4YGu" />
       </concept>
       <concept id="4334763093661093957" name="BuiltEnvironment.structure.RoomInstanceDefinition" flags="ng" index="j3bLk">
@@ -213,7 +215,9 @@
         <reference id="768972137583559222" name="targetContainer" index="2Ovb8z" />
         <child id="768972137592500155" name="sourceFile" index="2PX5YI" />
       </concept>
-      <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw" />
+      <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw">
+        <child id="5626228425383343645" name="PatientOccupiable" index="3IeprG" />
+      </concept>
       <concept id="4321323723309500087" name="BuiltEnvironment.structure.ResourceAllocation" flags="ng" index="3kFaIK">
         <property id="4321323723355291805" name="replenishAmount" index="39XYQq" />
         <property id="4321323723355291802" name="replenishFrequency" index="39XYQt" />
@@ -1779,7 +1783,8 @@
     </node>
     <node concept="2MhjZa" id="8bhHoBogiK" role="2MhjZp">
       <property role="TrG5h" value="Lateral Flow Test" />
-      <ref role="3tPpTl" node="5ivS4t6wkhV" resolve="LFD" />
+      <property role="3lFixl" value="true" />
+      <ref role="3tPpTl" node="5ivS4t6wkhV" resolve="LFT" />
       <node concept="2_8ZN7" id="8bhHoBogkS" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -1792,7 +1797,7 @@
         <node concept="3tEh0H" id="8bhHoBogES" role="1hyIAf">
           <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
           <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
-          <ref role="3tE8WY" node="5ivS4t6wkhV" resolve="LFD" />
+          <ref role="3tE8WY" node="5ivS4t6wkhV" resolve="LFT" />
         </node>
       </node>
       <node concept="2GGxJi" id="8bhHoBogMN" role="A3aay">
@@ -1800,13 +1805,19 @@
         <ref role="2GGxGe" node="8bhHoBogEX" resolve="PCR" />
         <node concept="3tEh0H" id="8bhHoBogMW" role="1hyIAf">
           <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-          <ref role="3tE8WY" node="5ivS4t6wkhV" resolve="LFD" />
+          <ref role="3tE8WY" node="5ivS4t6wkhV" resolve="LFT" />
           <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
         </node>
       </node>
       <node concept="2GGxJi" id="4f00s3RRAbM" role="A3aay">
         <ref role="3tVEyn" node="8bhHoBogiK" resolve="Lateral Flow Test" />
         <ref role="2GGxGe" node="8bhHoBogN1" resolve="LIAT" />
+      </node>
+      <node concept="1M3RjT" id="4Skof6veZSz" role="1M293l">
+        <property role="1M3RjU" value="10" />
+      </node>
+      <node concept="UeIYj" id="4Skof6veZS_" role="_yJwB">
+        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
       </node>
     </node>
     <node concept="2MhjZa" id="8bhHoBogyX" role="2MhjZp">
@@ -1920,7 +1931,7 @@
   </node>
   <node concept="3SEB2C" id="5ivS4t6wkhV">
     <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LFD" />
+    <property role="TrG5h" value="LFT" />
     <node concept="iVyPZ" id="5ivS4t6wkhW" role="iVyS4">
       <property role="iVyOC" value="70" />
       <property role="iVyOR" value="99" />
@@ -2459,7 +2470,7 @@
       <property role="3kFaIZ" value="100" />
       <property role="39XYQq" value="100" />
       <property role="39XYQt" value="1" />
-      <ref role="3kFaIX" node="5ivS4t6wkhV" resolve="LFD" />
+      <ref role="3kFaIX" node="5ivS4t6wkhV" resolve="LFT" />
     </node>
     <node concept="3kFaIK" id="3JSrgvLZc2g" role="2HvXPb">
       <property role="3kFaIZ" value="22" />
@@ -2482,9 +2493,7 @@
       <property role="m3wsY" value="10000" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
       <ref role="VgANK" node="2lOlAdP2IBt" resolve="Ward" />
-      <node concept="h4YGW" id="34hhAWx5$nI" role="h4YwH">
-        <property role="h4YG0" value="25" />
-        <property role="h0cbi" value="165" />
+      <node concept="h4YGW" id="4Skof6vlSMR" role="h4YwH">
         <ref role="h4YGu" node="34hhAWxFbXE" />
       </node>
     </node>
@@ -3393,6 +3402,9 @@
   <node concept="VhMOw" id="EFW1mYOHdw">
     <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="RespiratoryCubicle" />
+    <node concept="1kHjla" id="4Skof6wcCdm" role="3IeprG">
+      <ref role="IYbFp" node="34hhAWxFbXE" />
+    </node>
   </node>
   <node concept="VhMOw" id="EFW1mYOHdO">
     <property role="3GE5qa" value="ED Layout.RoomType" />
@@ -3608,7 +3620,7 @@
           </node>
         </node>
         <node concept="3bm0ZL" id="4f00s3RSamb" role="3VtFpW">
-          <ref role="3b6FNl" node="5ivS4t6wkhV" resolve="LFD" />
+          <ref role="3b6FNl" node="5ivS4t6wkhV" resolve="LFT" />
           <node concept="3JJFmu" id="4f00s3RSamk" role="3aPoJ3" />
         </node>
         <node concept="3JG_m1" id="4f00s3RSanF" role="3VtFpW">

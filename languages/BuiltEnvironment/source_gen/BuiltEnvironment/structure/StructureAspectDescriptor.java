@@ -278,6 +278,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/6750846609944804889");
     b.version(2);
+    b.aggregate("PatientOccupiable", 0x4e1460f1a02df61dL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL).optional(true).ordered(true).multiple(false).origin("5626228425383343645").done();
     b.alias("roomtype");
     return b.create();
   }

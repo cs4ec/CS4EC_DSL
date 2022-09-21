@@ -997,13 +997,13 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="targetObject" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
+      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="7lVoe4xN_mF">
     <property role="EcuMT" value="8465466444624057771" />
     <property role="3GE5qa" value="Structures.Class" />
-    <property role="TrG5h" value="OccupiableInstance" />
+    <property role="TrG5h" value="OccupiableReference" />
     <property role="34LRSv" value="occupiable" />
     <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
     <node concept="1TJgyj" id="34hhAWvUvMQ" role="1TKVEi">
@@ -1156,7 +1156,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="targetOccupiable" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
+      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableReference" />
     </node>
   </node>
   <node concept="25R3W" id="2Rfu8e4We78">
@@ -1567,7 +1567,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="targetObject" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableInstance" />
+      <ref role="20lvS9" node="7lVoe4xN_mF" resolve="OccupiableReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="3JSrgvKC6bQ">
@@ -1781,6 +1781,27 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3VxbR92UVH2" resolve="Condition" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="4Skof6wwmET">
+    <property role="EcuMT" value="5626228425388812985" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="InSameRoomCondition" />
+    <property role="34LRSv" value="I am in same room as" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="4Skof6wwmFl" role="1TKVEi">
+      <property role="IQ2ns" value="5626228425388813013" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpI6ey" resolve="HumanInstance" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4Skof6wY8pa">
+    <property role="EcuMT" value="5626228425396618826" />
+    <property role="3GE5qa" value="Structures.Class" />
+    <property role="TrG5h" value="MyRoomInstance" />
+    <property role="34LRSv" value="my room" />
+    <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
   </node>
 </model>
 

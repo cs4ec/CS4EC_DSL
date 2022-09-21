@@ -179,7 +179,7 @@ public class Nurse extends Actor {
 
     public void execute() {
 
-      ((Room) ToolBox().ReadMap().getCurrentRoom(Nurse.this)).getParentArea().decrementResource(LFD.getInstance());
+      ((Room) ToolBox().ReadMap().getCurrentRoom(Nurse.this)).getParentArea().decrementResource(LFT.getInstance());
     }
   }
   public class OrderAction_e0a extends BehaviourStep {
@@ -280,7 +280,7 @@ public class Nurse extends Actor {
 
     public void execute() {
 
-      ((Room) ToolBox().ReadMap().getCurrentRoom(Nurse.this)).getParentArea().decrementResource(LFD.getInstance());
+      ((Room) ToolBox().ReadMap().getCurrentRoom(Nurse.this)).getParentArea().decrementResource(LFT.getInstance());
     }
   }
   public class OrderAction_e0a_1 extends BehaviourStep {

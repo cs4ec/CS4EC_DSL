@@ -44,6 +44,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_HumanInstance;
   private ConceptPresentation props_HumanInstanceFromSignal;
   private ConceptPresentation props_IAmAtCondition;
+  private ConceptPresentation props_InSameRoomCondition;
   private ConceptPresentation props_InfectionState;
   private ConceptPresentation props_IsExactlyOperator;
   private ConceptPresentation props_IsLessThanOperator;
@@ -51,10 +52,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_MessageSelectionStrategy;
   private ConceptPresentation props_MoveAction;
   private ConceptPresentation props_MoveOrder;
+  private ConceptPresentation props_MyRoomInstance;
   private ConceptPresentation props_NewPatientSignal;
   private ConceptPresentation props_ObjectInstance;
   private ConceptPresentation props_OccupiableAvailabilityCondition;
-  private ConceptPresentation props_OccupiableInstance;
+  private ConceptPresentation props_OccupiableReference;
   private ConceptPresentation props_OccupyAction;
   private ConceptPresentation props_OccupyOrder;
   private ConceptPresentation props_Operator;
@@ -361,6 +363,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IAmAtCondition = cpb.create();
         }
         return props_IAmAtCondition;
+      case LanguageConceptSwitch.InSameRoomCondition:
+        if (props_InSameRoomCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("I am in same room as");
+          props_InSameRoomCondition = cpb.create();
+        }
+        return props_InSameRoomCondition;
       case LanguageConceptSwitch.InfectionState:
         if (props_InfectionState == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -412,6 +421,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MoveOrder = cpb.create();
         }
         return props_MoveOrder;
+      case LanguageConceptSwitch.MyRoomInstance:
+        if (props_MyRoomInstance == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_MyRoomInstance = cpb.create();
+        }
+        return props_MyRoomInstance;
       case LanguageConceptSwitch.NewPatientSignal:
         if (props_NewPatientSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -433,13 +449,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_OccupiableAvailabilityCondition = cpb.create();
         }
         return props_OccupiableAvailabilityCondition;
-      case LanguageConceptSwitch.OccupiableInstance:
-        if (props_OccupiableInstance == null) {
+      case LanguageConceptSwitch.OccupiableReference:
+        if (props_OccupiableReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.presentationByName();
-          props_OccupiableInstance = cpb.create();
+          props_OccupiableReference = cpb.create();
         }
-        return props_OccupiableInstance;
+        return props_OccupiableReference;
       case LanguageConceptSwitch.OccupyAction:
         if (props_OccupyAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

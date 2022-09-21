@@ -3,20 +3,30 @@ package simcore.agents;
 import java.lang.reflect.Field;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.engine.schedule.ISchedule;
+import repast.simphony.engine.schedule.ScheduleParameters;
+import repast.simphony.engine.schedule.ScheduledMethod;
+import repast.simphony.parameter.Parameter;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.continuous.NdPoint;
+import repast.simphony.space.graph.Network;
+import repast.simphony.space.graph.RepastEdge;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
+import repast.simphony.ui.probe.ProbeID;
 import simcore.Signals.Signal;
+import simcore.action.Action;
 import simcore.action.ActionFragment;
+import simcore.action.ActionStep;
 import simcore.action.Behaviour;
 import simcore.action.BehaviourStep;
 import simcore.action.Consequence;
@@ -38,9 +48,12 @@ import simcore.utilities.Tuple;
 public class Agent {
 	// Record the building that the agent is currently inside
 	protected Room curInside;
+	protected static Integer IDFactory = 1;
+	protected Integer myID;
 	public Object placeholderVariable;
 	protected Occupiable curOccupying;
 	protected List<Behaviour> myCurrentActions = new ArrayList<Behaviour>();
+	protected List<Behaviour> myPastActions = new ArrayList<Behaviour>();
 	protected Behaviour myActiveAction;
 	protected List<GridPoint> curPath;
 	protected boolean isIdle;
@@ -54,12 +67,12 @@ public class Agent {
 		this.grid = grid;
 		this.context = context;
 		curInside = null;
-	}
-
-	public Agent(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
-		this.space = space;
-		this.grid = grid;
-		curInside = null;
+		myID = IDFactory;
+		IDFactory++;
+		
+	    ISchedule schedule = RunEnvironment.getInstance().getCurrentSchedule();
+	    ScheduleParameters scheduleParams = ScheduleParameters.createAtEnd(ScheduleParameters.LAST_PRIORITY);
+	    schedule.schedule(scheduleParams, this, "printActivityHistory");
 	}
 
 	public void executeCurrentActions() {
@@ -83,6 +96,9 @@ public class Agent {
 				myActiveAction = null;
 				myCurrentActions.remove(action);
 			}
+
+			action.recordEnd();
+			myPastActions.add(action);
 			return;
 		} 
 		 
@@ -286,9 +302,9 @@ public class Agent {
 
 			targetField.setDouble(this, base);
 
-			ToolBox toolBox = ToolBox();
-			String content = "Time point: " + toolBox.getTime() + " | " + targetField.getName() + ": " + base;
-			toolBox.GetLog().WriteLog(this + "", content);
+//			ToolBox toolBox = ToolBox();
+//			String content = "Time point: " + toolBox.getTime() + " | " + targetField.getName() + ": " + base;
+//			toolBox.GetLog().WriteLog(this + "", content);
 
 		} catch (SecurityException e) {
 			// TODO Auto-generated catch block
@@ -375,8 +391,8 @@ public class Agent {
 		Tuple<Integer, Integer> pdblTopRight = new Tuple<Integer, Integer>(pLoc.getX() + pLoc.getW(),
 				pLoc.getY() + pLoc.getH());
 
-		if (curPoint.getX() > pdblBottomLeft.x && curPoint.getX() < pdblBottomRight.x) {
-			if (curPoint.getY() > pdblBottomLeft.y && curPoint.getY() < pdblTopLeft.y) {
+		if (curPoint.getX() > (pdblBottomLeft.x) && curPoint.getX() < (pdblBottomRight.x)) {
+			if (curPoint.getY() > (pdblBottomLeft.y) && curPoint.getY() < (pdblTopLeft.y)) {
 				return true;
 			}
 		}
@@ -419,5 +435,42 @@ public class Agent {
 	public Behaviour isIdleAction(Signal s) {
 		// Do Nothing
 		return null;
+	}
+	
+	@ProbeID
+	public String agentName() {
+		return myID + "";
+	}
+	
+	@Parameter(usageName="details", displayName="Staff's patients")
+	public String getDetails() {
+		String myPatientList = "";
+		Iterator<RepastEdge<Agent>> myPatients = ((Network) context.getProjection("CurrentPatientAllocations")).getEdges().iterator();
+		while(myPatients.hasNext()) {
+			myPatientList += myPatients.next().getTarget().agentName() + " | ";
+		}
+		
+		return myID + ", my patients: " + myPatientList;
+	}
+	
+	public void printActivityHistory() {
+		ToolBox toolBox = ToolBox();
+		String content = "";
+		
+		for (Behaviour behaviour : myPastActions) {
+			content+=behaviour.getDescription();
+			content+="\n";
+		}
+		
+		content+="\n";
+		content+="Did not finish...";
+		content+="\n";
+		for (Behaviour behaviour : myCurrentActions) {
+			content+=behaviour.getDescription();
+			content+="\n";
+		}
+		
+		
+		toolBox.GetLog().WriteLog(this.getClass().getSimpleName() + " " + this.agentName() + "", content);
 	}
 }

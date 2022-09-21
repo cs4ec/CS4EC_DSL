@@ -12,28 +12,28 @@
 		displayName="Use path finding" type="boolean" defaultValue="false"
 		isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
-  	<parameter name="LFDCOVIDSensitivity"
-  		displayName="LFDCOVIDSensitivity" type="double" defaultValue="70"
+  	<parameter name="LFTCOVIDSensitivity"
+  		displayName="LFTCOVIDSensitivity" type="double" defaultValue="70"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDCOVIDSpecificity"
-  		displayName="LFDCOVIDSpecificity" type="double" defaultValue="99"
+  	<parameter name="LFTCOVIDSpecificity"
+  		displayName="LFTCOVIDSpecificity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDFluASensitivity"
-  		displayName="LFDFluASensitivity" type="double" defaultValue="88"
+  	<parameter name="LFTFluASensitivity"
+  		displayName="LFTFluASensitivity" type="double" defaultValue="88"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDFluASpecificity"
-  		displayName="LFDFluASpecificity" type="double" defaultValue="95"
+  	<parameter name="LFTFluASpecificity"
+  		displayName="LFTFluASpecificity" type="double" defaultValue="95"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDFluBSensitivity"
-  		displayName="LFDFluBSensitivity" type="double" defaultValue="93"
+  	<parameter name="LFTFluBSensitivity"
+  		displayName="LFTFluBSensitivity" type="double" defaultValue="93"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LFDFluBSpecificity"
-  		displayName="LFDFluBSpecificity" type="double" defaultValue="98"
+  	<parameter name="LFTFluBSpecificity"
+  		displayName="LFTFluBSpecificity" type="double" defaultValue="98"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeAltCOVIDSensitivity"

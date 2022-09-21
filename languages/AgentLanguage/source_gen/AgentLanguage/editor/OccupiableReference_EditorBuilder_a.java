@@ -32,11 +32,11 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
-/*package*/ class OccupiableInstance_EditorBuilder_a extends AbstractEditorBuilder {
+/*package*/ class OccupiableReference_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
   private SNode myNode;
 
-  public OccupiableInstance_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
+  public OccupiableReference_EditorBuilder_a(@NotNull EditorContext context, @NotNull SNode node) {
     super(context);
     myNode = node;
   }
@@ -53,7 +53,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private EditorCell createCollection_0() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Indent());
-    editorCell.setCellId("Collection_9cb5bz_a");
+    editorCell.setCellId("Collection_onynot_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
     editorCell.addEditorCell(createConstant_0());
@@ -62,7 +62,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "a");
-    editorCell.setCellId("Constant_9cb5bz_a0");
+    editorCell.setCellId("Constant_onynot_a0");
     editorCell.setDefaultText("");
     return editorCell;
   }
