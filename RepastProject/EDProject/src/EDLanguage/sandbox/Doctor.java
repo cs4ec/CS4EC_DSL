@@ -11,6 +11,8 @@ import simcore.Signals.Signal;
 import java.util.List;
 import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
+import java.util.stream.StreamSupport;
+import repast.simphony.space.graph.RepastEdge;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import java.util.ArrayList;
@@ -18,9 +20,10 @@ import java.util.Comparator;
 import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.basicStructures.Board;
 import repast.simphony.engine.environment.RunEnvironment;
+import simcore.basicStructures.Board;
 import simcore.action.InstantBehaviourStep;
+import java.util.Iterator;
 
 public class Doctor extends Actor {
 
@@ -46,12 +49,20 @@ public class Doctor extends Actor {
       }
       if (plstSignals.stream().filter(new Predicate<Signal>() {
         public boolean test(Signal s) {
-          return ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")) != null;
+          return StreamSupport.stream(((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")).spliterator(), false).filter(new Predicate<RepastEdge<Object>>() {
+            public boolean test(RepastEdge<Object> e) {
+              return e.getSource() == Doctor.this.getClass();
+            }
+          }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(Doctor.this) <= mintMyMaxPatients;
         }
       }).findFirst().orElse(null) != null) {
         return plstSignals.stream().filter(new Predicate<Signal>() {
           public boolean test(Signal s) {
-            return ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")) != null;
+            return StreamSupport.stream(((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")).spliterator(), false).filter(new Predicate<RepastEdge<Object>>() {
+              public boolean test(RepastEdge<Object> e) {
+                return e.getSource() == Doctor.this.getClass();
+              }
+            }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(Doctor.this) <= mintMyMaxPatients;
           }
         }).findFirst().orElse(null);
       }
@@ -109,7 +120,7 @@ public class Doctor extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction");
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_7(behaviourBuilder));
     plstSteps.add(new StayAction_b0a_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -122,6 +133,9 @@ public class Doctor extends Actor {
 
 
   public Behaviour BuildActionFromSignal(Signal s) {
+    if (s.GetData("patient") != null) {
+      ((Network) context.getProjection("CurrentPatientAllocations")).addEdge(this, s.GetData("patient"));
+    }
     switch (s.getName()) {
       case "":
         break;
@@ -202,10 +216,27 @@ public class Doctor extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class SendSignalAction_d0a extends BehaviourStep {
+  public class StayAction_d0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_d0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return (timeExecuted == (120 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
+    }
+  }
+  public class SendSignalAction_e0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_d0a(Behaviour behaviour) {
+    public SendSignalAction_e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -218,10 +249,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_e0a extends BehaviourStep {
+  public class StayAction_f0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_e0a(Behaviour behaviour) {
+    public StayAction_f0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -235,11 +266,11 @@ public class Doctor extends Actor {
 
     }
   }
-  public class MoveAction_a0a_1 extends BehaviourStep {
+  public class MoveAction_a0a_4 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_1(Behaviour behaviour) {
+    public MoveAction_a0a_4(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -295,10 +326,27 @@ public class Doctor extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class SendSignalAction_d0a_1 extends BehaviourStep {
+  public class StayAction_d0a_3 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_d0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return (timeExecuted == (120 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
+    }
+  }
+  public class SendSignalAction_e0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_d0a_1(Behaviour behaviour) {
+    public SendSignalAction_e0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -311,10 +359,10 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_e0a_1 extends BehaviourStep {
+  public class StayAction_f0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_e0a_1(Behaviour behaviour) {
+    public StayAction_f0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -328,11 +376,11 @@ public class Doctor extends Actor {
 
     }
   }
-  public class MoveAction_a0b_1 extends BehaviourStep {
+  public class MoveAction_a0b_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_1(Behaviour behaviour) {
+    public MoveAction_a0b_0(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -440,7 +488,10 @@ public class Doctor extends Actor {
 
     public void execute() {
       Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
-      network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
+      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
+      while (patientStaffAllocations.hasNext()) {
+        network.removeEdge(patientStaffAllocations.next());
+      }
     }
   }
   public class MoveAction_a0b_3 extends BehaviourStep {
@@ -555,14 +606,17 @@ public class Doctor extends Actor {
 
     public void execute() {
       Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
-      network.removeEdge(network.getEdge(this, behaviour.getSignalTrigger().GetData("patient")));
+      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
+      while (patientStaffAllocations.hasNext()) {
+        network.removeEdge(patientStaffAllocations.next());
+      }
     }
   }
-  public class MoveAction_a0a_3 extends BehaviourStep {
+  public class MoveAction_a0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_3(Behaviour behaviour) {
+    public MoveAction_a0a_7(Behaviour behaviour) {
       target = Labaratory.getInstance();
       this.behaviour = behaviour;
     }
@@ -608,11 +662,11 @@ public class Doctor extends Actor {
 
     }
   }
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
+    public MoveAction_a0a_9(Behaviour behaviour) {
       target = Labaratory.getInstance();
       this.behaviour = behaviour;
     }
@@ -666,8 +720,9 @@ public class Doctor extends Actor {
     plstSteps.add(new MoveAction_a0a(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
-    plstSteps.add(new StayAction_e0a(behaviourBuilder));
+    plstSteps.add(new StayAction_d0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_e0a(behaviourBuilder));
+    plstSteps.add(new StayAction_f0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -676,7 +731,7 @@ public class Doctor extends Actor {
   public void InitAdmitActionAdmitAmber_g(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_1(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0b_0(behaviourBuilder));
     plstSteps.add(new MoveAction_b0b(behaviourBuilder));
     plstSteps.add(new OrderAction_c0b(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0b(behaviourBuilder));

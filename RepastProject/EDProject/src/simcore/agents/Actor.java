@@ -103,14 +103,14 @@ public class Actor extends Agent {
 						myActiveAction = signalAction;
 					}
 				} 
-//				else {
-//					// If there are no no signals yet, then I can do my 'isIdleAction' if one exists
-//					Behaviour idleBehaviour = this.isIdleAction(s);
-//					if(idleBehaviour != null) {
-//						myCurrentActions.add(idleBehaviour);
-//						myActiveAction = idleBehaviour;
-//					}
-//				}
+				else {
+					// If there are no no signals yet, then I can do my 'isIdleAction' if one exists
+					Behaviour idleBehaviour = this.isIdleAction(null);
+					if(idleBehaviour != null) {
+						myCurrentActions.add(idleBehaviour);
+						myActiveAction = idleBehaviour;
+					}
+				}
 			} else {
 				Behaviour myCurrentAction = plstReadyActions.get(0);
 				myActiveAction = myCurrentAction;
@@ -119,6 +119,7 @@ public class Actor extends Agent {
 
 		executeCurrentActions();
 	}
+	
 	
 	public void TakeOrder(Order o) {
 		curOrder = o;
@@ -160,9 +161,6 @@ public class Actor extends Agent {
 						
 						// if this agent is in the room..
 						if (targetLocation.WithInside(this)) {
-//							if (((MoveToOrder) order).getOccupiable() != null) {
-//								FindAnOccupiable(((MoveToOrder) order).getOccupiable());
-//							}
 							iterateOrder();
 						}
 					} else {
@@ -215,75 +213,10 @@ public class Actor extends Agent {
 	
 	// Behaviour to select signals. To be overridden in Actor subclasses
 	protected Signal selectSignal(List<Signal> plstSignals) {
-//		if(plstSignals.isEmpty()) {
-//			return null;
-//		}
-//				
-//		// If I can't assign patient to myself, then I can just choose the first signal 
-//		if(mintMyMaxPatients == 0) {
-//			return plstSignals.get(0);
-//		}	
-//		
-//		Map<Signal, Object> pMapSignalsWithMyPastPatients = new HashMap<Signal,Object>();
-//		Map<Signal, Object> pMapSignalsWithFreePatients = new HashMap<Signal,Object>();
-//		Map<Signal, Object> pMapSignalsWithMyPatients = new HashMap<Signal,Object>();
-//		
-//		Network patientNetwork = (Network)context.getProjection("MyPatients");
-//		Network seenPatientNetwork = (Network)context.getProjection("MySeenPatients");
-//		
-//		// Filter only those signals that I meet the pre-condition for
-//		plstSignals = plstSignals.stream().filter(s -> s.checkPreCondition(context)).collect(Collectors.toList());
-//
-//		for (Signal signal : plstSignals) {
-//			Object p = signal.GetData("patient");
-//			if(p != null && (patientNetwork.getEdge(this, p) != null) && patientNetwork.isAdjacent(this, p)) {
-//				pMapSignalsWithMyPatients.put(signal, p);
-//			} else if(p != null && (patientNetwork.getEdge(this, p) != null) && seenPatientNetwork.isAdjacent(this, p)) {
-//				pMapSignalsWithMyPastPatients.put(signal, p);
-//			} 
-//			else if(p != null /**&& p.getMyAssignedStaffOfType(this.getClass()).isEmpty()*/) {
-//				pMapSignalsWithFreePatients.put(signal, p);
-//			}
-//		}
-//		if(pMapSignalsWithMyPatients.isEmpty() && pMapSignalsWithFreePatients.isEmpty() && pMapSignalsWithMyPastPatients.isEmpty()) {
-//			// Currently I cannot do anything as I am at max capacity of patients and there are no tasks for those patients
-//			return null;
-//		} else {
-//			// Look for signals containing my patients. If there is one, take it. 
-//			if(!pMapSignalsWithMyPatients.isEmpty()) {
-//				return (Signal) pMapSignalsWithMyPatients.keySet().toArray()[0];
-//			} else if(!pMapSignalsWithMyPastPatients.isEmpty()) {
-//				return (Signal) pMapSignalsWithMyPastPatients.keySet().toArray()[0];
-//			}
-//			//Otherwise, I am waiting and see if I can take a new case in the meantime...
-//			if(!pMapSignalsWithFreePatients.isEmpty() && patientNetwork.size() != mintMyMaxPatients) {
-//				Signal pSignalNext = (Signal) pMapSignalsWithFreePatients.keySet().toArray()[0];
-//				Object pSignalPatient = pMapSignalsWithFreePatients.get(pSignalNext);
-//				seenPatientNetwork.addEdge(this, pSignalPatient);
-////				pSignalPatient.assignStaff(this);
-//				return pSignalNext;
-//			}
-//		}
-//		
-//		// Otherwise (i.e. I am at max capacity) then I do nothing
 		return null;
 	}
-//	
-//	public void removeRelationship(Agent target) {
-//		Network patientNetwork = (Network)context.getProjection("MyPatients");
-//		Network seenPatientNetwork = (Network)context.getProjection("MySeenPatients");
-//
-//		
-//		if(patientNetwork.isAdjacent(this, target)) {
-//			patientNetwork.removeEdge(patientNetwork.getEdge(this, target));
-//			if(!seenPatientNetwork.isAdjacent(this, target)) {
-//				seenPatientNetwork.addEdge(this,target);
-//			}
-//		}
-//	}
 
 	/**
-	 * ToDo: Add more complex behaviour when assigning a new mission to myself
 	 * @param s Incoming signal to trigger a new Behaviour
 	 */
 	public Behaviour BuildActionFromSignal(Signal s) {

@@ -439,36 +439,33 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getBoolean(_context.getNode(), PROPS.requiresPatient$9L4w) && Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), null);
   }
   public static boolean ifMacro_Condition_3_5(final IfMacroContext _context) {
-    return false;
-  }
-  public static boolean ifMacro_Condition_3_6(final IfMacroContext _context) {
     return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.duration$_Gwm), CONCEPTS.ActionDurationMinutes$_m);
   }
-  public static boolean ifMacro_Condition_3_7(final IfMacroContext _context) {
+  public static boolean ifMacro_Condition_3_6(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), CONCEPTS.DiseaseTest$k4);
   }
-  public static boolean ifMacro_Condition_3_8(final IfMacroContext _context) {
+  public static boolean ifMacro_Condition_3_7(final IfMacroContext _context) {
     return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.duration$_Gwm), CONCEPTS.TimeDistributionTable$1_);
   }
-  public static boolean ifMacro_Condition_3_9(final IfMacroContext _context) {
+  public static boolean ifMacro_Condition_3_8(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), CONCEPTS.DiseaseTest$k4);
   }
-  public static boolean ifMacro_Condition_3_10(final IfMacroContext _context) {
+  public static boolean ifMacro_Condition_3_9(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), CONCEPTS.ObservationTest$BU);
   }
-  public static boolean ifMacro_Condition_3_11(final IfMacroContext _context) {
+  public static boolean ifMacro_Condition_3_10(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), CONCEPTS.DiseaseTest$k4);
+  }
+  public static boolean ifMacro_Condition_3_11(final IfMacroContext _context) {
+    return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), CONCEPTS.ObservationTest$BU);
   }
   public static boolean ifMacro_Condition_3_12(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), CONCEPTS.ObservationTest$BU);
   }
   public static boolean ifMacro_Condition_3_13(final IfMacroContext _context) {
-    return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), null)) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.resource$QlPG), CONCEPTS.ObservationTest$BU);
-  }
-  public static boolean ifMacro_Condition_3_14(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.condition$UnEW), null));
   }
-  public static boolean ifMacro_Condition_3_15(final IfMacroContext _context) {
+  public static boolean ifMacro_Condition_3_14(final IfMacroContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.orderPatientLocation$SPZH) != null;
   }
   public static boolean ifMacro_Condition_7_0(final IfMacroContext _context) {
@@ -659,7 +656,19 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.timeLines$AGLE);
   }
   public static void mappingScript_CodeBlock_23(final MappingScriptContext _context) {
-    List<SNode> rootActions = Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
+
+    List<SNode> rootActionCards = ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb)).where(new IWhereFilter<SNode>() {
+      public boolean accept(final SNode it1) {
+        return Sequence.fromIterable(SLinkOperations.collect(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.DiseaseTest$k4), LINKS.TestingProcess$hIgq)).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it3) {
+            return Objects.equals(SLinkOperations.getTarget(it3, LINKS.actionCard$QzY2), it1);
+          }
+        }).isEmpty();
+      }
+    }).toListSequence();
+
+
+    List<SNode> rootActions = Sequence.fromIterable(SLinkOperations.collectMany(rootActionCards, LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
       public boolean accept(final SNode it) {
         return ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Branch$sq)).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it2) {
@@ -669,14 +678,10 @@ public class QueriesGenerated extends QueryProviderBase {
       }
     }).toListSequence();
 
-    SNode rootActionCard = ListSequence.fromList(rootActions).select(new ISelector<SNode, SNode>() {
-      public SNode select(SNode it) {
-        return SNodeOperations.getNodeAncestor(it, CONCEPTS.ActionCard$eb, false, false);
-      }
-    }).first();
 
-    // Do not include testing sub-process action cards 
-    if (!(Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collect(SModelOperations.roots(_context.getInputModel(), CONCEPTS.DiseaseTest$k4), LINKS.TestingProcess$hIgq), LINKS.actionCard$QzY2)).contains(rootActionCard))) {
+
+
+    for (SNode rootActionCard : ListSequence.fromList(rootActionCards)) {
       SNode newRootAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
       SPropertyOperations.assign(newRootAction, PROPS.name$MnvL, "PatientArrives");
       ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Actions$nh$G)).addElement(newRootAction);
@@ -697,6 +702,7 @@ public class QueriesGenerated extends QueryProviderBase {
       ListSequence.fromList(SLinkOperations.getChildren(rootActionCard, LINKS.Branches$1fde)).addSequence(ListSequence.fromList(newBranches));
 
     }
+
   }
   public static void mappingScript_CodeBlock_27(final MappingScriptContext _context) {
   }
@@ -712,11 +718,18 @@ public class QueriesGenerated extends QueryProviderBase {
       SNode test = (SNode) SLinkOperations.getTarget(parentAction, LINKS.resource$QlPG);
       SNode subProcess = SLinkOperations.getTarget(SLinkOperations.getTarget(test, LINKS.TestingProcess$hIgq), LINKS.actionCard$QzY2);
 
+      // For all actions in the sub-process, their default location is the location of the parent action that calls this sub-process. E.g. If I do an LFT action in a respiratory bay, then by default LFT sub-processes happen in that respiratory bay 
+      for (SNode subAction : ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G))) {
+        if (Objects.equals(SLinkOperations.getTarget(subAction, LINKS.location$2x_J), null)) {
+          SLinkOperations.setTarget(subAction, LINKS.location$2x_J, SNodeOperations.copyNode(SLinkOperations.getTarget(parentAction, LINKS.location$2x_J)));
+        }
+      }
+
       // Create a dummy 'funnel' action at the end of the action card to merge all actions into one  
       final SNode newDummyAction = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action"));
       SPropertyOperations.assign(newDummyAction, PROPS.name$MnvL, "Get Test Result");
       SLinkOperations.setTarget(newDummyAction, LINKS.resource$QlPG, test);
-      SLinkOperations.setTarget(newDummyAction, LINKS.location$2x_J, SLinkOperations.getTarget(parentAction, LINKS.location$2x_J));
+      SLinkOperations.setTarget(newDummyAction, LINKS.location$2x_J, SNodeOperations.copyNode(SLinkOperations.getTarget(parentAction, LINKS.location$2x_J)));
       ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G)).addElement(newDummyAction);
 
       // Copy the staff type of the action 
@@ -749,7 +762,15 @@ public class QueriesGenerated extends QueryProviderBase {
 
       SNode newBranch = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch"));
       SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, parentAction);
-      SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
+      SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, ListSequence.fromList(SLinkOperations.getChildren(subProcess, LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
+        public boolean accept(final SNode it) {
+          return ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Branch$sq)).where(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it2) {
+              return Objects.equals(SLinkOperations.getTarget(it2, LINKS.targetAction$Z7ub), it);
+            }
+          }).isEmpty();
+        }
+      }).findFirst(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return true;
         }
@@ -1186,7 +1207,6 @@ public class QueriesGenerated extends QueryProviderBase {
     imcMethods.put("5626228425387590017", new IfMC(i++));
     imcMethods.put("5626228425390434001", new IfMC(i++));
     imcMethods.put("3692958048407647351", new IfMC(i++));
-    imcMethods.put("3692958048406684605", new IfMC(i++));
     imcMethods.put("6963522544239144565", new IfMC(i++));
     imcMethods.put("4321323723338064347", new IfMC(i++));
     imcMethods.put("6963522544239183625", new IfMC(i++));
@@ -1254,16 +1274,14 @@ public class QueriesGenerated extends QueryProviderBase {
         case 17:
           return QueriesGenerated.ifMacro_Condition_3_14(ctx);
         case 18:
-          return QueriesGenerated.ifMacro_Condition_3_15(ctx);
-        case 19:
           return QueriesGenerated.ifMacro_Condition_7_0(ctx);
-        case 20:
+        case 19:
           return QueriesGenerated.ifMacro_Condition_8_0(ctx);
-        case 21:
+        case 20:
           return QueriesGenerated.ifMacro_Condition_8_1(ctx);
-        case 22:
+        case 21:
           return QueriesGenerated.ifMacro_Condition_13_0(ctx);
-        case 23:
+        case 22:
           return QueriesGenerated.ifMacro_Condition_25_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for if macro %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -1633,11 +1651,11 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink ProcessingTimeLines$Y13M = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0edf5L, 0x16d45e8703e0ee61L, "ProcessingTimeLines");
     /*package*/ static final SContainmentLink staffNumbers$IepE = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e56L, 0x4af9c647eff82ea4L, "staffNumbers");
     /*package*/ static final SContainmentLink timeLines$AGLE = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x20b46d627ba89aaL, 0x20b46d627ba89abL, "timeLines");
+    /*package*/ static final SContainmentLink TestingProcess$hIgq = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, 0x348ff1b011d7b149L, "TestingProcess");
+    /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
     /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
     /*package*/ static final SContainmentLink condition$HxRE = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L, 0x18668ef27386cf03L, "condition");
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
-    /*package*/ static final SContainmentLink TestingProcess$hIgq = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, 0x348ff1b011d7b149L, "TestingProcess");
-    /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
     /*package*/ static final SContainmentLink possibleValue$QY6s = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x5dc1936ab296486eL, "possibleValue");
     /*package*/ static final SContainmentLink attendanceRoute$f8XV = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, 0x18668ef2739f49dfL, "attendanceRoute");
     /*package*/ static final SContainmentLink ArrivalLocation$5hIS = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x637eade0e62ce2b8L, 0xaabf015bf63b5d0L, "ArrivalLocation");

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.function.Predicate;
 import simcore.agents.Agent;
+import repast.simphony.space.graph.Network;
 
 public class patient extends Actor {
 
@@ -94,6 +95,9 @@ public class patient extends Actor {
 
 
   public Behaviour BuildActionFromSignal(Signal s) {
+    if (s.GetData("patient") != null) {
+      ((Network) context.getProjection("CurrentPatientAllocations")).addEdge(this, s.GetData("patient"));
+    }
     switch (s.getName()) {
       case "":
         break;

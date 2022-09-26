@@ -3753,7 +3753,6 @@
     <property role="TrG5h" value="LFD_Testing" />
     <node concept="2MhjZa" id="4Y76Qe1vMgv" role="2MhjZp">
       <property role="TrG5h" value="Wait 5" />
-      <property role="3lFixl" value="true" />
       <node concept="2_8ZN7" id="4Y76Qe1vMgP" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -3772,8 +3771,8 @@
       <node concept="37mRIm" id="4Y76Qe1vMgG" role="37mRID">
         <property role="37mO49" value="5730579165040550943" />
         <node concept="gqqVs" id="4Y76Qe1vMgE" role="37mO4d">
-          <property role="gqqTZ" value="91.0" />
-          <property role="gqqTW" value="33.0" />
+          <property role="gqqTZ" value="89.0" />
+          <property role="gqqTW" value="84.0" />
           <property role="gqqTX" value="102.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -3792,9 +3791,19 @@
       <node concept="37mRIm" id="4Y76Qe1vMhr" role="37mRID">
         <property role="37mO49" value="5730579165040550990" />
         <node concept="gqqVs" id="4Y76Qe1vMhq" role="37mO4d">
-          <property role="gqqTZ" value="112.0" />
-          <property role="gqqTW" value="143.0" />
+          <property role="gqqTZ" value="100.0" />
+          <property role="gqqTW" value="163.0" />
           <property role="gqqTX" value="80.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="4Skof6xl6Vt" role="37mRID">
+        <property role="37mO49" value="5626228425402521241" />
+        <node concept="gqqVs" id="4Skof6xl6Vs" role="37mO4d">
+          <property role="gqqTZ" value="79.0" />
+          <property role="gqqTW" value="9.0" />
+          <property role="gqqTX" value="122.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -3802,7 +3811,6 @@
     </node>
     <node concept="2MhjZa" id="4Y76Qe1vMhe" role="2MhjZp">
       <property role="TrG5h" value="Done" />
-      <property role="3lFixl" value="true" />
       <node concept="2_8ZN7" id="4Y76Qe1vMhn" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -3811,6 +3819,20 @@
       </node>
       <node concept="UeIYj" id="4Y76Qe1wxhn" role="3lENdC">
         <ref role="Udx8D" node="52K8Ejkjl6" resolve="Labaratory" />
+      </node>
+    </node>
+    <node concept="2MhjZa" id="4Skof6xkDqp" role="2MhjZp">
+      <property role="TrG5h" value="Take sample" />
+      <property role="3lFixl" value="true" />
+      <node concept="2_8ZN7" id="4Skof6xkDqE" role="2_8HaY">
+        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
+      </node>
+      <node concept="1M3RjT" id="4Skof6xkDqA" role="1M293l">
+        <property role="1M3RjU" value="2" />
+      </node>
+      <node concept="2GGxJi" id="4Skof6xl6VB" role="A3aay">
+        <ref role="3tVEyn" node="4Skof6xkDqp" resolve="Take sample" />
+        <ref role="2GGxGe" node="4Y76Qe1vMgv" resolve="Wait 5" />
       </node>
     </node>
   </node>

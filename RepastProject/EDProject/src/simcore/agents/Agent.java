@@ -445,13 +445,22 @@ public class Agent {
 	@Parameter(usageName="details", displayName="Staff's patients")
 	public String getDetails() {
 		String myPatientList = "";
-		Iterator<RepastEdge<Agent>> myPatients = ((Network) context.getProjection("CurrentPatientAllocations")).getEdges().iterator();
+		Iterator<RepastEdge<Agent>> myPatients = ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(this).iterator();
 		while(myPatients.hasNext()) {
 			myPatientList += myPatients.next().getTarget().agentName() + " | ";
 		}
 		
 		return myID + ", my patients: " + myPatientList;
 	}
+//	
+//	public string getPatientAllocation() {
+//		
+//		Iterator myPatients = ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(this).iterator();
+//		while (myPatients.hasNext()) {
+//			System.out.println(((Actor)((RepastEdge<Actor>)myPatients.next()).getTarget()).agentName() + ", ");
+//			
+//		}
+//	}
 	
 	public void printActivityHistory() {
 		ToolBox toolBox = ToolBox();

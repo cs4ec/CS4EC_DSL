@@ -67,12 +67,16 @@
         <child id="1068498886295" name="lValue" index="37vLTJ" />
       </concept>
       <concept id="1215695189714" name="jetbrains.mps.baseLanguage.structure.PlusAssignmentExpression" flags="nn" index="d57v9" />
+      <concept id="1153422305557" name="jetbrains.mps.baseLanguage.structure.LessThanOrEqualsExpression" flags="nn" index="2dkUwp" />
       <concept id="4836112446988635817" name="jetbrains.mps.baseLanguage.structure.UndefinedType" flags="in" index="2jxLKc" />
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="8118189177080264853" name="jetbrains.mps.baseLanguage.structure.AlternativeType" flags="ig" index="nSUau">
         <child id="8118189177080264854" name="alternative" index="nSUat" />
       </concept>
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="nn" index="2tJIrI" />
+      <concept id="1076505808687" name="jetbrains.mps.baseLanguage.structure.WhileStatement" flags="nn" index="2$JKZl">
+        <child id="1076505808688" name="condition" index="2$JKZa" />
+      </concept>
       <concept id="1239714755177" name="jetbrains.mps.baseLanguage.structure.AbstractUnaryNumberOperation" flags="nn" index="2$Kvd9">
         <child id="1239714902950" name="expression" index="2$L3a6" />
       </concept>
@@ -2125,6 +2129,61 @@
     <node concept="3clFb_" id="4m3F$LV6j_Y" role="jymVt">
       <property role="TrG5h" value="BuildActionFromSignal" />
       <node concept="3clFbS" id="4m3F$LV6jA1" role="3clF47">
+        <node concept="3clFbJ" id="60svL3qBxp_" role="3cqZAp">
+          <node concept="3clFbS" id="60svL3qBxpB" role="3clFbx">
+            <node concept="3clFbF" id="60svL3qBAa5" role="3cqZAp">
+              <node concept="2OqwBi" id="60svL3qBCuY" role="3clFbG">
+                <node concept="1eOMI4" id="60svL3qBAa3" role="2Oq$k0">
+                  <node concept="10QFUN" id="60svL3qBAa0" role="1eOMHV">
+                    <node concept="3uibUv" id="60svL3qBAau" role="10QFUM">
+                      <ref role="3uigEE" to="ub2k:~Network" resolve="Network" />
+                    </node>
+                    <node concept="2OqwBi" id="60svL3qBASy" role="10QFUP">
+                      <node concept="37vLTw" id="60svL3qBAaS" role="2Oq$k0">
+                        <ref role="3cqZAo" to="uux2:~Agent.context" resolve="context" />
+                      </node>
+                      <node concept="liA8E" id="60svL3qBB_Z" role="2OqNvi">
+                        <ref role="37wK5l" to="d39x:~Context.getProjection(java.lang.String)" resolve="getProjection" />
+                        <node concept="Xl_RD" id="60svL3qBBJj" role="37wK5m">
+                          <property role="Xl_RC" value="CurrentPatientAllocations" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="60svL3qBCRW" role="2OqNvi">
+                  <ref role="37wK5l" to="ub2k:~Network.addEdge(java.lang.Object,java.lang.Object)" resolve="addEdge" />
+                  <node concept="Xjq3P" id="60svL3qBD1M" role="37wK5m" />
+                  <node concept="2OqwBi" id="60svL3qBDxQ" role="37wK5m">
+                    <node concept="37vLTw" id="60svL3qBDpQ" role="2Oq$k0">
+                      <ref role="3cqZAo" node="4m3F$LV6k6i" resolve="s" />
+                    </node>
+                    <node concept="liA8E" id="60svL3qBE48" role="2OqNvi">
+                      <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                      <node concept="Xl_RD" id="60svL3qBE8S" role="37wK5m">
+                        <property role="Xl_RC" value="patient" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3y3z36" id="60svL3qB_PG" role="3clFbw">
+            <node concept="10Nm6u" id="60svL3qBA9b" role="3uHU7w" />
+            <node concept="2OqwBi" id="60svL3qB_sc" role="3uHU7B">
+              <node concept="37vLTw" id="60svL3qB_e9" role="2Oq$k0">
+                <ref role="3cqZAo" node="4m3F$LV6k6i" resolve="s" />
+              </node>
+              <node concept="liA8E" id="60svL3qB_Ha" role="2OqNvi">
+                <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                <node concept="Xl_RD" id="60svL3qB_IB" role="37wK5m">
+                  <property role="Xl_RC" value="patient" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3KaCP$" id="4m3F$LV6kh5" role="3cqZAp">
           <node concept="3KbdKl" id="4m3F$LV6kid" role="3KbHQx">
             <node concept="Xl_RD" id="4m3F$LV6kiQ" role="3Kbmr1" />
@@ -11800,120 +11859,171 @@
         </node>
         <node concept="3Tm1VV" id="1SF32lXSTI" role="1B3o_S" />
         <node concept="3clFbS" id="1SF32lXSTJ" role="3clF47">
-          <node concept="3cpWs8" id="1SF32mvZfT" role="3cqZAp">
-            <node concept="3cpWsn" id="1SF32mvZfU" role="3cpWs9">
+          <node concept="3clFbH" id="60svL3qPyV$" role="3cqZAp" />
+          <node concept="3cpWs8" id="60svL3qPzve" role="3cqZAp">
+            <node concept="3cpWsn" id="60svL3qPzvf" role="3cpWs9">
               <property role="TrG5h" value="s" />
-              <node concept="3uibUv" id="1SF32mvZfV" role="1tU5fm">
+              <node concept="3uibUv" id="60svL3qPzvg" role="1tU5fm">
                 <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
               </node>
-              <node concept="2OqwBi" id="1SF32mvZfW" role="33vP2m">
-                <node concept="2OqwBi" id="1SF32mvZfX" role="2Oq$k0">
-                  <node concept="2OqwBi" id="1SF32mvZfY" role="2Oq$k0">
-                    <node concept="2OqwBi" id="1SF32mvZfZ" role="2Oq$k0">
-                      <node concept="37vLTw" id="1SF32mvZg0" role="2Oq$k0">
+              <node concept="2OqwBi" id="60svL3qQjlF" role="33vP2m">
+                <node concept="2OqwBi" id="60svL3qQgis" role="2Oq$k0">
+                  <node concept="2OqwBi" id="60svL3qPzvj" role="2Oq$k0">
+                    <node concept="2OqwBi" id="60svL3qPzvk" role="2Oq$k0">
+                      <node concept="37vLTw" id="60svL3qPzvl" role="2Oq$k0">
                         <ref role="3cqZAo" node="1SF32lXSUu" resolve="plstSignals" />
                       </node>
-                      <node concept="liA8E" id="1SF32mvZg1" role="2OqNvi">
+                      <node concept="liA8E" id="60svL3qPzvm" role="2OqNvi">
                         <ref role="37wK5l" to="33ny:~Collection.stream()" resolve="stream" />
                       </node>
                     </node>
-                    <node concept="liA8E" id="1SF32mvZg2" role="2OqNvi">
+                    <node concept="liA8E" id="60svL3qPB59" role="2OqNvi">
                       <ref role="37wK5l" to="1ctc:~Stream.filter(java.util.function.Predicate)" resolve="filter" />
-                      <node concept="1bVj0M" id="1SF32mvZg3" role="37wK5m">
-                        <node concept="3clFbS" id="1SF32mvZg4" role="1bW5cS">
-                          <node concept="3clFbF" id="1SF32mvZg5" role="3cqZAp">
-                            <node concept="3y3z36" id="1SF32mvZg6" role="3clFbG">
-                              <node concept="10Nm6u" id="1SF32mvZg7" role="3uHU7w" />
-                              <node concept="2OqwBi" id="1SF32mvZg8" role="3uHU7B">
-                                <node concept="1eOMI4" id="1SF32mvZg9" role="2Oq$k0">
-                                  <node concept="10QFUN" id="1SF32mvZga" role="1eOMHV">
-                                    <node concept="3uibUv" id="1SF32mvZgb" role="10QFUM">
-                                      <ref role="3uigEE" to="ub2k:~Network" resolve="Network" />
-                                    </node>
-                                    <node concept="2OqwBi" id="1SF32mvZgc" role="10QFUP">
-                                      <node concept="37vLTw" id="1SF32mvZgd" role="2Oq$k0">
-                                        <ref role="3cqZAo" to="uux2:~Agent.context" resolve="context" />
+                      <node concept="1bVj0M" id="60svL3qPBgl" role="37wK5m">
+                        <node concept="3clFbS" id="60svL3qPBgm" role="1bW5cS">
+                          <node concept="3clFbF" id="60svL3qPB_u" role="3cqZAp">
+                            <node concept="1Wc70l" id="60svL3qPVR4" role="3clFbG">
+                              <node concept="2dkUwp" id="60svL3qQapl" role="3uHU7w">
+                                <node concept="37vLTw" id="60svL3qQbnd" role="3uHU7w">
+                                  <ref role="3cqZAo" to="uux2:~Actor.mintMyMaxPatients" resolve="mintMyMaxPatients" />
+                                </node>
+                                <node concept="2OqwBi" id="60svL3qQ7xX" role="3uHU7B">
+                                  <node concept="1eOMI4" id="60svL3qQ6X7" role="2Oq$k0">
+                                    <node concept="10QFUN" id="60svL3qQ46C" role="1eOMHV">
+                                      <node concept="3uibUv" id="60svL3qQ50V" role="10QFUM">
+                                        <ref role="3uigEE" to="ub2k:~Network" resolve="Network" />
                                       </node>
-                                      <node concept="liA8E" id="1SF32mvZge" role="2OqNvi">
-                                        <ref role="37wK5l" to="d39x:~Context.getProjection(java.lang.String)" resolve="getProjection" />
-                                        <node concept="Xl_RD" id="1SF32mvZgf" role="37wK5m">
-                                          <property role="Xl_RC" value="" />
-                                          <node concept="17Uvod" id="1SF32mvZgg" role="lGtFl">
-                                            <property role="2qtEX9" value="value" />
-                                            <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
-                                            <node concept="3zFVjK" id="1SF32mvZgh" role="3zH0cK">
-                                              <node concept="3clFbS" id="1SF32mvZgi" role="2VODD2">
-                                                <node concept="3clFbF" id="1SF32mvZgj" role="3cqZAp">
-                                                  <node concept="2OqwBi" id="1SF32mvZgk" role="3clFbG">
-                                                    <node concept="30H73N" id="1SF32mvZgl" role="2Oq$k0" />
-                                                    <node concept="3TrcHB" id="1SF32mvZgm" role="2OqNvi">
-                                                      <ref role="3TsBF5" to="3751:1SF32lXXNI" resolve="relationshipName" />
-                                                    </node>
-                                                  </node>
-                                                </node>
-                                              </node>
-                                            </node>
+                                      <node concept="2OqwBi" id="60svL3qPXT2" role="10QFUP">
+                                        <node concept="37vLTw" id="60svL3qPWqo" role="2Oq$k0">
+                                          <ref role="3cqZAo" to="uux2:~Agent.context" resolve="context" />
+                                        </node>
+                                        <node concept="liA8E" id="60svL3qPZpt" role="2OqNvi">
+                                          <ref role="37wK5l" to="d39x:~Context.getProjection(java.lang.String)" resolve="getProjection" />
+                                          <node concept="Xl_RD" id="60svL3qPZRu" role="37wK5m">
+                                            <property role="Xl_RC" value="CurrentPatientAllocations" />
                                           </node>
                                         </node>
                                       </node>
                                     </node>
+                                  </node>
+                                  <node concept="liA8E" id="60svL3qQ8e4" role="2OqNvi">
+                                    <ref role="37wK5l" to="ub2k:~Network.getDegree(java.lang.Object)" resolve="getDegree" />
+                                    <node concept="Xjq3P" id="60svL3qQ8MS" role="37wK5m" />
                                   </node>
                                 </node>
-                                <node concept="liA8E" id="1SF32mw37p" role="2OqNvi">
-                                  <ref role="37wK5l" to="ub2k:~Network.getEdges(java.lang.Object)" resolve="getEdges" />
-                                  <node concept="2OqwBi" id="1SF32mw6r8" role="37wK5m">
-                                    <node concept="37vLTw" id="1SF32mw5T4" role="2Oq$k0">
-                                      <ref role="3cqZAo" node="1SF32mvZg$" resolve="s" />
-                                    </node>
-                                    <node concept="liA8E" id="1SF32mw71N" role="2OqNvi">
-                                      <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
-                                      <node concept="Xl_RD" id="1SF32mw7Jm" role="37wK5m">
-                                        <property role="Xl_RC" value="" />
-                                        <node concept="17Uvod" id="1SF32mw8ux" role="lGtFl">
-                                          <property role="2qtEX9" value="value" />
-                                          <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
-                                          <node concept="3zFVjK" id="1SF32mw8uy" role="3zH0cK">
-                                            <node concept="3clFbS" id="1SF32mw8uz" role="2VODD2">
-                                              <node concept="3clFbF" id="1SF32mw8ZX" role="3cqZAp">
-                                                <node concept="2OqwBi" id="1SF32mw9mP" role="3clFbG">
-                                                  <node concept="30H73N" id="1SF32mw8ZW" role="2Oq$k0" />
-                                                  <node concept="3TrcHB" id="1SF32mwahL" role="2OqNvi">
-                                                    <ref role="3TsBF5" to="3751:1SF32lXXNK" resolve="dataName" />
+                              </node>
+                              <node concept="3eOVzh" id="60svL3qPUsz" role="3uHU7B">
+                                <node concept="2OqwBi" id="60svL3qPR_L" role="3uHU7B">
+                                  <node concept="2OqwBi" id="60svL3qPJJw" role="2Oq$k0">
+                                    <node concept="2YIFZM" id="60svL3qPBG9" role="2Oq$k0">
+                                      <ref role="37wK5l" to="1ctc:~StreamSupport.stream(java.util.Spliterator,boolean)" resolve="stream" />
+                                      <ref role="1Pybhc" to="1ctc:~StreamSupport" resolve="StreamSupport" />
+                                      <node concept="2OqwBi" id="60svL3qPHy5" role="37wK5m">
+                                        <node concept="2OqwBi" id="60svL3qPFi7" role="2Oq$k0">
+                                          <node concept="1eOMI4" id="60svL3qPBP4" role="2Oq$k0">
+                                            <node concept="10QFUN" id="60svL3qPBP1" role="1eOMHV">
+                                              <node concept="3uibUv" id="60svL3qPBXh" role="10QFUM">
+                                                <ref role="3uigEE" to="ub2k:~Network" resolve="Network" />
+                                              </node>
+                                              <node concept="2OqwBi" id="60svL3qPCTp" role="10QFUP">
+                                                <node concept="37vLTw" id="60svL3qPC90" role="2Oq$k0">
+                                                  <ref role="3cqZAo" to="uux2:~Agent.context" resolve="context" />
+                                                </node>
+                                                <node concept="liA8E" id="60svL3qPDKh" role="2OqNvi">
+                                                  <ref role="37wK5l" to="d39x:~Context.getProjection(java.lang.String)" resolve="getProjection" />
+                                                  <node concept="Xl_RD" id="60svL3qPDY8" role="37wK5m">
+                                                    <property role="Xl_RC" value="CurrentPatientAllocations" />
                                                   </node>
                                                 </node>
                                               </node>
                                             </node>
                                           </node>
+                                          <node concept="liA8E" id="60svL3qPFHq" role="2OqNvi">
+                                            <ref role="37wK5l" to="ub2k:~Network.getEdges(java.lang.Object)" resolve="getEdges" />
+                                            <node concept="2OqwBi" id="60svL3qPGjO" role="37wK5m">
+                                              <node concept="37vLTw" id="60svL3qPFTU" role="2Oq$k0">
+                                                <ref role="3cqZAo" node="60svL3qPBq7" resolve="s" />
+                                              </node>
+                                              <node concept="liA8E" id="60svL3qPGGY" role="2OqNvi">
+                                                <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                                                <node concept="Xl_RD" id="60svL3qPGTr" role="37wK5m">
+                                                  <property role="Xl_RC" value="patient" />
+                                                </node>
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                        <node concept="liA8E" id="60svL3qPIfl" role="2OqNvi">
+                                          <ref role="37wK5l" to="wyt6:~Iterable.spliterator()" resolve="spliterator" />
+                                        </node>
+                                      </node>
+                                      <node concept="3clFbT" id="60svL3qPJ0Q" role="37wK5m" />
+                                    </node>
+                                    <node concept="liA8E" id="60svL3qPLes" role="2OqNvi">
+                                      <ref role="37wK5l" to="1ctc:~Stream.filter(java.util.function.Predicate)" resolve="filter" />
+                                      <node concept="1bVj0M" id="60svL3qPLCm" role="37wK5m">
+                                        <node concept="3clFbS" id="60svL3qPLCn" role="1bW5cS">
+                                          <node concept="3clFbF" id="60svL3qPN7W" role="3cqZAp">
+                                            <node concept="3clFbC" id="60svL3qPORe" role="3clFbG">
+                                              <node concept="2OqwBi" id="60svL3qPPMj" role="3uHU7w">
+                                                <node concept="Xjq3P" id="60svL3qPPf_" role="2Oq$k0" />
+                                                <node concept="liA8E" id="60svL3qPQqX" role="2OqNvi">
+                                                  <ref role="37wK5l" to="wyt6:~Object.getClass()" resolve="getClass" />
+                                                </node>
+                                              </node>
+                                              <node concept="2OqwBi" id="60svL3qPNAN" role="3uHU7B">
+                                                <node concept="37vLTw" id="60svL3qPN7V" role="2Oq$k0">
+                                                  <ref role="3cqZAo" node="60svL3qPMeV" resolve="e" />
+                                                </node>
+                                                <node concept="liA8E" id="60svL3qPOlT" role="2OqNvi">
+                                                  <ref role="37wK5l" to="ub2k:~RepastEdge.getSource()" resolve="getSource" />
+                                                </node>
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                        <node concept="37vLTG" id="60svL3qPMeV" role="1bW2Oz">
+                                          <property role="TrG5h" value="e" />
+                                          <node concept="3uibUv" id="60svL3qPMeU" role="1tU5fm">
+                                            <ref role="3uigEE" to="ub2k:~RepastEdge" resolve="RepastEdge" />
+                                          </node>
                                         </node>
                                       </node>
                                     </node>
                                   </node>
+                                  <node concept="liA8E" id="60svL3qPTjv" role="2OqNvi">
+                                    <ref role="37wK5l" to="1ctc:~Stream.count()" resolve="count" />
+                                  </node>
+                                </node>
+                                <node concept="3cmrfG" id="60svL3qPUtI" role="3uHU7w">
+                                  <property role="3cmrfH" value="1" />
                                 </node>
                               </node>
                             </node>
                           </node>
                         </node>
-                        <node concept="37vLTG" id="1SF32mvZg$" role="1bW2Oz">
+                        <node concept="37vLTG" id="60svL3qPBq7" role="1bW2Oz">
                           <property role="TrG5h" value="s" />
-                          <node concept="3uibUv" id="1SF32mvZg_" role="1tU5fm">
+                          <node concept="3uibUv" id="60svL3qPBq6" role="1tU5fm">
                             <ref role="3uigEE" to="mt9v:~Signal" resolve="Signal" />
                           </node>
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="liA8E" id="1SF32mvZgA" role="2OqNvi">
+                  <node concept="liA8E" id="60svL3qQiDD" role="2OqNvi">
                     <ref role="37wK5l" to="1ctc:~Stream.findFirst()" resolve="findFirst" />
                   </node>
                 </node>
-                <node concept="liA8E" id="1SF32mvZgB" role="2OqNvi">
+                <node concept="liA8E" id="60svL3qQkZl" role="2OqNvi">
                   <ref role="37wK5l" to="33ny:~Optional.orElse(java.lang.Object)" resolve="orElse" />
-                  <node concept="10Nm6u" id="1SF32mvZgC" role="37wK5m" />
+                  <node concept="10Nm6u" id="60svL3qQlw2" role="37wK5m" />
                 </node>
-                <node concept="raruj" id="1SF32m$L9G" role="lGtFl" />
+                <node concept="raruj" id="60svL3qQmAm" role="lGtFl" />
               </node>
             </node>
           </node>
+          <node concept="3clFbH" id="60svL3qPzvY" role="3cqZAp" />
           <node concept="3clFbH" id="1SF32mvYLV" role="3cqZAp" />
         </node>
         <node concept="37vLTG" id="1SF32lXSUu" role="3clF46">
@@ -12160,76 +12270,102 @@
         <node concept="3clFb_" id="1SF32mhEU9" role="jymVt">
           <property role="TrG5h" value="execute" />
           <node concept="3clFbS" id="1SF32mhEUa" role="3clF47">
-            <node concept="3cpWs8" id="1SF32mhOqC" role="3cqZAp">
-              <node concept="3cpWsn" id="1SF32mhOqF" role="3cpWs9">
+            <node concept="3cpWs8" id="60svL3qB4Mw" role="3cqZAp">
+              <node concept="3cpWsn" id="60svL3qB4Mv" role="3cpWs9">
                 <property role="TrG5h" value="network" />
-                <node concept="3uibUv" id="1SF32mhOqB" role="1tU5fm">
+                <node concept="3uibUv" id="60svL3qB4Mx" role="1tU5fm">
                   <ref role="3uigEE" to="ub2k:~Network" resolve="Network" />
                 </node>
-                <node concept="1eOMI4" id="1SF32mhNvC" role="33vP2m">
-                  <node concept="10QFUN" id="1SF32mhN$W" role="1eOMHV">
-                    <node concept="3uibUv" id="1SF32mhNRB" role="10QFUM">
-                      <ref role="3uigEE" to="ub2k:~Network" resolve="Network" />
-                    </node>
-                    <node concept="2OqwBi" id="1SF32mhKYk" role="10QFUP">
-                      <node concept="37vLTw" id="1SF32mhKmR" role="2Oq$k0">
+                <node concept="1eOMI4" id="60svL3qB4MA" role="33vP2m">
+                  <node concept="10QFUN" id="60svL3qB4My" role="1eOMHV">
+                    <node concept="2OqwBi" id="60svL3qBg8m" role="10QFUP">
+                      <node concept="37vLTw" id="60svL3qBg8l" role="2Oq$k0">
                         <ref role="3cqZAo" to="uux2:~Agent.context" resolve="context" />
                       </node>
-                      <node concept="liA8E" id="1SF32mhL$K" role="2OqNvi">
+                      <node concept="liA8E" id="60svL3qBg8n" role="2OqNvi">
                         <ref role="37wK5l" to="d39x:~Context.getProjection(java.lang.String)" resolve="getProjection" />
-                        <node concept="Xl_RD" id="1SF32mhLCV" role="37wK5m">
-                          <property role="Xl_RC" value="" />
-                          <node concept="17Uvod" id="1SF32mhLO7" role="lGtFl">
-                            <property role="2qtEX9" value="value" />
-                            <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475926800/1070475926801" />
-                            <node concept="3zFVjK" id="1SF32mhLO8" role="3zH0cK">
-                              <node concept="3clFbS" id="1SF32mhLO9" role="2VODD2">
-                                <node concept="3clFbF" id="1SF32mhM25" role="3cqZAp">
-                                  <node concept="2OqwBi" id="1SF32mhMfX" role="3clFbG">
-                                    <node concept="30H73N" id="1SF32mhM24" role="2Oq$k0" />
-                                    <node concept="3TrcHB" id="1SF32mhMuU" role="2OqNvi">
-                                      <ref role="3TsBF5" to="3751:1SF32lSZQ9" resolve="relationshipName" />
-                                    </node>
-                                  </node>
-                                </node>
-                              </node>
-                            </node>
-                          </node>
+                        <node concept="Xl_RD" id="60svL3qBg8o" role="37wK5m">
+                          <property role="Xl_RC" value="CurrentPatientAllocations" />
                         </node>
                       </node>
+                    </node>
+                    <node concept="3uibUv" id="60svL3qB4M_" role="10QFUM">
+                      <ref role="3uigEE" to="ub2k:~Network" resolve="Network" />
                     </node>
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3clFbF" id="1SF32mhP4Z" role="3cqZAp">
-              <node concept="2OqwBi" id="1SF32mhPir" role="3clFbG">
-                <node concept="37vLTw" id="1SF32mhP4X" role="2Oq$k0">
-                  <ref role="3cqZAo" node="1SF32mhOqF" resolve="network" />
-                </node>
-                <node concept="liA8E" id="1SF32mhP$T" role="2OqNvi">
-                  <ref role="37wK5l" to="ub2k:~Network.removeEdge(repast.simphony.space.graph.RepastEdge)" resolve="removeEdge" />
-                  <node concept="2OqwBi" id="1SF32mhPSi" role="37wK5m">
-                    <node concept="37vLTw" id="1SF32mhPBq" role="2Oq$k0">
-                      <ref role="3cqZAo" node="1SF32mhOqF" resolve="network" />
+            <node concept="3cpWs8" id="60svL3qB4MC" role="3cqZAp">
+              <node concept="15s5l7" id="60svL3qBtok" role="lGtFl">
+                <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: incompatible types: repast.simphony.space.graph.RepastEdge&lt;Agent&gt; and repast.simphony.space.graph.RepastEdge&lt;Object&gt;&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/7192154694570987550,r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/554301099359820442]&quot;;" />
+                <property role="huDt6" value="Error: incompatible types: repast.simphony.space.graph.RepastEdge&lt;Agent&gt; and repast.simphony.space.graph.RepastEdge&lt;Object&gt;" />
+              </node>
+              <node concept="3cpWsn" id="60svL3qB4MB" role="3cpWs9">
+                <property role="TrG5h" value="patientStaffAllocations" />
+                <node concept="3uibUv" id="60svL3qB4MD" role="1tU5fm">
+                  <ref role="3uigEE" to="33ny:~Iterator" resolve="Iterator" />
+                  <node concept="3uibUv" id="60svL3qB4ME" role="11_B2D">
+                    <ref role="3uigEE" to="ub2k:~RepastEdge" resolve="RepastEdge" />
+                    <node concept="3uibUv" id="60svL3qB4MF" role="11_B2D">
+                      <ref role="3uigEE" to="uux2:~Agent" resolve="Agent" />
                     </node>
-                    <node concept="liA8E" id="1SF32mhQ5c" role="2OqNvi">
-                      <ref role="37wK5l" to="ub2k:~Network.getEdge(java.lang.Object,java.lang.Object)" resolve="getEdge" />
-                      <node concept="Xjq3P" id="1SF32mhQaZ" role="37wK5m" />
-                      <node concept="Xjq3P" id="1SF32mhQtO" role="37wK5m">
-                        <node concept="29HgVG" id="1SF32mhQ$U" role="lGtFl">
-                          <node concept="3NFfHV" id="1SF32mhQ$V" role="3NFExx">
-                            <node concept="3clFbS" id="1SF32mhQ$W" role="2VODD2">
-                              <node concept="3clFbF" id="1SF32mhQ_2" role="3cqZAp">
-                                <node concept="2OqwBi" id="1SF32mhQ$X" role="3clFbG">
-                                  <node concept="3TrEf2" id="1SF32mhQ_0" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="3751:EFW1mZKI4V" resolve="target" />
-                                  </node>
-                                  <node concept="30H73N" id="1SF32mhQ_1" role="2Oq$k0" />
-                                </node>
-                              </node>
-                            </node>
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="60svL3qB4MG" role="33vP2m">
+                  <node concept="2OqwBi" id="60svL3qBggI" role="2Oq$k0">
+                    <node concept="37vLTw" id="60svL3qBggH" role="2Oq$k0">
+                      <ref role="3cqZAo" node="60svL3qB4Mv" resolve="network" />
+                    </node>
+                    <node concept="liA8E" id="60svL3qBggJ" role="2OqNvi">
+                      <ref role="37wK5l" to="ub2k:~Network.getEdges(java.lang.Object)" resolve="getEdges" />
+                      <node concept="2OqwBi" id="60svL3qBsHB" role="37wK5m">
+                        <node concept="2OqwBi" id="60svL3qBs7E" role="2Oq$k0">
+                          <node concept="37vLTw" id="60svL3qBGQy" role="2Oq$k0">
+                            <ref role="3cqZAo" node="1SF32mhETw" resolve="behaviour" />
                           </node>
+                          <node concept="liA8E" id="60svL3qBsvk" role="2OqNvi">
+                            <ref role="37wK5l" to="x5im:~Behaviour.getSignalTrigger()" resolve="getSignalTrigger" />
+                          </node>
+                        </node>
+                        <node concept="liA8E" id="60svL3qBt6v" role="2OqNvi">
+                          <ref role="37wK5l" to="mt9v:~Signal.GetData(java.lang.String)" resolve="GetData" />
+                          <node concept="Xl_RD" id="60svL3qBtem" role="37wK5m">
+                            <property role="Xl_RC" value="patient" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="60svL3qB4MM" role="2OqNvi">
+                    <ref role="37wK5l" to="wyt6:~Iterable.iterator()" resolve="iterator" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="2$JKZl" id="60svL3qB4MT" role="3cqZAp">
+              <node concept="2OqwBi" id="60svL3qBgtt" role="2$JKZa">
+                <node concept="37vLTw" id="60svL3qBgts" role="2Oq$k0">
+                  <ref role="3cqZAo" node="60svL3qB4MB" resolve="patientStaffAllocations" />
+                </node>
+                <node concept="liA8E" id="60svL3qBgtu" role="2OqNvi">
+                  <ref role="37wK5l" to="33ny:~Iterator.hasNext()" resolve="hasNext" />
+                </node>
+              </node>
+              <node concept="3clFbS" id="60svL3qB4MP" role="2LFqv$">
+                <node concept="3clFbF" id="60svL3qB4MQ" role="3cqZAp">
+                  <node concept="2OqwBi" id="60svL3qBg4b" role="3clFbG">
+                    <node concept="37vLTw" id="60svL3qBg4a" role="2Oq$k0">
+                      <ref role="3cqZAo" node="60svL3qB4Mv" resolve="network" />
+                    </node>
+                    <node concept="liA8E" id="60svL3qBg4c" role="2OqNvi">
+                      <ref role="37wK5l" to="ub2k:~Network.removeEdge(repast.simphony.space.graph.RepastEdge)" resolve="removeEdge" />
+                      <node concept="2OqwBi" id="60svL3qBg4d" role="37wK5m">
+                        <node concept="37vLTw" id="60svL3qBg4e" role="2Oq$k0">
+                          <ref role="3cqZAo" node="60svL3qB4MB" resolve="patientStaffAllocations" />
+                        </node>
+                        <node concept="liA8E" id="60svL3qBg4f" role="2OqNvi">
+                          <ref role="37wK5l" to="33ny:~Iterator.next()" resolve="next" />
                         </node>
                       </node>
                     </node>

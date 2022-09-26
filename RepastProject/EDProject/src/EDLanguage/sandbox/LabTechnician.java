@@ -11,6 +11,8 @@ import simcore.Signals.Signal;
 import java.util.List;
 import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
+import java.util.stream.StreamSupport;
+import repast.simphony.space.graph.RepastEdge;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import java.util.ArrayList;
@@ -41,12 +43,20 @@ public class LabTechnician extends Actor {
       }
       if (plstSignals.stream().filter(new Predicate<Signal>() {
         public boolean test(Signal s) {
-          return ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")) != null;
+          return StreamSupport.stream(((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")).spliterator(), false).filter(new Predicate<RepastEdge<Object>>() {
+            public boolean test(RepastEdge<Object> e) {
+              return e.getSource() == LabTechnician.this.getClass();
+            }
+          }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(LabTechnician.this) <= mintMyMaxPatients;
         }
       }).findFirst().orElse(null) != null) {
         return plstSignals.stream().filter(new Predicate<Signal>() {
           public boolean test(Signal s) {
-            return ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")) != null;
+            return StreamSupport.stream(((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")).spliterator(), false).filter(new Predicate<RepastEdge<Object>>() {
+              public boolean test(RepastEdge<Object> e) {
+                return e.getSource() == LabTechnician.this.getClass();
+              }
+            }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(LabTechnician.this) <= mintMyMaxPatients;
           }
         }).findFirst().orElse(null);
       }
@@ -105,6 +115,9 @@ public class LabTechnician extends Actor {
 
 
   public Behaviour BuildActionFromSignal(Signal s) {
+    if (s.GetData("patient") != null) {
+      ((Network) context.getProjection("CurrentPatientAllocations")).addEdge(this, s.GetData("patient"));
+    }
     switch (s.getName()) {
       case "":
         break;
