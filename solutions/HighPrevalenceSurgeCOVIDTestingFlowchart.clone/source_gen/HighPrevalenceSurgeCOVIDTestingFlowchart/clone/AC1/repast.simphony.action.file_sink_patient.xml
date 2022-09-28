@@ -26,6 +26,9 @@
     <string>patientgetRecentCovidContactisNo</string>
     <string>patientgetImmunocompromisedisYes</string>
     <string>patientgetImmunocompromisedisNo</string>
+    <string>patientgetSeverityissevere</string>
+    <string>patientgetSeverityismoderate</string>
+    <string>patientgetSeverityislow</string>
     <string>patientgetLFDCOVIDResultisPositive</string>
     <string>patientgetLFDCOVIDResultisNegative</string>
     <string>patientgetLFDFluAResultisPositive</string>
@@ -53,6 +56,8 @@
     <string>patientgetPHEThreeAltCOVIDResultisPositive</string>
     <string>patientgetPHEThreeAltCOVIDResultisNegative</string>
     <string>patientgetadmittedToisAmberBay</string>
+    <string>patientgetadmittedToisnull</string>
+    <string>patientgetadmittedToisSideRoom</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

@@ -484,6 +484,18 @@
       <node concept="3F0ifn" id="4Y2SMttz1le" role="3EZMnx">
         <property role="3F0ifm" value="days" />
       </node>
+      <node concept="3F0ifn" id="sr1c8PrIac" role="3EZMnx">
+        <property role="3F0ifm" value="Tick Rate:" />
+        <node concept="pVoyu" id="sr1c8PrIbE" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="sr1c8PrIaK" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:7NybO1s8SQz" resolve="secondsPerTick" />
+      </node>
+      <node concept="3F0ifn" id="sr1c8PrIbm" role="3EZMnx">
+        <property role="3F0ifm" value="seconds per tick" />
+      </node>
       <node concept="l2Vlx" id="4FTL$vJY2UX" role="2iSdaV" />
     </node>
   </node>
@@ -2063,13 +2075,11 @@
             <property role="Vbekb" value="g1_tSyq/BOLD_ITALIC" />
           </node>
         </node>
-        <node concept="3EZMnI" id="1xAzJ9Nu91I" role="3EZMnx">
-          <node concept="2iRkQZ" id="1xAzJ9Nu91J" role="2iSdaV" />
-          <node concept="3F2HdR" id="EFW1mY_h9r" role="3EZMnx">
-            <ref role="1NtTu8" to="e88n:EFW1mY_h9p" resolve="attributes" />
-            <node concept="l2Vlx" id="EFW1mY_h9t" role="2czzBx" />
-          </node>
-          <node concept="pVoyu" id="1xAzJ9Nu92c" role="3F10Kt">
+        <node concept="3F2HdR" id="sr1c8PiB5U" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:EFW1mY_h9p" resolve="attributes" />
+          <node concept="2iRkQZ" id="sr1c8PiB5X" role="2czzBx" />
+          <node concept="VPM3Z" id="sr1c8PiB5Y" role="3F10Kt" />
+          <node concept="pVoyu" id="sr1c8PiB6w" role="3F10Kt">
             <property role="VOm3f" value="true" />
           </node>
         </node>
@@ -3151,6 +3161,23 @@
         </node>
       </node>
       <node concept="l2Vlx" id="4ePomJhOlyV" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="sr1c8P9diQ">
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <ref role="1XX52x" to="e88n:sr1c8P9dhZ" resolve="PatientSeverityProperty" />
+    <node concept="3EZMnI" id="sr1c8P9djV" role="2wV5jI">
+      <node concept="3F0ifn" id="sr1c8P9dk2" role="3EZMnx">
+        <property role="3F0ifm" value="Patient Severity" />
+      </node>
+      <node concept="l2Vlx" id="sr1c8P9djY" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="sr1c8P9gPg">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1XX52x" to="e88n:sr1c8P9fkH" resolve="PatientSeverity" />
+    <node concept="PMmxH" id="sr1c8P9gPq" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
     </node>
   </node>
 </model>

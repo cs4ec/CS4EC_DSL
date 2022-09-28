@@ -1086,5 +1086,97 @@
       <node concept="3clFbS" id="4ePomJhOdUO" role="2VODD2" />
     </node>
   </node>
+  <node concept="13h7C7" id="sr1c8P9dk5">
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <ref role="13h7C2" to="e88n:sr1c8P9dhZ" resolve="PatientSeverityProperty" />
+    <node concept="13hLZK" id="sr1c8P9dk6" role="13h7CW">
+      <node concept="3clFbS" id="sr1c8P9dk7" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9e1w" role="3cqZAp">
+          <node concept="2OqwBi" id="sr1c8P9e1x" role="3clFbG">
+            <node concept="2OqwBi" id="sr1c8P9e1y" role="2Oq$k0">
+              <node concept="13iPFW" id="sr1c8P9e1z" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="sr1c8P9e1$" role="2OqNvi">
+                <ref role="3TtcxE" to="e88n:1xAzJ9Jg7oB" resolve="possibleValues" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="sr1c8P9e1_" role="2OqNvi">
+              <node concept="2ShNRf" id="sr1c8P9e1A" role="25WWJ7">
+                <node concept="3zrR0B" id="sr1c8P9e1B" role="2ShVmc">
+                  <node concept="3Tqbb2" id="sr1c8P9e1C" role="3zrR0E">
+                    <ref role="ehGHo" to="e88n:sr1c8P9fdY" resolve="PatientSeverity_Severe" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="sr1c8P9e1D" role="3cqZAp">
+          <node concept="2OqwBi" id="sr1c8P9e1E" role="3clFbG">
+            <node concept="2OqwBi" id="sr1c8P9e1F" role="2Oq$k0">
+              <node concept="13iPFW" id="sr1c8P9e1G" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="sr1c8P9e1H" role="2OqNvi">
+                <ref role="3TtcxE" to="e88n:1xAzJ9Jg7oB" resolve="possibleValues" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="sr1c8P9e1I" role="2OqNvi">
+              <node concept="2ShNRf" id="sr1c8P9e1J" role="25WWJ7">
+                <node concept="3zrR0B" id="sr1c8P9e1K" role="2ShVmc">
+                  <node concept="3Tqbb2" id="sr1c8P9e1L" role="3zrR0E">
+                    <ref role="ehGHo" to="e88n:sr1c8P9fXF" resolve="Patient_Severity_Moderate" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="sr1c8P9e1M" role="3cqZAp">
+          <node concept="2OqwBi" id="sr1c8P9e1N" role="3clFbG">
+            <node concept="2OqwBi" id="sr1c8P9e1O" role="2Oq$k0">
+              <node concept="13iPFW" id="sr1c8P9e1P" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="sr1c8P9e1Q" role="2OqNvi">
+                <ref role="3TtcxE" to="e88n:1xAzJ9Jg7oB" resolve="possibleValues" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="sr1c8P9e1R" role="2OqNvi">
+              <node concept="2ShNRf" id="sr1c8P9e1S" role="25WWJ7">
+                <node concept="3zrR0B" id="sr1c8P9e1T" role="2ShVmc">
+                  <node concept="3Tqbb2" id="sr1c8P9e1U" role="3zrR0E">
+                    <ref role="ehGHo" to="e88n:sr1c8P9g9V" resolve="PatientSeverity_Low" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="sr1c8P9e1V" role="3cqZAp" />
+        <node concept="3clFbF" id="sr1c8P9e1W" role="3cqZAp">
+          <node concept="37vLTI" id="sr1c8P9e1X" role="3clFbG">
+            <node concept="2OqwBi" id="sr1c8P9e1Y" role="37vLTJ">
+              <node concept="13iPFW" id="sr1c8P9e1Z" role="2Oq$k0" />
+              <node concept="3TrcHB" id="sr1c8P9e20" role="2OqNvi">
+                <ref role="3TsBF5" to="e88n:1xAzJ9KWVQG" resolve="name" />
+              </node>
+            </node>
+            <node concept="Xl_RD" id="sr1c8P9fPw" role="37vLTx">
+              <property role="Xl_RC" value="PatientSeverity" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="sr1c8PcZ6u" role="13h7CS">
+      <property role="TrG5h" value="getName" />
+      <ref role="13i0hy" node="1xAzJ9JgcJZ" resolve="getName" />
+      <node concept="3Tm1VV" id="sr1c8PcZ6v" role="1B3o_S" />
+      <node concept="3clFbS" id="sr1c8PcZ6y" role="3clF47">
+        <node concept="3cpWs6" id="sr1c8PcZN1" role="3cqZAp">
+          <node concept="Xl_RD" id="sr1c8PcZ6$" role="3cqZAk">
+            <property role="Xl_RC" value="Severity" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="sr1c8PcZ6z" role="3clF45" />
+    </node>
+  </node>
 </model>
 

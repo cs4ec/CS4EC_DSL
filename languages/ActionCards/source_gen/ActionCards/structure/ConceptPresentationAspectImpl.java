@@ -51,6 +51,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PatientProfile;
   private ConceptPresentation props_PatientPropertyConditional;
   private ConceptPresentation props_PatientPropertyReference;
+  private ConceptPresentation props_PatientSeverity;
+  private ConceptPresentation props_PatientSeverityProperty;
+  private ConceptPresentation props_PatientSeverity_Low;
+  private ConceptPresentation props_PatientSeverity_Severe;
+  private ConceptPresentation props_Patient_Severity_Moderate;
   private ConceptPresentation props_ProcessingTimeLine;
   private ConceptPresentation props_ProcessingTimeTable;
   private ConceptPresentation props_RecentCOVIDContactCondition;
@@ -379,6 +384,41 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientPropertyReference = cpb.create();
         }
         return props_PatientPropertyReference;
+      case LanguageConceptSwitch.PatientSeverity:
+        if (props_PatientSeverity == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("patient severity");
+          props_PatientSeverity = cpb.create();
+        }
+        return props_PatientSeverity;
+      case LanguageConceptSwitch.PatientSeverityProperty:
+        if (props_PatientSeverityProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Patient Severity");
+          props_PatientSeverityProperty = cpb.create();
+        }
+        return props_PatientSeverityProperty;
+      case LanguageConceptSwitch.PatientSeverity_Low:
+        if (props_PatientSeverity_Low == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("low");
+          props_PatientSeverity_Low = cpb.create();
+        }
+        return props_PatientSeverity_Low;
+      case LanguageConceptSwitch.PatientSeverity_Severe:
+        if (props_PatientSeverity_Severe == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("severe");
+          props_PatientSeverity_Severe = cpb.create();
+        }
+        return props_PatientSeverity_Severe;
+      case LanguageConceptSwitch.Patient_Severity_Moderate:
+        if (props_Patient_Severity_Moderate == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("moderate");
+          props_Patient_Severity_Moderate = cpb.create();
+        }
+        return props_Patient_Severity_Moderate;
       case LanguageConceptSwitch.ProcessingTimeLine:
         if (props_ProcessingTimeLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

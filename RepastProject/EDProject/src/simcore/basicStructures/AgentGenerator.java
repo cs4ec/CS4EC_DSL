@@ -32,19 +32,20 @@ public class AgentGenerator {
 		this.context = context;
 	}
 
+	// Based on: https://www.mcs.anl.gov/~zcliu/file/abm-ed-mdl_Zhengchun-Liu.pdf
 	protected void tick() {
 		if(ArrivalPerHour==null) {
 			return;
 		}
 		LocalDateTime timeNow = TimeKeeper.getInstance().getTime();
 	    double tick = RunEnvironment.getInstance().getCurrentSchedule().getTickCount();
-		if(tick == 1.0 || timeNow.getMinute() == 0 && timeNow.getSecond() == 0) {
-			lambda = (60 / (ArrivalPerHour.get(timeNow.getHour()+1)));
+		if(tick == 1.0 || (timeNow.getMinute() == 0 && timeNow.getSecond() == 0)) {
+			lambda = (60.0 / (ArrivalPerHour.get(timeNow.getHour()+1)));
 			int nextInt = RandomHelper.createPoisson(lambda).nextInt();	
 			k =	nextInt;
 		}
 		
-		if(timeNow.getMinute() == k%60 && timeNow.getSecond() == 0) {
+		if(timeNow.getMinute() == k && timeNow.getSecond() == 0) {
 	    	Context context = ContextUtils.getContext (this);
 	    	
 	    	// Perform extensible action upon generation

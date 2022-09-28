@@ -4,7 +4,6 @@ package EDLanguage.sandbox;
 
 import simcore.utilities.Distribution;
 import java.util.HashMap;
-import repast.simphony.engine.environment.RunEnvironment;
 import java.util.Map;
 
 public class CepheidExecutionTimeMap {
@@ -14,8 +13,8 @@ public class CepheidExecutionTimeMap {
   private CepheidExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
-    returnMap.put(5400 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (1 / TotalOccurances)));
-    returnMap.put(7200 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (1 / TotalOccurances)));
+    returnMap.put(90, ((Double) (1 / TotalOccurances)));
+    returnMap.put(120, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

@@ -214,6 +214,33 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
+        <string>patientgetSeverityissevere</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetSeverityissevere</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getSeverityissevere</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetSeverityismoderate</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetSeverityismoderate</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getSeverityismoderate</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetSeverityislow</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetSeverityislow</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getSeverityislow</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
         <string>patientgetLFDCOVIDResultisPositive</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
           <id>patientgetLFDCOVIDResultisPositive</id>
@@ -453,6 +480,24 @@
           <id>patientgetadmittedToisAmberBay</id>
           <className>EDLanguage.sandbox.patient</className>
           <methodName>getadmittedToisAmberBay</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetadmittedToisnull</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetadmittedToisnull</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getadmittedToisnull</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetadmittedToisSideRoom</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetadmittedToisSideRoom</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getadmittedToisSideRoom</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

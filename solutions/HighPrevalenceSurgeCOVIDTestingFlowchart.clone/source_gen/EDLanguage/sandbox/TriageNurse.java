@@ -45,18 +45,18 @@ public class TriageNurse extends Actor {
         public boolean test(Signal s) {
           return StreamSupport.stream(((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")).spliterator(), false).filter(new Predicate<RepastEdge<Object>>() {
             public boolean test(RepastEdge<Object> e) {
-              return e.getSource() == TriageNurse.this.getClass();
+              return e.getSource().getClass() == TriageNurse.class;
             }
-          }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(TriageNurse.this) <= mintMyMaxPatients;
+          }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(TriageNurse.this) < mintMyMaxPatients;
         }
       }).findFirst().orElse(null) != null) {
         return plstSignals.stream().filter(new Predicate<Signal>() {
           public boolean test(Signal s) {
             return StreamSupport.stream(((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")).spliterator(), false).filter(new Predicate<RepastEdge<Object>>() {
               public boolean test(RepastEdge<Object> e) {
-                return e.getSource() == TriageNurse.this.getClass();
+                return e.getSource().getClass() == TriageNurse.class;
               }
-            }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(TriageNurse.this) <= mintMyMaxPatients;
+            }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(TriageNurse.this) < mintMyMaxPatients;
           }
         }).findFirst().orElse(null);
       }

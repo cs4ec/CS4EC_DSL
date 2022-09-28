@@ -12,7 +12,7 @@ public class AdmitAmberTrigger_gSignal extends ActorTypeSignal {
   public AdmitAmberTrigger_gSignal() {
     this.setName("AdmitAmberTrigger_g");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("Doctor");
+    this.AddActor("PreAdmissionStaff");
   }
 
   public boolean checkPreCondition(Context context) {

@@ -7129,7 +7129,7 @@
     </node>
   </node>
   <node concept="3VqkwO" id="7NybO1sfYM7">
-    <property role="3oou0D" value="1" />
+    <property role="3oou0D" value="60" />
     <property role="i3J_M" value="7" />
     <node concept="2mjNtH" id="7NybO1sg0Xa" role="2mjQn4">
       <property role="TrG5h" value="CurrentPatientAllocations" />
@@ -7190,6 +7190,38 @@
                     </node>
                   </node>
                 </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="17Uvod" id="sr1c8PrIuE" role="lGtFl">
+      <property role="2qtEX9" value="secondsPerTick" />
+      <property role="P4ACc" value="1a0150ac-dda5-4129-824e-01dce96fdea4/3838812034270460672/7828349744270410420" />
+      <node concept="3zFVjK" id="sr1c8PrIuF" role="3zH0cK">
+        <node concept="3clFbS" id="sr1c8PrIuG" role="2VODD2">
+          <node concept="3clFbF" id="sr1c8PrIyO" role="3cqZAp">
+            <node concept="2OqwBi" id="sr1c8PrIPh" role="3clFbG">
+              <node concept="30H73N" id="sr1c8PrIyN" role="2Oq$k0" />
+              <node concept="3TrcHB" id="sr1c8PrJ8A" role="2OqNvi">
+                <ref role="3TsBF5" to="e88n:7NybO1s8SQz" resolve="secondsPerTick" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="17Uvod" id="sr1c8PrJba" role="lGtFl">
+      <property role="2qtEX9" value="runDuration" />
+      <property role="P4ACc" value="1a0150ac-dda5-4129-824e-01dce96fdea4/3838812034270460672/5729391434181384789" />
+      <node concept="3zFVjK" id="sr1c8PrJbb" role="3zH0cK">
+        <node concept="3clFbS" id="sr1c8PrJbc" role="2VODD2">
+          <node concept="3clFbF" id="sr1c8PrJkn" role="3cqZAp">
+            <node concept="2OqwBi" id="sr1c8PrJoz" role="3clFbG">
+              <node concept="30H73N" id="sr1c8PrJkm" role="2Oq$k0" />
+              <node concept="3TrcHB" id="sr1c8PrJGE" role="2OqNvi">
+                <ref role="3TsBF5" to="e88n:4Y2SMttz1js" resolve="runDuration" />
               </node>
             </node>
           </node>

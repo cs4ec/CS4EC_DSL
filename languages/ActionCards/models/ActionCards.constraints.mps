@@ -765,5 +765,55 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="sr1c8P9fld">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1M2myG" to="e88n:sr1c8P9fkH" resolve="PatientSeverity" />
+    <node concept="9S07l" id="sr1c8P9fle" role="9Vyp8">
+      <node concept="3clFbS" id="sr1c8P9flf" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9fp9" role="3cqZAp">
+          <node concept="3clFbT" id="sr1c8P9fp8" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="sr1c8P9fx1">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1M2myG" to="e88n:sr1c8P9fdY" resolve="PatientSeverity_Severe" />
+    <node concept="9S07l" id="sr1c8P9fx2" role="9Vyp8">
+      <node concept="3clFbS" id="sr1c8P9fx3" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9fx8" role="3cqZAp">
+          <node concept="3clFbT" id="sr1c8P9fx7" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="sr1c8P9fXR">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1M2myG" to="e88n:sr1c8P9fXF" resolve="Patient_Severity_Moderate" />
+    <node concept="9S07l" id="sr1c8P9fXS" role="9Vyp8">
+      <node concept="3clFbS" id="sr1c8P9fXT" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9g1Z" role="3cqZAp">
+          <node concept="3clFbT" id="sr1c8P9g1Y" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="sr1c8P9ga7">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1M2myG" to="e88n:sr1c8P9g9V" resolve="PatientSeverity_Low" />
+    <node concept="9S07l" id="sr1c8P9ga8" role="9Vyp8">
+      <node concept="3clFbS" id="sr1c8P9ga9" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9gae" role="3cqZAp">
+          <node concept="3clFbT" id="sr1c8P9gad" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

@@ -398,5 +398,31 @@
       <ref role="1YaFvo" to="e88n:4ePomJhOliH" resolve="RoomTypeCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="sr1c8P9h2O">
+    <property role="TrG5h" value="typeof_PatientSeverity" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <node concept="3clFbS" id="sr1c8P9h2P" role="18ibNy">
+      <node concept="1Z5TYs" id="1ofb2Ww00IW" role="3cqZAp">
+        <node concept="mw_s8" id="1ofb2Ww00Jg" role="1ZfhKB">
+          <node concept="2pJPEk" id="1ofb2Ww00Jc" role="mwGJk">
+            <node concept="2pJPED" id="1xAzJ9MuxEH" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:4rZeNQ6OYR8" resolve="StringLiteral" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1ofb2Ww00IZ" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1ofb2Ww00v6" role="mwGJk">
+            <node concept="1YBJjd" id="sr1c8P9h3C" role="1Z2MuG">
+              <ref role="1YBMHb" node="sr1c8P9h2R" resolve="patientSeverity" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="sr1c8P9h2R" role="1YuTPh">
+      <property role="TrG5h" value="patientSeverity" />
+      <ref role="1YaFvo" to="e88n:sr1c8P9fkH" resolve="PatientSeverity" />
+    </node>
+  </node>
 </model>
 

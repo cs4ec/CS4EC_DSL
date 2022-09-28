@@ -30,6 +30,7 @@ public class patient extends Actor {
   public String FluBInfectionStatus = "NotConfigured";
   public String RecentCovidContact = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
+  public String Severity = "NotConfigured";
   public String LFDCOVIDResult = "Incomplete";
   public String LFDFluAResult = "Incomplete";
   public String LFDFluBResult = "Incomplete";
@@ -241,6 +242,24 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getSeverityissevere() {
+    if (this.Severity == "severe") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getSeverityismoderate() {
+    if (this.Severity == "moderate") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getSeverityislow() {
+    if (this.Severity == "low") {
+      return 1;
+    }
+    return 0;
+  }
   public int getLFDCOVIDResultisPositive() {
     if (this.LFDCOVIDResult == "Positive") {
       return 1;
@@ -399,6 +418,18 @@ public class patient extends Actor {
   }
   public int getadmittedToisAmberBay() {
     if (this.admittedTo == "AmberBay") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisnull() {
+    if (this.admittedTo == "") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisSideRoom() {
+    if (this.admittedTo == "SideRoom") {
       return 1;
     }
     return 0;

@@ -12,7 +12,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,83,0" name="ActionCards.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,91,0" name="ActionCards.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876458087651">
@@ -1197,6 +1197,170 @@
       <unit id="4878912887035352761" at="43,0,46,0" name="ActionCards.constraints.RoomTypeCondition_Constraints$CONCEPTS" />
       <unit id="4878912887035352761" at="25,15,36,5" name="ActionCards.constraints.RoomTypeCondition_Constraints$1" />
       <unit id="4878912887035352761" at="18,0,47,0" name="ActionCards.constraints.RoomTypeCondition_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/512008214798464333">
+    <file name="PatientSeverity_Constraints.java">
+      <node id="512008214798464333" at="19,40,20,39" concept="9" />
+      <node id="512008214798464333" at="27,127,28,128" concept="4" />
+      <node id="512008214798464333" at="28,128,29,0" concept="6" />
+      <node id="512008214798464333" at="30,55,31,71" concept="1" />
+      <node id="512008214798464333" at="32,9,33,0" concept="6" />
+      <node id="512008214798464333" at="33,0,34,22" concept="5" />
+      <node id="512008214798464585" at="38,128,39,17" concept="5" />
+      <node id="512008214798464333" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="512008214798464333" at="44,0,45,0" concept="7" trace="PatientSeverity$7A" />
+      <node id="512008214798464333" at="19,0,22,0" concept="0" trace="PatientSeverity_Constraints#()V" />
+      <node id="512008214798464333" at="29,0,32,9" concept="2" />
+      <node id="512008214798464333" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="512008214798464333" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="512008214798464333" at="24,103,36,6" concept="5" />
+      <node id="512008214798464333" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="512008214798464333" at="19,40,20,39" />
+      <scope id="512008214798464333" at="30,55,31,71" />
+      <scope id="512008214798464335" at="38,128,39,17" />
+      <scope id="512008214798464333" at="19,0,22,0" />
+      <scope id="512008214798464333" at="38,0,41,0">
+        <var name="childConcept" id="512008214798464333" />
+        <var name="link" id="512008214798464333" />
+        <var name="node" id="512008214798464333" />
+        <var name="parentNode" id="512008214798464333" />
+      </scope>
+      <scope id="512008214798464333" at="27,127,34,22">
+        <var name="result" id="512008214798464333" />
+      </scope>
+      <scope id="512008214798464333" at="26,0,36,0">
+        <var name="checkingNodeContext" id="512008214798464333" />
+        <var name="context" id="512008214798464333" />
+      </scope>
+      <scope id="512008214798464333" at="24,103,36,6" />
+      <scope id="512008214798464333" at="23,0,38,0" />
+      <unit id="512008214798464333" at="43,0,46,0" name="ActionCards.constraints.PatientSeverity_Constraints$CONCEPTS" />
+      <unit id="512008214798464333" at="25,15,36,5" name="ActionCards.constraints.PatientSeverity_Constraints$1" />
+      <unit id="512008214798464333" at="18,0,47,0" name="ActionCards.constraints.PatientSeverity_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/512008214798465089">
+    <file name="PatientSeverity_Severe_Constraints.java">
+      <node id="512008214798465089" at="19,47,20,46" concept="9" />
+      <node id="512008214798465089" at="27,127,28,128" concept="4" />
+      <node id="512008214798465089" at="28,128,29,0" concept="6" />
+      <node id="512008214798465089" at="30,55,31,71" concept="1" />
+      <node id="512008214798465089" at="32,9,33,0" concept="6" />
+      <node id="512008214798465089" at="33,0,34,22" concept="5" />
+      <node id="512008214798465096" at="38,128,39,16" concept="5" />
+      <node id="512008214798465089" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="512008214798465089" at="44,0,45,0" concept="7" trace="PatientSeverity_Severe$DC" />
+      <node id="512008214798465089" at="19,0,22,0" concept="0" trace="PatientSeverity_Severe_Constraints#()V" />
+      <node id="512008214798465089" at="29,0,32,9" concept="2" />
+      <node id="512008214798465089" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="512008214798465089" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="512008214798465089" at="24,103,36,6" concept="5" />
+      <node id="512008214798465089" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="512008214798465089" at="19,47,20,46" />
+      <scope id="512008214798465089" at="30,55,31,71" />
+      <scope id="512008214798465091" at="38,128,39,16" />
+      <scope id="512008214798465089" at="19,0,22,0" />
+      <scope id="512008214798465089" at="38,0,41,0">
+        <var name="childConcept" id="512008214798465089" />
+        <var name="link" id="512008214798465089" />
+        <var name="node" id="512008214798465089" />
+        <var name="parentNode" id="512008214798465089" />
+      </scope>
+      <scope id="512008214798465089" at="27,127,34,22">
+        <var name="result" id="512008214798465089" />
+      </scope>
+      <scope id="512008214798465089" at="26,0,36,0">
+        <var name="checkingNodeContext" id="512008214798465089" />
+        <var name="context" id="512008214798465089" />
+      </scope>
+      <scope id="512008214798465089" at="24,103,36,6" />
+      <scope id="512008214798465089" at="23,0,38,0" />
+      <unit id="512008214798465089" at="43,0,46,0" name="ActionCards.constraints.PatientSeverity_Severe_Constraints$CONCEPTS" />
+      <unit id="512008214798465089" at="25,15,36,5" name="ActionCards.constraints.PatientSeverity_Severe_Constraints$1" />
+      <unit id="512008214798465089" at="18,0,47,0" name="ActionCards.constraints.PatientSeverity_Severe_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/512008214798466935">
+    <file name="Patient_Severity_Moderate_Constraints.java">
+      <node id="512008214798466935" at="19,50,20,49" concept="9" />
+      <node id="512008214798466935" at="27,127,28,128" concept="4" />
+      <node id="512008214798466935" at="28,128,29,0" concept="6" />
+      <node id="512008214798466935" at="30,55,31,71" concept="1" />
+      <node id="512008214798466935" at="32,9,33,0" concept="6" />
+      <node id="512008214798466935" at="33,0,34,22" concept="5" />
+      <node id="512008214798467199" at="38,128,39,16" concept="5" />
+      <node id="512008214798466935" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="512008214798466935" at="44,0,45,0" concept="7" trace="Patient_Severity_Moderate$by" />
+      <node id="512008214798466935" at="19,0,22,0" concept="0" trace="Patient_Severity_Moderate_Constraints#()V" />
+      <node id="512008214798466935" at="29,0,32,9" concept="2" />
+      <node id="512008214798466935" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="512008214798466935" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="512008214798466935" at="24,103,36,6" concept="5" />
+      <node id="512008214798466935" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="512008214798466935" at="19,50,20,49" />
+      <scope id="512008214798466935" at="30,55,31,71" />
+      <scope id="512008214798466937" at="38,128,39,16" />
+      <scope id="512008214798466935" at="19,0,22,0" />
+      <scope id="512008214798466935" at="38,0,41,0">
+        <var name="childConcept" id="512008214798466935" />
+        <var name="link" id="512008214798466935" />
+        <var name="node" id="512008214798466935" />
+        <var name="parentNode" id="512008214798466935" />
+      </scope>
+      <scope id="512008214798466935" at="27,127,34,22">
+        <var name="result" id="512008214798466935" />
+      </scope>
+      <scope id="512008214798466935" at="26,0,36,0">
+        <var name="checkingNodeContext" id="512008214798466935" />
+        <var name="context" id="512008214798466935" />
+      </scope>
+      <scope id="512008214798466935" at="24,103,36,6" />
+      <scope id="512008214798466935" at="23,0,38,0" />
+      <unit id="512008214798466935" at="43,0,46,0" name="ActionCards.constraints.Patient_Severity_Moderate_Constraints$CONCEPTS" />
+      <unit id="512008214798466935" at="25,15,36,5" name="ActionCards.constraints.Patient_Severity_Moderate_Constraints$1" />
+      <unit id="512008214798466935" at="18,0,47,0" name="ActionCards.constraints.Patient_Severity_Moderate_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/512008214798467719">
+    <file name="PatientSeverity_Low_Constraints.java">
+      <node id="512008214798467719" at="19,44,20,43" concept="9" />
+      <node id="512008214798467719" at="27,127,28,128" concept="4" />
+      <node id="512008214798467719" at="28,128,29,0" concept="6" />
+      <node id="512008214798467719" at="30,55,31,71" concept="1" />
+      <node id="512008214798467719" at="32,9,33,0" concept="6" />
+      <node id="512008214798467719" at="33,0,34,22" concept="5" />
+      <node id="512008214798467726" at="38,128,39,16" concept="5" />
+      <node id="512008214798467719" at="41,0,42,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="512008214798467719" at="44,0,45,0" concept="7" trace="PatientSeverity_Low$Ev" />
+      <node id="512008214798467719" at="19,0,22,0" concept="0" trace="PatientSeverity_Low_Constraints#()V" />
+      <node id="512008214798467719" at="29,0,32,9" concept="2" />
+      <node id="512008214798467719" at="38,0,41,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="512008214798467719" at="26,0,36,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="512008214798467719" at="24,103,36,6" concept="5" />
+      <node id="512008214798467719" at="23,0,38,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="512008214798467719" at="19,44,20,43" />
+      <scope id="512008214798467719" at="30,55,31,71" />
+      <scope id="512008214798467721" at="38,128,39,16" />
+      <scope id="512008214798467719" at="19,0,22,0" />
+      <scope id="512008214798467719" at="38,0,41,0">
+        <var name="childConcept" id="512008214798467719" />
+        <var name="link" id="512008214798467719" />
+        <var name="node" id="512008214798467719" />
+        <var name="parentNode" id="512008214798467719" />
+      </scope>
+      <scope id="512008214798467719" at="27,127,34,22">
+        <var name="result" id="512008214798467719" />
+      </scope>
+      <scope id="512008214798467719" at="26,0,36,0">
+        <var name="checkingNodeContext" id="512008214798467719" />
+        <var name="context" id="512008214798467719" />
+      </scope>
+      <scope id="512008214798467719" at="24,103,36,6" />
+      <scope id="512008214798467719" at="23,0,38,0" />
+      <unit id="512008214798467719" at="43,0,46,0" name="ActionCards.constraints.PatientSeverity_Low_Constraints$CONCEPTS" />
+      <unit id="512008214798467719" at="25,15,36,5" name="ActionCards.constraints.PatientSeverity_Low_Constraints$1" />
+      <unit id="512008214798467719" at="18,0,47,0" name="ActionCards.constraints.PatientSeverity_Low_Constraints" />
     </file>
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/5381978332891550871">

@@ -1038,5 +1038,43 @@
     <property role="TrG5h" value="RoomSelectionCondition" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
   </node>
+  <node concept="1TIwiD" id="sr1c8P9dhZ">
+    <property role="EcuMT" value="512008214798455935" />
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <property role="TrG5h" value="PatientSeverityProperty" />
+    <property role="34LRSv" value="Patient Severity" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="sr1c8P9di9" role="PzmwI">
+      <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9fdY">
+    <property role="EcuMT" value="512008214798463870" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <property role="TrG5h" value="PatientSeverity_Severe" />
+    <property role="34LRSv" value="severe" />
+    <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9fkH">
+    <property role="EcuMT" value="512008214798464301" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <property role="TrG5h" value="PatientSeverity" />
+    <property role="34LRSv" value="patient severity" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9fXF">
+    <property role="EcuMT" value="512008214798466923" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <property role="TrG5h" value="Patient_Severity_Moderate" />
+    <property role="34LRSv" value="moderate" />
+    <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9g9V">
+    <property role="EcuMT" value="512008214798467707" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <property role="TrG5h" value="PatientSeverity_Low" />
+    <property role="34LRSv" value="low" />
+    <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+  </node>
 </model>
 
