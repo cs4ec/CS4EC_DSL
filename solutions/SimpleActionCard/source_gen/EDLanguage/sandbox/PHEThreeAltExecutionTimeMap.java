@@ -4,7 +4,6 @@ package EDLanguage.sandbox;
 
 import simcore.utilities.Distribution;
 import java.util.HashMap;
-import repast.simphony.engine.environment.RunEnvironment;
 import java.util.Map;
 
 public class PHEThreeAltExecutionTimeMap {
@@ -14,8 +13,8 @@ public class PHEThreeAltExecutionTimeMap {
   private PHEThreeAltExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
-    returnMap.put(300 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (1 / TotalOccurances)));
-    returnMap.put(360 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (1 / TotalOccurances)));
+    returnMap.put(5, ((Double) (1 / TotalOccurances)));
+    returnMap.put(6, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

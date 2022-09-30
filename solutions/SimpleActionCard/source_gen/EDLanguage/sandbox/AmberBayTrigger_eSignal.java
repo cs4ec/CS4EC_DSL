@@ -18,7 +18,7 @@ public class AmberBayTrigger_eSignal extends ActorTypeSignal {
   public boolean checkPreCondition(Context context) {
     if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(AmberBay.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
-        return !(r.isFull());
+        return r.hasCapacity();
       }
     }).findAny().isPresent()) {
       return true;

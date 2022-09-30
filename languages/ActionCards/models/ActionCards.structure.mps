@@ -1076,5 +1076,84 @@
     <property role="34LRSv" value="low" />
     <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
   </node>
+  <node concept="1TIwiD" id="3mDt9dhI7l$">
+    <property role="EcuMT" value="3866749931154339172" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="CompositeTest" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="composite test" />
+    <ref role="1TJDcQ" node="6MzSDQOui5f" resolve="Test" />
+    <node concept="1TJgyj" id="3mDt9dhI7lB" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154339175" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="tests" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="6MzSDQOui5f" resolve="Test" />
+    </node>
+    <node concept="1TJgyj" id="3mDt9dhI7lD" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154339177" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="testSelectionStrategy" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3mDt9dhI7lG" resolve="TestSelectionStrategy" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhI7lG">
+    <property role="EcuMT" value="3866749931154339180" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestSelectionStrategy" />
+    <property role="34LRSv" value="test selection strategy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhI7lH">
+    <property role="EcuMT" value="3866749931154339181" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestSelectionRuleLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3mDt9dhI7lK" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154339184" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rule" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3mDt9dhI7lM" resolve="TestSelectionRule" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhI7lM">
+    <property role="EcuMT" value="3866749931154339186" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestSelectionRule" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhIeZN">
+    <property role="EcuMT" value="3866749931154370547" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ProbabilityDistribution" />
+    <property role="34LRSv" value="probability distribution" />
+    <ref role="1TJDcQ" node="3mDt9dhI7lG" resolve="TestSelectionStrategy" />
+    <node concept="1TJgyj" id="3mDt9dhIf1E" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154370666" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3mDt9dhIf0e" resolve="ProbabilityDistributionLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhIf0e">
+    <property role="EcuMT" value="3866749931154370574" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ProbabilityDistributionLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3mDt9dhIf0f" role="1TKVEl">
+      <property role="IQ2nx" value="3866749931154370575" />
+      <property role="TrG5h" value="probabilityDistribution" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyj" id="3mDt9dhIf21" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154370689" />
+      <property role="20kJfa" value="test" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6MzSDQOui5f" resolve="Test" />
+    </node>
+  </node>
 </model>
 

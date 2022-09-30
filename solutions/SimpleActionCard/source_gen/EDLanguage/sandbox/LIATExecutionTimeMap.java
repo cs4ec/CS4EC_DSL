@@ -4,7 +4,6 @@ package EDLanguage.sandbox;
 
 import simcore.utilities.Distribution;
 import java.util.HashMap;
-import repast.simphony.engine.environment.RunEnvironment;
 import java.util.Map;
 
 public class LIATExecutionTimeMap {
@@ -14,8 +13,8 @@ public class LIATExecutionTimeMap {
   private LIATExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
-    returnMap.put(1800 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (1 / TotalOccurances)));
-    returnMap.put(2100 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick"), ((Double) (1 / TotalOccurances)));
+    returnMap.put(30, ((Double) (1 / TotalOccurances)));
+    returnMap.put(35, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

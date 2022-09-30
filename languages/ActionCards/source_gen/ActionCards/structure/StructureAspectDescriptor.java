@@ -33,6 +33,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBooleanExpression = createDescriptorForBooleanExpression();
   /*package*/ final ConceptDescriptor myConceptBranch = createDescriptorForBranch();
   /*package*/ final ConceptDescriptor myConceptBranchConditional = createDescriptorForBranchConditional();
+  /*package*/ final ConceptDescriptor myConceptCompositeTest = createDescriptorForCompositeTest();
   /*package*/ final ConceptDescriptor myConceptDiagnosticCondition = createDescriptorForDiagnosticCondition();
   /*package*/ final ConceptDescriptor myConceptDischargeAction = createDescriptorForDischargeAction();
   /*package*/ final ConceptDescriptor myConceptDisease = createDescriptorForDisease();
@@ -63,6 +64,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptPatientSeverity_Low = createDescriptorForPatientSeverity_Low();
   /*package*/ final ConceptDescriptor myConceptPatientSeverity_Severe = createDescriptorForPatientSeverity_Severe();
   /*package*/ final ConceptDescriptor myConceptPatient_Severity_Moderate = createDescriptorForPatient_Severity_Moderate();
+  /*package*/ final ConceptDescriptor myConceptProbabilityDistribution = createDescriptorForProbabilityDistribution();
+  /*package*/ final ConceptDescriptor myConceptProbabilityDistributionLine = createDescriptorForProbabilityDistributionLine();
   /*package*/ final ConceptDescriptor myConceptProcessingTimeLine = createDescriptorForProcessingTimeLine();
   /*package*/ final ConceptDescriptor myConceptProcessingTimeTable = createDescriptorForProcessingTimeTable();
   /*package*/ final ConceptDescriptor myConceptRecentCOVIDContactCondition = createDescriptorForRecentCOVIDContactCondition();
@@ -79,6 +82,9 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptSymptomList = createDescriptorForSymptomList();
   /*package*/ final ConceptDescriptor myConceptTest = createDescriptorForTest();
   /*package*/ final ConceptDescriptor myConceptTestCapturedDisease = createDescriptorForTestCapturedDisease();
+  /*package*/ final ConceptDescriptor myConceptTestSelectionRule = createDescriptorForTestSelectionRule();
+  /*package*/ final ConceptDescriptor myConceptTestSelectionRuleLine = createDescriptorForTestSelectionRuleLine();
+  /*package*/ final ConceptDescriptor myConceptTestSelectionStrategy = createDescriptorForTestSelectionStrategy();
   /*package*/ final ConceptDescriptor myConceptTimeDistributionLine = createDescriptorForTimeDistributionLine();
   /*package*/ final ConceptDescriptor myConceptTimeDistributionTable = createDescriptorForTimeDistributionTable();
   /*package*/ final ConceptDescriptor myConceptTimeOfDayCondition = createDescriptorForTimeOfDayCondition();
@@ -107,7 +113,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptPatientSeverity, myConceptPatientSeverityProperty, myConceptPatientSeverity_Low, myConceptPatientSeverity_Severe, myConceptPatient_Severity_Moderate, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptRoomSelectionCondition, myConceptRoomSelectionLine, myConceptRoomSelectionRule, myConceptRoomTypeCondition, myConceptSelectEmptyRoom, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
+    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptCompositeTest, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientPropertyReference, myConceptPatientSeverity, myConceptPatientSeverityProperty, myConceptPatientSeverity_Low, myConceptPatientSeverity_Severe, myConceptPatient_Severity_Moderate, myConceptProbabilityDistribution, myConceptProbabilityDistributionLine, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptRoomSelectionCondition, myConceptRoomSelectionLine, myConceptRoomSelectionRule, myConceptRoomTypeCondition, myConceptSelectEmptyRoom, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTestSelectionRule, myConceptTestSelectionRuleLine, myConceptTestSelectionStrategy, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
   }
 
   @Override
@@ -148,6 +154,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBranch;
       case LanguageConceptSwitch.BranchConditional:
         return myConceptBranchConditional;
+      case LanguageConceptSwitch.CompositeTest:
+        return myConceptCompositeTest;
       case LanguageConceptSwitch.DiagnosticCondition:
         return myConceptDiagnosticCondition;
       case LanguageConceptSwitch.DischargeAction:
@@ -208,6 +216,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPatientSeverity_Severe;
       case LanguageConceptSwitch.Patient_Severity_Moderate:
         return myConceptPatient_Severity_Moderate;
+      case LanguageConceptSwitch.ProbabilityDistribution:
+        return myConceptProbabilityDistribution;
+      case LanguageConceptSwitch.ProbabilityDistributionLine:
+        return myConceptProbabilityDistributionLine;
       case LanguageConceptSwitch.ProcessingTimeLine:
         return myConceptProcessingTimeLine;
       case LanguageConceptSwitch.ProcessingTimeTable:
@@ -240,6 +252,12 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptTest;
       case LanguageConceptSwitch.TestCapturedDisease:
         return myConceptTestCapturedDisease;
+      case LanguageConceptSwitch.TestSelectionRule:
+        return myConceptTestSelectionRule;
+      case LanguageConceptSwitch.TestSelectionRuleLine:
+        return myConceptTestSelectionRuleLine;
+      case LanguageConceptSwitch.TestSelectionStrategy:
+        return myConceptTestSelectionStrategy;
       case LanguageConceptSwitch.TimeDistributionLine:
         return myConceptTimeDistributionLine;
       case LanguageConceptSwitch.TimeDistributionTable:
@@ -436,6 +454,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("org.iets3.core.expr.base.structure.Expression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876441168992");
     b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForCompositeTest() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "CompositeTest", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b87564L);
+    b.class_(false, false, true);
+    b.super_("ActionCards.structure.Test", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154339172");
+    b.version(2);
+    b.aggregate("tests", 0x35a9749351b87567L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL).optional(true).ordered(true).multiple(true).origin("3866749931154339175").done();
+    b.aggregate("testSelectionStrategy", 0x35a9749351b87569L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b8756cL).optional(false).ordered(true).multiple(false).origin("3866749931154339177").done();
+    b.alias("composite test");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDiagnosticCondition() {
@@ -723,6 +752,25 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("moderate");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForProbabilityDistribution() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ProbabilityDistribution", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b8eff3L);
+    b.class_(false, false, false);
+    b.super_("ActionCards.structure.TestSelectionStrategy", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b8756cL);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154370547");
+    b.version(2);
+    b.aggregate("lines", 0x35a9749351b8f06aL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b8f00eL).optional(true).ordered(true).multiple(true).origin("3866749931154370666").done();
+    b.alias("probability distribution");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForProbabilityDistributionLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ProbabilityDistributionLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b8f00eL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154370574");
+    b.version(2);
+    b.property("probabilityDistribution", 0x35a9749351b8f00fL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("3866749931154370575").done();
+    b.associate("test", 0x35a9749351b8f081L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL).optional(false).origin("3866749931154370689").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForProcessingTimeLine() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ProcessingTimeLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0ee1aL);
     b.class_(false, false, false);
@@ -866,6 +914,29 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("Sensitivity", 0x549fe0474671cd6fL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("6097839017212104047").done();
     b.property("Specificity", 0x549fe0474671cd70L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("6097839017212104048").done();
     b.associate("disease", 0x549fe0474671cd85L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L).optional(false).origin("6097839017212104069").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTestSelectionRule() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TestSelectionRule", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b87572L);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154339186");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTestSelectionRuleLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TestSelectionRuleLine", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b8756dL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154339181");
+    b.version(2);
+    b.aggregate("rule", 0x35a9749351b87570L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b87572L).optional(false).ordered(true).multiple(false).origin("3866749931154339184").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForTestSelectionStrategy() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TestSelectionStrategy", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b8756cL);
+    b.class_(false, false, false);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154339180");
+    b.version(2);
+    b.alias("test selection strategy");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTimeDistributionLine() {

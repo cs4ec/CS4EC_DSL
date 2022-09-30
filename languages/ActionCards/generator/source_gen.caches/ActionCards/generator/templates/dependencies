@@ -6,6 +6,7 @@
     <classNode dependClassName="ActionCards.behavior.DiseaseSymptom__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.IPatientProperty__BehaviorDescriptor" />
     <classNode dependClassName="BuiltEnvironment.behavior.RoomType__BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
@@ -13,6 +14,7 @@
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.Collection" />
     <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Iterator" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="java.util.Objects" />

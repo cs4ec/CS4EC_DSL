@@ -3180,5 +3180,66 @@
       <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
     </node>
   </node>
+  <node concept="24kQdi" id="3mDt9dhI8WY">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="e88n:3mDt9dhI7lH" resolve="TestSelectionRuleLine" />
+    <node concept="3EZMnI" id="3mDt9dhI8X5" role="2wV5jI">
+      <node concept="3F1sOY" id="3mDt9dhI8Xc" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3mDt9dhI7lK" resolve="rule" />
+      </node>
+      <node concept="l2Vlx" id="3mDt9dhI8X8" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3mDt9dhIf0q">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="e88n:3mDt9dhIf0e" resolve="ProbabilityDistributionLine" />
+    <node concept="2r0Tta" id="3mDt9dhIf0s" role="2wV5jI">
+      <node concept="2reCLk" id="3mDt9dhIf0v" role="2r0Tv6">
+        <node concept="2reCLy" id="3mDt9dhIf0x" role="2reCL6">
+          <node concept="1iCGBv" id="3mDt9dhIf25" role="2reSmM">
+            <ref role="1NtTu8" to="e88n:3mDt9dhIf21" resolve="test" />
+            <node concept="1sVBvm" id="3mDt9dhIf27" role="1sWHZn">
+              <node concept="3F0A7n" id="3mDt9dhIf2e" role="2wV5jI">
+                <property role="1Intyy" value="true" />
+                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2reCLy" id="3mDt9dhIf0G" role="2reCL6">
+          <node concept="3F0A7n" id="3mDt9dhIf0O" role="2reSmM">
+            <ref role="1NtTu8" to="e88n:3mDt9dhIf0f" resolve="probabilityDistribution" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="3mDt9dhIf0Y">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="e88n:3mDt9dhIeZN" resolve="ProbabilityDistribution" />
+    <node concept="3EZMnI" id="3mDt9dhIf10" role="2wV5jI">
+      <node concept="3EZMnI" id="3mDt9dhIf17" role="3EZMnx">
+        <node concept="VPM3Z" id="3mDt9dhIf19" role="3F10Kt" />
+        <node concept="3F0ifn" id="3mDt9dhIf1h" role="3EZMnx">
+          <property role="3F0ifm" value="Probability of selecting test:" />
+        </node>
+        <node concept="2iRfu4" id="3mDt9dhIf1c" role="2iSdaV" />
+      </node>
+      <node concept="2rfBfz" id="3mDt9dhIf1u" role="3EZMnx">
+        <node concept="2reSaE" id="3mDt9dhIf1B" role="2rf8GZ">
+          <ref role="2reCK$" to="e88n:3mDt9dhIf1E" resolve="lines" />
+          <node concept="2r3Xtq" id="3mDt9dhIf1L" role="2YiT2b">
+            <node concept="2rfbtV" id="3mDt9dhIf1P" role="uCobI">
+              <property role="2rfbtB" value="Test" />
+            </node>
+            <node concept="2rfbtV" id="3mDt9dhIf1V" role="uCobI">
+              <property role="2rfbtB" value="Probability (%)" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2iRkQZ" id="3mDt9dhIf13" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.function.Predicate;
 import simcore.agents.Agent;
+import repast.simphony.space.graph.Network;
 
 public class patient extends Actor {
 
@@ -48,10 +49,6 @@ public class patient extends Actor {
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
     mintMyMaxPatients = 1;
-  }
-
-  public patient(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
-    super(space, grid, pstrStartLocation);
   }
 
   protected Signal selectSignal(List<Signal> plstSignals) {
@@ -98,6 +95,9 @@ public class patient extends Actor {
 
 
   public Behaviour BuildActionFromSignal(Signal s) {
+    if (s.GetData("patient") != null) {
+      ((Network) context.getProjection("CurrentPatientAllocations")).addEdge(this, s.GetData("patient"));
+    }
     switch (s.getName()) {
       case "":
         break;

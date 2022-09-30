@@ -11,6 +11,8 @@ import simcore.Signals.Signal;
 import java.util.List;
 import java.util.function.Predicate;
 import repast.simphony.space.graph.Network;
+import java.util.stream.StreamSupport;
+import repast.simphony.space.graph.RepastEdge;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import java.util.ArrayList;
@@ -18,10 +20,10 @@ import java.util.Comparator;
 import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
 import simcore.Signals.Orders.MoveToOrder;
-import simcore.action.InstantBehaviourStep;
-import simcore.action.PassiveBehaviourStep;
-import simcore.basicStructures.Board;
 import repast.simphony.engine.environment.RunEnvironment;
+import simcore.action.PassiveBehaviourStep;
+import simcore.action.InstantBehaviourStep;
+import simcore.basicStructures.Board;
 
 public class CubicleNurse extends Actor {
 
@@ -30,10 +32,6 @@ public class CubicleNurse extends Actor {
   public CubicleNurse(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
     mintMyMaxPatients = 1;
-  }
-
-  public CubicleNurse(ContinuousSpace<Object> space, Grid<Object> grid, String pstrStartLocation) {
-    super(space, grid, pstrStartLocation);
   }
 
   protected Signal selectSignal(List<Signal> plstSignals) {
@@ -51,12 +49,20 @@ public class CubicleNurse extends Actor {
       }
       if (plstSignals.stream().filter(new Predicate<Signal>() {
         public boolean test(Signal s) {
-          return ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")) != null;
+          return StreamSupport.stream(((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")).spliterator(), false).filter(new Predicate<RepastEdge<Object>>() {
+            public boolean test(RepastEdge<Object> e) {
+              return e.getSource().getClass() == CubicleNurse.class;
+            }
+          }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(CubicleNurse.this) < mintMyMaxPatients;
         }
       }).findFirst().orElse(null) != null) {
         return plstSignals.stream().filter(new Predicate<Signal>() {
           public boolean test(Signal s) {
-            return ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")) != null;
+            return StreamSupport.stream(((Network) context.getProjection("CurrentPatientAllocations")).getEdges(s.GetData("patient")).spliterator(), false).filter(new Predicate<RepastEdge<Object>>() {
+              public boolean test(RepastEdge<Object> e) {
+                return e.getSource().getClass() == CubicleNurse.class;
+              }
+            }).count() < 1 && ((Network) context.getProjection("CurrentPatientAllocations")).getDegree(CubicleNurse.this) < mintMyMaxPatients;
           }
         }).findFirst().orElse(null);
       }
@@ -99,12 +105,8 @@ public class CubicleNurse extends Actor {
       }
     }
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
-        public boolean test(Agent a) {
-          return a.getClass() == patient.class;
-        }
-      })) {
-        return Double.MAX_VALUE;
+      if (pRoom.hasCapacity()) {
+        return Double.MIN_VALUE;
       }
     }
     if (true) {
@@ -131,6 +133,9 @@ public class CubicleNurse extends Actor {
 
 
   public Behaviour BuildActionFromSignal(Signal s) {
+    if (s.GetData("patient") != null) {
+      ((Network) context.getProjection("CurrentPatientAllocations")).addEdge(this, s.GetData("patient"));
+    }
     switch (s.getName()) {
       case "":
         break;
@@ -201,7 +206,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(BoardGame.class)));
     }
   }
   public class StayForConditionAction_c0a extends BehaviourStep {
@@ -216,18 +221,24 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class UseAction_d0a_1 extends InstantBehaviourStep {
+  public class StayAction_d0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public UseAction_d0a_1(Behaviour behaviour) {
+    /*package*/ int timeExecuted = 0;
+    public StayAction_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
 
-      ((Room) ToolBox().ReadMap().getCurrentRoom(CubicleNurse.this)).getParentArea().decrementResource(LFT.getInstance());
+    public boolean finishCondition() {
+      return (timeExecuted == (600 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class StayAction_e0a extends PassiveBehaviourStep {
@@ -422,7 +433,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(BoardGame.class)));
     }
   }
   public class StayForConditionAction_c0a_0 extends BehaviourStep {
@@ -437,18 +448,24 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class UseAction_d0a_2 extends InstantBehaviourStep {
+  public class StayAction_d0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public UseAction_d0a_2(Behaviour behaviour) {
+    /*package*/ int timeExecuted = 0;
+    public StayAction_d0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
 
-      ((Room) ToolBox().ReadMap().getCurrentRoom(CubicleNurse.this)).getParentArea().decrementResource(LFT.getInstance());
+    public boolean finishCondition() {
+      return (timeExecuted == (600 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class StayAction_e0a_1 extends PassiveBehaviourStep {
@@ -1187,7 +1204,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside));
     }
   }
   public class StayForConditionAction_c0b extends BehaviourStep {
@@ -1202,18 +1219,24 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class UseAction_d0b extends InstantBehaviourStep {
+  public class StayAction_d0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public UseAction_d0b(Behaviour behaviour) {
+    /*package*/ int timeExecuted = 0;
+    public StayAction_d0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
 
-      ((Room) ToolBox().ReadMap().getCurrentRoom(CubicleNurse.this)).getParentArea().decrementResource(PHEThreeAlt.getInstance());
+    public boolean finishCondition() {
+      return (timeExecuted == (240 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class StayAction_e0b extends PassiveBehaviourStep {
@@ -1326,7 +1349,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside));
     }
   }
   public class StayForConditionAction_c0b_0 extends BehaviourStep {
@@ -1341,18 +1364,24 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class UseAction_d0b_0 extends InstantBehaviourStep {
+  public class StayAction_d0b_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public UseAction_d0b_0(Behaviour behaviour) {
+    /*package*/ int timeExecuted = 0;
+    public StayAction_d0b_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
 
-      ((Room) ToolBox().ReadMap().getCurrentRoom(CubicleNurse.this)).getParentArea().decrementResource(PHEThreeAlt.getInstance());
+    public boolean finishCondition() {
+      return (timeExecuted == (240 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class StayAction_e0b_1 extends PassiveBehaviourStep {
@@ -1625,7 +1654,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside));
     }
   }
   public class StayForConditionAction_c0c_1 extends BehaviourStep {
@@ -1640,18 +1669,24 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class UseAction_d0c extends InstantBehaviourStep {
+  public class StayAction_d0c extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public UseAction_d0c(Behaviour behaviour) {
+    /*package*/ int timeExecuted = 0;
+    public StayAction_d0c(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
 
-      ((Room) ToolBox().ReadMap().getCurrentRoom(CubicleNurse.this)).getParentArea().decrementResource(PHEThreeAlt.getInstance());
+    public boolean finishCondition() {
+      return (timeExecuted == (240 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class StayAction_e0c extends PassiveBehaviourStep {
@@ -1764,7 +1799,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside));
     }
   }
   public class StayForConditionAction_c0c_2 extends BehaviourStep {
@@ -1779,18 +1814,24 @@ public class CubicleNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+      return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class UseAction_d0c_0 extends InstantBehaviourStep {
+  public class StayAction_d0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public UseAction_d0c_0(Behaviour behaviour) {
+    /*package*/ int timeExecuted = 0;
+    public StayAction_d0c_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
 
-      ((Room) ToolBox().ReadMap().getCurrentRoom(CubicleNurse.this)).getParentArea().decrementResource(PHEThreeAlt.getInstance());
+    public boolean finishCondition() {
+      return (timeExecuted == (240 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class StayAction_e0c_1 extends PassiveBehaviourStep {
@@ -2195,7 +2236,7 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new MoveAction_a0a_5(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a_3(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
-    plstSteps.add(new UseAction_d0a_1(behaviourBuilder));
+    plstSteps.add(new StayAction_d0a(behaviourBuilder));
     plstSteps.add(new StayAction_e0a(behaviourBuilder));
     plstSteps.add(new Choice_f0a(behaviourBuilder));
     plstSteps.add(new Choice_g0a(behaviourBuilder));
@@ -2216,7 +2257,7 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new MoveAction_a0b_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0b(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0b(behaviourBuilder));
-    plstSteps.add(new UseAction_d0b(behaviourBuilder));
+    plstSteps.add(new StayAction_d0b_1(behaviourBuilder));
     plstSteps.add(new StayAction_e0b(behaviourBuilder));
     plstSteps.add(new Choice_f0b(behaviourBuilder));
     plstSteps.add(new SendSignalAction_g0b(behaviourBuilder));
@@ -2232,7 +2273,7 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new MoveAction_a0c_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0c_3(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0c_1(behaviourBuilder));
-    plstSteps.add(new UseAction_d0c(behaviourBuilder));
+    plstSteps.add(new StayAction_d0c(behaviourBuilder));
     plstSteps.add(new StayAction_e0c(behaviourBuilder));
     plstSteps.add(new Choice_f0c(behaviourBuilder));
     plstSteps.add(new SendSignalAction_g0c(behaviourBuilder));
