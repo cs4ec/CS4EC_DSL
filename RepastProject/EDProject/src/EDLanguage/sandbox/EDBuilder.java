@@ -57,7 +57,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
     context.add(new patientGenerator_0(space, grid, context));
-    context.add(new patientGenerator_1(space, grid, context));
     context.add(new Board());
 
     // add Agents 
@@ -72,6 +71,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     }
     for (int i = 0; i < 5; i++) {
       context.add(new PreAdmissionStaff(space, grid, context));
+    }
+    for (int i = 0; i < 7; i++) {
+      context.add(new LabTechnician(space, grid, context));
     }
 
 
@@ -290,30 +292,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     ArrivalPerHour.put(21, 8);
     ArrivalPerHour.put(22, 7);
     ArrivalPerHour.put(23, 10);
-    ArrivalPerHour.put(24, 3);
-    ArrivalPerHour.put(1, 2);
-    ArrivalPerHour.put(2, 3);
-    ArrivalPerHour.put(3, 4);
-    ArrivalPerHour.put(4, 5);
-    ArrivalPerHour.put(5, 6);
-    ArrivalPerHour.put(6, 3);
-    ArrivalPerHour.put(7, 4);
-    ArrivalPerHour.put(8, 3);
-    ArrivalPerHour.put(9, 5);
-    ArrivalPerHour.put(10, 6);
-    ArrivalPerHour.put(11, 5);
-    ArrivalPerHour.put(12, 3);
-    ArrivalPerHour.put(13, 4);
-    ArrivalPerHour.put(14, 3);
-    ArrivalPerHour.put(15, 4);
-    ArrivalPerHour.put(16, 3);
-    ArrivalPerHour.put(17, 4);
-    ArrivalPerHour.put(18, 3);
-    ArrivalPerHour.put(19, 4);
-    ArrivalPerHour.put(20, 3);
-    ArrivalPerHour.put(21, 4);
-    ArrivalPerHour.put(22, 3);
-    ArrivalPerHour.put(23, 4);
     ArrivalPerHour.put(24, 3);
     PatientArrivalStore.Initialise((Map<Integer, Integer>) ArrivalPerHour);
   }

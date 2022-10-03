@@ -126,7 +126,6 @@
       <concept id="1758249876510071738" name="ActionCards.structure.AttendanceRouteCondition" flags="ng" index="1FDPl8">
         <child id="1758249876530420347" name="attendanceRoute" index="1GBHi9" />
       </concept>
-      <concept id="1758249876508941937" name="ActionCards.structure.ElectiveAttendanceRoute" flags="ng" index="1FPx23" />
       <concept id="1758249876508941398" name="ActionCards.structure.EmergencyAttendanceRoute" flags="ng" index="1FPxa$" />
       <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
         <child id="1758249876506201859" name="condition" index="1FS47L" />
@@ -2389,11 +2388,17 @@
       <node concept="2_8ZN7" id="sr1c8P8mZ7" role="2_8HaY">
         <ref role="2_8ZNy" node="1xAzJ9NxGdV" resolve="PreAdmissionStaff" />
       </node>
+      <node concept="UeIYj" id="3mDt9disU5S" role="3lENdC">
+        <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
+      </node>
     </node>
     <node concept="2lDReE" id="sr1c8P7SSs" role="2MhjZp">
       <property role="TrG5h" value="Admit Side Room" />
       <node concept="2_8ZN7" id="sr1c8P8mZa" role="2_8HaY">
         <ref role="2_8ZNy" node="1xAzJ9NxGdV" resolve="PreAdmissionStaff" />
+      </node>
+      <node concept="UeIYj" id="3mDt9disU5Q" role="3lENdC">
+        <ref role="Udx8D" node="52K8Ej3GjE" resolve="SideRoom" />
       </node>
     </node>
     <node concept="1H2jYY" id="sr1c8P7TMn" role="2MhjZp">
@@ -2448,11 +2453,17 @@
       <node concept="2_8ZN7" id="sr1c8P8mZg" role="2_8HaY">
         <ref role="2_8ZNy" node="1xAzJ9NxGdV" resolve="PreAdmissionStaff" />
       </node>
+      <node concept="UeIYj" id="3mDt9disU5O" role="3lENdC">
+        <ref role="Udx8D" node="52K8Ej3GjE" resolve="SideRoom" />
+      </node>
     </node>
     <node concept="2lDReE" id="sr1c8P7Ux$" role="2MhjZp">
       <property role="TrG5h" value="Admit Red" />
       <node concept="2_8ZN7" id="sr1c8P8mZj" role="2_8HaY">
         <ref role="2_8ZNy" node="1xAzJ9NxGdV" resolve="PreAdmissionStaff" />
+      </node>
+      <node concept="UeIYj" id="3mDt9disU5M" role="3lENdC">
+        <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
       </node>
     </node>
     <node concept="1H2jYY" id="sr1c8P7V1C" role="2MhjZp">
@@ -2491,6 +2502,10 @@
     <node concept="2_0uwW" id="1xAzJ9P173A" role="2_0uzz">
       <property role="2_0uz2" value="5" />
       <ref role="2_0uz0" node="1xAzJ9NxGdV" resolve="PreAdmissionStaff" />
+    </node>
+    <node concept="2_0uwW" id="3mDt9dit_I3" role="2_0uzz">
+      <property role="2_0uz2" value="7" />
+      <ref role="2_0uz0" node="52K8Ej3GgM" resolve="LabTechnician" />
     </node>
   </node>
   <node concept="2Ovb82" id="EFW1mZonCG">
@@ -2940,100 +2955,6 @@
   <node concept="2GGxxg" id="1xAzJ9NxGdV">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="PreAdmissionStaff" />
-  </node>
-  <node concept="2OfScj" id="1xAzJ9NOca1">
-    <property role="TrG5h" value="patient" />
-    <node concept="1jfOK3" id="1xAzJ9Prny0" role="2OfI9c">
-      <node concept="1He0ZG" id="1xAzJ9PrnAj" role="1R9TjS">
-        <property role="1C_jdu" value="Immunocompromised" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9PrnAn" role="1jfOML">
-        <property role="3JlXGq" value="5" />
-        <node concept="1FjjCg" id="1xAzJ9PrnAk" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9PrnAo" role="1jfOML">
-        <property role="3JlXGq" value="95" />
-        <node concept="1FjjCm" id="1xAzJ9PrnAl" role="3JlXG4" />
-      </node>
-    </node>
-    <node concept="25k$Xo" id="1xAzJ9NOca2" role="2OfIal">
-      <node concept="c0n4t" id="1xAzJ9NOca8" role="c0n7C">
-        <property role="c0n49" value="2" />
-      </node>
-      <node concept="UeIYj" id="1xAzJ9NOca3" role="2PM4n5">
-        <ref role="Udx8D" node="1xAzJ9NxGdM" resolve="ElectiveAttendanceArea" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcaa" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcad" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcah" role="c0n7C">
-        <property role="c0n49" value="5" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcam" role="c0n7C">
-        <property role="c0n49" value="6" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcas" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcaz" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcaF" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcb9" role="c0n7C">
-        <property role="c0n49" value="5" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcaO" role="c0n7C">
-        <property role="c0n49" value="6" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcaY" role="c0n7C">
-        <property role="c0n49" value="5" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcbl" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcby" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcbK" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcbZ" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOccf" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOccw" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOccM" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcd5" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcdp" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcdI" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOce4" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOcer" role="c0n7C">
-        <property role="c0n49" value="4" />
-      </node>
-      <node concept="c0n4t" id="1xAzJ9NOceN" role="c0n7C">
-        <property role="c0n49" value="3" />
-      </node>
-    </node>
-    <node concept="1FPx23" id="1xAzJ9NOca5" role="1FYssH" />
   </node>
   <node concept="3SEB2C" id="7$JgZMbkIKd">
     <property role="3GE5qa" value="Tests" />
