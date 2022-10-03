@@ -362,46 +362,49 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(_context.getNode(), LINKS.staff$HYEa), "staffReduction");
   }
   public static Object referenceMacro_GetReferent_36_0(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TesttoTimeDistr");
+    return _context.getNode();
   }
   public static Object referenceMacro_GetReferent_36_1(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TesttoTimeDistr");
   }
   public static Object referenceMacro_GetReferent_36_2(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_36_3(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_36_4(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_36_5(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_36_6(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
-  }
-  public static Object referenceMacro_GetReferent_36_7(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
-  public static Object referenceMacro_GetReferent_36_8(final ReferenceMacroContext _context) {
+  public static Object referenceMacro_GetReferent_36_7(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
+  }
+  public static Object referenceMacro_GetReferent_36_8(final ReferenceMacroContext _context) {
+    return _context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "TestResultToAtribute");
   }
   public static Object referenceMacro_GetReferent_36_9(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
   public static Object referenceMacro_GetReferent_36_10(final ReferenceMacroContext _context) {
+    return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
+  }
+  public static Object referenceMacro_GetReferent_36_11(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.patientProperty$oTU2), CONCEPTS.InfectionStatusProperty$al) && Objects.equals(SLinkOperations.getTarget(((SNode) SLinkOperations.getTarget(it, LINKS.patientProperty$oTU2)), LINKS.disease$NZ2B), SLinkOperations.getTarget(_context.getNode(), LINKS.disease$elY9));
       }
     }).first(), LINKS.patientProperty$oTU2), "PatientPropertyToAttribute");
   }
-  public static Object referenceMacro_GetReferent_36_11(final ReferenceMacroContext _context) {
+  public static Object referenceMacro_GetReferent_36_12(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), "PatientProfileReduction");
   }
-  public static Object referenceMacro_GetReferent_36_12(final ReferenceMacroContext _context) {
+  public static Object referenceMacro_GetReferent_36_13(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.patientProperty$oTU2), CONCEPTS.InfectionStatusProperty$al) && Objects.equals(SLinkOperations.getTarget(((SNode) SLinkOperations.getTarget(it, LINKS.patientProperty$oTU2)), LINKS.disease$NZ2B), SLinkOperations.getTarget(_context.getNode(), LINKS.disease$elY9));
@@ -1339,25 +1342,26 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("1758249876538244936", new RTQ(35, null));
     rtqMethods.put("1758249876538251463", new RTQ(36, null));
     rtqMethods.put("8998806958911782233", new RTQ(37, "map_StaffType"));
-    rtqMethods.put("3866749931154551452", new RTQ(38, null));
-    rtqMethods.put("3866749931154551483", new RTQ(39, null));
-    rtqMethods.put("3866749931154551501", new RTQ(40, null));
-    rtqMethods.put("3866749931154551518", new RTQ(41, null));
-    rtqMethods.put("3866749931154551536", new RTQ(42, null));
-    rtqMethods.put("3866749931154551603", new RTQ(43, null));
-    rtqMethods.put("3866749931154551621", new RTQ(44, null));
-    rtqMethods.put("3866749931154551638", new RTQ(45, null));
-    rtqMethods.put("3866749931154551656", new RTQ(46, null));
-    rtqMethods.put("3866749931154551708", new RTQ(47, "map_Patient"));
-    rtqMethods.put("3866749931154551722", new RTQ(48, "placeholder"));
-    rtqMethods.put("3866749931154551776", new RTQ(49, "map_Patient"));
-    rtqMethods.put("3866749931154551790", new RTQ(50, "placeholder"));
-    rtqMethods.put("3866749931154587987", new RTQ(51, null));
-    rtqMethods.put("3866749931154588009", new RTQ(52, null));
-    rtqMethods.put("3866749931154588043", new RTQ(53, null));
-    rtqMethods.put("3866749931154588063", new RTQ(54, null));
-    rtqMethods.put("3866749931154588129", new RTQ(55, "map_Patient"));
-    rtqMethods.put("3866749931154588143", new RTQ(56, "placeholder"));
+    rtqMethods.put("3866749931168522240", new RTQ(38, null));
+    rtqMethods.put("3866749931154551452", new RTQ(39, null));
+    rtqMethods.put("3866749931154551483", new RTQ(40, null));
+    rtqMethods.put("3866749931154551501", new RTQ(41, null));
+    rtqMethods.put("3866749931154551518", new RTQ(42, null));
+    rtqMethods.put("3866749931154551536", new RTQ(43, null));
+    rtqMethods.put("3866749931154551603", new RTQ(44, null));
+    rtqMethods.put("3866749931154551621", new RTQ(45, null));
+    rtqMethods.put("3866749931154551638", new RTQ(46, null));
+    rtqMethods.put("3866749931154551656", new RTQ(47, null));
+    rtqMethods.put("3866749931154551708", new RTQ(48, "map_Patient"));
+    rtqMethods.put("3866749931154551722", new RTQ(49, "placeholder"));
+    rtqMethods.put("3866749931154551776", new RTQ(50, "map_Patient"));
+    rtqMethods.put("3866749931154551790", new RTQ(51, "placeholder"));
+    rtqMethods.put("3866749931154587987", new RTQ(52, null));
+    rtqMethods.put("3866749931154588009", new RTQ(53, null));
+    rtqMethods.put("3866749931154588043", new RTQ(54, null));
+    rtqMethods.put("3866749931154588063", new RTQ(55, null));
+    rtqMethods.put("3866749931154588129", new RTQ(56, "map_Patient"));
+    rtqMethods.put("3866749931154588143", new RTQ(57, "placeholder"));
   }
   @NotNull
   @Override
@@ -1477,16 +1481,18 @@ public class QueriesGenerated extends QueryProviderBase {
         case 50:
           return QueriesGenerated.referenceMacro_GetReferent_36_12(ctx);
         case 51:
-          return QueriesGenerated.referenceMacro_GetReferent_37_0(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_36_13(ctx);
         case 52:
-          return QueriesGenerated.referenceMacro_GetReferent_37_1(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_37_0(ctx);
         case 53:
-          return QueriesGenerated.referenceMacro_GetReferent_37_2(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_37_1(ctx);
         case 54:
-          return QueriesGenerated.referenceMacro_GetReferent_37_3(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_37_2(ctx);
         case 55:
-          return QueriesGenerated.referenceMacro_GetReferent_37_4(ctx);
+          return QueriesGenerated.referenceMacro_GetReferent_37_3(ctx);
         case 56:
+          return QueriesGenerated.referenceMacro_GetReferent_37_4(ctx);
+        case 57:
           return QueriesGenerated.referenceMacro_GetReferent_37_5(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));

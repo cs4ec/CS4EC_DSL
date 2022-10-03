@@ -1586,13 +1586,6 @@
     <node concept="PrWs8" id="3JSrgvKC7cO" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-    <node concept="1TJgyj" id="3JSrgvLbur4" role="1TKVEi">
-      <property role="IQ2ns" value="4321323723340506820" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="targetLocation" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
-    </node>
   </node>
   <node concept="1TIwiD" id="3JSrgvMqo2V">
     <property role="EcuMT" value="4321323723361190075" />

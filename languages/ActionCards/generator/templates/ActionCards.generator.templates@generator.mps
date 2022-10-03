@@ -229,6 +229,7 @@
         <child id="768972137555555169" name="value" index="2Rw0dO" />
         <child id="768972137554994742" name="attributeReference" index="2Ry9oz" />
       </concept>
+      <concept id="4321323723331232502" name="AgentLanguage.structure.UseResourceAction" flags="ng" index="3bm0ZL" />
       <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableReference" flags="ng" index="1kHjla" />
       <concept id="3692958048405039038" name="AgentLanguage.structure.IAmAtCondition" flags="ng" index="1mQy9T">
         <child id="3692958048405039093" name="target" index="1mQy8M" />
@@ -8182,6 +8183,20 @@
     <node concept="3Vt_xe" id="3mDt9dhIVal" role="13RCb5">
       <property role="TrG5h" value="_Placeholder_" />
       <node concept="3VtFpM" id="3mDt9dhIVam" role="3VtFpR">
+        <node concept="3bm0ZL" id="3mDt9di$dwz" role="3VtFpW">
+          <node concept="raruj" id="3mDt9di$dZZ" role="lGtFl" />
+          <node concept="1ZhdrF" id="3mDt9di$e00" role="lGtFl">
+            <property role="2qtEX8" value="targetResource" />
+            <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/4321323723331232502/4321323723335586258" />
+            <node concept="3$xsQk" id="3mDt9di$e01" role="3$ytzL">
+              <node concept="3clFbS" id="3mDt9di$e02" role="2VODD2">
+                <node concept="3clFbF" id="3mDt9di$e0B" role="3cqZAp">
+                  <node concept="30H73N" id="3mDt9di$e0A" role="3clFbG" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="2s3SmU" id="3mDt9dhIVar" role="3VtFpW">
           <node concept="1ZhdrF" id="3mDt9dhIVas" role="lGtFl">
             <property role="2qtEX8" value="timeDistributionTable" />

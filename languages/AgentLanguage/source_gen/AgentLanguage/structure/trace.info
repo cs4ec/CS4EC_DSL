@@ -19,7 +19,7 @@
       <unit at="10,0,220,0" name="AgentLanguage.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="20,0,1311,0" name="AgentLanguage.structure.StructureAspectDescriptor" />
+      <unit at="20,0,1310,0" name="AgentLanguage.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/147289298429697462">
@@ -1479,15 +1479,14 @@
       <node id="4321323723331232502" at="1302,71,1303,100" concept="1" />
       <node id="4321323723331232502" at="1303,100,1304,17" concept="1" />
       <node id="4321323723335586258" at="1304,17,1305,178" concept="1" />
-      <node id="4321323723340506820" at="1305,178,1306,208" concept="1" />
-      <node id="4321323723331232502" at="1306,208,1307,28" concept="1" />
-      <node id="4321323723331232502" at="1307,28,1308,22" concept="6" />
-      <node id="4321323723331232502" at="1298,0,1310,0" concept="8" trace="createDescriptorForUseResourceAction#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="4321323723331232502" at="1305,178,1306,28" concept="1" />
+      <node id="4321323723331232502" at="1306,28,1307,22" concept="6" />
+      <node id="4321323723331232502" at="1298,0,1309,0" concept="8" trace="createDescriptorForUseResourceAction#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="4321323723331232502" at="342,51,343,42" />
-      <scope id="4321323723331232502" at="1298,75,1308,22">
+      <scope id="4321323723331232502" at="1298,75,1307,22">
         <var name="b" id="4321323723331232502" />
       </scope>
-      <scope id="4321323723331232502" at="1298,0,1310,0" />
+      <scope id="4321323723331232502" at="1298,0,1309,0" />
     </file>
   </root>
   <root nodeRef="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/4321323723361190075">

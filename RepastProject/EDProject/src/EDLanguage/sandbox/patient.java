@@ -422,8 +422,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisnull() {
-    if (this.admittedTo == "") {
+  public int getadmittedToisCOVIDPositiveCohort() {
+    if (this.admittedTo == "COVIDPositiveCohort") {
       return 1;
     }
     return 0;

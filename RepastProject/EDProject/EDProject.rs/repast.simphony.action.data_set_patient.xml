@@ -484,11 +484,11 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetadmittedToisnull</string>
+        <string>patientgetadmittedToisCOVIDPositiveCohort</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisnull</id>
+          <id>patientgetadmittedToisCOVIDPositiveCohort</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisnull</methodName>
+          <methodName>getadmittedToisCOVIDPositiveCohort</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

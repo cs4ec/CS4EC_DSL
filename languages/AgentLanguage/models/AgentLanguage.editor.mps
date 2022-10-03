@@ -1875,12 +1875,6 @@
           </node>
         </node>
       </node>
-      <node concept="3F0ifn" id="3JSrgvLbvSj" role="3EZMnx">
-        <property role="3F0ifm" value="on" />
-      </node>
-      <node concept="3F1sOY" id="3JSrgvLbvSx" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:3JSrgvLbur4" resolve="targetLocation" />
-      </node>
       <node concept="l2Vlx" id="3JSrgvKC7dm" role="2iSdaV" />
     </node>
   </node>

@@ -153,11 +153,11 @@ public class Doctor extends Actor {
 
 
 
-  public class MoveAction_a0a extends BehaviourStep {
+  public class MoveAction_a0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a(Behaviour behaviour) {
+    public MoveAction_a0a_1(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -198,10 +198,10 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
-  public class StayForConditionAction_c0a extends BehaviourStep {
+  public class StayForConditionAction_c0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0a(Behaviour behaviour) {
+    public StayForConditionAction_c0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -213,10 +213,10 @@ public class Doctor extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a extends BehaviourStep {
+  public class StayAction_d0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a(Behaviour behaviour) {
+    public StayAction_d0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -230,9 +230,9 @@ public class Doctor extends Actor {
 
     }
   }
-  public class Choice_e0a extends InstantBehaviourStep {
+  public class Choice_e0a_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0a(Behaviour behaviour) {
+    public Choice_e0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -247,9 +247,9 @@ public class Doctor extends Actor {
       }
     }
   }
-  public class Choice_f0a extends InstantBehaviourStep {
+  public class Choice_f0a_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_f0a(Behaviour behaviour) {
+    public Choice_f0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -264,9 +264,9 @@ public class Doctor extends Actor {
       }
     }
   }
-  public class Choice_g0a extends InstantBehaviourStep {
+  public class Choice_g0a_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0a(Behaviour behaviour) {
+    public Choice_g0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -298,11 +298,11 @@ public class Doctor extends Actor {
 
     }
   }
-  public class MoveAction_a0a_7 extends BehaviourStep {
+  public class MoveAction_a0a_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_7(Behaviour behaviour) {
+    public MoveAction_a0a_11(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -358,10 +358,10 @@ public class Doctor extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_7 extends BehaviourStep {
+  public class StayAction_d0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_7(Behaviour behaviour) {
+    public StayAction_d0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -375,9 +375,9 @@ public class Doctor extends Actor {
 
     }
   }
-  public class Choice_e0a_7 extends InstantBehaviourStep {
+  public class Choice_e0a_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0a_7(Behaviour behaviour) {
+    public Choice_e0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -424,9 +424,9 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_f0a_5 extends InstantBehaviourStep {
+  public class Choice_f0a_9 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_f0a_5(Behaviour behaviour) {
+    public Choice_f0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -473,9 +473,9 @@ public class Doctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_g0a_5 extends InstantBehaviourStep {
+  public class Choice_g0a_9 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0a_5(Behaviour behaviour) {
+    public Choice_g0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -644,13 +644,13 @@ public class Doctor extends Actor {
   public void InitDecideonPOCTest_d(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
-    plstSteps.add(new StayAction_d0a(behaviourBuilder));
-    plstSteps.add(new Choice_e0a(behaviourBuilder));
-    plstSteps.add(new Choice_f0a(behaviourBuilder));
-    plstSteps.add(new Choice_g0a(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0a_0(behaviourBuilder));
+    plstSteps.add(new StayAction_d0a_0(behaviourBuilder));
+    plstSteps.add(new Choice_e0a_0(behaviourBuilder));
+    plstSteps.add(new Choice_f0a_3(behaviourBuilder));
+    plstSteps.add(new Choice_g0a_3(behaviourBuilder));
     plstSteps.add(new StayAction_h0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

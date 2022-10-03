@@ -93,6 +93,7 @@
     <classNode dependClassName="EDLanguage.sandbox.AdmitSideRoomTrigger_nSignal" />
     <classNode dependClassName="EDLanguage.sandbox.AdmitSideRoomTrigger_oSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
+    <classNode dependClassName="EDLanguage.sandbox.Cepheid" />
     <classNode dependClassName="EDLanguage.sandbox.CepheidExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.CheckSymptomsTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
@@ -102,13 +103,17 @@
     <classNode dependClassName="EDLanguage.sandbox.GetTestResultTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.GetTestResultTrigger_eSignal" />
     <classNode dependClassName="EDLanguage.sandbox.IfforadmissionperformPCRTrigger_fSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LFD" />
     <classNode dependClassName="EDLanguage.sandbox.LFDExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LFTTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LFTTrigger_cSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.PCRTrigger_hSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.PHEThreeAlt" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeAltExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.TakesampleTrigger_cSignal" />
@@ -369,6 +374,7 @@
     <classNode dependClassName="EDLanguage.sandbox.AdmitSideRoomTrigger_oSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_qSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LabTechnician" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />

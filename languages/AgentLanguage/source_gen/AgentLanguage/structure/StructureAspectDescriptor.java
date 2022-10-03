@@ -1303,7 +1303,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/4321323723331232502");
     b.version(2);
     b.associate("targetResource", 0x3bf86d07f0e2d1d2L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f032c8d7L).optional(false).origin("4321323723335586258").done();
-    b.aggregate("targetLocation", 0x3bf86d07f12de6c4L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f1255b0L).optional(false).ordered(true).multiple(false).origin("4321323723340506820").done();
     b.alias("use resource");
     return b.create();
   }
