@@ -1145,7 +1145,7 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="3mDt9dhIf0f" role="1TKVEl">
       <property role="IQ2nx" value="3866749931154370575" />
-      <property role="TrG5h" value="probabilityDistribution" />
+      <property role="TrG5h" value="probability" />
       <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
     <node concept="1TJgyj" id="3mDt9dhIf21" role="1TKVEi">

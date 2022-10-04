@@ -110,6 +110,16 @@
         <reference id="4555810343887637004" name="disease" index="24g7ti" />
         <reference id="188877551433123871" name="test" index="3tE8WY" />
       </concept>
+      <concept id="3866749931154339172" name="ActionCards.structure.CompositeTest" flags="ng" index="1$4g7R">
+        <child id="3866749931154339177" name="testSelectionStrategy" index="1$4g7U" />
+      </concept>
+      <concept id="3866749931154370574" name="ActionCards.structure.ProbabilityDistributionLine" flags="ng" index="1$4oit">
+        <property id="3866749931154370575" name="probabilityDistribution" index="1$4ois" />
+        <reference id="3866749931154370689" name="test" index="1$4ogi" />
+      </concept>
+      <concept id="3866749931154370547" name="ActionCards.structure.ProbabilityDistribution" flags="ng" index="1$4pHw">
+        <child id="3866749931154370666" name="lines" index="1$4ojT" />
+      </concept>
       <concept id="1758249876500222036" name="ActionCards.structure.RecentCovidContactProperty" flags="ng" index="1FjhUA" />
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
@@ -136,41 +146,11 @@
       </concept>
     </language>
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage">
-      <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
       <concept id="6750846609956093098" name="AgentLanguage.structure.RoomTypeReference" flags="ng" index="UeIYj">
         <reference id="6750846609956389136" name="roomType" index="Udx8D" />
       </concept>
-      <concept id="4321323723331232502" name="AgentLanguage.structure.UseResourceAction" flags="ng" index="3bm0ZL">
-        <reference id="4321323723335586258" name="targetResource" index="3b6FNl" />
-        <child id="4321323723340506820" name="targetLocation" index="3aPoJ3" />
-      </concept>
       <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableReference" flags="ng" index="1kHjla">
         <reference id="3535684625553292470" name="occupiable" index="IYbFp" />
-      </concept>
-      <concept id="8504720493510951867" name="AgentLanguage.structure.OrderPatientAction" flags="ng" index="3JG_m1">
-        <child id="8504720493510951967" name="targetPatient" index="3JG_8_" />
-        <child id="8504720493510951878" name="orderContent" index="3JG_nW" />
-      </concept>
-      <concept id="8504720493510951870" name="AgentLanguage.structure.FollowOrder" flags="ng" index="3JG_m4">
-        <child id="8504720493510951876" name="targetObject" index="3JG_nY" />
-      </concept>
-      <concept id="8504720493510951869" name="AgentLanguage.structure.MoveOrder" flags="ng" index="3JG_m7">
-        <child id="8504720493510951874" name="targetObject" index="3JG_nS" />
-      </concept>
-      <concept id="8504720493511036692" name="AgentLanguage.structure.SelfInstance" flags="ng" index="3JGL$I" />
-      <concept id="8504720493511205796" name="AgentLanguage.structure.PatientInstance" flags="ng" index="3JJFmu" />
-      <concept id="3838812034270454385" name="AgentLanguage.structure.Actor" flags="ng" index="3Vql55">
-        <child id="2814466787070108702" name="behaviours" index="2Ov1EZ" />
-      </concept>
-      <concept id="3838812034270522234" name="AgentLanguage.structure.BehaviourElement" flags="ng" index="3Vt_xe">
-        <child id="513408552829927049" name="signal" index="3n3c3i" />
-        <child id="3838812034270528835" name="behaviour" index="3VtFpR" />
-      </concept>
-      <concept id="3838812034270528852" name="AgentLanguage.structure.MoveAction" flags="ng" index="3VtFpw">
-        <child id="513408552830880866" name="targetObject" index="3nfz8T" />
-      </concept>
-      <concept id="3838812034270528838" name="AgentLanguage.structure.BehaviourSequence" flags="ng" index="3VtFpM">
-        <child id="3838812034270528840" name="steps" index="3VtFpW" />
       </concept>
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
@@ -1823,7 +1803,7 @@
     <node concept="2MhjZa" id="8bhHoBogyX" role="2MhjZp">
       <property role="TrG5h" value="PCR" />
       <property role="3lFixl" value="true" />
-      <ref role="3tPpTl" node="2XblIMS17kI" resolve="PHEThreeAlt" />
+      <ref role="3tPpTl" node="3mDt9diCdVs" resolve="PointOfCareTest" />
       <node concept="2_8ZN7" id="8bhHoBogEF" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -3600,43 +3580,25 @@
       </node>
     </node>
   </node>
-  <node concept="3Vql55" id="4f00s3RSalk">
-    <property role="TrG5h" value="Nurse" />
-    <node concept="3Vt_xe" id="4f00s3RSall" role="2Ov1EZ">
-      <property role="TrG5h" value="LateralFlowTest" />
-      <node concept="3VtFpM" id="4f00s3RSalm" role="3VtFpR">
-        <node concept="3VtFpw" id="4f00s3RSalv" role="3VtFpW">
-          <node concept="3JJFmu" id="4f00s3RSal_" role="3nfz8T" />
-        </node>
-        <node concept="3JG_m1" id="4f00s3RSamE" role="3VtFpW">
-          <node concept="3JJFmu" id="4f00s3RSamG" role="3JG_8_" />
-          <node concept="3JG_m4" id="4f00s3RSan0" role="3JG_nW">
-            <node concept="3JGL$I" id="4f00s3RSan6" role="3JG_nY" />
-          </node>
-        </node>
-        <node concept="3VtFpw" id="4f00s3RSanm" role="3VtFpW">
-          <node concept="UeIYj" id="4f00s3RSan_" role="3nfz8T">
-            <ref role="Udx8D" node="EFW1mYOHdw" resolve="RespiratoryCubicle" />
-          </node>
-        </node>
-        <node concept="3bm0ZL" id="4f00s3RSamb" role="3VtFpW">
-          <ref role="3b6FNl" node="5ivS4t6wkhV" resolve="LFT" />
-          <node concept="3JJFmu" id="4f00s3RSamk" role="3aPoJ3" />
-        </node>
-        <node concept="3JG_m1" id="4f00s3RSanF" role="3VtFpW">
-          <node concept="3JJFmu" id="4f00s3RSanH" role="3JG_8_" />
-          <node concept="3JG_m7" id="4f00s3RSanY" role="3JG_nW">
-            <node concept="UeIYj" id="4f00s3RSao4" role="3JG_nS">
-              <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="EZebP" id="4f00s3RSalr" role="3n3c3i" />
-    </node>
-  </node>
   <node concept="IzEoG" id="34hhAWxFbXE">
     <property role="IzEow" value="BoardGame" />
+  </node>
+  <node concept="1$4g7R" id="3mDt9diCdVs">
+    <property role="TrG5h" value="PointOfCareTest" />
+    <node concept="1$4pHw" id="3mDt9diF4vV" role="1$4g7U">
+      <node concept="1$4oit" id="3mDt9diF4w0" role="1$4ojT">
+        <property role="1$4ois" value="60" />
+        <ref role="1$4ogi" node="7$JgZMbkIKd" resolve="Cepheid" />
+      </node>
+      <node concept="1$4oit" id="3mDt9diF4w6" role="1$4ojT">
+        <property role="1$4ois" value="30" />
+        <ref role="1$4ogi" node="5ivS4t6xSC2" resolve="LIAT" />
+      </node>
+      <node concept="1$4oit" id="3mDt9diF4we" role="1$4ojT">
+        <property role="1$4ois" value="10" />
+        <ref role="1$4ogi" node="1xAzJ9NaSPv" resolve="LabPCR" />
+      </node>
+    </node>
   </node>
 </model>
 

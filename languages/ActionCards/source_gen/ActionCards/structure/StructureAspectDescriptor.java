@@ -767,7 +767,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154370574");
     b.version(2);
-    b.property("probabilityDistribution", 0x35a9749351b8f00fL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("3866749931154370575").done();
+    b.property("probability", 0x35a9749351b8f00fL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("3866749931154370575").done();
     b.associate("test", 0x35a9749351b8f081L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL).optional(false).origin("3866749931154370689").done();
     return b.create();
   }

@@ -3208,7 +3208,7 @@
         </node>
         <node concept="2reCLy" id="3mDt9dhIf0G" role="2reCL6">
           <node concept="3F0A7n" id="3mDt9dhIf0O" role="2reSmM">
-            <ref role="1NtTu8" to="e88n:3mDt9dhIf0f" resolve="probabilityDistribution" />
+            <ref role="1NtTu8" to="e88n:3mDt9dhIf0f" resolve="probability" />
           </node>
         </node>
       </node>
@@ -3218,13 +3218,6 @@
     <property role="3GE5qa" value="Testing" />
     <ref role="1XX52x" to="e88n:3mDt9dhIeZN" resolve="ProbabilityDistribution" />
     <node concept="3EZMnI" id="3mDt9dhIf10" role="2wV5jI">
-      <node concept="3EZMnI" id="3mDt9dhIf17" role="3EZMnx">
-        <node concept="VPM3Z" id="3mDt9dhIf19" role="3F10Kt" />
-        <node concept="3F0ifn" id="3mDt9dhIf1h" role="3EZMnx">
-          <property role="3F0ifm" value="Probability of selecting test:" />
-        </node>
-        <node concept="2iRfu4" id="3mDt9dhIf1c" role="2iSdaV" />
-      </node>
       <node concept="2rfBfz" id="3mDt9dhIf1u" role="3EZMnx">
         <node concept="2reSaE" id="3mDt9dhIf1B" role="2rf8GZ">
           <ref role="2reCK$" to="e88n:3mDt9dhIf1E" resolve="lines" />
@@ -3239,6 +3232,25 @@
         </node>
       </node>
       <node concept="2iRkQZ" id="3mDt9dhIf13" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3mDt9diCdWp">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1XX52x" to="e88n:3mDt9dhI7l$" resolve="CompositeTest" />
+    <node concept="3EZMnI" id="3mDt9diCdWr" role="2wV5jI">
+      <node concept="3F0A7n" id="3mDt9diCdWy" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="3mDt9diCdW_" role="3EZMnx">
+        <property role="3F0ifm" value="-------------------------------" />
+      </node>
+      <node concept="3F0ifn" id="3mDt9diCdWL" role="3EZMnx">
+        <property role="3F0ifm" value="Test selection strategy:" />
+      </node>
+      <node concept="3F1sOY" id="3mDt9diCdWG" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3mDt9dhI7lD" resolve="testSelectionStrategy" />
+      </node>
+      <node concept="2iRkQZ" id="3mDt9diCdWu" role="2iSdaV" />
     </node>
   </node>
 </model>

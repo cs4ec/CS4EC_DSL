@@ -2083,5 +2083,42 @@
       <node concept="l2Vlx" id="4Skof6wY8EG" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="3mDt9djdNrk">
+    <property role="3GE5qa" value="actions.basic actions" />
+    <ref role="1XX52x" to="3751:3mDt9djdNq_" resolve="ProbabilityDistribution" />
+    <node concept="3EZMnI" id="3mDt9djdNrm" role="2wV5jI">
+      <node concept="3F0ifn" id="2K0oNvrFWCW" role="3EZMnx">
+        <property role="3F0ifm" value="Probability distribution" />
+      </node>
+      <node concept="3F2HdR" id="3mDt9djdNrt" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3mDt9djdNrb" resolve="lines" />
+        <node concept="2iRkQZ" id="3mDt9djdNrv" role="2czzBx" />
+      </node>
+      <node concept="2iRkQZ" id="3mDt9djdNrp" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="3mDt9djdNrD">
+    <property role="3GE5qa" value="actions.basic actions" />
+    <ref role="1XX52x" to="3751:3mDt9djdNr2" resolve="ProbabilityDistributionLine" />
+    <node concept="3EZMnI" id="3mDt9djdNrF" role="2wV5jI">
+      <node concept="3EZMnI" id="3mDt9djdNrW" role="3EZMnx">
+        <node concept="VPM3Z" id="3mDt9djdNrY" role="3F10Kt" />
+        <node concept="3F0ifn" id="3mDt9djdNs0" role="3EZMnx">
+          <property role="3F0ifm" value="at probability" />
+        </node>
+        <node concept="3F0A7n" id="3mDt9djdNsa" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:3mDt9djdNr9" resolve="probability" />
+        </node>
+        <node concept="3F0ifn" id="3mDt9djdNsA" role="3EZMnx">
+          <property role="3F0ifm" value=":" />
+        </node>
+        <node concept="2iRfu4" id="3mDt9djdNs1" role="2iSdaV" />
+      </node>
+      <node concept="3F1sOY" id="3mDt9djdNsq" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:3mDt9djdNr3" resolve="behaviour" />
+      </node>
+      <node concept="2iRkQZ" id="3mDt9djdNrI" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

@@ -1765,8 +1765,8 @@
       <node id="3866749931154370574" at="766,173,767,34" concept="1" />
       <node id="3866749931154370574" at="767,34,768,98" concept="1" />
       <node id="3866749931154370574" at="768,98,769,17" concept="1" />
-      <node id="3866749931154370575" at="769,17,770,194" concept="1" />
-      <node id="3866749931154370689" at="770,194,771,168" concept="1" />
+      <node id="3866749931154370575" at="769,17,770,182" concept="1" />
+      <node id="3866749931154370689" at="770,182,771,168" concept="1" />
       <node id="3866749931154370574" at="771,168,772,22" concept="6" />
       <node id="3866749931154370574" at="765,0,774,0" concept="8" trace="createDescriptorForProbabilityDistributionLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="3866749931154370574" at="221,61,222,52" />

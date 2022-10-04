@@ -20435,7 +20435,7 @@
                   <node concept="liA8E" id="1Qs" role="2OqNvi">
                     <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.property(java.lang.String,long)" resolve="property" />
                     <node concept="Xl_RD" id="1Qt" role="37wK5m">
-                      <property role="Xl_RC" value="probabilityDistribution" />
+                      <property role="Xl_RC" value="probability" />
                     </node>
                     <node concept="1adDum" id="1Qu" role="37wK5m">
                       <property role="1adDun" value="0x35a9749351b8f00fL" />

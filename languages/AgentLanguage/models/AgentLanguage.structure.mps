@@ -1796,5 +1796,37 @@
     <property role="34LRSv" value="my room" />
     <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
   </node>
+  <node concept="1TIwiD" id="3mDt9djdNq_">
+    <property role="EcuMT" value="3866749931179423397" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="ProbabilityDistribution" />
+    <property role="34LRSv" value="probability distribution" />
+    <property role="R4oN_" value="a choice between many behaviours based on probability" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="1TJgyj" id="3mDt9djdNrb" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931179423435" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3mDt9djdNr2" resolve="ProbabilityDistributionLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3mDt9djdNr2">
+    <property role="EcuMT" value="3866749931179423426" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="ProbabilityDistributionLine" />
+    <node concept="1TJgyi" id="3mDt9djdNr9" role="1TKVEl">
+      <property role="IQ2nx" value="3866749931179423433" />
+      <property role="TrG5h" value="probability" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyj" id="3mDt9djdNr3" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931179423427" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="behaviour" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjec8l6" resolve="BehaviourSequence" />
+    </node>
+  </node>
 </model>
 

@@ -70,6 +70,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
+  private ConceptPresentation props_ProbabilityDistribution;
+  private ConceptPresentation props_ProbabilityDistributionLine;
   private ConceptPresentation props_Relationship;
   private ConceptPresentation props_RemoveRelationshipAction;
   private ConceptPresentation props_RepastParam;
@@ -550,6 +552,21 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
+      case LanguageConceptSwitch.ProbabilityDistribution:
+        if (props_ProbabilityDistribution == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("a choice between many behaviours based on probability");
+          cpb.rawPresentation("probability distribution");
+          props_ProbabilityDistribution = cpb.create();
+        }
+        return props_ProbabilityDistribution;
+      case LanguageConceptSwitch.ProbabilityDistributionLine:
+        if (props_ProbabilityDistributionLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ProbabilityDistributionLine");
+          props_ProbabilityDistributionLine = cpb.create();
+        }
+        return props_ProbabilityDistributionLine;
       case LanguageConceptSwitch.Relationship:
         if (props_Relationship == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
