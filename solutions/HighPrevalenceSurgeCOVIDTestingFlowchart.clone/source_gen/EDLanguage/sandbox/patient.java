@@ -416,12 +416,6 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisAmberBay() {
-    if (this.admittedTo == "AmberBay") {
-      return 1;
-    }
-    return 0;
-  }
   public int getadmittedToisCOVIDPositiveCohort() {
     if (this.admittedTo == "COVIDPositiveCohort") {
       return 1;
@@ -430,6 +424,12 @@ public class patient extends Actor {
   }
   public int getadmittedToisSideRoom() {
     if (this.admittedTo == "SideRoom") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBay() {
+    if (this.admittedTo == "AmberBay") {
       return 1;
     }
     return 0;

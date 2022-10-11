@@ -140,8 +140,8 @@ public class CubicleNurse extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "LateralFlowTestTrigger_b":
-        behaviourBuilder = new Behaviour("LateralFlowTestTrigger_b");
+      case "LateralFlowTestTrigger_a":
+        behaviourBuilder = new Behaviour("LateralFlowTestTrigger_a");
         this.InitLateralFlowTest_a(s);
         break;
       case "PCRTrigger_b":
@@ -151,10 +151,6 @@ public class CubicleNurse extends Actor {
       case "PCRTrigger_c":
         behaviourBuilder = new Behaviour("PCRTrigger_c");
         this.InitPCR_c(s);
-        break;
-      case "PatientArrivesTrigger_g":
-        behaviourBuilder = new Behaviour("PatientArrivesTrigger_g");
-        this.InitPatientArrives_g(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -3887,72 +3883,6 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class SendSignalAction_a0d extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0d(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LateralFlowTestTrigger_bSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_b0d extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0d(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
-  public class SendSignalAction_a0d_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_a0d_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LateralFlowTestTrigger_bSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_b0d_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0d_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class MoveAction_a0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -4104,16 +4034,6 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new Choice_g0c(behaviourBuilder));
     plstSteps.add(new SendSignalAction_h0c(behaviourBuilder));
     plstSteps.add(new StayAction_i0c(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitPatientArrives_g(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new SendSignalAction_a0d(behaviourBuilder));
-    plstSteps.add(new StayAction_b0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

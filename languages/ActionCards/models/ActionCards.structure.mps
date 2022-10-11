@@ -500,6 +500,12 @@
     <property role="TrG5h" value="AdmissionAction" />
     <property role="34LRSv" value="admission action" />
     <ref role="1TJDcQ" node="2VPlUUsG6x$" resolve="Action" />
+    <node concept="1TJgyj" id="2K0oNvtWdGo" role="1TKVEi">
+      <property role="IQ2ns" value="3170643229266729752" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="admissionActionCard" />
+      <ref role="20lvS9" node="1xAzJ9Pwlb8" resolve="ActionCardReference" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5ivS4t6ssOS">
     <property role="EcuMT" value="6097839017212103992" />
@@ -1153,6 +1159,30 @@
       <property role="20kJfa" value="test" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="6MzSDQOui5f" resolve="Test" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2K0oNvtRlaD">
+    <property role="EcuMT" value="3170643229265449641" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="CompositeTestResultCondition" />
+    <property role="34LRSv" value="composite test result condition" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyj" id="2K0oNvtRlaG" role="1TKVEi">
+      <property role="IQ2ns" value="3170643229265449644" />
+      <property role="20kJfa" value="test" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3mDt9dhI7l$" resolve="CompositeTest" />
+    </node>
+    <node concept="1TJgyj" id="2K0oNvtRlaI" role="1TKVEi">
+      <property role="IQ2ns" value="3170643229265449646" />
+      <property role="20kJfa" value="disease" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+    </node>
+    <node concept="1TJgyi" id="2K0oNvtRlaE" role="1TKVEl">
+      <property role="IQ2nx" value="3170643229265449642" />
+      <property role="TrG5h" value="outcome" />
+      <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
     </node>
   </node>
 </model>

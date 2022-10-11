@@ -27,6 +27,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Branch;
   private ConceptPresentation props_BranchConditional;
   private ConceptPresentation props_CompositeTest;
+  private ConceptPresentation props_CompositeTestResultCondition;
   private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_DischargeAction;
   private ConceptPresentation props_Disease;
@@ -221,6 +222,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CompositeTest = cpb.create();
         }
         return props_CompositeTest;
+      case LanguageConceptSwitch.CompositeTestResultCondition:
+        if (props_CompositeTestResultCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("composite test result condition");
+          props_CompositeTestResultCondition = cpb.create();
+        }
+        return props_CompositeTestResultCondition;
       case LanguageConceptSwitch.DiagnosticCondition:
         if (props_DiagnosticCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -33,91 +33,75 @@ public class patientGenerator_0 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("PatientArrivesTrigger_r");
+    sendSignalTemp.setName("PatientArrivesTrigger_n");
     sendSignalTemp.AddData("patient", a);
-    sendSignalTemp.AddActor("CubicleNurse");
+    sendSignalTemp.AddActor("TriageNurse");
 
 
     // For each agent attribute 
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusfullyvaccinated") + 12.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusfullyvaccinated")) / 100)) {
       a.COVIDVaccineStatus = "fullyvaccinated";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusUnvaccinated") + 2.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusUnvaccinated") + 88.0) / 100)) {
       a.COVIDVaccineStatus = "Unvaccinated";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatuspartiallyvaccinated") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatuspartiallyvaccinated") + 98.0) / 100)) {
       a.COVIDVaccineStatus = "partiallyvaccinated";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusUnvaccinated") + 20.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusUnvaccinated")) / 100)) {
       a.FluAVaccineStatus = "Unvaccinated";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusfullyvaccinated") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusfullyvaccinated") + 80.0) / 100)) {
       a.FluAVaccineStatus = "fullyvaccinated";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatuspartiallyvaccinated") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatuspartiallyvaccinated") + 100.0) / 100)) {
       a.FluAVaccineStatus = "partiallyvaccinated";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusUnvaccinated") + 20.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusUnvaccinated")) / 100)) {
       a.FluBVaccineStatus = "Unvaccinated";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusfullyvaccinated") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusfullyvaccinated") + 80.0) / 100)) {
       a.FluBVaccineStatus = "fullyvaccinated";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatuspartiallyvaccinated") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatuspartiallyvaccinated") + 100.0) / 100)) {
       a.FluBVaccineStatus = "partiallyvaccinated";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSusceptible") + 20.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSusceptible")) / 100)) {
       a.COVIDInfectionStatus = "Susceptible";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic") + 96.0) / 100)) {
       a.COVIDInfectionStatus = "Symptomatic";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic") + 99.0) / 100)) {
       a.COVIDInfectionStatus = "Asymptomatic";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSusceptible") + 5.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSusceptible")) / 100)) {
       a.FluAInfectionStatus = "Susceptible";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic") + 2.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic") + 95.0) / 100)) {
       a.FluAInfectionStatus = "Symptomatic";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic") + 100.0) / 100)) {
       a.FluAInfectionStatus = "Asymptomatic";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible") + 5.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible")) / 100)) {
       a.FluBInfectionStatus = "Susceptible";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic") + 2.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic") + 95.0) / 100)) {
       a.FluBInfectionStatus = "Symptomatic";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic") + 100.0) / 100)) {
       a.FluBInfectionStatus = "Asymptomatic";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo") + 5.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo")) / 100)) {
       a.RecentCovidContact = "No";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes") + 95.0) / 100)) {
       a.RecentCovidContact = "Yes";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedNo") + 5.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedNo")) / 100)) {
       a.Immunocompromised = "No";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedYes") + 0.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedYes") + 95.0) / 100)) {
       a.Immunocompromised = "Yes";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitysevere") + 20.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitylow")) / 100)) {
+      a.Severity = "low";
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitymoderate") + 70.0) / 100)) {
+      a.Severity = "moderate";
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitysevere") + 85.0) / 100)) {
       a.Severity = "severe";
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitymoderate") + 0.0) / 100)) {
-      a.Severity = "moderate";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitylow") + 0.0) / 100)) {
-      a.Severity = "low";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("admissionRouteEmergencyAttendance") + 0.0) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("admissionRouteEmergencyAttendance")) / 100)) {
       a.admissionRoute = "EmergencyAttendance";
     }
 
@@ -128,30 +112,30 @@ public class patientGenerator_0 extends AgentGenerator {
 
   public void initialiseArrivalMap() {
     ArrivalPerHour = new HashMap<Integer, Integer>();
-    ArrivalPerHour.put(1, 4);
-    ArrivalPerHour.put(2, 6);
-    ArrivalPerHour.put(3, 6);
-    ArrivalPerHour.put(4, 3);
-    ArrivalPerHour.put(5, 3);
-    ArrivalPerHour.put(6, 7);
-    ArrivalPerHour.put(7, 2);
-    ArrivalPerHour.put(8, 2);
-    ArrivalPerHour.put(9, 5);
-    ArrivalPerHour.put(10, 10);
-    ArrivalPerHour.put(11, 10);
-    ArrivalPerHour.put(12, 13);
-    ArrivalPerHour.put(13, 13);
-    ArrivalPerHour.put(14, 14);
-    ArrivalPerHour.put(15, 15);
-    ArrivalPerHour.put(16, 16);
-    ArrivalPerHour.put(17, 14);
-    ArrivalPerHour.put(18, 13);
-    ArrivalPerHour.put(19, 9);
-    ArrivalPerHour.put(20, 7);
-    ArrivalPerHour.put(21, 8);
-    ArrivalPerHour.put(22, 7);
-    ArrivalPerHour.put(23, 10);
-    ArrivalPerHour.put(24, 3);
+    ArrivalPerHour.put(1, 5);
+    ArrivalPerHour.put(2, 8);
+    ArrivalPerHour.put(3, 8);
+    ArrivalPerHour.put(4, 4);
+    ArrivalPerHour.put(5, 4);
+    ArrivalPerHour.put(6, 9);
+    ArrivalPerHour.put(7, 3);
+    ArrivalPerHour.put(8, 3);
+    ArrivalPerHour.put(9, 6);
+    ArrivalPerHour.put(10, 13);
+    ArrivalPerHour.put(11, 13);
+    ArrivalPerHour.put(12, 16);
+    ArrivalPerHour.put(13, 16);
+    ArrivalPerHour.put(14, 18);
+    ArrivalPerHour.put(15, 19);
+    ArrivalPerHour.put(16, 20);
+    ArrivalPerHour.put(17, 18);
+    ArrivalPerHour.put(18, 16);
+    ArrivalPerHour.put(19, 11);
+    ArrivalPerHour.put(20, 9);
+    ArrivalPerHour.put(21, 10);
+    ArrivalPerHour.put(22, 9);
+    ArrivalPerHour.put(23, 13);
+    ArrivalPerHour.put(24, 4);
 
 
 

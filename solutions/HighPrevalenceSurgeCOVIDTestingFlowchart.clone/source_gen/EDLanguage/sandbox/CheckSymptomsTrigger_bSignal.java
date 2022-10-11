@@ -8,7 +8,7 @@ public class CheckSymptomsTrigger_bSignal extends ActorTypeSignal {
   public CheckSymptomsTrigger_bSignal() {
     this.setName("CheckSymptomsTrigger_b");
     this.setDescription("h");
-    this.AddActor("CubicleNurse");
+    this.AddActor("TriageNurse");
   }
 
 }

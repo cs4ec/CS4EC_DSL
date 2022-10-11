@@ -40,7 +40,9 @@
       <concept id="1645043697875742197" name="ActionCards.structure.ProcessingTimeTable" flags="ng" index="ldbdM">
         <child id="1645043697875742305" name="ProcessingTimeLines" index="ldb3A" />
       </concept>
-      <concept id="33966321878163354" name="ActionCards.structure.AdmissionAction" flags="ng" index="2lDReE" />
+      <concept id="33966321878163354" name="ActionCards.structure.AdmissionAction" flags="ng" index="2lDReE">
+        <child id="3170643229266729752" name="admissionActionCard" index="3LWbwJ" />
+      </concept>
       <concept id="5402567240278617686" name="ActionCards.structure.EDScenario" flags="ng" index="2_0uwh">
         <property id="5729391434181383388" name="runDuration" index="i3JvV" />
         <property id="8998806958909918627" name="secondsPerTick" index="wKqbz" />
@@ -114,7 +116,7 @@
         <child id="3866749931154339177" name="testSelectionStrategy" index="1$4g7U" />
       </concept>
       <concept id="3866749931154370574" name="ActionCards.structure.ProbabilityDistributionLine" flags="ng" index="1$4oit">
-        <property id="3866749931154370575" name="probabilityDistribution" index="1$4ois" />
+        <property id="3866749931154370575" name="probability" index="1$4ois" />
         <reference id="3866749931154370689" name="test" index="1$4ogi" />
       </concept>
       <concept id="3866749931154370547" name="ActionCards.structure.ProbabilityDistribution" flags="ng" index="1$4pHw">
@@ -126,6 +128,9 @@
       <concept id="1758249876508941937" name="ActionCards.structure.ElectiveAttendanceRoute" flags="ng" index="1FPx23" />
       <concept id="1758249876508941398" name="ActionCards.structure.EmergencyAttendanceRoute" flags="ng" index="1FPxa$" />
       <concept id="1758249876537114910" name="ActionCards.structure.ImmunosuppressedProperty" flags="ng" index="1He0ZG" />
+      <concept id="1758249876539396808" name="ActionCards.structure.ActionCardReference" flags="ng" index="1HTXKU">
+        <reference id="1758249876539396856" name="actionCard" index="1HTXKa" />
+      </concept>
       <concept id="6963522544237023781" name="ActionCards.structure.ActionDurationMinutes" flags="ng" index="1M3RjT">
         <property id="6963522544237023782" name="duration" index="1M3RjU" />
       </concept>
@@ -1852,6 +1857,9 @@
       </node>
       <node concept="UeIYj" id="4Y76Qe1wPk2" role="3lENdC">
         <ref role="Udx8D" node="7$JgZMbkJ3A" resolve="AmberBay" />
+      </node>
+      <node concept="1HTXKU" id="2K0oNvueMsp" role="3LWbwJ">
+        <ref role="1HTXKa" node="2K0oNvueMs4" resolve="Aber" />
       </node>
     </node>
     <node concept="2lDReE" id="4f00s3RRAd5" role="2MhjZp">
@@ -3597,6 +3605,31 @@
       <node concept="1$4oit" id="3mDt9diF4we" role="1$4ojT">
         <property role="1$4ois" value="10" />
         <ref role="1$4ogi" node="1xAzJ9NaSPv" resolve="LabPCR" />
+      </node>
+    </node>
+  </node>
+  <node concept="2MhjZA" id="2K0oNvueMs4">
+    <property role="3GE5qa" value="Action Cards" />
+    <property role="TrG5h" value="Aber" />
+    <node concept="37mRI7" id="2K0oNvueMsf" role="lGtFl">
+      <node concept="37mRIm" id="2K0oNvueMsg" role="37mRID">
+        <property role="37mO49" value="3170643229271598853" />
+        <node concept="gqqVs" id="2K0oNvueMse" role="37mO4d">
+          <property role="gqqTZ" value="62.0" />
+          <property role="gqqTW" value="50.0" />
+          <property role="gqqTX" value="122.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+    </node>
+    <node concept="2MhjZa" id="2K0oNvueMss" role="2MhjZp">
+      <property role="TrG5h" value="wdw" />
+      <node concept="2_8ZN7" id="2K0oNvueMsy" role="2_8HaY">
+        <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
+      </node>
+      <node concept="1M3RjT" id="2K0oNvueMsw" role="1M293l">
+        <property role="1M3RjU" value="10" />
       </node>
     </node>
   </node>

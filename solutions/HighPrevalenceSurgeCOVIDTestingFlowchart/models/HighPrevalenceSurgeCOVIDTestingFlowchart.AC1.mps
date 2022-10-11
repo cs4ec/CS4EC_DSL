@@ -201,7 +201,7 @@
       </concept>
       <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw" />
       <concept id="4321323723309500087" name="BuiltEnvironment.structure.ResourceAllocation" flags="ng" index="3kFaIK">
-        <property id="4321323723309500088" name="number" index="3kFaIZ" />
+        <property id="4321323723309500088" name="startingNumber" index="3kFaIZ" />
         <reference id="4321323723309500090" name="resource" index="3kFaIX" />
       </concept>
     </language>
@@ -2534,7 +2534,7 @@
         <node concept="gqqVs" id="7$JgZMbkJ2Y" role="37mO4d">
           <property role="gqqTZ" value="61.5" />
           <property role="gqqTW" value="1.0" />
-          <property role="gqqTX" value="108.0" />
+          <property role="gqqTX" value="112.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -2544,7 +2544,7 @@
         <node concept="gqqVs" id="7$JgZMbkJ30" role="37mO4d">
           <property role="gqqTZ" value="75.5" />
           <property role="gqqTW" value="138.0" />
-          <property role="gqqTX" value="70.0" />
+          <property role="gqqTX" value="72.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -2554,7 +2554,7 @@
         <node concept="gqqVs" id="7$JgZMbkJ32" role="37mO4d">
           <property role="gqqTZ" value="61.5" />
           <property role="gqqTW" value="204.0" />
-          <property role="gqqTX" value="98.0" />
+          <property role="gqqTX" value="102.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -2564,7 +2564,7 @@
         <node concept="gqqVs" id="7$JgZMbkJ34" role="37mO4d">
           <property role="gqqTZ" value="23.0" />
           <property role="gqqTW" value="72.0" />
-          <property role="gqqTX" value="175.0" />
+          <property role="gqqTX" value="182.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>

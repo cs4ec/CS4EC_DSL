@@ -23,8 +23,6 @@ import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.scopes.runtime.NamedElementsScope;
-import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import java.util.Objects;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
@@ -149,35 +147,8 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     List<SNode> nli = new ArrayList<SNode>();
     SNode actorBase = __thisNode__;
 
-
-    final List<SNode> myBehaviours = Actor__BehaviorDescriptor.GetInheritedBehaviourElement_id29F2V$jvuup.invoke(actorBase);
-    List<SNode> cleanedElements = new ArrayList<SNode>();
-
-    for (final Wrappers._int i = new Wrappers._int(0); i.value < myBehaviours.size(); i.value++) {
-      if (!(ListSequence.fromList(cleanedElements).any(new IWhereFilter<SNode>() {
-        public boolean accept(SNode it) {
-          return SPropertyOperations.getString(it, PROPS.name$MnvL) == myBehaviours.get(i.value).getName();
-        }
-      }))) {
-        ListSequence.fromList(cleanedElements).addElement(ListSequence.fromList(myBehaviours).getElement(i.value));
-      }
-
-    }
-
-
-    for (int i = 0; i < ListSequence.fromList(cleanedElements).count(); i++) {
-      List<SNode> allContainedBehaviours = ListSequence.fromList(SNodeOperations.getNodeDescendants(ListSequence.fromList(cleanedElements).getElement(i), CONCEPTS.Behaviour$OO, false, new SAbstractConcept[]{})).distinct().toListSequence();
-      for (int k = 0; k < ListSequence.fromList(allContainedBehaviours).count(); k++) {
-        if (SPropertyOperations.getString(SLinkOperations.getTarget(ListSequence.fromList(allContainedBehaviours).getElement(k), LINKS.description$Kute), PROPS.description$WNUv) != null) {
-          ListSequence.fromList(nli).addElement(ListSequence.fromList(allContainedBehaviours).getElement(k));
-        }
-      }
-
-    }
-
-    // This is the 'get all' that doesnt really work propery ---- remove when come to cleaning 
-    nli = SNodeOperations.getNodeDescendants(actorBase, CONCEPTS.Behaviour$OO, false, new SAbstractConcept[]{});
-
+    // This is the 'get all' that doesnt really work properly ---- remove when come to cleaning 
+    nli = ListSequence.fromList(SNodeOperations.getNodeDescendants(actorBase, CONCEPTS.Behaviour$OO, false, new SAbstractConcept[]{})).distinct().toListSequence();
     return nli;
   }
   /*package*/ static List<SNode> searhBehaviourSequence_id4BMD7YiwBKD(@NotNull SNode __thisNode__, SNode sequence, List<SNode> behaviours) {
@@ -308,7 +279,6 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty description$WNUv = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7ba98c3ed5361882L, 0x7ba98c3ed5361883L, "description");
   }
 
   private static final class CONCEPTS {
@@ -322,7 +292,6 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SContainmentLink behaviours$zTMQ = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x270efea19372e41eL, "behaviours");
     /*package*/ static final SContainmentLink attributes$f_y3 = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x257e995deb85de00L, "attributes");
     /*package*/ static final SReferenceLink superType$2Qmm = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x35463334ce306ba8L, "superType");
-    /*package*/ static final SContainmentLink description$Kute = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L, 0x7ba98c3ed53618a0L, "description");
     /*package*/ static final SContainmentLink steps$BnuP = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L, 0x35463334ce308548L, "steps");
     /*package*/ static final SContainmentLink isIdleBehaviour$pDqV = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x3dab4295aef20062L, "isIdleBehaviour");
   }

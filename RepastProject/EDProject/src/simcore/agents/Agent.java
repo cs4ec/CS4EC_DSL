@@ -72,7 +72,7 @@ public class Agent {
 		
 	    ISchedule schedule = RunEnvironment.getInstance().getCurrentSchedule();
 	    ScheduleParameters scheduleParams = ScheduleParameters.createAtEnd(ScheduleParameters.LAST_PRIORITY);
-	    schedule.schedule(scheduleParams, this, "printActivityHistory");
+//	    schedule.schedule(scheduleParams, this, "printActivityHistory");
 	}
 
 	public void executeCurrentActions() {

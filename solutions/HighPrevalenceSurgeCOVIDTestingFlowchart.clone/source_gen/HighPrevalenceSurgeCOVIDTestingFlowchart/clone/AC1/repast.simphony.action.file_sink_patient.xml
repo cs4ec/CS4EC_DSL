@@ -55,9 +55,9 @@
     <string>patientgetCepheidFluBResultisNegative</string>
     <string>patientgetPHEThreeAltCOVIDResultisPositive</string>
     <string>patientgetPHEThreeAltCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisAmberBay</string>
     <string>patientgetadmittedToisCOVIDPositiveCohort</string>
     <string>patientgetadmittedToisSideRoom</string>
+    <string>patientgetadmittedToisAmberBay</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

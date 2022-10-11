@@ -826,5 +826,18 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="2K0oNvtRlgm">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:2K0oNvtRlaD" resolve="CompositeTestResultCondition" />
+    <node concept="9S07l" id="2K0oNvtRlgn" role="9Vyp8">
+      <node concept="3clFbS" id="2K0oNvtRlgo" role="2VODD2">
+        <node concept="3clFbF" id="2K0oNvtRlki" role="3cqZAp">
+          <node concept="3clFbT" id="2K0oNvtRlkh" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

@@ -35,7 +35,7 @@ public class EDBuilder implements ContextBuilder<Object> {
   public Context build(Context<Object> context) {
 
     // Reset log contents 
-    new ToolBox(this).GetLog().clearOldContents();
+//    new ToolBox(this).GetLog().clearOldContents();
 
     context.setId("EDProject");
     int mapWidth = 449;
@@ -75,6 +75,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 7; i++) {
       context.add(new LabTechnician(space, grid, context));
     }
+    for (int i = 0; i < 30; i++) {
+      context.add(new WardNurse(space, grid, context));
+    }
 
 
     GridValueLayer vl = new GridValueLayer("cellbox", true, new repast.simphony.space.grid.StrictBorders(), mapWidth, mapHeight);
@@ -85,7 +88,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Area EmergencyDepartment_0 = new Area(context, space, grid, 5, 5, 370, 195, Color.WHITE);
     EmergencyDepartment_0.addResource(LabPCR.getInstance(), 100);
     EmergencyDepartment_0.addResource(LFD.getInstance(), 100);
-    EmergencyDepartment_0.addResource(LIAT.getInstance(), 22);
+    EmergencyDepartment_0.addResource(LIAT.getInstance(), 40);
     EmergencyDepartment_0.addResource(PHEThreeAlt.getInstance(), 1000);
     EmergencyDepartment_0.addResource(Cepheid.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishAmount(LabPCR.getInstance(), 100);
@@ -269,30 +272,30 @@ public class EDBuilder implements ContextBuilder<Object> {
 
   public void CreatePatientArrivalMap() {
     HashMap ArrivalPerHour = new HashMap();
-    ArrivalPerHour.put(1, 4);
-    ArrivalPerHour.put(2, 6);
-    ArrivalPerHour.put(3, 6);
-    ArrivalPerHour.put(4, 3);
-    ArrivalPerHour.put(5, 3);
-    ArrivalPerHour.put(6, 7);
-    ArrivalPerHour.put(7, 2);
-    ArrivalPerHour.put(8, 2);
-    ArrivalPerHour.put(9, 5);
-    ArrivalPerHour.put(10, 10);
-    ArrivalPerHour.put(11, 10);
-    ArrivalPerHour.put(12, 13);
-    ArrivalPerHour.put(13, 13);
-    ArrivalPerHour.put(14, 14);
-    ArrivalPerHour.put(15, 15);
-    ArrivalPerHour.put(16, 16);
-    ArrivalPerHour.put(17, 14);
-    ArrivalPerHour.put(18, 13);
-    ArrivalPerHour.put(19, 9);
-    ArrivalPerHour.put(20, 7);
-    ArrivalPerHour.put(21, 8);
-    ArrivalPerHour.put(22, 7);
-    ArrivalPerHour.put(23, 10);
-    ArrivalPerHour.put(24, 3);
+    ArrivalPerHour.put(1, 5);
+    ArrivalPerHour.put(2, 8);
+    ArrivalPerHour.put(3, 8);
+    ArrivalPerHour.put(4, 4);
+    ArrivalPerHour.put(5, 4);
+    ArrivalPerHour.put(6, 9);
+    ArrivalPerHour.put(7, 3);
+    ArrivalPerHour.put(8, 3);
+    ArrivalPerHour.put(9, 6);
+    ArrivalPerHour.put(10, 13);
+    ArrivalPerHour.put(11, 13);
+    ArrivalPerHour.put(12, 16);
+    ArrivalPerHour.put(13, 16);
+    ArrivalPerHour.put(14, 18);
+    ArrivalPerHour.put(15, 19);
+    ArrivalPerHour.put(16, 20);
+    ArrivalPerHour.put(17, 18);
+    ArrivalPerHour.put(18, 16);
+    ArrivalPerHour.put(19, 11);
+    ArrivalPerHour.put(20, 9);
+    ArrivalPerHour.put(21, 10);
+    ArrivalPerHour.put(22, 9);
+    ArrivalPerHour.put(23, 13);
+    ArrivalPerHour.put(24, 4);
     PatientArrivalStore.Initialise((Map<Integer, Integer>) ArrivalPerHour);
   }
 

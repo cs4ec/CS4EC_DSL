@@ -2176,6 +2176,16 @@
         </node>
         <node concept="2iRfu4" id="2_JteYOboLc" role="2iSdaV" />
       </node>
+      <node concept="3EZMnI" id="2K0oNvtWdGN" role="3EZMnx">
+        <node concept="VPM3Z" id="2K0oNvtWdGP" role="3F10Kt" />
+        <node concept="3F0ifn" id="2K0oNvtWdGR" role="3EZMnx">
+          <property role="3F0ifm" value="linked Action Card:" />
+        </node>
+        <node concept="3F1sOY" id="2K0oNvtWdHh" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:2K0oNvtWdGo" resolve="admissionActionCard" />
+        </node>
+        <node concept="2iRfu4" id="2K0oNvtWdGS" role="2iSdaV" />
+      </node>
       <node concept="2iRkQZ" id="2_JteYOboLd" role="2iSdaV" />
     </node>
   </node>
@@ -3251,6 +3261,40 @@
         <ref role="1NtTu8" to="e88n:3mDt9dhI7lD" resolve="testSelectionStrategy" />
       </node>
       <node concept="2iRkQZ" id="3mDt9diCdWu" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2K0oNvtRlaS">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="e88n:2K0oNvtRlaD" resolve="CompositeTestResultCondition" />
+    <node concept="3EZMnI" id="2K0oNvtRlaU" role="2wV5jI">
+      <node concept="3F0ifn" id="2K0oNvtRlb1" role="3EZMnx">
+        <property role="3F0ifm" value="test" />
+      </node>
+      <node concept="1iCGBv" id="2K0oNvtRlb7" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:2K0oNvtRlaG" resolve="test" />
+        <node concept="1sVBvm" id="2K0oNvtRlb9" role="1sWHZn">
+          <node concept="3F0A7n" id="2K0oNvtRlbh" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="1iCGBv" id="2K0oNvtRlbq" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:2K0oNvtRlaI" resolve="disease" />
+        <node concept="1sVBvm" id="2K0oNvtRlbs" role="1sWHZn">
+          <node concept="3F0A7n" id="2K0oNvtRlbB" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2K0oNvtRlbN" role="3EZMnx">
+        <property role="3F0ifm" value="gives" />
+      </node>
+      <node concept="3F0A7n" id="2K0oNvtRlc7" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:2K0oNvtRlaE" resolve="outcome" />
+      </node>
+      <node concept="2iRfu4" id="2K0oNvtRlaX" role="2iSdaV" />
     </node>
   </node>
 </model>
