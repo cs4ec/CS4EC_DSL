@@ -4,15 +4,6 @@
   <delimiter>,</delimiter>
   <format>TABULAR</format>
   <sourceIds class="linked-hash-set">
-    <string>patientgetCOVIDVaccineStatusisUnvaccinated</string>
-    <string>patientgetCOVIDVaccineStatusispartiallyvaccinated</string>
-    <string>patientgetCOVIDVaccineStatusisfullyvaccinated</string>
-    <string>patientgetFluAVaccineStatusisUnvaccinated</string>
-    <string>patientgetFluAVaccineStatusispartiallyvaccinated</string>
-    <string>patientgetFluAVaccineStatusisfullyvaccinated</string>
-    <string>patientgetFluBVaccineStatusisUnvaccinated</string>
-    <string>patientgetFluBVaccineStatusispartiallyvaccinated</string>
-    <string>patientgetFluBVaccineStatusisfullyvaccinated</string>
     <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
     <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
     <string>patientgetCOVIDInfectionStatusisSusceptible</string>
@@ -24,8 +15,6 @@
     <string>patientgetFluBInfectionStatusisSusceptible</string>
     <string>patientgetRecentCovidContactisYes</string>
     <string>patientgetRecentCovidContactisNo</string>
-    <string>patientgetImmunocompromisedisYes</string>
-    <string>patientgetImmunocompromisedisNo</string>
     <string>patientgetSeverityissevere</string>
     <string>patientgetSeverityismoderate</string>
     <string>patientgetSeverityislow</string>

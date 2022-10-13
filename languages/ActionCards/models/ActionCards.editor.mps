@@ -496,6 +496,15 @@
       <node concept="3F0ifn" id="sr1c8PrIbm" role="3EZMnx">
         <property role="3F0ifm" value="seconds per tick" />
       </node>
+      <node concept="3F0ifn" id="3i9haAJ4Whn" role="3EZMnx">
+        <property role="3F0ifm" value="Simulation Repetitions:" />
+        <node concept="pVoyu" id="3i9haAJ4WhI" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="3i9haAJ4Wi7" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:3i9haAJ4WgW" resolve="simulation_repetitions" />
+      </node>
       <node concept="l2Vlx" id="4FTL$vJY2UX" role="2iSdaV" />
     </node>
   </node>

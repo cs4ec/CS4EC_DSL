@@ -20,6 +20,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_Repast/EDRuntime_Repast.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/HighPrevalenceSurgeCOVIDTestingFlowchart.clone/HighPrevalenceSurgeCOVIDTestingFlowchart.clone.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/Retrospective31December2022/Retrospective31December2022.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/SimpleActionCard/SimpleActionCard.msd" folder="runtime" />
     </projectModules>
   </component>

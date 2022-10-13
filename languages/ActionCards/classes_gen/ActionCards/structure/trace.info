@@ -19,7 +19,7 @@
       <unit at="10,0,182,0" name="ActionCards.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="18,0,1033,0" name="ActionCards.structure.StructureAspectDescriptor" />
+      <unit at="18,0,1034,0" name="ActionCards.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/147289298423155114">
@@ -42,20 +42,20 @@
     <file name="StructureAspectDescriptor.java">
       <node id="147289298423155114" at="90,0,91,0" concept="2" trace="myConceptTimeDistributionTable" />
       <node id="147289298423155114" at="266,55,267,46" concept="6" />
-      <node id="147289298423155114" at="967,79,968,166" concept="5" />
-      <node id="147289298423155114" at="968,166,969,33" concept="1" />
-      <node id="147289298423155114" at="969,33,970,122" concept="1" />
-      <node id="147289298423155114" at="970,122,971,97" concept="1" />
-      <node id="147289298423155114" at="971,97,972,17" concept="1" />
-      <node id="147289298423155115" at="972,17,973,198" concept="1" />
-      <node id="147289298423155114" at="973,198,974,39" concept="1" />
-      <node id="147289298423155114" at="974,39,975,22" concept="6" />
-      <node id="147289298423155114" at="967,0,977,0" concept="8" trace="createDescriptorForTimeDistributionTable#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="147289298423155114" at="968,79,969,166" concept="5" />
+      <node id="147289298423155114" at="969,166,970,33" concept="1" />
+      <node id="147289298423155114" at="970,33,971,122" concept="1" />
+      <node id="147289298423155114" at="971,122,972,97" concept="1" />
+      <node id="147289298423155114" at="972,97,973,17" concept="1" />
+      <node id="147289298423155115" at="973,17,974,198" concept="1" />
+      <node id="147289298423155114" at="974,198,975,39" concept="1" />
+      <node id="147289298423155114" at="975,39,976,22" concept="6" />
+      <node id="147289298423155114" at="968,0,978,0" concept="8" trace="createDescriptorForTimeDistributionTable#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="147289298423155114" at="266,55,267,46" />
-      <scope id="147289298423155114" at="967,79,975,22">
+      <scope id="147289298423155114" at="968,79,976,22">
         <var name="b" id="147289298423155114" />
       </scope>
-      <scope id="147289298423155114" at="967,0,977,0" />
+      <scope id="147289298423155114" at="968,0,978,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/147289298423155117">
@@ -78,19 +78,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="147289298423155117" at="89,0,90,0" concept="2" trace="myConceptTimeDistributionLine" />
       <node id="147289298423155117" at="264,54,265,45" concept="6" />
-      <node id="147289298423155117" at="958,78,959,165" concept="5" />
-      <node id="147289298423155117" at="959,165,960,34" concept="1" />
-      <node id="147289298423155117" at="960,34,961,97" concept="1" />
-      <node id="147289298423155117" at="961,97,962,17" concept="1" />
-      <node id="147289298423155118" at="962,17,963,173" concept="1" />
-      <node id="147289298423155120" at="963,173,964,115" concept="1" />
-      <node id="147289298423155117" at="964,115,965,22" concept="6" />
-      <node id="147289298423155117" at="958,0,967,0" concept="8" trace="createDescriptorForTimeDistributionLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="147289298423155117" at="959,78,960,165" concept="5" />
+      <node id="147289298423155117" at="960,165,961,34" concept="1" />
+      <node id="147289298423155117" at="961,34,962,97" concept="1" />
+      <node id="147289298423155117" at="962,97,963,17" concept="1" />
+      <node id="147289298423155118" at="963,17,964,173" concept="1" />
+      <node id="147289298423155120" at="964,173,965,115" concept="1" />
+      <node id="147289298423155117" at="965,115,966,22" concept="6" />
+      <node id="147289298423155117" at="959,0,968,0" concept="8" trace="createDescriptorForTimeDistributionLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="147289298423155117" at="264,54,265,45" />
-      <scope id="147289298423155117" at="958,78,965,22">
+      <scope id="147289298423155117" at="959,78,966,22">
         <var name="b" id="147289298423155117" />
       </scope>
-      <scope id="147289298423155117" at="958,0,967,0" />
+      <scope id="147289298423155117" at="959,0,968,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1645043697875742197">
@@ -113,19 +113,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1645043697875742197" at="71,0,72,0" concept="2" trace="myConceptProcessingTimeTable" />
       <node id="1645043697875742197" at="228,53,229,44" concept="6" />
-      <node id="1645043697875742197" at="799,77,800,165" concept="5" />
-      <node id="1645043697875742197" at="800,165,801,33" concept="1" />
-      <node id="1645043697875742197" at="801,33,802,98" concept="1" />
-      <node id="1645043697875742197" at="802,98,803,17" concept="1" />
-      <node id="1645043697875742305" at="803,17,804,211" concept="1" />
-      <node id="1645043697875742197" at="804,211,805,42" concept="1" />
-      <node id="1645043697875742197" at="805,42,806,22" concept="6" />
-      <node id="1645043697875742197" at="799,0,808,0" concept="8" trace="createDescriptorForProcessingTimeTable#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1645043697875742197" at="800,77,801,165" concept="5" />
+      <node id="1645043697875742197" at="801,165,802,33" concept="1" />
+      <node id="1645043697875742197" at="802,33,803,98" concept="1" />
+      <node id="1645043697875742197" at="803,98,804,17" concept="1" />
+      <node id="1645043697875742305" at="804,17,805,211" concept="1" />
+      <node id="1645043697875742197" at="805,211,806,42" concept="1" />
+      <node id="1645043697875742197" at="806,42,807,22" concept="6" />
+      <node id="1645043697875742197" at="800,0,809,0" concept="8" trace="createDescriptorForProcessingTimeTable#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1645043697875742197" at="228,53,229,44" />
-      <scope id="1645043697875742197" at="799,77,806,22">
+      <scope id="1645043697875742197" at="800,77,807,22">
         <var name="b" id="1645043697875742197" />
       </scope>
-      <scope id="1645043697875742197" at="799,0,808,0" />
+      <scope id="1645043697875742197" at="800,0,809,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1645043697875742234">
@@ -148,19 +148,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1645043697875742234" at="70,0,71,0" concept="2" trace="myConceptProcessingTimeLine" />
       <node id="1645043697875742234" at="226,52,227,43" concept="6" />
-      <node id="1645043697875742234" at="790,76,791,164" concept="5" />
-      <node id="1645043697875742234" at="791,164,792,34" concept="1" />
-      <node id="1645043697875742234" at="792,34,793,98" concept="1" />
-      <node id="1645043697875742234" at="793,98,794,17" concept="1" />
-      <node id="1645043697875742262" at="794,17,795,175" concept="1" />
-      <node id="1645043697875742264" at="795,175,796,117" concept="1" />
-      <node id="1645043697875742234" at="796,117,797,22" concept="6" />
-      <node id="1645043697875742234" at="790,0,799,0" concept="8" trace="createDescriptorForProcessingTimeLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1645043697875742234" at="791,76,792,164" concept="5" />
+      <node id="1645043697875742234" at="792,164,793,34" concept="1" />
+      <node id="1645043697875742234" at="793,34,794,98" concept="1" />
+      <node id="1645043697875742234" at="794,98,795,17" concept="1" />
+      <node id="1645043697875742262" at="795,17,796,175" concept="1" />
+      <node id="1645043697875742264" at="796,175,797,117" concept="1" />
+      <node id="1645043697875742234" at="797,117,798,22" concept="6" />
+      <node id="1645043697875742234" at="791,0,800,0" concept="8" trace="createDescriptorForProcessingTimeLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1645043697875742234" at="226,52,227,43" />
-      <scope id="1645043697875742234" at="790,76,797,22">
+      <scope id="1645043697875742234" at="791,76,798,22">
         <var name="b" id="1645043697875742234" />
       </scope>
-      <scope id="1645043697875742234" at="790,0,799,0" />
+      <scope id="1645043697875742234" at="791,0,800,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876434336588">
@@ -182,24 +182,24 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876434336588" at="48,0,49,0" concept="2" trace="myConceptIPatientProperty" />
       <node id="1758249876434336588" at="182,50,183,41" concept="6" />
-      <node id="1758249876434336588" at="580,74,581,162" concept="5" />
-      <node id="1758249876434336588" at="581,162,582,19" concept="1" />
-      <node id="1758249876434336588" at="582,19,583,98" concept="1" />
-      <node id="1758249876434336588" at="583,98,584,17" concept="1" />
-      <node id="1758249876463009196" at="584,17,585,110" concept="1" />
-      <node id="1758249876434482727" at="585,110,586,206" concept="1" />
-      <node id="1758249876434336588" at="586,206,587,22" concept="6" />
-      <node id="1758249876434336588" at="600,34,601,76" concept="1" />
-      <node id="1758249876434336588" at="618,34,619,76" concept="1" />
-      <node id="1758249876434336588" at="737,34,738,76" concept="1" />
-      <node id="1758249876434336588" at="819,34,820,76" concept="1" />
-      <node id="1758249876434336588" at="1015,34,1016,76" concept="1" />
-      <node id="1758249876434336588" at="580,0,589,0" concept="8" trace="createDescriptorForIPatientProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876434336588" at="581,74,582,162" concept="5" />
+      <node id="1758249876434336588" at="582,162,583,19" concept="1" />
+      <node id="1758249876434336588" at="583,19,584,98" concept="1" />
+      <node id="1758249876434336588" at="584,98,585,17" concept="1" />
+      <node id="1758249876463009196" at="585,17,586,110" concept="1" />
+      <node id="1758249876434482727" at="586,110,587,206" concept="1" />
+      <node id="1758249876434336588" at="587,206,588,22" concept="6" />
+      <node id="1758249876434336588" at="601,34,602,76" concept="1" />
+      <node id="1758249876434336588" at="619,34,620,76" concept="1" />
+      <node id="1758249876434336588" at="738,34,739,76" concept="1" />
+      <node id="1758249876434336588" at="820,34,821,76" concept="1" />
+      <node id="1758249876434336588" at="1016,34,1017,76" concept="1" />
+      <node id="1758249876434336588" at="581,0,590,0" concept="8" trace="createDescriptorForIPatientProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876434336588" at="182,50,183,41" />
-      <scope id="1758249876434336588" at="580,74,587,22">
+      <scope id="1758249876434336588" at="581,74,588,22">
         <var name="b" id="1758249876434336588" />
       </scope>
-      <scope id="1758249876434336588" at="580,0,589,0" />
+      <scope id="1758249876434336588" at="581,0,590,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876434350217">
@@ -222,19 +222,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876434350217" at="52,0,53,0" concept="2" trace="myConceptInfectionStatusProperty" />
       <node id="1758249876434350217" at="190,57,191,48" concept="6" />
-      <node id="1758249876434350217" at="616,81,617,169" concept="5" />
-      <node id="1758249876434350217" at="617,169,618,34" concept="1" />
-      <node id="1758249876434350217" at="619,76,620,98" concept="1" />
-      <node id="1758249876434350217" at="620,98,621,17" concept="1" />
-      <node id="1758249876434489739" at="621,17,622,171" concept="1" />
-      <node id="1758249876434350217" at="622,171,623,32" concept="1" />
-      <node id="1758249876434350217" at="623,32,624,22" concept="6" />
-      <node id="1758249876434350217" at="616,0,626,0" concept="8" trace="createDescriptorForInfectionStatusProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876434350217" at="617,81,618,169" concept="5" />
+      <node id="1758249876434350217" at="618,169,619,34" concept="1" />
+      <node id="1758249876434350217" at="620,76,621,98" concept="1" />
+      <node id="1758249876434350217" at="621,98,622,17" concept="1" />
+      <node id="1758249876434489739" at="622,17,623,171" concept="1" />
+      <node id="1758249876434350217" at="623,171,624,32" concept="1" />
+      <node id="1758249876434350217" at="624,32,625,22" concept="6" />
+      <node id="1758249876434350217" at="617,0,627,0" concept="8" trace="createDescriptorForInfectionStatusProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876434350217" at="190,57,191,48" />
-      <scope id="1758249876434350217" at="616,81,624,22">
+      <scope id="1758249876434350217" at="617,81,625,22">
         <var name="b" id="1758249876434350217" />
       </scope>
-      <scope id="1758249876434350217" at="616,0,626,0" />
+      <scope id="1758249876434350217" at="617,0,627,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876434489693">
@@ -257,19 +257,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876434489693" at="95,0,96,0" concept="2" trace="myConceptVaccineStatusProperty" />
       <node id="1758249876434489693" at="276,55,277,46" concept="6" />
-      <node id="1758249876434489693" at="1013,79,1014,167" concept="5" />
-      <node id="1758249876434489693" at="1014,167,1015,34" concept="1" />
-      <node id="1758249876434489693" at="1016,76,1017,98" concept="1" />
-      <node id="1758249876434489693" at="1017,98,1018,17" concept="1" />
-      <node id="1758249876434501114" at="1018,17,1019,171" concept="1" />
-      <node id="1758249876434489693" at="1019,171,1020,30" concept="1" />
-      <node id="1758249876434489693" at="1020,30,1021,22" concept="6" />
-      <node id="1758249876434489693" at="1013,0,1023,0" concept="8" trace="createDescriptorForVaccineStatusProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876434489693" at="1014,79,1015,167" concept="5" />
+      <node id="1758249876434489693" at="1015,167,1016,34" concept="1" />
+      <node id="1758249876434489693" at="1017,76,1018,98" concept="1" />
+      <node id="1758249876434489693" at="1018,98,1019,17" concept="1" />
+      <node id="1758249876434501114" at="1019,17,1020,171" concept="1" />
+      <node id="1758249876434489693" at="1020,171,1021,30" concept="1" />
+      <node id="1758249876434489693" at="1021,30,1022,22" concept="6" />
+      <node id="1758249876434489693" at="1014,0,1024,0" concept="8" trace="createDescriptorForVaccineStatusProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876434489693" at="276,55,277,46" />
-      <scope id="1758249876434489693" at="1013,79,1021,22">
+      <scope id="1758249876434489693" at="1014,79,1022,22">
         <var name="b" id="1758249876434489693" />
       </scope>
-      <scope id="1758249876434489693" at="1013,0,1023,0" />
+      <scope id="1758249876434489693" at="1014,0,1024,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876434656837">
@@ -292,19 +292,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876434656837" at="94,0,95,0" concept="2" trace="myConceptVaccineStatusCondition" />
       <node id="1758249876434656837" at="274,56,275,47" concept="6" />
-      <node id="1758249876434656837" at="1004,80,1005,168" concept="5" />
-      <node id="1758249876434656837" at="1005,168,1006,34" concept="1" />
-      <node id="1758249876434656837" at="1006,34,1007,128" concept="1" />
-      <node id="1758249876434656837" at="1007,128,1008,98" concept="1" />
-      <node id="1758249876434656837" at="1008,98,1009,17" concept="1" />
-      <node id="1758249876434656837" at="1009,17,1010,47" concept="1" />
-      <node id="1758249876434656837" at="1010,47,1011,22" concept="6" />
-      <node id="1758249876434656837" at="1004,0,1013,0" concept="8" trace="createDescriptorForVaccineStatusCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876434656837" at="1005,80,1006,168" concept="5" />
+      <node id="1758249876434656837" at="1006,168,1007,34" concept="1" />
+      <node id="1758249876434656837" at="1007,34,1008,128" concept="1" />
+      <node id="1758249876434656837" at="1008,128,1009,98" concept="1" />
+      <node id="1758249876434656837" at="1009,98,1010,17" concept="1" />
+      <node id="1758249876434656837" at="1010,17,1011,47" concept="1" />
+      <node id="1758249876434656837" at="1011,47,1012,22" concept="6" />
+      <node id="1758249876434656837" at="1005,0,1014,0" concept="8" trace="createDescriptorForVaccineStatusCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876434656837" at="274,56,275,47" />
-      <scope id="1758249876434656837" at="1004,80,1011,22">
+      <scope id="1758249876434656837" at="1005,80,1012,22">
         <var name="b" id="1758249876434656837" />
       </scope>
-      <scope id="1758249876434656837" at="1004,0,1013,0" />
+      <scope id="1758249876434656837" at="1005,0,1014,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876441168992">
@@ -361,19 +361,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876443238711" at="47,0,48,0" concept="2" trace="myConceptFullyVaccinated" />
       <node id="1758249876443238711" at="180,49,181,40" concept="6" />
-      <node id="1758249876443238711" at="571,73,572,161" concept="5" />
-      <node id="1758249876443238711" at="572,161,573,34" concept="1" />
-      <node id="1758249876443238711" at="573,34,574,119" concept="1" />
-      <node id="1758249876443238711" at="574,119,575,98" concept="1" />
-      <node id="1758249876443238711" at="575,98,576,17" concept="1" />
-      <node id="1758249876443238711" at="576,17,577,32" concept="1" />
-      <node id="1758249876443238711" at="577,32,578,22" concept="6" />
-      <node id="1758249876443238711" at="571,0,580,0" concept="8" trace="createDescriptorForFullyVaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876443238711" at="572,73,573,161" concept="5" />
+      <node id="1758249876443238711" at="573,161,574,34" concept="1" />
+      <node id="1758249876443238711" at="574,34,575,119" concept="1" />
+      <node id="1758249876443238711" at="575,119,576,98" concept="1" />
+      <node id="1758249876443238711" at="576,98,577,17" concept="1" />
+      <node id="1758249876443238711" at="577,17,578,32" concept="1" />
+      <node id="1758249876443238711" at="578,32,579,22" concept="6" />
+      <node id="1758249876443238711" at="572,0,581,0" concept="8" trace="createDescriptorForFullyVaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876443238711" at="180,49,181,40" />
-      <scope id="1758249876443238711" at="571,73,578,22">
+      <scope id="1758249876443238711" at="572,73,579,22">
         <var name="b" id="1758249876443238711" />
       </scope>
-      <scope id="1758249876443238711" at="571,0,580,0" />
+      <scope id="1758249876443238711" at="572,0,581,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876443238721">
@@ -396,18 +396,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876443238721" at="93,0,94,0" concept="2" trace="myConceptVaccinationStatus" />
       <node id="1758249876443238721" at="272,51,273,42" concept="6" />
-      <node id="1758249876443238721" at="996,75,997,163" concept="5" />
-      <node id="1758249876443238721" at="997,163,998,34" concept="1" />
-      <node id="1758249876443238721" at="998,34,999,125" concept="1" />
-      <node id="1758249876443238721" at="999,125,1000,98" concept="1" />
-      <node id="1758249876443238721" at="1000,98,1001,17" concept="1" />
-      <node id="1758249876443238721" at="1001,17,1002,22" concept="6" />
-      <node id="1758249876443238721" at="996,0,1004,0" concept="8" trace="createDescriptorForVaccinationStatus#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876443238721" at="997,75,998,163" concept="5" />
+      <node id="1758249876443238721" at="998,163,999,34" concept="1" />
+      <node id="1758249876443238721" at="999,34,1000,125" concept="1" />
+      <node id="1758249876443238721" at="1000,125,1001,98" concept="1" />
+      <node id="1758249876443238721" at="1001,98,1002,17" concept="1" />
+      <node id="1758249876443238721" at="1002,17,1003,22" concept="6" />
+      <node id="1758249876443238721" at="997,0,1005,0" concept="8" trace="createDescriptorForVaccinationStatus#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876443238721" at="272,51,273,42" />
-      <scope id="1758249876443238721" at="996,75,1002,22">
+      <scope id="1758249876443238721" at="997,75,1003,22">
         <var name="b" id="1758249876443238721" />
       </scope>
-      <scope id="1758249876443238721" at="996,0,1004,0" />
+      <scope id="1758249876443238721" at="997,0,1005,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876443238740">
@@ -430,19 +430,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876443238740" at="57,0,58,0" concept="2" trace="myConceptPartiallyVaccinated" />
       <node id="1758249876443238740" at="200,53,201,44" concept="6" />
-      <node id="1758249876443238740" at="667,77,668,165" concept="5" />
-      <node id="1758249876443238740" at="668,165,669,34" concept="1" />
-      <node id="1758249876443238740" at="669,34,670,119" concept="1" />
-      <node id="1758249876443238740" at="670,119,671,98" concept="1" />
-      <node id="1758249876443238740" at="671,98,672,17" concept="1" />
-      <node id="1758249876443238740" at="672,17,673,36" concept="1" />
-      <node id="1758249876443238740" at="673,36,674,22" concept="6" />
-      <node id="1758249876443238740" at="667,0,676,0" concept="8" trace="createDescriptorForPartiallyVaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876443238740" at="668,77,669,165" concept="5" />
+      <node id="1758249876443238740" at="669,165,670,34" concept="1" />
+      <node id="1758249876443238740" at="670,34,671,119" concept="1" />
+      <node id="1758249876443238740" at="671,119,672,98" concept="1" />
+      <node id="1758249876443238740" at="672,98,673,17" concept="1" />
+      <node id="1758249876443238740" at="673,17,674,36" concept="1" />
+      <node id="1758249876443238740" at="674,36,675,22" concept="6" />
+      <node id="1758249876443238740" at="668,0,677,0" concept="8" trace="createDescriptorForPartiallyVaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876443238740" at="200,53,201,44" />
-      <scope id="1758249876443238740" at="667,77,674,22">
+      <scope id="1758249876443238740" at="668,77,675,22">
         <var name="b" id="1758249876443238740" />
       </scope>
-      <scope id="1758249876443238740" at="667,0,676,0" />
+      <scope id="1758249876443238740" at="668,0,677,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876443238759">
@@ -465,19 +465,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876443238759" at="92,0,93,0" concept="2" trace="myConceptUnvaccinated" />
       <node id="1758249876443238759" at="270,46,271,37" concept="6" />
-      <node id="1758249876443238759" at="987,70,988,158" concept="5" />
-      <node id="1758249876443238759" at="988,158,989,34" concept="1" />
-      <node id="1758249876443238759" at="989,34,990,119" concept="1" />
-      <node id="1758249876443238759" at="990,119,991,98" concept="1" />
-      <node id="1758249876443238759" at="991,98,992,17" concept="1" />
-      <node id="1758249876443238759" at="992,17,993,28" concept="1" />
-      <node id="1758249876443238759" at="993,28,994,22" concept="6" />
-      <node id="1758249876443238759" at="987,0,996,0" concept="8" trace="createDescriptorForUnvaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876443238759" at="988,70,989,158" concept="5" />
+      <node id="1758249876443238759" at="989,158,990,34" concept="1" />
+      <node id="1758249876443238759" at="990,34,991,119" concept="1" />
+      <node id="1758249876443238759" at="991,119,992,98" concept="1" />
+      <node id="1758249876443238759" at="992,98,993,17" concept="1" />
+      <node id="1758249876443238759" at="993,17,994,28" concept="1" />
+      <node id="1758249876443238759" at="994,28,995,22" concept="6" />
+      <node id="1758249876443238759" at="988,0,997,0" concept="8" trace="createDescriptorForUnvaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876443238759" at="270,46,271,37" />
-      <scope id="1758249876443238759" at="987,70,994,22">
+      <scope id="1758249876443238759" at="988,70,995,22">
         <var name="b" id="1758249876443238759" />
       </scope>
-      <scope id="1758249876443238759" at="987,0,996,0" />
+      <scope id="1758249876443238759" at="988,0,997,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876462569833">
@@ -500,22 +500,22 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876462569833" at="61,0,62,0" concept="2" trace="myConceptPatientPropertyConditional" />
       <node id="1758249876462569833" at="208,60,209,51" concept="6" />
-      <node id="1758249876462569833" at="706,84,707,172" concept="5" />
-      <node id="1758249876462569833" at="707,172,708,34" concept="1" />
-      <node id="1758249876462569833" at="708,34,709,119" concept="1" />
-      <node id="1758249876462569833" at="709,119,710,76" concept="1" />
-      <node id="1758249876462569833" at="710,76,711,98" concept="1" />
-      <node id="1758249876462569833" at="711,98,712,17" concept="1" />
-      <node id="1758249876465254186" at="712,17,713,179" concept="1" />
-      <node id="1758249876462569987" at="713,179,714,204" concept="1" />
-      <node id="1758249876462569833" at="714,204,715,32" concept="1" />
-      <node id="1758249876462569833" at="715,32,716,22" concept="6" />
-      <node id="1758249876462569833" at="706,0,718,0" concept="8" trace="createDescriptorForPatientPropertyConditional#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876462569833" at="707,84,708,172" concept="5" />
+      <node id="1758249876462569833" at="708,172,709,34" concept="1" />
+      <node id="1758249876462569833" at="709,34,710,119" concept="1" />
+      <node id="1758249876462569833" at="710,119,711,76" concept="1" />
+      <node id="1758249876462569833" at="711,76,712,98" concept="1" />
+      <node id="1758249876462569833" at="712,98,713,17" concept="1" />
+      <node id="1758249876465254186" at="713,17,714,179" concept="1" />
+      <node id="1758249876462569987" at="714,179,715,204" concept="1" />
+      <node id="1758249876462569833" at="715,204,716,32" concept="1" />
+      <node id="1758249876462569833" at="716,32,717,22" concept="6" />
+      <node id="1758249876462569833" at="707,0,719,0" concept="8" trace="createDescriptorForPatientPropertyConditional#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876462569833" at="208,60,209,51" />
-      <scope id="1758249876462569833" at="706,84,716,22">
+      <scope id="1758249876462569833" at="707,84,717,22">
         <var name="b" id="1758249876462569833" />
       </scope>
-      <scope id="1758249876462569833" at="706,0,718,0" />
+      <scope id="1758249876462569833" at="707,0,719,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876462569990">
@@ -538,18 +538,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876462569990" at="62,0,63,0" concept="2" trace="myConceptPatientPropertyReference" />
       <node id="1758249876462569990" at="210,58,211,49" concept="6" />
-      <node id="1758249876462569990" at="718,82,719,170" concept="5" />
-      <node id="1758249876462569990" at="719,170,720,34" concept="1" />
-      <node id="1758249876462569990" at="720,34,721,98" concept="1" />
-      <node id="1758249876462569990" at="721,98,722,17" concept="1" />
-      <node id="1758249876462569991" at="722,17,723,172" concept="1" />
-      <node id="1758249876462569990" at="723,172,724,22" concept="6" />
-      <node id="1758249876462569990" at="718,0,726,0" concept="8" trace="createDescriptorForPatientPropertyReference#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876462569990" at="719,82,720,170" concept="5" />
+      <node id="1758249876462569990" at="720,170,721,34" concept="1" />
+      <node id="1758249876462569990" at="721,34,722,98" concept="1" />
+      <node id="1758249876462569990" at="722,98,723,17" concept="1" />
+      <node id="1758249876462569991" at="723,17,724,172" concept="1" />
+      <node id="1758249876462569990" at="724,172,725,22" concept="6" />
+      <node id="1758249876462569990" at="719,0,727,0" concept="8" trace="createDescriptorForPatientPropertyReference#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876462569990" at="210,58,211,49" />
-      <scope id="1758249876462569990" at="718,82,724,22">
+      <scope id="1758249876462569990" at="719,82,725,22">
         <var name="b" id="1758249876462569990" />
       </scope>
-      <scope id="1758249876462569990" at="718,0,726,0" />
+      <scope id="1758249876462569990" at="719,0,727,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876463936250">
@@ -572,19 +572,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876463936250" at="51,0,52,0" concept="2" trace="myConceptInfectionStatusCondition" />
       <node id="1758249876463936250" at="188,58,189,49" concept="6" />
-      <node id="1758249876463936250" at="607,82,608,170" concept="5" />
-      <node id="1758249876463936250" at="608,170,609,34" concept="1" />
-      <node id="1758249876463936250" at="609,34,610,128" concept="1" />
-      <node id="1758249876463936250" at="610,128,611,98" concept="1" />
-      <node id="1758249876463936250" at="611,98,612,17" concept="1" />
-      <node id="1758249876463936250" at="612,17,613,51" concept="1" />
-      <node id="1758249876463936250" at="613,51,614,22" concept="6" />
-      <node id="1758249876463936250" at="607,0,616,0" concept="8" trace="createDescriptorForInfectionStatusCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876463936250" at="608,82,609,170" concept="5" />
+      <node id="1758249876463936250" at="609,170,610,34" concept="1" />
+      <node id="1758249876463936250" at="610,34,611,128" concept="1" />
+      <node id="1758249876463936250" at="611,128,612,98" concept="1" />
+      <node id="1758249876463936250" at="612,98,613,17" concept="1" />
+      <node id="1758249876463936250" at="613,17,614,51" concept="1" />
+      <node id="1758249876463936250" at="614,51,615,22" concept="6" />
+      <node id="1758249876463936250" at="608,0,617,0" concept="8" trace="createDescriptorForInfectionStatusCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876463936250" at="188,58,189,49" />
-      <scope id="1758249876463936250" at="607,82,614,22">
+      <scope id="1758249876463936250" at="608,82,615,22">
         <var name="b" id="1758249876463936250" />
       </scope>
-      <scope id="1758249876463936250" at="607,0,616,0" />
+      <scope id="1758249876463936250" at="608,0,617,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500222036">
@@ -607,18 +607,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876500222036" at="73,0,74,0" concept="2" trace="myConceptRecentCovidContactProperty" />
       <node id="1758249876500222036" at="232,60,233,51" concept="6" />
-      <node id="1758249876500222036" at="817,84,818,172" concept="5" />
-      <node id="1758249876500222036" at="818,172,819,34" concept="1" />
-      <node id="1758249876500222036" at="820,76,821,98" concept="1" />
-      <node id="1758249876500222036" at="821,98,822,17" concept="1" />
-      <node id="1758249876500222036" at="822,17,823,36" concept="1" />
-      <node id="1758249876500222036" at="823,36,824,22" concept="6" />
-      <node id="1758249876500222036" at="817,0,826,0" concept="8" trace="createDescriptorForRecentCovidContactProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876500222036" at="818,84,819,172" concept="5" />
+      <node id="1758249876500222036" at="819,172,820,34" concept="1" />
+      <node id="1758249876500222036" at="821,76,822,98" concept="1" />
+      <node id="1758249876500222036" at="822,98,823,17" concept="1" />
+      <node id="1758249876500222036" at="823,17,824,36" concept="1" />
+      <node id="1758249876500222036" at="824,36,825,22" concept="6" />
+      <node id="1758249876500222036" at="818,0,827,0" concept="8" trace="createDescriptorForRecentCovidContactProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876500222036" at="232,60,233,51" />
-      <scope id="1758249876500222036" at="817,84,824,22">
+      <scope id="1758249876500222036" at="818,84,825,22">
         <var name="b" id="1758249876500222036" />
       </scope>
-      <scope id="1758249876500222036" at="817,0,826,0" />
+      <scope id="1758249876500222036" at="818,0,827,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500231394">
@@ -641,19 +641,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876500231394" at="96,0,97,0" concept="2" trace="myConceptYes" />
       <node id="1758249876500231394" at="278,37,279,28" concept="6" />
-      <node id="1758249876500231394" at="1023,61,1024,149" concept="5" />
-      <node id="1758249876500231394" at="1024,149,1025,34" concept="1" />
-      <node id="1758249876500231394" at="1025,34,1026,119" concept="1" />
-      <node id="1758249876500231394" at="1026,119,1027,98" concept="1" />
-      <node id="1758249876500231394" at="1027,98,1028,17" concept="1" />
-      <node id="1758249876500231394" at="1028,17,1029,19" concept="1" />
-      <node id="1758249876500231394" at="1029,19,1030,22" concept="6" />
-      <node id="1758249876500231394" at="1023,0,1032,0" concept="8" trace="createDescriptorForYes#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876500231394" at="1024,61,1025,149" concept="5" />
+      <node id="1758249876500231394" at="1025,149,1026,34" concept="1" />
+      <node id="1758249876500231394" at="1026,34,1027,119" concept="1" />
+      <node id="1758249876500231394" at="1027,119,1028,98" concept="1" />
+      <node id="1758249876500231394" at="1028,98,1029,17" concept="1" />
+      <node id="1758249876500231394" at="1029,17,1030,19" concept="1" />
+      <node id="1758249876500231394" at="1030,19,1031,22" concept="6" />
+      <node id="1758249876500231394" at="1024,0,1033,0" concept="8" trace="createDescriptorForYes#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876500231394" at="278,37,279,28" />
-      <scope id="1758249876500231394" at="1023,61,1030,22">
+      <scope id="1758249876500231394" at="1024,61,1031,22">
         <var name="b" id="1758249876500231394" />
       </scope>
-      <scope id="1758249876500231394" at="1023,0,1032,0" />
+      <scope id="1758249876500231394" at="1024,0,1033,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500231395">
@@ -710,19 +710,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876500231396" at="54,0,55,0" concept="2" trace="myConceptNo" />
       <node id="1758249876500231396" at="194,36,195,27" concept="6" />
-      <node id="1758249876500231396" at="637,60,638,148" concept="5" />
-      <node id="1758249876500231396" at="638,148,639,34" concept="1" />
-      <node id="1758249876500231396" at="639,34,640,119" concept="1" />
-      <node id="1758249876500231396" at="640,119,641,98" concept="1" />
-      <node id="1758249876500231396" at="641,98,642,17" concept="1" />
-      <node id="1758249876500231396" at="642,17,643,18" concept="1" />
-      <node id="1758249876500231396" at="643,18,644,22" concept="6" />
-      <node id="1758249876500231396" at="637,0,646,0" concept="8" trace="createDescriptorForNo#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876500231396" at="638,60,639,148" concept="5" />
+      <node id="1758249876500231396" at="639,148,640,34" concept="1" />
+      <node id="1758249876500231396" at="640,34,641,119" concept="1" />
+      <node id="1758249876500231396" at="641,119,642,98" concept="1" />
+      <node id="1758249876500231396" at="642,98,643,17" concept="1" />
+      <node id="1758249876500231396" at="643,17,644,18" concept="1" />
+      <node id="1758249876500231396" at="644,18,645,22" concept="6" />
+      <node id="1758249876500231396" at="638,0,647,0" concept="8" trace="createDescriptorForNo#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876500231396" at="194,36,195,27" />
-      <scope id="1758249876500231396" at="637,60,644,22">
+      <scope id="1758249876500231396" at="638,60,645,22">
         <var name="b" id="1758249876500231396" />
       </scope>
-      <scope id="1758249876500231396" at="637,0,646,0" />
+      <scope id="1758249876500231396" at="638,0,647,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500242020">
@@ -745,19 +745,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876500242020" at="72,0,73,0" concept="2" trace="myConceptRecentCOVIDContactCondition" />
       <node id="1758249876500242020" at="230,61,231,52" concept="6" />
-      <node id="1758249876500242020" at="808,85,809,173" concept="5" />
-      <node id="1758249876500242020" at="809,173,810,34" concept="1" />
-      <node id="1758249876500242020" at="810,34,811,128" concept="1" />
-      <node id="1758249876500242020" at="811,128,812,98" concept="1" />
-      <node id="1758249876500242020" at="812,98,813,17" concept="1" />
-      <node id="1758249876500242020" at="813,17,814,59" concept="1" />
-      <node id="1758249876500242020" at="814,59,815,22" concept="6" />
-      <node id="1758249876500242020" at="808,0,817,0" concept="8" trace="createDescriptorForRecentCOVIDContactCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876500242020" at="809,85,810,173" concept="5" />
+      <node id="1758249876500242020" at="810,173,811,34" concept="1" />
+      <node id="1758249876500242020" at="811,34,812,128" concept="1" />
+      <node id="1758249876500242020" at="812,128,813,98" concept="1" />
+      <node id="1758249876500242020" at="813,98,814,17" concept="1" />
+      <node id="1758249876500242020" at="814,17,815,59" concept="1" />
+      <node id="1758249876500242020" at="815,59,816,22" concept="6" />
+      <node id="1758249876500242020" at="809,0,818,0" concept="8" trace="createDescriptorForRecentCOVIDContactCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876500242020" at="230,61,231,52" />
-      <scope id="1758249876500242020" at="808,85,815,22">
+      <scope id="1758249876500242020" at="809,85,816,22">
         <var name="b" id="1758249876500242020" />
       </scope>
-      <scope id="1758249876500242020" at="808,0,817,0" />
+      <scope id="1758249876500242020" at="809,0,818,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876506201858">
@@ -849,19 +849,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876508941398" at="46,0,47,0" concept="2" trace="myConceptEmergencyAttendanceRoute" />
       <node id="1758249876508941398" at="178,58,179,49" concept="6" />
-      <node id="1758249876508941398" at="562,82,563,170" concept="5" />
-      <node id="1758249876508941398" at="563,170,564,34" concept="1" />
-      <node id="1758249876508941398" at="564,34,565,117" concept="1" />
-      <node id="1758249876508941398" at="565,117,566,98" concept="1" />
-      <node id="1758249876508941398" at="566,98,567,17" concept="1" />
-      <node id="1758249876508941398" at="567,17,568,36" concept="1" />
-      <node id="1758249876508941398" at="568,36,569,22" concept="6" />
-      <node id="1758249876508941398" at="562,0,571,0" concept="8" trace="createDescriptorForEmergencyAttendanceRoute#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876508941398" at="563,82,564,170" concept="5" />
+      <node id="1758249876508941398" at="564,170,565,34" concept="1" />
+      <node id="1758249876508941398" at="565,34,566,117" concept="1" />
+      <node id="1758249876508941398" at="566,117,567,98" concept="1" />
+      <node id="1758249876508941398" at="567,98,568,17" concept="1" />
+      <node id="1758249876508941398" at="568,17,569,36" concept="1" />
+      <node id="1758249876508941398" at="569,36,570,22" concept="6" />
+      <node id="1758249876508941398" at="563,0,572,0" concept="8" trace="createDescriptorForEmergencyAttendanceRoute#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876508941398" at="178,58,179,49" />
-      <scope id="1758249876508941398" at="562,82,569,22">
+      <scope id="1758249876508941398" at="563,82,570,22">
         <var name="b" id="1758249876508941398" />
       </scope>
-      <scope id="1758249876508941398" at="562,0,571,0" />
+      <scope id="1758249876508941398" at="563,0,572,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876508941937">
@@ -884,19 +884,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876508941937" at="45,0,46,0" concept="2" trace="myConceptElectiveAttendanceRoute" />
       <node id="1758249876508941937" at="176,57,177,48" concept="6" />
-      <node id="1758249876508941937" at="553,81,554,169" concept="5" />
-      <node id="1758249876508941937" at="554,169,555,34" concept="1" />
-      <node id="1758249876508941937" at="555,34,556,117" concept="1" />
-      <node id="1758249876508941937" at="556,117,557,98" concept="1" />
-      <node id="1758249876508941937" at="557,98,558,17" concept="1" />
-      <node id="1758249876508941937" at="558,17,559,35" concept="1" />
-      <node id="1758249876508941937" at="559,35,560,22" concept="6" />
-      <node id="1758249876508941937" at="553,0,562,0" concept="8" trace="createDescriptorForElectiveAttendanceRoute#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876508941937" at="554,81,555,169" concept="5" />
+      <node id="1758249876508941937" at="555,169,556,34" concept="1" />
+      <node id="1758249876508941937" at="556,34,557,117" concept="1" />
+      <node id="1758249876508941937" at="557,117,558,98" concept="1" />
+      <node id="1758249876508941937" at="558,98,559,17" concept="1" />
+      <node id="1758249876508941937" at="559,17,560,35" concept="1" />
+      <node id="1758249876508941937" at="560,35,561,22" concept="6" />
+      <node id="1758249876508941937" at="554,0,563,0" concept="8" trace="createDescriptorForElectiveAttendanceRoute#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876508941937" at="176,57,177,48" />
-      <scope id="1758249876508941937" at="553,81,560,22">
+      <scope id="1758249876508941937" at="554,81,561,22">
         <var name="b" id="1758249876508941937" />
       </scope>
-      <scope id="1758249876508941937" at="553,0,562,0" />
+      <scope id="1758249876508941937" at="554,0,563,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876510071738">
@@ -955,18 +955,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876537114910" at="50,0,51,0" concept="2" trace="myConceptImmunosuppressedProperty" />
       <node id="1758249876537114910" at="186,58,187,49" concept="6" />
-      <node id="1758249876537114910" at="598,82,599,170" concept="5" />
-      <node id="1758249876537114910" at="599,170,600,34" concept="1" />
-      <node id="1758249876537114910" at="601,76,602,98" concept="1" />
-      <node id="1758249876537114910" at="602,98,603,17" concept="1" />
-      <node id="1758249876537114910" at="603,17,604,33" concept="1" />
-      <node id="1758249876537114910" at="604,33,605,22" concept="6" />
-      <node id="1758249876537114910" at="598,0,607,0" concept="8" trace="createDescriptorForImmunosuppressedProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876537114910" at="599,82,600,170" concept="5" />
+      <node id="1758249876537114910" at="600,170,601,34" concept="1" />
+      <node id="1758249876537114910" at="602,76,603,98" concept="1" />
+      <node id="1758249876537114910" at="603,98,604,17" concept="1" />
+      <node id="1758249876537114910" at="604,17,605,33" concept="1" />
+      <node id="1758249876537114910" at="605,33,606,22" concept="6" />
+      <node id="1758249876537114910" at="599,0,608,0" concept="8" trace="createDescriptorForImmunosuppressedProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876537114910" at="186,58,187,49" />
-      <scope id="1758249876537114910" at="598,82,605,22">
+      <scope id="1758249876537114910" at="599,82,606,22">
         <var name="b" id="1758249876537114910" />
       </scope>
-      <scope id="1758249876537114910" at="598,0,607,0" />
+      <scope id="1758249876537114910" at="599,0,608,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876537123464">
@@ -989,19 +989,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="1758249876537123464" at="49,0,50,0" concept="2" trace="myConceptImmunocompromisedCondition" />
       <node id="1758249876537123464" at="184,60,185,51" concept="6" />
-      <node id="1758249876537123464" at="589,84,590,172" concept="5" />
-      <node id="1758249876537123464" at="590,172,591,34" concept="1" />
-      <node id="1758249876537123464" at="591,34,592,128" concept="1" />
-      <node id="1758249876537123464" at="592,128,593,98" concept="1" />
-      <node id="1758249876537123464" at="593,98,594,17" concept="1" />
-      <node id="1758249876537123464" at="594,17,595,54" concept="1" />
-      <node id="1758249876537123464" at="595,54,596,22" concept="6" />
-      <node id="1758249876537123464" at="589,0,598,0" concept="8" trace="createDescriptorForImmunocompromisedCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="1758249876537123464" at="590,84,591,172" concept="5" />
+      <node id="1758249876537123464" at="591,172,592,34" concept="1" />
+      <node id="1758249876537123464" at="592,34,593,128" concept="1" />
+      <node id="1758249876537123464" at="593,128,594,98" concept="1" />
+      <node id="1758249876537123464" at="594,98,595,17" concept="1" />
+      <node id="1758249876537123464" at="595,17,596,54" concept="1" />
+      <node id="1758249876537123464" at="596,54,597,22" concept="6" />
+      <node id="1758249876537123464" at="590,0,599,0" concept="8" trace="createDescriptorForImmunocompromisedCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876537123464" at="184,60,185,51" />
-      <scope id="1758249876537123464" at="589,84,596,22">
+      <scope id="1758249876537123464" at="590,84,597,22">
         <var name="b" id="1758249876537123464" />
       </scope>
-      <scope id="1758249876537123464" at="589,0,598,0" />
+      <scope id="1758249876537123464" at="590,0,599,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876538241356">
@@ -1322,19 +1322,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="2876623929997959972" at="58,0,59,0" concept="2" trace="myConceptPatientArrivalLine" />
       <node id="2876623929997959972" at="202,52,203,43" concept="6" />
-      <node id="2876623929997959972" at="676,76,677,164" concept="5" />
-      <node id="2876623929997959972" at="677,164,678,34" concept="1" />
-      <node id="2876623929997959972" at="678,34,679,98" concept="1" />
-      <node id="2876623929997959972" at="679,98,680,17" concept="1" />
-      <node id="2876623929997959982" at="680,17,681,111" concept="1" />
-      <node id="2876623929997959984" at="681,111,682,124" concept="1" />
-      <node id="2876623929997959972" at="682,124,683,22" concept="6" />
-      <node id="2876623929997959972" at="676,0,685,0" concept="8" trace="createDescriptorForPatientArrivalLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="2876623929997959972" at="677,76,678,164" concept="5" />
+      <node id="2876623929997959972" at="678,164,679,34" concept="1" />
+      <node id="2876623929997959972" at="679,34,680,98" concept="1" />
+      <node id="2876623929997959972" at="680,98,681,17" concept="1" />
+      <node id="2876623929997959982" at="681,17,682,111" concept="1" />
+      <node id="2876623929997959984" at="682,111,683,124" concept="1" />
+      <node id="2876623929997959972" at="683,124,684,22" concept="6" />
+      <node id="2876623929997959972" at="677,0,686,0" concept="8" trace="createDescriptorForPatientArrivalLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="2876623929997959972" at="202,52,203,43" />
-      <scope id="2876623929997959972" at="676,76,683,22">
+      <scope id="2876623929997959972" at="677,76,684,22">
         <var name="b" id="2876623929997959972" />
       </scope>
-      <scope id="2876623929997959972" at="676,0,685,0" />
+      <scope id="2876623929997959972" at="677,0,686,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3170643229265449641">
@@ -1556,17 +1556,17 @@
     <file name="StructureAspectDescriptor.java">
       <node id="3692958048417247776" at="77,0,78,0" concept="2" trace="myConceptRoomSelectionRule" />
       <node id="3692958048417247776" at="240,51,241,42" concept="6" />
-      <node id="3692958048417247776" at="854,75,855,163" concept="5" />
-      <node id="3692958048417247776" at="855,163,856,34" concept="1" />
-      <node id="3692958048417247776" at="856,34,857,98" concept="1" />
-      <node id="3692958048417247776" at="857,98,858,17" concept="1" />
-      <node id="3692958048417247776" at="858,17,859,22" concept="6" />
-      <node id="3692958048417247776" at="854,0,861,0" concept="8" trace="createDescriptorForRoomSelectionRule#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="3692958048417247776" at="855,75,856,163" concept="5" />
+      <node id="3692958048417247776" at="856,163,857,34" concept="1" />
+      <node id="3692958048417247776" at="857,34,858,98" concept="1" />
+      <node id="3692958048417247776" at="858,98,859,17" concept="1" />
+      <node id="3692958048417247776" at="859,17,860,22" concept="6" />
+      <node id="3692958048417247776" at="855,0,862,0" concept="8" trace="createDescriptorForRoomSelectionRule#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="3692958048417247776" at="240,51,241,42" />
-      <scope id="3692958048417247776" at="854,75,859,22">
+      <scope id="3692958048417247776" at="855,75,860,22">
         <var name="b" id="3692958048417247776" />
       </scope>
-      <scope id="3692958048417247776" at="854,0,861,0" />
+      <scope id="3692958048417247776" at="855,0,862,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3787511550160215531">
@@ -1663,18 +1663,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="3866749931154339180" at="88,0,89,0" concept="2" trace="myConceptTestSelectionStrategy" />
       <node id="3866749931154339180" at="262,55,263,46" concept="6" />
-      <node id="3866749931154339180" at="950,79,951,167" concept="5" />
-      <node id="3866749931154339180" at="951,167,952,34" concept="1" />
-      <node id="3866749931154339180" at="952,34,953,98" concept="1" />
-      <node id="3866749931154339180" at="953,98,954,17" concept="1" />
-      <node id="3866749931154339180" at="954,17,955,39" concept="1" />
-      <node id="3866749931154339180" at="955,39,956,22" concept="6" />
-      <node id="3866749931154339180" at="950,0,958,0" concept="8" trace="createDescriptorForTestSelectionStrategy#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="3866749931154339180" at="951,79,952,167" concept="5" />
+      <node id="3866749931154339180" at="952,167,953,34" concept="1" />
+      <node id="3866749931154339180" at="953,34,954,98" concept="1" />
+      <node id="3866749931154339180" at="954,98,955,17" concept="1" />
+      <node id="3866749931154339180" at="955,17,956,39" concept="1" />
+      <node id="3866749931154339180" at="956,39,957,22" concept="6" />
+      <node id="3866749931154339180" at="951,0,959,0" concept="8" trace="createDescriptorForTestSelectionStrategy#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="3866749931154339180" at="262,55,263,46" />
-      <scope id="3866749931154339180" at="950,79,956,22">
+      <scope id="3866749931154339180" at="951,79,957,22">
         <var name="b" id="3866749931154339180" />
       </scope>
-      <scope id="3866749931154339180" at="950,0,958,0" />
+      <scope id="3866749931154339180" at="951,0,959,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154339181">
@@ -1697,18 +1697,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="3866749931154339181" at="87,0,88,0" concept="2" trace="myConceptTestSelectionRuleLine" />
       <node id="3866749931154339181" at="260,55,261,46" concept="6" />
-      <node id="3866749931154339181" at="942,79,943,167" concept="5" />
-      <node id="3866749931154339181" at="943,167,944,34" concept="1" />
-      <node id="3866749931154339181" at="944,34,945,98" concept="1" />
-      <node id="3866749931154339181" at="945,98,946,17" concept="1" />
-      <node id="3866749931154339184" at="946,17,947,198" concept="1" />
-      <node id="3866749931154339181" at="947,198,948,22" concept="6" />
-      <node id="3866749931154339181" at="942,0,950,0" concept="8" trace="createDescriptorForTestSelectionRuleLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="3866749931154339181" at="943,79,944,167" concept="5" />
+      <node id="3866749931154339181" at="944,167,945,34" concept="1" />
+      <node id="3866749931154339181" at="945,34,946,98" concept="1" />
+      <node id="3866749931154339181" at="946,98,947,17" concept="1" />
+      <node id="3866749931154339184" at="947,17,948,198" concept="1" />
+      <node id="3866749931154339181" at="948,198,949,22" concept="6" />
+      <node id="3866749931154339181" at="943,0,951,0" concept="8" trace="createDescriptorForTestSelectionRuleLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="3866749931154339181" at="260,55,261,46" />
-      <scope id="3866749931154339181" at="942,79,948,22">
+      <scope id="3866749931154339181" at="943,79,949,22">
         <var name="b" id="3866749931154339181" />
       </scope>
-      <scope id="3866749931154339181" at="942,0,950,0" />
+      <scope id="3866749931154339181" at="943,0,951,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154339186">
@@ -1731,17 +1731,17 @@
     <file name="StructureAspectDescriptor.java">
       <node id="3866749931154339186" at="86,0,87,0" concept="2" trace="myConceptTestSelectionRule" />
       <node id="3866749931154339186" at="258,51,259,42" concept="6" />
-      <node id="3866749931154339186" at="935,75,936,163" concept="5" />
-      <node id="3866749931154339186" at="936,163,937,34" concept="1" />
-      <node id="3866749931154339186" at="937,34,938,98" concept="1" />
-      <node id="3866749931154339186" at="938,98,939,17" concept="1" />
-      <node id="3866749931154339186" at="939,17,940,22" concept="6" />
-      <node id="3866749931154339186" at="935,0,942,0" concept="8" trace="createDescriptorForTestSelectionRule#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="3866749931154339186" at="936,75,937,163" concept="5" />
+      <node id="3866749931154339186" at="937,163,938,34" concept="1" />
+      <node id="3866749931154339186" at="938,34,939,98" concept="1" />
+      <node id="3866749931154339186" at="939,98,940,17" concept="1" />
+      <node id="3866749931154339186" at="940,17,941,22" concept="6" />
+      <node id="3866749931154339186" at="936,0,943,0" concept="8" trace="createDescriptorForTestSelectionRule#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="3866749931154339186" at="258,51,259,42" />
-      <scope id="3866749931154339186" at="935,75,940,22">
+      <scope id="3866749931154339186" at="936,75,941,22">
         <var name="b" id="3866749931154339186" />
       </scope>
-      <scope id="3866749931154339186" at="935,0,942,0" />
+      <scope id="3866749931154339186" at="936,0,943,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154370547">
@@ -1764,20 +1764,20 @@
     <file name="StructureAspectDescriptor.java">
       <node id="3866749931154370547" at="68,0,69,0" concept="2" trace="myConceptProbabilityDistribution" />
       <node id="3866749931154370547" at="222,57,223,48" concept="6" />
-      <node id="3866749931154370547" at="771,81,772,169" concept="5" />
-      <node id="3866749931154370547" at="772,169,773,34" concept="1" />
-      <node id="3866749931154370547" at="773,34,774,123" concept="1" />
-      <node id="3866749931154370547" at="774,123,775,98" concept="1" />
-      <node id="3866749931154370547" at="775,98,776,17" concept="1" />
-      <node id="3866749931154370666" at="776,17,777,197" concept="1" />
-      <node id="3866749931154370547" at="777,197,778,40" concept="1" />
-      <node id="3866749931154370547" at="778,40,779,22" concept="6" />
-      <node id="3866749931154370547" at="771,0,781,0" concept="8" trace="createDescriptorForProbabilityDistribution#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="3866749931154370547" at="772,81,773,169" concept="5" />
+      <node id="3866749931154370547" at="773,169,774,34" concept="1" />
+      <node id="3866749931154370547" at="774,34,775,123" concept="1" />
+      <node id="3866749931154370547" at="775,123,776,98" concept="1" />
+      <node id="3866749931154370547" at="776,98,777,17" concept="1" />
+      <node id="3866749931154370666" at="777,17,778,197" concept="1" />
+      <node id="3866749931154370547" at="778,197,779,40" concept="1" />
+      <node id="3866749931154370547" at="779,40,780,22" concept="6" />
+      <node id="3866749931154370547" at="772,0,782,0" concept="8" trace="createDescriptorForProbabilityDistribution#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="3866749931154370547" at="222,57,223,48" />
-      <scope id="3866749931154370547" at="771,81,779,22">
+      <scope id="3866749931154370547" at="772,81,780,22">
         <var name="b" id="3866749931154370547" />
       </scope>
-      <scope id="3866749931154370547" at="771,0,781,0" />
+      <scope id="3866749931154370547" at="772,0,782,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3866749931154370574">
@@ -1800,19 +1800,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="3866749931154370574" at="69,0,70,0" concept="2" trace="myConceptProbabilityDistributionLine" />
       <node id="3866749931154370574" at="224,61,225,52" concept="6" />
-      <node id="3866749931154370574" at="781,85,782,173" concept="5" />
-      <node id="3866749931154370574" at="782,173,783,34" concept="1" />
-      <node id="3866749931154370574" at="783,34,784,98" concept="1" />
-      <node id="3866749931154370574" at="784,98,785,17" concept="1" />
-      <node id="3866749931154370575" at="785,17,786,182" concept="1" />
-      <node id="3866749931154370689" at="786,182,787,168" concept="1" />
-      <node id="3866749931154370574" at="787,168,788,22" concept="6" />
-      <node id="3866749931154370574" at="781,0,790,0" concept="8" trace="createDescriptorForProbabilityDistributionLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="3866749931154370574" at="782,85,783,173" concept="5" />
+      <node id="3866749931154370574" at="783,173,784,34" concept="1" />
+      <node id="3866749931154370574" at="784,34,785,98" concept="1" />
+      <node id="3866749931154370574" at="785,98,786,17" concept="1" />
+      <node id="3866749931154370575" at="786,17,787,182" concept="1" />
+      <node id="3866749931154370689" at="787,182,788,168" concept="1" />
+      <node id="3866749931154370574" at="788,168,789,22" concept="6" />
+      <node id="3866749931154370574" at="782,0,791,0" concept="8" trace="createDescriptorForProbabilityDistributionLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="3866749931154370574" at="224,61,225,52" />
-      <scope id="3866749931154370574" at="781,85,788,22">
+      <scope id="3866749931154370574" at="782,85,789,22">
         <var name="b" id="3866749931154370574" />
       </scope>
-      <scope id="3866749931154370574" at="781,0,790,0" />
+      <scope id="3866749931154370574" at="782,0,791,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4321323723358269491">
@@ -1835,20 +1835,20 @@
     <file name="StructureAspectDescriptor.java">
       <node id="4321323723358269491" at="74,0,75,0" concept="2" trace="myConceptResourceAvailableCondition" />
       <node id="4321323723358269491" at="234,60,235,51" concept="6" />
-      <node id="4321323723358269491" at="826,84,827,172" concept="5" />
-      <node id="4321323723358269491" at="827,172,828,34" concept="1" />
-      <node id="4321323723358269491" at="828,34,829,119" concept="1" />
-      <node id="4321323723358269491" at="829,119,830,98" concept="1" />
-      <node id="4321323723358269491" at="830,98,831,17" concept="1" />
-      <node id="4321323723360619390" at="831,17,832,216" concept="1" />
-      <node id="4321323723358269491" at="832,216,833,47" concept="1" />
-      <node id="4321323723358269491" at="833,47,834,22" concept="6" />
-      <node id="4321323723358269491" at="826,0,836,0" concept="8" trace="createDescriptorForResourceAvailableCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="4321323723358269491" at="827,84,828,172" concept="5" />
+      <node id="4321323723358269491" at="828,172,829,34" concept="1" />
+      <node id="4321323723358269491" at="829,34,830,119" concept="1" />
+      <node id="4321323723358269491" at="830,119,831,98" concept="1" />
+      <node id="4321323723358269491" at="831,98,832,17" concept="1" />
+      <node id="4321323723360619390" at="832,17,833,216" concept="1" />
+      <node id="4321323723358269491" at="833,216,834,47" concept="1" />
+      <node id="4321323723358269491" at="834,47,835,22" concept="6" />
+      <node id="4321323723358269491" at="827,0,837,0" concept="8" trace="createDescriptorForResourceAvailableCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="4321323723358269491" at="234,60,235,51" />
-      <scope id="4321323723358269491" at="826,84,834,22">
+      <scope id="4321323723358269491" at="827,84,835,22">
         <var name="b" id="4321323723358269491" />
       </scope>
-      <scope id="4321323723358269491" at="826,0,836,0" />
+      <scope id="4321323723358269491" at="827,0,837,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4321323723389465661">
@@ -1871,20 +1871,20 @@
     <file name="StructureAspectDescriptor.java">
       <node id="4321323723389465661" at="91,0,92,0" concept="2" trace="myConceptTimeOfDayCondition" />
       <node id="4321323723389465661" at="268,52,269,43" concept="6" />
-      <node id="4321323723389465661" at="977,76,978,164" concept="5" />
-      <node id="4321323723389465661" at="978,164,979,34" concept="1" />
-      <node id="4321323723389465661" at="979,34,980,119" concept="1" />
-      <node id="4321323723389465661" at="980,119,981,98" concept="1" />
-      <node id="4321323723389465661" at="981,98,982,17" concept="1" />
-      <node id="4321323723398463336" at="982,17,983,204" concept="1" />
-      <node id="4321323723389465661" at="983,204,984,37" concept="1" />
-      <node id="4321323723389465661" at="984,37,985,22" concept="6" />
-      <node id="4321323723389465661" at="977,0,987,0" concept="8" trace="createDescriptorForTimeOfDayCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="4321323723389465661" at="978,76,979,164" concept="5" />
+      <node id="4321323723389465661" at="979,164,980,34" concept="1" />
+      <node id="4321323723389465661" at="980,34,981,119" concept="1" />
+      <node id="4321323723389465661" at="981,119,982,98" concept="1" />
+      <node id="4321323723389465661" at="982,98,983,17" concept="1" />
+      <node id="4321323723398463336" at="983,17,984,204" concept="1" />
+      <node id="4321323723389465661" at="984,204,985,37" concept="1" />
+      <node id="4321323723389465661" at="985,37,986,22" concept="6" />
+      <node id="4321323723389465661" at="978,0,988,0" concept="8" trace="createDescriptorForTimeOfDayCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="4321323723389465661" at="268,52,269,43" />
-      <scope id="4321323723389465661" at="977,76,985,22">
+      <scope id="4321323723389465661" at="978,76,986,22">
         <var name="b" id="4321323723389465661" />
       </scope>
-      <scope id="4321323723389465661" at="977,0,987,0" />
+      <scope id="4321323723389465661" at="978,0,988,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4878912887035313780">
@@ -1907,20 +1907,20 @@
     <file name="StructureAspectDescriptor.java">
       <node id="4878912887035313780" at="76,0,77,0" concept="2" trace="myConceptRoomSelectionLine" />
       <node id="4878912887035313780" at="238,51,239,42" concept="6" />
-      <node id="4878912887035313780" at="844,75,845,163" concept="5" />
-      <node id="4878912887035313780" at="845,163,846,34" concept="1" />
-      <node id="4878912887035313780" at="846,34,847,76" concept="1" />
-      <node id="4878912887035313780" at="847,76,848,98" concept="1" />
-      <node id="4878912887035313780" at="848,98,849,17" concept="1" />
-      <node id="4878912887035322779" at="849,17,850,196" concept="1" />
-      <node id="4878912887035322781" at="850,196,851,198" concept="1" />
-      <node id="4878912887035313780" at="851,198,852,22" concept="6" />
-      <node id="4878912887035313780" at="844,0,854,0" concept="8" trace="createDescriptorForRoomSelectionLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="4878912887035313780" at="845,75,846,163" concept="5" />
+      <node id="4878912887035313780" at="846,163,847,34" concept="1" />
+      <node id="4878912887035313780" at="847,34,848,76" concept="1" />
+      <node id="4878912887035313780" at="848,76,849,98" concept="1" />
+      <node id="4878912887035313780" at="849,98,850,17" concept="1" />
+      <node id="4878912887035322779" at="850,17,851,196" concept="1" />
+      <node id="4878912887035322781" at="851,196,852,198" concept="1" />
+      <node id="4878912887035313780" at="852,198,853,22" concept="6" />
+      <node id="4878912887035313780" at="845,0,855,0" concept="8" trace="createDescriptorForRoomSelectionLine#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="4878912887035313780" at="238,51,239,42" />
-      <scope id="4878912887035313780" at="844,75,852,22">
+      <scope id="4878912887035313780" at="845,75,853,22">
         <var name="b" id="4878912887035313780" />
       </scope>
-      <scope id="4878912887035313780" at="844,0,854,0" />
+      <scope id="4878912887035313780" at="845,0,855,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4878912887035329339">
@@ -1943,18 +1943,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="4878912887035329339" at="79,0,80,0" concept="2" trace="myConceptSelectEmptyRoom" />
       <node id="4878912887035329339" at="244,49,245,40" concept="6" />
-      <node id="4878912887035329339" at="869,73,870,161" concept="5" />
-      <node id="4878912887035329339" at="870,161,871,34" concept="1" />
-      <node id="4878912887035329339" at="871,34,872,119" concept="1" />
-      <node id="4878912887035329339" at="872,119,873,98" concept="1" />
-      <node id="4878912887035329339" at="873,98,874,17" concept="1" />
-      <node id="4878912887035329339" at="874,17,875,22" concept="6" />
-      <node id="4878912887035329339" at="869,0,877,0" concept="8" trace="createDescriptorForSelectEmptyRoom#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="4878912887035329339" at="870,73,871,161" concept="5" />
+      <node id="4878912887035329339" at="871,161,872,34" concept="1" />
+      <node id="4878912887035329339" at="872,34,873,119" concept="1" />
+      <node id="4878912887035329339" at="873,119,874,98" concept="1" />
+      <node id="4878912887035329339" at="874,98,875,17" concept="1" />
+      <node id="4878912887035329339" at="875,17,876,22" concept="6" />
+      <node id="4878912887035329339" at="870,0,878,0" concept="8" trace="createDescriptorForSelectEmptyRoom#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="4878912887035329339" at="244,49,245,40" />
-      <scope id="4878912887035329339" at="869,73,875,22">
+      <scope id="4878912887035329339" at="870,73,876,22">
         <var name="b" id="4878912887035329339" />
       </scope>
-      <scope id="4878912887035329339" at="869,0,877,0" />
+      <scope id="4878912887035329339" at="870,0,878,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4878912887035352237">
@@ -1977,18 +1977,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="4878912887035352237" at="78,0,79,0" concept="2" trace="myConceptRoomTypeCondition" />
       <node id="4878912887035352237" at="242,51,243,42" concept="6" />
-      <node id="4878912887035352237" at="861,75,862,163" concept="5" />
-      <node id="4878912887035352237" at="862,163,863,34" concept="1" />
-      <node id="4878912887035352237" at="863,34,864,98" concept="1" />
-      <node id="4878912887035352237" at="864,98,865,17" concept="1" />
-      <node id="4878912887035353261" at="865,17,866,204" concept="1" />
-      <node id="4878912887035352237" at="866,204,867,22" concept="6" />
-      <node id="4878912887035352237" at="861,0,869,0" concept="8" trace="createDescriptorForRoomTypeCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="4878912887035352237" at="862,75,863,163" concept="5" />
+      <node id="4878912887035352237" at="863,163,864,34" concept="1" />
+      <node id="4878912887035352237" at="864,34,865,98" concept="1" />
+      <node id="4878912887035352237" at="865,98,866,17" concept="1" />
+      <node id="4878912887035353261" at="866,17,867,204" concept="1" />
+      <node id="4878912887035352237" at="867,204,868,22" concept="6" />
+      <node id="4878912887035352237" at="862,0,870,0" concept="8" trace="createDescriptorForRoomTypeCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="4878912887035352237" at="242,51,243,42" />
-      <scope id="4878912887035352237" at="861,75,867,22">
+      <scope id="4878912887035352237" at="862,75,868,22">
         <var name="b" id="4878912887035352237" />
       </scope>
-      <scope id="4878912887035352237" at="861,0,869,0" />
+      <scope id="4878912887035352237" at="862,0,870,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4878912887035352238">
@@ -2011,18 +2011,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="4878912887035352238" at="75,0,76,0" concept="2" trace="myConceptRoomSelectionCondition" />
       <node id="4878912887035352238" at="236,56,237,47" concept="6" />
-      <node id="4878912887035352238" at="836,80,837,168" concept="5" />
-      <node id="4878912887035352238" at="837,168,838,34" concept="1" />
-      <node id="4878912887035352238" at="838,34,839,125" concept="1" />
-      <node id="4878912887035352238" at="839,125,840,98" concept="1" />
-      <node id="4878912887035352238" at="840,98,841,17" concept="1" />
-      <node id="4878912887035352238" at="841,17,842,22" concept="6" />
-      <node id="4878912887035352238" at="836,0,844,0" concept="8" trace="createDescriptorForRoomSelectionCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="4878912887035352238" at="837,80,838,168" concept="5" />
+      <node id="4878912887035352238" at="838,168,839,34" concept="1" />
+      <node id="4878912887035352238" at="839,34,840,125" concept="1" />
+      <node id="4878912887035352238" at="840,125,841,98" concept="1" />
+      <node id="4878912887035352238" at="841,98,842,17" concept="1" />
+      <node id="4878912887035352238" at="842,17,843,22" concept="6" />
+      <node id="4878912887035352238" at="837,0,845,0" concept="8" trace="createDescriptorForRoomSelectionCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="4878912887035352238" at="236,56,237,47" />
-      <scope id="4878912887035352238" at="836,80,842,22">
+      <scope id="4878912887035352238" at="837,80,843,22">
         <var name="b" id="4878912887035352238" />
       </scope>
-      <scope id="4878912887035352238" at="836,0,844,0" />
+      <scope id="4878912887035352238" at="837,0,845,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/512008214798455935">
@@ -2045,18 +2045,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="512008214798455935" at="64,0,65,0" concept="2" trace="myConceptPatientSeverityProperty" />
       <node id="512008214798455935" at="214,57,215,48" concept="6" />
-      <node id="512008214798455935" at="735,81,736,168" concept="5" />
-      <node id="512008214798455935" at="736,168,737,34" concept="1" />
-      <node id="512008214798455935" at="738,76,739,97" concept="1" />
-      <node id="512008214798455935" at="739,97,740,17" concept="1" />
-      <node id="512008214798455935" at="740,17,741,32" concept="1" />
-      <node id="512008214798455935" at="741,32,742,22" concept="6" />
-      <node id="512008214798455935" at="735,0,744,0" concept="8" trace="createDescriptorForPatientSeverityProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="512008214798455935" at="736,81,737,168" concept="5" />
+      <node id="512008214798455935" at="737,168,738,34" concept="1" />
+      <node id="512008214798455935" at="739,76,740,97" concept="1" />
+      <node id="512008214798455935" at="740,97,741,17" concept="1" />
+      <node id="512008214798455935" at="741,17,742,32" concept="1" />
+      <node id="512008214798455935" at="742,32,743,22" concept="6" />
+      <node id="512008214798455935" at="736,0,745,0" concept="8" trace="createDescriptorForPatientSeverityProperty#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="512008214798455935" at="214,57,215,48" />
-      <scope id="512008214798455935" at="735,81,742,22">
+      <scope id="512008214798455935" at="736,81,743,22">
         <var name="b" id="512008214798455935" />
       </scope>
-      <scope id="512008214798455935" at="735,0,744,0" />
+      <scope id="512008214798455935" at="736,0,745,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/512008214798463870">
@@ -2079,19 +2079,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="512008214798463870" at="66,0,67,0" concept="2" trace="myConceptPatientSeverity_Severe" />
       <node id="512008214798463870" at="218,56,219,47" concept="6" />
-      <node id="512008214798463870" at="753,80,754,167" concept="5" />
-      <node id="512008214798463870" at="754,167,755,34" concept="1" />
-      <node id="512008214798463870" at="755,34,756,116" concept="1" />
-      <node id="512008214798463870" at="756,116,757,97" concept="1" />
-      <node id="512008214798463870" at="757,97,758,17" concept="1" />
-      <node id="512008214798463870" at="758,17,759,22" concept="1" />
-      <node id="512008214798463870" at="759,22,760,22" concept="6" />
-      <node id="512008214798463870" at="753,0,762,0" concept="8" trace="createDescriptorForPatientSeverity_Severe#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="512008214798463870" at="754,80,755,167" concept="5" />
+      <node id="512008214798463870" at="755,167,756,34" concept="1" />
+      <node id="512008214798463870" at="756,34,757,116" concept="1" />
+      <node id="512008214798463870" at="757,116,758,97" concept="1" />
+      <node id="512008214798463870" at="758,97,759,17" concept="1" />
+      <node id="512008214798463870" at="759,17,760,22" concept="1" />
+      <node id="512008214798463870" at="760,22,761,22" concept="6" />
+      <node id="512008214798463870" at="754,0,763,0" concept="8" trace="createDescriptorForPatientSeverity_Severe#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="512008214798463870" at="218,56,219,47" />
-      <scope id="512008214798463870" at="753,80,760,22">
+      <scope id="512008214798463870" at="754,80,761,22">
         <var name="b" id="512008214798463870" />
       </scope>
-      <scope id="512008214798463870" at="753,0,762,0" />
+      <scope id="512008214798463870" at="754,0,763,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/512008214798464301">
@@ -2114,19 +2114,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="512008214798464301" at="63,0,64,0" concept="2" trace="myConceptPatientSeverity" />
       <node id="512008214798464301" at="212,49,213,40" concept="6" />
-      <node id="512008214798464301" at="726,73,727,160" concept="5" />
-      <node id="512008214798464301" at="727,160,728,34" concept="1" />
-      <node id="512008214798464301" at="728,34,729,125" concept="1" />
-      <node id="512008214798464301" at="729,125,730,97" concept="1" />
-      <node id="512008214798464301" at="730,97,731,17" concept="1" />
-      <node id="512008214798464301" at="731,17,732,32" concept="1" />
-      <node id="512008214798464301" at="732,32,733,22" concept="6" />
-      <node id="512008214798464301" at="726,0,735,0" concept="8" trace="createDescriptorForPatientSeverity#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="512008214798464301" at="727,73,728,160" concept="5" />
+      <node id="512008214798464301" at="728,160,729,34" concept="1" />
+      <node id="512008214798464301" at="729,34,730,125" concept="1" />
+      <node id="512008214798464301" at="730,125,731,97" concept="1" />
+      <node id="512008214798464301" at="731,97,732,17" concept="1" />
+      <node id="512008214798464301" at="732,17,733,32" concept="1" />
+      <node id="512008214798464301" at="733,32,734,22" concept="6" />
+      <node id="512008214798464301" at="727,0,736,0" concept="8" trace="createDescriptorForPatientSeverity#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="512008214798464301" at="212,49,213,40" />
-      <scope id="512008214798464301" at="726,73,733,22">
+      <scope id="512008214798464301" at="727,73,734,22">
         <var name="b" id="512008214798464301" />
       </scope>
-      <scope id="512008214798464301" at="726,0,735,0" />
+      <scope id="512008214798464301" at="727,0,736,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/512008214798466923">
@@ -2149,19 +2149,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="512008214798466923" at="67,0,68,0" concept="2" trace="myConceptPatient_Severity_Moderate" />
       <node id="512008214798466923" at="220,59,221,50" concept="6" />
-      <node id="512008214798466923" at="762,83,763,170" concept="5" />
-      <node id="512008214798466923" at="763,170,764,34" concept="1" />
-      <node id="512008214798466923" at="764,34,765,116" concept="1" />
-      <node id="512008214798466923" at="765,116,766,97" concept="1" />
-      <node id="512008214798466923" at="766,97,767,17" concept="1" />
-      <node id="512008214798466923" at="767,17,768,24" concept="1" />
-      <node id="512008214798466923" at="768,24,769,22" concept="6" />
-      <node id="512008214798466923" at="762,0,771,0" concept="8" trace="createDescriptorForPatient_Severity_Moderate#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="512008214798466923" at="763,83,764,170" concept="5" />
+      <node id="512008214798466923" at="764,170,765,34" concept="1" />
+      <node id="512008214798466923" at="765,34,766,116" concept="1" />
+      <node id="512008214798466923" at="766,116,767,97" concept="1" />
+      <node id="512008214798466923" at="767,97,768,17" concept="1" />
+      <node id="512008214798466923" at="768,17,769,24" concept="1" />
+      <node id="512008214798466923" at="769,24,770,22" concept="6" />
+      <node id="512008214798466923" at="763,0,772,0" concept="8" trace="createDescriptorForPatient_Severity_Moderate#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="512008214798466923" at="220,59,221,50" />
-      <scope id="512008214798466923" at="762,83,769,22">
+      <scope id="512008214798466923" at="763,83,770,22">
         <var name="b" id="512008214798466923" />
       </scope>
-      <scope id="512008214798466923" at="762,0,771,0" />
+      <scope id="512008214798466923" at="763,0,772,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/512008214798467707">
@@ -2184,19 +2184,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="512008214798467707" at="65,0,66,0" concept="2" trace="myConceptPatientSeverity_Low" />
       <node id="512008214798467707" at="216,53,217,44" concept="6" />
-      <node id="512008214798467707" at="744,77,745,164" concept="5" />
-      <node id="512008214798467707" at="745,164,746,34" concept="1" />
-      <node id="512008214798467707" at="746,34,747,116" concept="1" />
-      <node id="512008214798467707" at="747,116,748,97" concept="1" />
-      <node id="512008214798467707" at="748,97,749,17" concept="1" />
-      <node id="512008214798467707" at="749,17,750,19" concept="1" />
-      <node id="512008214798467707" at="750,19,751,22" concept="6" />
-      <node id="512008214798467707" at="744,0,753,0" concept="8" trace="createDescriptorForPatientSeverity_Low#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="512008214798467707" at="745,77,746,164" concept="5" />
+      <node id="512008214798467707" at="746,164,747,34" concept="1" />
+      <node id="512008214798467707" at="747,34,748,116" concept="1" />
+      <node id="512008214798467707" at="748,116,749,97" concept="1" />
+      <node id="512008214798467707" at="749,97,750,17" concept="1" />
+      <node id="512008214798467707" at="750,17,751,19" concept="1" />
+      <node id="512008214798467707" at="751,19,752,22" concept="6" />
+      <node id="512008214798467707" at="745,0,754,0" concept="8" trace="createDescriptorForPatientSeverity_Low#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="512008214798467707" at="216,53,217,44" />
-      <scope id="512008214798467707" at="744,77,751,22">
+      <scope id="512008214798467707" at="745,77,752,22">
         <var name="b" id="512008214798467707" />
       </scope>
-      <scope id="512008214798467707" at="744,0,753,0" />
+      <scope id="512008214798467707" at="745,0,754,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5381978332891550188">
@@ -2219,21 +2219,21 @@
     <file name="StructureAspectDescriptor.java">
       <node id="5381978332891550188" at="53,0,54,0" concept="2" trace="myConceptLocationCapacityCondition" />
       <node id="5381978332891550188" at="192,59,193,50" concept="6" />
-      <node id="5381978332891550188" at="626,83,627,171" concept="5" />
-      <node id="5381978332891550188" at="627,171,628,34" concept="1" />
-      <node id="5381978332891550188" at="628,34,629,119" concept="1" />
-      <node id="5381978332891550188" at="629,119,630,98" concept="1" />
-      <node id="5381978332891550188" at="630,98,631,17" concept="1" />
-      <node id="5381978332891550308" at="631,17,632,118" concept="1" />
-      <node id="5381978332891550252" at="632,118,633,201" concept="1" />
-      <node id="5381978332891550188" at="633,201,634,40" concept="1" />
-      <node id="5381978332891550188" at="634,40,635,22" concept="6" />
-      <node id="5381978332891550188" at="626,0,637,0" concept="8" trace="createDescriptorForLocationCapacityCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="5381978332891550188" at="627,83,628,171" concept="5" />
+      <node id="5381978332891550188" at="628,171,629,34" concept="1" />
+      <node id="5381978332891550188" at="629,34,630,119" concept="1" />
+      <node id="5381978332891550188" at="630,119,631,98" concept="1" />
+      <node id="5381978332891550188" at="631,98,632,17" concept="1" />
+      <node id="5381978332891550308" at="632,17,633,118" concept="1" />
+      <node id="5381978332891550252" at="633,118,634,201" concept="1" />
+      <node id="5381978332891550188" at="634,201,635,40" concept="1" />
+      <node id="5381978332891550188" at="635,40,636,22" concept="6" />
+      <node id="5381978332891550188" at="627,0,638,0" concept="8" trace="createDescriptorForLocationCapacityCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="5381978332891550188" at="192,59,193,50" />
-      <scope id="5381978332891550188" at="626,83,635,22">
+      <scope id="5381978332891550188" at="627,83,636,22">
         <var name="b" id="5381978332891550188" />
       </scope>
-      <scope id="5381978332891550188" at="626,0,637,0" />
+      <scope id="5381978332891550188" at="627,0,638,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240276654720">
@@ -2256,18 +2256,18 @@
     <file name="StructureAspectDescriptor.java">
       <node id="5402567240276654720" at="82,0,83,0" concept="2" trace="myConceptStaffTypeReference" />
       <node id="5402567240276654720" at="250,52,251,43" concept="6" />
-      <node id="5402567240276654720" at="895,76,896,164" concept="5" />
-      <node id="5402567240276654720" at="896,164,897,34" concept="1" />
-      <node id="5402567240276654720" at="897,34,898,98" concept="1" />
-      <node id="5402567240276654720" at="898,98,899,17" concept="1" />
-      <node id="5402567240276654757" at="899,17,900,173" concept="1" />
-      <node id="5402567240276654720" at="900,173,901,22" concept="6" />
-      <node id="5402567240276654720" at="895,0,903,0" concept="8" trace="createDescriptorForStaffTypeReference#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="5402567240276654720" at="896,76,897,164" concept="5" />
+      <node id="5402567240276654720" at="897,164,898,34" concept="1" />
+      <node id="5402567240276654720" at="898,34,899,98" concept="1" />
+      <node id="5402567240276654720" at="899,98,900,17" concept="1" />
+      <node id="5402567240276654757" at="900,17,901,173" concept="1" />
+      <node id="5402567240276654720" at="901,173,902,22" concept="6" />
+      <node id="5402567240276654720" at="896,0,904,0" concept="8" trace="createDescriptorForStaffTypeReference#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="5402567240276654720" at="250,52,251,43" />
-      <scope id="5402567240276654720" at="895,76,901,22">
+      <scope id="5402567240276654720" at="896,76,902,22">
         <var name="b" id="5402567240276654720" />
       </scope>
-      <scope id="5402567240276654720" at="895,0,903,0" />
+      <scope id="5402567240276654720" at="896,0,904,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240278617686">
@@ -2296,14 +2296,15 @@
       <node id="5402567240278617686" at="546,98,547,17" concept="1" />
       <node id="5729391434181383388" at="547,17,548,118" concept="1" />
       <node id="8998806958909918627" at="548,118,549,121" concept="1" />
-      <node id="5402567240278617764" at="549,121,550,204" concept="1" />
-      <node id="5402567240278617686" at="550,204,551,22" concept="6" />
-      <node id="5402567240278617686" at="543,0,553,0" concept="8" trace="createDescriptorForEDScenario#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="3785632457359082556" at="549,121,550,129" concept="1" />
+      <node id="5402567240278617764" at="550,129,551,204" concept="1" />
+      <node id="5402567240278617686" at="551,204,552,22" concept="6" />
+      <node id="5402567240278617686" at="543,0,554,0" concept="8" trace="createDescriptorForEDScenario#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="5402567240278617686" at="174,44,175,35" />
-      <scope id="5402567240278617686" at="543,68,551,22">
+      <scope id="5402567240278617686" at="543,68,552,22">
         <var name="b" id="5402567240278617686" />
       </scope>
-      <scope id="5402567240278617686" at="543,0,553,0" />
+      <scope id="5402567240278617686" at="543,0,554,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5402567240278617723">
@@ -2326,19 +2327,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="5402567240278617723" at="80,0,81,0" concept="2" trace="myConceptStaffNumber" />
       <node id="5402567240278617723" at="246,45,247,36" concept="6" />
-      <node id="5402567240278617723" at="877,69,878,157" concept="5" />
-      <node id="5402567240278617723" at="878,157,879,34" concept="1" />
-      <node id="5402567240278617723" at="879,34,880,98" concept="1" />
-      <node id="5402567240278617723" at="880,98,881,17" concept="1" />
-      <node id="5402567240278617733" at="881,17,882,113" concept="1" />
-      <node id="5402567240278617735" at="882,113,883,169" concept="1" />
-      <node id="5402567240278617723" at="883,169,884,22" concept="6" />
-      <node id="5402567240278617723" at="877,0,886,0" concept="8" trace="createDescriptorForStaffNumber#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="5402567240278617723" at="878,69,879,157" concept="5" />
+      <node id="5402567240278617723" at="879,157,880,34" concept="1" />
+      <node id="5402567240278617723" at="880,34,881,98" concept="1" />
+      <node id="5402567240278617723" at="881,98,882,17" concept="1" />
+      <node id="5402567240278617733" at="882,17,883,113" concept="1" />
+      <node id="5402567240278617735" at="883,113,884,169" concept="1" />
+      <node id="5402567240278617723" at="884,169,885,22" concept="6" />
+      <node id="5402567240278617723" at="878,0,887,0" concept="8" trace="createDescriptorForStaffNumber#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="5402567240278617723" at="246,45,247,36" />
-      <scope id="5402567240278617723" at="877,69,884,22">
+      <scope id="5402567240278617723" at="878,69,885,22">
         <var name="b" id="5402567240278617723" />
       </scope>
-      <scope id="5402567240278617723" at="877,0,886,0" />
+      <scope id="5402567240278617723" at="878,0,887,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733230">
@@ -2401,19 +2402,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="5710949967853733612" at="81,0,82,0" concept="2" trace="myConceptStaffType" />
       <node id="5710949967853733612" at="248,43,249,34" concept="6" />
-      <node id="5710949967853733612" at="886,67,887,155" concept="5" />
-      <node id="5710949967853733612" at="887,155,888,33" concept="1" />
-      <node id="5710949967853733612" at="888,33,889,71" concept="1" />
-      <node id="5710949967853733612" at="889,71,890,98" concept="1" />
-      <node id="5710949967853733612" at="890,98,891,17" concept="1" />
-      <node id="4443718667985551902" at="891,17,892,205" concept="1" />
-      <node id="5710949967853733612" at="892,205,893,22" concept="6" />
-      <node id="5710949967853733612" at="886,0,895,0" concept="8" trace="createDescriptorForStaffType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="5710949967853733612" at="887,67,888,155" concept="5" />
+      <node id="5710949967853733612" at="888,155,889,33" concept="1" />
+      <node id="5710949967853733612" at="889,33,890,71" concept="1" />
+      <node id="5710949967853733612" at="890,71,891,98" concept="1" />
+      <node id="5710949967853733612" at="891,98,892,17" concept="1" />
+      <node id="4443718667985551902" at="892,17,893,205" concept="1" />
+      <node id="5710949967853733612" at="893,205,894,22" concept="6" />
+      <node id="5710949967853733612" at="887,0,896,0" concept="8" trace="createDescriptorForStaffType#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="5710949967853733612" at="248,43,249,34" />
-      <scope id="5710949967853733612" at="886,67,893,22">
+      <scope id="5710949967853733612" at="887,67,894,22">
         <var name="b" id="5710949967853733612" />
       </scope>
-      <scope id="5710949967853733612" at="886,0,895,0" />
+      <scope id="5710949967853733612" at="887,0,896,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/6097839017212103992">
@@ -2436,21 +2437,21 @@
     <file name="StructureAspectDescriptor.java">
       <node id="6097839017212103992" at="85,0,86,0" concept="2" trace="myConceptTestCapturedDisease" />
       <node id="6097839017212103992" at="256,53,257,44" concept="6" />
-      <node id="6097839017212103992" at="924,77,925,165" concept="5" />
-      <node id="6097839017212103992" at="925,165,926,34" concept="1" />
-      <node id="6097839017212103992" at="926,34,927,111" concept="1" />
-      <node id="6097839017212103992" at="927,111,928,98" concept="1" />
-      <node id="6097839017212103992" at="928,98,929,17" concept="1" />
-      <node id="6097839017212104047" at="929,17,930,182" concept="1" />
-      <node id="6097839017212104048" at="930,182,931,182" concept="1" />
-      <node id="6097839017212104069" at="931,182,932,171" concept="1" />
-      <node id="6097839017212103992" at="932,171,933,22" concept="6" />
-      <node id="6097839017212103992" at="924,0,935,0" concept="8" trace="createDescriptorForTestCapturedDisease#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6097839017212103992" at="925,77,926,165" concept="5" />
+      <node id="6097839017212103992" at="926,165,927,34" concept="1" />
+      <node id="6097839017212103992" at="927,34,928,111" concept="1" />
+      <node id="6097839017212103992" at="928,111,929,98" concept="1" />
+      <node id="6097839017212103992" at="929,98,930,17" concept="1" />
+      <node id="6097839017212104047" at="930,17,931,182" concept="1" />
+      <node id="6097839017212104048" at="931,182,932,182" concept="1" />
+      <node id="6097839017212104069" at="932,182,933,171" concept="1" />
+      <node id="6097839017212103992" at="933,171,934,22" concept="6" />
+      <node id="6097839017212103992" at="925,0,936,0" concept="8" trace="createDescriptorForTestCapturedDisease#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6097839017212103992" at="256,53,257,44" />
-      <scope id="6097839017212103992" at="924,77,933,22">
+      <scope id="6097839017212103992" at="925,77,934,22">
         <var name="b" id="6097839017212103992" />
       </scope>
-      <scope id="6097839017212103992" at="924,0,935,0" />
+      <scope id="6097839017212103992" at="925,0,936,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/6963522544237016584">
@@ -2575,20 +2576,20 @@
     <file name="StructureAspectDescriptor.java">
       <node id="7169358838266389176" at="59,0,60,0" concept="2" trace="myConceptPatientArrivals" />
       <node id="7169358838266389176" at="204,49,205,40" concept="6" />
-      <node id="7169358838266389176" at="685,73,686,161" concept="5" />
-      <node id="7169358838266389176" at="686,161,687,34" concept="1" />
-      <node id="7169358838266389176" at="687,34,688,98" concept="1" />
-      <node id="7169358838266389176" at="688,98,689,17" concept="1" />
-      <node id="2876623929997960145" at="689,17,690,211" concept="1" />
-      <node id="768972137592763856" at="690,211,691,207" concept="1" />
-      <node id="7169358838266389176" at="691,207,692,32" concept="1" />
-      <node id="7169358838266389176" at="692,32,693,22" concept="6" />
-      <node id="7169358838266389176" at="685,0,695,0" concept="8" trace="createDescriptorForPatientArrivals#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7169358838266389176" at="686,73,687,161" concept="5" />
+      <node id="7169358838266389176" at="687,161,688,34" concept="1" />
+      <node id="7169358838266389176" at="688,34,689,98" concept="1" />
+      <node id="7169358838266389176" at="689,98,690,17" concept="1" />
+      <node id="2876623929997960145" at="690,17,691,211" concept="1" />
+      <node id="768972137592763856" at="691,211,692,207" concept="1" />
+      <node id="7169358838266389176" at="692,207,693,32" concept="1" />
+      <node id="7169358838266389176" at="693,32,694,22" concept="6" />
+      <node id="7169358838266389176" at="686,0,696,0" concept="8" trace="createDescriptorForPatientArrivals#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7169358838266389176" at="204,49,205,40" />
-      <scope id="7169358838266389176" at="685,73,693,22">
+      <scope id="7169358838266389176" at="686,73,694,22">
         <var name="b" id="7169358838266389176" />
       </scope>
-      <scope id="7169358838266389176" at="685,0,695,0" />
+      <scope id="7169358838266389176" at="686,0,696,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/768972137579180806">
@@ -2612,21 +2613,21 @@
     <file name="StructureAspectDescriptor.java">
       <node id="768972137579180806" at="60,0,61,0" concept="2" trace="myConceptPatientProfile" />
       <node id="768972137579180806" at="206,48,207,39" concept="6" />
-      <node id="768972137579180806" at="695,72,696,159" concept="5" />
-      <node id="768972137579180806" at="696,159,697,33" concept="1" />
-      <node id="768972137579180806" at="697,33,698,71" concept="1" />
-      <node id="768972137579180806" at="698,71,699,97" concept="1" />
-      <node id="768972137579180806" at="699,97,700,17" concept="1" />
-      <node id="768972137579221593" at="700,17,701,200" concept="1" />
-      <node id="768972137579221632" at="701,200,702,203" concept="1" />
-      <node id="1758249876507806175" at="702,203,703,209" concept="1" />
-      <node id="768972137579180806" at="703,209,704,22" concept="6" />
-      <node id="768972137579180806" at="695,0,706,0" concept="8" trace="createDescriptorForPatientProfile#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="768972137579180806" at="696,72,697,159" concept="5" />
+      <node id="768972137579180806" at="697,159,698,33" concept="1" />
+      <node id="768972137579180806" at="698,33,699,71" concept="1" />
+      <node id="768972137579180806" at="699,71,700,97" concept="1" />
+      <node id="768972137579180806" at="700,97,701,17" concept="1" />
+      <node id="768972137579221593" at="701,17,702,200" concept="1" />
+      <node id="768972137579221632" at="702,200,703,203" concept="1" />
+      <node id="1758249876507806175" at="703,203,704,209" concept="1" />
+      <node id="768972137579180806" at="704,209,705,22" concept="6" />
+      <node id="768972137579180806" at="696,0,707,0" concept="8" trace="createDescriptorForPatientProfile#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="768972137579180806" at="206,48,207,39" />
-      <scope id="768972137579180806" at="695,72,704,22">
+      <scope id="768972137579180806" at="696,72,705,22">
         <var name="b" id="768972137579180806" />
       </scope>
-      <scope id="768972137579180806" at="695,0,706,0" />
+      <scope id="768972137579180806" at="696,0,707,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/7828349744265630002">
@@ -2683,20 +2684,20 @@
     <file name="StructureAspectDescriptor.java">
       <node id="7828349744265630119" at="55,0,56,0" concept="2" trace="myConceptObservationTest" />
       <node id="7828349744265630119" at="196,49,197,40" concept="6" />
-      <node id="7828349744265630119" at="646,73,647,161" concept="5" />
-      <node id="7828349744265630119" at="647,161,648,33" concept="1" />
-      <node id="7828349744265630119" at="648,33,649,106" concept="1" />
-      <node id="7828349744265630119" at="649,106,650,98" concept="1" />
-      <node id="7828349744265630119" at="650,98,651,17" concept="1" />
-      <node id="7828349744265630405" at="651,17,652,208" concept="1" />
-      <node id="7828349744265630119" at="652,208,653,27" concept="1" />
-      <node id="7828349744265630119" at="653,27,654,22" concept="6" />
-      <node id="7828349744265630119" at="646,0,656,0" concept="8" trace="createDescriptorForObservationTest#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7828349744265630119" at="647,73,648,161" concept="5" />
+      <node id="7828349744265630119" at="648,161,649,33" concept="1" />
+      <node id="7828349744265630119" at="649,33,650,106" concept="1" />
+      <node id="7828349744265630119" at="650,106,651,98" concept="1" />
+      <node id="7828349744265630119" at="651,98,652,17" concept="1" />
+      <node id="7828349744265630405" at="652,17,653,208" concept="1" />
+      <node id="7828349744265630119" at="653,208,654,27" concept="1" />
+      <node id="7828349744265630119" at="654,27,655,22" concept="6" />
+      <node id="7828349744265630119" at="647,0,657,0" concept="8" trace="createDescriptorForObservationTest#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7828349744265630119" at="196,49,197,40" />
-      <scope id="7828349744265630119" at="646,73,654,22">
+      <scope id="7828349744265630119" at="647,73,655,22">
         <var name="b" id="7828349744265630119" />
       </scope>
-      <scope id="7828349744265630119" at="646,0,656,0" />
+      <scope id="7828349744265630119" at="647,0,657,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/7828349744265630201">
@@ -2719,19 +2720,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="7828349744265630201" at="83,0,84,0" concept="2" trace="myConceptSymptomList" />
       <node id="7828349744265630201" at="252,45,253,36" concept="6" />
-      <node id="7828349744265630201" at="903,69,904,157" concept="5" />
-      <node id="7828349744265630201" at="904,157,905,33" concept="1" />
-      <node id="7828349744265630201" at="905,33,906,98" concept="1" />
-      <node id="7828349744265630201" at="906,98,907,17" concept="1" />
-      <node id="7828349744265630211" at="907,17,908,200" concept="1" />
-      <node id="7828349744265630201" at="908,200,909,41" concept="1" />
-      <node id="7828349744265630201" at="909,41,910,22" concept="6" />
-      <node id="7828349744265630201" at="903,0,912,0" concept="8" trace="createDescriptorForSymptomList#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7828349744265630201" at="904,69,905,157" concept="5" />
+      <node id="7828349744265630201" at="905,157,906,33" concept="1" />
+      <node id="7828349744265630201" at="906,33,907,98" concept="1" />
+      <node id="7828349744265630201" at="907,98,908,17" concept="1" />
+      <node id="7828349744265630211" at="908,17,909,200" concept="1" />
+      <node id="7828349744265630201" at="909,200,910,41" concept="1" />
+      <node id="7828349744265630201" at="910,41,911,22" concept="6" />
+      <node id="7828349744265630201" at="904,0,913,0" concept="8" trace="createDescriptorForSymptomList#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7828349744265630201" at="252,45,253,36" />
-      <scope id="7828349744265630201" at="903,69,910,22">
+      <scope id="7828349744265630201" at="904,69,911,22">
         <var name="b" id="7828349744265630201" />
       </scope>
-      <scope id="7828349744265630201" at="903,0,912,0" />
+      <scope id="7828349744265630201" at="904,0,913,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/7828349744265630279">
@@ -2788,22 +2789,22 @@
     <file name="StructureAspectDescriptor.java">
       <node id="7828349744265634127" at="84,0,85,0" concept="2" trace="myConceptTest" />
       <node id="7828349744265634127" at="254,38,255,29" concept="6" />
-      <node id="7828349744265634127" at="912,62,913,150" concept="5" />
-      <node id="7828349744265634127" at="913,150,914,34" concept="1" />
-      <node id="7828349744265634127" at="914,34,915,115" concept="1" />
-      <node id="7828349744265634127" at="915,115,916,71" concept="1" />
-      <node id="7828349744265634127" at="916,71,917,98" concept="1" />
-      <node id="7828349744265634127" at="917,98,918,17" concept="1" />
-      <node id="7828349744265634184" at="918,17,919,212" concept="1" />
-      <node id="3787511550157762889" at="919,212,920,207" concept="1" />
-      <node id="7828349744265634127" at="920,207,921,20" concept="1" />
-      <node id="7828349744265634127" at="921,20,922,22" concept="6" />
-      <node id="7828349744265634127" at="912,0,924,0" concept="8" trace="createDescriptorForTest#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7828349744265634127" at="913,62,914,150" concept="5" />
+      <node id="7828349744265634127" at="914,150,915,34" concept="1" />
+      <node id="7828349744265634127" at="915,34,916,115" concept="1" />
+      <node id="7828349744265634127" at="916,115,917,71" concept="1" />
+      <node id="7828349744265634127" at="917,71,918,98" concept="1" />
+      <node id="7828349744265634127" at="918,98,919,17" concept="1" />
+      <node id="7828349744265634184" at="919,17,920,212" concept="1" />
+      <node id="3787511550157762889" at="920,212,921,207" concept="1" />
+      <node id="7828349744265634127" at="921,207,922,20" concept="1" />
+      <node id="7828349744265634127" at="922,20,923,22" concept="6" />
+      <node id="7828349744265634127" at="913,0,925,0" concept="8" trace="createDescriptorForTest#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7828349744265634127" at="254,38,255,29" />
-      <scope id="7828349744265634127" at="912,62,922,22">
+      <scope id="7828349744265634127" at="913,62,923,22">
         <var name="b" id="7828349744265634127" />
       </scope>
-      <scope id="7828349744265634127" at="912,0,924,0" />
+      <scope id="7828349744265634127" at="913,0,925,0" />
     </file>
   </root>
   <root nodeRef="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/7828349744267291363">
@@ -2826,21 +2827,21 @@
     <file name="StructureAspectDescriptor.java">
       <node id="7828349744267291363" at="56,0,57,0" concept="2" trace="myConceptObservationsCondition" />
       <node id="7828349744267291363" at="198,55,199,46" concept="6" />
-      <node id="7828349744267291363" at="656,79,657,167" concept="5" />
-      <node id="7828349744267291363" at="657,167,658,34" concept="1" />
-      <node id="7828349744267291363" at="658,34,659,119" concept="1" />
-      <node id="7828349744267291363" at="659,119,660,98" concept="1" />
-      <node id="7828349744267291363" at="660,98,661,17" concept="1" />
-      <node id="7828349744267291427" at="661,17,662,178" concept="1" />
-      <node id="7828349744267291447" at="662,178,663,167" concept="1" />
-      <node id="7828349744267291363" at="663,167,664,35" concept="1" />
-      <node id="7828349744267291363" at="664,35,665,22" concept="6" />
-      <node id="7828349744267291363" at="656,0,667,0" concept="8" trace="createDescriptorForObservationsCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="7828349744267291363" at="657,79,658,167" concept="5" />
+      <node id="7828349744267291363" at="658,167,659,34" concept="1" />
+      <node id="7828349744267291363" at="659,34,660,119" concept="1" />
+      <node id="7828349744267291363" at="660,119,661,98" concept="1" />
+      <node id="7828349744267291363" at="661,98,662,17" concept="1" />
+      <node id="7828349744267291427" at="662,17,663,178" concept="1" />
+      <node id="7828349744267291447" at="663,178,664,167" concept="1" />
+      <node id="7828349744267291363" at="664,167,665,35" concept="1" />
+      <node id="7828349744267291363" at="665,35,666,22" concept="6" />
+      <node id="7828349744267291363" at="657,0,668,0" concept="8" trace="createDescriptorForObservationsCondition#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="7828349744267291363" at="198,55,199,46" />
-      <scope id="7828349744267291363" at="656,79,665,22">
+      <scope id="7828349744267291363" at="657,79,666,22">
         <var name="b" id="7828349744267291363" />
       </scope>
-      <scope id="7828349744267291363" at="656,0,667,0" />
+      <scope id="7828349744267291363" at="657,0,668,0" />
     </file>
   </root>
 </debug-info>

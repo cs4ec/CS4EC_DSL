@@ -16,87 +16,6 @@
   <atEnd>false</atEnd>
   <methodDataSources class="linked-hash-map">
       <entry>
-        <string>patientgetCOVIDVaccineStatusisUnvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetCOVIDVaccineStatusisUnvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getCOVIDVaccineStatusisUnvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetCOVIDVaccineStatusispartiallyvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetCOVIDVaccineStatusispartiallyvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getCOVIDVaccineStatusispartiallyvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetCOVIDVaccineStatusisfullyvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetCOVIDVaccineStatusisfullyvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getCOVIDVaccineStatusisfullyvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetFluAVaccineStatusisUnvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetFluAVaccineStatusisUnvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getFluAVaccineStatusisUnvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetFluAVaccineStatusispartiallyvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetFluAVaccineStatusispartiallyvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getFluAVaccineStatusispartiallyvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetFluAVaccineStatusisfullyvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetFluAVaccineStatusisfullyvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getFluAVaccineStatusisfullyvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetFluBVaccineStatusisUnvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetFluBVaccineStatusisUnvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getFluBVaccineStatusisUnvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetFluBVaccineStatusispartiallyvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetFluBVaccineStatusispartiallyvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getFluBVaccineStatusispartiallyvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetFluBVaccineStatusisfullyvaccinated</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetFluBVaccineStatusisfullyvaccinated</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getFluBVaccineStatusisfullyvaccinated</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
         <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
           <id>patientgetCOVIDInfectionStatusisSymptomatic</id>
@@ -192,24 +111,6 @@
           <id>patientgetRecentCovidContactisNo</id>
           <className>EDLanguage.sandbox.patient</className>
           <methodName>getRecentCovidContactisNo</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetImmunocompromisedisYes</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetImmunocompromisedisYes</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getImmunocompromisedisYes</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetImmunocompromisedisNo</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetImmunocompromisedisNo</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getImmunocompromisedisNo</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

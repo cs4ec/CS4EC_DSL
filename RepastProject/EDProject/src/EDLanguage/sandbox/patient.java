@@ -22,14 +22,10 @@ public class patient extends Actor {
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
   public String admissionRoute = "UnConfigured";
-  public String COVIDVaccineStatus = "NotConfigured";
-  public String FluAVaccineStatus = "NotConfigured";
-  public String FluBVaccineStatus = "NotConfigured";
   public String COVIDInfectionStatus = "NotConfigured";
   public String FluAInfectionStatus = "NotConfigured";
   public String FluBInfectionStatus = "NotConfigured";
   public String RecentCovidContact = "NotConfigured";
-  public String Immunocompromised = "NotConfigured";
   public String Severity = "NotConfigured";
   public String LFDCOVIDResult = "Incomplete";
   public String LFDFluAResult = "Incomplete";
@@ -110,60 +106,6 @@ public class patient extends Actor {
   }
 
 
-  public int getCOVIDVaccineStatusisUnvaccinated() {
-    if (this.COVIDVaccineStatus == "Unvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCOVIDVaccineStatusispartiallyvaccinated() {
-    if (this.COVIDVaccineStatus == "partiallyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCOVIDVaccineStatusisfullyvaccinated() {
-    if (this.COVIDVaccineStatus == "fullyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAVaccineStatusisUnvaccinated() {
-    if (this.FluAVaccineStatus == "Unvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAVaccineStatusispartiallyvaccinated() {
-    if (this.FluAVaccineStatus == "partiallyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAVaccineStatusisfullyvaccinated() {
-    if (this.FluAVaccineStatus == "fullyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBVaccineStatusisUnvaccinated() {
-    if (this.FluBVaccineStatus == "Unvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBVaccineStatusispartiallyvaccinated() {
-    if (this.FluBVaccineStatus == "partiallyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBVaccineStatusisfullyvaccinated() {
-    if (this.FluBVaccineStatus == "fullyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
   public int getCOVIDInfectionStatusisSymptomatic() {
     if (this.COVIDInfectionStatus == "Symptomatic") {
       return 1;
@@ -226,18 +168,6 @@ public class patient extends Actor {
   }
   public int getRecentCovidContactisNo() {
     if (this.RecentCovidContact == "No") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getImmunocompromisedisYes() {
-    if (this.Immunocompromised == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getImmunocompromisedisNo() {
-    if (this.Immunocompromised == "No") {
       return 1;
     }
     return 0;

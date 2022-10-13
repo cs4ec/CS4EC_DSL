@@ -289,6 +289,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("secondsPerTick", 0x6ca3e29db4c202b4L).type(PrimitiveTypeId.INTEGER).origin("7828349744270410420").done();
     b.property("runDuration", 0x4f82e3275d8c1a55L).type(PrimitiveTypeId.INTEGER).origin("5729391434181384789").done();
+    b.property("simulationRepetitions", 0x348944a9af13c9c9L).type(PrimitiveTypeId.INTEGER).origin("3785632457359083977").done();
     b.aggregate("agents", 0x35463334ce306babL).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x35463334ce2f7b02L).optional(true).ordered(true).multiple(true).origin("3838812034270522283").done();
     b.aggregate("relationships", 0x78ac309637c9f4L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x78ac3096379b5dL).optional(true).ordered(true).multiple(true).origin("33966321883924980").done();
     return b.create();

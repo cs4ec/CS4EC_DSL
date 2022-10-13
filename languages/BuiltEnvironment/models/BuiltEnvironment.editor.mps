@@ -921,6 +921,12 @@
           <property role="3F0ifm" value="days" />
         </node>
       </node>
+      <node concept="3F0ifn" id="3i9haAJ4WBA" role="3EZMnx">
+        <property role="3F0ifm" value="Simulation Repetitions:" />
+      </node>
+      <node concept="3F0A7n" id="3i9haAJ4WCq" role="3EZMnx">
+        <ref role="1NtTu8" to="3z3g:3i9haAJ4WB9" resolve="simulationRepetitions" />
+      </node>
       <node concept="3F0ifn" id="4VcHHLiE1Kp" role="3EZMnx">
         <property role="3F0ifm" value="Agents:" />
       </node>

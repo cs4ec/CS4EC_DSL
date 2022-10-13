@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?><sweep runs="1">
+	<parameter name="SecondsPerTick"
+		displayName="Seconds Per Tick" type="int" defaultValue="60" />
+	<parameter name="randomSeed"
+		type="number" number_type="int" start="1" end="10" step="1" />
+	<parameter name="UsePathFinding"
+		displayName="Use path finding" type="boolean" defaultValue="false" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATprobability_a0_0"
+  		type="constant" constant_type="double" value="5" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRprobability_b0_0"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATprobability_a0"
+  		type="constant" constant_type="double" value="5" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRprobability_b0"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="LFDCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70" />
+  	<parameter name="LFDCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LFDFluASensitivity"
+  		type="constant" constant_type="double" value="88" />
+  	<parameter name="LFDFluASpecificity"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="LFDFluBSensitivity"
+  		type="constant" constant_type="double" value="93" />
+  	<parameter name="LFDFluBSpecificity"
+  		type="constant" constant_type="double" value="98" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="COVIDVaccineStatusUnvaccinated"
+  		 type="constant" constant_type="double" value = "10" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="COVIDVaccineStatuspartiallyvaccinated"
+  		 type="constant" constant_type="double" value = "2" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="COVIDVaccineStatusfullyvaccinated"
+  		 type="constant" constant_type="double" value = "88" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluAVaccineStatusUnvaccinated"
+  		 type="constant" constant_type="double" value = "80" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluAVaccineStatuspartiallyvaccinated"
+  		 type="constant" constant_type="double" value = "0" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluAVaccineStatusfullyvaccinated"
+  		 type="constant" constant_type="double" value = "20" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluBVaccineStatusUnvaccinated"
+  		 type="constant" constant_type="double" value = "80" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluBVaccineStatuspartiallyvaccinated"
+  		 type="constant" constant_type="double" value = "0" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluBVaccineStatusfullyvaccinated"
+  		 type="constant" constant_type="double" value = "20" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="COVIDInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "3" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="COVIDInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "1" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="COVIDInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "96" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluAInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "5" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluAInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluAInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "95" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluBInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "5" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluBInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="FluBInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "95" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="RecentCovidContactYes"
+  		 type="constant" constant_type="double" value = "5" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="RecentCovidContactNo"
+  		 type="constant" constant_type="double" value = "95" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="ImmunocompromisedYes"
+  		 type="constant" constant_type="double" value = "5" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="ImmunocompromisedNo"
+  		 type="constant" constant_type="double" value = "95" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="Severitysevere"
+  		 type="constant" constant_type="double" value = "5" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="Severitymoderate"
+  		 type="constant" constant_type="double" value = "15" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="Severitylow"
+  		 type="constant" constant_type="double" value = "70" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="admissionRouteEmergencyAttendance"
+  		 type="constant" constant_type="double" value = "100" />
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+</sweep>

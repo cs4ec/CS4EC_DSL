@@ -33,6 +33,7 @@ public class MyRunner {
       System.out.println("--------------------------------------------------------------------");
       System.out.println("Generate Repast project:");
       new MyRunner().DoTransferParameters(projectPath);
+      new MyRunner().DoTransferBatchParameters(projectPath);
       new MyRunner().DoGenerateProject(projectPath);
       System.out.println("Repast generation success;");
       System.out.println("--------------------------------------------------------------------");
@@ -116,6 +117,72 @@ public class MyRunner {
     }
 
   }
+
+  public void DoTransferBatchParameters(String baseProjectPath) {
+
+    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\HighPrevalenceSurgeCOVIDTestingFlowchart.clone\\classes_gen\\HighPrevalenceSurgeCOVIDTestingFlowchart\\clone\\AC1\\";
+
+    String filePathAfter = "RepastProject\\EDProject\\batch\\";
+
+    System.out.println("Moving Batch Parameters:");
+    System.out.println(filePath + " to " + baseProjectPath + filePathAfter);
+
+    File targetDir = new File(baseProjectPath + filePathAfter);
+    File[] baseFiles = null;
+
+    if (targetDir.isDirectory()) {
+
+      baseFiles = targetDir.listFiles();
+      for (int i = 0; i < baseFiles.length; i++) {
+        if (baseFiles[i].isFile() && (baseFiles[i].getName().startsWith("batch_params"))) {
+          baseFiles[i].delete();
+        }
+      }
+
+      File file = new File(filePath);
+      File[] files = null;
+
+      if (file.isDirectory()) {
+        files = file.listFiles();
+      }
+
+
+      try {
+
+        for (int i = 0; i < files.length; i++) {
+          File aFile = new File(files[i].getPath());
+          if (aFile.isDirectory()) {
+            continue;
+          }
+
+          InputStream in = null;
+          OutputStream out = null;
+
+          in = new FileInputStream(aFile);
+          out = new FileOutputStream(new File(baseProjectPath + filePathAfter + aFile.getName()));
+
+          byte[] buffer = new byte[20480];
+          int len;
+
+          while ((len = in.read(buffer)) > 0) {
+            out.write(buffer, 0, len);
+          }
+
+          in.close();
+          out.close();
+          System.out.print(aFile.getName() + "; ");
+
+        }
+        System.out.println("");
+      } catch (Exception e) {
+        System.out.println("File failed to move!");
+        e.printStackTrace();
+      }
+
+    }
+
+  }
+
 
 
   public void DoGenerateProject(String baseProjectPath) {

@@ -547,6 +547,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("runDuration", 0x4f82e3275d8c14dcL).type(PrimitiveTypeId.INTEGER).origin("5729391434181383388").done();
     b.property("secondsPerTick", 0x7ce22f405c238da3L).type(PrimitiveTypeId.INTEGER).origin("8998806958909918627").done();
+    b.property("simulation_repetitions", 0x348944a9af13c43cL).type(PrimitiveTypeId.INTEGER).origin("3785632457359082556").done();
     b.aggregate("staffNumbers", 0x4af9c647eff82ea4L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e7bL).optional(true).ordered(true).multiple(true).origin("5402567240278617764").done();
     return b.create();
   }

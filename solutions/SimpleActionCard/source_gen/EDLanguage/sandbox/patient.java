@@ -403,12 +403,6 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisnull() {
-    if (this.admittedTo == "") {
-      return 1;
-    }
-    return 0;
-  }
 
 
 

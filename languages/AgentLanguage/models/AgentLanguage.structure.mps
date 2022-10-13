@@ -1815,17 +1815,19 @@
     <property role="EcuMT" value="3866749931179423426" />
     <property role="3GE5qa" value="actions.basic actions" />
     <property role="TrG5h" value="ProbabilityDistributionLine" />
-    <node concept="1TJgyi" id="3mDt9djdNr9" role="1TKVEl">
-      <property role="IQ2nx" value="3866749931179423433" />
-      <property role="TrG5h" value="probability" />
-      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
-    </node>
     <node concept="1TJgyj" id="3mDt9djdNr3" role="1TKVEi">
       <property role="IQ2ns" value="3866749931179423427" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="behaviour" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3l6cNjec8l6" resolve="BehaviourSequence" />
+    </node>
+    <node concept="1TJgyj" id="3i9haAHH6Qt" role="1TKVEi">
+      <property role="IQ2ns" value="3785632457336057245" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="prob" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6tNT_P6ny7D" resolve="ExpressionWrapper" />
     </node>
   </node>
 </model>

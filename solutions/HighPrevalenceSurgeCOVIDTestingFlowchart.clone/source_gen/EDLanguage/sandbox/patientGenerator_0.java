@@ -42,63 +42,37 @@ public class patientGenerator_0 extends AgentGenerator {
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusfullyvaccinated")) / 100)) {
-      a.COVIDVaccineStatus = "fullyvaccinated";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatusUnvaccinated") + 88.0) / 100)) {
-      a.COVIDVaccineStatus = "Unvaccinated";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDVaccineStatuspartiallyvaccinated") + 98.0) / 100)) {
-      a.COVIDVaccineStatus = "partiallyvaccinated";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusUnvaccinated")) / 100)) {
-      a.FluAVaccineStatus = "Unvaccinated";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatusfullyvaccinated") + 80.0) / 100)) {
-      a.FluAVaccineStatus = "fullyvaccinated";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAVaccineStatuspartiallyvaccinated") + 100.0) / 100)) {
-      a.FluAVaccineStatus = "partiallyvaccinated";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusUnvaccinated")) / 100)) {
-      a.FluBVaccineStatus = "Unvaccinated";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatusfullyvaccinated") + 80.0) / 100)) {
-      a.FluBVaccineStatus = "fullyvaccinated";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBVaccineStatuspartiallyvaccinated") + 100.0) / 100)) {
-      a.FluBVaccineStatus = "partiallyvaccinated";
-    }
     if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSusceptible")) / 100)) {
       a.COVIDInfectionStatus = "Susceptible";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic") + 96.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic") + 97.2) / 100)) {
       a.COVIDInfectionStatus = "Symptomatic";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic") + 99.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic") + 100.0) / 100)) {
       a.COVIDInfectionStatus = "Asymptomatic";
     }
     if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSusceptible")) / 100)) {
       a.FluAInfectionStatus = "Susceptible";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic") + 95.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic") + 99.61) / 100)) {
       a.FluAInfectionStatus = "Symptomatic";
     } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic") + 100.0) / 100)) {
       a.FluAInfectionStatus = "Asymptomatic";
     }
     if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible")) / 100)) {
       a.FluBInfectionStatus = "Susceptible";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic") + 95.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic") + 100.0) / 100)) {
       a.FluBInfectionStatus = "Symptomatic";
     } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic") + 100.0) / 100)) {
       a.FluBInfectionStatus = "Asymptomatic";
     }
     if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo")) / 100)) {
       a.RecentCovidContact = "No";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes") + 95.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes") + 99.0) / 100)) {
       a.RecentCovidContact = "Yes";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedNo")) / 100)) {
-      a.Immunocompromised = "No";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedYes") + 95.0) / 100)) {
-      a.Immunocompromised = "Yes";
     }
     if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitylow")) / 100)) {
       a.Severity = "low";
     } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitymoderate") + 70.0) / 100)) {
       a.Severity = "moderate";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitysevere") + 85.0) / 100)) {
+    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitysevere") + 97.0) / 100)) {
       a.Severity = "severe";
     }
     if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("admissionRouteEmergencyAttendance")) / 100)) {

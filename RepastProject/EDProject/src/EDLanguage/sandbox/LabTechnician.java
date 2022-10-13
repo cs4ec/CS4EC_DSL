@@ -140,11 +140,11 @@ public class LabTechnician extends Actor {
 
 
 
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
+    public MoveAction_a0a_9(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -173,9 +173,9 @@ public class LabTechnician extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0a_1 extends BehaviourStep {
+  public class OrderAction_b0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_1(Behaviour behaviour) {
+    public OrderAction_b0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -185,10 +185,10 @@ public class LabTechnician extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(LabTechnician.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
-  public class StayForConditionAction_c0a_0 extends BehaviourStep {
+  public class StayForConditionAction_c0a_2 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0a_0(Behaviour behaviour) {
+    public StayForConditionAction_c0a_2(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -350,11 +350,11 @@ public class LabTechnician extends Actor {
 
     }
   }
-  public class MoveAction_a0a_13 extends BehaviourStep {
+  public class MoveAction_a0a_17 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_13(Behaviour behaviour) {
+    public MoveAction_a0a_17(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -794,9 +794,9 @@ public class LabTechnician extends Actor {
 
     }
   }
-  public class Choice_h0a_5 extends InstantBehaviourStep {
+  public class Choice_h0a_7 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_h0a_5(Behaviour behaviour) {
+    public Choice_h0a_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -972,9 +972,9 @@ public class LabTechnician extends Actor {
 
     }
   }
-  public class Choice_i0a_1 extends InstantBehaviourStep {
+  public class Choice_i0a_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_i0a_1(Behaviour behaviour) {
+    public Choice_i0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1141,9 +1141,9 @@ public class LabTechnician extends Actor {
   public void InitPCR_f(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_5(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0a_1(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0a_0(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_9(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0a_5(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0a_2(behaviourBuilder));
     plstSteps.add(new UseAction_d0a_0(behaviourBuilder));
     plstSteps.add(new StayAction_e0a_1(behaviourBuilder));
     plstSteps.add(new Choice_f0a_1(behaviourBuilder));

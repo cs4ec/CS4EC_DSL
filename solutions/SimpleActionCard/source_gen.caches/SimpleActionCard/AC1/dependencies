@@ -4,7 +4,7 @@
     <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="SimpleActionCard.AC1.AmberBayTrigger_eSignal">
+  <dependency className="SimpleActionCard.AC1.AmberBayTrigger_cSignal">
     <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -37,24 +37,15 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.CubicleNurse">
-    <classNode dependClassName="EDLanguage.sandbox.AmberBayTrigger_eSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AmberBayTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.BoardGame" />
-    <classNode dependClassName="EDLanguage.sandbox.Cepheid" />
-    <classNode dependClassName="EDLanguage.sandbox.CepheidExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.LFT" />
     <classNode dependClassName="EDLanguage.sandbox.LFTExecutionTimeMap" />
-    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
-    <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
-    <classNode dependClassName="EDLanguage.sandbox.LIATTrigger_dSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
-    <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.PCRTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.PCRTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeAlt" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeAltExecutionTimeMap" />
-    <classNode dependClassName="EDLanguage.sandbox.RedBayTrigger_fSignal" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
@@ -68,7 +59,6 @@
     <classNode dependClassName="java.util.stream.StreamSupport" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
-    <classNode dependClassName="repast.simphony.random.RandomHelper" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
@@ -88,9 +78,7 @@
   <dependency className="SimpleActionCard.AC1.Doctor">
     <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
-    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
-    <classNode dependClassName="EDLanguage.sandbox.wdwTrigger_aSignal" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
@@ -101,7 +89,6 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.StreamSupport" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
@@ -112,7 +99,6 @@
     <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.action.InstantBehaviourStep" />
     <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
@@ -214,14 +200,6 @@
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
-  <dependency className="SimpleActionCard.AC1.LIATTrigger_dSignal">
-    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="SimpleActionCard.AC1.LabPCR">
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
@@ -297,14 +275,6 @@
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="SimpleActionCard.AC1.PCRTrigger_cSignal">
-    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="SimpleActionCard.AC1.PHEThree">
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
@@ -359,9 +329,6 @@
   <dependency className="SimpleActionCard.AC1.RadiologyRoom">
     <classNode dependClassName="EDLanguage.sandbox.RadiologyRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="SimpleActionCard.AC1.RedBayTrigger_fSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.RespiratoryArea">
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryArea" />
@@ -457,24 +424,6 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.patientGenerator_0">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
-    <classNode dependClassName="java.lang.Integer" />
-    <classNode dependClassName="java.lang.Object" />
-    <classNode dependClassName="java.util.HashMap" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
-    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
-    <classNode dependClassName="repast.simphony.random.RandomHelper" />
-    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
-    <classNode dependClassName="repast.simphony.space.grid.Grid" />
-    <classNode dependClassName="simcore.Signals.ActorTypeSignal" />
-    <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.basicStructures.Board" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
-  </dependency>
-  <dependency className="SimpleActionCard.AC1.patientGenerator_1">
     <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
@@ -492,8 +441,23 @@
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
   </dependency>
-  <dependency className="SimpleActionCard.AC1.wdwTrigger_aSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  <dependency className="SimpleActionCard.AC1.patientGenerator_1">
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode dependClassName="repast.simphony.random.RandomHelper" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.ActorTypeSignal" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
   </dependency>
 </dependenciesRoot>
 

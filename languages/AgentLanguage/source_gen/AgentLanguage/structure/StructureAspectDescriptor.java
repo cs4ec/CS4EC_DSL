@@ -972,8 +972,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/3866749931179423426");
     b.version(2);
-    b.property("probability", 0x35a97493533736c9L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("3866749931179423433").done();
     b.aggregate("behaviour", 0x35a97493533736c3L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(false).ordered(true).multiple(false).origin("3866749931179423427").done();
+    b.aggregate("prob", 0x348944a9adb46d9dL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L).optional(false).ordered(true).multiple(false).origin("3785632457336057245").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForRelationship() {

@@ -256,6 +256,11 @@
       <property role="TrG5h" value="secondsPerTick" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="3i9haAJ4WgW" role="1TKVEl">
+      <property role="IQ2nx" value="3785632457359082556" />
+      <property role="TrG5h" value="simulation_repetitions" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
   </node>
   <node concept="1TIwiD" id="4FTL$vJY2TV">
     <property role="EcuMT" value="5402567240278617723" />
