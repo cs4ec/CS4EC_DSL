@@ -1538,9 +1538,9 @@
     <node concept="1TJgyj" id="6MzSDQOa75g" role="1TKVEi">
       <property role="IQ2ns" value="7828349744260346192" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attributeMonitorPossibleValues" />
+      <property role="20kJfa" value="AttributeMonitors" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      <ref role="20lvS9" node="72S_VmbS_tu" resolve="AttributeMonitorReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="4EKCctwQrzN">
@@ -1828,6 +1828,31 @@
       <property role="20kJfa" value="prob" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="6tNT_P6ny7D" resolve="ExpressionWrapper" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="72S_VmbKmVR">
+    <property role="EcuMT" value="8122408733952274167" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="PossibleValuesTuple" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="72S_VmbKmW1" role="1TKVEi">
+      <property role="IQ2ns" value="8122408733952274177" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="possibleValues" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="72S_VmbS_tu">
+    <property role="EcuMT" value="8122408733954430814" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="AttributeMonitorReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="72S_VmbS_tU" role="1TKVEi">
+      <property role="IQ2ns" value="8122408733954430842" />
+      <property role="20kJfa" value="attributeMonitor" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="74nMeo8dO2O" resolve="AttributeMonitor" />
     </node>
   </node>
 </model>

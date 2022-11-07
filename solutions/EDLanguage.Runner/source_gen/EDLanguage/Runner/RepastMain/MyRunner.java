@@ -56,7 +56,7 @@ public class MyRunner {
 
   public void DoTransferParameters(String baseProjectPath) {
 
-    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\HighPrevalenceSurgeCOVIDTestingFlowchart.clone\\classes_gen\\HighPrevalenceSurgeCOVIDTestingFlowchart\\clone\\AC1\\";
+    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\Retrospective31December2022\\classes_gen\\Retrospective31December2022\\AC1\\";
     String filePathAfter = "RepastProject\\EDProject\\EDProject.rs\\";
 
     System.out.println("Moving Parameters:");
@@ -120,7 +120,7 @@ public class MyRunner {
 
   public void DoTransferBatchParameters(String baseProjectPath) {
 
-    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\HighPrevalenceSurgeCOVIDTestingFlowchart.clone\\classes_gen\\HighPrevalenceSurgeCOVIDTestingFlowchart\\clone\\AC1\\";
+    String filePath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\Retrospective31December2022\\classes_gen\\Retrospective31December2022\\AC1\\";
 
     String filePathAfter = "RepastProject\\EDProject\\batch\\";
 
@@ -195,11 +195,11 @@ public class MyRunner {
     ClearDir(LogNote.GetUniqueLog().GetAddress() + "output\\");
 
     String classPathOld = "languages\\EDLanguage\\sandbox\\classes_gen\\EDLanguage\\sandbox\\";
-    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\HighPrevalenceSurgeCOVIDTestingFlowchart.clone\\classes_gen\\EDLanguage\\sandbox\\";
+    String classPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\Retrospective31December2022\\classes_gen\\EDLanguage\\sandbox\\";
     String classPathAfter = "RepastProject\\EDProject\\bin\\EDLanguage\\sandbox\\";
 
     String javaPathOld = "languages\\EDLanguage\\sandbox\\source_gen\\EDLanguage\\sandbox\\";
-    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\HighPrevalenceSurgeCOVIDTestingFlowchart.clone\\source_gen\\EDLanguage\\sandbox\\";
+    String javaPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\solutions\\Retrospective31December2022\\source_gen\\EDLanguage\\sandbox\\";
     String javaPathAfter = "RepastProject\\EDProject\\src\\EDLanguage\\sandbox\\";
 
     System.out.println("Generating files:");

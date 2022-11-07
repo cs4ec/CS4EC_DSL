@@ -1322,8 +1322,8 @@
       <node concept="37mRIm" id="3JSrgvJNSFo" role="37mRID">
         <property role="37mO49" value="4321323723317545668" />
         <node concept="gqqVs" id="3JSrgvJNSFn" role="37mO4d">
-          <property role="gqqTZ" value="351.5180722891567" />
-          <property role="gqqTW" value="14.370329804064744" />
+          <property role="gqqTZ" value="291.5180722891567" />
+          <property role="gqqTW" value="0.3703298040647436" />
           <property role="gqqTX" value="457.0" />
           <property role="gqqTy" value="31.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -2040,6 +2040,16 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="72S_VmbwZqW" role="37mRID">
+        <property role="37mO49" value="8122408733948245591" />
+        <node concept="gqqVs" id="72S_VmbwZqV" role="37mO4d">
+          <property role="gqqTZ" value="743.0" />
+          <property role="gqqTW" value="350.8795180722892" />
+          <property role="gqqTX" value="98.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="1FS47K" id="3JSrgvJNSF4" role="1FS4Pn">
       <node concept="1FDPl8" id="3JSrgvJNSF8" role="1FS47L">
@@ -2225,6 +2235,14 @@
           </node>
         </node>
       </node>
+      <node concept="2GGxJi" id="72S_VmbwZys" role="A3aay">
+        <ref role="3tVEyn" node="8bhHoBohrT" resolve="Decide and apply POCT" />
+        <ref role="2GGxGe" node="72S_VmbwZpn" resolve="Discharge" />
+        <node concept="1CySur" id="72S_VmbwZyJ" role="1hyIAf">
+          <ref role="1DsR7o" node="sr1c8PfM2P" />
+          <node concept="MfwqT" id="72S_VmbwZyX" role="1CySjL" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="8bhHoBoi3f" role="2MhjZp">
       <property role="TrG5h" value="If admitting go to amber and do PCR" />
@@ -2360,6 +2378,15 @@
       </node>
       <node concept="1HTXKU" id="2K0oNvu0RUZ" role="3LWbwJ">
         <ref role="1HTXKa" node="2K0oNvtWdxP" resolve="Amber Bay" />
+      </node>
+    </node>
+    <node concept="1H2jYY" id="72S_VmbwZpn" role="2MhjZp">
+      <property role="TrG5h" value="Discharge" />
+      <node concept="2_8ZN7" id="72S_VmbwZyp" role="2_8HaY">
+        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
+      </node>
+      <node concept="UeIYj" id="72S_VmbwZyn" role="3lENdC">
+        <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
       </node>
     </node>
   </node>

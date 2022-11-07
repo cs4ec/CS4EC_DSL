@@ -22,6 +22,7 @@ import simcore.action.BehaviourStep;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
 import java.util.Iterator;
+import simcore.basicStructures.Board;
 
 public class PreAdmissionStaff extends Actor {
 
@@ -125,29 +126,29 @@ public class PreAdmissionStaff extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "AdmitRedTrigger_g":
-        behaviourBuilder = new Behaviour("AdmitRedTrigger_g");
-        this.InitAdmitActionAdmitRed_g(s);
+      case "AdmitRedTrigger_b":
+        behaviourBuilder = new Behaviour("AdmitRedTrigger_b");
+        this.InitAdmitActionAdmitRed_b(s);
         break;
-      case "AdmitSideRoomTrigger_h":
-        behaviourBuilder = new Behaviour("AdmitSideRoomTrigger_h");
-        this.InitAdmitActionAdmitSideRoom_h(s);
+      case "AdmitSideRoomTrigger_c":
+        behaviourBuilder = new Behaviour("AdmitSideRoomTrigger_c");
+        this.InitAdmitActionAdmitSideRoom_c(s);
         break;
-      case "DischargeTrigger_i":
-        behaviourBuilder = new Behaviour("DischargeTrigger_i");
-        this.InitDischargeActionDischarge_i(s);
+      case "AdmitRedTrigger_d":
+        behaviourBuilder = new Behaviour("AdmitRedTrigger_d");
+        this.InitAdmitActionAdmitRed_d(s);
         break;
-      case "AdmitSideRoomTrigger_j":
-        behaviourBuilder = new Behaviour("AdmitSideRoomTrigger_j");
-        this.InitAdmitActionAdmitSideRoom_j(s);
+      case "AdmitRedTrigger_b_0":
+        behaviourBuilder = new Behaviour("AdmitRedTrigger_b_0");
+        this.InitAdmitActionAdmitRed_b_0(s);
         break;
-      case "AdmitRedTrigger_k":
-        behaviourBuilder = new Behaviour("AdmitRedTrigger_k");
-        this.InitAdmitActionAdmitRed_k(s);
+      case "AdmitSideRoomTrigger_c_0":
+        behaviourBuilder = new Behaviour("AdmitSideRoomTrigger_c_0");
+        this.InitAdmitActionAdmitSideRoom_c_0(s);
         break;
-      case "DischargeTrigger_l":
-        behaviourBuilder = new Behaviour("DischargeTrigger_l");
-        this.InitDischargeActionDischarge_l(s);
+      case "AdmitRedTrigger_d_0":
+        behaviourBuilder = new Behaviour("AdmitRedTrigger_d_0");
+        this.InitAdmitActionAdmitRed_d_0(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -158,11 +159,11 @@ public class PreAdmissionStaff extends Actor {
 
 
 
-  public class MoveAction_a0a_13 extends BehaviourStep {
+  public class MoveAction_a0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_13(Behaviour behaviour) {
+    public MoveAction_a0a_7(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -274,6 +275,22 @@ public class PreAdmissionStaff extends Actor {
       while (patientStaffAllocations.hasNext()) {
         network.removeEdge(patientStaffAllocations.next());
       }
+    }
+  }
+  public class SendSignalAction_g0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DoPCRTrigger_a_0Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0a_15 extends BehaviourStep {
@@ -394,11 +411,27 @@ public class PreAdmissionStaff extends Actor {
       }
     }
   }
-  public class MoveAction_a0b_3 extends BehaviourStep {
+  public class SendSignalAction_g0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DoPCRTrigger_a_0Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class MoveAction_a0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_3(Behaviour behaviour) {
+    public MoveAction_a0b(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -512,11 +545,11 @@ public class PreAdmissionStaff extends Actor {
       }
     }
   }
-  public class MoveAction_a0b_5 extends BehaviourStep {
+  public class MoveAction_a0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_5(Behaviour behaviour) {
+    public MoveAction_a0b_1(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -630,12 +663,146 @@ public class PreAdmissionStaff extends Actor {
       }
     }
   }
+  public class MoveAction_a0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0c(Behaviour behaviour) {
+      target = behaviour.getSignalTrigger().GetData("patient");
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
+          }
+        }
+        MoveTowards(concreteTarget);
+
+      }
+    }
+
+    public boolean finishCondition() {
+      return concreteTarget != null && ImAt(concreteTarget);
+    }
+  }
+  public class MoveAction_b0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_b0c(Behaviour behaviour) {
+      target = COVIDPositiveCohort.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
+          }
+        }
+        MoveTowards(concreteTarget);
+
+      }
+    }
+
+    public boolean finishCondition() {
+      return concreteTarget != null && ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_c0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_c0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(PreAdmissionStaff.this));
+    }
+  }
+  public class StayForConditionAction_d0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public StayForConditionAction_d0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+    }
+
+    public boolean finishCondition() {
+      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
+    }
+  }
+  public class Consequence_e0c extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_e0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
+
+    }
+  }
+  public class RemoveRelationshipAction_f0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_f0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
+      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
+      while (patientStaffAllocations.hasNext()) {
+        network.removeEdge(patientStaffAllocations.next());
+      }
+    }
+  }
+  public class SendSignalAction_g0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DoPCRTrigger_a_0Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
   public class MoveAction_a0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0c_1(Behaviour behaviour) {
-      target = MainEntrance.getInstance();
+      target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
 
@@ -663,64 +830,12 @@ public class PreAdmissionStaff extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0c_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
-
-      a.TakeOrder(new MoveToOrder().WithDestination(PreAdmissionStaff.this));
-    }
-  }
-  public class StayForConditionAction_c0c_0 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public StayForConditionAction_c0c_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-    }
-
-    public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
-    }
-  }
-  public class Consequence_d0c extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_d0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "MainEntrance";
-
-    }
-  }
-  public class RemoveRelationshipAction_e0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
-      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
-      while (patientStaffAllocations.hasNext()) {
-        network.removeEdge(patientStaffAllocations.next());
-      }
-    }
-  }
-  public class MoveAction_a0c_3 extends BehaviourStep {
+  public class MoveAction_b0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0c_3(Behaviour behaviour) {
-      target = MainEntrance.getInstance();
+    public MoveAction_b0c_1(Behaviour behaviour) {
+      target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -748,9 +863,9 @@ public class PreAdmissionStaff extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0c_3 extends BehaviourStep {
+  public class OrderAction_c0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_3(Behaviour behaviour) {
+    public OrderAction_c0c_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -760,10 +875,10 @@ public class PreAdmissionStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(PreAdmissionStaff.this));
     }
   }
-  public class StayForConditionAction_c0c_1 extends BehaviourStep {
+  public class StayForConditionAction_d0c_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0c_1(Behaviour behaviour) {
+    public StayForConditionAction_d0c_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -775,20 +890,20 @@ public class PreAdmissionStaff extends Actor {
       return ImAt(behaviour.getSignalTrigger().GetData("patient"));
     }
   }
-  public class Consequence_d0c_0 extends InstantBehaviourStep {
+  public class Consequence_e0c_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0c_0(Behaviour behaviour) {
+    public Consequence_e0c_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "MainEntrance";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
 
     }
   }
-  public class RemoveRelationshipAction_e0c_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_f0c_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0c_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_f0c_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -798,6 +913,22 @@ public class PreAdmissionStaff extends Actor {
       while (patientStaffAllocations.hasNext()) {
         network.removeEdge(patientStaffAllocations.next());
       }
+    }
+  }
+  public class SendSignalAction_g0c_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0c_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DoPCRTrigger_a_0Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0d extends BehaviourStep {
@@ -838,7 +969,7 @@ public class PreAdmissionStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_b0d(Behaviour behaviour) {
-      target = SideRoom.getInstance();
+      target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -900,7 +1031,7 @@ public class PreAdmissionStaff extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "SideRoom";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
 
     }
   }
@@ -916,6 +1047,22 @@ public class PreAdmissionStaff extends Actor {
       while (patientStaffAllocations.hasNext()) {
         network.removeEdge(patientStaffAllocations.next());
       }
+    }
+  }
+  public class SendSignalAction_g0d extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0d(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DoPCRTrigger_a_0Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0d_1 extends BehaviourStep {
@@ -956,7 +1103,7 @@ public class PreAdmissionStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_b0d_1(Behaviour behaviour) {
-      target = SideRoom.getInstance();
+      target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -1018,7 +1165,7 @@ public class PreAdmissionStaff extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "SideRoom";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
 
     }
   }
@@ -1034,6 +1181,22 @@ public class PreAdmissionStaff extends Actor {
       while (patientStaffAllocations.hasNext()) {
         network.removeEdge(patientStaffAllocations.next());
       }
+    }
+  }
+  public class SendSignalAction_g0d_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0d_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DoPCRTrigger_a_0Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0e extends BehaviourStep {
@@ -1074,7 +1237,7 @@ public class PreAdmissionStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_b0e(Behaviour behaviour) {
-      target = COVIDPositiveCohort.getInstance();
+      target = SideRoom.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -1136,7 +1299,7 @@ public class PreAdmissionStaff extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "SideRoom";
 
     }
   }
@@ -1192,7 +1355,7 @@ public class PreAdmissionStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_b0e_1(Behaviour behaviour) {
-      target = COVIDPositiveCohort.getInstance();
+      target = SideRoom.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -1254,7 +1417,7 @@ public class PreAdmissionStaff extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "SideRoom";
 
     }
   }
@@ -1277,7 +1440,7 @@ public class PreAdmissionStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0f(Behaviour behaviour) {
-      target = MainEntrance.getInstance();
+      target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
 
@@ -1305,9 +1468,42 @@ public class PreAdmissionStaff extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0f extends BehaviourStep {
+  public class MoveAction_b0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0f(Behaviour behaviour) {
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_b0f(Behaviour behaviour) {
+      target = COVIDPositiveCohort.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
+          }
+        }
+        MoveTowards(concreteTarget);
+
+      }
+    }
+
+    public boolean finishCondition() {
+      return concreteTarget != null && ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_c0f extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_c0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1317,10 +1513,10 @@ public class PreAdmissionStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(PreAdmissionStaff.this));
     }
   }
-  public class StayForConditionAction_c0f extends BehaviourStep {
+  public class StayForConditionAction_d0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0f(Behaviour behaviour) {
+    public StayForConditionAction_d0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1332,20 +1528,20 @@ public class PreAdmissionStaff extends Actor {
       return ImAt(behaviour.getSignalTrigger().GetData("patient"));
     }
   }
-  public class Consequence_d0f extends InstantBehaviourStep {
+  public class Consequence_e0f extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0f(Behaviour behaviour) {
+    public Consequence_e0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "MainEntrance";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
 
     }
   }
-  public class RemoveRelationshipAction_e0f extends BehaviourStep {
+  public class RemoveRelationshipAction_f0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0f(Behaviour behaviour) {
+    public RemoveRelationshipAction_f0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1355,6 +1551,22 @@ public class PreAdmissionStaff extends Actor {
       while (patientStaffAllocations.hasNext()) {
         network.removeEdge(patientStaffAllocations.next());
       }
+    }
+  }
+  public class SendSignalAction_g0f extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0f(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DoPCRTrigger_a_0Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
     }
   }
   public class MoveAction_a0f_1 extends BehaviourStep {
@@ -1362,7 +1574,7 @@ public class PreAdmissionStaff extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0f_1(Behaviour behaviour) {
-      target = MainEntrance.getInstance();
+      target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
 
@@ -1390,9 +1602,42 @@ public class PreAdmissionStaff extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0f_1 extends BehaviourStep {
+  public class MoveAction_b0f_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0f_1(Behaviour behaviour) {
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_b0f_1(Behaviour behaviour) {
+      target = COVIDPositiveCohort.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
+          }
+        }
+        MoveTowards(concreteTarget);
+
+      }
+    }
+
+    public boolean finishCondition() {
+      return concreteTarget != null && ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_c0f_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_c0f_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1402,10 +1647,10 @@ public class PreAdmissionStaff extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(PreAdmissionStaff.this));
     }
   }
-  public class StayForConditionAction_c0f_0 extends BehaviourStep {
+  public class StayForConditionAction_d0f_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0f_0(Behaviour behaviour) {
+    public StayForConditionAction_d0f_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1417,20 +1662,20 @@ public class PreAdmissionStaff extends Actor {
       return ImAt(behaviour.getSignalTrigger().GetData("patient"));
     }
   }
-  public class Consequence_d0f_0 extends InstantBehaviourStep {
+  public class Consequence_e0f_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_d0f_0(Behaviour behaviour) {
+    public Consequence_e0f_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "MainEntrance";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
 
     }
   }
-  public class RemoveRelationshipAction_e0f_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_f0f_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0f_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_f0f_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1442,26 +1687,43 @@ public class PreAdmissionStaff extends Actor {
       }
     }
   }
+  public class SendSignalAction_g0f_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_g0f_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new DoPCRTrigger_a_0Signal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
 
 
-  public void InitAdmitActionAdmitRed_g(Signal s) {
+  public void InitAdmitActionAdmitRed_b(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_13(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_7(behaviourBuilder));
     plstSteps.add(new MoveAction_b0a(behaviourBuilder));
     plstSteps.add(new OrderAction_c0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0a(behaviourBuilder));
     plstSteps.add(new Consequence_e0a(behaviourBuilder));
     plstSteps.add(new RemoveRelationshipAction_f0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_g0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmitSideRoom_h(Signal s) {
+  public void InitAdmitActionAdmitSideRoom_c(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0b(behaviourBuilder));
     plstSteps.add(new MoveAction_b0b(behaviourBuilder));
     plstSteps.add(new OrderAction_c0b(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0b(behaviourBuilder));
@@ -1472,20 +1734,22 @@ public class PreAdmissionStaff extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitDischargeActionDischarge_i(Signal s) {
+  public void InitAdmitActionAdmitRed_d(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0c_1(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0c_1(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0c_0(behaviourBuilder));
-    plstSteps.add(new Consequence_d0c(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0c(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0c(behaviourBuilder));
+    plstSteps.add(new MoveAction_b0c(behaviourBuilder));
+    plstSteps.add(new OrderAction_c0c(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_d0c(behaviourBuilder));
+    plstSteps.add(new Consequence_e0c(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_f0c(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_g0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmitSideRoom_j(Signal s) {
+  public void InitAdmitActionAdmitRed_b_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0d(behaviourBuilder));
@@ -1494,12 +1758,13 @@ public class PreAdmissionStaff extends Actor {
     plstSteps.add(new StayForConditionAction_d0d(behaviourBuilder));
     plstSteps.add(new Consequence_e0d(behaviourBuilder));
     plstSteps.add(new RemoveRelationshipAction_f0d(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_g0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitAdmitActionAdmitRed_k(Signal s) {
+  public void InitAdmitActionAdmitSideRoom_c_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0e(behaviourBuilder));
@@ -1513,14 +1778,16 @@ public class PreAdmissionStaff extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitDischargeActionDischarge_l(Signal s) {
+  public void InitAdmitActionAdmitRed_d_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0f(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0f(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0f(behaviourBuilder));
-    plstSteps.add(new Consequence_d0f(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0f(behaviourBuilder));
+    plstSteps.add(new MoveAction_b0f(behaviourBuilder));
+    plstSteps.add(new OrderAction_c0f(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_d0f(behaviourBuilder));
+    plstSteps.add(new Consequence_e0f(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_f0f(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_g0f(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

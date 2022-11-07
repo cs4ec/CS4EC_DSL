@@ -8,15 +8,15 @@ import simcore.basicStructures.ToolBox;
 import java.util.function.Predicate;
 import simcore.basicStructures.Room;
 
-public class LFTTrigger_bSignal extends ActorTypeSignal {
-  public LFTTrigger_bSignal() {
-    this.setName("LFTTrigger_b");
+public class PCRTrigger_lSignal extends ActorTypeSignal {
+  public PCRTrigger_lSignal() {
+    this.setName("PCRTrigger_l");
     this.setDescription("SecondPlaceholderSignal");
     this.AddActor("CubicleNurse");
   }
 
   public boolean checkPreCondition(Context context) {
-    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(RespiratoryCubicle.getInstance()).stream().filter(new Predicate<Room>() {
+    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(NonRespiratoryCubicle.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity();
       }

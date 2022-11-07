@@ -1,1 +1,230 @@
-<?xml version="1.0" ?><sweep runs="1"><parameter name="LIATFluBSpecificity" type="constant" constant_type="double" value="100"></parameter><parameter name="UsePathFinding" type="constant" constant_type="boolean" value="false"></parameter><parameter name="RecentCovidContactYes" type="constant" constant_type="double" value="1"></parameter><parameter name="COVIDInfectionStatusSymptomatic" type="constant" constant_type="double" value="2.8"></parameter><parameter name="Severitysevere" type="constant" constant_type="double" value="3"></parameter><parameter name="LabPCRFluASpecificity" type="constant" constant_type="double" value="100"></parameter><parameter name="LabPCRprobability_b0_0" type="constant" constant_type="double" value="95"></parameter><parameter name="Severitymoderate" type="constant" constant_type="double" value="27"></parameter><parameter name="LIATCOVIDSpecificity" type="constant" constant_type="double" value="100"></parameter><parameter name="LFDFluBSensitivity" type="constant" constant_type="double" value="93"></parameter><parameter name="LIATFluASpecificity" type="constant" constant_type="double" value="100"></parameter><parameter name="LFDFluBSpecificity" type="constant" constant_type="double" value="98"></parameter><parameter name="FluBInfectionStatusAsymptomatic" type="constant" constant_type="double" value="0"></parameter><parameter name="LFDCOVIDSpecificity" type="constant" constant_type="double" value="99"></parameter><parameter name="COVIDInfectionStatusSusceptible" type="constant" constant_type="double" value="97.2"></parameter><parameter name="FluAInfectionStatusSymptomatic" type="constant" constant_type="double" value="0.39"></parameter><parameter name="Severitylow" type="constant" constant_type="double" value="70"></parameter><parameter name="admissionRouteEmergencyAttendance" type="constant" constant_type="double" value="100"></parameter><parameter name="SecondsPerTick" type="constant" constant_type="int" value="60"></parameter><parameter name="PHEThreeAltCOVIDSensitivity" type="constant" constant_type="double" value="95"></parameter><parameter name="LabPCRCOVIDSpecificity" type="constant" constant_type="double" value="100"></parameter><parameter name="LFDFluASpecificity" type="constant" constant_type="double" value="95"></parameter><parameter name="FluBInfectionStatusSusceptible" type="constant" constant_type="double" value="100"></parameter><parameter name="LabPCRFluBSensitivity" type="constant" constant_type="double" value="100"></parameter><parameter name="COVIDInfectionStatusAsymptomatic" type="constant" constant_type="double" value="0"></parameter><parameter name="FluBInfectionStatusSymptomatic" type="constant" constant_type="double" value="0"></parameter><parameter name="LIATFluBSensitivity" type="constant" constant_type="double" value="100"></parameter><parameter name="PHEThreeAltCOVIDSpecificity" type="constant" constant_type="double" value="90"></parameter><parameter name="FluAInfectionStatusAsymptomatic" type="constant" constant_type="double" value="0"></parameter><parameter name="LIATCOVIDSensitivity" type="constant" constant_type="double" value="100"></parameter><parameter name="FluAInfectionStatusSusceptible" type="constant" constant_type="double" value="99.61"></parameter><parameter name="LabPCRFluASensitivity" type="constant" constant_type="double" value="100"></parameter><parameter name="LIATprobability_a0" type="constant" constant_type="double" value="5"></parameter><parameter name="LabPCRFluBSpecificity" type="constant" constant_type="double" value="100"></parameter><parameter name="LFDCOVIDSensitivity" type="constant" constant_type="double" value="70"></parameter><parameter name="RecentCovidContactNo" type="constant" constant_type="double" value="99"></parameter><parameter name="LIATprobability_a0_0" type="constant" constant_type="double" value="5"></parameter><parameter name="LabPCRprobability_b0" type="constant" constant_type="double" value="95"></parameter><parameter name="LFDFluASensitivity" type="constant" constant_type="double" value="88"></parameter><parameter name="LIATFluASensitivity" type="constant" constant_type="double" value="100"></parameter><parameter name="LabPCRCOVIDSensitivity" type="constant" constant_type="double" value="100"></parameter><parameter name="randomSeed" type="number" number_type="int" start="1" end="10" step="1"></parameter></sweep>
+<?xml version="1.0" encoding="UTF-8" ?><sweep runs="1">
+	<parameter name="SecondsPerTick"
+		type="constant" constant_type="int" value="60" />
+	<parameter name="randomSeed"
+		type="number" number_type="int" start="1" end="10" step="1" />
+	<parameter name="UsePathFinding"
+		type="constant" constant_type="boolean" value="false" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATprobability_a0_1"
+  		type="constant" constant_type="double" value="5" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRprobability_b0_0"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="PHEThreeAltCOVIDSensitivity"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="PHEThreeAltCOVIDSpecificity"
+  		type="constant" constant_type="double" value="90" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATprobability_a0"
+  		type="constant" constant_type="double" value="5" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRprobability_b0"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="PHEThreeAltCOVIDSensitivity"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="PHEThreeAltCOVIDSpecificity"
+  		type="constant" constant_type="double" value="90" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LFDCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70" />
+  	<parameter name="LFDCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LFDFluASensitivity"
+  		type="constant" constant_type="double" value="88" />
+  	<parameter name="LFDFluASpecificity"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="LFDFluBSensitivity"
+  		type="constant" constant_type="double" value="93" />
+  	<parameter name="LFDFluBSpecificity"
+  		type="constant" constant_type="double" value="98" />
+  	<parameter name="LFDCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70" />
+  	<parameter name="LFDCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LFDFluASensitivity"
+  		type="constant" constant_type="double" value="88" />
+  	<parameter name="LFDFluASpecificity"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="LFDFluBSensitivity"
+  		type="constant" constant_type="double" value="93" />
+  	<parameter name="LFDFluBSpecificity"
+  		type="constant" constant_type="double" value="98" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATprobability_a0_0"
+  		type="constant" constant_type="double" value="5" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRprobability_b0_1"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="PHEThreeAltCOVIDSensitivity"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="PHEThreeAltCOVIDSpecificity"
+  		type="constant" constant_type="double" value="90" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="COVIDInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "2.8" />
+  	<parameter name="COVIDInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="COVIDInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "97.2" />
+  	<parameter name="FluAInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "0.39" />
+  	<parameter name="FluAInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="FluAInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "99.61" />
+  	<parameter name="FluBInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="FluBInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="FluBInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "100" />
+  	<parameter name="RecentCovidContactYes"
+  		 type="constant" constant_type="double" value = "1" />
+  	<parameter name="RecentCovidContactNo"
+  		 type="constant" constant_type="double" value = "99" />
+  	<parameter name="Severitysevere"
+  		 type="constant" constant_type="double" value = "3" />
+  	<parameter name="Severitymoderate"
+  		 type="constant" constant_type="double" value = "27" />
+  	<parameter name="Severitylow"
+  		 type="constant" constant_type="double" value = "70" />
+  	<parameter name="admissionRouteEmergencyAttendance"
+  		 type="constant" constant_type="double" value = "100" />
+</sweep>

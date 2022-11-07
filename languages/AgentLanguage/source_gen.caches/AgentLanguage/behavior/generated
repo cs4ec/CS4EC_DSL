@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-2grl5pic0beyjvvbsdkjemwfgo48l6y">
-  <files names="Actor__BehaviorDescriptor.java:AttributeReference__BehaviorDescriptor.java:Attribute__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:BehaviourElement__BehaviorDescriptor.java:BehaviourSequence__BehaviorDescriptor.java:RoomSelectionCondition__BehaviorDescriptor.java:RoomSelectionStrategyLine__BehaviorDescriptor.java:SendSignalAction__BehaviorDescriptor.java:SignalInitReference__BehaviorDescriptor.java" />
+<product version="3" modelHash="-bixhcn275i2j23aqfaodjvkrpcqb5vp">
+  <files names="Actor__BehaviorDescriptor.java:AggregateAttributeMonitor__BehaviorDescriptor.java:AttributeReference__BehaviorDescriptor.java:Attribute__BehaviorDescriptor.java:BehaviorAspectDescriptor.java:BehaviourElement__BehaviorDescriptor.java:BehaviourSequence__BehaviorDescriptor.java:RoomSelectionCondition__BehaviorDescriptor.java:RoomSelectionStrategyLine__BehaviorDescriptor.java:SendSignalAction__BehaviorDescriptor.java:SignalInitReference__BehaviorDescriptor.java" />
 </product>
 

@@ -1141,5 +1141,9 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="72S_VmbM3Ek">
+    <property role="3GE5qa" value="actors.attribute" />
+    <ref role="1M2myG" to="3751:6MzSDQOa74z" resolve="AggregateAttributeMonitor" />
+  </node>
 </model>
 

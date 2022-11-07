@@ -216,10 +216,10 @@ public class CubicleNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_1 extends BehaviourStep {
+  public class StayAction_d0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_1(Behaviour behaviour) {
+    public StayAction_d0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1624,7 +1624,7 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
-    plstSteps.add(new StayAction_d0a_1(behaviourBuilder));
+    plstSteps.add(new StayAction_d0a_0(behaviourBuilder));
     plstSteps.add(new UseAction_e0a(behaviourBuilder));
     plstSteps.add(new StayAction_f0a(behaviourBuilder));
     plstSteps.add(new Choice_g0a(behaviourBuilder));

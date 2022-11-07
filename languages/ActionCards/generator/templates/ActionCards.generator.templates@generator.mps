@@ -23,13 +23,13 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" />
     <import index="wrwt" ref="r:dd1d9d2e-6aea-4031-b3f3-bb58e0c6c20a(BuiltEnvironment.behavior)" />
+    <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" />
     <import index="uyrv" ref="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)" implicit="true" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
     <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
-    <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -244,6 +244,9 @@
         <child id="513408552829743918" name="signals" index="3n3SPP" />
       </concept>
       <concept id="88285669848655860" name="AgentLanguage.structure.ActorTypeSignal" flags="ng" index="1nbS2H" />
+      <concept id="7828349744260346147" name="AgentLanguage.structure.AggregateAttributeMonitor" flags="ng" index="3oyTeY">
+        <child id="7828349744260346192" name="AttributeMonitors" index="3oyTfd" />
+      </concept>
       <concept id="4211260315489209491" name="AgentLanguage.structure.SignalInitReference" flags="ng" index="3z7ADy">
         <child id="4334763093659899423" name="signalContent" index="jeBCe" />
       </concept>
@@ -280,8 +283,12 @@
         <reference id="8149202941056073918" name="attribute" index="1T88xo" />
         <child id="8149202941056073926" name="possibleValues" index="1T88ww" />
       </concept>
+      <concept id="8122408733954430814" name="AgentLanguage.structure.AttributeMonitorReference" flags="ng" index="3VmG3F">
+        <reference id="8122408733954430842" name="attributeMonitor" index="3VmG3f" />
+      </concept>
       <concept id="3838812034270454385" name="AgentLanguage.structure.Actor" flags="ng" index="3Vql55">
         <property id="8465466444634577437" name="patientCapacity" index="1n5rFW" />
+        <child id="1816408742367153233" name="aggregateAttributeMonitors" index="26w69L" />
         <child id="4443718667983781986" name="isIdleBehaviour" index="2jmkbR" />
         <child id="33966321879452666" name="signalselectionstrategy" index="2lyMva" />
         <child id="7942748223948104476" name="roomSelectionStrategy" index="MWeLL" />
@@ -736,6 +743,11 @@
       <property role="TrG5h" value="ReduceTimeDistributionTable" />
       <ref role="2rTdP9" to="e88n:8bhHoBICAE" resolve="TimeDistributionTable" />
       <ref role="2rZz_L" to="3751:2_JteYPogU9" resolve="TimeDistributionTable" />
+    </node>
+    <node concept="2rT7sh" id="72S_Vmcp9_b" role="2rTMjI">
+      <property role="TrG5h" value="PatientPropertyToAttributeMonitor" />
+      <ref role="2rTdP9" to="e88n:2lOlAdPyF0B" resolve="Attribute" />
+      <ref role="2rZz_L" to="3751:74nMeo8dO2O" resolve="AttributeMonitor" />
     </node>
     <node concept="3aamgX" id="3WgUQREHuSZ" role="3acgRq">
       <ref role="30HIoZ" to="e88n:2VPlUUsG6x$" resolve="Action" />
@@ -2511,6 +2523,53 @@
     <property role="TrG5h" value="map_Patient" />
     <property role="1n5rFW" value="1" />
     <property role="3GE5qa" value="People" />
+    <node concept="3oyTeY" id="72S_VmcoJxf" role="26w69L">
+      <node concept="3VmG3F" id="72S_VmcoJzw" role="3oyTfd">
+        <ref role="3VmG3f" node="74nMeo8yQgC" />
+      </node>
+      <node concept="3VmG3F" id="72S_VmcpcWz" role="3oyTfd">
+        <node concept="1ZhdrF" id="72S_VmcpcXZ" role="lGtFl">
+          <property role="2qtEX8" value="attributeMonitor" />
+          <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/8122408733954430814/8122408733954430842" />
+          <node concept="3$xsQk" id="72S_VmcpcY0" role="3$ytzL">
+            <node concept="3clFbS" id="72S_VmcpcY1" role="2VODD2">
+              <node concept="3clFbF" id="72S_VmcpcY_" role="3cqZAp">
+                <node concept="2OqwBi" id="72S_Vmcpd8H" role="3clFbG">
+                  <node concept="1iwH7S" id="72S_VmcpcY$" role="2Oq$k0" />
+                  <node concept="1iwH70" id="72S_VmcpdfN" role="2OqNvi">
+                    <ref role="1iwH77" node="72S_Vmcp9_b" resolve="PatientPropertyToAttributeMonitor" />
+                    <node concept="30H73N" id="72S_Vmcpdlj" role="1iwH7V" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2vmvVl" id="72S_VmcoJxh" role="1T88ww" />
+      <node concept="1WS0z7" id="72S_VmcoJ$M" role="lGtFl">
+        <node concept="3JmXsc" id="72S_VmcoJ$N" role="3Jn$fo">
+          <node concept="3clFbS" id="72S_VmcoJ$O" role="2VODD2">
+            <node concept="3clFbF" id="72S_VmcpcJN" role="3cqZAp">
+              <node concept="2OqwBi" id="72S_VmcpcJO" role="3clFbG">
+                <node concept="2OqwBi" id="72S_VmcpcJP" role="2Oq$k0">
+                  <node concept="2OqwBi" id="72S_VmcpcJQ" role="2Oq$k0">
+                    <node concept="1iwH7S" id="72S_VmcpcJR" role="2Oq$k0" />
+                    <node concept="1r8y6K" id="72S_VmcpcJS" role="2OqNvi" />
+                  </node>
+                  <node concept="2RRcyG" id="72S_VmcpcJT" role="2OqNvi">
+                    <ref role="2RRcyH" to="e88n:ijr0ZWehMB" resolve="DiseaseTest" />
+                  </node>
+                </node>
+                <node concept="13MTOL" id="72S_VmcpcJU" role="2OqNvi">
+                  <ref role="13MTZf" to="e88n:5ivS4t6ssT3" resolve="CapturedDiseases" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="1T88xi" id="1xAzJ9MW8hL" role="1TgxgJ">
       <node concept="2vmvVl" id="1xAzJ9MW8hM" role="1T88ww" />
       <node concept="1WS0z7" id="1xAzJ9MWwhv" role="lGtFl">
@@ -2635,37 +2694,12 @@
                 <ref role="3cqZAo" node="4EKCctwFa2z" resolve="retList" />
               </node>
             </node>
-            <node concept="3clFbH" id="4EKCctwF9XR" role="3cqZAp" />
-            <node concept="3clFbH" id="4EKCctwF9Y5" role="3cqZAp" />
-            <node concept="3clFbH" id="4EKCctwF9Yk" role="3cqZAp" />
-            <node concept="1X3_iC" id="4EKCctwFklt" role="lGtFl">
-              <property role="3V$3am" value="statement" />
-              <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
-              <node concept="3clFbF" id="1xAzJ9MWwkm" role="8Wnug">
-                <node concept="2OqwBi" id="1xAzJ9NYA$$" role="3clFbG">
-                  <node concept="2OqwBi" id="1xAzJ9MWwko" role="2Oq$k0">
-                    <node concept="2OqwBi" id="1xAzJ9MWwkp" role="2Oq$k0">
-                      <node concept="2OqwBi" id="1xAzJ9MWwkq" role="2Oq$k0">
-                        <node concept="1iwH7S" id="1xAzJ9MWwkr" role="2Oq$k0" />
-                        <node concept="1r8y6K" id="1xAzJ9MWwks" role="2OqNvi" />
-                      </node>
-                      <node concept="2RRcyG" id="1xAzJ9MWwkt" role="2OqNvi">
-                        <ref role="2RRcyH" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
-                      </node>
-                    </node>
-                    <node concept="13MTOL" id="1xAzJ9MWwku" role="2OqNvi">
-                      <ref role="13MTZf" to="e88n:EFW1mY_h9p" resolve="attributes" />
-                    </node>
-                  </node>
-                  <node concept="1VAtEI" id="1xAzJ9NYB1y" role="2OqNvi" />
-                </node>
-              </node>
-            </node>
           </node>
         </node>
       </node>
       <node concept="5jKBG" id="1xAzJ9MW8kE" role="lGtFl">
         <ref role="v9R2y" node="1xAzJ9MW8kL" resolve="reduce_AttributeTable_To_Monitor" />
+        <ref role="2rW$FS" node="72S_Vmcp9_b" resolve="PatientPropertyToAttributeMonitor" />
       </node>
     </node>
     <node concept="1T88xi" id="74nMeo8olcp" role="1TgxgJ">
@@ -2694,6 +2728,7 @@
       </node>
       <node concept="5jKBG" id="74nMeo8olxM" role="lGtFl">
         <ref role="v9R2y" node="74nMeo8jptL" resolve="reduce_TestCapturedDisease_To_Monitor" />
+        <ref role="2rW$FS" node="72S_Vmcp9_b" resolve="PatientPropertyToAttributeMonitor" />
       </node>
     </node>
     <node concept="1T88xi" id="74nMeo8yQgC" role="1TgxgJ">

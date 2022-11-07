@@ -26,6 +26,7 @@
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
       <concept id="1237308012275" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineStyleClassItem" flags="ln" index="ljvvj" />
+      <concept id="1237375020029" name="jetbrains.mps.lang.editor.structure.IndentLayoutNewLineChildrenStyleClassItem" flags="ln" index="pj6Ft" />
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
       <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
@@ -757,6 +758,10 @@
         <node concept="3F0ifn" id="6MzSDQOiuI5" role="3EZMnx" />
         <node concept="3F0ifn" id="1$Pby2vHkLo" role="3EZMnx">
           <property role="3F0ifm" value="With Aggregate Attribute Monitors:" />
+        </node>
+        <node concept="3F2HdR" id="3i9haAJkQTX" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:1$Pby2vHkLh" resolve="aggregateAttributeMonitors" />
+          <node concept="2iRkQZ" id="3i9haAJkQTZ" role="2czzBx" />
         </node>
         <node concept="3F0ifn" id="1$Pby2vHkLO" role="3EZMnx" />
         <node concept="3EZMnI" id="2_JteYOhd$8" role="3EZMnx">
@@ -1830,9 +1835,18 @@
     <property role="3GE5qa" value="actors.attribute" />
     <ref role="1XX52x" to="3751:6MzSDQOa74z" resolve="AggregateAttributeMonitor" />
     <node concept="3EZMnI" id="6MzSDQOabT4" role="2wV5jI">
-      <node concept="3F2HdR" id="6MzSDQOabTh" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:6MzSDQOa75g" resolve="attributeMonitorPossibleValues" />
-        <node concept="l2Vlx" id="6MzSDQOabTj" role="2czzBx" />
+      <node concept="3F0ifn" id="72S_VmciqW2" role="3EZMnx">
+        <property role="3F0ifm" value="Values from:" />
+      </node>
+      <node concept="3F2HdR" id="72S_Vmc5ugu" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:6MzSDQOa75g" resolve="AttributeMonitors" />
+        <node concept="l2Vlx" id="72S_Vmc5ugw" role="2czzBx" />
+        <node concept="pj6Ft" id="72S_VmcbUOY" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="pVoyu" id="72S_VmciqW8" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="l2Vlx" id="6MzSDQOabT7" role="2iSdaV" />
     </node>
@@ -2118,6 +2132,27 @@
         <ref role="1NtTu8" to="3751:3mDt9djdNr3" resolve="behaviour" />
       </node>
       <node concept="2iRkQZ" id="3mDt9djdNrI" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="72S_VmbZ5ma">
+    <property role="3GE5qa" value="actors.attribute" />
+    <ref role="1XX52x" to="3751:72S_VmbS_tu" resolve="AttributeMonitorReference" />
+    <node concept="3EZMnI" id="72S_VmbZ5mg" role="2wV5jI">
+      <node concept="1iCGBv" id="72S_VmbZ5mn" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:72S_VmbS_tU" resolve="attributeMonitor" />
+        <node concept="1sVBvm" id="72S_VmbZ5mp" role="1sWHZn">
+          <node concept="1iCGBv" id="72S_VmbZ5mw" role="2wV5jI">
+            <ref role="1NtTu8" to="3751:74nMeo8dO2Y" resolve="attribute" />
+            <node concept="1sVBvm" id="72S_VmbZ5my" role="1sWHZn">
+              <node concept="3F0A7n" id="72S_VmbZ5mD" role="2wV5jI">
+                <property role="1Intyy" value="true" />
+                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2iRfu4" id="72S_VmbZ5mj" role="2iSdaV" />
     </node>
   </node>
 </model>

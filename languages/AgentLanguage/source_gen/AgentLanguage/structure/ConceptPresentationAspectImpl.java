@@ -23,6 +23,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_AttributeDistributionTable;
   private ConceptPresentation props_AttributeExpressionReference;
   private ConceptPresentation props_AttributeMonitor;
+  private ConceptPresentation props_AttributeMonitorReference;
   private ConceptPresentation props_AttributeReference;
   private ConceptPresentation props_Behaviour;
   private ConceptPresentation props_BehaviourElement;
@@ -70,6 +71,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PlaceInstanceFromSignal;
   private ConceptPresentation props_PlaceInstanceReference;
   private ConceptPresentation props_PossibilityCondition;
+  private ConceptPresentation props_PossibleValuesTuple;
   private ConceptPresentation props_ProbabilityDistribution;
   private ConceptPresentation props_ProbabilityDistributionLine;
   private ConceptPresentation props_Relationship;
@@ -214,6 +216,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttributeMonitor = cpb.create();
         }
         return props_AttributeMonitor;
+      case LanguageConceptSwitch.AttributeMonitorReference:
+        if (props_AttributeMonitorReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x70b897b58be2575eL, 0x70b897b58be2577aL, "attributeMonitor", "", "");
+          props_AttributeMonitorReference = cpb.create();
+        }
+        return props_AttributeMonitorReference;
       case LanguageConceptSwitch.AttributeReference:
         if (props_AttributeReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -552,6 +561,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PossibilityCondition = cpb.create();
         }
         return props_PossibilityCondition;
+      case LanguageConceptSwitch.PossibleValuesTuple:
+        if (props_PossibleValuesTuple == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("PossibleValuesTuple");
+          props_PossibleValuesTuple = cpb.create();
+        }
+        return props_PossibleValuesTuple;
       case LanguageConceptSwitch.ProbabilityDistribution:
         if (props_ProbabilityDistribution == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
