@@ -8,15 +8,15 @@ import simcore.basicStructures.ToolBox;
 import java.util.function.Predicate;
 import simcore.basicStructures.Room;
 
-public class ReceiveTreatmentTrigger_b_0Signal extends ActorTypeSignal {
-  public ReceiveTreatmentTrigger_b_0Signal() {
-    this.setName("ReceiveTreatmentTrigger_b_0");
+public class DischargeTrigger_nSignal extends ActorTypeSignal {
+  public DischargeTrigger_nSignal() {
+    this.setName("DischargeTrigger_n");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("WardNurse");
+    this.AddActor("CubicleNurse");
   }
 
   public boolean checkPreCondition(Context context) {
-    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(AmberBay.getInstance()).stream().filter(new Predicate<Room>() {
+    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(MainEntrance.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity();
       }

@@ -156,11 +156,11 @@ public class CubicleNurse extends Actor {
 
 
 
-  public class MoveAction_a0a_1 extends BehaviourStep {
+  public class MoveAction_a0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_1(Behaviour behaviour) {
+    public MoveAction_a0a_0(Behaviour behaviour) {
       target = RespiratoryCubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -1621,7 +1621,7 @@ public class CubicleNurse extends Actor {
   public void InitLateralFlowTest_a(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_0(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_0(behaviourBuilder));

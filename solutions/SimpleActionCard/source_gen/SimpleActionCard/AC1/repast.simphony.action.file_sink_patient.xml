@@ -53,6 +53,32 @@
     <string>patientgetPHEThreeAltCOVIDResultisPositive</string>
     <string>patientgetPHEThreeAltCOVIDResultisNegative</string>
     <string>patientgetadmittedToisAmberBay</string>
+    <string>patientgetadmittedToisAmberBaygetLFTCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLFTCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetLFTFluAResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLFTFluAResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetLFTFluBResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLFTFluBResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetLIATCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLIATCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetLIATFluAResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLIATFluAResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetLIATFluBResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLIATFluBResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetLabPCRCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLabPCRCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetLabPCRFluAResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLabPCRFluAResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetLabPCRFluBResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetLabPCRFluBResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetCepheidCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetCepheidCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetCepheidFluAResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetCepheidFluAResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetCepheidFluBResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetCepheidFluBResultisNegative</string>
+    <string>patientgetadmittedToisAmberBaygetPHEThreeAltCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisAmberBaygetPHEThreeAltCOVIDResultisNegative</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

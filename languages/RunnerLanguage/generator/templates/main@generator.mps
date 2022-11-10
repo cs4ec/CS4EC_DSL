@@ -15,7 +15,6 @@
     <import index="dxuu" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:javax.swing(JDK/)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="pq2j" ref="r:99a9a73c-58f7-4689-abbb-a4a55dedd02b(RunnerLanguage.behavior)" implicit="true" />
-    <import index="68mc" ref="r:2a10821d-612f-4a73-b7b0-ed6b57106321(com.mbeddr.mpsutil.filepicker.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -209,9 +208,6 @@
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
-      <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
-        <reference id="1138056516764" name="link" index="3Tt5mk" />
-      </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
@@ -286,8 +282,8 @@
                     <node concept="3clFbF" id="1wal9D1aatd" role="3cqZAp">
                       <node concept="2OqwBi" id="1wal9D1aate" role="3clFbG">
                         <node concept="30H73N" id="1wal9D1aatf" role="2Oq$k0" />
-                        <node concept="2qgKlT" id="5_FodVJeBuy" role="2OqNvi">
-                          <ref role="37wK5l" to="pq2j:1wal9D1amCA" resolve="GenerateInputString" />
+                        <node concept="2qgKlT" id="72S_VmfiUhi" role="2OqNvi">
+                          <ref role="37wK5l" to="pq2j:72S_VmfixC_" resolve="GetBaseAddress" />
                         </node>
                       </node>
                     </node>
@@ -722,36 +718,10 @@
                 <node concept="3zFVjK" id="74nMeo7ZBhP" role="3zH0cK">
                   <node concept="3clFbS" id="74nMeo7ZBhQ" role="2VODD2">
                     <node concept="3clFbF" id="5R1$QENtxN5" role="3cqZAp">
-                      <node concept="3cpWs3" id="5R1$QENtxN6" role="3clFbG">
-                        <node concept="2OqwBi" id="5R1$QENtxN7" role="3uHU7B">
-                          <node concept="2OqwBi" id="5R1$QENtxN8" role="2Oq$k0">
-                            <node concept="2OqwBi" id="5R1$QENtxN9" role="2Oq$k0">
-                              <node concept="2OqwBi" id="5R1$QENtxNa" role="2Oq$k0">
-                                <node concept="30H73N" id="5R1$QENtxNb" role="2Oq$k0" />
-                                <node concept="3TrEf2" id="5R1$QENtYYS" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="9ki:5R1$QENtWvS" resolve="RepastSettingsSourceAddress" />
-                                </node>
-                              </node>
-                              <node concept="3TrcHB" id="5R1$QENtxNd" role="2OqNvi">
-                                <ref role="3TsBF5" to="68mc:5lKnBeAtODI" resolve="path" />
-                              </node>
-                            </node>
-                            <node concept="liA8E" id="5R1$QENtxNe" role="2OqNvi">
-                              <ref role="37wK5l" to="wyt6:~String.toString()" resolve="toString" />
-                            </node>
-                          </node>
-                          <node concept="liA8E" id="5R1$QENtxNf" role="2OqNvi">
-                            <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
-                            <node concept="Xl_RD" id="5R1$QENtxNg" role="37wK5m">
-                              <property role="Xl_RC" value="/" />
-                            </node>
-                            <node concept="Xl_RD" id="5R1$QENtxNh" role="37wK5m">
-                              <property role="Xl_RC" value="\\\\" />
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="Xl_RD" id="5R1$QENtxNi" role="3uHU7w">
-                          <property role="Xl_RC" value="\\\\" />
+                      <node concept="2OqwBi" id="72S_Vmffw$f" role="3clFbG">
+                        <node concept="30H73N" id="72S_VmffwiE" role="2Oq$k0" />
+                        <node concept="2qgKlT" id="72S_VmfiUAp" role="2OqNvi">
+                          <ref role="37wK5l" to="pq2j:72S_Vmffr8J" resolve="getRepastSettingsFolder" />
                         </node>
                       </node>
                     </node>
@@ -1451,36 +1421,10 @@
                 <node concept="3zFVjK" id="3i9haAIuRsW" role="3zH0cK">
                   <node concept="3clFbS" id="3i9haAIuRsX" role="2VODD2">
                     <node concept="3clFbF" id="3i9haAIuRsY" role="3cqZAp">
-                      <node concept="3cpWs3" id="3i9haAIuRsZ" role="3clFbG">
-                        <node concept="2OqwBi" id="3i9haAIuRt0" role="3uHU7B">
-                          <node concept="2OqwBi" id="3i9haAIuRt1" role="2Oq$k0">
-                            <node concept="2OqwBi" id="3i9haAIuRt2" role="2Oq$k0">
-                              <node concept="2OqwBi" id="3i9haAIuRt3" role="2Oq$k0">
-                                <node concept="30H73N" id="3i9haAIuRt4" role="2Oq$k0" />
-                                <node concept="3TrEf2" id="3i9haAIuRt5" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="9ki:5R1$QENtWvS" resolve="RepastSettingsSourceAddress" />
-                                </node>
-                              </node>
-                              <node concept="3TrcHB" id="3i9haAIuRt6" role="2OqNvi">
-                                <ref role="3TsBF5" to="68mc:5lKnBeAtODI" resolve="path" />
-                              </node>
-                            </node>
-                            <node concept="liA8E" id="3i9haAIuRt7" role="2OqNvi">
-                              <ref role="37wK5l" to="wyt6:~String.toString()" resolve="toString" />
-                            </node>
-                          </node>
-                          <node concept="liA8E" id="3i9haAIuRt8" role="2OqNvi">
-                            <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
-                            <node concept="Xl_RD" id="3i9haAIuRt9" role="37wK5m">
-                              <property role="Xl_RC" value="/" />
-                            </node>
-                            <node concept="Xl_RD" id="3i9haAIuRta" role="37wK5m">
-                              <property role="Xl_RC" value="\\\\" />
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="Xl_RD" id="3i9haAIuRtb" role="3uHU7w">
-                          <property role="Xl_RC" value="\\\\" />
+                      <node concept="2OqwBi" id="72S_VmffxHY" role="3clFbG">
+                        <node concept="30H73N" id="72S_Vmffxoc" role="2Oq$k0" />
+                        <node concept="2qgKlT" id="72S_VmffxWI" role="2OqNvi">
+                          <ref role="37wK5l" to="pq2j:72S_Vmffr8J" resolve="getRepastSettingsFolder" />
                         </node>
                       </node>
                     </node>
@@ -2193,36 +2137,10 @@
                 <node concept="3zFVjK" id="2vFOz$GxxSY" role="3zH0cK">
                   <node concept="3clFbS" id="2vFOz$GxxSZ" role="2VODD2">
                     <node concept="3clFbF" id="2vFOz$GHP9n" role="3cqZAp">
-                      <node concept="3cpWs3" id="2vFOz$GKs8e" role="3clFbG">
-                        <node concept="2OqwBi" id="2vFOz$GHPAL" role="3uHU7B">
-                          <node concept="2OqwBi" id="2vFOz$GHOwT" role="2Oq$k0">
-                            <node concept="2OqwBi" id="2vFOz$GzCq9" role="2Oq$k0">
-                              <node concept="2OqwBi" id="2vFOz$GzBER" role="2Oq$k0">
-                                <node concept="30H73N" id="2vFOz$GzBny" role="2Oq$k0" />
-                                <node concept="3TrEf2" id="2vFOz$GzBWf" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="9ki:2vFOz$GvkAD" resolve="ClassesFolderAddress" />
-                                </node>
-                              </node>
-                              <node concept="3TrcHB" id="2vFOz$GHO7G" role="2OqNvi">
-                                <ref role="3TsBF5" to="68mc:5lKnBeAtODI" resolve="path" />
-                              </node>
-                            </node>
-                            <node concept="liA8E" id="2vFOz$GHODg" role="2OqNvi">
-                              <ref role="37wK5l" to="wyt6:~String.toString()" resolve="toString" />
-                            </node>
-                          </node>
-                          <node concept="liA8E" id="2vFOz$GHPV8" role="2OqNvi">
-                            <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
-                            <node concept="Xl_RD" id="2vFOz$GHQju" role="37wK5m">
-                              <property role="Xl_RC" value="/" />
-                            </node>
-                            <node concept="Xl_RD" id="2vFOz$GHQDb" role="37wK5m">
-                              <property role="Xl_RC" value="\\\\" />
-                            </node>
-                          </node>
-                        </node>
-                        <node concept="Xl_RD" id="2vFOz$GKswI" role="3uHU7w">
-                          <property role="Xl_RC" value="\\\\" />
+                      <node concept="2OqwBi" id="72S_VmffPVT" role="3clFbG">
+                        <node concept="30H73N" id="72S_VmffPEH" role="2Oq$k0" />
+                        <node concept="2qgKlT" id="72S_VmffQ7W" role="2OqNvi">
+                          <ref role="37wK5l" to="pq2j:72S_Vmffs$u" resolve="getClassFolderFolder" />
                         </node>
                       </node>
                     </node>
@@ -2269,36 +2187,10 @@
                 <node concept="3zFVjK" id="2vFOz$GxC3A" role="3zH0cK">
                   <node concept="3clFbS" id="2vFOz$GxC3B" role="2VODD2">
                     <node concept="3clFbF" id="2vFOz$GIwe8" role="3cqZAp">
-                      <node concept="3cpWs3" id="2vFOz$GKrsg" role="3clFbG">
-                        <node concept="Xl_RD" id="2vFOz$GKrKa" role="3uHU7w">
-                          <property role="Xl_RC" value="\\\\" />
-                        </node>
-                        <node concept="2OqwBi" id="2vFOz$GIwe9" role="3uHU7B">
-                          <node concept="2OqwBi" id="2vFOz$GIwea" role="2Oq$k0">
-                            <node concept="2OqwBi" id="2vFOz$GIweb" role="2Oq$k0">
-                              <node concept="2OqwBi" id="2vFOz$GIwec" role="2Oq$k0">
-                                <node concept="30H73N" id="2vFOz$GIwed" role="2Oq$k0" />
-                                <node concept="3TrEf2" id="2vFOz$GIx9F" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="9ki:2vFOz$GxgoG" resolve="SourcesFolderAddress" />
-                                </node>
-                              </node>
-                              <node concept="3TrcHB" id="2vFOz$GIwef" role="2OqNvi">
-                                <ref role="3TsBF5" to="68mc:5lKnBeAtODI" resolve="path" />
-                              </node>
-                            </node>
-                            <node concept="liA8E" id="2vFOz$GIweg" role="2OqNvi">
-                              <ref role="37wK5l" to="wyt6:~String.toString()" resolve="toString" />
-                            </node>
-                          </node>
-                          <node concept="liA8E" id="2vFOz$GIweh" role="2OqNvi">
-                            <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
-                            <node concept="Xl_RD" id="2vFOz$GIwei" role="37wK5m">
-                              <property role="Xl_RC" value="/" />
-                            </node>
-                            <node concept="Xl_RD" id="2vFOz$GIwej" role="37wK5m">
-                              <property role="Xl_RC" value="\\\\" />
-                            </node>
-                          </node>
+                      <node concept="2OqwBi" id="72S_VmffyLx" role="3clFbG">
+                        <node concept="30H73N" id="72S_VmffyrJ" role="2Oq$k0" />
+                        <node concept="2qgKlT" id="72S_Vmffz44" role="2OqNvi">
+                          <ref role="37wK5l" to="pq2j:72S_Vmfft02" resolve="getSourceFolderFolder" />
                         </node>
                       </node>
                     </node>

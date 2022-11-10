@@ -275,7 +275,11 @@ public class QueriesGenerated extends QueryProviderBase {
     return SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x5dafd33966e8fe19L, "BuiltEnvironment.structure.RoomType"));
   }
   public static Object referenceMacro_GetReferent_6_2(final ReferenceMacroContext _context) {
-    return _context.getOutputNodeByInputNodeAndMappingLabel(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
+    return _context.getOutputNodeByInputNodeAndMappingLabel(Sequence.fromIterable(SLinkOperations.collectMany(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb)).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return !(Objects.equals(SLinkOperations.getTarget(it, LINKS.UsageCondition$srTD), null));
+      }
+    }), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(final SNode it) {
         return ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Branch$sq)).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it2) {
@@ -1702,6 +1706,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink PatientOccupiable$Oc84 = MetaAdapterFactory.getContainmentLink(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x5dafd33966e8fe19L, 0x4e1460f1a02df61dL, "PatientOccupiable");
     /*package*/ static final SReferenceLink occupiable$cVUG = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL, 0x3111466f1fe9fcb6L, "occupiable");
     /*package*/ static final SContainmentLink orderPatientLocation$SPZH = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x348ff1b011050997L, "orderPatientLocation");
+    /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
     /*package*/ static final SContainmentLink Actions$nh$G = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2ef557ae9cb06877L, "Actions");
     /*package*/ static final SContainmentLink attributes$f_y3 = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x257e995deb85de00L, "attributes");
     /*package*/ static final SReferenceLink test$zhiH = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df36170cL, 0x29f0721df37881fL, "test");
@@ -1729,7 +1734,6 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink SymptomReference$jVTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db47911a7L, 0x6ca3e29db47912c5L, "SymptomReference");
     /*package*/ static final SReferenceLink symptom$dWL8 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791247L, 0x6ca3e29db4791251L, "symptom");
     /*package*/ static final SContainmentLink symptomReferences$_8Iv = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab012L, 0x6ca3e29db479125cL, "symptomReferences");
-    /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
     /*package*/ static final SContainmentLink condition$HxRE = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L, 0x18668ef27386cf03L, "condition");
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
     /*package*/ static final SContainmentLink TestingProcess$hIgq = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, 0x348ff1b011d7b149L, "TestingProcess");

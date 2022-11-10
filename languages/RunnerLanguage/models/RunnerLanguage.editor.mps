@@ -33,7 +33,6 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
-      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
@@ -48,32 +47,14 @@
       <node concept="3F0A7n" id="5VDVzf4vgRK" role="3EZMnx">
         <ref role="1NtTu8" to="9ki:5_FodVJemoN" resolve="addr" />
       </node>
-      <node concept="3F0ifn" id="2vFOz$GvkAS" role="3EZMnx">
-        <property role="3F0ifm" value="Classes Folder Address:" />
-        <node concept="pVoyu" id="2vFOz$GvkB8" role="3F10Kt">
+      <node concept="3F0ifn" id="72S_VmffAAs" role="3EZMnx">
+        <property role="3F0ifm" value="Project Name:" />
+        <node concept="pVoyu" id="72S_VmffAAP" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F1sOY" id="2vFOz$GvkB2" role="3EZMnx">
-        <ref role="1NtTu8" to="9ki:2vFOz$GvkAD" resolve="ClassesFolderAddress" />
-      </node>
-      <node concept="3F0ifn" id="5R1$QENtWw9" role="3EZMnx">
-        <property role="3F0ifm" value="Repast Source Files:" />
-        <node concept="pVoyu" id="5R1$QENtWwn" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="5R1$QENtWwC" role="3EZMnx">
-        <ref role="1NtTu8" to="9ki:5R1$QENtWvS" resolve="RepastSettingsSourceAddress" />
-      </node>
-      <node concept="3F0ifn" id="2vFOz$GxgoQ" role="3EZMnx">
-        <property role="3F0ifm" value="Sources Folder Address:" />
-        <node concept="pVoyu" id="2vFOz$Gxgpf" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="2vFOz$Gxgp6" role="3EZMnx">
-        <ref role="1NtTu8" to="9ki:2vFOz$GxgoG" resolve="SourcesFolderAddress" />
+      <node concept="3F0A7n" id="72S_VmffAAG" role="3EZMnx">
+        <ref role="1NtTu8" to="9ki:72S_Vmfflu6" resolve="projectName" />
       </node>
       <node concept="3F0ifn" id="74nMeo8d18E" role="3EZMnx">
         <property role="3F0ifm" value="BatchRun?:" />

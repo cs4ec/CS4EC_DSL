@@ -31,7 +31,7 @@
   		type="constant" constant_type="double" value="100" />
   	<parameter name="LabPCRFluBSpecificity"
   		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRprobability_b0_0"
+  	<parameter name="LabPCRprobability_b0_1"
   		type="constant" constant_type="double" value="95" />
   	<parameter name="PHEThreeAltCOVIDSensitivity"
   		type="constant" constant_type="double" value="95" />
@@ -143,7 +143,7 @@
   		type="constant" constant_type="double" value="100" />
   	<parameter name="LabPCRFluBSpecificity"
   		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRprobability_b0_1"
+  	<parameter name="LabPCRprobability_b0_0"
   		type="constant" constant_type="double" value="95" />
   	<parameter name="PHEThreeAltCOVIDSensitivity"
   		type="constant" constant_type="double" value="95" />

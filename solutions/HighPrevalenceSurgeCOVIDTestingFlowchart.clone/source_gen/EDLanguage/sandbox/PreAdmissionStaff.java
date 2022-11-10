@@ -158,11 +158,11 @@ public class PreAdmissionStaff extends Actor {
 
 
 
-  public class MoveAction_a0a_13 extends BehaviourStep {
+  public class MoveAction_a0a_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_13(Behaviour behaviour) {
+    public MoveAction_a0a_11(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -276,11 +276,11 @@ public class PreAdmissionStaff extends Actor {
       }
     }
   }
-  public class MoveAction_a0a_15 extends BehaviourStep {
+  public class MoveAction_a0a_13 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_15(Behaviour behaviour) {
+    public MoveAction_a0a_13(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -1447,7 +1447,7 @@ public class PreAdmissionStaff extends Actor {
   public void InitAdmitActionAdmitRed_g(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_13(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_11(behaviourBuilder));
     plstSteps.add(new MoveAction_b0a(behaviourBuilder));
     plstSteps.add(new OrderAction_c0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0a(behaviourBuilder));

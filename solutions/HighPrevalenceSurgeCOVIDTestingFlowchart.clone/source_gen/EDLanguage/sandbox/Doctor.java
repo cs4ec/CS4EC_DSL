@@ -194,11 +194,11 @@ public class Doctor extends Actor {
 
     }
   }
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
+    public MoveAction_a0a_3(Behaviour behaviour) {
       target = Labaratory.getInstance();
       this.behaviour = behaviour;
     }

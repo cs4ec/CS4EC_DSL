@@ -116,7 +116,7 @@ public class Doctor extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction");
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_0(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a(behaviourBuilder));
     plstSteps.add(new StayAction_b0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -144,11 +144,11 @@ public class Doctor extends Actor {
 
 
 
-  public class MoveAction_a0a_0 extends BehaviourStep {
+  public class MoveAction_a0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_0(Behaviour behaviour) {
+    public MoveAction_a0a(Behaviour behaviour) {
       target = Labaratory.getInstance();
       this.behaviour = behaviour;
     }
@@ -194,11 +194,11 @@ public class Doctor extends Actor {
 
     }
   }
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
+    public MoveAction_a0a_1(Behaviour behaviour) {
       target = Labaratory.getInstance();
       this.behaviour = behaviour;
     }

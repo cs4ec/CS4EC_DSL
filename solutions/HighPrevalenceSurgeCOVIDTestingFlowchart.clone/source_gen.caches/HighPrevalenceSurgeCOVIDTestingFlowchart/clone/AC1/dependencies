@@ -89,6 +89,7 @@
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.DecideandapplyPOCTTrigger_dSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_iSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_nSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoPCRTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoneTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.GetTestResultTrigger_aSignal" />
@@ -101,6 +102,7 @@
     <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.PCRTrigger_fSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ProcessTestatBoothTrigger_bSignal" />
@@ -163,6 +165,14 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.DischargeTrigger_lSignal">
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.DischargeTrigger_nSignal">
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -454,7 +464,7 @@
     <classNode dependClassName="EDLanguage.sandbox.POCT" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
   </dependency>
-  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.PatientArrivesTrigger_nSignal">
+  <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.PatientArrivesTrigger_oSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="HighPrevalenceSurgeCOVIDTestingFlowchart.clone.AC1.PreAdmissionStaff">

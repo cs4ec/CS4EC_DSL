@@ -2,7 +2,7 @@
 	<parameter name="SecondsPerTick"
 		type="constant" constant_type="int" value="60" />
 	<parameter name="randomSeed"
-		type="number" number_type="int" start="1" end="0" step="1" />
+		type="number" number_type="int" start="1" end="10" step="1" />
 	<parameter name="UsePathFinding"
 		type="constant" constant_type="boolean" value="false" />
   	<parameter name="LIATCOVIDSensitivity"

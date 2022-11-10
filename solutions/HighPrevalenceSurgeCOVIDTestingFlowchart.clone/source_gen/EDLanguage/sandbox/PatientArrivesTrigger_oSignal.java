@@ -4,9 +4,9 @@ package EDLanguage.sandbox;
 
 import simcore.Signals.ActorTypeSignal;
 
-public class PatientArrivesTrigger_nSignal extends ActorTypeSignal {
-  public PatientArrivesTrigger_nSignal() {
-    this.setName("PatientArrivesTrigger_n");
+public class PatientArrivesTrigger_oSignal extends ActorTypeSignal {
+  public PatientArrivesTrigger_oSignal() {
+    this.setName("PatientArrivesTrigger_o");
     this.setDescription("SecondPlaceholderSignal");
     this.AddActor("TriageNurse");
   }

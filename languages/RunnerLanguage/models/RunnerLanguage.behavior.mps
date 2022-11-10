@@ -60,6 +60,7 @@
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
       <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
+      <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
@@ -78,6 +79,7 @@
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
+      <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
       <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
         <child id="1068581517676" name="expression" index="3cqZAk" />
       </concept>
@@ -125,7 +127,7 @@
   <node concept="13h7C7" id="5_FodVJe_QT">
     <ref role="13h7C2" to="9ki:5_FodVJemjs" resolve="Runner" />
     <node concept="13i0hz" id="1wal9D1amCA" role="13h7CS">
-      <property role="TrG5h" value="GenerateInputString" />
+      <property role="TrG5h" value="GetProjectAddress" />
       <node concept="3Tm1VV" id="1wal9D1amCB" role="1B3o_S" />
       <node concept="3uibUv" id="1wal9D1amCQ" role="3clF45">
         <ref role="3uigEE" to="wyt6:~String" resolve="String" />
@@ -137,19 +139,123 @@
             <node concept="3uibUv" id="1wal9D1anEE" role="1tU5fm">
               <ref role="3uigEE" to="wyt6:~String" resolve="String" />
             </node>
-            <node concept="2OqwBi" id="1wal9D1amOt" role="33vP2m">
-              <node concept="13iPFW" id="1wal9D1amEB" role="2Oq$k0" />
-              <node concept="3TrcHB" id="1wal9D1amWK" role="2OqNvi">
+            <node concept="3cpWs3" id="72S_VmffEu7" role="33vP2m">
+              <node concept="2OqwBi" id="72S_VmffER2" role="3uHU7w">
+                <node concept="13iPFW" id="72S_VmffEwK" role="2Oq$k0" />
+                <node concept="3TrcHB" id="72S_VmffF4d" role="2OqNvi">
+                  <ref role="3TsBF5" to="9ki:72S_Vmfflu6" resolve="projectName" />
+                </node>
+              </node>
+              <node concept="3cpWs3" id="72S_VmffEku" role="3uHU7B">
+                <node concept="2OqwBi" id="1wal9D1amOt" role="3uHU7B">
+                  <node concept="13iPFW" id="1wal9D1amEB" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="1wal9D1amWK" role="2OqNvi">
+                    <ref role="3TsBF5" to="9ki:5_FodVJemoN" resolve="addr" />
+                  </node>
+                </node>
+                <node concept="Xl_RD" id="72S_VmffEmS" role="3uHU7w">
+                  <property role="Xl_RC" value="\\solutions\\" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="72S_VmffDPj" role="3cqZAp" />
+        <node concept="3cpWs6" id="72S_Vmfga2i" role="3cqZAp">
+          <node concept="37vLTw" id="72S_Vmfgayf" role="3cqZAk">
+            <ref role="3cqZAo" node="1wal9D1amDX" resolve="s" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="72S_VmfixC_" role="13h7CS">
+      <property role="TrG5h" value="GetBaseAddress" />
+      <node concept="3Tm1VV" id="72S_VmfixCA" role="1B3o_S" />
+      <node concept="3uibUv" id="72S_VmfixCB" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="3clFbS" id="72S_VmfixCC" role="3clF47">
+        <node concept="3cpWs6" id="72S_VmfiJZ3" role="3cqZAp">
+          <node concept="BsUDl" id="72S_VmfiJZq" role="3cqZAk">
+            <ref role="37wK5l" node="2vFOz$Gzz4V" resolve="ReplaceForwardSlashesWithBackSlashes" />
+            <node concept="2OqwBi" id="72S_VmfiK4G" role="37wK5m">
+              <node concept="13iPFW" id="72S_VmfiK0j" role="2Oq$k0" />
+              <node concept="3TrcHB" id="72S_VmfiK6y" role="2OqNvi">
                 <ref role="3TsBF5" to="9ki:5_FodVJemoN" resolve="addr" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="3cpWs6" id="2vFOz$GHy5a" role="3cqZAp">
-          <node concept="BsUDl" id="2vFOz$GHy9Z" role="3cqZAk">
+      </node>
+    </node>
+    <node concept="13i0hz" id="72S_Vmffr8J" role="13h7CS">
+      <property role="TrG5h" value="getRepastSettingsFolder" />
+      <node concept="3Tm1VV" id="72S_Vmffr8K" role="1B3o_S" />
+      <node concept="17QB3L" id="72S_Vmffra_" role="3clF45" />
+      <node concept="3clFbS" id="72S_Vmffr8M" role="3clF47">
+        <node concept="3cpWs6" id="72S_Vmffrbg" role="3cqZAp">
+          <node concept="BsUDl" id="72S_Vmfgawr" role="3cqZAk">
             <ref role="37wK5l" node="2vFOz$Gzz4V" resolve="ReplaceForwardSlashesWithBackSlashes" />
-            <node concept="37vLTw" id="2vFOz$GHye7" role="37wK5m">
-              <ref role="3cqZAo" node="1wal9D1amDX" resolve="s" />
+            <node concept="3cpWs3" id="72S_VmfgcvQ" role="37wK5m">
+              <node concept="3cpWs3" id="72S_VmfgbTk" role="3uHU7B">
+                <node concept="3cpWs3" id="72S_Vmfgbka" role="3uHU7B">
+                  <node concept="BsUDl" id="72S_Vmfgb4E" role="3uHU7B">
+                    <ref role="37wK5l" node="1wal9D1amCA" resolve="GetProjectAddress" />
+                  </node>
+                  <node concept="Xl_RD" id="72S_Vmffrrh" role="3uHU7w">
+                    <property role="Xl_RC" value="\\classes_gen\\" />
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="72S_VmffrPM" role="3uHU7w">
+                  <node concept="13iPFW" id="72S_VmffrGC" role="2Oq$k0" />
+                  <node concept="3TrcHB" id="72S_Vmffs11" role="2OqNvi">
+                    <ref role="3TsBF5" to="9ki:72S_Vmfflu6" resolve="projectName" />
+                  </node>
+                </node>
+              </node>
+              <node concept="Xl_RD" id="72S_Vmffsn1" role="3uHU7w">
+                <property role="Xl_RC" value="\\AC1" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="72S_Vmffs$u" role="13h7CS">
+      <property role="TrG5h" value="getClassFolderFolder" />
+      <node concept="3Tm1VV" id="72S_Vmffs$v" role="1B3o_S" />
+      <node concept="17QB3L" id="72S_Vmffs$w" role="3clF45" />
+      <node concept="3clFbS" id="72S_Vmffs$x" role="3clF47">
+        <node concept="3cpWs6" id="72S_Vmffs$y" role="3cqZAp">
+          <node concept="BsUDl" id="72S_Vmfgcze" role="3cqZAk">
+            <ref role="37wK5l" node="2vFOz$Gzz4V" resolve="ReplaceForwardSlashesWithBackSlashes" />
+            <node concept="3cpWs3" id="72S_Vmffs$A" role="37wK5m">
+              <node concept="BsUDl" id="72S_VmfgczZ" role="3uHU7B">
+                <ref role="37wK5l" node="1wal9D1amCA" resolve="GetProjectAddress" />
+              </node>
+              <node concept="Xl_RD" id="72S_Vmffs$C" role="3uHU7w">
+                <property role="Xl_RC" value="\\classes_gen\\EDLanguage\\sandbox" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="72S_Vmfft02" role="13h7CS">
+      <property role="TrG5h" value="getSourceFolderFolder" />
+      <node concept="3Tm1VV" id="72S_Vmfft03" role="1B3o_S" />
+      <node concept="17QB3L" id="72S_Vmfft04" role="3clF45" />
+      <node concept="3clFbS" id="72S_Vmfft05" role="3clF47">
+        <node concept="3cpWs6" id="72S_Vmfft06" role="3cqZAp">
+          <node concept="BsUDl" id="72S_VmfgcYf" role="3cqZAk">
+            <ref role="37wK5l" node="2vFOz$Gzz4V" resolve="ReplaceForwardSlashesWithBackSlashes" />
+            <node concept="3cpWs3" id="72S_Vmfft07" role="37wK5m">
+              <node concept="BsUDl" id="72S_Vmfft08" role="3uHU7B">
+                <ref role="37wK5l" node="1wal9D1amCA" resolve="GetProjectAddress" />
+              </node>
+              <node concept="Xl_RD" id="72S_Vmfft09" role="3uHU7w">
+                <property role="Xl_RC" value="\\source_gen\\EDLanguage\\sandbox" />
+              </node>
             </node>
           </node>
         </node>

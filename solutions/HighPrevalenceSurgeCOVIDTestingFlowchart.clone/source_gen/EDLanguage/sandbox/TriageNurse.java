@@ -131,9 +131,9 @@ public class TriageNurse extends Actor {
         behaviourBuilder = new Behaviour("CheckSymptomsTrigger_b");
         this.InitCheckSymptoms_a(s);
         break;
-      case "PatientArrivesTrigger_n":
-        behaviourBuilder = new Behaviour("PatientArrivesTrigger_n");
-        this.InitPatientArrives_n(s);
+      case "PatientArrivesTrigger_o":
+        behaviourBuilder = new Behaviour("PatientArrivesTrigger_o");
+        this.InitPatientArrives_o(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -144,11 +144,11 @@ public class TriageNurse extends Actor {
 
 
 
-  public class MoveAction_a0a_1 extends BehaviourStep {
+  public class MoveAction_a0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_1(Behaviour behaviour) {
+    public MoveAction_a0a_0(Behaviour behaviour) {
       target = TriageDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -313,11 +313,11 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class MoveAction_a0a_11 extends BehaviourStep {
+  public class MoveAction_a0a_15 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_11(Behaviour behaviour) {
+    public MoveAction_a0a_15(Behaviour behaviour) {
       target = TriageDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -811,7 +811,7 @@ public class TriageNurse extends Actor {
   public void InitCheckSymptoms_a(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_0(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
     plstSteps.add(new UseAction_d0a(behaviourBuilder));
@@ -826,7 +826,7 @@ public class TriageNurse extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitPatientArrives_n(Signal s) {
+  public void InitPatientArrives_o(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new Choice_a0b(behaviourBuilder));

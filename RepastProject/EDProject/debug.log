@@ -135,3 +135,222 @@ INFO  [SwingWorker-pool-2-thread-1] 2022-11-07 16:21:00,155 repast.simphony.batc
 INFO  [SwingWorker-pool-2-thread-1] 2022-11-07 16:21:00,175 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/w2037451/Documents/HelloAgent/RepastProject/EDProject/output
 INFO  [SwingWorker-pool-2-thread-1] 2022-11-07 16:21:00,192 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0014
 INFO  [SwingWorker-pool-2-thread-1] 2022-11-07 16:21:00,192 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 28.1029
+WARN  [AWT-EventQueue-0] 2022-11-09 15:03:40,922 repast.simphony.scenario.ObjectActionLoader - Error loading information from data. Continuing with model loading.
+com.thoughtworks.xstream.converters.ConversionException: Cannot construct java.util.Map$Entry : java.util.Map$Entry : Cannot construct java.util.Map$Entry : java.util.Map$Entry
+---- Debugging information ----
+message             : Cannot construct java.util.Map$Entry : java.util.Map$Entry
+cause-exception     : com.thoughtworks.xstream.converters.reflection.ObjectAccessException
+cause-message       : Cannot construct java.util.Map$Entry : java.util.Map$Entry
+class               : java.util.Map$Entry
+required-type       : java.util.Map$Entry
+converter-type      : com.thoughtworks.xstream.converters.reflection.ReflectionConverter
+path                : /repast.simphony.data2.engine.DataSetDescriptor/methodDataSources/entry[50]/entry
+line number         : 460
+class[1]            : java.util.LinkedHashMap
+converter-type[1]   : com.thoughtworks.xstream.converters.collections.MapConverter
+class[2]            : repast.simphony.data2.engine.DataSetDescriptor
+version             : 
+-------------------------------
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:79)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:65)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.converters.collections.AbstractCollectionConverter.readItem(AbstractCollectionConverter.java:71)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.putCurrentEntryIntoMap(MapConverter.java:106)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.populateMap(MapConverter.java:98)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.populateMap(MapConverter.java:92)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.unmarshal(MapConverter.java:87)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:65)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.unmarshallField(AbstractReflectionConverter.java:474)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.doUnmarshal(AbstractReflectionConverter.java:406)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.unmarshal(AbstractReflectionConverter.java:257)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:65)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.start(TreeUnmarshaller.java:134)
+	at com.thoughtworks.xstream.core.AbstractTreeMarshallingStrategy.unmarshal(AbstractTreeMarshallingStrategy.java:32)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1185)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1169)
+	at com.thoughtworks.xstream.XStream.fromXML(XStream.java:1040)
+	at repast.simphony.scenario.ObjectActionLoader.performLoad(ObjectActionLoader.java:33)
+	at repast.simphony.scenario.AbstractActionLoader.loadAction(AbstractActionLoader.java:35)
+	at repast.simphony.scenario.ScenarioFileLoader.createActions(ScenarioFileLoader.java:90)
+	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:66)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:199)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.thoughtworks.xstream.converters.reflection.ObjectAccessException: Cannot construct java.util.Map$Entry : java.util.Map$Entry
+	at com.thoughtworks.xstream.converters.reflection.SunLimitedUnsafeReflectionProvider.newInstance(SunLimitedUnsafeReflectionProvider.java:80)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.instantiateNewInstance(AbstractReflectionConverter.java:553)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.unmarshal(AbstractReflectionConverter.java:256)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	... 49 more
+Caused by: java.lang.InstantiationException: java.util.Map$Entry
+	at java.base/jdk.internal.misc.Unsafe.allocateInstance(Native Method)
+	at jdk.unsupported/sun.misc.Unsafe.allocateInstance(Unsafe.java:840)
+	at com.thoughtworks.xstream.converters.reflection.SunLimitedUnsafeReflectionProvider.newInstance(SunLimitedUnsafeReflectionProvider.java:76)
+	... 52 more
+WARN  [AWT-EventQueue-0] 2022-11-09 15:18:17,595 repast.simphony.scenario.ObjectActionLoader - Error loading information from data. Continuing with model loading.
+com.thoughtworks.xstream.converters.ConversionException: Cannot construct java.util.Map$Entry : java.util.Map$Entry : Cannot construct java.util.Map$Entry : java.util.Map$Entry
+---- Debugging information ----
+message             : Cannot construct java.util.Map$Entry : java.util.Map$Entry
+cause-exception     : com.thoughtworks.xstream.converters.reflection.ObjectAccessException
+cause-message       : Cannot construct java.util.Map$Entry : java.util.Map$Entry
+class               : java.util.Map$Entry
+required-type       : java.util.Map$Entry
+converter-type      : com.thoughtworks.xstream.converters.reflection.ReflectionConverter
+path                : /repast.simphony.data2.engine.DataSetDescriptor/methodDataSources/entry[50]/entry
+line number         : 460
+class[1]            : java.util.LinkedHashMap
+converter-type[1]   : com.thoughtworks.xstream.converters.collections.MapConverter
+class[2]            : repast.simphony.data2.engine.DataSetDescriptor
+version             : 
+-------------------------------
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:79)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:65)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.converters.collections.AbstractCollectionConverter.readItem(AbstractCollectionConverter.java:71)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.putCurrentEntryIntoMap(MapConverter.java:106)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.populateMap(MapConverter.java:98)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.populateMap(MapConverter.java:92)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.unmarshal(MapConverter.java:87)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:65)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.unmarshallField(AbstractReflectionConverter.java:474)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.doUnmarshal(AbstractReflectionConverter.java:406)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.unmarshal(AbstractReflectionConverter.java:257)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:65)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.start(TreeUnmarshaller.java:134)
+	at com.thoughtworks.xstream.core.AbstractTreeMarshallingStrategy.unmarshal(AbstractTreeMarshallingStrategy.java:32)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1185)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1169)
+	at com.thoughtworks.xstream.XStream.fromXML(XStream.java:1040)
+	at repast.simphony.scenario.ObjectActionLoader.performLoad(ObjectActionLoader.java:33)
+	at repast.simphony.scenario.AbstractActionLoader.loadAction(AbstractActionLoader.java:35)
+	at repast.simphony.scenario.ScenarioFileLoader.createActions(ScenarioFileLoader.java:90)
+	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:66)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:199)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: com.thoughtworks.xstream.converters.reflection.ObjectAccessException: Cannot construct java.util.Map$Entry : java.util.Map$Entry
+	at com.thoughtworks.xstream.converters.reflection.SunLimitedUnsafeReflectionProvider.newInstance(SunLimitedUnsafeReflectionProvider.java:80)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.instantiateNewInstance(AbstractReflectionConverter.java:553)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.unmarshal(AbstractReflectionConverter.java:256)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	... 49 more
+Caused by: java.lang.InstantiationException: java.util.Map$Entry
+	at java.base/jdk.internal.misc.Unsafe.allocateInstance(Native Method)
+	at jdk.unsupported/sun.misc.Unsafe.allocateInstance(Unsafe.java:840)
+	at com.thoughtworks.xstream.converters.reflection.SunLimitedUnsafeReflectionProvider.newInstance(SunLimitedUnsafeReflectionProvider.java:76)
+	... 52 more
+WARN  [AWT-EventQueue-0] 2022-11-09 15:24:32,126 repast.simphony.scenario.ObjectActionLoader - Error loading information from data. Continuing with model loading.
+com.thoughtworks.xstream.converters.ConversionException: null : null
+---- Debugging information ----
+cause-exception     : java.lang.RuntimeException
+cause-message       : null
+class               : java.util.LinkedHashMap
+required-type       : java.util.LinkedHashMap
+converter-type      : com.thoughtworks.xstream.converters.collections.MapConverter
+path                : /repast.simphony.data2.engine.DataSetDescriptor/methodDataSources/string
+line number         : 694
+class[1]            : repast.simphony.data2.engine.DataSetDescriptor
+converter-type[1]   : com.thoughtworks.xstream.converters.reflection.ReflectionConverter
+version             : 
+-------------------------------
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:79)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:65)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.unmarshallField(AbstractReflectionConverter.java:474)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.doUnmarshal(AbstractReflectionConverter.java:406)
+	at com.thoughtworks.xstream.converters.reflection.AbstractReflectionConverter.unmarshal(AbstractReflectionConverter.java:257)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	at com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller.convert(AbstractReferenceUnmarshaller.java:65)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:66)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convertAnother(TreeUnmarshaller.java:50)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.start(TreeUnmarshaller.java:134)
+	at com.thoughtworks.xstream.core.AbstractTreeMarshallingStrategy.unmarshal(AbstractTreeMarshallingStrategy.java:32)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1185)
+	at com.thoughtworks.xstream.XStream.unmarshal(XStream.java:1169)
+	at com.thoughtworks.xstream.XStream.fromXML(XStream.java:1040)
+	at repast.simphony.scenario.ObjectActionLoader.performLoad(ObjectActionLoader.java:33)
+	at repast.simphony.scenario.AbstractActionLoader.loadAction(AbstractActionLoader.java:35)
+	at repast.simphony.scenario.ScenarioFileLoader.createActions(ScenarioFileLoader.java:90)
+	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:66)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:199)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:721)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:715)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.lang.RuntimeException
+	at com.thoughtworks.xstream.io.xml.AbstractPullReader.moveDown(AbstractPullReader.java:105)
+	at com.thoughtworks.xstream.io.ReaderWrapper.moveDown(ReaderWrapper.java:36)
+	at com.thoughtworks.xstream.io.path.PathTrackingReader.moveDown(PathTrackingReader.java:37)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.putCurrentEntryIntoMap(MapConverter.java:105)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.populateMap(MapConverter.java:98)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.populateMap(MapConverter.java:92)
+	at com.thoughtworks.xstream.converters.collections.MapConverter.unmarshal(MapConverter.java:87)
+	at com.thoughtworks.xstream.core.TreeUnmarshaller.convert(TreeUnmarshaller.java:72)
+	... 40 more

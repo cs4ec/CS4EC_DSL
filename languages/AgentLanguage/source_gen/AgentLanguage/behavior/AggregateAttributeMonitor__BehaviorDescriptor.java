@@ -18,6 +18,7 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.core.aspects.behaviour.api.SConstructor;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException;
@@ -40,8 +41,8 @@ public final class AggregateAttributeMonitor__BehaviorDescriptor extends BaseBHD
     for (SNode monitorOneValues : ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.AttributeMonitors$x6OO)).getElement(0), LINKS.attributeMonitor$zPap), LINKS.possibleValues$XyGU))) {
       for (SNode monitorTwoValues : ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.AttributeMonitors$x6OO)).getElement(1), LINKS.attributeMonitor$zPap), LINKS.possibleValues$XyGU))) {
         SNode newTuple = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x70b897b58bc16ef7L, "AgentLanguage.structure.PossibleValuesTuple"));
-        ListSequence.fromList(SLinkOperations.getChildren(newTuple, LINKS.possibleValues$MgDX)).addElement(monitorOneValues);
-        ListSequence.fromList(SLinkOperations.getChildren(newTuple, LINKS.possibleValues$MgDX)).addElement(monitorTwoValues);
+        ListSequence.fromList(SLinkOperations.getChildren(newTuple, LINKS.possibleValues$MgDX)).addElement(SNodeOperations.copyNode(monitorOneValues));
+        ListSequence.fromList(SLinkOperations.getChildren(newTuple, LINKS.possibleValues$MgDX)).addElement(SNodeOperations.copyNode(monitorTwoValues));
         ListSequence.fromList(retList).addElement(newTuple);
 
       }

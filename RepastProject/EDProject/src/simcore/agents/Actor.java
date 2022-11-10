@@ -135,14 +135,24 @@ public class Actor extends Agent {
 		      if (concreteDestination == null) {
 		          if (destination instanceof RoomType) {
 		        	  concreteDestination = SelectLocation(((RoomType) destination));
-		          } else if(destination == Bed.class) {
+		          } 
+		          else if(destination instanceof Class && Occupiable.class.isAssignableFrom(((Class)destination))) {
 		        	  Occupiable target = SelectOccupiable(curInside, (Class) destination);
 		        	  if(target == null) {
 		        		  iterateOrder();
 		        	  } else {
 			        	  concreteDestination = target;
 		        	  }
-		          } else {
+		          } 
+//		          else if(destination == Bed.class) {
+//		        	  Occupiable target = SelectOccupiable(curInside, (Class) destination);
+//		        	  if(target == null) {
+//		        		  iterateOrder();
+//		        	  } else {
+//			        	  concreteDestination = target;
+//		        	  }
+//		          } 
+		          else {
 		        	  concreteDestination = destination;
 		          }
 		        }

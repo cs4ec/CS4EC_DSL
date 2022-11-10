@@ -403,6 +403,162 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getadmittedToisAmberBaygetLFTCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LFTCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLFTCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LFTCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLFTFluAResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LFTFluAResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLFTFluAResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LFTFluAResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLFTFluBResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LFTFluBResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLFTFluBResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LFTFluBResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLIATCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LIATCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLIATCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LIATCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLIATFluAResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LIATFluAResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLIATFluAResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LIATFluAResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLIATFluBResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LIATFluBResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLIATFluBResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LIATFluBResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLabPCRCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLabPCRCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLabPCRFluAResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRFluAResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLabPCRFluAResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRFluAResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLabPCRFluBResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRFluBResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetLabPCRFluBResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRFluBResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetCepheidCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.CepheidCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetCepheidCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.CepheidCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetCepheidFluAResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.CepheidFluAResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetCepheidFluAResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.CepheidFluAResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetCepheidFluBResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.CepheidFluBResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetCepheidFluBResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.CepheidFluBResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetPHEThreeAltCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.PHEThreeAltCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetPHEThreeAltCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.PHEThreeAltCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
 
 
 

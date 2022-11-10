@@ -3,6 +3,7 @@
   <dependency className="main.QueriesGenerated">
     <classNode dependClassName="AgentLanguage.behavior.Actor__BehaviorDescriptor" />
     <classNode dependClassName="AgentLanguage.behavior.AggregateAttributeMonitor__BehaviorDescriptor" />
+    <classNode dependClassName="AgentLanguage.behavior.AttributeMonitor__BehaviorDescriptor" />
     <classNode dependClassName="AgentLanguage.behavior.BehaviourElement__BehaviorDescriptor" />
     <classNode dependClassName="BuiltEnvironment.behavior.OccupiableDefinition__BehaviorDescriptor" />
     <classNode dependClassName="BuiltEnvironment.behavior.RoomType__BehaviorDescriptor" />

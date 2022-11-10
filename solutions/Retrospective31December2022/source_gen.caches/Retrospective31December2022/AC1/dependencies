@@ -670,7 +670,7 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="Retrospective31December2022.AC1.ReceiveTreatmentTrigger_bSignal">
-    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
+    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -678,7 +678,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="Retrospective31December2022.AC1.ReceiveTreatmentTrigger_b_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
+    <classNode dependClassName="EDLanguage.sandbox.AmberBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.basicStructures.Room" />
