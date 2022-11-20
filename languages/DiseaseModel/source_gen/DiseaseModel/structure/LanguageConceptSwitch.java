@@ -10,21 +10,27 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
   public static final int Asymptomatic = 0;
-  public static final int DiseaseStatus = 1;
-  public static final int Infected = 2;
-  public static final int InfectionStatus = 3;
-  public static final int Susceptible = 4;
-  public static final int Symptomatic = 5;
-  public static final int Unvaccinated = 6;
-  public static final int Vaccinated = 7;
-  public static final int VaccineStatus = 8;
+  public static final int Disease = 1;
+  public static final int DiseaseSymptom = 2;
+  public static final int DiseaseSymptomReference = 3;
+  public static final int Infected = 4;
+  public static final int InfectionStatus = 5;
+  public static final int SusceptibilityStatus = 6;
+  public static final int Susceptible = 7;
+  public static final int Symptomatic = 8;
+  public static final int Unvaccinated = 9;
+  public static final int Vaccinated = 10;
+  public static final int VaccineStatus = 11;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L);
     builder.put(0x5dc1936ab311194bL, Asymptomatic);
-    builder.put(0x5dc1936ab3111979L, DiseaseStatus);
+    builder.put(0x25745663758ab012L, Disease);
+    builder.put(0x6ca3e29db4791132L, DiseaseSymptom);
+    builder.put(0x6ca3e29db4791247L, DiseaseSymptomReference);
     builder.put(0x5dc1936ab3111910L, Infected);
     builder.put(0x5dc1936ab31118fbL, InfectionStatus);
+    builder.put(0x5dc1936ab3111979L, SusceptibilityStatus);
     builder.put(0x5dc1936ab3111925L, Susceptible);
     builder.put(0x5dc1936ab3111938L, Symptomatic);
     builder.put(0x5dc1936ab3112032L, Unvaccinated);

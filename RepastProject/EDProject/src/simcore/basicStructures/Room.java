@@ -121,29 +121,29 @@ public class Room extends Locatable{
 	}
 	
 	//---------------------------------------------------------- Occupiables -----------------------------------------------------------
-	public void setSeats(int pintNumSeats) {
-		for(int i = 0; i < pintNumSeats; i++) {
-			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
-			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
-			occupiables.add(new Seat(context, space, grid, rndXCoord, rndYCoord, this));
-		}
-	}
-	
-	public void setDesks(int pintNumDesks) {
-		for(int i = 0; i < pintNumDesks; i++) {
-			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
-			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
-			occupiables.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
-		}
-	}
-	
-	public void setBeds(int pintNumBeds) {
-		for(int i = 0; i < pintNumBeds; i++) {
-			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
-			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
-			occupiables.add(new Bed(context, space, grid, rndXCoord, rndYCoord, this));
-		}
-	}
+//	public void setSeats(int pintNumSeats) {
+//		for(int i = 0; i < pintNumSeats; i++) {
+//			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
+//			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
+//			occupiables.add(new Seat(context, space, grid, rndXCoord, rndYCoord, this));
+//		}
+//	}
+//	
+//	public void setDesks(int pintNumDesks) {
+//		for(int i = 0; i < pintNumDesks; i++) {
+//			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
+//			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
+//			occupiables.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
+//		}
+//	}
+//	
+//	public void setBeds(int pintNumBeds) {
+//		for(int i = 0; i < pintNumBeds; i++) {
+//			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
+//			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
+//			occupiables.add(new Bed(context, space, grid, rndXCoord, rndYCoord, this));
+//		}
+//	}
 	
 	public List<Occupiable> getAllOccupiables(){
 		return occupiables;

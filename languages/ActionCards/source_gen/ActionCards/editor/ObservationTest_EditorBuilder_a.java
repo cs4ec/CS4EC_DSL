@@ -169,7 +169,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return LINKS.SymptomReference$jVTD;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.DiseaseSymptomReference$jv;
+      return CONCEPTS.DiseaseSymptomReference$mw;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -294,7 +294,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SConcept DiseaseSymptomReference$jv = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791247L, "ActionCards.structure.DiseaseSymptomReference");
+    /*package*/ static final SConcept DiseaseSymptomReference$mw = MetaAdapterFactory.getConcept(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791247L, "DiseaseModel.structure.DiseaseSymptomReference");
   }
 
   private static final class LINKS {

@@ -143,131 +143,131 @@ public class CubicleNurse extends Actor {
         break;
       case "DecideandapplyPOCTTrigger_a":
         behaviourBuilder = new Behaviour("DecideandapplyPOCTTrigger_a");
-        this.InitDecideandapplyPOCT_a(s);
+        this.???(s);
         break;
       case "AdmitAmberTrigger_e":
         behaviourBuilder = new Behaviour("AdmitAmberTrigger_e");
-        this.InitAdmitActionAdmitAmber_e(s);
+        this.???(s);
         break;
       case "CheckClinicalSuspicionTrigger_f":
         behaviourBuilder = new Behaviour("CheckClinicalSuspicionTrigger_f");
-        this.InitCheckClinicalSuspicion_f(s);
+        this.???(s);
         break;
       case "LateralFlowTestTrigger_g":
         behaviourBuilder = new Behaviour("LateralFlowTestTrigger_g");
-        this.InitLateralFlowTest_g(s);
+        this.???(s);
         break;
       case "CheckClinicalSuspicionTrigger_h":
         behaviourBuilder = new Behaviour("CheckClinicalSuspicionTrigger_h");
-        this.InitCheckClinicalSuspicion_h(s);
+        this.???(s);
         break;
       case "CheckCOVIDContactTrigger_i":
         behaviourBuilder = new Behaviour("CheckCOVIDContactTrigger_i");
-        this.InitCheckCOVIDContact_i(s);
+        this.???(s);
         break;
       case "AdmitSideRoomTrigger_j":
         behaviourBuilder = new Behaviour("AdmitSideRoomTrigger_j");
-        this.InitAdmitActionAdmitSideRoom_j(s);
+        this.???(s);
         break;
       case "PCRTrigger_k":
         behaviourBuilder = new Behaviour("PCRTrigger_k");
-        this.InitPCR_k(s);
+        this.???(s);
         break;
       case "PCRTrigger_l":
         behaviourBuilder = new Behaviour("PCRTrigger_l");
-        this.InitPCR_l(s);
+        this.???(s);
         break;
       case "DischargeTrigger_m":
         behaviourBuilder = new Behaviour("DischargeTrigger_m");
-        this.InitDischargeActionDischarge_m(s);
+        this.???(s);
         break;
       case "DischargeTrigger_n":
         behaviourBuilder = new Behaviour("DischargeTrigger_n");
-        this.InitDischargeActionDischarge_n(s);
+        this.???(s);
         break;
       case "DischargeTrigger_o":
         behaviourBuilder = new Behaviour("DischargeTrigger_o");
-        this.InitDischargeActionDischarge_o(s);
+        this.???(s);
         break;
       case "TakesampleTrigger_a":
         behaviourBuilder = new Behaviour("TakesampleTrigger_a");
-        this.InitTakesample_a(s);
+        this.???(s);
         break;
       case "ProcessTestatBoothTrigger_b":
         behaviourBuilder = new Behaviour("ProcessTestatBoothTrigger_b");
-        this.InitProcessTestatBooth_b(s);
+        this.???(s);
         break;
       case "CollectSampleTrigger_c":
         behaviourBuilder = new Behaviour("CollectSampleTrigger_c");
-        this.InitCollectSample_c(s);
+        this.???(s);
         break;
       case "Wait15Trigger_a":
         behaviourBuilder = new Behaviour("Wait15Trigger_a");
-        this.InitWait15_a(s);
+        this.???(s);
         break;
       case "DoneTrigger_b":
         behaviourBuilder = new Behaviour("DoneTrigger_b");
-        this.InitDone_b(s);
+        this.???(s);
         break;
       case "TakesampleTrigger_c":
         behaviourBuilder = new Behaviour("TakesampleTrigger_c");
-        this.InitTakesample_c(s);
+        this.???(s);
         break;
       case "GetTestResultTrigger_a":
         behaviourBuilder = new Behaviour("GetTestResultTrigger_a");
-        this.InitGetTestResult_d(s);
+        this.???(s);
         break;
       case "GetTestResultTrigger_e":
         behaviourBuilder = new Behaviour("GetTestResultTrigger_e");
-        this.InitGetTestResult_e(s);
+        this.???(s);
         break;
       case "DecideandapplyPOCTTrigger_a_0":
         behaviourBuilder = new Behaviour("DecideandapplyPOCTTrigger_a_0");
-        this.InitDecideandapplyPOCT_a_0(s);
+        this.???(s);
         break;
       case "AdmitAmberTrigger_e_0":
         behaviourBuilder = new Behaviour("AdmitAmberTrigger_e_0");
-        this.InitAdmitActionAdmitAmber_e_0(s);
+        this.???(s);
         break;
       case "CheckClinicalSuspicionTrigger_f_0":
         behaviourBuilder = new Behaviour("CheckClinicalSuspicionTrigger_f_0");
-        this.InitCheckClinicalSuspicion_f_0(s);
+        this.???(s);
         break;
       case "LateralFlowTestTrigger_g_0":
         behaviourBuilder = new Behaviour("LateralFlowTestTrigger_g_0");
-        this.InitLateralFlowTest_g_0(s);
+        this.???(s);
         break;
       case "CheckClinicalSuspicionTrigger_h_0":
         behaviourBuilder = new Behaviour("CheckClinicalSuspicionTrigger_h_0");
-        this.InitCheckClinicalSuspicion_h_0(s);
+        this.???(s);
         break;
       case "CheckCOVIDContactTrigger_i_0":
         behaviourBuilder = new Behaviour("CheckCOVIDContactTrigger_i_0");
-        this.InitCheckCOVIDContact_i_0(s);
+        this.???(s);
         break;
       case "AdmitSideRoomTrigger_j_0":
         behaviourBuilder = new Behaviour("AdmitSideRoomTrigger_j_0");
-        this.InitAdmitActionAdmitSideRoom_j_0(s);
+        this.???(s);
         break;
       case "PCRTrigger_k_0":
         behaviourBuilder = new Behaviour("PCRTrigger_k_0");
-        this.InitPCR_k_0(s);
+        this.???(s);
         break;
       case "PCRTrigger_l_0":
         behaviourBuilder = new Behaviour("PCRTrigger_l_0");
-        this.InitPCR_l_0(s);
+        this.???(s);
         break;
       case "DischargeTrigger_m_0":
         behaviourBuilder = new Behaviour("DischargeTrigger_m_0");
-        this.InitDischargeActionDischarge_m_0(s);
+        this.???(s);
         break;
       case "DischargeTrigger_n_0":
         behaviourBuilder = new Behaviour("DischargeTrigger_n_0");
-        this.InitDischargeActionDischarge_n_0(s);
+        this.???(s);
         break;
       case "DischargeTrigger_o_0":
         behaviourBuilder = new Behaviour("DischargeTrigger_o_0");
-        this.InitDischargeActionDischarge_o_0(s);
+        this.???(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -14358,458 +14358,5 @@ public class CubicleNurse extends Actor {
   }
 
 
-  public void InitDecideandapplyPOCT_a(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_9(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0a_3(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0a_1(behaviourBuilder));
-    plstSteps.add(new ProbabilityDistribution_d0a(behaviourBuilder));
-    plstSteps.add(new Choice_e0a_1(behaviourBuilder));
-    plstSteps.add(new Choice_f0a(behaviourBuilder));
-    plstSteps.add(new Choice_g0a_7(behaviourBuilder));
-    plstSteps.add(new StayAction_h0a(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitAmber_e(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_7(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0b_3(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0b_3(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0b_1(behaviourBuilder));
-    plstSteps.add(new Consequence_e0b_1(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0b_1(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0b(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitCheckClinicalSuspicion_f(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0c_7(behaviourBuilder));
-    plstSteps.add(new Choice_b0c(behaviourBuilder));
-    plstSteps.add(new Choice_c0c(behaviourBuilder));
-    plstSteps.add(new Choice_d0c_1(behaviourBuilder));
-    plstSteps.add(new StayAction_e0c(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitLateralFlowTest_g(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0d_7(behaviourBuilder));
-    plstSteps.add(new StayAction_b0d(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0d(behaviourBuilder));
-    plstSteps.add(new StayAction_d0d_5(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitCheckClinicalSuspicion_h(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0e_7(behaviourBuilder));
-    plstSteps.add(new UseAction_b0e(behaviourBuilder));
-    plstSteps.add(new StayAction_c0e_1(behaviourBuilder));
-    plstSteps.add(new Choice_d0e(behaviourBuilder));
-    plstSteps.add(new Choice_e0e_1(behaviourBuilder));
-    plstSteps.add(new Choice_f0e(behaviourBuilder));
-    plstSteps.add(new StayAction_g0e(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitCheckCOVIDContact_i(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0f_7(behaviourBuilder));
-    plstSteps.add(new Choice_b0f(behaviourBuilder));
-    plstSteps.add(new Choice_c0f(behaviourBuilder));
-    plstSteps.add(new Choice_d0f_1(behaviourBuilder));
-    plstSteps.add(new StayAction_e0f(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitSideRoom_j(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0g(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0g(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0g(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0g(behaviourBuilder));
-    plstSteps.add(new Consequence_e0g(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0g(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitPCR_k(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0h(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0h(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0h(behaviourBuilder));
-    plstSteps.add(new UseAction_d0h(behaviourBuilder));
-    plstSteps.add(new StayAction_e0h(behaviourBuilder));
-    plstSteps.add(new Choice_f0h(behaviourBuilder));
-    plstSteps.add(new Choice_g0h(behaviourBuilder));
-    plstSteps.add(new Choice_h0h(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_i0h(behaviourBuilder));
-    plstSteps.add(new StayAction_j0h(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitPCR_l(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0i(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0i(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0i(behaviourBuilder));
-    plstSteps.add(new UseAction_d0i(behaviourBuilder));
-    plstSteps.add(new StayAction_e0i(behaviourBuilder));
-    plstSteps.add(new Choice_f0i(behaviourBuilder));
-    plstSteps.add(new Choice_g0i(behaviourBuilder));
-    plstSteps.add(new Choice_h0i(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_i0i(behaviourBuilder));
-    plstSteps.add(new StayAction_j0i(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDischargeActionDischarge_m(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0j(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0j(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0j(behaviourBuilder));
-    plstSteps.add(new Consequence_d0j(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0j(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDischargeActionDischarge_n(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0k(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0k(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0k(behaviourBuilder));
-    plstSteps.add(new Consequence_d0k(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0k(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDischargeActionDischarge_o(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0l(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0l(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0l(behaviourBuilder));
-    plstSteps.add(new Consequence_d0l(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0l(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitTakesample_a(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new StayForConditionAction_a0m(behaviourBuilder));
-    plstSteps.add(new StayAction_b0m(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0m(behaviourBuilder));
-    plstSteps.add(new StayAction_d0m(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitProcessTestatBooth_b(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0n(behaviourBuilder));
-    plstSteps.add(new StayAction_b0n(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0n(behaviourBuilder));
-    plstSteps.add(new StayAction_d0n(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitCollectSample_c(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0o(behaviourBuilder));
-    plstSteps.add(new StayAction_b0o(behaviourBuilder));
-    plstSteps.add(new StayAction_c0o(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitWait15_a(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0p(behaviourBuilder));
-    plstSteps.add(new StayAction_b0p(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0p(behaviourBuilder));
-    plstSteps.add(new StayAction_d0p(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDone_b(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0q(behaviourBuilder));
-    plstSteps.add(new StayAction_b0q(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0q(behaviourBuilder));
-    plstSteps.add(new StayAction_d0q(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitTakesample_c(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0r(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0r(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0r(behaviourBuilder));
-    plstSteps.add(new StayAction_d0r(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_e0r(behaviourBuilder));
-    plstSteps.add(new StayAction_f0r(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitGetTestResult_d(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0s(behaviourBuilder));
-    plstSteps.add(new UseAction_b0s(behaviourBuilder));
-    plstSteps.add(new StayAction_c0s(behaviourBuilder));
-    plstSteps.add(new Choice_d0s(behaviourBuilder));
-    plstSteps.add(new Choice_e0s(behaviourBuilder));
-    plstSteps.add(new Choice_f0s(behaviourBuilder));
-    plstSteps.add(new Choice_g0s(behaviourBuilder));
-    plstSteps.add(new Choice_h0s(behaviourBuilder));
-    plstSteps.add(new StayAction_i0s(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitGetTestResult_e(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0t(behaviourBuilder));
-    plstSteps.add(new UseAction_b0t(behaviourBuilder));
-    plstSteps.add(new StayAction_c0t(behaviourBuilder));
-    plstSteps.add(new Choice_d0t(behaviourBuilder));
-    plstSteps.add(new Choice_e0t(behaviourBuilder));
-    plstSteps.add(new Choice_f0t(behaviourBuilder));
-    plstSteps.add(new Choice_g0t(behaviourBuilder));
-    plstSteps.add(new Choice_h0t(behaviourBuilder));
-    plstSteps.add(new StayAction_i0t(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDecideandapplyPOCT_a_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0u(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0u(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0u(behaviourBuilder));
-    plstSteps.add(new ProbabilityDistribution_d0u(behaviourBuilder));
-    plstSteps.add(new Choice_e0u(behaviourBuilder));
-    plstSteps.add(new Choice_f0u(behaviourBuilder));
-    plstSteps.add(new Choice_g0u(behaviourBuilder));
-    plstSteps.add(new StayAction_h0u(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitAmber_e_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0v(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0v(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0v(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0v(behaviourBuilder));
-    plstSteps.add(new Consequence_e0v(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0v(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0v(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitCheckClinicalSuspicion_f_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0w(behaviourBuilder));
-    plstSteps.add(new Choice_b0w(behaviourBuilder));
-    plstSteps.add(new Choice_c0w(behaviourBuilder));
-    plstSteps.add(new Choice_d0w(behaviourBuilder));
-    plstSteps.add(new StayAction_e0w(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitLateralFlowTest_g_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0x(behaviourBuilder));
-    plstSteps.add(new StayAction_b0x(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_c0x(behaviourBuilder));
-    plstSteps.add(new StayAction_d0x(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitCheckClinicalSuspicion_h_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0y(behaviourBuilder));
-    plstSteps.add(new UseAction_b0y(behaviourBuilder));
-    plstSteps.add(new StayAction_c0y(behaviourBuilder));
-    plstSteps.add(new Choice_d0y(behaviourBuilder));
-    plstSteps.add(new Choice_e0y(behaviourBuilder));
-    plstSteps.add(new Choice_f0y(behaviourBuilder));
-    plstSteps.add(new StayAction_g0y(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitCheckCOVIDContact_i_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0z(behaviourBuilder));
-    plstSteps.add(new Choice_b0z(behaviourBuilder));
-    plstSteps.add(new Choice_c0z(behaviourBuilder));
-    plstSteps.add(new Choice_d0z(behaviourBuilder));
-    plstSteps.add(new StayAction_e0z(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitSideRoom_j_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0ab(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0ab(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0ab(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0ab(behaviourBuilder));
-    plstSteps.add(new Consequence_e0ab(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0ab(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitPCR_k_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0bb(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0bb(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0bb(behaviourBuilder));
-    plstSteps.add(new UseAction_d0bb(behaviourBuilder));
-    plstSteps.add(new StayAction_e0bb(behaviourBuilder));
-    plstSteps.add(new Choice_f0bb(behaviourBuilder));
-    plstSteps.add(new Choice_g0bb(behaviourBuilder));
-    plstSteps.add(new Choice_h0bb(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_i0bb(behaviourBuilder));
-    plstSteps.add(new StayAction_j0bb(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitPCR_l_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0cb(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0cb(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0cb(behaviourBuilder));
-    plstSteps.add(new UseAction_d0cb(behaviourBuilder));
-    plstSteps.add(new StayAction_e0cb(behaviourBuilder));
-    plstSteps.add(new Choice_f0cb(behaviourBuilder));
-    plstSteps.add(new Choice_g0cb(behaviourBuilder));
-    plstSteps.add(new Choice_h0cb(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_i0cb(behaviourBuilder));
-    plstSteps.add(new StayAction_j0cb(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDischargeActionDischarge_m_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0db(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0db(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0db(behaviourBuilder));
-    plstSteps.add(new Consequence_d0db(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0db(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDischargeActionDischarge_n_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0eb(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0eb(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0eb(behaviourBuilder));
-    plstSteps.add(new Consequence_d0eb(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0eb(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDischargeActionDischarge_o_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0fb(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0fb(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0fb(behaviourBuilder));
-    plstSteps.add(new Consequence_d0fb(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0fb(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
 
 }

@@ -96,7 +96,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room Paedeatrics_a = new Room("Paedeatrics", context, space, grid, 5, 145, 50, 50, 1, 10000, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room Lab_b = new Room("Lab", context, space, grid, 5, 5, 30, 30, 1, 1000, Labaratory.getInstance(), Color.YELLOW, EmergencyDepartment_0);
     Room MainReception_c = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room Triage_d = new Room("Triage", context, space, grid, 105, 160, 10, 10, 1, 1000, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
+    Room Triage_d_0 = new Room("Triage", context, space, grid, 105, 160, 10, 10, 1, 1000, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
     Room MajorsTriage_e = new Room("MajorsTriage", context, space, grid, 110, 100, 10, 10, 1, 1000, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
     Room LIATBoothOne_f = new Room("LIATBoothOne", context, space, grid, 111, 92, 5, 5, 1, 1000, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsWaitingRoom_g = new Room("MajorsWaitingRoom", context, space, grid, 140, 90, 20, 40, 1, 1000, NonRespiratoryArea.getInstance(), Color.GRAY, EmergencyDepartment_0);

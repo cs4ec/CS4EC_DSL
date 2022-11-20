@@ -19494,7 +19494,7 @@
                         <node concept="liA8E" id="1DZ" role="2OqNvi">
                           <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.aggregate(java.lang.String,long)" resolve="aggregate" />
                           <node concept="Xl_RD" id="1E0" role="37wK5m">
-                            <property role="Xl_RC" value="behaviours" />
+                            <property role="Xl_RC" value="behaviourMethod" />
                           </node>
                           <node concept="1adDum" id="1E1" role="37wK5m">
                             <property role="1adDun" value="0x270efea19372e41eL" />
@@ -23332,7 +23332,7 @@
                         <node concept="liA8E" id="20I" role="2OqNvi">
                           <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.aggregate(java.lang.String,long)" resolve="aggregate" />
                           <node concept="Xl_RD" id="20J" role="37wK5m">
-                            <property role="Xl_RC" value="behaviour" />
+                            <property role="Xl_RC" value="behaviourSequence" />
                           </node>
                           <node concept="1adDum" id="20K" role="37wK5m">
                             <property role="1adDun" value="0x35463334ce308543L" />

@@ -644,7 +644,7 @@
           <node concept="3EZMnI" id="3KCb14J87Dr" role="3EZMnx">
             <node concept="VPM3Z" id="3KCb14J87Dt" role="3F10Kt" />
             <node concept="3F1sOY" id="3KCb14J87DA" role="3EZMnx">
-              <ref role="1NtTu8" to="3751:3l6cNjec8l3" resolve="behaviour" />
+              <ref role="1NtTu8" to="3751:3l6cNjec8l3" resolve="behaviourSequence" />
             </node>
             <node concept="2iRkQZ" id="3KCb14J87Dw" role="2iSdaV" />
           </node>
@@ -789,7 +789,7 @@
         </node>
         <node concept="3F0ifn" id="7o6PzEpEZBf" role="3EZMnx" />
         <node concept="3F2HdR" id="7o6PzEpEZBU" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:2seZE6jsIgu" resolve="behaviours" />
+          <ref role="1NtTu8" to="3751:2seZE6jsIgu" resolve="behaviourMethod" />
           <node concept="2iRkQZ" id="7o6PzEpEZBX" role="2czzBx" />
           <node concept="VPM3Z" id="7o6PzEpEZBY" role="3F10Kt" />
         </node>
@@ -1363,6 +1363,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="6dYFu3AhE_C">
+    <property role="3GE5qa" value="AgentGeneration" />
     <ref role="1XX52x" to="3751:6dYFu3AbeaS" resolve="AgentGenerator" />
     <node concept="3EZMnI" id="2_JteYOEVVA" role="2wV5jI">
       <node concept="2iRkQZ" id="2_JteYOEVVB" role="2iSdaV" />
@@ -1488,6 +1489,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="2vFOz$FUEcN">
+    <property role="3GE5qa" value="AgentGeneration" />
     <ref role="1XX52x" to="3751:2vFOz$FUEc$" resolve="AgentGeneratorLine" />
     <node concept="2r0Tta" id="2vFOz$FUEdR" role="2wV5jI">
       <node concept="2reCLk" id="2vFOz$FUEel" role="2r0Tv6">
@@ -1645,6 +1647,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="1SF32mdTHF">
+    <property role="3GE5qa" value="actors" />
     <ref role="1XX52x" to="3751:1SF32mdTHt" resolve="Relationship" />
     <node concept="3EZMnI" id="1SF32mdTHQ" role="2wV5jI">
       <node concept="3F0A7n" id="1SF32mdTHX" role="3EZMnx">

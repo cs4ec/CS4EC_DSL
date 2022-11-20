@@ -30,9 +30,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CompositeTestResultCondition;
   private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_DischargeAction;
-  private ConceptPresentation props_Disease;
-  private ConceptPresentation props_DiseaseSymptom;
-  private ConceptPresentation props_DiseaseSymptomReference;
   private ConceptPresentation props_DiseaseTest;
   private ConceptPresentation props_EDScenario;
   private ConceptPresentation props_ElectiveAttendanceRoute;
@@ -243,27 +240,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DischargeAction = cpb.create();
         }
         return props_DischargeAction;
-      case LanguageConceptSwitch.Disease:
-        if (props_Disease == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_Disease = cpb.create();
-        }
-        return props_Disease;
-      case LanguageConceptSwitch.DiseaseSymptom:
-        if (props_DiseaseSymptom == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByName();
-          props_DiseaseSymptom = cpb.create();
-        }
-        return props_DiseaseSymptom;
-      case LanguageConceptSwitch.DiseaseSymptomReference:
-        if (props_DiseaseSymptomReference == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4791247L, 0x6ca3e29db4791251L, "symptom", "", "");
-          props_DiseaseSymptomReference = cpb.create();
-        }
-        return props_DiseaseSymptomReference;
       case LanguageConceptSwitch.DiseaseTest:
         if (props_DiseaseTest == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

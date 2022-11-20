@@ -38,8 +38,14 @@
         <child id="6702802731807737306" name="canBeChild" index="9Vyp8" />
       </concept>
     </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+    </language>
   </registry>
   <node concept="1M2fIO" id="5R1$QENaO7x">
+    <property role="3GE5qa" value="VaccinationStatus" />
     <ref role="1M2myG" to="482l:5R1$QEN4hZk" resolve="VaccineStatus" />
     <node concept="9S07l" id="5R1$QENaO7y" role="9Vyp8">
       <node concept="3clFbS" id="5R1$QENaO7z" role="2VODD2">
@@ -50,6 +56,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="5R1$QENaOg4">
+    <property role="3GE5qa" value="InfectionStatus" />
     <ref role="1M2myG" to="482l:5R1$QEN4hzV" resolve="InfectionStatus" />
     <node concept="9S07l" id="5R1$QENaOg5" role="9Vyp8">
       <node concept="3clFbS" id="5R1$QENaOg6" role="2VODD2">
@@ -60,6 +67,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="5R1$QENaOo3">
+    <property role="3GE5qa" value="InfectionStatus" />
     <ref role="1M2myG" to="482l:5R1$QEN4h_b" resolve="Asymptomatic" />
     <node concept="9S07l" id="5R1$QENaOo4" role="9Vyp8">
       <node concept="3clFbS" id="5R1$QENaOo5" role="2VODD2">
@@ -72,6 +80,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="5R1$QENaOwk">
+    <property role="3GE5qa" value="InfectionStatus" />
     <ref role="1M2myG" to="482l:5R1$QEN4h$g" resolve="Infected" />
     <node concept="9S07l" id="5R1$QENaOwl" role="9Vyp8">
       <node concept="3clFbS" id="5R1$QENaOwm" role="2VODD2">
@@ -84,6 +93,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="5R1$QENaOCj">
+    <property role="3GE5qa" value="InfectionStatus" />
     <ref role="1M2myG" to="482l:5R1$QEN4h$_" resolve="Susceptible" />
     <node concept="9S07l" id="5R1$QENaOCk" role="9Vyp8">
       <node concept="3clFbS" id="5R1$QENaOCl" role="2VODD2">
@@ -96,6 +106,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="5R1$QENaOH1">
+    <property role="3GE5qa" value="InfectionStatus" />
     <ref role="1M2myG" to="482l:5R1$QEN4h$S" resolve="Symptomatic" />
     <node concept="9S07l" id="5R1$QENaOH2" role="9Vyp8">
       <node concept="3clFbS" id="5R1$QENaOH3" role="2VODD2">
@@ -108,6 +119,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="5R1$QENaOPi">
+    <property role="3GE5qa" value="VaccinationStatus" />
     <ref role="1M2myG" to="482l:5R1$QEN4i0M" resolve="Unvaccinated" />
     <node concept="9S07l" id="5R1$QENaOPj" role="9Vyp8">
       <node concept="3clFbS" id="5R1$QENaOPk" role="2VODD2">
@@ -120,6 +132,7 @@
     </node>
   </node>
   <node concept="1M2fIO" id="5R1$QENaOTI">
+    <property role="3GE5qa" value="VaccinationStatus" />
     <ref role="1M2myG" to="482l:5R1$QEN4i0v" resolve="Vaccinated" />
     <node concept="9S07l" id="5R1$QENaOTJ" role="9Vyp8">
       <node concept="3clFbS" id="5R1$QENaOTK" role="2VODD2">

@@ -47,7 +47,7 @@
   <dependency className="ActionCards.behavior.BehaviorAspectDescriptor">
     <classNode dependClassName="ActionCards.behavior.ActionCardElement__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.Action__BehaviorDescriptor" />
-    <classNode dependClassName="ActionCards.behavior.DiseaseSymptom__BehaviorDescriptor" />
+    <classNode dependClassName="ActionCards.behavior.DischargeAction__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.IPatientProperty__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.ImmunocompromisedCondition__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.ImmunosuppressedProperty__BehaviorDescriptor" />
@@ -69,16 +69,11 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBehaviorAspectDescriptor" />
   </dependency>
-  <dependency className="ActionCards.behavior.DiseaseSymptom__BehaviorDescriptor">
+  <dependency className="ActionCards.behavior.DischargeAction__BehaviorDescriptor">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="java.util.List" />
-    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.AccessPrivileges" />
-    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl" />
-    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SMethodBuilder" />
-    <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.SModifiersImpl" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.BHMethodNotFoundException" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SConstructor" />
     <classNode dependClassName="jetbrains.mps.core.aspects.behaviour.api.SMethod" />

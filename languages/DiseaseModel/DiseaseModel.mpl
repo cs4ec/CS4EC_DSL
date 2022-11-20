@@ -103,6 +103,7 @@
   </dependencyVersions>
   <extendedLanguages>
     <extendedLanguage>cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</extendedLanguage>
+    <extendedLanguage>b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)</extendedLanguage>
   </extendedLanguages>
 </language>
 

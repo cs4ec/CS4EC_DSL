@@ -157,6 +157,7 @@
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
         <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -282,6 +283,7 @@
     </node>
   </node>
   <node concept="312cEu" id="H">
+    <property role="3GE5qa" value="InfectionStatus" />
     <property role="TrG5h" value="typeof_InfectionStatus_InferenceRule" />
     <uo k="s:originTrace" v="n:1758249876488589145" />
     <node concept="3clFbW" id="I" role="jymVt">

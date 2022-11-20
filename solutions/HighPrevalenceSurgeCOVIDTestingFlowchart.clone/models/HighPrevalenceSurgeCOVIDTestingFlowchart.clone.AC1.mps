@@ -93,9 +93,6 @@
         <child id="768972137579221632" name="arrivalRate" index="2OfIal" />
         <child id="1758249876507806175" name="attendanceRoute" index="1FYssH" />
       </concept>
-      <concept id="2698877061875544082" name="ActionCards.structure.Disease" flags="ng" index="1gZIpL">
-        <child id="7828349744265630300" name="symptomReferences" index="3oQJ31" />
-      </concept>
       <concept id="2698877061888154208" name="ActionCards.structure.AttributeTable" flags="ng" index="1jfOK3">
         <child id="2698877061888154322" name="attributeLines" index="1jfOML" />
         <child id="1758249876434524682" name="patientProperty" index="1R9TjS" />
@@ -108,16 +105,12 @@
         <child id="3787511550157762889" name="TestingProcess" index="_m43T" />
         <child id="7828349744265634184" name="ProcessingTimeTable" index="3oQGcl" />
       </concept>
-      <concept id="7828349744265630279" name="ActionCards.structure.DiseaseSymptomReference" flags="ng" index="3oQJ3q">
-        <reference id="7828349744265630289" name="symptom" index="3oQJ3c" />
-      </concept>
       <concept id="7828349744265630119" name="ActionCards.structure.ObservationTest" flags="ng" index="3oQJcU">
         <child id="7828349744265630405" name="SymptomReference" index="3oQJ1o" />
       </concept>
       <concept id="7828349744265630201" name="ActionCards.structure.SymptomList" flags="ng" index="3oQJd$">
         <child id="7828349744265630211" name="symptoms" index="3oQJ2u" />
       </concept>
-      <concept id="7828349744265630002" name="ActionCards.structure.DiseaseSymptom" flags="ng" index="3oQJeJ" />
       <concept id="188877551433029388" name="ActionCards.structure.DiagnosticCondition" flags="ng" index="3tEh0H">
         <property id="2698877061875545204" name="outcome" index="1gZI8n" />
         <reference id="4555810343887637004" name="disease" index="24g7ti" />
@@ -185,6 +178,13 @@
       </concept>
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
+      <concept id="2698877061875544082" name="DiseaseModel.structure.Disease" flags="ng" index="1gZIpL">
+        <child id="7828349744265630300" name="symptomReferences" index="3oQJ31" />
+      </concept>
+      <concept id="7828349744265630279" name="DiseaseModel.structure.DiseaseSymptomReference" flags="ng" index="3oQJ3q">
+        <reference id="7828349744265630289" name="symptom" index="3oQJ3c" />
+      </concept>
+      <concept id="7828349744265630002" name="DiseaseModel.structure.DiseaseSymptom" flags="ng" index="3oQJeJ" />
       <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
       <concept id="6755843002512513317" name="DiseaseModel.structure.Susceptible" flags="ng" index="3IO8Df" />
       <concept id="6755843002512513336" name="DiseaseModel.structure.Symptomatic" flags="ng" index="3IO8Di" />
@@ -2533,7 +2533,7 @@
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="PHEThree" />
     <node concept="3oQJ3q" id="6MzSDQOx5uX" role="3oQJ1o">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
     </node>
     <node concept="ldbdM" id="6MzSDQOx5v0" role="3oQGcl">
       <node concept="ldb2t" id="6MzSDQOx5v2" role="ldb3A">
@@ -2544,45 +2544,6 @@
         <property role="ldb2L" value="6" />
         <property role="ldb2Z" value="1" />
       </node>
-    </node>
-  </node>
-  <node concept="1gZIpL" id="5R1$QEMKFjT">
-    <property role="TrG5h" value="COVID" />
-    <property role="3GE5qa" value="Diseases" />
-    <node concept="3oQJ3q" id="5R1$QEMKFk4" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
-    </node>
-    <node concept="3oQJ3q" id="5R1$QEO4Vgs" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
-    </node>
-    <node concept="3oQJ3q" id="5R1$QEO4Vhj" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLL" resolve="Sore throat" />
-    </node>
-    <node concept="3oQJ3q" id="5R1$QEO4Vg$" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QEO4Qbe" resolve="Loss of taste" />
-    </node>
-    <node concept="3oQJ3q" id="5R1$QEO4VgI" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QEO4Qbj" resolve="Loss of smell" />
-    </node>
-  </node>
-  <node concept="1gZIpL" id="5R1$QEMKFkE">
-    <property role="TrG5h" value="FluA" />
-    <property role="3GE5qa" value="Diseases" />
-    <node concept="3oQJ3q" id="5R1$QEMKFkP" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
-    </node>
-    <node concept="3oQJ3q" id="5R1$QEO4Vh0" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
-    </node>
-  </node>
-  <node concept="1gZIpL" id="5R1$QEMMkRG">
-    <property role="TrG5h" value="FluB" />
-    <property role="3GE5qa" value="Diseases" />
-    <node concept="3oQJ3q" id="5R1$QEMMkRR" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
-    </node>
-    <node concept="3oQJ3q" id="7$JgZMbkPtm" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
     </node>
   </node>
   <node concept="2OfScj" id="1xAzJ9Ksr_q">
@@ -4774,6 +4735,45 @@
       <node concept="UeIYj" id="3VLqyG6_JEL" role="3lENdC">
         <ref role="Udx8D" node="5R1$QENtegU" resolve="LIATBooth" />
       </node>
+    </node>
+  </node>
+  <node concept="1gZIpL" id="5R1$QEMKFjT">
+    <property role="TrG5h" value="COVID" />
+    <property role="3GE5qa" value="Diseases" />
+    <node concept="3oQJ3q" id="5R1$QEMKFk4" role="3oQJ31">
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4Vgs" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QENZiLO" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4Vhj" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QENZiLL" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4Vg$" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QEO4Qbe" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4VgI" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QEO4Qbj" />
+    </node>
+  </node>
+  <node concept="1gZIpL" id="5R1$QEMKFkE">
+    <property role="TrG5h" value="FluA" />
+    <property role="3GE5qa" value="Diseases" />
+    <node concept="3oQJ3q" id="5R1$QEMKFkP" role="3oQJ31">
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+    </node>
+    <node concept="3oQJ3q" id="5R1$QEO4Vh0" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QENZiLO" />
+    </node>
+  </node>
+  <node concept="1gZIpL" id="5R1$QEMMkRG">
+    <property role="TrG5h" value="FluB" />
+    <property role="3GE5qa" value="Diseases" />
+    <node concept="3oQJ3q" id="5R1$QEMMkRR" role="3oQJ31">
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+    </node>
+    <node concept="3oQJ3q" id="7$JgZMbkPtm" role="3oQJ31">
+      <ref role="3oQJ3c" node="5R1$QENZiLO" />
     </node>
   </node>
 </model>

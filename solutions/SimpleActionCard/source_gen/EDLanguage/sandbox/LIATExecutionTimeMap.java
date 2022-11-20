@@ -13,8 +13,8 @@ public class LIATExecutionTimeMap {
   private LIATExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
-    returnMap.put(30, ((Double) (1 / TotalOccurances)));
-    returnMap.put(35, ((Double) (1 / TotalOccurances)));
+    returnMap.put(1800, ((Double) (1 / TotalOccurances)));
+    returnMap.put(2100, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

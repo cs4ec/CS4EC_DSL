@@ -44,7 +44,6 @@ public final class AggregateAttributeMonitor__BehaviorDescriptor extends BaseBHD
         ListSequence.fromList(SLinkOperations.getChildren(newTuple, LINKS.possibleValues$MgDX)).addElement(SNodeOperations.copyNode(monitorOneValues));
         ListSequence.fromList(SLinkOperations.getChildren(newTuple, LINKS.possibleValues$MgDX)).addElement(SNodeOperations.copyNode(monitorTwoValues));
         ListSequence.fromList(retList).addElement(newTuple);
-
       }
     }
 

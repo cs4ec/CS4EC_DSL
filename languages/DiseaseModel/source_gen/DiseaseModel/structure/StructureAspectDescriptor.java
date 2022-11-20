@@ -13,9 +13,12 @@ import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAsymptomatic = createDescriptorForAsymptomatic();
-  /*package*/ final ConceptDescriptor myConceptDiseaseStatus = createDescriptorForDiseaseStatus();
+  /*package*/ final ConceptDescriptor myConceptDisease = createDescriptorForDisease();
+  /*package*/ final ConceptDescriptor myConceptDiseaseSymptom = createDescriptorForDiseaseSymptom();
+  /*package*/ final ConceptDescriptor myConceptDiseaseSymptomReference = createDescriptorForDiseaseSymptomReference();
   /*package*/ final ConceptDescriptor myConceptInfected = createDescriptorForInfected();
   /*package*/ final ConceptDescriptor myConceptInfectionStatus = createDescriptorForInfectionStatus();
+  /*package*/ final ConceptDescriptor myConceptSusceptibilityStatus = createDescriptorForSusceptibilityStatus();
   /*package*/ final ConceptDescriptor myConceptSusceptible = createDescriptorForSusceptible();
   /*package*/ final ConceptDescriptor myConceptSymptomatic = createDescriptorForSymptomatic();
   /*package*/ final ConceptDescriptor myConceptUnvaccinated = createDescriptorForUnvaccinated();
@@ -36,7 +39,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAsymptomatic, myConceptDiseaseStatus, myConceptInfected, myConceptInfectionStatus, myConceptSusceptible, myConceptSymptomatic, myConceptUnvaccinated, myConceptVaccinated, myConceptVaccineStatus);
+    return Arrays.asList(myConceptAsymptomatic, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptInfected, myConceptInfectionStatus, myConceptSusceptibilityStatus, myConceptSusceptible, myConceptSymptomatic, myConceptUnvaccinated, myConceptVaccinated, myConceptVaccineStatus);
   }
 
   @Override
@@ -45,12 +48,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     switch (myIndexSwitch.index(id)) {
       case LanguageConceptSwitch.Asymptomatic:
         return myConceptAsymptomatic;
-      case LanguageConceptSwitch.DiseaseStatus:
-        return myConceptDiseaseStatus;
+      case LanguageConceptSwitch.Disease:
+        return myConceptDisease;
+      case LanguageConceptSwitch.DiseaseSymptom:
+        return myConceptDiseaseSymptom;
+      case LanguageConceptSwitch.DiseaseSymptomReference:
+        return myConceptDiseaseSymptomReference;
       case LanguageConceptSwitch.Infected:
         return myConceptInfected;
       case LanguageConceptSwitch.InfectionStatus:
         return myConceptInfectionStatus;
+      case LanguageConceptSwitch.SusceptibilityStatus:
+        return myConceptSusceptibilityStatus;
       case LanguageConceptSwitch.Susceptible:
         return myConceptSusceptible;
       case LanguageConceptSwitch.Symptomatic:
@@ -80,13 +89,29 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("Asymptomatic");
     return b.create();
   }
-  private static ConceptDescriptor createDescriptorForDiseaseStatus() {
-    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "DiseaseStatus", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab3111979L);
-    b.class_(false, false, false);
-    b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512513401");
+  private static ConceptDescriptor createDescriptorForDisease() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "Disease", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x25745663758ab012L);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/2698877061875544082");
     b.version(2);
-    b.aggregate("InfectionStatus", 0x5dc1936ab32b6e54L).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab31118fbL).optional(false).ordered(true).multiple(false).origin("6755843002514239060").done();
-    b.aggregate("VaccineStatus", 0x5dc1936ab32b6e58L).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab3111fd4L).optional(false).ordered(true).multiple(false).origin("6755843002514239064").done();
+    b.aggregate("symptomReferences", 0x6ca3e29db479125cL).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791247L).optional(true).ordered(true).multiple(true).origin("7828349744265630300").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForDiseaseSymptom() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "DiseaseSymptom", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791132L);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/7828349744265630002");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForDiseaseSymptomReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "DiseaseSymptomReference", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791247L);
+    b.class_(false, false, false);
+    b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/7828349744265630279");
+    b.version(2);
+    b.associate("symptom", 0x6ca3e29db4791251L).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791132L).optional(false).origin("7828349744265630289").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForInfected() {
@@ -105,6 +130,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512513275");
     b.version(2);
     b.alias("Infection Status");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForSusceptibilityStatus() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "SusceptibilityStatus", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab3111979L);
+    b.class_(false, false, false);
+    b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512513401");
+    b.version(2);
+    b.aggregate("InfectionStatus", 0x5dc1936ab32b6e54L).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab31118fbL).optional(false).ordered(true).multiple(false).origin("6755843002514239060").done();
+    b.aggregate("VaccineStatus", 0x5dc1936ab32b6e58L).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab3111fd4L).optional(false).ordered(true).multiple(false).origin("6755843002514239064").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForSusceptible() {

@@ -38,7 +38,6 @@ import simcore.basicStructures.EDMap;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
-import simcore.basicStructures.Seat;
 import simcore.basicStructures.TimeKeeper;
 import simcore.basicStructures.ToolBox;
 import simcore.utilities.AStar;

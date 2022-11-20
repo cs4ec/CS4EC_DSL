@@ -16,6 +16,8 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
   private final BHDescriptor myActor__BehaviorDescriptor = new Actor__BehaviorDescriptor();
   private final BHDescriptor myBehaviourElement__BehaviorDescriptor = new BehaviourElement__BehaviorDescriptor();
   private final BHDescriptor myBehaviourSequence__BehaviorDescriptor = new BehaviourSequence__BehaviorDescriptor();
+  private final BHDescriptor myBehaviour__BehaviorDescriptor = new Behaviour__BehaviorDescriptor();
+  private final BHDescriptor myChoice__BehaviorDescriptor = new Choice__BehaviorDescriptor();
   private final BHDescriptor mySignalInitReference__BehaviorDescriptor = new SignalInitReference__BehaviorDescriptor();
   private final BHDescriptor mySendSignalAction__BehaviorDescriptor = new SendSignalAction__BehaviorDescriptor();
   private final BHDescriptor myAttribute__BehaviorDescriptor = new Attribute__BehaviorDescriptor();
@@ -42,20 +44,24 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 4:
         return myAttributeReference__BehaviorDescriptor;
       case 5:
-        return myBehaviourElement__BehaviorDescriptor;
+        return myBehaviour__BehaviorDescriptor;
       case 6:
-        return myBehaviourSequence__BehaviorDescriptor;
+        return myBehaviourElement__BehaviorDescriptor;
       case 7:
-        return myRoomSelectionCondition__BehaviorDescriptor;
+        return myBehaviourSequence__BehaviorDescriptor;
       case 8:
-        return myRoomSelectionStrategyLine__BehaviorDescriptor;
+        return myChoice__BehaviorDescriptor;
       case 9:
-        return mySendSignalAction__BehaviorDescriptor;
+        return myRoomSelectionCondition__BehaviorDescriptor;
       case 10:
+        return myRoomSelectionStrategyLine__BehaviorDescriptor;
+      case 11:
+        return mySendSignalAction__BehaviorDescriptor;
+      case 12:
         return mySignalInitReference__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6ca3e29db4287123L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125516L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7117c8e6083740b4L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125519L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x334005c7663c2373L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6e3a4f6d5ccaaf60L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f1890L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c93L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6ca3e29db4287123L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125516L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7117c8e6083740b4L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125519L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce30854aL), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x334005c7663c2373L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6e3a4f6d5ccaaf60L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f1890L), MetaIdFactory.conceptId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3a7166f1d96f0c93L)).seal();
 }

@@ -36,8 +36,8 @@
   		displayName="LIATFluBSpecificity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LIATprobability_a0_1"
-  		displayName="LIATprobability_a0_1" type="double" defaultValue="5"
+  	<parameter name="LIATprobability_a0_0"
+  		displayName="LIATprobability_a0_0" type="double" defaultValue="5"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LabPCRCOVIDSensitivity"
@@ -64,8 +64,8 @@
   		displayName="LabPCRFluBSpecificity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LabPCRprobability_b0_1"
-  		displayName="LabPCRprobability_b0_1" type="double" defaultValue="95"
+  	<parameter name="LabPCRprobability_b0_0"
+  		displayName="LabPCRprobability_b0_0" type="double" defaultValue="95"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeAltCOVIDSensitivity"
@@ -260,8 +260,8 @@
   		displayName="LIATFluBSpecificity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LIATprobability_a0_0"
-  		displayName="LIATprobability_a0_0" type="double" defaultValue="5"
+  	<parameter name="LIATprobability_a0_1"
+  		displayName="LIATprobability_a0_1" type="double" defaultValue="5"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LabPCRCOVIDSensitivity"
@@ -288,8 +288,8 @@
   		displayName="LabPCRFluBSpecificity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="LabPCRprobability_b0_0"
-  		displayName="LabPCRprobability_b0_0" type="double" defaultValue="95"
+  	<parameter name="LabPCRprobability_b0_1"
+  		displayName="LabPCRprobability_b0_1" type="double" defaultValue="95"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeAltCOVIDSensitivity"

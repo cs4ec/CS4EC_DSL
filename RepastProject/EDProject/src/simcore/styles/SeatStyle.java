@@ -9,7 +9,6 @@ import saf.v3d.scene.Position;
 import saf.v3d.scene.VSpatial;
 import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
-import simcore.basicStructures.Seat;
 
 public class SeatStyle extends DefaultStyleOGL2D{
     @Override

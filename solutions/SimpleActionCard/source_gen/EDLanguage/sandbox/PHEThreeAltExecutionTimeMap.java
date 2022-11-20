@@ -13,8 +13,8 @@ public class PHEThreeAltExecutionTimeMap {
   private PHEThreeAltExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
-    returnMap.put(5, ((Double) (1 / TotalOccurances)));
-    returnMap.put(6, ((Double) (1 / TotalOccurances)));
+    returnMap.put(300, ((Double) (1 / TotalOccurances)));
+    returnMap.put(360, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

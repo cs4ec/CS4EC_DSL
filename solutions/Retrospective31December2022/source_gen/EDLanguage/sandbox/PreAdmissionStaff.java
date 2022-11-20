@@ -128,27 +128,27 @@ public class PreAdmissionStaff extends Actor {
         break;
       case "AdmitRedTrigger_b":
         behaviourBuilder = new Behaviour("AdmitRedTrigger_b");
-        this.InitAdmitActionAdmitRed_b(s);
+        this.???(s);
         break;
       case "AdmitSideRoomTrigger_c":
         behaviourBuilder = new Behaviour("AdmitSideRoomTrigger_c");
-        this.InitAdmitActionAdmitSideRoom_c(s);
+        this.???(s);
         break;
       case "AdmitRedTrigger_d":
         behaviourBuilder = new Behaviour("AdmitRedTrigger_d");
-        this.InitAdmitActionAdmitRed_d(s);
+        this.???(s);
         break;
       case "AdmitRedTrigger_b_0":
         behaviourBuilder = new Behaviour("AdmitRedTrigger_b_0");
-        this.InitAdmitActionAdmitRed_b_0(s);
+        this.???(s);
         break;
       case "AdmitSideRoomTrigger_c_0":
         behaviourBuilder = new Behaviour("AdmitSideRoomTrigger_c_0");
-        this.InitAdmitActionAdmitSideRoom_c_0(s);
+        this.???(s);
         break;
       case "AdmitRedTrigger_d_0":
         behaviourBuilder = new Behaviour("AdmitRedTrigger_d_0");
-        this.InitAdmitActionAdmitRed_d_0(s);
+        this.???(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -159,11 +159,11 @@ public class PreAdmissionStaff extends Actor {
 
 
 
-  public class MoveAction_a0a_3 extends BehaviourStep {
+  public class MoveAction_a0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_3(Behaviour behaviour) {
+    public MoveAction_a0a_7(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -293,11 +293,11 @@ public class PreAdmissionStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_a0a_13 extends BehaviourStep {
+  public class MoveAction_a0a_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_13(Behaviour behaviour) {
+    public MoveAction_a0a_11(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -1705,93 +1705,5 @@ public class PreAdmissionStaff extends Actor {
   }
 
 
-  public void InitAdmitActionAdmitRed_b(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0a(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0a(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0a(behaviourBuilder));
-    plstSteps.add(new Consequence_e0a(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0a(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0a(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitSideRoom_c(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0b(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0b(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0b(behaviourBuilder));
-    plstSteps.add(new Consequence_e0b(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0b(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitRed_d(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0c(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0c(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0c(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0c(behaviourBuilder));
-    plstSteps.add(new Consequence_e0c(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0c(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0c(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitRed_b_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0d(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0d(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0d(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0d(behaviourBuilder));
-    plstSteps.add(new Consequence_e0d(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0d(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0d(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitSideRoom_c_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0e(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0e(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0e(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0e(behaviourBuilder));
-    plstSteps.add(new Consequence_e0e(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0e(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitAdmitActionAdmitRed_d_0(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0f(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0f(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0f(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0f(behaviourBuilder));
-    plstSteps.add(new Consequence_e0f(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0f(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_g0f(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
 
 }

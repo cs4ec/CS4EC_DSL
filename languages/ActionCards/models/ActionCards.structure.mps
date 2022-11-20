@@ -12,6 +12,7 @@
   <imports>
     <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
+    <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
@@ -295,7 +296,7 @@
       <property role="IQ2ns" value="4555810343887637004" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
     <node concept="1TJgyi" id="2lOlAdPyFhO" role="1TKVEl">
       <property role="IQ2nx" value="2698877061875545204" />
@@ -351,20 +352,6 @@
       <property role="20kJfa" value="CapturedDiseases" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
       <ref role="20lvS9" node="5ivS4t6ssOS" resolve="TestCapturedDisease" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="2lOlAdPyF0i">
-    <property role="EcuMT" value="2698877061875544082" />
-    <property role="TrG5h" value="Disease" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" node="2lOlAdPyF0B" resolve="Attribute" />
-    <node concept="1TJgyj" id="6MzSDQOuh9s" role="1TKVEi">
-      <property role="IQ2ns" value="7828349744265630300" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="symptomReferences" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6MzSDQOuh97" resolve="DiseaseSymptomReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="2lOlAdPyF0B">
@@ -521,7 +508,7 @@
       <property role="IQ2ns" value="6097839017212104069" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
     <node concept="1TJgyi" id="5ivS4t6ssPJ" role="1TKVEl">
       <property role="IQ2nx" value="6097839017212104047" />
@@ -533,12 +520,6 @@
       <property role="TrG5h" value="Specificity" />
       <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="6MzSDQOuh4M">
-    <property role="EcuMT" value="7828349744265630002" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="TrG5h" value="DiseaseSymptom" />
-    <ref role="1TJDcQ" node="2lOlAdPyF0B" resolve="Attribute" />
   </node>
   <node concept="1TIwiD" id="6MzSDQOuh6B">
     <property role="EcuMT" value="7828349744265630119" />
@@ -552,7 +533,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="SymptomReference" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6MzSDQOuh97" resolve="DiseaseSymptomReference" />
+      <ref role="20lvS9" to="482l:6MzSDQOuh97" resolve="DiseaseSymptomReference" />
     </node>
   </node>
   <node concept="1TIwiD" id="6MzSDQOuh7T">
@@ -567,19 +548,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="symptoms" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6MzSDQOuh4M" resolve="DiseaseSymptom" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="6MzSDQOuh97">
-    <property role="EcuMT" value="7828349744265630279" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="TrG5h" value="DiseaseSymptomReference" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="6MzSDQOuh9h" role="1TKVEi">
-      <property role="IQ2ns" value="7828349744265630289" />
-      <property role="20kJfa" value="symptom" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6MzSDQOuh4M" resolve="DiseaseSymptom" />
+      <ref role="20lvS9" to="482l:6MzSDQOuh4M" resolve="DiseaseSymptom" />
     </node>
   </node>
   <node concept="1TIwiD" id="6MzSDQOui5f">
@@ -651,7 +620,7 @@
       <property role="IQ2ns" value="1758249876434489739" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9Jg95t">
@@ -664,7 +633,7 @@
       <property role="IQ2ns" value="1758249876434501114" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
     <node concept="PrWs8" id="1xAzJ9Jg95B" role="PzmwI">
       <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
@@ -1182,7 +1151,7 @@
       <property role="IQ2ns" value="3170643229265449646" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
     <node concept="1TJgyi" id="2K0oNvtRlaE" role="1TKVEl">
       <property role="IQ2nx" value="3170643229265449642" />

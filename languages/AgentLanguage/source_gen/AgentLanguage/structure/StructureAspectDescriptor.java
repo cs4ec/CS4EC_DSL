@@ -377,7 +377,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("patientCapacity", 0x757b60e1226eda1dL).type(PrimitiveTypeId.INTEGER).origin("8465466444634577437").done();
     b.associate("superType", 0x35463334ce306ba8L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L).optional(true).origin("3838812034270522280").done();
     b.aggregate("attributes", 0x257e995deb85de00L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125516L).optional(true).ordered(true).multiple(true).origin("2701765455131303424").done();
-    b.aggregate("behaviours", 0x270efea19372e41eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL).optional(true).ordered(true).multiple(true).origin("2814466787070108702").done();
+    b.aggregate("behaviourMethod", 0x270efea19372e41eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL).optional(true).ordered(true).multiple(true).origin("2814466787070108702").done();
     b.aggregate("signalselectionstrategy", 0x78ac3095f38bfaL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x78ac3095f379c3L).optional(true).ordered(true).multiple(false).origin("33966321879452666").done();
     b.aggregate("roomSelectionStrategy", 0x6e3a4f6d5ccaa31cL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6e3a4f6d5ccaa76fL).optional(true).ordered(true).multiple(false).origin("7942748223948104476").done();
     b.aggregate("attributeMonitors", 0x7117c8e60855dcc9L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7117c8e6083740b4L).optional(true).ordered(true).multiple(true).origin("8149202941058079945").done();
@@ -551,7 +551,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/3838812034270522234");
     b.version(2);
     b.aggregate("signal", 0x71ffe5bd0133e89L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x2faec239055220c9L).optional(true).ordered(true).multiple(false).origin("513408552829927049").done();
-    b.aggregate("behaviour", 0x35463334ce308543L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(false).ordered(true).multiple(false).origin("3838812034270528835").done();
+    b.aggregate("behaviourSequence", 0x35463334ce308543L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(false).ordered(true).multiple(false).origin("3838812034270528835").done();
     b.aggregate("consequence", 0x50f1fbdc6defea4eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x50f1fbdc6defea52L).optional(true).ordered(true).multiple(false).origin("5832719916577319502").done();
     b.alias("behaviour element");
     return b.create();

@@ -12,6 +12,7 @@
       <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/SimulationMonitor/SimulationMonitor.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/StaffDefinitionLanguage/StaffDefinitionLanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/DualCassetteIntervention/DualCassetteIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.LanguageDependency/EDLanguage.LanguageDependency.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.Runner/EDLanguage.Runner.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntimeSolution/EDRuntimeSolution.msd" folder="" />
@@ -20,6 +21,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_Repast/EDRuntime_Repast.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/HighPrevalenceSurgeCOVIDTestingFlowchart.clone/HighPrevalenceSurgeCOVIDTestingFlowchart.clone.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/MinimalActionCard/MinimalActionCard.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/Retrospective31December2022/Retrospective31December2022.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/SimpleActionCard/SimpleActionCard.msd" folder="runtime" />
     </projectModules>

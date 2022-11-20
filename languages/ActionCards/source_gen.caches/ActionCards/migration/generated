@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="ad9qpjfm4hgrbr9nkn0zspl8r31o99d">
-  <files names="MigrationDescriptor.java" />
+<product version="3" modelHash="-l4om0pzxqkkozcjneqzfne8nwjzky">
+  <files names="Migrate_MoveConcepts_0.java:MigrationDescriptor.java" />
 </product>
 

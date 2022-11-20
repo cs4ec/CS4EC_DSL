@@ -6,22 +6,23 @@ import simcore.utilities.Distribution;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PHEThreeExecutionTimeMap {
+public class PheThreeExecutionTimeMap {
   protected Distribution<Integer> processingTimeDistribution;
-  protected static PHEThreeExecutionTimeMap instance;
+  protected static PheThreeExecutionTimeMap instance;
 
-  private PHEThreeExecutionTimeMap() {
+  private PheThreeExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
-    double TotalOccurances = 3;
-    returnMap.put(5, ((Double) (1 / TotalOccurances)));
-    returnMap.put(6, ((Double) (1 / TotalOccurances)));
+    double TotalOccurances = 4;
+    returnMap.put(1800, ((Double) (1 / TotalOccurances)));
+    returnMap.put(3600, ((Double) (1 / TotalOccurances)));
+    returnMap.put(7200, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }
 
-  public static PHEThreeExecutionTimeMap getInstance() {
+  public static PheThreeExecutionTimeMap getInstance() {
     if (instance == null) {
-      instance = new PHEThreeExecutionTimeMap();
+      instance = new PheThreeExecutionTimeMap();
     }
     return instance;
   }

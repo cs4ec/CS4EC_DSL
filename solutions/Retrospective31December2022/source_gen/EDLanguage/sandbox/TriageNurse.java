@@ -129,11 +129,11 @@ public class TriageNurse extends Actor {
         break;
       case "TriageTrigger_a":
         behaviourBuilder = new Behaviour("TriageTrigger_a");
-        this.InitTriage_a(s);
+        this.???(s);
         break;
       case "PatientArrivesTrigger_b":
         behaviourBuilder = new Behaviour("PatientArrivesTrigger_b");
-        this.InitPatientArrives_b(s);
+        this.???(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -144,11 +144,11 @@ public class TriageNurse extends Actor {
 
 
 
-  public class MoveAction_a0a_4 extends BehaviourStep {
+  public class MoveAction_a0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_4(Behaviour behaviour) {
+    public MoveAction_a0a_0(Behaviour behaviour) {
       target = TriageDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -189,10 +189,10 @@ public class TriageNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(TriageNurse.this.curInside));
     }
   }
-  public class StayForConditionAction_c0a_0 extends BehaviourStep {
+  public class StayForConditionAction_c0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0a_0(Behaviour behaviour) {
+    public StayForConditionAction_c0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -204,10 +204,10 @@ public class TriageNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_1 extends BehaviourStep {
+  public class StayAction_d0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_1(Behaviour behaviour) {
+    public StayAction_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -249,9 +249,9 @@ public class TriageNurse extends Actor {
       return timeExecuted == testingTime;
     }
   }
-  public class Choice_g0a_0 extends InstantBehaviourStep {
+  public class Choice_g0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0a_0(Behaviour behaviour) {
+    public Choice_g0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -318,11 +318,11 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class MoveAction_a0a_11 extends BehaviourStep {
+  public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_11(Behaviour behaviour) {
+    public MoveAction_a0a_5(Behaviour behaviour) {
       target = TriageDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -351,9 +351,9 @@ public class TriageNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0a_5 extends BehaviourStep {
+  public class OrderAction_b0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_5(Behaviour behaviour) {
+    public OrderAction_b0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -363,10 +363,10 @@ public class TriageNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(TriageNurse.this.curInside));
     }
   }
-  public class StayForConditionAction_c0a_2 extends BehaviourStep {
+  public class StayForConditionAction_c0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0a_2(Behaviour behaviour) {
+    public StayForConditionAction_c0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -378,10 +378,10 @@ public class TriageNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_4 extends BehaviourStep {
+  public class StayAction_d0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_4(Behaviour behaviour) {
+    public StayAction_d0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -395,9 +395,9 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class UseAction_e0a_1 extends InstantBehaviourStep {
+  public class UseAction_e0a_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public UseAction_e0a_1(Behaviour behaviour) {
+    public UseAction_e0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -406,11 +406,11 @@ public class TriageNurse extends Actor {
       ((Room) ToolBox().ReadMap().getCurrentRoom(TriageNurse.this)).getParentArea().decrementResource(PHEThreeAlt.getInstance());
     }
   }
-  public class StayAction_f0a_3 extends PassiveBehaviourStep {
+  public class StayAction_f0a_1 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = PHEThreeAltExecutionTimeMap.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
-    public StayAction_f0a_3(Behaviour behaviour) {
+    public StayAction_f0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -423,9 +423,9 @@ public class TriageNurse extends Actor {
       return timeExecuted == testingTime;
     }
   }
-  public class Choice_g0a_3 extends InstantBehaviourStep {
+  public class Choice_g0a_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0a_3(Behaviour behaviour) {
+    public Choice_g0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -601,9 +601,9 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class Choice_h0a_3 extends InstantBehaviourStep {
+  public class Choice_h0a_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_h0a_3(Behaviour behaviour) {
+    public Choice_h0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -650,9 +650,9 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_i0a_3 extends InstantBehaviourStep {
+  public class Choice_i0a_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_i0a_3(Behaviour behaviour) {
+    public Choice_i0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -818,33 +818,5 @@ public class TriageNurse extends Actor {
   }
 
 
-  public void InitTriage_a(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_4(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0a(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0a_0(behaviourBuilder));
-    plstSteps.add(new StayAction_d0a_1(behaviourBuilder));
-    plstSteps.add(new UseAction_e0a(behaviourBuilder));
-    plstSteps.add(new StayAction_f0a(behaviourBuilder));
-    plstSteps.add(new Choice_g0a_0(behaviourBuilder));
-    plstSteps.add(new Choice_h0a(behaviourBuilder));
-    plstSteps.add(new Choice_i0a(behaviourBuilder));
-    plstSteps.add(new StayAction_j0a(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitPatientArrives_b(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new Choice_a0b(behaviourBuilder));
-    plstSteps.add(new StayAction_b0b(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
 
 }

@@ -186,6 +186,7 @@
     </language>
   </registry>
   <node concept="312cEu" id="0">
+    <property role="3GE5qa" value="InfectionStatus" />
     <property role="TrG5h" value="Asymptomatic_Constraints" />
     <uo k="s:originTrace" v="n:6755843002514228739" />
     <node concept="3Tm1VV" id="1" role="1B3o_S">
@@ -703,6 +704,7 @@
     </node>
   </node>
   <node concept="312cEu" id="2_">
+    <property role="3GE5qa" value="InfectionStatus" />
     <property role="TrG5h" value="Infected_Constraints" />
     <uo k="s:originTrace" v="n:6755843002514229268" />
     <node concept="3Tm1VV" id="2A" role="1B3o_S">
@@ -1041,6 +1043,7 @@
     </node>
   </node>
   <node concept="312cEu" id="40">
+    <property role="3GE5qa" value="InfectionStatus" />
     <property role="TrG5h" value="InfectionStatus_Constraints" />
     <uo k="s:originTrace" v="n:6755843002514228228" />
     <node concept="3Tm1VV" id="41" role="1B3o_S">
@@ -1378,6 +1381,7 @@
     </node>
   </node>
   <node concept="312cEu" id="5r">
+    <property role="3GE5qa" value="InfectionStatus" />
     <property role="TrG5h" value="Susceptible_Constraints" />
     <uo k="s:originTrace" v="n:6755843002514229779" />
     <node concept="3Tm1VV" id="5s" role="1B3o_S">
@@ -1716,6 +1720,7 @@
     </node>
   </node>
   <node concept="312cEu" id="6Q">
+    <property role="3GE5qa" value="InfectionStatus" />
     <property role="TrG5h" value="Symptomatic_Constraints" />
     <uo k="s:originTrace" v="n:6755843002514230081" />
     <node concept="3Tm1VV" id="6R" role="1B3o_S">
@@ -2054,6 +2059,7 @@
     </node>
   </node>
   <node concept="312cEu" id="8h">
+    <property role="3GE5qa" value="VaccinationStatus" />
     <property role="TrG5h" value="Unvaccinated_Constraints" />
     <uo k="s:originTrace" v="n:6755843002514230610" />
     <node concept="3Tm1VV" id="8i" role="1B3o_S">
@@ -2392,6 +2398,7 @@
     </node>
   </node>
   <node concept="312cEu" id="9G">
+    <property role="3GE5qa" value="VaccinationStatus" />
     <property role="TrG5h" value="Vaccinated_Constraints" />
     <uo k="s:originTrace" v="n:6755843002514230894" />
     <node concept="3Tm1VV" id="9H" role="1B3o_S">
@@ -2730,6 +2737,7 @@
     </node>
   </node>
   <node concept="312cEu" id="b7">
+    <property role="3GE5qa" value="VaccinationStatus" />
     <property role="TrG5h" value="VaccineStatus_Constraints" />
     <uo k="s:originTrace" v="n:6755843002514227681" />
     <node concept="3Tm1VV" id="b8" role="1B3o_S">
