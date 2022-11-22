@@ -159,13 +159,13 @@ public class CubicleNurse extends Actor {
         behaviourBuilder = new Behaviour("GetTestResultTrigger_g");
         this.InitGetTestResult_g(s);
         break;
-      case "Wait15Trigger_a":
-        behaviourBuilder = new Behaviour("Wait15Trigger_a");
-        this.InitWait15_a(s);
+      case "WaitforresultTrigger_a":
+        behaviourBuilder = new Behaviour("WaitforresultTrigger_a");
+        this.InitWaitforresult_a(s);
         break;
-      case "DoneTrigger_b":
-        behaviourBuilder = new Behaviour("DoneTrigger_b");
-        this.InitDone_b(s);
+      case "RecordresultTrigger_b":
+        behaviourBuilder = new Behaviour("RecordresultTrigger_b");
+        this.InitRecordresult_b(s);
         break;
       case "TakesampleTrigger_c":
         behaviourBuilder = new Behaviour("TakesampleTrigger_c");
@@ -2099,7 +2099,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DoneTrigger_bSignal();
+      sendSignalTemp = new RecordresultTrigger_bSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2292,7 +2292,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new Wait15Trigger_aSignal();
+      sendSignalTemp = new WaitforresultTrigger_aSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -4020,7 +4020,7 @@ public class CubicleNurse extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitWait15_a(Signal s) {
+  public void InitWaitforresult_a(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0f(behaviourBuilder));
@@ -4032,7 +4032,7 @@ public class CubicleNurse extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitDone_b(Signal s) {
+  public void InitRecordresult_b(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0g(behaviourBuilder));

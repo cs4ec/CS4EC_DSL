@@ -39,6 +39,7 @@ public class patient extends Actor {
   public String CepheidCOVIDResult = "Incomplete";
   public String CepheidFluAResult = "Incomplete";
   public String CepheidFluBResult = "Incomplete";
+  public String POCTResult = "Incomplete";
   public String PHEThreeResult = "Incomplete";
   public Behaviour behaviourBuilder;
 

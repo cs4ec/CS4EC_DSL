@@ -56,7 +56,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "the person from signal with name \"");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Message dataline: \"");
     editorCell.setCellId("Constant_vddt2k_a0");
     editorCell.setDefaultText("");
     return editorCell;

@@ -7536,12 +7536,12 @@
   </root>
   <root nodeRef="r:e018bb20-cedf-4aa2-971b-6149b7705c93(DualCassetteIntervention.AC1)/5730579165040550942">
     <file name="CubicleNurse.java">
-      <node id="5730579165040550943" at="162,29,163,60" concept="3" />
-      <node id="5730579165040550943" at="163,60,164,29" concept="3" />
-      <node id="5730579165040550943" at="164,29,165,14" concept="1" />
-      <node id="5730579165040550990" at="166,27,167,58" concept="3" />
-      <node id="5730579165040550990" at="167,58,168,27" concept="3" />
-      <node id="5730579165040550990" at="168,27,169,14" concept="1" />
+      <node id="5730579165040550943" at="162,36,163,67" concept="3" />
+      <node id="5730579165040550943" at="163,67,164,36" concept="3" />
+      <node id="5730579165040550943" at="164,36,165,14" concept="1" />
+      <node id="5730579165040550990" at="166,35,167,66" concept="3" />
+      <node id="5730579165040550990" at="167,66,168,35" concept="3" />
+      <node id="5730579165040550990" at="168,35,169,14" concept="1" />
       <node id="5626228425402521241" at="170,33,171,64" concept="3" />
       <node id="5626228425402521241" at="171,64,172,33" concept="3" />
       <node id="5626228425402521241" at="172,33,173,14" concept="1" />
@@ -7549,19 +7549,19 @@
       <node id="5730579165040551011" at="2095,54,2096,33" concept="3" />
       <node id="5730579165040551011" at="2099,27,2100,28" concept="9" />
       <node id="5730579165040551011" at="2100,28,2101,43" concept="9" />
-      <node id="5730579165040551011" at="2101,43,2102,49" concept="3" />
-      <node id="5730579165040551011" at="2102,49,2103,89" concept="3" />
+      <node id="5730579165040551011" at="2101,43,2102,57" concept="3" />
+      <node id="5730579165040551011" at="2102,57,2103,89" concept="3" />
       <node id="5730579165040551011" at="2103,89,2104,0" concept="12" />
       <node id="5730579165040551011" at="2104,0,2105,36" concept="3" />
       <node id="5626228425402642151" at="2286,0,2287,0" concept="4" trace="behaviour" />
       <node id="5626228425402642151" at="2288,54,2289,33" concept="3" />
       <node id="5626228425402642151" at="2292,27,2293,28" concept="9" />
       <node id="5626228425402642151" at="2293,28,2294,43" concept="9" />
-      <node id="5626228425402642151" at="2294,43,2295,51" concept="3" />
-      <node id="5626228425402642151" at="2295,51,2296,89" concept="3" />
+      <node id="5626228425402642151" at="2294,43,2295,58" concept="3" />
+      <node id="5626228425402642151" at="2295,58,2296,89" concept="3" />
       <node id="5626228425402642151" at="2296,89,2297,0" concept="12" />
       <node id="5626228425402642151" at="2297,0,2298,36" concept="3" />
-      <node id="5730579165040550943" at="4023,38,4024,41" concept="3" />
+      <node id="5730579165040550943" at="4023,45,4024,41" concept="3" />
       <node id="5730579165040550943" at="4024,41,4025,57" concept="9" />
       <node id="5730579165040550943" at="4025,57,4026,56" concept="3" />
       <node id="5730579165040550943" at="4026,56,4027,56" concept="3" />
@@ -7571,7 +7571,7 @@
       <node id="5730579165040550943" at="4030,41,4031,0" concept="12" />
       <node id="5730579165040550943" at="4031,0,4032,41" concept="9" />
       <node id="5730579165040550943" at="4032,41,4033,0" concept="12" />
-      <node id="5730579165040550990" at="4035,36,4036,41" concept="3" />
+      <node id="5730579165040550990" at="4035,44,4036,41" concept="3" />
       <node id="5730579165040550990" at="4036,41,4037,57" concept="9" />
       <node id="5730579165040550990" at="4037,57,4038,56" concept="3" />
       <node id="5730579165040550990" at="4038,56,4039,56" concept="3" />
@@ -7597,13 +7597,13 @@
       <node id="5626228425402642151" at="2288,0,2291,0" concept="2" trace="SendSignalAction_e0h#(Lsimcore/action/Behaviour;)V" />
       <node id="5730579165040551011" at="2099,0,2107,0" concept="8" trace="execute#()V" />
       <node id="5626228425402642151" at="2292,0,2300,0" concept="8" trace="execute#()V" />
-      <node id="5730579165040550943" at="4023,0,4035,0" concept="8" trace="InitWait15_a#(Lsimcore/Signals/Signal;)V" />
-      <node id="5730579165040550990" at="4035,0,4047,0" concept="8" trace="InitDone_b#(Lsimcore/Signals/Signal;)V" />
+      <node id="5730579165040550943" at="4023,0,4035,0" concept="8" trace="InitWaitforresult_a#(Lsimcore/Signals/Signal;)V" />
+      <node id="5730579165040550990" at="4035,0,4047,0" concept="8" trace="InitRecordresult_b#(Lsimcore/Signals/Signal;)V" />
       <node id="5626228425402521241" at="4047,0,4061,0" concept="8" trace="InitTakesample_c#(Lsimcore/Signals/Signal;)V" />
       <scope id="5730579165040551011" at="2095,54,2096,33" />
       <scope id="5626228425402642151" at="2288,54,2289,33" />
-      <scope id="5730579165040550943" at="162,29,165,14" />
-      <scope id="5730579165040550990" at="166,27,169,14" />
+      <scope id="5730579165040550943" at="162,36,165,14" />
+      <scope id="5730579165040550990" at="166,35,169,14" />
       <scope id="5626228425402521241" at="170,33,173,14" />
       <scope id="5730579165040551011" at="2095,0,2098,0">
         <var name="behaviour" id="5730579165040551011" />
@@ -7621,11 +7621,11 @@
       </scope>
       <scope id="5730579165040551011" at="2099,0,2107,0" />
       <scope id="5626228425402642151" at="2292,0,2300,0" />
-      <scope id="5730579165040550943" at="4023,38,4033,0">
+      <scope id="5730579165040550943" at="4023,45,4033,0">
         <var name="plstSteps" id="5730579165040550943" />
         <var name="sendSignalTemp" id="5730579165040550943" />
       </scope>
-      <scope id="5730579165040550990" at="4035,36,4045,0">
+      <scope id="5730579165040550990" at="4035,44,4045,0">
         <var name="plstSteps" id="5730579165040550990" />
         <var name="sendSignalTemp" id="5730579165040550990" />
       </scope>
@@ -7645,22 +7645,22 @@
       <unit id="5730579165040551011" at="2092,0,2108,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_c0f" />
       <unit id="5626228425402642151" at="2285,0,2301,0" name="EDLanguage.sandbox.CubicleNurse$SendSignalAction_e0h" />
     </file>
-    <file name="DoneTrigger_bSignal.java">
-      <node id="5730579165040550990" at="12,32,13,34" concept="3" />
-      <node id="5730579165040550990" at="13,34,14,51" concept="3" />
+    <file name="RecordresultTrigger_bSignal.java">
+      <node id="5730579165040550990" at="12,40,13,42" concept="3" />
+      <node id="5730579165040550990" at="13,42,14,51" concept="3" />
       <node id="5730579165040550990" at="14,51,15,34" concept="3" />
       <node id="5730579165040550990" at="20,35,21,31" concept="10" />
       <node id="5730579165040550990" at="23,31,24,18" concept="10" />
       <node id="5730579165040550990" at="25,12,26,19" concept="10" />
       <node id="5730579165040550990" at="25,10,27,5" concept="0" />
       <node id="5730579165040550990" at="20,0,23,0" concept="8" trace="test#(Lsimcore/basicStructures/Room;)Z" />
-      <node id="5730579165040550990" at="12,0,17,0" concept="2" trace="DoneTrigger_bSignal#()V" />
+      <node id="5730579165040550990" at="12,0,17,0" concept="2" trace="RecordresultTrigger_bSignal#()V" />
       <node id="5730579165040550990" at="18,53,27,5" concept="7" />
       <node id="5730579165040550990" at="18,0,29,0" concept="8" trace="checkPreCondition#(Lrepast/simphony/context/Context;)Z" />
       <scope id="5730579165040550990" at="20,35,21,31" />
       <scope id="5730579165040550990" at="23,31,24,18" />
       <scope id="5730579165040550990" at="25,12,26,19" />
-      <scope id="5730579165040550990" at="12,32,15,34" />
+      <scope id="5730579165040550990" at="12,40,15,34" />
       <scope id="5730579165040550990" at="20,0,23,0">
         <var name="r" id="5730579165040550990" />
       </scope>
@@ -7669,8 +7669,8 @@
       <scope id="5730579165040550990" at="18,0,29,0">
         <var name="context" id="5730579165040550990" />
       </scope>
-      <unit id="5730579165040550990" at="19,117,23,5" name="EDLanguage.sandbox.DoneTrigger_bSignal$1" />
-      <unit id="5730579165040550990" at="11,0,30,0" name="EDLanguage.sandbox.DoneTrigger_bSignal" />
+      <unit id="5730579165040550990" at="19,117,23,5" name="EDLanguage.sandbox.RecordresultTrigger_bSignal$1" />
+      <unit id="5730579165040550990" at="11,0,30,0" name="EDLanguage.sandbox.RecordresultTrigger_bSignal" />
     </file>
     <file name="TakesampleTrigger_cSignal.java">
       <node id="5626228425402521241" at="12,38,13,40" concept="3" />
@@ -7699,22 +7699,22 @@
       <unit id="5626228425402521241" at="19,117,23,5" name="EDLanguage.sandbox.TakesampleTrigger_cSignal$1" />
       <unit id="5626228425402521241" at="11,0,30,0" name="EDLanguage.sandbox.TakesampleTrigger_cSignal" />
     </file>
-    <file name="Wait15Trigger_aSignal.java">
-      <node id="5730579165040550943" at="12,34,13,36" concept="3" />
-      <node id="5730579165040550943" at="13,36,14,51" concept="3" />
+    <file name="WaitforresultTrigger_aSignal.java">
+      <node id="5730579165040550943" at="12,41,13,43" concept="3" />
+      <node id="5730579165040550943" at="13,43,14,51" concept="3" />
       <node id="5730579165040550943" at="14,51,15,34" concept="3" />
       <node id="5730579165040550943" at="20,35,21,31" concept="10" />
       <node id="5730579165040550943" at="23,31,24,18" concept="10" />
       <node id="5730579165040550943" at="25,12,26,19" concept="10" />
       <node id="5730579165040550943" at="25,10,27,5" concept="0" />
       <node id="5730579165040550943" at="20,0,23,0" concept="8" trace="test#(Lsimcore/basicStructures/Room;)Z" />
-      <node id="5730579165040550943" at="12,0,17,0" concept="2" trace="Wait15Trigger_aSignal#()V" />
+      <node id="5730579165040550943" at="12,0,17,0" concept="2" trace="WaitforresultTrigger_aSignal#()V" />
       <node id="5730579165040550943" at="18,53,27,5" concept="7" />
       <node id="5730579165040550943" at="18,0,29,0" concept="8" trace="checkPreCondition#(Lrepast/simphony/context/Context;)Z" />
       <scope id="5730579165040550943" at="20,35,21,31" />
       <scope id="5730579165040550943" at="23,31,24,18" />
       <scope id="5730579165040550943" at="25,12,26,19" />
-      <scope id="5730579165040550943" at="12,34,15,34" />
+      <scope id="5730579165040550943" at="12,41,15,34" />
       <scope id="5730579165040550943" at="20,0,23,0">
         <var name="r" id="5730579165040550943" />
       </scope>
@@ -7723,8 +7723,8 @@
       <scope id="5730579165040550943" at="18,0,29,0">
         <var name="context" id="5730579165040550943" />
       </scope>
-      <unit id="5730579165040550943" at="19,117,23,5" name="EDLanguage.sandbox.Wait15Trigger_aSignal$1" />
-      <unit id="5730579165040550943" at="11,0,30,0" name="EDLanguage.sandbox.Wait15Trigger_aSignal" />
+      <unit id="5730579165040550943" at="19,117,23,5" name="EDLanguage.sandbox.WaitforresultTrigger_aSignal$1" />
+      <unit id="5730579165040550943" at="11,0,30,0" name="EDLanguage.sandbox.WaitforresultTrigger_aSignal" />
     </file>
   </root>
   <root nodeRef="r:e018bb20-cedf-4aa2-971b-6149b7705c93(DualCassetteIntervention.AC1)/6097839017213117563">

@@ -144,32 +144,30 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
 
     return nli;
   }
-  /*package*/ static void getSubBehaviours_id1BosAjM85tg(@NotNull SNode __thisNode__, List<SNode> allBehaviours, SNode parent) {
-    for (SNode child : ListSequence.fromList(SNodeOperations.getChildren(parent))) {
-      if (SNodeOperations.isInstanceOf(child, CONCEPTS.BehaviourSequence$Ol)) {
-        Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, ((SNode) child));
-      } else if (SNodeOperations.isInstanceOf(child, CONCEPTS.ProbabilityDistribution$1L)) {
-        for (SNode line : ListSequence.fromList(SLinkOperations.getChildren(((SNode) child), LINKS.lines$VIaz))) {
-          Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(line, LINKS.behaviour$VGYZ));
-        }
-      } else if (SNodeOperations.isInstanceOf(child, CONCEPTS.Choice$s)) {
-        Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(((SNode) child), LINKS.if_case$BonZ));
-        Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(((SNode) child), LINKS.else_case$Bpz4));
-      } else if (SNodeOperations.isInstanceOf(child, CONCEPTS.Behaviour$OO)) {
-        ListSequence.fromList(allBehaviours).addElement((SNode) child);
+  /*package*/ static void getSubBehaviours_id1BosAjM85tg(@NotNull SNode __thisNode__, List<SNode> allBehaviours, SNode currentNode) {
+    if (SNodeOperations.isInstanceOf(currentNode, CONCEPTS.BehaviourSequence$Ol)) {
+      for (SNode step : ListSequence.fromList(SLinkOperations.getChildren(((SNode) currentNode), LINKS.steps$BnuP))) {
+        Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, step);
       }
+    } else if (SNodeOperations.isInstanceOf(currentNode, CONCEPTS.ProbabilityDistribution$1L)) {
+      for (SNode line : ListSequence.fromList(SLinkOperations.getChildren(((SNode) currentNode), LINKS.lines$VIaz))) {
+        Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(line, LINKS.behaviour$VGYZ));
+      }
+    } else if (SNodeOperations.isInstanceOf(currentNode, CONCEPTS.Choice$s)) {
+      Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(((SNode) currentNode), LINKS.if_case$BonZ));
+      Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(((SNode) currentNode), LINKS.else_case$Bpz4));
     }
-    ListSequence.fromList(allBehaviours).addElement(parent);
+
+    if (SNodeOperations.isInstanceOf(currentNode, CONCEPTS.Behaviour$OO)) {
+      ListSequence.fromList(allBehaviours).addElement(currentNode);
+    }
   }
   /*package*/ static List<SNode> GetAllBehaviours_id4BMD7YivWul(@NotNull SNode __thisNode__) {
     List<SNode> allBehaviours = new ArrayList<SNode>();
 
     // Add the behaviour methods 
     for (SNode behaviourMethod : ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.behaviourMethod$zTMQ))) {
-      for (SNode Behaviour : ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(behaviourMethod, LINKS.behaviourSequence$hsTv), LINKS.steps$BnuP))) {
-        Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, Behaviour);
-      }
-
+      Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(behaviourMethod, LINKS.behaviourSequence$hsTv));
     }
     // Add the Idle action behaviour steps 
     ListSequence.fromList(allBehaviours).addSequence(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.isIdleBehaviour$pDqV), LINKS.behaviourSequence$hsTv), LINKS.steps$BnuP)));
@@ -324,12 +322,12 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SContainmentLink behaviourMethod$zTMQ = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x270efea19372e41eL, "behaviourMethod");
     /*package*/ static final SContainmentLink attributes$f_y3 = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x257e995deb85de00L, "attributes");
     /*package*/ static final SReferenceLink superType$2Qmm = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x35463334ce306ba8L, "superType");
+    /*package*/ static final SContainmentLink steps$BnuP = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L, 0x35463334ce308548L, "steps");
     /*package*/ static final SContainmentLink behaviour$VGYZ = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35a97493533736c2L, 0x35a97493533736c3L, "behaviour");
     /*package*/ static final SContainmentLink lines$VIaz = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35a97493533736a5L, 0x35a97493533736cbL, "lines");
     /*package*/ static final SContainmentLink if_case$BonZ = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce30854aL, 0x35463334ce30854bL, "if_case");
     /*package*/ static final SContainmentLink else_case$Bpz4 = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce30854aL, 0x35463334ce308550L, "else_case");
     /*package*/ static final SContainmentLink behaviourSequence$hsTv = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, 0x35463334ce308543L, "behaviourSequence");
-    /*package*/ static final SContainmentLink steps$BnuP = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L, 0x35463334ce308548L, "steps");
     /*package*/ static final SContainmentLink isIdleBehaviour$pDqV = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x3dab4295aef20062L, "isIdleBehaviour");
   }
 }

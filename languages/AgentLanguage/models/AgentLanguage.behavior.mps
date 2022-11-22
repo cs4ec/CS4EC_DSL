@@ -209,7 +209,6 @@
       <concept id="1180031783296" name="jetbrains.mps.lang.smodel.structure.Concept_IsSubConceptOfOperation" flags="nn" index="2Zo12i">
         <child id="1180031783297" name="conceptArgument" index="2Zo12j" />
       </concept>
-      <concept id="1171500988903" name="jetbrains.mps.lang.smodel.structure.Node_GetChildrenOperation" flags="nn" index="32TBzR" />
       <concept id="6677504323281689838" name="jetbrains.mps.lang.smodel.structure.SConceptType" flags="in" index="3bZ5Sz" />
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
@@ -1042,187 +1041,158 @@
       <property role="TrG5h" value="getSubBehaviours" />
       <node concept="3Tm1VV" id="1BosAjM85th" role="1B3o_S" />
       <node concept="3clFbS" id="1BosAjM85tj" role="3clF47">
-        <node concept="2Gpval" id="1BosAjM8frI" role="3cqZAp">
-          <node concept="2GrKxI" id="1BosAjM8frJ" role="2Gsz3X">
-            <property role="TrG5h" value="child" />
-          </node>
-          <node concept="2OqwBi" id="1BosAjM8fAe" role="2GsD0m">
-            <node concept="37vLTw" id="1BosAjM8fsw" role="2Oq$k0">
-              <ref role="3cqZAo" node="1BosAjM8fqu" resolve="parent" />
+        <node concept="3clFbJ" id="1BosAjM8fMi" role="3cqZAp">
+          <node concept="2OqwBi" id="1BosAjM8g4J" role="3clFbw">
+            <node concept="37vLTw" id="1BosAjMW7I_" role="2Oq$k0">
+              <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
             </node>
-            <node concept="32TBzR" id="1BosAjM8fL4" role="2OqNvi" />
+            <node concept="1mIQ4w" id="1BosAjM8ggL" role="2OqNvi">
+              <node concept="chp4Y" id="1BosAjM8giO" role="cj9EA">
+                <ref role="cht4Q" to="3751:3l6cNjec8l6" resolve="BehaviourSequence" />
+              </node>
+            </node>
           </node>
-          <node concept="3clFbS" id="1BosAjM8frL" role="2LFqv$">
-            <node concept="3clFbJ" id="1BosAjM8fMi" role="3cqZAp">
-              <node concept="2OqwBi" id="1BosAjM8g4J" role="3clFbw">
-                <node concept="2GrUjf" id="1BosAjM8fMA" role="2Oq$k0">
-                  <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
-                </node>
-                <node concept="1mIQ4w" id="1BosAjM8ggL" role="2OqNvi">
-                  <node concept="chp4Y" id="1BosAjM8giO" role="cj9EA">
-                    <ref role="cht4Q" to="3751:3l6cNjec8l6" resolve="BehaviourSequence" />
+          <node concept="3clFbS" id="1BosAjM8fMk" role="3clFbx">
+            <node concept="2Gpval" id="1BosAjMWdW5" role="3cqZAp">
+              <node concept="2GrKxI" id="1BosAjMWdW7" role="2Gsz3X">
+                <property role="TrG5h" value="step" />
+              </node>
+              <node concept="2OqwBi" id="1BosAjMWeOV" role="2GsD0m">
+                <node concept="1eOMI4" id="1BosAjMWew6" role="2Oq$k0">
+                  <node concept="10QFUN" id="1BosAjMWeyy" role="1eOMHV">
+                    <node concept="3Tqbb2" id="1BosAjMWe_0" role="10QFUM">
+                      <ref role="ehGHo" to="3751:3l6cNjec8l6" resolve="BehaviourSequence" />
+                    </node>
+                    <node concept="37vLTw" id="1BosAjMWe71" role="10QFUP">
+                      <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
+                    </node>
                   </node>
                 </node>
+                <node concept="3Tsc0h" id="1BosAjMWf4Y" role="2OqNvi">
+                  <ref role="3TtcxE" to="3751:3l6cNjec8l8" resolve="steps" />
+                </node>
               </node>
-              <node concept="3clFbS" id="1BosAjM8fMk" role="3clFbx">
+              <node concept="3clFbS" id="1BosAjMWdWb" role="2LFqv$">
                 <node concept="3clFbF" id="1BosAjM8glA" role="3cqZAp">
                   <node concept="BsUDl" id="1BosAjM8kOV" role="3clFbG">
                     <ref role="37wK5l" node="1BosAjM85tg" resolve="getSubBehaviours" />
                     <node concept="37vLTw" id="1BosAjM8kPi" role="37wK5m">
                       <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
                     </node>
-                    <node concept="1eOMI4" id="1BosAjM8kSu" role="37wK5m">
-                      <node concept="10QFUN" id="1BosAjM8kSr" role="1eOMHV">
-                        <node concept="3Tqbb2" id="1BosAjM8kZF" role="10QFUM">
-                          <ref role="ehGHo" to="3751:3l6cNjec8l7" resolve="Behaviour" />
-                        </node>
-                        <node concept="2GrUjf" id="1BosAjM8kQf" role="10QFUP">
-                          <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
-                        </node>
-                      </node>
+                    <node concept="2GrUjf" id="1BosAjNhUTw" role="37wK5m">
+                      <ref role="2Gs0qQ" node="1BosAjMWdW7" resolve="step" />
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="3eNFk2" id="1BosAjMmfTx" role="3eNLev">
-                <node concept="2OqwBi" id="1BosAjMmgbe" role="3eO9$A">
-                  <node concept="2GrUjf" id="1BosAjMmg2F" role="2Oq$k0">
-                    <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
-                  </node>
-                  <node concept="1mIQ4w" id="1BosAjMmgEv" role="2OqNvi">
-                    <node concept="chp4Y" id="1BosAjMmgEW" role="cj9EA">
-                      <ref role="cht4Q" to="3751:3mDt9djdNq_" resolve="ProbabilityDistribution" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3clFbS" id="1BosAjMmfTz" role="3eOfB_">
-                  <node concept="2Gpval" id="1BosAjMmhk9" role="3cqZAp">
-                    <node concept="2GrKxI" id="1BosAjMmhka" role="2Gsz3X">
-                      <property role="TrG5h" value="line" />
-                    </node>
-                    <node concept="3clFbS" id="1BosAjMmhkc" role="2LFqv$">
-                      <node concept="3clFbF" id="1BosAjMmjBK" role="3cqZAp">
-                        <node concept="BsUDl" id="1BosAjMmjBJ" role="3clFbG">
-                          <ref role="37wK5l" node="1BosAjM85tg" resolve="getSubBehaviours" />
-                          <node concept="37vLTw" id="1BosAjMmjCe" role="37wK5m">
-                            <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
-                          </node>
-                          <node concept="2OqwBi" id="1BosAjMmkbH" role="37wK5m">
-                            <node concept="2GrUjf" id="1BosAjMmkbd" role="2Oq$k0">
-                              <ref role="2Gs0qQ" node="1BosAjMmhka" resolve="line" />
-                            </node>
-                            <node concept="3TrEf2" id="1BosAjMmkKF" role="2OqNvi">
-                              <ref role="3Tt5mk" to="3751:3mDt9djdNr3" resolve="behaviour" />
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                    <node concept="2OqwBi" id="1BosAjMmj4a" role="2GsD0m">
-                      <node concept="1eOMI4" id="1BosAjMmi_e" role="2Oq$k0">
-                        <node concept="10QFUN" id="1BosAjMmho3" role="1eOMHV">
-                          <node concept="3Tqbb2" id="1BosAjMmhJX" role="10QFUM">
-                            <ref role="ehGHo" to="3751:3mDt9djdNq_" resolve="ProbabilityDistribution" />
-                          </node>
-                          <node concept="2GrUjf" id="1BosAjMmhlZ" role="10QFUP">
-                            <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
-                          </node>
-                        </node>
-                      </node>
-                      <node concept="3Tsc0h" id="1BosAjMmj_5" role="2OqNvi">
-                        <ref role="3TtcxE" to="3751:3mDt9djdNrb" resolve="lines" />
-                      </node>
-                    </node>
-                  </node>
+            </node>
+          </node>
+          <node concept="3eNFk2" id="1BosAjMmfTx" role="3eNLev">
+            <node concept="2OqwBi" id="1BosAjMmgbe" role="3eO9$A">
+              <node concept="37vLTw" id="1BosAjMW8uV" role="2Oq$k0">
+                <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
+              </node>
+              <node concept="1mIQ4w" id="1BosAjMmgEv" role="2OqNvi">
+                <node concept="chp4Y" id="1BosAjMmgEW" role="cj9EA">
+                  <ref role="cht4Q" to="3751:3mDt9djdNq_" resolve="ProbabilityDistribution" />
                 </node>
               </node>
-              <node concept="3eNFk2" id="1BosAjMun5S" role="3eNLev">
-                <node concept="2OqwBi" id="1BosAjMunAX" role="3eO9$A">
-                  <node concept="2GrUjf" id="1BosAjMunuq" role="2Oq$k0">
-                    <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
-                  </node>
-                  <node concept="1mIQ4w" id="1BosAjMunZv" role="2OqNvi">
-                    <node concept="chp4Y" id="1BosAjMuo1y" role="cj9EA">
-                      <ref role="cht4Q" to="3751:3l6cNjec8la" resolve="Choice" />
-                    </node>
-                  </node>
+            </node>
+            <node concept="3clFbS" id="1BosAjMmfTz" role="3eOfB_">
+              <node concept="2Gpval" id="1BosAjMmhk9" role="3cqZAp">
+                <node concept="2GrKxI" id="1BosAjMmhka" role="2Gsz3X">
+                  <property role="TrG5h" value="line" />
                 </node>
-                <node concept="3clFbS" id="1BosAjMun5U" role="3eOfB_">
-                  <node concept="3clFbF" id="1BosAjMuo7o" role="3cqZAp">
-                    <node concept="BsUDl" id="1BosAjMuo7n" role="3clFbG">
+                <node concept="3clFbS" id="1BosAjMmhkc" role="2LFqv$">
+                  <node concept="3clFbF" id="1BosAjMmjBK" role="3cqZAp">
+                    <node concept="BsUDl" id="1BosAjMmjBJ" role="3clFbG">
                       <ref role="37wK5l" node="1BosAjM85tg" resolve="getSubBehaviours" />
-                      <node concept="37vLTw" id="1BosAjMusNZ" role="37wK5m">
+                      <node concept="37vLTw" id="1BosAjMmjCe" role="37wK5m">
                         <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
                       </node>
-                      <node concept="2OqwBi" id="1BosAjMuqkf" role="37wK5m">
-                        <node concept="1eOMI4" id="1BosAjMup2C" role="2Oq$k0">
-                          <node concept="10QFUN" id="1BosAjMup2_" role="1eOMHV">
-                            <node concept="3Tqbb2" id="1BosAjMupwp" role="10QFUM">
-                              <ref role="ehGHo" to="3751:3l6cNjec8la" resolve="Choice" />
-                            </node>
-                            <node concept="2GrUjf" id="1BosAjMuo7Q" role="10QFUP">
-                              <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
-                            </node>
-                          </node>
+                      <node concept="2OqwBi" id="1BosAjMmkbH" role="37wK5m">
+                        <node concept="2GrUjf" id="1BosAjMmkbd" role="2Oq$k0">
+                          <ref role="2Gs0qQ" node="1BosAjMmhka" resolve="line" />
                         </node>
-                        <node concept="3TrEf2" id="1BosAjMuqTv" role="2OqNvi">
-                          <ref role="3Tt5mk" to="3751:3l6cNjec8lb" resolve="if_case" />
+                        <node concept="3TrEf2" id="1BosAjMmkKF" role="2OqNvi">
+                          <ref role="3Tt5mk" to="3751:3mDt9djdNr3" resolve="behaviour" />
                         </node>
                       </node>
                     </node>
                   </node>
-                  <node concept="3clFbF" id="1BosAjMuuxA" role="3cqZAp">
-                    <node concept="BsUDl" id="1BosAjMuuxB" role="3clFbG">
-                      <ref role="37wK5l" node="1BosAjM85tg" resolve="getSubBehaviours" />
-                      <node concept="37vLTw" id="1BosAjMuuxC" role="37wK5m">
-                        <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
+                </node>
+                <node concept="2OqwBi" id="1BosAjMmj4a" role="2GsD0m">
+                  <node concept="1eOMI4" id="1BosAjMmi_e" role="2Oq$k0">
+                    <node concept="10QFUN" id="1BosAjMmho3" role="1eOMHV">
+                      <node concept="3Tqbb2" id="1BosAjMmhJX" role="10QFUM">
+                        <ref role="ehGHo" to="3751:3mDt9djdNq_" resolve="ProbabilityDistribution" />
                       </node>
-                      <node concept="2OqwBi" id="1BosAjMuuxD" role="37wK5m">
-                        <node concept="1eOMI4" id="1BosAjMuuxE" role="2Oq$k0">
-                          <node concept="10QFUN" id="1BosAjMuuxF" role="1eOMHV">
-                            <node concept="3Tqbb2" id="1BosAjMuuxG" role="10QFUM">
-                              <ref role="ehGHo" to="3751:3l6cNjec8la" resolve="Choice" />
-                            </node>
-                            <node concept="2GrUjf" id="1BosAjMuuxH" role="10QFUP">
-                              <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
-                            </node>
-                          </node>
+                      <node concept="37vLTw" id="1BosAjMW8GO" role="10QFUP">
+                        <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3Tsc0h" id="1BosAjMmj_5" role="2OqNvi">
+                    <ref role="3TtcxE" to="3751:3mDt9djdNrb" resolve="lines" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3eNFk2" id="1BosAjMun5S" role="3eNLev">
+            <node concept="2OqwBi" id="1BosAjMunAX" role="3eO9$A">
+              <node concept="37vLTw" id="1BosAjMW9fZ" role="2Oq$k0">
+                <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
+              </node>
+              <node concept="1mIQ4w" id="1BosAjMunZv" role="2OqNvi">
+                <node concept="chp4Y" id="1BosAjMuo1y" role="cj9EA">
+                  <ref role="cht4Q" to="3751:3l6cNjec8la" resolve="Choice" />
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbS" id="1BosAjMun5U" role="3eOfB_">
+              <node concept="3clFbF" id="1BosAjMuo7o" role="3cqZAp">
+                <node concept="BsUDl" id="1BosAjMuo7n" role="3clFbG">
+                  <ref role="37wK5l" node="1BosAjM85tg" resolve="getSubBehaviours" />
+                  <node concept="37vLTw" id="1BosAjMusNZ" role="37wK5m">
+                    <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
+                  </node>
+                  <node concept="2OqwBi" id="1BosAjMuqkf" role="37wK5m">
+                    <node concept="1eOMI4" id="1BosAjMup2C" role="2Oq$k0">
+                      <node concept="10QFUN" id="1BosAjMup2_" role="1eOMHV">
+                        <node concept="3Tqbb2" id="1BosAjMupwp" role="10QFUM">
+                          <ref role="ehGHo" to="3751:3l6cNjec8la" resolve="Choice" />
                         </node>
-                        <node concept="3TrEf2" id="1BosAjMuvym" role="2OqNvi">
-                          <ref role="3Tt5mk" to="3751:3l6cNjec8lg" resolve="else_case" />
+                        <node concept="37vLTw" id="1BosAjMW9u0" role="10QFUP">
+                          <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
                         </node>
                       </node>
+                    </node>
+                    <node concept="3TrEf2" id="1BosAjMuqTv" role="2OqNvi">
+                      <ref role="3Tt5mk" to="3751:3l6cNjec8lb" resolve="if_case" />
                     </node>
                   </node>
                 </node>
               </node>
-              <node concept="3eNFk2" id="1BosAjM8lQV" role="3eNLev">
-                <node concept="2OqwBi" id="1BosAjM8m9o" role="3eO9$A">
-                  <node concept="2GrUjf" id="1BosAjM8lZ7" role="2Oq$k0">
-                    <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
+              <node concept="3clFbF" id="1BosAjMuuxA" role="3cqZAp">
+                <node concept="BsUDl" id="1BosAjMuuxB" role="3clFbG">
+                  <ref role="37wK5l" node="1BosAjM85tg" resolve="getSubBehaviours" />
+                  <node concept="37vLTw" id="1BosAjMuuxC" role="37wK5m">
+                    <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
                   </node>
-                  <node concept="1mIQ4w" id="1BosAjM8mup" role="2OqNvi">
-                    <node concept="chp4Y" id="1BosAjM8muQ" role="cj9EA">
-                      <ref role="cht4Q" to="3751:3l6cNjec8l7" resolve="Behaviour" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3clFbS" id="1BosAjM8lQX" role="3eOfB_">
-                  <node concept="3clFbF" id="1BosAjM8mw4" role="3cqZAp">
-                    <node concept="2OqwBi" id="1BosAjM8nPA" role="3clFbG">
-                      <node concept="37vLTw" id="1BosAjM8mw3" role="2Oq$k0">
-                        <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
-                      </node>
-                      <node concept="TSZUe" id="1BosAjM8pKW" role="2OqNvi">
-                        <node concept="10QFUN" id="1BosAjM8q3l" role="25WWJ7">
-                          <node concept="3Tqbb2" id="1BosAjM8qk_" role="10QFUM">
-                            <ref role="ehGHo" to="3751:3l6cNjec8l7" resolve="Behaviour" />
-                          </node>
-                          <node concept="2GrUjf" id="1BosAjM8pSZ" role="10QFUP">
-                            <ref role="2Gs0qQ" node="1BosAjM8frJ" resolve="child" />
-                          </node>
+                  <node concept="2OqwBi" id="1BosAjMuuxD" role="37wK5m">
+                    <node concept="1eOMI4" id="1BosAjMuuxE" role="2Oq$k0">
+                      <node concept="10QFUN" id="1BosAjMuuxF" role="1eOMHV">
+                        <node concept="3Tqbb2" id="1BosAjMuuxG" role="10QFUM">
+                          <ref role="ehGHo" to="3751:3l6cNjec8la" resolve="Choice" />
+                        </node>
+                        <node concept="37vLTw" id="1BosAjMW9Ds" role="10QFUP">
+                          <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
                         </node>
                       </node>
+                    </node>
+                    <node concept="3TrEf2" id="1BosAjMuvym" role="2OqNvi">
+                      <ref role="3Tt5mk" to="3751:3l6cNjec8lg" resolve="else_case" />
                     </node>
                   </node>
                 </node>
@@ -1230,14 +1200,29 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="1BosAjM8qVt" role="3cqZAp">
-          <node concept="2OqwBi" id="1BosAjM8swm" role="3clFbG">
-            <node concept="37vLTw" id="1BosAjM8qVr" role="2Oq$k0">
-              <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
+        <node concept="3clFbH" id="1BosAjNwalH" role="3cqZAp" />
+        <node concept="3clFbJ" id="1BosAjNw9ZF" role="3cqZAp">
+          <node concept="2OqwBi" id="1BosAjNw9ZI" role="3clFbw">
+            <node concept="37vLTw" id="1BosAjNw9ZJ" role="2Oq$k0">
+              <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
             </node>
-            <node concept="TSZUe" id="1BosAjM8vPA" role="2OqNvi">
-              <node concept="37vLTw" id="1BosAjM8vXD" role="25WWJ7">
-                <ref role="3cqZAo" node="1BosAjM8fqu" resolve="parent" />
+            <node concept="1mIQ4w" id="1BosAjNw9ZK" role="2OqNvi">
+              <node concept="chp4Y" id="1BosAjNw9ZL" role="cj9EA">
+                <ref role="cht4Q" to="3751:3l6cNjec8l7" resolve="Behaviour" />
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbS" id="1BosAjNw9ZM" role="3clFbx">
+            <node concept="3clFbF" id="1BosAjNw9ZN" role="3cqZAp">
+              <node concept="2OqwBi" id="1BosAjNw9ZO" role="3clFbG">
+                <node concept="37vLTw" id="1BosAjNw9ZP" role="2Oq$k0">
+                  <ref role="3cqZAo" node="1BosAjM8frg" resolve="allBehaviours" />
+                </node>
+                <node concept="TSZUe" id="1BosAjNw9ZQ" role="2OqNvi">
+                  <node concept="37vLTw" id="1BosAjNw9ZR" role="25WWJ7">
+                    <ref role="3cqZAo" node="1BosAjM8fqu" resolve="currentNode" />
+                  </node>
+                </node>
               </node>
             </node>
           </node>
@@ -1250,7 +1235,7 @@
         </node>
       </node>
       <node concept="37vLTG" id="1BosAjM8fqu" role="3clF46">
-        <property role="TrG5h" value="parent" />
+        <property role="TrG5h" value="currentNode" />
         <node concept="3Tqbb2" id="1BosAjM8fqt" role="1tU5fm">
           <ref role="ehGHo" to="3751:3l6cNjec8l7" resolve="Behaviour" />
         </node>
@@ -1304,38 +1289,22 @@
             </node>
           </node>
           <node concept="3clFbS" id="1BosAjJOmC2" role="2LFqv$">
-            <node concept="2Gpval" id="1BosAjLRsKo" role="3cqZAp">
-              <node concept="2GrKxI" id="1BosAjLRsKq" role="2Gsz3X">
-                <property role="TrG5h" value="Behaviour" />
-              </node>
-              <node concept="2OqwBi" id="1BosAjLRu56" role="2GsD0m">
-                <node concept="2OqwBi" id="1BosAjLRt3h" role="2Oq$k0">
-                  <node concept="2GrUjf" id="1BosAjLRsRo" role="2Oq$k0">
+            <node concept="3clFbF" id="1BosAjNaVJ$" role="3cqZAp">
+              <node concept="BsUDl" id="1BosAjNaVJy" role="3clFbG">
+                <ref role="37wK5l" node="1BosAjM85tg" resolve="getSubBehaviours" />
+                <node concept="37vLTw" id="1BosAjNaVRY" role="37wK5m">
+                  <ref role="3cqZAo" node="4BMD7Yiw4Fj" resolve="allBehaviours" />
+                </node>
+                <node concept="2OqwBi" id="1BosAjNaW2n" role="37wK5m">
+                  <node concept="2GrUjf" id="1BosAjNaVK4" role="2Oq$k0">
                     <ref role="2Gs0qQ" node="1BosAjJOmBY" resolve="behaviourMethod" />
                   </node>
-                  <node concept="3TrEf2" id="1BosAjLRtBf" role="2OqNvi">
+                  <node concept="3TrEf2" id="1BosAjNaWkY" role="2OqNvi">
                     <ref role="3Tt5mk" to="3751:3l6cNjec8l3" resolve="behaviourSequence" />
-                  </node>
-                </node>
-                <node concept="3Tsc0h" id="1BosAjLRuxI" role="2OqNvi">
-                  <ref role="3TtcxE" to="3751:3l6cNjec8l8" resolve="steps" />
-                </node>
-              </node>
-              <node concept="3clFbS" id="1BosAjLRsKu" role="2LFqv$">
-                <node concept="3clFbF" id="1BosAjM8HQI" role="3cqZAp">
-                  <node concept="BsUDl" id="1BosAjM8HQH" role="3clFbG">
-                    <ref role="37wK5l" node="1BosAjM85tg" resolve="getSubBehaviours" />
-                    <node concept="37vLTw" id="1BosAjM8HRe" role="37wK5m">
-                      <ref role="3cqZAo" node="4BMD7Yiw4Fj" resolve="allBehaviours" />
-                    </node>
-                    <node concept="2GrUjf" id="1BosAjM8HSi" role="37wK5m">
-                      <ref role="2Gs0qQ" node="1BosAjLRsKq" resolve="Behaviour" />
-                    </node>
                   </node>
                 </node>
               </node>
             </node>
-            <node concept="3clFbH" id="1BosAjLRs5t" role="3cqZAp" />
           </node>
         </node>
         <node concept="3SKdUt" id="1BosAjLDcu8" role="3cqZAp">

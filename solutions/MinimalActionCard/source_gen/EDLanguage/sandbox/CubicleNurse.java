@@ -116,8 +116,8 @@ public class CubicleNurse extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction");
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
-    plstSteps.add(new StayAction_b0a_1(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
+    plstSteps.add(new StayAction_b0a_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -144,11 +144,11 @@ public class CubicleNurse extends Actor {
 
 
 
-  public class MoveAction_a0a_1 extends BehaviourStep {
+  public class MoveAction_a0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_1(Behaviour behaviour) {
+    public MoveAction_a0a_3(Behaviour behaviour) {
       target = WaitingRoom.getInstance();
       this.behaviour = behaviour;
     }
@@ -177,10 +177,10 @@ public class CubicleNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class StayAction_b0a_1 extends BehaviourStep {
+  public class StayAction_b0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_b0a_1(Behaviour behaviour) {
+    public StayAction_b0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 

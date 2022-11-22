@@ -18,6 +18,8 @@ import simcore.basicStructures.RoomType;
 import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
+import simcore.action.BehaviourStep;
+import repast.simphony.engine.environment.RunEnvironment;
 
 public class TriageNurse extends Actor {
 
@@ -110,6 +112,18 @@ public class TriageNurse extends Actor {
 
   }
 
+  public Behaviour isIdleAction(Signal s) {
+    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
+    plstSteps.add(new StayAction_b0a_1(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+    return behaviourBuilder;
+  }
 
 
 
@@ -130,6 +144,56 @@ public class TriageNurse extends Actor {
 
 
 
+  public class MoveAction_a0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0a_1(Behaviour behaviour) {
+      target = Labaratory.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target), behaviour);
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (concreteTarget != null) {
+        if (target instanceof RoomType) {
+          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
+            concreteTarget = SelectLocation(((RoomType) target), behaviour);
+          }
+        }
+        MoveTowards(concreteTarget);
+
+      }
+    }
+
+    public boolean finishCondition() {
+      return concreteTarget != null && ImAt(concreteTarget);
+    }
+  }
+  public class StayAction_b0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_b0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
+    }
+  }
 
 
 

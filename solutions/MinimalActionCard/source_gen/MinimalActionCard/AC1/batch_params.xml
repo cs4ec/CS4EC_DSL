@@ -17,6 +17,34 @@
   		type="constant" constant_type="double" value="100" />
   	<parameter name="LIATFluBSpecificity"
   		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATprobability_a0_0"
+  		type="constant" constant_type="double" value="5" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRprobability_b0_0"
+  		type="constant" constant_type="double" value="95" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="100" />
   	<parameter name="LIATprobability_a0"
   		type="constant" constant_type="double" value="5" />
   	<parameter name="LabPCRCOVIDSensitivity"
@@ -33,18 +61,6 @@
   		type="constant" constant_type="double" value="100" />
   	<parameter name="LabPCRprobability_b0"
   		type="constant" constant_type="double" value="95" />
-  	<parameter name="LFDCOVIDSensitivity"
-  		type="constant" constant_type="double" value="70" />
-  	<parameter name="LFDCOVIDSpecificity"
-  		type="constant" constant_type="double" value="99" />
-  	<parameter name="LFDFluASensitivity"
-  		type="constant" constant_type="double" value="88" />
-  	<parameter name="LFDFluASpecificity"
-  		type="constant" constant_type="double" value="95" />
-  	<parameter name="LFDFluBSensitivity"
-  		type="constant" constant_type="double" value="93" />
-  	<parameter name="LFDFluBSpecificity"
-  		type="constant" constant_type="double" value="98" />
   	<parameter name="COVIDInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "2.8" />
   	<parameter name="COVIDInfectionStatusAsymptomatic"

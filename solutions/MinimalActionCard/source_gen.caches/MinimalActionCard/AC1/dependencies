@@ -170,14 +170,6 @@
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
-  <dependency className="MinimalActionCard.AC1.LFDTrigger_cSignal">
-    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="MinimalActionCard.AC1.LIAT">
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
@@ -208,6 +200,7 @@
   </dependency>
   <dependency className="MinimalActionCard.AC1.LabTechnician">
     <classNode dependClassName="EDLanguage.sandbox.LabTechnician" />
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
@@ -218,12 +211,14 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.StreamSupport" />
     <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
@@ -269,7 +264,16 @@
     <classNode dependClassName="EDLanguage.sandbox.POCT" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
   </dependency>
+  <dependency className="MinimalActionCard.AC1.POCTTrigger_cSignal">
+    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="MinimalActionCard.AC1.PreAdmissionStaff">
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
     <classNode dependClassName="EDLanguage.sandbox.PreAdmissionStaff" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
@@ -281,12 +285,14 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.StreamSupport" />
     <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
@@ -325,6 +331,7 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="MinimalActionCard.AC1.TriageNurse">
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
@@ -336,12 +343,14 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.StreamSupport" />
     <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
@@ -359,8 +368,11 @@
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.LFD" />
-    <classNode dependClassName="EDLanguage.sandbox.LFDExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
+    <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.WardNurse" />
@@ -376,6 +388,7 @@
     <classNode dependClassName="java.util.stream.StreamSupport" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.random.RandomHelper" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />

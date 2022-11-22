@@ -278,6 +278,9 @@
   <node concept="2GGxxg" id="2_JteYPiCG6">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="TriageNurse" />
+    <node concept="UeIYj" id="1BosAjNaggO" role="2iD$2b">
+      <ref role="Udx8D" node="52K8Ejkjl6" resolve="Labaratory" />
+    </node>
   </node>
   <node concept="2GGxxg" id="2_JteYPiCHe">
     <property role="3GE5qa" value="Staff" />
@@ -289,6 +292,9 @@
   <node concept="2GGxxg" id="52K8Ej3GgM">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="LabTechnician" />
+    <node concept="UeIYj" id="1BosAjNaggK" role="2iD$2b">
+      <ref role="Udx8D" node="52K8Ejkjl6" resolve="Labaratory" />
+    </node>
   </node>
   <node concept="3SEB2C" id="5ivS4t6wkhV">
     <property role="3GE5qa" value="Tests" />
@@ -584,6 +590,9 @@
   <node concept="2GGxxg" id="1xAzJ9NxGdV">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="PreAdmissionStaff" />
+    <node concept="UeIYj" id="1BosAjNaggM" role="2iD$2b">
+      <ref role="Udx8D" node="52K8Ejkjl6" resolve="Labaratory" />
+    </node>
   </node>
   <node concept="3SEB2C" id="7$JgZMbkIKd">
     <property role="3GE5qa" value="Tests" />
@@ -2426,6 +2435,9 @@
   <node concept="2GGxxg" id="2K0oNvtWdy4">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="WardNurse" />
+    <node concept="UeIYj" id="1BosAjNaggQ" role="2iD$2b">
+      <ref role="Udx8D" node="52K8Ejkjl6" resolve="Labaratory" />
+    </node>
   </node>
   <node concept="2MhjZA" id="3i9haAIoNzA">
     <property role="3GE5qa" value="Action Cards" />
@@ -2529,8 +2541,8 @@
       </node>
     </node>
     <node concept="2MhjZa" id="1BosAjLKiea" role="2MhjZp">
-      <property role="TrG5h" value="LFD" />
-      <ref role="3tPpTl" node="5ivS4t6wkhV" resolve="LFD" />
+      <property role="TrG5h" value="POCT" />
+      <ref role="3tPpTl" node="2K0oNvtRlac" resolve="POCT" />
       <node concept="2_8ZN7" id="1BosAjLKiem" role="2_8HaY">
         <ref role="2_8ZNy" node="2K0oNvtWdy4" resolve="WardNurse" />
       </node>
@@ -2541,7 +2553,7 @@
         <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
       </node>
       <node concept="2GGxJi" id="1BosAjLKieI" role="A3aay">
-        <ref role="3tVEyn" node="1BosAjLKiea" resolve="LFD" />
+        <ref role="3tVEyn" node="1BosAjLKiea" resolve="POCT" />
         <ref role="2GGxGe" node="3i9haAIoNzN" resolve="Receive Treatment" />
         <node concept="1CySur" id="1BosAjLZlWj" role="1hyIAf">
           <ref role="1DsR7o" node="1xAzJ9L0u7B" />

@@ -76,7 +76,6 @@
     <classNode dependClassName="EDLanguage.sandbox.CheckClinicalSusipicionTrigger_dSignal" />
     <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.DoneTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.GetTestResultTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.GetTestResultTrigger_a_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.GetTestResultTrigger_gSignal" />
@@ -93,12 +92,13 @@
     <classNode dependClassName="EDLanguage.sandbox.PheThreeExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ReceiveTreatmentTrigger_b_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.RecordresultTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="EDLanguage.sandbox.SendSampletoLabTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.TakesampleTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
-    <classNode dependClassName="EDLanguage.sandbox.Wait15Trigger_aSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitforresultTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
@@ -198,14 +198,6 @@
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.DoneTrigger_bSignal">
-    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.EDBuilder">
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
@@ -505,6 +497,14 @@
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
+  <dependency className="DualCassetteIntervention.AC1.RecordresultTrigger_bSignal">
+    <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="DualCassetteIntervention.AC1.RespiratoryArea">
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryArea" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -613,7 +613,7 @@
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
-  <dependency className="DualCassetteIntervention.AC1.Wait15Trigger_aSignal">
+  <dependency className="DualCassetteIntervention.AC1.WaitforresultTrigger_aSignal">
     <classNode dependClassName="EDLanguage.sandbox.RespiratoryCubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />

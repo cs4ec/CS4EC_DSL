@@ -8,15 +8,15 @@ import simcore.basicStructures.ToolBox;
 import java.util.function.Predicate;
 import simcore.basicStructures.Room;
 
-public class LFDTrigger_cSignal extends ActorTypeSignal {
-  public LFDTrigger_cSignal() {
-    this.setName("LFDTrigger_c");
+public class WaitforresultTrigger_aSignal extends ActorTypeSignal {
+  public WaitforresultTrigger_aSignal() {
+    this.setName("WaitforresultTrigger_a");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("WardNurse");
+    this.AddActor("CubicleNurse");
   }
 
   public boolean checkPreCondition(Context context) {
-    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(COVIDPositiveCohort.getInstance()).stream().filter(new Predicate<Room>() {
+    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(RespiratoryCubicle.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity();
       }

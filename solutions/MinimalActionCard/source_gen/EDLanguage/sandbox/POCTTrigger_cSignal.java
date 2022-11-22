@@ -8,15 +8,15 @@ import simcore.basicStructures.ToolBox;
 import java.util.function.Predicate;
 import simcore.basicStructures.Room;
 
-public class Wait15Trigger_aSignal extends ActorTypeSignal {
-  public Wait15Trigger_aSignal() {
-    this.setName("Wait15Trigger_a");
+public class POCTTrigger_cSignal extends ActorTypeSignal {
+  public POCTTrigger_cSignal() {
+    this.setName("POCTTrigger_c");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("CubicleNurse");
+    this.AddActor("WardNurse");
   }
 
   public boolean checkPreCondition(Context context) {
-    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(RespiratoryCubicle.getInstance()).stream().filter(new Predicate<Room>() {
+    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(COVIDPositiveCohort.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity();
       }

@@ -8,9 +8,9 @@ import simcore.basicStructures.ToolBox;
 import java.util.function.Predicate;
 import simcore.basicStructures.Room;
 
-public class DoneTrigger_bSignal extends ActorTypeSignal {
-  public DoneTrigger_bSignal() {
-    this.setName("DoneTrigger_b");
+public class RecordresultTrigger_bSignal extends ActorTypeSignal {
+  public RecordresultTrigger_bSignal() {
+    this.setName("RecordresultTrigger_b");
     this.setDescription("SecondPlaceholderSignal");
     this.AddActor("CubicleNurse");
   }
