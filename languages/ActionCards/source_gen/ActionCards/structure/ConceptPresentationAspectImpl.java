@@ -26,8 +26,11 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BooleanExpression;
   private ConceptPresentation props_Branch;
   private ConceptPresentation props_BranchConditional;
+  private ConceptPresentation props_CompositeDiagnosticCondition;
   private ConceptPresentation props_CompositeTest;
   private ConceptPresentation props_CompositeTestResultCondition;
+  private ConceptPresentation props_ConditionalLine;
+  private ConceptPresentation props_ConditionalSelection;
   private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_DischargeAction;
   private ConceptPresentation props_DiseaseTest;
@@ -62,6 +65,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RecentCOVIDContactCondition;
   private ConceptPresentation props_RecentCovidContactProperty;
   private ConceptPresentation props_ResourceAvailableCondition;
+  private ConceptPresentation props_ResultsMappingLine;
+  private ConceptPresentation props_ResultsMappingTable;
   private ConceptPresentation props_RoomSelectionCondition;
   private ConceptPresentation props_RoomSelectionLine;
   private ConceptPresentation props_RoomSelectionRule;
@@ -73,6 +78,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_SymptomList;
   private ConceptPresentation props_Test;
   private ConceptPresentation props_TestCapturedDisease;
+  private ConceptPresentation props_TestOutcome;
   private ConceptPresentation props_TestSelectionRule;
   private ConceptPresentation props_TestSelectionRuleLine;
   private ConceptPresentation props_TestSelectionStrategy;
@@ -144,7 +150,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.ActionDurationMinutes:
         if (props_ActionDurationMinutes == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("ActionDurationMinutes");
+          cpb.rawPresentation("minutes");
           props_ActionDurationMinutes = cpb.create();
         }
         return props_ActionDurationMinutes;
@@ -212,6 +218,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BranchConditional = cpb.create();
         }
         return props_BranchConditional;
+      case LanguageConceptSwitch.CompositeDiagnosticCondition:
+        if (props_CompositeDiagnosticCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("composite diagnostic condition");
+          props_CompositeDiagnosticCondition = cpb.create();
+        }
+        return props_CompositeDiagnosticCondition;
       case LanguageConceptSwitch.CompositeTest:
         if (props_CompositeTest == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -226,6 +239,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_CompositeTestResultCondition = cpb.create();
         }
         return props_CompositeTestResultCondition;
+      case LanguageConceptSwitch.ConditionalLine:
+        if (props_ConditionalLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x465f14a415e67319L, 0x465f14a415e6734dL, "test", "", "");
+          props_ConditionalLine = cpb.create();
+        }
+        return props_ConditionalLine;
+      case LanguageConceptSwitch.ConditionalSelection:
+        if (props_ConditionalSelection == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("conditional distribution");
+          props_ConditionalSelection = cpb.create();
+        }
+        return props_ConditionalSelection;
       case LanguageConceptSwitch.DiagnosticCondition:
         if (props_DiagnosticCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -244,7 +271,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
         if (props_DiseaseTest == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.shortDesc("Type of a test");
-          cpb.presentationByName();
+          cpb.rawPresentation("disease test");
           props_DiseaseTest = cpb.create();
         }
         return props_DiseaseTest;
@@ -465,6 +492,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ResourceAvailableCondition = cpb.create();
         }
         return props_ResourceAvailableCondition;
+      case LanguageConceptSwitch.ResultsMappingLine:
+        if (props_ResultsMappingLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x31419b89f2ca37faL, 0x31419b89f2ca381fL, "Disease", "", "");
+          props_ResultsMappingLine = cpb.create();
+        }
+        return props_ResultsMappingLine;
+      case LanguageConceptSwitch.ResultsMappingTable:
+        if (props_ResultsMappingTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("results mapping table");
+          props_ResultsMappingTable = cpb.create();
+        }
+        return props_ResultsMappingTable;
       case LanguageConceptSwitch.RoomSelectionCondition:
         if (props_RoomSelectionCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -543,6 +584,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_TestCapturedDisease = cpb.create();
         }
         return props_TestCapturedDisease;
+      case LanguageConceptSwitch.TestOutcome:
+        if (props_TestOutcome == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("TestOutcome");
+          props_TestOutcome = cpb.create();
+        }
+        return props_TestOutcome;
       case LanguageConceptSwitch.TestSelectionRule:
         if (props_TestSelectionRule == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

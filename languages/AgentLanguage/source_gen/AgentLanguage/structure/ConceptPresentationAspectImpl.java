@@ -13,6 +13,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActorReference;
   private ConceptPresentation props_ActorTypeSignal;
   private ConceptPresentation props_AdmitAction;
+  private ConceptPresentation props_AgentAttributeReference;
   private ConceptPresentation props_AgentGenerator;
   private ConceptPresentation props_AgentGeneratorLine;
   private ConceptPresentation props_AggregateAttributeMonitor;
@@ -146,6 +147,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AdmitAction = cpb.create();
         }
         return props_AdmitAction;
+      case LanguageConceptSwitch.AgentAttributeReference:
+        if (props_AgentAttributeReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x31419b89f31842dcL, 0x31419b89f31842dfL, "actorReference", "", "");
+          props_AgentAttributeReference = cpb.create();
+        }
+        return props_AgentAttributeReference;
       case LanguageConceptSwitch.AgentGenerator:
         if (props_AgentGenerator == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

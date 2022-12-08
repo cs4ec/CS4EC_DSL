@@ -2045,7 +2045,7 @@
         <node concept="gqqVs" id="72S_VmbwZqV" role="37mO4d">
           <property role="gqqTZ" value="743.0" />
           <property role="gqqTW" value="350.8795180722892" />
-          <property role="gqqTX" value="98.0" />
+          <property role="gqqTX" value="102.0" />
           <property role="gqqTy" value="37.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -2533,7 +2533,7 @@
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="PHEThree" />
     <node concept="3oQJ3q" id="6MzSDQOx5uX" role="3oQJ1o">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
     <node concept="ldbdM" id="6MzSDQOx5v0" role="3oQGcl">
       <node concept="ldb2t" id="6MzSDQOx5v2" role="ldb3A">
@@ -4741,39 +4741,39 @@
     <property role="TrG5h" value="COVID" />
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJ3q" id="5R1$QEMKFk4" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4Vgs" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" />
+      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4Vhj" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLL" />
+      <ref role="3oQJ3c" node="5R1$QENZiLL" resolve="Sore throat" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4Vg$" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QEO4Qbe" />
+      <ref role="3oQJ3c" node="5R1$QEO4Qbe" resolve="Loss of taste" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4VgI" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QEO4Qbj" />
+      <ref role="3oQJ3c" node="5R1$QEO4Qbj" resolve="Loss of smell" />
     </node>
   </node>
   <node concept="1gZIpL" id="5R1$QEMKFkE">
     <property role="TrG5h" value="FluA" />
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJ3q" id="5R1$QEMKFkP" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4Vh0" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" />
+      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
     </node>
   </node>
   <node concept="1gZIpL" id="5R1$QEMMkRG">
     <property role="TrG5h" value="FluB" />
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJ3q" id="5R1$QEMMkRR" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
     <node concept="3oQJ3q" id="7$JgZMbkPtm" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" />
+      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
     </node>
   </node>
 </model>

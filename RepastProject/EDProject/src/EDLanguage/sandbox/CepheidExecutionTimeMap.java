@@ -13,8 +13,8 @@ public class CepheidExecutionTimeMap {
   private CepheidExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
-    returnMap.put(5400, ((Double) (1 / TotalOccurances)));
-    returnMap.put(7200, ((Double) (1 / TotalOccurances)));
+    returnMap.put(25, ((Double) (1 / TotalOccurances)));
+    returnMap.put(30, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

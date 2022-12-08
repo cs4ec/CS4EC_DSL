@@ -5,68 +5,84 @@
 		type="number" number_type="int" start="1" end="10" step="1" />
 	<parameter name="UsePathFinding"
 		type="constant" constant_type="boolean" value="false" />
+  	<parameter name="LateralFlowCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70" />
+  	<parameter name="LateralFlowCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LateralFlowFluASensitivity"
+  		type="constant" constant_type="double" value="80" />
+  	<parameter name="LateralFlowFluASpecificity"
+  		type="constant" constant_type="double" value="85" />
+  	<parameter name="LateralFlowFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LateralFlowFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATCOVIDSensitivity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATCOVIDSpecificity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATFluASensitivity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATFluASpecificity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATFluBSensitivity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATFluBSpecificity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LIATprobability_a0_0"
-  		type="constant" constant_type="double" value="5" />
-  	<parameter name="LabPCRCOVIDSensitivity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRCOVIDSpecificity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRFluASensitivity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRFluASpecificity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRFluBSensitivity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRFluBSpecificity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRprobability_b0_0"
-  		type="constant" constant_type="double" value="95" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATCOVIDSensitivity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATCOVIDSpecificity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATFluASensitivity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATFluASpecificity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATFluBSensitivity"
-  		type="constant" constant_type="double" value="100" />
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATFluBSpecificity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LIATprobability_a0"
-  		type="constant" constant_type="double" value="5" />
-  	<parameter name="LabPCRCOVIDSensitivity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRCOVIDSpecificity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRFluASensitivity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRFluASpecificity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRFluBSensitivity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRFluBSpecificity"
-  		type="constant" constant_type="double" value="100" />
-  	<parameter name="LabPCRprobability_b0"
-  		type="constant" constant_type="double" value="95" />
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LateralFlowCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70" />
+  	<parameter name="LateralFlowCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LateralFlowFluASensitivity"
+  		type="constant" constant_type="double" value="80" />
+  	<parameter name="LateralFlowFluASpecificity"
+  		type="constant" constant_type="double" value="85" />
+  	<parameter name="LateralFlowFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LateralFlowFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LateralFlowCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70" />
+  	<parameter name="LateralFlowCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LateralFlowFluASensitivity"
+  		type="constant" constant_type="double" value="80" />
+  	<parameter name="LateralFlowFluASpecificity"
+  		type="constant" constant_type="double" value="85" />
+  	<parameter name="LateralFlowFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LateralFlowFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="COVIDInfectionStatusSymptomatic"
-  		 type="constant" constant_type="double" value = "2.8" />
+  		 type="constant" constant_type="double" value = "4" />
   	<parameter name="COVIDInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
   	<parameter name="COVIDInfectionStatusSusceptible"
-  		 type="constant" constant_type="double" value = "97.2" />
+  		 type="constant" constant_type="double" value = "96" />
   	<parameter name="FluAInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "0.39" />
   	<parameter name="FluAInfectionStatusAsymptomatic"
@@ -80,9 +96,9 @@
   	<parameter name="FluBInfectionStatusSusceptible"
   		 type="constant" constant_type="double" value = "100" />
   	<parameter name="RecentCovidContactYes"
-  		 type="constant" constant_type="double" value = "1" />
+  		 type="constant" constant_type="double" value = "15" />
   	<parameter name="RecentCovidContactNo"
-  		 type="constant" constant_type="double" value = "99" />
+  		 type="constant" constant_type="double" value = "85" />
   	<parameter name="Severitysevere"
   		 type="constant" constant_type="double" value = "3" />
   	<parameter name="Severitymoderate"

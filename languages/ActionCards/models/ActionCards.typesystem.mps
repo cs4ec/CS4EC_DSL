@@ -450,5 +450,31 @@
       <ref role="1YaFvo" to="e88n:2K0oNvtRlaD" resolve="CompositeTestResultCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="1BosAjNP_jS">
+    <property role="TrG5h" value="typeof_CompositeDiagnosticCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="1BosAjNP_jT" role="18ibNy">
+      <node concept="1Z5TYs" id="1BosAjNP_jZ" role="3cqZAp">
+        <node concept="mw_s8" id="1BosAjNP_k0" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1BosAjNP_k1" role="mwGJk">
+            <node concept="1YBJjd" id="1BosAjNP_kx" role="1Z2MuG">
+              <ref role="1YBMHb" node="1BosAjNP_jV" resolve="compositeDiagnosticCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1BosAjNP_k3" role="1ZfhKB">
+          <node concept="2pJPEk" id="1BosAjNP_k4" role="mwGJk">
+            <node concept="2pJPED" id="1BosAjNP_k5" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1BosAjNP_jV" role="1YuTPh">
+      <property role="TrG5h" value="compositeDiagnosticCondition" />
+      <ref role="1YaFvo" to="e88n:1BosAjNP_7f" resolve="CompositeDiagnosticCondition" />
+    </node>
+  </node>
 </model>
 

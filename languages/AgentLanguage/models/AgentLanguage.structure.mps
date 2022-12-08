@@ -1858,5 +1858,24 @@
       <ref role="20lvS9" node="74nMeo8dO2O" resolve="AttributeMonitor" />
     </node>
   </node>
+  <node concept="1TIwiD" id="351ASBN64bs">
+    <property role="EcuMT" value="3549288998135939804" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <property role="TrG5h" value="AgentAttributeReference" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyj" id="351ASBN64bt" role="1TKVEi">
+      <property role="IQ2ns" value="3549288998135939805" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="attributeReference" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_kp" resolve="AttributeReference" />
+    </node>
+    <node concept="1TJgyj" id="351ASBN64bv" role="1TKVEi">
+      <property role="IQ2ns" value="3549288998135939807" />
+      <property role="20kJfa" value="actorReference" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjebQ9L" resolve="Actor" />
+    </node>
+  </node>
 </model>
 

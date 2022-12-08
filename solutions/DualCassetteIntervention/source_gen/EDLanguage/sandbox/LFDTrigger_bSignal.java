@@ -16,7 +16,7 @@ public class LFDTrigger_bSignal extends ActorTypeSignal {
   }
 
   public boolean checkPreCondition(Context context) {
-    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(RespiratoryCubicle.getInstance()).stream().filter(new Predicate<Room>() {
+    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(MajorsC_Cubicle.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity();
       }

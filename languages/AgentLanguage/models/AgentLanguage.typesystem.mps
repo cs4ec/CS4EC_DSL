@@ -184,5 +184,46 @@
       <ref role="1YaFvo" to="3751:3d01stAf2m5" resolve="RoomTypeCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="351ASBN67Gi">
+    <property role="TrG5h" value="typeof_AgentAttributeReference" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <node concept="3clFbS" id="351ASBN67Gj" role="18ibNy">
+      <node concept="1Z5TYs" id="351ASBN67O4" role="3cqZAp">
+        <node concept="mw_s8" id="351ASBN67O5" role="1ZfhKB">
+          <node concept="1Z2H0r" id="351ASBN67O6" role="mwGJk">
+            <node concept="2OqwBi" id="351ASBN68Kl" role="1Z2MuG">
+              <node concept="2OqwBi" id="351ASBN67O7" role="2Oq$k0">
+                <node concept="2OqwBi" id="351ASBN67O8" role="2Oq$k0">
+                  <node concept="1YBJjd" id="351ASBN67Rt" role="2Oq$k0">
+                    <ref role="1YBMHb" node="351ASBN67Gl" resolve="agentAttributeReference" />
+                  </node>
+                  <node concept="3TrEf2" id="351ASBN68au" role="2OqNvi">
+                    <ref role="3Tt5mk" to="3751:351ASBN64bt" resolve="attributeReference" />
+                  </node>
+                </node>
+                <node concept="3TrEf2" id="351ASBN68uH" role="2OqNvi">
+                  <ref role="3Tt5mk" to="3751:3KCb14J4_kq" resolve="attribute" />
+                </node>
+              </node>
+              <node concept="3TrEf2" id="351ASBN69a8" role="2OqNvi">
+                <ref role="3Tt5mk" to="hm2y:69zaTr1EKHX" resolve="type" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="351ASBN67Oc" role="1ZfhK$">
+          <node concept="1Z2H0r" id="351ASBN67Od" role="mwGJk">
+            <node concept="1YBJjd" id="351ASBN67Qt" role="1Z2MuG">
+              <ref role="1YBMHb" node="351ASBN67Gl" resolve="agentAttributeReference" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="351ASBN67Gl" role="1YuTPh">
+      <property role="TrG5h" value="agentAttributeReference" />
+      <ref role="1YaFvo" to="3751:351ASBN64bs" resolve="AgentAttributeReference" />
+    </node>
+  </node>
 </model>
 

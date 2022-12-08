@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 
-import EDLanguage.sandbox.LIAT;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduledMethod;
@@ -85,9 +84,5 @@ public class Area extends Locatable{
 	public Area getParentArea() {
 		return parentArea;
 	}
-	
-  public int getLIATAvailability() {
-	    return resources.get(LIAT.getInstance());
-	  }
 	
 }

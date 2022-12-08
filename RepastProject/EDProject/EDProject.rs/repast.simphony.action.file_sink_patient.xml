@@ -18,12 +18,14 @@
     <string>patientgetSeverityissevere</string>
     <string>patientgetSeverityismoderate</string>
     <string>patientgetSeverityislow</string>
-    <string>patientgetLFDCOVIDResultisPositive</string>
-    <string>patientgetLFDCOVIDResultisNegative</string>
-    <string>patientgetLFDFluAResultisPositive</string>
-    <string>patientgetLFDFluAResultisNegative</string>
-    <string>patientgetLFDFluBResultisPositive</string>
-    <string>patientgetLFDFluBResultisNegative</string>
+    <string>patientgetImmunocompromisedisYes</string>
+    <string>patientgetImmunocompromisedisNo</string>
+    <string>patientgetLateralFlowCOVIDResultisPositive</string>
+    <string>patientgetLateralFlowCOVIDResultisNegative</string>
+    <string>patientgetLateralFlowFluAResultisPositive</string>
+    <string>patientgetLateralFlowFluAResultisNegative</string>
+    <string>patientgetLateralFlowFluBResultisPositive</string>
+    <string>patientgetLateralFlowFluBResultisNegative</string>
     <string>patientgetLIATCOVIDResultisPositive</string>
     <string>patientgetLIATCOVIDResultisNegative</string>
     <string>patientgetLIATFluAResultisPositive</string>
@@ -36,95 +38,142 @@
     <string>patientgetLabPCRFluAResultisNegative</string>
     <string>patientgetLabPCRFluBResultisPositive</string>
     <string>patientgetLabPCRFluBResultisNegative</string>
+    <string>patientgetPHEThreeCOVIDResultisPositive</string>
+    <string>patientgetPHEThreeCOVIDResultisNegative</string>
+    <string>patientgetPHEThreeFluAResultisPositive</string>
+    <string>patientgetPHEThreeFluAResultisNegative</string>
+    <string>patientgetPHEThreeFluBResultisPositive</string>
+    <string>patientgetPHEThreeFluBResultisNegative</string>
     <string>patientgetCepheidCOVIDResultisPositive</string>
     <string>patientgetCepheidCOVIDResultisNegative</string>
     <string>patientgetCepheidFluAResultisPositive</string>
     <string>patientgetCepheidFluAResultisNegative</string>
     <string>patientgetCepheidFluBResultisPositive</string>
     <string>patientgetCepheidFluBResultisNegative</string>
-    <string>patientgetPheThreeCOVIDResultisPositive</string>
-    <string>patientgetPheThreeCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisSideRoom</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohort</string>
     <string>patientgetadmittedToisGreenBay</string>
-    <string>patientgetadmittedToisSideRoomgetLFDCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLFDCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLFDCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLFDCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisGreenBaygetLFDCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisGreenBaygetLFDCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetLFDFluAResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLFDFluAResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLFDFluAResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLFDFluAResultisNegative</string>
-    <string>patientgetadmittedToisGreenBaygetLFDFluAResultisPositive</string>
-    <string>patientgetadmittedToisGreenBaygetLFDFluAResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetLFDFluBResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLFDFluBResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLFDFluBResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLFDFluBResultisNegative</string>
-    <string>patientgetadmittedToisGreenBaygetLFDFluBResultisPositive</string>
-    <string>patientgetadmittedToisGreenBaygetLFDFluBResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetLIATCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLIATCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohort</string>
+    <string>patientgetadmittedToisFluPositiveCohort</string>
+    <string>patientgetadmittedToisSideRoom</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLateralFlowCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLateralFlowCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLateralFlowCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLateralFlowCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLateralFlowCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLateralFlowCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowFluAResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowFluAResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLateralFlowFluAResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLateralFlowFluAResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLateralFlowFluAResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLateralFlowFluAResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLateralFlowFluAResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLateralFlowFluAResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowFluBResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowFluBResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLateralFlowFluBResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLateralFlowFluBResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLateralFlowFluBResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLateralFlowFluBResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLateralFlowFluBResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLateralFlowFluBResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetLIATCOVIDResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetLIATCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetLIATFluAResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLIATFluAResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATFluAResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATFluAResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLIATCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLIATCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLIATCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLIATCOVIDResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetLIATFluAResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetLIATFluAResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetLIATFluBResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLIATFluBResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATFluBResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATFluBResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATFluAResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATFluAResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLIATFluAResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLIATFluAResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLIATFluAResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLIATFluAResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetLIATFluBResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetLIATFluBResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetLabPCRCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLabPCRCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATFluBResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLIATFluBResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLIATFluBResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLIATFluBResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLIATFluBResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLIATFluBResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetLabPCRCOVIDResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetLabPCRCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetLabPCRFluAResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLabPCRFluAResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRFluAResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRFluAResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLabPCRCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLabPCRCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLabPCRCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLabPCRCOVIDResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetLabPCRFluAResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetLabPCRFluAResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetLabPCRFluBResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetLabPCRFluBResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRFluBResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRFluBResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRFluAResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRFluAResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLabPCRFluAResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLabPCRFluAResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLabPCRFluAResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLabPCRFluAResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetLabPCRFluBResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetLabPCRFluBResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetCepheidCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetCepheidCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRFluBResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetLabPCRFluBResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLabPCRFluBResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetLabPCRFluBResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetLabPCRFluBResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetLabPCRFluBResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetPHEThreeCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetPHEThreeCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetPHEThreeCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetPHEThreeCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetPHEThreeCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetPHEThreeCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetPHEThreeCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetPHEThreeCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetPHEThreeFluAResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetPHEThreeFluAResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetPHEThreeFluAResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetPHEThreeFluAResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetPHEThreeFluAResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetPHEThreeFluAResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetPHEThreeFluAResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetPHEThreeFluAResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetPHEThreeFluBResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetPHEThreeFluBResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetPHEThreeFluBResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetPHEThreeFluBResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetPHEThreeFluBResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetPHEThreeFluBResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetPHEThreeFluBResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetPHEThreeFluBResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetCepheidCOVIDResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetCepheidCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetCepheidFluAResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetCepheidFluAResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidFluAResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidFluAResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetCepheidCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetCepheidCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetCepheidCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetCepheidCOVIDResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetCepheidFluAResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetCepheidFluAResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetCepheidFluBResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetCepheidFluBResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidFluBResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidFluBResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidFluAResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidFluAResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetCepheidFluAResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetCepheidFluAResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetCepheidFluAResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetCepheidFluAResultisNegative</string>
     <string>patientgetadmittedToisGreenBaygetCepheidFluBResultisPositive</string>
     <string>patientgetadmittedToisGreenBaygetCepheidFluBResultisNegative</string>
-    <string>patientgetadmittedToisSideRoomgetPheThreeCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisSideRoomgetPheThreeCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetPheThreeCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetPheThreeCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisGreenBaygetPheThreeCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisGreenBaygetPheThreeCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidFluBResultisPositive</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetCepheidFluBResultisNegative</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetCepheidFluBResultisPositive</string>
+    <string>patientgetadmittedToisFluPositiveCohortgetCepheidFluBResultisNegative</string>
+    <string>patientgetadmittedToisSideRoomgetCepheidFluBResultisPositive</string>
+    <string>patientgetadmittedToisSideRoomgetCepheidFluBResultisNegative</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

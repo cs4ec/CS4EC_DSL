@@ -18,30 +18,18 @@
     <string>patientgetSeverityissevere</string>
     <string>patientgetSeverityismoderate</string>
     <string>patientgetSeverityislow</string>
-    <string>patientgetLFDCOVIDResultisPositive</string>
-    <string>patientgetLFDCOVIDResultisNegative</string>
-    <string>patientgetLFDFluAResultisPositive</string>
-    <string>patientgetLFDFluAResultisNegative</string>
-    <string>patientgetLFDFluBResultisPositive</string>
-    <string>patientgetLFDFluBResultisNegative</string>
-    <string>patientgetLIATCOVIDResultisPositive</string>
+    <string>patientgetLateralFlowCOVIDResultisNegative</string>
+    <string>patientgetLateralFlowCOVIDResultisPositive</string>
+    <string>patientgetLateralFlowFluAResultisPositive</string>
+    <string>patientgetLateralFlowFluAResultisNegative</string>
+    <string>patientgetLateralFlowFluBResultisNegative</string>
+    <string>patientgetLateralFlowFluBResultisPositive</string>
     <string>patientgetLIATCOVIDResultisNegative</string>
-    <string>patientgetLIATFluAResultisPositive</string>
+    <string>patientgetLIATCOVIDResultisPositive</string>
     <string>patientgetLIATFluAResultisNegative</string>
-    <string>patientgetLIATFluBResultisPositive</string>
+    <string>patientgetLIATFluAResultisPositive</string>
     <string>patientgetLIATFluBResultisNegative</string>
-    <string>patientgetLabPCRCOVIDResultisPositive</string>
-    <string>patientgetLabPCRCOVIDResultisNegative</string>
-    <string>patientgetLabPCRFluAResultisPositive</string>
-    <string>patientgetLabPCRFluAResultisNegative</string>
-    <string>patientgetLabPCRFluBResultisPositive</string>
-    <string>patientgetLabPCRFluBResultisNegative</string>
-    <string>patientgetCepheidCOVIDResultisPositive</string>
-    <string>patientgetCepheidCOVIDResultisNegative</string>
-    <string>patientgetCepheidFluAResultisPositive</string>
-    <string>patientgetCepheidFluAResultisNegative</string>
-    <string>patientgetCepheidFluBResultisPositive</string>
-    <string>patientgetCepheidFluBResultisNegative</string>
+    <string>patientgetLIATFluBResultisPositive</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

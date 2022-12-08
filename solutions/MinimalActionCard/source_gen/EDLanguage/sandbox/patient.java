@@ -27,19 +27,15 @@ public class patient extends Actor {
   public String FluBInfectionStatus = "NotConfigured";
   public String RecentCovidContact = "NotConfigured";
   public String Severity = "NotConfigured";
-  public String LFDCOVIDResult = "Incomplete";
-  public String LFDFluAResult = "Incomplete";
-  public String LFDFluBResult = "Incomplete";
+  public String LateralFlowCOVIDResult = "Incomplete";
+  public String LateralFlowFluAResult = "Incomplete";
+  public String LateralFlowFluBResult = "Incomplete";
   public String LIATCOVIDResult = "Incomplete";
   public String LIATFluAResult = "Incomplete";
   public String LIATFluBResult = "Incomplete";
-  public String LabPCRCOVIDResult = "Incomplete";
-  public String LabPCRFluAResult = "Incomplete";
-  public String LabPCRFluBResult = "Incomplete";
-  public String CepheidCOVIDResult = "Incomplete";
-  public String CepheidFluAResult = "Incomplete";
-  public String CepheidFluBResult = "Incomplete";
-  public String POCTResult = "Incomplete";
+  public String PCRCOVIDResult = "Incomplete";
+  public String PCRFluAResult = "Incomplete";
+  public String PCRFluBResult = "Incomplete";
   public String PHEThreeResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
@@ -190,44 +186,38 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getLFDCOVIDResultisPositive() {
-    if (this.LFDCOVIDResult == "Positive") {
+  public int getLateralFlowCOVIDResultisNegative() {
+    if (this.LateralFlowCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getLFDCOVIDResultisNegative() {
-    if (this.LFDCOVIDResult == "Negative") {
+  public int getLateralFlowCOVIDResultisPositive() {
+    if (this.LateralFlowCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLFDFluAResultisPositive() {
-    if (this.LFDFluAResult == "Positive") {
+  public int getLateralFlowFluAResultisPositive() {
+    if (this.LateralFlowFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLFDFluAResultisNegative() {
-    if (this.LFDFluAResult == "Negative") {
+  public int getLateralFlowFluAResultisNegative() {
+    if (this.LateralFlowFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getLFDFluBResultisPositive() {
-    if (this.LFDFluBResult == "Positive") {
+  public int getLateralFlowFluBResultisNegative() {
+    if (this.LateralFlowFluBResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getLFDFluBResultisNegative() {
-    if (this.LFDFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLIATCOVIDResultisPositive() {
-    if (this.LIATCOVIDResult == "Positive") {
+  public int getLateralFlowFluBResultisPositive() {
+    if (this.LateralFlowFluBResult == "Positive") {
       return 1;
     }
     return 0;
@@ -238,8 +228,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getLIATFluAResultisPositive() {
-    if (this.LIATFluAResult == "Positive") {
+  public int getLIATCOVIDResultisPositive() {
+    if (this.LIATCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
@@ -250,8 +240,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getLIATFluBResultisPositive() {
-    if (this.LIATFluBResult == "Positive") {
+  public int getLIATFluAResultisPositive() {
+    if (this.LIATFluAResult == "Positive") {
       return 1;
     }
     return 0;
@@ -262,74 +252,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getLabPCRCOVIDResultisPositive() {
-    if (this.LabPCRCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRCOVIDResultisNegative() {
-    if (this.LabPCRCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRFluAResultisPositive() {
-    if (this.LabPCRFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRFluAResultisNegative() {
-    if (this.LabPCRFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRFluBResultisPositive() {
-    if (this.LabPCRFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRFluBResultisNegative() {
-    if (this.LabPCRFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidCOVIDResultisPositive() {
-    if (this.CepheidCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidCOVIDResultisNegative() {
-    if (this.CepheidCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidFluAResultisPositive() {
-    if (this.CepheidFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidFluAResultisNegative() {
-    if (this.CepheidFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidFluBResultisPositive() {
-    if (this.CepheidFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidFluBResultisNegative() {
-    if (this.CepheidFluBResult == "Negative") {
+  public int getLIATFluBResultisPositive() {
+    if (this.LIATFluBResult == "Positive") {
       return 1;
     }
     return 0;

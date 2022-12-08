@@ -2158,5 +2158,27 @@
       <node concept="2iRfu4" id="72S_VmbZ5mj" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="351ASBN64bD">
+    <property role="3GE5qa" value="actors.attribute" />
+    <ref role="1XX52x" to="3751:351ASBN64bs" resolve="AgentAttributeReference" />
+    <node concept="3EZMnI" id="351ASBN64bF" role="2wV5jI">
+      <node concept="1iCGBv" id="351ASBN64bM" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:351ASBN64bv" resolve="actorReference" />
+        <node concept="1sVBvm" id="351ASBN64bO" role="1sWHZn">
+          <node concept="3F0A7n" id="351ASBN64bV" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="351ASBN64cw" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+      </node>
+      <node concept="3F1sOY" id="351ASBN64cG" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:351ASBN64bt" resolve="attributeReference" />
+      </node>
+      <node concept="l2Vlx" id="351ASBN64bI" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

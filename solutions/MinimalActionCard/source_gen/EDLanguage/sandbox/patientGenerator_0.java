@@ -33,55 +33,162 @@ public class patientGenerator_0 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("");
+    sendSignalTemp.setName("PatientArrivesTrigger_c");
     sendSignalTemp.AddData("patient", a);
-    sendSignalTemp.AddActor("");
+    sendSignalTemp.AddActor("CubicleNurse");
 
 
     // For each agent attribute 
     // For each attribute value option 
     // Assign the value based on probability function 
     double rndDouble = RandomHelper.nextDouble();
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSusceptible")) / 100)) {
-      a.COVIDInfectionStatus = "Susceptible";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic") + 97.2) / 100)) {
-      a.COVIDInfectionStatus = "Symptomatic";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic") + 100.0) / 100)) {
-      a.COVIDInfectionStatus = "Asymptomatic";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSusceptible")) / 100)) {
-      a.FluAInfectionStatus = "Susceptible";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic") + 99.61) / 100)) {
-      a.FluAInfectionStatus = "Symptomatic";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic") + 100.0) / 100)) {
-      a.FluAInfectionStatus = "Asymptomatic";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible")) / 100)) {
-      a.FluBInfectionStatus = "Susceptible";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic") + 100.0) / 100)) {
-      a.FluBInfectionStatus = "Symptomatic";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic") + 100.0) / 100)) {
-      a.FluBInfectionStatus = "Asymptomatic";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo")) / 100)) {
-      a.RecentCovidContact = "No";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes") + 99.0) / 100)) {
-      a.RecentCovidContact = "Yes";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitylow")) / 100)) {
-      a.Severity = "low";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitymoderate") + 70.0) / 100)) {
-      a.Severity = "moderate";
-    } else if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitysevere") + 97.0) / 100)) {
-      a.Severity = "severe";
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("admissionRouteEmergencyAttendance")) / 100)) {
-      a.admissionRoute = "EmergencyAttendance";
-    }
+
+    this.generateAttribute_a(a);
+    this.generateAttribute_b(a);
+    this.generateAttribute_c(a);
+    this.generateAttribute_d(a);
+    this.generateAttribute_e(a);
+    this.generateAttribute_f(a);
 
     b.PushMission(sendSignalTemp);
 
     return a;
+  }
+
+  public void generateAttribute_a(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSusceptible"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.COVIDInfectionStatus = "Susceptible";
+      return;
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic") + runningTotal) / 100)) {
+      agent.COVIDInfectionStatus = "Symptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusSymptomatic");
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic") + runningTotal) / 100)) {
+      agent.COVIDInfectionStatus = "Asymptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("COVIDInfectionStatusAsymptomatic");
+    }
+
+  }
+  public void generateAttribute_b(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSusceptible"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.FluAInfectionStatus = "Susceptible";
+      return;
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic") + runningTotal) / 100)) {
+      agent.FluAInfectionStatus = "Symptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusSymptomatic");
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic") + runningTotal) / 100)) {
+      agent.FluAInfectionStatus = "Asymptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("FluAInfectionStatusAsymptomatic");
+    }
+
+  }
+  public void generateAttribute_c(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSusceptible"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.FluBInfectionStatus = "Susceptible";
+      return;
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic") + runningTotal) / 100)) {
+      agent.FluBInfectionStatus = "Symptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusSymptomatic");
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic") + runningTotal) / 100)) {
+      agent.FluBInfectionStatus = "Asymptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("FluBInfectionStatusAsymptomatic");
+    }
+
+  }
+  public void generateAttribute_d(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactNo"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.RecentCovidContact = "No";
+      return;
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes") + runningTotal) / 100)) {
+      agent.RecentCovidContact = "Yes";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes");
+    }
+
+  }
+  public void generateAttribute_e(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Severitylow"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.Severity = "low";
+      return;
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitymoderate") + runningTotal) / 100)) {
+      agent.Severity = "moderate";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Severitymoderate");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Severitymoderate");
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Severitysevere") + runningTotal) / 100)) {
+      agent.Severity = "severe";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Severitysevere");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Severitysevere");
+    }
+
+  }
+  public void generateAttribute_f(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("admissionRouteEmergencyAttendance"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.admissionRoute = "EmergencyAttendance";
+      return;
+    }
+
   }
 
   public void initialiseArrivalMap() {
