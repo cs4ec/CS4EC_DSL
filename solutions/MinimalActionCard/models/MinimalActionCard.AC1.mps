@@ -32,6 +32,7 @@
       <concept id="1645043697875742197" name="ActionCards.structure.ProcessingTimeTable" flags="ng" index="ldbdM">
         <child id="1645043697875742305" name="ProcessingTimeLines" index="ldb3A" />
       </concept>
+      <concept id="33966321878163354" name="ActionCards.structure.AdmissionAction" flags="ng" index="2lDReE" />
       <concept id="5402567240278617686" name="ActionCards.structure.EDScenario" flags="ng" index="2_0uwh">
         <property id="5729391434181383388" name="runDuration" index="i3JvV" />
         <property id="3785632457359082556" name="simulation_repetitions" index="2rAC2l" />
@@ -2441,6 +2442,36 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="2y1i1i3X1p3" role="37mRID">
+        <property role="37mO49" value="2918693286463149620" />
+        <node concept="gqqVs" id="2y1i1i3X1p2" role="37mO4d">
+          <property role="gqqTZ" value="414.0" />
+          <property role="gqqTW" value="149.0" />
+          <property role="gqqTX" value="98.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="2y1i1i3X1pK" role="37mRID">
+        <property role="37mO49" value="2918693286463149677" />
+        <node concept="gqqVs" id="2y1i1i3X1pJ" role="37mO4d">
+          <property role="gqqTZ" value="229.0" />
+          <property role="gqqTW" value="225.0" />
+          <property role="gqqTX" value="80.0" />
+          <property role="gqqTy" value="30.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="2y1i1i3X1qA" role="37mRID">
+        <property role="37mO49" value="2918693286463149714" />
+        <node concept="gqqVs" id="2y1i1i3X1q_" role="37mO4d">
+          <property role="gqqTZ" value="194.0" />
+          <property role="gqqTW" value="241.0" />
+          <property role="gqqTX" value="80.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="1BosAjLKiea" role="2MhjZp">
       <property role="TrG5h" value="PCR" />
@@ -2454,6 +2485,10 @@
       </node>
       <node concept="UeIYj" id="1BosAjLKieG" role="3lENdC">
         <ref role="Udx8D" node="52K8Ej3Gdk" resolve="NonRespiratoryCubicle" />
+      </node>
+      <node concept="2GGxJi" id="2y1i1i3X1ra" role="A3aay">
+        <ref role="3tVEyn" node="1BosAjLKiea" resolve="PCR" />
+        <ref role="2GGxGe" node="2y1i1i3X1qi" resolve="admit" />
       </node>
     </node>
     <node concept="1FS47K" id="351ASBMK1a1" role="1FS4Pn">
@@ -2479,6 +2514,15 @@
       <node concept="2GGxJi" id="4pv5aglQ7CK" role="A3aay">
         <ref role="3tVEyn" node="4pv5aglQ7BJ" resolve="Triage" />
         <ref role="2GGxGe" node="1BosAjLKiea" resolve="PCR" />
+      </node>
+    </node>
+    <node concept="2lDReE" id="2y1i1i3X1qi" role="2MhjZp">
+      <property role="TrG5h" value="admit" />
+      <node concept="2_8ZN7" id="2y1i1i3X1qw" role="2_8HaY">
+        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
+      </node>
+      <node concept="UeIYj" id="2y1i1i3X1qz" role="3lENdC">
+        <ref role="Udx8D" node="7$JgZMbkJ3A" resolve="GreenBay" />
       </node>
     </node>
   </node>

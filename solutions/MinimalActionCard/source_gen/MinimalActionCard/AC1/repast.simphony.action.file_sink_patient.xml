@@ -30,6 +30,34 @@
     <string>patientgetLIATFluAResultisPositive</string>
     <string>patientgetLIATFluBResultisNegative</string>
     <string>patientgetLIATFluBResultisPositive</string>
+    <string>patientgetadmittedToisGreenBay</string>
+    <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisAsymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisGreenBaygetFluAInfectionStatusisSymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetFluAInfectionStatusisAsymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetFluAInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisGreenBaygetFluBInfectionStatusisSymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetFluBInfectionStatusisAsymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetFluBInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisGreenBaygetRecentCovidContactisYes</string>
+    <string>patientgetadmittedToisGreenBaygetRecentCovidContactisNo</string>
+    <string>patientgetadmittedToisGreenBaygetSeverityissevere</string>
+    <string>patientgetadmittedToisGreenBaygetSeverityismoderate</string>
+    <string>patientgetadmittedToisGreenBaygetSeverityislow</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowFluAResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowFluAResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowFluBResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetLateralFlowFluBResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLIATCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetLIATCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLIATFluAResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetLIATFluAResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLIATFluBResultisNegative</string>
+    <string>patientgetadmittedToisGreenBaygetLIATFluBResultisPositive</string>
+    <string>patientgetAliveTime</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import repast.simphony.context.Context;
+import simcore.agents.Actor;
 
 public class Signal {
 
@@ -21,7 +22,7 @@ public class Signal {
 		subjects = new ArrayList<String>();
 	}
 	
-	public boolean checkPreCondition(Context c) {
+	public boolean checkPreCondition(Context c, Actor receiver) {
 		return true;
 	}
 

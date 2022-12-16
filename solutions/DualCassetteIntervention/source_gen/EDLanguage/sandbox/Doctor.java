@@ -300,9 +300,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0a extends BehaviourStep {
+  public class DespawnAction_f0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0a(Behaviour behaviour) {
+    public DespawnAction_f0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -418,9 +428,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0a_0 extends BehaviourStep {
+  public class DespawnAction_f0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0a_0(Behaviour behaviour) {
+    public DespawnAction_f0a_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0a_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -536,9 +556,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0b extends BehaviourStep {
+  public class DespawnAction_f0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0b(Behaviour behaviour) {
+    public DespawnAction_f0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0b extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -654,9 +684,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0b_0 extends BehaviourStep {
+  public class DespawnAction_f0b_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0b_0(Behaviour behaviour) {
+    public DespawnAction_f0b_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0b_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0b_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -739,9 +779,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0c extends BehaviourStep {
+  public class DespawnAction_e0c extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0c(Behaviour behaviour) {
+    public DespawnAction_e0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_f0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_f0c(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -824,9 +874,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0c_0 extends BehaviourStep {
+  public class DespawnAction_e0c_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0c_0(Behaviour behaviour) {
+    public DespawnAction_e0c_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_f0c_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_f0c_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -942,9 +1002,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0d extends BehaviourStep {
+  public class DespawnAction_f0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0d(Behaviour behaviour) {
+    public DespawnAction_f0d(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0d extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1060,9 +1130,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0d_0 extends BehaviourStep {
+  public class DespawnAction_f0d_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0d_0(Behaviour behaviour) {
+    public DespawnAction_f0d_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0d_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0d_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1178,9 +1258,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0e extends BehaviourStep {
+  public class DespawnAction_f0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0e(Behaviour behaviour) {
+    public DespawnAction_f0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0e extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1296,9 +1386,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0e_0 extends BehaviourStep {
+  public class DespawnAction_f0e_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0e_0(Behaviour behaviour) {
+    public DespawnAction_f0e_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0e_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0e_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1381,9 +1481,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0f extends BehaviourStep {
+  public class DespawnAction_e0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0f(Behaviour behaviour) {
+    public DespawnAction_e0f(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_f0f extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_f0f(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1466,9 +1576,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0f_0 extends BehaviourStep {
+  public class DespawnAction_e0f_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0f_0(Behaviour behaviour) {
+    public DespawnAction_e0f_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_f0f_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_f0f_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1904,9 +2024,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0h extends BehaviourStep {
+  public class DespawnAction_f0h extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0h(Behaviour behaviour) {
+    public DespawnAction_f0h(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0h extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0h(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2022,9 +2152,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0h_0 extends BehaviourStep {
+  public class DespawnAction_f0h_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0h_0(Behaviour behaviour) {
+    public DespawnAction_f0h_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0h_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0h_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2140,9 +2280,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0i extends BehaviourStep {
+  public class DespawnAction_f0i extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0i(Behaviour behaviour) {
+    public DespawnAction_f0i(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0i extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0i(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2258,9 +2408,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0i_0 extends BehaviourStep {
+  public class DespawnAction_f0i_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0i_0(Behaviour behaviour) {
+    public DespawnAction_f0i_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0i_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0i_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2376,9 +2536,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0j extends BehaviourStep {
+  public class DespawnAction_f0j extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0j(Behaviour behaviour) {
+    public DespawnAction_f0j(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0j extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0j(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2494,9 +2664,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0j_0 extends BehaviourStep {
+  public class DespawnAction_f0j_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0j_0(Behaviour behaviour) {
+    public DespawnAction_f0j_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0j_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0j_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2579,9 +2759,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0k extends BehaviourStep {
+  public class DespawnAction_e0k extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0k(Behaviour behaviour) {
+    public DespawnAction_e0k(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_f0k extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_f0k(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2664,9 +2854,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_e0k_0 extends BehaviourStep {
+  public class DespawnAction_e0k_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0k_0(Behaviour behaviour) {
+    public DespawnAction_e0k_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_f0k_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_f0k_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2782,9 +2982,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0l extends BehaviourStep {
+  public class DespawnAction_f0l extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0l(Behaviour behaviour) {
+    public DespawnAction_f0l(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0l extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0l(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2900,9 +3110,19 @@ public class Doctor extends Actor {
 
     }
   }
-  public class RemoveRelationshipAction_f0l_0 extends BehaviourStep {
+  public class DespawnAction_f0l_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0l_0(Behaviour behaviour) {
+    public DespawnAction_f0l_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0l_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0l_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2974,7 +3194,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0a(behaviourBuilder));
     plstSteps.add(new Consequence_e0a(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0a(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0a(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2988,7 +3209,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0b(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0b(behaviourBuilder));
     plstSteps.add(new Consequence_e0b(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0b(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0b(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3001,7 +3223,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_b0c(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0c(behaviourBuilder));
     plstSteps.add(new Consequence_d0c(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0c(behaviourBuilder));
+    plstSteps.add(new DespawnAction_e0c(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_f0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3015,7 +3238,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0d(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0d(behaviourBuilder));
     plstSteps.add(new Consequence_e0d(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0d(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0d(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3029,7 +3253,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0e(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0e(behaviourBuilder));
     plstSteps.add(new Consequence_e0e(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0e(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0e(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3042,7 +3267,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_b0f(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0f(behaviourBuilder));
     plstSteps.add(new Consequence_d0f(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0f(behaviourBuilder));
+    plstSteps.add(new DespawnAction_e0f(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_f0f(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3071,7 +3297,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0h(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0h(behaviourBuilder));
     plstSteps.add(new Consequence_e0h(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0h(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0h(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0h(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3085,7 +3312,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0i(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0i(behaviourBuilder));
     plstSteps.add(new Consequence_e0i(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0i(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0i(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0i(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3099,7 +3327,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0j(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0j(behaviourBuilder));
     plstSteps.add(new Consequence_e0j(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0j(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0j(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0j(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3112,7 +3341,8 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_b0k(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0k(behaviourBuilder));
     plstSteps.add(new Consequence_d0k(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0k(behaviourBuilder));
+    plstSteps.add(new DespawnAction_e0k(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_f0k(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -3126,11 +3356,18 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0l(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0l(behaviourBuilder));
     plstSteps.add(new Consequence_e0l(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0l(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0l(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0l(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
 
+  public int DoctorgetAliveTime() {
+    if (deSpawnTime == 0) {
+      deSpawnTime = ToolBox().getTime();
+    }
+    return (int) (deSpawnTime - spawnTime);
+  }
 }

@@ -33,7 +33,7 @@ public class patientGenerator_0 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("PatientArrivesTrigger_c");
+    sendSignalTemp.setName("PatientArrivesTrigger_d");
     sendSignalTemp.AddData("patient", a);
     sendSignalTemp.AddActor("CubicleNurse");
 

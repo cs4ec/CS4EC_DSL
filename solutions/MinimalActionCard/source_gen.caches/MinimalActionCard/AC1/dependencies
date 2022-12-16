@@ -15,6 +15,7 @@
   <dependency className="MinimalActionCard.AC1.CubicleNurse">
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlow" />
@@ -24,12 +25,14 @@
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.admitTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.Iterator" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.StreamSupport" />
@@ -243,7 +246,7 @@
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
   </dependency>
-  <dependency className="MinimalActionCard.AC1.PatientArrivesTrigger_cSignal">
+  <dependency className="MinimalActionCard.AC1.PatientArrivesTrigger_dSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="MinimalActionCard.AC1.PreAdmissionStaff">
@@ -358,6 +361,14 @@
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="MinimalActionCard.AC1.admitTrigger_cSignal">
+    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="MinimalActionCard.AC1.map_PatientProfile">
     <classNode dependClassName="java.lang.Double" />

@@ -197,4 +197,10 @@ public class LabTechnician extends Actor {
 
 
 
+  public int LabTechniciangetAliveTime() {
+    if (deSpawnTime == 0) {
+      deSpawnTime = ToolBox().getTime();
+    }
+    return (int) (deSpawnTime - spawnTime);
+  }
 }

@@ -476,5 +476,31 @@
       <ref role="1YaFvo" to="e88n:1BosAjNP_7f" resolve="CompositeDiagnosticCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="i1eH3WpcqG">
+    <property role="TrG5h" value="typeof_ProbabilityCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="i1eH3WpcqH" role="18ibNy">
+      <node concept="1Z5TYs" id="i1eH3WpcqW" role="3cqZAp">
+        <node concept="mw_s8" id="i1eH3WpcqX" role="1ZfhK$">
+          <node concept="1Z2H0r" id="i1eH3WpcqY" role="mwGJk">
+            <node concept="1YBJjd" id="i1eH3WpcrB" role="1Z2MuG">
+              <ref role="1YBMHb" node="i1eH3WpcqJ" resolve="probabilityCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="i1eH3Wpcr0" role="1ZfhKB">
+          <node concept="2pJPEk" id="i1eH3Wpcr1" role="mwGJk">
+            <node concept="2pJPED" id="i1eH3Wpcr2" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="i1eH3WpcqJ" role="1YuTPh">
+      <property role="TrG5h" value="probabilityCondition" />
+      <ref role="1YaFvo" to="e88n:i1eH3Wpca0" resolve="ProbabilityCondition" />
+    </node>
+  </node>
 </model>
 

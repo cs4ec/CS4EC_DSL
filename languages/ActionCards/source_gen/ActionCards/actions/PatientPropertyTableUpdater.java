@@ -5,43 +5,10 @@ package ActionCards.actions;
 import jetbrains.mps.openapi.actions.descriptor.NodeFactory;
 import org.jetbrains.mps.openapi.model.SNode;
 import org.jetbrains.mps.openapi.model.SModel;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
-import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import org.jetbrains.mps.openapi.language.SContainmentLink;
-import org.jetbrains.mps.openapi.language.SProperty;
 
 public class PatientPropertyTableUpdater {
   public static class NodeFactory_1758249876435103904 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SNode table = ((SNode) enclosingNode);
-      ListSequence.fromList(SLinkOperations.getChildren(table, LINKS.attributeLines$amAy)).removeWhere(new IWhereFilter<SNode>() {
-        public boolean accept(SNode it) {
-          return true;
-        }
-      });
-
-      for (SNode val : ListSequence.fromList(SLinkOperations.getChildren(newNode, LINKS.possibleValues$MtIS))) {
-        SNode newLine = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, "ActionCards.structure.AttributeLine"));
-        SLinkOperations.setTarget(newLine, LINKS.possibleValue$QY6s, val);
-        SPropertyOperations.assign(newLine, PROPS.prevalence$QY$u, "0");
-        ListSequence.fromList(SLinkOperations.getChildren(table, LINKS.attributeLines$amAy)).addElement(newLine);
-      }
-
-      SLinkOperations.getChildren(table, LINKS.attributeLines$amAy).addAll(SLinkOperations.getChildren(newNode, LINKS.possibleValues$MtIS));
     }
-  }
-
-  private static final class LINKS {
-    /*package*/ static final SContainmentLink attributeLines$amAy = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L, 0x25745663764b1ad2L, "attributeLines");
-    /*package*/ static final SContainmentLink possibleValue$QY6s = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x5dc1936ab296486eL, "possibleValue");
-    /*package*/ static final SContainmentLink possibleValues$MtIS = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL, 0x18668ef26f407627L, "possibleValues");
-  }
-
-  private static final class PROPS {
-    /*package*/ static final SProperty prevalence$QY$u = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x5dc1936ab2964870L, "prevalence");
   }
 }

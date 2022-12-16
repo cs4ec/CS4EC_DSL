@@ -49,6 +49,8 @@ public class Agent {
 	protected Room curInside;
 	protected static Integer IDFactory = 1;
 	protected Integer myID;
+	public double spawnTime = 0;
+	public double deSpawnTime = 0;
 	public Object placeholderVariable;
 	protected Occupiable curOccupying;
 	protected List<Behaviour> myCurrentActions = new ArrayList<Behaviour>();
@@ -66,6 +68,7 @@ public class Agent {
 		this.grid = grid;
 		this.context = context;
 		curInside = null;
+		spawnTime = ToolBox().getTime();
 		myID = IDFactory;
 		IDFactory++;
 		

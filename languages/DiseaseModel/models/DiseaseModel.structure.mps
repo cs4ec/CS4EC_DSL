@@ -62,8 +62,8 @@
   <node concept="1TIwiD" id="5R1$QEN4h$_">
     <property role="EcuMT" value="6755843002512513317" />
     <property role="TrG5h" value="Susceptible" />
-    <property role="34LRSv" value="Susceptible" />
     <property role="3GE5qa" value="InfectionStatus" />
+    <property role="34LRSv" value="Susceptible" />
     <ref role="1TJDcQ" node="5R1$QEN4hzV" resolve="InfectionStatus" />
   </node>
   <node concept="1TIwiD" id="5R1$QEN4h$S">
@@ -76,8 +76,8 @@
   <node concept="1TIwiD" id="5R1$QEN4h_b">
     <property role="EcuMT" value="6755843002512513355" />
     <property role="TrG5h" value="Asymptomatic" />
-    <property role="34LRSv" value="Asymptomatic" />
     <property role="3GE5qa" value="InfectionStatus" />
+    <property role="34LRSv" value="Asymptomatic" />
     <ref role="1TJDcQ" node="5R1$QEN4h$g" resolve="Infected" />
   </node>
   <node concept="1TIwiD" id="5R1$QEN4h_T">

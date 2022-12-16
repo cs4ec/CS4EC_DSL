@@ -2,12 +2,14 @@ package simcore.agents;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.engine.schedule.ScheduledMethod;
@@ -202,10 +204,10 @@ public class Actor extends Agent {
 		curOrder = curOrder.getNextStep();
 	}
 
-	private Signal searchForSignals(Board board) {
+	protected Signal searchForSignals(Board board) {
 		// Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for
-		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(s-> s.checkPreCondition(context)).collect(Collectors.toList());
-		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(s-> s.checkPreCondition(context)).collect(Collectors.toList());
+		List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(s-> s.checkPreCondition(context, this)).collect(Collectors.toList());
+		List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(s-> s.checkPreCondition(context, this)).collect(Collectors.toList());
 		
 		if(plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
 			return null;

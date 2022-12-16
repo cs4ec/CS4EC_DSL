@@ -6,9 +6,9 @@
 	<parameter name="UsePathFinding"
 		type="constant" constant_type="boolean" value="false" />
   	<parameter name="LateralFlowCOVIDSensitivity"
-  		type="constant" constant_type="double" value="70" />
+  		type="constant" constant_type="double" value="70.7" />
   	<parameter name="LateralFlowCOVIDSpecificity"
-  		type="constant" constant_type="double" value="99" />
+  		type="constant" constant_type="double" value="99.1" />
   	<parameter name="LateralFlowFluASensitivity"
   		type="constant" constant_type="double" value="84" />
   	<parameter name="LateralFlowFluASpecificity"
@@ -102,9 +102,9 @@
   	<parameter name="PHEThreeFluBSpecificity"
   		type="constant" constant_type="double" value="99" />
   	<parameter name="LateralFlowCOVIDSensitivity"
-  		type="constant" constant_type="double" value="70" />
+  		type="constant" constant_type="double" value="70.7" />
   	<parameter name="LateralFlowCOVIDSpecificity"
-  		type="constant" constant_type="double" value="99" />
+  		type="constant" constant_type="double" value="99.1" />
   	<parameter name="LateralFlowFluASensitivity"
   		type="constant" constant_type="double" value="84" />
   	<parameter name="LateralFlowFluASpecificity"
@@ -186,9 +186,9 @@
   	<parameter name="PHEThreeFluBSpecificity"
   		type="constant" constant_type="double" value="99" />
   	<parameter name="LateralFlowCOVIDSensitivity"
-  		type="constant" constant_type="double" value="70" />
+  		type="constant" constant_type="double" value="70.7" />
   	<parameter name="LateralFlowCOVIDSpecificity"
-  		type="constant" constant_type="double" value="99" />
+  		type="constant" constant_type="double" value="99.1" />
   	<parameter name="LateralFlowFluASensitivity"
   		type="constant" constant_type="double" value="84" />
   	<parameter name="LateralFlowFluASpecificity"
@@ -258,23 +258,23 @@
   	<parameter name="CepheidFluBSpecificity"
   		type="constant" constant_type="double" value="99.9" />
   	<parameter name="COVIDInfectionStatusSymptomatic"
-  		 type="constant" constant_type="double" value = "2.8" />
+  		 type="constant" constant_type="double" value = "0.17" />
   	<parameter name="COVIDInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
   	<parameter name="COVIDInfectionStatusSusceptible"
-  		 type="constant" constant_type="double" value = "97.2" />
+  		 type="constant" constant_type="double" value = "99.83" />
   	<parameter name="FluAInfectionStatusSymptomatic"
-  		 type="constant" constant_type="double" value = "0.39" />
+  		 type="constant" constant_type="double" value = "0.5" />
   	<parameter name="FluAInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
   	<parameter name="FluAInfectionStatusSusceptible"
-  		 type="constant" constant_type="double" value = "99.61" />
+  		 type="constant" constant_type="double" value = "99.5" />
   	<parameter name="FluBInfectionStatusSymptomatic"
-  		 type="constant" constant_type="double" value = "0" />
+  		 type="constant" constant_type="double" value = "0.17" />
   	<parameter name="FluBInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
   	<parameter name="FluBInfectionStatusSusceptible"
-  		 type="constant" constant_type="double" value = "100" />
+  		 type="constant" constant_type="double" value = "99.83" />
   	<parameter name="RecentCovidContactYes"
   		 type="constant" constant_type="double" value = "1" />
   	<parameter name="RecentCovidContactNo"
@@ -286,9 +286,9 @@
   	<parameter name="Severitylow"
   		 type="constant" constant_type="double" value = "70" />
   	<parameter name="ImmunocompromisedYes"
-  		 type="constant" constant_type="double" value = "3" />
+  		 type="constant" constant_type="double" value = "20" />
   	<parameter name="ImmunocompromisedNo"
-  		 type="constant" constant_type="double" value = "97" />
+  		 type="constant" constant_type="double" value = "80" />
   	<parameter name="admissionRouteEmergencyAttendance"
   		 type="constant" constant_type="double" value = "100" />
 </sweep>

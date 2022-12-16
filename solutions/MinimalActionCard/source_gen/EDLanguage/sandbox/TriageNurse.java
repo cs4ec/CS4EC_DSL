@@ -197,4 +197,10 @@ public class TriageNurse extends Actor {
 
 
 
+  public int TriageNursegetAliveTime() {
+    if (deSpawnTime == 0) {
+      deSpawnTime = ToolBox().getTime();
+    }
+    return (int) (deSpawnTime - spawnTime);
+  }
 }

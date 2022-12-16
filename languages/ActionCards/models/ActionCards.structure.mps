@@ -213,6 +213,11 @@
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="People.Staff" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="i1eH3VqwZY" role="1TKVEl">
+      <property role="IQ2nx" value="324605317393027070" />
+      <property role="TrG5h" value="patientLimit" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="3QFgDmJ3g8u" role="1TKVEi">
       <property role="IQ2ns" value="4443718667985551902" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -394,19 +399,18 @@
     <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
     <property role="TrG5h" value="AttributeTable" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="i1eH3VE_Wj" role="1TKVEi">
+      <property role="IQ2ns" value="324605317397241619" />
+      <property role="20kJfa" value="patientProperty" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
     <node concept="1TJgyj" id="2lOlAdQiLFi" role="1TKVEi">
       <property role="IQ2ns" value="2698877061888154322" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="attributeLines" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2lOlAdQiLDW" resolve="AttributeLine" />
-    </node>
-    <node concept="1TJgyj" id="1xAzJ9JghCa" role="1TKVEi">
-      <property role="IQ2ns" value="1758249876434524682" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="patientProperty" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
     </node>
     <node concept="PrWs8" id="5R1$QEMOJHt" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
@@ -722,18 +726,6 @@
     <node concept="1TJgyj" id="1xAzJ9L5vWE" role="1TKVEi">
       <property role="IQ2ns" value="1758249876465254186" />
       <property role="20kJfa" value="patientProperty" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="1xAzJ9KVgC6">
-    <property role="TrG5h" value="PatientPropertyReference" />
-    <property role="EcuMT" value="1758249876462569990" />
-    <property role="3GE5qa" value="Attributes.PatientProperties" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="1xAzJ9KVgC7" role="1TKVEi">
-      <property role="IQ2ns" value="1758249876462569991" />
-      <property role="20kJfa" value="property" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
     </node>
@@ -1276,6 +1268,33 @@
       <property role="20kJfa" value="condition" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="i1eH3VE_aN">
+    <property role="EcuMT" value="324605317397238451" />
+    <property role="3GE5qa" value="People" />
+    <property role="TrG5h" value="Patient" />
+    <property role="34LRSv" value="patient" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="i1eH3VE_aX" role="1TKVEi">
+      <property role="IQ2ns" value="324605317397238461" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="patientProperty" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="i1eH3Wpca0">
+    <property role="EcuMT" value="324605317409456768" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="ProbabilityCondition" />
+    <property role="34LRSv" value="probability" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyi" id="i1eH3WpcaI" role="1TKVEl">
+      <property role="IQ2nx" value="324605317409456814" />
+      <property role="TrG5h" value="probabilityChance" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
   </node>
 </model>

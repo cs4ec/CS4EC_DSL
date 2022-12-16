@@ -197,4 +197,10 @@ public class PreAdmissionStaff extends Actor {
 
 
 
+  public int PreAdmissionStaffgetAliveTime() {
+    if (deSpawnTime == 0) {
+      deSpawnTime = ToolBox().getTime();
+    }
+    return (int) (deSpawnTime - spawnTime);
+  }
 }

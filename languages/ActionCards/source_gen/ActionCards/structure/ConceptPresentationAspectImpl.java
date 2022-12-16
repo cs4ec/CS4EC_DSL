@@ -48,16 +48,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObservationTest;
   private ConceptPresentation props_ObservationsCondition;
   private ConceptPresentation props_PartiallyVaccinated;
+  private ConceptPresentation props_Patient;
   private ConceptPresentation props_PatientArrivalLine;
   private ConceptPresentation props_PatientArrivals;
   private ConceptPresentation props_PatientProfile;
   private ConceptPresentation props_PatientPropertyConditional;
-  private ConceptPresentation props_PatientPropertyReference;
   private ConceptPresentation props_PatientSeverity;
   private ConceptPresentation props_PatientSeverityProperty;
   private ConceptPresentation props_PatientSeverity_Low;
   private ConceptPresentation props_PatientSeverity_Severe;
   private ConceptPresentation props_Patient_Severity_Moderate;
+  private ConceptPresentation props_ProbabilityCondition;
   private ConceptPresentation props_ProbabilityDistribution;
   private ConceptPresentation props_ProbabilityDistributionLine;
   private ConceptPresentation props_ProcessingTimeLine;
@@ -192,7 +193,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.AttributeTable:
         if (props_AttributeTable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("AttributeTable");
+          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L, 0x4813ad0fbaa5f13L, "patientProperty", "", "");
           props_AttributeTable = cpb.create();
         }
         return props_AttributeTable;
@@ -372,6 +373,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PartiallyVaccinated = cpb.create();
         }
         return props_PartiallyVaccinated;
+      case LanguageConceptSwitch.Patient:
+        if (props_Patient == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("patient");
+          props_Patient = cpb.create();
+        }
+        return props_Patient;
       case LanguageConceptSwitch.PatientArrivalLine:
         if (props_PatientArrivalLine == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -401,13 +409,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientPropertyConditional = cpb.create();
         }
         return props_PatientPropertyConditional;
-      case LanguageConceptSwitch.PatientPropertyReference:
-        if (props_PatientPropertyReference == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.presentationByReference(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0a06L, 0x18668ef270ed0a07L, "property", "", "");
-          props_PatientPropertyReference = cpb.create();
-        }
-        return props_PatientPropertyReference;
       case LanguageConceptSwitch.PatientSeverity:
         if (props_PatientSeverity == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -443,6 +444,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Patient_Severity_Moderate = cpb.create();
         }
         return props_Patient_Severity_Moderate;
+      case LanguageConceptSwitch.ProbabilityCondition:
+        if (props_ProbabilityCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("probability");
+          props_ProbabilityCondition = cpb.create();
+        }
+        return props_ProbabilityCondition;
       case LanguageConceptSwitch.ProbabilityDistribution:
         if (props_ProbabilityDistribution == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

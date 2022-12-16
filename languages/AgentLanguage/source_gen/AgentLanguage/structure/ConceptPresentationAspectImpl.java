@@ -38,6 +38,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ConsequenceInStep;
   private ConceptPresentation props_DataInstanceMap;
   private ConceptPresentation props_DataMap;
+  private ConceptPresentation props_DeSpawnAction;
   private ConceptPresentation props_Description;
   private ConceptPresentation props_DirectSignal;
   private ConceptPresentation props_DischargeAction;
@@ -78,6 +79,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Relationship;
   private ConceptPresentation props_RemoveRelationshipAction;
   private ConceptPresentation props_RepastParam;
+  private ConceptPresentation props_RoomIsEmptyOrContainsRelationshipMemberCondition;
   private ConceptPresentation props_RoomSelectionCondition;
   private ConceptPresentation props_RoomSelectionRule;
   private ConceptPresentation props_RoomSelectionStrategy;
@@ -324,6 +326,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DataMap = cpb.create();
         }
         return props_DataMap;
+      case LanguageConceptSwitch.DeSpawnAction:
+        if (props_DeSpawnAction == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("despawn the agent");
+          cpb.presentationByName();
+          props_DeSpawnAction = cpb.create();
+        }
+        return props_DeSpawnAction;
       case LanguageConceptSwitch.Description:
         if (props_Description == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -613,6 +623,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_RepastParam = cpb.create();
         }
         return props_RepastParam;
+      case LanguageConceptSwitch.RoomIsEmptyOrContainsRelationshipMemberCondition:
+        if (props_RoomIsEmptyOrContainsRelationshipMemberCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Room is empty or contains member of relationship");
+          props_RoomIsEmptyOrContainsRelationshipMemberCondition = cpb.create();
+        }
+        return props_RoomIsEmptyOrContainsRelationshipMemberCondition;
       case LanguageConceptSwitch.RoomSelectionCondition:
         if (props_RoomSelectionCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

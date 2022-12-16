@@ -80,12 +80,12 @@ import org.jetbrains.mps.openapi.language.SConcept;
     setCellContext(editorCell);
     editorCell.addEditorCell(createCustomFactory_1());
     editorCell.addEditorCell(createCustomFactory_3());
-    if (nodeCondition_xu8bbp_a2a_0()) {
+    if (nodeCondition_xu8bbp_a2a()) {
       editorCell.addEditorCell(createCustomFactory_7());
     }
     return editorCell;
   }
-  private boolean nodeCondition_xu8bbp_a2a_0() {
+  private boolean nodeCondition_xu8bbp_a2a() {
     return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(myNode, LINKS.condition$UnEW)).isNotEmpty();
   }
   private EditorCell createCustomFactory_0(final EditorContext editorContext, final SNode node) {
@@ -449,14 +449,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new conditionSingleRoleHandler_xu8bbp_b0a2a_0(myNode, LINKS.condition$UnEW, getEditorContext());
+    SingleRoleCellProvider provider = new conditionSingleRoleHandler_xu8bbp_b0a2a(myNode, LINKS.condition$UnEW, getEditorContext());
     return provider.createCell();
   }
-  private static class conditionSingleRoleHandler_xu8bbp_b0a2a_0 extends SingleRoleCellProvider {
+  private static class conditionSingleRoleHandler_xu8bbp_b0a2a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public conditionSingleRoleHandler_xu8bbp_b0a2a_0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public conditionSingleRoleHandler_xu8bbp_b0a2a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }

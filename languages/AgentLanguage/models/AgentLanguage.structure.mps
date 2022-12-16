@@ -1196,6 +1196,11 @@
     <property role="34LRSv" value="Agent Generator" />
     <property role="3GE5qa" value="AgentGeneration" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="i1eH3W4JhS" role="1TKVEl">
+      <property role="IQ2nx" value="324605317404095608" />
+      <property role="TrG5h" value="agentProfileName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
     <node concept="1TJgyj" id="2vFOz$FUEfh" role="1TKVEi">
       <property role="IQ2ns" value="2876623929997960145" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -1875,6 +1880,49 @@
       <property role="20kJfa" value="actorReference" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="3l6cNjebQ9L" resolve="Actor" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5YqbxEqMl1l">
+    <property role="EcuMT" value="6888869271817506901" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="DeSpawnAction" />
+    <property role="34LRSv" value="despawn" />
+    <property role="R4oN_" value="despawn the agent" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="PrWs8" id="5YqbxEqMl1m" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="5YqbxEqMqn3" role="1TKVEi">
+      <property role="IQ2ns" value="6888869271817528771" />
+      <property role="20kJfa" value="actorRef" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjebQ9L" resolve="Actor" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="i1eH3WOG5k">
+    <property role="EcuMT" value="324605317416665428" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="RoomIsEmptyOrContainsRelationshipMemberCondition" />
+    <property role="34LRSv" value="Room is empty or contains member of relationship" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyi" id="i1eH3WOKp5" role="1TKVEl">
+      <property role="IQ2nx" value="324605317416683077" />
+      <property role="TrG5h" value="relationshipName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyj" id="i1eH3WOJH5" role="1TKVEi">
+      <property role="IQ2ns" value="324605317416680261" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="targetRoomType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+    <node concept="1TJgyj" id="i1eH3WOK8I" role="1TKVEi">
+      <property role="IQ2ns" value="324605317416682030" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ActorRef" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
     </node>
   </node>
 </model>

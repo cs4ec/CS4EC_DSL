@@ -197,4 +197,10 @@ public class Doctor extends Actor {
 
 
 
+  public int DoctorgetAliveTime() {
+    if (deSpawnTime == 0) {
+      deSpawnTime = ToolBox().getTime();
+    }
+    return (int) (deSpawnTime - spawnTime);
+  }
 }

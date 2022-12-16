@@ -15,7 +15,7 @@ public class ActorTypeSignal extends Signal{
 	}
 	
 	@Override
-	public boolean checkPreCondition(Context c) {
+	public boolean checkPreCondition(Context c, Actor receiver) {
 		return true;
 	}
 }
