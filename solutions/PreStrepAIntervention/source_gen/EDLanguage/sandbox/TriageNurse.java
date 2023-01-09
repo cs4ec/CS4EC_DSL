@@ -8,8 +8,10 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
 import simcore.Signals.Signal;
+import simcore.basicStructures.Board;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import repast.simphony.space.graph.Network;
 import java.util.stream.StreamSupport;
 import repast.simphony.space.graph.RepastEdge;
@@ -21,7 +23,6 @@ import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
 import simcore.Signals.Orders.MoveToOrder;
 import repast.simphony.engine.environment.RunEnvironment;
-import simcore.basicStructures.Board;
 import simcore.action.InstantBehaviourStep;
 
 public class TriageNurse extends Actor {
@@ -32,6 +33,32 @@ public class TriageNurse extends Actor {
     super(space, grid, context);
     mintMyMaxPatients = 2147483647;
   }
+
+  protected Signal searchForSignals(Board board) {
+    // Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for 
+    List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, TriageNurse.this);
+      }
+    }).collect(Collectors.toList());
+    List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, TriageNurse.this);
+      }
+    }).collect(Collectors.toList());
+
+    if (plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
+      return null;
+    }
+    // First see if there are any direct messages for me and prioritise those 
+    Signal s = selectSignal(plstDirectSignals);
+    if (s == null) {
+      // If none, select a message for my class type 
+      s = selectSignal(plstSignals);
+    }
+    return s;
+  }
+
 
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (!(plstSignals.isEmpty())) {
@@ -127,23 +154,23 @@ public class TriageNurse extends Actor {
       case "":
         break;
       case "Arrival_ChecksTrigger_a":
-        behaviourBuilder = new Behaviour("Arrival_ChecksTrigger_a");
+        behaviourBuilder = new Behaviour("Arrival_ChecksTrigger_a", this);
         this.InitArrival_Checks_a(s);
         break;
       case "PatientArrivesTrigger_b":
-        behaviourBuilder = new Behaviour("PatientArrivesTrigger_b");
+        behaviourBuilder = new Behaviour("PatientArrivesTrigger_b", this);
         this.InitPatientArrives_b(s);
         break;
       case "TriageTrigger_a":
-        behaviourBuilder = new Behaviour("TriageTrigger_a");
+        behaviourBuilder = new Behaviour("TriageTrigger_a", this);
         this.InitTriage_a(s);
         break;
       case "ChecksTrigger_b":
-        behaviourBuilder = new Behaviour("ChecksTrigger_b");
+        behaviourBuilder = new Behaviour("ChecksTrigger_b", this);
         this.InitChecks_b(s);
         break;
       case "ChecksTrigger_c":
-        behaviourBuilder = new Behaviour("ChecksTrigger_c");
+        behaviourBuilder = new Behaviour("ChecksTrigger_c", this);
         this.InitChecks_c(s);
         break;
       default:

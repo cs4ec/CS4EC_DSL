@@ -232,7 +232,7 @@
   <node concept="2GGxxg" id="av1M7vbJYz">
     <property role="TrG5h" value="MajorsDoctor" />
     <property role="3GE5qa" value="Staff" />
-    <property role="3ZUNkI" value="0" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="34hhAWvhKM1" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -255,7 +255,7 @@
       <ref role="2_0uz0" node="2_JteYPiCG6" resolve="TriageNurse" />
     </node>
     <node concept="2_0uwW" id="1xAzJ9P173A" role="2_0uzz">
-      <property role="2_0uz2" value="3" />
+      <property role="2_0uz2" value="5" />
       <ref role="2_0uz0" node="1xAzJ9NxGdV" resolve="MinorsNurse" />
     </node>
     <node concept="2_0uwW" id="3mDt9dit_I3" role="2_0uzz">
@@ -283,7 +283,7 @@
   <node concept="2GGxxg" id="2_JteYPiCHe">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MajorsNurse" />
-    <property role="3ZUNkI" value="0" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="i1eH3VeDCF" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -435,7 +435,7 @@
   <node concept="2GGxxg" id="1xAzJ9NxGdV">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MinorsNurse" />
-    <property role="3ZUNkI" value="0" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="i1eH3WJij_" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -2882,7 +2882,7 @@
   <node concept="2GGxxg" id="i1eH3VeDCH">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MinorsDoctor" />
-    <property role="3ZUNkI" value="0" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="i1eH3WJijq" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -3144,6 +3144,16 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="lHwnuE6DS5" role="37mRID">
+        <property role="37mO49" value="391111093606063551" />
+        <node concept="gqqVs" id="lHwnuE6DS4" role="37mO4d">
+          <property role="gqqTZ" value="910.0004119873047" />
+          <property role="gqqTW" value="230.0" />
+          <property role="gqqTX" value="162.0" />
+          <property role="gqqTy" value="37.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="i1eH3VeDOd" role="2MhjZp">
       <property role="TrG5h" value="Wait" />
@@ -3241,7 +3251,7 @@
       </node>
       <node concept="2GGxJi" id="i1eH3WKMUF" role="A3aay">
         <ref role="3tVEyn" node="i1eH3WpbP4" resolve="ObsReview" />
-        <ref role="2GGxGe" node="i1eH3WKMT1" resolve="AdmitToWards" />
+        <ref role="2GGxGe" node="lHwnuE6DQZ" resolve="SeniorDocReview" />
         <node concept="3STvxg" id="i1eH3WKMUM" role="1hyIAf">
           <property role="3STvxY" value="25" />
         </node>
@@ -3271,6 +3281,23 @@
       </node>
       <node concept="UeIYj" id="i1eH3WKMTM" role="3lENdC">
         <ref role="Udx8D" node="7$JgZMbkJ3A" resolve="GreenBay" />
+      </node>
+    </node>
+    <node concept="2MhjZa" id="lHwnuE6DQZ" role="2MhjZp">
+      <property role="TrG5h" value="SeniorDocReview" />
+      <property role="3lFixl" value="true" />
+      <node concept="2_8ZN7" id="lHwnuE6DS1" role="2_8HaY">
+        <ref role="2_8ZNy" node="52K8Ej3GgM" resolve="SeniorDoc" />
+      </node>
+      <node concept="1M3RjT" id="lHwnuE6DRZ" role="1M293l">
+        <property role="1M3RjU" value="10" />
+      </node>
+      <node concept="2GGxJi" id="lHwnuE6DSU" role="A3aay">
+        <ref role="3tVEyn" node="lHwnuE6DQZ" resolve="SeniorDocReview" />
+        <ref role="2GGxGe" node="i1eH3WKMT1" resolve="AdmitToWards" />
+      </node>
+      <node concept="UeIYj" id="1KQh9TqlCEs" role="3lENdC">
+        <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsBay" />
       </node>
     </node>
   </node>

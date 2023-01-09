@@ -184,17 +184,10 @@
       </concept>
       <concept id="768972137583559191" name="BuiltEnvironment.structure.MapImporter" flags="ng" index="2Ovb82">
         <reference id="768972137583559222" name="targetContainer" index="2Ovb8z" />
-        <child id="768972137592500155" name="sourceFile" index="2PX5YI" />
       </concept>
       <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw">
         <child id="5626228425383343645" name="PatientOccupiable" index="3IeprG" />
       </concept>
-    </language>
-    <language id="d3a0fd26-445a-466c-900e-10444ddfed52" name="com.mbeddr.mpsutil.filepicker">
-      <concept id="6156524541422549000" name="com.mbeddr.mpsutil.filepicker.structure.AbstractPicker" flags="ng" index="3N1QpV">
-        <property id="6156524541422553710" name="path" index="3N1Lgt" />
-      </concept>
-      <concept id="1504214765033455826" name="com.mbeddr.mpsutil.filepicker.structure.FileSystemFilePicker" flags="ng" index="3VlSI9" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
@@ -232,7 +225,7 @@
   <node concept="2GGxxg" id="av1M7vbJYz">
     <property role="TrG5h" value="MajorsDoctor" />
     <property role="3GE5qa" value="Staff" />
-    <property role="3ZUNkI" value="3" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="34hhAWvhKM1" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -275,9 +268,6 @@
     <property role="TrG5h" value="EDMapImporter" />
     <property role="3GE5qa" value="ED Layout" />
     <ref role="2Ovb8z" node="EFW1mZkn0D" resolve="EmergencyDepartment" />
-    <node concept="3VlSI9" id="EFW1mZonD8" role="2PX5YI">
-      <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/ActionCardWinter2021/StThomasEDMap2.json" />
-    </node>
   </node>
   <node concept="2GGxxg" id="2_JteYPiCG6">
     <property role="3GE5qa" value="Staff" />
@@ -287,7 +277,7 @@
   <node concept="2GGxxg" id="2_JteYPiCHe">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MajorsNurse" />
-    <property role="3ZUNkI" value="3" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="i1eH3VeDCF" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -440,7 +430,7 @@
   <node concept="2GGxxg" id="1xAzJ9NxGdV">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MinorsNurse" />
-    <property role="3ZUNkI" value="3" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="i1eH3WJij_" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -2621,23 +2611,8 @@
         <ref role="3tVEyn" node="6lG8bJ5b7bJ" resolve="ReassuranceSafetyNetting" />
         <ref role="2GGxGe" node="6lG8bJ5b7cH" resolve="Discharge" />
       </node>
-      <node concept="_GsXW" id="6lG8bJ5b7JS" role="1M293l">
-        <node concept="_GsXV" id="6lG8bJ5b7JT" role="_GsXX">
-          <property role="_GsXS" value="9" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7JU" role="_GsXX">
-          <property role="_GsXS" value="10" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7JV" role="_GsXX">
-          <property role="_GsXS" value="11" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7JW" role="_GsXX">
-          <property role="_GsXS" value="12" />
-          <property role="_GsXA" value="1" />
-        </node>
+      <node concept="1M3RjT" id="lHwnuE5J2A" role="1M293l">
+        <property role="1M3RjU" value="10" />
       </node>
     </node>
     <node concept="1H2jYY" id="6lG8bJ5b7cH" role="2MhjZp">
@@ -2662,23 +2637,8 @@
         <ref role="3tVEyn" node="6lG8bJ5b7em" resolve="ReassuranceSafetyNetting" />
         <ref role="2GGxGe" node="6lG8bJ5b7rX" resolve="Antibiotics" />
       </node>
-      <node concept="_GsXW" id="6lG8bJ5b7G1" role="1M293l">
-        <node concept="_GsXV" id="6lG8bJ5b7G2" role="_GsXX">
-          <property role="_GsXS" value="9" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7G3" role="_GsXX">
-          <property role="_GsXS" value="10" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7G4" role="_GsXX">
-          <property role="_GsXS" value="11" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7G5" role="_GsXX">
-          <property role="_GsXS" value="12" />
-          <property role="_GsXA" value="1" />
-        </node>
+      <node concept="1M3RjT" id="lHwnuE5J2u" role="1M293l">
+        <property role="1M3RjU" value="1" />
       </node>
     </node>
     <node concept="1HTXKU" id="6lG8bJ5b7jh" role="1HTZI9">
@@ -2726,19 +2686,7 @@
       </node>
       <node concept="_GsXW" id="6lG8bJ5b7Gb" role="1M293l">
         <node concept="_GsXV" id="6lG8bJ5b7Gc" role="_GsXX">
-          <property role="_GsXS" value="9" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7Gd" role="_GsXX">
-          <property role="_GsXS" value="10" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7Ge" role="_GsXX">
-          <property role="_GsXS" value="11" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7Gf" role="_GsXX">
-          <property role="_GsXS" value="12" />
+          <property role="_GsXS" value="5" />
           <property role="_GsXA" value="1" />
         </node>
       </node>
@@ -2752,30 +2700,15 @@
       <node concept="2_8ZN7" id="i1eH3VgOJ1" role="2_8HaY">
         <ref role="2_8ZNy" node="i1eH3VgOG6" resolve="GASNurse" />
       </node>
-      <node concept="_GsXW" id="6lG8bJ5b7Ht" role="1M293l">
-        <node concept="_GsXV" id="6lG8bJ5b7Hu" role="_GsXX">
-          <property role="_GsXS" value="9" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7Hv" role="_GsXX">
-          <property role="_GsXS" value="10" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7Hw" role="_GsXX">
-          <property role="_GsXS" value="11" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="6lG8bJ5b7Hx" role="_GsXX">
-          <property role="_GsXS" value="12" />
-          <property role="_GsXA" value="1" />
-        </node>
-      </node>
       <node concept="UeIYj" id="6lG8bJ5b7HB" role="3lENdC">
         <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsBay" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ5b7IJ" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ5b7Gl" resolve="Swabbing" />
         <ref role="2GGxGe" node="6lG8bJ5b7cH" resolve="Discharge" />
+      </node>
+      <node concept="1M3RjT" id="lHwnuE5J2y" role="1M293l">
+        <property role="1M3RjU" value="5" />
       </node>
     </node>
   </node>
@@ -3114,7 +3047,7 @@
   <node concept="2GGxxg" id="i1eH3VeDCH">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MinorsDoctor" />
-    <property role="3ZUNkI" value="3" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="i1eH3WJijq" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -3513,12 +3446,19 @@
     </node>
     <node concept="2MhjZa" id="i1eH3XzWoH" role="2MhjZp">
       <property role="TrG5h" value="SenDocReview" />
+      <property role="3lFixl" value="true" />
       <node concept="2_8ZN7" id="i1eH3XzWqm" role="2_8HaY">
         <ref role="2_8ZNy" node="52K8Ej3GgM" resolve="SeniorDoc" />
       </node>
       <node concept="2GGxJi" id="i1eH3XzWqp" role="A3aay">
         <ref role="3tVEyn" node="i1eH3XzWoH" resolve="SenDocReview" />
         <ref role="2GGxGe" node="i1eH3WKMT1" resolve="AdmitToWards" />
+      </node>
+      <node concept="1M3RjT" id="lHwnuE6DQX" role="1M293l">
+        <property role="1M3RjU" value="10" />
+      </node>
+      <node concept="UeIYj" id="1KQh9TqlCEh" role="3lENdC">
+        <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsBay" />
       </node>
     </node>
   </node>
@@ -3968,7 +3908,7 @@
   <node concept="2GGxxg" id="i1eH3VgOG6">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="GASNurse" />
-    <property role="3ZUNkI" value="3" />
+    <property role="3ZUNkI" value="1" />
     <node concept="UeIYj" id="i1eH3VgOGg" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>

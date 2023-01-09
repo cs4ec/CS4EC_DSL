@@ -46,7 +46,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = false;
 
-    RunEnvironment.getInstance().endAt(86400 / params.getInteger("SecondsPerTick"));
+    RunEnvironment.getInstance().endAt(604800 / params.getInteger("SecondsPerTick"));
 
     CreatePatientArrivalMap();
 
@@ -64,23 +64,20 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 3; i++) {
       context.add(new MajorsDoctor(space, grid, context));
     }
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 4; i++) {
       context.add(new MajorsNurse(space, grid, context));
     }
     for (int i = 0; i < 5; i++) {
       context.add(new TriageNurse(space, grid, context));
     }
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 5; i++) {
       context.add(new MinorsNurse(space, grid, context));
     }
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 3; i++) {
       context.add(new SeniorDoc(space, grid, context));
     }
     for (int i = 0; i < 2; i++) {
       context.add(new MinorsDoctor(space, grid, context));
-    }
-    for (int i = 0; i < 2; i++) {
-      context.add(new GASNurse(space, grid, context));
     }
 
 
@@ -97,10 +94,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsTriage_e = new Room("MajorsTriage", context, space, grid, 110, 100, 10, 10, 1, 1000, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
     Room LIATBoothOne_f = new Room("LIATBoothOne", context, space, grid, 111, 92, 5, 5, 1, 1000, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsWaitingRoom_g = new Room("MajorsWaitingRoom", context, space, grid, 140, 90, 20, 40, 1, 1000, NonRespiratoryArea.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room NonRespiratoryCubicle11_h = new Room("NonRespiratoryCubicle1", context, space, grid, 80, 80, 10, 10, 1, 1000, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room NonRespiratoryCubicle22_i = new Room("NonRespiratoryCubicle2", context, space, grid, 90, 60, 10, 10, 1, 3, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room NonRespiratoryCubicle33_j = new Room("NonRespiratoryCubicle3", context, space, grid, 100, 80, 10, 10, 1, 3, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
-        Room NonRespiratoryCubicle1_h = new Room("NonRespiratoryCubicle1", context, space, grid, 110, 80, 10, 10, 1, 1000, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room NonRespiratoryCubicle1_h = new Room("NonRespiratoryCubicle1", context, space, grid, 110, 80, 10, 10, 1, 1000, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
     Room NonRespiratoryCubicle2_i = new Room("NonRespiratoryCubicle2", context, space, grid, 110, 60, 10, 10, 1, 3, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
     Room NonRespiratoryCubicle3_j = new Room("NonRespiratoryCubicle3", context, space, grid, 120, 80, 10, 10, 1, 3, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
     Room NonRespiratoryCubicle4_k = new Room("NonRespiratoryCubicle4", context, space, grid, 120, 60, 10, 10, 1, 3, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
@@ -149,10 +143,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room NonRespiratoryCohort_bc = new Room("NonRespiratoryCohort", context, space, grid, 200, 5, 50, 50, 1, 1000, NonRespiratoryCohort.getInstance(), Color.GREEN, EmergencyDepartment_0);
 
     try {
-        NonRespiratoryCubicle11_h.addOccupiable(new Bed(context, space, grid, 85, 85, NonRespiratoryCubicle11_h));
-        NonRespiratoryCubicle22_i.addOccupiable(new Bed(context, space, grid, 95, 65, NonRespiratoryCubicle22_i));
-        NonRespiratoryCubicle33_j.addOccupiable(new Bed(context, space, grid, 105, 85, NonRespiratoryCubicle33_j));
-        
       NonRespiratoryCubicle1_h.addOccupiable(new Bed(context, space, grid, 115, 85, NonRespiratoryCubicle1_h));
       NonRespiratoryCubicle2_i.addOccupiable(new Bed(context, space, grid, 115, 65, NonRespiratoryCubicle2_i));
       NonRespiratoryCubicle3_j.addOccupiable(new Bed(context, space, grid, 125, 85, NonRespiratoryCubicle3_j));

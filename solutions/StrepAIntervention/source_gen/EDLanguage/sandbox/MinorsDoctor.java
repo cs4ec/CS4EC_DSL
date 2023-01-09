@@ -34,7 +34,7 @@ public class MinorsDoctor extends Actor {
 
   public MinorsDoctor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
-    mintMyMaxPatients = 3;
+    mintMyMaxPatients = 5;
   }
 
   protected Signal searchForSignals(Board board) {

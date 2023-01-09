@@ -248,10 +248,7 @@
     <classNode dependClassName="EDLanguage.sandbox.ScarletFeverTrigger_hSignal" />
     <classNode dependClassName="EDLanguage.sandbox.SwabbingTrigger_jSignal" />
     <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a1" />
-    <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a2" />
-    <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a4" />
     <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a8" />
-    <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a9" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
@@ -573,6 +570,15 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.SenDocReviewTrigger_iSignal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.SeniorDoc">
@@ -684,32 +690,8 @@
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
-  <dependency className="StrepAIntervention.AC1.TimeDistributionTable_a2">
-    <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a2" />
-    <classNode dependClassName="java.lang.Double" />
-    <classNode dependClassName="java.lang.Integer" />
-    <classNode dependClassName="java.util.HashMap" />
-    <classNode dependClassName="java.util.Map" />
-    <classNode dependClassName="simcore.utilities.Distribution" />
-  </dependency>
-  <dependency className="StrepAIntervention.AC1.TimeDistributionTable_a4">
-    <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a4" />
-    <classNode dependClassName="java.lang.Double" />
-    <classNode dependClassName="java.lang.Integer" />
-    <classNode dependClassName="java.util.HashMap" />
-    <classNode dependClassName="java.util.Map" />
-    <classNode dependClassName="simcore.utilities.Distribution" />
-  </dependency>
   <dependency className="StrepAIntervention.AC1.TimeDistributionTable_a8">
     <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a8" />
-    <classNode dependClassName="java.lang.Double" />
-    <classNode dependClassName="java.lang.Integer" />
-    <classNode dependClassName="java.util.HashMap" />
-    <classNode dependClassName="java.util.Map" />
-    <classNode dependClassName="simcore.utilities.Distribution" />
-  </dependency>
-  <dependency className="StrepAIntervention.AC1.TimeDistributionTable_a9">
-    <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a9" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.util.HashMap" />

@@ -3,6 +3,9 @@ package simcore.action;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
+
+import org.jmock.core.constraint.IsInstanceOf;
 
 import EDLanguage.sandbox.patient;
 import repast.simphony.engine.schedule.IAction;
@@ -21,9 +24,11 @@ public class Behaviour {
 	protected Locatable behaviourLocation;
 	protected List<BehaviourStep> steps;
 	protected int currentStep = 0;
+	public Agent instantiator;
 	
-	public Behaviour(String s){
+	public Behaviour(String s, Agent instantiator){
 		name = s;
+		this.instantiator = instantiator;
 		startTime = TimeKeeper.getInstance().getTime();
 	}
 	
@@ -75,13 +80,23 @@ public class Behaviour {
 	}
 	
 	public void recordEnd() {
+		if(this.signalTrigger != null) {
+			  for (Map.Entry<String, Object> entry : signalTrigger.getData().entrySet()) {
+			        if(entry.getValue() instanceof Agent) {
+			        	((Agent)entry.getValue()).actionHistory.add(this);
+			        }
+			    }
+		}
+		
+		instantiator.actionHistory.add(this);
+		  
 		endTime = TimeKeeper.getInstance().getTime();
-
 	}
 	
 	public String getDescription() {
 		String content = "";
 		content+= name;
+		content+= " completed by: " + instantiator.getClass().getSimpleName() + instantiator.agentName();
 		if(signalTrigger != null && signalTrigger.GetData("patient") != null) {
 			content+= " with patient " + ((Agent)signalTrigger.GetData("patient")).agentName();
 		}

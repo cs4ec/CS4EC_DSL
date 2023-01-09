@@ -12,11 +12,8 @@ public class TimeDistributionTable_a8 {
 
   private TimeDistributionTable_a8() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
-    double TotalOccurances = 5;
-    returnMap.put(9, ((Double) (1 / TotalOccurances)));
-    returnMap.put(10, ((Double) (1 / TotalOccurances)));
-    returnMap.put(11, ((Double) (1 / TotalOccurances)));
-    returnMap.put(12, ((Double) (1 / TotalOccurances)));
+    double TotalOccurances = 2;
+    returnMap.put(5, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

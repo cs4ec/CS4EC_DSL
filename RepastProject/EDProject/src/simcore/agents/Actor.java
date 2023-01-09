@@ -105,12 +105,12 @@ public class Actor extends Agent {
 					}
 				} 
 				else {
-					// If there are no no signals yet, then I can do my 'isIdleAction' if one exists
-					Behaviour idleBehaviour = this.isIdleAction(null);
-					if(idleBehaviour != null) {
-						myCurrentActions.add(idleBehaviour);
-						myActiveAction = idleBehaviour;
-					}
+//					// If there are no no signals yet, then I can do my 'isIdleAction' if one exists
+//					Behaviour idleBehaviour = this.isIdleAction(null);
+//					if(idleBehaviour != null) {
+//						myCurrentActions.add(idleBehaviour);
+//						myActiveAction = idleBehaviour;
+//					}
 				}
 			} else {
 				Behaviour myCurrentAction = plstReadyActions.get(0);

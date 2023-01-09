@@ -33,7 +33,7 @@ public class GASNurse extends Actor {
 
   public GASNurse(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
-    mintMyMaxPatients = 3;
+    mintMyMaxPatients = 1;
   }
 
   protected Signal searchForSignals(Board board) {
@@ -658,9 +658,8 @@ public class GASNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0b_11 extends PassiveBehaviourStep {
+  public class StayAction_d0b_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = TimeDistributionTable_a2.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_d0b_11(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -672,7 +671,8 @@ public class GASNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == testingTime;
+      return (timeExecuted == (600 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class SendSignalAction_e0b_11 extends BehaviourStep {
@@ -768,9 +768,8 @@ public class GASNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0b_13 extends PassiveBehaviourStep {
+  public class StayAction_d0b_13 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = TimeDistributionTable_a2.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_d0b_13(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -782,7 +781,8 @@ public class GASNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == testingTime;
+      return (timeExecuted == (600 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class SendSignalAction_e0b_13 extends BehaviourStep {
@@ -818,11 +818,11 @@ public class GASNurse extends Actor {
 
     }
   }
-  public class MoveAction_a0c_15 extends BehaviourStep {
+  public class MoveAction_a0c_19 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0c_15(Behaviour behaviour) {
+    public MoveAction_a0c_19(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -851,9 +851,9 @@ public class GASNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0c_11 extends BehaviourStep {
+  public class OrderAction_b0c_15 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_11(Behaviour behaviour) {
+    public OrderAction_b0c_15(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -863,10 +863,10 @@ public class GASNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(GASNurse.this));
     }
   }
-  public class StayForConditionAction_c0c_5 extends BehaviourStep {
+  public class StayForConditionAction_c0c_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0c_5(Behaviour behaviour) {
+    public StayForConditionAction_c0c_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -913,11 +913,11 @@ public class GASNurse extends Actor {
       }
     }
   }
-  public class MoveAction_a0c_17 extends BehaviourStep {
+  public class MoveAction_a0c_21 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0c_17(Behaviour behaviour) {
+    public MoveAction_a0c_21(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -946,9 +946,9 @@ public class GASNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0c_13 extends BehaviourStep {
+  public class OrderAction_b0c_17 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_13(Behaviour behaviour) {
+    public OrderAction_b0c_17(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -958,10 +958,10 @@ public class GASNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(GASNurse.this));
     }
   }
-  public class StayForConditionAction_c0c_6 extends BehaviourStep {
+  public class StayForConditionAction_c0c_8 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0c_6(Behaviour behaviour) {
+    public StayForConditionAction_c0c_8(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1068,9 +1068,8 @@ public class GASNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0d_7 extends PassiveBehaviourStep {
+  public class StayAction_d0d_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = TimeDistributionTable_a4.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_d0d_7(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -1082,7 +1081,8 @@ public class GASNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == testingTime;
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class SendSignalAction_e0d_3 extends BehaviourStep {
@@ -1178,9 +1178,8 @@ public class GASNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0d_9 extends PassiveBehaviourStep {
+  public class StayAction_d0d_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = TimeDistributionTable_a4.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_d0d_9(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -1192,7 +1191,8 @@ public class GASNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == testingTime;
+      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class SendSignalAction_e0d_5 extends BehaviourStep {
@@ -1706,9 +1706,8 @@ public class GASNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0i extends PassiveBehaviourStep {
+  public class StayAction_d0i extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = TimeDistributionTable_a9.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_d0i(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -1720,7 +1719,8 @@ public class GASNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == testingTime;
+      return (timeExecuted == (300 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class SendSignalAction_e0i extends BehaviourStep {
@@ -1816,9 +1816,8 @@ public class GASNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0i_1 extends PassiveBehaviourStep {
+  public class StayAction_d0i_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ int testingTime = TimeDistributionTable_a9.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
     public StayAction_d0i_1(Behaviour behaviour) {
       this.behaviour = behaviour;
@@ -1830,7 +1829,8 @@ public class GASNurse extends Actor {
     }
 
     public boolean finishCondition() {
-      return timeExecuted == testingTime;
+      return (timeExecuted == (300 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+
     }
   }
   public class SendSignalAction_e0i_1 extends BehaviourStep {
@@ -1951,9 +1951,9 @@ public class GASNurse extends Actor {
   public void InitDischargeActionDischarge_d_1(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0c_15(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0c_11(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0c_5(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0c_19(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0c_15(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0c_7(behaviourBuilder));
     plstSteps.add(new Consequence_d0c(behaviourBuilder));
     plstSteps.add(new DespawnAction_e0c(behaviourBuilder));
     plstSteps.add(new RemoveRelationshipAction_f0c(behaviourBuilder));

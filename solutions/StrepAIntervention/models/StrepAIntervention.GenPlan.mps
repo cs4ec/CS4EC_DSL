@@ -62,12 +62,6 @@
           <property role="20Rdg7" value="AgentLanguage#01" />
         </node>
       </node>
-      <node concept="3uMdn$" id="74nMeo7oyQC" role="3uOsAP">
-        <node concept="20RdaH" id="74nMeo7oyQD" role="3uMdmt">
-          <property role="20Rdg5" value="ebbc2a81-6618-40a2-b3b8-997fd1520167" />
-          <property role="20Rdg7" value="com.dslfoundry.plaintextgen#5198309202559528987" />
-        </node>
-      </node>
       <node concept="3uMdn$" id="5ivS4t6lQQA" role="3uOsAP">
         <node concept="20RdaH" id="5ivS4t6lQQB" role="3uMdmt">
           <property role="20Rdg5" value="4517af98-2eaa-4f19-a962-92df60010094" />
@@ -86,6 +80,12 @@
         <node concept="20RdaH" id="5ivS4t6oAgK" role="3uMdmt">
           <property role="20Rdg5" value="50fd4dec-4494-4a71-a0ca-d35c48af6670" />
           <property role="20Rdg7" value="de.itemis.mps.editor.diagram.layout#4341402299005877448" />
+        </node>
+      </node>
+      <node concept="3uMdn$" id="74nMeo7oyQC" role="3uOsAP">
+        <node concept="20RdaH" id="74nMeo7oyQD" role="3uMdmt">
+          <property role="20Rdg5" value="ebbc2a81-6618-40a2-b3b8-997fd1520167" />
+          <property role="20Rdg7" value="com.dslfoundry.plaintextgen#5198309202559528987" />
         </node>
       </node>
     </node>

@@ -5,10 +5,6 @@
 		type="number" number_type="int" start="1" end="10" step="1" />
 	<parameter name="UsePathFinding"
 		type="constant" constant_type="boolean" value="false" />
-  	<parameter name="BranchProbability_a2"
-  		type="constant" constant_type="double" value="20" />
-  	<parameter name="BranchProbability_b2"
-  		type="constant" constant_type="double" value="80" />
   	<parameter name="BranchProbability_a5"
   		type="constant" constant_type="double" value="75" />
   	<parameter name="BranchProbability_b5"

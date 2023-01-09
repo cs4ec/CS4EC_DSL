@@ -55,6 +55,7 @@ public class Agent {
 	protected Occupiable curOccupying;
 	protected List<Behaviour> myCurrentActions = new ArrayList<Behaviour>();
 	protected List<Behaviour> myPastActions = new ArrayList<Behaviour>();
+	public List<Behaviour> actionHistory = new ArrayList<Behaviour>();
 	protected Behaviour myActiveAction;
 	protected List<GridPoint> curPath;
 	protected boolean isIdle;
@@ -464,11 +465,12 @@ public class Agent {
 //		}
 //	}
 	
+	@ScheduledMethod(start=10080)
 	public void printActivityHistory() {
 		ToolBox toolBox = ToolBox();
 		String content = "";
 		
-		for (Behaviour behaviour : myPastActions) {
+		for (Behaviour behaviour : actionHistory) {
 			content+=behaviour.getDescription();
 			content+="\n";
 		}

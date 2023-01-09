@@ -224,6 +224,7 @@
   <node concept="2GGxxg" id="av1M7vbJYz">
     <property role="TrG5h" value="MajorsDoctor" />
     <property role="3GE5qa" value="Staff" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="34hhAWvhKM1" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -269,11 +270,12 @@
   <node concept="2GGxxg" id="2_JteYPiCG6">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="TriageNurse" />
+    <property role="3ZUNkI" value="0" />
   </node>
   <node concept="2GGxxg" id="2_JteYPiCHe">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MajorsNurse" />
-    <property role="3ZUNkI" value="3" />
+    <property role="3ZUNkI" value="5" />
     <node concept="UeIYj" id="i1eH3VeDCF" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -281,6 +283,7 @@
   <node concept="2GGxxg" id="52K8Ej3GgM">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="SeniorDoc" />
+    <property role="3ZUNkI" value="0" />
   </node>
   <node concept="3oQJd$" id="6MzSDQOvLH$">
     <property role="3GE5qa" value="Diseases" />
@@ -427,7 +430,7 @@
   <node concept="2GGxxg" id="1xAzJ9NxGdV">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MinorsNurse" />
-    <property role="3ZUNkI" value="3" />
+    <property role="3ZUNkI" value="5" />
   </node>
   <node concept="j3bMj" id="EFW1mZkn0D">
     <property role="3GE5qa" value="ED Layout" />
@@ -2199,6 +2202,7 @@
   <node concept="2GGxxg" id="2K0oNvtWdy4">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="WardNurse" />
+    <property role="3ZUNkI" value="0" />
   </node>
   <node concept="2MhjZA" id="3i9haAIoNzA">
     <property role="3GE5qa" value="Action Cards" />
@@ -2829,6 +2833,7 @@
   <node concept="2GGxxg" id="i1eH3VeDCH">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="MinorsDoctor" />
+    <property role="3ZUNkI" value="5" />
   </node>
   <node concept="2MhjZA" id="i1eH3VeDCI">
     <property role="3GE5qa" value="Action Cards" />
@@ -3857,7 +3862,7 @@
   <node concept="2GGxxg" id="i1eH3VgOG6">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="GASNurse" />
-    <property role="3ZUNkI" value="3" />
+    <property role="3ZUNkI" value="1" />
     <node concept="UeIYj" id="i1eH3VgOGg" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>

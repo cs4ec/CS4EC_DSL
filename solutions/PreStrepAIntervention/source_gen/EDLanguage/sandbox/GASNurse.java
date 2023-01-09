@@ -8,8 +8,10 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
 import simcore.Signals.Signal;
+import simcore.basicStructures.Board;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import repast.simphony.space.graph.Network;
 import java.util.stream.StreamSupport;
 import repast.simphony.space.graph.RepastEdge;
@@ -29,6 +31,32 @@ public class GASNurse extends Actor {
     super(space, grid, context);
     mintMyMaxPatients = 2147483647;
   }
+
+  protected Signal searchForSignals(Board board) {
+    // Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for 
+    List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, GASNurse.this);
+      }
+    }).collect(Collectors.toList());
+    List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, GASNurse.this);
+      }
+    }).collect(Collectors.toList());
+
+    if (plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
+      return null;
+    }
+    // First see if there are any direct messages for me and prioritise those 
+    Signal s = selectSignal(plstDirectSignals);
+    if (s == null) {
+      // If none, select a message for my class type 
+      s = selectSignal(plstSignals);
+    }
+    return s;
+  }
+
 
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (!(plstSignals.isEmpty())) {
@@ -113,7 +141,7 @@ public class GASNurse extends Actor {
   }
 
   public Behaviour isIdleAction(Signal s) {
-    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_33(behaviourBuilder));

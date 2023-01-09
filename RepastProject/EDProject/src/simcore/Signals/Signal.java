@@ -7,10 +7,12 @@ import java.util.Map;
 
 import repast.simphony.context.Context;
 import simcore.agents.Actor;
+import simcore.basicStructures.ToolBox;
 
 public class Signal {
 
 	protected String name;
+	public double sentTime;
 	protected String description;	
 	protected List<String> subjects; //String to represent Actor
 
@@ -20,6 +22,7 @@ public class Signal {
 	public Signal() {
 		data = new HashMap<String, Object>();
 		subjects = new ArrayList<String>();
+		sentTime = new ToolBox(this).getTime();
 	}
 	
 	public boolean checkPreCondition(Context c, Actor receiver) {
@@ -86,6 +89,10 @@ public class Signal {
 			}
 		}
 		return false;
+	}
+	
+	public double getSentTime() {
+		return sentTime;
 	}
 	
 	

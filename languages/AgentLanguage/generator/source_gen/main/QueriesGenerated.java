@@ -531,16 +531,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(_context.getNode()) + "DataSet";
   }
   public static Object propertyMacro_GetValue_56_1(final PropertyMacroContext _context) {
-    return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.Actor$CU, false, false)) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeMonitor$Tq, false, false), _context.getNode());
+    return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(((SNode) _context.getVariable("var:actor"))) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke(((SNode) _context.getVariable("var:attributeMonitor")), _context.getNode());
   }
   public static Object propertyMacro_GetValue_56_2(final PropertyMacroContext _context) {
-    return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.Actor$CU, false, false)) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeMonitor$Tq, false, false), _context.getNode());
+    return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(((SNode) _context.getVariable("var:actor"))) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke(((SNode) _context.getVariable("var:attributeMonitor")), _context.getNode());
   }
   public static Object propertyMacro_GetValue_56_3(final PropertyMacroContext _context) {
-    return "EDLanguage.sandbox." + Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.Actor$CU, false, false));
+    return "EDLanguage.sandbox." + Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(((SNode) _context.getVariable("var:actor")));
   }
   public static Object propertyMacro_GetValue_56_4(final PropertyMacroContext _context) {
-    return (String) AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeMonitor$Tq, false, false), _context.getNode());
+    return (String) AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke(((SNode) _context.getVariable("var:attributeMonitor")), _context.getNode());
   }
   public static Object propertyMacro_GetValue_56_5(final PropertyMacroContext _context) {
     return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(((SNode) _context.getVariable("var:actor"))) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke((SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(((SNode) _context.getVariable("var:aggregateMonitor")), LINKS.AttributeMonitors$x6OO)).getElement(0), LINKS.attributeMonitor$zPap)), (SNode) SLinkOperations.getChildren(_context.getNode(), LINKS.possibleValues$MgDX).get(0)) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke((SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(((SNode) _context.getVariable("var:aggregateMonitor")), LINKS.AttributeMonitors$x6OO)).getElement(1), LINKS.attributeMonitor$zPap)), (SNode) SLinkOperations.getChildren(_context.getNode(), LINKS.possibleValues$MgDX).get(1));
@@ -576,7 +576,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(_context.getNode()) + "DataSet";
   }
   public static Object propertyMacro_GetValue_57_2(final PropertyMacroContext _context) {
-    return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(((SNode) _context.getVariable("var:actor"))) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeMonitor$Tq, false, false), _context.getNode());
+    return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(((SNode) _context.getVariable("var:actor"))) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke(((SNode) _context.getVariable("var:attributeMonitor")), _context.getNode());
   }
   public static Object propertyMacro_GetValue_57_3(final PropertyMacroContext _context) {
     return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(((SNode) _context.getVariable("var:actor"))) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke((SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(((SNode) _context.getVariable("var:aggregateMonitor")), LINKS.AttributeMonitors$x6OO)).getElement(0), LINKS.attributeMonitor$zPap)), (SNode) SLinkOperations.getChildren(_context.getNode(), LINKS.possibleValues$MgDX).get(0)) + AttributeMonitor__BehaviorDescriptor.getFormattedName_id72S_VmelIuC.invoke((SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(((SNode) _context.getVariable("var:aggregateMonitor")), LINKS.AttributeMonitors$x6OO)).getElement(1), LINKS.attributeMonitor$zPap)), (SNode) SLinkOperations.getChildren(_context.getNode(), LINKS.possibleValues$MgDX).get(1));
@@ -852,7 +852,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.targetOccupiable$rNKZ), LINKS.occupiable$cVUG), PROPS.name$2kMF);
   }
   public static Object referenceMacro_GetReferent_43_0(final ReferenceMacroContext _context) {
-    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v));
+    return _context.getOutputNodeByInputNodeAndMappingLabel(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v), "ActorMap");
   }
   public static Object referenceMacro_GetReferent_43_1(final ReferenceMacroContext _context) {
     return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(SLinkOperations.getTarget(_context.getNode(), LINKS.AgentType$lBsa), LINKS.actor$ls$v));
@@ -1278,15 +1278,21 @@ public class QueriesGenerated extends QueryProviderBase {
     return _context.getNode();
   }
   public static Object varMacro_Value_56_0(final TemplateVarContext _context) {
-    return _context.getNode();
+    return (SNode) SNodeOperations.getParent(_context.getNode());
   }
   public static Object varMacro_Value_56_1(final TemplateVarContext _context) {
     return _context.getNode();
   }
-  public static Object varMacro_Value_57_0(final TemplateVarContext _context) {
+  public static Object varMacro_Value_56_2(final TemplateVarContext _context) {
     return _context.getNode();
   }
+  public static Object varMacro_Value_57_0(final TemplateVarContext _context) {
+    return (SNode) SNodeOperations.getParent(_context.getNode());
+  }
   public static Object varMacro_Value_57_1(final TemplateVarContext _context) {
+    return _context.getNode();
+  }
+  public static Object varMacro_Value_57_2(final TemplateVarContext _context) {
     return _context.getNode();
   }
   public static Object varMacro_Value_58_0(final TemplateVarContext _context) {
@@ -2317,7 +2323,7 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("6149859341190059359", new RTQ(37, "map_AdmissionBay"));
     rtqMethods.put("3553172394609228547", new RTQ(38, null));
     rtqMethods.put("768972137576932903", new RTQ(39, "Actor"));
-    rtqMethods.put("768972137576923916", new RTQ(40, "Actor"));
+    rtqMethods.put("324605317434316623", new RTQ(40, "Actor"));
     rtqMethods.put("7308252286140513958", new RTQ(41, "placeholder"));
     rtqMethods.put("7308252286149548746", new RTQ(42, "Agent"));
     rtqMethods.put("512008214795528135", new RTQ(43, "PlaceholderClass"));
@@ -2501,14 +2507,16 @@ public class QueriesGenerated extends QueryProviderBase {
     vvqMethods.put("1862364223783455333", new VVQ(0));
     vvqMethods.put("324605317405408120", new VVQ(1));
     vvqMethods.put("8122408733995633410", new VVQ(2));
-    vvqMethods.put("8122408733995820060", new VVQ(3));
-    vvqMethods.put("8122408733997729977", new VVQ(4));
-    vvqMethods.put("8122408734005021617", new VVQ(5));
-    vvqMethods.put("8122408734004971219", new VVQ(6));
-    vvqMethods.put("8122408733976938748", new VVQ(7));
-    vvqMethods.put("324605317407795343", new VVQ(8));
-    vvqMethods.put("7308252286149576716", new VVQ(9));
-    vvqMethods.put("7308252286135740518", new VVQ(10));
+    vvqMethods.put("324605317429733073", new VVQ(3));
+    vvqMethods.put("8122408733995820060", new VVQ(4));
+    vvqMethods.put("8122408733997729977", new VVQ(5));
+    vvqMethods.put("324605317429774695", new VVQ(6));
+    vvqMethods.put("8122408734005021617", new VVQ(7));
+    vvqMethods.put("8122408734004971219", new VVQ(8));
+    vvqMethods.put("8122408733976938748", new VVQ(9));
+    vvqMethods.put("324605317407795343", new VVQ(10));
+    vvqMethods.put("7308252286149576716", new VVQ(11));
+    vvqMethods.put("7308252286135740518", new VVQ(12));
   }
   @NotNull
   @Override
@@ -2535,16 +2543,20 @@ public class QueriesGenerated extends QueryProviderBase {
         case 4:
           return QueriesGenerated.varMacro_Value_56_1(ctx);
         case 5:
-          return QueriesGenerated.varMacro_Value_57_0(ctx);
+          return QueriesGenerated.varMacro_Value_56_2(ctx);
         case 6:
-          return QueriesGenerated.varMacro_Value_57_1(ctx);
+          return QueriesGenerated.varMacro_Value_57_0(ctx);
         case 7:
-          return QueriesGenerated.varMacro_Value_58_0(ctx);
+          return QueriesGenerated.varMacro_Value_57_1(ctx);
         case 8:
-          return QueriesGenerated.varMacro_Value_82_0(ctx);
+          return QueriesGenerated.varMacro_Value_57_2(ctx);
         case 9:
-          return QueriesGenerated.varMacro_Value_84_0(ctx);
+          return QueriesGenerated.varMacro_Value_58_0(ctx);
         case 10:
+          return QueriesGenerated.varMacro_Value_82_0(ctx);
+        case 11:
+          return QueriesGenerated.varMacro_Value_84_0(ctx);
+        case 12:
           return QueriesGenerated.varMacro_Value_84_1(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -2686,10 +2698,9 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept WallDefinition$Qt = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x109830a68a82ca51L, "BuiltEnvironment.structure.WallDefinition");
     /*package*/ static final SConcept ScenarioBuilder$Aw = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x35463334ce2f7b00L, "BuiltEnvironment.structure.ScenarioBuilder");
     /*package*/ static final SConcept AttributeDistributionTable$$C = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f407L, "AgentLanguage.structure.AttributeDistributionTable");
-    /*package*/ static final SConcept Actor$CU = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, "AgentLanguage.structure.Actor");
-    /*package*/ static final SConcept AttributeMonitor$Tq = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7117c8e6083740b4L, "AgentLanguage.structure.AttributeMonitor");
     /*package*/ static final SConcept ProbabilityDistribution$1L = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35a97493533736a5L, "AgentLanguage.structure.ProbabilityDistribution");
     /*package*/ static final SConcept RoomInstanceDefinition$uw = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, "BuiltEnvironment.structure.RoomInstanceDefinition");
+    /*package*/ static final SConcept Actor$CU = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, "AgentLanguage.structure.Actor");
     /*package*/ static final SConcept StringType$B3 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc7L, "org.iets3.core.expr.simpleTypes.structure.StringType");
     /*package*/ static final SConcept AgentGenerator$SQ = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x637eade0e62ce2b8L, "AgentLanguage.structure.AgentGenerator");
     /*package*/ static final SConcept ExpressionWrapper$uy = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, "AgentLanguage.structure.ExpressionWrapper");

@@ -195,7 +195,7 @@ public class Room extends Locatable{
 	
 	// check if loc is full
 	public boolean hasCapacity() {
-		// If this room has occupiables, determine capacity by that
+//		 If this room has occupiables, determine capacity by that
 		if(!getAllOccupiables().isEmpty()) {
 			return getAllOccupiables().stream().anyMatch(o->!o.isOccupied());	
 		} else {

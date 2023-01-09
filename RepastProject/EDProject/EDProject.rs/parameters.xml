@@ -12,14 +12,6 @@
 		displayName="Use path finding" type="boolean" defaultValue="false"
 		isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
-  	<parameter name="BranchProbability_a2"
-  		displayName="BranchProbability_a2" type="double" defaultValue="20"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b2"
-  		displayName="BranchProbability_b2" type="double" defaultValue="80"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="BranchProbability_a5"
   		displayName="BranchProbability_a5" type="double" defaultValue="75"
   		isReadOnly="false"

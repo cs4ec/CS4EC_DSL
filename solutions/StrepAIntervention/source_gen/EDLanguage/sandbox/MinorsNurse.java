@@ -33,7 +33,7 @@ public class MinorsNurse extends Actor {
 
   public MinorsNurse(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
-    mintMyMaxPatients = 3;
+    mintMyMaxPatients = 5;
   }
 
   protected Signal searchForSignals(Board board) {
@@ -628,11 +628,11 @@ public class MinorsNurse extends Actor {
 
     }
   }
-  public class MoveAction_a0c_11 extends BehaviourStep {
+  public class MoveAction_a0c_15 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0c_11(Behaviour behaviour) {
+    public MoveAction_a0c_15(Behaviour behaviour) {
       target = MinorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -661,9 +661,9 @@ public class MinorsNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0c_7 extends BehaviourStep {
+  public class OrderAction_b0c_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_7(Behaviour behaviour) {
+    public OrderAction_b0c_11(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -673,10 +673,10 @@ public class MinorsNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(MinorsNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
-  public class StayForConditionAction_c0c_3 extends BehaviourStep {
+  public class StayForConditionAction_c0c_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0c_3(Behaviour behaviour) {
+    public StayForConditionAction_c0c_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -688,10 +688,10 @@ public class MinorsNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0c_5 extends BehaviourStep {
+  public class StayAction_d0c_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0c_5(Behaviour behaviour) {
+    public StayAction_d0c_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -792,10 +792,10 @@ public class MinorsNurse extends Actor {
 
     }
   }
-  public class StayAction_f0c_7 extends BehaviourStep {
+  public class StayAction_f0c_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_f0c_7(Behaviour behaviour) {
+    public StayAction_f0c_11(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -809,11 +809,11 @@ public class MinorsNurse extends Actor {
 
     }
   }
-  public class MoveAction_a0c_13 extends BehaviourStep {
+  public class MoveAction_a0c_17 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0c_13(Behaviour behaviour) {
+    public MoveAction_a0c_17(Behaviour behaviour) {
       target = MinorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -842,9 +842,9 @@ public class MinorsNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0c_9 extends BehaviourStep {
+  public class OrderAction_b0c_13 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_9(Behaviour behaviour) {
+    public OrderAction_b0c_13(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -854,10 +854,10 @@ public class MinorsNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(MinorsNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
-  public class StayForConditionAction_c0c_4 extends BehaviourStep {
+  public class StayForConditionAction_c0c_6 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0c_4(Behaviour behaviour) {
+    public StayForConditionAction_c0c_6(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -869,10 +869,10 @@ public class MinorsNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0c_7 extends BehaviourStep {
+  public class StayAction_d0c_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0c_7(Behaviour behaviour) {
+    public StayAction_d0c_11(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -909,10 +909,10 @@ public class MinorsNurse extends Actor {
 
     }
   }
-  public class StayAction_f0c_9 extends BehaviourStep {
+  public class StayAction_f0c_13 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_f0c_9(Behaviour behaviour) {
+    public StayAction_f0c_13(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1009,12 +1009,12 @@ public class MinorsNurse extends Actor {
   public void InitObsReview_f_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0c_11(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0c_7(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0c_3(behaviourBuilder));
-    plstSteps.add(new StayAction_d0c_5(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0c_15(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0c_11(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0c_5(behaviourBuilder));
+    plstSteps.add(new StayAction_d0c_9(behaviourBuilder));
     plstSteps.add(new ProbabilityDistribution_e0c_3(behaviourBuilder));
-    plstSteps.add(new StayAction_f0c_7(behaviourBuilder));
+    plstSteps.add(new StayAction_f0c_11(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
