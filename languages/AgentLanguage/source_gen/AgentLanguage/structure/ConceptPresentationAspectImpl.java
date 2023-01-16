@@ -12,7 +12,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Actor;
   private ConceptPresentation props_ActorReference;
   private ConceptPresentation props_ActorTypeSignal;
-  private ConceptPresentation props_AdmitAction;
   private ConceptPresentation props_AgentAttributeReference;
   private ConceptPresentation props_AgentGenerator;
   private ConceptPresentation props_AgentGeneratorLine;
@@ -41,7 +40,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DeSpawnAction;
   private ConceptPresentation props_Description;
   private ConceptPresentation props_DirectSignal;
-  private ConceptPresentation props_DischargeAction;
   private ConceptPresentation props_ExpressionWrapper;
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_HumanInstance;
@@ -141,14 +139,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ActorTypeSignal = cpb.create();
         }
         return props_ActorTypeSignal;
-      case LanguageConceptSwitch.AdmitAction:
-        if (props_AdmitAction == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("Admit the patient");
-          cpb.presentationByName();
-          props_AdmitAction = cpb.create();
-        }
-        return props_AdmitAction;
       case LanguageConceptSwitch.AgentAttributeReference:
         if (props_AgentAttributeReference == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -348,14 +338,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DirectSignal = cpb.create();
         }
         return props_DirectSignal;
-      case LanguageConceptSwitch.DischargeAction:
-        if (props_DischargeAction == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.shortDesc("Discharge the patient");
-          cpb.presentationByName();
-          props_DischargeAction = cpb.create();
-        }
-        return props_DischargeAction;
       case LanguageConceptSwitch.ExpressionWrapper:
         if (props_ExpressionWrapper == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

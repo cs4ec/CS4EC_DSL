@@ -4,81 +4,12 @@
   <delimiter>,</delimiter>
   <format>TABULAR</format>
   <sourceIds class="linked-hash-set">
-    <string>patientgetCOVIDVaccineStatusisUnvaccinated</string>
-    <string>patientgetCOVIDVaccineStatusispartiallyvaccinated</string>
-    <string>patientgetCOVIDVaccineStatusisfullyvaccinated</string>
-    <string>patientgetFluAVaccineStatusisUnvaccinated</string>
-    <string>patientgetFluAVaccineStatusispartiallyvaccinated</string>
-    <string>patientgetFluAVaccineStatusisfullyvaccinated</string>
-    <string>patientgetFluBVaccineStatusisUnvaccinated</string>
-    <string>patientgetFluBVaccineStatusispartiallyvaccinated</string>
-    <string>patientgetFluBVaccineStatusisfullyvaccinated</string>
-    <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
-    <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
-    <string>patientgetCOVIDInfectionStatusisSusceptible</string>
-    <string>patientgetFluAInfectionStatusisSymptomatic</string>
-    <string>patientgetFluAInfectionStatusisAsymptomatic</string>
-    <string>patientgetFluAInfectionStatusisSusceptible</string>
-    <string>patientgetFluBInfectionStatusisSymptomatic</string>
-    <string>patientgetFluBInfectionStatusisAsymptomatic</string>
-    <string>patientgetFluBInfectionStatusisSusceptible</string>
-    <string>patientgetRecentCovidContactisYes</string>
-    <string>patientgetRecentCovidContactisNo</string>
     <string>patientgetImmunocompromisedisYes</string>
     <string>patientgetImmunocompromisedisNo</string>
-    <string>patientgetLFTCOVIDResultisPositive</string>
-    <string>patientgetLFTCOVIDResultisNegative</string>
-    <string>patientgetLFTFluAResultisPositive</string>
-    <string>patientgetLFTFluAResultisNegative</string>
-    <string>patientgetLFTFluBResultisPositive</string>
-    <string>patientgetLFTFluBResultisNegative</string>
-    <string>patientgetLIATCOVIDResultisPositive</string>
-    <string>patientgetLIATCOVIDResultisNegative</string>
-    <string>patientgetLIATFluAResultisPositive</string>
-    <string>patientgetLIATFluAResultisNegative</string>
-    <string>patientgetLIATFluBResultisPositive</string>
-    <string>patientgetLIATFluBResultisNegative</string>
-    <string>patientgetLabPCRCOVIDResultisPositive</string>
-    <string>patientgetLabPCRCOVIDResultisNegative</string>
-    <string>patientgetLabPCRFluAResultisPositive</string>
-    <string>patientgetLabPCRFluAResultisNegative</string>
-    <string>patientgetLabPCRFluBResultisPositive</string>
-    <string>patientgetLabPCRFluBResultisNegative</string>
-    <string>patientgetCepheidCOVIDResultisPositive</string>
-    <string>patientgetCepheidCOVIDResultisNegative</string>
-    <string>patientgetCepheidFluAResultisPositive</string>
-    <string>patientgetCepheidFluAResultisNegative</string>
-    <string>patientgetCepheidFluBResultisPositive</string>
-    <string>patientgetCepheidFluBResultisNegative</string>
-    <string>patientgetPHEThreeAltCOVIDResultisPositive</string>
-    <string>patientgetPHEThreeAltCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisAmberBay</string>
-    <string>patientgetadmittedToisAmberBaygetLFTCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLFTCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetLFTFluAResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLFTFluAResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetLFTFluBResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLFTFluBResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetLIATCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLIATCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetLIATFluAResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLIATFluAResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetLIATFluBResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLIATFluBResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetLabPCRCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLabPCRCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetLabPCRFluAResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLabPCRFluAResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetLabPCRFluBResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetLabPCRFluBResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetCepheidCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetCepheidCOVIDResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetCepheidFluAResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetCepheidFluAResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetCepheidFluBResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetCepheidFluBResultisNegative</string>
-    <string>patientgetadmittedToisAmberBaygetPHEThreeAltCOVIDResultisPositive</string>
-    <string>patientgetadmittedToisAmberBaygetPHEThreeAltCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohort</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetImmunocompromisedisYes</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetImmunocompromisedisNo</string>
+    <string>patientgetAliveTime</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>
   <addTimeStamp>true</addTimeStamp>

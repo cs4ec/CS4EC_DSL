@@ -8,8 +8,8 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import simcore.basicStructures.Room;
 
-public class BoardGame extends StaticOccupiable {
-  public BoardGame(Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, Room inRoom) {
+public class Bed extends StaticOccupiable {
+  public Bed(Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, Room inRoom) {
     super(context, space, grid, x, y, inRoom);
   }
 

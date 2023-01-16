@@ -8,12 +8,14 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
 import simcore.Signals.Signal;
+import simcore.basicStructures.Board;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.function.Predicate;
 import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
 
@@ -22,34 +24,39 @@ public class patient extends Actor {
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
   public String admissionRoute = "UnConfigured";
-  public String COVIDVaccineStatus = "NotConfigured";
-  public String FluAVaccineStatus = "NotConfigured";
-  public String FluBVaccineStatus = "NotConfigured";
-  public String COVIDInfectionStatus = "NotConfigured";
-  public String FluAInfectionStatus = "NotConfigured";
-  public String FluBInfectionStatus = "NotConfigured";
-  public String RecentCovidContact = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
-  public String LFTCOVIDResult = "Incomplete";
-  public String LFTFluAResult = "Incomplete";
-  public String LFTFluBResult = "Incomplete";
-  public String LIATCOVIDResult = "Incomplete";
-  public String LIATFluAResult = "Incomplete";
-  public String LIATFluBResult = "Incomplete";
-  public String LabPCRCOVIDResult = "Incomplete";
-  public String LabPCRFluAResult = "Incomplete";
-  public String LabPCRFluBResult = "Incomplete";
-  public String CepheidCOVIDResult = "Incomplete";
-  public String CepheidFluAResult = "Incomplete";
-  public String CepheidFluBResult = "Incomplete";
-  public String PHEThreeAltCOVIDResult = "Incomplete";
-  public String PHEThreeResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
     mintMyMaxPatients = 1;
   }
+
+  protected Signal searchForSignals(Board board) {
+    // Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for 
+    List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, patient.this);
+      }
+    }).collect(Collectors.toList());
+    List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, patient.this);
+      }
+    }).collect(Collectors.toList());
+
+    if (plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
+      return null;
+    }
+    // First see if there are any direct messages for me and prioritise those 
+    Signal s = selectSignal(plstDirectSignals);
+    if (s == null) {
+      // If none, select a message for my class type 
+      s = selectSignal(plstSignals);
+    }
+    return s;
+  }
+
 
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (plstSignals.isEmpty()) {
@@ -109,126 +116,6 @@ public class patient extends Actor {
   }
 
 
-  public int getCOVIDVaccineStatusisUnvaccinated() {
-    if (this.COVIDVaccineStatus == "Unvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCOVIDVaccineStatusispartiallyvaccinated() {
-    if (this.COVIDVaccineStatus == "partiallyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCOVIDVaccineStatusisfullyvaccinated() {
-    if (this.COVIDVaccineStatus == "fullyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAVaccineStatusisUnvaccinated() {
-    if (this.FluAVaccineStatus == "Unvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAVaccineStatusispartiallyvaccinated() {
-    if (this.FluAVaccineStatus == "partiallyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAVaccineStatusisfullyvaccinated() {
-    if (this.FluAVaccineStatus == "fullyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBVaccineStatusisUnvaccinated() {
-    if (this.FluBVaccineStatus == "Unvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBVaccineStatusispartiallyvaccinated() {
-    if (this.FluBVaccineStatus == "partiallyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBVaccineStatusisfullyvaccinated() {
-    if (this.FluBVaccineStatus == "fullyvaccinated") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCOVIDInfectionStatusisSymptomatic() {
-    if (this.COVIDInfectionStatus == "Symptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCOVIDInfectionStatusisAsymptomatic() {
-    if (this.COVIDInfectionStatus == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCOVIDInfectionStatusisSusceptible() {
-    if (this.COVIDInfectionStatus == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAInfectionStatusisSymptomatic() {
-    if (this.FluAInfectionStatus == "Symptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAInfectionStatusisAsymptomatic() {
-    if (this.FluAInfectionStatus == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluAInfectionStatusisSusceptible() {
-    if (this.FluAInfectionStatus == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBInfectionStatusisSymptomatic() {
-    if (this.FluBInfectionStatus == "Symptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBInfectionStatusisAsymptomatic() {
-    if (this.FluBInfectionStatus == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getFluBInfectionStatusisSusceptible() {
-    if (this.FluBInfectionStatus == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getRecentCovidContactisYes() {
-    if (this.RecentCovidContact == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getRecentCovidContactisNo() {
-    if (this.RecentCovidContact == "No") {
-      return 1;
-    }
-    return 0;
-  }
   public int getImmunocompromisedisYes() {
     if (this.Immunocompromised == "Yes") {
       return 1;
@@ -241,320 +128,20 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getLFTCOVIDResultisPositive() {
-    if (this.LFTCOVIDResult == "Positive") {
+  public int getadmittedToisCOVIDPositiveCohort() {
+    if (this.admittedTo == "COVIDPositiveCohort") {
       return 1;
     }
     return 0;
   }
-  public int getLFTCOVIDResultisNegative() {
-    if (this.LFTCOVIDResult == "Negative") {
+  public int getadmittedToisCOVIDPositiveCohortgetImmunocompromisedisYes() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.Immunocompromised == "Yes") {
       return 1;
     }
     return 0;
   }
-  public int getLFTFluAResultisPositive() {
-    if (this.LFTFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLFTFluAResultisNegative() {
-    if (this.LFTFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLFTFluBResultisPositive() {
-    if (this.LFTFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLFTFluBResultisNegative() {
-    if (this.LFTFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLIATCOVIDResultisPositive() {
-    if (this.LIATCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLIATCOVIDResultisNegative() {
-    if (this.LIATCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLIATFluAResultisPositive() {
-    if (this.LIATFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLIATFluAResultisNegative() {
-    if (this.LIATFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLIATFluBResultisPositive() {
-    if (this.LIATFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLIATFluBResultisNegative() {
-    if (this.LIATFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRCOVIDResultisPositive() {
-    if (this.LabPCRCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRCOVIDResultisNegative() {
-    if (this.LabPCRCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRFluAResultisPositive() {
-    if (this.LabPCRFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRFluAResultisNegative() {
-    if (this.LabPCRFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRFluBResultisPositive() {
-    if (this.LabPCRFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRFluBResultisNegative() {
-    if (this.LabPCRFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidCOVIDResultisPositive() {
-    if (this.CepheidCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidCOVIDResultisNegative() {
-    if (this.CepheidCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidFluAResultisPositive() {
-    if (this.CepheidFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidFluAResultisNegative() {
-    if (this.CepheidFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidFluBResultisPositive() {
-    if (this.CepheidFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getCepheidFluBResultisNegative() {
-    if (this.CepheidFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getPHEThreeAltCOVIDResultisPositive() {
-    if (this.PHEThreeAltCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getPHEThreeAltCOVIDResultisNegative() {
-    if (this.PHEThreeAltCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBay() {
-    if (this.admittedTo == "AmberBay") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLFTCOVIDResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LFTCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLFTCOVIDResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LFTCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLFTFluAResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LFTFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLFTFluAResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LFTFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLFTFluBResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LFTFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLFTFluBResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LFTFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLIATCOVIDResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LIATCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLIATCOVIDResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LIATCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLIATFluAResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LIATFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLIATFluAResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LIATFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLIATFluBResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LIATFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLIATFluBResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LIATFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLabPCRCOVIDResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LabPCRCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLabPCRCOVIDResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LabPCRCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLabPCRFluAResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LabPCRFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLabPCRFluAResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LabPCRFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLabPCRFluBResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.LabPCRFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetLabPCRFluBResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.LabPCRFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetCepheidCOVIDResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.CepheidCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetCepheidCOVIDResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.CepheidCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetCepheidFluAResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.CepheidFluAResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetCepheidFluAResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.CepheidFluAResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetCepheidFluBResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.CepheidFluBResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetCepheidFluBResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.CepheidFluBResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetPHEThreeAltCOVIDResultisPositive() {
-    if (this.admittedTo == "AmberBay" && this.PHEThreeAltCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisAmberBaygetPHEThreeAltCOVIDResultisNegative() {
-    if (this.admittedTo == "AmberBay" && this.PHEThreeAltCOVIDResult == "Negative") {
+  public int getadmittedToisCOVIDPositiveCohortgetImmunocompromisedisNo() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.Immunocompromised == "No") {
       return 1;
     }
     return 0;
@@ -563,4 +150,10 @@ public class patient extends Actor {
 
 
 
+  public int patientgetAliveTime() {
+    if (deSpawnTime == 0) {
+      deSpawnTime = ToolBox().getTime();
+    }
+    return (int) (deSpawnTime - spawnTime);
+  }
 }

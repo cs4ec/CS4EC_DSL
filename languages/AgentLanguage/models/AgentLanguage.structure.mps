@@ -1073,49 +1073,6 @@
       <property role="TrG5h" value="LOW" />
     </node>
   </node>
-  <node concept="1TIwiD" id="4TDP_lRPmO">
-    <property role="EcuMT" value="88285669845063092" />
-    <property role="3GE5qa" value="actions.basic actions" />
-    <property role="TrG5h" value="DischargeAction" />
-    <property role="34LRSv" value="discharge" />
-    <property role="R4oN_" value="Discharge the patient" />
-    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
-    <node concept="PrWs8" id="4TDP_lRPmP" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyj" id="4TDP_lRPmR" role="1TKVEi">
-      <property role="IQ2ns" value="88285669845063095" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="targetPatient" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="4TDP_lWbTk">
-    <property role="EcuMT" value="88285669846203988" />
-    <property role="3GE5qa" value="actions.basic actions" />
-    <property role="TrG5h" value="AdmitAction" />
-    <property role="34LRSv" value="admit" />
-    <property role="R4oN_" value="Admit the patient" />
-    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
-    <node concept="PrWs8" id="4TDP_lWbTl" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-    <node concept="1TJgyj" id="4TDP_lWbTn" role="1TKVEi">
-      <property role="IQ2ns" value="88285669846203991" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="targetPatient" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="7o6PzEpI6e$" resolve="PatientInstance" />
-    </node>
-    <node concept="1TJgyj" id="2blVuwV8Ivb" role="1TKVEi">
-      <property role="IQ2ns" value="2510173949009258443" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="targetBay" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="3KCb14J4_mK" resolve="ObjectInstance" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="4TDP_m2UaO">
     <property role="EcuMT" value="88285669847966388" />
     <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />

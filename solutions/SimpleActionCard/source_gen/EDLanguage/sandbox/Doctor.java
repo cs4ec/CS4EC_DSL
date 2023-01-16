@@ -8,8 +8,10 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
 import simcore.Signals.Signal;
+import simcore.basicStructures.Board;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import repast.simphony.space.graph.Network;
 import java.util.stream.StreamSupport;
 import repast.simphony.space.graph.RepastEdge;
@@ -29,8 +31,34 @@ public class Doctor extends Actor {
 
   public Doctor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
-    mintMyMaxPatients = 1;
+    mintMyMaxPatients = 2147483647;
   }
+
+  protected Signal searchForSignals(Board board) {
+    // Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for 
+    List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, Doctor.this);
+      }
+    }).collect(Collectors.toList());
+    List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, Doctor.this);
+      }
+    }).collect(Collectors.toList());
+
+    if (plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
+      return null;
+    }
+    // First see if there are any direct messages for me and prioritise those 
+    Signal s = selectSignal(plstDirectSignals);
+    if (s == null) {
+      // If none, select a message for my class type 
+      s = selectSignal(plstSignals);
+    }
+    return s;
+  }
+
 
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (!(plstSignals.isEmpty())) {
@@ -126,7 +154,7 @@ public class Doctor extends Actor {
       case "":
         break;
       case "AmberBayTrigger_c":
-        behaviourBuilder = new Behaviour("AmberBayTrigger_c");
+        behaviourBuilder = new Behaviour("AmberBayTrigger_c", this);
         this.InitAdmitActionAmberBay_c(s);
         break;
       default:
@@ -176,7 +204,7 @@ public class Doctor extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_b0a(Behaviour behaviour) {
-      target = AmberBay.getInstance();
+      target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -238,13 +266,23 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "AmberBay";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
 
     }
   }
-  public class RemoveRelationshipAction_f0a extends BehaviourStep {
+  public class DespawnAction_f0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0a(Behaviour behaviour) {
+    public DespawnAction_f0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -294,7 +332,7 @@ public class Doctor extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_b0a_1(Behaviour behaviour) {
-      target = AmberBay.getInstance();
+      target = COVIDPositiveCohort.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -356,13 +394,23 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "AmberBay";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "COVIDPositiveCohort";
 
     }
   }
-  public class RemoveRelationshipAction_f0a_0 extends BehaviourStep {
+  public class DespawnAction_f0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0a_0(Behaviour behaviour) {
+    public DespawnAction_f0a_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+    }
+  }
+  public class RemoveRelationshipAction_g0a_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_g0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -384,11 +432,18 @@ public class Doctor extends Actor {
     plstSteps.add(new OrderAction_c0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0a(behaviourBuilder));
     plstSteps.add(new Consequence_e0a(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0a(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0a(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_g0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
 
   }
 
+  public int DoctorgetAliveTime() {
+    if (deSpawnTime == 0) {
+      deSpawnTime = ToolBox().getTime();
+    }
+    return (int) (deSpawnTime - spawnTime);
+  }
 }

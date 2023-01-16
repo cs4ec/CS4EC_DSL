@@ -38,7 +38,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     new ToolBox(this).GetLog().clearOldContents();
 
     context.setId("EDProject");
-    int mapWidth = 449;
+    int mapWidth = 120;
     int mapHeight = 250;
 
     Parameters params = RunEnvironment.getInstance().getParameters();
@@ -57,7 +57,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
     context.add(new patientGenerator_0(space, grid, context));
-    context.add(new patientGenerator_1(space, grid, context));
     context.add(new Board());
 
     // add Agents 
@@ -80,86 +79,73 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     // add Locations here 
 
-    Area EmergencyDepartment_0 = new Area(context, space, grid, 5, 5, 370, 195, Color.WHITE);
-    EmergencyDepartment_0.addResource(LabPCR.getInstance(), 100);
-    EmergencyDepartment_0.addResource(LFT.getInstance(), 100);
-    EmergencyDepartment_0.addResource(LIAT.getInstance(), 22);
-    EmergencyDepartment_0.addResource(PHEThreeAlt.getInstance(), 1000);
-    EmergencyDepartment_0.setReplenishAmount(LabPCR.getInstance(), 100);
-    EmergencyDepartment_0.setReplenishAmount(LFT.getInstance(), 100);
-    EmergencyDepartment_0.setReplenishAmount(LIAT.getInstance(), 22);
-    EmergencyDepartment_0.setReplenishAmount(PHEThreeAlt.getInstance(), 1000);
-    EmergencyDepartment_0.setReplenishFrequency(LabPCR.getInstance(), 1);
-    EmergencyDepartment_0.setReplenishFrequency(LFT.getInstance(), 1);
-    EmergencyDepartment_0.setReplenishFrequency(LIAT.getInstance(), 1);
-    EmergencyDepartment_0.setReplenishFrequency(PHEThreeAlt.getInstance(), 1);
-    Room Paedeatrics_a = new Room("Paedeatrics", context, space, grid, 5, 145, 50, 50, 1, 10000, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room Lab_b = new Room("Lab", context, space, grid, 5, 5, 30, 30, 1, 1000, Labaratory.getInstance(), Color.YELLOW, EmergencyDepartment_0);
-    Room MainReception_c = new Room("MainReception", context, space, grid, 55, 125, 20, 20, 1, 40, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room Triage_d_0 = new Room("Triage", context, space, grid, 105, 160, 10, 10, 1, 1000, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
-    Room MajorsTriage_e = new Room("MajorsTriage", context, space, grid, 110, 100, 10, 10, 1, 1000, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
-    Room LIATBoothOne_f = new Room("LIATBoothOne", context, space, grid, 111, 92, 5, 5, 1, 1000, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room MajorsWaitingRoom_g = new Room("MajorsWaitingRoom", context, space, grid, 140, 90, 20, 40, 1, 1000, NonRespiratoryArea.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room RespiratoryCubicle1_h = new Room("RespiratoryCubicle1", context, space, grid, 110, 80, 10, 10, 1, 1000, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle2_i = new Room("RespiratoryCubicle2", context, space, grid, 110, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle3_j = new Room("RespiratoryCubicle3", context, space, grid, 120, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle4_k = new Room("RespiratoryCubicle4", context, space, grid, 120, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle5_l = new Room("RespiratoryCubicle5", context, space, grid, 140, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle6_m = new Room("RespiratoryCubicle6", context, space, grid, 130, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle7_n = new Room("RespiratoryCubicle7", context, space, grid, 150, 80, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle8_o = new Room("RespiratoryCubicle8", context, space, grid, 140, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room RespiratoryCubicle9_p = new Room("RespiratoryCubicle9", context, space, grid, 150, 60, 10, 10, 1, 3, NonRespiratoryCubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room TaskRoom1_q = new Room("TaskRoom1", context, space, grid, 120, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room TaskRoom2_r = new Room("TaskRoom2", context, space, grid, 125, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room TaskRoom3_s = new Room("TaskRoom3", context, space, grid, 130, 155, 5, 5, 1, 3, TaskRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room Entrance_t = new Room("Entrance", context, space, grid, 95, 193, 10, 5, 1, 10, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room XRayRoom1_u = new Room("XRayRoom1", context, space, grid, 140, 155, 5, 5, 1, 3, RadiologyRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room XRayRoom2_v = new Room("XRayRoom2", context, space, grid, 145, 155, 5, 5, 1, 3, RadiologyRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room TriageWaitingRoom_w = new Room("TriageWaitingRoom", context, space, grid, 105, 170, 50, 20, 1, 100, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room MajorsABReception_x = new Room("MajorsABReception", context, space, grid, 200, 168, 20, 10, 1, 15, Ward.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room LIATBooth2_y = new Room("LIATBooth2", context, space, grid, 220, 169, 5, 8, 1, 5, LIATBooth.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room MajorsBayA_z = new Room("MajorsBayA", context, space, grid, 205, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayB_ab = new Room("MajorsBayB", context, space, grid, 220, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayC_bb = new Room("MajorsBayC", context, space, grid, 235, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayD_cb = new Room("MajorsBayD", context, space, grid, 235, 175, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayE_db = new Room("MajorsBayE", context, space, grid, 235, 160, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayF_eb = new Room("MajorsBayF", context, space, grid, 235, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayG_fb = new Room("MajorsBayG", context, space, grid, 220, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayH_gb = new Room("MajorsBayH", context, space, grid, 205, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayI_hb = new Room("MajorsBayI", context, space, grid, 190, 145, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayJ_ib = new Room("MajorsBayJ", context, space, grid, 175, 175, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayK_jb = new Room("MajorsBayK", context, space, grid, 175, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsBayL_kb = new Room("MajorsBayL", context, space, grid, 190, 190, 10, 10, 1, 3, RespiratoryCubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room SideRoom_lb = new Room("SideRoom", context, space, grid, 200, 60, 50, 50, 1, 1000, SideRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room CovidCohort_mb = new Room("CovidCohort", context, space, grid, 260, 60, 50, 50, 1, 1000, COVIDPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room AmberBay_nb = new Room("AmberBay", context, space, grid, 260, 5, 50, 50, 1, 1000, AmberBay.getInstance(), Color.ORANGE, EmergencyDepartment_0);
-    Room PreAdmissionArea_ob = new Room("PreAdmissionArea", context, space, grid, 320, 5, 50, 50, 1, 1000, ElectiveAttendanceArea.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room NonRespiratoryCohort_pb = new Room("NonRespiratoryCohort", context, space, grid, 200, 5, 50, 50, 1, 1000, NonRespiratoryCohort.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Area EmergencyDepartment_0 = new Area(context, space, grid, 1, 1, 70, 200, Color.WHITE);
+    Room Entrance_a = new Room("Entrance", context, space, grid, 5, 199, 3, 1, 1, 10000, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room TriageWaitingRoom_b = new Room("TriageWaitingRoom", context, space, grid, 10, 195, 10, 5, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room Triage_c = new Room("Triage", context, space, grid, 10, 190, 5, 5, 1, 20, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
+    Room MinorsWaitingRoom_d = new Room("MinorsWaitingRoom", context, space, grid, 15, 170, 10, 15, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room MajorsCOne_e = new Room("MajorsCOne", context, space, grid, 3, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCTwo_f = new Room("MajorsCTwo", context, space, grid, 8, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCThree_g = new Room("MajorsCThree", context, space, grid, 15, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCFour_h = new Room("MajorsCFour", context, space, grid, 20, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCFive_i = new Room("MajorsCFive", context, space, grid, 1, 156, 5, 5, 1, 5, MajorsCBay.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCSix_j = new Room("MajorsCSix", context, space, grid, 6, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCSeven_k = new Room("MajorsCSeven", context, space, grid, 11, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCEight_l = new Room("MajorsCEight", context, space, grid, 16, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCNine_m = new Room("MajorsCNine", context, space, grid, 21, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsABOne_n = new Room("MajorsABOne", context, space, grid, 35, 195, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwo_o = new Room("MajorsABTwo", context, space, grid, 40, 195, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABThree_p = new Room("MajorsABThree", context, space, grid, 45, 195, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABFour_q = new Room("MajorsABFour", context, space, grid, 50, 195, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABFive_r = new Room("MajorsABFive", context, space, grid, 55, 195, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABSix_s = new Room("MajorsABSix", context, space, grid, 60, 195, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABSeven_t = new Room("MajorsABSeven", context, space, grid, 65, 195, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABEight_u = new Room("MajorsABEight", context, space, grid, 35, 190, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABNine_v = new Room("MajorsABNine", context, space, grid, 65, 190, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTen_w = new Room("MajorsABTen", context, space, grid, 65, 185, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABEleven_x = new Room("MajorsABEleven", context, space, grid, 65, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwelve_y = new Room("MajorsABTwelve", context, space, grid, 40, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABThirteen_z = new Room("MajorsABThirteen", context, space, grid, 45, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABFourteen_ab = new Room("MajorsABFourteen", context, space, grid, 50, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABFifteen_bb = new Room("MajorsABFifteen", context, space, grid, 55, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABSixteen_cb = new Room("MajorsABSixteen", context, space, grid, 60, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABSeventeen_db = new Room("MajorsABSeventeen", context, space, grid, 65, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room COVIDCohort_eb = new Room("COVIDCohort", context, space, grid, 40, 165, 10, 10, 1, 10000, COVIDPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room FluCohort_fb = new Room("FluCohort", context, space, grid, 40, 153, 10, 10, 1, 100000, FluPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room GreenBay_gb = new Room("GreenBay", context, space, grid, 52, 165, 10, 10, 1, 100000, GreenBay.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room SideRoom_hb = new Room("SideRoom", context, space, grid, 52, 151, 10, 10, 1, 10000000, SideRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
 
     try {
-      Paedeatrics_a.addOccupiable(new BoardGame(context, space, grid, 0, 0, Paedeatrics_a));
+      MajorsCOne_e.addOccupiable(new Bed(context, space, grid, 4, 164, MajorsCOne_e));
+      MajorsCTwo_f.addOccupiable(new Bed(context, space, grid, 9, 164, MajorsCTwo_f));
+      MajorsCThree_g.addOccupiable(new Bed(context, space, grid, 16, 164, MajorsCThree_g));
+      MajorsCFour_h.addOccupiable(new Bed(context, space, grid, 21, 164, MajorsCFour_h));
+      MajorsCFive_i.addOccupiable(new Bed(context, space, grid, 2, 157, MajorsCFive_i));
+      MajorsCSix_j.addOccupiable(new Bed(context, space, grid, 7, 157, MajorsCSix_j));
+      MajorsCSeven_k.addOccupiable(new Bed(context, space, grid, 12, 157, MajorsCSeven_k));
+      MajorsCEight_l.addOccupiable(new Bed(context, space, grid, 17, 157, MajorsCEight_l));
+      MajorsCNine_m.addOccupiable(new Bed(context, space, grid, 22, 157, MajorsCNine_m));
+      MajorsABOne_n.addOccupiable(new Bed(context, space, grid, 23, 196, MajorsABOne_n));
+      MajorsABTwo_o.addOccupiable(new Bed(context, space, grid, 41, 196, MajorsABTwo_o));
+      MajorsABThree_p.addOccupiable(new Bed(context, space, grid, 46, 196, MajorsABThree_p));
+      MajorsABFour_q.addOccupiable(new Bed(context, space, grid, 51, 196, MajorsABFour_q));
+      MajorsABFive_r.addOccupiable(new Bed(context, space, grid, 56, 196, MajorsABFive_r));
+      MajorsABSix_s.addOccupiable(new Bed(context, space, grid, 61, 196, MajorsABSix_s));
+      MajorsABSeven_t.addOccupiable(new Bed(context, space, grid, 66, 196, MajorsABSeven_t));
+      MajorsABEight_u.addOccupiable(new Bed(context, space, grid, 36, 191, MajorsABEight_u));
+      MajorsABNine_v.addOccupiable(new Bed(context, space, grid, 66, 191, MajorsABNine_v));
+      MajorsABTen_w.addOccupiable(new Bed(context, space, grid, 66, 186, MajorsABTen_w));
+      MajorsABEleven_x.addOccupiable(new Bed(context, space, grid, 66, 181, MajorsABEleven_x));
+      MajorsABTwelve_y.addOccupiable(new Bed(context, space, grid, 41, 181, MajorsABTwelve_y));
+      MajorsABThirteen_z.addOccupiable(new Bed(context, space, grid, 46, 181, MajorsABThirteen_z));
+      MajorsABFourteen_ab.addOccupiable(new Bed(context, space, grid, 51, 181, MajorsABFourteen_ab));
+      MajorsABFifteen_bb.addOccupiable(new Bed(context, space, grid, 56, 181, MajorsABFifteen_bb));
+      MajorsABSixteen_cb.addOccupiable(new Bed(context, space, grid, 61, 181, MajorsABSixteen_cb));
+      MajorsABSeventeen_db.addOccupiable(new Bed(context, space, grid, 66, 181, MajorsABSeventeen_db));
 
     } catch (NumberFormatException e) {
     }
 
-    createWallBetween(0, 124, 110, 124, context, space, grid);
-    createWallBetween(110, 80, 110, 125, context, space, grid);
-    createWallBetween(105, 160, 156, 160, context, space, grid);
-    createWallBetween(156, 160, 156, 200, context, space, grid);
-    createWallBetween(115, 170, 156, 170, context, space, grid);
-    createWallBetween(0, 0, 399, 0, context, space, grid);
-    createWallBetween(0, 200, 399, 200, context, space, grid);
-    createWallBetween(0, 0, 199, 0, context, space, grid);
-    createWallBetween(399, 0, 399, 200, context, space, grid);
-    createWallBetween(160, 80, 160, 140, context, space, grid);
-    createWallBetween(160, 60, 160, 70, context, space, grid);
-    createWallBetween(110, 90, 130, 90, context, space, grid);
-    createWallBetween(140, 90, 160, 90, context, space, grid);
-    createWallBetween(110, 60, 155, 60, context, space, grid);
-    createWallBetween(175, 60, 175, 150, context, space, grid);
-    createWallBetween(175, 165, 175, 200, context, space, grid);
-    createWallBetween(175, 145, 245, 145, context, space, grid);
-    createWallBetween(245, 145, 245, 200, context, space, grid);
 
     for (Object obj : context) {
       NdPoint pt = space.getLocation(obj);
@@ -174,30 +160,6 @@ public class EDBuilder implements ContextBuilder<Object> {
 
   public void CreatePatientArrivalMap() {
     HashMap ArrivalPerHour = new HashMap();
-    ArrivalPerHour.put(1, 4);
-    ArrivalPerHour.put(2, 6);
-    ArrivalPerHour.put(3, 6);
-    ArrivalPerHour.put(4, 3);
-    ArrivalPerHour.put(5, 3);
-    ArrivalPerHour.put(6, 7);
-    ArrivalPerHour.put(7, 2);
-    ArrivalPerHour.put(8, 2);
-    ArrivalPerHour.put(9, 5);
-    ArrivalPerHour.put(10, 10);
-    ArrivalPerHour.put(11, 10);
-    ArrivalPerHour.put(12, 13);
-    ArrivalPerHour.put(13, 13);
-    ArrivalPerHour.put(14, 14);
-    ArrivalPerHour.put(15, 15);
-    ArrivalPerHour.put(16, 16);
-    ArrivalPerHour.put(17, 14);
-    ArrivalPerHour.put(18, 13);
-    ArrivalPerHour.put(19, 9);
-    ArrivalPerHour.put(20, 7);
-    ArrivalPerHour.put(21, 8);
-    ArrivalPerHour.put(22, 7);
-    ArrivalPerHour.put(23, 10);
-    ArrivalPerHour.put(24, 3);
     ArrivalPerHour.put(1, 2);
     ArrivalPerHour.put(2, 3);
     ArrivalPerHour.put(3, 4);

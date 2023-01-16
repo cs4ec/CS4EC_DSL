@@ -1156,38 +1156,6 @@
       </node>
     </node>
   </node>
-  <node concept="24kQdi" id="4TDP_lRPmT">
-    <property role="3GE5qa" value="actions.basic actions" />
-    <ref role="1XX52x" to="3751:4TDP_lRPmO" resolve="DischargeAction" />
-    <node concept="3EZMnI" id="4TDP_lRPmV" role="2wV5jI">
-      <node concept="3F0ifn" id="4TDP_lRPn2" role="3EZMnx">
-        <property role="3F0ifm" value="Discharge" />
-      </node>
-      <node concept="3F1sOY" id="4TDP_lRPn8" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:4TDP_lRPmR" resolve="targetPatient" />
-      </node>
-      <node concept="l2Vlx" id="4TDP_lRPmY" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="4TDP_lXz4m">
-    <property role="3GE5qa" value="actions.basic actions" />
-    <ref role="1XX52x" to="3751:4TDP_lWbTk" resolve="AdmitAction" />
-    <node concept="3EZMnI" id="4TDP_lXz4o" role="2wV5jI">
-      <node concept="3F0ifn" id="4TDP_lXz4v" role="3EZMnx">
-        <property role="3F0ifm" value="admit" />
-      </node>
-      <node concept="3F1sOY" id="4TDP_lXz4_" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:4TDP_lWbTn" resolve="targetPatient" />
-      </node>
-      <node concept="3F0ifn" id="4TDP_lX_jA" role="3EZMnx">
-        <property role="3F0ifm" value="to" />
-      </node>
-      <node concept="3F1sOY" id="2blVuwVb2u7" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:2blVuwV8Ivb" resolve="targetBay" />
-      </node>
-      <node concept="l2Vlx" id="4TDP_lXz4r" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="4TDP_m2UyI">
     <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
     <ref role="1XX52x" to="3751:4TDP_m2UaO" resolve="DirectSignal" />

@@ -24,10 +24,7 @@ public class patient extends Actor {
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
   public String admissionRoute = "UnConfigured";
-  public String Severity = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
-  public String RecentCovidContact = "NotConfigured";
-  public String StrepAInfectionStatus = "NotConfigured";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -119,24 +116,6 @@ public class patient extends Actor {
   }
 
 
-  public int getSeverityissevere() {
-    if (this.Severity == "severe") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getSeverityismoderate() {
-    if (this.Severity == "moderate") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getSeverityislow() {
-    if (this.Severity == "low") {
-      return 1;
-    }
-    return 0;
-  }
   public int getImmunocompromisedisYes() {
     if (this.Immunocompromised == "Yes") {
       return 1;
@@ -149,98 +128,20 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getRecentCovidContactisYes() {
-    if (this.RecentCovidContact == "Yes") {
+  public int getadmittedToisCOVIDPositiveCohort() {
+    if (this.admittedTo == "COVIDPositiveCohort") {
       return 1;
     }
     return 0;
   }
-  public int getRecentCovidContactisNo() {
-    if (this.RecentCovidContact == "No") {
+  public int getadmittedToisCOVIDPositiveCohortgetImmunocompromisedisYes() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.Immunocompromised == "Yes") {
       return 1;
     }
     return 0;
   }
-  public int getStrepAInfectionStatusisSusceptible() {
-    if (this.StrepAInfectionStatus == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getStrepAInfectionStatusisAsymptomatic() {
-    if (this.StrepAInfectionStatus == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getStrepAInfectionStatusisSymptomatic() {
-    if (this.StrepAInfectionStatus == "Symptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBay() {
-    if (this.admittedTo == "GreenBay") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetSeverityissevere() {
-    if (this.admittedTo == "GreenBay" && this.Severity == "severe") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetSeverityismoderate() {
-    if (this.admittedTo == "GreenBay" && this.Severity == "moderate") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetSeverityislow() {
-    if (this.admittedTo == "GreenBay" && this.Severity == "low") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetImmunocompromisedisYes() {
-    if (this.admittedTo == "GreenBay" && this.Immunocompromised == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetImmunocompromisedisNo() {
-    if (this.admittedTo == "GreenBay" && this.Immunocompromised == "No") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetRecentCovidContactisYes() {
-    if (this.admittedTo == "GreenBay" && this.RecentCovidContact == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetRecentCovidContactisNo() {
-    if (this.admittedTo == "GreenBay" && this.RecentCovidContact == "No") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetStrepAInfectionStatusisSusceptible() {
-    if (this.admittedTo == "GreenBay" && this.StrepAInfectionStatus == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetStrepAInfectionStatusisAsymptomatic() {
-    if (this.admittedTo == "GreenBay" && this.StrepAInfectionStatus == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetStrepAInfectionStatusisSymptomatic() {
-    if (this.admittedTo == "GreenBay" && this.StrepAInfectionStatus == "Symptomatic") {
+  public int getadmittedToisCOVIDPositiveCohortgetImmunocompromisedisNo() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.Immunocompromised == "No") {
       return 1;
     }
     return 0;
