@@ -146,7 +146,7 @@ public class MajorsDoctor extends Actor {
   }
 
   public Behaviour isIdleAction(Signal s) {
-    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
@@ -169,15 +169,15 @@ public class MajorsDoctor extends Actor {
       case "":
         break;
       case "AssessmentTrigger_a":
-        behaviourBuilder = new Behaviour("AssessmentTrigger_a");
+        behaviourBuilder = new Behaviour("AssessmentTrigger_a", this);
         this.InitAssessment_a(s);
         break;
       case "DischargeTrigger_d_0":
-        behaviourBuilder = new Behaviour("DischargeTrigger_d_0");
+        behaviourBuilder = new Behaviour("DischargeTrigger_d_0", this);
         this.InitDischargeActionDischarge_d(s);
         break;
       case "AdmitToWardsTrigger_h":
-        behaviourBuilder = new Behaviour("AdmitToWardsTrigger_h");
+        behaviourBuilder = new Behaviour("AdmitToWardsTrigger_h", this);
         this.InitAdmitActionAdmitToWards_h(s);
         break;
       default:

@@ -987,6 +987,21 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static void mappingScript_CodeBlock_39(final MappingScriptContext _context) {
   }
+  public static void mappingScript_CodeBlock_46(final MappingScriptContext _context) {
+    List<SNode> endActions = ListSequence.fromList(new ArrayList<SNode>());
+    ListSequence.fromList(endActions).addSequence(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.AdmissionAction$VB)));
+    ListSequence.fromList(endActions).addSequence(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.DischargeAction$Sl)));
+
+    List<SNode> allStaff = ListSequence.fromList(new ArrayList<SNode>());
+    ListSequence.fromList(allStaff).addSequence(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.StaffType$5i)));
+
+    for (SNode staff : ListSequence.fromList(allStaff)) {
+      for (SNode endAction : ListSequence.fromList(endActions)) {
+        SNode currentAction = endAction;
+      }
+    }
+
+  }
   public static SNode insertMacro_Query_6_0(final InsertMacroContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.possibleValue$QY6s);
   }
@@ -1049,6 +1064,7 @@ public class QueriesGenerated extends QueryProviderBase {
     mscbMethods.put("3787511550168649561", new SCB(i++));
     mscbMethods.put("3170643229266748671", new SCB(i++));
     mscbMethods.put("1862364223830584741", new SCB(i++));
+    mscbMethods.put("8385198440888090728", new SCB(i++));
   }
   @Override
   @NotNull
@@ -1078,6 +1094,9 @@ public class QueriesGenerated extends QueryProviderBase {
           return;
         case 4:
           QueriesGenerated.mappingScript_CodeBlock_39(ctx);
+          return;
+        case 5:
+          QueriesGenerated.mappingScript_CodeBlock_46(ctx);
           return;
         default:
           throw new GenerationFailureException(String.format("There's no code block with method index %d ", methodKey));
@@ -2048,5 +2067,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept AdmissionAction$VB = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x78ac3095dfdf9aL, "ActionCards.structure.AdmissionAction");
     /*package*/ static final SConcept ObservationTest$BU = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db47911a7L, "ActionCards.structure.ObservationTest");
     /*package*/ static final SConcept Disease$8R = MetaAdapterFactory.getConcept(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x25745663758ab012L, "DiseaseModel.structure.Disease");
+    /*package*/ static final SConcept DischargeAction$Sl = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2756fb14cL, "ActionCards.structure.DischargeAction");
+    /*package*/ static final SConcept StaffType$5i = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL, "ActionCards.structure.StaffType");
   }
 }

@@ -28,6 +28,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/SimpleActionCard/SimpleActionCard.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StrepAIntervention/StrepAIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StrepAIntervention_pre/StrepAIntervention_pre.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/StyleFiles/StyleFiles.msd" folder="" />
     </projectModules>
   </component>
 </project>

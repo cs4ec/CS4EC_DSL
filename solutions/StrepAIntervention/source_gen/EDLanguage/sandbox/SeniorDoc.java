@@ -142,7 +142,7 @@ public class SeniorDoc extends Actor {
   }
 
   public Behaviour isIdleAction(Signal s) {
-    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_19(behaviourBuilder));
@@ -165,23 +165,23 @@ public class SeniorDoc extends Actor {
       case "":
         break;
       case "AdditionalAssessmentTrigger_c":
-        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_c");
+        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_c", this);
         this.InitAdditionalAssessment_c(s);
         break;
       case "AdditionalAssessmentTrigger_g":
-        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_g");
+        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_g", this);
         this.InitAdditionalAssessment_g(s);
         break;
       case "SenDocReviewTrigger_i":
-        behaviourBuilder = new Behaviour("SenDocReviewTrigger_i");
+        behaviourBuilder = new Behaviour("SenDocReviewTrigger_i", this);
         this.InitSenDocReview_i(s);
         break;
       case "AdditionalAssessmentTrigger_c_0":
-        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_c_0");
+        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_c_0", this);
         this.InitAdditionalAssessment_c_0(s);
         break;
       case "SeniorReviewTrigger_g":
-        behaviourBuilder = new Behaviour("SeniorReviewTrigger_g");
+        behaviourBuilder = new Behaviour("SeniorReviewTrigger_g", this);
         this.InitSeniorReview_g(s);
         break;
       default:

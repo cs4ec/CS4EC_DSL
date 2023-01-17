@@ -62,6 +62,16 @@
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
+  <dependency className="SimpleActionCard.AC1.CubicleNursestyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
   <dependency className="SimpleActionCard.AC1.Doctor">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
@@ -91,6 +101,16 @@
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="SimpleActionCard.AC1.Doctorstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.EDBuilder">
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
@@ -183,6 +203,16 @@
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
+  <dependency className="SimpleActionCard.AC1.LabTechnicianstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
   <dependency className="SimpleActionCard.AC1.Labaratory">
     <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -267,6 +297,16 @@
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
+  <dependency className="SimpleActionCard.AC1.PreAdmissionStaffstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
   <dependency className="SimpleActionCard.AC1.RadiologyRoom">
     <classNode dependClassName="EDLanguage.sandbox.RadiologyRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -323,6 +363,16 @@
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
+  <dependency className="SimpleActionCard.AC1.TriageNursestyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
   <dependency className="SimpleActionCard.AC1.TriageTrigger_bSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
@@ -354,6 +404,16 @@
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="SimpleActionCard.AC1.map_PatientProfilestyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.nullTrigger_aSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
@@ -397,6 +457,16 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
+  </dependency>
+  <dependency className="SimpleActionCard.AC1.patientstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
 </dependenciesRoot>
 

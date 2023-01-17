@@ -155,23 +155,23 @@ public class TriageNurse extends Actor {
       case "":
         break;
       case "Arrival_ChecksTrigger_a":
-        behaviourBuilder = new Behaviour("Arrival_ChecksTrigger_a");
+        behaviourBuilder = new Behaviour("Arrival_ChecksTrigger_a", this);
         this.InitArrival_Checks_a(s);
         break;
       case "PatientArrivesTrigger_k":
-        behaviourBuilder = new Behaviour("PatientArrivesTrigger_k");
+        behaviourBuilder = new Behaviour("PatientArrivesTrigger_k", this);
         this.InitPatientArrives_k(s);
         break;
       case "TriageTrigger_a":
-        behaviourBuilder = new Behaviour("TriageTrigger_a");
+        behaviourBuilder = new Behaviour("TriageTrigger_a", this);
         this.InitTriage_a(s);
         break;
       case "ChecksTrigger_b":
-        behaviourBuilder = new Behaviour("ChecksTrigger_b");
+        behaviourBuilder = new Behaviour("ChecksTrigger_b", this);
         this.InitChecks_b(s);
         break;
       case "ChecksTrigger_c":
-        behaviourBuilder = new Behaviour("ChecksTrigger_c");
+        behaviourBuilder = new Behaviour("ChecksTrigger_c", this);
         this.InitChecks_c(s);
         break;
       default:

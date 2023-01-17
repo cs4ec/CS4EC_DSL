@@ -94,7 +94,14 @@ public class MyRunner {
           OutputStream out = null;
 
           in = new FileInputStream(aFile);
-          out = new FileOutputStream(new File(baseProjectPath + filePathAfter + aFile.getName()));
+
+          if (aFile.getName().startsWith("style")) {
+            out = new FileOutputStream(new File(baseProjectPath + filePathAfter + "styles\\" + aFile.getName()));
+
+          } else {
+            out = new FileOutputStream(new File(baseProjectPath + filePathAfter + aFile.getName()));
+          }
+
 
           byte[] buffer = new byte[20480];
           int len;

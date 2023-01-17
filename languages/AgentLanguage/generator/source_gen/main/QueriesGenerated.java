@@ -696,10 +696,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.actorType$zg3B));
   }
   public static Object propertyMacro_GetValue_87_1(final PropertyMacroContext _context) {
-    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.actorType$zg3B));
+    return "EDLanguage.sandbox." + Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.actorType$zg3B)) + "style";
   }
   public static Object propertyMacro_GetValue_87_2(final PropertyMacroContext _context) {
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.actorType$zg3B));
+  }
+  public static Object propertyMacro_GetValue_87_3(final PropertyMacroContext _context) {
     return (((Integer) _context.getVariable("cv:numAgents")) + 4) + "";
+  }
+  public static Object propertyMacro_GetValue_88_0(final PropertyMacroContext _context) {
+    return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(_context.getNode()) + "style";
   }
   public static Object referenceMacro_GetReferent_1_0(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString((_context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "BehaviourMap")), PROPS.name$MnvL);
@@ -1850,8 +1856,10 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("6888869271817513607", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "AdmitAction"));
     pvqMethods.put("324605317416811527", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf93d565d10L, 0xf93d565d11L, "value"), ""));
     pvqMethods.put("5094365826583562690", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "MajorsDoctor"));
+    pvqMethods.put("5094365826592345128", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "repast.simphony.visualizationOGL2D.DefaultStyleOGL2D"));
     pvqMethods.put("5094365826583574438", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "MajorsDoctor"));
     pvqMethods.put("5094365826583584039", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "8"));
+    pvqMethods.put("2059891927244849155", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "actorStyle"));
   }
   @NotNull
   @Override
@@ -2204,6 +2212,10 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.propertyMacro_GetValue_87_1(ctx);
         case 167:
           return QueriesGenerated.propertyMacro_GetValue_87_2(ctx);
+        case 168:
+          return QueriesGenerated.propertyMacro_GetValue_87_3(ctx);
+        case 169:
+          return QueriesGenerated.propertyMacro_GetValue_88_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }

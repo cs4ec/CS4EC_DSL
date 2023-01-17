@@ -238,6 +238,54 @@
       <unit id="1758249876506198907" at="81,47,89,9" name="EDLanguage.sandbox.PreAdmissionStaff$5" />
       <unit id="1758249876506198907" at="24,0,171,0" name="EDLanguage.sandbox.PreAdmissionStaff" />
     </file>
+    <file name="PreAdmissionStaffstyle.java">
+      <node id="1758249876506198907" at="13,64,14,41" concept="11" />
+      <node id="1758249876506198907" at="14,41,15,46" concept="3" />
+      <node id="1758249876506198907" at="15,46,16,19" concept="10" />
+      <node id="1758249876506198907" at="19,41,20,40" concept="10" />
+      <node id="1758249876506198907" at="23,51,24,26" concept="10" />
+      <node id="1758249876506198907" at="26,40,27,21" concept="10" />
+      <node id="1758249876506198907" at="29,46,30,23" concept="10" />
+      <node id="1758249876506198907" at="32,43,33,13" concept="10" />
+      <node id="1758249876506198907" at="35,40,36,14" concept="10" />
+      <node id="1758249876506198907" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="1758249876506198907" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="1758249876506198907" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="1758249876506198907" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="1758249876506198907" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="1758249876506198907" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="1758249876506198907" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="1758249876506198907" at="19,41,20,40" />
+      <scope id="1758249876506198907" at="23,51,24,26" />
+      <scope id="1758249876506198907" at="26,40,27,21" />
+      <scope id="1758249876506198907" at="29,46,30,23" />
+      <scope id="1758249876506198907" at="32,43,33,13" />
+      <scope id="1758249876506198907" at="35,40,36,14" />
+      <scope id="1758249876506198907" at="13,64,16,19" />
+      <scope id="1758249876506198907" at="26,0,29,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="29,0,32,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="32,0,35,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="35,0,38,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="18,0,22,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="22,0,26,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="12,0,18,0">
+        <var name="object" id="1758249876506198907" />
+        <var name="spatial" id="1758249876506198907" />
+      </scope>
+      <unit id="1758249876506198907" at="11,0,40,0" name="SimpleActionCard.AC1.PreAdmissionStaffstyle" />
+    </file>
   </root>
   <root nodeRef="r:cff43c46-8848-46bf-abdf-ac236c9dc36d(SimpleActionCard.AC1)/1758249876511048321">
     <file name="EDBuilder.java">
@@ -398,6 +446,54 @@
       <unit id="1758249876511048321" at="73,51,77,5" name="EDLanguage.sandbox.map_PatientProfile$3" />
       <unit id="1758249876511048321" at="77,18,81,5" name="EDLanguage.sandbox.map_PatientProfile$4" />
       <unit id="1758249876511048321" at="22,0,126,0" name="EDLanguage.sandbox.map_PatientProfile" />
+    </file>
+    <file name="map_PatientProfilestyle.java">
+      <node id="1758249876511048321" at="13,64,14,41" concept="11" />
+      <node id="1758249876511048321" at="14,41,15,46" concept="3" />
+      <node id="1758249876511048321" at="15,46,16,19" concept="10" />
+      <node id="1758249876511048321" at="19,41,20,40" concept="10" />
+      <node id="1758249876511048321" at="23,51,24,26" concept="10" />
+      <node id="1758249876511048321" at="26,40,27,21" concept="10" />
+      <node id="1758249876511048321" at="29,46,30,23" concept="10" />
+      <node id="1758249876511048321" at="32,43,33,13" concept="10" />
+      <node id="1758249876511048321" at="35,40,36,14" concept="10" />
+      <node id="1758249876511048321" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="1758249876511048321" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="1758249876511048321" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="1758249876511048321" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="1758249876511048321" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="1758249876511048321" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="1758249876511048321" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="1758249876511048321" at="19,41,20,40" />
+      <scope id="1758249876511048321" at="23,51,24,26" />
+      <scope id="1758249876511048321" at="26,40,27,21" />
+      <scope id="1758249876511048321" at="29,46,30,23" />
+      <scope id="1758249876511048321" at="32,43,33,13" />
+      <scope id="1758249876511048321" at="35,40,36,14" />
+      <scope id="1758249876511048321" at="13,64,16,19" />
+      <scope id="1758249876511048321" at="26,0,29,0">
+        <var name="object" id="1758249876511048321" />
+      </scope>
+      <scope id="1758249876511048321" at="29,0,32,0">
+        <var name="object" id="1758249876511048321" />
+      </scope>
+      <scope id="1758249876511048321" at="32,0,35,0">
+        <var name="object" id="1758249876511048321" />
+      </scope>
+      <scope id="1758249876511048321" at="35,0,38,0">
+        <var name="object" id="1758249876511048321" />
+      </scope>
+      <scope id="1758249876511048321" at="18,0,22,0">
+        <var name="object" id="1758249876511048321" />
+      </scope>
+      <scope id="1758249876511048321" at="22,0,26,0">
+        <var name="object" id="1758249876511048321" />
+      </scope>
+      <scope id="1758249876511048321" at="12,0,18,0">
+        <var name="object" id="1758249876511048321" />
+        <var name="spatial" id="1758249876511048321" />
+      </scope>
+      <unit id="1758249876511048321" at="11,0,40,0" name="SimpleActionCard.AC1.map_PatientProfilestyle" />
     </file>
     <file name="patient.java">
       <node id="5094365826583405910" at="120,42,121,15" concept="10" />
@@ -1367,6 +1463,54 @@
       <unit id="188877551432564643" at="330,0,363,0" name="EDLanguage.sandbox.Doctor$MoveAction_b0a_1" />
       <unit id="188877551432564643" at="28,0,450,0" name="EDLanguage.sandbox.Doctor" />
     </file>
+    <file name="Doctorstyle.java">
+      <node id="188877551432564643" at="13,64,14,41" concept="11" />
+      <node id="188877551432564643" at="14,41,15,46" concept="3" />
+      <node id="188877551432564643" at="15,46,16,19" concept="10" />
+      <node id="188877551432564643" at="19,41,20,40" concept="10" />
+      <node id="188877551432564643" at="23,51,24,26" concept="10" />
+      <node id="188877551432564643" at="26,40,27,21" concept="10" />
+      <node id="188877551432564643" at="29,46,30,23" concept="10" />
+      <node id="188877551432564643" at="32,43,33,13" concept="10" />
+      <node id="188877551432564643" at="35,40,36,14" concept="10" />
+      <node id="188877551432564643" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="188877551432564643" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="188877551432564643" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="188877551432564643" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="188877551432564643" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="188877551432564643" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="188877551432564643" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="188877551432564643" at="19,41,20,40" />
+      <scope id="188877551432564643" at="23,51,24,26" />
+      <scope id="188877551432564643" at="26,40,27,21" />
+      <scope id="188877551432564643" at="29,46,30,23" />
+      <scope id="188877551432564643" at="32,43,33,13" />
+      <scope id="188877551432564643" at="35,40,36,14" />
+      <scope id="188877551432564643" at="13,64,16,19" />
+      <scope id="188877551432564643" at="26,0,29,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="29,0,32,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="32,0,35,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="35,0,38,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="18,0,22,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="22,0,26,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="12,0,18,0">
+        <var name="object" id="188877551432564643" />
+        <var name="spatial" id="188877551432564643" />
+      </scope>
+      <unit id="188877551432564643" at="11,0,40,0" name="SimpleActionCard.AC1.Doctorstyle" />
+    </file>
   </root>
   <root nodeRef="r:cff43c46-8848-46bf-abdf-ac236c9dc36d(SimpleActionCard.AC1)/2698877061867170269">
     <file name="Ward.java">
@@ -1953,6 +2097,54 @@
       <unit id="2985733650857495302" at="173,0,206,0" name="EDLanguage.sandbox.TriageNurse$MoveAction_a0a_3" />
       <unit id="2985733650857495302" at="283,0,316,0" name="EDLanguage.sandbox.TriageNurse$MoveAction_a0a_5" />
       <unit id="2985733650857495302" at="28,0,527,0" name="EDLanguage.sandbox.TriageNurse" />
+    </file>
+    <file name="TriageNursestyle.java">
+      <node id="2985733650857495302" at="13,64,14,41" concept="11" />
+      <node id="2985733650857495302" at="14,41,15,46" concept="3" />
+      <node id="2985733650857495302" at="15,46,16,19" concept="10" />
+      <node id="2985733650857495302" at="19,41,20,40" concept="10" />
+      <node id="2985733650857495302" at="23,51,24,26" concept="10" />
+      <node id="2985733650857495302" at="26,40,27,21" concept="10" />
+      <node id="2985733650857495302" at="29,46,30,23" concept="10" />
+      <node id="2985733650857495302" at="32,43,33,13" concept="10" />
+      <node id="2985733650857495302" at="35,40,36,14" concept="10" />
+      <node id="2985733650857495302" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="2985733650857495302" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="2985733650857495302" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="2985733650857495302" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="2985733650857495302" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="2985733650857495302" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="2985733650857495302" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="2985733650857495302" at="19,41,20,40" />
+      <scope id="2985733650857495302" at="23,51,24,26" />
+      <scope id="2985733650857495302" at="26,40,27,21" />
+      <scope id="2985733650857495302" at="29,46,30,23" />
+      <scope id="2985733650857495302" at="32,43,33,13" />
+      <scope id="2985733650857495302" at="35,40,36,14" />
+      <scope id="2985733650857495302" at="13,64,16,19" />
+      <scope id="2985733650857495302" at="26,0,29,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="29,0,32,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="32,0,35,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="35,0,38,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="18,0,22,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="22,0,26,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="12,0,18,0">
+        <var name="object" id="2985733650857495302" />
+        <var name="spatial" id="2985733650857495302" />
+      </scope>
+      <unit id="2985733650857495302" at="11,0,40,0" name="SimpleActionCard.AC1.TriageNursestyle" />
     </file>
   </root>
   <root nodeRef="r:cff43c46-8848-46bf-abdf-ac236c9dc36d(SimpleActionCard.AC1)/2985733650857495355">
@@ -2695,6 +2887,54 @@
       <unit id="2985733650857495374" at="648,0,681,0" name="EDLanguage.sandbox.CubicleNurse$MoveAction_a0a_11" />
       <unit id="2985733650857495374" at="27,0,737,0" name="EDLanguage.sandbox.CubicleNurse" />
     </file>
+    <file name="CubicleNursestyle.java">
+      <node id="2985733650857495374" at="13,64,14,41" concept="11" />
+      <node id="2985733650857495374" at="14,41,15,46" concept="3" />
+      <node id="2985733650857495374" at="15,46,16,19" concept="10" />
+      <node id="2985733650857495374" at="19,41,20,40" concept="10" />
+      <node id="2985733650857495374" at="23,51,24,26" concept="10" />
+      <node id="2985733650857495374" at="26,40,27,21" concept="10" />
+      <node id="2985733650857495374" at="29,46,30,23" concept="10" />
+      <node id="2985733650857495374" at="32,43,33,13" concept="10" />
+      <node id="2985733650857495374" at="35,40,36,14" concept="10" />
+      <node id="2985733650857495374" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="2985733650857495374" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="2985733650857495374" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="2985733650857495374" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="2985733650857495374" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="2985733650857495374" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="2985733650857495374" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="2985733650857495374" at="19,41,20,40" />
+      <scope id="2985733650857495374" at="23,51,24,26" />
+      <scope id="2985733650857495374" at="26,40,27,21" />
+      <scope id="2985733650857495374" at="29,46,30,23" />
+      <scope id="2985733650857495374" at="32,43,33,13" />
+      <scope id="2985733650857495374" at="35,40,36,14" />
+      <scope id="2985733650857495374" at="13,64,16,19" />
+      <scope id="2985733650857495374" at="26,0,29,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="29,0,32,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="32,0,35,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="35,0,38,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="18,0,22,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="22,0,26,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="12,0,18,0">
+        <var name="object" id="2985733650857495374" />
+        <var name="spatial" id="2985733650857495374" />
+      </scope>
+      <unit id="2985733650857495374" at="11,0,40,0" name="SimpleActionCard.AC1.CubicleNursestyle" />
+    </file>
   </root>
   <root nodeRef="r:cff43c46-8848-46bf-abdf-ac236c9dc36d(SimpleActionCard.AC1)/3535684625582833514">
     <file name="Bed.java">
@@ -3175,6 +3415,54 @@
       <unit id="768972137573140830" at="81,18,85,5" name="EDLanguage.sandbox.patient$4" />
       <unit id="768972137573140830" at="22,0,160,0" name="EDLanguage.sandbox.patient" />
     </file>
+    <file name="patientstyle.java">
+      <node id="768972137573140830" at="13,64,14,41" concept="11" />
+      <node id="768972137573140830" at="14,41,15,46" concept="3" />
+      <node id="768972137573140830" at="15,46,16,19" concept="10" />
+      <node id="768972137573140830" at="19,41,20,40" concept="10" />
+      <node id="768972137573140830" at="23,51,24,26" concept="10" />
+      <node id="768972137573140830" at="26,40,27,21" concept="10" />
+      <node id="768972137573140830" at="29,46,30,23" concept="10" />
+      <node id="768972137573140830" at="32,43,33,13" concept="10" />
+      <node id="768972137573140830" at="35,40,36,14" concept="10" />
+      <node id="768972137573140830" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="768972137573140830" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="768972137573140830" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="768972137573140830" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="768972137573140830" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="768972137573140830" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="768972137573140830" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="768972137573140830" at="19,41,20,40" />
+      <scope id="768972137573140830" at="23,51,24,26" />
+      <scope id="768972137573140830" at="26,40,27,21" />
+      <scope id="768972137573140830" at="29,46,30,23" />
+      <scope id="768972137573140830" at="32,43,33,13" />
+      <scope id="768972137573140830" at="35,40,36,14" />
+      <scope id="768972137573140830" at="13,64,16,19" />
+      <scope id="768972137573140830" at="26,0,29,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="29,0,32,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="32,0,35,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="35,0,38,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="18,0,22,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="22,0,26,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="12,0,18,0">
+        <var name="object" id="768972137573140830" />
+        <var name="spatial" id="768972137573140830" />
+      </scope>
+      <unit id="768972137573140830" at="11,0,40,0" name="SimpleActionCard.AC1.patientstyle" />
+    </file>
   </root>
   <root nodeRef="r:cff43c46-8848-46bf-abdf-ac236c9dc36d(SimpleActionCard.AC1)/768972137583268694">
     <file name="TriageDesk.java">
@@ -3570,6 +3858,54 @@
       <unit id="90846643906069554" at="72,42,80,7" name="EDLanguage.sandbox.LabTechnician$6" />
       <unit id="90846643906069554" at="81,47,89,9" name="EDLanguage.sandbox.LabTechnician$5" />
       <unit id="90846643906069554" at="24,0,171,0" name="EDLanguage.sandbox.LabTechnician" />
+    </file>
+    <file name="LabTechnicianstyle.java">
+      <node id="90846643906069554" at="13,64,14,41" concept="11" />
+      <node id="90846643906069554" at="14,41,15,46" concept="3" />
+      <node id="90846643906069554" at="15,46,16,19" concept="10" />
+      <node id="90846643906069554" at="19,41,20,40" concept="10" />
+      <node id="90846643906069554" at="23,51,24,26" concept="10" />
+      <node id="90846643906069554" at="26,40,27,21" concept="10" />
+      <node id="90846643906069554" at="29,46,30,23" concept="10" />
+      <node id="90846643906069554" at="32,43,33,13" concept="10" />
+      <node id="90846643906069554" at="35,40,36,14" concept="10" />
+      <node id="90846643906069554" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="90846643906069554" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="90846643906069554" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="90846643906069554" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="90846643906069554" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="90846643906069554" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="90846643906069554" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="90846643906069554" at="19,41,20,40" />
+      <scope id="90846643906069554" at="23,51,24,26" />
+      <scope id="90846643906069554" at="26,40,27,21" />
+      <scope id="90846643906069554" at="29,46,30,23" />
+      <scope id="90846643906069554" at="32,43,33,13" />
+      <scope id="90846643906069554" at="35,40,36,14" />
+      <scope id="90846643906069554" at="13,64,16,19" />
+      <scope id="90846643906069554" at="26,0,29,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="29,0,32,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="32,0,35,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="35,0,38,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="18,0,22,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="22,0,26,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="12,0,18,0">
+        <var name="object" id="90846643906069554" />
+        <var name="spatial" id="90846643906069554" />
+      </scope>
+      <unit id="90846643906069554" at="11,0,40,0" name="SimpleActionCard.AC1.LabTechnicianstyle" />
     </file>
   </root>
   <root nodeRef="r:cff43c46-8848-46bf-abdf-ac236c9dc36d(SimpleActionCard.AC1)/90846643906069738">

@@ -8,19 +8,19 @@
     </entry>
       <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
+      <string>EDLanguage.sandbox.Doctorstyle</string>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.CubicleNurse</string>
-      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
+      <string>EDLanguage.sandbox.CubicleNursestyle</string>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.TriageNurse</string>
-      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
+      <string>EDLanguage.sandbox.TriageNursestyle</string>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.PreAdmissionStaff</string>
-      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
+      <string>EDLanguage.sandbox.PreAdmissionStaffstyle</string>
       </entry>
   </styles>
   <editedStyles>
@@ -40,6 +40,7 @@
       <string>EDLanguage.sandbox.patient</string>
       <string>EDLanguage.sandbox.patient.style_2.xml</string>
     </entry>
+
   </editedStyles>
   <netStyles/>
   <editedNetStyles/>
@@ -63,19 +64,19 @@
     </entry>
       <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <int>1</int>
+      <int>4</int>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.CubicleNurse</string>
-      <int>2</int>
+      <int>5</int>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.TriageNurse</string>
-      <int>3</int>
+      <int>6</int>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.PreAdmissionStaff</string>
-      <int>4</int>
+      <int>7</int>
       </entry>
     <entry>
       <string>simcore.basicStructures.Occupiable</string>

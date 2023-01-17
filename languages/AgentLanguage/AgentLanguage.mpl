@@ -31,6 +31,8 @@
         <dependency reexport="false">f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)</dependency>
         <dependency reexport="false">30254c5b-f87e-4bb3-a60a-77a7ec6ed411(org.iets3.core.expr.genjava.base)</dependency>
         <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
+        <dependency reexport="false">99a71636-4380-4f69-8ffd-d4b1190320d6(EDRuntime_RepastMainProvider)</dependency>
+        <dependency reexport="true">c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:990507d3-3527-4c54-bfe9-0ca3c9c6247a:com.dslfoundry.plaintextgen" version="0" />
@@ -66,15 +68,19 @@
         <language slang="l:6b277d9a-d52d-416f-a209-1919bd737f50:org.iets3.core.expr.simpleTypes" version="1" />
       </languageVersions>
       <dependencyVersions>
+        <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="1" />
         <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
         <module reference="7b52bc0f-0af6-4ced-b84b-e851110576df(AgentLanguage#01)" version="0" />
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
+        <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
         <module reference="777aeadd-8647-48eb-9aa5-d721b3a58bdf(EDLanguage.LanguageDependency)" version="0" />
+        <module reference="29af8eae-5649-40f8-acdf-a1edf032cb72(EDLanguage.Runner)" version="0" />
         <module reference="0546afe3-5b47-4943-b633-1bacc6185ce7(EDRuntime3)" version="0" />
         <module reference="2f102c00-63bc-4f80-b8a3-561027d75608(EDRuntime_EDProject)" version="0" />
         <module reference="4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)" version="0" />
         <module reference="284d85cb-43ad-40d9-9962-97f40cd43560(EDRuntime_Repast)" version="0" />
         <module reference="4fbbea45-19cc-4b4e-a78f-8d62c6a38b7a(EDRuntime_Repast)" version="0" />
+        <module reference="99a71636-4380-4f69-8ffd-d4b1190320d6(EDRuntime_RepastMainProvider)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
         <module reference="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" version="0" />
@@ -82,6 +88,7 @@
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
         <module reference="5da4efb7-c57c-4f95-894b-163d4b6ba3d5(RuntimeSolutionRepast)" version="0" />
+        <module reference="c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)" version="0" />
         <module reference="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" version="0" />
         <module reference="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" version="0" />
         <module reference="d4280a54-f6df-4383-aa41-d1b2bffa7eb1(com.mbeddr.core.base)" version="3" />
@@ -133,6 +140,8 @@
     <dependency reexport="false">7e450f4e-1ac3-41ef-a851-4598161bdb94(de.slisson.mps.tables)</dependency>
     <dependency reexport="false">30254c5b-f87e-4bb3-a60a-77a7ec6ed411(org.iets3.core.expr.genjava.base)</dependency>
     <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
+    <dependency reexport="true">4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)</dependency>
+    <dependency reexport="true">c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="5" />
@@ -234,6 +243,11 @@
     <module reference="30254c5b-f87e-4bb3-a60a-77a7ec6ed411(org.iets3.core.expr.genjava.base)" version="0" />
     <module reference="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" version="1" />
   </dependencyVersions>
+  <runtime>
+    <dependency reexport="false">29af8eae-5649-40f8-acdf-a1edf032cb72(EDLanguage.Runner)</dependency>
+    <dependency reexport="false">4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)</dependency>
+    <dependency reexport="false">c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)</dependency>
+  </runtime>
   <extendedLanguages>
     <extendedLanguage>6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)</extendedLanguage>
     <extendedLanguage>d3a0fd26-445a-466c-900e-10444ddfed52(com.mbeddr.mpsutil.filepicker)</extendedLanguage>

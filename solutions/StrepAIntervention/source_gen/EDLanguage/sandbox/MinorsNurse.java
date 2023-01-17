@@ -145,7 +145,7 @@ public class MinorsNurse extends Actor {
   }
 
   public Behaviour isIdleAction(Signal s) {
-    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_25(behaviourBuilder));
@@ -168,15 +168,15 @@ public class MinorsNurse extends Actor {
       case "":
         break;
       case "WaitTrigger_b_0":
-        behaviourBuilder = new Behaviour("WaitTrigger_b_0");
+        behaviourBuilder = new Behaviour("WaitTrigger_b_0", this);
         this.InitWait_b_0(s);
         break;
       case "ObsReviewTrigger_e_0":
-        behaviourBuilder = new Behaviour("ObsReviewTrigger_e_0");
+        behaviourBuilder = new Behaviour("ObsReviewTrigger_e_0", this);
         this.InitObsReview_e_0(s);
         break;
       case "ObsReviewTrigger_f_0":
-        behaviourBuilder = new Behaviour("ObsReviewTrigger_f_0");
+        behaviourBuilder = new Behaviour("ObsReviewTrigger_f_0", this);
         this.InitObsReview_f_0(s);
         break;
       default:

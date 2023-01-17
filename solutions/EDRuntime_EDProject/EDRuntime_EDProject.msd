@@ -6,6 +6,8 @@
     </modelRoot>
     <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="simcore.jar" />
+      <sourceRoot location="saf.core.ui.jar" />
+      <sourceRoot location="saf.core.v3d.jar" />
     </modelRoot>
   </models>
   <facets>

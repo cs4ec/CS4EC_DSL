@@ -187,6 +187,54 @@
       <unit id="1758249876454488410" at="77,18,81,5" name="EDLanguage.sandbox.map_PatientProfile$4" />
       <unit id="1758249876454488410" at="22,0,126,0" name="EDLanguage.sandbox.map_PatientProfile" />
     </file>
+    <file name="map_PatientProfilestyle.java">
+      <node id="1758249876454488410" at="13,64,14,41" concept="11" />
+      <node id="1758249876454488410" at="14,41,15,46" concept="3" />
+      <node id="1758249876454488410" at="15,46,16,19" concept="10" />
+      <node id="1758249876454488410" at="19,41,20,40" concept="10" />
+      <node id="1758249876454488410" at="23,51,24,26" concept="10" />
+      <node id="1758249876454488410" at="26,40,27,21" concept="10" />
+      <node id="1758249876454488410" at="29,46,30,23" concept="10" />
+      <node id="1758249876454488410" at="32,43,33,13" concept="10" />
+      <node id="1758249876454488410" at="35,40,36,14" concept="10" />
+      <node id="1758249876454488410" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="1758249876454488410" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="1758249876454488410" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="1758249876454488410" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="1758249876454488410" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="1758249876454488410" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="1758249876454488410" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="1758249876454488410" at="19,41,20,40" />
+      <scope id="1758249876454488410" at="23,51,24,26" />
+      <scope id="1758249876454488410" at="26,40,27,21" />
+      <scope id="1758249876454488410" at="29,46,30,23" />
+      <scope id="1758249876454488410" at="32,43,33,13" />
+      <scope id="1758249876454488410" at="35,40,36,14" />
+      <scope id="1758249876454488410" at="13,64,16,19" />
+      <scope id="1758249876454488410" at="26,0,29,0">
+        <var name="object" id="1758249876454488410" />
+      </scope>
+      <scope id="1758249876454488410" at="29,0,32,0">
+        <var name="object" id="1758249876454488410" />
+      </scope>
+      <scope id="1758249876454488410" at="32,0,35,0">
+        <var name="object" id="1758249876454488410" />
+      </scope>
+      <scope id="1758249876454488410" at="35,0,38,0">
+        <var name="object" id="1758249876454488410" />
+      </scope>
+      <scope id="1758249876454488410" at="18,0,22,0">
+        <var name="object" id="1758249876454488410" />
+      </scope>
+      <scope id="1758249876454488410" at="22,0,26,0">
+        <var name="object" id="1758249876454488410" />
+      </scope>
+      <scope id="1758249876454488410" at="12,0,18,0">
+        <var name="object" id="1758249876454488410" />
+        <var name="spatial" id="1758249876454488410" />
+      </scope>
+      <unit id="1758249876454488410" at="11,0,40,0" name="StrepAIntervention.AC1.map_PatientProfilestyle" />
+    </file>
     <file name="patient.java">
       <node id="324605317389916517" at="123,36,124,15" concept="10" />
       <node id="324605317389916517" at="125,5,126,13" concept="10" />
@@ -474,8 +522,8 @@
       <node id="1758249876506198907" at="140,15,141,77" concept="10" />
       <node id="1758249876506198907" at="142,5,143,13" concept="10" />
       <node id="1758249876506198907" at="143,13,144,0" concept="12" />
-      <node id="1758249876506198907" at="147,43,148,53" concept="3" />
-      <node id="1758249876506198907" at="148,53,149,41" concept="3" />
+      <node id="1758249876506198907" at="147,43,148,59" concept="3" />
+      <node id="1758249876506198907" at="148,59,149,41" concept="3" />
       <node id="1758249876506198907" at="149,41,150,57" concept="9" />
       <node id="1758249876506198907" at="150,57,151,59" concept="3" />
       <node id="1758249876506198907" at="151,59,152,58" concept="3" />
@@ -1390,6 +1438,54 @@
       <unit id="1758249876506198907" at="929,0,962,0" name="EDLanguage.sandbox.MinorsNurse$MoveAction_a0a_25" />
       <unit id="1758249876506198907" at="30,0,1031,0" name="EDLanguage.sandbox.MinorsNurse" />
     </file>
+    <file name="MinorsNursestyle.java">
+      <node id="1758249876506198907" at="13,64,14,41" concept="11" />
+      <node id="1758249876506198907" at="14,41,15,46" concept="3" />
+      <node id="1758249876506198907" at="15,46,16,19" concept="10" />
+      <node id="1758249876506198907" at="19,41,20,40" concept="10" />
+      <node id="1758249876506198907" at="23,51,24,26" concept="10" />
+      <node id="1758249876506198907" at="26,40,27,21" concept="10" />
+      <node id="1758249876506198907" at="29,46,30,23" concept="10" />
+      <node id="1758249876506198907" at="32,43,33,13" concept="10" />
+      <node id="1758249876506198907" at="35,40,36,14" concept="10" />
+      <node id="1758249876506198907" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="1758249876506198907" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="1758249876506198907" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="1758249876506198907" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="1758249876506198907" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="1758249876506198907" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="1758249876506198907" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="1758249876506198907" at="19,41,20,40" />
+      <scope id="1758249876506198907" at="23,51,24,26" />
+      <scope id="1758249876506198907" at="26,40,27,21" />
+      <scope id="1758249876506198907" at="29,46,30,23" />
+      <scope id="1758249876506198907" at="32,43,33,13" />
+      <scope id="1758249876506198907" at="35,40,36,14" />
+      <scope id="1758249876506198907" at="13,64,16,19" />
+      <scope id="1758249876506198907" at="26,0,29,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="29,0,32,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="32,0,35,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="35,0,38,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="18,0,22,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="22,0,26,0">
+        <var name="object" id="1758249876506198907" />
+      </scope>
+      <scope id="1758249876506198907" at="12,0,18,0">
+        <var name="object" id="1758249876506198907" />
+        <var name="spatial" id="1758249876506198907" />
+      </scope>
+      <unit id="1758249876506198907" at="11,0,40,0" name="StrepAIntervention.AC1.MinorsNursestyle" />
+    </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/188877551432564643">
     <file name="MajorsDoctor.java">
@@ -1426,8 +1522,8 @@
       <node id="188877551432564643" at="141,15,142,77" concept="10" />
       <node id="188877551432564643" at="143,5,144,13" concept="10" />
       <node id="188877551432564643" at="144,13,145,0" concept="12" />
-      <node id="188877551432564643" at="148,43,149,53" concept="3" />
-      <node id="188877551432564643" at="149,53,150,41" concept="3" />
+      <node id="188877551432564643" at="148,43,149,59" concept="3" />
+      <node id="188877551432564643" at="149,59,150,41" concept="3" />
       <node id="188877551432564643" at="150,41,151,57" concept="9" />
       <node id="188877551432564643" at="151,57,152,58" concept="3" />
       <node id="188877551432564643" at="152,58,153,56" concept="3" />
@@ -2438,6 +2534,54 @@
       <unit id="188877551432564643" at="936,0,969,0" name="EDLanguage.sandbox.MajorsDoctor$MoveAction_a0a_3" />
       <unit id="188877551432564643" at="31,0,1039,0" name="EDLanguage.sandbox.MajorsDoctor" />
     </file>
+    <file name="MajorsDoctorstyle.java">
+      <node id="188877551432564643" at="13,64,14,41" concept="11" />
+      <node id="188877551432564643" at="14,41,15,46" concept="3" />
+      <node id="188877551432564643" at="15,46,16,19" concept="10" />
+      <node id="188877551432564643" at="19,41,20,40" concept="10" />
+      <node id="188877551432564643" at="23,51,24,26" concept="10" />
+      <node id="188877551432564643" at="26,40,27,21" concept="10" />
+      <node id="188877551432564643" at="29,46,30,23" concept="10" />
+      <node id="188877551432564643" at="32,43,33,13" concept="10" />
+      <node id="188877551432564643" at="35,40,36,14" concept="10" />
+      <node id="188877551432564643" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="188877551432564643" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="188877551432564643" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="188877551432564643" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="188877551432564643" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="188877551432564643" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="188877551432564643" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="188877551432564643" at="19,41,20,40" />
+      <scope id="188877551432564643" at="23,51,24,26" />
+      <scope id="188877551432564643" at="26,40,27,21" />
+      <scope id="188877551432564643" at="29,46,30,23" />
+      <scope id="188877551432564643" at="32,43,33,13" />
+      <scope id="188877551432564643" at="35,40,36,14" />
+      <scope id="188877551432564643" at="13,64,16,19" />
+      <scope id="188877551432564643" at="26,0,29,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="29,0,32,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="32,0,35,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="35,0,38,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="18,0,22,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="22,0,26,0">
+        <var name="object" id="188877551432564643" />
+      </scope>
+      <scope id="188877551432564643" at="12,0,18,0">
+        <var name="object" id="188877551432564643" />
+        <var name="spatial" id="188877551432564643" />
+      </scope>
+      <unit id="188877551432564643" at="11,0,40,0" name="StrepAIntervention.AC1.MajorsDoctorstyle" />
+    </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/2698877061867170269">
     <file name="Ward.java">
@@ -2510,8 +2654,8 @@
       <node id="2985733650857495302" at="142,13,143,0" concept="12" />
       <node id="2985733650857495302" at="151,39,152,105" concept="3" />
       <node id="2985733650857495302" at="155,14,156,14" concept="1" />
-      <node id="2985733650857495302" at="161,37,162,68" concept="3" />
-      <node id="2985733650857495302" at="162,68,163,37" concept="3" />
+      <node id="2985733650857495302" at="161,37,162,74" concept="3" />
+      <node id="2985733650857495302" at="162,74,163,37" concept="3" />
       <node id="2985733650857495302" at="163,37,164,14" concept="1" />
       <node id="2985733650857495302" at="177,14,178,71" concept="3" />
       <node id="2985733650857495302" at="178,71,179,32" concept="10" />
@@ -3671,6 +3815,54 @@
       <unit id="2985733650857495302" at="1393,0,1426,0" name="EDLanguage.sandbox.TriageNurse$MoveAction_a0e_1" />
       <unit id="2985733650857495302" at="29,0,1588,0" name="EDLanguage.sandbox.TriageNurse" />
     </file>
+    <file name="TriageNursestyle.java">
+      <node id="2985733650857495302" at="13,64,14,41" concept="11" />
+      <node id="2985733650857495302" at="14,41,15,46" concept="3" />
+      <node id="2985733650857495302" at="15,46,16,19" concept="10" />
+      <node id="2985733650857495302" at="19,41,20,40" concept="10" />
+      <node id="2985733650857495302" at="23,51,24,26" concept="10" />
+      <node id="2985733650857495302" at="26,40,27,21" concept="10" />
+      <node id="2985733650857495302" at="29,46,30,23" concept="10" />
+      <node id="2985733650857495302" at="32,43,33,13" concept="10" />
+      <node id="2985733650857495302" at="35,40,36,14" concept="10" />
+      <node id="2985733650857495302" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="2985733650857495302" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="2985733650857495302" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="2985733650857495302" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="2985733650857495302" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="2985733650857495302" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="2985733650857495302" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="2985733650857495302" at="19,41,20,40" />
+      <scope id="2985733650857495302" at="23,51,24,26" />
+      <scope id="2985733650857495302" at="26,40,27,21" />
+      <scope id="2985733650857495302" at="29,46,30,23" />
+      <scope id="2985733650857495302" at="32,43,33,13" />
+      <scope id="2985733650857495302" at="35,40,36,14" />
+      <scope id="2985733650857495302" at="13,64,16,19" />
+      <scope id="2985733650857495302" at="26,0,29,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="29,0,32,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="32,0,35,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="35,0,38,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="18,0,22,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="22,0,26,0">
+        <var name="object" id="2985733650857495302" />
+      </scope>
+      <scope id="2985733650857495302" at="12,0,18,0">
+        <var name="object" id="2985733650857495302" />
+        <var name="spatial" id="2985733650857495302" />
+      </scope>
+      <unit id="2985733650857495302" at="11,0,40,0" name="StrepAIntervention.AC1.TriageNursestyle" />
+    </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/2985733650857495355">
     <file name="RespiratoryArea.java">
@@ -3724,8 +3916,8 @@
       <node id="2985733650857495374" at="140,15,141,77" concept="10" />
       <node id="2985733650857495374" at="142,5,143,13" concept="10" />
       <node id="2985733650857495374" at="143,13,144,0" concept="12" />
-      <node id="2985733650857495374" at="147,43,148,53" concept="3" />
-      <node id="2985733650857495374" at="148,53,149,41" concept="3" />
+      <node id="2985733650857495374" at="147,43,148,59" concept="3" />
+      <node id="2985733650857495374" at="148,59,149,41" concept="3" />
       <node id="2985733650857495374" at="149,41,150,57" concept="9" />
       <node id="2985733650857495374" at="150,57,151,59" concept="3" />
       <node id="2985733650857495374" at="151,59,152,58" concept="3" />
@@ -4688,6 +4880,54 @@
       <unit id="2985733650857495374" at="1007,0,1040,0" name="EDLanguage.sandbox.MajorsNurse$MoveAction_a0a_13" />
       <unit id="2985733650857495374" at="30,0,1109,0" name="EDLanguage.sandbox.MajorsNurse" />
     </file>
+    <file name="MajorsNursestyle.java">
+      <node id="2985733650857495374" at="13,64,14,41" concept="11" />
+      <node id="2985733650857495374" at="14,41,15,46" concept="3" />
+      <node id="2985733650857495374" at="15,46,16,19" concept="10" />
+      <node id="2985733650857495374" at="19,41,20,40" concept="10" />
+      <node id="2985733650857495374" at="23,51,24,26" concept="10" />
+      <node id="2985733650857495374" at="26,40,27,21" concept="10" />
+      <node id="2985733650857495374" at="29,46,30,23" concept="10" />
+      <node id="2985733650857495374" at="32,43,33,13" concept="10" />
+      <node id="2985733650857495374" at="35,40,36,14" concept="10" />
+      <node id="2985733650857495374" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="2985733650857495374" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="2985733650857495374" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="2985733650857495374" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="2985733650857495374" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="2985733650857495374" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="2985733650857495374" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="2985733650857495374" at="19,41,20,40" />
+      <scope id="2985733650857495374" at="23,51,24,26" />
+      <scope id="2985733650857495374" at="26,40,27,21" />
+      <scope id="2985733650857495374" at="29,46,30,23" />
+      <scope id="2985733650857495374" at="32,43,33,13" />
+      <scope id="2985733650857495374" at="35,40,36,14" />
+      <scope id="2985733650857495374" at="13,64,16,19" />
+      <scope id="2985733650857495374" at="26,0,29,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="29,0,32,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="32,0,35,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="35,0,38,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="18,0,22,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="22,0,26,0">
+        <var name="object" id="2985733650857495374" />
+      </scope>
+      <scope id="2985733650857495374" at="12,0,18,0">
+        <var name="object" id="2985733650857495374" />
+        <var name="spatial" id="2985733650857495374" />
+      </scope>
+      <unit id="2985733650857495374" at="11,0,40,0" name="StrepAIntervention.AC1.MajorsNursestyle" />
+    </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/3170643229266729092">
     <file name="WardNurse.java">
@@ -4883,6 +5123,54 @@
       <unit id="3170643229266729092" at="81,47,89,9" name="EDLanguage.sandbox.WardNurse$5" />
       <unit id="3170643229266729092" at="24,0,171,0" name="EDLanguage.sandbox.WardNurse" />
     </file>
+    <file name="WardNursestyle.java">
+      <node id="3170643229266729092" at="13,64,14,41" concept="11" />
+      <node id="3170643229266729092" at="14,41,15,46" concept="3" />
+      <node id="3170643229266729092" at="15,46,16,19" concept="10" />
+      <node id="3170643229266729092" at="19,41,20,40" concept="10" />
+      <node id="3170643229266729092" at="23,51,24,26" concept="10" />
+      <node id="3170643229266729092" at="26,40,27,21" concept="10" />
+      <node id="3170643229266729092" at="29,46,30,23" concept="10" />
+      <node id="3170643229266729092" at="32,43,33,13" concept="10" />
+      <node id="3170643229266729092" at="35,40,36,14" concept="10" />
+      <node id="3170643229266729092" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="3170643229266729092" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="3170643229266729092" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="3170643229266729092" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="3170643229266729092" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="3170643229266729092" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="3170643229266729092" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="3170643229266729092" at="19,41,20,40" />
+      <scope id="3170643229266729092" at="23,51,24,26" />
+      <scope id="3170643229266729092" at="26,40,27,21" />
+      <scope id="3170643229266729092" at="29,46,30,23" />
+      <scope id="3170643229266729092" at="32,43,33,13" />
+      <scope id="3170643229266729092" at="35,40,36,14" />
+      <scope id="3170643229266729092" at="13,64,16,19" />
+      <scope id="3170643229266729092" at="26,0,29,0">
+        <var name="object" id="3170643229266729092" />
+      </scope>
+      <scope id="3170643229266729092" at="29,0,32,0">
+        <var name="object" id="3170643229266729092" />
+      </scope>
+      <scope id="3170643229266729092" at="32,0,35,0">
+        <var name="object" id="3170643229266729092" />
+      </scope>
+      <scope id="3170643229266729092" at="35,0,38,0">
+        <var name="object" id="3170643229266729092" />
+      </scope>
+      <scope id="3170643229266729092" at="18,0,22,0">
+        <var name="object" id="3170643229266729092" />
+      </scope>
+      <scope id="3170643229266729092" at="22,0,26,0">
+        <var name="object" id="3170643229266729092" />
+      </scope>
+      <scope id="3170643229266729092" at="12,0,18,0">
+        <var name="object" id="3170643229266729092" />
+        <var name="spatial" id="3170643229266729092" />
+      </scope>
+      <unit id="3170643229266729092" at="11,0,40,0" name="StrepAIntervention.AC1.WardNursestyle" />
+    </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/324605317389916717">
     <file name="MinorsDoctor.java">
@@ -4919,8 +5207,8 @@
       <node id="324605317389916717" at="141,15,142,77" concept="10" />
       <node id="324605317389916717" at="143,5,144,13" concept="10" />
       <node id="324605317389916717" at="144,13,145,0" concept="12" />
-      <node id="324605317389916717" at="148,43,149,53" concept="3" />
-      <node id="324605317389916717" at="149,53,150,41" concept="3" />
+      <node id="324605317389916717" at="148,43,149,59" concept="3" />
+      <node id="324605317389916717" at="149,59,150,41" concept="3" />
       <node id="324605317389916717" at="150,41,151,57" concept="9" />
       <node id="324605317389916717" at="151,57,152,59" concept="3" />
       <node id="324605317389916717" at="152,59,153,58" concept="3" />
@@ -5635,6 +5923,54 @@
       <unit id="324605317389916717" at="676,0,709,0" name="EDLanguage.sandbox.MinorsDoctor$MoveAction_a0a_31" />
       <unit id="324605317389916717" at="31,0,764,0" name="EDLanguage.sandbox.MinorsDoctor" />
     </file>
+    <file name="MinorsDoctorstyle.java">
+      <node id="324605317389916717" at="13,64,14,41" concept="11" />
+      <node id="324605317389916717" at="14,41,15,46" concept="3" />
+      <node id="324605317389916717" at="15,46,16,19" concept="10" />
+      <node id="324605317389916717" at="19,41,20,40" concept="10" />
+      <node id="324605317389916717" at="23,51,24,26" concept="10" />
+      <node id="324605317389916717" at="26,40,27,21" concept="10" />
+      <node id="324605317389916717" at="29,46,30,23" concept="10" />
+      <node id="324605317389916717" at="32,43,33,13" concept="10" />
+      <node id="324605317389916717" at="35,40,36,14" concept="10" />
+      <node id="324605317389916717" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="324605317389916717" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="324605317389916717" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="324605317389916717" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="324605317389916717" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="324605317389916717" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="324605317389916717" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="324605317389916717" at="19,41,20,40" />
+      <scope id="324605317389916717" at="23,51,24,26" />
+      <scope id="324605317389916717" at="26,40,27,21" />
+      <scope id="324605317389916717" at="29,46,30,23" />
+      <scope id="324605317389916717" at="32,43,33,13" />
+      <scope id="324605317389916717" at="35,40,36,14" />
+      <scope id="324605317389916717" at="13,64,16,19" />
+      <scope id="324605317389916717" at="26,0,29,0">
+        <var name="object" id="324605317389916717" />
+      </scope>
+      <scope id="324605317389916717" at="29,0,32,0">
+        <var name="object" id="324605317389916717" />
+      </scope>
+      <scope id="324605317389916717" at="32,0,35,0">
+        <var name="object" id="324605317389916717" />
+      </scope>
+      <scope id="324605317389916717" at="35,0,38,0">
+        <var name="object" id="324605317389916717" />
+      </scope>
+      <scope id="324605317389916717" at="18,0,22,0">
+        <var name="object" id="324605317389916717" />
+      </scope>
+      <scope id="324605317389916717" at="22,0,26,0">
+        <var name="object" id="324605317389916717" />
+      </scope>
+      <scope id="324605317389916717" at="12,0,18,0">
+        <var name="object" id="324605317389916717" />
+        <var name="spatial" id="324605317389916717" />
+      </scope>
+      <unit id="324605317389916717" at="11,0,40,0" name="StrepAIntervention.AC1.MinorsDoctorstyle" />
+    </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/324605317389917426">
     <file name="AdditionalAssessmentTrigger_cSignal.java">
@@ -5813,14 +6149,14 @@
       <unit id="324605317389917473" at="14,0,37,0" name="EDLanguage.sandbox.DischargeTrigger_d_0Signal" />
     </file>
     <file name="MajorsDoctor.java">
-      <node id="324605317389917427" at="171,33,172,64" concept="3" />
-      <node id="324605317389917427" at="172,64,173,33" concept="3" />
+      <node id="324605317389917427" at="171,33,172,70" concept="3" />
+      <node id="324605317389917427" at="172,70,173,33" concept="3" />
       <node id="324605317389917427" at="173,33,174,14" concept="1" />
-      <node id="324605317389917473" at="175,34,176,65" concept="3" />
-      <node id="324605317389917473" at="176,65,177,47" concept="3" />
+      <node id="324605317389917473" at="175,34,176,71" concept="3" />
+      <node id="324605317389917473" at="176,71,177,47" concept="3" />
       <node id="324605317389917473" at="177,47,178,14" concept="1" />
-      <node id="324605317415644737" at="179,35,180,66" concept="3" />
-      <node id="324605317415644737" at="180,66,181,46" concept="3" />
+      <node id="324605317415644737" at="179,35,180,72" concept="3" />
+      <node id="324605317415644737" at="180,72,181,46" concept="3" />
       <node id="324605317415644737" at="181,46,182,14" concept="1" />
       <node id="324605317389917432" at="270,0,271,0" concept="4" trace="behaviour" />
       <node id="324605317389917432" at="272,57,273,33" concept="3" />
@@ -5982,14 +6318,14 @@
       <unit id="324605317389917435" at="317,0,333,0" name="EDLanguage.sandbox.MajorsDoctor$SendSignalAction_a0b4a0_1" />
     </file>
     <file name="MajorsNurse.java">
-      <node id="324605317389917453" at="170,27,171,58" concept="3" />
-      <node id="324605317389917453" at="171,58,172,27" concept="3" />
+      <node id="324605317389917453" at="170,27,171,64" concept="3" />
+      <node id="324605317389917453" at="171,64,172,27" concept="3" />
       <node id="324605317389917453" at="172,27,173,14" concept="1" />
-      <node id="324605317409455283" at="174,32,175,63" concept="3" />
-      <node id="324605317409455283" at="175,63,176,32" concept="3" />
+      <node id="324605317409455283" at="174,32,175,69" concept="3" />
+      <node id="324605317409455283" at="175,69,176,32" concept="3" />
       <node id="324605317409455283" at="176,32,177,14" concept="1" />
-      <node id="324605317409455428" at="178,32,179,63" concept="3" />
-      <node id="324605317409455428" at="179,63,180,32" concept="3" />
+      <node id="324605317409455428" at="178,32,179,69" concept="3" />
+      <node id="324605317409455428" at="179,69,180,32" concept="3" />
       <node id="324605317409455428" at="180,32,181,14" concept="1" />
       <node id="324605317389917458" at="269,0,270,0" concept="4" trace="behaviour" />
       <node id="324605317389917458" at="271,59,272,33" concept="3" />
@@ -6389,14 +6725,14 @@
       <unit id="324605317429052973" at="14,0,37,0" name="EDLanguage.sandbox.SenDocReviewTrigger_iSignal" />
     </file>
     <file name="SeniorDoc.java">
-      <node id="324605317389917459" at="167,43,168,74" concept="3" />
-      <node id="324605317389917459" at="168,74,169,43" concept="3" />
+      <node id="324605317389917459" at="167,43,168,80" concept="3" />
+      <node id="324605317389917459" at="168,80,169,43" concept="3" />
       <node id="324605317389917459" at="169,43,170,14" concept="1" />
-      <node id="324605317409456125" at="171,43,172,74" concept="3" />
-      <node id="324605317409456125" at="172,74,173,43" concept="3" />
+      <node id="324605317409456125" at="171,43,172,80" concept="3" />
+      <node id="324605317409456125" at="172,80,173,43" concept="3" />
       <node id="324605317409456125" at="173,43,174,14" concept="1" />
-      <node id="324605317429052973" at="175,35,176,66" concept="3" />
-      <node id="324605317429052973" at="176,66,177,35" concept="3" />
+      <node id="324605317429052973" at="175,35,176,72" concept="3" />
+      <node id="324605317429052973" at="176,72,177,35" concept="3" />
       <node id="324605317429052973" at="177,35,178,14" concept="1" />
       <node id="324605317389917463" at="274,0,275,0" concept="4" trace="behaviour" />
       <node id="324605317389917463" at="276,54,277,33" concept="3" />
@@ -6789,11 +7125,11 @@
       <unit id="324605317389917618" at="14,0,37,0" name="EDLanguage.sandbox.DischargeTrigger_d_1Signal" />
     </file>
     <file name="MinorsDoctor.java">
-      <node id="324605317389917555" at="171,35,172,66" concept="3" />
-      <node id="324605317389917555" at="172,66,173,35" concept="3" />
+      <node id="324605317389917555" at="171,35,172,72" concept="3" />
+      <node id="324605317389917555" at="172,72,173,35" concept="3" />
       <node id="324605317389917555" at="173,35,174,14" concept="1" />
-      <node id="324605317389917618" at="175,34,176,65" concept="3" />
-      <node id="324605317389917618" at="176,65,177,49" concept="3" />
+      <node id="324605317389917618" at="175,34,176,71" concept="3" />
+      <node id="324605317389917618" at="176,71,177,49" concept="3" />
       <node id="324605317389917618" at="177,49,178,14" concept="1" />
       <node id="324605317389917561" at="266,0,267,0" concept="4" trace="behaviour" />
       <node id="324605317389917561" at="268,59,269,33" concept="3" />
@@ -6933,14 +7269,14 @@
       <unit id="324605317389917564" at="313,0,329,0" name="EDLanguage.sandbox.MinorsDoctor$SendSignalAction_a0b4a0_9" />
     </file>
     <file name="MinorsNurse.java">
-      <node id="324605317389917598" at="170,29,171,60" concept="3" />
-      <node id="324605317389917598" at="171,60,172,29" concept="3" />
+      <node id="324605317389917598" at="170,29,171,66" concept="3" />
+      <node id="324605317389917598" at="171,66,172,29" concept="3" />
       <node id="324605317389917598" at="172,29,173,14" concept="1" />
-      <node id="324605317409455676" at="174,34,175,65" concept="3" />
-      <node id="324605317409455676" at="175,65,176,34" concept="3" />
+      <node id="324605317409455676" at="174,34,175,71" concept="3" />
+      <node id="324605317409455676" at="175,71,176,34" concept="3" />
       <node id="324605317409455676" at="176,34,177,14" concept="1" />
-      <node id="324605317409455773" at="178,34,179,65" concept="3" />
-      <node id="324605317409455773" at="179,65,180,34" concept="3" />
+      <node id="324605317409455773" at="178,34,179,71" concept="3" />
+      <node id="324605317409455773" at="179,71,180,34" concept="3" />
       <node id="324605317409455773" at="180,34,181,14" concept="1" />
       <node id="324605317389917603" at="269,0,270,0" concept="4" trace="behaviour" />
       <node id="324605317389917603" at="271,56,272,33" concept="3" />
@@ -7251,11 +7587,11 @@
       <unit id="324605317409455773" at="14,0,37,0" name="EDLanguage.sandbox.ObsReviewTrigger_f_0Signal" />
     </file>
     <file name="SeniorDoc.java">
-      <node id="324605317389917604" at="179,45,180,76" concept="3" />
-      <node id="324605317389917604" at="180,76,181,45" concept="3" />
+      <node id="324605317389917604" at="179,45,180,82" concept="3" />
+      <node id="324605317389917604" at="180,82,181,45" concept="3" />
       <node id="324605317389917604" at="181,45,182,14" concept="1" />
-      <node id="324605317415644068" at="183,35,184,66" concept="3" />
-      <node id="324605317415644068" at="184,66,185,35" concept="3" />
+      <node id="324605317415644068" at="183,35,184,72" concept="3" />
+      <node id="324605317415644068" at="184,72,185,35" concept="3" />
       <node id="324605317415644068" at="185,35,186,14" concept="1" />
       <node id="324605317389917608" at="934,0,935,0" concept="4" trace="behaviour" />
       <node id="324605317389917608" at="936,54,937,33" concept="3" />
@@ -7550,8 +7886,8 @@
       <node id="324605317390486278" at="140,15,141,77" concept="10" />
       <node id="324605317390486278" at="142,5,143,13" concept="10" />
       <node id="324605317390486278" at="143,13,144,0" concept="12" />
-      <node id="324605317390486278" at="147,43,148,53" concept="3" />
-      <node id="324605317390486278" at="148,53,149,41" concept="3" />
+      <node id="324605317390486278" at="147,43,148,59" concept="3" />
+      <node id="324605317390486278" at="148,59,149,41" concept="3" />
       <node id="324605317390486278" at="149,41,150,57" concept="9" />
       <node id="324605317390486278" at="150,57,151,59" concept="3" />
       <node id="324605317390486278" at="151,59,152,58" concept="3" />
@@ -9180,6 +9516,54 @@
       <unit id="324605317390486278" at="1869,0,1902,0" name="EDLanguage.sandbox.GASNurse$MoveAction_a0a_37" />
       <unit id="324605317390486278" at="30,0,2045,0" name="EDLanguage.sandbox.GASNurse" />
     </file>
+    <file name="GASNursestyle.java">
+      <node id="324605317390486278" at="13,64,14,41" concept="11" />
+      <node id="324605317390486278" at="14,41,15,46" concept="3" />
+      <node id="324605317390486278" at="15,46,16,19" concept="10" />
+      <node id="324605317390486278" at="19,41,20,40" concept="10" />
+      <node id="324605317390486278" at="23,51,24,26" concept="10" />
+      <node id="324605317390486278" at="26,40,27,21" concept="10" />
+      <node id="324605317390486278" at="29,46,30,23" concept="10" />
+      <node id="324605317390486278" at="32,43,33,13" concept="10" />
+      <node id="324605317390486278" at="35,40,36,14" concept="10" />
+      <node id="324605317390486278" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="324605317390486278" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="324605317390486278" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="324605317390486278" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="324605317390486278" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="324605317390486278" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="324605317390486278" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="324605317390486278" at="19,41,20,40" />
+      <scope id="324605317390486278" at="23,51,24,26" />
+      <scope id="324605317390486278" at="26,40,27,21" />
+      <scope id="324605317390486278" at="29,46,30,23" />
+      <scope id="324605317390486278" at="32,43,33,13" />
+      <scope id="324605317390486278" at="35,40,36,14" />
+      <scope id="324605317390486278" at="13,64,16,19" />
+      <scope id="324605317390486278" at="26,0,29,0">
+        <var name="object" id="324605317390486278" />
+      </scope>
+      <scope id="324605317390486278" at="29,0,32,0">
+        <var name="object" id="324605317390486278" />
+      </scope>
+      <scope id="324605317390486278" at="32,0,35,0">
+        <var name="object" id="324605317390486278" />
+      </scope>
+      <scope id="324605317390486278" at="35,0,38,0">
+        <var name="object" id="324605317390486278" />
+      </scope>
+      <scope id="324605317390486278" at="18,0,22,0">
+        <var name="object" id="324605317390486278" />
+      </scope>
+      <scope id="324605317390486278" at="22,0,26,0">
+        <var name="object" id="324605317390486278" />
+      </scope>
+      <scope id="324605317390486278" at="12,0,18,0">
+        <var name="object" id="324605317390486278" />
+        <var name="spatial" id="324605317390486278" />
+      </scope>
+      <unit id="324605317390486278" at="11,0,40,0" name="StrepAIntervention.AC1.GASNursestyle" />
+    </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/324605317399082413">
     <file name="patient.java">
@@ -9295,32 +9679,32 @@
       <unit id="7308252286154470189" at="14,0,37,0" name="EDLanguage.sandbox.DischargeTrigger_dSignal" />
     </file>
     <file name="GASNurse.java">
-      <node id="7308252286154469840" at="170,41,171,72" concept="3" />
-      <node id="7308252286154469840" at="171,72,172,41" concept="3" />
+      <node id="7308252286154469840" at="170,41,171,78" concept="3" />
+      <node id="7308252286154469840" at="171,78,172,41" concept="3" />
       <node id="7308252286154469840" at="172,41,173,14" concept="1" />
-      <node id="7308252286154470127" at="174,47,175,78" concept="3" />
-      <node id="7308252286154470127" at="175,78,176,47" concept="3" />
+      <node id="7308252286154470127" at="174,47,175,84" concept="3" />
+      <node id="7308252286154470127" at="175,84,176,47" concept="3" />
       <node id="7308252286154470127" at="176,47,177,14" concept="1" />
-      <node id="7308252286154470189" at="178,32,179,63" concept="3" />
-      <node id="7308252286154470189" at="179,63,180,49" concept="3" />
+      <node id="7308252286154470189" at="178,32,179,69" concept="3" />
+      <node id="7308252286154470189" at="179,69,180,49" concept="3" />
       <node id="7308252286154470189" at="180,49,181,14" concept="1" />
-      <node id="7308252286154470294" at="182,47,183,78" concept="3" />
-      <node id="7308252286154470294" at="183,78,184,47" concept="3" />
+      <node id="7308252286154470294" at="182,47,183,84" concept="3" />
+      <node id="7308252286154470294" at="183,84,184,47" concept="3" />
       <node id="7308252286154470294" at="184,47,185,14" concept="1" />
-      <node id="7308252286154470758" at="186,32,187,63" concept="3" />
-      <node id="7308252286154470758" at="187,63,188,32" concept="3" />
+      <node id="7308252286154470758" at="186,32,187,69" concept="3" />
+      <node id="7308252286154470758" at="187,69,188,32" concept="3" />
       <node id="7308252286154470758" at="188,32,189,14" concept="1" />
-      <node id="7308252286154470860" at="190,34,191,65" concept="3" />
-      <node id="7308252286154470860" at="191,65,192,34" concept="3" />
+      <node id="7308252286154470860" at="190,34,191,71" concept="3" />
+      <node id="7308252286154470860" at="191,71,192,34" concept="3" />
       <node id="7308252286154470860" at="192,34,193,14" concept="1" />
-      <node id="7308252286154470975" at="194,35,195,66" concept="3" />
-      <node id="7308252286154470975" at="195,66,196,35" concept="3" />
+      <node id="7308252286154470975" at="194,35,195,72" concept="3" />
+      <node id="7308252286154470975" at="195,72,196,35" concept="3" />
       <node id="7308252286154470975" at="196,35,197,14" concept="1" />
-      <node id="7308252286154471165" at="198,34,199,65" concept="3" />
-      <node id="7308252286154471165" at="199,65,200,34" concept="3" />
+      <node id="7308252286154471165" at="198,34,199,71" concept="3" />
+      <node id="7308252286154471165" at="199,71,200,34" concept="3" />
       <node id="7308252286154471165" at="200,34,201,14" concept="1" />
-      <node id="7308252286154472213" at="202,31,203,62" concept="3" />
-      <node id="7308252286154472213" at="203,62,204,31" concept="3" />
+      <node id="7308252286154472213" at="202,31,203,68" concept="3" />
+      <node id="7308252286154472213" at="203,68,204,31" concept="3" />
       <node id="7308252286154472213" at="204,31,205,14" concept="1" />
       <node id="7308252286154470260" at="293,0,294,0" concept="4" trace="behaviour" />
       <node id="7308252286154470260" at="295,58,296,33" concept="3" />
@@ -10265,8 +10649,8 @@
       <unit id="7308252286154472203" at="9,0,37,0" name="EDLanguage.sandbox.TimeDistributionTable_a8" />
     </file>
     <file name="TriageNurse.java">
-      <node id="5070794400416168431" at="157,37,158,68" concept="3" />
-      <node id="5070794400416168431" at="158,68,159,37" concept="3" />
+      <node id="5070794400416168431" at="157,37,158,74" concept="3" />
+      <node id="5070794400416168431" at="158,74,159,37" concept="3" />
       <node id="5070794400416168431" at="159,37,160,14" concept="1" />
       <node id="5070794400416168496" at="264,0,265,0" concept="4" trace="behaviour" />
       <node id="5070794400416168496" at="266,56,267,33" concept="3" />
@@ -10630,14 +11014,14 @@
       <unit id="324605317389917333" at="14,0,37,0" name="EDLanguage.sandbox.ChecksTrigger_cSignal" />
     </file>
     <file name="TriageNurse.java">
-      <node id="7308252286154470477" at="165,29,166,60" concept="3" />
-      <node id="7308252286154470477" at="166,60,167,29" concept="3" />
+      <node id="7308252286154470477" at="165,29,166,66" concept="3" />
+      <node id="7308252286154470477" at="166,66,167,29" concept="3" />
       <node id="7308252286154470477" at="167,29,168,14" concept="1" />
-      <node id="7308252286154470518" at="169,29,170,60" concept="3" />
-      <node id="7308252286154470518" at="170,60,171,29" concept="3" />
+      <node id="7308252286154470518" at="169,29,170,66" concept="3" />
+      <node id="7308252286154470518" at="170,66,171,29" concept="3" />
       <node id="7308252286154470518" at="171,29,172,14" concept="1" />
-      <node id="324605317389917333" at="173,29,174,60" concept="3" />
-      <node id="324605317389917333" at="174,60,175,29" concept="3" />
+      <node id="324605317389917333" at="173,29,174,66" concept="3" />
+      <node id="324605317389917333" at="174,66,175,29" concept="3" />
       <node id="324605317389917333" at="175,29,176,14" concept="1" />
       <node id="7308252286154470561" at="667,0,668,0" concept="4" trace="behaviour" />
       <node id="7308252286154470561" at="669,56,670,33" concept="3" />
@@ -11346,6 +11730,54 @@
       <unit id="7308252286154471521" at="77,18,81,5" name="EDLanguage.sandbox.map_PatientProfile$4" />
       <unit id="7308252286154471521" at="22,0,126,0" name="EDLanguage.sandbox.map_PatientProfile" />
     </file>
+    <file name="map_PatientProfilestyle.java">
+      <node id="7308252286154471521" at="13,64,14,41" concept="11" />
+      <node id="7308252286154471521" at="14,41,15,46" concept="3" />
+      <node id="7308252286154471521" at="15,46,16,19" concept="10" />
+      <node id="7308252286154471521" at="19,41,20,40" concept="10" />
+      <node id="7308252286154471521" at="23,51,24,26" concept="10" />
+      <node id="7308252286154471521" at="26,40,27,21" concept="10" />
+      <node id="7308252286154471521" at="29,46,30,23" concept="10" />
+      <node id="7308252286154471521" at="32,43,33,13" concept="10" />
+      <node id="7308252286154471521" at="35,40,36,14" concept="10" />
+      <node id="7308252286154471521" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="7308252286154471521" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="7308252286154471521" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="7308252286154471521" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="7308252286154471521" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="7308252286154471521" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="7308252286154471521" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="7308252286154471521" at="19,41,20,40" />
+      <scope id="7308252286154471521" at="23,51,24,26" />
+      <scope id="7308252286154471521" at="26,40,27,21" />
+      <scope id="7308252286154471521" at="29,46,30,23" />
+      <scope id="7308252286154471521" at="32,43,33,13" />
+      <scope id="7308252286154471521" at="35,40,36,14" />
+      <scope id="7308252286154471521" at="13,64,16,19" />
+      <scope id="7308252286154471521" at="26,0,29,0">
+        <var name="object" id="7308252286154471521" />
+      </scope>
+      <scope id="7308252286154471521" at="29,0,32,0">
+        <var name="object" id="7308252286154471521" />
+      </scope>
+      <scope id="7308252286154471521" at="32,0,35,0">
+        <var name="object" id="7308252286154471521" />
+      </scope>
+      <scope id="7308252286154471521" at="35,0,38,0">
+        <var name="object" id="7308252286154471521" />
+      </scope>
+      <scope id="7308252286154471521" at="18,0,22,0">
+        <var name="object" id="7308252286154471521" />
+      </scope>
+      <scope id="7308252286154471521" at="22,0,26,0">
+        <var name="object" id="7308252286154471521" />
+      </scope>
+      <scope id="7308252286154471521" at="12,0,18,0">
+        <var name="object" id="7308252286154471521" />
+        <var name="spatial" id="7308252286154471521" />
+      </scope>
+      <unit id="7308252286154471521" at="11,0,40,0" name="StrepAIntervention.AC1.map_PatientProfilestyle" />
+    </file>
     <file name="patient.java">
       <node id="7308252286154471524" at="165,54,166,15" concept="10" />
       <node id="7308252286154471524" at="167,5,168,13" concept="10" />
@@ -11967,6 +12399,54 @@
       <unit id="768972137573140830" at="84,18,88,5" name="EDLanguage.sandbox.patient$4" />
       <unit id="768972137573140830" at="22,0,259,0" name="EDLanguage.sandbox.patient" />
     </file>
+    <file name="patientstyle.java">
+      <node id="768972137573140830" at="13,64,14,41" concept="11" />
+      <node id="768972137573140830" at="14,41,15,46" concept="3" />
+      <node id="768972137573140830" at="15,46,16,19" concept="10" />
+      <node id="768972137573140830" at="19,41,20,40" concept="10" />
+      <node id="768972137573140830" at="23,51,24,26" concept="10" />
+      <node id="768972137573140830" at="26,40,27,21" concept="10" />
+      <node id="768972137573140830" at="29,46,30,23" concept="10" />
+      <node id="768972137573140830" at="32,43,33,13" concept="10" />
+      <node id="768972137573140830" at="35,40,36,14" concept="10" />
+      <node id="768972137573140830" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="768972137573140830" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="768972137573140830" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="768972137573140830" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="768972137573140830" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="768972137573140830" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="768972137573140830" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="768972137573140830" at="19,41,20,40" />
+      <scope id="768972137573140830" at="23,51,24,26" />
+      <scope id="768972137573140830" at="26,40,27,21" />
+      <scope id="768972137573140830" at="29,46,30,23" />
+      <scope id="768972137573140830" at="32,43,33,13" />
+      <scope id="768972137573140830" at="35,40,36,14" />
+      <scope id="768972137573140830" at="13,64,16,19" />
+      <scope id="768972137573140830" at="26,0,29,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="29,0,32,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="32,0,35,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="35,0,38,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="18,0,22,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="22,0,26,0">
+        <var name="object" id="768972137573140830" />
+      </scope>
+      <scope id="768972137573140830" at="12,0,18,0">
+        <var name="object" id="768972137573140830" />
+        <var name="spatial" id="768972137573140830" />
+      </scope>
+      <unit id="768972137573140830" at="11,0,40,0" name="StrepAIntervention.AC1.patientstyle" />
+    </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/768972137583268694">
     <file name="TriageDesk.java">
@@ -12284,8 +12764,8 @@
       <node id="90846643906069554" at="137,15,138,77" concept="10" />
       <node id="90846643906069554" at="139,5,140,13" concept="10" />
       <node id="90846643906069554" at="140,13,141,0" concept="12" />
-      <node id="90846643906069554" at="144,43,145,53" concept="3" />
-      <node id="90846643906069554" at="145,53,146,41" concept="3" />
+      <node id="90846643906069554" at="144,43,145,59" concept="3" />
+      <node id="90846643906069554" at="145,59,146,41" concept="3" />
       <node id="90846643906069554" at="146,41,147,57" concept="9" />
       <node id="90846643906069554" at="147,57,148,59" concept="3" />
       <node id="90846643906069554" at="148,59,149,58" concept="3" />
@@ -13575,6 +14055,54 @@
       <unit id="90846643906069554" at="1186,0,1219,0" name="EDLanguage.sandbox.SeniorDoc$MoveAction_a0e_5" />
       <unit id="90846643906069554" at="1296,0,1329,0" name="EDLanguage.sandbox.SeniorDoc$MoveAction_a0a_19" />
       <unit id="90846643906069554" at="27,0,1426,0" name="EDLanguage.sandbox.SeniorDoc" />
+    </file>
+    <file name="SeniorDocstyle.java">
+      <node id="90846643906069554" at="13,64,14,41" concept="11" />
+      <node id="90846643906069554" at="14,41,15,46" concept="3" />
+      <node id="90846643906069554" at="15,46,16,19" concept="10" />
+      <node id="90846643906069554" at="19,41,20,40" concept="10" />
+      <node id="90846643906069554" at="23,51,24,26" concept="10" />
+      <node id="90846643906069554" at="26,40,27,21" concept="10" />
+      <node id="90846643906069554" at="29,46,30,23" concept="10" />
+      <node id="90846643906069554" at="32,43,33,13" concept="10" />
+      <node id="90846643906069554" at="35,40,36,14" concept="10" />
+      <node id="90846643906069554" at="26,0,29,0" concept="8" trace="getColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="90846643906069554" at="29,0,32,0" concept="8" trace="getBorderColor#(Ljava/lang/Object;)Ljava/awt/Color;" />
+      <node id="90846643906069554" at="32,0,35,0" concept="8" trace="getBorderSize#(Ljava/lang/Object;)I" />
+      <node id="90846643906069554" at="35,0,38,0" concept="8" trace="getScale#(Ljava/lang/Object;)F" />
+      <node id="90846643906069554" at="18,0,22,0" concept="8" trace="getLabel#(Ljava/lang/Object;)Ljava/lang/String;" />
+      <node id="90846643906069554" at="22,0,26,0" concept="8" trace="getLabelPosition#(Ljava/lang/Object;)Lsaf/v3d/scene/Position;" />
+      <node id="90846643906069554" at="12,0,18,0" concept="8" trace="getVSpatial#(Ljava/lang/Object;Lsaf/v3d/scene/VSpatial;)Lsaf/v3d/scene/VSpatial;" />
+      <scope id="90846643906069554" at="19,41,20,40" />
+      <scope id="90846643906069554" at="23,51,24,26" />
+      <scope id="90846643906069554" at="26,40,27,21" />
+      <scope id="90846643906069554" at="29,46,30,23" />
+      <scope id="90846643906069554" at="32,43,33,13" />
+      <scope id="90846643906069554" at="35,40,36,14" />
+      <scope id="90846643906069554" at="13,64,16,19" />
+      <scope id="90846643906069554" at="26,0,29,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="29,0,32,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="32,0,35,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="35,0,38,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="18,0,22,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="22,0,26,0">
+        <var name="object" id="90846643906069554" />
+      </scope>
+      <scope id="90846643906069554" at="12,0,18,0">
+        <var name="object" id="90846643906069554" />
+        <var name="spatial" id="90846643906069554" />
+      </scope>
+      <unit id="90846643906069554" at="11,0,40,0" name="StrepAIntervention.AC1.SeniorDocstyle" />
     </file>
   </root>
   <root nodeRef="r:978fb497-08e3-429d-a925-e254f42b0a7b(StrepAIntervention.AC1)/90846643906069738">

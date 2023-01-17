@@ -145,7 +145,7 @@ public class GASNurse extends Actor {
   }
 
   public Behaviour isIdleAction(Signal s) {
-    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_37(behaviourBuilder));
@@ -168,39 +168,39 @@ public class GASNurse extends Actor {
       case "":
         break;
       case "GroupAStrep_TriageTrigger_b":
-        behaviourBuilder = new Behaviour("GroupAStrep_TriageTrigger_b");
+        behaviourBuilder = new Behaviour("GroupAStrep_TriageTrigger_b", this);
         this.InitGroupAStrep_Triage_b(s);
         break;
       case "ReassuranceSafetyNettingTrigger_c":
-        behaviourBuilder = new Behaviour("ReassuranceSafetyNettingTrigger_c");
+        behaviourBuilder = new Behaviour("ReassuranceSafetyNettingTrigger_c", this);
         this.InitReassuranceSafetyNetting_c(s);
         break;
       case "DischargeTrigger_d":
-        behaviourBuilder = new Behaviour("DischargeTrigger_d");
+        behaviourBuilder = new Behaviour("DischargeTrigger_d", this);
         this.InitDischargeActionDischarge_d_1(s);
         break;
       case "ReassuranceSafetyNettingTrigger_e":
-        behaviourBuilder = new Behaviour("ReassuranceSafetyNettingTrigger_e");
+        behaviourBuilder = new Behaviour("ReassuranceSafetyNettingTrigger_e", this);
         this.InitReassuranceSafetyNetting_e(s);
         break;
       case "Centor0_1Trigger_f":
-        behaviourBuilder = new Behaviour("Centor0_1Trigger_f");
+        behaviourBuilder = new Behaviour("Centor0_1Trigger_f", this);
         this.InitCentor0_1_f(s);
         break;
       case "Centor2PlusTrigger_g":
-        behaviourBuilder = new Behaviour("Centor2PlusTrigger_g");
+        behaviourBuilder = new Behaviour("Centor2PlusTrigger_g", this);
         this.InitCentor2Plus_g(s);
         break;
       case "ScarletFeverTrigger_h":
-        behaviourBuilder = new Behaviour("ScarletFeverTrigger_h");
+        behaviourBuilder = new Behaviour("ScarletFeverTrigger_h", this);
         this.InitScarletFever_h(s);
         break;
       case "AntibioticsTrigger_i":
-        behaviourBuilder = new Behaviour("AntibioticsTrigger_i");
+        behaviourBuilder = new Behaviour("AntibioticsTrigger_i", this);
         this.InitAntibiotics_i(s);
         break;
       case "SwabbingTrigger_j":
-        behaviourBuilder = new Behaviour("SwabbingTrigger_j");
+        behaviourBuilder = new Behaviour("SwabbingTrigger_j", this);
         this.InitSwabbing_j(s);
         break;
       default:
