@@ -559,6 +559,7 @@
       <concept id="3364660638048049750" name="jetbrains.mps.lang.core.structure.PropertyAttribute" flags="ng" index="A9Btg">
         <property id="1757699476691236117" name="name_DebugInfo" index="2qtEX9" />
         <property id="1341860900487648621" name="propertyId" index="P4ACc" />
+        <property id="1189424455254633007" name="enumUsageMigrated" index="1I7cki" />
       </concept>
       <concept id="3364660638048049745" name="jetbrains.mps.lang.core.structure.LinkAttribute" flags="ng" index="A9Btn">
         <property id="1757699476691236116" name="role_DebugInfo" index="2qtEX8" />
@@ -1160,6 +1161,23 @@
               <node concept="30H73N" id="i1eH3VqxMa" role="2Oq$k0" />
               <node concept="3TrcHB" id="i1eH3Vqyr4" role="2OqNvi">
                 <ref role="3TsBF5" to="e88n:i1eH3VqwZY" resolve="patientLimit" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="17Uvod" id="1MmdcH8glwK" role="lGtFl">
+      <property role="2qtEX9" value="colour" />
+      <property role="P4ACc" value="7dcff301-ba01-414e-8574-a8f6da31876b/3838812034270454385/2059891927260258057" />
+      <property role="1I7cki" value="true" />
+      <node concept="3zFVjK" id="1MmdcH8glwL" role="3zH0cK">
+        <node concept="3clFbS" id="1MmdcH8glwM" role="2VODD2">
+          <node concept="3clFbF" id="1MmdcH8glCN" role="3cqZAp">
+            <node concept="2OqwBi" id="1MmdcH8glOT" role="3clFbG">
+              <node concept="30H73N" id="1MmdcH8glCM" role="2Oq$k0" />
+              <node concept="3TrcHB" id="1MmdcH8gm1B" role="2OqNvi">
+                <ref role="3TsBF5" to="e88n:1MmdcH82H9n" resolve="colour" />
               </node>
             </node>
           </node>
@@ -3871,6 +3889,25 @@
     </node>
     <node concept="2ZBi8u" id="EFW1mYCPF7" role="lGtFl">
       <ref role="2rW$FS" node="1xAzJ9O2jGr" resolve="PatientProfileReduction" />
+    </node>
+    <node concept="17Uvod" id="1MmdcH8jMUA" role="lGtFl">
+      <property role="2qtEX9" value="colour" />
+      <property role="P4ACc" value="7dcff301-ba01-414e-8574-a8f6da31876b/3838812034270454385/2059891927260258057" />
+      <property role="1I7cki" value="true" />
+      <node concept="3zFVjK" id="1MmdcH8jMUB" role="3zH0cK">
+        <node concept="3clFbS" id="1MmdcH8jMUC" role="2VODD2">
+          <node concept="3clFbF" id="1MmdcH8jQD7" role="3cqZAp">
+            <node concept="2OqwBi" id="1MmdcH8jR20" role="3clFbG">
+              <node concept="1XH99k" id="1MmdcH8jQD6" role="2Oq$k0">
+                <ref role="1XH99l" to="3751:6o2BuIx6R5l" resolve="Colour" />
+              </node>
+              <node concept="2ViDtV" id="1MmdcH8jRkm" role="2OqNvi">
+                <ref role="2ViDtZ" to="3751:6o2BuIx6R5q" resolve="BLUE" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
   </node>
   <node concept="13MO4I" id="1SF32lS14$">

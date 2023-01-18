@@ -12,7 +12,7 @@ public class PreAdmissionStaffstyle extends DefaultStyleOGL2D {
   @Override
   public VSpatial getVSpatial(Object object, VSpatial spatial) {
     // Create the spatial and return it. 
-    spatial = shapeFactory.createRectangle(1, 1);
+    spatial = shapeFactory.createCircle((float) 0.45, 16);
     return spatial;
   }
   @Override

@@ -136,6 +136,11 @@
       <property role="TrG5h" value="patientCapacity" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="1MmdcH82HW9" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927260258057" />
+      <property role="TrG5h" value="colour" />
+      <ref role="AX2Wp" node="6o2BuIx6R5l" resolve="Colour" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3l6cNjec6HU">
     <property role="EcuMT" value="3838812034270522234" />

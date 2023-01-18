@@ -746,6 +746,16 @@
             <ref role="1NtTu8" to="3751:7lVoe4yrHCt" resolve="patientCapacity" />
           </node>
         </node>
+        <node concept="3EZMnI" id="1MmdcH82HYd" role="3EZMnx">
+          <node concept="VPM3Z" id="1MmdcH82HYf" role="3F10Kt" />
+          <node concept="3F0ifn" id="1MmdcH82HYh" role="3EZMnx">
+            <property role="3F0ifm" value="Colour:" />
+          </node>
+          <node concept="3F0A7n" id="1MmdcH82HZ3" role="3EZMnx">
+            <ref role="1NtTu8" to="3751:1MmdcH82HW9" resolve="colour" />
+          </node>
+          <node concept="2iRfu4" id="1MmdcH82HYi" role="2iSdaV" />
+        </node>
         <node concept="3EZMnI" id="7o6PzEpEZA7" role="3EZMnx">
           <node concept="VPM3Z" id="7o6PzEpEZA9" role="3F10Kt" />
           <node concept="3F0ifn" id="7o6PzEpEZAb" role="3EZMnx">

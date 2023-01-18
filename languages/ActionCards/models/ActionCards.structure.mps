@@ -218,6 +218,11 @@
       <property role="TrG5h" value="patientLimit" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="1MmdcH82H9n" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927260254807" />
+      <property role="TrG5h" value="colour" />
+      <ref role="AX2Wp" to="3751:6o2BuIx6R5l" resolve="Colour" />
+    </node>
     <node concept="1TJgyj" id="3QFgDmJ3g8u" role="1TKVEi">
       <property role="IQ2ns" value="4443718667985551902" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />

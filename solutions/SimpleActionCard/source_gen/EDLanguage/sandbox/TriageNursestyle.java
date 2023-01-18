@@ -12,7 +12,7 @@ public class TriageNursestyle extends DefaultStyleOGL2D {
   @Override
   public VSpatial getVSpatial(Object object, VSpatial spatial) {
     // Create the spatial and return it. 
-    spatial = shapeFactory.createRectangle(1, 1);
+    spatial = shapeFactory.createCircle((float) 0.45, 16);
     return spatial;
   }
   @Override
@@ -24,7 +24,7 @@ public class TriageNursestyle extends DefaultStyleOGL2D {
     return Position.NORTH;
   }
   public Color getColor(Object object) {
-    return Color.RED;
+    return Color.BLACK;
   }
   public Color getBorderColor(Object object) {
     return Color.BLACK;

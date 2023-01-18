@@ -11,16 +11,28 @@
       <string>EDLanguage.sandbox.Doctorstyle</string>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.CubicleNurse</string>
-      <string>EDLanguage.sandbox.CubicleNursestyle</string>
-      </entry>
-      <entry>
       <string>EDLanguage.sandbox.TriageNurse</string>
       <string>EDLanguage.sandbox.TriageNursestyle</string>
       </entry>
       <entry>
+      <string>EDLanguage.sandbox.CubicleNurse</string>
+      <string>EDLanguage.sandbox.CubicleNursestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.LabTechnician</string>
+      <string>EDLanguage.sandbox.LabTechnicianstyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.PreAdmissionStaff</string>
       <string>EDLanguage.sandbox.PreAdmissionStaffstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.map_PatientProfile</string>
+      <string>EDLanguage.sandbox.map_PatientProfilestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.patient</string>
+      <string>EDLanguage.sandbox.patientstyle</string>
       </entry>
   </styles>
   <editedStyles>
@@ -35,10 +47,6 @@
     <entry>
       <string>simcore.basicStructures.Wall</string>
       <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.patient</string>
-      <string>EDLanguage.sandbox.patient.style_2.xml</string>
     </entry>
 
   </editedStyles>

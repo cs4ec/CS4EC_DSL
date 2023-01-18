@@ -941,6 +941,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733612");
     b.version(2);
     b.property("patientLimit", 0x4813ad0fb6a0ffeL).type(PrimitiveTypeId.INTEGER).origin("324605317393027070").done();
+    b.property("colour", 0x1c9634cb480ad257L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L)).origin("2059891927260254807").done();
     b.aggregate("idleLocation", 0x3dab4295af0d021eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(true).ordered(true).multiple(false).origin("4443718667985551902").done();
     return b.create();
   }

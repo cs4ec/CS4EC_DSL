@@ -41,6 +41,7 @@
         <child id="3787511550169010962" name="outgoingBranches" index="A3aay" />
       </concept>
       <concept id="5710949967853733612" name="ActionCards.structure.StaffType" flags="ng" index="2GGxxg">
+        <property id="2059891927260254807" name="colour" index="1kBeqs" />
         <child id="4443718667985551902" name="idleLocation" index="2iD$2b" />
       </concept>
       <concept id="5710949967853733230" name="ActionCards.structure.Branch" flags="ng" index="2GGxJi">
@@ -1798,6 +1799,7 @@
   <node concept="2GGxxg" id="av1M7vbJYz">
     <property role="TrG5h" value="Doctor" />
     <property role="3GE5qa" value="Staff" />
+    <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
   </node>
   <node concept="2_0uwh" id="EFW1mYe4_u">
     <property role="3GE5qa" value="Simulation Scenario" />
@@ -1832,10 +1834,12 @@
   <node concept="2GGxxg" id="2_JteYPiCG6">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="TriageNurse" />
+    <property role="1kBeqs" value="6o2BuIx6R5z/BLACK" />
   </node>
   <node concept="2GGxxg" id="2_JteYPiCHe">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="CubicleNurse" />
+    <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
     <node concept="UeIYj" id="3QFgDmJ9UKa" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -1843,6 +1847,7 @@
   <node concept="2GGxxg" id="52K8Ej3GgM">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="LabTechnician" />
+    <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
   </node>
   <node concept="3oQJd$" id="6MzSDQOvLH$">
     <property role="3GE5qa" value="Diseases" />
@@ -1865,6 +1870,7 @@
   <node concept="2GGxxg" id="1xAzJ9NxGdV">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="PreAdmissionStaff" />
+    <property role="1kBeqs" value="6o2BuIx6R5m/RED" />
   </node>
   <node concept="2OfScj" id="1xAzJ9NOca1">
     <property role="TrG5h" value="patient" />

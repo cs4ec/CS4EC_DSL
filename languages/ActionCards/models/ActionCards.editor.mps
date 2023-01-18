@@ -432,6 +432,15 @@
       <node concept="3F1sOY" id="3QFgDmJ6AHh" role="3EZMnx">
         <ref role="1NtTu8" to="e88n:3QFgDmJ3g8u" resolve="idleLocation" />
       </node>
+      <node concept="3F0ifn" id="1MmdcH82H9B" role="3EZMnx">
+        <property role="3F0ifm" value="Colour:" />
+        <node concept="pVoyu" id="1MmdcH82H9O" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="1MmdcH82Ha3" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:1MmdcH82H9n" resolve="colour" />
+      </node>
       <node concept="l2Vlx" id="4X1nFNzWPI$" role="2iSdaV" />
     </node>
   </node>
