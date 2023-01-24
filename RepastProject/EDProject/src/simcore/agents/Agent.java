@@ -13,6 +13,8 @@ import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ISchedule;
 import repast.simphony.engine.schedule.ScheduleParameters;
 import repast.simphony.engine.schedule.ScheduledMethod;
+import repast.simphony.engine.watcher.Watch;
+import repast.simphony.engine.watcher.WatcherTriggerSchedule;
 import repast.simphony.parameter.Parameter;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.SpatialMath;
@@ -27,6 +29,7 @@ import simcore.Signals.Signal;
 import simcore.action.Action;
 import simcore.action.ActionFragment;
 import simcore.action.ActionStep;
+import simcore.action.BackgroundBehaviour;
 import simcore.action.Behaviour;
 import simcore.action.BehaviourStep;
 import simcore.action.Consequence;
@@ -56,6 +59,7 @@ public class Agent {
 	protected List<Behaviour> myCurrentActions = new ArrayList<Behaviour>();
 	protected List<Behaviour> myPastActions = new ArrayList<Behaviour>();
 	public List<Behaviour> actionHistory = new ArrayList<Behaviour>();
+	protected List<BackgroundBehaviour> myBackgroundBehaviours = new ArrayList<BackgroundBehaviour>();
 	protected Behaviour myActiveAction;
 	protected List<GridPoint> curPath;
 	protected boolean isIdle;
@@ -82,6 +86,12 @@ public class Agent {
 		// Tick through all my passive actions
 		List<Behaviour> currentPassiveActions = myCurrentActions.stream().filter(a -> a.getCurrentStep() instanceof PassiveBehaviourStep).collect(Collectors.toList());
 		for (Behaviour action : currentPassiveActions) {
+			stepAction(action);
+		}
+		
+		// Tick through all my background actions
+		List<BackgroundBehaviour> currentBackgroundActions = myBackgroundBehaviours.stream().collect(Collectors.toList());
+		for (BackgroundBehaviour action : currentBackgroundActions) {
 			stepAction(action);
 		}
 
@@ -421,6 +431,13 @@ public class Agent {
 		GridPoint pointOfTarget = grid.getLocation(o);
 
 		return (CalcDistance(curPoint, pointOfTarget) < 2);
+	}
+	
+	public double distanceTo(Object o) {
+		GridPoint curPoint = grid.getLocation(this);
+		GridPoint pointOfTarget = grid.getLocation(o);
+
+		return CalcDistance(curPoint, pointOfTarget);
 	}
 
 	public Board ReadBoard() {

@@ -5,6 +5,7 @@
     <classNode dependClassName="AgentLanguage.behavior.AggregateAttributeMonitor__BehaviorDescriptor" />
     <classNode dependClassName="AgentLanguage.behavior.AttributeMonitor__BehaviorDescriptor" />
     <classNode dependClassName="AgentLanguage.behavior.BehaviourElement__BehaviorDescriptor" />
+    <classNode dependClassName="AgentLanguage.behavior.Iterable__BehaviorDescriptor" />
     <classNode dependClassName="BuiltEnvironment.behavior.OccupiableDefinition__BehaviorDescriptor" />
     <classNode dependClassName="BuiltEnvironment.behavior.RoomType__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Double" />

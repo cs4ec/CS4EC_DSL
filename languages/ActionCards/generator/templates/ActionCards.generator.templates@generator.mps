@@ -148,7 +148,9 @@
       <concept id="4334763093659899158" name="AgentLanguage.structure.Attribute" flags="ng" index="jeB$7">
         <child id="2698877061876378325" name="value" index="1gSNMQ" />
       </concept>
-      <concept id="4334763093659899161" name="AgentLanguage.structure.AttributeReference" flags="ng" index="jeB$8" />
+      <concept id="4334763093659899161" name="AgentLanguage.structure.AttributeReference" flags="ng" index="jeB$8">
+        <reference id="4334763093659899162" name="attribute" index="jeB$b" />
+      </concept>
       <concept id="4334763093659899312" name="AgentLanguage.structure.ObjectInstance" flags="ng" index="jeBAx">
         <property id="4334763093659899313" name="type" index="jeBAw" />
       </concept>
@@ -219,6 +221,7 @@
       </concept>
       <concept id="6750846609956093098" name="AgentLanguage.structure.RoomTypeReference" flags="ng" index="UeIYj" />
       <concept id="5832719916577320042" name="AgentLanguage.structure.UpdateAttributeAction" flags="ng" index="X7xuQ">
+        <reference id="2985733650910570790" name="actorRef" index="2h6LR9" />
         <child id="768972137555555169" name="value" index="2Rw0dO" />
         <child id="768972137554994742" name="attributeReference" index="2Ry9oz" />
       </concept>
@@ -227,7 +230,24 @@
       </concept>
       <concept id="6888869271817506901" name="AgentLanguage.structure.DeSpawnAction" flags="ng" index="35kRTf" />
       <concept id="4321323723331232502" name="AgentLanguage.structure.UseResourceAction" flags="ng" index="3bm0ZL" />
+      <concept id="2059891927271928779" name="AgentLanguage.structure.AgentIterable" flags="ng" index="1kaGs0">
+        <child id="2059891927271928780" name="agentReference" index="1kaGs7" />
+      </concept>
+      <concept id="2059891927271928772" name="AgentLanguage.structure.ForEach" flags="ng" index="1kaGsf">
+        <reference id="2059891927282614285" name="behaviourRef" index="1lXzj6" />
+        <child id="2059891927271928773" name="iterable" index="1kaGse" />
+      </concept>
+      <concept id="2059891927271849305" name="AgentLanguage.structure.BackgroundBehaviour" flags="ng" index="1kboAi" />
       <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableReference" flags="ng" index="1kHjla" />
+      <concept id="2059891927279854529" name="AgentLanguage.structure.ScheduledBehaviour" flags="ng" index="1lCXsa">
+        <property id="2059891927279856151" name="interval" index="1lCXVs" />
+        <property id="2059891927279856149" name="startTick" index="1lCXVu" />
+        <child id="2059891927279856154" name="behaviourSequence" index="1lCXVh" />
+      </concept>
+      <concept id="2059891927283971796" name="AgentLanguage.structure.DistanceCondition" flags="ng" index="1lSC8v">
+        <property id="2059891927283971799" name="range" index="1lSC8s" />
+        <child id="2059891927283971797" name="target" index="1lSC8u" />
+      </concept>
       <concept id="3692958048405039038" name="AgentLanguage.structure.IAmAtCondition" flags="ng" index="1mQy9T">
         <child id="3692958048405039093" name="target" index="1mQy8M" />
       </concept>
@@ -299,8 +319,10 @@
         <child id="4443718667983781986" name="isIdleBehaviour" index="2jmkbR" />
         <child id="33966321879452666" name="signalselectionstrategy" index="2lyMva" />
         <child id="7942748223948104476" name="roomSelectionStrategy" index="MWeLL" />
-        <child id="2814466787070108702" name="behaviourMethod" index="2Ov1EZ" />
+        <child id="2814466787070108702" name="behaviourMethods" index="2Ov1EZ" />
         <child id="2701765455131303424" name="attributes" index="3eYOtt" />
+        <child id="2059891927278244927" name="scheduledBehaviours" index="1lyQ3O" />
+        <child id="2059891927295056299" name="backgroundBehaviours" index="1myYPw" />
         <child id="8149202941058079945" name="attributeMonitors" index="1TgxgJ" />
       </concept>
       <concept id="3838812034270522234" name="AgentLanguage.structure.BehaviourElement" flags="ng" index="3Vt_xe">
@@ -331,6 +353,7 @@
         <child id="5115872837157187954" name="expr" index="30bsDf" />
       </concept>
       <concept id="5115872837156687890" name="org.iets3.core.expr.base.structure.LessExpression" flags="ng" index="30d6GJ" />
+      <concept id="5115872837156724025" name="org.iets3.core.expr.base.structure.LogicalAndExpression" flags="ng" index="30deo4" />
       <concept id="5115872837156723899" name="org.iets3.core.expr.base.structure.LogicalOrExpression" flags="ng" index="30deu6" />
       <concept id="5115872837156576277" name="org.iets3.core.expr.base.structure.BinaryExpression" flags="ng" index="30dEsC">
         <child id="5115872837156576280" name="right" index="30dEs_" />
@@ -2934,6 +2957,72 @@
     <property role="TrG5h" value="map_Patient" />
     <property role="1n5rFW" value="1" />
     <property role="3GE5qa" value="People" />
+    <node concept="1kboAi" id="1MmdcHaswnH" role="1myYPw">
+      <property role="TrG5h" value="infect" />
+      <node concept="3VtFpM" id="1MmdcHaswnI" role="3VtFpR">
+        <node concept="3VtFpY" id="1MmdcHaVKEb" role="3VtFpW">
+          <node concept="30deo4" id="1MmdcHaVKFk" role="3VtFpT">
+            <node concept="1lSC8v" id="1MmdcHaVKGb" role="30dEsF">
+              <property role="1lSC8s" value="10" />
+              <node concept="3n3BjK" id="1MmdcHaVKGP" role="1lSC8u">
+                <ref role="3n3BjR" node="EFW1mY_7M0" resolve="map_Patient" />
+              </node>
+            </node>
+            <node concept="jeB$4" id="1MmdcHaVKEo" role="30dEs_">
+              <property role="jeB_Y" value="3KCb14J4_lk/equals" />
+              <ref role="2h88ii" node="EFW1mY_7M0" resolve="map_Patient" />
+              <ref role="2u9qTp" node="74nMeo8yJIQ" resolve="admittedTo" />
+              <node concept="30bdrP" id="1MmdcHaVKF9" role="x4oD$" />
+            </node>
+          </node>
+          <node concept="3VtFpM" id="1MmdcHaVKEd" role="3VtFpZ">
+            <node concept="X7xuQ" id="1MmdcHaVKHH" role="3VtFpW">
+              <ref role="2h6LR9" node="EFW1mY_7M0" resolve="map_Patient" />
+              <node concept="jeB$8" id="1MmdcHaVKIn" role="2Ry9oz">
+                <ref role="jeB$b" node="2_JteYR9Br8" resolve="placeholder" />
+              </node>
+              <node concept="30bdrP" id="1MmdcHaVKIu" role="2Rw0dO">
+                <property role="30bdrQ" value="HELLO" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1kboAi" id="1MmdcH9XOis" role="2Ov1EZ">
+      <property role="TrG5h" value="InfectSpread" />
+      <node concept="3VtFpM" id="1MmdcH9XOit" role="3VtFpR">
+        <node concept="3VtFpY" id="1MmdcH9XOkg" role="3VtFpW">
+          <node concept="30deo4" id="1MmdcH9XOly" role="3VtFpT">
+            <node concept="jeB$4" id="1MmdcH9XOkw" role="30dEs_">
+              <property role="jeB_Y" value="3KCb14J4_lk/equals" />
+              <ref role="2h88ii" node="EFW1mY_7M0" resolve="map_Patient" />
+              <ref role="2u9qTp" node="74nMeo8yJIQ" resolve="admittedTo" />
+              <node concept="30bdrP" id="1MmdcH9XOlk" role="x4oD$">
+                <property role="30bdrQ" value="NA" />
+              </node>
+            </node>
+            <node concept="1lSC8v" id="1MmdcH9XOo2" role="30dEsF">
+              <property role="1lSC8s" value="10" />
+              <node concept="3n3BjK" id="1MmdcH9XOow" role="1lSC8u">
+                <ref role="3n3BjR" node="EFW1mY_7M0" resolve="map_Patient" />
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="1MmdcH9XOkk" role="3VtFpZ">
+            <node concept="X7xuQ" id="1MmdcH9XOpj" role="3VtFpW">
+              <ref role="2h6LR9" node="EFW1mY_7M0" resolve="map_Patient" />
+              <node concept="jeB$8" id="1MmdcH9XOpX" role="2Ry9oz">
+                <ref role="jeB$b" node="2_JteYR9Br8" resolve="placeholder" />
+              </node>
+              <node concept="30bdrP" id="1MmdcH9XOq4" role="2Rw0dO">
+                <property role="30bdrQ" value="HELLO" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="3oyTeY" id="2y1i1i3N_hU" role="26w69L">
       <node concept="3VmG3F" id="2y1i1i3N_ma" role="3oyTfd">
         <ref role="3VmG3f" node="74nMeo8yQgC" />
@@ -3443,72 +3532,6 @@
         </node>
       </node>
     </node>
-    <node concept="3Vt_xe" id="52K8Ej3pX6" role="2Ov1EZ">
-      <property role="TrG5h" value="placeholderBeh" />
-      <node concept="3VtFpM" id="52K8Ej3pX7" role="3VtFpR">
-        <node concept="jcv$W" id="52K8Ej3pY2" role="3VtFpW">
-          <property role="jcv$Z" value="1" />
-        </node>
-      </node>
-      <node concept="1W57fq" id="52K8EjHq80" role="lGtFl">
-        <node concept="3IZrLx" id="52K8EjHq81" role="3IZSJc">
-          <node concept="3clFbS" id="52K8EjHq82" role="2VODD2">
-            <node concept="3cpWs6" id="52K8EjHqcI" role="3cqZAp">
-              <node concept="3clFbT" id="52K8EjHqdc" role="3cqZAk" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="1WS0z7" id="52K8Ej3xqi" role="lGtFl">
-        <node concept="3JmXsc" id="52K8Ej3xqj" role="3Jn$fo">
-          <node concept="3clFbS" id="52K8Ej3xqk" role="2VODD2">
-            <node concept="3clFbF" id="52K8Ej3q0P" role="3cqZAp">
-              <node concept="2OqwBi" id="52K8Ej3vsY" role="3clFbG">
-                <node concept="2OqwBi" id="52K8Ej3rYi" role="2Oq$k0">
-                  <node concept="2OqwBi" id="52K8Ej3qrl" role="2Oq$k0">
-                    <node concept="2OqwBi" id="52K8Ej3qbC" role="2Oq$k0">
-                      <node concept="1iwH7S" id="52K8Ej3q0O" role="2Oq$k0" />
-                      <node concept="1r8y6K" id="52K8Ej3qi9" role="2OqNvi" />
-                    </node>
-                    <node concept="2RRcyG" id="52K8Ej3q$o" role="2OqNvi">
-                      <ref role="2RRcyH" to="e88n:2VPlUUsG6x8" resolve="ActionCard" />
-                    </node>
-                  </node>
-                  <node concept="13MTOL" id="52K8Ej3t_1" role="2OqNvi">
-                    <ref role="13MTZf" to="e88n:2VPlUUsG6xR" resolve="Actions" />
-                  </node>
-                </node>
-                <node concept="3zZkjj" id="52K8Ej3vEM" role="2OqNvi">
-                  <node concept="1bVj0M" id="52K8Ej3vEO" role="23t8la">
-                    <node concept="3clFbS" id="52K8Ej3vEP" role="1bW5cS">
-                      <node concept="3clFbF" id="52K8Ej3vJx" role="3cqZAp">
-                        <node concept="2OqwBi" id="52K8EjHose" role="3clFbG">
-                          <node concept="37vLTw" id="52K8EjHnWL" role="2Oq$k0">
-                            <ref role="3cqZAo" node="52K8Ej3vEQ" resolve="it" />
-                          </node>
-                          <node concept="1mIQ4w" id="52K8EjHoHX" role="2OqNvi">
-                            <node concept="chp4Y" id="52K8EjHoLy" role="cj9EA">
-                              <ref role="cht4Q" to="e88n:1SF32lRXYq" resolve="AdmissionAction" />
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                    <node concept="Rh6nW" id="52K8Ej3vEQ" role="1bW2Oz">
-                      <property role="TrG5h" value="it" />
-                      <node concept="2jxLKc" id="52K8Ej3vER" role="1tU5fm" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="5jKBG" id="52K8Ej3xC$" role="lGtFl">
-        <ref role="v9R2y" node="52K8Ej38P$" resolve="reduce_OrderAction_To_Behaviour" />
-      </node>
-    </node>
     <node concept="jeB$7" id="2_JteYR9Br8" role="3eYOtt">
       <property role="TrG5h" value="placeholder" />
       <node concept="30bdrP" id="2_JteYR9BsL" role="1gSNMQ">
@@ -3904,6 +3927,22 @@
               <node concept="2ViDtV" id="1MmdcH8jRkm" role="2OqNvi">
                 <ref role="2ViDtZ" to="3751:6o2BuIx6R5q" resolve="BLUE" />
               </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1lCXsa" id="1MmdcH9nXaf" role="1lyQ3O">
+      <property role="TrG5h" value="InfectionSpread" />
+      <property role="1lCXVu" value="1" />
+      <property role="1lCXVs" value="1" />
+      <node concept="3VtFpM" id="1MmdcH9nXag" role="1lCXVh">
+        <node concept="1kaGsf" id="1MmdcH9t9Xb" role="3VtFpW">
+          <ref role="1lXzj6" node="1MmdcHaswnH" resolve="infect" />
+          <node concept="1kaGs0" id="1MmdcH9t9Xf" role="1kaGse">
+            <property role="TrG5h" value="patient" />
+            <node concept="3n3BjK" id="1MmdcH9t9Xl" role="1kaGs7">
+              <ref role="3n3BjR" node="EFW1mY_7M0" resolve="map_Patient" />
             </node>
           </node>
         </node>

@@ -539,9 +539,6 @@ public class QueriesGenerated extends QueryProviderBase {
   public static boolean ifMacro_Condition_3_9(final IfMacroContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.orderPatientLocation$SPZH) != null;
   }
-  public static boolean ifMacro_Condition_7_0(final IfMacroContext _context) {
-    return false;
-  }
   public static boolean ifMacro_Condition_8_0(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), null));
   }
@@ -726,13 +723,6 @@ public class QueriesGenerated extends QueryProviderBase {
     return retList;
   }
   public static Iterable<SNode> sourceNodesQuery_7_5(final SourceSubstituteMacroNodesContext _context) {
-    return Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb), LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it) {
-        return SNodeOperations.isInstanceOf(it, CONCEPTS.AdmissionAction$VB);
-      }
-    });
-  }
-  public static Iterable<SNode> sourceNodesQuery_7_6(final SourceSubstituteMacroNodesContext _context) {
     List<String> foundNames = ListSequence.fromList(new ArrayList<String>());
     List<SNode> retList = ListSequence.fromList(new ArrayList<SNode>());
 
@@ -749,13 +739,13 @@ public class QueriesGenerated extends QueryProviderBase {
     return retList;
 
   }
-  public static Iterable<SNode> sourceNodesQuery_7_7(final SourceSubstituteMacroNodesContext _context) {
+  public static Iterable<SNode> sourceNodesQuery_7_6(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.collectMany(SModelOperations.roots(_context.getInputModel(), CONCEPTS.Test$I1), LINKS.Captures$ujxd);
   }
-  public static Iterable<SNode> sourceNodesQuery_7_8(final SourceSubstituteMacroNodesContext _context) {
+  public static Iterable<SNode> sourceNodesQuery_7_7(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.collectMany(SLinkOperations.collect(SModelOperations.roots(_context.getInputModel(), CONCEPTS.CompositeTest$T8), LINKS.resultsMappingTable$5f_7), LINKS.lines$hNl9);
   }
-  public static Iterable<SNode> sourceNodesQuery_7_9(final SourceSubstituteMacroNodesContext _context) {
+  public static Iterable<SNode> sourceNodesQuery_7_8(final SourceSubstituteMacroNodesContext _context) {
     return SModelOperations.roots(_context.getInputModel(), CONCEPTS.ObservationTest$BU);
   }
   public static Iterable<SNode> sourceNodesQuery_8_0(final SourceSubstituteMacroNodesContext _context) {
@@ -1211,7 +1201,6 @@ public class QueriesGenerated extends QueryProviderBase {
     snsqMethods.put("1758249876496450656", new SNsQ(i++));
     snsqMethods.put("8149202941058832091", new SNsQ(i++));
     snsqMethods.put("8149202941061588881", new SNsQ(i++));
-    snsqMethods.put("90846643906025107", new SNsQ(i++));
     snsqMethods.put("1758249876462519954", new SNsQ(i++));
     snsqMethods.put("2985733650884960145", new SNsQ(i++));
     snsqMethods.put("3549288998130939108", new SNsQ(i++));
@@ -1280,34 +1269,32 @@ public class QueriesGenerated extends QueryProviderBase {
         case 16:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_7_8(ctx));
         case 17:
-          return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_7_9(ctx));
-        case 18:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_8_0(ctx));
-        case 19:
+        case 18:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_10_0(ctx));
-        case 20:
+        case 19:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_15_0(ctx));
-        case 21:
+        case 20:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_20_0(ctx));
-        case 22:
+        case 21:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_29_0(ctx));
-        case 23:
+        case 22:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_31_0(ctx));
-        case 24:
+        case 23:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_34_0(ctx));
-        case 25:
+        case 24:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_34_1(ctx));
-        case 26:
+        case 25:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_36_0(ctx));
-        case 27:
+        case 26:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_36_1(ctx));
-        case 28:
+        case 27:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_41_0(ctx));
-        case 29:
+        case 28:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_43_0(ctx));
-        case 30:
+        case 29:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_44_0(ctx));
-        case 31:
+        case 30:
           return IterableUtil.asCollection(QueriesGenerated.sourceNodesQuery_44_1(ctx));
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
@@ -1528,7 +1515,6 @@ public class QueriesGenerated extends QueryProviderBase {
     imcMethods.put("324605317411327937", new IfMC(i++));
     imcMethods.put("1589537774394613407", new IfMC(i++));
     imcMethods.put("3787511550144033697", new IfMC(i++));
-    imcMethods.put("90846643917005312", new IfMC(i++));
     imcMethods.put("33966321878176064", new IfMC(i++));
     imcMethods.put("3170643229272243322", new IfMC(i++));
     imcMethods.put("33966321878176110", new IfMC(i++));
@@ -1577,18 +1563,16 @@ public class QueriesGenerated extends QueryProviderBase {
         case 12:
           return QueriesGenerated.ifMacro_Condition_3_9(ctx);
         case 13:
-          return QueriesGenerated.ifMacro_Condition_7_0(ctx);
-        case 14:
           return QueriesGenerated.ifMacro_Condition_8_0(ctx);
-        case 15:
+        case 14:
           return QueriesGenerated.ifMacro_Condition_8_1(ctx);
-        case 16:
+        case 15:
           return QueriesGenerated.ifMacro_Condition_8_2(ctx);
-        case 17:
+        case 16:
           return QueriesGenerated.ifMacro_Condition_10_0(ctx);
-        case 18:
+        case 17:
           return QueriesGenerated.ifMacro_Condition_13_0(ctx);
-        case 19:
+        case 18:
           return QueriesGenerated.ifMacro_Condition_24_0(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no condition method for if macro %s (key: #%d)", ctx.getTemplateReference(), methodKey));

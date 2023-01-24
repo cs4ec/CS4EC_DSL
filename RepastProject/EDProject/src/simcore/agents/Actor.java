@@ -145,14 +145,6 @@ public class Actor extends Agent {
 			        	  concreteDestination = target;
 		        	  }
 		          } 
-//		          else if(destination == Bed.class) {
-//		        	  Occupiable target = SelectOccupiable(curInside, (Class) destination);
-//		        	  if(target == null) {
-//		        		  iterateOrder();
-//		        	  } else {
-//			        	  concreteDestination = target;
-//		        	  }
-//		          } 
 		          else {
 		        	  concreteDestination = destination;
 		          }

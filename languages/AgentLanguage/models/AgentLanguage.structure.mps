@@ -81,10 +81,24 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3KCb14J4_km" resolve="Attribute" />
     </node>
+    <node concept="1TJgyj" id="1MmdcH97lgZ" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927278244927" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="scheduledBehaviours" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1MmdcH9duf1" resolve="ScheduledBehaviour" />
+    </node>
+    <node concept="1TJgyj" id="1MmdcHa7tAF" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927295056299" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="backgroundBehaviours" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1MmdcH8IVPp" resolve="BackgroundBehaviour" />
+    </node>
     <node concept="1TJgyj" id="2seZE6jsIgu" role="1TKVEi">
       <property role="IQ2ns" value="2814466787070108702" />
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="behaviourMethod" />
+      <property role="20kJfa" value="behaviourMethods" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="3l6cNjec6HU" resolve="BehaviourElement" />
     </node>
@@ -1886,6 +1900,168 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH8IVPp">
+    <property role="EcuMT" value="2059891927271849305" />
+    <property role="3GE5qa" value="actions" />
+    <property role="TrG5h" value="BackgroundBehaviour" />
+    <property role="34LRSv" value="background behaviour" />
+    <property role="R4oN_" value="A behaviour of an actor, done in background" />
+    <ref role="1TJDcQ" node="3l6cNjec6HU" resolve="BehaviourElement" />
+    <node concept="PrWs8" id="1MmdcH8IVPQ" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH8Jff4">
+    <property role="EcuMT" value="2059891927271928772" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="ForEach" />
+    <property role="34LRSv" value="for each loop" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="1TJgyj" id="1MmdcH8Jff5" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927271928773" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="iterable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1MmdcH8Jffa" resolve="Iterable" />
+    </node>
+    <node concept="1TJgyj" id="1MmdcH9o00d" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927282614285" />
+      <property role="20kJfa" value="behaviourRef" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjec6HU" resolve="BehaviourElement" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH8Jffa">
+    <property role="EcuMT" value="2059891927271928778" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="Iterable" />
+    <property role="R5$K7" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="1MmdcH8OpDU" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH8Jffb">
+    <property role="EcuMT" value="2059891927271928779" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="AgentIterable" />
+    <ref role="1TJDcQ" node="1MmdcH8Jffa" resolve="Iterable" />
+    <node concept="1TJgyj" id="1MmdcH8Jffc" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927271928780" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="agentReference" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH8OnFq">
+    <property role="EcuMT" value="2059891927273274074" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="IterableAttributeCondition" />
+    <property role="34LRSv" value="check attribute value of iterable" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyj" id="1MmdcH8OpDd" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927273282125" />
+      <property role="20kJfa" value="iterable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1MmdcH8Jffa" resolve="Iterable" />
+    </node>
+    <node concept="1TJgyj" id="1MmdcH8OpDg" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927273282128" />
+      <property role="20kJfa" value="attribute" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_km" resolve="Attribute" />
+    </node>
+    <node concept="1TJgyi" id="1MmdcH8OnOO" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927273274676" />
+      <property role="TrG5h" value="operator" />
+      <ref role="AX2Wp" node="3KCb14J4_lj" resolve="JudgeOperator" />
+    </node>
+    <node concept="1TJgyj" id="1MmdcH8OnOQ" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927273274678" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="right" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH921mh">
+    <property role="EcuMT" value="2059891927276852625" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="MyAttributeCondition" />
+    <property role="34LRSv" value="check value of my attribute" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyi" id="1MmdcH921mi" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927276852626" />
+      <property role="TrG5h" value="operator" />
+      <ref role="AX2Wp" node="3KCb14J4_lj" resolve="JudgeOperator" />
+    </node>
+    <node concept="1TJgyj" id="1MmdcH921mk" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927276852628" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="right" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="1MmdcH921mm" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927276852630" />
+      <property role="20kJfa" value="atribute" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3KCb14J4_km" resolve="Attribute" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH9duf1">
+    <property role="EcuMT" value="2059891927279854529" />
+    <property role="3GE5qa" value="actions" />
+    <property role="TrG5h" value="ScheduledBehaviour" />
+    <property role="34LRSv" value="scheduled behaviour" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="1MmdcH9duCj" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyi" id="1MmdcH9duCl" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927279856149" />
+      <property role="TrG5h" value="startTick" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="1MmdcH9duCn" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927279856151" />
+      <property role="TrG5h" value="interval" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="1MmdcH9duCq" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927279856154" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="behaviourSequence" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjec8l6" resolve="BehaviourSequence" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH9tbrk">
+    <property role="EcuMT" value="2059891927283971796" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="DistanceCondition" />
+    <property role="34LRSv" value="Distance to an actor" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="1TJgyi" id="1MmdcH9tbrn" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927283971799" />
+      <property role="TrG5h" value="range" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="1MmdcH9tbrl" role="1TKVEi">
+      <property role="IQ2ns" value="2059891927283971797" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="svZ_Jg4oEF" resolve="ActorReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1MmdcH9teHJ">
+    <property role="EcuMT" value="2059891927283985263" />
+    <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
+    <property role="TrG5h" value="SignalDataReference" />
+    <ref role="1TJDcQ" node="3KCb14J4_mK" resolve="ObjectInstance" />
   </node>
 </model>
 

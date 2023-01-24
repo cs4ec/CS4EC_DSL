@@ -225,5 +225,83 @@
       <ref role="1YaFvo" to="3751:351ASBN64bs" resolve="AgentAttributeReference" />
     </node>
   </node>
+  <node concept="1YbPZF" id="1MmdcH8WXsw">
+    <property role="TrG5h" value="typeof_IterableAttributeCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="1MmdcH8WXsx" role="18ibNy">
+      <node concept="1Z5TYs" id="1MmdcH8WXCh" role="3cqZAp">
+        <node concept="mw_s8" id="1MmdcH8WXCi" role="1ZfhKB">
+          <node concept="2pJPEk" id="1MmdcH8WXCj" role="mwGJk">
+            <node concept="2pJPED" id="1MmdcH8WXCk" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1MmdcH8WXCl" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1MmdcH8WXCm" role="mwGJk">
+            <node concept="1YBJjd" id="1MmdcH8WXCN" role="1Z2MuG">
+              <ref role="1YBMHb" node="1MmdcH8WXsz" resolve="iterableAttributeCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1MmdcH8WXsz" role="1YuTPh">
+      <property role="TrG5h" value="iterableAttributeCondition" />
+      <ref role="1YaFvo" to="3751:1MmdcH8OnFq" resolve="IterableAttributeCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1MmdcH921pF">
+    <property role="TrG5h" value="typeof_MyAttributeCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="1MmdcH921pG" role="18ibNy">
+      <node concept="1Z5TYs" id="1MmdcH921pM" role="3cqZAp">
+        <node concept="mw_s8" id="1MmdcH921pN" role="1ZfhKB">
+          <node concept="2pJPEk" id="1MmdcH921pO" role="mwGJk">
+            <node concept="2pJPED" id="1MmdcH921pP" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1MmdcH921pQ" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1MmdcH921pR" role="mwGJk">
+            <node concept="1YBJjd" id="1MmdcH921qk" role="1Z2MuG">
+              <ref role="1YBMHb" node="1MmdcH921pI" resolve="myAttributeCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1MmdcH921pI" role="1YuTPh">
+      <property role="TrG5h" value="myAttributeCondition" />
+      <ref role="1YaFvo" to="3751:1MmdcH921mh" resolve="MyAttributeCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1MmdcH9MsvH">
+    <property role="TrG5h" value="typeof_DistanceCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="1MmdcH9MsvI" role="18ibNy">
+      <node concept="1Z5TYs" id="1MmdcH9MsFv" role="3cqZAp">
+        <node concept="mw_s8" id="1MmdcH9MsFw" role="1ZfhKB">
+          <node concept="2pJPEk" id="1MmdcH9MsFx" role="mwGJk">
+            <node concept="2pJPED" id="1MmdcH9MsFy" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1MmdcH9MsFz" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1MmdcH9MsF$" role="mwGJk">
+            <node concept="1YBJjd" id="1MmdcH9MsG1" role="1Z2MuG">
+              <ref role="1YBMHb" node="1MmdcH9MsvK" resolve="distanceCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1MmdcH9MsvK" role="1YuTPh">
+      <property role="TrG5h" value="distanceCondition" />
+      <ref role="1YaFvo" to="3751:1MmdcH9tbrk" resolve="DistanceCondition" />
+    </node>
+  </node>
 </model>
 
