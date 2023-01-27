@@ -121,6 +121,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createCollection_1() {
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Vertical());
     editorCell.setCellId("Collection_kgvjvi_e0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(createRefNode_0());
     return editorCell;
   }

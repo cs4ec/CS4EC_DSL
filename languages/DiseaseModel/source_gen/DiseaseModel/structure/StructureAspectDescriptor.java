@@ -10,13 +10,18 @@ import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
+import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
+import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptAsymptomatic = createDescriptorForAsymptomatic();
   /*package*/ final ConceptDescriptor myConceptDisease = createDescriptorForDisease();
   /*package*/ final ConceptDescriptor myConceptDiseaseSymptom = createDescriptorForDiseaseSymptom();
   /*package*/ final ConceptDescriptor myConceptDiseaseSymptomReference = createDescriptorForDiseaseSymptomReference();
+  /*package*/ final ConceptDescriptor myConceptExposed = createDescriptorForExposed();
   /*package*/ final ConceptDescriptor myConceptInfected = createDescriptorForInfected();
+  /*package*/ final ConceptDescriptor myConceptInfectionSpreadLine = createDescriptorForInfectionSpreadLine();
+  /*package*/ final ConceptDescriptor myConceptInfectionSpreadTable = createDescriptorForInfectionSpreadTable();
   /*package*/ final ConceptDescriptor myConceptInfectionStatus = createDescriptorForInfectionStatus();
   /*package*/ final ConceptDescriptor myConceptSusceptibilityStatus = createDescriptorForSusceptibilityStatus();
   /*package*/ final ConceptDescriptor myConceptSusceptible = createDescriptorForSusceptible();
@@ -39,7 +44,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAsymptomatic, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptInfected, myConceptInfectionStatus, myConceptSusceptibilityStatus, myConceptSusceptible, myConceptSymptomatic, myConceptUnvaccinated, myConceptVaccinated, myConceptVaccineStatus);
+    return Arrays.asList(myConceptAsymptomatic, myConceptDisease, myConceptDiseaseSymptom, myConceptDiseaseSymptomReference, myConceptExposed, myConceptInfected, myConceptInfectionSpreadLine, myConceptInfectionSpreadTable, myConceptInfectionStatus, myConceptSusceptibilityStatus, myConceptSusceptible, myConceptSymptomatic, myConceptUnvaccinated, myConceptVaccinated, myConceptVaccineStatus);
   }
 
   @Override
@@ -54,8 +59,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDiseaseSymptom;
       case LanguageConceptSwitch.DiseaseSymptomReference:
         return myConceptDiseaseSymptomReference;
+      case LanguageConceptSwitch.Exposed:
+        return myConceptExposed;
       case LanguageConceptSwitch.Infected:
         return myConceptInfected;
+      case LanguageConceptSwitch.InfectionSpreadLine:
+        return myConceptInfectionSpreadLine;
+      case LanguageConceptSwitch.InfectionSpreadTable:
+        return myConceptInfectionSpreadTable;
       case LanguageConceptSwitch.InfectionStatus:
         return myConceptInfectionStatus;
       case LanguageConceptSwitch.SusceptibilityStatus:
@@ -96,6 +107,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/2698877061875544082");
     b.version(2);
     b.aggregate("symptomReferences", 0x6ca3e29db479125cL).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791247L).optional(true).ordered(true).multiple(true).origin("7828349744265630300").done();
+    b.aggregate("infectionSpreadTable", 0x1c9634cb4b041bc7L).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x1c9634cb4b041b5dL).optional(true).ordered(true).multiple(false).origin("2059891927310146503").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForDiseaseSymptom() {
@@ -114,6 +126,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.associate("symptom", 0x6ca3e29db4791251L).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791132L).optional(false).origin("7828349744265630289").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForExposed() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "Exposed", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x1c9634cb4b0672f6L);
+    b.class_(false, false, false);
+    b.super_("DiseaseModel.structure.Infected", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab3111910L);
+    b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/2059891927310299894");
+    b.version(2);
+    b.alias("Exposed");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForInfected() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "Infected", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab3111910L);
     b.class_(false, false, false);
@@ -121,6 +142,25 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512513296");
     b.version(2);
     b.alias("Infected");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForInfectionSpreadLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "InfectionSpreadLine", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x1c9634cb4b041b5eL);
+    b.class_(false, false, false);
+    b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/2059891927310146398");
+    b.version(2);
+    b.property("distance", 0x1c9634cb4b041b61L).type(PrimitiveTypeId.INTEGER).origin("2059891927310146401").done();
+    b.property("spreadChance", 0x1c9634cb4b041b63L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("2059891927310146403").done();
+    b.aggregate("infectionStatus", 0x1c9634cb4b041b5fL).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x5dc1936ab31118fbL).optional(false).ordered(true).multiple(false).origin("2059891927310146399").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForInfectionSpreadTable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "InfectionSpreadTable", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x1c9634cb4b041b5dL);
+    b.class_(false, false, false);
+    b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/2059891927310146397");
+    b.version(2);
+    b.aggregate("lines", 0x1c9634cb4b041baeL).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x1c9634cb4b041b5eL).optional(true).ordered(true).multiple(true).origin("2059891927310146478").done();
+    b.alias("Infection spread table");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForInfectionStatus() {

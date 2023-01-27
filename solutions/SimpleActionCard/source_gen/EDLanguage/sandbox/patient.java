@@ -20,6 +20,7 @@ import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
 import simcore.action.InstantBehaviourStep;
 import simcore.action.BehaviourStep;
+import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import simcore.action.BackgroundBehaviour;
 
@@ -29,6 +30,7 @@ public class patient extends Actor {
   public String admittedTo = "NA";
   public String admissionRoute = "UnConfigured";
   public String Immunocompromised = "NotConfigured";
+  public String COVIDInfectionStatus = "NotConfigured";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -132,6 +134,18 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getCOVIDInfectionStatusisSusceptible() {
+    if (this.COVIDInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getCOVIDInfectionStatusisAsymptomatic() {
+    if (this.COVIDInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
   public int getadmittedToisCOVIDPositiveCohort() {
     if (this.admittedTo == "COVIDPositiveCohort") {
       return 1;
@@ -146,6 +160,18 @@ public class patient extends Actor {
   }
   public int getadmittedToisCOVIDPositiveCohortgetImmunocompromisedisNo() {
     if (this.admittedTo == "COVIDPositiveCohort" && this.Immunocompromised == "No") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSusceptible() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.COVIDInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisAsymptomatic() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.COVIDInfectionStatus == "Asymptomatic") {
       return 1;
     }
     return 0;
@@ -207,90 +233,114 @@ public class patient extends Actor {
       }
     }
   }
-  public class MoveAction_a0a_13 extends BehaviourStep {
+  public class Consequence_a0a0a0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0a_13(Behaviour behaviour) {
-      target = patient.this;
+    public Consequence_a0a0a0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target), behaviour);
-        } else {
-          concreteTarget = target;
-        }
-      }
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus = "Exposed";
 
-      if (concreteTarget != null) {
-        if (target instanceof RoomType) {
-          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
-            concreteTarget = SelectLocation(((RoomType) target), behaviour);
-          }
-        }
-        MoveTowards(concreteTarget);
-
-      }
-    }
-
-    public boolean finishCondition() {
-      return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class MoveAction_a0a_15 extends BehaviourStep {
+  public class Consequence_a0a0a0a_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0a_15(Behaviour behaviour) {
-      target = patient.this;
+    public Consequence_a0a0a0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target), behaviour);
-        } else {
-          concreteTarget = target;
-        }
-      }
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus = "Exposed";
 
-      if (concreteTarget != null) {
-        if (target instanceof RoomType) {
-          if (EvaluateRoomChoice(((Room) concreteTarget)) == Double.MAX_VALUE) {
-            concreteTarget = SelectLocation(((RoomType) target), behaviour);
-          }
-        }
-        MoveTowards(concreteTarget);
-
-      }
+    }
+  }
+  public class Choice_a0a0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
     }
 
-    public boolean finishCondition() {
-      return concreteTarget != null && ImAt(concreteTarget);
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:(instance of Symptomatic)-10_a0"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0a0a_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:(instance of Symptomatic)-10_a0"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0a_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0a_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0a_5 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0a_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
   @ScheduledMethod(start = 1, interval = 1)
-  public void InfectionSpread() {
+  public void ScheduledBehaviourForCOVID() {
     for (Object object : context.getObjects(patient.class)) {
       patient a = (patient) object;
       Signal s = new Signal();
       s.setName("patient" + a.agentName());
-      s.setDescription("infectTrigger");
+      s.setDescription("BackgroundBehaviourForCOVIDTrigger");
       s.AddActor("patient");
       s.AddData("patient", a);
-      infect(s);
+      BackgroundBehaviourForCOVID(s);
     }
   }
-  public void infect(Signal s) {
-    BackgroundBehaviour backgroundBehaviour = new BackgroundBehaviour("infect", this);
+  public void BackgroundBehaviourForCOVID(Signal s) {
+    BackgroundBehaviour backgroundBehaviour = new BackgroundBehaviour("BackgroundBehaviourForCOVID", this);
 
     backgroundBehaviour.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_13(backgroundBehaviour));
+    plstSteps.add(new Choice_a0a_3(backgroundBehaviour));
     backgroundBehaviour.setSteps(plstSteps);
 
     myBackgroundBehaviours.add(backgroundBehaviour);

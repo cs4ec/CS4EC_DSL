@@ -5,9 +5,15 @@
 		type="number" number_type="int" start="1" end="10" step="1" />
 	<parameter name="UsePathFinding"
 		type="constant" constant_type="boolean" value="false" />
+  	<parameter name="InfectionSpreadChance:(instance of Symptomatic)-10_a0"
+  		type="constant" constant_type="double" value="0.000000002" />
   	<parameter name="patientImmunocompromisedYes"
   		 type="constant" constant_type="double" value = "10" />
   	<parameter name="patientImmunocompromisedNo"
+  		 type="constant" constant_type="double" value = "90" />
+  	<parameter name="patientCOVIDInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "10" />
+  	<parameter name="patientCOVIDInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "90" />
   	<parameter name="patientadmissionRouteEmergencyAttendance"
   		 type="constant" constant_type="double" value = "100" />

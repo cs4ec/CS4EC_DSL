@@ -110,7 +110,16 @@
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
       <concept id="2698877061875544082" name="DiseaseModel.structure.Disease" flags="ng" index="1gZIpL">
+        <child id="2059891927310146503" name="infectionSpreadTable" index="1n$yWc" />
         <child id="7828349744265630300" name="symptomReferences" index="3oQJ31" />
+      </concept>
+      <concept id="2059891927310146398" name="DiseaseModel.structure.InfectionSpreadLine" flags="ng" index="1n$yYl">
+        <property id="2059891927310146403" name="spreadChance" index="1n$yYC" />
+        <property id="2059891927310146401" name="distance" index="1n$yYE" />
+        <child id="2059891927310146399" name="infectionStatus" index="1n$yYk" />
+      </concept>
+      <concept id="2059891927310146397" name="DiseaseModel.structure.InfectionSpreadTable" flags="ng" index="1n$yYm">
+        <child id="2059891927310146478" name="lines" index="1n$yX_" />
       </concept>
       <concept id="7828349744265630279" name="DiseaseModel.structure.DiseaseSymptomReference" flags="ng" index="3oQJ3q">
         <reference id="7828349744265630289" name="symptom" index="3oQJ3c" />
@@ -1963,6 +1972,17 @@
         <node concept="1FjjCm" id="4qMOFDDpalF" role="3JlXG4" />
       </node>
     </node>
+    <node concept="1jfOK3" id="1MmdcHbHcu_" role="2OfI9c">
+      <ref role="3ZaQn3" node="4qMOFDDpakM" />
+      <node concept="1jfOKv" id="1MmdcHbHcuP" role="1jfOML">
+        <property role="3JlXGq" value="10" />
+        <node concept="3IO8Df" id="1MmdcHbHcuW" role="3JlXG4" />
+      </node>
+      <node concept="1jfOKv" id="1MmdcHbHcv2" role="1jfOML">
+        <property role="3JlXGq" value="90" />
+        <node concept="3IO8Cx" id="1MmdcHbHcva" role="3JlXG4" />
+      </node>
+    </node>
   </node>
   <node concept="j3bMj" id="EFW1mZkn0D">
     <property role="3GE5qa" value="ED Layout" />
@@ -2962,6 +2982,13 @@
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4VgI" role="3oQJ31">
       <ref role="3oQJ3c" node="5R1$QEO4Qbj" resolve="Loss of smell" />
+    </node>
+    <node concept="1n$yYm" id="1MmdcHbamQr" role="1n$yWc">
+      <node concept="1n$yYl" id="1MmdcHbamQt" role="1n$yX_">
+        <property role="1n$yYE" value="10" />
+        <property role="1n$yYC" value="0.000000002" />
+        <node concept="3IO8Di" id="1MmdcHbamQ$" role="1n$yYk" />
+      </node>
     </node>
   </node>
   <node concept="1gZIpL" id="5R1$QEMKFkE">

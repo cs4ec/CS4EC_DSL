@@ -13,14 +13,17 @@ public final class LanguageConceptSwitch {
   public static final int Disease = 1;
   public static final int DiseaseSymptom = 2;
   public static final int DiseaseSymptomReference = 3;
-  public static final int Infected = 4;
-  public static final int InfectionStatus = 5;
-  public static final int SusceptibilityStatus = 6;
-  public static final int Susceptible = 7;
-  public static final int Symptomatic = 8;
-  public static final int Unvaccinated = 9;
-  public static final int Vaccinated = 10;
-  public static final int VaccineStatus = 11;
+  public static final int Exposed = 4;
+  public static final int Infected = 5;
+  public static final int InfectionSpreadLine = 6;
+  public static final int InfectionSpreadTable = 7;
+  public static final int InfectionStatus = 8;
+  public static final int SusceptibilityStatus = 9;
+  public static final int Susceptible = 10;
+  public static final int Symptomatic = 11;
+  public static final int Unvaccinated = 12;
+  public static final int Vaccinated = 13;
+  public static final int VaccineStatus = 14;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L);
@@ -28,7 +31,10 @@ public final class LanguageConceptSwitch {
     builder.put(0x25745663758ab012L, Disease);
     builder.put(0x6ca3e29db4791132L, DiseaseSymptom);
     builder.put(0x6ca3e29db4791247L, DiseaseSymptomReference);
+    builder.put(0x1c9634cb4b0672f6L, Exposed);
     builder.put(0x5dc1936ab3111910L, Infected);
+    builder.put(0x1c9634cb4b041b5eL, InfectionSpreadLine);
+    builder.put(0x1c9634cb4b041b5dL, InfectionSpreadTable);
     builder.put(0x5dc1936ab31118fbL, InfectionStatus);
     builder.put(0x5dc1936ab3111979L, SusceptibilityStatus);
     builder.put(0x5dc1936ab3111925L, Susceptible);

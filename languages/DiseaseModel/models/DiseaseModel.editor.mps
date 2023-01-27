@@ -4,6 +4,7 @@
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="14" />
     <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="4" />
+    <use id="7e450f4e-1ac3-41ef-a851-4598161bdb94" name="de.slisson.mps.tables" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -20,6 +21,7 @@
       <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
       <concept id="1237303669825" name="jetbrains.mps.lang.editor.structure.CellLayout_Indent" flags="nn" index="l2Vlx" />
+      <concept id="1237307900041" name="jetbrains.mps.lang.editor.structure.IndentLayoutIndentStyleClassItem" flags="ln" index="lj46D" />
       <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
@@ -55,9 +57,36 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
+      </concept>
+    </language>
+    <language id="7e450f4e-1ac3-41ef-a851-4598161bdb94" name="de.slisson.mps.tables">
+      <concept id="1397920687865593407" name="de.slisson.mps.tables.structure.PartialTable" flags="ng" index="2r0Tta">
+        <child id="1397920687865593523" name="cells" index="2r0Tv6" />
+      </concept>
+      <concept id="1397920687865839151" name="de.slisson.mps.tables.structure.HeaderCollection" flags="ng" index="2r3Xtq">
+        <child id="6874252336974775034" name="childs" index="uCobI" />
+      </concept>
+      <concept id="1397920687864997170" name="de.slisson.mps.tables.structure.TableNodeCollection" flags="ng" index="2reCL7">
+        <child id="1397920687864997171" name="childTableNodes" index="2reCL6" />
+      </concept>
+      <concept id="1397920687864997153" name="de.slisson.mps.tables.structure.StaticHorizontal" flags="ng" index="2reCLk" />
+      <concept id="1397920687864997143" name="de.slisson.mps.tables.structure.TableCell" flags="ng" index="2reCLy">
+        <child id="1397920687865064647" name="editorCell" index="2reSmM" />
+      </concept>
+      <concept id="1397920687865064415" name="de.slisson.mps.tables.structure.ChildsVertical" flags="ng" index="2reSaE" />
+      <concept id="1397920687865064509" name="de.slisson.mps.tables.structure.ChildCollection" flags="ng" index="2reSl8">
+        <reference id="1397920687864997201" name="linkDeclaration" index="2reCK$" />
+        <child id="2199447184406843652" name="columnHeaders" index="2YiT2b" />
+      </concept>
+      <concept id="1397920687864864270" name="de.slisson.mps.tables.structure.StaticHeader" flags="ng" index="2rfbtV">
+        <property id="1397920687864864274" name="text" index="2rfbtB" />
+      </concept>
+      <concept id="1397920687864683158" name="de.slisson.mps.tables.structure.Table" flags="ng" index="2rfBfz">
+        <child id="1397920687864865354" name="cells" index="2rf8GZ" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -126,6 +155,27 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
+      <node concept="3F0ifn" id="1MmdcHb11Jv" role="3EZMnx">
+        <property role="3F0ifm" value="Infection Spread:" />
+        <node concept="pVoyu" id="1MmdcHb11JP" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="VSNWy" id="1MmdcHb11JU" role="3F10Kt">
+          <property role="1lJzqX" value="14" />
+        </node>
+        <node concept="Vb9p2" id="1MmdcHb11JV" role="3F10Kt">
+          <property role="Vbekb" value="g1_k_vY/BOLD" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="1MmdcHb11Ko" role="3EZMnx">
+        <ref role="1NtTu8" to="482l:1MmdcHb11J7" resolve="infectionSpreadTable" />
+        <node concept="pVoyu" id="1MmdcHb11KM" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="1MmdcHb11KO" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="l2Vlx" id="2lOlAdPyFbO" role="2iSdaV" />
     </node>
   </node>
@@ -153,6 +203,47 @@
         </node>
       </node>
       <node concept="l2Vlx" id="6MzSDQOuh9Z" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1MmdcHb11HH">
+    <ref role="1XX52x" to="482l:1MmdcHb11Hu" resolve="InfectionSpreadLine" />
+    <node concept="2r0Tta" id="1MmdcHb11HJ" role="2wV5jI">
+      <node concept="2reCLk" id="1MmdcHb11HM" role="2r0Tv6">
+        <node concept="2reCLy" id="1MmdcHb11HO" role="2reCL6">
+          <node concept="3F1sOY" id="1MmdcHb11HS" role="2reSmM">
+            <ref role="1NtTu8" to="482l:1MmdcHb11Hv" resolve="infectionStatus" />
+          </node>
+        </node>
+        <node concept="2reCLy" id="1MmdcHb11HZ" role="2reCL6">
+          <node concept="3F0A7n" id="1MmdcHb11I7" role="2reSmM">
+            <ref role="1NtTu8" to="482l:1MmdcHb11Hx" resolve="distance" />
+          </node>
+        </node>
+        <node concept="2reCLy" id="1MmdcHb11Ig" role="2reCL6">
+          <node concept="3F0A7n" id="1MmdcHb11Iq" role="2reSmM">
+            <ref role="1NtTu8" to="482l:1MmdcHb11Hz" resolve="spreadChance" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="1MmdcHb11I$">
+    <ref role="1XX52x" to="482l:1MmdcHb11Ht" resolve="InfectionSpreadTable" />
+    <node concept="2rfBfz" id="1MmdcHb11IA" role="2wV5jI">
+      <node concept="2reSaE" id="1MmdcHb11IF" role="2rf8GZ">
+        <ref role="2reCK$" to="482l:1MmdcHb11II" resolve="lines" />
+        <node concept="2r3Xtq" id="1MmdcHb11IK" role="2YiT2b">
+          <node concept="2rfbtV" id="1MmdcHb11IO" role="uCobI">
+            <property role="2rfbtB" value="Infection Status" />
+          </node>
+          <node concept="2rfbtV" id="1MmdcHb11IU" role="uCobI">
+            <property role="2rfbtB" value="Distance" />
+          </node>
+          <node concept="2rfbtV" id="1MmdcHb11J2" role="uCobI">
+            <property role="2rfbtB" value="Spread Chance (per second)" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

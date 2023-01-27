@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="eh65uggv8dfgonlif5m31rhmyqd1zqe">
-  <files names="Asymptomatic_Constraints.java:ConstraintsAspectDescriptor.java:Infected_Constraints.java:InfectionStatus_Constraints.java:Susceptible_Constraints.java:Symptomatic_Constraints.java:Unvaccinated_Constraints.java:Vaccinated_Constraints.java:VaccineStatus_Constraints.java" />
+<product version="3" modelHash="-4vz4y711jdzaalzf6l2odjvy6ttj4aa">
+  <files names="Asymptomatic_Constraints.java:ConstraintsAspectDescriptor.java:Exposed_Constraints.java:Infected_Constraints.java:InfectionStatus_Constraints.java:Susceptible_Constraints.java:Symptomatic_Constraints.java:Unvaccinated_Constraints.java:Vaccinated_Constraints.java:VaccineStatus_Constraints.java" />
 </product>
 

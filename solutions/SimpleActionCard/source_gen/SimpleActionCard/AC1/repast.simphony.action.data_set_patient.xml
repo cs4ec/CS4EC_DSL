@@ -34,6 +34,24 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
+        <string>patientgetCOVIDInfectionStatusisSusceptible</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetCOVIDInfectionStatusisSusceptible</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getCOVIDInfectionStatusisSusceptible</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetCOVIDInfectionStatusisAsymptomatic</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getCOVIDInfectionStatusisAsymptomatic</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
         <string>patientgetadmittedToisCOVIDPositiveCohort</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
           <id>patientgetadmittedToisCOVIDPositiveCohort</id>
@@ -58,6 +76,24 @@
           <id>patientgetadmittedToisCOVIDPositiveCohortgetImmunocompromisedisNo</id>
           <className>EDLanguage.sandbox.patient</className>
           <methodName>getadmittedToisCOVIDPositiveCohortgetImmunocompromisedisNo</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSusceptible</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSusceptible</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSusceptible</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisAsymptomatic</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisAsymptomatic</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisAsymptomatic</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

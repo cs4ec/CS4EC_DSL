@@ -502,5 +502,31 @@
       <ref role="1YaFvo" to="e88n:i1eH3Wpca0" resolve="ProbabilityCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="1MmdcHbXLhT">
+    <property role="TrG5h" value="typeof_BranchConditional" />
+    <property role="3GE5qa" value="Expressions" />
+    <node concept="3clFbS" id="1MmdcHbXLhU" role="18ibNy">
+      <node concept="1Z5TYs" id="1MmdcHbXLkd" role="3cqZAp">
+        <node concept="mw_s8" id="1MmdcHbXLke" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1MmdcHbXLkf" role="mwGJk">
+            <node concept="1YBJjd" id="1MmdcHbXLkJ" role="1Z2MuG">
+              <ref role="1YBMHb" node="1MmdcHbXLhW" resolve="branchConditional" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1MmdcHbXLkh" role="1ZfhKB">
+          <node concept="2pJPEk" id="1MmdcHbXLki" role="mwGJk">
+            <node concept="2pJPED" id="1MmdcHbXLkj" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1MmdcHbXLhW" role="1YuTPh">
+      <property role="TrG5h" value="branchConditional" />
+      <ref role="1YaFvo" to="e88n:1xAzJ9JDBLw" resolve="BranchConditional" />
+    </node>
+  </node>
 </model>
 

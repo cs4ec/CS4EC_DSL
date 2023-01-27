@@ -430,6 +430,7 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.Collectors" />
     <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
     <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
