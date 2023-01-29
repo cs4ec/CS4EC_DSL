@@ -327,12 +327,14 @@ public class patient extends Actor {
   public void ScheduledBehaviourForCOVID() {
     for (Object object : context.getObjects(patient.class)) {
       patient a = (patient) object;
-      Signal s = new Signal();
-      s.setName("patient" + a.agentName());
-      s.setDescription("BackgroundBehaviourForCOVIDTrigger");
-      s.AddActor("patient");
-      s.AddData("patient", a);
-      BackgroundBehaviourForCOVID(s);
+      if (a.deSpawnTime == 0) {
+        Signal s = new Signal();
+        s.setName("patient" + a.agentName());
+        s.setDescription("BackgroundBehaviourForCOVIDTrigger");
+        s.AddActor("patient");
+        s.AddData("patient", a);
+        BackgroundBehaviourForCOVID(s);
+      }
     }
   }
   public void BackgroundBehaviourForCOVID(Signal s) {

@@ -25,14 +25,20 @@ import java.awt.Color;
 import simcore.basicStructures.Room;
 import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.context.space.graph.NetworkBuilder;
+import repast.simphony.engine.schedule.ISchedule;
+import repast.simphony.engine.schedule.ScheduleParameters;
 import java.util.HashMap;
 import simcore.utilities.PatientArrivalStore;
 import java.util.Map;
 import simcore.basicStructures.Wall;
+import simcore.agents.Agent;
 
 public class EDBuilder implements ContextBuilder<Object> {
 
+  public Context context;
+
   public Context build(Context<Object> context) {
+    this.context = context;
 
     // Reset log contents 
     new ToolBox(this).GetLog().clearOldContents();
@@ -116,6 +122,14 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room SideRoom_hb = new Room("SideRoom", context, space, grid, 52, 151, 10, 10, 1, 10000000, SideRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
 
     try {
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 10, 195, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 13, 195, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 15, 195, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 18, 195, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 10, 198, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 13, 198, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 15, 198, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 18, 198, TriageWaitingRoom_b));
       MajorsCOne_e.addOccupiable(new Bed(context, space, grid, 4, 164, MajorsCOne_e));
       MajorsCTwo_f.addOccupiable(new Bed(context, space, grid, 9, 164, MajorsCTwo_f));
       MajorsCThree_g.addOccupiable(new Bed(context, space, grid, 16, 164, MajorsCThree_g));
@@ -154,6 +168,11 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     new NetworkBuilder("CurrentPatientAllocations", context, true).buildNetwork();
     new NetworkBuilder("HistoricalPatientAllocations", context, true).buildNetwork();
+
+    ISchedule schedule = RunEnvironment.getInstance().getCurrentSchedule();
+    ScheduleParameters stop = ScheduleParameters.createAtEnd(ScheduleParameters.LAST_PRIORITY);
+    schedule.schedule(stop, this, "printActivityHistories");
+
 
     return context;
   }
@@ -203,4 +222,12 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     }
   }
+
+  public void printActivityHistories() {
+    for (Object object : context.getObjects(Agent.class)) {
+      Agent a = (Agent) object;
+      a.printActivityHistory();
+    }
+  }
+
 }

@@ -42,7 +42,6 @@
       </concept>
       <concept id="5710949967853733612" name="ActionCards.structure.StaffType" flags="ng" index="2GGxxg">
         <property id="2059891927260254807" name="colour" index="1kBeqs" />
-        <child id="4443718667985551902" name="idleLocation" index="2iD$2b" />
       </concept>
       <concept id="5710949967853733230" name="ActionCards.structure.Branch" flags="ng" index="2GGxJi">
         <reference id="5710949967853733298" name="targetAction" index="2GGxGe" />
@@ -1849,9 +1848,6 @@
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="CubicleNurse" />
     <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
-    <node concept="UeIYj" id="3QFgDmJ9UKa" role="2iD$2b">
-      <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
-    </node>
   </node>
   <node concept="2GGxxg" id="52K8Ej3GgM">
     <property role="3GE5qa" value="Staff" />
@@ -2006,6 +2002,46 @@
       <property role="m3wsY" value="10000" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
       <ref role="VgANK" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      <node concept="h4YGW" id="2w4aK2mW$Il" role="h4YwH">
+        <property role="h4YG0" value="10" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="2w4aK2mWxeS" />
+      </node>
+      <node concept="h4YGW" id="2w4aK2mW$In" role="h4YwH">
+        <property role="h4YG0" value="13" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="2w4aK2mWxeS" />
+      </node>
+      <node concept="h4YGW" id="2w4aK2mW$Iq" role="h4YwH">
+        <property role="h4YG0" value="15" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="2w4aK2mWxeS" />
+      </node>
+      <node concept="h4YGW" id="2w4aK2mW$Iu" role="h4YwH">
+        <property role="h4YG0" value="18" />
+        <property role="h0cbi" value="195" />
+        <ref role="h4YGu" node="2w4aK2mWxeS" />
+      </node>
+      <node concept="h4YGW" id="2w4aK2mW$IH" role="h4YwH">
+        <property role="h4YG0" value="10" />
+        <property role="h0cbi" value="198" />
+        <ref role="h4YGu" node="2w4aK2mWxeS" />
+      </node>
+      <node concept="h4YGW" id="2w4aK2mW$II" role="h4YwH">
+        <property role="h4YG0" value="13" />
+        <property role="h0cbi" value="198" />
+        <ref role="h4YGu" node="2w4aK2mWxeS" />
+      </node>
+      <node concept="h4YGW" id="2w4aK2mW$IJ" role="h4YwH">
+        <property role="h4YG0" value="15" />
+        <property role="h0cbi" value="198" />
+        <ref role="h4YGu" node="2w4aK2mWxeS" />
+      </node>
+      <node concept="h4YGW" id="2w4aK2mW$IK" role="h4YwH">
+        <property role="h4YG0" value="18" />
+        <property role="h0cbi" value="198" />
+        <ref role="h4YGu" node="2w4aK2mWxeS" />
+      </node>
     </node>
     <node concept="j3bLk" id="1$AaFX9fzfC" role="j3bMi">
       <property role="TrG5h" value="Triage" />
@@ -2898,6 +2934,9 @@
   <node concept="VhMOw" id="EFW1mYOHdO">
     <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="WaitingRoom" />
+    <node concept="1kHjla" id="2w4aK2mWxeT" role="3IeprG">
+      <ref role="IYbFp" node="2w4aK2mWxeS" />
+    </node>
   </node>
   <node concept="VhMOw" id="EFW1mYOHdY">
     <property role="3GE5qa" value="ED Layout.RoomType" />
@@ -3042,6 +3081,9 @@
   <node concept="VhMOw" id="4qMOFDDpamO">
     <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="GreenBay" />
+  </node>
+  <node concept="IzEoG" id="2w4aK2mWxeS">
+    <property role="IzEow" value="Seat" />
   </node>
 </model>
 

@@ -11,7 +11,7 @@ import repast.simphony.engine.schedule.ScheduledMethod;
 
 public class LogNote {
 	
-	private String projectPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\";
+	private String projectPath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\RepastProject\\EDProject\\";
 	private static LogNote logInstance = null;
 	
 	private LogNote() {}

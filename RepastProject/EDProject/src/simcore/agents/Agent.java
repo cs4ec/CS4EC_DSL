@@ -110,8 +110,10 @@ public class Agent {
 				myCurrentActions.remove(action);
 			}
 
-			action.recordEnd();
-			myPastActions.add(action);
+			if(!(action instanceof BackgroundBehaviour)) {
+				action.recordEnd();
+				myPastActions.add(action);
+			}
 			return;
 		} 
 		 
@@ -472,17 +474,7 @@ public class Agent {
 		
 		return myID + ", my patients: " + myPatientList;
 	}
-//	
-//	public string getPatientAllocation() {
-//		
-//		Iterator myPatients = ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(this).iterator();
-//		while (myPatients.hasNext()) {
-//			System.out.println(((Actor)((RepastEdge<Actor>)myPatients.next()).getTarget()).agentName() + ", ");
-//			
-//		}
-//	}
 	
-	@ScheduledMethod(start=10080)
 	public void printActivityHistory() {
 		ToolBox toolBox = ToolBox();
 		String content = "";

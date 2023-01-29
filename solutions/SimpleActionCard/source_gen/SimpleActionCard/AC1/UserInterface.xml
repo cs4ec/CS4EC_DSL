@@ -7,6 +7,14 @@
       <string>simcore.styles.LocationStyle</string>
     </entry>
       <entry>
+      <string>EDLanguage.sandbox.Bed</string>
+      <string>EDLanguage.sandbox.Bedstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.Seat</string>
+      <string>EDLanguage.sandbox.Seatstyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.Doctor</string>
       <string>EDLanguage.sandbox.Doctorstyle</string>
       </entry>
@@ -70,6 +78,14 @@
       <string>simcore.basicStructures.Room</string>
       <int>0</int>
     </entry>
+      <entry>
+      <string>EDLanguage.sandbox.Bed</string>
+      <int>3</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.Seat</string>
+      <int>3</int>
+      </entry>
       <entry>
       <string>EDLanguage.sandbox.Doctor</string>
       <int>4</int>

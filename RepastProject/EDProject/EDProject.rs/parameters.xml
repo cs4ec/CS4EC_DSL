@@ -12,12 +12,24 @@
 		displayName="Use path finding" type="boolean" defaultValue="false"
 		isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
+  	<parameter name="InfectionSpreadChance:(instance of Symptomatic)-10_a0"
+  		displayName="InfectionSpreadChance:(instance of Symptomatic)-10_a0" type="double" defaultValue="0.000000002"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientImmunocompromisedYes"
   		displayName="patientImmunocompromisedYes" type="double" defaultValue="10"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientImmunocompromisedNo"
   		displayName="patientImmunocompromisedNo" type="double" defaultValue="90"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientCOVIDInfectionStatusSusceptible"
+  		displayName="patientCOVIDInfectionStatusSusceptible" type="double" defaultValue="10"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientCOVIDInfectionStatusAsymptomatic"
+  		displayName="patientCOVIDInfectionStatusAsymptomatic" type="double" defaultValue="90"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientadmissionRouteEmergencyAttendance"

@@ -45,6 +45,7 @@ public class patientGenerator_0 extends AgentGenerator {
 
     this.generateAttribute_a(a);
     this.generateAttribute_b(a);
+    this.generateAttribute_c(a);
 
     b.PushMission(sendSignalTemp);
 
@@ -71,6 +72,25 @@ public class patientGenerator_0 extends AgentGenerator {
 
   }
   public void generateAttribute_b(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patientCOVIDInfectionStatusAsymptomatic"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.COVIDInfectionStatus = "Asymptomatic";
+      return;
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("patientCOVIDInfectionStatusSusceptible") + runningTotal) / 100)) {
+      agent.COVIDInfectionStatus = "Susceptible";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientCOVIDInfectionStatusSusceptible");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientCOVIDInfectionStatusSusceptible");
+    }
+
+  }
+  public void generateAttribute_c(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
