@@ -24,16 +24,16 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
 import com.mbeddr.mpsutil.grammarcells.runtime.CellActionWithReadAccess;
 import com.mbeddr.mpsutil.grammarcells.runtime.SavedCaretPosition;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import com.mbeddr.mpsutil.grammarcells.runtime.DelegateToParentCellAction;
-import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
-import jetbrains.mps.openapi.editor.style.Style;
-import jetbrains.mps.editor.runtime.style.StyleImpl;
-import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
@@ -121,13 +121,27 @@ import org.jetbrains.mps.openapi.language.SConcept;
     alternationCondition = nodeCondition_mc4j88_a1a0();
     EditorCell editorCell = null;
     if (alternationCondition) {
-      editorCell = createCustomFactory_1();
+      editorCell = createCollection_1();
     } else {
       editorCell = createSideTransformationCell4_0();
     }
     return editorCell;
   }
   private boolean nodeCondition_mc4j88_a1a0() {
+    return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(myNode, LINKS.type$1eya)).isNotEmpty();
+  }
+  private EditorCell createCollection_1() {
+    jetbrains.mps.nodeEditor.cells.EditorCell_Collection editorCell = new jetbrains.mps.nodeEditor.cells.EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_mc4j88_a1a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    if (nodeCondition_mc4j88_a0a1a0()) {
+      editorCell.addEditorCell(createCustomFactory_1());
+    }
+    return editorCell;
+  }
+  private boolean nodeCondition_mc4j88_a0a1a0() {
     return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(myNode, LINKS.type$1eya)).isNotEmpty();
   }
   private EditorCell createCustomFactory_0(final EditorContext editorContext, final SNode node) {
@@ -179,7 +193,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return jetbrains.mps.nodeEditor.cells.EditorCell_Collection.createVertical(editorContext, node);
     }
 
-    final EditorCell cell = createCollection_1();
+    final EditorCell cell = createCollection_2();
     EditorCell editorCell = new _FunctionTypes._return_P0_E0<EditorCell>() {
       public EditorCell invoke() {
         final SNode childNode = SLinkOperations.getTarget(myNode, LINKS.type$1eya);
@@ -205,9 +219,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createCustomFactory_3() {
     return createCustomFactory_2(getEditorContext(), myNode);
   }
-  private EditorCell createCollection_1() {
+  private EditorCell createCollection_2() {
     jetbrains.mps.nodeEditor.cells.EditorCell_Collection editorCell = new jetbrains.mps.nodeEditor.cells.EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
-    editorCell.setCellId("Collection_mc4j88_a0a1a0");
+    editorCell.setCellId("Collection_mc4j88_a0a0b0a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
@@ -217,19 +231,19 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createConstant_0() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
-    editorCell.setCellId("Constant_mc4j88_a0a0b0a");
+    editorCell.setCellId("Constant_mc4j88_a0a0a1a0");
     editorCell.setDefaultText("");
     return editorCell;
   }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new typeSingleRoleHandler_mc4j88_b0a0b0a(myNode, LINKS.type$1eya, getEditorContext());
+    SingleRoleCellProvider provider = new typeSingleRoleHandler_mc4j88_b0a0a1a0(myNode, LINKS.type$1eya, getEditorContext());
     return provider.createCell();
   }
-  private static class typeSingleRoleHandler_mc4j88_b0a0b0a extends SingleRoleCellProvider {
+  private static class typeSingleRoleHandler_mc4j88_b0a0a1a0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public typeSingleRoleHandler_mc4j88_b0a0b0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public typeSingleRoleHandler_mc4j88_b0a0a1a0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -293,6 +307,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     public List<TransformationMenuItem> createItems(final TransformationMenuContext ctx) {
       List<TransformationMenuItem> result = ListSequence.fromList(new ArrayList<TransformationMenuItem>());
       final SNode sourceNode = ctx.getNode();
+      EditorContext editorContext = ctx.getEditorContext();
       final Iterable<String> matchingTexts = new StringOrSequenceQuery() {
         public Object queryStringOrSequence() {
           return Sequence.<String>singleton(":");
@@ -304,12 +319,15 @@ import org.jetbrains.mps.openapi.language.SConcept;
           @Override
           public void execute(@NotNull String pattern) {
             final SNode sourceNode = ctx.getNode();
+            EditorContext editorContext = ctx.getEditorContext();
             SNode newNode = SNodeFactoryOperations.setNewChild(SNodeOperations.cast(sourceNode, CONCEPTS.Attribute$w0), LINKS.type$1eya, null);
           }
           @Override
           public SAbstractConcept getOutputConcept() {
             return CONCEPTS.Attribute$w0;
           }
+
+
         });
       }
       return result;

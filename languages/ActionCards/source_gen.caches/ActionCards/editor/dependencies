@@ -255,6 +255,7 @@
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.EditorUtil" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.BaseDiagramECell" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.DiagramCreationContext" />
+    <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.ElkLayouter" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.RootDCell" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.RootDiagramECell" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.SubDiagramECell" />
@@ -1975,7 +1976,6 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.constraints.ConstraintsCanBeFacade" />
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageRegistry" />
-    <classNode dependClassName="jetbrains.mps.smodel.presentation.NodePresentationUtil" />
     <classNode dependClassName="org.jetbrains.annotations.NotNull" />
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />

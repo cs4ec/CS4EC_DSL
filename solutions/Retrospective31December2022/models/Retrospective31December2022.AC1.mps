@@ -25,11 +25,6 @@
       <concept id="2876623929997959972" name="ActionCards.structure.PatientArrivalLine" flags="ng" index="c0n4t">
         <property id="2876623929997959984" name="NumPatientsInHour" index="c0n49" />
       </concept>
-      <concept id="6097839017212103992" name="ActionCards.structure.TestCapturedDisease" flags="ng" index="iVyPZ">
-        <property id="6097839017212104047" name="Sensitivity" index="iVyOC" />
-        <property id="6097839017212104048" name="Specificity" index="iVyOR" />
-        <reference id="6097839017212104069" name="disease" index="iVyR2" />
-      </concept>
       <concept id="1645043697875742234" name="ActionCards.structure.ProcessingTimeLine" flags="ng" index="ldb2t">
         <property id="1645043697875742262" name="Time" index="ldb2L" />
         <property id="1645043697875742264" name="Occurances" index="ldb2Z" />
@@ -102,7 +97,7 @@
         <child id="6755843002504464494" name="possibleValue" index="3JlXG4" />
       </concept>
       <concept id="7828349744265634127" name="ActionCards.structure.Test" flags="ng" index="3oQGfi">
-        <child id="3787511550157762889" name="TestingProcess" index="_m43T" />
+        <child id="3549288998120194503" name="Captures" index="33qpDe" />
         <child id="7828349744265634184" name="ProcessingTimeTable" index="3oQGcl" />
       </concept>
       <concept id="7828349744265630119" name="ActionCards.structure.ObservationTest" flags="ng" index="3oQJcU">
@@ -130,6 +125,7 @@
         <reference id="1758249876465254186" name="patientProperty" index="1DsR7o" />
         <child id="1758249876462569987" name="checkValue" index="1CySjL" />
       </concept>
+      <concept id="1862364223830857512" name="ActionCards.structure.TestOutcome" flags="ng" index="3E3ulc" />
       <concept id="1758249876500222036" name="ActionCards.structure.RecentCovidContactProperty" flags="ng" index="1FjhUA" />
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
@@ -154,7 +150,10 @@
         <reference id="1758249876434489739" name="disease" index="1R9xXT" />
       </concept>
       <concept id="329726013640088743" name="ActionCards.structure.DiseaseTest" flags="ng" index="3SEB2C">
-        <child id="6097839017212104259" name="CapturedDiseases" index="iVyS4" />
+        <property id="3549288998120194512" name="sensitivity" index="33qpDp" />
+        <property id="3549288998120194514" name="specificity" index="33qpDr" />
+        <reference id="3549288998120194507" name="disease" index="33qpD2" />
+        <child id="3549288998120194517" name="possibleOutcomes" index="33qpDs" />
       </concept>
     </language>
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage">
@@ -2548,67 +2547,6 @@
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="LabTechnician" />
   </node>
-  <node concept="3SEB2C" id="5ivS4t6wkhV">
-    <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LFD" />
-    <node concept="iVyPZ" id="5ivS4t6wkhW" role="iVyS4">
-      <property role="iVyOC" value="70" />
-      <property role="iVyOR" value="99" />
-      <ref role="iVyR2" node="5R1$QEMKFjT" resolve="COVID" />
-    </node>
-    <node concept="iVyPZ" id="5R1$QEMMkR5" role="iVyS4">
-      <property role="iVyOC" value="88" />
-      <property role="iVyOR" value="95" />
-      <ref role="iVyR2" node="5R1$QEMKFkE" resolve="FluA" />
-    </node>
-    <node concept="iVyPZ" id="5R1$QEMMkS2" role="iVyS4">
-      <property role="iVyOC" value="93" />
-      <property role="iVyOR" value="98" />
-      <ref role="iVyR2" node="5R1$QEMMkRG" resolve="FluB" />
-    </node>
-    <node concept="ldbdM" id="6MzSDQOvNej" role="3oQGcl">
-      <node concept="ldb2t" id="3JSrgvQmfzl" role="ldb3A">
-        <property role="ldb2L" value="10" />
-        <property role="ldb2Z" value="1" />
-      </node>
-      <node concept="ldb2t" id="6MzSDQOvNel" role="ldb3A">
-        <property role="ldb2L" value="15" />
-        <property role="ldb2Z" value="1" />
-      </node>
-    </node>
-    <node concept="1HTXKU" id="4Y76Qe1vMhI" role="_m43T">
-      <ref role="1HTXKa" node="4Y76Qe1vMgu" resolve="LFD_Testing" />
-    </node>
-  </node>
-  <node concept="3SEB2C" id="5ivS4t6xSC2">
-    <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LIAT" />
-    <node concept="iVyPZ" id="5ivS4t6xSC3" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMKFjT" resolve="COVID" />
-    </node>
-    <node concept="iVyPZ" id="5ivS4t6xSCh" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMKFkE" resolve="FluA" />
-    </node>
-    <node concept="iVyPZ" id="5R1$QEMMkSo" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMMkRG" resolve="FluB" />
-    </node>
-    <node concept="ldbdM" id="6MzSDQOvNew" role="3oQGcl">
-      <node concept="ldb2t" id="6MzSDQOvNey" role="ldb3A">
-        <property role="ldb2L" value="15" />
-        <property role="ldb2Z" value="1" />
-      </node>
-      <node concept="ldb2t" id="7NybO1sdaKl" role="ldb3A">
-        <property role="ldb2L" value="25" />
-        <property role="ldb2Z" value="1" />
-      </node>
-    </node>
-  </node>
   <node concept="3oQJd$" id="6MzSDQOvLH$">
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJeJ" id="6MzSDQOvLHI" role="3oQJ2u">
@@ -2809,95 +2747,9 @@
     </node>
     <node concept="1FPxa$" id="1xAzJ9P01j9" role="1FYssH" />
   </node>
-  <node concept="3SEB2C" id="1xAzJ9NaSPv">
-    <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LabPCR" />
-    <node concept="iVyPZ" id="1xAzJ9NaSPw" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMKFjT" resolve="COVID" />
-    </node>
-    <node concept="iVyPZ" id="1xAzJ9NaSPx" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMKFkE" resolve="FluA" />
-    </node>
-    <node concept="iVyPZ" id="1xAzJ9NaSP$" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMMkRG" resolve="FluB" />
-    </node>
-    <node concept="ldbdM" id="1xAzJ9PFChe" role="3oQGcl">
-      <node concept="ldb2t" id="1xAzJ9PFChg" role="ldb3A">
-        <property role="ldb2L" value="300" />
-        <property role="ldb2Z" value="15" />
-      </node>
-      <node concept="ldb2t" id="3JSrgvQmfys" role="ldb3A">
-        <property role="ldb2L" value="420" />
-        <property role="ldb2Z" value="220" />
-      </node>
-      <node concept="ldb2t" id="3JSrgvQmfyv" role="ldb3A">
-        <property role="ldb2L" value="540" />
-        <property role="ldb2Z" value="490" />
-      </node>
-      <node concept="ldb2t" id="3JSrgvQmfyP" role="ldb3A">
-        <property role="ldb2L" value="660" />
-        <property role="ldb2Z" value="390" />
-      </node>
-      <node concept="ldb2t" id="3JSrgvQmB7m" role="ldb3A">
-        <property role="ldb2L" value="780" />
-        <property role="ldb2Z" value="160" />
-      </node>
-      <node concept="ldb2t" id="3JSrgvQmB7s" role="ldb3A">
-        <property role="ldb2L" value="900" />
-        <property role="ldb2Z" value="40" />
-      </node>
-      <node concept="ldb2t" id="3JSrgvQmB7z" role="ldb3A">
-        <property role="ldb2L" value="1020" />
-        <property role="ldb2Z" value="55" />
-      </node>
-      <node concept="ldb2t" id="3JSrgvQmB7F" role="ldb3A">
-        <property role="ldb2L" value="1140" />
-        <property role="ldb2Z" value="95" />
-      </node>
-      <node concept="ldb2t" id="3JSrgvQmB7O" role="ldb3A">
-        <property role="ldb2L" value="1260" />
-        <property role="ldb2Z" value="55" />
-      </node>
-    </node>
-  </node>
   <node concept="2GGxxg" id="1xAzJ9NxGdV">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="PreAdmissionStaff" />
-  </node>
-  <node concept="3SEB2C" id="7$JgZMbkIKd">
-    <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="Cepheid" />
-    <node concept="iVyPZ" id="7$JgZMbkIKe" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMKFjT" resolve="COVID" />
-    </node>
-    <node concept="iVyPZ" id="7$JgZMbkIKf" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMKFkE" resolve="FluA" />
-    </node>
-    <node concept="iVyPZ" id="7$JgZMbkIKi" role="iVyS4">
-      <property role="iVyOC" value="100" />
-      <property role="iVyOR" value="100" />
-      <ref role="iVyR2" node="5R1$QEMMkRG" resolve="FluB" />
-    </node>
-    <node concept="ldbdM" id="7$JgZMbkIKm" role="3oQGcl">
-      <node concept="ldb2t" id="7$JgZMbkIKo" role="ldb3A">
-        <property role="ldb2L" value="90" />
-        <property role="ldb2Z" value="1" />
-      </node>
-      <node concept="ldb2t" id="7$JgZMbkIKq" role="ldb3A">
-        <property role="ldb2L" value="120" />
-        <property role="ldb2Z" value="1" />
-      </node>
-    </node>
   </node>
   <node concept="j3bMj" id="EFW1mZkn0D">
     <property role="3GE5qa" value="ED Layout" />
@@ -4503,25 +4355,6 @@
       <property role="2qS95b" value="145" />
       <property role="2qS95m" value="245" />
       <property role="2qS95i" value="200" />
-    </node>
-  </node>
-  <node concept="3SEB2C" id="2XblIMS17kI">
-    <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="PHEThreeAlt" />
-    <node concept="iVyPZ" id="2XblIMS17kJ" role="iVyS4">
-      <property role="iVyOC" value="95" />
-      <property role="iVyOR" value="90" />
-      <ref role="iVyR2" node="5R1$QEMKFjT" resolve="COVID" />
-    </node>
-    <node concept="ldbdM" id="2XblIN1G_Fq" role="3oQGcl">
-      <node concept="ldb2t" id="2XblIN1G_Fs" role="ldb3A">
-        <property role="ldb2L" value="5" />
-        <property role="ldb2Z" value="1" />
-      </node>
-      <node concept="ldb2t" id="7NybO1sdaKi" role="ldb3A">
-        <property role="ldb2L" value="6" />
-        <property role="ldb2Z" value="1" />
-      </node>
     </node>
   </node>
   <node concept="IzEoG" id="34hhAWxKdrf">
@@ -7590,6 +7423,17 @@
     </node>
     <node concept="3oQJ3q" id="7$JgZMbkPtm" role="3oQJ31">
       <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
+    </node>
+  </node>
+  <node concept="3oQGfi" id="32D7375LZ8r">
+    <property role="3GE5qa" value="Tests" />
+    <property role="TrG5h" value="LIAT" />
+    <node concept="3SEB2C" id="32D7375LZ8B" role="33qpDe">
+      <property role="33qpDp" value="80" />
+      <property role="33qpDr" value="99" />
+      <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
+      <node concept="3E3ulc" id="32D7375LZje" role="33qpDs" />
+      <node concept="3E3ulc" id="32D7375LZiS" role="33qpDs" />
     </node>
   </node>
 </model>

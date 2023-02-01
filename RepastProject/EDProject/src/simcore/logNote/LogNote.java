@@ -11,7 +11,9 @@ import repast.simphony.engine.schedule.ScheduledMethod;
 
 public class LogNote {
 	
-	private String projectPath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\RepastProject\\EDProject\\";
+//	private String projectPath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\RepastProject\\EDProject\\";
+
+	private String projectPath = "/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/";
 	private static LogNote logInstance = null;
 	
 	private LogNote() {}
@@ -27,7 +29,7 @@ public class LogNote {
 	
 	public void clearOldContents() {
 		// Clear old logs
-		File parentFolder = new File(projectPath + "output\\");
+		File parentFolder = new File(projectPath + "output/");
 		try {
 			FileUtils.cleanDirectory(parentFolder);
 		} catch (IOException e) {
@@ -46,7 +48,7 @@ public class LogNote {
 	
 	public void WriteLog(String fileName, String content) {
 		try {
-			File file = new File(projectPath + "output\\" + fileName + ".txt");
+			File file = new File(projectPath + "output/" + fileName + ".txt");
 			
 			if(!file.exists()){
 				System.out.println("Generating Log: " + file.getPath());

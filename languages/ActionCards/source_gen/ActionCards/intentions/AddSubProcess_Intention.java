@@ -20,27 +20,21 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public final class AddSubProcess_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
   private Collection<IntentionExecutable> myCachedExecutable;
+
   public AddSubProcess_Intention() {
     super(Kind.NORMAL, false, new SNodePointer("r:0e133877-5dd0-4049-8f39-92ae11bca168(ActionCards.intentions)", "5730579165026210361"));
   }
+
   @Override
   public String getPresentation() {
     return "AddSubProcess";
   }
-  @Override
-  public boolean isApplicable(final SNode node, final EditorContext editorContext) {
-    if (!(isApplicableToNode(node, editorContext))) {
-      return false;
-    }
-    return true;
-  }
-  private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
-    return false;
-  }
+
   @Override
   public boolean isSurroundWith() {
     return false;
   }
+
   public Collection<IntentionExecutable> instances(final SNode node, final EditorContext context) {
     if (myCachedExecutable == null) {
       myCachedExecutable = Collections.<IntentionExecutable>singletonList(new IntentionImplementation());
@@ -50,19 +44,36 @@ public final class AddSubProcess_Intention extends AbstractIntentionDescriptor i
   /*package*/ final class IntentionImplementation extends AbstractIntentionExecutable {
     public IntentionImplementation() {
     }
+
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
       return "Add Process";
     }
+
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       if (Objects.equals(SLinkOperations.getTarget(node, LINKS.TestingProcess$hIgq), null)) {
       }
     }
+
+    @Override
+    public boolean isApplicable(final SNode node, final EditorContext editorContext) {
+      if (!(isApplicableToNode(node, editorContext))) {
+        return false;
+      }
+      return true;
+    }
+
+    private boolean isApplicableToNode(final SNode node, final EditorContext editorContext) {
+      return false;
+    }
+
+
     @Override
     public IntentionDescriptor getDescriptor() {
       return AddSubProcess_Intention.this;
     }
+
   }
 
   private static final class LINKS {

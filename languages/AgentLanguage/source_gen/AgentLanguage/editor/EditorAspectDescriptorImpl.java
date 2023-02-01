@@ -215,22 +215,23 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
     }
     return Collections.<ConceptEditor>emptyList();
   }
-
+  private Collection<ConceptEditorComponent> getDeclaredEC_0(String editorComponentId) {
+    if ("AgentLanguage.editor.DummyForGrammarCells".equals(editorComponentId)) {
+      return Collections.singletonList(new DummyForGrammarCells());
+    }
+    return Collections.emptyList();
+  }
   @NotNull
   public Collection<ConceptEditorComponent> getDeclaredEditorComponents(SAbstractConcept concept, String editorComponentId) {
     SAbstractConcept cncpt = ((SAbstractConcept) concept);
     switch (conceptIndex1.index(cncpt)) {
       case 0:
-        if (true) {
-          if ("AgentLanguage.editor.DummyForGrammarCells".equals(editorComponentId)) {
-            return Collections.<ConceptEditorComponent>singletonList(new DummyForGrammarCells());
-          }
-        }
-        break;
+        return getDeclaredEC_0(editorComponentId);
       default:
     }
-    return Collections.<ConceptEditorComponent>emptyList();
+    return Collections.emptyList();
   }
+
 
   @NotNull
   @Override
