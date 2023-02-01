@@ -125,13 +125,13 @@ import org.jetbrains.mps.openapi.language.SContainmentLink;
               PartialTableExtractor.pushNewInstance();
               Grid grid = new Grid();
 
-              // column headers 
+              // column headers
               {
                 List<HeaderGrid> headerGrids = new ArrayList<HeaderGrid>(0);
                 grid.setColumnHeaders(headerGrids);
               }
 
-              // row headers 
+              // row headers
               {
                 List<HeaderGrid> headerGrids = new ArrayList<HeaderGrid>(0);
                 grid.setRowHeaders(headerGrids);

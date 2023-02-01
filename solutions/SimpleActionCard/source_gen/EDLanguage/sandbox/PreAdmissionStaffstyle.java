@@ -9,9 +9,10 @@ import saf.v3d.scene.Position;
 import java.awt.Color;
 
 public class PreAdmissionStaffstyle extends DefaultStyleOGL2D {
+
   @Override
   public VSpatial getVSpatial(Object object, VSpatial spatial) {
-    // Create the spatial and return it. 
+    // Create the spatial and return it.
     spatial = shapeFactory.createCircle((float) 0.45, 16);
     return spatial;
   }

@@ -49,7 +49,7 @@ public class StaffNumber_SubstituteMenu extends SubstituteMenuBase {
   public class SMP_ReferenceScope_vxba4n_a extends ReferenceScopeSubstituteMenuPart {
 
     public SMP_ReferenceScope_vxba4n_a() {
-      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
+      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
       super((SAbstractConcept) CONCEPTS.StaffNumber$ml, LINKS.staff$HYEa);
     }
     @NotNull

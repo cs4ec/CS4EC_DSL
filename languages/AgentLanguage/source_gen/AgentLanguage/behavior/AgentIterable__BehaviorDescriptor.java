@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -24,7 +23,7 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
 public final class AgentIterable__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x1c9634cb48bcf3cbL, "AgentLanguage.structure.AgentIterable");
 
-  public static final SMethod<String> getType_id1MmdcH8OyWK = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getType").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1MmdcH8OyWK").build();
+  public static final SMethod<String> getType_id1MmdcH8OyWK = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getType").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1MmdcH8OyWK").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getType_id1MmdcH8OyWK);
 

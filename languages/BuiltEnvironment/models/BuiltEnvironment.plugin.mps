@@ -153,7 +153,7 @@
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
-        <reference id="1171315804605" name="concept" index="2RRcyH" />
+        <child id="6750920497477046361" name="conceptArgument" index="3MHsoP" />
       </concept>
       <concept id="1171323947159" name="jetbrains.mps.lang.smodel.structure.Model_NodesOperation" flags="nn" index="2SmgA7">
         <child id="1758937410080001570" name="conceptArgument" index="1dBWTz" />
@@ -402,7 +402,9 @@
                     <node concept="I4A8Y" id="EFW1mYTLV2" role="2OqNvi" />
                   </node>
                   <node concept="2RRcyG" id="EFW1mYTMhW" role="2OqNvi">
-                    <ref role="2RRcyH" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
+                    <node concept="chp4Y" id="1fQ3pJcUc1U" role="3MHsoP">
+                      <ref role="cht4Q" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
+                    </node>
                   </node>
                 </node>
                 <node concept="3clFbS" id="EFW1mYTLoO" role="2LFqv$">
@@ -1271,7 +1273,9 @@
                   <node concept="I4A8Y" id="5Lup6bke$3M" role="2OqNvi" />
                 </node>
                 <node concept="2RRcyG" id="5Lup6bke$3N" role="2OqNvi">
-                  <ref role="2RRcyH" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
+                  <node concept="chp4Y" id="1fQ3pJcUc1V" role="3MHsoP">
+                    <ref role="cht4Q" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
+                  </node>
                 </node>
               </node>
               <node concept="3clFbS" id="5Lup6bke$3O" role="2LFqv$">

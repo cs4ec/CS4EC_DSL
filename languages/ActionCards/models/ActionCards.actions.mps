@@ -96,7 +96,7 @@
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
       </concept>
       <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
-        <reference id="1171315804605" name="concept" index="2RRcyH" />
+        <child id="6750920497477046361" name="conceptArgument" index="3MHsoP" />
       </concept>
       <concept id="3562215692195599741" name="jetbrains.mps.lang.smodel.structure.SLinkImplicitSelect" flags="nn" index="13MTOL">
         <reference id="3562215692195600259" name="link" index="13MTZf" />
@@ -356,7 +356,9 @@
                       <node concept="2OqwBi" id="1xAzJ9Nlkg8" role="2Oq$k0">
                         <node concept="1Q6Npb" id="1xAzJ9Nlkdv" role="2Oq$k0" />
                         <node concept="2RRcyG" id="1xAzJ9Nlklr" role="2OqNvi">
-                          <ref role="2RRcyH" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                          <node concept="chp4Y" id="1fQ3pJcUc0J" role="3MHsoP">
+                            <ref role="cht4Q" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                          </node>
                         </node>
                       </node>
                       <node concept="13MTOL" id="1xAzJ9Nloln" role="2OqNvi">
@@ -425,7 +427,9 @@
                       <node concept="2OqwBi" id="1xAzJ9PnFGr" role="2Oq$k0">
                         <node concept="1Q6Npb" id="1xAzJ9PnFGs" role="2Oq$k0" />
                         <node concept="2RRcyG" id="1xAzJ9PnFGt" role="2OqNvi">
-                          <ref role="2RRcyH" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                          <node concept="chp4Y" id="1fQ3pJcUc0K" role="3MHsoP">
+                            <ref role="cht4Q" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                          </node>
                         </node>
                       </node>
                       <node concept="13MTOL" id="1xAzJ9PnFGu" role="2OqNvi">

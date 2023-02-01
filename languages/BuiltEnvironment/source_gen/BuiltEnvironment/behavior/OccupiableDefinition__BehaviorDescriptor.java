@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -23,7 +22,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class OccupiableDefinition__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L, "BuiltEnvironment.structure.OccupiableDefinition");
 
-  public static final SMethod<String> getFormattedName_id34hhAWvP6xc = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getFormattedName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("34hhAWvP6xc").build();
+  public static final SMethod<String> getFormattedName_id34hhAWvP6xc = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getFormattedName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("34hhAWvP6xc").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getFormattedName_id34hhAWvP6xc);
 

@@ -29,12 +29,15 @@ public class map_PatientProfile extends Actor {
   }
 
   protected Signal searchForSignals(Board board) {
-    // Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for 
+    // Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for
     List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(new Predicate<Signal>() {
       public boolean test(Signal s) {
         return s.checkPreCondition(context, map_PatientProfile.this);
       }
     }).collect(Collectors.toList());
+
+
+
     List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(new Predicate<Signal>() {
       public boolean test(Signal s) {
         return s.checkPreCondition(context, map_PatientProfile.this);
@@ -44,10 +47,10 @@ public class map_PatientProfile extends Actor {
     if (plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
       return null;
     }
-    // First see if there are any direct messages for me and prioritise those 
+    // First see if there are any direct messages for me and prioritise those
     Signal s = selectSignal(plstDirectSignals);
     if (s == null) {
-      // If none, select a message for my class type 
+      // If none, select a message for my class type
       s = selectSignal(plstSignals);
     }
     return s;
@@ -63,13 +66,13 @@ public class map_PatientProfile extends Actor {
 
   protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
     ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
-    // First, select the room that contains my patient (if my current action involves the patient) 
+    // First, select the room that contains my patient (if my current action involves the patient)
     for (Room pRoom : pRooms) {
       if (behaviour.getSignalTrigger() != null && behaviour.getSignalTrigger().GetData("patient") != null && pRoom.getOccupiers().contains(behaviour.getSignalTrigger().GetData("patient"))) {
         return pRoom;
       }
     }
-    // If my patient isn't currently in that room, then consider other options 
+    // If my patient isn't currently in that room, then consider other options
     Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
       public int compare(Room r1, Room r2) {
         return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));

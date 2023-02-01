@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+	<parameter name="SecondsPerTick"
+		displayName="Seconds Per Tick" type="int" defaultValue="1"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="randomSeed"
+		displayName="Default Random Seed" type="int" defaultValue="__NULL__"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="UsePathFinding"
+		displayName="Use path finding" type="boolean" defaultValue="false"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
+  	<parameter name="InfectionSpreadChance:(instance of Asymptomatic)-10_a0"
+  		displayName="InfectionSpreadChance:(instance of Asymptomatic)-10_a0" type="double" defaultValue="0.000003"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientnullInfectionStatusSusceptible"
+  		displayName="patientnullInfectionStatusSusceptible" type="double" defaultValue="10"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientadmissionRouteEmergencyAttendance"
+  		displayName="patientadmissionRouteEmergencyAttendance" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+</parameters>

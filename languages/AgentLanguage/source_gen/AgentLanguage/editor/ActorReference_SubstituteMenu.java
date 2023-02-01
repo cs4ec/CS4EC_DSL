@@ -49,7 +49,7 @@ public class ActorReference_SubstituteMenu extends SubstituteMenuBase {
   public class SMP_ReferenceScope_pmi0nl_a extends ReferenceScopeSubstituteMenuPart {
 
     public SMP_ReferenceScope_pmi0nl_a() {
-      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
+      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
       super((SAbstractConcept) CONCEPTS.ActorReference$8P, LINKS.actor$ls$v);
     }
     @NotNull

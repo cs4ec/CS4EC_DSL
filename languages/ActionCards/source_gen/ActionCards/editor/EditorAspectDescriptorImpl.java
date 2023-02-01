@@ -183,7 +183,7 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
       case 0:
         return Collections.<TransformationMenu>singletonList(new ActionDurationEmptyLine_TransformationMenu());
       case 1:
-        return Collections.<TransformationMenu>singletonList(new template_GrammarCellsSideTransformationsMenu());
+        return Arrays.asList(new TransformationMenu[]{new IncludeBeforeAfterTransformations(), new template_GrammarCellsSideTransformationsMenu()});
       case 2:
         return Collections.<TransformationMenu>singletonList(new InfectionStatusCondition_TransformationMenu());
       case 3:

@@ -2,7 +2,7 @@
 <model ref="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)">
   <persistence version="9" />
   <languages>
-    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="18" />
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="2" />
     <use id="d8f591ec-4d86-4af2-9f92-a9e93c803ffa" name="jetbrains.mps.lang.scopes" version="0" />
     <use id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base" version="3" />
@@ -144,7 +144,7 @@
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
-        <reference id="1171315804605" name="concept" index="2RRcyH" />
+        <child id="6750920497477046361" name="conceptArgument" index="3MHsoP" />
       </concept>
       <concept id="1180031783296" name="jetbrains.mps.lang.smodel.structure.Concept_IsSubConceptOfOperation" flags="nn" index="2Zo12i">
         <child id="1180031783297" name="conceptArgument" index="2Zo12j" />
@@ -154,7 +154,7 @@
       </concept>
       <concept id="6677504323281689838" name="jetbrains.mps.lang.smodel.structure.SConceptType" flags="in" index="3bZ5Sz" />
       <concept id="1182511038748" name="jetbrains.mps.lang.smodel.structure.Model_NodesIncludingImportedOperation" flags="nn" index="1j9C0f">
-        <reference id="1182511038750" name="concept" index="1j9C0d" />
+        <child id="6750920497477143623" name="conceptArgument" index="3MHPCF" />
       </concept>
       <concept id="1139621453865" name="jetbrains.mps.lang.smodel.structure.Node_IsInstanceOfOperation" flags="nn" index="1mIQ4w">
         <child id="1177027386292" name="conceptArgument" index="cj9EA" />
@@ -565,7 +565,9 @@
                       <node concept="I4A8Y" id="1xAzJ9L0wfC" role="2OqNvi" />
                     </node>
                     <node concept="1j9C0f" id="1xAzJ9L0wCE" role="2OqNvi">
-                      <ref role="1j9C0d" to="e88n:1xAzJ9JLx51" resolve="VaccinationStatus" />
+                      <node concept="chp4Y" id="1fQ3pJcUc0P" role="3MHPCF">
+                        <ref role="cht4Q" to="e88n:1xAzJ9JLx51" resolve="VaccinationStatus" />
+                      </node>
                     </node>
                   </node>
                 </node>
@@ -765,7 +767,9 @@
                         <node concept="I4A8Y" id="1xAzJ9NfVPf" role="2OqNvi" />
                       </node>
                       <node concept="2RRcyG" id="1xAzJ9NfW3A" role="2OqNvi">
-                        <ref role="2RRcyH" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                        <node concept="chp4Y" id="1fQ3pJcUc0L" role="3MHsoP">
+                          <ref role="cht4Q" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                        </node>
                       </node>
                     </node>
                     <node concept="13MTOL" id="1xAzJ9Ng0qm" role="2OqNvi">
@@ -925,7 +929,9 @@
                         <node concept="I4A8Y" id="1xAzJ9PnEJL" role="2OqNvi" />
                       </node>
                       <node concept="2RRcyG" id="1xAzJ9PnEJM" role="2OqNvi">
-                        <ref role="2RRcyH" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                        <node concept="chp4Y" id="1fQ3pJcUc0M" role="3MHsoP">
+                          <ref role="cht4Q" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                        </node>
                       </node>
                     </node>
                     <node concept="13MTOL" id="1xAzJ9PnEJN" role="2OqNvi">

@@ -36,20 +36,12 @@ import com.mbeddr.mpsutil.grammarcells.runtime.Parser;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.constraints.ConstraintsCanBeFacade;
 import jetbrains.mps.core.aspects.constraints.rules.kinds.ContainmentContext;
-import jetbrains.mps.core.aspects.constraints.rules.kinds.CanBeAncestorContext;
 import com.mbeddr.mpsutil.grammarcells.runtime.MultiTextActionItem;
 import jetbrains.mps.smodel.presentation.NodePresentationUtil;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.action.SNodeFactoryOperations;
 import jetbrains.mps.editor.runtime.selection.SelectionUtil;
 import com.mbeddr.mpsutil.grammarcells.runtime.SavedCaretPosition;
-import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
-import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
-import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.AttributeOperations;
-import java.util.Objects;
-import com.mbeddr.mpsutil.grammarcells.runtime.StringOrSequenceQuery;
-import com.mbeddr.mpsutil.grammarcells.runtime.EditorHierachyCache;
 import jetbrains.mps.openapi.editor.cells.SubstituteAction;
 import jetbrains.mps.smodel.IOperationContext;
 import jetbrains.mps.smodel.action.NodeSubstituteActionsFactoryContext;
@@ -112,7 +104,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                           public SNode createNode(@NotNull String pattern) {
                             SNode nodeToWrap = super.createNode(pattern);
                             wrappedNode = nodeToWrap;
-                            // use setupNode after setting wrapped element to allow access to the wrapped element in node factories 
+                            // use setupNode after setting wrapped element to allow access to the wrapped element in node factories
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
                             SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$D_));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
@@ -190,7 +182,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                           public SNode createNode(@NotNull String pattern) {
                             SNode nodeToWrap = super.createNode(pattern);
                             wrappedNode = nodeToWrap;
-                            // use setupNode after setting wrapped element to allow access to the wrapped element in node factories 
+                            // use setupNode after setting wrapped element to allow access to the wrapped element in node factories
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
                             SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$D_));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
@@ -268,7 +260,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                           public SNode createNode(@NotNull String pattern) {
                             SNode nodeToWrap = super.createNode(pattern);
                             wrappedNode = nodeToWrap;
-                            // use setupNode after setting wrapped element to allow access to the wrapped element in node factories 
+                            // use setupNode after setting wrapped element to allow access to the wrapped element in node factories
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
                             SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$D_));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
@@ -347,7 +339,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                         final Iterable<String> matchingText = Sequence.<String>singleton("if");
                         if (Sequence.fromIterable(matchingText).isNotEmpty()) {
                           boolean sideTransformationEnabled = ConstraintsCanBeFacade.checkCanBeParent(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
-                          sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeAncestor(new CanBeAncestorContext.Builder().ancestorNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
+                          sideTransformationEnabled &= GrammarCellsUtil.canBeAncestor(SNodeOperations.getParent(sourceNode), subconcept, sourceNode.getContainmentLink());
                           sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeChild(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
                           if (sideTransformationEnabled) {
                             ListSequence.fromList(result).addSequence(Sequence.fromIterable(new MultiTextActionItem(matchingText, _context) {
@@ -435,7 +427,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                         final Iterable<String> matchingText = Sequence.<String>singleton("if");
                         if (Sequence.fromIterable(matchingText).isNotEmpty()) {
                           boolean sideTransformationEnabled = ConstraintsCanBeFacade.checkCanBeParent(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
-                          sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeAncestor(new CanBeAncestorContext.Builder().ancestorNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
+                          sideTransformationEnabled &= GrammarCellsUtil.canBeAncestor(SNodeOperations.getParent(sourceNode), subconcept, sourceNode.getContainmentLink());
                           sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeChild(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
                           if (sideTransformationEnabled) {
                             ListSequence.fromList(result).addSequence(Sequence.fromIterable(new MultiTextActionItem(matchingText, _context) {
@@ -500,7 +492,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                         final Iterable<String> matchingText = Sequence.<String>singleton("");
                         if (Sequence.fromIterable(matchingText).isNotEmpty()) {
                           boolean sideTransformationEnabled = ConstraintsCanBeFacade.checkCanBeParent(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
-                          sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeAncestor(new CanBeAncestorContext.Builder().ancestorNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
+                          sideTransformationEnabled &= GrammarCellsUtil.canBeAncestor(SNodeOperations.getParent(sourceNode), subconcept, sourceNode.getContainmentLink());
                           sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeChild(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
                           if (sideTransformationEnabled) {
                             ListSequence.fromList(result).addSequence(Sequence.fromIterable(new MultiTextActionItem(matchingText, _context) {
@@ -588,7 +580,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                         final Iterable<String> matchingText = Sequence.<String>singleton("if");
                         if (Sequence.fromIterable(matchingText).isNotEmpty()) {
                           boolean sideTransformationEnabled = ConstraintsCanBeFacade.checkCanBeParent(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
-                          sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeAncestor(new CanBeAncestorContext.Builder().ancestorNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
+                          sideTransformationEnabled &= GrammarCellsUtil.canBeAncestor(SNodeOperations.getParent(sourceNode), subconcept, sourceNode.getContainmentLink());
                           sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeChild(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
                           if (sideTransformationEnabled) {
                             ListSequence.fromList(result).addSequence(Sequence.fromIterable(new MultiTextActionItem(matchingText, _context) {
@@ -651,526 +643,6 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
             }
           }.query(_context)));
         }
-      }
-      {
-        final EditorContext editorContext = _context.getEditorContext();
-        List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> redirectedBefore = ListSequence.fromList(new ArrayList<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>());
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(null);
-
-        List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> redirectedAfter = ListSequence.fromList(new ArrayList<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>());
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
-          public TransformationMenuContext redirect() {
-            // redirect to condition 
-            final SNode sourceNode = _context.getNode();
-
-            // Use the grammar rules for a deep search 
-            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Branch$sq, LINKS.condition$UnEW);
-            if (parentNode != null) {
-              return _context.withNode(parentNode);
-            }
-
-            // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Expression$D_) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
-              TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
-              return parentContext;
-            }
-
-            return null;
-          }
-        }.redirect(), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        new Object() {
-          public void withRedirectedContext(final TransformationMenuContext _context) {
-            if (_context == null) {
-              return;
-            }
-            final SNode sourceNode = _context.getNode();
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Branch$sq)) {
-              final Iterable<String> matchingTexts = new StringOrSequenceQuery() {
-                public Object queryStringOrSequence() {
-                  return new Object() {
-                    public Iterable<String> query(SNode node) {
-                      return new StringOrSequenceQuery() {
-                        public Object queryStringOrSequence() {
-                          return "if";
-                        }
-                      }.query();
-                    }
-
-                  }.query(sourceNode);
-                }
-              }.query();
-              final boolean isApplicable = new Object() {
-                public boolean query() {
-                  return (SLinkOperations.getTarget(SNodeOperations.cast(_context.getNode(), CONCEPTS.Branch$sq), LINKS.condition$UnEW) == null);
-                }
-              }.query();
-
-              if (isApplicable && Sequence.fromIterable(matchingTexts).isNotEmpty()) {
-                ListSequence.fromList(result).addElement(new MultiTextActionItem(matchingTexts, _context) {
-                  @Override
-                  public void execute(@NotNull String pattern) {
-                    doSubstitute(pattern);
-                  }
-                  public SNode doSubstitute(@NotNull String pattern) {
-                    final SNode sourceNode = _context.getNode();
-                    SNode result = SNodeFactoryOperations.setNewChild(SNodeOperations.cast(sourceNode, CONCEPTS.Branch$sq), LINKS.condition$UnEW, null);
-                    return result;
-                  }
-                  @Override
-                  public SAbstractConcept getOutputConcept() {
-                    return CONCEPTS.Branch$sq;
-                  }
-                });
-              }
-            }
-          }
-          public void withRedirectedContext(List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> beforeContexts, List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> afterContexts) {
-
-            List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> contexts = (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM ? afterContexts : beforeContexts);
-            contexts = ListSequence.fromList(contexts).where(new IWhereFilter<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>() {
-              public boolean accept(Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>> it) {
-                return it != null;
-              }
-            }).toListSequence();
-
-            for (int validIndex = 0; validIndex < ListSequence.fromList(contexts).count(); validIndex++) {
-              TransformationMenuContext redirectedContext = ListSequence.fromList(contexts).getElement(validIndex)._0();
-              if (redirectedContext == null) {
-                continue;
-              }
-
-              boolean anyBeforeVisible = false;
-              for (int i = 0; i < validIndex; i++) {
-                anyBeforeVisible = anyBeforeVisible || ListSequence.fromList(contexts).getElement(i)._1().invoke(redirectedContext);
-              }
-              if (anyBeforeVisible) {
-                continue;
-              }
-
-              if (!(EditorHierachyCache.getInstance().isActiveEditor(Branch_diagram_Editor.class, redirectedContext.getNode().getConcept(), GrammarCellsUtil.getSelectionHints(_context.getEditorContext())))) {
-                continue;
-              }
-
-              withRedirectedContext(redirectedContext);
-              break;
-            }
-          }
-        }.withRedirectedContext(redirectedBefore, redirectedAfter);
-      }
-      {
-        final EditorContext editorContext = _context.getEditorContext();
-        List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> redirectedBefore = ListSequence.fromList(new ArrayList<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>());
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-
-        List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> redirectedAfter = ListSequence.fromList(new ArrayList<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>());
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
-          public TransformationMenuContext redirect() {
-            // redirect to condition 
-            final SNode sourceNode = _context.getNode();
-
-            // Use the grammar rules for a deep search 
-            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Branch$sq, LINKS.condition$UnEW);
-            if (parentNode != null) {
-              return _context.withNode(parentNode);
-            }
-
-            // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Expression$D_) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
-              TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
-              return parentContext;
-            }
-
-            return null;
-          }
-        }.redirect(), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
-          public TransformationMenuContext redirect() {
-            // redirect to condition 
-            final SNode sourceNode = _context.getNode();
-
-            // Use the grammar rules for a deep search 
-            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Branch$sq, LINKS.condition$UnEW);
-            if (parentNode != null) {
-              return _context.withNode(parentNode);
-            }
-
-            // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Expression$D_) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
-              TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
-              return parentContext;
-            }
-
-            return null;
-          }
-        }.redirect(), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        new Object() {
-          public void withRedirectedContext(final TransformationMenuContext _context) {
-            if (_context == null) {
-              return;
-            }
-            final SNode sourceNode = _context.getNode();
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Branch$sq)) {
-              final Iterable<String> matchingTexts = new StringOrSequenceQuery() {
-                public Object queryStringOrSequence() {
-                  return new Object() {
-                    public Iterable<String> query(SNode node) {
-                      return new StringOrSequenceQuery() {
-                        public Object queryStringOrSequence() {
-                          return "if";
-                        }
-                      }.query();
-                    }
-
-                  }.query(sourceNode);
-                }
-              }.query();
-              final boolean isApplicable = new Object() {
-                public boolean query() {
-                  return (SLinkOperations.getTarget(SNodeOperations.cast(_context.getNode(), CONCEPTS.Branch$sq), LINKS.condition$UnEW) == null);
-                }
-              }.query();
-
-              if (isApplicable && Sequence.fromIterable(matchingTexts).isNotEmpty()) {
-                ListSequence.fromList(result).addElement(new MultiTextActionItem(matchingTexts, _context) {
-                  @Override
-                  public void execute(@NotNull String pattern) {
-                    doSubstitute(pattern);
-                  }
-                  public SNode doSubstitute(@NotNull String pattern) {
-                    final SNode sourceNode = _context.getNode();
-                    SNode result = SNodeFactoryOperations.setNewChild(SNodeOperations.cast(sourceNode, CONCEPTS.Branch$sq), LINKS.condition$UnEW, null);
-                    return result;
-                  }
-                  @Override
-                  public SAbstractConcept getOutputConcept() {
-                    return CONCEPTS.Branch$sq;
-                  }
-                });
-              }
-            }
-          }
-          public void withRedirectedContext(List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> beforeContexts, List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> afterContexts) {
-
-            List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> contexts = (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM ? afterContexts : beforeContexts);
-            contexts = ListSequence.fromList(contexts).where(new IWhereFilter<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>() {
-              public boolean accept(Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>> it) {
-                return it != null;
-              }
-            }).toListSequence();
-
-            for (int validIndex = 0; validIndex < ListSequence.fromList(contexts).count(); validIndex++) {
-              TransformationMenuContext redirectedContext = ListSequence.fromList(contexts).getElement(validIndex)._0();
-              if (redirectedContext == null) {
-                continue;
-              }
-
-              boolean anyBeforeVisible = false;
-              for (int i = 0; i < validIndex; i++) {
-                anyBeforeVisible = anyBeforeVisible || ListSequence.fromList(contexts).getElement(i)._1().invoke(redirectedContext);
-              }
-              if (anyBeforeVisible) {
-                continue;
-              }
-
-              if (!(EditorHierachyCache.getInstance().isActiveEditor(Branch_Editor.class, redirectedContext.getNode().getConcept(), GrammarCellsUtil.getSelectionHints(_context.getEditorContext())))) {
-                continue;
-              }
-
-              withRedirectedContext(redirectedContext);
-              break;
-            }
-          }
-        }.withRedirectedContext(redirectedBefore, redirectedAfter);
-      }
-      {
-        final EditorContext editorContext = _context.getEditorContext();
-        List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> redirectedBefore = ListSequence.fromList(new ArrayList<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>());
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
-          public TransformationMenuContext redirect() {
-            // redirect to condition 
-            final SNode sourceNode = _context.getNode();
-
-            // Use the grammar rules for a deep search 
-            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Branch$sq, LINKS.condition$UnEW);
-            if (parentNode != null) {
-              return _context.withNode(parentNode);
-            }
-
-            // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Expression$D_) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == true) {
-              TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
-              return parentContext;
-            }
-
-            return null;
-          }
-        }.redirect(), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-        ListSequence.fromList(redirectedBefore).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return true;
-          }
-        }));
-
-        List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> redirectedAfter = ListSequence.fromList(new ArrayList<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>());
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from((SNodeOperations.isInstanceOf(((SNode) _context.getNode()), CONCEPTS.Branch$sq) ? _context : null), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        ListSequence.fromList(redirectedAfter).addElement(MultiTuple.<TransformationMenuContext,_FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>from(new Object() {
-          public TransformationMenuContext redirect() {
-            // redirect to condition 
-            final SNode sourceNode = _context.getNode();
-
-            // Use the grammar rules for a deep search 
-            SNode parentNode = new Parser(_context.getModel()).isEndOf(sourceNode, _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Branch$sq, LINKS.condition$UnEW);
-            if (parentNode != null) {
-              return _context.withNode(parentNode);
-            }
-
-            // There might be no grammar for some concepts. Try a single level check. 
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Expression$D_) && SNodeOperations.isInstanceOf(SNodeOperations.getParent(sourceNode), CONCEPTS.Branch$sq) && Objects.equals(sourceNode.getContainmentLink(), LINKS.condition$UnEW) && (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) == false) {
-              TransformationMenuContext parentContext = _context.withNode(_context.getNode().getParent());
-              return parentContext;
-            }
-
-            return null;
-          }
-        }.redirect(), new _FunctionTypes._return_P1_E0<Boolean, TransformationMenuContext>() {
-          public Boolean invoke(TransformationMenuContext parentContext) {
-            final SNode sourceNode = parentContext.getNode();
-            return new Object() {
-              public boolean renderingCondition(SNode node) {
-                return Sequence.fromIterable(AttributeOperations.getChildNodesAndAttributes(node, LINKS.condition$UnEW)).isNotEmpty();
-              }
-            }.renderingCondition(sourceNode);
-          }
-        }));
-        new Object() {
-          public void withRedirectedContext(final TransformationMenuContext _context) {
-            if (_context == null) {
-              return;
-            }
-            final SNode sourceNode = _context.getNode();
-            if (SNodeOperations.isInstanceOf(sourceNode, CONCEPTS.Branch$sq)) {
-              final Iterable<String> matchingTexts = new StringOrSequenceQuery() {
-                public Object queryStringOrSequence() {
-                  return new Object() {
-                    public Iterable<String> query(SNode node) {
-                      return new StringOrSequenceQuery() {
-                        public Object queryStringOrSequence() {
-                          return "if";
-                        }
-                      }.query();
-                    }
-
-                  }.query(sourceNode);
-                }
-              }.query();
-              final boolean isApplicable = new Object() {
-                public boolean query() {
-                  return (SLinkOperations.getTarget(SNodeOperations.cast(_context.getNode(), CONCEPTS.Branch$sq), LINKS.condition$UnEW) == null);
-                }
-              }.query();
-
-              if (isApplicable && Sequence.fromIterable(matchingTexts).isNotEmpty()) {
-                ListSequence.fromList(result).addElement(new MultiTextActionItem(matchingTexts, _context) {
-                  @Override
-                  public void execute(@NotNull String pattern) {
-                    doSubstitute(pattern);
-                  }
-                  public SNode doSubstitute(@NotNull String pattern) {
-                    final SNode sourceNode = _context.getNode();
-                    SNode result = SNodeFactoryOperations.setNewChild(SNodeOperations.cast(sourceNode, CONCEPTS.Branch$sq), LINKS.condition$UnEW, null);
-                    return result;
-                  }
-                  @Override
-                  public SAbstractConcept getOutputConcept() {
-                    return CONCEPTS.Branch$sq;
-                  }
-                });
-              }
-            }
-          }
-          public void withRedirectedContext(List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> beforeContexts, List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> afterContexts) {
-
-            List<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>> contexts = (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM ? afterContexts : beforeContexts);
-            contexts = ListSequence.fromList(contexts).where(new IWhereFilter<Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>>>() {
-              public boolean accept(Tuples._2<TransformationMenuContext, _FunctionTypes._return_P1_E0<? extends Boolean, ? super TransformationMenuContext>> it) {
-                return it != null;
-              }
-            }).toListSequence();
-
-            for (int validIndex = 0; validIndex < ListSequence.fromList(contexts).count(); validIndex++) {
-              TransformationMenuContext redirectedContext = ListSequence.fromList(contexts).getElement(validIndex)._0();
-              if (redirectedContext == null) {
-                continue;
-              }
-
-              boolean anyBeforeVisible = false;
-              for (int i = 0; i < validIndex; i++) {
-                anyBeforeVisible = anyBeforeVisible || ListSequence.fromList(contexts).getElement(i)._1().invoke(redirectedContext);
-              }
-              if (anyBeforeVisible) {
-                continue;
-              }
-
-              if (!(EditorHierachyCache.getInstance().isActiveEditor(Branch_Editor.class, redirectedContext.getNode().getConcept(), GrammarCellsUtil.getSelectionHints(_context.getEditorContext())))) {
-                continue;
-              }
-
-              withRedirectedContext(redirectedContext);
-              break;
-            }
-          }
-        }.withRedirectedContext(redirectedBefore, redirectedAfter);
       }
     } finally {
       _context.getEditorMenuTrace().popTraceInfo();

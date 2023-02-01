@@ -49,7 +49,7 @@ public class DataInstanceMap_SubstituteMenu extends SubstituteMenuBase {
   public class SMP_ReferenceScope_9aaxt9_a extends ReferenceScopeSubstituteMenuPart {
 
     public SMP_ReferenceScope_9aaxt9_a() {
-      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
+      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
       super((SAbstractConcept) CONCEPTS.DataInstanceMap$Ya, LINKS.dataLine$x$TU);
     }
     @NotNull

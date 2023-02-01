@@ -276,7 +276,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         cell.setAction(CellActionType.DELETE, new CellActionWithReadAccess() {
           public void execute(EditorContext editorContext) {
             {
-              // replace with placeholder 
+              // replace with placeholder
               SNode child = SLinkOperations.getTarget(node, LINKS.if_case$BonZ);
               SAbstractConcept childConcept = SNodeOperations.getConcept(child);
               if (!(GrammarCellsUtil.isExactly(childConcept, CONCEPTS.BehaviourSequence$Ol))) {
@@ -296,8 +296,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
           @Override
           public boolean canExecute_inReadAction(EditorContext editorContext) {
             {
-              // Required because we replace the existing action that would 
-              // replace the node with a placeholder 
+              // Required because we replace the existing action that would
+              // replace the node with a placeholder
               SNode child = SLinkOperations.getTarget(node, LINKS.if_case$BonZ);
               SAbstractConcept childConcept = SNodeOperations.getConcept(child);
               if (!(GrammarCellsUtil.isExactly(childConcept, CONCEPTS.BehaviourSequence$Ol))) {
@@ -317,7 +317,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         cell.setAction(CellActionType.BACKSPACE, new CellActionWithReadAccess() {
           public void execute(EditorContext editorContext) {
             {
-              // replace with placeholder 
+              // replace with placeholder
               SNode child = SLinkOperations.getTarget(node, LINKS.if_case$BonZ);
               SAbstractConcept childConcept = SNodeOperations.getConcept(child);
               if (!(GrammarCellsUtil.isExactly(childConcept, CONCEPTS.BehaviourSequence$Ol))) {
@@ -337,8 +337,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
           @Override
           public boolean canExecute_inReadAction(EditorContext editorContext) {
             {
-              // Required because we replace the existing action that would 
-              // replace the node with a placeholder 
+              // Required because we replace the existing action that would
+              // replace the node with a placeholder
               SNode child = SLinkOperations.getTarget(node, LINKS.if_case$BonZ);
               SAbstractConcept childConcept = SNodeOperations.getConcept(child);
               if (!(GrammarCellsUtil.isExactly(childConcept, CONCEPTS.BehaviourSequence$Ol))) {
@@ -638,7 +638,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         cell.setAction(CellActionType.DELETE, new CellActionWithReadAccess() {
           public void execute(EditorContext editorContext) {
             {
-              // replace with placeholder 
+              // replace with placeholder
               SNode child = SLinkOperations.getTarget(node, LINKS.else_case$Bpz4);
               SAbstractConcept childConcept = SNodeOperations.getConcept(child);
               if (!(GrammarCellsUtil.isExactly(childConcept, CONCEPTS.BehaviourSequence$Ol))) {
@@ -658,8 +658,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
           @Override
           public boolean canExecute_inReadAction(EditorContext editorContext) {
             {
-              // Required because we replace the existing action that would 
-              // replace the node with a placeholder 
+              // Required because we replace the existing action that would
+              // replace the node with a placeholder
               SNode child = SLinkOperations.getTarget(node, LINKS.else_case$Bpz4);
               SAbstractConcept childConcept = SNodeOperations.getConcept(child);
               if (!(GrammarCellsUtil.isExactly(childConcept, CONCEPTS.BehaviourSequence$Ol))) {
@@ -679,7 +679,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         cell.setAction(CellActionType.BACKSPACE, new CellActionWithReadAccess() {
           public void execute(EditorContext editorContext) {
             {
-              // replace with placeholder 
+              // replace with placeholder
               SNode child = SLinkOperations.getTarget(node, LINKS.else_case$Bpz4);
               SAbstractConcept childConcept = SNodeOperations.getConcept(child);
               if (!(GrammarCellsUtil.isExactly(childConcept, CONCEPTS.BehaviourSequence$Ol))) {
@@ -699,8 +699,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
           @Override
           public boolean canExecute_inReadAction(EditorContext editorContext) {
             {
-              // Required because we replace the existing action that would 
-              // replace the node with a placeholder 
+              // Required because we replace the existing action that would
+              // replace the node with a placeholder
               SNode child = SLinkOperations.getTarget(node, LINKS.else_case$Bpz4);
               SAbstractConcept childConcept = SNodeOperations.getConcept(child);
               if (!(GrammarCellsUtil.isExactly(childConcept, CONCEPTS.BehaviourSequence$Ol))) {

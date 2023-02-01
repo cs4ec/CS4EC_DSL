@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -23,7 +22,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class DiseaseSymptom__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791132L, "DiseaseModel.structure.DiseaseSymptom");
 
-  public static final SMethod<String> getFormattedName_id5R1$QEO4R2C = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getFormattedName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("5R1$QEO4R2C").build();
+  public static final SMethod<String> getFormattedName_id5R1$QEO4R2C = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getFormattedName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("5R1$QEO4R2C").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getFormattedName_id5R1$QEO4R2C);
 

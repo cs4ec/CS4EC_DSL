@@ -6,8 +6,6 @@
     </modelRoot>
     <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="repast.simphony.bin_and_src.jar" />
-      <sourceRoot location="saf.core.ui.jar" />
-      <sourceRoot location="saf.core.v3d.jar" />
     </modelRoot>
   </models>
   <facets>
@@ -21,6 +19,7 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
+    <dependency reexport="false">c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="11" />
@@ -31,6 +30,7 @@
   <dependencyVersions>
     <module reference="4fbbea45-19cc-4b4e-a78f-8d62c6a38b7a(EDRuntime_Repast)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
+    <module reference="c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)" version="0" />
   </dependencyVersions>
 </solution>
 

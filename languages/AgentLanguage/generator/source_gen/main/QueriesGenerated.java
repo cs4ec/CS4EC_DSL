@@ -257,10 +257,10 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getInteger(_context.getNode(), PROPS.yEnd$sBFw);
   }
   public static Object propertyMacro_GetValue_4_22(final PropertyMacroContext _context) {
-    return SPropertyOperations.getInteger(_context.getNode(), PROPS.NumAgentsInHour$Puav);
+    return SNodeOperations.getIndexInParent(_context.getNode()) + 1;
   }
   public static Object propertyMacro_GetValue_4_23(final PropertyMacroContext _context) {
-    return SNodeOperations.getIndexInParent(_context.getNode()) + 1;
+    return SPropertyOperations.getInteger(_context.getNode(), PROPS.NumAgentsInHour$Puav);
   }
   public static Object propertyMacro_GetValue_7_0(final PropertyMacroContext _context) {
     return _context.createUniqueName("StayAction", null);
@@ -715,7 +715,7 @@ public class QueriesGenerated extends QueryProviderBase {
     return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.actorType$zg3B));
   }
   public static Object propertyMacro_GetValue_87_7(final PropertyMacroContext _context) {
-    return (((Integer) _context.getVariable("cv:numAgents")) + 4) + "";
+    return ((Integer) _context.getVariable("loop:index") + 4) + "";
   }
   public static Object propertyMacro_GetValue_88_0(final PropertyMacroContext _context) {
     return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(_context.getNode()) + "style";
@@ -1654,7 +1654,7 @@ public class QueriesGenerated extends QueryProviderBase {
     snsqMethods.put("3535684625585784102", new SNsQ(i++));
     snsqMethods.put("3031028417294406201", new SNsQ(i++));
     snsqMethods.put("33966321883987096", new SNsQ(i++));
-    snsqMethods.put("2876623929999941983", new SNsQ(i++));
+    snsqMethods.put("2864832681525721677", new SNsQ(i++));
     snsqMethods.put("513408552830773206", new SNsQ(i++));
     snsqMethods.put("7164338824335585528", new SNsQ(i++));
     snsqMethods.put("2838504079105909", new SNsQ(i++));
@@ -1867,8 +1867,8 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("3031028417294393137", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "10"));
     pvqMethods.put("3031028417294393971", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "10"));
     pvqMethods.put("3031028417294394877", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "10"));
-    pvqMethods.put("2876623929999949807", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "3"));
-    pvqMethods.put("2876623929999943672", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "1"));
+    pvqMethods.put("2864832681525775644", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "1"));
+    pvqMethods.put("2864832681525806820", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf8cc59b314L, 0xf8cc59b315L, "value"), "3"));
     pvqMethods.put("5328502176963256478", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), null));
     pvqMethods.put("5328502176963256517", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "StayForConditionAction"));
     pvqMethods.put("2985733650906607432", new PVQ(i++, MetaAdapterFactory.getProperty(0xf3061a5392264cc5L, 0xa443f952ceaf5816L, 0xf93d565d10L, 0xf93d565d11L, "value"), "patient"));

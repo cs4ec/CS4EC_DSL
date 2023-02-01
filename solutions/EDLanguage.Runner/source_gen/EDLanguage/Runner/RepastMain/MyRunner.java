@@ -15,7 +15,7 @@ public class MyRunner {
 
     String[] argos = new String[1];
 
-    String inputPath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\";
+    String inputPath = "/Users/thomasgodfrey/MPSProjects/CS4EC\\";
 
     String projectPath = "";
 
@@ -23,7 +23,7 @@ public class MyRunner {
     String[] paths = inputPath.split("\\\\");
     for (int i = 0; i < paths.length; i++) {
       projectPath += paths[i];
-      projectPath += "\\";
+      projectPath += "/";
     }
 
     System.out.println("Execution start on: " + projectPath);
@@ -56,8 +56,9 @@ public class MyRunner {
 
   public void DoTransferParameters(String baseProjectPath) {
 
-    String filePath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\solutions\\SimpleActionCard\\classes_gen\\SimpleActionCard\\AC1\\";
-    String filePathAfter = "RepastProject\\EDProject\\EDProject.rs\\";
+    String filePath = "/Users/thomasgodfrey/MPSProjects/CS4EC/solutions/SimpleActionCard/classes_gen/SimpleActionCard/AC1";
+    String filePathAfter = "RepastProject/EDProject/EDProject.rs/";
+    // WINDOWS BELWO
 
     System.out.println("Moving Parameters:");
     System.out.println(filePath + " to " + baseProjectPath + filePathAfter);
@@ -96,7 +97,9 @@ public class MyRunner {
           in = new FileInputStream(aFile);
 
           if (aFile.getName().startsWith("style")) {
-            out = new FileOutputStream(new File(baseProjectPath + filePathAfter + "styles\\" + aFile.getName()));
+            out = new FileOutputStream(new File(baseProjectPath + filePathAfter + "styles/" + aFile.getName()));
+
+            // WINDOWS BELOW
 
           } else {
             out = new FileOutputStream(new File(baseProjectPath + filePathAfter + aFile.getName()));
@@ -127,9 +130,10 @@ public class MyRunner {
 
   public void DoTransferBatchParameters(String baseProjectPath) {
 
-    String filePath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\solutions\\SimpleActionCard\\classes_gen\\SimpleActionCard\\AC1\\";
+    String filePath = "/Users/thomasgodfrey/MPSProjects/CS4EC/solutions/SimpleActionCard/classes_gen/SimpleActionCard/AC1";
 
-    String filePathAfter = "RepastProject\\EDProject\\batch\\";
+    String filePathAfter = "RepastProject/EDProject/batch/";
+    // WINDOWS AFTER
 
     System.out.println("Moving Batch Parameters:");
     System.out.println(filePath + " to " + baseProjectPath + filePathAfter);
@@ -194,20 +198,20 @@ public class MyRunner {
 
   public void DoGenerateProject(String baseProjectPath) {
 
-    // Set log path 
+    // Set log path
     LogNote.GetUniqueLog().SetAddress(baseProjectPath);
-    System.out.println("Log generated at: " + LogNote.GetUniqueLog().GetAddress() + "output\\");
+    System.out.println("Log generated at: " + LogNote.GetUniqueLog().GetAddress() + "output/");
 
-    // clear former logs 
-    ClearDir(LogNote.GetUniqueLog().GetAddress() + "output\\");
+    // clear former logs
+    ClearDir(LogNote.GetUniqueLog().GetAddress() + "output/");
 
-    String classPathOld = "languages\\EDLanguage\\sandbox\\classes_gen\\EDLanguage\\sandbox\\";
-    String classPath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\solutions\\SimpleActionCard\\classes_gen\\EDLanguage\\sandbox\\";
-    String classPathAfter = "RepastProject\\EDProject\\bin\\EDLanguage\\sandbox\\";
+    String classPathOld = "languages/EDLanguage/sandbox/classes_gen/EDLanguage/sandbox/";
+    String classPath = "/Users/thomasgodfrey/MPSProjects/CS4EC/solutions/SimpleActionCard/classes_gen/EDLanguage/sandbox";
+    String classPathAfter = "RepastProject/EDProject/bin/EDLanguage/sandbox/";
 
-    String javaPathOld = "languages\\EDLanguage\\sandbox\\source_gen\\EDLanguage\\sandbox\\";
-    String javaPath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\solutions\\SimpleActionCard\\source_gen\\EDLanguage\\sandbox\\";
-    String javaPathAfter = "RepastProject\\EDProject\\src\\EDLanguage\\sandbox\\";
+    String javaPathOld = "languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/";
+    String javaPath = "/Users/thomasgodfrey/MPSProjects/CS4EC/solutions/SimpleActionCard/source_gen/EDLanguage/sandbox";
+    String javaPathAfter = "RepastProject/EDProject/src/EDLanguage/sandbox/";
 
     System.out.println("Generating files:");
     System.out.println("ClassPath: " + classPath);
@@ -234,7 +238,7 @@ public class MyRunner {
 
     if (targetDir.isDirectory()) {
 
-      if (after.endsWith("EDLanguage\\sandbox\\")) {
+      if (after.endsWith("EDLanguage/sandbox/")) {
         baseFiles = targetDir.listFiles();
         for (int i = 0; i < baseFiles.length; i++) {
           if (baseFiles[i].isFile()) {
@@ -292,7 +296,7 @@ public class MyRunner {
 
 
   public void ClearDir(String addr) {
-    if (!(addr.endsWith("output\\"))) {
+    if (!(addr.endsWith("output/"))) {
       System.out.println("Clear failed: Stop");
       return;
     }

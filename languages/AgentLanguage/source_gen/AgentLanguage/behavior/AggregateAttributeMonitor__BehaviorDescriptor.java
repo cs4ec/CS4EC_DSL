@@ -10,7 +10,6 @@ import java.util.List;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.Arrays;
 import org.jetbrains.annotations.NotNull;
@@ -28,7 +27,7 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
 public final class AggregateAttributeMonitor__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6ca3e29db4287123L, "AgentLanguage.structure.AggregateAttributeMonitor");
 
-  public static final SMethod<List<SNode>> cartesian_id72S_VmbLnPC = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("cartesian").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("72S_VmbLnPC").build();
+  public static final SMethod<List<SNode>> cartesian_id72S_VmbLnPC = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("cartesian").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("72S_VmbLnPC").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(cartesian_id72S_VmbLnPC);
 

@@ -49,7 +49,7 @@ public class ProbabilityDistributionLine_SubstituteMenu extends SubstituteMenuBa
   public class SMP_ReferenceScope_8fy3qt_a extends ReferenceScopeSubstituteMenuPart {
 
     public SMP_ReferenceScope_8fy3qt_a() {
-      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
+      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
       super((SAbstractConcept) CONCEPTS.ProbabilityDistributionLine$VP, LINKS.test$Vj_e);
     }
     @NotNull

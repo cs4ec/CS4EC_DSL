@@ -57,7 +57,7 @@ public class ImporterLogic {
         MapSequence.fromMap(roomTypesByName).put(SPropertyOperations.getString(roomType, PROPS.name$MnvL), roomType);
       }
 
-      // Remove all existing rooms from the model 
+      // Remove all existing rooms from the model
       for (SNode room : ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(targetContainer), CONCEPTS.RoomInstanceDefinition$uw))) {
         SNodeOperations.deleteNode(room);
       }
@@ -91,7 +91,7 @@ public class ImporterLogic {
         JsonObject object = item.getAsJsonObject();
 
         SNode room = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, "BuiltEnvironment.structure.RoomInstanceDefinition"));
-        // ReadsimplepropertiesdirectlyfromJSON 
+        // ReadsimplepropertiesdirectlyfromJSON
         final Wrappers._T<String> newRoomName = new Wrappers._T<String>(getString(object, "name of the room", prefixForErrors));
         Iterable<SNode> roomsWithDuplicateName = ListSequence.fromList(importedRooms).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it) {

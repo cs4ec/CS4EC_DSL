@@ -3,11 +3,11 @@
   <persistence version="9" />
   <attribute name="doNotGenerate" value="false" />
   <languages>
-    <use id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage" version="0" />
-    <use id="b3cac82c-d024-46bc-b485-624ad80c3cc2" name="ActionCards" version="0" />
+    <use id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage" version="1" />
+    <use id="b3cac82c-d024-46bc-b485-624ad80c3cc2" name="ActionCards" version="1" />
     <use id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout" version="0" />
     <use id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base" version="3" />
-    <use id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment" version="0" />
+    <use id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment" version="1" />
     <use id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel" version="0" />
     <engage id="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" name="org.iets3.core.expr.genjava.base" />
     <engage id="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" name="org.iets3.core.expr.genjava.simpleTypes" />
@@ -2631,7 +2631,7 @@
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="PHEThree" />
     <node concept="3oQJ3q" id="6MzSDQOx5uX" role="3oQJ1o">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
     <node concept="ldbdM" id="6MzSDQOx5v0" role="3oQGcl">
       <node concept="ldb2t" id="6MzSDQOx5v2" role="ldb3A">
@@ -7557,39 +7557,39 @@
     <property role="TrG5h" value="COVID" />
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJ3q" id="5R1$QEMKFk4" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4Vgs" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" />
+      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4Vhj" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLL" />
+      <ref role="3oQJ3c" node="5R1$QENZiLL" resolve="Sore throat" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4Vg$" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QEO4Qbe" />
+      <ref role="3oQJ3c" node="5R1$QEO4Qbe" resolve="Loss of taste" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4VgI" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QEO4Qbj" />
+      <ref role="3oQJ3c" node="5R1$QEO4Qbj" resolve="Loss of smell" />
     </node>
   </node>
   <node concept="1gZIpL" id="5R1$QEMKFkE">
     <property role="TrG5h" value="FluA" />
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJ3q" id="5R1$QEMKFkP" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
     <node concept="3oQJ3q" id="5R1$QEO4Vh0" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" />
+      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
     </node>
   </node>
   <node concept="1gZIpL" id="5R1$QEMMkRG">
     <property role="TrG5h" value="FluB" />
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJ3q" id="5R1$QEMMkRR" role="3oQJ31">
-      <ref role="3oQJ3c" node="6MzSDQOvLHI" />
+      <ref role="3oQJ3c" node="6MzSDQOvLHI" resolve="Cough" />
     </node>
     <node concept="3oQJ3q" id="7$JgZMbkPtm" role="3oQJ31">
-      <ref role="3oQJ3c" node="5R1$QENZiLO" />
+      <ref role="3oQJ3c" node="5R1$QENZiLO" resolve="Fever" />
     </node>
   </node>
 </model>

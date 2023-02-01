@@ -134,7 +134,7 @@
         <child id="1180031783297" name="conceptArgument" index="2Zo12j" />
       </concept>
       <concept id="1182511038748" name="jetbrains.mps.lang.smodel.structure.Model_NodesIncludingImportedOperation" flags="nn" index="1j9C0f">
-        <reference id="1182511038750" name="concept" index="1j9C0d" />
+        <child id="6750920497477143623" name="conceptArgument" index="3MHPCF" />
       </concept>
       <concept id="1172326502327" name="jetbrains.mps.lang.smodel.structure.Concept_IsExactlyOperation" flags="nn" index="3O6GUB">
         <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
@@ -283,7 +283,9 @@
                   <node concept="I4A8Y" id="1xAzJ9Lntmo" role="2OqNvi" />
                 </node>
                 <node concept="1j9C0f" id="1xAzJ9Lnt$o" role="2OqNvi">
-                  <ref role="1j9C0d" to="e88n:1xAzJ9Jg95t" resolve="VaccineStatusProperty" />
+                  <node concept="chp4Y" id="1fQ3pJcUc0N" role="3MHPCF">
+                    <ref role="cht4Q" to="e88n:1xAzJ9Jg95t" resolve="VaccineStatusProperty" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -390,7 +392,9 @@
                   <node concept="I4A8Y" id="1xAzJ9Ly5sd" role="2OqNvi" />
                 </node>
                 <node concept="1j9C0f" id="1xAzJ9Ly5se" role="2OqNvi">
-                  <ref role="1j9C0d" to="e88n:1xAzJ9JfB29" resolve="InfectionStatusProperty" />
+                  <node concept="chp4Y" id="1fQ3pJcUc0O" role="3MHPCF">
+                    <ref role="cht4Q" to="e88n:1xAzJ9JfB29" resolve="InfectionStatusProperty" />
+                  </node>
                 </node>
               </node>
             </node>

@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import org.jetbrains.mps.openapi.model.SNode;
 import java.util.List;
@@ -26,7 +25,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class AttributeMonitor__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7117c8e6083740b4L, "AgentLanguage.structure.AttributeMonitor");
 
-  public static final SMethod<String> getFormattedName_id72S_VmelIuC = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getFormattedName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("72S_VmelIuC").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<String> getFormattedName_id72S_VmelIuC = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getFormattedName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("72S_VmelIuC").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getFormattedName_id72S_VmelIuC);
 

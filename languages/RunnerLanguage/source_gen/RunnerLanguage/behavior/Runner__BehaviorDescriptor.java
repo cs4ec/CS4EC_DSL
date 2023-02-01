@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import java.util.List;
 import java.util.Arrays;
@@ -23,12 +22,12 @@ import org.jetbrains.mps.openapi.language.SProperty;
 public final class Runner__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x3fb39b69f96e474bL, 0xa5f6477776571ddfL, 0x596b60deef3964dcL, "RunnerLanguage.structure.Runner");
 
-  public static final SMethod<String> GetProjectAddress_id1wal9D1amCA = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetProjectAddress").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1wal9D1amCA").build();
-  public static final SMethod<String> GetBaseAddress_id72S_VmfixC_ = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetBaseAddress").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("72S_VmfixC_").build();
-  public static final SMethod<String> getRepastSettingsFolder_id72S_Vmffr8J = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getRepastSettingsFolder").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("72S_Vmffr8J").build();
-  public static final SMethod<String> getClassFolderFolder_id72S_Vmffs$u = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getClassFolderFolder").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("72S_Vmffs$u").build();
-  public static final SMethod<String> getSourceFolderFolder_id72S_Vmfft02 = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getSourceFolderFolder").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("72S_Vmfft02").build();
-  public static final SMethod<String> ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("ReplaceForwardSlashesWithBackSlashes").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("2vFOz$Gzz4V").build(SMethodBuilder.createJavaParameter(String.class, ""));
+  public static final SMethod<String> GetProjectAddress_id1wal9D1amCA = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetProjectAddress").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1wal9D1amCA").build();
+  public static final SMethod<String> GetBaseAddress_id72S_VmfixC_ = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetBaseAddress").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("72S_VmfixC_").build();
+  public static final SMethod<String> getRepastSettingsFolder_id72S_Vmffr8J = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getRepastSettingsFolder").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("72S_Vmffr8J").build();
+  public static final SMethod<String> getClassFolderFolder_id72S_Vmffs$u = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getClassFolderFolder").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("72S_Vmffs$u").build();
+  public static final SMethod<String> getSourceFolderFolder_id72S_Vmfft02 = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getSourceFolderFolder").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("72S_Vmfft02").build();
+  public static final SMethod<String> ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("ReplaceForwardSlashesWithBackSlashes").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("2vFOz$Gzz4V").build(SMethodBuilder.createJavaParameter(String.class, ""));
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(GetProjectAddress_id1wal9D1amCA, GetBaseAddress_id72S_VmfixC_, getRepastSettingsFolder_id72S_Vmffr8J, getClassFolderFolder_id72S_Vmffs$u, getSourceFolderFolder_id72S_Vmfft02, ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V);
 
@@ -36,7 +35,7 @@ public final class Runner__BehaviorDescriptor extends BaseBHDescriptor {
   }
 
   /*package*/ static String GetProjectAddress_id1wal9D1amCA(@NotNull SNode __thisNode__) {
-    String s = SPropertyOperations.getString(__thisNode__, PROPS.addr$49ha) + "\\solutions\\" + SPropertyOperations.getString(__thisNode__, PROPS.projectName$p3Pl);
+    String s = SPropertyOperations.getString(__thisNode__, PROPS.addr$49ha) + "/solutions/" + SPropertyOperations.getString(__thisNode__, PROPS.projectName$p3Pl);
 
     return s;
   }
@@ -44,13 +43,18 @@ public final class Runner__BehaviorDescriptor extends BaseBHDescriptor {
     return Runner__BehaviorDescriptor.ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V.invoke(__thisNode__, SPropertyOperations.getString(__thisNode__, PROPS.addr$49ha));
   }
   /*package*/ static String getRepastSettingsFolder_id72S_Vmffr8J(@NotNull SNode __thisNode__) {
-    return Runner__BehaviorDescriptor.ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V.invoke(__thisNode__, Runner__BehaviorDescriptor.GetProjectAddress_id1wal9D1amCA.invoke(__thisNode__) + "\\classes_gen\\" + SPropertyOperations.getString(__thisNode__, PROPS.projectName$p3Pl) + "\\AC1");
+    return Runner__BehaviorDescriptor.GetProjectAddress_id1wal9D1amCA.invoke(__thisNode__) + "/classes_gen/" + SPropertyOperations.getString(__thisNode__, PROPS.projectName$p3Pl) + "/AC1";
+    // WINDOWS BELOW
   }
   /*package*/ static String getClassFolderFolder_id72S_Vmffs$u(@NotNull SNode __thisNode__) {
-    return Runner__BehaviorDescriptor.ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V.invoke(__thisNode__, Runner__BehaviorDescriptor.GetProjectAddress_id1wal9D1amCA.invoke(__thisNode__) + "\\classes_gen\\EDLanguage\\sandbox");
+    return Runner__BehaviorDescriptor.GetProjectAddress_id1wal9D1amCA.invoke(__thisNode__) + "/classes_gen/EDLanguage/sandbox";
+    // WINDOWS BELOW
   }
   /*package*/ static String getSourceFolderFolder_id72S_Vmfft02(@NotNull SNode __thisNode__) {
-    return Runner__BehaviorDescriptor.ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V.invoke(__thisNode__, Runner__BehaviorDescriptor.GetProjectAddress_id1wal9D1amCA.invoke(__thisNode__) + "\\source_gen\\EDLanguage\\sandbox");
+
+    return Runner__BehaviorDescriptor.GetProjectAddress_id1wal9D1amCA.invoke(__thisNode__) + "/source_gen/EDLanguage/sandbox";
+
+    // WINDOWS BELOW
   }
   /*package*/ static String ReplaceForwardSlashesWithBackSlashes_id2vFOz$Gzz4V(@NotNull SNode __thisNode__, String inputString) {
     String result = "";

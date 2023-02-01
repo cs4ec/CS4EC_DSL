@@ -8,7 +8,6 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import jetbrains.mps.core.aspects.behaviour.api.SMethod;
 import jetbrains.mps.core.aspects.behaviour.SMethodBuilder;
 import jetbrains.mps.core.aspects.behaviour.SJavaCompoundTypeImpl;
-import jetbrains.mps.core.aspects.behaviour.SModifiersImpl;
 import jetbrains.mps.core.aspects.behaviour.AccessPrivileges;
 import jetbrains.mps.scope.Scope;
 import org.jetbrains.mps.openapi.model.SNode;
@@ -35,19 +34,19 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
 public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
   private static final SAbstractConcept CONCEPT = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, "AgentLanguage.structure.Actor");
 
-  public static final SMethod<String> getFormattedName_id52K8EjkEtU = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getFormattedName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("52K8EjkEtU").build();
-  public static final SMethod<Scope> getScope_id52_Geb4QDV$ = new SMethodBuilder<Scope>(new SJavaCompoundTypeImpl(Scope.class)).name("getScope").modifiers(SModifiersImpl.create(8, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("52_Geb4QDV$").build(SMethodBuilder.createJavaParameter((Class<SAbstractConcept>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
-  public static final SMethod<List<SNode>> GetInheritedBehaviourElement_id29F2V$jvuup = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetInheritedBehaviourElement").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("29F2V$jvuup").build();
-  public static final SMethod<List<SNode>> GetInheritedAttributes_id6tNT_P6mjyK = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetInheritedAttributes").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("6tNT_P6mjyK").build();
-  public static final SMethod<List<SNode>> GetConstructBehaviourElement_id7IDz3VlgFrn = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetConstructBehaviourElement").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("7IDz3VlgFrn").build();
-  public static final SMethod<Void> getSubBehaviours_id1BosAjM85tg = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("getSubBehaviours").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("1BosAjM85tg").build(SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
-  public static final SMethod<List<SNode>> GetAllBehaviours_id4BMD7YivWul = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetAllBehaviours").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BMD7YivWul").build();
-  public static final SMethod<List<SNode>> searhBehaviourSequence_id4BMD7YiwBKD = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("searhBehaviourSequence").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4BMD7YiwBKD").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
-  public static final SMethod<List<SNode>> GetAllInheritanceList_id29F2V$jrHY3 = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetAllInheritanceList").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("29F2V$jrHY3").build();
-  public static final SMethod<Boolean> BehaviourSignalIsIn_id4EinDJV_e0e = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("BehaviourSignalIsIn").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4EinDJV_e0e").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
-  public static final SMethod<Boolean> AttributeIsIn_id4aMsku86oa7 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("AttributeIsIn").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("4aMsku86oa7").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
-  public static final SMethod<String> GetSuperTypeName_idJ03_IHVUJg = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetSuperTypeName").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("J03_IHVUJg").build();
-  public static final SMethod<SNode> getIsIdleBehaviour_id3QFgDmIWQJk = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getIsIdleBehaviour").modifiers(SModifiersImpl.create(0, AccessPrivileges.PUBLIC)).concept(CONCEPT).id("3QFgDmIWQJk").build();
+  public static final SMethod<String> getFormattedName_id52K8EjkEtU = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("getFormattedName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("52K8EjkEtU").build();
+  public static final SMethod<Scope> getScope_id52_Geb4QDV$ = new SMethodBuilder<Scope>(new SJavaCompoundTypeImpl(Scope.class)).name("getScope").modifiers(8, AccessPrivileges.PUBLIC).concept(CONCEPT).id("52_Geb4QDV$").build(SMethodBuilder.createJavaParameter((Class<SAbstractConcept>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<List<SNode>> GetInheritedBehaviourElement_id29F2V$jvuup = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetInheritedBehaviourElement").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("29F2V$jvuup").build();
+  public static final SMethod<List<SNode>> GetInheritedAttributes_id6tNT_P6mjyK = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetInheritedAttributes").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("6tNT_P6mjyK").build();
+  public static final SMethod<List<SNode>> GetConstructBehaviourElement_id7IDz3VlgFrn = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetConstructBehaviourElement").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("7IDz3VlgFrn").build();
+  public static final SMethod<Void> getSubBehaviours_id1BosAjM85tg = new SMethodBuilder<Void>(new SJavaCompoundTypeImpl(Void.class)).name("getSubBehaviours").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("1BosAjM85tg").build(SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""));
+  public static final SMethod<List<SNode>> GetAllBehaviours_id4BMD7YivWul = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetAllBehaviours").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4BMD7YivWul").build();
+  public static final SMethod<List<SNode>> searhBehaviourSequence_id4BMD7YiwBKD = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("searhBehaviourSequence").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4BMD7YiwBKD").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
+  public static final SMethod<List<SNode>> GetAllInheritanceList_id29F2V$jrHY3 = new SMethodBuilder<List<SNode>>(new SJavaCompoundTypeImpl((Class<List<SNode>>) ((Class) Object.class))).name("GetAllInheritanceList").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("29F2V$jrHY3").build();
+  public static final SMethod<Boolean> BehaviourSignalIsIn_id4EinDJV_e0e = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("BehaviourSignalIsIn").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4EinDJV_e0e").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
+  public static final SMethod<Boolean> AttributeIsIn_id4aMsku86oa7 = new SMethodBuilder<Boolean>(new SJavaCompoundTypeImpl(Boolean.TYPE)).name("AttributeIsIn").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("4aMsku86oa7").build(SMethodBuilder.createJavaParameter((Class<SNode>) ((Class) Object.class), ""), SMethodBuilder.createJavaParameter((Class<List<SNode>>) ((Class) Object.class), ""));
+  public static final SMethod<String> GetSuperTypeName_idJ03_IHVUJg = new SMethodBuilder<String>(new SJavaCompoundTypeImpl(String.class)).name("GetSuperTypeName").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("J03_IHVUJg").build();
+  public static final SMethod<SNode> getIsIdleBehaviour_id3QFgDmIWQJk = new SMethodBuilder<SNode>(new SJavaCompoundTypeImpl((Class<SNode>) ((Class) Object.class))).name("getIsIdleBehaviour").modifiers(0, AccessPrivileges.PUBLIC).concept(CONCEPT).id("3QFgDmIWQJk").build();
 
   private static final List<SMethod<?>> BH_METHODS = Arrays.<SMethod<?>>asList(getFormattedName_id52K8EjkEtU, getScope_id52_Geb4QDV$, GetInheritedBehaviourElement_id29F2V$jvuup, GetInheritedAttributes_id6tNT_P6mjyK, GetConstructBehaviourElement_id7IDz3VlgFrn, getSubBehaviours_id1BosAjM85tg, GetAllBehaviours_id4BMD7YivWul, searhBehaviourSequence_id4BMD7YiwBKD, GetAllInheritanceList_id29F2V$jrHY3, BehaviourSignalIsIn_id4EinDJV_e0e, AttributeIsIn_id4aMsku86oa7, GetSuperTypeName_idJ03_IHVUJg, getIsIdleBehaviour_id3QFgDmIWQJk);
 
@@ -166,7 +165,7 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
   /*package*/ static List<SNode> GetAllBehaviours_id4BMD7YivWul(@NotNull SNode __thisNode__) {
     List<SNode> allBehaviours = new ArrayList<SNode>();
 
-    // Add the behaviour methods 
+    // Add the behaviour methods
     for (SNode behaviourMethod : ListSequence.fromList(SLinkOperations.getChildren(__thisNode__, LINKS.behaviourMethods$zTMQ))) {
       Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(behaviourMethod, LINKS.behaviourSequence$hsTv));
     }
@@ -174,10 +173,10 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
       Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(behaviourMethod, LINKS.behaviourSequence$hsTv));
     }
 
-    // Add the Idle action behaviour steps 
+    // Add the Idle action behaviour steps
     ListSequence.fromList(allBehaviours).addSequence(ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(SLinkOperations.getTarget(__thisNode__, LINKS.isIdleBehaviour$pDqV), LINKS.behaviourSequence$hsTv), LINKS.steps$BnuP)));
 
-    // This is the 'get all' that doesnt really work properly ---- remove when come to cleaning 
+    // This is the 'get all' that doesnt really work properly ---- remove when come to cleaning
     return allBehaviours;
   }
   /*package*/ static List<SNode> searhBehaviourSequence_id4BMD7YiwBKD(@NotNull SNode __thisNode__, SNode sequence, List<SNode> behaviours) {
