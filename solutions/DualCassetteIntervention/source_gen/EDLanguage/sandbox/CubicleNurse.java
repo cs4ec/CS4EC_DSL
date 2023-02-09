@@ -8,8 +8,10 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
 import simcore.Signals.Signal;
+import simcore.basicStructures.Board;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import repast.simphony.space.graph.Network;
 import java.util.stream.StreamSupport;
 import repast.simphony.space.graph.RepastEdge;
@@ -23,8 +25,7 @@ import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
 import simcore.action.PassiveBehaviourStep;
 import repast.simphony.engine.environment.RunEnvironment;
-import simcore.basicStructures.Board;
-import org.iets3.core.expr.genjava.simpleTypes.rt.rt.AH;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
 import simcore.basicStructures.TimeKeeper;
 
 public class CubicleNurse extends Actor {
@@ -33,8 +34,37 @@ public class CubicleNurse extends Actor {
 
   public CubicleNurse(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
-    mintMyMaxPatients = 1;
+    mintMyMaxPatients = 2147483647;
   }
+
+  protected Signal searchForSignals(Board board) {
+    // Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for
+    List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, CubicleNurse.this);
+      }
+    }).collect(Collectors.toList());
+
+
+
+    List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, CubicleNurse.this);
+      }
+    }).collect(Collectors.toList());
+
+    if (plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
+      return null;
+    }
+    // First see if there are any direct messages for me and prioritise those
+    Signal s = selectSignal(plstDirectSignals);
+    if (s == null) {
+      // If none, select a message for my class type
+      s = selectSignal(plstSignals);
+    }
+    return s;
+  }
+
 
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (!(plstSignals.isEmpty())) {
@@ -74,13 +104,13 @@ public class CubicleNurse extends Actor {
 
   protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
     ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
-    // First, select the room that contains my patient (if my current action involves the patient) 
+    // First, select the room that contains my patient (if my current action involves the patient)
     for (Room pRoom : pRooms) {
       if (behaviour.getSignalTrigger() != null && behaviour.getSignalTrigger().GetData("patient") != null && pRoom.getOccupiers().contains(behaviour.getSignalTrigger().GetData("patient"))) {
         return pRoom;
       }
     }
-    // If my patient isn't currently in that room, then consider other options 
+    // If my patient isn't currently in that room, then consider other options
     Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
       public int compare(Room r1, Room r2) {
         return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
@@ -119,7 +149,7 @@ public class CubicleNurse extends Actor {
   }
 
   public Behaviour isIdleAction(Signal s) {
-    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_9(behaviourBuilder));
@@ -142,83 +172,83 @@ public class CubicleNurse extends Actor {
       case "":
         break;
       case "CheckSymptomaticTrigger_b":
-        behaviourBuilder = new Behaviour("CheckSymptomaticTrigger_b");
+        behaviourBuilder = new Behaviour("CheckSymptomaticTrigger_b", this);
         this.InitCheckSymptomatic_a(s);
         break;
       case "LFDTrigger_b":
-        behaviourBuilder = new Behaviour("LFDTrigger_b");
+        behaviourBuilder = new Behaviour("LFDTrigger_b", this);
         this.InitLFD_b(s);
         break;
       case "CheckClinicalSusipicionTrigger_c":
-        behaviourBuilder = new Behaviour("CheckClinicalSusipicionTrigger_c");
+        behaviourBuilder = new Behaviour("CheckClinicalSusipicionTrigger_c", this);
         this.InitCheckClinicalSusipicion_c(s);
         break;
       case "PerformLIATorCepheidTrigger_d":
-        behaviourBuilder = new Behaviour("PerformLIATorCepheidTrigger_d");
+        behaviourBuilder = new Behaviour("PerformLIATorCepheidTrigger_d", this);
         this.InitPerformLIATorCepheid_d(s);
         break;
       case "IspatientbeingadmittedtovulnerableareaTrigger_f":
-        behaviourBuilder = new Behaviour("IspatientbeingadmittedtovulnerableareaTrigger_f");
+        behaviourBuilder = new Behaviour("IspatientbeingadmittedtovulnerableareaTrigger_f", this);
         this.InitIspatientbeingadmittedtovulnerablearea_f(s);
         break;
       case "PerformLIATorCepheidTrigger_g":
-        behaviourBuilder = new Behaviour("PerformLIATorCepheidTrigger_g");
+        behaviourBuilder = new Behaviour("PerformLIATorCepheidTrigger_g", this);
         this.InitPerformLIATorCepheid_g(s);
         break;
       case "PatientArrivesTrigger_j":
-        behaviourBuilder = new Behaviour("PatientArrivesTrigger_j");
+        behaviourBuilder = new Behaviour("PatientArrivesTrigger_j", this);
         this.InitPatientArrives_j(s);
         break;
       case "CheckSymptomaticTrigger_c":
-        behaviourBuilder = new Behaviour("CheckSymptomaticTrigger_c");
+        behaviourBuilder = new Behaviour("CheckSymptomaticTrigger_c", this);
         this.InitCheckSymptomatic_a_0(s);
         break;
       case "LFDTrigger_b_0":
-        behaviourBuilder = new Behaviour("LFDTrigger_b_0");
+        behaviourBuilder = new Behaviour("LFDTrigger_b_0", this);
         this.InitLFD_b_0(s);
         break;
       case "CheckClinicalSusipicionTrigger_c_0":
-        behaviourBuilder = new Behaviour("CheckClinicalSusipicionTrigger_c_0");
+        behaviourBuilder = new Behaviour("CheckClinicalSusipicionTrigger_c_0", this);
         this.InitCheckClinicalSusipicion_c_0(s);
         break;
       case "PerformLIATorCepheidTrigger_d_0":
-        behaviourBuilder = new Behaviour("PerformLIATorCepheidTrigger_d_0");
+        behaviourBuilder = new Behaviour("PerformLIATorCepheidTrigger_d_0", this);
         this.InitPerformLIATorCepheid_d_0(s);
         break;
       case "IspatientbeingadmittedtovulnerableareaTrigger_f_0":
-        behaviourBuilder = new Behaviour("IspatientbeingadmittedtovulnerableareaTrigger_f_0");
+        behaviourBuilder = new Behaviour("IspatientbeingadmittedtovulnerableareaTrigger_f_0", this);
         this.InitIspatientbeingadmittedtovulnerablearea_f_0(s);
         break;
       case "PerformLIATorCepheidTrigger_g_0":
-        behaviourBuilder = new Behaviour("PerformLIATorCepheidTrigger_g_0");
+        behaviourBuilder = new Behaviour("PerformLIATorCepheidTrigger_g_0", this);
         this.InitPerformLIATorCepheid_g_0(s);
         break;
       case "PatientArrivesTrigger_j_0":
-        behaviourBuilder = new Behaviour("PatientArrivesTrigger_j_0");
+        behaviourBuilder = new Behaviour("PatientArrivesTrigger_j_0", this);
         this.InitPatientArrives_j_0(s);
         break;
       case "ImmunoCompromisedTrigger_g":
-        behaviourBuilder = new Behaviour("ImmunoCompromisedTrigger_g");
+        behaviourBuilder = new Behaviour("ImmunoCompromisedTrigger_g", this);
         this.InitImmunoCompromised_g(s);
         break;
       case "YesTrigger_h":
-        behaviourBuilder = new Behaviour("YesTrigger_h");
+        behaviourBuilder = new Behaviour("YesTrigger_h", this);
         this.InitYes_h(s);
         break;
       case "COVIDPositiveTrigger_i":
-        behaviourBuilder = new Behaviour("COVIDPositiveTrigger_i");
+        behaviourBuilder = new Behaviour("COVIDPositiveTrigger_i", this);
         this.InitCOVIDPositive_i(s);
         break;
       case "YesTrigger_j":
-        behaviourBuilder = new Behaviour("YesTrigger_j");
+        behaviourBuilder = new Behaviour("YesTrigger_j", this);
         this.InitYes_j(s);
         break;
       case "FluPositiveTrigger_k":
-        behaviourBuilder = new Behaviour("FluPositiveTrigger_k");
+        behaviourBuilder = new Behaviour("FluPositiveTrigger_k", this);
         this.InitFluPositive_k(s);
         break;
       case "YesTrigger_l":
-        behaviourBuilder = new Behaviour("YesTrigger_l");
+        behaviourBuilder = new Behaviour("YesTrigger_l", this);
         this.InitYes_l(s);
         break;
       default:
@@ -283,7 +313,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -310,7 +340,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -841,7 +871,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0h0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -958,7 +988,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -1020,7 +1050,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1047,7 +1077,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -1098,7 +1128,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0h0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1151,7 +1181,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -1213,7 +1243,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1240,7 +1270,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -1771,7 +1801,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0h0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1888,7 +1918,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -1950,7 +1980,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1977,7 +2007,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -2028,7 +2058,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0h0b(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2081,7 +2111,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -2143,7 +2173,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2158,7 +2188,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -2187,7 +2217,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -2718,7 +2748,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0i0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -2835,7 +2865,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -2897,7 +2927,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2912,7 +2942,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -2941,7 +2971,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -2992,7 +3022,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0i0c(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3045,7 +3075,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -3107,7 +3137,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -3134,7 +3164,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -3665,7 +3695,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3729,7 +3759,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -3780,7 +3810,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3868,7 +3898,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -4399,7 +4429,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4463,7 +4493,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -4514,7 +4544,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0e0d(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4606,7 +4636,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -4668,7 +4698,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -4747,7 +4777,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -4809,7 +4839,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -4855,7 +4885,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4904,7 +4934,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0e(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4922,7 +4952,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -4984,7 +5014,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -4998,7 +5028,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0e(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -5015,7 +5045,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0e(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -5033,7 +5063,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -5095,7 +5125,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -5122,7 +5152,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -5653,7 +5683,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -5717,7 +5747,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -5768,7 +5798,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -5856,7 +5886,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -6387,7 +6417,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0e0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -6451,7 +6481,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -6502,7 +6532,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0e0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -6594,7 +6624,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -6656,7 +6686,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -6735,7 +6765,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -6850,7 +6880,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -6901,7 +6931,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -6963,7 +6993,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -6990,7 +7020,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -7521,7 +7551,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0h0h(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -7638,7 +7668,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -7700,7 +7730,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -7727,7 +7757,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -7778,7 +7808,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0h0h(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -7831,7 +7861,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -7893,7 +7923,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -7920,7 +7950,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -8451,7 +8481,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0h0i(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -8568,7 +8598,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -8630,7 +8660,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -8657,7 +8687,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -8708,7 +8738,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0h0i(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -8761,7 +8791,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -8823,7 +8853,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -8838,7 +8868,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -8867,7 +8897,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -9398,7 +9428,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0i0j(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -9515,7 +9545,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -9577,7 +9607,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -9592,7 +9622,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -9621,7 +9651,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -9672,7 +9702,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0i0j(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -9725,7 +9755,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -9787,7 +9817,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -9814,7 +9844,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -10345,7 +10375,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d0k(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -10409,7 +10439,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -10460,7 +10490,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d0k(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -10548,7 +10578,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -11079,7 +11109,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0e0k(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -11143,7 +11173,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -11194,7 +11224,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0e0k(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -11286,7 +11316,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -11348,7 +11378,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -11427,7 +11457,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -11489,7 +11519,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -11535,7 +11565,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0l(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -11584,7 +11614,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0l(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -11602,7 +11632,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -11664,7 +11694,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -11678,7 +11708,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0l(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -11695,7 +11725,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0l(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -11713,7 +11743,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -11775,7 +11805,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -11802,7 +11832,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -12333,7 +12363,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d0m(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -12397,7 +12427,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -12448,7 +12478,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0d0m(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -12536,7 +12566,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13067,7 +13097,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0e0m(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -13131,7 +13161,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13182,7 +13212,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus == "Asymptomatic")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Symptomatic") || (((patient) behaviour.getSignalTrigger().GetData("patient")).??? == "Asymptomatic")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0e0e0m(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -13274,7 +13304,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13336,7 +13366,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -13415,7 +13445,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13464,7 +13494,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13513,7 +13543,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13628,7 +13658,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13679,7 +13709,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13712,7 +13742,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13745,7 +13775,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13860,7 +13890,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13911,7 +13941,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13944,7 +13974,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -13977,7 +14007,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -14092,7 +14122,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -14143,7 +14173,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -14176,7 +14206,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -14209,7 +14239,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -14259,7 +14289,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 

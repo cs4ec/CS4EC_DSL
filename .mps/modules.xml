@@ -21,12 +21,9 @@
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_EDProject/EDRuntime_EDProject.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_Repast/EDRuntime_Repast.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
-      <modulePath path="$PROJECT_DIR$/solutions/HighPrevalenceSurgeCOVIDTestingFlowchart.clone/HighPrevalenceSurgeCOVIDTestingFlowchart.clone.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/MinimalActionCard/MinimalActionCard.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/NewSolution/NewSolution.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/PreStrepAIntervention/PreStrepAIntervention.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/Retrospective31December2022/Retrospective31December2022.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/SimpleActionCard/SimpleActionCard.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpread/StThomasDiseaseSpread.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StrepAIntervention/StrepAIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StrepAIntervention_pre/StrepAIntervention_pre.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StyleFiles/StyleFiles.msd" folder="" />

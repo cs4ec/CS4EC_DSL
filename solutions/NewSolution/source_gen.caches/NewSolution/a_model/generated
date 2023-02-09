@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="2ogpi6oal7vjphqlfctmryuhiacyc6v">
-  <files names="PatientWaitTimesDataSet.xml:UserInterface.xml:batch_params.xml:parameters.xml:patientWaitTime.xml:repast.simphony.action.data_set_patient.xml:repast.simphony.action.file_sink_patient.xml:repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml:scenario.xml" />
-  <files dir="EDLanguage/sandbox" names="EDBuilder.java:Nurse.java:Nursestyle.java:Seat.java:Seatstyle.java:WaitingRoom.java:map_PatientProfile.java:map_PatientProfilestyle.java:patient.java:patientGenerator_0.java:patientstyle.java" />
-</product>
-

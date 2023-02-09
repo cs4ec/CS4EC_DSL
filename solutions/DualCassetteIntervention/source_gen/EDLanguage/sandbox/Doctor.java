@@ -8,8 +8,10 @@ import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.context.Context;
 import simcore.Signals.Signal;
+import simcore.basicStructures.Board;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import repast.simphony.space.graph.Network;
 import java.util.stream.StreamSupport;
 import repast.simphony.space.graph.RepastEdge;
@@ -23,7 +25,6 @@ import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
 import java.util.Iterator;
 import repast.simphony.engine.environment.RunEnvironment;
-import simcore.basicStructures.Board;
 
 public class Doctor extends Actor {
 
@@ -31,8 +32,37 @@ public class Doctor extends Actor {
 
   public Doctor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
     super(space, grid, context);
-    mintMyMaxPatients = 1;
+    mintMyMaxPatients = 2147483647;
   }
+
+  protected Signal searchForSignals(Board board) {
+    // Read the board for signals, and find ones for me - filter out any signals that I don't meet the pre-condition for
+    List<Signal> plstDirectSignals = board.GetDirectSignalsForMe(this).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, Doctor.this);
+      }
+    }).collect(Collectors.toList());
+
+
+
+    List<Signal> plstSignals = board.GetSignalListBySubject(this.getClass()).stream().filter(new Predicate<Signal>() {
+      public boolean test(Signal s) {
+        return s.checkPreCondition(context, Doctor.this);
+      }
+    }).collect(Collectors.toList());
+
+    if (plstDirectSignals.isEmpty() && plstSignals.isEmpty()) {
+      return null;
+    }
+    // First see if there are any direct messages for me and prioritise those
+    Signal s = selectSignal(plstDirectSignals);
+    if (s == null) {
+      // If none, select a message for my class type
+      s = selectSignal(plstSignals);
+    }
+    return s;
+  }
+
 
   protected Signal selectSignal(List<Signal> plstSignals) {
     if (!(plstSignals.isEmpty())) {
@@ -72,13 +102,13 @@ public class Doctor extends Actor {
 
   protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
     ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
-    // First, select the room that contains my patient (if my current action involves the patient) 
+    // First, select the room that contains my patient (if my current action involves the patient)
     for (Room pRoom : pRooms) {
       if (behaviour.getSignalTrigger() != null && behaviour.getSignalTrigger().GetData("patient") != null && pRoom.getOccupiers().contains(behaviour.getSignalTrigger().GetData("patient"))) {
         return pRoom;
       }
     }
-    // If my patient isn't currently in that room, then consider other options 
+    // If my patient isn't currently in that room, then consider other options
     Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
       public int compare(Room r1, Room r2) {
         return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
@@ -117,7 +147,7 @@ public class Doctor extends Actor {
   }
 
   public Behaviour isIdleAction(Signal s) {
-    behaviourBuilder = new Behaviour("isIdleAction");
+    behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
@@ -140,51 +170,51 @@ public class Doctor extends Actor {
       case "":
         break;
       case "AdmittoGreenBayTrigger_e":
-        behaviourBuilder = new Behaviour("AdmittoGreenBayTrigger_e");
+        behaviourBuilder = new Behaviour("AdmittoGreenBayTrigger_e", this);
         this.InitAdmitActionAdmittoGreenBay_e(s);
         break;
       case "AdmittoVulnerableAreaTrigger_h":
-        behaviourBuilder = new Behaviour("AdmittoVulnerableAreaTrigger_h");
+        behaviourBuilder = new Behaviour("AdmittoVulnerableAreaTrigger_h", this);
         this.InitAdmitActionAdmittoVulnerableArea_h(s);
         break;
       case "DischargeTrigger_i":
-        behaviourBuilder = new Behaviour("DischargeTrigger_i");
+        behaviourBuilder = new Behaviour("DischargeTrigger_i", this);
         this.InitDischargeActionDischarge_i(s);
         break;
       case "AdmittoGreenBayTrigger_e_0":
-        behaviourBuilder = new Behaviour("AdmittoGreenBayTrigger_e_0");
+        behaviourBuilder = new Behaviour("AdmittoGreenBayTrigger_e_0", this);
         this.InitAdmitActionAdmittoGreenBay_e_0(s);
         break;
       case "AdmittoVulnerableAreaTrigger_h_0":
-        behaviourBuilder = new Behaviour("AdmittoVulnerableAreaTrigger_h_0");
+        behaviourBuilder = new Behaviour("AdmittoVulnerableAreaTrigger_h_0", this);
         this.InitAdmitActionAdmittoVulnerableArea_h_0(s);
         break;
       case "DischargeTrigger_i_0":
-        behaviourBuilder = new Behaviour("DischargeTrigger_i_0");
+        behaviourBuilder = new Behaviour("DischargeTrigger_i_0", this);
         this.InitDischargeActionDischarge_i_0(s);
         break;
       case "DecideTrigger_a":
-        behaviourBuilder = new Behaviour("DecideTrigger_a");
+        behaviourBuilder = new Behaviour("DecideTrigger_a", this);
         this.InitDecide_a(s);
         break;
       case "COVIDCohortTrigger_b":
-        behaviourBuilder = new Behaviour("COVIDCohortTrigger_b");
+        behaviourBuilder = new Behaviour("COVIDCohortTrigger_b", this);
         this.InitAdmitActionCOVIDCohort_b(s);
         break;
       case "FluCohortTrigger_c":
-        behaviourBuilder = new Behaviour("FluCohortTrigger_c");
+        behaviourBuilder = new Behaviour("FluCohortTrigger_c", this);
         this.InitAdmitActionFluCohort_c(s);
         break;
       case "GreenCohortTrigger_d":
-        behaviourBuilder = new Behaviour("GreenCohortTrigger_d");
+        behaviourBuilder = new Behaviour("GreenCohortTrigger_d", this);
         this.InitAdmitActionGreenCohort_d(s);
         break;
       case "DischargeTrigger_e":
-        behaviourBuilder = new Behaviour("DischargeTrigger_e");
+        behaviourBuilder = new Behaviour("DischargeTrigger_e", this);
         this.InitDischargeActionDischarge_e(s);
         break;
       case "SideRoomTrigger_f":
-        behaviourBuilder = new Behaviour("SideRoomTrigger_f");
+        behaviourBuilder = new Behaviour("SideRoomTrigger_f", this);
         this.InitAdmitActionSideRoom_f(s);
         break;
       default:
@@ -282,7 +312,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -410,7 +440,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -538,7 +568,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -666,7 +696,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -761,7 +791,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -856,7 +886,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -984,7 +1014,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1112,7 +1142,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1240,7 +1270,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1368,7 +1398,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1463,7 +1493,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1558,7 +1588,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1653,7 +1683,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1668,7 +1698,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -1783,7 +1813,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -1845,7 +1875,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -1860,7 +1890,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -1911,7 +1941,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 
@@ -2006,7 +2036,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2134,7 +2164,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2262,7 +2292,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2390,7 +2420,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2518,7 +2548,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2646,7 +2676,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2741,7 +2771,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2836,7 +2866,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -2964,7 +2994,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -3092,7 +3122,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
     }
 
     public boolean finishCondition() {
@@ -3175,7 +3205,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      // Do nothing 
+      // Do nothing
       timeExecuted++;
     }
 

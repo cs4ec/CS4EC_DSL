@@ -24,6 +24,7 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import de.itemis.mps.editor.diagram.runtime.model.IConnectionType;
 import de.itemis.mps.editor.diagram.runtime.model.DiagramModel;
+import de.itemis.mps.editor.diagram.runtime.jgraph.ElkLayouter;
 import de.itemis.mps.editor.diagram.runtime.model.IPaletteEntryProvider;
 import de.itemis.mps.editor.diagram.runtime.model.CompositePaletteEntryProvider;
 import de.itemis.mps.editor.diagram.runtime.model.SubstituteInfoPaletteEntryProvider;
@@ -87,6 +88,8 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
                     DiagramModel model = DiagramModel.getModel(editorContext, node, "3787511550156378417", accessor);
 
+                    ElkLayouter layouter;
+
                     IPaletteEntryProvider paletteEntryProvider = new CompositePaletteEntryProvider(new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.rooms$Ov5F))));
                     model.setPaletteEntryProvider(paletteEntryProvider);
 
@@ -94,6 +97,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
                       editorCell.value = new SubDiagramECell(editorContext, node, model);
                     } else {
                       editorCell.value = new RootDiagramECell(editorContext, node, model);
+                      ((RootDiagramECell) editorCell.value).runAutoLayouterOnInit(node, false);
                     }
                     editorCell.value.setCellId("Diagram_kjb02t_a");
                     editorCell.value.setBig(true);

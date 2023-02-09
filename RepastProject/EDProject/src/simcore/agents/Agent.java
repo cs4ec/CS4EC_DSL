@@ -56,6 +56,7 @@ public class Agent {
 	public double deSpawnTime = 0;
 	public Object placeholderVariable;
 	protected Occupiable curOccupying;
+	protected Occupiable allocatedOccupiable;
 	protected List<Behaviour> myCurrentActions = new ArrayList<Behaviour>();
 	protected List<Behaviour> myPastActions = new ArrayList<Behaviour>();
 	public List<Behaviour> actionHistory = new ArrayList<Behaviour>();
@@ -128,22 +129,7 @@ public class Agent {
 		
 		action.step();
 	}
-	
-	
-	/*
-	 * An alternative movement implementation that ignores any pathfinding or obstacles, heads straight line to target
-	 */
-	public void CrowFlyMovement(GridPoint pt) {
-		NdPoint myPoint = space.getLocation(this);
 
-		if (!ImAt(pt)) {
-			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
-			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
-			space.moveByVector(this, 1, angle, 0);
-			myPoint = space.getLocation(this);
-			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
-		}
-	}
 	
 	// A simplified move action where if I am following another agent, I will not use full pathfinding but instead 
 	// copy the path of the agent I am following
@@ -183,12 +169,6 @@ public class Agent {
 		return plstAllEmptyOccupiables;
 	}
 	
-	// Create an action plan to select and occupy an object of the specified type
-	protected void FindAnOccupiable(Class occupiableType) {
-//		myActiveAction = new Action("TakeOccupiable").WithStep(
-//				new ActionStep().WithName("move to a " + occupiableType.getName()).WithAction(new OccupyAction().WithTarget(occupiableType)));
-	}
-	
 	// Utility method to select an occupiable of a given type
 	protected Occupiable SelectOccupiable(Room destination, Class occupiableType) {
 		if(curOccupying != null && curOccupying.getClass() == occupiableType) {
@@ -198,7 +178,8 @@ public class Agent {
 		if (!plstEmptyOccupiables.isEmpty()) {
 			ArrayList<Occupiable> emptyOccupiables = (ArrayList<Occupiable>) plstEmptyOccupiables;
 			int pNumOccupiables = emptyOccupiables.size();
-			return emptyOccupiables.get(RandomHelper.nextIntFromTo(0, pNumOccupiables-1));// <------ ToDo: change to have more complex seat selection
+			Occupiable pOccupiable = emptyOccupiables.get(RandomHelper.nextIntFromTo(0, pNumOccupiables-1));
+			return pOccupiable;// <------ ToDo: change to have more complex seat selection
 		}
 		return null;
 	}
@@ -220,30 +201,30 @@ public class Agent {
 		}
 
 		if (pointOfTarget != null) {
-			MoveTowards(pointOfTarget);
+			MoveTowards(pointOfTarget, o);
 		}
 	}
 	
-	public void MoveTowards(GridPoint pt) {
+	public void MoveTowards(GridPoint pt, Object targetObject) {
 		int count = 0;
 		int pintSecondsPerTick = RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick");
 		
 		while(count < pintSecondsPerTick) {
 			count++;
 			if(RunEnvironment.getInstance().getParameters().getBoolean("UsePathFinding")) {
-				PathFinding(pt);
+				PathFinding(pt, targetObject);
 			} else {
-				CrowFlyMovement(pt);
+				CrowFlyMovement(pt, targetObject);
 			}
 		}
 	}
 	
-	public void PathFinding(GridPoint pt) {
+	public void PathFinding(GridPoint pt, Object targetObject) {
 		NdPoint myPoint = space.getLocation(this);
 
 		// If I am not yet at the destination
-		if (!ImAt(pt)) {
-			// And I dont have a path, then get a new one
+		if ((targetObject instanceof Room && !ImAt((Room)targetObject)) || !ImAt(pt)) {
+			// And I don't have a path, then get a new one
 			if (curPath == null || curPath.isEmpty()) {
 				curPath = new ArrayList<>();
 				curPath.addAll(AStar.getRoute(grid, grid.getLocation(this), pt));
@@ -265,6 +246,21 @@ public class Agent {
 				myPoint = space.getLocation(this);
 				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 			}
+		}
+	}
+	
+	/*
+	 * An alternative movement implementation that ignores any pathfinding or obstacles, heads straight line to target
+	 */
+	public void CrowFlyMovement(GridPoint pt, Object targetObject) {
+		NdPoint myPoint = space.getLocation(this);
+
+		if ((targetObject instanceof Room && !ImAt((Room)targetObject)) || !ImAt(pt)) {
+			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
+			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
+			space.moveByVector(this, 1, angle, 0);
+			myPoint = space.getLocation(this);
+			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 		}
 	}
 	
@@ -396,8 +392,8 @@ public class Agent {
 		curOccupying = o;
 	}
 
-	public boolean ImAt(Room pLoc) {
-		GridPoint curPoint = grid.getLocation(this);
+	public boolean ImAt(Room pLoc) {		
+		NdPoint curPoint = space.getLocation(this);
 //		System.out.println(this + " CurrPoint = " + curPoint);
 
 		Tuple<Integer, Integer> pdblBottomLeft = new Tuple<Integer, Integer>(pLoc.getX(), pLoc.getY());
@@ -494,5 +490,9 @@ public class Agent {
 		
 		
 		toolBox.GetLog().WriteLog(this.getClass().getSimpleName() + " " + this.agentName() + "", content);
+	}
+
+	public void setAllocated(Occupiable occupiableLocation) {
+		allocatedOccupiable = occupiableLocation;
 	}
 }

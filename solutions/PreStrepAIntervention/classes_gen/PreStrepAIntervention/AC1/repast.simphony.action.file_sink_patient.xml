@@ -1,0 +1,32 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>patientDataSink</name>
+  <dataSet>patientDataSet</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>patientgetSeverityissevere</string>
+    <string>patientgetSeverityismoderate</string>
+    <string>patientgetSeverityislow</string>
+    <string>patientgetImmunocompromisedisYes</string>
+    <string>patientgetImmunocompromisedisNo</string>
+    <string>patientgetRecentCovidContactisYes</string>
+    <string>patientgetRecentCovidContactisNo</string>
+    <string>patientgetStrepAInfectionStatusisSusceptible</string>
+    <string>patientgetStrepAInfectionStatusisAsymptomatic</string>
+    <string>patientgetStrepAInfectionStatusisSymptomatic</string>
+    <string>patientgetadmittedToisGreenBay</string>
+    <string>patientgetadmittedToisGreenBaygetSeverityissevere</string>
+    <string>patientgetadmittedToisGreenBaygetSeverityismoderate</string>
+    <string>patientgetadmittedToisGreenBaygetSeverityislow</string>
+    <string>patientgetadmittedToisGreenBaygetImmunocompromisedisYes</string>
+    <string>patientgetadmittedToisGreenBaygetImmunocompromisedisNo</string>
+    <string>patientgetadmittedToisGreenBaygetRecentCovidContactisYes</string>
+    <string>patientgetadmittedToisGreenBaygetRecentCovidContactisNo</string>
+    <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisAsymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSymptomatic</string>
+    <string>patientgetAliveTime</string>
+  </sourceIds>
+  <fileName>patientDataOutput.txt</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

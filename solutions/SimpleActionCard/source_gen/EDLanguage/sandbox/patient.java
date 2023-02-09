@@ -31,6 +31,7 @@ public class patient extends Actor {
   public String admissionRoute = "UnConfigured";
   public String Immunocompromised = "NotConfigured";
   public String COVIDInfectionStatus = "NotConfigured";
+  public String LIATCOVIDResult = "Incomplete";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -149,6 +150,18 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getLIATCOVIDResultisPositive() {
+    if (this.LIATCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLIATCOVIDResultisNegative() {
+    if (this.LIATCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
   public int getadmittedToisCOVIDPositiveCohort() {
     if (this.admittedTo == "COVIDPositiveCohort") {
       return 1;
@@ -175,6 +188,18 @@ public class patient extends Actor {
   }
   public int getadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisAsymptomatic() {
     if (this.admittedTo == "COVIDPositiveCohort" && this.COVIDInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetLIATCOVIDResultisPositive() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.LIATCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetLIATCOVIDResultisNegative() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.LIATCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
@@ -299,7 +324,7 @@ public class patient extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
+      if (curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0a0a_1(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -316,7 +341,7 @@ public class patient extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
+      if (curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0a0a_1(behaviour));
         behaviour.injectSteps(plstSteps);

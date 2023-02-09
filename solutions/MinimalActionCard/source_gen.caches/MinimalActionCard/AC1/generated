@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="4zvfkwwlyvbvpvvyweny2mkcs2q2yxm">
-  <files names="batch_params.xml:parameters.xml:repast.simphony.action.data_set_patient.xml:repast.simphony.action.file_sink_patient.xml:repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml:scenario.xml" />
-  <files dir="EDLanguage/sandbox" names="Bed.java:COVIDPositiveCohort.java:CubicleNurse.java:Doctor.java:EDBuilder.java:ElectiveAttendanceArea.java:FluPositiveCohort.java:GreenBay.java:LIAT.java:LIATBooth.java:LIATExecutionTimeMap.java:LabTechnician.java:Labaratory.java:LateralFlow.java:LateralFlowExecutionTimeMap.java:MainEntrance.java:MajorsCBay.java:NonRespiratoryArea.java:NonRespiratoryCohort.java:NonRespiratoryCubicle.java:PCR.java:PCRTrigger_aSignal.java:PHEThree.java:PatientArrivesTrigger_dSignal.java:PreAdmissionStaff.java:RadiologyRoom.java:RespiratoryArea.java:RespiratoryCubicle.java:SideRoom.java:TaskRoom.java:TriageDesk.java:TriageNurse.java:TriageTrigger_aSignal.java:WaitingRoom.java:Ward.java:WardNurse.java:admitTrigger_cSignal.java:map_PatientProfile.java:patient.java:patientGenerator_0.java" />
-</product>
-

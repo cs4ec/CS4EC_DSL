@@ -182,6 +182,7 @@
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.EditorUtil" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.BaseDiagramECell" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.DiagramCreationContext" />
+    <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.ElkLayouter" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.RootDCell" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.RootDiagramECell" />
     <classNode dependClassName="de.itemis.mps.editor.diagram.runtime.jgraph.SubDiagramECell" />

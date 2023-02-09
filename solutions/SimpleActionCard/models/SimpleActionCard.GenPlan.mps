@@ -74,6 +74,24 @@
           <property role="2V$B1Q" value="BuiltEnvironment" />
         </node>
       </node>
+      <node concept="2Qf6Nf" id="1q14pdU79II" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="1q14pdU79IQ" role="2Qf6Ng">
+          <property role="2V$B1T" value="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" />
+          <property role="2V$B1Q" value="org.iets3.core.expr.genjava.base" />
+        </node>
+      </node>
+      <node concept="2Qf6Nf" id="1q14pdU79IS" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="1q14pdU79J2" role="2Qf6Ng">
+          <property role="2V$B1T" value="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" />
+          <property role="2V$B1Q" value="org.iets3.core.expr.genjava.simpleTypes" />
+        </node>
+      </node>
+      <node concept="2Qf6Nf" id="7WB5kYNhE8U" role="2Qf7GQ">
+        <node concept="2V$Bhx" id="7WB5kYNiaKO" role="2Qf6Ng">
+          <property role="2V$B1T" value="6b277d9a-d52d-416f-a209-1919bd737f50" />
+          <property role="2V$B1Q" value="org.iets3.core.expr.simpleTypes" />
+        </node>
+      </node>
     </node>
     <node concept="2VgMA2" id="32D7375ESVu" role="2VgMA7">
       <node concept="2Qf6Nf" id="32D7375FWIe" role="2Qf7GQ">

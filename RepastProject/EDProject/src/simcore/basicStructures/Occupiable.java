@@ -10,6 +10,7 @@ import simcore.agents.Agent;
 
 public class Occupiable extends Locatable{
 	protected Agent occupier;
+	protected Agent allocatedTo;
 	protected Room inRoom;
 
 	public Occupiable(Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, Room inRoom) {
@@ -35,9 +36,16 @@ public class Occupiable extends Locatable{
 		person.SetOccupying(this);
 	}
 	
+	public void setAllocated(Agent person) {
+		allocatedTo = person;
+		person.setAllocated(this);
+	}
+	
 	public void eject(Agent person) {
 		occupier = null;
+		allocatedTo = null;
 		person.SetOccupying(null);
+		person.setAllocated(null);
 	}
 	
 	public Agent getOccupier() {
@@ -50,6 +58,10 @@ public class Occupiable extends Locatable{
 	
 	public Boolean isOccupied() {
 		return occupier != null;
+	}
+	
+	public Boolean isAllocated() {
+		return allocatedTo != null;
 	}
 	
 	@Override

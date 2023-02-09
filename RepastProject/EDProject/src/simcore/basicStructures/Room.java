@@ -120,31 +120,6 @@ public class Room extends Locatable{
 		return this.entry;
 	}
 	
-	//---------------------------------------------------------- Occupiables -----------------------------------------------------------
-//	public void setSeats(int pintNumSeats) {
-//		for(int i = 0; i < pintNumSeats; i++) {
-//			int rndXCoord = RandomHelper.nextIntFromTo(locX+5, (locX+width-5));
-//			int rndYCoord = RandomHelper.nextIntFromTo(locY+5, locY+height-5);
-//			occupiables.add(new Seat(context, space, grid, rndXCoord, rndYCoord, this));
-//		}
-//	}
-//	
-//	public void setDesks(int pintNumDesks) {
-//		for(int i = 0; i < pintNumDesks; i++) {
-//			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
-//			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
-//			occupiables.add(new Desk(context, space, grid, rndXCoord, rndYCoord, this));
-//		}
-//	}
-//	
-//	public void setBeds(int pintNumBeds) {
-//		for(int i = 0; i < pintNumBeds; i++) {
-//			int rndXCoord = RandomHelper.nextIntFromTo(locX+2, (locX+width-2));
-//			int rndYCoord = RandomHelper.nextIntFromTo(locY+2, locY+height-2);
-//			occupiables.add(new Bed(context, space, grid, rndXCoord, rndYCoord, this));
-//		}
-//	}
-	
 	public List<Occupiable> getAllOccupiables(){
 		return occupiables;
 	}
@@ -154,7 +129,7 @@ public class Room extends Locatable{
 	}
 	
 	public List<Occupiable> getAllEmptyOcupiablesOfType(Class c) {
-		return occupiables.stream().filter(o -> o.getClass() == c && !o.isOccupied()).collect(Collectors.toList());
+		return occupiables.stream().filter(o -> o.getClass() == c && !o.isOccupied() && !o.isAllocated()).collect(Collectors.toList());
 	}
 	
 	public void addOccupiable(Occupiable occupiable) {

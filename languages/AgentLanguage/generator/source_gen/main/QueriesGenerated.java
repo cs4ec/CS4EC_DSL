@@ -709,13 +709,13 @@ public class QueriesGenerated extends QueryProviderBase {
     return (String) OccupiableDefinition__BehaviorDescriptor.getFormattedName_id34hhAWvP6xc.invoke(_context.getNode());
   }
   public static Object propertyMacro_GetValue_87_5(final PropertyMacroContext _context) {
-    return "3";
+    return (Integer) _context.getVariable("loop:index") + 4 + "";
   }
   public static Object propertyMacro_GetValue_87_6(final PropertyMacroContext _context) {
     return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.actorType$zg3B));
   }
   public static Object propertyMacro_GetValue_87_7(final PropertyMacroContext _context) {
-    return ((Integer) _context.getVariable("loop:index") + 4) + "";
+    return ((Integer) _context.getVariable("loop:index") + SModelOperations.roots(_context.getInputModel(), CONCEPTS.OccupiableDefinition$ZY).size() + 4) + "";
   }
   public static Object propertyMacro_GetValue_88_0(final PropertyMacroContext _context) {
     return Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(_context.getNode()) + "style";
@@ -2918,12 +2918,12 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept ScenarioBuilder$Aw = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x35463334ce2f7b00L, "BuiltEnvironment.structure.ScenarioBuilder");
     /*package*/ static final SConcept AttributeDistributionTable$$C = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f407L, "AgentLanguage.structure.AttributeDistributionTable");
     /*package*/ static final SConcept ProbabilityDistribution$1L = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35a97493533736a5L, "AgentLanguage.structure.ProbabilityDistribution");
+    /*package*/ static final SConcept OccupiableDefinition$ZY = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L, "BuiltEnvironment.structure.OccupiableDefinition");
     /*package*/ static final SConcept RoomInstanceDefinition$uw = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, "BuiltEnvironment.structure.RoomInstanceDefinition");
     /*package*/ static final SConcept Actor$CU = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, "AgentLanguage.structure.Actor");
     /*package*/ static final SConcept StringType$B3 = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc7L, "org.iets3.core.expr.simpleTypes.structure.StringType");
     /*package*/ static final SConcept AgentGenerator$SQ = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x637eade0e62ce2b8L, "AgentLanguage.structure.AgentGenerator");
     /*package*/ static final SConcept ExpressionWrapper$uy = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, "AgentLanguage.structure.ExpressionWrapper");
-    /*package*/ static final SConcept OccupiableDefinition$ZY = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L, "BuiltEnvironment.structure.OccupiableDefinition");
   }
 
   private static final class PROPS {

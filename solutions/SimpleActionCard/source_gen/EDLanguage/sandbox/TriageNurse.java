@@ -24,6 +24,8 @@ import simcore.action.BehaviourStep;
 import simcore.Signals.Orders.MoveToOrder;
 import repast.simphony.engine.environment.RunEnvironment;
 import simcore.action.InstantBehaviourStep;
+import org.iets3.core.expr.simpleTypes.runtime.AH;
+import simcore.basicStructures.TimeKeeper;
 
 public class TriageNurse extends Actor {
 
@@ -250,10 +252,10 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class SendSignalAction_e0a extends BehaviourStep {
+  public class SendSignalAction_a0e0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_e0a(Behaviour behaviour) {
+    public SendSignalAction_a0e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -264,6 +266,39 @@ public class TriageNurse extends Actor {
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
+    }
+  }
+  public class SendSignalAction_a0e0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0e0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new LateralFlowTestTrigger_aSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class Choice_e0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_e0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (!(AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 8) + (60 * 0))))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0e0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
   public class StayAction_f0a extends BehaviourStep {
@@ -360,20 +395,21 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class SendSignalAction_e0a_1 extends BehaviourStep {
+  public class Choice_e0a_3 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_e0a_1(Behaviour behaviour) {
+    public Choice_e0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new LateralFlowTestTrigger_aSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
+      if (!(AH.isGreater(TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime()), ((3600 * 8) + (60 * 0))))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0e0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
     }
   }
   public class StayAction_f0a_1 extends BehaviourStep {
@@ -502,7 +538,7 @@ public class TriageNurse extends Actor {
     plstSteps.add(new OrderAction_b0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_1(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_e0a(behaviourBuilder));
+    plstSteps.add(new Choice_e0a_1(behaviourBuilder));
     plstSteps.add(new StayAction_f0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

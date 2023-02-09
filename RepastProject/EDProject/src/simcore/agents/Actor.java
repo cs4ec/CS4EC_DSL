@@ -13,6 +13,7 @@ import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.engine.schedule.ScheduledMethod;
+import repast.simphony.parameter.Parameter;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.graph.Network;
 import repast.simphony.space.graph.RepastEdge;
@@ -38,7 +39,7 @@ import simcore.basicStructures.ToolBox;
 public class Actor extends Agent {
 	  protected int mintMyMaxPatients = 1;
 	  protected Schedule schedule;
-	  protected Order curOrder;
+	  protected List<Order> myOrders = new ArrayList<Order>();
 
 	
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -82,11 +83,12 @@ public class Actor extends Agent {
 		if (isIdle) {
 			
 			// Have I been given an order?
-			if(curOrder != null) {
+			if(!myOrders.isEmpty()) {
 				myActiveAction = null; // Reset/Remove any independent actions, orders take priority
-				ExecOrder(curOrder);
+				ExecOrder(myOrders.get(0));
 				return;
-			} 
+			}
+
 
 			List<Behaviour> plstReadyActions = myCurrentActions.stream().filter(a -> !(a.getCurrentStep() instanceof PassiveBehaviourStep)).collect(Collectors.toList());
 			
@@ -123,7 +125,7 @@ public class Actor extends Agent {
 	
 	
 	public void TakeOrder(Order o) {
-		curOrder = o;
+		myOrders.add(o);
 	}
 
 	// Process an order given by a staff member
@@ -143,6 +145,7 @@ public class Actor extends Agent {
 		        		  iterateOrder();
 		        	  } else {
 			        	  concreteDestination = target;
+			        	  target.setAllocated(this);
 		        	  }
 		          } 
 		          else {
@@ -182,10 +185,7 @@ public class Actor extends Agent {
 			MoveTowards(target);
 		} else if (order instanceof StopOrder) {
 			iterateOrder();
-		} else if (order instanceof OccupyOrder) {
-			FindAnOccupiable(((OccupyOrder) order).getOccupiable());
-			iterateOrder();
-		}
+		} 
 	}
 	
 	/**
@@ -193,7 +193,11 @@ public class Actor extends Agent {
 	 * This is used in cases of 'composite orders' e.g. Go to the DocOffice AND Take a Seat
 	 */
 	private void iterateOrder() {
-		curOrder = curOrder.getNextStep();
+		if(myOrders.get(0).getNextStep() != null) {
+			myOrders.set(0, myOrders.get(0).getNextStep());
+		} else {
+			myOrders.remove(0);
+		}
 	}
 
 	protected Signal searchForSignals(Board board) {
@@ -225,6 +229,23 @@ public class Actor extends Agent {
 	public Behaviour BuildActionFromSignal(Signal s) {
 		return null;
 
+	}
+	
+	@Parameter(usageName="actions", displayName="My Actions")
+	public String getActions() {
+		String out = "Current Actions: ";
+		if(myCurrentActions != null) {
+			for (Behaviour behaviour : myCurrentActions) {
+				out+= behaviour.toString() + ",";
+			}
+		}
+		return out;
+	}
+	
+	@Parameter(usageName="idle", displayName="Am I Idle")
+	public String getIdle() {
+		
+		return isIdle + "";
 	}
 
 	public boolean IsIdle() {

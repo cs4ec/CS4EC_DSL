@@ -1069,120 +1069,124 @@
       <unit id="3787511550156315337" at="13,0,24,0" name="BuiltEnvironment.editor.Area_diagram_Editor" />
     </file>
     <file name="Area_diagram_EditorBuilder_a.java">
-      <node id="3787511550156315337" at="41,92,42,19" concept="11" />
-      <node id="3787511550156315337" at="42,19,43,18" concept="2" />
-      <node id="3787511550156315337" at="48,26,49,18" concept="8" />
-      <node id="3787511550156315337" at="52,39,53,29" concept="8" />
-      <node id="3787511550156315337" at="56,91,57,93" concept="7" />
-      <node id="3787511550156315337" at="57,93,58,0" concept="9" />
-      <node id="3787511550156315337" at="64,48,65,40" concept="8" />
-      <node id="3787511550156315337" at="70,37,71,93" concept="7" />
-      <node id="3787511550156315337" at="73,116,74,112" concept="7" />
-      <node id="3787511550156378420" at="75,116,76,72" concept="2" />
-      <node id="3787511550156315337" at="77,25,78,40" concept="8" />
-      <node id="3787511550156315337" at="81,73,82,97" concept="7" />
-      <node id="3787511550156315337" at="82,97,83,47" concept="8" />
-      <node id="3787511550156315337" at="86,22,87,0" concept="9" />
-      <node id="3787511550156315337" at="87,0,88,117" concept="7" />
-      <node id="3787511550156315337" at="88,117,89,0" concept="9" />
-      <node id="3787511550156315337" at="89,0,90,261" concept="7" />
-      <node id="3787511550156315337" at="90,261,91,72" concept="2" />
-      <node id="3787511550156315337" at="91,72,92,0" concept="9" />
-      <node id="3787511550156315337" at="93,64,94,89" concept="2" />
-      <node id="3787511550156315337" at="95,28,96,90" concept="2" />
-      <node id="3787511550156315337" at="97,21,98,67" concept="2" />
-      <node id="3787511550156315337" at="98,67,99,50" concept="2" />
-      <node id="3787511550156315337" at="99,50,100,53" concept="2" />
-      <node id="3787511550156315337" at="101,69,102,99" concept="7" />
-      <node id="3787511550156315337" at="103,63,104,72" concept="2" />
-      <node id="3787511550156315337" at="114,7,115,0" concept="9" />
-      <node id="3787511550156315337" at="115,0,116,28" concept="8" />
-      <node id="3787511550156315337" at="118,40,119,55" concept="8" />
-      <node id="3787511550156315337" at="123,0,124,0" concept="10" trace="rooms$Ov5F" />
-      <node id="3787511550156315337" at="38,0,40,0" concept="3" trace="myNode" />
-      <node id="3787511550156315337" at="95,26,97,21" concept="0" />
-      <node id="3787511550156315337" at="52,0,55,0" concept="6" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="3787511550156315337" at="64,0,67,0" concept="6" trace="invoke#()Lde/itemis/mps/editor/diagram/runtime/jgraph/BaseDiagramECell;" />
-      <node id="3787511550156378420" at="74,112,77,25" concept="4" />
-      <node id="3787511550156315337" at="102,99,105,23" concept="5" />
-      <node id="3787511550156315337" at="118,0,121,0" concept="6" trace="createDiagram_1#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <node id="3787511550156315337" at="41,0,45,0" concept="1" trace="Area_diagram_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-      <node id="3787511550156315337" at="46,0,51,0" concept="6" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="3787511550156315337" at="80,0,85,0" concept="6" trace="getConnectionTypes#()Ljava/util/List;" />
-      <node id="3787511550156315337" at="92,0,97,21" concept="5" />
-      <node id="3787511550156315337" at="100,53,106,21" concept="5" />
-      <node id="3787511550156315337" at="73,0,80,0" concept="6" trace="getElements#(Lde/itemis/mps/editor/diagram/runtime/model/IAccessorFactory;)Ljava/util/List;" />
-      <node id="3787511550156315337" at="71,93,86,22" concept="7" />
-      <node id="3787511550156315337" at="70,0,108,0" concept="6" trace="run#()V" />
-      <node id="3787511550156315337" at="68,33,108,19" concept="2" />
-      <node id="3787511550156315337" at="68,0,110,0" concept="6" trace="run#()V" />
-      <node id="3787511550156315337" at="62,32,110,15" concept="2" />
-      <node id="3787511550156315337" at="62,0,112,0" concept="6" trace="invoke#()V" />
-      <node id="3787511550156315337" at="60,25,112,11" concept="2" />
-      <node id="3787511550156315337" at="60,0,114,0" concept="6" trace="run#()V" />
-      <node id="3787511550156315337" at="58,0,114,7" concept="2" />
-      <node id="3787511550156315337" at="56,0,118,0" concept="6" trace="createDiagram_0#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
-      <scope id="3787511550156315337" at="48,26,49,18" />
-      <scope id="3787511550156315337" at="52,39,53,29" />
-      <scope id="3787511550156315337" at="64,48,65,40" />
-      <scope id="3787511550156378420" at="75,116,76,72" />
-      <scope id="3787511550156315337" at="93,64,94,89" />
-      <scope id="3787511550156315337" at="95,28,96,90" />
-      <scope id="3787511550156315337" at="103,63,104,72" />
-      <scope id="3787511550156315337" at="118,40,119,55" />
-      <scope id="3787511550156315337" at="41,92,43,18" />
-      <scope id="3787511550156315337" at="81,73,83,47">
+      <node id="3787511550156315337" at="42,92,43,19" concept="11" />
+      <node id="3787511550156315337" at="43,19,44,18" concept="2" />
+      <node id="3787511550156315337" at="49,26,50,18" concept="8" />
+      <node id="3787511550156315337" at="53,39,54,29" concept="8" />
+      <node id="3787511550156315337" at="57,91,58,93" concept="7" />
+      <node id="3787511550156315337" at="58,93,59,0" concept="9" />
+      <node id="3787511550156315337" at="65,48,66,40" concept="8" />
+      <node id="3787511550156315337" at="71,37,72,93" concept="7" />
+      <node id="3787511550156315337" at="74,116,75,112" concept="7" />
+      <node id="3787511550156378420" at="76,116,77,72" concept="2" />
+      <node id="3787511550156315337" at="78,25,79,40" concept="8" />
+      <node id="3787511550156315337" at="82,73,83,97" concept="7" />
+      <node id="3787511550156315337" at="83,97,84,47" concept="8" />
+      <node id="3787511550156315337" at="87,22,88,0" concept="9" />
+      <node id="3787511550156315337" at="88,0,89,117" concept="7" />
+      <node id="3787511550156315337" at="89,117,90,0" concept="9" />
+      <node id="3787511550156315337" at="90,0,91,41" concept="7" />
+      <node id="3787511550156315337" at="91,41,92,0" concept="9" />
+      <node id="3787511550156315337" at="92,0,93,261" concept="7" />
+      <node id="3787511550156315337" at="93,261,94,72" concept="2" />
+      <node id="3787511550156315337" at="94,72,95,0" concept="9" />
+      <node id="3787511550156315337" at="96,64,97,89" concept="2" />
+      <node id="3787511550156315337" at="98,28,99,90" concept="2" />
+      <node id="3787511550156315337" at="99,90,100,95" concept="2" />
+      <node id="3787511550156315337" at="101,21,102,67" concept="2" />
+      <node id="3787511550156315337" at="102,67,103,50" concept="2" />
+      <node id="3787511550156315337" at="103,50,104,53" concept="2" />
+      <node id="3787511550156315337" at="105,69,106,99" concept="7" />
+      <node id="3787511550156315337" at="107,63,108,72" concept="2" />
+      <node id="3787511550156315337" at="118,7,119,0" concept="9" />
+      <node id="3787511550156315337" at="119,0,120,28" concept="8" />
+      <node id="3787511550156315337" at="122,40,123,55" concept="8" />
+      <node id="3787511550156315337" at="127,0,128,0" concept="10" trace="rooms$Ov5F" />
+      <node id="3787511550156315337" at="39,0,41,0" concept="3" trace="myNode" />
+      <node id="3787511550156315337" at="53,0,56,0" concept="6" trace="createCell#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="3787511550156315337" at="65,0,68,0" concept="6" trace="invoke#()Lde/itemis/mps/editor/diagram/runtime/jgraph/BaseDiagramECell;" />
+      <node id="3787511550156378420" at="75,112,78,25" concept="4" />
+      <node id="3787511550156315337" at="98,26,101,21" concept="0" />
+      <node id="3787511550156315337" at="106,99,109,23" concept="5" />
+      <node id="3787511550156315337" at="122,0,125,0" concept="6" trace="createDiagram_1#()Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <node id="3787511550156315337" at="42,0,46,0" concept="1" trace="Area_diagram_EditorBuilder_a#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="3787511550156315337" at="47,0,52,0" concept="6" trace="getNode#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3787511550156315337" at="81,0,86,0" concept="6" trace="getConnectionTypes#()Ljava/util/List;" />
+      <node id="3787511550156315337" at="95,0,101,21" concept="5" />
+      <node id="3787511550156315337" at="104,53,110,21" concept="5" />
+      <node id="3787511550156315337" at="74,0,81,0" concept="6" trace="getElements#(Lde/itemis/mps/editor/diagram/runtime/model/IAccessorFactory;)Ljava/util/List;" />
+      <node id="3787511550156315337" at="72,93,87,22" concept="7" />
+      <node id="3787511550156315337" at="71,0,112,0" concept="6" trace="run#()V" />
+      <node id="3787511550156315337" at="69,33,112,19" concept="2" />
+      <node id="3787511550156315337" at="69,0,114,0" concept="6" trace="run#()V" />
+      <node id="3787511550156315337" at="63,32,114,15" concept="2" />
+      <node id="3787511550156315337" at="63,0,116,0" concept="6" trace="invoke#()V" />
+      <node id="3787511550156315337" at="61,25,116,11" concept="2" />
+      <node id="3787511550156315337" at="61,0,118,0" concept="6" trace="run#()V" />
+      <node id="3787511550156315337" at="59,0,118,7" concept="2" />
+      <node id="3787511550156315337" at="57,0,122,0" concept="6" trace="createDiagram_0#(Ljetbrains/mps/openapi/editor/EditorContext;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/openapi/editor/cells/EditorCell;" />
+      <scope id="3787511550156315337" at="49,26,50,18" />
+      <scope id="3787511550156315337" at="53,39,54,29" />
+      <scope id="3787511550156315337" at="65,48,66,40" />
+      <scope id="3787511550156378420" at="76,116,77,72" />
+      <scope id="3787511550156315337" at="96,64,97,89" />
+      <scope id="3787511550156315337" at="107,63,108,72" />
+      <scope id="3787511550156315337" at="122,40,123,55" />
+      <scope id="3787511550156315337" at="42,92,44,18" />
+      <scope id="3787511550156315337" at="82,73,84,47">
         <var name="connectionTypes" id="3787511550156315337" />
       </scope>
-      <scope id="3787511550156315337" at="52,0,55,0" />
-      <scope id="3787511550156315337" at="64,0,67,0" />
-      <scope id="3787511550156378420" at="74,112,77,25">
+      <scope id="3787511550156315337" at="98,28,100,95" />
+      <scope id="3787511550156315337" at="53,0,56,0" />
+      <scope id="3787511550156315337" at="65,0,68,0" />
+      <scope id="3787511550156378420" at="75,112,78,25">
         <var name="e" id="3787511550156378420" />
       </scope>
-      <scope id="3787511550156315337" at="118,0,121,0" />
-      <scope id="3787511550156315337" at="41,0,45,0">
+      <scope id="3787511550156315337" at="122,0,125,0" />
+      <scope id="3787511550156315337" at="42,0,46,0">
         <var name="context" id="3787511550156315337" />
         <var name="node" id="3787511550156315337" />
       </scope>
-      <scope id="3787511550156315337" at="101,69,105,23">
+      <scope id="3787511550156315337" at="105,69,109,23">
         <var name="defaultParent" id="3787511550156315337" />
       </scope>
-      <scope id="3787511550156315337" at="46,0,51,0" />
-      <scope id="3787511550156315337" at="73,116,78,40">
+      <scope id="3787511550156315337" at="47,0,52,0" />
+      <scope id="3787511550156315337" at="74,116,79,40">
         <var name="elements" id="3787511550156315337" />
       </scope>
-      <scope id="3787511550156315337" at="80,0,85,0" />
-      <scope id="3787511550156315337" at="73,0,80,0">
+      <scope id="3787511550156315337" at="81,0,86,0" />
+      <scope id="3787511550156315337" at="74,0,81,0">
         <var name="accessorFactory" id="3787511550156315337" />
       </scope>
-      <scope id="3787511550156315337" at="70,37,106,21">
+      <scope id="3787511550156315337" at="71,37,110,21">
         <var name="_variablesContext" id="3787511550156315337" />
         <var name="accessor" id="3787511550156315337" />
+        <var name="layouter" id="3787511550156315337" />
         <var name="model" id="3787511550156315337" />
         <var name="paletteEntryProvider" id="3787511550156315337" />
       </scope>
-      <scope id="3787511550156315337" at="70,0,108,0" />
-      <scope id="3787511550156315337" at="68,33,108,19" />
-      <scope id="3787511550156315337" at="68,0,110,0" />
-      <scope id="3787511550156315337" at="62,32,110,15" />
-      <scope id="3787511550156315337" at="62,0,112,0" />
-      <scope id="3787511550156315337" at="60,25,112,11" />
-      <scope id="3787511550156315337" at="60,0,114,0" />
-      <scope id="3787511550156315337" at="56,91,116,28">
+      <scope id="3787511550156315337" at="71,0,112,0" />
+      <scope id="3787511550156315337" at="69,33,112,19" />
+      <scope id="3787511550156315337" at="69,0,114,0" />
+      <scope id="3787511550156315337" at="63,32,114,15" />
+      <scope id="3787511550156315337" at="63,0,116,0" />
+      <scope id="3787511550156315337" at="61,25,116,11" />
+      <scope id="3787511550156315337" at="61,0,118,0" />
+      <scope id="3787511550156315337" at="57,91,120,28">
         <var name="editorCell" id="3787511550156315337" />
       </scope>
-      <scope id="3787511550156315337" at="56,0,118,0">
+      <scope id="3787511550156315337" at="57,0,122,0">
         <var name="editorContext" id="3787511550156315337" />
         <var name="node" id="3787511550156315337" />
       </scope>
-      <unit id="3787511550156315337" at="122,0,125,0" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$LINKS" />
-      <unit id="3787511550156315337" at="63,49,67,13" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1$1" />
-      <unit id="3787511550156315337" at="72,52,86,21" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1$2$1$1" />
-      <unit id="3787511550156315337" at="69,65,108,17" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1$2$1" />
-      <unit id="3787511550156315337" at="67,19,110,13" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1$2" />
-      <unit id="3787511550156315337" at="61,49,112,9" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1" />
-      <unit id="3787511550156315337" at="59,44,114,5" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1" />
-      <unit id="3787511550156315337" at="37,0,126,0" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a" />
+      <unit id="3787511550156315337" at="126,0,129,0" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$LINKS" />
+      <unit id="3787511550156315337" at="64,49,68,13" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1$1" />
+      <unit id="3787511550156315337" at="73,52,87,21" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1$2$1$1" />
+      <unit id="3787511550156315337" at="70,65,112,17" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1$2$1" />
+      <unit id="3787511550156315337" at="68,19,114,13" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1$2" />
+      <unit id="3787511550156315337" at="62,49,116,9" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1$1" />
+      <unit id="3787511550156315337" at="60,44,118,5" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a$1" />
+      <unit id="3787511550156315337" at="38,0,130,0" name="BuiltEnvironment.editor.Area_diagram_EditorBuilder_a" />
     </file>
   </root>
   <root nodeRef="r:770cdc7e-168f-4d14-bb8c-55cfedef145f(BuiltEnvironment.editor)/3787511550156378614">

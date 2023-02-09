@@ -371,7 +371,6 @@
         <child id="1167945861827" name="conditionFunction" index="3IZSJc" />
       </concept>
       <concept id="1118786554307" name="jetbrains.mps.lang.generator.structure.LoopMacro" flags="ln" index="1WS0z7">
-        <property id="7430509679011668804" name="counterVarName" index="1qytDF" />
         <child id="1167952069335" name="sourceNodesQuery" index="3Jn$fo" />
       </concept>
       <concept id="1088761943574" name="jetbrains.mps.lang.generator.structure.ReferenceMacro" flags="ln" index="1ZhdrF">
@@ -22058,6 +22057,96 @@
           </node>
           <node concept="356sEK" id="2w4aK2ndkBj" role="383Ya9">
             <node concept="356WMU" id="2w4aK2ny3kw" role="356sEH">
+              <node concept="356sEK" id="4qMOFDDDm1G" role="383Ya9">
+                <node concept="356sEF" id="4qMOFDDDm1H" role="356sEH">
+                  <property role="TrG5h" value="&lt;entry&gt;" />
+                </node>
+                <node concept="2EixSi" id="4qMOFDDDm1I" role="2EinRH" />
+              </node>
+              <node concept="356sEK" id="4qMOFDDDml8" role="383Ya9">
+                <node concept="356sEQ" id="4qMOFDDDmC9" role="356sEH">
+                  <property role="333NGx" value="  " />
+                  <node concept="356sEK" id="4qMOFDDDmCd" role="383Ya9">
+                    <node concept="356sEF" id="4qMOFDDDmCe" role="356sEH">
+                      <property role="TrG5h" value="&lt;string&gt;EDLanguage.sandbox.patient&lt;/string&gt;" />
+                    </node>
+                    <node concept="2EixSi" id="4qMOFDDDmCf" role="2EinRH" />
+                  </node>
+                  <node concept="356sEK" id="4qMOFDDDmCg" role="383Ya9">
+                    <node concept="356sEF" id="4qMOFDDDmCh" role="356sEH">
+                      <property role="TrG5h" value="&lt;int&gt;1&lt;/int&gt;" />
+                    </node>
+                    <node concept="2EixSi" id="4qMOFDDDmCi" role="2EinRH" />
+                  </node>
+                </node>
+                <node concept="2EixSi" id="4qMOFDDDmla" role="2EinRH" />
+              </node>
+              <node concept="356sEK" id="4qMOFDDDn0A" role="383Ya9">
+                <node concept="356sEF" id="4qMOFDDDn0B" role="356sEH">
+                  <property role="TrG5h" value="&lt;/entry&gt;" />
+                </node>
+                <node concept="2EixSi" id="4qMOFDDDn0C" role="2EinRH" />
+              </node>
+              <node concept="356sEK" id="7WB5kYMz7yp" role="383Ya9">
+                <node concept="2EixSi" id="7WB5kYMz7yr" role="2EinRH" />
+              </node>
+              <node concept="356sEK" id="7hudoSBWK4y" role="383Ya9">
+                <node concept="356sEF" id="7hudoSBWK4z" role="356sEH">
+                  <property role="TrG5h" value="&lt;entry&gt;" />
+                </node>
+                <node concept="2EixSi" id="7hudoSBWK4_" role="2EinRH" />
+              </node>
+              <node concept="356sEQ" id="7hudoSBWK4E" role="383Ya9">
+                <property role="333NGx" value="  " />
+                <node concept="356sEK" id="7hudoSBWK4A" role="383Ya9">
+                  <node concept="356sEF" id="7hudoSBWK4B" role="356sEH">
+                    <property role="TrG5h" value="&lt;string&gt;simcore.basicStructures.Wall&lt;/string&gt;" />
+                  </node>
+                  <node concept="2EixSi" id="7hudoSBWK4D" role="2EinRH" />
+                </node>
+                <node concept="356sEK" id="7hudoSBWK4F" role="383Ya9">
+                  <node concept="356sEF" id="7hudoSBWK4G" role="356sEH">
+                    <property role="TrG5h" value="&lt;int&gt;2&lt;/int&gt;" />
+                  </node>
+                  <node concept="2EixSi" id="7hudoSBWK4I" role="2EinRH" />
+                </node>
+              </node>
+              <node concept="356sEK" id="7hudoSBWK4J" role="383Ya9">
+                <node concept="356sEF" id="7hudoSBWK4K" role="356sEH">
+                  <property role="TrG5h" value="&lt;/entry&gt;" />
+                </node>
+                <node concept="2EixSi" id="7hudoSBWK4M" role="2EinRH" />
+              </node>
+              <node concept="356sEK" id="7WB5kYMz7zv" role="383Ya9">
+                <node concept="2EixSi" id="7WB5kYMz7zx" role="2EinRH" />
+              </node>
+              <node concept="356sEK" id="7hudoSBWK40" role="383Ya9">
+                <node concept="356sEF" id="7hudoSBWK41" role="356sEH">
+                  <property role="TrG5h" value="&lt;entry&gt;" />
+                </node>
+                <node concept="2EixSi" id="7hudoSBWK43" role="2EinRH" />
+              </node>
+              <node concept="356sEQ" id="7hudoSBWK48" role="383Ya9">
+                <property role="333NGx" value="  " />
+                <node concept="356sEK" id="7hudoSBWK44" role="383Ya9">
+                  <node concept="356sEF" id="7hudoSBWK45" role="356sEH">
+                    <property role="TrG5h" value="&lt;string&gt;simcore.basicStructures.Occupiable&lt;/string&gt;" />
+                  </node>
+                  <node concept="2EixSi" id="7hudoSBWK47" role="2EinRH" />
+                </node>
+                <node concept="356sEK" id="7hudoSBWK49" role="383Ya9">
+                  <node concept="356sEF" id="7hudoSBWK4a" role="356sEH">
+                    <property role="TrG5h" value="&lt;int&gt;3&lt;/int&gt;" />
+                  </node>
+                  <node concept="2EixSi" id="7hudoSBWK4c" role="2EinRH" />
+                </node>
+              </node>
+              <node concept="356sEK" id="7hudoSBWK4d" role="383Ya9">
+                <node concept="356sEF" id="7hudoSBWK4e" role="356sEH">
+                  <property role="TrG5h" value="&lt;/entry&gt;" />
+                </node>
+                <node concept="2EixSi" id="7hudoSBWK4g" role="2EinRH" />
+              </node>
               <node concept="356sEQ" id="2w4aK2ndkV4" role="383Ya9">
                 <property role="333NGx" value="  " />
                 <node concept="356sEK" id="2w4aK2ndkV5" role="383Ya9">
@@ -22105,9 +22194,19 @@
                       <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
                       <node concept="3zFVjK" id="2w4aK2ndkVq" role="3zH0cK">
                         <node concept="3clFbS" id="2w4aK2ndkVr" role="2VODD2">
-                          <node concept="3clFbF" id="2w4aK2ndkVs" role="3cqZAp">
-                            <node concept="Xl_RD" id="2w4aK2ndmPs" role="3clFbG">
-                              <property role="Xl_RC" value="3" />
+                          <node concept="3clFbF" id="7WB5kYMzae0" role="3cqZAp">
+                            <node concept="3cpWs3" id="7WB5kYMzcOh" role="3clFbG">
+                              <node concept="Xl_RD" id="7WB5kYMzd8$" role="3uHU7w">
+                                <property role="Xl_RC" value="" />
+                              </node>
+                              <node concept="3cpWs3" id="7WB5kYMzbHj" role="3uHU7B">
+                                <node concept="3cmrfG" id="7WB5kYMzc2L" role="3uHU7w">
+                                  <property role="3cmrfH" value="4" />
+                                </node>
+                                <node concept="$GB7w" id="7WB5kYMP_WV" role="3uHU7B">
+                                  <property role="26SvY3" value="1jlY2aid0uu/index" />
+                                </node>
+                              </node>
                             </node>
                           </node>
                         </node>
@@ -22126,7 +22225,6 @@
                   <node concept="2EixSi" id="2w4aK2ndkVD" role="2EinRH" />
                 </node>
                 <node concept="1WS0z7" id="2w4aK2ndkVE" role="lGtFl">
-                  <property role="1qytDF" value="" />
                   <node concept="3JmXsc" id="2w4aK2ndkVF" role="3Jn$fo">
                     <node concept="3clFbS" id="2w4aK2ndkVG" role="2VODD2">
                       <node concept="3clFbF" id="2w4aK2ndlTb" role="3cqZAp">
@@ -22207,12 +22305,30 @@
                             <property role="Xl_RC" value="" />
                           </node>
                           <node concept="1eOMI4" id="4qMOFDDpVhm" role="3uHU7B">
-                            <node concept="3cpWs3" id="4qMOFDDpRxd" role="1eOMHV">
-                              <node concept="$GB7w" id="1fQ3pJcUc1Y" role="3uHU7B">
-                                <property role="26SvY3" value="1jlY2aid0uu/index" />
-                              </node>
-                              <node concept="3cmrfG" id="4qMOFDDDnjZ" role="3uHU7w">
+                            <node concept="3cpWs3" id="7WB5kYMzky2" role="1eOMHV">
+                              <node concept="3cmrfG" id="7WB5kYMzkHY" role="3uHU7w">
                                 <property role="3cmrfH" value="4" />
+                              </node>
+                              <node concept="3cpWs3" id="4qMOFDDpRxd" role="3uHU7B">
+                                <node concept="2OqwBi" id="7WB5kYMzhoU" role="3uHU7w">
+                                  <node concept="2OqwBi" id="7WB5kYMzfdC" role="2Oq$k0">
+                                    <node concept="2OqwBi" id="7WB5kYMzfdD" role="2Oq$k0">
+                                      <node concept="1iwH7S" id="7WB5kYMzfdE" role="2Oq$k0" />
+                                      <node concept="1r8y6K" id="7WB5kYMzfdF" role="2OqNvi" />
+                                    </node>
+                                    <node concept="2RRcyG" id="7WB5kYMzfdG" role="2OqNvi">
+                                      <node concept="chp4Y" id="7WB5kYMzfdH" role="3MHsoP">
+                                        <ref role="cht4Q" to="3z3g:34hhAWvBY13" resolve="OccupiableDefinition" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="liA8E" id="7WB5kYMzjhy" role="2OqNvi">
+                                    <ref role="37wK5l" to="33ny:~List.size()" resolve="size" />
+                                  </node>
+                                </node>
+                                <node concept="$GB7w" id="7WB5kYMEw4m" role="3uHU7B">
+                                  <property role="26SvY3" value="1jlY2aid0uu/index" />
+                                </node>
                               </node>
                             </node>
                           </node>
@@ -22234,7 +22350,6 @@
               <node concept="2EixSi" id="4qMOFDDpSPe" role="2EinRH" />
             </node>
             <node concept="1WS0z7" id="4qMOFDDpNbl" role="lGtFl">
-              <property role="1qytDF" value="" />
               <node concept="3JmXsc" id="4qMOFDDpNbo" role="3Jn$fo">
                 <node concept="3clFbS" id="4qMOFDDpNbp" role="2VODD2">
                   <node concept="3clFbF" id="4qMOFDDpNbv" role="3cqZAp">
@@ -22248,90 +22363,6 @@
                 </node>
               </node>
             </node>
-          </node>
-          <node concept="356sEK" id="7hudoSBWK40" role="383Ya9">
-            <node concept="356sEF" id="7hudoSBWK41" role="356sEH">
-              <property role="TrG5h" value="&lt;entry&gt;" />
-            </node>
-            <node concept="2EixSi" id="7hudoSBWK43" role="2EinRH" />
-          </node>
-          <node concept="356sEQ" id="7hudoSBWK48" role="383Ya9">
-            <property role="333NGx" value="  " />
-            <node concept="356sEK" id="7hudoSBWK44" role="383Ya9">
-              <node concept="356sEF" id="7hudoSBWK45" role="356sEH">
-                <property role="TrG5h" value="&lt;string&gt;simcore.basicStructures.Occupiable&lt;/string&gt;" />
-              </node>
-              <node concept="2EixSi" id="7hudoSBWK47" role="2EinRH" />
-            </node>
-            <node concept="356sEK" id="7hudoSBWK49" role="383Ya9">
-              <node concept="356sEF" id="7hudoSBWK4a" role="356sEH">
-                <property role="TrG5h" value="&lt;int&gt;3&lt;/int&gt;" />
-              </node>
-              <node concept="2EixSi" id="7hudoSBWK4c" role="2EinRH" />
-            </node>
-          </node>
-          <node concept="356sEK" id="7hudoSBWK4d" role="383Ya9">
-            <node concept="356sEF" id="7hudoSBWK4e" role="356sEH">
-              <property role="TrG5h" value="&lt;/entry&gt;" />
-            </node>
-            <node concept="2EixSi" id="7hudoSBWK4g" role="2EinRH" />
-          </node>
-          <node concept="356sEK" id="7hudoSBWK4y" role="383Ya9">
-            <node concept="356sEF" id="7hudoSBWK4z" role="356sEH">
-              <property role="TrG5h" value="&lt;entry&gt;" />
-            </node>
-            <node concept="2EixSi" id="7hudoSBWK4_" role="2EinRH" />
-          </node>
-          <node concept="356sEQ" id="7hudoSBWK4E" role="383Ya9">
-            <property role="333NGx" value="  " />
-            <node concept="356sEK" id="7hudoSBWK4A" role="383Ya9">
-              <node concept="356sEF" id="7hudoSBWK4B" role="356sEH">
-                <property role="TrG5h" value="&lt;string&gt;simcore.basicStructures.Wall&lt;/string&gt;" />
-              </node>
-              <node concept="2EixSi" id="7hudoSBWK4D" role="2EinRH" />
-            </node>
-            <node concept="356sEK" id="7hudoSBWK4F" role="383Ya9">
-              <node concept="356sEF" id="7hudoSBWK4G" role="356sEH">
-                <property role="TrG5h" value="&lt;int&gt;2&lt;/int&gt;" />
-              </node>
-              <node concept="2EixSi" id="7hudoSBWK4I" role="2EinRH" />
-            </node>
-          </node>
-          <node concept="356sEK" id="7hudoSBWK4J" role="383Ya9">
-            <node concept="356sEF" id="7hudoSBWK4K" role="356sEH">
-              <property role="TrG5h" value="&lt;/entry&gt;" />
-            </node>
-            <node concept="2EixSi" id="7hudoSBWK4M" role="2EinRH" />
-          </node>
-          <node concept="356sEK" id="4qMOFDDDm1G" role="383Ya9">
-            <node concept="356sEF" id="4qMOFDDDm1H" role="356sEH">
-              <property role="TrG5h" value="&lt;entry&gt;" />
-            </node>
-            <node concept="2EixSi" id="4qMOFDDDm1I" role="2EinRH" />
-          </node>
-          <node concept="356sEK" id="4qMOFDDDml8" role="383Ya9">
-            <node concept="356sEQ" id="4qMOFDDDmC9" role="356sEH">
-              <property role="333NGx" value="  " />
-              <node concept="356sEK" id="4qMOFDDDmCd" role="383Ya9">
-                <node concept="356sEF" id="4qMOFDDDmCe" role="356sEH">
-                  <property role="TrG5h" value="&lt;string&gt;EDLanguage.sandbox.patient&lt;/string&gt;" />
-                </node>
-                <node concept="2EixSi" id="4qMOFDDDmCf" role="2EinRH" />
-              </node>
-              <node concept="356sEK" id="4qMOFDDDmCg" role="383Ya9">
-                <node concept="356sEF" id="4qMOFDDDmCh" role="356sEH">
-                  <property role="TrG5h" value="&lt;int&gt;1&lt;/int&gt;" />
-                </node>
-                <node concept="2EixSi" id="4qMOFDDDmCi" role="2EinRH" />
-              </node>
-            </node>
-            <node concept="2EixSi" id="4qMOFDDDmla" role="2EinRH" />
-          </node>
-          <node concept="356sEK" id="4qMOFDDDn0A" role="383Ya9">
-            <node concept="356sEF" id="4qMOFDDDn0B" role="356sEH">
-              <property role="TrG5h" value="&lt;/entry&gt;" />
-            </node>
-            <node concept="2EixSi" id="4qMOFDDDn0C" role="2EinRH" />
           </node>
         </node>
         <node concept="356sEK" id="7hudoSBWK5R" role="383Ya9">

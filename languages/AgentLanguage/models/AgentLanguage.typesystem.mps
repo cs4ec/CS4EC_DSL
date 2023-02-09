@@ -303,5 +303,31 @@
       <ref role="1YaFvo" to="3751:1MmdcH9tbrk" resolve="DistanceCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="3hAz$Jp5uXB">
+    <property role="TrG5h" value="typeof_InSameRoomCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="3hAz$Jp5uXC" role="18ibNy">
+      <node concept="1Z5TYs" id="3hAz$Jp5uXF" role="3cqZAp">
+        <node concept="mw_s8" id="3hAz$Jp5uXG" role="1ZfhKB">
+          <node concept="2pJPEk" id="3hAz$Jp5uXH" role="mwGJk">
+            <node concept="2pJPED" id="3hAz$Jp5uXI" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3hAz$Jp5uXJ" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3hAz$Jp5uXK" role="mwGJk">
+            <node concept="1YBJjd" id="3hAz$Jp5uXV" role="1Z2MuG">
+              <ref role="1YBMHb" node="3hAz$Jp5uXE" resolve="inSameRoomCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3hAz$Jp5uXE" role="1YuTPh">
+      <property role="TrG5h" value="inSameRoomCondition" />
+      <ref role="1YaFvo" to="3751:4Skof6wwmET" resolve="InSameRoomCondition" />
+    </node>
+  </node>
 </model>
 

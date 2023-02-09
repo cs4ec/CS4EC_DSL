@@ -17,21 +17,21 @@ import jetbrains.mps.openapi.intentions.IntentionDescriptor;
 
 public final class ShowDiagramView_Intention extends AbstractIntentionDescriptor implements IntentionFactory {
   private Collection<IntentionExecutable> myCachedExecutable;
+
   public ShowDiagramView_Intention() {
     super(Kind.NORMAL, false, new SNodePointer("r:d94b79e6-f75d-4500-a732-17f3ce4e1ec8(BuiltEnvironment.intentions)", "3787511550156389402"));
   }
+
   @Override
   public String getPresentation() {
     return "ShowDiagramView";
   }
-  @Override
-  public boolean isApplicable(final SNode node, final EditorContext editorContext) {
-    return true;
-  }
+
   @Override
   public boolean isSurroundWith() {
     return false;
   }
+
   public Collection<IntentionExecutable> instances(final SNode node, final EditorContext context) {
     if (myCachedExecutable == null) {
       myCachedExecutable = Collections.<IntentionExecutable>singletonList(new IntentionImplementation());
@@ -41,6 +41,7 @@ public final class ShowDiagramView_Intention extends AbstractIntentionDescriptor
   /*package*/ final class IntentionImplementation extends AbstractIntentionExecutable {
     public IntentionImplementation() {
     }
+
     @Override
     public String getDescription(final SNode node, final EditorContext editorContext) {
       String[] explicitEditorHintsForNode = editorContext.getEditorComponent().getUpdater().getExplicitEditorHintsForNode(SNodeOperations.getPointer(node));
@@ -50,6 +51,7 @@ public final class ShowDiagramView_Intention extends AbstractIntentionDescriptor
         return "View Name";
       }
     }
+
     @Override
     public void execute(final SNode node, final EditorContext editorContext) {
       String[] editorHintsForNode = editorContext.getEditorComponent().getUpdater().getExplicitEditorHintsForNode(SNodeOperations.getPointer(node));
@@ -63,9 +65,18 @@ public final class ShowDiagramView_Intention extends AbstractIntentionDescriptor
       }
       editorContext.getEditorComponent().getUpdater().update();
     }
+
+    @Override
+    public boolean isApplicable(final SNode node, final EditorContext editorContext) {
+      return true;
+    }
+
+
+
     @Override
     public IntentionDescriptor getDescriptor() {
       return ShowDiagramView_Intention.this;
     }
+
   }
 }
