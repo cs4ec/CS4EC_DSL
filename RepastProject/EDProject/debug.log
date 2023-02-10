@@ -57,3 +57,83 @@ Caused by: java.lang.NullPointerException: Cannot invoke "simcore.Signals.Signal
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
 	... 7 more
+FATAL [Thread-3] 2023-02-09T23:10:08,072 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1174.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.NullPointerException: Cannot invoke "simcore.basicStructures.Room.getRoomType()" because "this.curInside" is null
+	at EDLanguage.sandbox.CubicleNurse.SelectLocation(CubicleNurse.java:108) ~[?:?]
+	at EDLanguage.sandbox.CubicleNurse$MoveAction_a0d_3.execute(CubicleNurse.java:4027) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:130) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:101) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:123) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:77) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-11] 2023-02-10T15:26:05,095 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1262.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.basicStructures.Occupiable$$FastClassByCGLIB$$4574b971.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.NullPointerException: Cannot invoke "simcore.basicStructures.Occupiable.getX()" because "o" is null
+	at simcore.agents.Agent.SetOccupying(Agent.java:394) ~[?:?]
+	at simcore.basicStructures.Occupiable.eject(Occupiable.java:50) ~[?:?]
+	at simcore.basicStructures.Occupiable.step(Occupiable.java:31) ~[?:?]
+	at simcore.basicStructures.Occupiable$$FastClassByCGLIB$$4574b971.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2023-02-10T20:37:26,075 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1896.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.NullPointerException: Cannot invoke "simcore.basicStructures.Room.getRoomType()" because "this.curInside" is null
+	at EDLanguage.sandbox.CubicleNurse.SelectLocation(CubicleNurse.java:106) ~[?:?]
+	at EDLanguage.sandbox.CubicleNurse$MoveAction_a0d_3.execute(CubicleNurse.java:4027) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:130) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:101) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:124) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:78) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more

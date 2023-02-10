@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.Queue;
 import java.util.Set;
 import java.util.stream.Collectors;
+
+import EDLanguage.sandbox.MajorsC_Cubicle;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.random.RandomHelper;
@@ -32,6 +34,7 @@ public class Room extends Locatable{
 	private Integer curCap;
 	private Queue<Agent> waitList;
 	protected Set<Agent> contentPeople;	
+	protected List<Agent> allocatedPeople;
 	protected Area parentArea;
 	protected List<Occupiable> occupiables;
 
@@ -64,6 +67,7 @@ public class Room extends Locatable{
 
 		waitList = new LinkedList<Agent>();
 		contentPeople = new HashSet<Agent>();
+		allocatedPeople = new ArrayList<>();
 		occupiables = new ArrayList<Occupiable>();
 
 		// call function to create layout style for this location
@@ -171,6 +175,23 @@ public class Room extends Locatable{
 	// check if loc is full
 	public boolean hasCapacity() {
 //		 If this room has occupiables, determine capacity by that
+		if(!getAllOccupiables().isEmpty()) {
+			return getAllOccupiables().stream().anyMatch(o->!o.isOccupied());	
+		} else {
+			// otherwise check capacity by room "size"
+			return (getCurrentCapacity() < getMaxCapacity());
+		}
+	}
+	
+	// check if loc is full based on my agent type
+	public boolean hasCapacity(Agent checkingAgent) {
+		if(roomType instanceof MajorsC_Cubicle) {
+		      if (roomType.actorAllocationLimit.containsKey(checkingAgent.getClass()) && getOccupiers().stream().filter(a -> a.getClass() == checkingAgent.getClass()).collect(Collectors.toList()).size() < roomType.actorAllocationLimit.get(checkingAgent.getClass())) {
+		    	  return true; 
+		      } else {
+		    	  return false;
+		      }
+		}
 		if(!getAllOccupiables().isEmpty()) {
 			return getAllOccupiables().stream().anyMatch(o->!o.isOccupied());	
 		} else {

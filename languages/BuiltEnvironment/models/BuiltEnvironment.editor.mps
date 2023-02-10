@@ -279,6 +279,32 @@
         <reference id="1981294357059564497" name="linkDeclaration" index="1RuSHD" />
       </concept>
     </language>
+    <language id="7e450f4e-1ac3-41ef-a851-4598161bdb94" name="de.slisson.mps.tables">
+      <concept id="1397920687865593407" name="de.slisson.mps.tables.structure.PartialTable" flags="ng" index="2r0Tta">
+        <child id="1397920687865593523" name="cells" index="2r0Tv6" />
+      </concept>
+      <concept id="1397920687865839151" name="de.slisson.mps.tables.structure.HeaderCollection" flags="ng" index="2r3Xtq">
+        <child id="6874252336974775034" name="childs" index="uCobI" />
+      </concept>
+      <concept id="1397920687864997170" name="de.slisson.mps.tables.structure.TableNodeCollection" flags="ng" index="2reCL7">
+        <child id="1397920687864997171" name="childTableNodes" index="2reCL6" />
+      </concept>
+      <concept id="1397920687864997153" name="de.slisson.mps.tables.structure.StaticHorizontal" flags="ng" index="2reCLk" />
+      <concept id="1397920687864997143" name="de.slisson.mps.tables.structure.TableCell" flags="ng" index="2reCLy">
+        <child id="1397920687865064647" name="editorCell" index="2reSmM" />
+      </concept>
+      <concept id="1397920687865064415" name="de.slisson.mps.tables.structure.ChildsVertical" flags="ng" index="2reSaE" />
+      <concept id="1397920687865064509" name="de.slisson.mps.tables.structure.ChildCollection" flags="ng" index="2reSl8">
+        <reference id="1397920687864997201" name="linkDeclaration" index="2reCK$" />
+        <child id="2199447184406843652" name="columnHeaders" index="2YiT2b" />
+      </concept>
+      <concept id="1397920687864864270" name="de.slisson.mps.tables.structure.StaticHeader" flags="ng" index="2rfbtV">
+        <property id="1397920687864864274" name="text" index="2rfbtB" />
+      </concept>
+      <concept id="1397920687864683158" name="de.slisson.mps.tables.structure.Table" flags="ng" index="2rfBfz">
+        <child id="1397920687864865354" name="cells" index="2rf8GZ" />
+      </concept>
+    </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
         <reference id="1138405853777" name="concept" index="ehGHo" />
@@ -1218,11 +1244,62 @@
         <node concept="pVoyu" id="4Skof6wbvp5" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
+        <node concept="lj46D" id="lSEs43$_dV" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
       </node>
       <node concept="3F0ifn" id="4Skof6wbvpr" role="3EZMnx">
         <property role="3F0ifm" value="for patients" />
       </node>
+      <node concept="3F1sOY" id="lSEs43$_eh" role="3EZMnx">
+        <ref role="1NtTu8" to="3z3g:lSEs43$_dS" resolve="staffRoomAllocation" />
+        <node concept="pVoyu" id="lSEs43$_er" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="lSEs43$_et" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
       <node concept="l2Vlx" id="4Skof6wbvoF" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="lSEs43zrgs">
+    <ref role="1XX52x" to="3z3g:lSEs43zrg6" resolve="StaffRoomAllocationLine" />
+    <node concept="2r0Tta" id="lSEs43zrgu" role="2wV5jI">
+      <node concept="2reCLk" id="lSEs43zrh2" role="2r0Tv6">
+        <node concept="2reCLy" id="lSEs43zrhm" role="2reCL6">
+          <node concept="1iCGBv" id="lSEs43zrhq" role="2reSmM">
+            <ref role="1NtTu8" to="3z3g:lSEs43zrgg" resolve="staff" />
+            <node concept="1sVBvm" id="lSEs43zrhs" role="1sWHZn">
+              <node concept="3F0A7n" id="lSEs43zrhz" role="2wV5jI">
+                <property role="1Intyy" value="true" />
+                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2reCLy" id="lSEs43zBJP" role="2reCL6">
+          <node concept="3F0A7n" id="lSEs43zBK3" role="2reSmM">
+            <ref role="1NtTu8" to="3z3g:lSEs43zBJN" resolve="limit" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="lSEs43zrik">
+    <ref role="1XX52x" to="3z3g:lSEs43zrfN" resolve="StaffRoomAllocationTable" />
+    <node concept="2rfBfz" id="lSEs43zriC" role="2wV5jI">
+      <node concept="2reSaE" id="lSEs43zrjm" role="2rf8GZ">
+        <ref role="2reCK$" to="3z3g:lSEs43zrib" resolve="lines" />
+        <node concept="2r3Xtq" id="lSEs43zrk2" role="2YiT2b">
+          <node concept="2rfbtV" id="lSEs43zrk6" role="uCobI">
+            <property role="2rfbtB" value="Staff" />
+          </node>
+          <node concept="2rfbtV" id="lSEs43zBKj" role="uCobI">
+            <property role="2rfbtB" value="Limit" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

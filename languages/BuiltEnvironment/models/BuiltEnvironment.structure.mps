@@ -316,6 +316,12 @@
       <property role="20kJfa" value="PatientOccupiable" />
       <ref role="20lvS9" to="3751:7lVoe4xN_mF" resolve="OccupiableReference" />
     </node>
+    <node concept="1TJgyj" id="lSEs43$_dS" role="1TKVEi">
+      <property role="IQ2ns" value="394251613848621944" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="staffRoomAllocation" />
+      <ref role="20lvS9" node="lSEs43zrfN" resolve="StaffRoomAllocationTable" />
+    </node>
     <node concept="PrWs8" id="5QJON_BqFe7" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -519,6 +525,34 @@
       <property role="20kJfa" value="occupiable" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="34hhAWvBY13" resolve="OccupiableDefinition" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="lSEs43zrfN">
+    <property role="EcuMT" value="394251613848318963" />
+    <property role="TrG5h" value="StaffRoomAllocationTable" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="lSEs43zrib" role="1TKVEi">
+      <property role="IQ2ns" value="394251613848319115" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="lSEs43zrg6" resolve="StaffRoomAllocationLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="lSEs43zrg6">
+    <property role="EcuMT" value="394251613848318982" />
+    <property role="TrG5h" value="StaffRoomAllocationLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="lSEs43zBJN" role="1TKVEl">
+      <property role="IQ2nx" value="394251613848370163" />
+      <property role="TrG5h" value="limit" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="lSEs43zrgg" role="1TKVEi">
+      <property role="IQ2ns" value="394251613848318992" />
+      <property role="20kJfa" value="staff" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="e88n:4X1nFNzWOrG" resolve="StaffType" />
     </node>
   </node>
 </model>

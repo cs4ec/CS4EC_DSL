@@ -101,6 +101,9 @@ public class Doctor extends Actor {
   }
 
   protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
+    if (curInside != null && curInside.getRoomType() == pRoomType) {
+      return curInside;
+    }
     ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
     // First, select the room that contains my patient (if my current action involves the patient)
     for (Room pRoom : pRooms) {
@@ -135,8 +138,8 @@ public class Doctor extends Actor {
       }
     }
     if (true) {
-      if (pRoom.hasCapacity()) {
-        return Double.MIN_VALUE;
+      if (!(pRoom.hasCapacity(this))) {
+        return Double.MAX_VALUE;
       }
     }
     if (true) {

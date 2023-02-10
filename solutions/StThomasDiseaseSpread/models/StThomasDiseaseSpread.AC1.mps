@@ -190,6 +190,13 @@
       <concept id="6755843002512513336" name="DiseaseModel.structure.Symptomatic" flags="ng" index="3IO8Di" />
     </language>
     <language id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment">
+      <concept id="394251613848318963" name="BuiltEnvironment.structure.StaffRoomAllocationTable" flags="ng" index="6XhCM">
+        <child id="394251613848319115" name="lines" index="6XhPa" />
+      </concept>
+      <concept id="394251613848318982" name="BuiltEnvironment.structure.StaffRoomAllocationLine" flags="ng" index="6XhR7">
+        <property id="394251613848370163" name="limit" index="6XH8M" />
+        <reference id="394251613848318992" name="staff" index="6XhRh" />
+      </concept>
       <concept id="3535684625554910547" name="BuiltEnvironment.structure.OccupiableAllocation" flags="ng" index="h4YGW">
         <property id="3535684625555883197" name="y" index="h0cbi" />
         <property id="3535684625554910575" name="x" index="h4YG0" />
@@ -226,6 +233,7 @@
         <child id="768972137592500155" name="sourceFile" index="2PX5YI" />
       </concept>
       <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw">
+        <child id="394251613848621944" name="staffRoomAllocation" index="6UJET" />
         <child id="5626228425383343645" name="PatientOccupiable" index="3IeprG" />
       </concept>
       <concept id="4321323723398463303" name="BuiltEnvironment.structure.TimeOfDayWrapper" flags="ng" index="3fm_90">
@@ -1780,6 +1788,12 @@
     <property role="TrG5h" value="MajorsC_Cubicle" />
     <node concept="1kHjla" id="4Skof6wcCdx" role="3IeprG">
       <ref role="IYbFp" node="34hhAWxKdrf" />
+    </node>
+    <node concept="6XhCM" id="lSEs43KcuB" role="6UJET">
+      <node concept="6XhR7" id="lSEs43KcuD" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="2_JteYPiCHe" resolve="CubicleNurse" />
+      </node>
     </node>
   </node>
   <node concept="VhMOw" id="52K8Ej3GeZ">

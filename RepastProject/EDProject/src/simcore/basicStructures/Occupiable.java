@@ -4,7 +4,9 @@ import java.awt.Color;
 import java.util.ArrayList;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduledMethod;
+import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
+import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.space.grid.Grid;
 import simcore.agents.Agent;
 
@@ -34,6 +36,7 @@ public class Occupiable extends Locatable{
 	public void setOccupier(Agent person) {
 		occupier = person;
 		person.SetOccupying(this);
+		
 	}
 	
 	public void setAllocated(Agent person) {

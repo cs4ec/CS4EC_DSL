@@ -26,10 +26,12 @@ public final class LanguageConceptSwitch {
   public static final int RoomInstanceDefinition = 14;
   public static final int RoomType = 15;
   public static final int ScenarioBuilder = 16;
-  public static final int TimeOfDayVariable = 17;
-  public static final int TimeOfDayWrapper = 18;
-  public static final int WallDefinition = 19;
-  public static final int WallInstanceDefinition = 20;
+  public static final int StaffRoomAllocationLine = 17;
+  public static final int StaffRoomAllocationTable = 18;
+  public static final int TimeOfDayVariable = 19;
+  public static final int TimeOfDayWrapper = 20;
+  public static final int WallDefinition = 21;
+  public static final int WallInstanceDefinition = 22;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1a0150acdda54129L, 0x824e01dce96fdea4L);
@@ -50,6 +52,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x3c282c112f249045L, RoomInstanceDefinition);
     builder.put(0x5dafd33966e8fe19L, RoomType);
     builder.put(0x35463334ce2f7b00L, ScenarioBuilder);
+    builder.put(0x578a9c1038db406L, StaffRoomAllocationLine);
+    builder.put(0x578a9c1038db3f3L, StaffRoomAllocationTable);
     builder.put(0x3bf86d07f429da00L, TimeOfDayVariable);
     builder.put(0x3bf86d07f4a23f47L, TimeOfDayWrapper);
     builder.put(0x109830a68a82ca51L, WallDefinition);

@@ -26,6 +26,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_RoomInstanceDefinition;
   private ConceptPresentation props_RoomType;
   private ConceptPresentation props_ScenarioBuilder;
+  private ConceptPresentation props_StaffRoomAllocationLine;
+  private ConceptPresentation props_StaffRoomAllocationTable;
   private ConceptPresentation props_TimeOfDayVariable;
   private ConceptPresentation props_TimeOfDayWrapper;
   private ConceptPresentation props_WallDefinition;
@@ -159,6 +161,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ScenarioBuilder = cpb.create();
         }
         return props_ScenarioBuilder;
+      case LanguageConceptSwitch.StaffRoomAllocationLine:
+        if (props_StaffRoomAllocationLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x578a9c1038db406L, 0x578a9c1038db410L, "staff", "", "");
+          props_StaffRoomAllocationLine = cpb.create();
+        }
+        return props_StaffRoomAllocationLine;
+      case LanguageConceptSwitch.StaffRoomAllocationTable:
+        if (props_StaffRoomAllocationTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("StaffRoomAllocationTable");
+          props_StaffRoomAllocationTable = cpb.create();
+        }
+        return props_StaffRoomAllocationTable;
       case LanguageConceptSwitch.TimeOfDayVariable:
         if (props_TimeOfDayVariable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

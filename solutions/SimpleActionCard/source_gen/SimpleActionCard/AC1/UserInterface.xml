@@ -80,17 +80,17 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.patient</string>
-      <int>1</int>
+      <int>3</int>
     </entry>
 
     <entry>
       <string>simcore.basicStructures.Wall</string>
-      <int>2</int>
+      <int>1</int>
     </entry>
 
     <entry>
       <string>simcore.basicStructures.Occupiable</string>
-      <int>3</int>
+      <int>2</int>
     </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>

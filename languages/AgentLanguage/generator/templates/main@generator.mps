@@ -2003,6 +2003,36 @@
         </node>
       </node>
       <node concept="3clFbS" id="3QFgDmIp7OU" role="3clF47">
+        <node concept="3clFbJ" id="lSEs44mM3A" role="3cqZAp">
+          <node concept="3clFbS" id="lSEs44mM3C" role="3clFbx">
+            <node concept="3cpWs6" id="lSEs44nfK0" role="3cqZAp">
+              <node concept="37vLTw" id="lSEs44nnjP" role="3cqZAk">
+                <ref role="3cqZAo" to="uux2:~Agent.curInside" resolve="curInside" />
+              </node>
+            </node>
+          </node>
+          <node concept="1Wc70l" id="lSEs44tU0V" role="3clFbw">
+            <node concept="3y3z36" id="lSEs44u2ol" role="3uHU7B">
+              <node concept="10Nm6u" id="lSEs44u6CP" role="3uHU7w" />
+              <node concept="37vLTw" id="lSEs44tZiZ" role="3uHU7B">
+                <ref role="3cqZAo" to="uux2:~Agent.curInside" resolve="curInside" />
+              </node>
+            </node>
+            <node concept="3clFbC" id="lSEs44mTim" role="3uHU7w">
+              <node concept="37vLTw" id="lSEs44mXjn" role="3uHU7w">
+                <ref role="3cqZAo" node="3QFgDmIp7OQ" resolve="pRoomType" />
+              </node>
+              <node concept="2OqwBi" id="lSEs44n7TZ" role="3uHU7B">
+                <node concept="37vLTw" id="lSEs44mOZT" role="2Oq$k0">
+                  <ref role="3cqZAo" to="uux2:~Agent.curInside" resolve="curInside" />
+                </node>
+                <node concept="liA8E" id="lSEs44ncat" role="2OqNvi">
+                  <ref role="37wK5l" to="y2pi:~Room.getRoomType()" resolve="getRoomType" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="3QFgDmIp7OW" role="3cqZAp">
           <node concept="3cpWsn" id="3QFgDmIp7OV" role="3cpWs9">
             <property role="TrG5h" value="pRooms" />
@@ -9410,6 +9440,78 @@
       <node concept="3clFbS" id="5QJON_AZhkD" role="3clF47">
         <node concept="XkiVB" id="5QJON_AZhoh" role="3cqZAp">
           <ref role="37wK5l" to="y2pi:~RoomType.&lt;init&gt;()" resolve="RoomType" />
+        </node>
+        <node concept="3clFbF" id="lSEs43_tWb" role="3cqZAp">
+          <node concept="2OqwBi" id="lSEs43_wiv" role="3clFbG">
+            <node concept="37vLTw" id="lSEs43_tW9" role="2Oq$k0">
+              <ref role="3cqZAo" to="y2pi:~RoomType.actorAllocationLimit" resolve="actorAllocationLimit" />
+            </node>
+            <node concept="liA8E" id="lSEs43_ygV" role="2OqNvi">
+              <ref role="37wK5l" to="33ny:~HashMap.put(java.lang.Object,java.lang.Object)" resolve="put" />
+              <node concept="3VsKOn" id="lSEs447gop" role="37wK5m">
+                <ref role="3VsUkX" node="DbMKZsswSi" resolve="MyActor" />
+                <node concept="1ZhdrF" id="lSEs447hmd" role="lGtFl">
+                  <property role="2qtEX8" value="classifier" />
+                  <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1116615150612/1116615189566" />
+                  <node concept="3$xsQk" id="lSEs447hme" role="3$ytzL">
+                    <node concept="3clFbS" id="lSEs447hmf" role="2VODD2">
+                      <node concept="3clFbF" id="lSEs447jC5" role="3cqZAp">
+                        <node concept="2OqwBi" id="lSEs447m5S" role="3clFbG">
+                          <node concept="2OqwBi" id="lSEs447kxr" role="2Oq$k0">
+                            <node concept="30H73N" id="lSEs447jC4" role="2Oq$k0" />
+                            <node concept="3TrEf2" id="lSEs447lCp" role="2OqNvi">
+                              <ref role="3Tt5mk" to="3z3g:lSEs43zrgg" resolve="staff" />
+                            </node>
+                          </node>
+                          <node concept="3TrcHB" id="lSEs447n9Q" role="2OqNvi">
+                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3cmrfG" id="lSEs43_zr3" role="37wK5m">
+                <property role="3cmrfH" value="1" />
+                <node concept="17Uvod" id="lSEs43_Dgp" role="lGtFl">
+                  <property role="2qtEX9" value="value" />
+                  <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                  <node concept="3zFVjK" id="lSEs43_Dgq" role="3zH0cK">
+                    <node concept="3clFbS" id="lSEs43_Dgr" role="2VODD2">
+                      <node concept="3clFbF" id="lSEs43_Dgy" role="3cqZAp">
+                        <node concept="2OqwBi" id="lSEs43_DOQ" role="3clFbG">
+                          <node concept="30H73N" id="lSEs43_Dgx" role="2Oq$k0" />
+                          <node concept="3TrcHB" id="lSEs43_F0w" role="2OqNvi">
+                            <ref role="3TsBF5" to="3z3g:lSEs43zBJN" resolve="limit" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="1WS0z7" id="lSEs43_$bs" role="lGtFl">
+            <node concept="3JmXsc" id="lSEs43_$bv" role="3Jn$fo">
+              <node concept="3clFbS" id="lSEs43_$bw" role="2VODD2">
+                <node concept="3clFbF" id="lSEs43_$bA" role="3cqZAp">
+                  <node concept="2OqwBi" id="lSEs43__CS" role="3clFbG">
+                    <node concept="2OqwBi" id="lSEs43_$bx" role="2Oq$k0">
+                      <node concept="3TrEf2" id="lSEs43__0r" role="2OqNvi">
+                        <ref role="3Tt5mk" to="3z3g:lSEs43$_dS" resolve="staffRoomAllocation" />
+                      </node>
+                      <node concept="30H73N" id="lSEs43_$b_" role="2Oq$k0" />
+                    </node>
+                    <node concept="3Tsc0h" id="lSEs43_A09" role="2OqNvi">
+                      <ref role="3TtcxE" to="3z3g:lSEs43zrib" resolve="lines" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="17Uvod" id="5QJON_AZN6i" role="lGtFl">
@@ -17914,19 +18016,22 @@
           <node concept="3clFbJ" id="3QFgDmIMrS$" role="3cqZAp">
             <node concept="3clFbS" id="3QFgDmIMrT1" role="3clFbx">
               <node concept="3cpWs6" id="3QFgDmIMrT2" role="3cqZAp">
-                <node concept="10M0yZ" id="4Skof6vB7JY" role="3cqZAk">
-                  <ref role="3cqZAo" to="wyt6:~Double.MIN_VALUE" resolve="MIN_VALUE" />
+                <node concept="10M0yZ" id="lSEs44F1pK" role="3cqZAk">
+                  <ref role="3cqZAo" to="wyt6:~Double.MAX_VALUE" resolve="MAX_VALUE" />
                   <ref role="1PxDUh" to="wyt6:~Double" resolve="Double" />
                 </node>
               </node>
             </node>
             <node concept="raruj" id="3QFgDmIMrT4" role="lGtFl" />
-            <node concept="2OqwBi" id="4Skof6vwAQ1" role="3clFbw">
-              <node concept="37vLTw" id="4Skof6vwAFq" role="2Oq$k0">
-                <ref role="3cqZAo" node="3QFgDmIMrT5" resolve="pRoom" />
-              </node>
-              <node concept="liA8E" id="4Skof6vwAYP" role="2OqNvi">
-                <ref role="37wK5l" to="y2pi:~Room.hasCapacity()" resolve="hasCapacity" />
+            <node concept="3fqX7Q" id="lSEs44F1mv" role="3clFbw">
+              <node concept="2OqwBi" id="lSEs44F1mx" role="3fr31v">
+                <node concept="37vLTw" id="lSEs44F1my" role="2Oq$k0">
+                  <ref role="3cqZAo" node="3QFgDmIMrT5" resolve="pRoom" />
+                </node>
+                <node concept="liA8E" id="lSEs44F1mz" role="2OqNvi">
+                  <ref role="37wK5l" to="y2pi:~Room.hasCapacity(simcore.agents.Agent)" resolve="hasCapacity" />
+                  <node concept="Xjq3P" id="lSEs44F1m$" role="37wK5m" />
+                </node>
               </node>
             </node>
           </node>
@@ -22074,7 +22179,7 @@
                   </node>
                   <node concept="356sEK" id="4qMOFDDDmCg" role="383Ya9">
                     <node concept="356sEF" id="4qMOFDDDmCh" role="356sEH">
-                      <property role="TrG5h" value="&lt;int&gt;1&lt;/int&gt;" />
+                      <property role="TrG5h" value="&lt;int&gt;1000&lt;/int&gt;" />
                     </node>
                     <node concept="2EixSi" id="4qMOFDDDmCi" role="2EinRH" />
                   </node>
@@ -22106,7 +22211,7 @@
                 </node>
                 <node concept="356sEK" id="7hudoSBWK4F" role="383Ya9">
                   <node concept="356sEF" id="7hudoSBWK4G" role="356sEH">
-                    <property role="TrG5h" value="&lt;int&gt;2&lt;/int&gt;" />
+                    <property role="TrG5h" value="&lt;int&gt;1&lt;/int&gt;" />
                   </node>
                   <node concept="2EixSi" id="7hudoSBWK4I" role="2EinRH" />
                 </node>
@@ -22136,7 +22241,7 @@
                 </node>
                 <node concept="356sEK" id="7hudoSBWK49" role="383Ya9">
                   <node concept="356sEF" id="7hudoSBWK4a" role="356sEH">
-                    <property role="TrG5h" value="&lt;int&gt;3&lt;/int&gt;" />
+                    <property role="TrG5h" value="&lt;int&gt;2&lt;/int&gt;" />
                   </node>
                   <node concept="2EixSi" id="7hudoSBWK4c" role="2EinRH" />
                 </node>

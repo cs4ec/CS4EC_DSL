@@ -35,6 +35,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptRoomInstanceDefinition = createDescriptorForRoomInstanceDefinition();
   /*package*/ final ConceptDescriptor myConceptRoomType = createDescriptorForRoomType();
   /*package*/ final ConceptDescriptor myConceptScenarioBuilder = createDescriptorForScenarioBuilder();
+  /*package*/ final ConceptDescriptor myConceptStaffRoomAllocationLine = createDescriptorForStaffRoomAllocationLine();
+  /*package*/ final ConceptDescriptor myConceptStaffRoomAllocationTable = createDescriptorForStaffRoomAllocationTable();
   /*package*/ final ConceptDescriptor myConceptTimeOfDayVariable = createDescriptorForTimeOfDayVariable();
   /*package*/ final ConceptDescriptor myConceptTimeOfDayWrapper = createDescriptorForTimeOfDayWrapper();
   /*package*/ final ConceptDescriptor myConceptWallDefinition = createDescriptorForWallDefinition();
@@ -58,7 +60,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptBlueprintMap, myConceptDateTimeNowVariable, myConceptMapImporter, myConceptOccupiableAllocation, myConceptOccupiableDefinition, myConceptOccupiablesList, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptTimeOfDayVariable, myConceptTimeOfDayWrapper, myConceptWallDefinition, myConceptWallInstanceDefinition);
+    return Arrays.asList(myConceptActorInstantiation, myConceptAdmissionBay, myConceptAdmissionBayList, myConceptArea, myConceptBlueprintMap, myConceptDateTimeNowVariable, myConceptMapImporter, myConceptOccupiableAllocation, myConceptOccupiableDefinition, myConceptOccupiablesList, myConceptResource, myConceptResourceAllocation, myConceptResourceAvailabilityVariable, myConceptRoom, myConceptRoomInstanceDefinition, myConceptRoomType, myConceptScenarioBuilder, myConceptStaffRoomAllocationLine, myConceptStaffRoomAllocationTable, myConceptTimeOfDayVariable, myConceptTimeOfDayWrapper, myConceptWallDefinition, myConceptWallInstanceDefinition);
   }
 
   @Override
@@ -99,6 +101,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptRoomType;
       case LanguageConceptSwitch.ScenarioBuilder:
         return myConceptScenarioBuilder;
+      case LanguageConceptSwitch.StaffRoomAllocationLine:
+        return myConceptStaffRoomAllocationLine;
+      case LanguageConceptSwitch.StaffRoomAllocationTable:
+        return myConceptStaffRoomAllocationTable;
       case LanguageConceptSwitch.TimeOfDayVariable:
         return myConceptTimeOfDayVariable;
       case LanguageConceptSwitch.TimeOfDayWrapper:
@@ -279,6 +285,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/6750846609944804889");
     b.version(2);
     b.aggregate("PatientOccupiable", 0x4e1460f1a02df61dL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x757b60e121ce55abL).optional(true).ordered(true).multiple(false).origin("5626228425383343645").done();
+    b.aggregate("staffRoomAllocation", 0x578a9c103925378L).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x578a9c1038db3f3L).optional(true).ordered(true).multiple(false).origin("394251613848621944").done();
     b.alias("roomtype");
     return b.create();
   }
@@ -292,6 +299,23 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("simulationRepetitions", 0x348944a9af13c9c9L).type(PrimitiveTypeId.INTEGER).origin("3785632457359083977").done();
     b.aggregate("agents", 0x35463334ce306babL).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x35463334ce2f7b02L).optional(true).ordered(true).multiple(true).origin("3838812034270522283").done();
     b.aggregate("relationships", 0x78ac309637c9f4L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x78ac3096379b5dL).optional(true).ordered(true).multiple(true).origin("33966321883924980").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStaffRoomAllocationLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "StaffRoomAllocationLine", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x578a9c1038db406L);
+    b.class_(false, false, false);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/394251613848318982");
+    b.version(2);
+    b.property("limit", 0x578a9c1038e7bf3L).type(PrimitiveTypeId.INTEGER).origin("394251613848370163").done();
+    b.associate("staff", 0x578a9c1038db410L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL).optional(false).origin("394251613848318992").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStaffRoomAllocationTable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("BuiltEnvironment", "StaffRoomAllocationTable", 0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x578a9c1038db3f3L);
+    b.class_(false, false, false);
+    b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/394251613848318963");
+    b.version(2);
+    b.aggregate("lines", 0x578a9c1038db48bL).target(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x578a9c1038db406L).optional(true).ordered(true).multiple(true).origin("394251613848319115").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForTimeOfDayVariable() {

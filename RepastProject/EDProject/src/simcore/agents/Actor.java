@@ -9,8 +9,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.WaitingRoom;
 import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
+import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.Schedule;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.parameter.Parameter;
@@ -39,6 +41,7 @@ import simcore.basicStructures.ToolBox;
 public class Actor extends Agent {
 	  protected int mintMyMaxPatients = 1;
 	  protected Schedule schedule;
+	  protected int idleTime = 0;
 	  protected List<Order> myOrders = new ArrayList<Order>();
 
 	
@@ -81,6 +84,7 @@ public class Actor extends Agent {
 		Board board = ReadBoard();
 		// If I do not have a current active action, then select one
 		if (isIdle) {
+			idleTime++;
 			
 			// Have I been given an order?
 			if(!myOrders.isEmpty()) {
@@ -100,25 +104,18 @@ public class Actor extends Agent {
 				if (s != null) {
 					board.board.remove(s);
 					isIdle = false;
+					idleTime = 0;
 					Behaviour signalAction = BuildActionFromSignal(s);
 					if(signalAction != null && !(signalAction.getCurrentStep() instanceof PassiveBehaviourStep)) {
 						myCurrentActions.add(signalAction);
 						myActiveAction = signalAction;
 					}
 				} 
-				else {
-//					// If there are no no signals yet, then I can do my 'isIdleAction' if one exists
-//					Behaviour idleBehaviour = this.isIdleAction(null);
-//					if(idleBehaviour != null) {
-//						myCurrentActions.add(idleBehaviour);
-//						myActiveAction = idleBehaviour;
-//					}
-				}
 			} else {
 				Behaviour myCurrentAction = plstReadyActions.get(0);
 				myActiveAction = myCurrentAction;
 			}
-		}
+		} 
 
 		executeCurrentActions();
 	}
@@ -138,6 +135,7 @@ public class Actor extends Agent {
 		      if (concreteDestination == null) {
 		          if (destination instanceof RoomType) {
 		        	  concreteDestination = SelectLocation(((RoomType) destination));
+		        	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
 		          } 
 		          else if(destination instanceof Class && Occupiable.class.isAssignableFrom(((Class)destination))) {
 		        	  Occupiable target = SelectOccupiable(curInside, (Class) destination);
@@ -145,20 +143,22 @@ public class Actor extends Agent {
 		        		  iterateOrder();
 		        	  } else {
 			        	  concreteDestination = target;
+			        	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
 			        	  target.setAllocated(this);
 		        	  }
 		          } 
 		          else {
 		        	  concreteDestination = destination;
+		        	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
 		          }
 		        }
 			
 		      if(concreteDestination != null) {
-				    if (destination instanceof RoomType) {
-				        if (EvaluateRoomChoice(((Room) concreteDestination)) == 0) {
-				        	concreteDestination = SelectLocation(((RoomType) destination));
-				        }
-				      }
+//				    if (destination instanceof RoomType) {
+//				        if (EvaluateRoomChoice(((Room) concreteDestination)) == 0) {
+//				        	concreteDestination = SelectLocation(((RoomType) destination));
+//				        }
+//				      }
 
 					MoveTowards(concreteDestination);
 					
@@ -237,6 +237,17 @@ public class Actor extends Agent {
 		if(myCurrentActions != null) {
 			for (Behaviour behaviour : myCurrentActions) {
 				out+= behaviour.toString() + ",";
+			}
+		}
+		return out;
+	}
+	
+	@Parameter(usageName="orders", displayName="My Orders")
+	public String getOrders() {
+		String out = "";
+		if(myOrders != null) {
+			for (Order order : myOrders) {
+				out+= order.toString() + ",";
 			}
 		}
 		return out;

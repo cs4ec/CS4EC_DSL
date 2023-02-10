@@ -390,6 +390,14 @@ public class Agent {
 
 	public void SetOccupying(Occupiable o) {
 		curOccupying = o;
+		
+		if(o != null) {
+			NdPoint targetSpace = space.getLocation(o);
+			NdPoint targetGrid = new NdPoint(o.getX(), o.getY());
+
+			space.moveTo(this, targetSpace.getX(), targetSpace.getY());
+			grid.moveTo(this, (int) targetGrid.getX(), (int) targetGrid.getY());
+		}
 	}
 
 	public boolean ImAt(Room pLoc) {		
@@ -470,6 +478,7 @@ public class Agent {
 		
 		return myID + ", my patients: " + myPatientList;
 	}
+
 	
 	public void printActivityHistory() {
 		ToolBox toolBox = ToolBox();

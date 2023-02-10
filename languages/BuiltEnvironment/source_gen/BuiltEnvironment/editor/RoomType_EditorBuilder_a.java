@@ -66,6 +66,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_1());
     editorCell.addEditorCell(createRefNode_0());
     editorCell.addEditorCell(createConstant_2());
+    editorCell.addEditorCell(createRefNode_1());
     return editorCell;
   }
   private EditorCell createConstant_0() {
@@ -143,6 +144,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
       Style style = new StyleImpl();
       style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+      style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
       editorCell.getStyle().putAll(style);
     }
     @Override
@@ -169,6 +171,65 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setDefaultText("");
     return editorCell;
   }
+  private EditorCell createRefNode_1() {
+    SingleRoleCellProvider provider = new staffRoomAllocationSingleRoleHandler_oljmsb_f0(myNode, LINKS.staffRoomAllocation$zWNX, getEditorContext());
+    return provider.createCell();
+  }
+  private static class staffRoomAllocationSingleRoleHandler_oljmsb_f0 extends SingleRoleCellProvider {
+    @NotNull
+    private SNode myNode;
+
+    public staffRoomAllocationSingleRoleHandler_oljmsb_f0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+      super(containmentLink, context);
+      myNode = ownerNode;
+    }
+
+    @Override
+    @NotNull
+    public SNode getNode() {
+      return myNode;
+    }
+
+    protected EditorCell createChildCell(SNode child) {
+      EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.staffRoomAllocation$zWNX, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.staffRoomAllocation$zWNX, child));
+      installCellInfo(child, editorCell, false);
+      return editorCell;
+    }
+
+
+
+    private void installCellInfo(SNode child, EditorCell editorCell, boolean isEmpty) {
+      if (editorCell.getSubstituteInfo() == null || editorCell.getSubstituteInfo() instanceof DefaultSubstituteInfo) {
+        editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
+      }
+      if (editorCell.getSRole() == null) {
+        editorCell.setSRole(LINKS.staffRoomAllocation$zWNX);
+      }
+      Style style = new StyleImpl();
+      style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+      style.set(StyleAttributes.INDENT_LAYOUT_INDENT, true);
+      editorCell.getStyle().putAll(style);
+    }
+    @Override
+    protected EditorCell createEmptyCell() {
+      getCellFactory().pushCellContext();
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.staffRoomAllocation$zWNX));
+      try {
+        EditorCell editorCell = super.createEmptyCell();
+        editorCell.setCellId("empty_staffRoomAllocation");
+        installCellInfo(null, editorCell, true);
+        setCellContext(editorCell);
+        return editorCell;
+      } finally {
+        getCellFactory().popCellContext();
+      }
+    }
+    protected String getNoTargetText() {
+      return "<no staffRoomAllocation>";
+    }
+  }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
@@ -180,5 +241,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink PatientOccupiable$Oc84 = MetaAdapterFactory.getContainmentLink(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x5dafd33966e8fe19L, 0x4e1460f1a02df61dL, "PatientOccupiable");
+    /*package*/ static final SContainmentLink staffRoomAllocation$zWNX = MetaAdapterFactory.getContainmentLink(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x5dafd33966e8fe19L, 0x578a9c103925378L, "staffRoomAllocation");
   }
 }

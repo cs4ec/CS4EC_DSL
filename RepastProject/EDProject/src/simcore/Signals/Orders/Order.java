@@ -12,4 +12,10 @@ public class Order {
 	public Order getNextStep() {
 		return nextStep;
 	}
+	
+	@Override
+	public String toString() {
+		return this.getClass().getName();
+		
+	}
 }

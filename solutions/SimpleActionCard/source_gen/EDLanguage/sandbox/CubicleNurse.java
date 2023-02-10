@@ -135,7 +135,7 @@ public class CubicleNurse extends Actor {
       }
     }
     if (true) {
-      if (pRoom.hasCapacity()) {
+      if (pRoom.hasCapacity(this)) {
         return Double.MIN_VALUE;
       }
     }
@@ -251,20 +251,16 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class SendSignalAction_e0a extends BehaviourStep {
+  public class OrderAction_e0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_e0a(Behaviour behaviour) {
+    public OrderAction_e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new PCRTrigger_bSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      b.PushMission(sendSignalTemp);
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
     }
   }
   public class OrderAction_f0a extends BehaviourStep {
@@ -276,19 +272,23 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
-  public class OrderAction_g0a extends BehaviourStep {
+  public class SendSignalAction_g0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_g0a(Behaviour behaviour) {
+
+    public SendSignalAction_g0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new PCRTrigger_bSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+      b.PushMission(sendSignalTemp);
     }
   }
   public class StayAction_h0a extends BehaviourStep {
@@ -385,20 +385,16 @@ public class CubicleNurse extends Actor {
 
     }
   }
-  public class SendSignalAction_e0a_1 extends BehaviourStep {
+  public class OrderAction_e0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_e0a_1(Behaviour behaviour) {
+    public OrderAction_e0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new PCRTrigger_bSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      b.PushMission(sendSignalTemp);
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
     }
   }
   public class OrderAction_f0a_1 extends BehaviourStep {
@@ -410,19 +406,23 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
-  public class OrderAction_g0a_1 extends BehaviourStep {
+  public class SendSignalAction_g0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_g0a_1(Behaviour behaviour) {
+
+    public SendSignalAction_g0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new PCRTrigger_bSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+      b.PushMission(sendSignalTemp);
     }
   }
   public class StayAction_h0a_1 extends BehaviourStep {
@@ -957,9 +957,9 @@ public class CubicleNurse extends Actor {
     plstSteps.add(new OrderAction_b0a_3(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_1(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_5(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_e0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_e0a(behaviourBuilder));
     plstSteps.add(new OrderAction_f0a(behaviourBuilder));
-    plstSteps.add(new OrderAction_g0a(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_g0a(behaviourBuilder));
     plstSteps.add(new StayAction_h0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

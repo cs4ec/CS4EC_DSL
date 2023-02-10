@@ -49,47 +49,15 @@
   </styles>
   <editedStyles>
     <entry>
-      <string>EDLanguage.sandbox.Doctor</string>
-      <null/>
-    </entry>
-    <entry>
       <string>simcore.basicStructures.Room</string>
       <null/>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.map_PatientProfile</string>
-      <null/>
+      <string>simcore.basicStructures.Occupiable</string>
+      <string>simcore.basicStructures.Occupiable.style_1.xml</string>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.Bed</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.TriageNurse</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.WardNurse</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.LabTechnician</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.patient</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.CubicleNurse</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.Seat</string>
+      <string>simcore.basicStructures.Wall</string>
       <null/>
     </entry>
   </editedStyles>
@@ -103,7 +71,7 @@
     <pType>LAST</pType>
     <duration>-1.0</duration>
     <frequency>REPEAT</frequency>
-    <hashCode>-1600130507</hashCode>
+    <hashCode>-1164110486</hashCode>
   </schedParams>
   <layoutClassName>foo.bar.baz</layoutClassName>
   <layoutProjection>space</layoutProjection>
@@ -111,7 +79,7 @@
   <layerOrder>
     <entry>
       <string>EDLanguage.sandbox.Doctor</string>
-      <int>4</int>
+      <int>5</int>
     </entry>
     <entry>
       <string>simcore.basicStructures.Room</string>
@@ -127,27 +95,27 @@
     </entry>
     <entry>
       <string>EDLanguage.sandbox.TriageNurse</string>
-      <int>6</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.WardNurse</string>
-      <int>9</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
       <int>7</int>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.LabTechnician</string>
-      <int>8</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.patient</string>
+      <string>EDLanguage.sandbox.WardNurse</string>
       <int>10</int>
     </entry>
     <entry>
+      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
+      <int>8</int>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.LabTechnician</string>
+      <int>9</int>
+    </entry>
+    <entry>
+      <string>EDLanguage.sandbox.patient</string>
+      <int>4</int>
+    </entry>
+    <entry>
       <string>EDLanguage.sandbox.CubicleNurse</string>
-      <int>5</int>
+      <int>6</int>
     </entry>
     <entry>
       <string>EDLanguage.sandbox.Seat</string>

@@ -274,6 +274,7 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.MajorsC_Cubicle">
+    <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>

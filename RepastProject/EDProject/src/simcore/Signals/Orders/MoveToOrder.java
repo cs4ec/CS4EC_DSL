@@ -1,6 +1,7 @@
 package simcore.Signals.Orders;
 
 import simcore.basicStructures.Occupiable;
+import simcore.basicStructures.Room;
 
 public class MoveToOrder extends Order{
 	
@@ -9,6 +10,9 @@ public class MoveToOrder extends Order{
 	
 	public MoveToOrder WithDestination(Object o) {
 		Target = o;
+		if(Target instanceof Room) {
+			ConcreteTarget = Target;
+		}
 		return this;
 	}
 
@@ -26,5 +30,15 @@ public class MoveToOrder extends Order{
 	
 	public void setConcreteTarget(Object target) {
 		ConcreteTarget = target;
+	}
+	
+	@Override
+	public String toString() {
+		String s = "";
+		s+= "Move to: " + Target.toString();
+		if(ConcreteTarget != null) {
+			s+= " concrete target: " + ConcreteTarget.toString();
+		}
+		return s;
 	}
 }

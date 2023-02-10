@@ -572,16 +572,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.duration$_Gwm), CONCEPTS.TimeDistributionTable$1_);
   }
   public static boolean ifMacro_Condition_3_7(final IfMacroContext _context) {
-    return Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:probabilityDistrBranches"))).isNotEmpty();
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.orderPatientLocation$SPZH) != null;
   }
   public static boolean ifMacro_Condition_3_8(final IfMacroContext _context) {
-    return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.condition$UnEW), null)) && !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.condition$UnEW), CONCEPTS.ProbabilityCondition$dt));
+    return SLinkOperations.getTarget(_context.getNode(), LINKS.orderPatientLocation$SPZH) != null;
   }
   public static boolean ifMacro_Condition_3_9(final IfMacroContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.orderPatientLocation$SPZH) != null;
+    return Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:probabilityDistrBranches"))).isNotEmpty();
   }
   public static boolean ifMacro_Condition_3_10(final IfMacroContext _context) {
-    return SLinkOperations.getTarget(_context.getNode(), LINKS.orderPatientLocation$SPZH) != null;
+    return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.condition$UnEW), null)) && !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.condition$UnEW), CONCEPTS.ProbabilityCondition$dt));
   }
   public static boolean ifMacro_Condition_8_0(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.location$2x_J), null));
@@ -1604,10 +1604,10 @@ public class QueriesGenerated extends QueryProviderBase {
     imcMethods.put("3692958048407647351", new IfMC(i++));
     imcMethods.put("6963522544239144565", new IfMC(i++));
     imcMethods.put("6963522544239183625", new IfMC(i++));
-    imcMethods.put("324605317411327937", new IfMC(i++));
-    imcMethods.put("1589537774394613407", new IfMC(i++));
     imcMethods.put("3787511550144033697", new IfMC(i++));
     imcMethods.put("9162315398963964649", new IfMC(i++));
+    imcMethods.put("324605317411327937", new IfMC(i++));
+    imcMethods.put("1589537774394613407", new IfMC(i++));
     imcMethods.put("33966321878176064", new IfMC(i++));
     imcMethods.put("3170643229272243322", new IfMC(i++));
     imcMethods.put("33966321878176110", new IfMC(i++));
