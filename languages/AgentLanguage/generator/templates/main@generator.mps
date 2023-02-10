@@ -20947,14 +20947,6 @@
           <node concept="3clFbS" id="5YqbxEqMmDc" role="3clF47">
             <node concept="3clFbF" id="5YqbxEqMoBo" role="3cqZAp">
               <node concept="37vLTI" id="5YqbxEqMusZ" role="3clFbG">
-                <node concept="2OqwBi" id="5YqbxEqMuTY" role="37vLTx">
-                  <node concept="1rXfSq" id="5YqbxEqMuLd" role="2Oq$k0">
-                    <ref role="37wK5l" to="uux2:~Agent.ToolBox()" resolve="ToolBox" />
-                  </node>
-                  <node concept="liA8E" id="5YqbxEqMv9n" role="2OqNvi">
-                    <ref role="37wK5l" to="y2pi:~ToolBox.getTime()" resolve="getTime" />
-                  </node>
-                </node>
                 <node concept="2OqwBi" id="5YqbxEqMtKz" role="37vLTJ">
                   <node concept="1eOMI4" id="5YqbxEqMsek" role="2Oq$k0">
                     <node concept="10QFUN" id="5YqbxEqMsjT" role="1eOMHV">
@@ -21002,6 +20994,24 @@
                   </node>
                   <node concept="2OwXpG" id="5YqbxEqMu2n" role="2OqNvi">
                     <ref role="2Oxat5" to="uux2:~Agent.deSpawnTime" resolve="deSpawnTime" />
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="lSEs44MH82" role="37vLTx">
+                  <node concept="2YIFZM" id="lSEs44MGXU" role="2Oq$k0">
+                    <ref role="37wK5l" to="y2pi:~TimeKeeper.getInstance()" resolve="getInstance" />
+                    <ref role="1Pybhc" to="y2pi:~TimeKeeper" resolve="TimeKeeper" />
+                  </node>
+                  <node concept="liA8E" id="lSEs44MHhD" role="2OqNvi">
+                    <ref role="37wK5l" to="y2pi:~TimeKeeper.getTimeOfDayAsInt(java.time.LocalDateTime)" resolve="getTimeOfDayAsInt" />
+                    <node concept="2OqwBi" id="lSEs44MHMq" role="37wK5m">
+                      <node concept="2YIFZM" id="lSEs44MHIq" role="2Oq$k0">
+                        <ref role="37wK5l" to="y2pi:~TimeKeeper.getInstance()" resolve="getInstance" />
+                        <ref role="1Pybhc" to="y2pi:~TimeKeeper" resolve="TimeKeeper" />
+                      </node>
+                      <node concept="liA8E" id="lSEs44MIdD" role="2OqNvi">
+                        <ref role="37wK5l" to="y2pi:~TimeKeeper.getTime()" resolve="getTime" />
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>

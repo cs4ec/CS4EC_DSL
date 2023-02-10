@@ -14,6 +14,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
+import simcore.basicStructures.TimeKeeper;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
@@ -1012,7 +1014,7 @@ public class patient extends Actor {
 
   public int patientgetAliveTime() {
     if (deSpawnTime == 0) {
-      deSpawnTime = ToolBox().getTime();
+      deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
     return (int) (deSpawnTime - spawnTime);
   }

@@ -115,7 +115,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsCTwo_f = new Room("MajorsCTwo", context, space, grid, 8, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCThree_g = new Room("MajorsCThree", context, space, grid, 15, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCFour_h = new Room("MajorsCFour", context, space, grid, 20, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room MajorsCFive_i = new Room("MajorsCFive", context, space, grid, 1, 156, 5, 5, 1, 5, MajorsCBay.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCFive_i = new Room("MajorsCFive", context, space, grid, 1, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCSix_j = new Room("MajorsCSix", context, space, grid, 6, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCSeven_k = new Room("MajorsCSeven", context, space, grid, 11, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCEight_l = new Room("MajorsCEight", context, space, grid, 16, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
@@ -252,6 +252,11 @@ public class EDBuilder implements ContextBuilder<Object> {
       NdPoint pt = space.getLocation(obj);
       grid.moveTo(obj, (int) pt.getX(), (int) pt.getY());
     }
+    
+    for (Object cubicleNurse : context.getObjects(CubicleNurse.class)) {
+		space.moveTo(cubicleNurse, 5, 50);
+		grid.moveTo(cubicleNurse, 5, (int) 50);
+	}
 
     new NetworkBuilder("CurrentPatientAllocations", context, true).buildNetwork();
     new NetworkBuilder("HistoricalPatientAllocations", context, true).buildNetwork();

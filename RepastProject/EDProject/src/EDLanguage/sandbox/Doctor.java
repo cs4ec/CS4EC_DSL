@@ -17,6 +17,8 @@ import java.util.stream.StreamSupport;
 import repast.simphony.space.graph.RepastEdge;
 import simcore.basicStructures.Room;
 import simcore.basicStructures.RoomType;
+import simcore.basicStructures.TimeKeeper;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
@@ -308,7 +310,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
   }
   public class RemoveRelationshipAction_g0a extends BehaviourStep {
@@ -436,7 +438,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
   }
   public class RemoveRelationshipAction_g0a_0 extends BehaviourStep {
@@ -564,7 +566,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
   }
   public class RemoveRelationshipAction_g0b extends BehaviourStep {
@@ -692,7 +694,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
   }
   public class RemoveRelationshipAction_g0b_0 extends BehaviourStep {
@@ -787,7 +789,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
   }
   public class RemoveRelationshipAction_f0c extends BehaviourStep {
@@ -882,7 +884,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
   }
   public class RemoveRelationshipAction_f0c_0 extends BehaviourStep {
@@ -1010,7 +1012,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
   }
   public class RemoveRelationshipAction_g0d extends BehaviourStep {
@@ -1138,7 +1140,7 @@ public class Doctor extends Actor {
     }
 
     public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = ToolBox().getTime();
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
     }
   }
   public class RemoveRelationshipAction_g0d_0 extends BehaviourStep {

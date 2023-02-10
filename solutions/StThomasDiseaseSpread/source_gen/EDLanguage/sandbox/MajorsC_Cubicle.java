@@ -9,6 +9,7 @@ public class MajorsC_Cubicle extends RoomType {
 
   private MajorsC_Cubicle() {
     super();
+    actorAllocationLimit.put(CubicleNurse.class, 1);
   }
 
   public static RoomType getInstance() {

@@ -130,7 +130,7 @@ public class LabTechnician extends Actor {
       }
     }
     if (true) {
-      if (pRoom.hasCapacity()) {
+      if (pRoom.hasCapacity(this)) {
         return Double.MIN_VALUE;
       }
     }

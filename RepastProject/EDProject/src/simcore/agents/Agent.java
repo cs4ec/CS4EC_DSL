@@ -74,7 +74,7 @@ public class Agent {
 		this.grid = grid;
 		this.context = context;
 		curInside = null;
-		spawnTime = ToolBox().getTime();
+		spawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
 		myID = IDFactory;
 		IDFactory++;
 		
@@ -477,6 +477,17 @@ public class Agent {
 		}
 		
 		return myID + ", my patients: " + myPatientList;
+	}
+	
+	@Parameter(usageName="AllocatedStaff", displayName="AllocatedStaff")
+	public String getAllocatedStaff() {
+		String myStaffList = "";
+		Iterator<RepastEdge<Agent>> myStaff = ((Network) context.getProjection("CurrentPatientAllocations")).getEdges(this).iterator();
+		while(myStaff.hasNext()) {
+			myStaffList += myStaff.next().getSource().agentName() + " | ";
+		}
+		
+		return myID + ", my staff: " + myStaffList;
 	}
 
 	
