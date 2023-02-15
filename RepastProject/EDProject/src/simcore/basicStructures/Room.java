@@ -12,15 +12,19 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.MajorsC_Cubicle;
+import EDLanguage.sandbox.MajorsNurse;
+import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
+import repast.simphony.engine.schedule.ScheduleParameters;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.continuous.ContinuousSpace;
+import repast.simphony.space.graph.Network;
 import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import repast.simphony.ui.probe.ProbeID;
 import repast.simphony.valueLayer.GridValueLayer;
+import simcore.action.Behaviour;
 import simcore.agents.Agent;
 import simcore.utilities.Cellbox;
 
@@ -80,7 +84,7 @@ public class Room extends Locatable{
 	}
 
 	// every tick check for agent at entry point
-	@ScheduledMethod(start = 1, interval = 1)
+	@ScheduledMethod(start = 1, interval = 1,priority = ScheduleParameters.FIRST_PRIORITY)
 	public void step() {
 		contentPeople = new HashSet<>();
 		curCap = 0;
@@ -185,13 +189,14 @@ public class Room extends Locatable{
 	
 	// check if loc is full based on my agent type
 	public boolean hasCapacity(Agent checkingAgent) {
-		if(roomType instanceof MajorsC_Cubicle) {
-		      if (roomType.actorAllocationLimit.containsKey(checkingAgent.getClass()) && getOccupiers().stream().filter(a -> a.getClass() == checkingAgent.getClass()).collect(Collectors.toList()).size() < roomType.actorAllocationLimit.get(checkingAgent.getClass())) {
-		    	  return true; 
-		      } else {
-		    	  return false;
-		      }
-		}
+		Set<Agent> occupiers = getOccupiers();
+
+	      for (Class agent : roomType.actorAllocationLimit.keySet()) {
+	    	  if(getOccupiers().stream().filter(a -> a.getClass() == agent).collect(Collectors.toList()).size() >= roomType.actorAllocationLimit.get(agent)) {
+	    		  return false;
+	    	  }
+	      }
+
 		if(!getAllOccupiables().isEmpty()) {
 			return getAllOccupiables().stream().anyMatch(o->!o.isOccupied());	
 		} else {

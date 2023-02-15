@@ -307,7 +307,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)/394251613848318982");
     b.version(2);
     b.property("limit", 0x578a9c1038e7bf3L).type(PrimitiveTypeId.INTEGER).origin("394251613848370163").done();
-    b.associate("staff", 0x578a9c1038db410L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL).optional(false).origin("394251613848318992").done();
+    b.associate("staff", 0x578a9c1038db410L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x578a9c104f25dbfL).optional(false).origin("394251613848318992").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForStaffRoomAllocationTable() {

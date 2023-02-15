@@ -1828,6 +1828,7 @@
     <classNode dependClassName="ActionCards.editor.GrammarCellsSubstituteMenu_PatientSeverity_Low" />
     <classNode dependClassName="ActionCards.editor.GrammarCellsSubstituteMenu_PatientSeverity_Severe" />
     <classNode dependClassName="ActionCards.editor.GrammarCellsSubstituteMenu_Patient_Severity_Moderate" />
+    <classNode dependClassName="ActionCards.editor.GrammarCellsSubstituteMenu_Person" />
     <classNode dependClassName="ActionCards.editor.GrammarCellsSubstituteMenu_ProbabilityCondition" />
     <classNode dependClassName="ActionCards.editor.GrammarCellsSubstituteMenu_ProbabilityDistribution" />
     <classNode dependClassName="ActionCards.editor.GrammarCellsSubstituteMenu_ProbabilityDistributionLine" />
@@ -2855,6 +2856,24 @@
     <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
   </dependency>
   <dependency className="ActionCards.editor.GrammarCellsSubstituteMenu_Patient_Severity_Moderate">
+    <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.EditorMenuDescriptorBase" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.menus.MenuPart" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.menus.substitute.SubstituteMenuItem" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SAbstractConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SModule" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.module.SRepository" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.persistence.PersistenceFacade" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.menus.substitute.SubstituteMenuBase" />
+  </dependency>
+  <dependency className="ActionCards.editor.GrammarCellsSubstituteMenu_Person">
     <classNode dependClassName="com.mbeddr.mpsutil.grammarcells.runtime.menu.GrammarCellsSubstituteMenuPart" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.ArrayList" />

@@ -1,6 +1,7 @@
 package simcore.agents;
 
 import java.lang.reflect.Field;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -52,8 +53,8 @@ public class Agent {
 	protected Room curInside;
 	protected static Integer IDFactory = 1;
 	protected Integer myID;
-	public double spawnTime = 0;
-	public double deSpawnTime = 0;
+	public LocalDateTime spawnTime;
+	public LocalDateTime deSpawnTime;
 	public Object placeholderVariable;
 	protected Occupiable curOccupying;
 	protected Occupiable allocatedOccupiable;
@@ -74,7 +75,7 @@ public class Agent {
 		this.grid = grid;
 		this.context = context;
 		curInside = null;
-		spawnTime = TimeKeeper.getInstance().getTimeOfDayAsInt(TimeKeeper.getInstance().getTime());
+		spawnTime = TimeKeeper.getInstance().getTime();
 		myID = IDFactory;
 		IDFactory++;
 		
@@ -160,6 +161,16 @@ public class Agent {
 		return selectedRoom;
 	}
 	
+	protected double EvaluateRoomChoice(Room r1) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	protected double EvaluateRoomChoice(Room r1, Behaviour behaviour) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	public List<Occupiable> getAllEmptyOcupiablesOfType(Class c, RoomType roomType) {
 		ArrayList<Occupiable> plstAllEmptyOccupiables = new ArrayList<Occupiable>();
 		
@@ -262,11 +273,6 @@ public class Agent {
 			myPoint = space.getLocation(this);
 			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 		}
-	}
-	
-	// Utility method to evaluate the utility of a room for selection
-	protected double EvaluateRoomChoice(Room pRoom) {
-		return Double.MIN_VALUE;
 	}
 	
 

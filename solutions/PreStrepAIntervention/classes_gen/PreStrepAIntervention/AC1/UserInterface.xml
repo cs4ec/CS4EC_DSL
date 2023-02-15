@@ -6,42 +6,58 @@
       <string>simcore.basicStructures.Room</string>
       <string>simcore.styles.LocationStyle</string>
     </entry>
-    <entry>
+      <entry>
+      <string>EDLanguage.sandbox.Bed</string>
+      <string>EDLanguage.sandbox.Bedstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.Seat</string>
+      <string>EDLanguage.sandbox.Seatstyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.MajorsDoctor</string>
-      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
-    </entry>
-    <entry>
+      <string>EDLanguage.sandbox.MajorsDoctorstyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.TriageNurse</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Occupiable</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.MinorsNurse</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Wall</string>
-      <string>simcore.styles.WallStyle</string>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.MinorsDoctor</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.SeniorDoc</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.patient</string>
-      <string>repast.simphony.visualization.editedStyle.EditedStyle2D</string>
-    </entry>
-    <entry>
+      <string>EDLanguage.sandbox.TriageNursestyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.MajorsNurse</string>
-      <string>repast.simphony.visualizationOGL2D.DefaultStyleOGL2D</string>
-    </entry>
+      <string>EDLanguage.sandbox.MajorsNursestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.SeniorDoc</string>
+      <string>EDLanguage.sandbox.SeniorDocstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.MinorsNurse</string>
+      <string>EDLanguage.sandbox.MinorsNursestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.WardNurse</string>
+      <string>EDLanguage.sandbox.WardNursestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.MinorsDoctor</string>
+      <string>EDLanguage.sandbox.MinorsDoctorstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.GASNurse</string>
+      <string>EDLanguage.sandbox.GASNursestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.map_PatientProfile</string>
+      <string>EDLanguage.sandbox.map_PatientProfilestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.map_PatientProfile</string>
+      <string>EDLanguage.sandbox.map_PatientProfilestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.patient</string>
+      <string>EDLanguage.sandbox.patientstyle</string>
+      </entry>
   </styles>
   <editedStyles>
     <entry>
@@ -49,41 +65,14 @@
       <null/>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.MajorsDoctor</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.TriageNurse</string>
-      <string>EDLanguage.sandbox.TriageNurse.style_2.xml</string>
-    </entry>
-    <entry>
       <string>simcore.basicStructures.Occupiable</string>
       <string>simcore.basicStructures.Occupiable.style_1.xml</string>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.MinorsNurse</string>
-      <string>EDLanguage.sandbox.MinorsNurse.style_2.xml</string>
     </entry>
     <entry>
       <string>simcore.basicStructures.Wall</string>
       <null/>
     </entry>
-    <entry>
-      <string>EDLanguage.sandbox.MinorsDoctor</string>
-      <string>EDLanguage.sandbox.MinorsDoctor.style_3.xml</string>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.SeniorDoc</string>
-      <string>EDLanguage.sandbox.SeniorDoc.style_3.xml</string>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.patient</string>
-      <string>EDLanguage.sandbox.patient.style_2.xml</string>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.MajorsNurse</string>
-      <null/>
-    </entry>
+
   </editedStyles>
   <netStyles/>
   <editedNetStyles/>
@@ -106,41 +95,51 @@
       <int>0</int>
     </entry>
     <entry>
-      <string>EDLanguage.sandbox.MajorsDoctor</string>
-      <int>8</int>
+      <string>EDLanguage.sandbox.patient</string>
+      <int>1000</int>
     </entry>
-    <entry>
-      <string>EDLanguage.sandbox.TriageNurse</string>
-      <int>9</int>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Occupiable</string>
-      <int>2</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.MinorsNurse</string>
-      <int>5</int>
-    </entry>
+
     <entry>
       <string>simcore.basicStructures.Wall</string>
       <int>1</int>
     </entry>
+
     <entry>
-      <string>EDLanguage.sandbox.MinorsDoctor</string>
-      <int>6</int>
+      <string>simcore.basicStructures.Occupiable</string>
+      <int>2</int>
     </entry>
-    <entry>
-      <string>EDLanguage.sandbox.SeniorDoc</string>
+      <entry>
+      <string>EDLanguage.sandbox.Bed</string>
       <int>4</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.patient</string>
-      <int>3</int>
-    </entry>
-    <entry>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.Seat</string>
+      <int>5</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.MajorsDoctor</string>
+      <int>6</int>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.MajorsNurse</string>
       <int>7</int>
-    </entry>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.TriageNurse</string>
+      <int>8</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.MinorsNurse</string>
+      <int>9</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.SeniorDoc</string>
+      <int>10</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.MinorsDoctor</string>
+      <int>11</int>
+      </entry>
   </layerOrder>
   <projections>
     <repast.simphony.scenario.data.ProjectionData>

@@ -552,7 +552,7 @@
       <property role="IQ2ns" value="394251613848318992" />
       <property role="20kJfa" value="staff" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="e88n:4X1nFNzWOrG" resolve="StaffType" />
+      <ref role="20lvS9" to="e88n:lSEs44W_QZ" resolve="Person" />
     </node>
   </node>
 </model>

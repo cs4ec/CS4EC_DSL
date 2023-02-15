@@ -39,7 +39,7 @@
       <unit at="26,0,98,0" name="ActionCards.editor.ConditionalLine_SubstituteMenu" />
     </file>
     <file name="EditorAspectDescriptorImpl.java">
-      <unit at="22,0,375,0" name="ActionCards.editor.EditorAspectDescriptorImpl" />
+      <unit at="22,0,377,0" name="ActionCards.editor.EditorAspectDescriptorImpl" />
     </file>
     <file name="GrammarActionsDescriptor.java">
       <unit at="687,0,690,0" name="ActionCards.editor.GrammarActionsDescriptor$LINKS" />
@@ -307,6 +307,11 @@
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Patient_Severity_Moderate$CONCEPTS" />
       <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Patient_Severity_Moderate$GrammarCellsSubstituteMenuPart_fer847_a" />
       <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Patient_Severity_Moderate" />
+    </file>
+    <file name="GrammarCellsSubstituteMenu_Person.java">
+      <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Person$CONCEPTS" />
+      <unit at="46,0,56,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Person$GrammarCellsSubstituteMenuPart_fowjp4_a" />
+      <unit at="21,0,61,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_Person" />
     </file>
     <file name="GrammarCellsSubstituteMenu_ProbabilityCondition.java">
       <unit at="57,0,60,0" name="ActionCards.editor.GrammarCellsSubstituteMenu_ProbabilityCondition$CONCEPTS" />

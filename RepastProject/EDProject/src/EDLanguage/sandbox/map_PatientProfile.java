@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
+import simcore.basicStructures.TimeKeeper;
 
 public class map_PatientProfile extends Actor {
 
@@ -64,8 +65,8 @@ public class map_PatientProfile extends Actor {
     return null;
   }
 
-  protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
-    if (curInside != null && curInside.getRoomType() == pRoomType) {
+  protected Room SelectLocation(RoomType pRoomType, final Behaviour behaviour) {
+    if (curInside != null && curInside.getRoomType() == pRoomType && EvaluateRoomChoice(curInside, behaviour) != Double.MAX_VALUE) {
       return curInside;
     }
     ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
@@ -78,18 +79,18 @@ public class map_PatientProfile extends Actor {
     // If my patient isn't currently in that room, then consider other options
     Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
       public int compare(Room r1, Room r2) {
-        return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
+        return Double.compare(EvaluateRoomChoice(r1, behaviour), EvaluateRoomChoice(r2, behaviour));
       }
     }).filter(new Predicate<Room>() {
       public boolean test(Room r) {
-        return EvaluateRoomChoice(r) != Double.MAX_VALUE;
+        return EvaluateRoomChoice(r, behaviour) != Double.MAX_VALUE;
       }
     }).findFirst().orElse(null);
     return selectedRoom;
   }
 
 
-  protected double EvaluateRoomChoice(Room pRoom) {
+  protected double EvaluateRoomChoice(Room pRoom, Behaviour behaviour) {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (pRoom == null) {
@@ -123,9 +124,9 @@ public class map_PatientProfile extends Actor {
 
 
   public int map_PatientProfilegetAliveTime() {
-    if (deSpawnTime == 0) {
-      deSpawnTime = ToolBox().getTime();
+    if (deSpawnTime == null) {
+      deSpawnTime = TimeKeeper.getInstance().getTime();
     }
-    return (int) (deSpawnTime - spawnTime);
+    return (int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime);
   }
 }

@@ -1268,10 +1268,10 @@
     <node concept="2r0Tta" id="lSEs43zrgu" role="2wV5jI">
       <node concept="2reCLk" id="lSEs43zrh2" role="2r0Tv6">
         <node concept="2reCLy" id="lSEs43zrhm" role="2reCL6">
-          <node concept="1iCGBv" id="lSEs43zrhq" role="2reSmM">
+          <node concept="1iCGBv" id="lSEs4504Ug" role="2reSmM">
             <ref role="1NtTu8" to="3z3g:lSEs43zrgg" resolve="staff" />
-            <node concept="1sVBvm" id="lSEs43zrhs" role="1sWHZn">
-              <node concept="3F0A7n" id="lSEs43zrhz" role="2wV5jI">
+            <node concept="1sVBvm" id="lSEs4504Ui" role="1sWHZn">
+              <node concept="3F0A7n" id="lSEs453y7i" role="2wV5jI">
                 <property role="1Intyy" value="true" />
                 <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
               </node>
@@ -1293,7 +1293,7 @@
         <ref role="2reCK$" to="3z3g:lSEs43zrib" resolve="lines" />
         <node concept="2r3Xtq" id="lSEs43zrk2" role="2YiT2b">
           <node concept="2rfbtV" id="lSEs43zrk6" role="uCobI">
-            <property role="2rfbtB" value="Staff" />
+            <property role="2rfbtB" value="Person" />
           </node>
           <node concept="2rfbtV" id="lSEs43zBKj" role="uCobI">
             <property role="2rfbtB" value="Limit" />

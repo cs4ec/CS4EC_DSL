@@ -210,9 +210,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         return style;
       }
     }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Staff", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Staff"), cell);
-    header.setLabel("Staff");
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Person", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Person"), cell);
+    header.setLabel("Person");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);

@@ -15,7 +15,7 @@
   </registry>
   <node concept="2Qkwg2" id="5_FodVJfsgn">
     <property role="2QkwrH" value="/Users/thomasgodfrey/MPSProjects/CS4EC" />
-    <property role="3Zxs0N" value="StThomasDiseaseSpread" />
+    <property role="3Zxs0N" value="PreStrepAIntervention" />
   </node>
 </model>
 

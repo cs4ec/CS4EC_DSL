@@ -212,7 +212,7 @@
     <property role="R4oN_" value="Staff type in the ED" />
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="People.Staff" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="lSEs44W_QZ" resolve="Person" />
     <node concept="1TJgyi" id="i1eH3VqwZY" role="1TKVEl">
       <property role="IQ2nx" value="324605317393027070" />
       <property role="TrG5h" value="patientLimit" />
@@ -1281,7 +1281,7 @@
     <property role="TrG5h" value="Patient" />
     <property role="34LRSv" value="patient" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="lSEs44W_QZ" resolve="Person" />
     <node concept="1TJgyj" id="i1eH3VE_aX" role="1TKVEi">
       <property role="IQ2ns" value="324605317397238461" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -1300,6 +1300,15 @@
       <property role="IQ2nx" value="324605317409456814" />
       <property role="TrG5h" value="probabilityChance" />
       <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="lSEs44W_QZ">
+    <property role="EcuMT" value="394251613871693247" />
+    <property role="3GE5qa" value="People" />
+    <property role="TrG5h" value="Person" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="lSEs4504UO" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>

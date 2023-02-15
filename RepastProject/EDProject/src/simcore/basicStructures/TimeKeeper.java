@@ -3,6 +3,7 @@ package simcore.basicStructures;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -40,5 +41,9 @@ public class TimeKeeper {
 	
 	public int getTimeOfDayAsInt(LocalDateTime dt) {
 		return (dt.getHour() * 3600) + (dt.getMinute()*60) + (dt.getSecond());
+	}
+
+	public static int compareSeconds(LocalDateTime deSpawnTime, LocalDateTime spawnTime) {
+		return (int) ChronoUnit.SECONDS.between(deSpawnTime, spawnTime); 
 	}
 }

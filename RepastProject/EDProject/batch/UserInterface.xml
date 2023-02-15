@@ -15,28 +15,40 @@
       <string>EDLanguage.sandbox.Seatstyle</string>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.Doctor</string>
-      <string>EDLanguage.sandbox.Doctorstyle</string>
+      <string>EDLanguage.sandbox.MajorsDoctor</string>
+      <string>EDLanguage.sandbox.MajorsDoctorstyle</string>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.TriageNurse</string>
       <string>EDLanguage.sandbox.TriageNursestyle</string>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.CubicleNurse</string>
-      <string>EDLanguage.sandbox.CubicleNursestyle</string>
+      <string>EDLanguage.sandbox.MajorsNurse</string>
+      <string>EDLanguage.sandbox.MajorsNursestyle</string>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.LabTechnician</string>
-      <string>EDLanguage.sandbox.LabTechnicianstyle</string>
+      <string>EDLanguage.sandbox.SeniorDoc</string>
+      <string>EDLanguage.sandbox.SeniorDocstyle</string>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
-      <string>EDLanguage.sandbox.PreAdmissionStaffstyle</string>
+      <string>EDLanguage.sandbox.MinorsNurse</string>
+      <string>EDLanguage.sandbox.MinorsNursestyle</string>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.WardNurse</string>
       <string>EDLanguage.sandbox.WardNursestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.MinorsDoctor</string>
+      <string>EDLanguage.sandbox.MinorsDoctorstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.GASNurse</string>
+      <string>EDLanguage.sandbox.GASNursestyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.map_PatientProfile</string>
+      <string>EDLanguage.sandbox.map_PatientProfilestyle</string>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.map_PatientProfile</string>
@@ -105,11 +117,11 @@
       <int>5</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.Doctor</string>
+      <string>EDLanguage.sandbox.MajorsDoctor</string>
       <int>6</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.CubicleNurse</string>
+      <string>EDLanguage.sandbox.MajorsNurse</string>
       <int>7</int>
       </entry>
       <entry>
@@ -117,15 +129,15 @@
       <int>8</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
+      <string>EDLanguage.sandbox.MinorsNurse</string>
       <int>9</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.LabTechnician</string>
+      <string>EDLanguage.sandbox.SeniorDoc</string>
       <int>10</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.WardNurse</string>
+      <string>EDLanguage.sandbox.MinorsDoctor</string>
       <int>11</int>
       </entry>
   </layerOrder>

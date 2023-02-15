@@ -65,6 +65,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptPatientSeverity_Low = createDescriptorForPatientSeverity_Low();
   /*package*/ final ConceptDescriptor myConceptPatientSeverity_Severe = createDescriptorForPatientSeverity_Severe();
   /*package*/ final ConceptDescriptor myConceptPatient_Severity_Moderate = createDescriptorForPatient_Severity_Moderate();
+  /*package*/ final ConceptDescriptor myConceptPerson = createDescriptorForPerson();
   /*package*/ final ConceptDescriptor myConceptProbabilityCondition = createDescriptorForProbabilityCondition();
   /*package*/ final ConceptDescriptor myConceptProbabilityDistribution = createDescriptorForProbabilityDistribution();
   /*package*/ final ConceptDescriptor myConceptProbabilityDistributionLine = createDescriptorForProbabilityDistributionLine();
@@ -119,7 +120,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptCompositeDiagnosticCondition, myConceptCompositeTest, myConceptCompositeTestResultCondition, myConceptConditionalLine, myConceptConditionalSelection, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatient, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientSeverity, myConceptPatientSeverityProperty, myConceptPatientSeverity_Low, myConceptPatientSeverity_Severe, myConceptPatient_Severity_Moderate, myConceptProbabilityCondition, myConceptProbabilityDistribution, myConceptProbabilityDistributionLine, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptResultsMappingLine, myConceptResultsMappingTable, myConceptRoomSelectionCondition, myConceptRoomSelectionLine, myConceptRoomSelectionRule, myConceptRoomTypeCondition, myConceptSelectEmptyRoom, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTestOutcome, myConceptTestSelectionRule, myConceptTestSelectionRuleLine, myConceptTestSelectionStrategy, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
+    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttendanceRouteCondition, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptCompositeDiagnosticCondition, myConceptCompositeTest, myConceptCompositeTestResultCondition, myConceptConditionalLine, myConceptConditionalSelection, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatient, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPatientPropertyConditional, myConceptPatientSeverity, myConceptPatientSeverityProperty, myConceptPatientSeverity_Low, myConceptPatientSeverity_Severe, myConceptPatient_Severity_Moderate, myConceptPerson, myConceptProbabilityCondition, myConceptProbabilityDistribution, myConceptProbabilityDistributionLine, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptResultsMappingLine, myConceptResultsMappingTable, myConceptRoomSelectionCondition, myConceptRoomSelectionLine, myConceptRoomSelectionRule, myConceptRoomTypeCondition, myConceptSelectEmptyRoom, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTestOutcome, myConceptTestSelectionRule, myConceptTestSelectionRuleLine, myConceptTestSelectionStrategy, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
   }
 
   @Override
@@ -224,6 +225,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPatientSeverity_Severe;
       case LanguageConceptSwitch.Patient_Severity_Moderate:
         return myConceptPatient_Severity_Moderate;
+      case LanguageConceptSwitch.Person:
+        return myConceptPerson;
       case LanguageConceptSwitch.ProbabilityCondition:
         return myConceptProbabilityCondition;
       case LanguageConceptSwitch.ProbabilityDistribution:
@@ -699,6 +702,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForPatient() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Patient", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4813ad0fbaa52b3L);
     b.class_(false, false, true);
+    b.super_("ActionCards.structure.Person", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x578a9c104f25dbfL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/324605317397238451");
     b.version(2);
     b.aggregate("patientProperty", 0x4813ad0fbaa52bdL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL).optional(true).ordered(true).multiple(true).origin("324605317397238461").done();
@@ -790,6 +794,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/512008214798466923");
     b.version(2);
     b.alias("moderate");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForPerson() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "Person", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x578a9c104f25dbfL);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/394251613871693247");
+    b.version(2);
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForProbabilityCondition() {
@@ -937,6 +949,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForStaffType() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "StaffType", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f346ecL);
     b.class_(false, false, true);
+    b.super_("ActionCards.structure.Person", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x578a9c104f25dbfL);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5710949967853733612");
     b.version(2);

@@ -38,9 +38,9 @@ public class patientGenerator_1 extends AgentGenerator {
     sendSignalTemp.AddActor("TriageNurse");
 
 
-    // For each agent attribute 
-    // For each attribute value option 
-    // Assign the value based on probability function 
+    // For each agent attribute
+    // For each attribute value option
+    // Assign the value based on probability function
     double rndDouble = RandomHelper.nextDouble();
 
     this.generateAttribute_a_0(a);

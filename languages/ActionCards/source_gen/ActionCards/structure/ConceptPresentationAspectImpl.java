@@ -58,6 +58,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PatientSeverity_Low;
   private ConceptPresentation props_PatientSeverity_Severe;
   private ConceptPresentation props_Patient_Severity_Moderate;
+  private ConceptPresentation props_Person;
   private ConceptPresentation props_ProbabilityCondition;
   private ConceptPresentation props_ProbabilityDistribution;
   private ConceptPresentation props_ProbabilityDistributionLine;
@@ -376,7 +377,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.Patient:
         if (props_Patient == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("patient");
+          cpb.presentationByName();
           props_Patient = cpb.create();
         }
         return props_Patient;
@@ -444,6 +445,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Patient_Severity_Moderate = cpb.create();
         }
         return props_Patient_Severity_Moderate;
+      case LanguageConceptSwitch.Person:
+        if (props_Person == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Person = cpb.create();
+        }
+        return props_Person;
       case LanguageConceptSwitch.ProbabilityCondition:
         if (props_ProbabilityCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
