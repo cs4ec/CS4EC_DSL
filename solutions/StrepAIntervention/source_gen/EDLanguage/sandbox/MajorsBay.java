@@ -9,6 +9,7 @@ public class MajorsBay extends RoomType {
 
   private MajorsBay() {
     super();
+    actorAllocationLimit.put(patient.class, 1);
   }
 
   public static RoomType getInstance() {

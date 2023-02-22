@@ -140,6 +140,10 @@
       <string>EDLanguage.sandbox.MinorsDoctor</string>
       <int>11</int>
       </entry>
+      <entry>
+      <string>EDLanguage.sandbox.GASNurse</string>
+      <int>12</int>
+      </entry>
   </layerOrder>
   <projections>
     <repast.simphony.scenario.data.ProjectionData>

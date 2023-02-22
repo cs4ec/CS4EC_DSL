@@ -14,6 +14,7 @@ import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.Schedule;
+import repast.simphony.engine.schedule.ScheduleParameters;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import repast.simphony.parameter.Parameter;
 import repast.simphony.space.continuous.ContinuousSpace;
@@ -128,64 +129,59 @@ public class Actor extends Agent {
 	// Process an order given by a staff member
 	private void ExecOrder(Order order) {
 		if (order instanceof MoveToOrder) {
-			Object destination = ((MoveToOrder) order).getTarget();
-			
-			Object concreteDestination = ((MoveToOrder)order).getConcreteTarget();
-			
-		      if (concreteDestination == null) {
-		          if (destination instanceof RoomType) {
-		        	  concreteDestination = SelectLocation(((RoomType) destination));
-		        	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
-		          } 
-		          else if(destination instanceof Class && Occupiable.class.isAssignableFrom(((Class)destination))) {
-		        	  Occupiable target = SelectOccupiable(curInside, (Class) destination);
-		        	  if(target == null) {
-		        		  iterateOrder();
-		        	  } else {
-			        	  concreteDestination = target;
-			        	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
-			        	  target.setAllocated(this);
-		        	  }
-		          } 
-		          else {
-		        	  concreteDestination = destination;
-		        	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
-		          }
-		        }
-			
-		      if(concreteDestination != null) {
-//				    if (destination instanceof RoomType) {
-//				        if (EvaluateRoomChoice(((Room) concreteDestination)) == 0) {
-//				        	concreteDestination = SelectLocation(((RoomType) destination));
-//				        }
-//				      }
+			executeMoveOrder(order);
+		}
+	}
 
-					MoveTowards(concreteDestination);
-					
-					if (concreteDestination instanceof Room) {
-						Room targetLocation = (Room) concreteDestination;
-						
-						// if this agent is in the room..
-						if (targetLocation.WithInside(this)) {
-							iterateOrder();
-						}
-					} else {
-						if (ImAt(concreteDestination)) {
-							if(concreteDestination instanceof Occupiable) {
-								((Occupiable) concreteDestination).setOccupier(this);
-							}
-							iterateOrder();
-						}
-					}
+	private void executeMoveOrder(Order order) {
+		Object destination = ((MoveToOrder) order).getTarget();
+		
+		Object concreteDestination = ((MoveToOrder)order).getConcreteTarget();
+		
+		  if (concreteDestination == null) {
+		      if (destination instanceof RoomType) {
+		    	  concreteDestination = SelectLocation(((RoomType) destination));
+		    	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
+		      } 
+		      else if(destination instanceof Class && Occupiable.class.isAssignableFrom(((Class)destination))) {
+		    	  Occupiable target = SelectOccupiable(curInside, (Class) destination);
+		    	  if(target == null) {
+		    		  iterateOrder();
+		    	  } else {
+		        	  concreteDestination = target;
+		        	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
+		        	  target.setAllocated(this);
+		    	  }
+		      } 
+		      else {
+		    	  concreteDestination = destination;
+		    	  ((MoveToOrder) order).setConcreteTarget(concreteDestination);
 		      }
-
-		} else if (order instanceof FollowOrder) {
-			// follow the target
-			Object target = ((FollowOrder) order).getFollowTarget();
-			MoveTowards(target);
-		} else if (order instanceof StopOrder) {
-			iterateOrder();
-		} 
+		    }
+		
+		  if(concreteDestination != null) {
+				int count = 0;
+				while(count <  RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")) {
+					count++;
+					MoveTowards(concreteDestination);
+				}
+				
+				if (concreteDestination instanceof Room) {
+					Room targetLocation = (Room) concreteDestination;
+					
+					// if this agent is in the room..
+					if (targetLocation.WithInside(this)) {
+						iterateOrder();
+					}
+				} else {
+					if (ImAt(concreteDestination)) {
+						if(concreteDestination instanceof Occupiable) {
+							((Occupiable) concreteDestination).setOccupier(this);
+						}
+						iterateOrder();
+					}
+				}
+		  }
 	}
 	
 	/**

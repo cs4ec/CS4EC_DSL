@@ -217,17 +217,13 @@ public class Agent {
 	}
 	
 	public void MoveTowards(GridPoint pt, Object targetObject) {
-		int count = 0;
-		int pintSecondsPerTick = RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick");
 		
-		while(count < pintSecondsPerTick) {
-			count++;
-			if(RunEnvironment.getInstance().getParameters().getBoolean("UsePathFinding")) {
-				PathFinding(pt, targetObject);
-			} else {
-				CrowFlyMovement(pt, targetObject);
-			}
+		if(RunEnvironment.getInstance().getParameters().getBoolean("UsePathFinding")) {
+			PathFinding(pt, targetObject);
+		} else {
+			CrowFlyMovement(pt, targetObject);
 		}
+		
 	}
 	
 	public void PathFinding(GridPoint pt, Object targetObject) {
@@ -257,6 +253,9 @@ public class Agent {
 				myPoint = space.getLocation(this);
 				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 			}
+		} 
+		if((targetObject instanceof Room && ImAt((Room)targetObject))) {
+			((Room)targetObject).addOccupier(this);
 		}
 	}
 	
@@ -272,6 +271,9 @@ public class Agent {
 			space.moveByVector(this, 1, angle, 0);
 			myPoint = space.getLocation(this);
 			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+		} 
+		if((targetObject instanceof Room && ImAt((Room)targetObject))) {
+			((Room)targetObject).addOccupier(this);
 		}
 	}
 	

@@ -25,7 +25,7 @@ public class WardNursestyle extends DefaultStyleOGL2D {
     return Position.NORTH;
   }
   public Color getColor(Object object) {
-    return Color.YELLOW;
+    return Color.GRAY;
   }
   public Color getBorderColor(Object object) {
     return Color.BLACK;

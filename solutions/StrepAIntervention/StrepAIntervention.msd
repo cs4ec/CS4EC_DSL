@@ -9,7 +9,7 @@
     <facet type="java">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
-    <facet planModel="r:7f268a0c-4939-4da8-9cc9-b1cfd43f3bcd(HighPrevalenceSurgeCOVIDTestingFlowchart.clone.GenPlan)" type="generator" />
+    <facet planModel="r:ac2df552-8ba2-4448-b093-7895f4e0bd3c(StrepAIntervention.GenPlan)" type="generator" />
   </facets>
   <sourcePath />
   <dependencies>

@@ -8,7 +8,7 @@ import simcore.agents.Actor;
 import saf.v3d.scene.Position;
 import java.awt.Color;
 
-public class TriageNursestyle extends DefaultStyleOGL2D {
+public class MinorsDoctorstyle extends DefaultStyleOGL2D {
 
   @Override
   public VSpatial getVSpatial(Object object, VSpatial spatial) {
@@ -25,7 +25,7 @@ public class TriageNursestyle extends DefaultStyleOGL2D {
     return Position.NORTH;
   }
   public Color getColor(Object object) {
-    return Color.GREEN;
+    return Color.ORANGE;
   }
   public Color getBorderColor(Object object) {
     return Color.BLACK;

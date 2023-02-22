@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" ?><sweep runs="1">
 	<parameter name="SecondsPerTick"
-		type="constant" constant_type="int" value="1" />
+		type="constant" constant_type="int" value="60" />
 	<parameter name="randomSeed"
 		type="number" number_type="int" start="1" end="10" step="1" />
 	<parameter name="UsePathFinding"
 		type="constant" constant_type="boolean" value="false" />
+  	<parameter name="BranchProbability_a0"
+  		type="constant" constant_type="double" value="50" />
+  	<parameter name="BranchProbability_b0"
+  		type="constant" constant_type="double" value="50" />
+  	<parameter name="BranchProbability_a2"
+  		type="constant" constant_type="double" value="20" />
+  	<parameter name="BranchProbability_b2"
+  		type="constant" constant_type="double" value="80" />
+  	<parameter name="BranchProbability_a1"
+  		type="constant" constant_type="double" value="50" />
+  	<parameter name="BranchProbability_b1"
+  		type="constant" constant_type="double" value="50" />
   	<parameter name="BranchProbability_a5"
-  		type="constant" constant_type="double" value="75" />
+  		type="constant" constant_type="double" value="90" />
   	<parameter name="BranchProbability_b5"
-  		type="constant" constant_type="double" value="25" />
+  		type="constant" constant_type="double" value="10" />
   	<parameter name="BranchProbability_a5_0"
   		type="constant" constant_type="double" value="80" />
   	<parameter name="BranchProbability_b5_0"
+  		type="constant" constant_type="double" value="20" />
+  	<parameter name="BranchProbability_a0_0"
+  		type="constant" constant_type="double" value="80" />
+  	<parameter name="BranchProbability_b0_0"
   		type="constant" constant_type="double" value="20" />
   	<parameter name="NormalPatientsSeveritysevere"
   		 type="constant" constant_type="double" value = "15" />
@@ -41,14 +57,6 @@
   		 type="constant" constant_type="double" value = "80" />
   	<parameter name="StrepPatientsSeveritylow"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="StrepPatientsImmunocompromisedYes"
-  		 type="constant" constant_type="double" value = "20" />
-  	<parameter name="StrepPatientsImmunocompromisedNo"
-  		 type="constant" constant_type="double" value = "80" />
-  	<parameter name="StrepPatientsRecentCovidContactYes"
-  		 type="constant" constant_type="double" value = "50" />
-  	<parameter name="StrepPatientsRecentCovidContactNo"
-  		 type="constant" constant_type="double" value = "50" />
   	<parameter name="StrepPatientsadmissionRouteElectiveattendance"
   		 type="constant" constant_type="double" value = "100" />
 </sweep>

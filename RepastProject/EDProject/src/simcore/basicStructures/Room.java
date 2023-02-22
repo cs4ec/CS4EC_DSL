@@ -17,6 +17,7 @@ import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduleParameters;
 import repast.simphony.engine.schedule.ScheduledMethod;
+import repast.simphony.parameter.Parameter;
 import repast.simphony.random.RandomHelper;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.graph.Network;
@@ -82,6 +83,15 @@ public class Room extends Locatable{
 	public String name() {
 		return locName + " cap: " + (maxCap - curCap) + " width: " + width;
 	}
+	
+	@Parameter(usageName="occupiersList", displayName="occupiers")
+	public String getOccupiersList() {
+		String s = "";
+		for (Agent a : getOccupiers()) {
+			s+= a.agentName() + ",";
+		}
+		return s;
+	}
 
 	// every tick check for agent at entry point
 	@ScheduledMethod(start = 1, interval = 1,priority = ScheduleParameters.FIRST_PRIORITY)
@@ -103,6 +113,12 @@ public class Room extends Locatable{
 	
 	public Set<Agent> getOccupiers(){
 		return contentPeople;
+	}
+	
+	public void addOccupier(Agent a) {
+		a.SetInside(this);
+		contentPeople.add(a);
+		curCap++;
 	}
 
 	private void createLayoutStyle() {

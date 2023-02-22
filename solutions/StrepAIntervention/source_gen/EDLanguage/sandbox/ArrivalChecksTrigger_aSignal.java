@@ -4,9 +4,9 @@ package EDLanguage.sandbox;
 
 import simcore.Signals.ActorTypeSignal;
 
-public class Arrival_ChecksTrigger_aSignal extends ActorTypeSignal {
-  public Arrival_ChecksTrigger_aSignal() {
-    this.setName("Arrival_ChecksTrigger_a");
+public class ArrivalChecksTrigger_aSignal extends ActorTypeSignal {
+  public ArrivalChecksTrigger_aSignal() {
+    this.setName("ArrivalChecksTrigger_a");
     this.setDescription("h");
     this.AddActor("TriageNurse");
   }

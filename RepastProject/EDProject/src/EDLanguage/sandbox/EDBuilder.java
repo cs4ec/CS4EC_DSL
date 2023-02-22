@@ -44,7 +44,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     new ToolBox(this).GetLog().clearOldContents();
 
     context.setId("EDProject");
-    int mapWidth = 449;
+    int mapWidth = 120;
     int mapHeight = 250;
 
     Parameters params = RunEnvironment.getInstance().getParameters();
@@ -52,7 +52,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = false;
 
-    RunEnvironment.getInstance().endAt(604800 / params.getInteger("SecondsPerTick"));
+    RunEnvironment.getInstance().endAt(86400 / params.getInteger("SecondsPerTick"));
 
     CreatePatientArrivalMap();
 
@@ -70,20 +70,23 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 3; i++) {
       context.add(new MajorsDoctor(space, grid, context));
     }
-    for (int i = 0; i < 4; i++) {
+    for (int i = 0; i < 3; i++) {
       context.add(new MajorsNurse(space, grid, context));
     }
     for (int i = 0; i < 5; i++) {
       context.add(new TriageNurse(space, grid, context));
     }
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 2; i++) {
       context.add(new MinorsNurse(space, grid, context));
     }
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 2; i++) {
       context.add(new SeniorDoc(space, grid, context));
     }
     for (int i = 0; i < 2; i++) {
       context.add(new MinorsDoctor(space, grid, context));
+    }
+    for (int i = 0; i < 2; i++) {
+      context.add(new GASNurse(space, grid, context));
     }
 
 
@@ -215,24 +218,6 @@ public class EDBuilder implements ContextBuilder<Object> {
     } catch (NumberFormatException e) {
     }
 
-    createWallBetween(0, 124, 110, 124, context, space, grid);
-    createWallBetween(110, 80, 110, 125, context, space, grid);
-    createWallBetween(105, 160, 156, 160, context, space, grid);
-    createWallBetween(156, 160, 156, 200, context, space, grid);
-    createWallBetween(115, 170, 156, 170, context, space, grid);
-    createWallBetween(0, 0, 399, 0, context, space, grid);
-    createWallBetween(0, 200, 399, 200, context, space, grid);
-    createWallBetween(0, 0, 199, 0, context, space, grid);
-    createWallBetween(399, 0, 399, 200, context, space, grid);
-    createWallBetween(160, 80, 160, 140, context, space, grid);
-    createWallBetween(160, 60, 160, 70, context, space, grid);
-    createWallBetween(110, 90, 130, 90, context, space, grid);
-    createWallBetween(140, 90, 160, 90, context, space, grid);
-    createWallBetween(110, 60, 155, 60, context, space, grid);
-    createWallBetween(175, 60, 175, 150, context, space, grid);
-    createWallBetween(175, 160, 175, 200, context, space, grid);
-    createWallBetween(175, 145, 305, 145, context, space, grid);
-    createWallBetween(305, 145, 305, 200, context, space, grid);
 
     for (Object obj : context) {
       NdPoint pt = space.getLocation(obj);
