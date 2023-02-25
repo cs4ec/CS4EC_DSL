@@ -131,7 +131,7 @@ public class MajorsNurse extends Actor {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+      if (behaviour.getSignalTrigger() != null && pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
         public boolean test(Agent a) {
           return a == behaviour.getSignalTrigger().GetData("patient");
         }
@@ -1016,7 +1016,7 @@ public class MajorsNurse extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_13(Behaviour behaviour) {
-      target = WaitingRoom.getInstance();
+      target = MajorsDesk.getInstance();
       this.behaviour = behaviour;
     }
 

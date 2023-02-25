@@ -116,6 +116,13 @@ public class Actor extends Agent {
 				Behaviour myCurrentAction = plstReadyActions.get(0);
 				myActiveAction = myCurrentAction;
 			}
+			
+			if(myActiveAction == null) {
+				myActiveAction = isIdleAction(null);
+				if(myActiveAction != null && !myCurrentActions.contains(myActiveAction)) {
+					myCurrentActions.add(myActiveAction);
+				}
+			}
 		} 
 
 		executeCurrentActions();
@@ -236,6 +243,11 @@ public class Actor extends Agent {
 			}
 		}
 		return out;
+	}
+	
+	@Parameter(usageName="personType", displayName="My Type")
+	public String getPersonType() {
+		return this.getClass().getSimpleName();
 	}
 	
 	@Parameter(usageName="orders", displayName="My Orders")

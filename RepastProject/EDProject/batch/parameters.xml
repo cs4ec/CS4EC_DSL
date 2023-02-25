@@ -12,112 +12,320 @@
 		displayName="Use path finding" type="boolean" defaultValue="false"
 		isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
-  	<parameter name="BranchProbability_a0"
-  		displayName="BranchProbability_a0" type="double" defaultValue="50"
+  	<parameter name="LateralFlowCOVIDSensitivity"
+  		displayName="LateralFlowCOVIDSensitivity" type="double" defaultValue="70.7"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b0"
-  		displayName="BranchProbability_b0" type="double" defaultValue="50"
+  	<parameter name="LateralFlowCOVIDSpecificity"
+  		displayName="LateralFlowCOVIDSpecificity" type="double" defaultValue="99.1"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_a2"
-  		displayName="BranchProbability_a2" type="double" defaultValue="20"
+  	<parameter name="LateralFlowFluASensitivity"
+  		displayName="LateralFlowFluASensitivity" type="double" defaultValue="84"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b2"
-  		displayName="BranchProbability_b2" type="double" defaultValue="80"
+  	<parameter name="LateralFlowFluASpecificity"
+  		displayName="LateralFlowFluASpecificity" type="double" defaultValue="97"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_a1"
-  		displayName="BranchProbability_a1" type="double" defaultValue="50"
+  	<parameter name="LateralFlowFluBSensitivity"
+  		displayName="LateralFlowFluBSensitivity" type="double" defaultValue="84"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b1"
-  		displayName="BranchProbability_b1" type="double" defaultValue="50"
+  	<parameter name="LateralFlowFluBSpecificity"
+  		displayName="LateralFlowFluBSpecificity" type="double" defaultValue="97"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_a5"
-  		displayName="BranchProbability_a5" type="double" defaultValue="90"
+  	<parameter name="LIATCOVIDSensitivity"
+  		displayName="LIATCOVIDSensitivity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b5"
-  		displayName="BranchProbability_b5" type="double" defaultValue="10"
+  	<parameter name="LIATCOVIDSpecificity"
+  		displayName="LIATCOVIDSpecificity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_a5_0"
-  		displayName="BranchProbability_a5_0" type="double" defaultValue="80"
+  	<parameter name="LIATFluASensitivity"
+  		displayName="LIATFluASensitivity" type="double" defaultValue="98.4"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b5_0"
-  		displayName="BranchProbability_b5_0" type="double" defaultValue="20"
+  	<parameter name="LIATFluASpecificity"
+  		displayName="LIATFluASpecificity" type="double" defaultValue="96.5"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_a0_0"
-  		displayName="BranchProbability_a0_0" type="double" defaultValue="80"
+  	<parameter name="LIATFluBSensitivity"
+  		displayName="LIATFluBSensitivity" type="double" defaultValue="97.9"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b0_0"
-  		displayName="BranchProbability_b0_0" type="double" defaultValue="20"
+  	<parameter name="LIATFluBSpecificity"
+  		displayName="LIATFluBSpecificity" type="double" defaultValue="99.4"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsSeveritysevere"
-  		displayName="NormalPatientsSeveritysevere" type="double" defaultValue="15"
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		displayName="LabPCRCOVIDSensitivity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsSeveritymoderate"
-  		displayName="NormalPatientsSeveritymoderate" type="double" defaultValue="85"
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		displayName="LabPCRCOVIDSpecificity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsSeveritylow"
-  		displayName="NormalPatientsSeveritylow" type="double" defaultValue="0"
+  	<parameter name="LabPCRFluASensitivity"
+  		displayName="LabPCRFluASensitivity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsImmunocompromisedYes"
-  		displayName="NormalPatientsImmunocompromisedYes" type="double" defaultValue="20"
+  	<parameter name="LabPCRFluASpecificity"
+  		displayName="LabPCRFluASpecificity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsImmunocompromisedNo"
-  		displayName="NormalPatientsImmunocompromisedNo" type="double" defaultValue="80"
+  	<parameter name="LabPCRFluBSensitivity"
+  		displayName="LabPCRFluBSensitivity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsRecentCovidContactYes"
-  		displayName="NormalPatientsRecentCovidContactYes" type="double" defaultValue="50"
+  	<parameter name="LabPCRFluBSpecificity"
+  		displayName="LabPCRFluBSpecificity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsRecentCovidContactNo"
-  		displayName="NormalPatientsRecentCovidContactNo" type="double" defaultValue="50"
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		displayName="PHEThreeCOVIDSensitivity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsadmissionRouteEmergencyAttendance"
-  		displayName="NormalPatientsadmissionRouteEmergencyAttendance" type="double" defaultValue="100"
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		displayName="PHEThreeCOVIDSpecificity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepPatientsStrepAInfectionStatusSusceptible"
-  		displayName="StrepPatientsStrepAInfectionStatusSusceptible" type="double" defaultValue="60"
+  	<parameter name="PHEThreeFluASensitivity"
+  		displayName="PHEThreeFluASensitivity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepPatientsStrepAInfectionStatusAsymptomatic"
-  		displayName="StrepPatientsStrepAInfectionStatusAsymptomatic" type="double" defaultValue="30"
+  	<parameter name="PHEThreeFluASpecificity"
+  		displayName="PHEThreeFluASpecificity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepPatientsStrepAInfectionStatusSymptomatic"
-  		displayName="StrepPatientsStrepAInfectionStatusSymptomatic" type="double" defaultValue="10"
+  	<parameter name="PHEThreeFluBSensitivity"
+  		displayName="PHEThreeFluBSensitivity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepPatientsSeveritysevere"
-  		displayName="StrepPatientsSeveritysevere" type="double" defaultValue="20"
+  	<parameter name="PHEThreeFluBSpecificity"
+  		displayName="PHEThreeFluBSpecificity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepPatientsSeveritymoderate"
-  		displayName="StrepPatientsSeveritymoderate" type="double" defaultValue="80"
+  	<parameter name="CepheidCOVIDSensitivity"
+  		displayName="CepheidCOVIDSensitivity" type="double" defaultValue="97.9"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepPatientsSeveritylow"
-  		displayName="StrepPatientsSeveritylow" type="double" defaultValue="0"
+  	<parameter name="CepheidCOVIDSpecificity"
+  		displayName="CepheidCOVIDSpecificity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepPatientsadmissionRouteElectiveattendance"
-  		displayName="StrepPatientsadmissionRouteElectiveattendance" type="double" defaultValue="100"
+  	<parameter name="CepheidFluASensitivity"
+  		displayName="CepheidFluASensitivity" type="double" defaultValue="99.99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluASpecificity"
+  		displayName="CepheidFluASpecificity" type="double" defaultValue="99.99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluBSensitivity"
+  		displayName="CepheidFluBSensitivity" type="double" defaultValue="99.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluBSpecificity"
+  		displayName="CepheidFluBSpecificity" type="double" defaultValue="99.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		displayName="LIATCOVIDSensitivity" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		displayName="LIATCOVIDSpecificity" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATFluASensitivity"
+  		displayName="LIATFluASensitivity" type="double" defaultValue="98.4"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATFluASpecificity"
+  		displayName="LIATFluASpecificity" type="double" defaultValue="96.5"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATFluBSensitivity"
+  		displayName="LIATFluBSensitivity" type="double" defaultValue="97.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATFluBSpecificity"
+  		displayName="LIATFluBSpecificity" type="double" defaultValue="99.4"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidCOVIDSensitivity"
+  		displayName="CepheidCOVIDSensitivity" type="double" defaultValue="97.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidCOVIDSpecificity"
+  		displayName="CepheidCOVIDSpecificity" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluASensitivity"
+  		displayName="CepheidFluASensitivity" type="double" defaultValue="99.99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluASpecificity"
+  		displayName="CepheidFluASpecificity" type="double" defaultValue="99.99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluBSensitivity"
+  		displayName="CepheidFluBSensitivity" type="double" defaultValue="99.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluBSpecificity"
+  		displayName="CepheidFluBSpecificity" type="double" defaultValue="99.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		displayName="PHEThreeCOVIDSensitivity" type="double" defaultValue="99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		displayName="PHEThreeCOVIDSpecificity" type="double" defaultValue="99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="PHEThreeFluASensitivity"
+  		displayName="PHEThreeFluASensitivity" type="double" defaultValue="99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="PHEThreeFluASpecificity"
+  		displayName="PHEThreeFluASpecificity" type="double" defaultValue="99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="PHEThreeFluBSensitivity"
+  		displayName="PHEThreeFluBSensitivity" type="double" defaultValue="99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="PHEThreeFluBSpecificity"
+  		displayName="PHEThreeFluBSpecificity" type="double" defaultValue="99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		displayName="LIATCOVIDSensitivity" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		displayName="LIATCOVIDSpecificity" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATFluASensitivity"
+  		displayName="LIATFluASensitivity" type="double" defaultValue="98.4"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATFluASpecificity"
+  		displayName="LIATFluASpecificity" type="double" defaultValue="96.5"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATFluBSensitivity"
+  		displayName="LIATFluBSensitivity" type="double" defaultValue="97.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATFluBSpecificity"
+  		displayName="LIATFluBSpecificity" type="double" defaultValue="99.4"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidCOVIDSensitivity"
+  		displayName="CepheidCOVIDSensitivity" type="double" defaultValue="97.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidCOVIDSpecificity"
+  		displayName="CepheidCOVIDSpecificity" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluASensitivity"
+  		displayName="CepheidFluASensitivity" type="double" defaultValue="99.99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluASpecificity"
+  		displayName="CepheidFluASpecificity" type="double" defaultValue="99.99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluBSensitivity"
+  		displayName="CepheidFluBSensitivity" type="double" defaultValue="99.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="CepheidFluBSpecificity"
+  		displayName="CepheidFluBSpecificity" type="double" defaultValue="99.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="InfectionSpreadChance:FluBAsymptomatic-10_a0"
+  		displayName="InfectionSpreadChance:FluBAsymptomatic-10_a0" type="double" defaultValue="0.042"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileCOVIDInfectionStatusSymptomatic"
+  		displayName="patientProfileCOVIDInfectionStatusSymptomatic" type="double" defaultValue="0.5"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileCOVIDInfectionStatusAsymptomatic"
+  		displayName="patientProfileCOVIDInfectionStatusAsymptomatic" type="double" defaultValue="0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileCOVIDInfectionStatusSusceptible"
+  		displayName="patientProfileCOVIDInfectionStatusSusceptible" type="double" defaultValue="99.5"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileCOVIDInfectionStatusExposed"
+  		displayName="patientProfileCOVIDInfectionStatusExposed" type="double" defaultValue="0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileFluAInfectionStatusSymptomatic"
+  		displayName="patientProfileFluAInfectionStatusSymptomatic" type="double" defaultValue="0.17"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileFluAInfectionStatusAsymptomatic"
+  		displayName="patientProfileFluAInfectionStatusAsymptomatic" type="double" defaultValue="0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileFluAInfectionStatusSusceptible"
+  		displayName="patientProfileFluAInfectionStatusSusceptible" type="double" defaultValue="99.83"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileFluAInfectionStatusExposed"
+  		displayName="patientProfileFluAInfectionStatusExposed" type="double" defaultValue="0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileFluBInfectionStatusSymptomatic"
+  		displayName="patientProfileFluBInfectionStatusSymptomatic" type="double" defaultValue="0.17"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileFluBInfectionStatusAsymptomatic"
+  		displayName="patientProfileFluBInfectionStatusAsymptomatic" type="double" defaultValue="0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileFluBInfectionStatusSusceptible"
+  		displayName="patientProfileFluBInfectionStatusSusceptible" type="double" defaultValue="99.83"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileFluBInfectionStatusExposed"
+  		displayName="patientProfileFluBInfectionStatusExposed" type="double" defaultValue="0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileSeveritysevere"
+  		displayName="patientProfileSeveritysevere" type="double" defaultValue="3"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileSeveritymoderate"
+  		displayName="patientProfileSeveritymoderate" type="double" defaultValue="27"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileSeveritylow"
+  		displayName="patientProfileSeveritylow" type="double" defaultValue="70"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileImmunocompromisedYes"
+  		displayName="patientProfileImmunocompromisedYes" type="double" defaultValue="1"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileImmunocompromisedNo"
+  		displayName="patientProfileImmunocompromisedNo" type="double" defaultValue="99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileadmissionRouteEmergencyAttendance"
+  		displayName="patientProfileadmissionRouteEmergencyAttendance" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 </parameters>

@@ -144,7 +144,17 @@
       </concept>
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
-      <concept id="2698877061875544082" name="DiseaseModel.structure.Disease" flags="ng" index="1gZIpL" />
+      <concept id="2698877061875544082" name="DiseaseModel.structure.Disease" flags="ng" index="1gZIpL">
+        <child id="2059891927310146503" name="infectionSpreadTable" index="1n$yWc" />
+      </concept>
+      <concept id="2059891927310146398" name="DiseaseModel.structure.InfectionSpreadLine" flags="ng" index="1n$yYl">
+        <property id="2059891927310146403" name="spreadChance" index="1n$yYC" />
+        <property id="2059891927310146401" name="distance" index="1n$yYE" />
+        <child id="2059891927310146399" name="infectionStatus" index="1n$yYk" />
+      </concept>
+      <concept id="2059891927310146397" name="DiseaseModel.structure.InfectionSpreadTable" flags="ng" index="1n$yYm">
+        <child id="2059891927310146478" name="lines" index="1n$yX_" />
+      </concept>
       <concept id="7828349744265630002" name="DiseaseModel.structure.DiseaseSymptom" flags="ng" index="3oQJeJ" />
       <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
       <concept id="6755843002512513317" name="DiseaseModel.structure.Susceptible" flags="ng" index="3IO8Df" />
@@ -227,7 +237,7 @@
     <property role="3ZUNkI" value="5" />
     <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
     <node concept="UeIYj" id="34hhAWvhKM1" role="2iD$2b">
-      <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
     </node>
   </node>
   <node concept="2_0uwh" id="EFW1mYe4_u">
@@ -281,7 +291,7 @@
     <property role="3ZUNkI" value="5" />
     <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
     <node concept="UeIYj" id="i1eH3VeDCF" role="2iD$2b">
-      <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
     </node>
   </node>
   <node concept="2GGxxg" id="52K8Ej3GgM">
@@ -290,7 +300,7 @@
     <property role="3ZUNkI" value="0" />
     <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
     <node concept="UeIYj" id="i1eH3WJik2" role="2iD$2b">
-      <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
     </node>
   </node>
   <node concept="3oQJd$" id="6MzSDQOvLH$">
@@ -436,7 +446,7 @@
     <property role="3ZUNkI" value="5" />
     <property role="1kBeqs" value="6o2BuIx6R5m/RED" />
     <node concept="UeIYj" id="i1eH3WJij_" role="2iD$2b">
-      <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      <ref role="Udx8D" node="1Iqh_KL7vdp" resolve="MinorsDesk" />
     </node>
   </node>
   <node concept="j3bMj" id="EFW1mZkn0D">
@@ -552,6 +562,31 @@
       <property role="376uKC" value="6o2BuIx6R5q/BLUE" />
       <ref role="VgANK" node="EFW1mYOHdm" resolve="TriageDesk" />
     </node>
+    <node concept="j3bLk" id="1Iqh_KL6VtH" role="j3bMi">
+      <property role="TrG5h" value="GASRoomOne" />
+      <property role="memwX" value="15" />
+      <property role="memz3" value="190" />
+      <property role="m3A$7" value="5" />
+      <property role="m3A$b" value="5" />
+      <property role="m3wsY" value="5" />
+      <property role="376uKC" value="6o2BuIx6R5D/YELLOW" />
+      <ref role="VgANK" node="1Iqh_KL6Vsh" resolve="GASRoom" />
+      <node concept="h4YGW" id="1Iqh_KL6Vvz" role="h4YwH">
+        <property role="h4YG0" value="17" />
+        <property role="h0cbi" value="192" />
+        <ref role="h4YGu" node="34hhAWxKdrf" />
+      </node>
+    </node>
+    <node concept="j3bLk" id="1Iqh_KL7vdZ" role="j3bMi">
+      <property role="TrG5h" value="MinorsDesk" />
+      <property role="memwX" value="1" />
+      <property role="memz3" value="170" />
+      <property role="m3A$7" value="5" />
+      <property role="m3A$b" value="5" />
+      <property role="m3wsY" value="100" />
+      <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <ref role="VgANK" node="1Iqh_KL7vdp" resolve="MinorsDesk" />
+    </node>
     <node concept="j3bLk" id="1$AaFX9fzfw" role="j3bMi">
       <property role="TrG5h" value="MinorsWaitingRoom" />
       <property role="memwX" value="16" />
@@ -560,7 +595,7 @@
       <property role="m3A$b" value="13" />
       <property role="m3wsY" value="10000" />
       <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
-      <ref role="VgANK" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      <ref role="VgANK" node="1Iqh_KLke_Q" resolve="MinorsWaitingRoom" />
       <node concept="h4YGW" id="7WB5kYMwe7N" role="h4YwH">
         <property role="h4YG0" value="25" />
         <property role="h0cbi" value="170" />
@@ -897,6 +932,16 @@
         <ref role="h4YGu" node="34hhAWxKdrf" />
       </node>
     </node>
+    <node concept="j3bLk" id="1Iqh_KL7vg0" role="j3bMi">
+      <property role="TrG5h" value="majorsDesk" />
+      <property role="memwX" value="45" />
+      <property role="memz3" value="187" />
+      <property role="m3A$7" value="10" />
+      <property role="m3A$b" value="3" />
+      <property role="m3wsY" value="100" />
+      <property role="376uKC" value="6o2BuIx6R5u/GRAY" />
+      <ref role="VgANK" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
+    </node>
     <node concept="j3bLk" id="1$AaFX9fzjI" role="j3bMi">
       <property role="TrG5h" value="MajorsABOne" />
       <property role="memwX" value="35" />
@@ -908,7 +953,7 @@
       <ref role="VgANK" node="EFW1mYOHdw" resolve="MajorsBay" />
       <node concept="h4YGW" id="1$AaFX9fzk6" role="h4YwH">
         <property role="h4YG0" value="36" />
-        <property role="h0cbi" value="195" />
+        <property role="h0cbi" value="196" />
         <ref role="h4YGu" node="34hhAWxKdrf" />
       </node>
     </node>
@@ -1622,6 +1667,12 @@
   <node concept="VhMOw" id="EFW1mYOHdm">
     <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="TriageDesk" />
+    <node concept="6XhCM" id="1Iqh_KL6Vsd" role="6UJET">
+      <node concept="6XhR7" id="1Iqh_KL6Vsf" role="6XhPa">
+        <property role="6XH8M" value="5" />
+        <ref role="6XhRh" node="i1eH3VLBmH" resolve="patient" />
+      </node>
+    </node>
   </node>
   <node concept="VhMOw" id="EFW1mYOHdw">
     <property role="3GE5qa" value="ED Layout.RoomType" />
@@ -1633,6 +1684,22 @@
       <node concept="6XhR7" id="lSEs46fmuw" role="6XhPa">
         <property role="6XH8M" value="1" />
         <ref role="6XhRh" node="i1eH3VLBmH" resolve="patient" />
+      </node>
+      <node concept="6XhR7" id="1Iqh_KKWyu5" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="i1eH3VeDCH" resolve="MinorsDoctor" />
+      </node>
+      <node concept="6XhR7" id="1Iqh_KKWyu6" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="1xAzJ9NxGdV" resolve="MinorsNurse" />
+      </node>
+      <node concept="6XhR7" id="1Iqh_KKWyu7" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="52K8Ej3GgM" resolve="SeniorDoc" />
+      </node>
+      <node concept="6XhR7" id="1Iqh_KKWyu8" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="i1eH3VgOG6" resolve="GASNurse" />
       </node>
     </node>
   </node>
@@ -2075,6 +2142,9 @@
           <node concept="1FPx23" id="6lG8bJ5b7F9" role="1GBHi9" />
         </node>
       </node>
+      <node concept="UeIYj" id="1Iqh_KL6Vt_" role="_yJwB">
+        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ5b77g" role="2MhjZp">
       <property role="TrG5h" value="GroupAStrepTriage" />
@@ -2109,7 +2179,7 @@
         </node>
       </node>
       <node concept="UeIYj" id="6lG8bJ5b77I" role="3lENdC">
-        <ref role="Udx8D" node="EFW1mYOHdm" resolve="TriageDesk" />
+        <ref role="Udx8D" node="1Iqh_KL6Vsh" resolve="GASRoom" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ5b7dO" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ5b77g" resolve="GroupAStrepTriage" />
@@ -2253,6 +2323,13 @@
   <node concept="1gZIpL" id="6lG8bJ5b7bg">
     <property role="3GE5qa" value="Diseases" />
     <property role="TrG5h" value="StrepA" />
+    <node concept="1n$yYm" id="1Iqh_KL5_KZ" role="1n$yWc">
+      <node concept="1n$yYl" id="1Iqh_KL5_L1" role="1n$yX_">
+        <property role="1n$yYE" value="10" />
+        <property role="1n$yYC" value="0.0001" />
+        <node concept="3IO8Cx" id="1Iqh_KL5_L5" role="1n$yYk" />
+      </node>
+    </node>
   </node>
   <node concept="2MhjZA" id="6lG8bJ5b7hc">
     <property role="3GE5qa" value="Action Cards" />
@@ -2445,6 +2522,9 @@
           <node concept="MfZID" id="i1eH3VVePB" role="1CySjL" />
         </node>
       </node>
+      <node concept="UeIYj" id="1Iqh_KKWyt_" role="_yJwB">
+        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      </node>
     </node>
     <node concept="2MhjZa" id="i1eH3VeDMl" role="2MhjZp">
       <property role="TrG5h" value="Checks" />
@@ -2471,6 +2551,9 @@
         <node concept="3STvxg" id="i1eH3WKMWL" role="1hyIAf">
           <property role="3STvxY" value="80" />
         </node>
+      </node>
+      <node concept="UeIYj" id="1Iqh_KKWytz" role="_yJwB">
+        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
       </node>
     </node>
     <node concept="1HTXKU" id="i1eH3VeDRl" role="1HTZI9">
@@ -2598,7 +2681,7 @@
     <property role="3ZUNkI" value="5" />
     <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
     <node concept="UeIYj" id="i1eH3WJijq" role="2iD$2b">
-      <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      <ref role="Udx8D" node="1Iqh_KL7vdp" resolve="MinorsDesk" />
     </node>
   </node>
   <node concept="2MhjZA" id="i1eH3VeDNM">
@@ -3037,7 +3120,7 @@
         <property role="1M3RjU" value="30" />
       </node>
       <node concept="UeIYj" id="lSEs4660dv" role="_yJwB">
-        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+        <ref role="Udx8D" node="1Iqh_KLke_Q" resolve="MinorsWaitingRoom" />
       </node>
     </node>
     <node concept="37mRI7" id="i1eH3VeDPZ" role="lGtFl">
@@ -3378,7 +3461,7 @@
         <ref role="2GGxGe" node="i1eH3WpbSW" resolve="ObsReview" />
       </node>
       <node concept="UeIYj" id="lSEs4660dz" role="_yJwB">
-        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+        <ref role="Udx8D" node="1Iqh_KLke_Q" resolve="MinorsWaitingRoom" />
       </node>
     </node>
     <node concept="1H2jYY" id="i1eH3VeDQM" role="2MhjZp">
@@ -3407,7 +3490,7 @@
         <property role="1M3RjU" value="10" />
       </node>
       <node concept="UeIYj" id="lSEs4660dx" role="_yJwB">
-        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+        <ref role="Udx8D" node="1Iqh_KLke_Q" resolve="MinorsWaitingRoom" />
       </node>
     </node>
     <node concept="2MhjZa" id="i1eH3WpbUt" role="2MhjZp">
@@ -3437,7 +3520,7 @@
         <property role="1M3RjU" value="10" />
       </node>
       <node concept="UeIYj" id="lSEs4660d_" role="_yJwB">
-        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+        <ref role="Udx8D" node="1Iqh_KLke_Q" resolve="MinorsWaitingRoom" />
       </node>
     </node>
     <node concept="2MhjZa" id="i1eH3WKMI$" role="2MhjZp">
@@ -3457,7 +3540,7 @@
         <ref role="2GGxGe" node="i1eH3VeDQM" resolve="Discharge" />
       </node>
       <node concept="UeIYj" id="lSEs4660dB" role="_yJwB">
-        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+        <ref role="Udx8D" node="1Iqh_KLke_Q" resolve="MinorsWaitingRoom" />
       </node>
     </node>
   </node>
@@ -3467,7 +3550,7 @@
     <property role="3ZUNkI" value="1" />
     <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
     <node concept="UeIYj" id="i1eH3VgOGg" role="2iD$2b">
-      <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      <ref role="Udx8D" node="EFW1mYOHdm" resolve="TriageDesk" />
     </node>
   </node>
   <node concept="3ZaQxz" id="i1eH3VLBmH">
@@ -3490,6 +3573,38 @@
   </node>
   <node concept="IzEoG" id="lSEs465oM2">
     <property role="IzEow" value="Seat" />
+  </node>
+  <node concept="VhMOw" id="1Iqh_KL6Vsh">
+    <property role="3GE5qa" value="ED Layout.RoomType" />
+    <property role="TrG5h" value="GASRoom" />
+    <node concept="1kHjla" id="1Iqh_KL6Vsi" role="3IeprG">
+      <ref role="IYbFp" node="34hhAWxKdrf" />
+    </node>
+    <node concept="6XhCM" id="1Iqh_KL6Vsk" role="6UJET">
+      <node concept="6XhR7" id="1Iqh_KL6Vsm" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="i1eH3VgOG6" resolve="GASNurse" />
+      </node>
+      <node concept="6XhR7" id="1Iqh_KL6Vso" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="52K8Ej3GgM" resolve="SeniorDoc" />
+      </node>
+    </node>
+  </node>
+  <node concept="VhMOw" id="1Iqh_KL7vdp">
+    <property role="3GE5qa" value="ED Layout.RoomType" />
+    <property role="TrG5h" value="MinorsDesk" />
+  </node>
+  <node concept="VhMOw" id="1Iqh_KL7vdz">
+    <property role="3GE5qa" value="ED Layout.RoomType" />
+    <property role="TrG5h" value="MajorsDesk" />
+  </node>
+  <node concept="VhMOw" id="1Iqh_KLke_Q">
+    <property role="3GE5qa" value="ED Layout.RoomType" />
+    <property role="TrG5h" value="MinorsWaitingRoom" />
+    <node concept="1kHjla" id="1Iqh_KLkeA0" role="3IeprG">
+      <ref role="IYbFp" node="lSEs465oM2" />
+    </node>
   </node>
 </model>
 

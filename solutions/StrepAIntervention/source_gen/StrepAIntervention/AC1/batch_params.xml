@@ -29,6 +29,8 @@
   		type="constant" constant_type="double" value="80" />
   	<parameter name="BranchProbability_b0_0"
   		type="constant" constant_type="double" value="20" />
+  	<parameter name="InfectionSpreadChance:Asymptomatic-10_a0"
+  		type="constant" constant_type="double" value="0.0001" />
   	<parameter name="NormalPatientsSeveritysevere"
   		 type="constant" constant_type="double" value = "15" />
   	<parameter name="NormalPatientsSeveritymoderate"

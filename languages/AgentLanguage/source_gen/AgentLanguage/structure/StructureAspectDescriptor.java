@@ -767,6 +767,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("AgentLanguage.structure.Behaviour", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/2059891927271928772");
     b.version(2);
+    b.property("withinRange", 0x3a8f619a2689c93bL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("4219698690568866107").done();
     b.associate("behaviourRef", 0x1c9634cb4960000dL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL).optional(false).origin("2059891927282614285").done();
     b.aggregate("iterable", 0x1c9634cb48bcf3c5L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x1c9634cb48bcf3caL).optional(false).ordered(true).multiple(false).origin("2059891927271928773").done();
     b.alias("for each loop");

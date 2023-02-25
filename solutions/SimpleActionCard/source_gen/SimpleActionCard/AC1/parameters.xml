@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <parameters>
 	<parameter name="SecondsPerTick"
-		displayName="Seconds Per Tick" type="int" defaultValue="1"
+		displayName="Seconds Per Tick" type="int" defaultValue="60"
 		isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 	<parameter name="randomSeed"
@@ -28,8 +28,8 @@
   		displayName="LIATCOVIDSpecificity" type="double" defaultValue="90"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="InfectionSpreadChance:(instance of Symptomatic)-10_a0"
-  		displayName="InfectionSpreadChance:(instance of Symptomatic)-10_a0" type="double" defaultValue="0.000000002"
+  	<parameter name="InfectionSpreadChance:Symptomatic-10_a0"
+  		displayName="InfectionSpreadChance:Symptomatic-10_a0" type="double" defaultValue="0.000000002"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientImmunocompromisedYes"

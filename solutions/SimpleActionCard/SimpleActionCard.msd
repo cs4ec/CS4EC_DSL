@@ -6,7 +6,7 @@
     </modelRoot>
   </models>
   <facets>
-    <facet type="java">
+    <facet type="java" languageLevel="JAVA_10">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
     <facet planModel="r:d6c34be0-cfe0-40ab-8a55-1d44897df182(SimpleActionCard.GenPlan)" type="generator" />

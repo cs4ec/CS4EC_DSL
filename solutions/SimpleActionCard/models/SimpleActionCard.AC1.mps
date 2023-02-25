@@ -1885,8 +1885,8 @@
   </node>
   <node concept="2_0uwh" id="EFW1mYe4_u">
     <property role="3GE5qa" value="Simulation Scenario" />
-    <property role="i3JvV" value="7" />
-    <property role="wKqbz" value="1" />
+    <property role="i3JvV" value="1" />
+    <property role="wKqbz" value="60" />
     <property role="2rAC2l" value="10" />
     <node concept="2_0uwW" id="EFW1mYe4_C" role="2_0uzz">
       <property role="2_0uz2" value="10" />

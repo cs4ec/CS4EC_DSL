@@ -25,8 +25,8 @@ import repast.simphony.engine.environment.RunEnvironment;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
 import repast.simphony.random.RandomHelper;
-import simcore.basicStructures.TimeKeeper;
 import java.util.Iterator;
+import simcore.basicStructures.TimeKeeper;
 
 public class MajorsDoctor extends Actor {
 
@@ -131,7 +131,7 @@ public class MajorsDoctor extends Actor {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+      if (behaviour.getSignalTrigger() != null && pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
         public boolean test(Agent a) {
           return a == behaviour.getSignalTrigger().GetData("patient");
         }
@@ -591,19 +591,9 @@ public class MajorsDoctor extends Actor {
 
     }
   }
-  public class DespawnAction_e0b extends BehaviourStep {
+  public class RemoveRelationshipAction_e0b extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public DespawnAction_e0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
-    }
-  }
-  public class RemoveRelationshipAction_f0b extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0b(Behaviour behaviour) {
+    public RemoveRelationshipAction_e0b(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -613,6 +603,16 @@ public class MajorsDoctor extends Actor {
       while (patientStaffAllocations.hasNext()) {
         network.removeEdge(patientStaffAllocations.next());
       }
+    }
+  }
+  public class DespawnAction_f0b extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public DespawnAction_f0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
     }
   }
   public class MoveAction_a0b_1 extends BehaviourStep {
@@ -695,19 +695,9 @@ public class MajorsDoctor extends Actor {
 
     }
   }
-  public class DespawnAction_e0b_0 extends BehaviourStep {
+  public class RemoveRelationshipAction_e0b_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public DespawnAction_e0b_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
-    }
-  }
-  public class RemoveRelationshipAction_f0b_0 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0b_0(Behaviour behaviour) {
+    public RemoveRelationshipAction_e0b_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -717,6 +707,16 @@ public class MajorsDoctor extends Actor {
       while (patientStaffAllocations.hasNext()) {
         network.removeEdge(patientStaffAllocations.next());
       }
+    }
+  }
+  public class DespawnAction_f0b_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public DespawnAction_f0b_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
     }
   }
   public class MoveAction_a0c extends BehaviourStep {
@@ -1016,7 +1016,7 @@ public class MajorsDoctor extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_3(Behaviour behaviour) {
-      target = WaitingRoom.getInstance();
+      target = MajorsDesk.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -1093,8 +1093,8 @@ public class MajorsDoctor extends Actor {
     plstSteps.add(new OrderAction_b0b(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0b(behaviourBuilder));
     plstSteps.add(new Consequence_d0b(behaviourBuilder));
-    plstSteps.add(new DespawnAction_e0b(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0b(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_e0b(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

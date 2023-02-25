@@ -20,6 +20,7 @@ import simcore.basicStructures.RoomType;
 import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
+import simcore.basicStructures.TimeKeeper;
 
 public class PreAdmissionStaff extends Actor {
 
@@ -95,8 +96,8 @@ public class PreAdmissionStaff extends Actor {
     return null;
   }
 
-  protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
-    if (curInside != null && curInside.getRoomType() == pRoomType) {
+  protected Room SelectLocation(RoomType pRoomType, final Behaviour behaviour) {
+    if (curInside != null && curInside.getRoomType() == pRoomType && EvaluateRoomChoice(curInside, behaviour) != Double.MAX_VALUE) {
       return curInside;
     }
     ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
@@ -109,24 +110,24 @@ public class PreAdmissionStaff extends Actor {
     // If my patient isn't currently in that room, then consider other options
     Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
       public int compare(Room r1, Room r2) {
-        return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
+        return Double.compare(EvaluateRoomChoice(r1, behaviour), EvaluateRoomChoice(r2, behaviour));
       }
     }).filter(new Predicate<Room>() {
       public boolean test(Room r) {
-        return EvaluateRoomChoice(r) != Double.MAX_VALUE;
+        return EvaluateRoomChoice(r, behaviour) != Double.MAX_VALUE;
       }
     }).findFirst().orElse(null);
     return selectedRoom;
   }
 
 
-  protected double EvaluateRoomChoice(Room pRoom) {
+  protected double EvaluateRoomChoice(Room pRoom, final Behaviour behaviour) {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+      if (behaviour.getSignalTrigger() != null && pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
         public boolean test(Agent a) {
-          return a.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(PreAdmissionStaff.this, a) != null;
+          return a == behaviour.getSignalTrigger().GetData("patient");
         }
       })) {
         return Double.MIN_VALUE;
@@ -168,9 +169,9 @@ public class PreAdmissionStaff extends Actor {
 
 
   public int PreAdmissionStaffgetAliveTime() {
-    if (deSpawnTime == 0) {
-      deSpawnTime = ToolBox().getTime();
+    if (deSpawnTime == null) {
+      return 0;
     }
-    return (int) (deSpawnTime - spawnTime);
+    return Math.abs((int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime));
   }
 }

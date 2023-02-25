@@ -1,6 +1,5 @@
 package simcore.Signals.Orders;
 
-import simcore.basicStructures.Occupiable;
 import simcore.basicStructures.Room;
 
 public class MoveToOrder extends Order{

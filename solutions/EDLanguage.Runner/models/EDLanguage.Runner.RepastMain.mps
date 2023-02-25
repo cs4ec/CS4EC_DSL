@@ -9,13 +9,15 @@
     <language id="3fb39b69-f96e-474b-a5f6-477776571ddf" name="RunnerLanguage">
       <concept id="6443350202496148700" name="RunnerLanguage.structure.Runner" flags="ng" index="2Qkwg2">
         <property id="6443350202496149043" name="addr" index="2QkwrH" />
+        <property id="8149202941055865373" name="BatchRun" index="1T8XFV" />
         <property id="8122408734010726278" name="projectName" index="3Zxs0N" />
       </concept>
     </language>
   </registry>
   <node concept="2Qkwg2" id="5_FodVJfsgn">
     <property role="2QkwrH" value="/Users/thomasgodfrey/MPSProjects/CS4EC" />
-    <property role="3Zxs0N" value="StrepAIntervention" />
+    <property role="3Zxs0N" value="QuickCompileTestingBed" />
+    <property role="1T8XFV" value="true" />
   </node>
 </model>
 

@@ -130,7 +130,7 @@ public class TriageNurse extends Actor {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+      if (behaviour.getSignalTrigger() != null && pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
         public boolean test(Agent a) {
           return a == behaviour.getSignalTrigger().GetData("patient");
         }
@@ -276,10 +276,34 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class SendSignalAction_a0e0a extends BehaviourStep {
+  public class OrderAction_e0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_e0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+    }
+  }
+  public class OrderAction_f0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_f0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+    }
+  }
+  public class SendSignalAction_a0g0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0e0a(Behaviour behaviour) {
+    public SendSignalAction_a0g0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -292,10 +316,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0e0a_1 extends BehaviourStep {
+  public class SendSignalAction_a0g0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0e0a_1(Behaviour behaviour) {
+    public SendSignalAction_a0g0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -308,16 +332,16 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_e0a extends InstantBehaviourStep {
+  public class Choice_g0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0a(Behaviour behaviour) {
+    public Choice_g0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (((patient) behaviour.getSignalTrigger().GetData("patient")).admissionRoute == "EmergencyAttendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0e0a(behaviour));
+        plstSteps.add(new SendSignalAction_a0g0a(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -325,10 +349,10 @@ public class TriageNurse extends Actor {
       }
     }
   }
-  public class SendSignalAction_a0f0a extends BehaviourStep {
+  public class SendSignalAction_a0h0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0f0a(Behaviour behaviour) {
+    public SendSignalAction_a0h0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -341,10 +365,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0f0a_1 extends BehaviourStep {
+  public class SendSignalAction_a0h0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0f0a_1(Behaviour behaviour) {
+    public SendSignalAction_a0h0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -357,16 +381,16 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_f0a extends InstantBehaviourStep {
+  public class Choice_h0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_f0a(Behaviour behaviour) {
+    public Choice_h0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (((patient) behaviour.getSignalTrigger().GetData("patient")).admissionRoute == "Electiveattendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0f0a(behaviour));
+        plstSteps.add(new SendSignalAction_a0h0a(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -374,10 +398,10 @@ public class TriageNurse extends Actor {
       }
     }
   }
-  public class StayAction_g0a extends BehaviourStep {
+  public class StayAction_i0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_g0a(Behaviour behaviour) {
+    public StayAction_i0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -477,16 +501,40 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class Choice_e0a_1 extends InstantBehaviourStep {
+  public class OrderAction_e0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0a_1(Behaviour behaviour) {
+    public OrderAction_e0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+    }
+  }
+  public class OrderAction_f0a_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_f0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+    }
+  }
+  public class Choice_g0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_g0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (((patient) behaviour.getSignalTrigger().GetData("patient")).admissionRoute == "EmergencyAttendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0e0a(behaviour));
+        plstSteps.add(new SendSignalAction_a0g0a(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -494,16 +542,16 @@ public class TriageNurse extends Actor {
       }
     }
   }
-  public class Choice_f0a_1 extends InstantBehaviourStep {
+  public class Choice_h0a_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_f0a_1(Behaviour behaviour) {
+    public Choice_h0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (((patient) behaviour.getSignalTrigger().GetData("patient")).admissionRoute == "Electiveattendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0f0a(behaviour));
+        plstSteps.add(new SendSignalAction_a0h0a(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -511,10 +559,10 @@ public class TriageNurse extends Actor {
       }
     }
   }
-  public class StayAction_g0a_1 extends BehaviourStep {
+  public class StayAction_i0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_g0a_1(Behaviour behaviour) {
+    public StayAction_i0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1018,10 +1066,34 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class SendSignalAction_a0e0d extends BehaviourStep {
+  public class OrderAction_e0d extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_e0d(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+    }
+  }
+  public class OrderAction_f0d extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_f0d(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+    }
+  }
+  public class SendSignalAction_a0g0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0e0d(Behaviour behaviour) {
+    public SendSignalAction_a0g0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1034,10 +1106,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0e0d_1 extends BehaviourStep {
+  public class SendSignalAction_a0g0d_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0e0d_1(Behaviour behaviour) {
+    public SendSignalAction_a0g0d_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1050,16 +1122,16 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_e0d extends InstantBehaviourStep {
+  public class Choice_g0d extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0d(Behaviour behaviour) {
+    public Choice_g0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "severe") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0e0d(behaviour));
+        plstSteps.add(new SendSignalAction_a0g0d(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1067,10 +1139,10 @@ public class TriageNurse extends Actor {
       }
     }
   }
-  public class SendSignalAction_a0f0d extends BehaviourStep {
+  public class SendSignalAction_a0h0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0f0d(Behaviour behaviour) {
+    public SendSignalAction_a0h0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1083,10 +1155,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0f0d_1 extends BehaviourStep {
+  public class SendSignalAction_a0h0d_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0f0d_1(Behaviour behaviour) {
+    public SendSignalAction_a0h0d_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1099,16 +1171,16 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_f0d extends InstantBehaviourStep {
+  public class Choice_h0d extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_f0d(Behaviour behaviour) {
+    public Choice_h0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "moderate") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0f0d(behaviour));
+        plstSteps.add(new SendSignalAction_a0h0d(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1116,10 +1188,10 @@ public class TriageNurse extends Actor {
       }
     }
   }
-  public class StayAction_g0d extends BehaviourStep {
+  public class StayAction_i0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_g0d(Behaviour behaviour) {
+    public StayAction_i0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1219,16 +1291,40 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class Choice_e0d_1 extends InstantBehaviourStep {
+  public class OrderAction_e0d_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_e0d_1(Behaviour behaviour) {
+    public OrderAction_e0d_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+    }
+  }
+  public class OrderAction_f0d_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_f0d_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+    }
+  }
+  public class Choice_g0d_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_g0d_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "severe") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0e0d(behaviour));
+        plstSteps.add(new SendSignalAction_a0g0d(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1236,16 +1332,16 @@ public class TriageNurse extends Actor {
       }
     }
   }
-  public class Choice_f0d_1 extends InstantBehaviourStep {
+  public class Choice_h0d_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_f0d_1(Behaviour behaviour) {
+    public Choice_h0d_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "moderate") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0f0d(behaviour));
+        plstSteps.add(new SendSignalAction_a0h0d(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1253,10 +1349,10 @@ public class TriageNurse extends Actor {
       }
     }
   }
-  public class StayAction_g0d_1 extends BehaviourStep {
+  public class StayAction_i0d_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_g0d_1(Behaviour behaviour) {
+    public StayAction_i0d_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1356,10 +1452,34 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class SendSignalAction_a0a4a4 extends BehaviourStep {
+  public class OrderAction_e0e extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_e0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+    }
+  }
+  public class OrderAction_f0e extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_f0e(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+    }
+  }
+  public class SendSignalAction_a0a6a4 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0a4a4(Behaviour behaviour) {
+    public SendSignalAction_a0a6a4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1372,10 +1492,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0a4a4_1 extends BehaviourStep {
+  public class SendSignalAction_a0a6a4_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0a4a4_1(Behaviour behaviour) {
+    public SendSignalAction_a0a6a4_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1388,10 +1508,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0b4a4 extends BehaviourStep {
+  public class SendSignalAction_a0b6a4 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0b4a4(Behaviour behaviour) {
+    public SendSignalAction_a0b6a4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1404,10 +1524,10 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0b4a4_1 extends BehaviourStep {
+  public class SendSignalAction_a0b6a4_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0b4a4_1(Behaviour behaviour) {
+    public SendSignalAction_a0b6a4_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1420,9 +1540,9 @@ public class TriageNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class ProbabilityDistribution_e0e extends InstantBehaviourStep {
+  public class ProbabilityDistribution_g0e extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public ProbabilityDistribution_e0e(Behaviour behaviour) {
+    public ProbabilityDistribution_g0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1432,21 +1552,21 @@ public class TriageNurse extends Actor {
       if (rndDouble < ((80) / 100)) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0b4a4(behaviour));
+        plstSteps.add(new SendSignalAction_a0b6a4(behaviour));
         behaviour.injectSteps(plstSteps);
 
       } else if (rndDouble < ((20 + 80.0) / 100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0a4a4(behaviour));
+        plstSteps.add(new SendSignalAction_a0a6a4(behaviour));
         behaviour.injectSteps(plstSteps);
       }
 
     }
   }
-  public class StayAction_f0e extends BehaviourStep {
+  public class StayAction_h0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_f0e(Behaviour behaviour) {
+    public StayAction_h0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1546,9 +1666,33 @@ public class TriageNurse extends Actor {
 
     }
   }
-  public class ProbabilityDistribution_e0e_1 extends InstantBehaviourStep {
+  public class OrderAction_e0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public ProbabilityDistribution_e0e_1(Behaviour behaviour) {
+    public OrderAction_e0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+    }
+  }
+  public class OrderAction_f0e_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_f0e_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+    }
+  }
+  public class ProbabilityDistribution_g0e_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public ProbabilityDistribution_g0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1558,21 +1702,21 @@ public class TriageNurse extends Actor {
       if (rndDouble < ((80) / 100)) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0b4a4(behaviour));
+        plstSteps.add(new SendSignalAction_a0b6a4(behaviour));
         behaviour.injectSteps(plstSteps);
 
       } else if (rndDouble < ((20 + 80.0) / 100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0a4a4(behaviour));
+        plstSteps.add(new SendSignalAction_a0a6a4(behaviour));
         behaviour.injectSteps(plstSteps);
       }
 
     }
   }
-  public class StayAction_f0e_1 extends BehaviourStep {
+  public class StayAction_h0e_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_f0e_1(Behaviour behaviour) {
+    public StayAction_h0e_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1595,9 +1739,11 @@ public class TriageNurse extends Actor {
     plstSteps.add(new OrderAction_b0a_3(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_1(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_3(behaviourBuilder));
-    plstSteps.add(new Choice_e0a(behaviourBuilder));
-    plstSteps.add(new Choice_f0a(behaviourBuilder));
-    plstSteps.add(new StayAction_g0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_e0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0a(behaviourBuilder));
+    plstSteps.add(new Choice_g0a(behaviourBuilder));
+    plstSteps.add(new Choice_h0a(behaviourBuilder));
+    plstSteps.add(new StayAction_i0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -1634,9 +1780,11 @@ public class TriageNurse extends Actor {
     plstSteps.add(new OrderAction_b0d(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0d(behaviourBuilder));
     plstSteps.add(new StayAction_d0d(behaviourBuilder));
-    plstSteps.add(new Choice_e0d(behaviourBuilder));
-    plstSteps.add(new Choice_f0d(behaviourBuilder));
-    plstSteps.add(new StayAction_g0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_e0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0d(behaviourBuilder));
+    plstSteps.add(new Choice_g0d(behaviourBuilder));
+    plstSteps.add(new Choice_h0d(behaviourBuilder));
+    plstSteps.add(new StayAction_i0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -1649,8 +1797,10 @@ public class TriageNurse extends Actor {
     plstSteps.add(new OrderAction_b0e(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0e(behaviourBuilder));
     plstSteps.add(new StayAction_d0e(behaviourBuilder));
-    plstSteps.add(new ProbabilityDistribution_e0e(behaviourBuilder));
-    plstSteps.add(new StayAction_f0e(behaviourBuilder));
+    plstSteps.add(new OrderAction_e0e(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0e(behaviourBuilder));
+    plstSteps.add(new ProbabilityDistribution_g0e(behaviourBuilder));
+    plstSteps.add(new StayAction_h0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

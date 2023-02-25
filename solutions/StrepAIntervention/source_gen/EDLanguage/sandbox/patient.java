@@ -20,6 +20,9 @@ import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
 import simcore.action.InstantBehaviourStep;
 import simcore.action.BehaviourStep;
+import repast.simphony.engine.environment.RunEnvironment;
+import repast.simphony.engine.schedule.ScheduledMethod;
+import simcore.action.BackgroundBehaviour;
 import simcore.basicStructures.TimeKeeper;
 
 public class patient extends Actor {
@@ -310,6 +313,120 @@ public class patient extends Actor {
         behaviour.injectSteps(plstSteps);
       }
     }
+  }
+  public class Consequence_a0a0a0a extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0a0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).StrepAInfectionStatus = "Exposed";
+
+    }
+  }
+  public class Consequence_a0a0a0a_0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0a0a_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).StrepAInfectionStatus = "Exposed";
+
+    }
+  }
+  public class Choice_a0a0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:Asymptomatic-10_a0"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0a0a_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:Asymptomatic-10_a0"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0a_3 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a_3(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && ((patient) behaviour.getSignalTrigger().GetData("patient")).StrepAInfectionStatus == "Asymptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0a_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0a_5 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && ((patient) behaviour.getSignalTrigger().GetData("patient")).StrepAInfectionStatus == "Asymptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0a_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  @ScheduledMethod(start = 1, interval = 1)
+  public void ScheduledBehaviourForStrepA() {
+    for (Object object : context.getObjects(patient.class)) {
+      patient a = (patient) object;
+      if (a.deSpawnTime == null) {
+        Signal s = new Signal();
+        s.setName("patient" + a.agentName());
+        s.setDescription("BackgroundBehaviourForStrepATrigger");
+        s.AddActor("patient");
+        s.AddData("patient", a);
+        BackgroundBehaviourForStrepA(s);
+      }
+    }
+  }
+  public void BackgroundBehaviourForStrepA(Signal s) {
+    BackgroundBehaviour backgroundBehaviour = new BackgroundBehaviour("BackgroundBehaviourForStrepA", this);
+
+    backgroundBehaviour.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new Choice_a0a_3(backgroundBehaviour));
+    backgroundBehaviour.setSteps(plstSteps);
+
+    myBackgroundBehaviours.add(backgroundBehaviour);
   }
 
 

@@ -205,10 +205,15 @@ public class Agent {
 	 * 
 	 */
 	public void MoveTowards(Object o) {
-		GridPoint pointOfTarget = grid.getLocation(o);
+		GridPoint pointOfTarget;
+		if(o instanceof GridPoint) {
+			pointOfTarget = (GridPoint) o;
+		} else {
+			pointOfTarget = grid.getLocation(o);
+		}
 
 		if (o instanceof Room) {
-			pointOfTarget = ((Room) o).getCenterCoordinates();
+			pointOfTarget = ((Room) o).getRandomEmptySpot();
 		}
 
 		if (pointOfTarget != null) {
@@ -217,20 +222,22 @@ public class Agent {
 	}
 	
 	public void MoveTowards(GridPoint pt, Object targetObject) {
-		
-		if(RunEnvironment.getInstance().getParameters().getBoolean("UsePathFinding")) {
-			PathFinding(pt, targetObject);
+		if((targetObject instanceof Room && ImAt((Room)targetObject))) {
+			((Room)targetObject).addOccupier(this);
 		} else {
-			CrowFlyMovement(pt, targetObject);
+			if(RunEnvironment.getInstance().getParameters().getBoolean("UsePathFinding")) {
+				PathFinding(pt);
+			} else {
+				CrowFlyMovement(pt);
+			}	
 		}
-		
 	}
 	
-	public void PathFinding(GridPoint pt, Object targetObject) {
+	public void PathFinding(GridPoint pt) {
 		NdPoint myPoint = space.getLocation(this);
 
 		// If I am not yet at the destination
-		if ((targetObject instanceof Room && !ImAt((Room)targetObject)) || !ImAt(pt)) {
+		if (!ImAt(pt)) {
 			// And I don't have a path, then get a new one
 			if (curPath == null || curPath.isEmpty()) {
 				curPath = new ArrayList<>();
@@ -254,26 +261,26 @@ public class Agent {
 				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
 			}
 		} 
-		if((targetObject instanceof Room && ImAt((Room)targetObject))) {
-			((Room)targetObject).addOccupier(this);
-		}
 	}
 	
 	/*
 	 * An alternative movement implementation that ignores any pathfinding or obstacles, heads straight line to target
 	 */
-	public void CrowFlyMovement(GridPoint pt, Object targetObject) {
+	public void CrowFlyMovement(GridPoint pt) {
 		NdPoint myPoint = space.getLocation(this);
 
-		if ((targetObject instanceof Room && !ImAt((Room)targetObject)) || !ImAt(pt)) {
-			NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
-			double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
-			space.moveByVector(this, 1, angle, 0);
-			myPoint = space.getLocation(this);
-			grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
-		} 
-		if((targetObject instanceof Room && ImAt((Room)targetObject))) {
-			((Room)targetObject).addOccupier(this);
+		if(CalcDistance(pt, grid.getLocation(this)) < 1) {
+			space.moveTo(this, (int) pt.getX(), (int) pt.getY());
+			grid.moveTo(this, (int) pt.getX(), (int) pt.getY());
+
+		} else {
+			if (!ImAt(pt)) {
+				NdPoint otherPoint = new NdPoint(pt.getX(), pt.getY());
+				double angle = SpatialMath.calcAngleFor2DMovement(space, myPoint, otherPoint);
+				space.moveByVector(this, 1, angle, 0);
+				myPoint = space.getLocation(this);
+				grid.moveTo(this, (int) myPoint.getX(), (int) myPoint.getY());
+			} 
 		}
 	}
 	

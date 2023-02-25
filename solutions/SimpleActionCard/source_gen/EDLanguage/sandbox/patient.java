@@ -23,6 +23,7 @@ import simcore.action.BehaviourStep;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import simcore.action.BackgroundBehaviour;
+import simcore.basicStructures.TimeKeeper;
 
 public class patient extends Actor {
 
@@ -75,7 +76,10 @@ public class patient extends Actor {
     return null;
   }
 
-  protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
+  protected Room SelectLocation(RoomType pRoomType, final Behaviour behaviour) {
+    if (curInside != null && curInside.getRoomType() == pRoomType && EvaluateRoomChoice(curInside, behaviour) != Double.MAX_VALUE) {
+      return curInside;
+    }
     ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
     // First, select the room that contains my patient (if my current action involves the patient)
     for (Room pRoom : pRooms) {
@@ -86,18 +90,18 @@ public class patient extends Actor {
     // If my patient isn't currently in that room, then consider other options
     Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
       public int compare(Room r1, Room r2) {
-        return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
+        return Double.compare(EvaluateRoomChoice(r1, behaviour), EvaluateRoomChoice(r2, behaviour));
       }
     }).filter(new Predicate<Room>() {
       public boolean test(Room r) {
-        return EvaluateRoomChoice(r) != Double.MAX_VALUE;
+        return EvaluateRoomChoice(r, behaviour) != Double.MAX_VALUE;
       }
     }).findFirst().orElse(null);
     return selectedRoom;
   }
 
 
-  protected double EvaluateRoomChoice(Room pRoom) {
+  protected double EvaluateRoomChoice(Room pRoom, Behaviour behaviour) {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (pRoom == null) {
@@ -290,7 +294,7 @@ public class patient extends Actor {
     }
 
     public void execute() {
-      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:(instance of Symptomatic)-10_a0"))) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:Symptomatic-10_a0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -307,7 +311,7 @@ public class patient extends Actor {
     }
 
     public void execute() {
-      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:(instance of Symptomatic)-10_a0"))) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:Symptomatic-10_a0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -353,15 +357,17 @@ public class patient extends Actor {
   }
   @ScheduledMethod(start = 1, interval = 1)
   public void ScheduledBehaviourForCOVID() {
-    for (Object object : context.getObjects(patient.class)) {
-      patient a = (patient) object;
-      if (a.deSpawnTime == 0) {
-        Signal s = new Signal();
-        s.setName("patient" + a.agentName());
-        s.setDescription("BackgroundBehaviourForCOVIDTrigger");
-        s.AddActor("patient");
-        s.AddData("patient", a);
-        BackgroundBehaviourForCOVID(s);
+    if (deSpawnTime == null) {
+      for (Object object : context.getObjects(patient.class)) {
+        patient a = (patient) object;
+        if (a.deSpawnTime == null) {
+          Signal s = new Signal();
+          s.setName("patient" + a.agentName());
+          s.setDescription("BackgroundBehaviourForCOVIDTrigger");
+          s.AddActor("patient");
+          s.AddData("patient", a);
+          BackgroundBehaviourForCOVID(s);
+        }
       }
     }
   }
@@ -379,9 +385,9 @@ public class patient extends Actor {
 
 
   public int patientgetAliveTime() {
-    if (deSpawnTime == 0) {
-      deSpawnTime = ToolBox().getTime();
+    if (deSpawnTime == null) {
+      return 0;
     }
-    return (int) (deSpawnTime - spawnTime);
+    return Math.abs((int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime));
   }
 }

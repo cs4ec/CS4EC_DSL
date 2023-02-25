@@ -131,7 +131,7 @@ public class MinorsNurse extends Actor {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+      if (behaviour.getSignalTrigger() != null && pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
         public boolean test(Agent a) {
           return a == behaviour.getSignalTrigger().GetData("patient");
         }
@@ -474,7 +474,7 @@ public class MinorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+      a.TakeOrder(new MoveToOrder().WithDestination(MinorsWaitingRoom.getInstance()));
     }
   }
   public class OrderAction_f0b extends BehaviourStep {
@@ -486,7 +486,7 @@ public class MinorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
     }
   }
   public class SendSignalAction_g0b extends BehaviourStep {
@@ -617,7 +617,7 @@ public class MinorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+      a.TakeOrder(new MoveToOrder().WithDestination(MinorsWaitingRoom.getInstance()));
     }
   }
   public class OrderAction_f0b_1 extends BehaviourStep {
@@ -629,7 +629,7 @@ public class MinorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
     }
   }
   public class SendSignalAction_g0b_1 extends BehaviourStep {
@@ -760,7 +760,7 @@ public class MinorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+      a.TakeOrder(new MoveToOrder().WithDestination(MinorsWaitingRoom.getInstance()));
     }
   }
   public class OrderAction_f0c extends BehaviourStep {
@@ -772,7 +772,7 @@ public class MinorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
     }
   }
   public class SendSignalAction_a0a6a2 extends BehaviourStep {
@@ -974,7 +974,7 @@ public class MinorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+      a.TakeOrder(new MoveToOrder().WithDestination(MinorsWaitingRoom.getInstance()));
     }
   }
   public class OrderAction_f0c_1 extends BehaviourStep {
@@ -986,7 +986,7 @@ public class MinorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
     }
   }
   public class ProbabilityDistribution_g0c_1 extends InstantBehaviourStep {
@@ -1034,7 +1034,7 @@ public class MinorsNurse extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_25(Behaviour behaviour) {
-      target = WaitingRoom.getInstance();
+      target = MinorsDesk.getInstance();
       this.behaviour = behaviour;
     }
 

@@ -32,6 +32,9 @@ import simcore.utilities.PatientArrivalStore;
 import java.util.Map;
 import simcore.basicStructures.Wall;
 import simcore.agents.Agent;
+import java.util.List;
+import java.util.stream.StreamSupport;
+import java.util.stream.Collectors;
 
 public class EDBuilder implements ContextBuilder<Object> {
 
@@ -52,7 +55,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = false;
 
-    RunEnvironment.getInstance().endAt(604800 / params.getInteger("SecondsPerTick"));
+    RunEnvironment.getInstance().endAt(86400 / params.getInteger("SecondsPerTick"));
 
     CreatePatientArrivalMap();
 
@@ -224,6 +227,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     ScheduleParameters stop = ScheduleParameters.createAtEnd(ScheduleParameters.LAST_PRIORITY);
     schedule.schedule(stop, this, "printActivityHistories");
 
+    ScheduleParameters midPoint = ScheduleParameters.createOneTime((86400 / params.getInteger("SecondsPerTick")));
+    schedule.schedule(midPoint, this, "emptyWarmInPeriodAgentsOfType", patient.class, ScheduleParameters.LAST_PRIORITY);
+
 
     return context;
   }
@@ -280,5 +286,16 @@ public class EDBuilder implements ContextBuilder<Object> {
       a.printActivityHistory();
     }
   }
+
+  public void emptyWarmInPeriodAgentsOfType(Class c) {
+
+    List<Object> listAgents = StreamSupport.stream(context.getObjects(c).spliterator(), false).collect(Collectors.toList());
+    for (Object agent : listAgents) {
+      if (((Agent) agent).deSpawnTime != null) {
+        context.remove(agent);
+      }
+    }
+  }
+
 
 }

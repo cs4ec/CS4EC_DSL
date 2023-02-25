@@ -54,7 +54,10 @@ public class Signal {
 	}
 	
 	public Object GetData(String s) {
-		return data.get(s);
+		if(data.containsKey(s)) {
+			return data.get(s);
+		}
+		return null;
 	}
 	
 	public void AddData(String s, Object o) {

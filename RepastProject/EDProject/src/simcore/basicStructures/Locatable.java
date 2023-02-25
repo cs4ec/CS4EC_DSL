@@ -6,6 +6,7 @@ import java.util.List;
 import repast.simphony.context.Context;
 import repast.simphony.space.continuous.ContinuousSpace;
 import repast.simphony.space.grid.Grid;
+import repast.simphony.space.grid.GridPoint;
 import repast.simphony.valueLayer.GridValueLayer;
 import simcore.utilities.Cellbox;
 
@@ -50,6 +51,10 @@ public class Locatable {
 		context.add(this);
 		grid.moveTo(this, locX, locY + height);
 		space.moveTo(this, locX + width / 2, locY + height / 2);
+	}
+	
+	public GridPoint getCentrePoint() {
+		return new GridPoint(locX + (width / 2), locY + (height / 2));
 	}
 	
 	public int getX() {

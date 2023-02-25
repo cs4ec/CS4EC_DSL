@@ -6,10 +6,8 @@
   </dependency>
   <dependency className="SimpleActionCard.AC1.AmberBayTrigger_cSignal">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -51,6 +49,7 @@
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -75,6 +74,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.CubicleNursestyle">
@@ -92,6 +92,7 @@
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -102,6 +103,7 @@
     <classNode dependClassName="java.util.stream.Collectors" />
     <classNode dependClassName="java.util.stream.StreamSupport" />
     <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
@@ -115,6 +117,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.Doctorstyle">
@@ -145,14 +148,19 @@
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="EDLanguage.sandbox.patientGenerator_0" />
     <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="java.util.stream.StreamSupport" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
     <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder" />
@@ -212,8 +220,8 @@
   </dependency>
   <dependency className="SimpleActionCard.AC1.LabTechnician">
     <classNode dependClassName="EDLanguage.sandbox.LabTechnician" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -233,6 +241,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.LabTechnicianstyle">
@@ -251,10 +260,8 @@
   </dependency>
   <dependency className="SimpleActionCard.AC1.LateralFlowTestTrigger_aSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -292,10 +299,8 @@
   </dependency>
   <dependency className="SimpleActionCard.AC1.PCRTrigger_bSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -307,8 +312,8 @@
   </dependency>
   <dependency className="SimpleActionCard.AC1.PreAdmissionStaff">
     <classNode dependClassName="EDLanguage.sandbox.PreAdmissionStaff" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -328,6 +333,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.PreAdmissionStaffstyle">
@@ -389,6 +395,7 @@
     <classNode dependClassName="EDLanguage.sandbox.TriageTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -439,6 +446,7 @@
   </dependency>
   <dependency className="SimpleActionCard.AC1.map_PatientProfile">
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -456,6 +464,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.map_PatientProfilestyle">
@@ -474,6 +483,7 @@
   <dependency className="SimpleActionCard.AC1.patient">
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -497,6 +507,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="SimpleActionCard.AC1.patientGenerator_0">

@@ -25,8 +25,8 @@ import repast.simphony.engine.environment.RunEnvironment;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
 import repast.simphony.random.RandomHelper;
-import simcore.basicStructures.TimeKeeper;
 import java.util.Iterator;
+import simcore.basicStructures.TimeKeeper;
 
 public class MinorsDoctor extends Actor {
 
@@ -131,7 +131,7 @@ public class MinorsDoctor extends Actor {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+      if (behaviour.getSignalTrigger() != null && pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
         public boolean test(Agent a) {
           return a == behaviour.getSignalTrigger().GetData("patient");
         }
@@ -277,28 +277,28 @@ public class MinorsDoctor extends Actor {
 
     }
   }
-  public class OrderAction_e0a extends BehaviourStep {
+  public class OrderAction_e0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_e0a(Behaviour behaviour) {
+    public OrderAction_e0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+      a.TakeOrder(new MoveToOrder().WithDestination(MinorsWaitingRoom.getInstance()));
     }
   }
-  public class OrderAction_f0a extends BehaviourStep {
+  public class OrderAction_f0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_f0a(Behaviour behaviour) {
+    public OrderAction_f0a_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
     }
   }
   public class SendSignalAction_a0a6a0 extends BehaviourStep {
@@ -491,28 +491,28 @@ public class MinorsDoctor extends Actor {
 
     }
   }
-  public class OrderAction_e0a_1 extends BehaviourStep {
+  public class OrderAction_e0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_e0a_1(Behaviour behaviour) {
+    public OrderAction_e0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
+      a.TakeOrder(new MoveToOrder().WithDestination(MinorsWaitingRoom.getInstance()));
     }
   }
-  public class OrderAction_f0a_1 extends BehaviourStep {
+  public class OrderAction_f0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_f0a_1(Behaviour behaviour) {
+    public OrderAction_f0a_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
     }
   }
   public class ProbabilityDistribution_g0a_1 extends InstantBehaviourStep {
@@ -635,19 +635,9 @@ public class MinorsDoctor extends Actor {
 
     }
   }
-  public class DespawnAction_e0b_1 extends BehaviourStep {
+  public class RemoveRelationshipAction_e0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public DespawnAction_e0b_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
-    }
-  }
-  public class RemoveRelationshipAction_f0b_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0b_1(Behaviour behaviour) {
+    public RemoveRelationshipAction_e0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -657,6 +647,16 @@ public class MinorsDoctor extends Actor {
       while (patientStaffAllocations.hasNext()) {
         network.removeEdge(patientStaffAllocations.next());
       }
+    }
+  }
+  public class DespawnAction_f0b_1 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public DespawnAction_f0b_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
     }
   }
   public class MoveAction_a0b_17 extends BehaviourStep {
@@ -739,19 +739,9 @@ public class MinorsDoctor extends Actor {
 
     }
   }
-  public class DespawnAction_e0b_2 extends BehaviourStep {
+  public class RemoveRelationshipAction_e0b_2 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public DespawnAction_e0b_2(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
-    }
-  }
-  public class RemoveRelationshipAction_f0b_2 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_f0b_2(Behaviour behaviour) {
+    public RemoveRelationshipAction_e0b_2(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -763,12 +753,22 @@ public class MinorsDoctor extends Actor {
       }
     }
   }
+  public class DespawnAction_f0b_2 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public DespawnAction_f0b_2(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
+    }
+  }
   public class MoveAction_a0a_31 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_31(Behaviour behaviour) {
-      target = WaitingRoom.getInstance();
+      target = MinorsDesk.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -831,8 +831,8 @@ public class MinorsDoctor extends Actor {
     plstSteps.add(new OrderAction_b0a_11(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_5(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_19(behaviourBuilder));
-    plstSteps.add(new OrderAction_e0a(behaviourBuilder));
-    plstSteps.add(new OrderAction_f0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_e0a_3(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0a_3(behaviourBuilder));
     plstSteps.add(new ProbabilityDistribution_g0a(behaviourBuilder));
     plstSteps.add(new StayAction_h0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
@@ -847,8 +847,8 @@ public class MinorsDoctor extends Actor {
     plstSteps.add(new OrderAction_b0b_15(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0b_7(behaviourBuilder));
     plstSteps.add(new Consequence_d0b_1(behaviourBuilder));
-    plstSteps.add(new DespawnAction_e0b_1(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_f0b_1(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_e0b_1(behaviourBuilder));
+    plstSteps.add(new DespawnAction_f0b_1(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

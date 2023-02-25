@@ -7,12 +7,15 @@
     <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
     <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
     <string>patientgetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetCOVIDInfectionStatusisExposed</string>
     <string>patientgetFluAInfectionStatusisSymptomatic</string>
     <string>patientgetFluAInfectionStatusisAsymptomatic</string>
     <string>patientgetFluAInfectionStatusisSusceptible</string>
+    <string>patientgetFluAInfectionStatusisExposed</string>
     <string>patientgetFluBInfectionStatusisSymptomatic</string>
     <string>patientgetFluBInfectionStatusisAsymptomatic</string>
     <string>patientgetFluBInfectionStatusisSusceptible</string>
+    <string>patientgetFluBInfectionStatusisExposed</string>
     <string>patientgetSeverityissevere</string>
     <string>patientgetSeverityismoderate</string>
     <string>patientgetSeverityislow</string>
@@ -53,21 +56,27 @@
     <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisAsymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisExposed</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSymptomatic</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisAsymptomatic</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisExposed</string>
     <string>patientgetadmittedToisGreenBaygetFluAInfectionStatusisSymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetFluAInfectionStatusisAsymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetFluAInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisGreenBaygetFluAInfectionStatusisExposed</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetFluAInfectionStatusisSymptomatic</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetFluAInfectionStatusisAsymptomatic</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetFluAInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetFluAInfectionStatusisExposed</string>
     <string>patientgetadmittedToisGreenBaygetFluBInfectionStatusisSymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetFluBInfectionStatusisAsymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetFluBInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisGreenBaygetFluBInfectionStatusisExposed</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetFluBInfectionStatusisSymptomatic</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetFluBInfectionStatusisAsymptomatic</string>
     <string>patientgetadmittedToisCOVIDPositiveCohortgetFluBInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisCOVIDPositiveCohortgetFluBInfectionStatusisExposed</string>
     <string>patientgetadmittedToisGreenBaygetSeverityissevere</string>
     <string>patientgetadmittedToisGreenBaygetSeverityismoderate</string>
     <string>patientgetadmittedToisGreenBaygetSeverityislow</string>

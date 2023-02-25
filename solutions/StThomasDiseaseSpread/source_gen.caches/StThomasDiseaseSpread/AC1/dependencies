@@ -2,10 +2,18 @@
 <dependenciesRoot>
   <dependency className="StThomasDiseaseSpread.AC1.AdmitRedBayTrigger_jSignal">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.AdmitRedBayTrigger_j_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -14,10 +22,18 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.AdmittoGreenBayTrigger_eSignal">
     <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.AdmittoGreenBayTrigger_e_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -26,10 +42,18 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.AdmittoVulnerableAreaTrigger_hSignal">
     <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.AdmittoVulnerableAreaTrigger_h_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -71,11 +95,19 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.CheckClinicalSusipicionTrigger_cSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.CheckClinicalSusipicionTrigger_c_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -85,29 +117,52 @@
   <dependency className="StThomasDiseaseSpread.AC1.CheckSymptomaticTrigger_bSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.CheckSymptomaticTrigger_b_0Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.CheckSymptomaticTrigger_cSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.CheckSymptomaticTrigger_c_0Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.CubicleNurse">
     <classNode dependClassName="EDLanguage.sandbox.AdmitRedBayTrigger_jSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmitRedBayTrigger_j_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.AdmittoGreenBayTrigger_eSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmittoGreenBayTrigger_e_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.AdmittoVulnerableAreaTrigger_hSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdmittoVulnerableAreaTrigger_h_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.Cepheid" />
     <classNode dependClassName="EDLanguage.sandbox.CepheidExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.CheckClinicalSusipicionTrigger_cSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.CheckClinicalSusipicionTrigger_c_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_iSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_i_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoctorAssessmentTrigger_kSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoctorAssessmentTrigger_k_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.IspatientbeingadmittedtovulnerableareaTrigger_fSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.IspatientbeingadmittedtovulnerableareaTrigger_f_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlow" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlowExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.PerformLIATorCepheidTrigger_dSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.PerformLIATorCepheidTrigger_d_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.PerformLIATorCepheidTrigger_gSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.PerformLIATorCepheidTrigger_g_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.Seat" />
-    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.StaffReception" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -148,10 +203,18 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.DischargeTrigger_iSignal">
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.DischargeTrigger_i_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -159,13 +222,23 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.Doctor">
+    <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.NurseTreatmentsTrigger_lSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.NurseTreatmentsTrigger_mSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.NurseTreatmentsTrigger_nSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.NurseTreatmentsTrigger_n_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.Seat" />
+    <classNode dependClassName="EDLanguage.sandbox.StaffReception" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -190,7 +263,48 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.DoctorAssessmentTrigger_kSignal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.DoctorAssessmentTrigger_k_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.DoctorAssessmentTrigger_lSignal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.DoctorAssessmentTrigger_mSignal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.Doctorstyle">
     <classNode dependClassName="java.awt.Color" />
@@ -216,12 +330,13 @@
     <classNode dependClassName="EDLanguage.sandbox.LateralFlow" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode dependClassName="EDLanguage.sandbox.PreAdmissionStaff" />
     <classNode dependClassName="EDLanguage.sandbox.Seat" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.StaffReception" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
@@ -232,6 +347,7 @@
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -277,10 +393,18 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.IspatientbeingadmittedtovulnerableareaTrigger_fSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.IspatientbeingadmittedtovulnerableareaTrigger_f_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -288,11 +412,19 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.LFDTrigger_bSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.LFDTrigger_b_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -329,8 +461,8 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.LabTechnician">
     <classNode dependClassName="EDLanguage.sandbox.LabTechnician" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -350,6 +482,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.LabTechnicianstyle">
@@ -387,16 +520,21 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.MajorsAB_Cubicle">
+    <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="StThomasDiseaseSpread.AC1.MajorsCBay">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
+  <dependency className="StThomasDiseaseSpread.AC1.MajorsCWaitingRoom">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.MajorsC_Cubicle">
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.Doctor" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.NonRespiratoryArea">
@@ -406,6 +544,46 @@
   <dependency className="StThomasDiseaseSpread.AC1.NonRespiratoryCohort">
     <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCohort" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.NurseTreatmentsTrigger_lSignal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.NurseTreatmentsTrigger_mSignal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.NurseTreatmentsTrigger_nSignal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.NurseTreatmentsTrigger_n_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.PHEThree">
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
@@ -419,15 +597,26 @@
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
-  <dependency className="StThomasDiseaseSpread.AC1.PatientArrivesTrigger_kSignal">
+  <dependency className="StThomasDiseaseSpread.AC1.PatientArrivesTrigger_oSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.PatientArrivesTrigger_o_0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.PerformLIATorCepheidTrigger_dSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.PerformLIATorCepheidTrigger_d_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -436,10 +625,18 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.PerformLIATorCepheidTrigger_gSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.PerformLIATorCepheidTrigger_g_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -448,8 +645,8 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.PreAdmissionStaff">
     <classNode dependClassName="EDLanguage.sandbox.PreAdmissionStaff" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -469,6 +666,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.PreAdmissionStaffstyle">
@@ -511,6 +709,10 @@
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.StaffReception">
+    <classNode dependClassName="EDLanguage.sandbox.StaffReception" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.TaskRoom">
     <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -521,8 +723,12 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.TriageNurse">
     <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.IspatientbeingadmittedtovulnerableareaTrigger_fSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_c_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoctorAssessmentTrigger_lSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DoctorAssessmentTrigger_mSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LFDTrigger_bSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.LFDTrigger_b_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.Seat" />
@@ -531,6 +737,7 @@
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -555,6 +762,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.TriageNursestyle">
@@ -581,8 +789,8 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.WardNurse">
     <classNode dependClassName="EDLanguage.sandbox.WardNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -602,6 +810,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.WardNursestyle">
@@ -616,6 +825,7 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.map_PatientProfile">
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -633,6 +843,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.map_PatientProfilestyle">
@@ -648,9 +859,13 @@
   <dependency className="StThomasDiseaseSpread.AC1.nullTrigger_aSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
+  <dependency className="StThomasDiseaseSpread.AC1.nullTrigger_a_0Signal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.patient">
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />
@@ -660,10 +875,13 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.Collectors" />
     <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.BackgroundBehaviour" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.action.InstantBehaviourStep" />
@@ -671,6 +889,7 @@
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.patientGenerator_0">

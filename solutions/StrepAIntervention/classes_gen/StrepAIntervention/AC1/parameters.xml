@@ -60,6 +60,10 @@
   		displayName="BranchProbability_b0_0" type="double" defaultValue="20"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="InfectionSpreadChance:Asymptomatic-10_a0"
+  		displayName="InfectionSpreadChance:Asymptomatic-10_a0" type="double" defaultValue="0.0001"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="NormalPatientsSeveritysevere"
   		displayName="NormalPatientsSeveritysevere" type="double" defaultValue="15"
   		isReadOnly="false"

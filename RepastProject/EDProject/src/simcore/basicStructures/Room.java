@@ -9,10 +9,10 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import EDLanguage.sandbox.MajorsNurse;
 import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduleParameters;
@@ -141,6 +141,7 @@ public class Room extends Locatable{
 
 	// get the center coordinates of this room
 	public GridPoint getCenterCoordinates() {
+		
 		return this.entry;
 	}
 	
@@ -175,6 +176,11 @@ public class Room extends Locatable{
 
 		fileWritter.close();
 	}
+	
+	public GridPoint getRandomEmptySpot() {
+		Random rand = new Random();
+		return new GridPoint((rand.nextInt((((locX + width)-locX + 1)))) + locX, (rand.nextInt((((locY + height)-locY +1)))) + locY);
+	}
 
 	// called by Agents,
 	// e.g. Nurse: if(pharmacy.WithInside(this)) do something
@@ -182,7 +188,7 @@ public class Room extends Locatable{
 		return contentPeople.contains(o);
 	}
 
-	// Agent already in queue
+	// Agent already in queue   
 	public boolean WithInQueue(Object o) {
 		return waitList.contains(o);
 	}
@@ -194,6 +200,12 @@ public class Room extends Locatable{
 	
 	// check if loc is full
 	public boolean hasCapacity() {
+	      for (Class agent : roomType.actorAllocationLimit.keySet()) {
+	    	  if(getOccupiers().stream().filter(a -> a.getClass() == agent).collect(Collectors.toList()).size() >= roomType.actorAllocationLimit.get(agent)) {
+	    		  return false;
+	    	  }
+	      }
+		
 //		 If this room has occupiables, determine capacity by that
 		if(!getAllOccupiables().isEmpty()) {
 			return getAllOccupiables().stream().anyMatch(o->!o.isOccupied());	
@@ -213,12 +225,12 @@ public class Room extends Locatable{
 	    	  }
 	      }
 
-		if(!getAllOccupiables().isEmpty()) {
-			return getAllOccupiables().stream().anyMatch(o->!o.isOccupied());	
-		} else {
+//		if(!getAllOccupiables().isEmpty()) {
+//			return getAllOccupiables().stream().anyMatch(o->!o.isOccupied());	
+//		} else {
 			// otherwise check capacity by room "size"
 			return (getCurrentCapacity() < getMaxCapacity());
-		}
+//		}
 	}
 	
 	// check if loc is full
