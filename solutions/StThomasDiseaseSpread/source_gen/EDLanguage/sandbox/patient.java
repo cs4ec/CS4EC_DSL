@@ -1610,7 +1610,7 @@ public class patient extends Actor {
     if (deSpawnTime == null) {
       for (Object object : context.getObjects(patient.class)) {
         patient a = (patient) object;
-        if (a.deSpawnTime == null) {
+        if (a.deSpawnTime == null && distanceTo(a) < 10) {
           Signal s = new Signal();
           s.setName("patient" + a.agentName());
           s.setDescription("BackgroundBehaviourForCOVIDTrigger");
@@ -1626,7 +1626,7 @@ public class patient extends Actor {
     if (deSpawnTime == null) {
       for (Object object : context.getObjects(patient.class)) {
         patient a = (patient) object;
-        if (a.deSpawnTime == null) {
+        if (a.deSpawnTime == null && distanceTo(a) < 10) {
           Signal s = new Signal();
           s.setName("patient" + a.agentName());
           s.setDescription("BackgroundBehaviourForFluATrigger");
@@ -1642,7 +1642,7 @@ public class patient extends Actor {
     if (deSpawnTime == null) {
       for (Object object : context.getObjects(patient.class)) {
         patient a = (patient) object;
-        if (a.deSpawnTime == null) {
+        if (a.deSpawnTime == null && distanceTo(a) < 10) {
           Signal s = new Signal();
           s.setName("patient" + a.agentName());
           s.setDescription("BackgroundBehaviourForFluBTrigger");

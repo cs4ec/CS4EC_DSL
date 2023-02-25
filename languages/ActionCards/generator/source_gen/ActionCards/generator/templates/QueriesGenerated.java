@@ -104,19 +104,19 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.PatientProfile$ZT, false, false), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_7_0(final PropertyMacroContext _context) {
-    return SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.infectionStatus$BJRb)).getConceptAlias();
-  }
-  public static Object propertyMacro_GetValue_7_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getInteger(_context.getNode(), PROPS.distance$EdZH);
-  }
-  public static Object propertyMacro_GetValue_7_2(final PropertyMacroContext _context) {
     return CONCEPTS.Exposed$dD.getConceptAlias();
   }
-  public static Object propertyMacro_GetValue_7_3(final PropertyMacroContext _context) {
+  public static Object propertyMacro_GetValue_7_1(final PropertyMacroContext _context) {
     return Double.parseDouble(SPropertyOperations.getString(_context.getNode(), PROPS.spreadChance$EetJ)) * SPropertyOperations.getInteger(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), PROPS.secondsPerTick$Ii2m) + "";
   }
+  public static Object propertyMacro_GetValue_7_2(final PropertyMacroContext _context) {
+    return _context.createUniqueName("InfectionSpreadChance:" + SPropertyOperations.getString(((SNode) _context.getVariable("var:disease")), PROPS.name$MnvL) + SConceptOperations.conceptAlias(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.infectionStatus$BJRb))) + "-" + SPropertyOperations.getString(_context.getNode(), PROPS.distance$EdZH), null);
+  }
+  public static Object propertyMacro_GetValue_7_3(final PropertyMacroContext _context) {
+    return SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.infectionStatus$BJRb)).getConceptAlias();
+  }
   public static Object propertyMacro_GetValue_7_4(final PropertyMacroContext _context) {
-    return _context.createUniqueName("InfectionSpreadChance:" + SPropertyOperations.getString(((SNode) _context.getVariable("var:disease")), PROPS.name$MnvL) + SConceptOperations.conceptAlias(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.infectionStatus$BJRb))) + "-" + SPropertyOperations.getInteger(_context.getNode(), PROPS.distance$EdZH), null);
+    return SPropertyOperations.getString(_context.getNode(), PROPS.distance$EdZH);
   }
   public static Object propertyMacro_GetValue_7_5(final PropertyMacroContext _context) {
     return "BackgroundBehaviourFor" + SPropertyOperations.getString(((SNode) _context.getVariable("var:disease")), PROPS.name$MnvL);
@@ -134,9 +134,9 @@ public class QueriesGenerated extends QueryProviderBase {
     return SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L, "AgentLanguage.structure.Colour"), 0x66029deba11b715aL, "BLUE");
   }
   public static Object propertyMacro_GetValue_7_10(final PropertyMacroContext _context) {
-    return SPropertyOperations.getInteger(ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.lines$F2yI)).sort(new ISelector<SNode, Integer>() {
-      public Integer select(SNode it) {
-        return SPropertyOperations.getInteger(it, PROPS.distance$EdZH);
+    return SPropertyOperations.getString(ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.lines$F2yI)).sort(new ISelector<SNode, String>() {
+      public String select(SNode it) {
+        return SPropertyOperations.getString(it, PROPS.distance$EdZH);
       }
     }, false).first(), PROPS.distance$EdZH) + "";
   }
@@ -721,7 +721,11 @@ public class QueriesGenerated extends QueryProviderBase {
     return SLinkOperations.getChildren(_context.getNode(), LINKS.PatientArrivalLines$6zwB);
   }
   public static Iterable<SNode> sourceNodesQuery_7_0(final SourceSubstituteMacroNodesContext _context) {
-    return SLinkOperations.getChildren(_context.getNode(), LINKS.lines$F2yI);
+    return ListSequence.fromList(SLinkOperations.getChildren(_context.getNode(), LINKS.lines$F2yI)).sort(new ISelector<SNode, String>() {
+      public String select(SNode it) {
+        return SPropertyOperations.getString(it, PROPS.distance$EdZH);
+      }
+    }, true);
   }
   public static Iterable<SNode> sourceNodesQuery_7_1(final SourceSubstituteMacroNodesContext _context) {
     return SLinkOperations.collect(SModelOperations.roots(_context.getInputModel(), CONCEPTS.Disease$8R), LINKS.infectionSpreadTable$ygZW);
@@ -1265,7 +1269,7 @@ public class QueriesGenerated extends QueryProviderBase {
     snsqMethods.put("1758249876478405397", new SNsQ(i++));
     snsqMethods.put("1758249876478375032", new SNsQ(i++));
     snsqMethods.put("768972137574892036", new SNsQ(i++));
-    snsqMethods.put("2059891927310248104", new SNsQ(i++));
+    snsqMethods.put("5539834982858035132", new SNsQ(i++));
     snsqMethods.put("2059891927310230798", new SNsQ(i++));
     snsqMethods.put("2918693286460675278", new SNsQ(i++));
     snsqMethods.put("8122408733962860851", new SNsQ(i++));
@@ -1395,11 +1399,11 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("1758249876478397567", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f407L, 0x296f74efb4e82777L, "attributeName"), null));
     pvqMethods.put("768972137574895409", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x27ebd2392beaa324L, 0x27ebd2392beaa330L, "NumAgentsInHour"), null));
     pvqMethods.put("324605317405353181", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x637eade0e62ce2b8L, 0x4813ad0fc12f478L, "agentProfileName"), null));
-    pvqMethods.put("4219698690559322746", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
-    pvqMethods.put("2059891927310248983", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x1c9634cb4974b6d4L, 0x1c9634cb4974b6d7L, "range"), "10"));
-    pvqMethods.put("2059891927313101942", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
-    pvqMethods.put("4219698690560142810", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, 0x33299c1cba4a21f8L, "value"), null));
-    pvqMethods.put("4219698690560142817", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, 0x33299c1cb9c839daL, "repastVariableName"), "Hello"));
+    pvqMethods.put("5539834982854301501", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
+    pvqMethods.put("5539834982854301510", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, 0x33299c1cba4a21f8L, "value"), null));
+    pvqMethods.put("5539834982854301535", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, 0x33299c1cb9c839daL, "repastVariableName"), "Hello"));
+    pvqMethods.put("5539834982854280198", new PVQ(i++, MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value"), null));
+    pvqMethods.put("5539834982854280246", new PVQ(i++, MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x1c9634cb4974b6d4L, 0x1c9634cb4974b6d7L, "range"), "10"));
     pvqMethods.put("2059891927314344517", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "infect"));
     pvqMethods.put("3549288998130939098", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "testAttribute"));
     pvqMethods.put("1862364223774866000", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "testAttribute"));
@@ -1707,8 +1711,8 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("768972137579212820", new RTQ(18, "map_StaffType"));
     rtqMethods.put("768972137593373021", new RTQ(19, null));
     rtqMethods.put("1758249876534945954", new RTQ(20, null));
-    rtqMethods.put("4219698690559316728", new RTQ(21, null));
-    rtqMethods.put("2059891927310296488", new RTQ(22, null));
+    rtqMethods.put("5539834982854301473", new RTQ(21, null));
+    rtqMethods.put("5539834982854280213", new RTQ(22, null));
     rtqMethods.put("2918693286460682017", new RTQ(23, null));
     rtqMethods.put("8122408733962981247", new RTQ(24, null));
     rtqMethods.put("2059891927310350086", new RTQ(25, "infect"));
@@ -2090,9 +2094,9 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty probabilityChance$4eDb = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4813ad0fc64c280L, 0x4813ad0fc64c2aeL, "probabilityChance");
     /*package*/ static final SProperty prevalence$QY$u = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x5dc1936ab2964870L, "prevalence");
     /*package*/ static final SProperty NumPatientsInHour$_nla = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x27ebd2392beaa324L, 0x27ebd2392beaa330L, "NumPatientsInHour");
-    /*package*/ static final SProperty distance$EdZH = MetaAdapterFactory.getProperty(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x1c9634cb4b041b5eL, 0x1c9634cb4b041b61L, "distance");
     /*package*/ static final SProperty spreadChance$EetJ = MetaAdapterFactory.getProperty(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x1c9634cb4b041b5eL, 0x1c9634cb4b041b63L, "spreadChance");
     /*package*/ static final SProperty secondsPerTick$Ii2m = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e56L, 0x7ce22f405c238da3L, "secondsPerTick");
+    /*package*/ static final SProperty distance$EdZH = MetaAdapterFactory.getProperty(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x1c9634cb4b041b5eL, 0x1c9634cb4b041b61L, "distance");
     /*package*/ static final SProperty Time$Vgn$ = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0ee1aL, 0x16d45e8703e0ee36L, "Time");
     /*package*/ static final SProperty Occurances$VgPA = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x16d45e8703e0ee1aL, 0x16d45e8703e0ee38L, "Occurances");
     /*package*/ static final SProperty outcome$4Ox3 = MetaAdapterFactory.getProperty(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df36170cL, 0x25745663758ab474L, "outcome");

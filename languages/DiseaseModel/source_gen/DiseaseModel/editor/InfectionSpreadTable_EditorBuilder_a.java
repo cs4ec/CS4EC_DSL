@@ -227,9 +227,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         return style;
       }
     }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Distance", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Distance"), cell);
-    header.setLabel("Distance");
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Distance (metres)", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Distance (metres)"), cell);
+    header.setLabel("Distance (metres)");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);
@@ -243,9 +243,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         return style;
       }
     }.createStyle(0, 0);
-    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Spread Chance (per second)", false);
-    Header header = new EditorCellHeader(new StringHeaderReference("Spread Chance (per second)"), cell);
-    header.setLabel("Spread Chance (per second)");
+    final EditorCell_Constant cell = new EditorCell_Constant(editorContext, snode, "Spread Chance % (per second)", false);
+    Header header = new EditorCellHeader(new StringHeaderReference("Spread Chance % (per second)"), cell);
+    header.setLabel("Spread Chance % (per second)");
     header.setStyle(style);
     HeaderGrid grid = new HeaderGrid();
     grid.setElement(0, 0, header);

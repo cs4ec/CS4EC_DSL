@@ -431,7 +431,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3KCb14J5ffO">
-    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
     <ref role="1XX52x" to="3751:3l6cNjec8la" resolve="Choice" />
     <node concept="3EZMnI" id="3KCb14J5ffQ" role="2wV5jI">
       <node concept="3F0ifn" id="3KCb14J5fgN" role="3EZMnx">
@@ -2114,7 +2114,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3mDt9djdNrk">
-    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
     <ref role="1XX52x" to="3751:3mDt9djdNq_" resolve="ProbabilityDistribution" />
     <node concept="3EZMnI" id="3mDt9djdNrm" role="2wV5jI">
       <node concept="3F0ifn" id="2K0oNvrFWCW" role="3EZMnx">
@@ -2128,7 +2128,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="3mDt9djdNrD">
-    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
     <ref role="1XX52x" to="3751:3mDt9djdNr2" resolve="ProbabilityDistributionLine" />
     <node concept="3EZMnI" id="3mDt9djdNrF" role="2wV5jI">
       <node concept="3EZMnI" id="3mDt9djdNrW" role="3EZMnx">
@@ -2344,7 +2344,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="1MmdcH8JffU">
-    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
     <ref role="1XX52x" to="3751:1MmdcH8Jff4" resolve="ForEach" />
     <node concept="3EZMnI" id="1MmdcH8JffW" role="2wV5jI">
       <node concept="3F0ifn" id="1MmdcH8Jfg3" role="3EZMnx">
@@ -2514,6 +2514,50 @@
         <ref role="1NtTu8" to="3751:1MmdcH9tbrl" resolve="target" />
       </node>
       <node concept="l2Vlx" id="1MmdcH9tbr_" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4NxsD3bcMP_">
+    <property role="3GE5qa" value="actions.OperationsFlow" />
+    <ref role="1XX52x" to="3751:4NxsD3bcMPn" resolve="DecisionTreeLine" />
+    <node concept="3EZMnI" id="4NxsD3bcMPB" role="2wV5jI">
+      <node concept="3EZMnI" id="4NxsD3bcMPC" role="3EZMnx">
+        <node concept="VPM3Z" id="4NxsD3bcMPD" role="3F10Kt" />
+        <node concept="3F0ifn" id="4NxsD3bcMPE" role="3EZMnx">
+          <property role="3F0ifm" value="Case:" />
+        </node>
+        <node concept="3F1sOY" id="4NxsD3bcMPZ" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:4NxsD3bcMPo" resolve="condition" />
+        </node>
+        <node concept="3F0ifn" id="4NxsD3bcMPG" role="3EZMnx">
+          <property role="3F0ifm" value=":" />
+        </node>
+        <node concept="2iRfu4" id="4NxsD3bcMPH" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="4NxsD3bpdiw" role="3EZMnx">
+        <node concept="3F0ifn" id="4NxsD3bpdiS" role="3EZMnx" />
+        <node concept="2iRfu4" id="4NxsD3bpdix" role="2iSdaV" />
+        <node concept="3F1sOY" id="4NxsD3bcMQi" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:4NxsD3bcMPp" resolve="behaviour" />
+        </node>
+      </node>
+      <node concept="2iRkQZ" id="4NxsD3bcMPJ" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4NxsD3bcNeP">
+    <property role="3GE5qa" value="actions.OperationsFlow" />
+    <ref role="1XX52x" to="3751:4NxsD3bcMPg" resolve="DecisionTree" />
+    <node concept="3EZMnI" id="4NxsD3bcNeR" role="2wV5jI">
+      <node concept="3F0ifn" id="4NxsD3bcNeY" role="3EZMnx">
+        <property role="3F0ifm" value="Select Case:" />
+      </node>
+      <node concept="3EZMnI" id="4NxsD3bkaw9" role="3EZMnx">
+        <node concept="2iRkQZ" id="4NxsD3bkawa" role="2iSdaV" />
+        <node concept="3F2HdR" id="4NxsD3bcNf4" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:4NxsD3bcNeG" resolve="lines" />
+          <node concept="l2Vlx" id="4NxsD3bkaw6" role="2czzBx" />
+        </node>
+      </node>
+      <node concept="2iRkQZ" id="4NxsD3bcNeU" role="2iSdaV" />
     </node>
   </node>
 </model>

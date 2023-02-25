@@ -215,7 +215,7 @@
   </node>
   <node concept="1TIwiD" id="3l6cNjec8la">
     <property role="EcuMT" value="3838812034270528842" />
-    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
     <property role="TrG5h" value="Choice" />
     <property role="34LRSv" value="if" />
     <property role="R4oN_" value="A choice between two behaviours" />
@@ -1779,7 +1779,7 @@
   </node>
   <node concept="1TIwiD" id="3mDt9djdNq_">
     <property role="EcuMT" value="3866749931179423397" />
-    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
     <property role="TrG5h" value="ProbabilityDistribution" />
     <property role="34LRSv" value="probability distribution" />
     <property role="R4oN_" value="a choice between many behaviours based on probability" />
@@ -1794,7 +1794,7 @@
   </node>
   <node concept="1TIwiD" id="3mDt9djdNr2">
     <property role="EcuMT" value="3866749931179423426" />
-    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
     <property role="TrG5h" value="ProbabilityDistributionLine" />
     <node concept="1TJgyj" id="3mDt9djdNr3" role="1TKVEi">
       <property role="IQ2ns" value="3866749931179423427" />
@@ -1911,7 +1911,7 @@
   </node>
   <node concept="1TIwiD" id="1MmdcH8Jff4">
     <property role="EcuMT" value="2059891927271928772" />
-    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
     <property role="TrG5h" value="ForEach" />
     <property role="34LRSv" value="for each loop" />
     <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
@@ -2049,7 +2049,7 @@
     <node concept="1TJgyi" id="1MmdcH9tbrn" role="1TKVEl">
       <property role="IQ2nx" value="2059891927283971799" />
       <property role="TrG5h" value="range" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+      <ref role="AX2Wp" node="6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
     <node concept="1TJgyj" id="1MmdcH9tbrl" role="1TKVEi">
       <property role="IQ2ns" value="2059891927283971797" />
@@ -2064,6 +2064,40 @@
     <property role="3GE5qa" value="actions.basic actions.SendSignalAction.signals" />
     <property role="TrG5h" value="SignalDataReference" />
     <ref role="1TJDcQ" node="3KCb14J4_mK" resolve="ObjectInstance" />
+  </node>
+  <node concept="1TIwiD" id="4NxsD3bcMPg">
+    <property role="EcuMT" value="5539834982852406608" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
+    <property role="TrG5h" value="DecisionTree" />
+    <property role="34LRSv" value="decision tree" />
+    <property role="R4oN_" value="An ordered exclusive choice between behaviours" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="1TJgyj" id="4NxsD3bcNeG" role="1TKVEi">
+      <property role="IQ2ns" value="5539834982852408236" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4NxsD3bcMPn" resolve="DecisionTreeLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4NxsD3bcMPn">
+    <property role="EcuMT" value="5539834982852406615" />
+    <property role="3GE5qa" value="actions.OperationsFlow" />
+    <property role="TrG5h" value="DecisionTreeLine" />
+    <node concept="1TJgyj" id="4NxsD3bcMPo" role="1TKVEi">
+      <property role="IQ2ns" value="5539834982852406616" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="4NxsD3bcMPp" role="1TKVEi">
+      <property role="IQ2ns" value="5539834982852406617" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="behaviour" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3l6cNjec8l6" resolve="BehaviourSequence" />
+    </node>
   </node>
 </model>
 

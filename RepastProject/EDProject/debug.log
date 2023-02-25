@@ -879,3 +879,23 @@ java.lang.IllegalArgumentException: Method EDLanguage.sandbox.EDBuilder.emptyDeS
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+INFO  [AWT-EventQueue-0] 2023-02-25T12:48:04,180 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T12:48:04,393 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T12:50:12,086 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T12:50:12,089 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T12:55:43,352 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T12:55:43,431 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T12:55:55,795 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T12:55:55,798 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T12:56:35,034 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T12:56:35,037 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt

@@ -95,7 +95,7 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.CheckClinicalSusipicionTrigger_cSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -105,7 +105,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.CheckClinicalSusipicionTrigger_c_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -412,7 +412,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.LFDTrigger_bSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -422,7 +422,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.LFDTrigger_b_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -604,7 +604,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.PerformLIATorCepheidTrigger_dSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -614,7 +614,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.PerformLIATorCepheidTrigger_d_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -723,7 +723,7 @@
   </dependency>
   <dependency className="StThomasDiseaseSpread.AC1.TriageNurse">
     <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_c_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorAssessmentTrigger_lSignal" />
     <classNode dependClassName="EDLanguage.sandbox.DoctorAssessmentTrigger_mSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LFDTrigger_bSignal" />

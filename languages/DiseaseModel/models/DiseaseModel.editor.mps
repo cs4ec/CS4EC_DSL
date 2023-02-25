@@ -237,10 +237,10 @@
             <property role="2rfbtB" value="Infection Status" />
           </node>
           <node concept="2rfbtV" id="1MmdcHb11IU" role="uCobI">
-            <property role="2rfbtB" value="Distance" />
+            <property role="2rfbtB" value="Distance (metres)" />
           </node>
           <node concept="2rfbtV" id="1MmdcHb11J2" role="uCobI">
-            <property role="2rfbtB" value="Spread Chance (per second)" />
+            <property role="2rfbtB" value="Spread Chance % (per second)" />
           </node>
         </node>
       </node>

@@ -195,7 +195,7 @@
     <node concept="1TJgyi" id="1MmdcHb11Hx" role="1TKVEl">
       <property role="IQ2nx" value="2059891927310146401" />
       <property role="TrG5h" value="distance" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
     <node concept="1TJgyi" id="1MmdcHb11Hz" role="1TKVEl">
       <property role="IQ2nx" value="2059891927310146403" />

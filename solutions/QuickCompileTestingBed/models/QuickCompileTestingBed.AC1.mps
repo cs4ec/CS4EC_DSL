@@ -1948,9 +1948,14 @@
     </node>
     <node concept="1n$yYm" id="1Iqh_KKX5W5" role="1n$yWc">
       <node concept="1n$yYl" id="1Iqh_KKX5W7" role="1n$yX_">
-        <property role="1n$yYE" value="10" />
-        <property role="1n$yYC" value="0.0007" />
-        <node concept="3IO8Cx" id="1Iqh_KKX5Wb" role="1n$yYk" />
+        <property role="1n$yYE" value="0.4" />
+        <property role="1n$yYC" value="0.0001" />
+        <node concept="3IO8Di" id="4NxsD3b7LAG" role="1n$yYk" />
+      </node>
+      <node concept="1n$yYl" id="4NxsD3b7LAM" role="1n$yX_">
+        <property role="1n$yYE" value="1.2" />
+        <property role="1n$yYC" value="0.0002" />
+        <node concept="3IO8Di" id="4NxsD3b7LB1" role="1n$yYk" />
       </node>
     </node>
   </node>

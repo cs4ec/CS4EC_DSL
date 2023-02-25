@@ -40,6 +40,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_DataInstanceMap;
   private ConceptPresentation props_DataMap;
   private ConceptPresentation props_DeSpawnAction;
+  private ConceptPresentation props_DecisionTree;
+  private ConceptPresentation props_DecisionTreeLine;
   private ConceptPresentation props_Description;
   private ConceptPresentation props_DirectSignal;
   private ConceptPresentation props_DistanceCondition;
@@ -348,6 +350,21 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DeSpawnAction = cpb.create();
         }
         return props_DeSpawnAction;
+      case LanguageConceptSwitch.DecisionTree:
+        if (props_DecisionTree == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("An ordered exclusive choice between behaviours");
+          cpb.rawPresentation("decision tree");
+          props_DecisionTree = cpb.create();
+        }
+        return props_DecisionTree;
+      case LanguageConceptSwitch.DecisionTreeLine:
+        if (props_DecisionTreeLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("DecisionTreeLine");
+          props_DecisionTreeLine = cpb.create();
+        }
+        return props_DecisionTreeLine;
       case LanguageConceptSwitch.Description:
         if (props_Description == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -156,6 +156,10 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     } else if (SNodeOperations.isInstanceOf(currentNode, CONCEPTS.Choice$s)) {
       Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(((SNode) currentNode), LINKS.if_case$BonZ));
       Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(((SNode) currentNode), LINKS.else_case$Bpz4));
+    } else if (SNodeOperations.isInstanceOf(currentNode, CONCEPTS.DecisionTree$OB)) {
+      for (SNode line : ListSequence.fromList(SLinkOperations.getChildren(((SNode) currentNode), LINKS.lines$NsLN))) {
+        Actor__BehaviorDescriptor.getSubBehaviours_id1BosAjM85tg.invoke(__thisNode__, allBehaviours, SLinkOperations.getTarget(line, LINKS.behaviour$ATuw));
+      }
     }
 
     if (SNodeOperations.isInstanceOf(currentNode, CONCEPTS.Behaviour$OO)) {
@@ -318,6 +322,7 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SConcept BehaviourSequence$Ol = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L, "AgentLanguage.structure.BehaviourSequence");
     /*package*/ static final SConcept ProbabilityDistribution$1L = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35a97493533736a5L, "AgentLanguage.structure.ProbabilityDistribution");
     /*package*/ static final SConcept Choice$s = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce30854aL, "AgentLanguage.structure.Choice");
+    /*package*/ static final SConcept DecisionTree$OB = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4ce17290cb332d50L, "AgentLanguage.structure.DecisionTree");
     /*package*/ static final SConcept Behaviour$OO = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L, "AgentLanguage.structure.Behaviour");
   }
 
@@ -332,6 +337,8 @@ public final class Actor__BehaviorDescriptor extends BaseBHDescriptor {
     /*package*/ static final SContainmentLink lines$VIaz = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35a97493533736a5L, 0x35a97493533736cbL, "lines");
     /*package*/ static final SContainmentLink if_case$BonZ = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce30854aL, 0x35463334ce30854bL, "if_case");
     /*package*/ static final SContainmentLink else_case$Bpz4 = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce30854aL, 0x35463334ce308550L, "else_case");
+    /*package*/ static final SContainmentLink behaviour$ATuw = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4ce17290cb332d57L, 0x4ce17290cb332d59L, "behaviour");
+    /*package*/ static final SContainmentLink lines$NsLN = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4ce17290cb332d50L, 0x4ce17290cb3333acL, "lines");
     /*package*/ static final SContainmentLink behaviourSequence$hsTv = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, 0x35463334ce308543L, "behaviourSequence");
     /*package*/ static final SContainmentLink isIdleBehaviour$pDqV = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x3dab4295aef20062L, "isIdleBehaviour");
   }

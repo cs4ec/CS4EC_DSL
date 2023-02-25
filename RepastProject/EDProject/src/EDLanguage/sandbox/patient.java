@@ -806,7 +806,7 @@ public class patient extends Actor {
     }
 
     public void execute() {
-      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluBAsymptomatic-10_a0"))) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluBSymptomatic-0.4_a0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -823,7 +823,7 @@ public class patient extends Actor {
     }
 
     public void execute() {
-      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluBAsymptomatic-10_a0"))) {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluBSymptomatic-0.4_a0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0a(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -840,9 +840,82 @@ public class patient extends Actor {
     }
 
     public void execute() {
-      if (patient.this.FluBInfectionStatus == "Asymptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
+      if (patient.this.FluBInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 0.4) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0a0a_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Consequence_a0a0b0a extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0b0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus = "Exposed";
+
+    }
+  }
+  public class Consequence_a0a0b0a_0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0b0a_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).FluBInfectionStatus = "Exposed";
+
+    }
+  }
+  public class Choice_a0b0a extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0b0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluBSymptomatic-1.2_b0"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0b0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_a0b0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0b0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluBSymptomatic-1.2_b0"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0b0a(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_b0a extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_b0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (patient.this.FluBInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 1.2) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0b0a(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -857,9 +930,26 @@ public class patient extends Actor {
     }
 
     public void execute() {
-      if (patient.this.FluBInfectionStatus == "Asymptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10) {
+      if (patient.this.FluBInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 0.4) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0a0a_1(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class Choice_b0a_1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_b0a_1(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (patient.this.FluBInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 1.2) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0b0a(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -872,7 +962,7 @@ public class patient extends Actor {
     if (deSpawnTime == null) {
       for (Object object : context.getObjects(patient.class)) {
         patient a = (patient) object;
-        if (a.deSpawnTime == null && distanceTo(a) < 10) {
+        if (a.deSpawnTime == null && distanceTo(a) < 1.2) {
           Signal s = new Signal();
           s.setName("patient" + a.agentName());
           s.setDescription("BackgroundBehaviourForFluBTrigger");
@@ -889,6 +979,7 @@ public class patient extends Actor {
     backgroundBehaviour.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new Choice_a0a_3(backgroundBehaviour));
+    plstSteps.add(new Choice_b0a(backgroundBehaviour));
     backgroundBehaviour.setSteps(plstSteps);
 
     myBackgroundBehaviours.add(backgroundBehaviour);

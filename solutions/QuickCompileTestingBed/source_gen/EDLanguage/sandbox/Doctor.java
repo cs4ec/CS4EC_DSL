@@ -154,7 +154,7 @@ public class Doctor extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_5(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_7(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -189,11 +189,11 @@ public class Doctor extends Actor {
 
 
 
-  public class MoveAction_a0a extends BehaviourStep {
+  public class MoveAction_a0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a(Behaviour behaviour) {
+    public MoveAction_a0a_1(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -335,11 +335,11 @@ public class Doctor extends Actor {
       }
     }
   }
-  public class MoveAction_a0a_3 extends BehaviourStep {
+  public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_3(Behaviour behaviour) {
+    public MoveAction_a0a_5(Behaviour behaviour) {
       target = behaviour.getSignalTrigger().GetData("patient");
       this.behaviour = behaviour;
     }
@@ -689,11 +689,11 @@ public class Doctor extends Actor {
       ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
     }
   }
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
+    public MoveAction_a0a_7(Behaviour behaviour) {
       target = StaffReception.getInstance();
       this.behaviour = behaviour;
     }
@@ -736,7 +736,7 @@ public class Doctor extends Actor {
   public void InitAdmitActionAdmittoVulnerableArea_d(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
     plstSteps.add(new MoveAction_b0a(behaviourBuilder));
     plstSteps.add(new OrderAction_c0a(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0a(behaviourBuilder));

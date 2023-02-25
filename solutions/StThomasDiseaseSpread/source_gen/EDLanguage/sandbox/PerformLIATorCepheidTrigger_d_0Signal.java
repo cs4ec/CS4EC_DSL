@@ -18,7 +18,7 @@ public class PerformLIATorCepheidTrigger_d_0Signal extends ActorTypeSignal {
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {
-    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(MajorsC_Cubicle.getInstance()).stream().filter(new Predicate<Room>() {
+    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(MajorsAB_Cubicle.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity() || r.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
           public boolean test(Agent actor) {

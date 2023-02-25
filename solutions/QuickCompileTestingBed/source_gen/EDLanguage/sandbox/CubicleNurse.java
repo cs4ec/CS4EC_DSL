@@ -190,11 +190,11 @@ public class CubicleNurse extends Actor {
 
 
 
-  public class MoveAction_a0a_7 extends BehaviourStep {
+  public class MoveAction_a0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_7(Behaviour behaviour) {
+    public MoveAction_a0a_3(Behaviour behaviour) {
       target = MajorsC_Cubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -259,10 +259,10 @@ public class CubicleNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_1 extends BehaviourStep {
+  public class StayAction_d0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_1(Behaviour behaviour) {
+    public StayAction_d0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -332,9 +332,9 @@ public class CubicleNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_g0a_1 extends InstantBehaviourStep {
+  public class Choice_g0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0a_1(Behaviour behaviour) {
+    public Choice_g0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -381,9 +381,9 @@ public class CubicleNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_h0a_1 extends InstantBehaviourStep {
+  public class Choice_h0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_h0a_1(Behaviour behaviour) {
+    public Choice_h0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -398,11 +398,11 @@ public class CubicleNurse extends Actor {
       }
     }
   }
-  public class MoveAction_a0a_11 extends BehaviourStep {
+  public class MoveAction_a0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_11(Behaviour behaviour) {
+    public MoveAction_a0a_9(Behaviour behaviour) {
       target = MajorsC_Cubicle.getInstance();
       this.behaviour = behaviour;
     }
@@ -452,10 +452,10 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
-  public class StayForConditionAction_c0a_2 extends BehaviourStep {
+  public class StayForConditionAction_c0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0a_2(Behaviour behaviour) {
+    public StayForConditionAction_c0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -508,9 +508,9 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
-  public class Choice_g0a_3 extends InstantBehaviourStep {
+  public class Choice_g0a_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_g0a_3(Behaviour behaviour) {
+    public Choice_g0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -525,9 +525,9 @@ public class CubicleNurse extends Actor {
       }
     }
   }
-  public class Choice_h0a_3 extends InstantBehaviourStep {
+  public class Choice_h0a_1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_h0a_3(Behaviour behaviour) {
+    public Choice_h0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -2357,14 +2357,14 @@ public class CubicleNurse extends Actor {
   public void InitIspatientbeingadmittedtovulnerablearea_b(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_7(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a_1(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_0(behaviourBuilder));
-    plstSteps.add(new StayAction_d0a_1(behaviourBuilder));
+    plstSteps.add(new StayAction_d0a_0(behaviourBuilder));
     plstSteps.add(new OrderAction_e0a(behaviourBuilder));
     plstSteps.add(new OrderAction_f0a(behaviourBuilder));
-    plstSteps.add(new Choice_g0a_1(behaviourBuilder));
-    plstSteps.add(new Choice_h0a_1(behaviourBuilder));
+    plstSteps.add(new Choice_g0a(behaviourBuilder));
+    plstSteps.add(new Choice_h0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

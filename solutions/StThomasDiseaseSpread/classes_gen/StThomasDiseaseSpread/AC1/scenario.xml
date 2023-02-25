@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Scenario simphonyVersion="2.7.0">
-<repast.simphony.action.data_set context="EDProject" file="repast.simphony.action.data_set_patient.xml" />
-<repast.simphony.action.data_set context="EDProject" file="patientWaitTimesDataSet.xml" />
 <repast.simphony.action.data_set context="EDProject" file="patientWaitTimesDataSetDaily.xml" />
 <repast.simphony.action.data_set context="EDProject" file="repast.simphony.action.data_set_patientDaily.xml" />
-<repast.simphony.action.file_sink context="EDProject" file="repast.simphony.action.file_sink_patient.xml" />
-<repast.simphony.action.file_sink context="EDProject" file="patientWaitTime.xml" />
 <repast.simphony.action.file_sink context="EDProject" file="patientWaitTimeDaily.xml" />
 <repast.simphony.action.file_sink context="EDProject" file="repast.simphony.action.file_sink_patientDaily.xml" />
 <repast.simphony.dataLoader.engine.ClassNameDataLoaderAction context="EDProject" file="repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml" />
