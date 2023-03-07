@@ -25,7 +25,7 @@ public class TriageNursestyle extends DefaultStyleOGL2D {
     return Position.NORTH;
   }
   public Color getColor(Object object) {
-    return Color.blue;
+    return Color.GREEN;
   }
   public Color getBorderColor(Object object) {
     return Color.BLACK;

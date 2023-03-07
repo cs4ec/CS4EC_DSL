@@ -14,11 +14,11 @@ public class ObsReviewTrigger_e_0Signal extends ActorTypeSignal {
   public ObsReviewTrigger_e_0Signal() {
     this.setName("ObsReviewTrigger_e_0");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("MinorsNurse");
+    this.AddActor("MajorsNurse");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {
-    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(MinorsBay.getInstance()).stream().filter(new Predicate<Room>() {
+    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(MajorsBay.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity() || r.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
           public boolean test(Agent actor) {

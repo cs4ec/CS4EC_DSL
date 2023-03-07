@@ -813,6 +813,14 @@
           <ref role="1NtTu8" to="3751:3QFgDmIWw1y" resolve="isIdleBehaviour" />
         </node>
         <node concept="3F0ifn" id="7o6PzEpEZBf" role="3EZMnx" />
+        <node concept="3F0ifn" id="s75sN4xHoF" role="3EZMnx">
+          <property role="3F0ifm" value="Triggered Behaviours:" />
+        </node>
+        <node concept="3F2HdR" id="s75sN4xHnN" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:2seZE6jsIgu" resolve="behaviourMethods" />
+          <node concept="2iRkQZ" id="s75sN4xHnP" role="2czzBx" />
+        </node>
+        <node concept="3F0ifn" id="s75sN4xHmY" role="3EZMnx" />
         <node concept="3F0ifn" id="1MmdcH97lh9" role="3EZMnx">
           <property role="3F0ifm" value="Scheduled Behaviours:" />
         </node>
@@ -1696,8 +1704,14 @@
         <node concept="3F0ifn" id="2_JteYNYsUL" role="3EZMnx">
           <property role="3F0ifm" value="Probability Distribution table for" />
         </node>
-        <node concept="3F0A7n" id="2_JteYOYVmu" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:2_JteYOU2tR" resolve="attributeName" />
+        <node concept="1iCGBv" id="s75sN7xXxi" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:s75sN7xXxb" resolve="attribute" />
+          <node concept="1sVBvm" id="s75sN7xXxk" role="1sWHZn">
+            <node concept="3F0A7n" id="s75sN7xXxs" role="2wV5jI">
+              <property role="1Intyy" value="true" />
+              <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+            </node>
+          </node>
         </node>
       </node>
       <node concept="2iRkQZ" id="2_JteYNYsU$" role="2iSdaV" />

@@ -255,20 +255,16 @@ public class patient extends Actor {
     return 0;
   }
 
+  public void ALLCOLLECTEDBEHAVIOURS() {
+    System.out.println("<no name>[updateAttribute]");
+    System.out.println("BehaviourSequence");
+    System.out.println("if");
+    System.out.println("BehaviourSequence");
+  }
+
   public class Consequence_a0a0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Consequence_a0a0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).placeholder = "HELLO";
-
-    }
-  }
-  public class Consequence_a0a0a_0 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -294,30 +290,13 @@ public class patient extends Actor {
       }
     }
   }
-  public class Choice_a0a_1 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0a_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA") {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
 
 
 
   public int patientgetAliveTime() {
     if (deSpawnTime == null) {
-      deSpawnTime = TimeKeeper.getInstance().getTime();
+      return 0;
     }
-    return (int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime);
+    return Math.abs((int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime));
   }
 }

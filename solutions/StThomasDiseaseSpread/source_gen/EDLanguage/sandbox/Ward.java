@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class Ward extends RoomType {
-  private static Ward instance;
+  private static RoomType instance;
 
   private Ward() {
     super();

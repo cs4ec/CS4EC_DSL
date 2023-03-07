@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class StaffReception extends RoomType {
-  private static StaffReception instance;
+  private static RoomType instance;
 
   private StaffReception() {
     super();

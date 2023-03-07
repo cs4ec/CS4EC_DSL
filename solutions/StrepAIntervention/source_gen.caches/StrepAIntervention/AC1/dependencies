@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="StrepAIntervention.AC1.AdditionalAssessmentTrigger_cSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -11,7 +11,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.AdditionalAssessmentTrigger_c_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -54,7 +54,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.AssessmentTrigger_aSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -64,7 +64,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.AssessmentTrigger_a_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -181,6 +181,7 @@
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -326,14 +327,14 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.MajorsDoctor">
-    <classNode dependClassName="EDLanguage.sandbox.AdditionalAssessmentTrigger_cSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdditionalAssessmentTrigger_c_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsDesk" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsDoctor" />
-    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_eSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_e_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
@@ -378,14 +379,14 @@
   <dependency className="StrepAIntervention.AC1.MajorsNurse">
     <classNode dependClassName="EDLanguage.sandbox.AdditionalAssessmentTrigger_gSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_d_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_d_1Signal" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsDesk" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_fSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_f_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.SenDocReviewTrigger_iSignal" />
     <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a1_0" />
-    <classNode dependClassName="EDLanguage.sandbox.WaitTrigger_bSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitTrigger_b_0Signal" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
@@ -440,14 +441,15 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.MinorsDoctor">
-    <classNode dependClassName="EDLanguage.sandbox.AdditionalAssessmentTrigger_c_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.AdditionalAssessmentTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsDesk" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsDoctor" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsWaitingRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_e_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_eSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.Seat" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
@@ -491,15 +493,16 @@
   </dependency>
   <dependency className="StrepAIntervention.AC1.MinorsNurse">
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_d_1Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_d_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsDesk" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsNurse" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsWaitingRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_f_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_fSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.Seat" />
     <classNode dependClassName="EDLanguage.sandbox.SeniorReviewTrigger_gSignal" />
     <classNode dependClassName="EDLanguage.sandbox.TimeDistributionTable_a1_1" />
-    <classNode dependClassName="EDLanguage.sandbox.WaitTrigger_b_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitTrigger_bSignal" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
@@ -553,7 +556,7 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.ObsReviewTrigger_eSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -563,16 +566,6 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.ObsReviewTrigger_e_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="StrepAIntervention.AC1.ObsReviewTrigger_fSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -582,8 +575,18 @@
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="StrepAIntervention.AC1.ObsReviewTrigger_f_0Signal">
+  <dependency className="StrepAIntervention.AC1.ObsReviewTrigger_fSignal">
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="StrepAIntervention.AC1.ObsReviewTrigger_f_0Signal">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -657,14 +660,15 @@
   <dependency className="StrepAIntervention.AC1.SeniorDoc">
     <classNode dependClassName="EDLanguage.sandbox.AdmitToWardsTrigger_hSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_d_1Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_d_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsDesk" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsWaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_eSignal" />
     <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_e_0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_fSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.ObsReviewTrigger_f_0Signal" />
+    <classNode dependClassName="EDLanguage.sandbox.Seat" />
     <classNode dependClassName="EDLanguage.sandbox.SeniorDoc" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
@@ -831,7 +835,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.WaitTrigger_bSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -841,7 +845,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.WaitTrigger_b_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />

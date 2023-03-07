@@ -1150,5 +1150,140 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="4NxsD3bUtxm">
+    <property role="3GE5qa" value="ActionCard" />
+    <ref role="13h7C2" to="e88n:1xAzJ9NxGW2" resolve="ActionCardCondition" />
+    <node concept="13hLZK" id="4NxsD3bUtxn" role="13h7CW">
+      <node concept="3clFbS" id="4NxsD3bUtxo" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="7Y3K4B5laXR">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="13h7C2" to="e88n:6MzSDQOui5f" resolve="Test" />
+    <node concept="13i0hz" id="7Y3K4B5lb6e" role="13h7CS">
+      <property role="TrG5h" value="getFormattedName" />
+      <node concept="3Tm1VV" id="7Y3K4B5lb6f" role="1B3o_S" />
+      <node concept="3uibUv" id="7Y3K4B5lb6g" role="3clF45">
+        <ref role="3uigEE" to="wyt6:~String" resolve="String" />
+      </node>
+      <node concept="3clFbS" id="7Y3K4B5lb6h" role="3clF47">
+        <node concept="3cpWs8" id="7Y3K4B5lb6i" role="3cqZAp">
+          <node concept="3cpWsn" id="7Y3K4B5lb6j" role="3cpWs9">
+            <property role="TrG5h" value="removedSpaces" />
+            <node concept="17QB3L" id="7Y3K4B5lb6k" role="1tU5fm" />
+            <node concept="2OqwBi" id="7Y3K4B5lb6l" role="33vP2m">
+              <node concept="2OqwBi" id="7Y3K4B5lb6m" role="2Oq$k0">
+                <node concept="13iPFW" id="7Y3K4B5lb6n" role="2Oq$k0" />
+                <node concept="3TrcHB" id="7Y3K4B5lb6o" role="2OqNvi">
+                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+              <node concept="liA8E" id="7Y3K4B5lb6p" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.replaceAll(java.lang.String,java.lang.String)" resolve="replaceAll" />
+                <node concept="Xl_RD" id="7Y3K4B5lb6q" role="37wK5m">
+                  <property role="Xl_RC" value="\\s+" />
+                </node>
+                <node concept="Xl_RD" id="7Y3K4B5lb6r" role="37wK5m">
+                  <property role="Xl_RC" value="" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="7Y3K4B5lb6s" role="3cqZAp">
+          <node concept="2OqwBi" id="7Y3K4B5lb6t" role="3cqZAk">
+            <node concept="37vLTw" id="7Y3K4B5lb6u" role="2Oq$k0">
+              <ref role="3cqZAo" node="7Y3K4B5lb6j" resolve="removedSpaces" />
+            </node>
+            <node concept="liA8E" id="7Y3K4B5lb6v" role="2OqNvi">
+              <ref role="37wK5l" to="wyt6:~String.replace(java.lang.CharSequence,java.lang.CharSequence)" resolve="replace" />
+              <node concept="Xl_RD" id="7Y3K4B5lb6w" role="37wK5m">
+                <property role="Xl_RC" value="-" />
+              </node>
+              <node concept="Xl_RD" id="7Y3K4B5lb6x" role="37wK5m">
+                <property role="Xl_RC" value="" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13hLZK" id="7Y3K4B5laXS" role="13h7CW">
+      <node concept="3clFbS" id="7Y3K4B5laXT" role="2VODD2" />
+    </node>
+  </node>
+  <node concept="13h7C7" id="s75sN8M_hW">
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <ref role="13h7C2" to="e88n:s75sN8M$HE" resolve="AdmissionRouteProperty" />
+    <node concept="13hLZK" id="s75sN8M_hX" role="13h7CW">
+      <node concept="3clFbS" id="s75sN8M_hY" role="2VODD2">
+        <node concept="3clFbF" id="s75sN8M_o0" role="3cqZAp">
+          <node concept="2OqwBi" id="s75sN8M_o1" role="3clFbG">
+            <node concept="2OqwBi" id="s75sN8M_o2" role="2Oq$k0">
+              <node concept="13iPFW" id="s75sN8M_o3" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="s75sN8M_o4" role="2OqNvi">
+                <ref role="3TtcxE" to="e88n:1xAzJ9Jg7oB" resolve="possibleValues" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="s75sN8M_o5" role="2OqNvi">
+              <node concept="2ShNRf" id="s75sN8M_o6" role="25WWJ7">
+                <node concept="3zrR0B" id="s75sN8M_o7" role="2ShVmc">
+                  <node concept="3Tqbb2" id="s75sN8M_o8" role="3zrR0E">
+                    <ref role="ehGHo" to="e88n:1xAzJ9NG9TL" resolve="ElectiveAttendanceRoute" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="s75sN8M_o9" role="3cqZAp">
+          <node concept="2OqwBi" id="s75sN8M_oa" role="3clFbG">
+            <node concept="2OqwBi" id="s75sN8M_ob" role="2Oq$k0">
+              <node concept="13iPFW" id="s75sN8M_oc" role="2Oq$k0" />
+              <node concept="3Tsc0h" id="s75sN8M_od" role="2OqNvi">
+                <ref role="3TtcxE" to="e88n:1xAzJ9Jg7oB" resolve="possibleValues" />
+              </node>
+            </node>
+            <node concept="TSZUe" id="s75sN8M_oe" role="2OqNvi">
+              <node concept="2ShNRf" id="s75sN8M_of" role="25WWJ7">
+                <node concept="3zrR0B" id="s75sN8M_og" role="2ShVmc">
+                  <node concept="3Tqbb2" id="s75sN8M_oh" role="3zrR0E">
+                    <ref role="ehGHo" to="e88n:1xAzJ9NG9Lm" resolve="EmergencyAttendanceRoute" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="s75sN8M_or" role="3cqZAp" />
+        <node concept="3clFbF" id="s75sN8M_os" role="3cqZAp">
+          <node concept="37vLTI" id="s75sN8M_ot" role="3clFbG">
+            <node concept="2OqwBi" id="s75sN8M_ou" role="37vLTJ">
+              <node concept="13iPFW" id="s75sN8M_ov" role="2Oq$k0" />
+              <node concept="3TrcHB" id="s75sN8M_ow" role="2OqNvi">
+                <ref role="3TsBF5" to="e88n:1xAzJ9KWVQG" resolve="name" />
+              </node>
+            </node>
+            <node concept="Xl_RD" id="s75sN8M_ox" role="37vLTx">
+              <property role="Xl_RC" value="AdmissionRoute" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="13i0hz" id="s75sN8M_i7" role="13h7CS">
+      <property role="TrG5h" value="getName" />
+      <ref role="13i0hy" node="1xAzJ9JgcJZ" resolve="getName" />
+      <node concept="3Tm1VV" id="s75sN8M_i8" role="1B3o_S" />
+      <node concept="3clFbS" id="s75sN8M_ib" role="3clF47">
+        <node concept="3cpWs6" id="s75sN8M_mR" role="3cqZAp">
+          <node concept="Xl_RD" id="s75sN8M_nb" role="3cqZAk">
+            <property role="Xl_RC" value="AdmissionRoute" />
+          </node>
+        </node>
+      </node>
+      <node concept="17QB3L" id="s75sN8M_ic" role="3clF45" />
+    </node>
+  </node>
 </model>
 

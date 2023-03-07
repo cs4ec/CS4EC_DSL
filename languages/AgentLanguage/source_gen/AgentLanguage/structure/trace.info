@@ -498,8 +498,8 @@
     <file name="ConceptPresentationAspectImpl.java">
       <node id="2985733650842579975" at="24,0,25,0" concept="2" trace="props_AttributeDistributionTable" />
       <node id="2985733650842579975" at="217,55,218,76" concept="5" />
-      <node id="2985733650842579975" at="218,76,219,60" concept="1" />
-      <node id="2985733650842579975" at="219,60,220,58" concept="1" />
+      <node id="2985733650842579975" at="218,76,219,142" concept="1" />
+      <node id="2985733650842579975" at="219,142,220,58" concept="1" />
       <node id="2985733650842579975" at="221,9,222,48" concept="6" />
       <node id="2985733650842579975" at="216,60,221,9" concept="3" />
       <scope id="2985733650842579975" at="217,55,220,58">
@@ -518,8 +518,8 @@
       <node id="2985733650842579975" at="541,174,542,34" concept="1" />
       <node id="2985733650842579975" at="542,34,543,100" concept="1" />
       <node id="2985733650842579975" at="543,100,544,17" concept="1" />
-      <node id="2985733650851047287" at="544,17,545,119" concept="1" />
-      <node id="2985733650842580021" at="545,119,546,197" concept="1" />
+      <node id="506397452367550539" at="544,17,545,171" concept="1" />
+      <node id="2985733650842580021" at="545,171,546,197" concept="1" />
       <node id="2985733650842579975" at="546,197,547,22" concept="6" />
       <node id="2985733650842579975" at="540,0,549,0" concept="8" trace="createDescriptorForAttributeDistributionTable#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="2985733650842579975" at="190,60,191,51" />

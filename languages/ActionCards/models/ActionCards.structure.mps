@@ -257,6 +257,13 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4FTL$vJY2TV" resolve="StaffNumber" />
     </node>
+    <node concept="1TJgyj" id="21NGWDo2OZw" role="1TKVEi">
+      <property role="IQ2ns" value="2338410313177321440" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="ActionCards" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1xAzJ9Pwlb8" resolve="ActionCardReference" />
+    </node>
     <node concept="1TJgyi" id="4Y2SMttz1js" role="1TKVEl">
       <property role="IQ2nx" value="5729391434181383388" />
       <property role="TrG5h" value="runDuration" />
@@ -812,20 +819,6 @@
     <property role="34LRSv" value="Elective attendance" />
     <ref role="1TJDcQ" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
   </node>
-  <node concept="1TIwiD" id="1xAzJ9NKtIU">
-    <property role="EcuMT" value="1758249876510071738" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <property role="TrG5h" value="AttendanceRouteCondition" />
-    <property role="34LRSv" value="Check patient attendance route" />
-    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
-    <node concept="1TJgyj" id="1xAzJ9OY5DV" role="1TKVEi">
-      <property role="IQ2ns" value="1758249876530420347" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attendanceRoute" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="1xAzJ9PnC4u">
     <property role="EcuMT" value="1758249876537114910" />
     <property role="3GE5qa" value="Attributes.PatientProperties" />
@@ -1309,6 +1302,16 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="lSEs4504UO" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="s75sN8M$HE">
+    <property role="EcuMT" value="506397452388682602" />
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <property role="TrG5h" value="AdmissionRouteProperty" />
+    <property role="34LRSv" value="Admission Route" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="s75sN8M$HF" role="PzmwI">
+      <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
     </node>
   </node>
 </model>

@@ -899,3 +899,186 @@ INFO  [AWT-EventQueue-0] 2023-02-25T12:56:35,034 repast.simphony.batch.gui.Batch
 INFO  [AWT-EventQueue-0] 2023-02-25T12:56:35,037 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
 	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
 	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T21:06:17,152 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T21:06:17,242 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T21:14:45,415 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T21:14:45,488 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T21:22:03,671 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T21:22:03,673 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T21:22:27,514 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T21:22:27,516 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T21:23:09,280 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T21:23:09,325 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T21:23:58,894 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T21:23:58,896 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T21:29:29,034 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T21:29:29,078 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2023-02-25T21:33:27,327 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2023-02-25T21:33:27,380 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/batch/batch_params.xml to
+	/var/folders/70/bj2grq5d7gs2d5kh57p1x4_w0000gn/T/unrolledParamFile.txt
+FATAL [AWT-EventQueue-0] 2023-03-07T17:39:44,032 MessageCenter.INTERNAL.repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: EDLanguage/sandbox/NurseTreatmentsTrigger_m_0Signal
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[?:?]
+	at java.lang.Class.privateGetPublicMethods(Class.java:3427) ~[?:?]
+	at java.lang.Class.getMethods(Class.java:2019) ~[?:?]
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42) ~[?:?]
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30) ~[?:?]
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36) ~[?:?]
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155) ~[?:?]
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:373) ~[?:?]
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39) ~[?:?]
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216) ~[?:?]
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18) ~[?:?]
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33) ~[saf.core.runtime.jar:?]
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47) ~[saf.core.runtime.jar:?]
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16) ~[?:?]
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101) ~[?:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:771) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:722) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:716) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:741) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.NurseTreatmentsTrigger_m_0Signal
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source) ~[jpf.jar:1.0.0]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	... 29 more
+FATAL [AWT-EventQueue-0] 2023-03-07T17:40:29,285 MessageCenter.INTERNAL.repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: EDLanguage/sandbox/IspatientbeingadmittedtovulnerableareaTrigger_f_1Signal
+	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?]
+	at java.lang.Class.privateGetDeclaredMethods(Class.java:3402) ~[?:?]
+	at java.lang.Class.privateGetPublicMethods(Class.java:3427) ~[?:?]
+	at java.lang.Class.getMethods(Class.java:2019) ~[?:?]
+	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42) ~[?:?]
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30) ~[?:?]
+	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36) ~[?:?]
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155) ~[?:?]
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:373) ~[?:?]
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39) ~[?:?]
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216) ~[?:?]
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18) ~[?:?]
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33) ~[saf.core.runtime.jar:?]
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47) ~[saf.core.runtime.jar:?]
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16) ~[?:?]
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101) ~[?:?]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:318) ~[?:?]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:771) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:722) ~[?:?]
+	at java.awt.EventQueue$4.run(EventQueue.java:716) ~[?:?]
+	at java.security.AccessController.doPrivileged(AccessController.java:399) ~[?:?]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86) ~[?:?]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:741) ~[?:?]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.IspatientbeingadmittedtovulnerableareaTrigger_f_1Signal
+	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source) ~[jpf.jar:1.0.0]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[?:?]
+	... 29 more
+FATAL [Thread-4] 2023-03-07T17:52:10,952 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (2881.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Iterable.iterator()" because the return value of "repast.simphony.space.graph.Network.getEdges(Object)" is null
+	at EDLanguage.sandbox.Doctor$RemoveRelationshipAction_g0b.execute(Doctor.java:612) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:131) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:102) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:128) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:81) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2023-03-07T17:56:00,405 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (5761.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Iterable.iterator()" because the return value of "repast.simphony.space.graph.Network.getEdges(Object)" is null
+	at EDLanguage.sandbox.Doctor$RemoveRelationshipAction_g0a.execute(Doctor.java:466) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:131) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:102) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:128) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:81) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2023-03-07T17:59:08,367 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (8641.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.NullPointerException: Cannot invoke "java.lang.Iterable.iterator()" because the return value of "repast.simphony.space.graph.Network.getEdges(Object)" is null
+	at EDLanguage.sandbox.Doctor$RemoveRelationshipAction_e0c.execute(Doctor.java:706) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:131) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:102) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:128) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:81) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more

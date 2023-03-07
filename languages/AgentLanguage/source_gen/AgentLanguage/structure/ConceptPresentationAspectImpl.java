@@ -216,7 +216,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.AttributeDistributionTable:
         if (props_AttributeDistributionTable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("AttributeDistributionTable");
+          cpb.presentationByReference(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f407L, 0x70715ccc787d84bL, "attribute", "", "");
           props_AttributeDistributionTable = cpb.create();
         }
         return props_AttributeDistributionTable;

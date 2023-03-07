@@ -540,28 +540,32 @@
   		displayName="CepheidFluBSpecificity" type="double" defaultValue="99.9"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="InfectionSpreadChance:COVIDAsymptomatic-10_a0"
-  		displayName="InfectionSpreadChance:COVIDAsymptomatic-10_a0" type="double" defaultValue="0.042"
+  	<parameter name="InfectionSpreadChance:COVIDSymptomatic-0.4_a0"
+  		displayName="InfectionSpreadChance:COVIDSymptomatic-0.4_a0" type="double" defaultValue="0.012"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="InfectionSpreadChance:COVIDSymptomatic-10_b0"
-  		displayName="InfectionSpreadChance:COVIDSymptomatic-10_b0" type="double" defaultValue="0.42"
+  	<parameter name="InfectionSpreadChance:COVIDSymptomatic-1.2_b0"
+  		displayName="InfectionSpreadChance:COVIDSymptomatic-1.2_b0" type="double" defaultValue="0.006"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="InfectionSpreadChance:FluAAsymptomatic-10_a0"
-  		displayName="InfectionSpreadChance:FluAAsymptomatic-10_a0" type="double" defaultValue="0.042"
+  	<parameter name="InfectionSpreadChance:FluASymptomatic-0.4_a0"
+  		displayName="InfectionSpreadChance:FluASymptomatic-0.4_a0" type="double" defaultValue="0.012"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="InfectionSpreadChance:FluASymptomatic-10_b0"
-  		displayName="InfectionSpreadChance:FluASymptomatic-10_b0" type="double" defaultValue="0.42"
+  	<parameter name="InfectionSpreadChance:FluASymptomatic-1.2_b0"
+  		displayName="InfectionSpreadChance:FluASymptomatic-1.2_b0" type="double" defaultValue="0.006"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="InfectionSpreadChance:FluBAsymptomatic-10_a0"
-  		displayName="InfectionSpreadChance:FluBAsymptomatic-10_a0" type="double" defaultValue="0.042"
+  	<parameter name="InfectionSpreadChance:FluBSymptomatic-0.4_a0"
+  		displayName="InfectionSpreadChance:FluBSymptomatic-0.4_a0" type="double" defaultValue="0.012"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="InfectionSpreadChance:FluBSymptomatic-10_b0"
-  		displayName="InfectionSpreadChance:FluBSymptomatic-10_b0" type="double" defaultValue="0.42"
+  	<parameter name="InfectionSpreadChance:FluBSymptomatic-1.2_b0"
+  		displayName="InfectionSpreadChance:FluBSymptomatic-1.2_b0" type="double" defaultValue="0.006"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientProfileAdmissionRouteEmergencyAttendance"
+  		displayName="patientProfileAdmissionRouteEmergencyAttendance" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientProfileCOVIDInfectionStatusSymptomatic"
@@ -617,11 +621,11 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientProfileSeveritymoderate"
-  		displayName="patientProfileSeveritymoderate" type="double" defaultValue="27"
+  		displayName="patientProfileSeveritymoderate" type="double" defaultValue="37"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientProfileSeveritylow"
-  		displayName="patientProfileSeveritylow" type="double" defaultValue="70"
+  		displayName="patientProfileSeveritylow" type="double" defaultValue="60"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientProfileImmunocompromisedYes"
@@ -630,10 +634,6 @@
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientProfileImmunocompromisedNo"
   		displayName="patientProfileImmunocompromisedNo" type="double" defaultValue="99"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="patientProfileadmissionRouteEmergencyAttendance"
-  		displayName="patientProfileadmissionRouteEmergencyAttendance" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 </parameters>

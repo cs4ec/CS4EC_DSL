@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class VulnerableArea extends RoomType {
-  private static VulnerableArea instance;
+  private static RoomType instance;
 
   private VulnerableArea() {
     super();

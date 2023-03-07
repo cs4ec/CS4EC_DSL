@@ -9,7 +9,6 @@ import simcore.basicStructures.ToolBox;
 import java.util.function.Predicate;
 import simcore.basicStructures.Room;
 import simcore.agents.Agent;
-import repast.simphony.space.graph.Network;
 
 public class FluCohortTrigger_cSignal extends ActorTypeSignal {
   public FluCohortTrigger_cSignal() {
@@ -18,12 +17,12 @@ public class FluCohortTrigger_cSignal extends ActorTypeSignal {
     this.AddActor("Doctor");
   }
 
-  public boolean checkPreCondition(Context context, final Actor receiver) {
+  public boolean checkPreCondition(Context context, Actor receiver) {
     if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(FluPositiveCohort.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity() || r.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
           public boolean test(Agent actor) {
-            return actor.getClass() == patient.class && ((Network) context.getProjection("CurrentPatientAllocations")).getEdge(receiver, actor) != null;
+            return actor == GetData("patient");
           }
         });
       }

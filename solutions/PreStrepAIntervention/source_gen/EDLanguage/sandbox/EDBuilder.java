@@ -32,6 +32,7 @@ import simcore.utilities.PatientArrivalStore;
 import java.util.Map;
 import simcore.basicStructures.Wall;
 import simcore.agents.Agent;
+import java.util.ArrayList;
 
 public class EDBuilder implements ContextBuilder<Object> {
 
@@ -243,8 +244,11 @@ public class EDBuilder implements ContextBuilder<Object> {
     new NetworkBuilder("HistoricalPatientAllocations", context, true).buildNetwork();
 
     ISchedule schedule = RunEnvironment.getInstance().getCurrentSchedule();
-    ScheduleParameters stop = ScheduleParameters.createAtEnd(ScheduleParameters.LAST_PRIORITY);
+    ScheduleParameters stop = ScheduleParameters.createRepeating((86400 / params.getInteger("SecondsPerTick")), (86400 / params.getInteger("SecondsPerTick")), ScheduleParameters.FIRST_PRIORITY);
     schedule.schedule(stop, this, "printActivityHistories");
+
+    ScheduleParameters midPoint = ScheduleParameters.createRepeating((86400 / params.getInteger("SecondsPerTick")), (86400 / params.getInteger("SecondsPerTick")), ScheduleParameters.LAST_PRIORITY);
+    schedule.schedule(midPoint, this, "emptyDeSpawnedAgents");
 
 
     return context;
@@ -326,5 +330,18 @@ public class EDBuilder implements ContextBuilder<Object> {
       a.printActivityHistory();
     }
   }
+
+  public void emptyDeSpawnedAgents() {
+    ArrayList<Object> listAgents = new ArrayList();
+    for (Object object : context.getObjects(Agent.class)) {
+      listAgents.add(object);
+    }
+    for (Object agent : listAgents) {
+      if (((Agent) agent).deSpawnTime != null) {
+        context.remove(agent);
+      }
+    }
+  }
+
 
 }

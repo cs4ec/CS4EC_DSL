@@ -619,33 +619,6 @@
       </node>
     </node>
   </node>
-  <node concept="1M2fIO" id="1xAzJ9NKtNr">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1M2myG" to="e88n:1xAzJ9NKtIU" resolve="AttendanceRouteCondition" />
-    <node concept="9S07l" id="1xAzJ9NKtNs" role="9Vyp8">
-      <node concept="3clFbS" id="1xAzJ9NKtNt" role="2VODD2">
-        <node concept="3clFbF" id="1xAzJ9NKtRn" role="3cqZAp">
-          <node concept="3clFbT" id="1xAzJ9NKtRm" role="3clFbG">
-            <property role="3clFbU" value="true" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="9SLcT" id="1xAzJ9OREA3" role="9SGkU">
-      <node concept="3clFbS" id="1xAzJ9OREA4" role="2VODD2">
-        <node concept="3clFbF" id="1xAzJ9OREAr" role="3cqZAp">
-          <node concept="2OqwBi" id="1xAzJ9OREL1" role="3clFbG">
-            <node concept="2DD5aU" id="1xAzJ9OREZN" role="2Oq$k0" />
-            <node concept="2Zo12i" id="1xAzJ9ORF9X" role="2OqNvi">
-              <node concept="chp4Y" id="1xAzJ9ORFh1" role="2Zo12j">
-                <ref role="cht4Q" to="e88n:1xAzJ9NG9Dt" resolve="AttendanceRoute" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="1M2fIO" id="1xAzJ9PnEpc">
     <property role="3GE5qa" value="Expressions.Conditions" />
     <ref role="1M2myG" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />

@@ -125,7 +125,7 @@ public class WardNurse extends Actor {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (true) {
-      if (pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
+      if (behaviour.getSignalTrigger() != null && pRoom.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
         public boolean test(Agent a) {
           return a == behaviour.getSignalTrigger().GetData("patient");
         }
@@ -165,13 +165,16 @@ public class WardNurse extends Actor {
 
 
 
+  public void ALLCOLLECTEDBEHAVIOURS() {
+  }
+
 
 
 
   public int WardNursegetAliveTime() {
     if (deSpawnTime == null) {
-      deSpawnTime = TimeKeeper.getInstance().getTime();
+      return 0;
     }
-    return (int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime);
+    return Math.abs((int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime));
   }
 }

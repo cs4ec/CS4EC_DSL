@@ -25,6 +25,8 @@
       <modulePath path="$PROJECT_DIR$/solutions/QuickCompileTestingBed/QuickCompileTestingBed.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/RepastProvider/RepastProvider.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpread/StThomasDiseaseSpread.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpreadRespBays/StThomasDiseaseSpreadRespBays.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpreadSpeedy/StThomasDiseaseSpreadSpeedy.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StrepAIntervention/StrepAIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StyleFiles/StyleFiles.msd" folder="" />
     </projectModules>

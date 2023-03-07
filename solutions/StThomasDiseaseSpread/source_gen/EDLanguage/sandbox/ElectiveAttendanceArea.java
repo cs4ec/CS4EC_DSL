@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class ElectiveAttendanceArea extends RoomType {
-  private static ElectiveAttendanceArea instance;
+  private static RoomType instance;
 
   private ElectiveAttendanceArea() {
     super();

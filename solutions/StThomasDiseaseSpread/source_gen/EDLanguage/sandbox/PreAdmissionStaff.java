@@ -168,6 +168,7 @@ public class PreAdmissionStaff extends Actor {
 
 
 
+
   public int PreAdmissionStaffgetAliveTime() {
     if (deSpawnTime == null) {
       return 0;

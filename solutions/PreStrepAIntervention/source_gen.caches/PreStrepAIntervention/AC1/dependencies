@@ -2,10 +2,8 @@
 <dependenciesRoot>
   <dependency className="PreStrepAIntervention.AC1.AdditionalAssessmentTrigger_cSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -14,10 +12,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.AdditionalAssessmentTrigger_c_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -26,10 +22,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.AdditionalAssessmentTrigger_gSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -38,10 +32,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.AdmitToWardsTrigger_hSignal">
     <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -49,14 +41,19 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.Arrival_ChecksTrigger_aSignal">
+    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.AssessmentTrigger_aSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -65,10 +62,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.AssessmentTrigger_a_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -99,10 +94,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.ChecksTrigger_bSignal">
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -111,10 +104,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.ChecksTrigger_cSignal">
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -123,10 +114,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.DischargeTrigger_dSignal">
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -135,10 +124,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.DischargeTrigger_d_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -170,6 +157,7 @@
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.NumberFormatException" />
     <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -213,6 +201,7 @@
     <classNode dependClassName="EDLanguage.sandbox.GASNurse" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -279,6 +268,7 @@
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -329,6 +319,7 @@
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -383,6 +374,7 @@
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -432,6 +424,7 @@
     <classNode dependClassName="EDLanguage.sandbox.WaitTrigger_b_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -480,10 +473,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.ObsReviewTrigger_eSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -492,10 +483,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.ObsReviewTrigger_e_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -504,10 +493,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.ObsReviewTrigger_fSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -516,17 +503,12 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.ObsReviewTrigger_f_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="PreStrepAIntervention.AC1.PatientArrivesTrigger_bSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.RadiologyRoom">
@@ -568,6 +550,7 @@
     <classNode dependClassName="EDLanguage.sandbox.SeniorDoc" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -595,10 +578,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.SeniorDocReviewTrigger_iSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -617,10 +598,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.SeniorReviewTrigger_gSignal">
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -656,7 +635,6 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.TriageNurse">
-    <classNode dependClassName="EDLanguage.sandbox.Arrival_ChecksTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.AssessmentTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.AssessmentTrigger_a_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.ChecksTrigger_bSignal" />
@@ -668,6 +646,7 @@
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -706,10 +685,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.TriageTrigger_aSignal">
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -718,10 +695,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.WaitTrigger_bSignal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -730,10 +705,8 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.WaitTrigger_b_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -751,6 +724,7 @@
   <dependency className="PreStrepAIntervention.AC1.WardNurse">
     <classNode dependClassName="EDLanguage.sandbox.WardNurse" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -785,6 +759,7 @@
   </dependency>
   <dependency className="PreStrepAIntervention.AC1.map_PatientProfile">
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
@@ -818,6 +793,7 @@
   <dependency className="PreStrepAIntervention.AC1.patient">
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.lang.System" />

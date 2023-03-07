@@ -32,6 +32,7 @@ import simcore.utilities.PatientArrivalStore;
 import java.util.Map;
 import simcore.basicStructures.Wall;
 import simcore.agents.Agent;
+import java.util.ArrayList;
 
 public class EDBuilder implements ContextBuilder<Object> {
 
@@ -93,29 +94,29 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     Area EmergencyDepartment_0 = new Area(context, space, grid, 1, 1, 70, 200, Color.WHITE);
     EmergencyDepartment_0.addResource(LabPCR.getInstance(), 1000);
-    EmergencyDepartment_0.addResource(LateralFlow.getInstance(), 1000);
+    EmergencyDepartment_0.addResource(DualCassetteLateralFlowTest.getInstance(), 1000);
     EmergencyDepartment_0.addResource(LIAT.getInstance(), 1000);
     EmergencyDepartment_0.addResource(Cepheid.getInstance(), 1000);
     EmergencyDepartment_0.addResource(PHEThree.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishAmount(LabPCR.getInstance(), 1000);
-    EmergencyDepartment_0.setReplenishAmount(LateralFlow.getInstance(), 1000);
+    EmergencyDepartment_0.setReplenishAmount(DualCassetteLateralFlowTest.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishAmount(LIAT.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishAmount(Cepheid.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishAmount(PHEThree.getInstance(), 1000);
     EmergencyDepartment_0.setReplenishFrequency(LabPCR.getInstance(), 1);
-    EmergencyDepartment_0.setReplenishFrequency(LateralFlow.getInstance(), 1);
+    EmergencyDepartment_0.setReplenishFrequency(DualCassetteLateralFlowTest.getInstance(), 1);
     EmergencyDepartment_0.setReplenishFrequency(LIAT.getInstance(), 1);
     EmergencyDepartment_0.setReplenishFrequency(Cepheid.getInstance(), 1);
     EmergencyDepartment_0.setReplenishFrequency(PHEThree.getInstance(), 1);
     Room Entrance_a = new Room("Entrance", context, space, grid, 5, 199, 3, 1, 1, 10000, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room TriageWaitingRoom_b = new Room("TriageWaitingRoom", context, space, grid, 10, 195, 10, 5, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room TriageWaitingRoom_b = new Room("TriageWaitingRoom", context, space, grid, 10, 195, 11, 5, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room Triage_c = new Room("Triage", context, space, grid, 10, 190, 5, 5, 1, 20, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
-    Room MinorsWaitingRoom_d = new Room("MinorsWaitingRoom", context, space, grid, 15, 170, 10, 15, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room MinorsWaitingRoom_d = new Room("MinorsWaitingRoom", context, space, grid, 16, 170, 11, 13, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room MajorsCOne_e = new Room("MajorsCOne", context, space, grid, 3, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCTwo_f = new Room("MajorsCTwo", context, space, grid, 8, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCThree_g = new Room("MajorsCThree", context, space, grid, 15, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCFour_h = new Room("MajorsCFour", context, space, grid, 20, 163, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room MajorsCFive_i = new Room("MajorsCFive", context, space, grid, 1, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room MajorsCFive_i = new Room("MajorsCFive", context, space, grid, 1, 156, 5, 5, 1, 5, MajorsCBay.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCSix_j = new Room("MajorsCSix", context, space, grid, 6, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCSeven_k = new Room("MajorsCSeven", context, space, grid, 11, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MajorsCEight_l = new Room("MajorsCEight", context, space, grid, 16, 156, 5, 5, 1, 5, MajorsC_Cubicle.getInstance(), Color.RED, EmergencyDepartment_0);
@@ -140,9 +141,65 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room COVIDCohort_eb = new Room("COVIDCohort", context, space, grid, 40, 165, 10, 10, 1, 10000, COVIDPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
     Room FluCohort_fb = new Room("FluCohort", context, space, grid, 40, 153, 10, 10, 1, 100000, FluPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
     Room GreenBay_gb = new Room("GreenBay", context, space, grid, 52, 165, 10, 10, 1, 100000, GreenBay.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room SideRoom_hb = new Room("SideRoom", context, space, grid, 52, 151, 10, 10, 1, 10000000, SideRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room SideRoom_hb = new Room("SideRoom", context, space, grid, 52, 153, 10, 10, 1, 10000000, SideRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
 
     try {
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 11, 196, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 11, 197, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 11, 198, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 11, 199, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 14, 196, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 14, 197, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 14, 198, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 14, 199, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 17, 196, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 17, 197, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 17, 198, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 17, 199, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 20, 196, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 20, 197, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 20, 198, TriageWaitingRoom_b));
+      TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 20, 199, TriageWaitingRoom_b));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 25, 170, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 24, 170, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 23, 170, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 22, 170, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 20, 170, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 19, 170, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 18, 170, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 17, 170, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 25, 173, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 24, 173, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 23, 173, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 22, 173, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 20, 173, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 19, 173, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 18, 173, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 17, 173, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 25, 176, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 24, 176, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 23, 176, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 22, 176, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 20, 176, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 19, 176, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 18, 176, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 17, 176, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 25, 179, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 24, 179, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 23, 179, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 22, 179, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 20, 179, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 19, 179, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 18, 179, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 17, 179, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 25, 182, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 24, 182, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 23, 182, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 22, 182, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 20, 182, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 19, 182, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 18, 182, MinorsWaitingRoom_d));
+      MinorsWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 17, 182, MinorsWaitingRoom_d));
       MajorsCOne_e.addOccupiable(new Bed(context, space, grid, 4, 164, MajorsCOne_e));
       MajorsCTwo_f.addOccupiable(new Bed(context, space, grid, 9, 164, MajorsCTwo_f));
       MajorsCThree_g.addOccupiable(new Bed(context, space, grid, 16, 164, MajorsCThree_g));
@@ -152,7 +209,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsCSeven_k.addOccupiable(new Bed(context, space, grid, 12, 157, MajorsCSeven_k));
       MajorsCEight_l.addOccupiable(new Bed(context, space, grid, 17, 157, MajorsCEight_l));
       MajorsCNine_m.addOccupiable(new Bed(context, space, grid, 22, 157, MajorsCNine_m));
-      MajorsABOne_n.addOccupiable(new Bed(context, space, grid, 23, 196, MajorsABOne_n));
+      MajorsABOne_n.addOccupiable(new Bed(context, space, grid, 36, 196, MajorsABOne_n));
       MajorsABTwo_o.addOccupiable(new Bed(context, space, grid, 41, 196, MajorsABTwo_o));
       MajorsABThree_p.addOccupiable(new Bed(context, space, grid, 46, 196, MajorsABThree_p));
       MajorsABFour_q.addOccupiable(new Bed(context, space, grid, 51, 196, MajorsABFour_q));
@@ -201,8 +258,11 @@ public class EDBuilder implements ContextBuilder<Object> {
     new NetworkBuilder("HistoricalPatientAllocations", context, true).buildNetwork();
 
     ISchedule schedule = RunEnvironment.getInstance().getCurrentSchedule();
-    ScheduleParameters stop = ScheduleParameters.createAtEnd(ScheduleParameters.LAST_PRIORITY);
+    ScheduleParameters stop = ScheduleParameters.createRepeating((86400 / params.getInteger("SecondsPerTick")), (86400 / params.getInteger("SecondsPerTick")), ScheduleParameters.FIRST_PRIORITY);
     schedule.schedule(stop, this, "printActivityHistories");
+
+    ScheduleParameters midPoint = ScheduleParameters.createRepeating((86400 / params.getInteger("SecondsPerTick")), (86400 / params.getInteger("SecondsPerTick")), ScheduleParameters.LAST_PRIORITY);
+    schedule.schedule(midPoint, this, "emptyDeSpawnedAgents");
 
 
     return context;
@@ -260,5 +320,18 @@ public class EDBuilder implements ContextBuilder<Object> {
       a.printActivityHistory();
     }
   }
+
+  public void emptyDeSpawnedAgents() {
+    ArrayList<Object> listAgents = new ArrayList();
+    for (Object object : context.getObjects(Agent.class)) {
+      listAgents.add(object);
+    }
+    for (Object agent : listAgents) {
+      if (((Agent) agent).deSpawnTime != null) {
+        context.remove(agent);
+      }
+    }
+  }
+
 
 }

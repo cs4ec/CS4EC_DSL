@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="QuickCompileTestingBed.AC1.AdmittoVulnerableAreaTrigger_dSignal">
-    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="QuickCompileTestingBed.AC1.Bed">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -28,10 +18,6 @@
     <classNode dependClassName="simcore.basicStructures.Occupiable" />
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.COVIDPositiveCohort">
-    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="QuickCompileTestingBed.AC1.Cepheid">
     <classNode dependClassName="EDLanguage.sandbox.Cepheid" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
@@ -48,20 +34,8 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="QuickCompileTestingBed.AC1.CubicleNurse">
-    <classNode dependClassName="EDLanguage.sandbox.AdmittoVulnerableAreaTrigger_dSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.Bed" />
-    <classNode dependClassName="EDLanguage.sandbox.Cepheid" />
-    <classNode dependClassName="EDLanguage.sandbox.CepheidExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_eSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.LIAT" />
-    <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.PerformLIATorCepheidTrigger_cSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.Seat" />
-    <classNode dependClassName="EDLanguage.sandbox.StaffReception" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
@@ -72,19 +46,15 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.Collectors" />
     <classNode dependClassName="java.util.stream.StreamSupport" />
-    <classNode dependClassName="org.iets3.core.expr.simpleTypes.runtime.AH" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
-    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
-    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
-    <classNode dependClassName="simcore.action.PassiveBehaviourStep" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
@@ -102,8 +72,8 @@
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.DischargeTrigger_eSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+  <dependency className="QuickCompileTestingBed.AC1.DischargeTrigger_bSignal">
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -114,9 +84,7 @@
   </dependency>
   <dependency className="QuickCompileTestingBed.AC1.Doctor">
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
-    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.StaffReception" />
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
@@ -158,29 +126,17 @@
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
   <dependency className="QuickCompileTestingBed.AC1.EDBuilder">
-    <classNode dependClassName="EDLanguage.sandbox.Bed" />
-    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.Cepheid" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.Doctor" />
-    <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
-    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
     <classNode dependClassName="EDLanguage.sandbox.LabTechnician" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlow" />
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode dependClassName="EDLanguage.sandbox.PreAdmissionStaff" />
-    <classNode dependClassName="EDLanguage.sandbox.Seat" />
-    <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
-    <classNode dependClassName="EDLanguage.sandbox.StaffReception" />
-    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.WardNurse" />
     <classNode dependClassName="EDLanguage.sandbox.patientGenerator_0" />
     <classNode dependClassName="java.awt.Color" />
@@ -220,35 +176,13 @@
     <classNode dependClassName="simcore.utilities.StaffAdder" />
     <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
   </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.ElectiveAttendanceArea">
-    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
+  <dependency className="QuickCompileTestingBed.AC1.Entrance">
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.FluPositiveCohort">
-    <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.GreenBay">
-    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.IspatientbeingadmittedtovulnerableareaTrigger_bSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="QuickCompileTestingBed.AC1.LIAT">
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.LIATBooth">
-    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="QuickCompileTestingBed.AC1.LIATExecutionTimeMap">
     <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
@@ -306,10 +240,6 @@
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.Labaratory">
-    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="QuickCompileTestingBed.AC1.LateralFlow">
     <classNode dependClassName="EDLanguage.sandbox.LateralFlow" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
@@ -326,36 +256,6 @@
     <classNode dependClassName="EDLanguage.sandbox.LiatOrCepheid" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
   </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.MainEntrance">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.MajorsAB_Cubicle">
-    <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.Doctor" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.MajorsCWaitingRoom">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.MajorsC_Cubicle">
-    <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.Doctor" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.NonRespiratoryArea">
-    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryArea" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.NonRespiratoryCohort">
-    <classNode dependClassName="EDLanguage.sandbox.NonRespiratoryCohort" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="QuickCompileTestingBed.AC1.PHEThree">
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode extendsClassName="simcore.basicStructures.Resource" />
@@ -368,17 +268,7 @@
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.PatientArrivesTrigger_fSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.PerformLIATorCepheidTrigger_cSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+  <dependency className="QuickCompileTestingBed.AC1.PatientArrivesTrigger_cSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="QuickCompileTestingBed.AC1.PreAdmissionStaff">
@@ -417,14 +307,6 @@
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.RadiologyRoom">
-    <classNode dependClassName="EDLanguage.sandbox.RadiologyRoom" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.RespiratoryArea">
-    <classNode dependClassName="EDLanguage.sandbox.RespiratoryArea" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="QuickCompileTestingBed.AC1.Seat">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -443,30 +325,13 @@
     <classNode dependClassName="simcore.basicStructures.Occupiable" />
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.SideRoom">
-    <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.StaffReception">
-    <classNode dependClassName="EDLanguage.sandbox.StaffReception" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.TaskRoom">
-    <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.TriageDesk">
-    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
   <dependency className="QuickCompileTestingBed.AC1.TriageNurse">
     <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.IspatientbeingadmittedtovulnerableareaTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsCWaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_bSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.Seat" />
-    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
@@ -507,18 +372,6 @@
     <classNode dependClassName="saf.v3d.scene.VSpatial" />
     <classNode dependClassName="simcore.agents.Actor" />
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.VulnerableArea">
-    <classNode dependClassName="EDLanguage.sandbox.VulnerableArea" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.WaitingRoom">
-    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
-  </dependency>
-  <dependency className="QuickCompileTestingBed.AC1.Ward">
-    <classNode dependClassName="EDLanguage.sandbox.Ward" />
-    <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="QuickCompileTestingBed.AC1.WardNurse">
     <classNode dependClassName="EDLanguage.sandbox.WardNurse" />
@@ -605,13 +458,10 @@
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="java.util.stream.Collectors" />
     <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
-    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
     <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
-    <classNode dependClassName="simcore.action.BackgroundBehaviour" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.action.InstantBehaviourStep" />
@@ -623,7 +473,7 @@
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>
   <dependency className="QuickCompileTestingBed.AC1.patientGenerator_0">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.Entrance" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />

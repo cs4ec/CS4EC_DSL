@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class GreenBay extends RoomType {
-  private static GreenBay instance;
+  private static RoomType instance;
 
   private GreenBay() {
     super();

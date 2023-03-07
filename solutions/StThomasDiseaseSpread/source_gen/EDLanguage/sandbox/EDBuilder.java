@@ -45,7 +45,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     new ToolBox(this).GetLog().clearOldContents();
 
     context.setId("EDProject");
-    int mapWidth = 120;
+    int mapWidth = 125;
     int mapHeight = 250;
 
     Parameters params = RunEnvironment.getInstance().getParameters();
@@ -140,10 +140,21 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsABFifteen_db = new Room("MajorsABFifteen", context, space, grid, 55, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
     Room MajorsABSixteen_eb = new Room("MajorsABSixteen", context, space, grid, 60, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
     Room MajorsABSeventeen_fb = new Room("MajorsABSeventeen", context, space, grid, 65, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room COVIDCohort_gb = new Room("COVIDCohort", context, space, grid, 40, 165, 10, 10, 1, 10000, COVIDPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room FluCohort_hb = new Room("FluCohort", context, space, grid, 40, 153, 10, 10, 1, 100000, FluPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
-    Room GreenBay_ib = new Room("GreenBay", context, space, grid, 52, 165, 10, 10, 1, 100000, GreenBay.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room SideRoom_jb = new Room("SideRoom", context, space, grid, 52, 151, 10, 10, 1, 10000000, SideRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room MajorsABEighteen_gb = new Room("MajorsABEighteen", context, space, grid, 70, 195, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABNineteen_hb = new Room("MajorsABNineteen", context, space, grid, 70, 190, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwenty_ib = new Room("MajorsABTwenty", context, space, grid, 70, 185, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwentyOne_jb = new Room("MajorsABTwentyOne", context, space, grid, 70, 180, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwentyTwo_kb = new Room("MajorsABTwentyTwo", context, space, grid, 70, 175, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwentyThree_lb = new Room("MajorsABTwentyThree", context, space, grid, 70, 170, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwentyFour_mb = new Room("MajorsABTwentyFour", context, space, grid, 70, 165, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwentFive_nb = new Room("MajorsABTwentFive", context, space, grid, 70, 160, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwentySix_ob = new Room("MajorsABTwentySix", context, space, grid, 70, 155, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwentySeven_pb = new Room("MajorsABTwentySeven", context, space, grid, 70, 150, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwentyEight_qb = new Room("MajorsABTwentyEight", context, space, grid, 70, 145, 5, 5, 1, 5, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room COVIDCohort_rb = new Room("COVIDCohort", context, space, grid, 40, 165, 10, 10, 1, 10000, COVIDPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room FluCohort_sb = new Room("FluCohort", context, space, grid, 40, 153, 10, 10, 1, 100000, FluPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
+    Room GreenBay_tb = new Room("GreenBay", context, space, grid, 52, 165, 10, 10, 1, 100000, GreenBay.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room SideRoom_ub = new Room("SideRoom", context, space, grid, 52, 151, 10, 10, 1, 10000000, SideRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
 
     try {
       TriageWaitingRoom_b.addOccupiable(new Seat(context, space, grid, 11, 196, TriageWaitingRoom_b));
@@ -228,6 +239,17 @@ public class EDBuilder implements ContextBuilder<Object> {
       MajorsABFifteen_db.addOccupiable(new Bed(context, space, grid, 56, 181, MajorsABFifteen_db));
       MajorsABSixteen_eb.addOccupiable(new Bed(context, space, grid, 61, 181, MajorsABSixteen_eb));
       MajorsABSeventeen_fb.addOccupiable(new Bed(context, space, grid, 66, 181, MajorsABSeventeen_fb));
+      MajorsABEighteen_gb.addOccupiable(new Bed(context, space, grid, 71, 196, MajorsABEighteen_gb));
+      MajorsABNineteen_hb.addOccupiable(new Bed(context, space, grid, 71, 191, MajorsABNineteen_hb));
+      MajorsABTwenty_ib.addOccupiable(new Bed(context, space, grid, 71, 186, MajorsABTwenty_ib));
+      MajorsABTwentyOne_jb.addOccupiable(new Bed(context, space, grid, 71, 181, MajorsABTwentyOne_jb));
+      MajorsABTwentyTwo_kb.addOccupiable(new Bed(context, space, grid, 71, 176, MajorsABTwentyTwo_kb));
+      MajorsABTwentyThree_lb.addOccupiable(new Bed(context, space, grid, 71, 171, MajorsABTwentyThree_lb));
+      MajorsABTwentyFour_mb.addOccupiable(new Bed(context, space, grid, 71, 166, MajorsABTwentyFour_mb));
+      MajorsABTwentFive_nb.addOccupiable(new Bed(context, space, grid, 71, 161, MajorsABTwentFive_nb));
+      MajorsABTwentySix_ob.addOccupiable(new Bed(context, space, grid, 71, 156, MajorsABTwentySix_ob));
+      MajorsABTwentySeven_pb.addOccupiable(new Bed(context, space, grid, 71, 151, MajorsABTwentySeven_pb));
+      MajorsABTwentyEight_qb.addOccupiable(new Bed(context, space, grid, 71, 146, MajorsABTwentyEight_qb));
 
     } catch (NumberFormatException e) {
     }

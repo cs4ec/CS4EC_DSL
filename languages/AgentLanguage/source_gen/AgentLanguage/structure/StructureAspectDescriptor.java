@@ -542,7 +542,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/2985733650842579975");
     b.version(2);
-    b.property("attributeName", 0x296f74efb4e82777L).type(PrimitiveTypeId.STRING).origin("2985733650851047287").done();
+    b.associate("attribute", 0x70715ccc787d84bL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f125516L).optional(false).origin("506397452367550539").done();
     b.aggregate("lines", 0x296f74efb466f435L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f367L).optional(true).ordered(true).multiple(true).origin("2985733650842580021").done();
     return b.create();
   }

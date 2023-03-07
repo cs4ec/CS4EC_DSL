@@ -156,7 +156,6 @@ public class GASNurse extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_37(behaviourBuilder));
-    plstSteps.add(new StayAction_b0a_17(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -219,11 +218,11 @@ public class GASNurse extends Actor {
 
 
 
-  public class MoveAction_a0a_33 extends BehaviourStep {
+  public class MoveAction_a0a_27 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_33(Behaviour behaviour) {
+    public MoveAction_a0a_27(Behaviour behaviour) {
       target = GASRoom.getInstance();
       this.behaviour = behaviour;
     }
@@ -288,11 +287,11 @@ public class GASNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_23 extends PassiveBehaviourStep {
+  public class StayAction_d0a_14 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = TimeDistributionTable_a1.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_23(Behaviour behaviour) {
+    public StayAction_d0a_14(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -452,28 +451,11 @@ public class GASNurse extends Actor {
       }
     }
   }
-  public class StayAction_h0a_3 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_h0a_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
-  public class MoveAction_a0a_35 extends BehaviourStep {
+  public class MoveAction_a0a_33 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_35(Behaviour behaviour) {
+    public MoveAction_a0a_33(Behaviour behaviour) {
       target = GASRoom.getInstance();
       this.behaviour = behaviour;
     }
@@ -538,11 +520,11 @@ public class GASNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_25 extends PassiveBehaviourStep {
+  public class StayAction_d0a_17 extends PassiveBehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int testingTime = TimeDistributionTable_a1.getInstance().getProcessingTime();
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_25(Behaviour behaviour) {
+    public StayAction_d0a_17(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -604,23 +586,6 @@ public class GASNurse extends Actor {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         behaviour.injectSteps(plstSteps);
       }
-    }
-  }
-  public class StayAction_h0a_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_h0a_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0b_19 extends BehaviourStep {
@@ -725,23 +690,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_f0b_7 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0b_7(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class MoveAction_a0b_21 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -842,23 +790,6 @@ public class GASNurse extends Actor {
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_f0b_9 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0b_9(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0c_19 extends BehaviourStep {
@@ -1171,23 +1102,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_f0d extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0d(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class MoveAction_a0d_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -1290,23 +1204,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_f0d_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0d_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class SendSignalAction_a0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
@@ -1321,23 +1218,6 @@ public class GASNurse extends Actor {
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_b0e extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0e(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class SendSignalAction_a0e_1 extends BehaviourStep {
@@ -1356,23 +1236,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_b0e_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0e_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class SendSignalAction_a0f extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
@@ -1387,23 +1250,6 @@ public class GASNurse extends Actor {
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_b0f extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0f(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class SendSignalAction_a0f_1 extends BehaviourStep {
@@ -1422,23 +1268,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_b0f_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0f_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class SendSignalAction_a0g extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
@@ -1455,23 +1284,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_b0g extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0g(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class SendSignalAction_a0g_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
@@ -1486,23 +1298,6 @@ public class GASNurse extends Actor {
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_b0g_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0g_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0h extends BehaviourStep {
@@ -1607,23 +1402,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_f0h extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0h(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class MoveAction_a0h_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -1724,23 +1502,6 @@ public class GASNurse extends Actor {
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_f0h_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0h_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0i extends BehaviourStep {
@@ -1845,23 +1606,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_f0i extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0i(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class MoveAction_a0i_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -1964,23 +1708,6 @@ public class GASNurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_f0i_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0i_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class MoveAction_a0a_37 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -2023,36 +1750,18 @@ public class GASNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class StayAction_b0a_17 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0a_17(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
 
 
   public void InitGroupAStrepTriage_b(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_33(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_27(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a_15(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_7(behaviourBuilder));
-    plstSteps.add(new StayAction_d0a_23(behaviourBuilder));
+    plstSteps.add(new StayAction_d0a_14(behaviourBuilder));
     plstSteps.add(new Choice_e0a(behaviourBuilder));
     plstSteps.add(new Choice_f0a(behaviourBuilder));
     plstSteps.add(new Choice_g0a_3(behaviourBuilder));
-    plstSteps.add(new StayAction_h0a_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2066,7 +1775,6 @@ public class GASNurse extends Actor {
     plstSteps.add(new StayForConditionAction_c0b_9(behaviourBuilder));
     plstSteps.add(new StayAction_d0b_11(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0b_7(behaviourBuilder));
-    plstSteps.add(new StayAction_f0b_7(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2094,7 +1802,6 @@ public class GASNurse extends Actor {
     plstSteps.add(new StayForConditionAction_c0d_3(behaviourBuilder));
     plstSteps.add(new StayAction_d0d_7(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0d(behaviourBuilder));
-    plstSteps.add(new StayAction_f0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2104,7 +1811,6 @@ public class GASNurse extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new SendSignalAction_a0e(behaviourBuilder));
-    plstSteps.add(new StayAction_b0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2114,7 +1820,6 @@ public class GASNurse extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new SendSignalAction_a0f(behaviourBuilder));
-    plstSteps.add(new StayAction_b0f(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2124,7 +1829,6 @@ public class GASNurse extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new SendSignalAction_a0g(behaviourBuilder));
-    plstSteps.add(new StayAction_b0g(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2138,7 +1842,6 @@ public class GASNurse extends Actor {
     plstSteps.add(new StayForConditionAction_c0h(behaviourBuilder));
     plstSteps.add(new StayAction_d0h(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0h(behaviourBuilder));
-    plstSteps.add(new StayAction_f0h(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -2152,7 +1855,6 @@ public class GASNurse extends Actor {
     plstSteps.add(new StayForConditionAction_c0i(behaviourBuilder));
     plstSteps.add(new StayAction_d0i(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0i(behaviourBuilder));
-    plstSteps.add(new StayAction_f0i(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

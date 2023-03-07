@@ -152,8 +152,7 @@ public class SeniorDoc extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_19(behaviourBuilder));
-    plstSteps.add(new StayAction_b0a_7(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_25(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -171,8 +170,8 @@ public class SeniorDoc extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "AdditionalAssessmentTrigger_c":
-        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_c", this);
+      case "AdditionalAssessmentTrigger_c_0":
+        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_c_0", this);
         this.InitAdditionalAssessment_c(s);
         break;
       case "AdditionalAssessmentTrigger_g":
@@ -183,8 +182,8 @@ public class SeniorDoc extends Actor {
         behaviourBuilder = new Behaviour("SenDocReviewTrigger_i", this);
         this.InitSenDocReview_i(s);
         break;
-      case "AdditionalAssessmentTrigger_c_0":
-        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_c_0", this);
+      case "AdditionalAssessmentTrigger_c":
+        behaviourBuilder = new Behaviour("AdditionalAssessmentTrigger_c", this);
         this.InitAdditionalAssessment_c_0(s);
         break;
       case "SeniorReviewTrigger_g":
@@ -200,11 +199,11 @@ public class SeniorDoc extends Actor {
 
 
 
-  public class MoveAction_a0a_15 extends BehaviourStep {
+  public class MoveAction_a0a_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_15(Behaviour behaviour) {
+    public MoveAction_a0a_11(Behaviour behaviour) {
       target = MajorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -269,10 +268,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_11 extends BehaviourStep {
+  public class StayAction_d0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_11(Behaviour behaviour) {
+    public StayAction_d0a_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -296,34 +295,17 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ObsReviewTrigger_eSignal();
+      sendSignalTemp = new ObsReviewTrigger_e_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_f0a_3 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0a_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
-  public class MoveAction_a0a_17 extends BehaviourStep {
+  public class MoveAction_a0a_13 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_17(Behaviour behaviour) {
+    public MoveAction_a0a_13(Behaviour behaviour) {
       target = MajorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -388,10 +370,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0a_13 extends BehaviourStep {
+  public class StayAction_d0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0a_13(Behaviour behaviour) {
+    public StayAction_d0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -415,27 +397,10 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ObsReviewTrigger_eSignal();
+      sendSignalTemp = new ObsReviewTrigger_e_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_f0a_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0a_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0b_7 extends BehaviourStep {
@@ -534,27 +499,10 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ObsReviewTrigger_fSignal();
+      sendSignalTemp = new ObsReviewTrigger_f_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_f0b_3 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0b_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0b_9 extends BehaviourStep {
@@ -653,27 +601,10 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ObsReviewTrigger_fSignal();
+      sendSignalTemp = new ObsReviewTrigger_f_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_f0b_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0b_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0c_11 extends BehaviourStep {
@@ -778,23 +709,6 @@ public class SeniorDoc extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_f0c_7 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0c_7(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
   public class MoveAction_a0c_13 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
@@ -895,23 +809,6 @@ public class SeniorDoc extends Actor {
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_f0c_9 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_f0c_9(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0d_3 extends BehaviourStep {
@@ -1021,7 +918,7 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
   public class SendSignalAction_g0d extends BehaviourStep {
@@ -1034,27 +931,10 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ObsReviewTrigger_e_0Signal();
+      sendSignalTemp = new ObsReviewTrigger_eSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_h0d extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_h0d(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0d_5 extends BehaviourStep {
@@ -1164,7 +1044,7 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
   public class SendSignalAction_g0d_1 extends BehaviourStep {
@@ -1177,27 +1057,10 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new ObsReviewTrigger_e_0Signal();
+      sendSignalTemp = new ObsReviewTrigger_eSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_h0d_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_h0d_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0e_3 extends BehaviourStep {
@@ -1307,7 +1170,7 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
   public class SendSignalAction_g0e extends BehaviourStep {
@@ -1320,27 +1183,10 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_d_1Signal();
+      sendSignalTemp = new DischargeTrigger_d_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_h0e_3 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_h0e_3(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
     }
   }
   public class MoveAction_a0e_5 extends BehaviourStep {
@@ -1450,7 +1296,7 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(Bed.class));
+      a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
   public class SendSignalAction_g0e_1 extends BehaviourStep {
@@ -1463,34 +1309,17 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new DischargeTrigger_d_1Signal();
+      sendSignalTemp = new DischargeTrigger_d_0Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_h0e_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_h0e_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
-  public class MoveAction_a0a_19 extends BehaviourStep {
+  public class MoveAction_a0a_25 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_19(Behaviour behaviour) {
+    public MoveAction_a0a_25(Behaviour behaviour) {
       target = MajorsDesk.getInstance();
       this.behaviour = behaviour;
     }
@@ -1528,34 +1357,16 @@ public class SeniorDoc extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class StayAction_b0a_7 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_b0a_7(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return (timeExecuted == (60 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
-
-    }
-  }
 
 
   public void InitAdditionalAssessment_c(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_15(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_11(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a_7(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_3(behaviourBuilder));
-    plstSteps.add(new StayAction_d0a_11(behaviourBuilder));
+    plstSteps.add(new StayAction_d0a_7(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0a(behaviourBuilder));
-    plstSteps.add(new StayAction_f0a_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -1569,7 +1380,6 @@ public class SeniorDoc extends Actor {
     plstSteps.add(new StayForConditionAction_c0b_3(behaviourBuilder));
     plstSteps.add(new StayAction_d0b_3(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0b_3(behaviourBuilder));
-    plstSteps.add(new StayAction_f0b_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -1583,7 +1393,6 @@ public class SeniorDoc extends Actor {
     plstSteps.add(new StayForConditionAction_c0c_3(behaviourBuilder));
     plstSteps.add(new StayAction_d0c_5(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0c(behaviourBuilder));
-    plstSteps.add(new StayAction_f0c_7(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -1599,7 +1408,6 @@ public class SeniorDoc extends Actor {
     plstSteps.add(new OrderAction_e0d_3(behaviourBuilder));
     plstSteps.add(new OrderAction_f0d_3(behaviourBuilder));
     plstSteps.add(new SendSignalAction_g0d(behaviourBuilder));
-    plstSteps.add(new StayAction_h0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -1615,7 +1423,6 @@ public class SeniorDoc extends Actor {
     plstSteps.add(new OrderAction_e0e_3(behaviourBuilder));
     plstSteps.add(new OrderAction_f0e_3(behaviourBuilder));
     plstSteps.add(new SendSignalAction_g0e(behaviourBuilder));
-    plstSteps.add(new StayAction_h0e_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

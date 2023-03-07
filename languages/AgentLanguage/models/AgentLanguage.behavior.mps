@@ -179,6 +179,12 @@
       </concept>
       <concept id="8077936094962911282" name="jetbrains.mps.lang.scopes.structure.ParentScope" flags="nn" index="iy90A" />
     </language>
+    <language id="760a0a8c-eabb-4521-8bfd-65db761a9ba3" name="jetbrains.mps.baseLanguage.logging">
+      <concept id="2034914114981261497" name="jetbrains.mps.baseLanguage.logging.structure.LogLowLevelStatement" flags="ng" index="RRSsy">
+        <property id="2034914114981261751" name="severity" index="RRSoG" />
+        <child id="2034914114981261753" name="message" index="RRSoy" />
+      </concept>
+    </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
@@ -1282,6 +1288,12 @@
             </node>
           </node>
           <node concept="3clFbS" id="1BosAjNw9ZM" role="3clFbx">
+            <node concept="RRSsy" id="s75sN5_74s" role="3cqZAp">
+              <property role="RRSoG" value="gZ5fksE/warn" />
+              <node concept="Xl_RD" id="s75sN5_74u" role="RRSoy">
+                <property role="Xl_RC" value="HELP" />
+              </node>
+            </node>
             <node concept="3clFbF" id="1BosAjNw9ZN" role="3cqZAp">
               <node concept="2OqwBi" id="1BosAjNw9ZO" role="3clFbG">
                 <node concept="37vLTw" id="1BosAjNw9ZP" role="2Oq$k0">
@@ -1315,6 +1327,13 @@
       <property role="TrG5h" value="GetAllBehaviours" />
       <node concept="3Tm1VV" id="4BMD7YivWum" role="1B3o_S" />
       <node concept="3clFbS" id="4BMD7YivWun" role="3clF47">
+        <node concept="RRSsy" id="s75sN5GVFH" role="3cqZAp">
+          <property role="RRSoG" value="gZ5eI4k/fatal" />
+          <node concept="Xl_RD" id="s75sN5GVFJ" role="RRSoy">
+            <property role="Xl_RC" value="HELLO" />
+          </node>
+        </node>
+        <node concept="3clFbH" id="s75sN5GTn1" role="3cqZAp" />
         <node concept="3cpWs8" id="4BMD7Yiw4Fi" role="3cqZAp">
           <node concept="3cpWsn" id="4BMD7Yiw4Fj" role="3cpWs9">
             <property role="TrG5h" value="allBehaviours" />

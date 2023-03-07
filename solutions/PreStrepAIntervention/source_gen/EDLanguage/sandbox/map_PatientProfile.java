@@ -120,13 +120,16 @@ public class map_PatientProfile extends Actor {
 
 
 
+  public void ALLCOLLECTEDBEHAVIOURS() {
+  }
+
 
 
 
   public int map_PatientProfilegetAliveTime() {
     if (deSpawnTime == null) {
-      deSpawnTime = TimeKeeper.getInstance().getTime();
+      return 0;
     }
-    return (int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime);
+    return Math.abs((int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime));
   }
 }

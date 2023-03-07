@@ -11,6 +11,10 @@
       <string>EDLanguage.sandbox.Bedstyle</string>
       </entry>
       <entry>
+      <string>EDLanguage.sandbox.Seat</string>
+      <string>EDLanguage.sandbox.Seatstyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.Doctor</string>
       <string>EDLanguage.sandbox.Doctorstyle</string>
       </entry>
@@ -78,46 +82,52 @@
       <string>simcore.basicStructures.Room</string>
       <int>0</int>
     </entry>
+    <entry>
+      <string>EDLanguage.sandbox.patient</string>
+      <int>1000</int>
+    </entry>
+
+    <entry>
+      <string>simcore.basicStructures.Wall</string>
+      <int>1</int>
+    </entry>
+
+    <entry>
+      <string>simcore.basicStructures.Occupiable</string>
+      <int>2</int>
+    </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>
-      <int>3</int>
-      </entry>
-      <entry>
-      <string>EDLanguage.sandbox.Doctor</string>
       <int>4</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.CubicleNurse</string>
+      <string>EDLanguage.sandbox.Seat</string>
       <int>5</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.TriageNurse</string>
+      <string>EDLanguage.sandbox.Doctor</string>
       <int>6</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
+      <string>EDLanguage.sandbox.CubicleNurse</string>
       <int>7</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.LabTechnician</string>
+      <string>EDLanguage.sandbox.TriageNurse</string>
       <int>8</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.WardNurse</string>
+      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
       <int>9</int>
       </entry>
-    <entry>
-      <string>simcore.basicStructures.Occupiable</string>
-      <int>3</int>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Wall</string>
-      <int>2</int>
-    </entry>
-    <entry>
-      <string>EDLanguage.sandbox.patient</string>
-      <int>1</int>
-    </entry>
+      <entry>
+      <string>EDLanguage.sandbox.LabTechnician</string>
+      <int>10</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.WardNurse</string>
+      <int>11</int>
+      </entry>
   </layerOrder>
   <projections>
     <repast.simphony.scenario.data.ProjectionData>

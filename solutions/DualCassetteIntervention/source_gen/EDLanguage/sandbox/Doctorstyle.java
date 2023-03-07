@@ -25,7 +25,7 @@ public class Doctorstyle extends DefaultStyleOGL2D {
     return Position.NORTH;
   }
   public Color getColor(Object object) {
-    return Color.blue;
+    return Color.RED;
   }
   public Color getBorderColor(Object object) {
     return Color.BLACK;

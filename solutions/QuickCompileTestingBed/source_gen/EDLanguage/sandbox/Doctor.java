@@ -24,8 +24,8 @@ import simcore.action.BehaviourStep;
 import repast.simphony.engine.environment.RunEnvironment;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
-import simcore.basicStructures.TimeKeeper;
 import java.util.Iterator;
+import simcore.basicStructures.TimeKeeper;
 
 public class Doctor extends Actor {
 
@@ -154,7 +154,7 @@ public class Doctor extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_7(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -172,13 +172,9 @@ public class Doctor extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "AdmittoVulnerableAreaTrigger_d":
-        behaviourBuilder = new Behaviour("AdmittoVulnerableAreaTrigger_d", this);
-        this.InitAdmitActionAdmittoVulnerableArea_d(s);
-        break;
-      case "DischargeTrigger_e":
-        behaviourBuilder = new Behaviour("DischargeTrigger_e", this);
-        this.InitDischargeActionDischarge_e(s);
+      case "DischargeTrigger_b":
+        behaviourBuilder = new Behaviour("DischargeTrigger_b", this);
+        this.InitDischargeActionDischarge_b(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -189,12 +185,12 @@ public class Doctor extends Actor {
 
 
 
-  public class MoveAction_a0a_1 extends BehaviourStep {
+  public class MoveAction_a0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_1(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
+    public MoveAction_a0a(Behaviour behaviour) {
+      target = Entrance.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -231,51 +227,9 @@ public class Doctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class MoveAction_b0a extends BehaviourStep {
+  public class OrderAction_b0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0a(Behaviour behaviour) {
-      target = GreenBay.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      int count = 0;
-
-      while (count < RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")) {
-        count++;
-        if (finishCondition()) {
-          return;
-        }
-        if (concreteTarget == null) {
-          if (target instanceof RoomType) {
-            concreteTarget = SelectLocation(((RoomType) target), behaviour);
-          } else {
-            concreteTarget = target;
-          }
-        }
-
-        if (concreteTarget != null) {
-          if (target instanceof RoomType) {
-            if (EvaluateRoomChoice(((Room) concreteTarget), behaviour) == Double.MAX_VALUE) {
-              concreteTarget = SelectLocation(((RoomType) target), behaviour);
-            }
-          }
-
-          MoveTowards(concreteTarget);
-
-        }
-      }
-    }
-
-    public boolean finishCondition() {
-      return concreteTarget != null && ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_c0a extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_c0a(Behaviour behaviour) {
+    public OrderAction_b0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -285,10 +239,10 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class StayForConditionAction_d0a extends BehaviourStep {
+  public class StayForConditionAction_c0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_d0a(Behaviour behaviour) {
+    public StayForConditionAction_c0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -300,15 +254,29 @@ public class Doctor extends Actor {
       return ImAt(behaviour.getSignalTrigger().GetData("patient"));
     }
   }
-  public class Consequence_e0a extends InstantBehaviourStep {
+  public class Consequence_d0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_e0a(Behaviour behaviour) {
+    public Consequence_d0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "GreenBay";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "Entrance";
 
+    }
+  }
+  public class RemoveRelationshipAction_e0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_e0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
+      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
+      while (patientStaffAllocations.hasNext()) {
+        network.removeEdge(patientStaffAllocations.next());
+      }
     }
   }
   public class DespawnAction_f0a extends BehaviourStep {
@@ -321,26 +289,12 @@ public class Doctor extends Actor {
       ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
     }
   }
-  public class RemoveRelationshipAction_g0a extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_g0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
-      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
-      while (patientStaffAllocations.hasNext()) {
-        network.removeEdge(patientStaffAllocations.next());
-      }
-    }
-  }
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
-      target = behaviour.getSignalTrigger().GetData("patient");
+    public MoveAction_a0a_1(Behaviour behaviour) {
+      target = Entrance.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -377,51 +331,9 @@ public class Doctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class MoveAction_b0a_1 extends BehaviourStep {
+  public class OrderAction_b0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_b0a_1(Behaviour behaviour) {
-      target = GreenBay.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      int count = 0;
-
-      while (count < RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")) {
-        count++;
-        if (finishCondition()) {
-          return;
-        }
-        if (concreteTarget == null) {
-          if (target instanceof RoomType) {
-            concreteTarget = SelectLocation(((RoomType) target), behaviour);
-          } else {
-            concreteTarget = target;
-          }
-        }
-
-        if (concreteTarget != null) {
-          if (target instanceof RoomType) {
-            if (EvaluateRoomChoice(((Room) concreteTarget), behaviour) == Double.MAX_VALUE) {
-              concreteTarget = SelectLocation(((RoomType) target), behaviour);
-            }
-          }
-
-          MoveTowards(concreteTarget);
-
-        }
-      }
-    }
-
-    public boolean finishCondition() {
-      return concreteTarget != null && ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_c0a_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_c0a_1(Behaviour behaviour) {
+    public OrderAction_b0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -431,10 +343,10 @@ public class Doctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
     }
   }
-  public class StayForConditionAction_d0a_0 extends BehaviourStep {
+  public class StayForConditionAction_c0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_d0a_0(Behaviour behaviour) {
+    public StayForConditionAction_c0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -446,15 +358,29 @@ public class Doctor extends Actor {
       return ImAt(behaviour.getSignalTrigger().GetData("patient"));
     }
   }
-  public class Consequence_e0a_0 extends InstantBehaviourStep {
+  public class Consequence_d0a_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Consequence_e0a_0(Behaviour behaviour) {
+    public Consequence_d0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "GreenBay";
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "Entrance";
 
+    }
+  }
+  public class RemoveRelationshipAction_e0a_0 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public RemoveRelationshipAction_e0a_0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
+      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
+      while (patientStaffAllocations.hasNext()) {
+        network.removeEdge(patientStaffAllocations.next());
+      }
     }
   }
   public class DespawnAction_f0a_0 extends BehaviourStep {
@@ -467,234 +393,12 @@ public class Doctor extends Actor {
       ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
     }
   }
-  public class RemoveRelationshipAction_g0a_0 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_g0a_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
-      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
-      while (patientStaffAllocations.hasNext()) {
-        network.removeEdge(patientStaffAllocations.next());
-      }
-    }
-  }
-  public class MoveAction_a0b extends BehaviourStep {
+  public class MoveAction_a0a_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b(Behaviour behaviour) {
-      target = MainEntrance.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      int count = 0;
-
-      while (count < RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")) {
-        count++;
-        if (finishCondition()) {
-          return;
-        }
-        if (concreteTarget == null) {
-          if (target instanceof RoomType) {
-            concreteTarget = SelectLocation(((RoomType) target), behaviour);
-          } else {
-            concreteTarget = target;
-          }
-        }
-
-        if (concreteTarget != null) {
-          if (target instanceof RoomType) {
-            if (EvaluateRoomChoice(((Room) concreteTarget), behaviour) == Double.MAX_VALUE) {
-              concreteTarget = SelectLocation(((RoomType) target), behaviour);
-            }
-          }
-
-          MoveTowards(concreteTarget);
-
-        }
-      }
-    }
-
-    public boolean finishCondition() {
-      return concreteTarget != null && ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_b0b extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_b0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
-
-      a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
-    }
-  }
-  public class StayForConditionAction_c0b extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public StayForConditionAction_c0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-    }
-
-    public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
-    }
-  }
-  public class Consequence_d0b extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_d0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "MainEntrance";
-
-    }
-  }
-  public class RemoveRelationshipAction_e0b extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
-      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
-      while (patientStaffAllocations.hasNext()) {
-        network.removeEdge(patientStaffAllocations.next());
-      }
-    }
-  }
-  public class DespawnAction_f0b extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public DespawnAction_f0b(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
-    }
-  }
-  public class MoveAction_a0b_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0b_1(Behaviour behaviour) {
-      target = MainEntrance.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      int count = 0;
-
-      while (count < RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")) {
-        count++;
-        if (finishCondition()) {
-          return;
-        }
-        if (concreteTarget == null) {
-          if (target instanceof RoomType) {
-            concreteTarget = SelectLocation(((RoomType) target), behaviour);
-          } else {
-            concreteTarget = target;
-          }
-        }
-
-        if (concreteTarget != null) {
-          if (target instanceof RoomType) {
-            if (EvaluateRoomChoice(((Room) concreteTarget), behaviour) == Double.MAX_VALUE) {
-              concreteTarget = SelectLocation(((RoomType) target), behaviour);
-            }
-          }
-
-          MoveTowards(concreteTarget);
-
-        }
-      }
-    }
-
-    public boolean finishCondition() {
-      return concreteTarget != null && ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_b0b_1 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_b0b_1(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
-
-      a.TakeOrder(new MoveToOrder().WithDestination(Doctor.this));
-    }
-  }
-  public class StayForConditionAction_c0b_0 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public StayForConditionAction_c0b_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing
-    }
-
-    public boolean finishCondition() {
-      return ImAt(behaviour.getSignalTrigger().GetData("patient"));
-    }
-  }
-  public class Consequence_d0b_0 extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_d0b_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo = "MainEntrance";
-
-    }
-  }
-  public class RemoveRelationshipAction_e0b_0 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_e0b_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Network network = ((Network) context.getProjection("CurrentPatientAllocations"));
-      Iterator<RepastEdge<Agent>> patientStaffAllocations = network.getEdges(behaviour.getSignalTrigger().GetData("patient")).iterator();
-      while (patientStaffAllocations.hasNext()) {
-        network.removeEdge(patientStaffAllocations.next());
-      }
-    }
-  }
-  public class DespawnAction_f0b_0 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public DespawnAction_f0b_0(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
-    }
-  }
-  public class MoveAction_a0a_7 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0a_7(Behaviour behaviour) {
-      target = StaffReception.getInstance();
+    public MoveAction_a0a_3(Behaviour behaviour) {
+      target = Entrance.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -733,30 +437,15 @@ public class Doctor extends Actor {
   }
 
 
-  public void InitAdmitActionAdmittoVulnerableArea_d(Signal s) {
+  public void InitDischargeActionDischarge_b(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_1(behaviourBuilder));
-    plstSteps.add(new MoveAction_b0a(behaviourBuilder));
-    plstSteps.add(new OrderAction_c0a(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_d0a(behaviourBuilder));
-    plstSteps.add(new Consequence_e0a(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0a(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0a(behaviourBuilder));
+    plstSteps.add(new Consequence_d0a(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_e0a(behaviourBuilder));
     plstSteps.add(new DespawnAction_f0a(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_g0a(behaviourBuilder));
-    behaviourBuilder.setSteps(plstSteps);
-
-    Signal sendSignalTemp = new Signal();
-
-  }
-  public void InitDischargeActionDischarge_e(Signal s) {
-    behaviourBuilder.setSignalTrigger(s);
-    ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0b(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0b(behaviourBuilder));
-    plstSteps.add(new Consequence_d0b(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_e0b(behaviourBuilder));
-    plstSteps.add(new DespawnAction_f0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

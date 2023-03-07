@@ -4,6 +4,7 @@
     <classNode dependClassName="ActionCards.behavior.ActionCardElement__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.Action__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.IPatientProperty__BehaviorDescriptor" />
+    <classNode dependClassName="ActionCards.behavior.Test__BehaviorDescriptor" />
     <classNode dependClassName="BuiltEnvironment.behavior.RoomType__BehaviorDescriptor" />
     <classNode dependClassName="DiseaseModel.behavior.DiseaseSymptom__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Double" />

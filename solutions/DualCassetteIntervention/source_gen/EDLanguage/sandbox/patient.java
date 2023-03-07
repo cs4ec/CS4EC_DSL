@@ -20,6 +20,7 @@ import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
 import simcore.action.InstantBehaviourStep;
 import simcore.action.BehaviourStep;
+import simcore.basicStructures.TimeKeeper;
 
 public class patient extends Actor {
 
@@ -27,12 +28,13 @@ public class patient extends Actor {
   public String admittedTo = "NA";
   public String admissionRoute = "UnConfigured";
   public String COVIDInfectionStatus = "NotConfigured";
+  public String FluBInfectionStatus = "NotConfigured";
   public String FluAInfectionStatus = "NotConfigured";
   public String Severity = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
-  public String LateralFlowCOVIDResult = "Incomplete";
-  public String LateralFlowFluAResult = "Incomplete";
-  public String LateralFlowFluBResult = "Incomplete";
+  public String DualCassetteLateralFlowTestCOVIDResult = "Incomplete";
+  public String DualCassetteLateralFlowTestFluAResult = "Incomplete";
+  public String DualCassetteLateralFlowTestFluBResult = "Incomplete";
   public String LIATCOVIDResult = "Incomplete";
   public String LIATFluAResult = "Incomplete";
   public String LIATFluBResult = "Incomplete";
@@ -91,7 +93,10 @@ public class patient extends Actor {
     return null;
   }
 
-  protected Room SelectLocation(RoomType pRoomType, Behaviour behaviour) {
+  protected Room SelectLocation(RoomType pRoomType, final Behaviour behaviour) {
+    if (curInside != null && curInside.getRoomType() == pRoomType && EvaluateRoomChoice(curInside, behaviour) != Double.MAX_VALUE) {
+      return curInside;
+    }
     ArrayList<Room> pRooms = (ArrayList<Room>) ReadMap().FindInstancesOfRoomType(pRoomType);
     // First, select the room that contains my patient (if my current action involves the patient)
     for (Room pRoom : pRooms) {
@@ -102,18 +107,18 @@ public class patient extends Actor {
     // If my patient isn't currently in that room, then consider other options
     Room selectedRoom = pRooms.stream().sorted(new Comparator<Room>() {
       public int compare(Room r1, Room r2) {
-        return Double.compare(EvaluateRoomChoice(r1), EvaluateRoomChoice(r2));
+        return Double.compare(EvaluateRoomChoice(r1, behaviour), EvaluateRoomChoice(r2, behaviour));
       }
     }).filter(new Predicate<Room>() {
       public boolean test(Room r) {
-        return EvaluateRoomChoice(r) != Double.MAX_VALUE;
+        return EvaluateRoomChoice(r, behaviour) != Double.MAX_VALUE;
       }
     }).findFirst().orElse(null);
     return selectedRoom;
   }
 
 
-  protected double EvaluateRoomChoice(Room pRoom) {
+  protected double EvaluateRoomChoice(Room pRoom, Behaviour behaviour) {
     ArrayList<Agent> occupiers = new ArrayList<Agent>(pRoom.getOccupiers());
 
     if (pRoom == null) {
@@ -156,6 +161,24 @@ public class patient extends Actor {
   }
   public int getCOVIDInfectionStatusisSusceptible() {
     if (this.COVIDInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBInfectionStatusisSymptomatic() {
+    if (this.FluBInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBInfectionStatusisAsymptomatic() {
+    if (this.FluBInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getFluBInfectionStatusisSusceptible() {
+    if (this.FluBInfectionStatus == "Susceptible") {
       return 1;
     }
     return 0;
@@ -208,38 +231,38 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getLateralFlowCOVIDResultisPositive() {
-    if (this.LateralFlowCOVIDResult == "Positive") {
+  public int getDualCassetteLateralFlowTestCOVIDResultisPositive() {
+    if (this.DualCassetteLateralFlowTestCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLateralFlowCOVIDResultisNegative() {
-    if (this.LateralFlowCOVIDResult == "Negative") {
+  public int getDualCassetteLateralFlowTestCOVIDResultisNegative() {
+    if (this.DualCassetteLateralFlowTestCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getLateralFlowFluAResultisPositive() {
-    if (this.LateralFlowFluAResult == "Positive") {
+  public int getDualCassetteLateralFlowTestFluAResultisPositive() {
+    if (this.DualCassetteLateralFlowTestFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLateralFlowFluAResultisNegative() {
-    if (this.LateralFlowFluAResult == "Negative") {
+  public int getDualCassetteLateralFlowTestFluAResultisNegative() {
+    if (this.DualCassetteLateralFlowTestFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getLateralFlowFluBResultisPositive() {
-    if (this.LateralFlowFluBResult == "Positive") {
+  public int getDualCassetteLateralFlowTestFluBResultisPositive() {
+    if (this.DualCassetteLateralFlowTestFluBResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getLateralFlowFluBResultisNegative() {
-    if (this.LateralFlowFluBResult == "Negative") {
+  public int getDualCassetteLateralFlowTestFluBResultisNegative() {
+    if (this.DualCassetteLateralFlowTestFluBResult == "Negative") {
       return 1;
     }
     return 0;
@@ -484,6 +507,78 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getadmittedToisGreenBaygetFluBInfectionStatusisSymptomatic() {
+    if (this.admittedTo == "GreenBay" && this.FluBInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisGreenBaygetFluBInfectionStatusisAsymptomatic() {
+    if (this.admittedTo == "GreenBay" && this.FluBInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisGreenBaygetFluBInfectionStatusisSusceptible() {
+    if (this.admittedTo == "GreenBay" && this.FluBInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetFluBInfectionStatusisSymptomatic() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.FluBInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetFluBInfectionStatusisAsymptomatic() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.FluBInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetFluBInfectionStatusisSusceptible() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.FluBInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisFluPositiveCohortgetFluBInfectionStatusisSymptomatic() {
+    if (this.admittedTo == "FluPositiveCohort" && this.FluBInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisFluPositiveCohortgetFluBInfectionStatusisAsymptomatic() {
+    if (this.admittedTo == "FluPositiveCohort" && this.FluBInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisFluPositiveCohortgetFluBInfectionStatusisSusceptible() {
+    if (this.admittedTo == "FluPositiveCohort" && this.FluBInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisSideRoomgetFluBInfectionStatusisSymptomatic() {
+    if (this.admittedTo == "SideRoom" && this.FluBInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisSideRoomgetFluBInfectionStatusisAsymptomatic() {
+    if (this.admittedTo == "SideRoom" && this.FluBInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisSideRoomgetFluBInfectionStatusisSusceptible() {
+    if (this.admittedTo == "SideRoom" && this.FluBInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
   public int getadmittedToisGreenBaygetFluAInfectionStatusisSymptomatic() {
     if (this.admittedTo == "GreenBay" && this.FluAInfectionStatus == "Symptomatic") {
       return 1;
@@ -676,146 +771,146 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLateralFlowCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowCOVIDResult == "Positive") {
+  public int getadmittedToisGreenBaygetDualCassetteLateralFlowTestCOVIDResultisPositive() {
+    if (this.admittedTo == "GreenBay" && this.DualCassetteLateralFlowTestCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLateralFlowCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowCOVIDResult == "Negative") {
+  public int getadmittedToisGreenBaygetDualCassetteLateralFlowTestCOVIDResultisNegative() {
+    if (this.admittedTo == "GreenBay" && this.DualCassetteLateralFlowTestCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohortgetLateralFlowCOVIDResultisPositive() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LateralFlowCOVIDResult == "Positive") {
+  public int getadmittedToisCOVIDPositiveCohortgetDualCassetteLateralFlowTestCOVIDResultisPositive() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.DualCassetteLateralFlowTestCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohortgetLateralFlowCOVIDResultisNegative() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LateralFlowCOVIDResult == "Negative") {
+  public int getadmittedToisCOVIDPositiveCohortgetDualCassetteLateralFlowTestCOVIDResultisNegative() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.DualCassetteLateralFlowTestCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisFluPositiveCohortgetLateralFlowCOVIDResultisPositive() {
-    if (this.admittedTo == "FluPositiveCohort" && this.LateralFlowCOVIDResult == "Positive") {
+  public int getadmittedToisFluPositiveCohortgetDualCassetteLateralFlowTestCOVIDResultisPositive() {
+    if (this.admittedTo == "FluPositiveCohort" && this.DualCassetteLateralFlowTestCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisFluPositiveCohortgetLateralFlowCOVIDResultisNegative() {
-    if (this.admittedTo == "FluPositiveCohort" && this.LateralFlowCOVIDResult == "Negative") {
+  public int getadmittedToisFluPositiveCohortgetDualCassetteLateralFlowTestCOVIDResultisNegative() {
+    if (this.admittedTo == "FluPositiveCohort" && this.DualCassetteLateralFlowTestCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetLateralFlowCOVIDResultisPositive() {
-    if (this.admittedTo == "SideRoom" && this.LateralFlowCOVIDResult == "Positive") {
+  public int getadmittedToisSideRoomgetDualCassetteLateralFlowTestCOVIDResultisPositive() {
+    if (this.admittedTo == "SideRoom" && this.DualCassetteLateralFlowTestCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetLateralFlowCOVIDResultisNegative() {
-    if (this.admittedTo == "SideRoom" && this.LateralFlowCOVIDResult == "Negative") {
+  public int getadmittedToisSideRoomgetDualCassetteLateralFlowTestCOVIDResultisNegative() {
+    if (this.admittedTo == "SideRoom" && this.DualCassetteLateralFlowTestCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLateralFlowFluAResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowFluAResult == "Positive") {
+  public int getadmittedToisGreenBaygetDualCassetteLateralFlowTestFluAResultisPositive() {
+    if (this.admittedTo == "GreenBay" && this.DualCassetteLateralFlowTestFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLateralFlowFluAResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowFluAResult == "Negative") {
+  public int getadmittedToisGreenBaygetDualCassetteLateralFlowTestFluAResultisNegative() {
+    if (this.admittedTo == "GreenBay" && this.DualCassetteLateralFlowTestFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohortgetLateralFlowFluAResultisPositive() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LateralFlowFluAResult == "Positive") {
+  public int getadmittedToisCOVIDPositiveCohortgetDualCassetteLateralFlowTestFluAResultisPositive() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.DualCassetteLateralFlowTestFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohortgetLateralFlowFluAResultisNegative() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LateralFlowFluAResult == "Negative") {
+  public int getadmittedToisCOVIDPositiveCohortgetDualCassetteLateralFlowTestFluAResultisNegative() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.DualCassetteLateralFlowTestFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisFluPositiveCohortgetLateralFlowFluAResultisPositive() {
-    if (this.admittedTo == "FluPositiveCohort" && this.LateralFlowFluAResult == "Positive") {
+  public int getadmittedToisFluPositiveCohortgetDualCassetteLateralFlowTestFluAResultisPositive() {
+    if (this.admittedTo == "FluPositiveCohort" && this.DualCassetteLateralFlowTestFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisFluPositiveCohortgetLateralFlowFluAResultisNegative() {
-    if (this.admittedTo == "FluPositiveCohort" && this.LateralFlowFluAResult == "Negative") {
+  public int getadmittedToisFluPositiveCohortgetDualCassetteLateralFlowTestFluAResultisNegative() {
+    if (this.admittedTo == "FluPositiveCohort" && this.DualCassetteLateralFlowTestFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetLateralFlowFluAResultisPositive() {
-    if (this.admittedTo == "SideRoom" && this.LateralFlowFluAResult == "Positive") {
+  public int getadmittedToisSideRoomgetDualCassetteLateralFlowTestFluAResultisPositive() {
+    if (this.admittedTo == "SideRoom" && this.DualCassetteLateralFlowTestFluAResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetLateralFlowFluAResultisNegative() {
-    if (this.admittedTo == "SideRoom" && this.LateralFlowFluAResult == "Negative") {
+  public int getadmittedToisSideRoomgetDualCassetteLateralFlowTestFluAResultisNegative() {
+    if (this.admittedTo == "SideRoom" && this.DualCassetteLateralFlowTestFluAResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLateralFlowFluBResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowFluBResult == "Positive") {
+  public int getadmittedToisGreenBaygetDualCassetteLateralFlowTestFluBResultisPositive() {
+    if (this.admittedTo == "GreenBay" && this.DualCassetteLateralFlowTestFluBResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLateralFlowFluBResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowFluBResult == "Negative") {
+  public int getadmittedToisGreenBaygetDualCassetteLateralFlowTestFluBResultisNegative() {
+    if (this.admittedTo == "GreenBay" && this.DualCassetteLateralFlowTestFluBResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohortgetLateralFlowFluBResultisPositive() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LateralFlowFluBResult == "Positive") {
+  public int getadmittedToisCOVIDPositiveCohortgetDualCassetteLateralFlowTestFluBResultisPositive() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.DualCassetteLateralFlowTestFluBResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohortgetLateralFlowFluBResultisNegative() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LateralFlowFluBResult == "Negative") {
+  public int getadmittedToisCOVIDPositiveCohortgetDualCassetteLateralFlowTestFluBResultisNegative() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.DualCassetteLateralFlowTestFluBResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisFluPositiveCohortgetLateralFlowFluBResultisPositive() {
-    if (this.admittedTo == "FluPositiveCohort" && this.LateralFlowFluBResult == "Positive") {
+  public int getadmittedToisFluPositiveCohortgetDualCassetteLateralFlowTestFluBResultisPositive() {
+    if (this.admittedTo == "FluPositiveCohort" && this.DualCassetteLateralFlowTestFluBResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisFluPositiveCohortgetLateralFlowFluBResultisNegative() {
-    if (this.admittedTo == "FluPositiveCohort" && this.LateralFlowFluBResult == "Negative") {
+  public int getadmittedToisFluPositiveCohortgetDualCassetteLateralFlowTestFluBResultisNegative() {
+    if (this.admittedTo == "FluPositiveCohort" && this.DualCassetteLateralFlowTestFluBResult == "Negative") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetLateralFlowFluBResultisPositive() {
-    if (this.admittedTo == "SideRoom" && this.LateralFlowFluBResult == "Positive") {
+  public int getadmittedToisSideRoomgetDualCassetteLateralFlowTestFluBResultisPositive() {
+    if (this.admittedTo == "SideRoom" && this.DualCassetteLateralFlowTestFluBResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetLateralFlowFluBResultisNegative() {
-    if (this.admittedTo == "SideRoom" && this.LateralFlowFluBResult == "Negative") {
+  public int getadmittedToisSideRoomgetDualCassetteLateralFlowTestFluBResultisNegative() {
+    if (this.admittedTo == "SideRoom" && this.DualCassetteLateralFlowTestFluBResult == "Negative") {
       return 1;
     }
     return 0;
@@ -1457,9 +1552,9 @@ public class patient extends Actor {
 
 
   public int patientgetAliveTime() {
-    if (deSpawnTime == 0) {
-      deSpawnTime = ToolBox().getTime();
+    if (deSpawnTime == null) {
+      return 0;
     }
-    return (int) (deSpawnTime - spawnTime);
+    return Math.abs((int) TimeKeeper.compareSeconds(deSpawnTime, spawnTime));
   }
 }

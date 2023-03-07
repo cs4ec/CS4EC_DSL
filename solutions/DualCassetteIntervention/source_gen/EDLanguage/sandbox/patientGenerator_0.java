@@ -48,6 +48,7 @@ public class patientGenerator_0 extends AgentGenerator {
     this.generateAttribute_c(a);
     this.generateAttribute_d(a);
     this.generateAttribute_e(a);
+    this.generateAttribute_f(a);
 
     b.PushMission(sendSignalTemp);
 
@@ -85,6 +86,32 @@ public class patientGenerator_0 extends AgentGenerator {
 
     double runningTotal = 0;
 
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patientFluBInfectionStatusSymptomatic"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.FluBInfectionStatus = "Symptomatic";
+      return;
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("patientFluBInfectionStatusAsymptomatic") + runningTotal) / 100)) {
+      agent.FluBInfectionStatus = "Asymptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientFluBInfectionStatusAsymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientFluBInfectionStatusAsymptomatic");
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("patientFluBInfectionStatusSusceptible") + runningTotal) / 100)) {
+      agent.FluBInfectionStatus = "Susceptible";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientFluBInfectionStatusSusceptible");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientFluBInfectionStatusSusceptible");
+    }
+
+  }
+  public void generateAttribute_c(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
     runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patientFluAInfectionStatusSusceptible"));
     if (rndDouble < (runningTotal / 100)) {
       agent.FluAInfectionStatus = "Susceptible";
@@ -106,7 +133,7 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_c(patient agent) {
+  public void generateAttribute_d(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -132,7 +159,7 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_d(patient agent) {
+  public void generateAttribute_e(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -151,7 +178,7 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_e(patient agent) {
+  public void generateAttribute_f(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;

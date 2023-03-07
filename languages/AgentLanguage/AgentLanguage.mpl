@@ -241,9 +241,9 @@
     <module reference="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" version="1" />
   </dependencyVersions>
   <runtime>
-    <dependency reexport="false">29af8eae-5649-40f8-acdf-a1edf032cb72(EDLanguage.Runner)</dependency>
     <dependency reexport="false">4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)</dependency>
     <dependency reexport="false">c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)</dependency>
+    <dependency reexport="false">29af8eae-5649-40f8-acdf-a1edf032cb72(EDLanguage.Runner)</dependency>
   </runtime>
   <extendedLanguages>
     <extendedLanguage>6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)</extendedLanguage>

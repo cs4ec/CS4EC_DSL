@@ -48,6 +48,7 @@
         <child id="3787511550169010962" name="outgoingBranches" index="A3aay" />
       </concept>
       <concept id="5710949967853733612" name="ActionCards.structure.StaffType" flags="ng" index="2GGxxg">
+        <property id="2059891927260254807" name="colour" index="1kBeqs" />
         <child id="4443718667985551902" name="idleLocation" index="2iD$2b" />
       </concept>
       <concept id="5710949967853733230" name="ActionCards.structure.Branch" flags="ng" index="2GGxJi">
@@ -301,6 +302,7 @@
   <node concept="2GGxxg" id="av1M7vbJYz">
     <property role="TrG5h" value="Doctor" />
     <property role="3GE5qa" value="Staff" />
+    <property role="1kBeqs" value="6o2BuIx6R5m/RED" />
     <node concept="UeIYj" id="34hhAWvhKM1" role="2iD$2b">
       <ref role="Udx8D" node="52K8Ejkjl6" resolve="Labaratory" />
     </node>
@@ -346,10 +348,12 @@
   <node concept="2GGxxg" id="2_JteYPiCG6">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="TriageNurse" />
+    <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
   </node>
   <node concept="2GGxxg" id="2_JteYPiCHe">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="CubicleNurse" />
+    <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
     <node concept="UeIYj" id="3QFgDmJ9UKa" role="2iD$2b">
       <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
     </node>
@@ -357,6 +361,7 @@
   <node concept="2GGxxg" id="52K8Ej3GgM">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="LabTechnician" />
+    <property role="1kBeqs" value="6o2BuIx6R5u/GRAY" />
   </node>
   <node concept="3oQJd$" id="6MzSDQOvLH$">
     <property role="3GE5qa" value="Diseases" />
@@ -388,6 +393,21 @@
       <node concept="1jfOKv" id="1$AaFX9f$3k" role="1jfOML">
         <property role="3JlXGq" value="99.5" />
         <node concept="3IO8Df" id="1$AaFX9f$3v" role="3JlXG4" />
+      </node>
+    </node>
+    <node concept="1jfOK3" id="21NGWDnRSPq" role="2OfI9c">
+      <ref role="3ZaQn3" node="1$AaFX9f$23" />
+      <node concept="1jfOKv" id="21NGWDnRSPQ" role="1jfOML">
+        <property role="3JlXGq" value="0" />
+        <node concept="3IO8Di" id="21NGWDnRSPW" role="3JlXG4" />
+      </node>
+      <node concept="1jfOKv" id="21NGWDnRSQ2" role="1jfOML">
+        <property role="3JlXGq" value="0" />
+        <node concept="3IO8Cx" id="21NGWDnRSQa" role="3JlXG4" />
+      </node>
+      <node concept="1jfOKv" id="21NGWDnRSQg" role="1jfOML">
+        <property role="3JlXGq" value="0" />
+        <node concept="3IO8Df" id="21NGWDnRSQr" role="3JlXG4" />
       </node>
     </node>
     <node concept="1jfOK3" id="1$AaFX9f$3_" role="2OfI9c">
@@ -513,6 +533,7 @@
   <node concept="2GGxxg" id="1xAzJ9NxGdV">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="PreAdmissionStaff" />
+    <property role="1kBeqs" value="6o2BuIx6R5u/GRAY" />
   </node>
   <node concept="j3bMj" id="EFW1mZkn0D">
     <property role="3GE5qa" value="ED Layout" />
@@ -982,7 +1003,7 @@
       <property role="376uKC" value="6o2BuIx6R5n/GREEN" />
       <ref role="VgANK" node="EFW1mYOHdw" resolve="MajorsAB_Cubicle" />
       <node concept="h4YGW" id="1$AaFX9fzk6" role="h4YwH">
-        <property role="h4YG0" value="23" />
+        <property role="h4YG0" value="36" />
         <property role="h0cbi" value="196" />
         <ref role="h4YGu" node="34hhAWxKdrf" />
       </node>
@@ -1260,7 +1281,7 @@
     <node concept="j3bLk" id="1$AaFX9fz$5" role="j3bMi">
       <property role="TrG5h" value="SideRoom" />
       <property role="memwX" value="52" />
-      <property role="memz3" value="151" />
+      <property role="memz3" value="153" />
       <property role="m3A$7" value="10" />
       <property role="m3A$b" value="10" />
       <property role="m3wsY" value="10000000" />
@@ -1277,7 +1298,7 @@
       <property role="3kFaIZ" value="1000" />
       <property role="39XYQq" value="1000" />
       <property role="39XYQt" value="1" />
-      <ref role="3kFaIX" node="3IhX87gchRq" resolve="LateralFlow" />
+      <ref role="3kFaIX" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
     </node>
     <node concept="3kFaIK" id="3IhX87gluVj" role="2HvXPb">
       <property role="3kFaIZ" value="1000" />
@@ -1738,6 +1759,9 @@
   <node concept="VhMOw" id="EFW1mYOHdO">
     <property role="3GE5qa" value="ED Layout.RoomType" />
     <property role="TrG5h" value="WaitingRoom" />
+    <node concept="1kHjla" id="21NGWDnSGzC" role="3IeprG">
+      <ref role="IYbFp" node="7WB5kYMxfEs" />
+    </node>
   </node>
   <node concept="VhMOw" id="EFW1mYOHdY">
     <property role="3GE5qa" value="ED Layout.RoomType" />
@@ -1928,6 +1952,7 @@
   <node concept="2GGxxg" id="2K0oNvtWdy4">
     <property role="3GE5qa" value="Staff" />
     <property role="TrG5h" value="WardNurse" />
+    <property role="1kBeqs" value="6o2BuIx6R5u/GRAY" />
   </node>
   <node concept="2MhjZA" id="72S_VmbzklC">
     <property role="3GE5qa" value="Action Cards" />
@@ -4122,7 +4147,7 @@
           <property role="gqqTZ" value="450.5001000000001" />
           <property role="gqqTW" value="282.78378378378375" />
           <property role="gqqTX" value="279.0" />
-          <property role="gqqTy" value="37.0" />
+          <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -4169,7 +4194,7 @@
           <property role="gqqTZ" value="289.5001000000001" />
           <property role="gqqTW" value="362.2307692307692" />
           <property role="gqqTX" value="242.0" />
-          <property role="gqqTy" value="37.0" />
+          <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -4207,7 +4232,7 @@
           <property role="gqqTZ" value="468.0" />
           <property role="gqqTW" value="437.0" />
           <property role="gqqTX" value="208.0" />
-          <property role="gqqTy" value="37.0" />
+          <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -4264,7 +4289,7 @@
           <property role="gqqTZ" value="855.0" />
           <property role="gqqTW" value="191.0" />
           <property role="gqqTX" value="452.0" />
-          <property role="gqqTy" value="37.0" />
+          <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -4283,7 +4308,7 @@
           <property role="gqqTZ" value="855.0" />
           <property role="gqqTW" value="277.78378378378375" />
           <property role="gqqTX" value="242.0" />
-          <property role="gqqTy" value="37.0" />
+          <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -4311,7 +4336,7 @@
           <property role="gqqTZ" value="850.5" />
           <property role="gqqTW" value="362.2307692307692" />
           <property role="gqqTX" value="252.0" />
-          <property role="gqqTy" value="37.0" />
+          <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -4360,7 +4385,7 @@
           <property role="gqqTZ" value="1140.0" />
           <property role="gqqTW" value="314.2307692307692" />
           <property role="gqqTX" value="102.0" />
-          <property role="gqqTy" value="37.0" />
+          <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -4378,8 +4403,8 @@
         <node concept="gqqVs" id="6lG8bJ3TEZq" role="37mO4d">
           <property role="gqqTZ" value="134.0" />
           <property role="gqqTW" value="442.0" />
-          <property role="gqqTX" value="156.0" />
-          <property role="gqqTy" value="32.0" />
+          <property role="gqqTX" value="172.0" />
+          <property role="gqqTy" value="33.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -4444,7 +4469,7 @@
     <node concept="2MhjZa" id="72S_Vmfld5X" role="2MhjZp">
       <property role="TrG5h" value="LFD" />
       <property role="3lFixl" value="true" />
-      <ref role="3tPpTl" node="3IhX87gchRq" resolve="LateralFlow" />
+      <ref role="3tPpTl" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
       <node concept="2_8ZN7" id="72S_Vmfld$7" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -4452,25 +4477,25 @@
         <ref role="Udx8D" node="52K8Ej3Gdk" resolve="MajorsC_Cubicle" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ589ht" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3T0vU" resolve="LFD" />
-        <ref role="2GGxGe" node="6lG8bJ3TBxN" resolve="Decide" />
+        <ref role="3tVEyn" node="6lG8bJ3T0vU" resolve="Lateral Flow Test" />
+        <ref role="2GGxGe" node="6lG8bJ3TBxN" resolve="Suitable for Admission" />
         <node concept="30deu6" id="6lG8bJ589hu" role="1hyIAf">
           <node concept="30deu6" id="6lG8bJ589hv" role="30dEsF">
             <node concept="3tEh0H" id="6lG8bJ589hw" role="30dEsF">
               <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
               <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
             </node>
             <node concept="3tEh0H" id="6lG8bJ589hx" role="30dEs_">
               <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
               <ref role="24g7ti" node="5R1$QEMMkRG" resolve="FluB" />
             </node>
           </node>
           <node concept="3tEh0H" id="6lG8bJ589hy" role="30dEs_">
             <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
             <ref role="24g7ti" node="5R1$QEMKFkE" resolve="FluA" />
-            <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+            <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
           </node>
         </node>
       </node>
@@ -4482,18 +4507,18 @@
             <node concept="3tEh0H" id="6lG8bJ589oC" role="30dEsF">
               <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
               <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
             </node>
             <node concept="3tEh0H" id="6lG8bJ589oD" role="30dEs_">
               <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
               <ref role="24g7ti" node="5R1$QEMMkRG" resolve="FluB" />
             </node>
           </node>
           <node concept="3tEh0H" id="6lG8bJ589oE" role="30dEs_">
             <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
             <ref role="24g7ti" node="5R1$QEMKFkE" resolve="FluA" />
-            <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+            <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
           </node>
         </node>
       </node>
@@ -4581,7 +4606,7 @@
       </node>
       <node concept="2GGxJi" id="72S_Vmflh15" role="A3aay">
         <ref role="3tVEyn" node="72S_VmflfYc" resolve="Perform LIAT or Cepheid" />
-        <ref role="2GGxGe" node="6lG8bJ3TBxN" resolve="Decide" />
+        <ref role="2GGxGe" node="6lG8bJ3TBxN" resolve="Suitable for Admission" />
       </node>
     </node>
     <node concept="2lDReE" id="72S_Vmflhfm" role="2MhjZp">
@@ -4605,16 +4630,16 @@
       <node concept="2GGxJi" id="1BosAjMPbQL" role="A3aay">
         <ref role="3tVEyn" node="1BosAjMPbgJ" resolve="Is patient being admitted to vulnerable area" />
         <ref role="2GGxGe" node="1BosAjMPbFn" resolve="Perform LIAT or Cepheid" />
-        <node concept="1CySur" id="4pv5agm8qGS" role="1hyIAf">
-          <ref role="1DsR7o" node="1$AaFX9f$4h" />
-          <node concept="1FjjCg" id="4pv5agm8qH7" role="1CySjL" />
+        <node concept="1CySur" id="21NGWDnSGwi" role="1hyIAf">
+          <ref role="1DsR7o" node="1$AaFX9f$8h" />
+          <node concept="1FjjCg" id="21NGWDnSGwx" role="1CySjL" />
         </node>
       </node>
       <node concept="2GGxJi" id="6lG8bJ3TEvx" role="A3aay">
         <ref role="3tVEyn" node="1BosAjMPbgJ" resolve="Is patient being admitted to vulnerable area" />
         <ref role="2GGxGe" node="6lG8bJ3TEkc" resolve="Discharge" />
         <node concept="1CySur" id="6lG8bJ3TEYQ" role="1hyIAf">
-          <ref role="1DsR7o" node="1$AaFX9f$4h" />
+          <ref role="1DsR7o" node="1$AaFX9f$8h" />
           <node concept="1FjjCm" id="6lG8bJ3TEZ4" role="1CySjL" />
         </node>
       </node>
@@ -4653,7 +4678,7 @@
       </node>
     </node>
     <node concept="1HTXKU" id="6lG8bJ3TEZo" role="1HTZI9">
-      <ref role="1HTXKa" node="6lG8bJ3TBxM" resolve="SelectAdmissionBay" />
+      <ref role="1HTXKa" node="6lG8bJ3TBxM" resolve="Select Admission Bay" />
     </node>
   </node>
   <node concept="1gZIpL" id="5R1$QEMKFjT">
@@ -4713,7 +4738,7 @@
   </node>
   <node concept="3oQGfi" id="3IhX87gchRq">
     <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LateralFlow" />
+    <property role="TrG5h" value="DualCassetteLateralFlowTest" />
     <node concept="3SEB2C" id="3IhX87gchRF" role="33qpDe">
       <property role="33qpDp" value="70.7" />
       <property role="33qpDr" value="99.1" />
@@ -4749,11 +4774,11 @@
     </node>
     <node concept="ldbdM" id="3IhX87gchR$" role="3oQGcl">
       <node concept="ldb2t" id="3IhX87gchRA" role="ldb3A">
-        <property role="ldb2L" value="10" />
+        <property role="ldb2L" value="15" />
         <property role="ldb2Z" value="1" />
       </node>
       <node concept="ldb2t" id="3IhX87gchRC" role="ldb3A">
-        <property role="ldb2L" value="15" />
+        <property role="ldb2L" value="20" />
         <property role="ldb2Z" value="1" />
       </node>
     </node>
@@ -7489,9 +7514,9 @@
       <node concept="37mRIm" id="6lG8bJ3T0yh" role="37mRID">
         <property role="37mO49" value="7308252286132946938" />
         <node concept="gqqVs" id="6lG8bJ3T0yg" role="37mO4d">
-          <property role="gqqTZ" value="484.0002983642578" />
+          <property role="gqqTZ" value="489.0" />
           <property role="gqqTW" value="183.0" />
-          <property role="gqqTX" value="42.0" />
+          <property role="gqqTX" value="182.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -7509,7 +7534,7 @@
       <node concept="37mRIm" id="6lG8bJ3T0yl" role="37mRID">
         <property role="37mO49" value="7308252286132946949" />
         <node concept="gqqVs" id="6lG8bJ3T0yk" role="37mO4d">
-          <property role="gqqTZ" value="532.0005272460937" />
+          <property role="gqqTZ" value="602.0005272460937" />
           <property role="gqqTW" value="254.0" />
           <property role="gqqTX" value="262.0" />
           <property role="gqqTy" value="38.0" />
@@ -7519,8 +7544,8 @@
       <node concept="37mRIm" id="6lG8bJ3T0yn" role="37mRID">
         <property role="37mO49" value="7308252286132946969" />
         <node concept="gqqVs" id="6lG8bJ3T0ym" role="37mO4d">
-          <property role="gqqTZ" value="484.0002983642578" />
-          <property role="gqqTW" value="337.0" />
+          <property role="gqqTZ" value="554.0002983642578" />
+          <property role="gqqTW" value="321.0" />
           <property role="gqqTX" value="242.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -7539,8 +7564,8 @@
       <node concept="37mRIm" id="6lG8bJ3T0yr" role="37mRID">
         <property role="37mO49" value="7308252286132946980" />
         <node concept="gqqVs" id="6lG8bJ3T0yq" role="37mO4d">
-          <property role="gqqTZ" value="672.0005425048828" />
-          <property role="gqqTW" value="428.0" />
+          <property role="gqqTZ" value="730.0005425048828" />
+          <property role="gqqTW" value="420.0" />
           <property role="gqqTX" value="192.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -7549,7 +7574,7 @@
       <node concept="37mRIm" id="6lG8bJ3T0yt" role="37mRID">
         <property role="37mO49" value="7308252286132946984" />
         <node concept="gqqVs" id="6lG8bJ3T0ys" role="37mO4d">
-          <property role="gqqTZ" value="964.0002983642578" />
+          <property role="gqqTZ" value="924.0002983642578" />
           <property role="gqqTW" value="183.0" />
           <property role="gqqTX" value="452.0" />
           <property role="gqqTy" value="38.0" />
@@ -7559,9 +7584,9 @@
       <node concept="37mRIm" id="6lG8bJ3T0yv" role="37mRID">
         <property role="37mO49" value="7308252286132946994" />
         <node concept="gqqVs" id="6lG8bJ3T0yu" role="37mO4d">
-          <property role="gqqTZ" value="964.0002983642578" />
+          <property role="gqqTZ" value="935.0" />
           <property role="gqqTW" value="254.0" />
-          <property role="gqqTX" value="242.0" />
+          <property role="gqqTX" value="231.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -7569,7 +7594,7 @@
       <node concept="37mRIm" id="6lG8bJ3T0yx" role="37mRID">
         <property role="37mO49" value="7308252286132946999" />
         <node concept="gqqVs" id="6lG8bJ3T0yw" role="37mO4d">
-          <property role="gqqTZ" value="954.0002983642578" />
+          <property role="gqqTZ" value="914.0002983642578" />
           <property role="gqqTW" value="318.0" />
           <property role="gqqTX" value="252.0" />
           <property role="gqqTy" value="38.0" />
@@ -7579,8 +7604,8 @@
       <node concept="37mRIm" id="6lG8bJ3T0yz" role="37mRID">
         <property role="37mO49" value="7308252286132946963" />
         <node concept="gqqVs" id="6lG8bJ3T0yy" role="37mO4d">
-          <property role="gqqTZ" value="314.0" />
-          <property role="gqqTW" value="14.0" />
+          <property role="gqqTZ" value="395.0" />
+          <property role="gqqTW" value="-95.0" />
           <property role="gqqTX" value="968.0" />
           <property role="gqqTy" value="79.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -7600,7 +7625,7 @@
         <property role="37mO49" value="7308252286132946927" />
         <node concept="2VclpC" id="6lG8bJ3T0yA" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3T0yC" role="2Vcluh">
-            <property role="2Vclpx" value="507.0990131790039" />
+            <property role="2Vclpx" value="570.9984755430062" />
             <property role="2Vclpz" value="136.2993735117771" />
           </node>
         </node>
@@ -7609,7 +7634,7 @@
         <property role="37mO49" value="7308252286132946941" />
         <node concept="2VclpC" id="6lG8bJ3T0yE" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3T0yG" role="2Vcluh">
-            <property role="2Vclpx" value="412.49379295527234" />
+            <property role="2Vclpx" value="482.49379295527234" />
             <property role="2Vclpz" value="203.0" />
           </node>
         </node>
@@ -7618,8 +7643,8 @@
         <property role="37mO49" value="7308252286132946952" />
         <node concept="2VclpC" id="6lG8bJ3T0yI" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3T0yK" role="2Vcluh">
-            <property role="2Vclpx" value="595.0" />
-            <property role="2Vclpz" value="351.5870331449229" />
+            <property role="2Vclpx" value="674.6730352298143" />
+            <property role="2Vclpz" value="310.2582708042888" />
           </node>
         </node>
       </node>
@@ -7648,10 +7673,10 @@
       <node concept="37mRIm" id="6lG8bJ3TCfx" role="37mRID">
         <property role="37mO49" value="7308252286133109725" />
         <node concept="gqqVs" id="6lG8bJ3TCfw" role="37mO4d">
-          <property role="gqqTZ" value="361.9995880126953" />
-          <property role="gqqTW" value="410.5" />
-          <property role="gqqTX" value="156.0" />
-          <property role="gqqTy" value="72.0" />
+          <property role="gqqTZ" value="438.0" />
+          <property role="gqqTW" value="412.0" />
+          <property role="gqqTX" value="172.0" />
+          <property role="gqqTy" value="54.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -7659,11 +7684,11 @@
         <property role="37mO49" value="7308252286132946972" />
         <node concept="2VclpC" id="6lG8bJ3TCsj" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3TCsl" role="2Vcluh">
-            <property role="2Vclpx" value="465.9995880126953" />
+            <property role="2Vclpx" value="535.9995880126953" />
             <property role="2Vclpz" value="335.0" />
           </node>
           <node concept="2VclrF" id="6lG8bJ3TCBa" role="2Vcluh">
-            <property role="2Vclpx" value="465.9995880126953" />
+            <property role="2Vclpx" value="535.9995880126953" />
             <property role="2Vclpz" value="374.6232255123179" />
           </node>
         </node>
@@ -7680,7 +7705,7 @@
       <node concept="37mRIm" id="6lG8bJ3TCXg" role="37mRID">
         <property role="37mO49" value="7308252286133112586" />
         <node concept="gqqVs" id="6lG8bJ3TCXf" role="37mO4d">
-          <property role="gqqTZ" value="1247.999771118164" />
+          <property role="gqqTZ" value="1207.999771118164" />
           <property role="gqqTW" value="254.0" />
           <property role="gqqTX" value="102.0" />
           <property role="gqqTy" value="38.0" />
@@ -7691,7 +7716,7 @@
         <property role="37mO49" value="7308252286133113353" />
         <node concept="2VclpC" id="6lG8bJ3TD8B" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3TD8D" role="2Vcluh">
-            <property role="2Vclpx" value="1299.0" />
+            <property role="2Vclpx" value="1259.0" />
             <property role="2Vclpz" value="244.0" />
           </node>
         </node>
@@ -7700,7 +7725,7 @@
         <property role="37mO49" value="7308252286132946990" />
         <node concept="2VclpC" id="6lG8bJ3TDjX" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3TDjZ" role="2Vcluh">
-            <property role="2Vclpx" value="1082.9813100956324" />
+            <property role="2Vclpx" value="1042.9813100956324" />
             <property role="2Vclpz" value="254.0" />
           </node>
         </node>
@@ -7709,8 +7734,8 @@
         <property role="37mO49" value="7308252286132946931" />
         <node concept="2VclpC" id="6lG8bJ3TDv1" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3TDv3" role="2Vcluh">
-            <property role="2Vclpx" value="1204.0" />
-            <property role="2Vclpz" value="131.0" />
+            <property role="2Vclpx" value="1151.9999355316208" />
+            <property role="2Vclpz" value="130.9999355316209" />
           </node>
         </node>
       </node>
@@ -7718,7 +7743,7 @@
         <property role="37mO49" value="7308252286132946943" />
         <node concept="2VclpC" id="6lG8bJ3TDEp" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3TDEr" role="2Vcluh">
-            <property role="2Vclpx" value="656.0" />
+            <property role="2Vclpx" value="726.0" />
             <property role="2Vclpz" value="205.0" />
           </node>
         </node>
@@ -7736,7 +7761,7 @@
         <property role="37mO49" value="2918693286464393260" />
         <node concept="2VclpC" id="2y1i1i41L0K" role="37mO4d">
           <node concept="2VclrF" id="2y1i1i41L0M" role="2Vcluh">
-            <property role="2Vclpx" value="757.7467200538889" />
+            <property role="2Vclpx" value="827.7467200538889" />
             <property role="2Vclpz" value="342.2532799461111" />
           </node>
         </node>
@@ -7751,7 +7776,7 @@
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0vJ" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ3T0vH" resolve="Check Symptomatic" />
-        <ref role="2GGxGe" node="6lG8bJ3T0vU" resolve="LFD" />
+        <ref role="2GGxGe" node="6lG8bJ3T0vU" resolve="Lateral Flow Test" />
         <node concept="30deu6" id="6lG8bJ3TBve" role="1hyIAf">
           <node concept="30deu6" id="6lG8bJ3TBvf" role="30dEsF">
             <node concept="3tEh0H" id="6lG8bJ3TBvg" role="30dEsF">
@@ -7800,9 +7825,9 @@
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0vU" role="2MhjZp">
-      <property role="TrG5h" value="LFD" />
+      <property role="TrG5h" value="Lateral Flow Test" />
       <property role="3lFixl" value="true" />
-      <ref role="3tPpTl" node="3IhX87gchRq" resolve="LateralFlow" />
+      <ref role="3tPpTl" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
       <node concept="2_8ZN7" id="6lG8bJ3T0vV" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -7810,48 +7835,48 @@
         <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsAB_Cubicle" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0vX" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3T0vU" resolve="LFD" />
-        <ref role="2GGxGe" node="6lG8bJ3TBxN" resolve="Decide" />
+        <ref role="3tVEyn" node="6lG8bJ3T0vU" resolve="Lateral Flow Test" />
+        <ref role="2GGxGe" node="6lG8bJ3TBxN" resolve="Suitable for Admission" />
         <node concept="30deu6" id="6lG8bJ589c1" role="1hyIAf">
           <node concept="30deu6" id="6lG8bJ589c2" role="30dEsF">
             <node concept="3tEh0H" id="6lG8bJ589c3" role="30dEsF">
               <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
               <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
             </node>
             <node concept="3tEh0H" id="6lG8bJ589c4" role="30dEs_">
               <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
               <ref role="24g7ti" node="5R1$QEMMkRG" resolve="FluB" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
             </node>
           </node>
           <node concept="3tEh0H" id="6lG8bJ589c5" role="30dEs_">
             <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
             <ref role="24g7ti" node="5R1$QEMKFkE" resolve="FluA" />
-            <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+            <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
           </node>
         </node>
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0vZ" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3T0vU" resolve="LFD" />
+        <ref role="3tVEyn" node="6lG8bJ3T0vU" resolve="Lateral Flow Test" />
         <ref role="2GGxGe" node="6lG8bJ3T0w5" resolve="Check Clinical Susipicion" />
         <node concept="30deo4" id="6lG8bJ589al" role="1hyIAf">
           <node concept="30deo4" id="6lG8bJ589am" role="30dEsF">
             <node concept="3tEh0H" id="6lG8bJ589an" role="30dEsF">
               <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
               <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
             </node>
             <node concept="3tEh0H" id="6lG8bJ589ao" role="30dEs_">
               <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
               <ref role="24g7ti" node="5R1$QEMMkRG" resolve="FluB" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
             </node>
           </node>
           <node concept="3tEh0H" id="6lG8bJ589ap" role="30dEs_">
             <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
             <ref role="24g7ti" node="5R1$QEMKFkE" resolve="FluA" />
-            <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+            <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
           </node>
         </node>
       </node>
@@ -7868,7 +7893,7 @@
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0w8" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ3T0w5" resolve="Check Clinical Susipicion" />
-        <ref role="2GGxGe" node="6lG8bJ3T0wp" resolve="Perform LIAT or Cepheid" />
+        <ref role="2GGxGe" node="6lG8bJ3T0wp" resolve="Perform Rapid-PCR" />
         <node concept="30deu6" id="2y1i1i41Lcc" role="1hyIAf">
           <node concept="30deu6" id="2y1i1i41Lcd" role="30dEsF">
             <node concept="3tEh0H" id="2y1i1i41Lce" role="30dEsF">
@@ -7934,7 +7959,7 @@
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0wp" role="2MhjZp">
-      <property role="TrG5h" value="Perform LIAT or Cepheid" />
+      <property role="TrG5h" value="Perform Rapid-PCR" />
       <property role="3lFixl" value="true" />
       <ref role="3tPpTl" node="6lG8bJ2M3z7" resolve="LiatOrCepheid" />
       <node concept="2_8ZN7" id="6lG8bJ3T0wq" role="2_8HaY">
@@ -7944,8 +7969,8 @@
         <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsAB_Cubicle" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0ws" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3T0wp" resolve="Perform LIAT or Cepheid" />
-        <ref role="2GGxGe" node="6lG8bJ3TBxN" resolve="Decide" />
+        <ref role="3tVEyn" node="6lG8bJ3T0wp" resolve="Perform Rapid-PCR" />
+        <ref role="2GGxGe" node="6lG8bJ3TBxN" resolve="Suitable for Admission" />
       </node>
     </node>
     <node concept="2lDReE" id="6lG8bJ3T0w$" role="2MhjZp">
@@ -7968,9 +7993,9 @@
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0wI" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ3T0wC" resolve="Is patient being admitted to vulnerable area" />
-        <ref role="2GGxGe" node="6lG8bJ3T0wM" resolve="Perform LIAT or Cepheid" />
+        <ref role="2GGxGe" node="6lG8bJ3T0wM" resolve="Perform Rapid PCR" />
         <node concept="1CySur" id="6lG8bJ3T0wJ" role="1hyIAf">
-          <ref role="1DsR7o" node="1$AaFX9f$4h" />
+          <ref role="1DsR7o" node="1$AaFX9f$8h" />
           <node concept="1FjjCg" id="6lG8bJ3T0wK" role="1CySjL" />
         </node>
       </node>
@@ -7978,13 +8003,13 @@
         <ref role="3tVEyn" node="6lG8bJ3T0wC" resolve="Is patient being admitted to vulnerable area" />
         <ref role="2GGxGe" node="6lG8bJ3TCWa" resolve="Discharge" />
         <node concept="1CySur" id="6lG8bJ3TD8j" role="1hyIAf">
-          <ref role="1DsR7o" node="1$AaFX9f$4h" />
+          <ref role="1DsR7o" node="1$AaFX9f$8h" />
           <node concept="1FjjCm" id="6lG8bJ3TD8x" role="1CySjL" />
         </node>
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0wM" role="2MhjZp">
-      <property role="TrG5h" value="Perform LIAT or Cepheid" />
+      <property role="TrG5h" value="Perform Rapid PCR" />
       <property role="3lFixl" value="true" />
       <ref role="3tPpTl" node="6lG8bJ2M3z7" resolve="LiatOrCepheid" />
       <node concept="2_8ZN7" id="6lG8bJ3T0wN" role="2_8HaY">
@@ -7994,7 +8019,7 @@
         <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsAB_Cubicle" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0wP" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3T0wM" resolve="Perform LIAT or Cepheid" />
+        <ref role="3tVEyn" node="6lG8bJ3T0wM" resolve="Perform Rapid PCR" />
         <ref role="2GGxGe" node="6lG8bJ3T0wR" resolve="Admit to Vulnerable Area" />
       </node>
     </node>
@@ -8008,7 +8033,7 @@
       </node>
     </node>
     <node concept="1HTXKU" id="6lG8bJ3TCft" role="1HTZI9">
-      <ref role="1HTXKa" node="6lG8bJ3TBxM" resolve="SelectAdmissionBay" />
+      <ref role="1HTXKa" node="6lG8bJ3TBxM" resolve="Select Admission Bay" />
     </node>
     <node concept="1H2jYY" id="6lG8bJ3TCWa" role="2MhjZp">
       <property role="TrG5h" value="Discharge" />
@@ -8022,9 +8047,9 @@
   </node>
   <node concept="2MhjZA" id="6lG8bJ3TBxM">
     <property role="3GE5qa" value="Action Cards" />
-    <property role="TrG5h" value="SelectAdmissionBay" />
+    <property role="TrG5h" value="Select Admission Bay" />
     <node concept="2MhjZa" id="6lG8bJ3TBxN" role="2MhjZp">
-      <property role="TrG5h" value="Decide" />
+      <property role="TrG5h" value="Suitable for Admission" />
       <property role="3lFixl" value="true" />
       <node concept="2_8ZN7" id="6lG8bJ3TByc" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
@@ -8033,7 +8058,7 @@
         <property role="1M3RjU" value="2" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ3TBAR" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3TBxN" resolve="Decide" />
+        <ref role="3tVEyn" node="6lG8bJ3TBxN" resolve="Suitable for Admission" />
         <ref role="2GGxGe" node="6lG8bJ3TBA9" resolve="ImmunoCompromised" />
         <node concept="30deu6" id="6lG8bJ3TCe2" role="1hyIAf">
           <node concept="1CySur" id="6lG8bJ3TCbG" role="30dEs_">
@@ -8047,24 +8072,21 @@
         </node>
       </node>
       <node concept="2GGxJi" id="6lG8bJ3TCat" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3TBxN" resolve="Decide" />
+        <ref role="3tVEyn" node="6lG8bJ3TBxN" resolve="Suitable for Admission" />
         <ref role="2GGxGe" node="6lG8bJ3TB$m" resolve="Discharge" />
         <node concept="1CySur" id="6lG8bJ3TCbh" role="1hyIAf">
           <ref role="1DsR7o" node="1$AaFX9f$4h" />
           <node concept="MfwqT" id="6lG8bJ3TCbv" role="1CySjL" />
         </node>
       </node>
-      <node concept="UeIYj" id="6lG8bJ3V5yN" role="3lENdC">
-        <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsAB_Cubicle" />
-      </node>
     </node>
     <node concept="37mRI7" id="6lG8bJ3TBxZ" role="lGtFl">
       <node concept="37mRIm" id="6lG8bJ3TBy0" role="37mRID">
         <property role="37mO49" value="7308252286133106803" />
         <node concept="gqqVs" id="6lG8bJ3TBxY" role="37mO4d">
-          <property role="gqqTZ" value="450.0" />
-          <property role="gqqTW" value="-22.0" />
-          <property role="gqqTX" value="102.0" />
+          <property role="gqqTZ" value="382.0" />
+          <property role="gqqTW" value="-2.0" />
+          <property role="gqqTX" value="242.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
@@ -8083,7 +8105,7 @@
         <property role="37mO49" value="7308252286133106857" />
         <node concept="gqqVs" id="6lG8bJ3TByP" role="37mO4d">
           <property role="gqqTZ" value="96.0" />
-          <property role="gqqTW" value="331.0" />
+          <property role="gqqTW" value="291.0" />
           <property role="gqqTX" value="122.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -8103,7 +8125,7 @@
         <property role="37mO49" value="7308252286133106905" />
         <node concept="gqqVs" id="6lG8bJ3TBzC" role="37mO4d">
           <property role="gqqTZ" value="244.0" />
-          <property role="gqqTW" value="331.0" />
+          <property role="gqqTW" value="291.0" />
           <property role="gqqTX" value="102.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -8113,7 +8135,7 @@
         <property role="37mO49" value="7308252286133106922" />
         <node concept="gqqVs" id="6lG8bJ3TB$4" role="37mO4d">
           <property role="gqqTZ" value="388.0" />
-          <property role="gqqTW" value="331.0" />
+          <property role="gqqTW" value="291.0" />
           <property role="gqqTX" value="122.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -8123,7 +8145,7 @@
         <property role="37mO49" value="7308252286133106966" />
         <node concept="gqqVs" id="6lG8bJ3TB$F" role="37mO4d">
           <property role="gqqTZ" value="676.0" />
-          <property role="gqqTW" value="327.0" />
+          <property role="gqqTW" value="287.0" />
           <property role="gqqTX" value="102.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -8133,7 +8155,7 @@
         <property role="37mO49" value="7308252286133107004" />
         <node concept="gqqVs" id="6lG8bJ3TB_k" role="37mO4d">
           <property role="gqqTZ" value="550.0" />
-          <property role="gqqTW" value="327.0" />
+          <property role="gqqTW" value="287.0" />
           <property role="gqqTX" value="92.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -8143,7 +8165,7 @@
         <property role="37mO49" value="7308252286133107081" />
         <node concept="gqqVs" id="6lG8bJ3TBAy" role="37mO4d">
           <property role="gqqTZ" value="399.0" />
-          <property role="gqqTW" value="62.0" />
+          <property role="gqqTW" value="72.0" />
           <property role="gqqTX" value="182.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -8173,8 +8195,8 @@
         <property role="37mO49" value="7308252286133107235" />
         <node concept="2VclpC" id="6lG8bJ3TBDB" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3TBDD" role="2Vcluh">
-            <property role="2Vclpx" value="517.0" />
-            <property role="2Vclpz" value="126.0" />
+            <property role="2Vclpx" value="550.0" />
+            <property role="2Vclpz" value="143.00007354888868" />
           </node>
         </node>
       </node>
@@ -8182,8 +8204,8 @@
         <property role="37mO49" value="7308252286133107237" />
         <node concept="2VclpC" id="6lG8bJ3TBE6" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3TBE8" role="2Vcluh">
-            <property role="2Vclpx" value="411.0" />
-            <property role="2Vclpz" value="127.0" />
+            <property role="2Vclpx" value="353.0" />
+            <property role="2Vclpz" value="130.0" />
           </node>
         </node>
       </node>
@@ -8191,7 +8213,7 @@
         <property role="37mO49" value="7308252286133107374" />
         <node concept="gqqVs" id="6lG8bJ3TBFl" role="37mO4d">
           <property role="gqqTZ" value="269.0" />
-          <property role="gqqTW" value="127.0" />
+          <property role="gqqTW" value="147.0" />
           <property role="gqqTX" value="142.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -8211,7 +8233,7 @@
         <property role="37mO49" value="7308252286133107660" />
         <node concept="gqqVs" id="6lG8bJ3TBJX" role="37mO4d">
           <property role="gqqTZ" value="307.0" />
-          <property role="gqqTW" value="199.0" />
+          <property role="gqqTW" value="219.0" />
           <property role="gqqTX" value="122.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -8231,6 +8253,10 @@
         <property role="37mO49" value="7308252286133109405" />
         <node concept="2VclpC" id="6lG8bJ3TCaw" role="37mO4d">
           <node concept="2VclrF" id="6lG8bJ3TCay" role="2Vcluh">
+            <property role="2Vclpx" value="591.8596826400236" />
+            <property role="2Vclpz" value="36.0" />
+          </node>
+          <node concept="2VclrF" id="4NxsD3bF4cT" role="2Vcluh">
             <property role="2Vclpx" value="715.0" />
             <property role="2Vclpz" value="123.0" />
           </node>
@@ -8242,6 +8268,24 @@
           <node concept="2VclrF" id="6lG8bJ3TCe$" role="2Vcluh">
             <property role="2Vclpx" value="341.5" />
             <property role="2Vclpz" value="253.5" />
+          </node>
+        </node>
+      </node>
+      <node concept="37mRIm" id="4NxsD3bF4gH" role="37mRID">
+        <property role="37mO49" value="7308252286133107746" />
+        <node concept="2VclpC" id="4NxsD3bF4gG" role="37mO4d">
+          <node concept="2VclrF" id="4NxsD3bF4gI" role="2Vcluh">
+            <property role="2Vclpx" value="373.9999183235847" />
+            <property role="2Vclpz" value="219.0" />
+          </node>
+        </node>
+      </node>
+      <node concept="37mRIm" id="4NxsD3bF4hE" role="37mRID">
+        <property role="37mO49" value="7308252286133107526" />
+        <node concept="2VclpC" id="4NxsD3bF4hD" role="37mO4d">
+          <node concept="2VclrF" id="4NxsD3bF4hF" role="2Vcluh">
+            <property role="2Vclpx" value="157.0" />
+            <property role="2Vclpz" value="264.0" />
           </node>
         </node>
       </node>
@@ -8298,7 +8342,7 @@
       </node>
       <node concept="2GGxJi" id="6lG8bJ3TBCz" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ3TBA9" resolve="ImmunoCompromised" />
-        <ref role="2GGxGe" node="6lG8bJ3TBBG" resolve="Yes" />
+        <ref role="2GGxGe" node="6lG8bJ3TB$W" resolve="SideRoom" />
         <node concept="1CySur" id="6lG8bJ3TBCG" role="1hyIAf">
           <ref role="1DsR7o" node="1$AaFX9f$8h" />
           <node concept="1FjjCg" id="6lG8bJ3TBCU" role="1CySjL" />
@@ -8313,16 +8357,6 @@
         </node>
       </node>
     </node>
-    <node concept="2MhjZa" id="6lG8bJ3TBBG" role="2MhjZp">
-      <property role="TrG5h" value="Yes" />
-      <node concept="2_8ZN7" id="6lG8bJ3TBC7" role="2_8HaY">
-        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
-      </node>
-      <node concept="2GGxJi" id="6lG8bJ3TBEC" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3TBBG" resolve="Yes" />
-        <ref role="2GGxGe" node="6lG8bJ3TB$W" resolve="SideRoom" />
-      </node>
-    </node>
     <node concept="2MhjZa" id="6lG8bJ3TBEI" role="2MhjZp">
       <property role="TrG5h" value="COVIDPositive" />
       <node concept="2_8ZN7" id="6lG8bJ3TBFi" role="2_8HaY">
@@ -8330,11 +8364,11 @@
       </node>
       <node concept="2GGxJi" id="6lG8bJ3TBH6" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ3TBEI" resolve="COVIDPositive" />
-        <ref role="2GGxGe" node="6lG8bJ3TBFW" resolve="Yes" />
+        <ref role="2GGxGe" node="6lG8bJ3TByD" resolve="COVIDCohort" />
         <node concept="30deu6" id="6lG8bJ3TBI1" role="1hyIAf">
           <node concept="3tEh0H" id="6lG8bJ3TBIg" role="30dEs_">
             <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-            <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+            <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
             <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
           </node>
           <node concept="3tEh0H" id="6lG8bJ3TBHK" role="30dEsF">
@@ -8354,7 +8388,7 @@
                 <node concept="3tEh0H" id="6lG8bJ589yg" role="30dEsF">
                   <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
                   <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
-                  <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+                  <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
                 </node>
                 <node concept="30czhn" id="6lG8bJ589G_" role="30dEs_">
                   <node concept="3tEh0H" id="6lG8bJ589uF" role="30czhm">
@@ -8382,22 +8416,12 @@
               </node>
               <node concept="3tEh0H" id="6lG8bJ3TBM_" role="30dEs_">
                 <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-                <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+                <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
                 <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
               </node>
             </node>
           </node>
         </node>
-      </node>
-    </node>
-    <node concept="2MhjZa" id="6lG8bJ3TBFW" role="2MhjZp">
-      <property role="TrG5h" value="Yes" />
-      <node concept="2_8ZN7" id="6lG8bJ3TBJ7" role="2_8HaY">
-        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
-      </node>
-      <node concept="2GGxJi" id="6lG8bJ3TBJa" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3TBFW" resolve="Yes" />
-        <ref role="2GGxGe" node="6lG8bJ3TByD" resolve="COVIDCohort" />
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3TBJc" role="2MhjZp">
@@ -8407,7 +8431,7 @@
       </node>
       <node concept="2GGxJi" id="6lG8bJ3TBQ9" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ3TBJc" resolve="FluPositive" />
-        <ref role="2GGxGe" node="6lG8bJ3TBOF" resolve="Yes" />
+        <ref role="2GGxGe" node="6lG8bJ3TBzp" resolve="FluCohort" />
         <node concept="30deu6" id="6lG8bJ3TBR2" role="1hyIAf">
           <node concept="30deu6" id="6lG8bJ3TBR3" role="30dEsF">
             <node concept="3tEh0H" id="6lG8bJ3TBQh" role="30dEsF">
@@ -8417,14 +8441,14 @@
             </node>
             <node concept="3tEh0H" id="6lG8bJ3TBQg" role="30dEs_">
               <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
               <ref role="24g7ti" node="5R1$QEMKFkE" resolve="FluA" />
             </node>
           </node>
           <node concept="30deu6" id="6lG8bJ3TBRo" role="30dEs_">
             <node concept="3tEh0H" id="6lG8bJ3TBRp" role="30dEs_">
               <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-              <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+              <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
               <ref role="24g7ti" node="5R1$QEMMkRG" resolve="FluB" />
             </node>
             <node concept="3tEh0H" id="6lG8bJ3TBRq" role="30dEsF">
@@ -8448,7 +8472,7 @@
               </node>
               <node concept="3tEh0H" id="6lG8bJ3TBTk" role="30dEs_">
                 <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-                <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+                <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
                 <ref role="24g7ti" node="5R1$QEMKFkE" resolve="FluA" />
               </node>
             </node>
@@ -8461,19 +8485,9 @@
           <node concept="3tEh0H" id="6lG8bJ3TBTm" role="30dEs_">
             <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
             <ref role="24g7ti" node="5R1$QEMMkRG" resolve="FluB" />
-            <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlow" />
+            <ref role="3tE8WY" node="3IhX87gchRq" resolve="DualCassetteLateralFlowTest" />
           </node>
         </node>
-      </node>
-    </node>
-    <node concept="2MhjZa" id="6lG8bJ3TBOF" role="2MhjZp">
-      <property role="TrG5h" value="Yes" />
-      <node concept="2_8ZN7" id="6lG8bJ3TBQ6" role="2_8HaY">
-        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
-      </node>
-      <node concept="2GGxJi" id="6lG8bJ3TBT1" role="A3aay">
-        <ref role="3tVEyn" node="6lG8bJ3TBOF" resolve="Yes" />
-        <ref role="2GGxGe" node="6lG8bJ3TBzp" resolve="FluCohort" />
       </node>
     </node>
   </node>

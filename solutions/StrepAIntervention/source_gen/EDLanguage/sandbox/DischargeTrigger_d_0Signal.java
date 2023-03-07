@@ -14,7 +14,7 @@ public class DischargeTrigger_d_0Signal extends ActorTypeSignal {
   public DischargeTrigger_d_0Signal() {
     this.setName("DischargeTrigger_d_0");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("MajorsDoctor");
+    this.AddActor("MinorsDoctor");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

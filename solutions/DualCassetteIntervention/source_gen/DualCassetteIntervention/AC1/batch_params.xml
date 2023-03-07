@@ -5,17 +5,17 @@
 		type="number" number_type="int" start="1" end="10" step="1" />
 	<parameter name="UsePathFinding"
 		type="constant" constant_type="boolean" value="false" />
-  	<parameter name="LateralFlowCOVIDSensitivity"
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSensitivity"
   		type="constant" constant_type="double" value="70.7" />
-  	<parameter name="LateralFlowCOVIDSpecificity"
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSpecificity"
   		type="constant" constant_type="double" value="99.1" />
-  	<parameter name="LateralFlowFluASensitivity"
+  	<parameter name="DualCassetteLateralFlowTestFluASensitivity"
   		type="constant" constant_type="double" value="84" />
-  	<parameter name="LateralFlowFluASpecificity"
+  	<parameter name="DualCassetteLateralFlowTestFluASpecificity"
   		type="constant" constant_type="double" value="97" />
-  	<parameter name="LateralFlowFluBSensitivity"
+  	<parameter name="DualCassetteLateralFlowTestFluBSensitivity"
   		type="constant" constant_type="double" value="84" />
-  	<parameter name="LateralFlowFluBSpecificity"
+  	<parameter name="DualCassetteLateralFlowTestFluBSpecificity"
   		type="constant" constant_type="double" value="97" />
   	<parameter name="LIATCOVIDSensitivity"
   		type="constant" constant_type="double" value="100" />
@@ -101,17 +101,17 @@
   		type="constant" constant_type="double" value="99" />
   	<parameter name="PHEThreeFluBSpecificity"
   		type="constant" constant_type="double" value="99" />
-  	<parameter name="LateralFlowCOVIDSensitivity"
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSensitivity"
   		type="constant" constant_type="double" value="70.7" />
-  	<parameter name="LateralFlowCOVIDSpecificity"
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSpecificity"
   		type="constant" constant_type="double" value="99.1" />
-  	<parameter name="LateralFlowFluASensitivity"
+  	<parameter name="DualCassetteLateralFlowTestFluASensitivity"
   		type="constant" constant_type="double" value="84" />
-  	<parameter name="LateralFlowFluASpecificity"
+  	<parameter name="DualCassetteLateralFlowTestFluASpecificity"
   		type="constant" constant_type="double" value="97" />
-  	<parameter name="LateralFlowFluBSensitivity"
+  	<parameter name="DualCassetteLateralFlowTestFluBSensitivity"
   		type="constant" constant_type="double" value="84" />
-  	<parameter name="LateralFlowFluBSpecificity"
+  	<parameter name="DualCassetteLateralFlowTestFluBSpecificity"
   		type="constant" constant_type="double" value="97" />
   	<parameter name="PHEThreeCOVIDSensitivity"
   		type="constant" constant_type="double" value="99" />
@@ -185,17 +185,17 @@
   		type="constant" constant_type="double" value="99" />
   	<parameter name="PHEThreeFluBSpecificity"
   		type="constant" constant_type="double" value="99" />
-  	<parameter name="LateralFlowCOVIDSensitivity"
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSensitivity"
   		type="constant" constant_type="double" value="70.7" />
-  	<parameter name="LateralFlowCOVIDSpecificity"
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSpecificity"
   		type="constant" constant_type="double" value="99.1" />
-  	<parameter name="LateralFlowFluASensitivity"
+  	<parameter name="DualCassetteLateralFlowTestFluASensitivity"
   		type="constant" constant_type="double" value="84" />
-  	<parameter name="LateralFlowFluASpecificity"
+  	<parameter name="DualCassetteLateralFlowTestFluASpecificity"
   		type="constant" constant_type="double" value="97" />
-  	<parameter name="LateralFlowFluBSensitivity"
+  	<parameter name="DualCassetteLateralFlowTestFluBSensitivity"
   		type="constant" constant_type="double" value="84" />
-  	<parameter name="LateralFlowFluBSpecificity"
+  	<parameter name="DualCassetteLateralFlowTestFluBSpecificity"
   		type="constant" constant_type="double" value="97" />
   	<parameter name="PHEThreeCOVIDSensitivity"
   		type="constant" constant_type="double" value="99" />
@@ -263,6 +263,12 @@
   		 type="constant" constant_type="double" value = "0" />
   	<parameter name="patientCOVIDInfectionStatusSusceptible"
   		 type="constant" constant_type="double" value = "99.5" />
+  	<parameter name="patientFluBInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="patientFluBInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="patientFluBInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "0" />
   	<parameter name="patientFluAInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "0.17" />
   	<parameter name="patientFluAInfectionStatusAsymptomatic"

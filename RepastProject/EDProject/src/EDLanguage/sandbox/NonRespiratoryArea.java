@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class NonRespiratoryArea extends RoomType {
-  private static NonRespiratoryArea instance;
+  private static RoomType instance;
 
   private NonRespiratoryArea() {
     super();

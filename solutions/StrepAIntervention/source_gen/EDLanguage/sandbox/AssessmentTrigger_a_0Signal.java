@@ -14,11 +14,11 @@ public class AssessmentTrigger_a_0Signal extends ActorTypeSignal {
   public AssessmentTrigger_a_0Signal() {
     this.setName("AssessmentTrigger_a_0");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("MinorsDoctor");
+    this.AddActor("MajorsDoctor");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {
-    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(MinorsBay.getInstance()).stream().filter(new Predicate<Room>() {
+    if (new ToolBox(context).ReadMap().FindInstancesOfRoomType(MajorsBay.getInstance()).stream().filter(new Predicate<Room>() {
       public boolean test(Room r) {
         return r.hasCapacity() || r.getOccupiers().stream().anyMatch(new Predicate<Agent>() {
           public boolean test(Agent actor) {

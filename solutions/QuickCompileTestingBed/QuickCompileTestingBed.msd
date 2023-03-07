@@ -6,7 +6,7 @@
     </modelRoot>
   </models>
   <facets>
-    <facet type="java">
+    <facet type="java" languageLevel="JAVA_9">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
     <facet planModel="r:2a1f1036-5bc2-4d20-bd0e-dd0d369c0be7(DualCassetteIntervention.GenPlan)" type="generator" />

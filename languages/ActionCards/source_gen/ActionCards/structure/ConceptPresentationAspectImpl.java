@@ -18,8 +18,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActionDurationEmptyLine;
   private ConceptPresentation props_ActionDurationMinutes;
   private ConceptPresentation props_AdmissionAction;
+  private ConceptPresentation props_AdmissionRouteProperty;
   private ConceptPresentation props_AttendanceRoute;
-  private ConceptPresentation props_AttendanceRouteCondition;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeLine;
   private ConceptPresentation props_AttributeTable;
@@ -163,6 +163,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AdmissionAction = cpb.create();
         }
         return props_AdmissionAction;
+      case LanguageConceptSwitch.AdmissionRouteProperty:
+        if (props_AdmissionRouteProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Admission Route");
+          props_AdmissionRouteProperty = cpb.create();
+        }
+        return props_AdmissionRouteProperty;
       case LanguageConceptSwitch.AttendanceRoute:
         if (props_AttendanceRoute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -170,13 +177,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttendanceRoute = cpb.create();
         }
         return props_AttendanceRoute;
-      case LanguageConceptSwitch.AttendanceRouteCondition:
-        if (props_AttendanceRouteCondition == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Check patient attendance route");
-          props_AttendanceRouteCondition = cpb.create();
-        }
-        return props_AttendanceRouteCondition;
       case LanguageConceptSwitch.Attribute:
         if (props_Attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

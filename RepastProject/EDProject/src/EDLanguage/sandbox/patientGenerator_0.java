@@ -33,7 +33,7 @@ public class patientGenerator_0 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("PatientArrivesTrigger_f");
+    sendSignalTemp.setName("PatientArrivesTrigger_o");
     sendSignalTemp.AddData("patient", a);
     sendSignalTemp.AddActor("TriageNurse");
 
@@ -56,6 +56,18 @@ public class patientGenerator_0 extends AgentGenerator {
   }
 
   public void generateAttribute_a(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patientProfileAdmissionRouteEmergencyAttendance"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.AdmissionRoute = "EmergencyAttendance";
+      return;
+    }
+
+  }
+  public void generateAttribute_b(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -88,7 +100,7 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_b(patient agent) {
+  public void generateAttribute_c(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -121,7 +133,7 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_c(patient agent) {
+  public void generateAttribute_d(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -154,7 +166,7 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_d(patient agent) {
+  public void generateAttribute_e(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -180,7 +192,7 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_e(patient agent) {
+  public void generateAttribute_f(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -196,18 +208,6 @@ public class patientGenerator_0 extends AgentGenerator {
       return;
     } else {
       runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientProfileImmunocompromisedYes");
-    }
-
-  }
-  public void generateAttribute_f(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patientProfileadmissionRouteEmergencyAttendance"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.admissionRoute = "EmergencyAttendance";
-      return;
     }
 
   }

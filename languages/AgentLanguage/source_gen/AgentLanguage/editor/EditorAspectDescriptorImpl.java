@@ -278,7 +278,7 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase {
       case 11:
         return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_AttributeDistributionLine());
       case 12:
-        return Collections.<SubstituteMenu>singletonList(new GrammarCellsSubstituteMenu_AttributeDistributionTable());
+        return Arrays.asList(new SubstituteMenu[]{new AttributeDistributionTable_SubstituteMenu(), new GrammarCellsSubstituteMenu_AttributeDistributionTable()});
       case 13:
         return Arrays.asList(new SubstituteMenu[]{new AttributeExpressionReference_SubstituteMenu(), new GrammarCellsSubstituteMenu_AttributeExpressionReference()});
       case 14:

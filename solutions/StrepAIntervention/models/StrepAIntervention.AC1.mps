@@ -322,7 +322,7 @@
     </node>
   </node>
   <node concept="2OfScj" id="1xAzJ9Ksr_q">
-    <property role="TrG5h" value="NormalPatients" />
+    <property role="TrG5h" value="Typical Patients" />
     <property role="3GE5qa" value="PatientProfiles" />
     <node concept="1jfOK3" id="i1eH3VeD_s" role="2OfI9c">
       <ref role="3ZaQn3" node="i1eH3VODli" />
@@ -2564,7 +2564,7 @@
     </node>
   </node>
   <node concept="2OfScj" id="6lG8bJ5b7xx">
-    <property role="TrG5h" value="StrepPatients" />
+    <property role="TrG5h" value="Strep A Patients" />
     <property role="3GE5qa" value="PatientProfiles" />
     <node concept="1jfOK3" id="6lG8bJ5b7xy" role="2OfI9c">
       <ref role="3ZaQn3" node="i1eH3VLBn7" />
@@ -2673,7 +2673,7 @@
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
       </node>
     </node>
-    <node concept="1FPx23" id="6lG8bJ5b7E5" role="1FYssH" />
+    <node concept="1FPxa$" id="4NxsD3c5u0G" role="1FYssH" />
   </node>
   <node concept="2GGxxg" id="i1eH3VeDCH">
     <property role="3GE5qa" value="Staff" />
