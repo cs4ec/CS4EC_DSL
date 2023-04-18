@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class LIATBooth extends RoomType {
-  private static LIATBooth instance;
+  private static RoomType instance;
 
   private LIATBooth() {
     super();

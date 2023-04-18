@@ -10,7 +10,7 @@ public class MajorsAB_Cubicle extends RoomType {
   private MajorsAB_Cubicle() {
     super();
     actorAllocationLimit.put(patient.class, 1);
-    actorAllocationLimit.put(CubicleNurse.class, 1);
+    actorAllocationLimit.put(MajorsABCubicleNurse.class, 1);
     actorAllocationLimit.put(Doctor.class, 1);
   }
 

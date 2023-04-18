@@ -41,7 +41,10 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptBehaviourElementReference = createDescriptorForBehaviourElementReference();
   /*package*/ final ConceptDescriptor myConceptBehaviourSequence = createDescriptorForBehaviourSequence();
   /*package*/ final ConceptDescriptor myConceptBinaryCondition = createDescriptorForBinaryCondition();
+  /*package*/ final ConceptDescriptor myConceptBreadcrumb = createDescriptorForBreadcrumb();
   /*package*/ final ConceptDescriptor myConceptChoice = createDescriptorForChoice();
+  /*package*/ final ConceptDescriptor myConceptColourLine = createDescriptorForColourLine();
+  /*package*/ final ConceptDescriptor myConceptColourTable = createDescriptorForColourTable();
   /*package*/ final ConceptDescriptor myConceptCompositeOrder = createDescriptorForCompositeOrder();
   /*package*/ final ConceptDescriptor myConceptCondition = createDescriptorForCondition();
   /*package*/ final ConceptDescriptor myConceptConsequenceElement = createDescriptorForConsequenceElement();
@@ -54,6 +57,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptDescription = createDescriptorForDescription();
   /*package*/ final ConceptDescriptor myConceptDirectSignal = createDescriptorForDirectSignal();
   /*package*/ final ConceptDescriptor myConceptDistanceCondition = createDescriptorForDistanceCondition();
+  /*package*/ final ConceptDescriptor myConceptDropBreadcrumb = createDescriptorForDropBreadcrumb();
   /*package*/ final ConceptDescriptor myConceptExpressionWrapper = createDescriptorForExpressionWrapper();
   /*package*/ final ConceptDescriptor myConceptFollowOrder = createDescriptorForFollowOrder();
   /*package*/ final ConceptDescriptor myConceptForEach = createDescriptorForForEach();
@@ -64,6 +68,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptInfectionState = createDescriptorForInfectionState();
   /*package*/ final ConceptDescriptor myConceptIsExactlyOperator = createDescriptorForIsExactlyOperator();
   /*package*/ final ConceptDescriptor myConceptIsLessThanOperator = createDescriptorForIsLessThanOperator();
+  /*package*/ final ConceptDescriptor myConceptIsPathObstructedCondition = createDescriptorForIsPathObstructedCondition();
   /*package*/ final ConceptDescriptor myConceptIterable = createDescriptorForIterable();
   /*package*/ final ConceptDescriptor myConceptIterableAttributeCondition = createDescriptorForIterableAttributeCondition();
   /*package*/ final ConceptDescriptor myConceptKernelFCondition = createDescriptorForKernelFCondition();
@@ -156,7 +161,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptActor, myConceptActorReference, myConceptActorTypeSignal, myConceptAgentAttributeReference, myConceptAgentGenerator, myConceptAgentGeneratorLine, myConceptAgentIterable, myConceptAggregateAttributeMonitor, myConceptAndCondition, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeDistributionLine, myConceptAttributeDistributionTable, myConceptAttributeExpressionReference, myConceptAttributeMonitor, myConceptAttributeMonitorReference, myConceptAttributeReference, myConceptBackgroundBehaviour, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptBinaryCondition, myConceptChoice, myConceptCompositeOrder, myConceptCondition, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDeSpawnAction, myConceptDecisionTree, myConceptDecisionTreeLine, myConceptDescription, myConceptDirectSignal, myConceptDistanceCondition, myConceptExpressionWrapper, myConceptFollowOrder, myConceptForEach, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptIAmAtCondition, myConceptInSameRoomCondition, myConceptInfectionState, myConceptIsExactlyOperator, myConceptIsLessThanOperator, myConceptIterable, myConceptIterableAttributeCondition, myConceptKernelFCondition, myConceptMessageSelectionStrategy, myConceptMoveAction, myConceptMoveOrder, myConceptMyAttributeCondition, myConceptMyRoomInstance, myConceptNewPatientSignal, myConceptObjectInstance, myConceptOccupiableAvailabilityCondition, myConceptOccupiableReference, myConceptOccupyAction, myConceptOccupyOrder, myConceptOperator, myConceptOrder, myConceptOrderPatientAction, myConceptPassiveWaitAction, myConceptPassiveWaitUntil, myConceptPatientInstance, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptPossibleValuesTuple, myConceptProbabilityDistribution, myConceptProbabilityDistributionLine, myConceptRelationship, myConceptRemoveRelationshipAction, myConceptRepastParam, myConceptRoomIsEmptyOrContainsRelationshipMemberCondition, myConceptRoomSelectionCondition, myConceptRoomSelectionRule, myConceptRoomSelectionStrategy, myConceptRoomSelectionStrategyLine, myConceptRoomTypeCondition, myConceptRoomTypeIsAvailableCondition, myConceptRoomTypeReference, myConceptScheduledBehaviour, myConceptSelectClosestRoom, myConceptSelectFirstSignal, myConceptSelectNotRelationshipDataSignal, myConceptSelectRandomSignal, myConceptSelectRelationshipDataSignal, myConceptSelectRoomByCapacity, myConceptSelectRoomByRelationshipToOccupier, myConceptSelectRoomWithNoAgentsOfType, myConceptSelfInstance, myConceptSendSignalAction, myConceptSignal, myConceptSignalDataReference, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalSelectionRule, myConceptSignalSelectionRuleLine, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptUpdateAttributeAction, myConceptUseResourceAction);
+    return Arrays.asList(myConceptActor, myConceptActorReference, myConceptActorTypeSignal, myConceptAgentAttributeReference, myConceptAgentGenerator, myConceptAgentGeneratorLine, myConceptAgentIterable, myConceptAggregateAttributeMonitor, myConceptAndCondition, myConceptAttribute, myConceptAttributeCondition, myConceptAttributeDistributionLine, myConceptAttributeDistributionTable, myConceptAttributeExpressionReference, myConceptAttributeMonitor, myConceptAttributeMonitorReference, myConceptAttributeReference, myConceptBackgroundBehaviour, myConceptBehaviour, myConceptBehaviourElement, myConceptBehaviourElementReference, myConceptBehaviourSequence, myConceptBinaryCondition, myConceptBreadcrumb, myConceptChoice, myConceptColourLine, myConceptColourTable, myConceptCompositeOrder, myConceptCondition, myConceptConsequenceElement, myConceptConsequenceInStep, myConceptDataInstanceMap, myConceptDataMap, myConceptDeSpawnAction, myConceptDecisionTree, myConceptDecisionTreeLine, myConceptDescription, myConceptDirectSignal, myConceptDistanceCondition, myConceptDropBreadcrumb, myConceptExpressionWrapper, myConceptFollowOrder, myConceptForEach, myConceptHumanInstance, myConceptHumanInstanceFromSignal, myConceptIAmAtCondition, myConceptInSameRoomCondition, myConceptInfectionState, myConceptIsExactlyOperator, myConceptIsLessThanOperator, myConceptIsPathObstructedCondition, myConceptIterable, myConceptIterableAttributeCondition, myConceptKernelFCondition, myConceptMessageSelectionStrategy, myConceptMoveAction, myConceptMoveOrder, myConceptMyAttributeCondition, myConceptMyRoomInstance, myConceptNewPatientSignal, myConceptObjectInstance, myConceptOccupiableAvailabilityCondition, myConceptOccupiableReference, myConceptOccupyAction, myConceptOccupyOrder, myConceptOperator, myConceptOrder, myConceptOrderPatientAction, myConceptPassiveWaitAction, myConceptPassiveWaitUntil, myConceptPatientInstance, myConceptPlaceInstance, myConceptPlaceInstanceCollection, myConceptPlaceInstanceFromSignal, myConceptPlaceInstanceReference, myConceptPossibilityCondition, myConceptPossibleValuesTuple, myConceptProbabilityDistribution, myConceptProbabilityDistributionLine, myConceptRelationship, myConceptRemoveRelationshipAction, myConceptRepastParam, myConceptRoomIsEmptyOrContainsRelationshipMemberCondition, myConceptRoomSelectionCondition, myConceptRoomSelectionRule, myConceptRoomSelectionStrategy, myConceptRoomSelectionStrategyLine, myConceptRoomTypeCondition, myConceptRoomTypeIsAvailableCondition, myConceptRoomTypeReference, myConceptScheduledBehaviour, myConceptSelectClosestRoom, myConceptSelectFirstSignal, myConceptSelectNotRelationshipDataSignal, myConceptSelectRandomSignal, myConceptSelectRelationshipDataSignal, myConceptSelectRoomByCapacity, myConceptSelectRoomByRelationshipToOccupier, myConceptSelectRoomWithNoAgentsOfType, myConceptSelfInstance, myConceptSendSignalAction, myConceptSignal, myConceptSignalDataReference, myConceptSignalDefinition, myConceptSignalInitReference, myConceptSignalReference, myConceptSignalSelectionRule, myConceptSignalSelectionRuleLine, myConceptSignalTrigger, myConceptSpaceAtCondition, myConceptStayAction, myConceptStayForConditionAction, myConceptStayForTimeAction, myConceptStopOrder, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptUpdateAttributeAction, myConceptUseResourceAction);
   }
 
   @Override
@@ -209,8 +214,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptBehaviourSequence;
       case LanguageConceptSwitch.BinaryCondition:
         return myConceptBinaryCondition;
+      case LanguageConceptSwitch.Breadcrumb:
+        return myConceptBreadcrumb;
       case LanguageConceptSwitch.Choice:
         return myConceptChoice;
+      case LanguageConceptSwitch.ColourLine:
+        return myConceptColourLine;
+      case LanguageConceptSwitch.ColourTable:
+        return myConceptColourTable;
       case LanguageConceptSwitch.CompositeOrder:
         return myConceptCompositeOrder;
       case LanguageConceptSwitch.Condition:
@@ -235,6 +246,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptDirectSignal;
       case LanguageConceptSwitch.DistanceCondition:
         return myConceptDistanceCondition;
+      case LanguageConceptSwitch.DropBreadcrumb:
+        return myConceptDropBreadcrumb;
       case LanguageConceptSwitch.ExpressionWrapper:
         return myConceptExpressionWrapper;
       case LanguageConceptSwitch.FollowOrder:
@@ -255,6 +268,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptIsExactlyOperator;
       case LanguageConceptSwitch.IsLessThanOperator:
         return myConceptIsLessThanOperator;
+      case LanguageConceptSwitch.IsPathObstructedCondition:
+        return myConceptIsPathObstructedCondition;
       case LanguageConceptSwitch.Iterable:
         return myConceptIterable;
       case LanguageConceptSwitch.IterableAttributeCondition:
@@ -641,6 +656,15 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("right", 0x142c08a9440bcdbL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ebbb42L).optional(false).ordered(true).multiple(false).origin("90846643926121691").done();
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForBreadcrumb() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "Breadcrumb", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xb071d9209171bd9L);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/794636372309122009");
+    b.version(2);
+    b.aggregate("colourTable", 0xb071d920ad29965L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xb071d920ad27edaL).optional(false).ordered(true).multiple(false).origin("794636372338186597").done();
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForChoice() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "Choice", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce30854aL);
     b.class_(false, false, false);
@@ -651,6 +675,25 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.aggregate("if_case", 0x35463334ce30854bL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(false).ordered(true).multiple(false).origin("3838812034270528843").done();
     b.aggregate("else_case", 0x35463334ce308550L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308546L).optional(true).ordered(true).multiple(false).origin("3838812034270528848").done();
     b.alias("if");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForColourLine() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "ColourLine", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xb071d920ad27f13L);
+    b.class_(false, false, false);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/794636372338179859");
+    b.version(2);
+    b.property("Colour", 0xb071d920ad27f38L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L)).origin("794636372338179896").done();
+    b.property("Occurances", 0xb071d920ad27f3aL).type(PrimitiveTypeId.INTEGER).origin("794636372338179898").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForColourTable() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "ColourTable", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xb071d920ad27edaL);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/794636372338179802");
+    b.version(2);
+    b.aggregate("lines", 0xb071d920ad27f85L).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xb071d920ad27f13L).optional(true).ordered(true).multiple(true).origin("794636372338179973").done();
+    b.alias("Colour Table");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForCompositeOrder() {
@@ -766,6 +809,17 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("Distance to an actor");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForDropBreadcrumb() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "DropBreadcrumb", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xb071d9209171be3L);
+    b.class_(false, false, false);
+    b.super_("AgentLanguage.structure.Behaviour", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce308547L);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/794636372309122019");
+    b.version(2);
+    b.associate("breadcrumb", 0xb071d9209171c0aL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0xb071d9209171bd9L).optional(true).origin("794636372309122058").done();
+    b.alias("drop");
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForExpressionWrapper() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "ExpressionWrapper", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L);
     b.class_(false, false, false);
@@ -857,6 +911,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.super_("AgentLanguage.structure.Operator", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3bf86d07f26980bbL);
     b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/4321323723361190114");
     b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForIsPathObstructedCondition() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("AgentLanguage", "IsPathObstructedCondition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6612fd2dda53a22L);
+    b.class_(false, false, false);
+    b.super_("AgentLanguage.structure.Condition", 0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3ee12f7242ebbb42L);
+    b.origin("r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)/459701219676731938");
+    b.version(2);
+    b.aggregate("target", 0x6612fd2dda53c0bL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x7606d63a99b863a2L).optional(false).ordered(true).multiple(false).origin("459701219676732427").done();
+    b.alias("Is path obstructed to");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForIterable() {

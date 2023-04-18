@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="PatientLanguage.Language">
+    <classNode dependClassName="PatientLanguage.behavior.BehaviorAspectDescriptor" />
+    <classNode dependClassName="PatientLanguage.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="PatientLanguage.structure.ConceptPresentationAspectImpl" />
+    <classNode dependClassName="PatientLanguage.structure.StructureAspectDescriptor" />
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Collection" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.StructureAspectDescriptor" />
+    <classNode dependClassName="org.jetbrains.annotations.NotNull" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SLanguage" />
+    <classNode extendsClassName="jetbrains.mps.smodel.language.LanguageRuntime" />
+  </dependency>
+</dependenciesRoot>
+

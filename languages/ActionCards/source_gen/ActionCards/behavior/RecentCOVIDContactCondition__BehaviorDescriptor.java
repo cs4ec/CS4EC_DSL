@@ -32,7 +32,7 @@ public final class RecentCOVIDContactCondition__BehaviorDescriptor extends BaseB
   private static void ___init___(@NotNull SNode __thisNode__) {
     SLinkOperations.setTarget(__thisNode__, LINKS.checkValue$p63D, SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bb4e2L, "ActionCards.structure.Yes")));
 
-    SLinkOperations.setTarget(__thisNode__, LINKS.patientProperty$FJ4E, SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(SNodeOperations.getModel(__thisNode__), CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).where(new IWhereFilter<SNode>() {
+    SLinkOperations.setTarget(__thisNode__, LINKS.patientProperty$FJ4E, SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(SNodeOperations.getModel(__thisNode__), CONCEPTS.PatientProfile$he), LINKS.attributes$eds7)).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.patientProperty$d18a), CONCEPTS.RecentCovidContactProperty$IY);
       }
@@ -87,12 +87,12 @@ public final class RecentCOVIDContactCondition__BehaviorDescriptor extends BaseB
   private static final class LINKS {
     /*package*/ static final SContainmentLink checkValue$p63D = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L, 0x18668ef270ed0a03L, "checkValue");
     /*package*/ static final SReferenceLink patientProperty$FJ4E = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L, 0x18668ef27115ff2aL, "patientProperty");
-    /*package*/ static final SContainmentLink attributes$kiaM = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, 0xaabf015be951259L, "attributes");
+    /*package*/ static final SContainmentLink attributes$eds7 = MetaAdapterFactory.getContainmentLink(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0xaabf015be947306L, 0xaabf015be951259L, "attributes");
     /*package*/ static final SReferenceLink patientProperty$d18a = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L, 0x4813ad0fbaa5f13L, "patientProperty");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept PatientProfile$ZT = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, "ActionCards.structure.PatientProfile");
+    /*package*/ static final SConcept PatientProfile$he = MetaAdapterFactory.getConcept(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0xaabf015be947306L, "PatientLanguage.structure.PatientProfile");
     /*package*/ static final SConcept RecentCovidContactProperty$IY = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732b9054L, "ActionCards.structure.RecentCovidContactProperty");
   }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language namespace="ActionCards" uuid="b3cac82c-d024-46bc-b485-624ad80c3cc2" languageVersion="1" moduleVersion="1">
+<language namespace="ActionCards" uuid="b3cac82c-d024-46bc-b485-624ad80c3cc2" languageVersion="2" moduleVersion="2">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
@@ -29,6 +29,7 @@
         <dependency reexport="false">4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)</dependency>
         <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
         <dependency reexport="false">bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)</dependency>
+        <dependency reexport="false">2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:b3cac82c-d024-46bc-b485-624ad80c3cc2:ActionCards" version="1" />
@@ -64,7 +65,7 @@
         <language slang="l:6b277d9a-d52d-416f-a209-1919bd737f50:org.iets3.core.expr.simpleTypes" version="1" />
       </languageVersions>
       <dependencyVersions>
-        <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="1" />
+        <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="2" />
         <module reference="18e9a695-d274-436f-9223-400c64c57517(ActionCards.generator)" version="0" />
         <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
@@ -78,6 +79,7 @@
         <module reference="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" version="0" />
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
+        <module reference="2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)" version="0" />
         <module reference="c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)" version="0" />
         <module reference="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" version="0" />
         <module reference="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" version="0" />
@@ -126,6 +128,7 @@
     <dependency reexport="false">f7ad14aa-a3e2-4301-8822-d919845c8bcf(de.itemis.mps.editor.diagram.shapes)</dependency>
     <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
     <dependency reexport="true">c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)</dependency>
+    <dependency reexport="false">2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:b3cac82c-d024-46bc-b485-624ad80c3cc2:ActionCards" version="1" />
@@ -203,7 +206,7 @@
     <language slang="l:71934284-d7d1-45ee-a054-8c072591085f:org.iets3.core.expr.toplevel" version="4" />
   </languageVersions>
   <dependencyVersions>
-    <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="1" />
+    <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="2" />
     <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
     <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
@@ -214,6 +217,7 @@
     <module reference="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" version="0" />
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
+    <module reference="2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)" version="0" />
     <module reference="c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)" version="0" />
     <module reference="d4280a54-f6df-4383-aa41-d1b2bffa7eb1(com.mbeddr.core.base)" version="3" />
     <module reference="63e0e566-5131-447e-90e3-12ea330e1a00(com.mbeddr.mpsutil.blutil)" version="0" />

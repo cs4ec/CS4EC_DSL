@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class Labaratory extends RoomType {
-  private static Labaratory instance;
+  private static RoomType instance;
 
   private Labaratory() {
     super();

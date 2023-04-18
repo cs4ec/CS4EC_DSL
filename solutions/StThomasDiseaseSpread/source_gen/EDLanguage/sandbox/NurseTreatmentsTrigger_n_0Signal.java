@@ -14,7 +14,7 @@ public class NurseTreatmentsTrigger_n_0Signal extends ActorTypeSignal {
   public NurseTreatmentsTrigger_n_0Signal() {
     this.setName("NurseTreatmentsTrigger_n_0");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("CubicleNurse");
+    this.AddActor("MajorsABCubicleNurse");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

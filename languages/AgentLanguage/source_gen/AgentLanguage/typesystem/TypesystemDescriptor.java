@@ -32,6 +32,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_IsPathObstructedCondition_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_IterableAttributeCondition_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }

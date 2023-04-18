@@ -14,7 +14,7 @@ public class PerformLIATorCepheidTrigger_dSignal extends ActorTypeSignal {
   public PerformLIATorCepheidTrigger_dSignal() {
     this.setName("PerformLIATorCepheidTrigger_d");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("CubicleNurse");
+    this.AddActor("MajorsCCubicleNurse");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

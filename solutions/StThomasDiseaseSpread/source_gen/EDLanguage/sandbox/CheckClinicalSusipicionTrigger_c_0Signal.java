@@ -14,7 +14,7 @@ public class CheckClinicalSusipicionTrigger_c_0Signal extends ActorTypeSignal {
   public CheckClinicalSusipicionTrigger_c_0Signal() {
     this.setName("CheckClinicalSusipicionTrigger_c_0");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("CubicleNurse");
+    this.AddActor("MajorsABCubicleNurse");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

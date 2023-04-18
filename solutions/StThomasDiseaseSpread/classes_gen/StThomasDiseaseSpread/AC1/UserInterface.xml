@@ -6,6 +6,22 @@
       <string>simcore.basicStructures.Room</string>
       <string>simcore.styles.LocationStyle</string>
     </entry>
+    <entry>
+      <string>simcore.basicStructures.Wall</string>
+      <string>simcore.styles.WallStyle</string>
+    </entry>
+      <entry>
+      <string>EDLanguage.sandbox.COVIDBreadcrumb</string>
+      <string>EDLanguage.sandbox.COVIDBreadcrumbstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.FluABreadcrumb</string>
+      <string>EDLanguage.sandbox.FluABreadcrumbstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.FluBBreadcrumb</string>
+      <string>EDLanguage.sandbox.FluBBreadcrumbstyle</string>
+      </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>
       <string>EDLanguage.sandbox.Bedstyle</string>
@@ -23,8 +39,8 @@
       <string>EDLanguage.sandbox.TriageNursestyle</string>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.CubicleNurse</string>
-      <string>EDLanguage.sandbox.CubicleNursestyle</string>
+      <string>EDLanguage.sandbox.MajorsABCubicleNurse</string>
+      <string>EDLanguage.sandbox.MajorsABCubicleNursestyle</string>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.LabTechnician</string>
@@ -39,6 +55,10 @@
       <string>EDLanguage.sandbox.WardNursestyle</string>
       </entry>
       <entry>
+      <string>EDLanguage.sandbox.MajorsCCubicleNurse</string>
+      <string>EDLanguage.sandbox.MajorsCCubicleNursestyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.map_PatientProfile</string>
       <string>EDLanguage.sandbox.map_PatientProfilestyle</string>
       </entry>
@@ -48,19 +68,6 @@
       </entry>
   </styles>
   <editedStyles>
-    <entry>
-      <string>simcore.basicStructures.Room</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Occupiable</string>
-      <string>simcore.basicStructures.Occupiable.style_1.xml</string>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Wall</string>
-      <null/>
-    </entry>
-
   </editedStyles>
   <netStyles/>
   <editedNetStyles/>
@@ -89,13 +96,25 @@
 
     <entry>
       <string>simcore.basicStructures.Wall</string>
-      <int>1</int>
+      <int>1001</int>
     </entry>
 
     <entry>
       <string>simcore.basicStructures.Occupiable</string>
       <int>2</int>
     </entry>
+      <entry>
+      <string>EDLanguage.sandbox.COVIDBreadcrumb</string>
+      <int>15</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.FluABreadcrumb</string>
+      <int>16</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.FluBBreadcrumb</string>
+      <int>17</int>
+      </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>
       <int>4</int>
@@ -109,24 +128,28 @@
       <int>6</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.CubicleNurse</string>
+      <string>EDLanguage.sandbox.MajorsABCubicleNurse</string>
       <int>7</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.TriageNurse</string>
+      <string>EDLanguage.sandbox.MajorsCCubicleNurse</string>
       <int>8</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
+      <string>EDLanguage.sandbox.TriageNurse</string>
       <int>9</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.LabTechnician</string>
+      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
       <int>10</int>
       </entry>
       <entry>
-      <string>EDLanguage.sandbox.WardNurse</string>
+      <string>EDLanguage.sandbox.LabTechnician</string>
       <int>11</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.WardNurse</string>
+      <int>12</int>
       </entry>
   </layerOrder>
   <projections>

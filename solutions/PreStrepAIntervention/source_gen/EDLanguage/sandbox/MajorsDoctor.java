@@ -193,35 +193,6 @@ public class MajorsDoctor extends Actor {
 
 
 
-  public void ALLCOLLECTEDBEHAVIOURS() {
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[stay for a while]");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("if");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("if");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[updateAttribute]");
-    System.out.println("<no name>[removeRelationship]");
-    System.out.println("<no name>[despawn]");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[updateAttribute]");
-    System.out.println("<no name>[despawn]");
-    System.out.println("<no name>[removeRelationship]");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-  }
 
   public class MoveAction_a0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
@@ -601,19 +572,9 @@ public class MajorsDoctor extends Actor {
 
     }
   }
-  public class DespawnAction_f0c extends BehaviourStep {
+  public class RemoveRelationshipAction_f0c extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public DespawnAction_f0c(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
-    }
-  }
-  public class RemoveRelationshipAction_g0c extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public RemoveRelationshipAction_g0c(Behaviour behaviour) {
+    public RemoveRelationshipAction_f0c(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -625,12 +586,22 @@ public class MajorsDoctor extends Actor {
       }
     }
   }
+  public class DespawnAction_g0c extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public DespawnAction_g0c(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
+    }
+  }
   public class MoveAction_a0a_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_0(Behaviour behaviour) {
-      target = WaitingRoom.getInstance();
+      target = StaffRoom.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -705,8 +676,8 @@ public class MajorsDoctor extends Actor {
     plstSteps.add(new OrderAction_c0c(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_d0c(behaviourBuilder));
     plstSteps.add(new Consequence_e0c(behaviourBuilder));
-    plstSteps.add(new DespawnAction_f0c(behaviourBuilder));
-    plstSteps.add(new RemoveRelationshipAction_g0c(behaviourBuilder));
+    plstSteps.add(new RemoveRelationshipAction_f0c(behaviourBuilder));
+    plstSteps.add(new DespawnAction_g0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

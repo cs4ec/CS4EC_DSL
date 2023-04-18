@@ -17,10 +17,18 @@ import de.itemis.mps.editor.diagram.runtime.model.IBoxAccessor;
 import de.itemis.mps.editor.diagram.runtime.model.SNodeBoxAccessor;
 import de.itemis.mps.editor.diagram.runtime.model.IDiagramElementAccessor;
 import de.itemis.mps.editor.diagram.runtime.model.IAccessorFactory;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
+import java.awt.Color;
 import org.jetbrains.mps.openapi.language.SProperty;
 import jetbrains.mps.openapi.editor.menus.transformation.SPropertyInfo;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Property;
 import jetbrains.mps.nodeEditor.cells.SPropertyAccessor;
+import jetbrains.mps.openapi.editor.style.StyleRegistry;
+import jetbrains.mps.nodeEditor.MPSColors;
 import jetbrains.mps.nodeEditor.cellMenu.SPropertySubstituteInfo;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.IAttributeDescriptor;
@@ -61,7 +69,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
         final ContextVariables _variablesContext = ContextVariables.getCurrent();
         final List<Port> ports = new ArrayList<Port>();
 
-        EditorCell contentCell = createProperty_0();
+        EditorCell contentCell = createCollection_0();
         final List<EditorCell> contentCells = new ArrayList<EditorCell>();
         contentCells.add(contentCell);
 
@@ -105,6 +113,15 @@ import org.jetbrains.mps.openapi.language.SConcept;
   private EditorCell createDiagramNode_1() {
     return createDiagramNode_0(getEditorContext(), myNode);
   }
+  private EditorCell createCollection_0() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_nbkxem_a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.BACKGROUND_COLOR, (Color) null);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createProperty_0());
+    return editorCell;
+  }
   private EditorCell createProperty_0() {
     getCellFactory().pushCellContext();
     try {
@@ -113,6 +130,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
       editorCell.setDefaultText("<no name>");
       editorCell.setCellId("property_name");
+      Style style = new StyleImpl();
+      style.set(StyleAttributes.FONT_SIZE, 12);
+      style.set(StyleAttributes.TEXT_COLOR, StyleRegistry.getInstance().getSimpleColor(MPSColors.WHITE));
+      editorCell.getStyle().putAll(style);
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);
       Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);

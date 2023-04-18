@@ -20,6 +20,8 @@ import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
 import simcore.action.InstantBehaviourStep;
 import simcore.action.BehaviourStep;
+import simcore.basicStructures.ToolBox;
+import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.engine.environment.RunEnvironment;
 import repast.simphony.engine.schedule.ScheduledMethod;
 import simcore.action.BackgroundBehaviour;
@@ -1067,6 +1069,42 @@ public class patient extends Actor {
 
     }
   }
+  public class DropBreadcrumb_b0a0a0a0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public DropBreadcrumb_b0a0a0a0(Behaviour behaviour) {
+      Grid grid = (Grid) ToolBox.grids.stream().filter(new Predicate<Grid>() {
+        public boolean test(Grid g) {
+          return g.getName() == "COVIDBreadcrumb";
+        }
+      }).findFirst().get();
+
+      NdPoint spacePt = space.getLocation(patient.this);
+      int diffusionRange = 3;
+      for (int xAxis = (int) (spacePt.getX() - diffusionRange); xAxis < (int) (spacePt.getX() + diffusionRange); xAxis++) {
+        int xCloseness = Math.abs(((int) spacePt.getX() - xAxis));
+        for (int yAxis = (int) (spacePt.getY() - diffusionRange); yAxis < (int) (spacePt.getY() + diffusionRange); yAxis++) {
+          int yCloseness = Math.abs(((int) spacePt.getY() - yAxis));
+
+          for (int count = Math.max(xCloseness, yCloseness); count < diffusionRange; count++) {
+            if (grid.getObjectAt(xAxis, yAxis) == null) {
+              COVIDBreadcrumb breadcrumb = new COVIDBreadcrumb();
+              context.add(breadcrumb);
+              grid.getAdder().add(grid, breadcrumb);
+              grid.moveTo(breadcrumb, xAxis, yAxis);
+              space.moveTo(breadcrumb, xAxis, yAxis);
+            } else {
+              ((COVIDBreadcrumb) grid.getObjectAt(xAxis, yAxis)).count++;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+  }
   public class Choice_a0a0a0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Choice_a0a0a0(Behaviour behaviour) {
@@ -1077,6 +1115,7 @@ public class patient extends Actor {
       if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:COVIDSymptomatic-0.4_a0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0a0(behaviour));
+        plstSteps.add(new DropBreadcrumb_b0a0a0a0(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1095,6 +1134,42 @@ public class patient extends Actor {
 
     }
   }
+  public class DropBreadcrumb_b0a0b0a0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public DropBreadcrumb_b0a0b0a0(Behaviour behaviour) {
+      Grid grid = (Grid) ToolBox.grids.stream().filter(new Predicate<Grid>() {
+        public boolean test(Grid g) {
+          return g.getName() == "COVIDBreadcrumb";
+        }
+      }).findFirst().get();
+
+      NdPoint spacePt = space.getLocation(patient.this);
+      int diffusionRange = 3;
+      for (int xAxis = (int) (spacePt.getX() - diffusionRange); xAxis < (int) (spacePt.getX() + diffusionRange); xAxis++) {
+        int xCloseness = Math.abs(((int) spacePt.getX() - xAxis));
+        for (int yAxis = (int) (spacePt.getY() - diffusionRange); yAxis < (int) (spacePt.getY() + diffusionRange); yAxis++) {
+          int yCloseness = Math.abs(((int) spacePt.getY() - yAxis));
+
+          for (int count = Math.max(xCloseness, yCloseness); count < diffusionRange; count++) {
+            if (grid.getObjectAt(xAxis, yAxis) == null) {
+              COVIDBreadcrumb breadcrumb = new COVIDBreadcrumb();
+              context.add(breadcrumb);
+              grid.getAdder().add(grid, breadcrumb);
+              grid.moveTo(breadcrumb, xAxis, yAxis);
+              space.moveTo(breadcrumb, xAxis, yAxis);
+            } else {
+              ((COVIDBreadcrumb) grid.getObjectAt(xAxis, yAxis)).count++;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+  }
   public class Choice_a0b0a0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Choice_a0b0a0(Behaviour behaviour) {
@@ -1105,6 +1180,7 @@ public class patient extends Actor {
       if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:COVIDSymptomatic-1.2_b0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0b0a0(behaviour));
+        plstSteps.add(new DropBreadcrumb_b0a0b0a0(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1122,13 +1198,13 @@ public class patient extends Actor {
 
 
 
-      if (patient.this.COVIDInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 0.4) {
+      if (patient.this.COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 0.4 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && !(((isPathObstructed(grid.getLocation(patient.this), grid.getLocation(behaviour.getSignalTrigger().GetData("patient"))))))) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0a0a0(behaviour));
         behaviour.injectSteps(plstSteps);
 
-      } else if (patient.this.COVIDInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 1.2) {
+      } else if (patient.this.COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 1.2 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && !(((isPathObstructed(grid.getLocation(patient.this), grid.getLocation(behaviour.getSignalTrigger().GetData("patient"))))))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0b0a0(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1147,6 +1223,42 @@ public class patient extends Actor {
 
     }
   }
+  public class DropBreadcrumb_b0a0a0a1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public DropBreadcrumb_b0a0a0a1(Behaviour behaviour) {
+      Grid grid = (Grid) ToolBox.grids.stream().filter(new Predicate<Grid>() {
+        public boolean test(Grid g) {
+          return g.getName() == "FluABreadcrumb";
+        }
+      }).findFirst().get();
+
+      NdPoint spacePt = space.getLocation(patient.this);
+      int diffusionRange = 3;
+      for (int xAxis = (int) (spacePt.getX() - diffusionRange); xAxis < (int) (spacePt.getX() + diffusionRange); xAxis++) {
+        int xCloseness = Math.abs(((int) spacePt.getX() - xAxis));
+        for (int yAxis = (int) (spacePt.getY() - diffusionRange); yAxis < (int) (spacePt.getY() + diffusionRange); yAxis++) {
+          int yCloseness = Math.abs(((int) spacePt.getY() - yAxis));
+
+          for (int count = Math.max(xCloseness, yCloseness); count < diffusionRange; count++) {
+            if (grid.getObjectAt(xAxis, yAxis) == null) {
+              FluABreadcrumb breadcrumb = new FluABreadcrumb();
+              context.add(breadcrumb);
+              grid.getAdder().add(grid, breadcrumb);
+              grid.moveTo(breadcrumb, xAxis, yAxis);
+              space.moveTo(breadcrumb, xAxis, yAxis);
+            } else {
+              ((FluABreadcrumb) grid.getObjectAt(xAxis, yAxis)).count++;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+  }
   public class Choice_a0a0a1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Choice_a0a0a1(Behaviour behaviour) {
@@ -1157,6 +1269,7 @@ public class patient extends Actor {
       if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluASymptomatic-0.4_a0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0a1(behaviour));
+        plstSteps.add(new DropBreadcrumb_b0a0a0a1(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1175,6 +1288,42 @@ public class patient extends Actor {
 
     }
   }
+  public class DropBreadcrumb_b0a0b0a1 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public DropBreadcrumb_b0a0b0a1(Behaviour behaviour) {
+      Grid grid = (Grid) ToolBox.grids.stream().filter(new Predicate<Grid>() {
+        public boolean test(Grid g) {
+          return g.getName() == "FluABreadcrumb";
+        }
+      }).findFirst().get();
+
+      NdPoint spacePt = space.getLocation(patient.this);
+      int diffusionRange = 3;
+      for (int xAxis = (int) (spacePt.getX() - diffusionRange); xAxis < (int) (spacePt.getX() + diffusionRange); xAxis++) {
+        int xCloseness = Math.abs(((int) spacePt.getX() - xAxis));
+        for (int yAxis = (int) (spacePt.getY() - diffusionRange); yAxis < (int) (spacePt.getY() + diffusionRange); yAxis++) {
+          int yCloseness = Math.abs(((int) spacePt.getY() - yAxis));
+
+          for (int count = Math.max(xCloseness, yCloseness); count < diffusionRange; count++) {
+            if (grid.getObjectAt(xAxis, yAxis) == null) {
+              FluABreadcrumb breadcrumb = new FluABreadcrumb();
+              context.add(breadcrumb);
+              grid.getAdder().add(grid, breadcrumb);
+              grid.moveTo(breadcrumb, xAxis, yAxis);
+              space.moveTo(breadcrumb, xAxis, yAxis);
+            } else {
+              ((FluABreadcrumb) grid.getObjectAt(xAxis, yAxis)).count++;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+  }
   public class Choice_a0b0a1 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Choice_a0b0a1(Behaviour behaviour) {
@@ -1185,6 +1334,7 @@ public class patient extends Actor {
       if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluASymptomatic-1.2_b0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0b0a1(behaviour));
+        plstSteps.add(new DropBreadcrumb_b0a0b0a1(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1202,13 +1352,13 @@ public class patient extends Actor {
 
 
 
-      if (patient.this.FluAInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 0.4) {
+      if (patient.this.FluAInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 0.4 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && !(((isPathObstructed(grid.getLocation(patient.this), grid.getLocation(behaviour.getSignalTrigger().GetData("patient"))))))) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0a0a1(behaviour));
         behaviour.injectSteps(plstSteps);
 
-      } else if (patient.this.FluAInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 1.2) {
+      } else if (patient.this.FluAInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 1.2 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && !(((isPathObstructed(grid.getLocation(patient.this), grid.getLocation(behaviour.getSignalTrigger().GetData("patient"))))))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0b0a1(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1227,6 +1377,42 @@ public class patient extends Actor {
 
     }
   }
+  public class DropBreadcrumb_b0a0a0a2 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public DropBreadcrumb_b0a0a0a2(Behaviour behaviour) {
+      Grid grid = (Grid) ToolBox.grids.stream().filter(new Predicate<Grid>() {
+        public boolean test(Grid g) {
+          return g.getName() == "FluBBreadcrumb";
+        }
+      }).findFirst().get();
+
+      NdPoint spacePt = space.getLocation(patient.this);
+      int diffusionRange = 3;
+      for (int xAxis = (int) (spacePt.getX() - diffusionRange); xAxis < (int) (spacePt.getX() + diffusionRange); xAxis++) {
+        int xCloseness = Math.abs(((int) spacePt.getX() - xAxis));
+        for (int yAxis = (int) (spacePt.getY() - diffusionRange); yAxis < (int) (spacePt.getY() + diffusionRange); yAxis++) {
+          int yCloseness = Math.abs(((int) spacePt.getY() - yAxis));
+
+          for (int count = Math.max(xCloseness, yCloseness); count < diffusionRange; count++) {
+            if (grid.getObjectAt(xAxis, yAxis) == null) {
+              FluBBreadcrumb breadcrumb = new FluBBreadcrumb();
+              context.add(breadcrumb);
+              grid.getAdder().add(grid, breadcrumb);
+              grid.moveTo(breadcrumb, xAxis, yAxis);
+              space.moveTo(breadcrumb, xAxis, yAxis);
+            } else {
+              ((FluBBreadcrumb) grid.getObjectAt(xAxis, yAxis)).count++;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+  }
   public class Choice_a0a0a2 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Choice_a0a0a2(Behaviour behaviour) {
@@ -1237,6 +1423,7 @@ public class patient extends Actor {
       if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluBSymptomatic-0.4_a0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0a0a2(behaviour));
+        plstSteps.add(new DropBreadcrumb_b0a0a0a2(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1255,6 +1442,42 @@ public class patient extends Actor {
 
     }
   }
+  public class DropBreadcrumb_b0a0b0a2 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public DropBreadcrumb_b0a0b0a2(Behaviour behaviour) {
+      Grid grid = (Grid) ToolBox.grids.stream().filter(new Predicate<Grid>() {
+        public boolean test(Grid g) {
+          return g.getName() == "FluBBreadcrumb";
+        }
+      }).findFirst().get();
+
+      NdPoint spacePt = space.getLocation(patient.this);
+      int diffusionRange = 3;
+      for (int xAxis = (int) (spacePt.getX() - diffusionRange); xAxis < (int) (spacePt.getX() + diffusionRange); xAxis++) {
+        int xCloseness = Math.abs(((int) spacePt.getX() - xAxis));
+        for (int yAxis = (int) (spacePt.getY() - diffusionRange); yAxis < (int) (spacePt.getY() + diffusionRange); yAxis++) {
+          int yCloseness = Math.abs(((int) spacePt.getY() - yAxis));
+
+          for (int count = Math.max(xCloseness, yCloseness); count < diffusionRange; count++) {
+            if (grid.getObjectAt(xAxis, yAxis) == null) {
+              FluBBreadcrumb breadcrumb = new FluBBreadcrumb();
+              context.add(breadcrumb);
+              grid.getAdder().add(grid, breadcrumb);
+              grid.moveTo(breadcrumb, xAxis, yAxis);
+              space.moveTo(breadcrumb, xAxis, yAxis);
+            } else {
+              ((FluBBreadcrumb) grid.getObjectAt(xAxis, yAxis)).count++;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+  }
   public class Choice_a0b0a2 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
     public Choice_a0b0a2(Behaviour behaviour) {
@@ -1265,6 +1488,7 @@ public class patient extends Actor {
       if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:FluBSymptomatic-1.2_b0"))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Consequence_a0a0b0a2(behaviour));
+        plstSteps.add(new DropBreadcrumb_b0a0b0a2(behaviour));
         behaviour.injectSteps(plstSteps);
       } else {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
@@ -1282,13 +1506,13 @@ public class patient extends Actor {
 
 
 
-      if (patient.this.FluBInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 0.4) {
+      if (patient.this.FluBInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 0.4 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && !(((isPathObstructed(grid.getLocation(patient.this), grid.getLocation(behaviour.getSignalTrigger().GetData("patient"))))))) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0a0a2(behaviour));
         behaviour.injectSteps(plstSteps);
 
-      } else if (patient.this.FluBInfectionStatus == "Symptomatic" && curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom() && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 1.2) {
+      } else if (patient.this.FluBInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 1.2 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && !(((isPathObstructed(grid.getLocation(patient.this), grid.getLocation(behaviour.getSignalTrigger().GetData("patient"))))))) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new Choice_a0b0a2(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -1301,7 +1525,7 @@ public class patient extends Actor {
     if (deSpawnTime == null) {
       for (Object object : context.getObjects(patient.class)) {
         patient a = (patient) object;
-        if (a.deSpawnTime == null && distanceTo(a) < 1.2) {
+        if (a != this && a.deSpawnTime == null && distanceTo(a) < 1.2) {
           Signal s = new Signal();
           s.setName("patient" + a.agentName());
           s.setDescription("BackgroundBehaviourForCOVIDTrigger");
@@ -1317,7 +1541,7 @@ public class patient extends Actor {
     if (deSpawnTime == null) {
       for (Object object : context.getObjects(patient.class)) {
         patient a = (patient) object;
-        if (a.deSpawnTime == null && distanceTo(a) < 1.2) {
+        if (a != this && a.deSpawnTime == null && distanceTo(a) < 1.2) {
           Signal s = new Signal();
           s.setName("patient" + a.agentName());
           s.setDescription("BackgroundBehaviourForFluATrigger");
@@ -1333,7 +1557,7 @@ public class patient extends Actor {
     if (deSpawnTime == null) {
       for (Object object : context.getObjects(patient.class)) {
         patient a = (patient) object;
-        if (a.deSpawnTime == null && distanceTo(a) < 1.2) {
+        if (a != this && a.deSpawnTime == null && distanceTo(a) < 1.2) {
           Signal s = new Signal();
           s.setName("patient" + a.agentName());
           s.setDescription("BackgroundBehaviourForFluBTrigger");

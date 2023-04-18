@@ -152,7 +152,7 @@ public class SeniorDoc extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_5(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_6(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -199,49 +199,12 @@ public class SeniorDoc extends Actor {
 
 
 
-  public void ALLCOLLECTEDBEHAVIOURS() {
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[stay for a while]");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[stay for a while]");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[stay for a while]");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[stay for a while]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[stay for a while]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-  }
 
-  public class MoveAction_a0a_4 extends BehaviourStep {
+  public class MoveAction_a0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_4(Behaviour behaviour) {
+    public MoveAction_a0a_5(Behaviour behaviour) {
       target = MajorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -279,9 +242,9 @@ public class SeniorDoc extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0a_3 extends BehaviourStep {
+  public class OrderAction_b0a_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_3(Behaviour behaviour) {
+    public OrderAction_b0a_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -323,10 +286,10 @@ public class SeniorDoc extends Actor {
 
     }
   }
-  public class SendSignalAction_e0a_1 extends BehaviourStep {
+  public class SendSignalAction_e0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_e0a_1(Behaviour behaviour) {
+    public SendSignalAction_e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -381,9 +344,9 @@ public class SeniorDoc extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0b_5 extends BehaviourStep {
+  public class OrderAction_b0b_2 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0b_5(Behaviour behaviour) {
+    public OrderAction_b0b_2(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -408,10 +371,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0b_0 extends BehaviourStep {
+  public class StayAction_d0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0b_0(Behaviour behaviour) {
+    public StayAction_d0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -425,10 +388,10 @@ public class SeniorDoc extends Actor {
 
     }
   }
-  public class SendSignalAction_e0b_1 extends BehaviourStep {
+  public class SendSignalAction_e0b_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_e0b_1(Behaviour behaviour) {
+    public SendSignalAction_e0b_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -483,9 +446,9 @@ public class SeniorDoc extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0c_3 extends BehaviourStep {
+  public class OrderAction_b0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0c_3(Behaviour behaviour) {
+    public OrderAction_b0c_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -510,10 +473,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0c_2 extends BehaviourStep {
+  public class StayAction_d0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0c_2(Behaviour behaviour) {
+    public StayAction_d0c_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -543,11 +506,11 @@ public class SeniorDoc extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_a0d_0 extends BehaviourStep {
+  public class MoveAction_a0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0d_0(Behaviour behaviour) {
+    public MoveAction_a0d(Behaviour behaviour) {
       target = MinorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -585,9 +548,9 @@ public class SeniorDoc extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0d_1 extends BehaviourStep {
+  public class OrderAction_b0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0d_1(Behaviour behaviour) {
+    public OrderAction_b0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -597,10 +560,10 @@ public class SeniorDoc extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
     }
   }
-  public class StayForConditionAction_c0d_0 extends BehaviourStep {
+  public class StayForConditionAction_c0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0d_0(Behaviour behaviour) {
+    public StayForConditionAction_c0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -612,10 +575,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0d_0 extends BehaviourStep {
+  public class StayAction_d0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0d_0(Behaviour behaviour) {
+    public StayAction_d0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -629,9 +592,9 @@ public class SeniorDoc extends Actor {
 
     }
   }
-  public class OrderAction_e0d_1 extends BehaviourStep {
+  public class OrderAction_e0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_e0d_1(Behaviour behaviour) {
+    public OrderAction_e0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -641,9 +604,9 @@ public class SeniorDoc extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(WaitingRoom.getInstance()));
     }
   }
-  public class OrderAction_f0d_1 extends BehaviourStep {
+  public class OrderAction_f0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_f0d_1(Behaviour behaviour) {
+    public OrderAction_f0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -795,12 +758,12 @@ public class SeniorDoc extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_a0a_5 extends BehaviourStep {
+  public class MoveAction_a0a_6 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_5(Behaviour behaviour) {
-      target = WaitingRoom.getInstance();
+    public MoveAction_a0a_6(Behaviour behaviour) {
+      target = StaffRoom.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -842,11 +805,11 @@ public class SeniorDoc extends Actor {
   public void InitAdditionalAssessment_c(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_4(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0a_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_5(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0a_1(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_1(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_1(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_e0a_1(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -856,10 +819,10 @@ public class SeniorDoc extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b_2(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0b_5(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0b_2(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0b_2(behaviourBuilder));
-    plstSteps.add(new StayAction_d0b_0(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_e0b_1(behaviourBuilder));
+    plstSteps.add(new StayAction_d0b_1(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_e0b_0(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -869,9 +832,9 @@ public class SeniorDoc extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0c_2(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0c_3(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0c_1(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0c_1(behaviourBuilder));
-    plstSteps.add(new StayAction_d0c_2(behaviourBuilder));
+    plstSteps.add(new StayAction_d0c_1(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -881,12 +844,12 @@ public class SeniorDoc extends Actor {
   public void InitAdditionalAssessment_c_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0d_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0d_1(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0d_0(behaviourBuilder));
-    plstSteps.add(new StayAction_d0d_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_e0d_1(behaviourBuilder));
-    plstSteps.add(new OrderAction_f0d_1(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0d(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0d(behaviourBuilder));
+    plstSteps.add(new StayAction_d0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_e0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0d(behaviourBuilder));
     plstSteps.add(new SendSignalAction_g0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

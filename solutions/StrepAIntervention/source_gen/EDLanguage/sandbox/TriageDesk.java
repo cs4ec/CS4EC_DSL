@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class TriageDesk extends RoomType {
-  private static TriageDesk instance;
+  private static RoomType instance;
 
   private TriageDesk() {
     super();

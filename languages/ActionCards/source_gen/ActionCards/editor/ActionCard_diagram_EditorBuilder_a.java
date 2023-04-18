@@ -30,6 +30,7 @@ import de.itemis.mps.editor.diagram.runtime.model.IConnectionEndpoint;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import de.itemis.mps.editor.diagram.runtime.model.DiagramModel;
 import de.itemis.mps.editor.diagram.runtime.jgraph.ElkLayouter;
+import de.itemis.mps.editor.diagram.runtime.jgraph.TreeLayouter;
 import de.itemis.mps.editor.diagram.runtime.model.IPaletteEntryProvider;
 import de.itemis.mps.editor.diagram.runtime.model.CompositePaletteEntryProvider;
 import de.itemis.mps.editor.diagram.runtime.model.SubstituteInfoPaletteEntryProvider;
@@ -222,7 +223,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
                     DiagramModel model = DiagramModel.getModel(editorContext, node, "8399499156273261182", accessor);
 
-                    ElkLayouter layouter;
+                    ElkLayouter layouter = new TreeLayouter();
+                    model.setLayouter(layouter);
 
                     IPaletteEntryProvider paletteEntryProvider = new CompositePaletteEntryProvider(new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.Actions$nh$G))), new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.UsageCondition$srTD))), new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.ActionCardReferences$o2ug))));
                     model.setPaletteEntryProvider(paletteEntryProvider);

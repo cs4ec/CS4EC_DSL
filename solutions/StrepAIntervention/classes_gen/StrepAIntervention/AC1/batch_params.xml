@@ -29,14 +29,14 @@
   		type="constant" constant_type="double" value="80" />
   	<parameter name="BranchProbability_b0_0"
   		type="constant" constant_type="double" value="20" />
-  	<parameter name="InfectionSpreadChance:StrepAAsymptomatic-10_a0"
-  		type="constant" constant_type="double" value="0.006" />
   	<parameter name="Typical PatientsSeveritysevere"
   		 type="constant" constant_type="double" value = "15" />
   	<parameter name="Typical PatientsSeveritymoderate"
   		 type="constant" constant_type="double" value = "85" />
   	<parameter name="Typical PatientsSeveritylow"
   		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="Typical PatientsAdmissionRouteElectiveattendance"
+  		 type="constant" constant_type="double" value = "100" />
   	<parameter name="Typical PatientsImmunocompromisedYes"
   		 type="constant" constant_type="double" value = "20" />
   	<parameter name="Typical PatientsImmunocompromisedNo"
@@ -45,20 +45,18 @@
   		 type="constant" constant_type="double" value = "50" />
   	<parameter name="Typical PatientsRecentCovidContactNo"
   		 type="constant" constant_type="double" value = "50" />
-  	<parameter name="Typical PatientsadmissionRouteEmergencyAttendance"
-  		 type="constant" constant_type="double" value = "100" />
   	<parameter name="Strep A PatientsStrepAInfectionStatusSusceptible"
   		 type="constant" constant_type="double" value = "60" />
   	<parameter name="Strep A PatientsStrepAInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "30" />
   	<parameter name="Strep A PatientsStrepAInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "10" />
+  	<parameter name="Strep A PatientsAdmissionRouteEmergencyAttendance"
+  		 type="constant" constant_type="double" value = "100" />
   	<parameter name="Strep A PatientsSeveritysevere"
   		 type="constant" constant_type="double" value = "20" />
   	<parameter name="Strep A PatientsSeveritymoderate"
   		 type="constant" constant_type="double" value = "80" />
   	<parameter name="Strep A PatientsSeveritylow"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="Strep A PatientsadmissionRouteEmergencyAttendance"
-  		 type="constant" constant_type="double" value = "100" />
 </sweep>

@@ -92,7 +92,7 @@
     <classNode dependClassName="ActionCards.behavior.ImmunocompromisedCondition__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.ImmunosuppressedProperty__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.InfectionStatusProperty__BehaviorDescriptor" />
-    <classNode dependClassName="ActionCards.behavior.PatientProfile__BehaviorDescriptor" />
+    <classNode dependClassName="ActionCards.behavior.PatientProfile_old__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.PatientPropertyConditional__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.PatientSeverityProperty__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.RecentCOVIDContactCondition__BehaviorDescriptor" />
@@ -221,7 +221,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
-  <dependency className="ActionCards.behavior.PatientProfile__BehaviorDescriptor">
+  <dependency className="ActionCards.behavior.PatientProfile_old__BehaviorDescriptor">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.util.Arrays" />

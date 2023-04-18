@@ -13,6 +13,9 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myOccupiableDefinition__BehaviorDescriptor = new OccupiableDefinition__BehaviorDescriptor();
+  private final BHDescriptor myOccupiableAllocation__BehaviorDescriptor = new OccupiableAllocation__BehaviorDescriptor();
+  private final BHDescriptor myRoomInstanceDefinition__BehaviorDescriptor = new RoomInstanceDefinition__BehaviorDescriptor();
+  private final BHDescriptor myArea__BehaviorDescriptor = new Area__BehaviorDescriptor();
   private final BHDescriptor myRoomType__BehaviorDescriptor = new RoomType__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
@@ -23,12 +26,18 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
-        return myOccupiableDefinition__BehaviorDescriptor;
+        return myArea__BehaviorDescriptor;
       case 1:
+        return myOccupiableAllocation__BehaviorDescriptor;
+      case 2:
+        return myOccupiableDefinition__BehaviorDescriptor;
+      case 3:
+        return myRoomInstanceDefinition__BehaviorDescriptor;
+      case 4:
         return myRoomType__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L), MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x5dafd33966e8fe19L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249082L), MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f2002ad53L), MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L), MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L), MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x5dafd33966e8fe19L)).seal();
 }

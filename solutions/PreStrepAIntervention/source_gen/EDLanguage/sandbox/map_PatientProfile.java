@@ -120,8 +120,6 @@ public class map_PatientProfile extends Actor {
 
 
 
-  public void ALLCOLLECTEDBEHAVIOURS() {
-  }
 
 
 

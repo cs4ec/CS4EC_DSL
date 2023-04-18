@@ -470,9 +470,9 @@
       <node id="1758249876500249005" at="83,40,84,19" concept="5" />
       <node id="1758249876500249005" at="88,0,89,0" concept="7" trace="checkValue$p63D" />
       <node id="1758249876500249005" at="89,0,90,0" concept="7" trace="patientProperty$FJ4E" />
-      <node id="1758249876500249005" at="90,0,91,0" concept="7" trace="attributes$kiaM" />
+      <node id="1758249876500249005" at="90,0,91,0" concept="7" trace="attributes$eds7" />
       <node id="1758249876500249005" at="91,0,92,0" concept="7" trace="patientProperty$d18a" />
-      <node id="1758249876500249005" at="95,0,96,0" concept="7" trace="PatientProfile$ZT" />
+      <node id="1758249876500249005" at="95,0,96,0" concept="7" trace="PatientProfile$he" />
       <node id="1758249876500249005" at="96,0,97,0" concept="7" trace="RecentCovidContactProperty$IY" />
       <node id="1758249876500249005" at="43,0,45,0" concept="0" trace="RecentCOVIDContactCondition__BehaviorDescriptor#()V" />
       <node id="1758249876501566202" at="36,0,39,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
@@ -631,9 +631,9 @@
       <node id="1758249876537125823" at="83,40,84,19" concept="5" />
       <node id="1758249876537125823" at="88,0,89,0" concept="7" trace="checkValue$p63D" />
       <node id="1758249876537125823" at="89,0,90,0" concept="7" trace="patientProperty$FJ4E" />
-      <node id="1758249876537125823" at="90,0,91,0" concept="7" trace="attributes$kiaM" />
+      <node id="1758249876537125823" at="90,0,91,0" concept="7" trace="attributes$eds7" />
       <node id="1758249876537125823" at="91,0,92,0" concept="7" trace="patientProperty$d18a" />
-      <node id="1758249876537125823" at="95,0,96,0" concept="7" trace="PatientProfile$ZT" />
+      <node id="1758249876537125823" at="95,0,96,0" concept="7" trace="PatientProfile$he" />
       <node id="1758249876537125823" at="96,0,97,0" concept="7" trace="ImmunosuppressedProperty$On" />
       <node id="1758249876537125823" at="43,0,45,0" concept="0" trace="ImmunocompromisedCondition__BehaviorDescriptor#()V" />
       <node id="1758249876537125877" at="36,0,39,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
@@ -1202,7 +1202,7 @@
     </file>
   </root>
   <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/768972137579649659">
-    <file name="PatientProfile__BehaviorDescriptor.java">
+    <file name="PatientProfile_old__BehaviorDescriptor.java">
       <node id="768972137579649659" at="20,0,21,0" concept="7" trace="CONCEPT" />
       <node id="768972137579649659" at="23,0,24,0" concept="7" trace="BH_METHODS" />
       <node id="768972137579649682" at="25,63,26,73" concept="1" />
@@ -1216,7 +1216,7 @@
       <node id="768972137579649659" at="64,48,65,22" concept="5" />
       <node id="768972137579649659" at="70,40,71,19" concept="5" />
       <node id="768972137579649659" at="75,0,76,0" concept="7" trace="name$MnvL" />
-      <node id="768972137579649659" at="30,0,32,0" concept="0" trace="PatientProfile__BehaviorDescriptor#()V" />
+      <node id="768972137579649659" at="30,0,32,0" concept="0" trace="PatientProfile_old__BehaviorDescriptor#()V" />
       <node id="768972137579649659" at="25,0,28,0" concept="8" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
       <node id="768972137579649659" at="40,49,43,5" concept="2" />
       <node id="768972137579649659" at="52,49,55,5" concept="2" />
@@ -1227,7 +1227,7 @@
       <node id="768972137579649659" at="68,0,73,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
       <node id="768972137579649659" at="38,0,49,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
       <node id="768972137579649659" at="50,0,61,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
-      <scope id="768972137579649659" at="30,52,30,52" />
+      <scope id="768972137579649659" at="30,56,30,56" />
       <scope id="768972137579649659" at="25,63,26,73" />
       <scope id="768972137579649659" at="34,114,35,21" />
       <scope id="768972137579649659" at="41,26,42,56" />
@@ -1263,8 +1263,8 @@
         <var name="method" id="768972137579649659" />
         <var name="parameters" id="768972137579649659" />
       </scope>
-      <unit id="768972137579649659" at="74,0,77,0" name="ActionCards.behavior.PatientProfile__BehaviorDescriptor$PROPS" />
-      <unit id="768972137579649659" at="19,0,78,0" name="ActionCards.behavior.PatientProfile__BehaviorDescriptor" />
+      <unit id="768972137579649659" at="74,0,77,0" name="ActionCards.behavior.PatientProfile_old__BehaviorDescriptor$PROPS" />
+      <unit id="768972137579649659" at="19,0,78,0" name="ActionCards.behavior.PatientProfile_old__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)/9188399087841750903">

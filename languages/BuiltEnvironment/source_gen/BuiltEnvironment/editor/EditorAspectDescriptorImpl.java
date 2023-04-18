@@ -39,7 +39,7 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
       case 6:
         return Collections.<ConceptEditor>singletonList(new OccupiableAllocation_Editor());
       case 7:
-        return Collections.<ConceptEditor>singletonList(new OccupiableDefinition_Editor());
+        return Arrays.asList(new ConceptEditor[]{new OccupiableDefinition_Editor(), new OccupiableDefinition_diagram_Editor()});
       case 8:
         return Collections.<ConceptEditor>singletonList(new OccupiablesList_Editor());
       case 9:
@@ -51,7 +51,7 @@ public class EditorAspectDescriptorImpl extends EditorAspectDescriptorBase imple
       case 12:
         return Arrays.asList(new ConceptEditor[]{new Room_Editor(), new Room_diagram_Editor()});
       case 13:
-        return Collections.<ConceptEditor>singletonList(new RoomInstanceDefinition_Editor());
+        return Arrays.asList(new ConceptEditor[]{new RoomInstanceDefinition_Editor(), new RoomInstanceDefinition_diagram_Editor()});
       case 14:
         return Collections.<ConceptEditor>singletonList(new RoomType_Editor());
       case 15:

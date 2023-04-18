@@ -14,7 +14,7 @@ import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
   private final BHDescriptor myAdmissionRouteProperty__BehaviorDescriptor = new AdmissionRouteProperty__BehaviorDescriptor();
   private final BHDescriptor myPatientSeverityProperty__BehaviorDescriptor = new PatientSeverityProperty__BehaviorDescriptor();
-  private final BHDescriptor myPatientProfile__BehaviorDescriptor = new PatientProfile__BehaviorDescriptor();
+  private final BHDescriptor myPatientProfile_old__BehaviorDescriptor = new PatientProfile_old__BehaviorDescriptor();
   private final BHDescriptor myIPatientProperty__BehaviorDescriptor = new IPatientProperty__BehaviorDescriptor();
   private final BHDescriptor myInfectionStatusProperty__BehaviorDescriptor = new InfectionStatusProperty__BehaviorDescriptor();
   private final BHDescriptor myVaccineStatusProperty__BehaviorDescriptor = new VaccineStatusProperty__BehaviorDescriptor();
@@ -57,7 +57,7 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 8:
         return myInfectionStatusProperty__BehaviorDescriptor;
       case 9:
-        return myPatientProfile__BehaviorDescriptor;
+        return myPatientProfile_old__BehaviorDescriptor;
       case 10:
         return myPatientPropertyConditional__BehaviorDescriptor;
       case 11:

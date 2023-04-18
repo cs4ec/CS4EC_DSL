@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-apcwvql19ad665e2aex8eikq3i1xhsk">
-  <files names="IntentionsDescriptor.java:ShowDiagramView_Intention.java" />
+<product version="3" modelHash="-4camglgcox9nahasdkdl9c1hxplcedk">
+  <files names="DrawSpatialProperties_Intention.java:IntentionsDescriptor.java:PreviewLayout_Intention.java:ShowDiagramView_Intention.java:UpdateSpatialProperties_Intention.java" />
 </product>
 

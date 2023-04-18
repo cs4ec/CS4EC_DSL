@@ -22,6 +22,7 @@ import de.itemis.mps.editor.diagram.runtime.model.IAccessorFactory;
 import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.Sequence;
 import de.itemis.mps.editor.diagram.runtime.model.IConnectionType;
 import de.itemis.mps.editor.diagram.runtime.model.DiagramModel;
 import de.itemis.mps.editor.diagram.runtime.jgraph.ElkLayouter;
@@ -32,8 +33,12 @@ import de.itemis.mps.editor.diagram.runtime.substitute.SubstituteInfoFactory;
 import de.itemis.mps.editor.diagram.runtime.jgraph.SubDiagramECell;
 import de.itemis.mps.editor.diagram.runtime.jgraph.RootDiagramECell;
 import de.itemis.mps.editor.diagram.runtime.jgraph.RootDCell;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SReferenceLink;
 
 /*package*/ class Area_diagram_EditorBuilder_a extends AbstractEditorBuilder {
   @NotNull
@@ -76,6 +81,13 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
                         for (SNode e : ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.rooms$Ov5F))) {
                           elements.addAll(accessorFactory.fromSNode(e));
                         }
+                        for (SNode e : Sequence.fromIterable(new Object() {
+                          public Iterable<SNode> query() {
+                            return SLinkOperations.collect(SLinkOperations.collectMany(SLinkOperations.getChildren(node, LINKS.rooms$Ov5F), LINKS.occupiables$hg34), LINKS.occupiable$SGU7);
+                          }
+                        }.query())) {
+                          elements.addAll(accessorFactory.fromSNode(e, false));
+                        }
                         return elements;
                       }
                       @Override
@@ -105,7 +117,18 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
                     if (editorCell.value.getContextGraph() != null) {
                       Object defaultParent = editorCell.value.getContextGraph().getDefaultParent();
                       if (defaultParent instanceof RootDCell) {
-                        ((RootDCell) defaultParent).resetButtonConfig();
+                        {
+                          Style styleDiagram = new StyleImpl();
+                          styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__layout-diagram-button"), false);
+                          styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__relayout-all-edges-button"), false);
+                          styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__maximize-diagram-button"), false);
+                          styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__reset-view-button"), false);
+                          styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__zoom-in-button"), false);
+                          styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__zoom-out-button"), false);
+                          styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__fit-size-all-diagram-button"), false);
+                          styleDiagram.set(StyleAttributes.getInstance().<Boolean>getAttribute("de.itemis.mps.editor.diagram.styles", "__show_ports_labels"), false);
+                          ((RootDCell) defaultParent).updateButtonConfig(styleDiagram);
+                        }
                       }
                     }
                   }
@@ -125,5 +148,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink rooms$Ov5F = MetaAdapterFactory.getContainmentLink(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249082L, 0x3c282c112f249083L, "rooms");
+    /*package*/ static final SContainmentLink occupiables$hg34 = MetaAdapterFactory.getContainmentLink(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x3111466f2002ae42L, "occupiables");
+    /*package*/ static final SReferenceLink occupiable$SGU7 = MetaAdapterFactory.getReferenceLink(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f2002ad53L, 0x3111466f2002ad71L, "occupiable");
   }
 }

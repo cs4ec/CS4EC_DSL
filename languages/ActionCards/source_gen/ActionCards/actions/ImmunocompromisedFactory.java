@@ -18,7 +18,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 public class ImmunocompromisedFactory {
   public static class NodeFactory_1758249876537129594 implements NodeFactory {
     public void setup(SNode newNode, SNode sampleNode, SNode enclosingNode, SModel model) {
-      SLinkOperations.setTarget(newNode, LINKS.patientProperty$FJ4E, SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(model, CONCEPTS.PatientProfile$ZT), LINKS.attributes$kiaM)).where(new IWhereFilter<SNode>() {
+      SLinkOperations.setTarget(newNode, LINKS.patientProperty$FJ4E, SLinkOperations.getTarget(Sequence.fromIterable(SLinkOperations.collectMany(SModelOperations.roots(model, CONCEPTS.PatientProfile$he), LINKS.attributes$eds7)).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, LINKS.patientProperty$d18a), CONCEPTS.ImmunosuppressedProperty$On);
         }
@@ -28,12 +28,12 @@ public class ImmunocompromisedFactory {
 
   private static final class LINKS {
     /*package*/ static final SReferenceLink patientProperty$FJ4E = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L, 0x18668ef27115ff2aL, "patientProperty");
-    /*package*/ static final SContainmentLink attributes$kiaM = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, 0xaabf015be951259L, "attributes");
+    /*package*/ static final SContainmentLink attributes$eds7 = MetaAdapterFactory.getContainmentLink(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0xaabf015be947306L, 0xaabf015be951259L, "attributes");
     /*package*/ static final SReferenceLink patientProperty$d18a = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L, 0x4813ad0fbaa5f13L, "patientProperty");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept PatientProfile$ZT = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L, "ActionCards.structure.PatientProfile");
+    /*package*/ static final SConcept PatientProfile$he = MetaAdapterFactory.getConcept(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0xaabf015be947306L, "PatientLanguage.structure.PatientProfile");
     /*package*/ static final SConcept ImmunosuppressedProperty$On = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2755e811eL, "ActionCards.structure.ImmunosuppressedProperty");
   }
 }

@@ -402,6 +402,68 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                     }
                   }
                 }
+                if (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) {
+                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$D_, null);
+                  if (sourceNode != null) {
+                    final SAbstractConcept sourceNodeConcept = SNodeOperations.getConcept(sourceNode);
+                    SContainmentLink link = sourceNode.getContainmentLink();
+                    final SAbstractConcept expectedConcept = (link == null ? null : link.getTargetConcept());
+                    for (final SAbstractConcept subconcept : GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.Branch$sq, _context.getModel(), Branch_diagram_Editor.class, _context.getEditorContext())) {
+                      boolean wrapperAllowed = expectedConcept == null || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(subconcept), SNodeOperations.asSConcept(expectedConcept));
+                      if (wrapperAllowed) {
+                        final Iterable<String> matchingText = Sequence.<String>singleton("Label diagram");
+                        if (Sequence.fromIterable(matchingText).isNotEmpty()) {
+                          EditorContext editorContext = _context.getEditorContext();
+                          boolean sideTransformationEnabled = ConstraintsCanBeFacade.checkCanBeParent(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
+                          sideTransformationEnabled &= GrammarCellsUtil.canBeAncestor(SNodeOperations.getParent(sourceNode), subconcept, sourceNode.getContainmentLink());
+                          sideTransformationEnabled &= ConstraintsCanBeFacade.checkCanBeChild(new ContainmentContext.Builder().parentNode(SNodeOperations.getParent(sourceNode)).childConcept(subconcept).link(sourceNode.getContainmentLink()).build()).isEmpty();
+                          if (sideTransformationEnabled) {
+                            ListSequence.fromList(result).addSequence(Sequence.fromIterable(new MultiTextActionItem(matchingText, _context) {
+
+                              @Override
+                              public void execute(@NotNull String pattern) {
+                                doSubstitute(_context.getEditorContext(), pattern);
+                              }
+                              protected SNode doSubstitute(@Nullable EditorContext editorContext, String pattern) {
+                                String matchingText = getMatchingText(pattern);
+                                SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.Branch$sq);
+                                SNodeOperations.replaceWithAnother(sourceNode, wrapper);
+                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.Expression$D_));
+
+
+                                SNode newChild = ListSequence.fromList(SNodeOperations.getChildren(wrapper)).findFirst(new IWhereFilter<SNode>() {
+                                  public boolean accept(SNode it) {
+                                    return it != sourceNode;
+                                  }
+                                });
+                                editorContext.flushEvents();
+                                if (newChild == null) {
+                                  GrammarCellsUtil.selectCellWithText(editorContext, wrapper, matchingText);
+                                } else {
+                                  SelectionUtil.selectNode(editorContext, newChild);
+                                }
+
+                                SavedCaretPosition caretPosition = new SavedCaretPosition(editorContext);
+                                caretPosition.save();
+                                Parser parser = new Parser(editorContext.getModel());
+                                SNode rebalanced = parser.rebalanceIfRequired(parser.findRootExpression(wrapper));
+                                if (rebalanced != null) {
+                                  editorContext.flushEvents();
+                                  caretPosition.restore();
+                                }
+                                return newChild;
+                              }
+                              public SAbstractConcept getOutputConcept() {
+                                return subconcept;
+                              }
+                            }.getMultipleOrSingleAction(false)));
+                            addSideTransformRemoval(_context);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               } finally {
                 _context.getEditorMenuTrace().popTraceInfo();
               }

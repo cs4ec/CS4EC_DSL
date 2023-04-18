@@ -154,7 +154,7 @@ public class MinorsDoctor extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_9(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_10(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -189,35 +189,12 @@ public class MinorsDoctor extends Actor {
 
 
 
-  public void ALLCOLLECTEDBEHAVIOURS() {
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[stay for a while]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("if");
-    System.out.println("send signal");
-    System.out.println("BehaviourSequence");
-    System.out.println("if");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-    System.out.println("<no name>[ask patient]");
-    System.out.println("<no name>[stay until]");
-    System.out.println("<no name>[updateAttribute]");
-    System.out.println("<no name>[removeRelationship]");
-    System.out.println("<no name>[despawn]");
-    System.out.println("BehaviourSequence");
-    System.out.println("<no name>[go to]");
-  }
 
-  public class MoveAction_a0a_8 extends BehaviourStep {
+  public class MoveAction_a0a_9 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_8(Behaviour behaviour) {
+    public MoveAction_a0a_9(Behaviour behaviour) {
       target = MinorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -255,9 +232,9 @@ public class MinorsDoctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0a_5 extends BehaviourStep {
+  public class OrderAction_b0a_2 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_5(Behaviour behaviour) {
+    public OrderAction_b0a_2(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -431,9 +408,9 @@ public class MinorsDoctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0b_9 extends BehaviourStep {
+  public class OrderAction_b0b_4 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0b_9(Behaviour behaviour) {
+    public OrderAction_b0b_4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -493,12 +470,12 @@ public class MinorsDoctor extends Actor {
       ((Actor) behaviour.getSignalTrigger().GetData("patient")).deSpawnTime = TimeKeeper.getInstance().getTime();
     }
   }
-  public class MoveAction_a0a_9 extends BehaviourStep {
+  public class MoveAction_a0a_10 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_9(Behaviour behaviour) {
-      target = WaitingRoom.getInstance();
+    public MoveAction_a0a_10(Behaviour behaviour) {
+      target = StaffRoom.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -540,8 +517,8 @@ public class MinorsDoctor extends Actor {
   public void InitAssessment_a_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_8(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0a_5(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_9(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0a_2(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_2(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_2(behaviourBuilder));
     plstSteps.add(new OrderAction_e0a(behaviourBuilder));
@@ -557,7 +534,7 @@ public class MinorsDoctor extends Actor {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0b_4(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0b_9(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0b_4(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0b_4(behaviourBuilder));
     plstSteps.add(new Consequence_d0b_0(behaviourBuilder));
     plstSteps.add(new RemoveRelationshipAction_e0b_0(behaviourBuilder));

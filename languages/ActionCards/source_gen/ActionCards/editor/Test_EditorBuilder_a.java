@@ -28,8 +28,6 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
-import jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole;
-import jetbrains.mps.lang.editor.cellProviders.RefCellCellProvider;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
@@ -73,7 +71,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createCollection_2());
     editorCell.addEditorCell(createConstant_2());
-    editorCell.addEditorCell(createRefNode_0());
+    editorCell.addEditorCell(createRefNode_1());
     editorCell.addEditorCell(createConstant_3());
     editorCell.addEditorCell(createConstant_4());
     editorCell.addEditorCell(createCollection_3());
@@ -128,89 +126,68 @@ import org.jetbrains.mps.openapi.language.SConcept;
     EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
     editorCell.setCellId("Collection_sbg7x_c0");
     editorCell.addEditorCell(createConstant_1());
-    editorCell.addEditorCell(createRefCell_0());
+    editorCell.addEditorCell(createRefNode_0());
     return editorCell;
   }
   private EditorCell createConstant_1() {
     EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Testing Process Action Card:");
     editorCell.setCellId("Constant_sbg7x_a2a");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.FONT_SIZE, 13);
-    style.set(StyleAttributes.FONT_STYLE, MPSFonts.BOLD);
-    editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefCell_0() {
-    CellProviderWithRole provider = new RefCellCellProvider(myNode, LINKS.TestingProcess$hIgq, CONCEPTS.ActionCardReference$CD, "TestingProcess", getEditorContext()) {
-
-      @Override
-      protected EditorCell createRefCell(EditorContext context, SNode effectiveNode, SNode node) {
-        EditorCell cell = new Inline_Builder0(getEditorContext(), myNode, effectiveNode).createCell();
-        installDeleteActions_nullable_aggregation(cell);
-        return cell;
-      }
-    };
-    provider.setNoTargetText("N/A");
-    EditorCell editorCell;
-    editorCell = provider.createEditorCell(getEditorContext());
-    if (editorCell.getSRole() == null) {
-      editorCell.setReferenceCell(true);
-      editorCell.setSRole(LINKS.TestingProcess$hIgq);
-    }
-    editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
-    SNode attributeConcept = provider.getRoleAttribute();
-    if (attributeConcept != null) {
-      EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
-      return manager.createNodeRoleAttributeCell(attributeConcept, provider.getRoleAttributeKind(), editorCell);
-    } else
-    return editorCell;
+  private EditorCell createRefNode_0() {
+    SingleRoleCellProvider provider = new TestingProcessSingleRoleHandler_sbg7x_b2a(myNode, LINKS.TestingProcess$hIgq, getEditorContext());
+    return provider.createCell();
   }
-  /*package*/ static class Inline_Builder0 extends AbstractEditorBuilder {
+  private static class TestingProcessSingleRoleHandler_sbg7x_b2a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
-    private SNode myReferencingNode;
 
-    /*package*/ Inline_Builder0(@NotNull EditorContext context, SNode referencingNode, @NotNull SNode node) {
-      super(context);
-      myReferencingNode = referencingNode;
-      myNode = node;
+    public TestingProcessSingleRoleHandler_sbg7x_b2a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+      super(containmentLink, context);
+      myNode = ownerNode;
     }
 
-    /*package*/ EditorCell createCell() {
-      return createProperty_1();
-    }
-
-    @NotNull
     @Override
+    @NotNull
     public SNode getNode() {
       return myNode;
     }
 
-    private EditorCell createProperty_1() {
+    protected EditorCell createChildCell(SNode child) {
+      EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.TestingProcess$hIgq, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.TestingProcess$hIgq, child));
+      installCellInfo(child, editorCell, false);
+      return editorCell;
+    }
+
+
+
+    private void installCellInfo(SNode child, EditorCell editorCell, boolean isEmpty) {
+      if (editorCell.getSubstituteInfo() == null || editorCell.getSubstituteInfo() instanceof DefaultSubstituteInfo) {
+        editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
+      }
+      if (editorCell.getSRole() == null) {
+        editorCell.setSRole(LINKS.TestingProcess$hIgq);
+      }
+    }
+    @Override
+    protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.TestingProcess$hIgq));
       try {
-        final SProperty property = PROPS.name$MnvL;
-        getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
-        EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, true, false), myNode);
-        editorCell.setDefaultText("<no name>");
-        editorCell.setCellId("property_name1");
-        editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
+        EditorCell editorCell = super.createEmptyCell();
+        editorCell.setCellId("empty_TestingProcess");
+        installCellInfo(null, editorCell, true);
         setCellContext(editorCell);
-        Iterable<SNode> propertyAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.PropertyAttribute$Gb);
-        Iterable<SNode> currentPropertyAttributes = Sequence.fromIterable(propertyAttributes).where(new IWhereFilter<SNode>() {
-          public boolean accept(SNode it) {
-            return Objects.equals(PropertyAttribute__BehaviorDescriptor.getProperty_id1avfQ4BBzOo.invoke(it), property);
-          }
-        });
-        if (Sequence.fromIterable(currentPropertyAttributes).isNotEmpty()) {
-          EditorManager manager = EditorManager.getInstanceFromContext(getEditorContext());
-          return manager.createNodeRoleAttributeCell(Sequence.fromIterable(currentPropertyAttributes).first(), AttributeKind.PROPERTY, editorCell);
-        } else
         return editorCell;
       } finally {
         getCellFactory().popCellContext();
       }
+    }
+    protected String getNoTargetText() {
+      return "<no TestingProcess>";
     }
   }
   private EditorCell createConstant_2() {
@@ -219,7 +196,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setDefaultText("");
     return editorCell;
   }
-  private EditorCell createRefNode_0() {
+  private EditorCell createRefNode_1() {
     SingleRoleCellProvider provider = new ProcessingTimeTableSingleRoleHandler_sbg7x_e0(myNode, LINKS.ProcessingTimeTable$ddGw, getEditorContext());
     return provider.createCell();
   }
@@ -378,7 +355,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SConcept ActionCardReference$CD = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, "ActionCards.structure.ActionCardReference");
     /*package*/ static final SConcept DiseaseTest$k4 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4936c0ffc391ca7L, "ActionCards.structure.DiseaseTest");
   }
 

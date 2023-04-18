@@ -14,7 +14,7 @@ public class PerformLIATorCepheidTrigger_g_0Signal extends ActorTypeSignal {
   public PerformLIATorCepheidTrigger_g_0Signal() {
     this.setName("PerformLIATorCepheidTrigger_g_0");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("CubicleNurse");
+    this.AddActor("MajorsABCubicleNurse");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

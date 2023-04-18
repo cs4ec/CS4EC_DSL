@@ -151,7 +151,7 @@ public class GASNurse extends Actor {
     behaviourBuilder = new Behaviour("isIdleAction", this);
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0a_10(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0a_11(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -178,16 +178,13 @@ public class GASNurse extends Actor {
 
 
 
-  public void ALLCOLLECTEDBEHAVIOURS() {
-    System.out.println("<no name>[go to]");
-  }
 
-  public class MoveAction_a0a_10 extends BehaviourStep {
+  public class MoveAction_a0a_11 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_10(Behaviour behaviour) {
-      target = WaitingRoom.getInstance();
+    public MoveAction_a0a_11(Behaviour behaviour) {
+      target = StaffRoom.getInstance();
       this.behaviour = behaviour;
     }
 

@@ -34,8 +34,17 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
       case 0:
         if (true) {
           // concept
-          intentions = new IntentionFactory[1];
+          intentions = new IntentionFactory[2];
           intentions[0] = new ShowDiagramView_Intention();
+          intentions[1] = new PreviewLayout_Intention();
+        }
+        break;
+      case 1:
+        if (true) {
+          // concept
+          intentions = new IntentionFactory[2];
+          intentions[0] = new UpdateSpatialProperties_Intention();
+          intentions[1] = new DrawSpatialProperties_Intention();
         }
         break;
       default:
@@ -47,9 +56,12 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
   @NotNull
   @Override
   public Collection<IntentionFactory> getAllIntentions() {
-    IntentionFactory[] rv = new IntentionFactory[1];
+    IntentionFactory[] rv = new IntentionFactory[4];
     rv[0] = new ShowDiagramView_Intention();
+    rv[1] = new UpdateSpatialProperties_Intention();
+    rv[2] = new DrawSpatialProperties_Intention();
+    rv[3] = new PreviewLayout_Intention();
     return Arrays.asList(rv);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249082L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249082L), MetaIdFactory.conceptId(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L)).seal();
 }

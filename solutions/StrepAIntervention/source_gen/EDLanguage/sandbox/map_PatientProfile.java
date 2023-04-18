@@ -123,6 +123,7 @@ public class map_PatientProfile extends Actor {
 
 
 
+
   public int map_PatientProfilegetAliveTime() {
     if (deSpawnTime == null) {
       return 0;

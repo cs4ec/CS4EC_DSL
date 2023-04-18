@@ -26,8 +26,8 @@ public class patient extends Actor {
 
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
-  public String admissionRoute = "UnConfigured";
   public String Severity = "NotConfigured";
+  public String AdmissionRoute = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
   public String RecentCovidContact = "NotConfigured";
   public String StrepAInfectionStatus = "NotConfigured";
@@ -146,6 +146,12 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getAdmissionRouteisEmergencyAttendance() {
+    if (this.AdmissionRoute == "EmergencyAttendance") {
+      return 1;
+    }
+    return 0;
+  }
   public int getImmunocompromisedisYes() {
     if (this.Immunocompromised == "Yes") {
       return 1;
@@ -212,6 +218,12 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance() {
+    if (this.admittedTo == "GreenBay" && this.AdmissionRoute == "EmergencyAttendance") {
+      return 1;
+    }
+    return 0;
+  }
   public int getadmittedToisGreenBaygetImmunocompromisedisYes() {
     if (this.admittedTo == "GreenBay" && this.Immunocompromised == "Yes") {
       return 1;
@@ -255,12 +267,6 @@ public class patient extends Actor {
     return 0;
   }
 
-  public void ALLCOLLECTEDBEHAVIOURS() {
-    System.out.println("<no name>[updateAttribute]");
-    System.out.println("BehaviourSequence");
-    System.out.println("if");
-    System.out.println("BehaviourSequence");
-  }
 
   public class Consequence_a0a0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;

@@ -58,7 +58,7 @@ public class AStar {
 		}
 	}
 
-	AStar(int xstart, int ystart, boolean diag, Grid<Object> grid) {
+	public AStar(int xstart, int ystart, boolean diag, Grid<Object> grid) {
 		this.open = new ArrayList<>();
 		this.closed = new ArrayList<>();
 		this.path = new ArrayList<>();
@@ -70,6 +70,13 @@ public class AStar {
 		this.ystart = ystart;
 		this.diag = diag;
 		this.grid = grid;
+	}
+	
+	public int[][] getMaze(){
+		if (maze == null) {
+			maze = readMap(grid);
+		}
+		return maze;
 	}
 
 	private int[][] readMap(Grid<Object> grid) {
@@ -175,7 +182,7 @@ public class AStar {
 					node.g = node.parent.g + 1.; // Horizontal/vertical cost = 1.0
 					node.g += maze[this.now.x + x][this.now.y + y]; // add movement cost for this square
 
-					// diagonal cost = sqrt(hor_cost² + vert_cost²)
+					// diagonal cost = sqrt(hor_costï¿½ + vert_costï¿½)
 					// in this example the cost would be 12.2 instead of 11
 
 					if (diag && x != 0 && y != 0) {

@@ -1,6 +1,8 @@
 package simcore.basicStructures;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import repast.simphony.context.Context;
 import repast.simphony.engine.environment.RunEnvironment;
@@ -13,6 +15,7 @@ import simcore.logNote.LogNote;
 public class ToolBox {
 	
 	Context context;
+	public static List<Grid> grids = new ArrayList<Grid>();
 	
 	public ToolBox(Object o) {
 		if(!(o instanceof Context)) {

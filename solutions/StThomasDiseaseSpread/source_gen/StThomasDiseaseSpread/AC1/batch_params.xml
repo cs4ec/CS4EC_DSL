@@ -161,6 +161,18 @@
   		type="constant" constant_type="double" value="99.9" />
   	<parameter name="CepheidFluBSpecificity"
   		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATCOVIDSensitivity"
   		type="constant" constant_type="double" value="100" />
   	<parameter name="LIATCOVIDSpecificity"
@@ -233,18 +245,6 @@
   		type="constant" constant_type="double" value="99.9" />
   	<parameter name="CepheidFluBSpecificity"
   		type="constant" constant_type="double" value="99.9" />
-  	<parameter name="PHEThreeCOVIDSensitivity"
-  		type="constant" constant_type="double" value="99" />
-  	<parameter name="PHEThreeCOVIDSpecificity"
-  		type="constant" constant_type="double" value="99" />
-  	<parameter name="PHEThreeFluASensitivity"
-  		type="constant" constant_type="double" value="99" />
-  	<parameter name="PHEThreeFluASpecificity"
-  		type="constant" constant_type="double" value="99" />
-  	<parameter name="PHEThreeFluBSensitivity"
-  		type="constant" constant_type="double" value="99" />
-  	<parameter name="PHEThreeFluBSpecificity"
-  		type="constant" constant_type="double" value="99" />
   	<parameter name="LIATCOVIDSensitivity"
   		type="constant" constant_type="double" value="100" />
   	<parameter name="LIATCOVIDSpecificity"

@@ -4,7 +4,6 @@
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="14" />
     <use id="7e450f4e-1ac3-41ef-a851-4598161bdb94" name="de.slisson.mps.tables" version="0" />
-    <use id="d3a0fd26-445a-466c-900e-10444ddfed52" name="com.mbeddr.mpsutil.filepicker" version="0" />
     <use id="9d69e719-78c8-4286-90db-fb19c107d049" name="com.mbeddr.mpsutil.grammarcells" version="2" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
@@ -42,6 +41,12 @@
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
       <concept id="1186414928363" name="jetbrains.mps.lang.editor.structure.SelectableStyleSheetItem" flags="ln" index="VPM3Z" />
+      <concept id="1186414999511" name="jetbrains.mps.lang.editor.structure.UnderlinedStyleClassItem" flags="ln" index="VQ3r3">
+        <property id="1214316229833" name="underlined" index="2USNnj" />
+      </concept>
+      <concept id="1186415722038" name="jetbrains.mps.lang.editor.structure.FontSizeStyleClassItem" flags="ln" index="VSNWy">
+        <property id="1221209241505" name="value" index="1lJzqX" />
+      </concept>
       <concept id="1233758997495" name="jetbrains.mps.lang.editor.structure.PunctuationLeftStyleClassItem" flags="ln" index="11L4FC" />
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
@@ -2572,6 +2577,101 @@
         </node>
       </node>
       <node concept="2iRkQZ" id="4NxsD3bcNeU" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="G77p895LKj">
+    <property role="3GE5qa" value="actions.basic actions" />
+    <ref role="1XX52x" to="3751:G77p895LJz" resolve="DropBreadcrumb" />
+    <node concept="3EZMnI" id="G77p895LKr" role="2wV5jI">
+      <node concept="3F0ifn" id="G77p895LKt" role="3EZMnx">
+        <property role="3F0ifm" value="Drop" />
+      </node>
+      <node concept="1iCGBv" id="G77p895LK_" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:G77p895LKa" resolve="breadcrumb" />
+        <node concept="1sVBvm" id="G77p895LKB" role="1sWHZn">
+          <node concept="3F0A7n" id="G77p895LL3" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="2iRfu4" id="G77p895LKu" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="G77p895LLm">
+    <property role="3GE5qa" value="Structures" />
+    <ref role="1XX52x" to="3751:G77p895LJp" resolve="Breadcrumb" />
+    <node concept="3EZMnI" id="G77p895LLo" role="2wV5jI">
+      <node concept="3F0A7n" id="G77p895LLv" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+        <node concept="VQ3r3" id="G77p8aOD_O" role="3F10Kt">
+          <property role="2USNnj" value="gtbM8PH/underlined" />
+        </node>
+        <node concept="VSNWy" id="G77p8aOD_T" role="3F10Kt">
+          <property role="1lJzqX" value="18" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="G77p8aOD_B" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:G77p8aOD__" resolve="colourTable" />
+      </node>
+      <node concept="2iRkQZ" id="G77p8981ns" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="G77p8aOBX4">
+    <property role="3GE5qa" value="Structures" />
+    <ref role="1XX52x" to="3751:G77p8aOBWj" resolve="ColourLine" />
+    <node concept="2r0Tta" id="G77p8aOBXo" role="2wV5jI">
+      <node concept="2reCLk" id="G77p8aOBXr" role="2r0Tv6">
+        <node concept="2reCLy" id="G77p8aOBXt" role="2reCL6">
+          <node concept="3F0A7n" id="G77p8aOBXx" role="2reSmM">
+            <ref role="1NtTu8" to="3751:G77p8aOBWS" resolve="Colour" />
+          </node>
+        </node>
+        <node concept="2reCLy" id="G77p8aOBXC" role="2reCL6">
+          <node concept="3F0A7n" id="G77p8aOBXK" role="2reSmM">
+            <ref role="1NtTu8" to="3751:G77p8aOBWU" resolve="Occurances" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="G77p8aOBYe">
+    <property role="3GE5qa" value="Structures" />
+    <ref role="1XX52x" to="3751:G77p8aOBVq" resolve="ColourTable" />
+    <node concept="3EZMnI" id="G77p8aOBY_" role="2wV5jI">
+      <node concept="3F0A7n" id="G77p8aOBYG" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="2rfBfz" id="G77p8aOBYM" role="3EZMnx">
+        <node concept="2reSaE" id="G77p8aOBYS" role="2rf8GZ">
+          <ref role="2reCK$" to="3751:G77p8aOBY5" resolve="lines" />
+          <node concept="2r3Xtq" id="G77p8aOBYV" role="2YiT2b">
+            <node concept="2rfbtV" id="G77p8aOBYZ" role="uCobI">
+              <property role="2rfbtB" value="Colour" />
+            </node>
+            <node concept="2rfbtV" id="G77p8aOBZ5" role="uCobI">
+              <property role="2rfbtB" value=" &gt;=Occurances" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="2iRkQZ" id="G77p8aOBYC" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="pxbXbtDjKk">
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <ref role="1XX52x" to="3751:pxbXbtDjCy" resolve="IsPathObstructedCondition" />
+    <node concept="3EZMnI" id="pxbXbtDjKm" role="2wV5jI">
+      <node concept="3F0ifn" id="pxbXbtDjKt" role="3EZMnx">
+        <property role="3F0ifm" value="Is path to" />
+      </node>
+      <node concept="3F1sOY" id="pxbXbtDjKz" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:pxbXbtDjKb" resolve="target" />
+      </node>
+      <node concept="3F0ifn" id="pxbXbtDjKF" role="3EZMnx">
+        <property role="3F0ifm" value="obstructed" />
+      </node>
+      <node concept="l2Vlx" id="pxbXbtDjKp" role="2iSdaV" />
     </node>
   </node>
 </model>

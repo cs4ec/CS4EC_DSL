@@ -43,9 +43,9 @@ public class patientGenerator_0 extends AgentGenerator {
     // Assign the value based on probability function
     double rndDouble = RandomHelper.nextDouble();
 
-    this.generateAttribute_a_0(a);
-    this.generateAttribute_b_0(a);
-    this.generateAttribute_c_0(a);
+    this.generateAttribute_a(a);
+    this.generateAttribute_b(a);
+    this.generateAttribute_c(a);
     this.generateAttribute_d(a);
 
     b.PushMission(sendSignalTemp);
@@ -53,7 +53,7 @@ public class patientGenerator_0 extends AgentGenerator {
     return a;
   }
 
-  public void generateAttribute_a_0(patient agent) {
+  public void generateAttribute_a(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -79,7 +79,19 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_b_0(patient agent) {
+  public void generateAttribute_b(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsAdmissionRouteElectiveattendance"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.AdmissionRoute = "Electiveattendance";
+      return;
+    }
+
+  }
+  public void generateAttribute_c(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -98,7 +110,7 @@ public class patientGenerator_0 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_c_0(patient agent) {
+  public void generateAttribute_d(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -114,18 +126,6 @@ public class patientGenerator_0 extends AgentGenerator {
       return;
     } else {
       runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsRecentCovidContactNo");
-    }
-
-  }
-  public void generateAttribute_d(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsadmissionRouteEmergencyAttendance"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.admissionRoute = "EmergencyAttendance";
-      return;
     }
 
   }

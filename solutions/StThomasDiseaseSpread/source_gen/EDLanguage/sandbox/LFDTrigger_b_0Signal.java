@@ -14,7 +14,7 @@ public class LFDTrigger_b_0Signal extends ActorTypeSignal {
   public LFDTrigger_b_0Signal() {
     this.setName("LFDTrigger_b_0");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("CubicleNurse");
+    this.AddActor("MajorsABCubicleNurse");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

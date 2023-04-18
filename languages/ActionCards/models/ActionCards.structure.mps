@@ -25,6 +25,9 @@
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
         <child id="3348158742936976577" name="members" index="25R1y" />
       </concept>
+      <concept id="1224240836180" name="jetbrains.mps.lang.structure.structure.DeprecatedNodeAnnotation" flags="ig" index="asaX9">
+        <property id="1225118933224" name="comment" index="YLQ7P" />
+      </concept>
       <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
         <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
       </concept>
@@ -59,6 +62,7 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -162,6 +166,16 @@
       <property role="TrG5h" value="yPos" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+    <node concept="1TJgyi" id="pxbXbuAnfU" role="1TKVEl">
+      <property role="IQ2nx" value="459701219692737530" />
+      <property role="TrG5h" value="width" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="pxbXbuAnfZ" role="1TKVEl">
+      <property role="IQ2nx" value="459701219692737535" />
+      <property role="TrG5h" value="height" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
     <node concept="1TJgyj" id="av1M7viD_O" role="1TKVEi">
       <property role="IQ2ns" value="188877551434373492" />
       <property role="20kJfa" value="resource" />
@@ -194,6 +208,11 @@
       <property role="IQ2nx" value="188877551436930727" />
       <property role="TrG5h" value="toPort" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="2S_5Uq$_XRk" role="1TKVEl">
+      <property role="IQ2nx" value="3325089904376405460" />
+      <property role="TrG5h" value="showConditionLabel" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
     <node concept="1TJgyj" id="4X1nFNzWOmM" role="1TKVEi">
       <property role="IQ2ns" value="5710949967853733298" />
@@ -448,44 +467,61 @@
   </node>
   <node concept="1TIwiD" id="2vFOz$FUEc$">
     <property role="EcuMT" value="2876623929997959972" />
-    <property role="TrG5h" value="PatientArrivalLine" />
+    <property role="TrG5h" value="PatientArrivalLine_old" />
     <property role="3GE5qa" value="People" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="2vFOz$FUEcI" role="1TKVEl">
       <property role="IQ2nx" value="2876623929997959982" />
-      <property role="TrG5h" value="Time" />
+      <property role="TrG5h" value="Time_old" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+      <node concept="asaX9" id="2S_5Uq$dj3K" role="lGtFl">
+        <property role="YLQ7P" value="The property was moved to concept &quot;PatientLanguage.structure.PatientArrivalLine&quot;" />
+      </node>
     </node>
     <node concept="1TJgyi" id="2vFOz$FUEcK" role="1TKVEl">
       <property role="IQ2nx" value="2876623929997959984" />
-      <property role="TrG5h" value="NumPatientsInHour" />
+      <property role="TrG5h" value="NumPatientsInHour_old" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+      <node concept="asaX9" id="2S_5Uq$dj3V" role="lGtFl">
+        <property role="YLQ7P" value="The property was moved to concept &quot;PatientLanguage.structure.PatientArrivalLine&quot;" />
+      </node>
+    </node>
+    <node concept="asaX9" id="2S_5Uq$dj3c" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;PatientLanguage&quot;" />
     </node>
   </node>
   <node concept="1TIwiD" id="6dYFu3AbeaS">
     <property role="EcuMT" value="7169358838266389176" />
-    <property role="TrG5h" value="PatientArrivals" />
+    <property role="TrG5h" value="PatientArrivals_old" />
     <property role="34LRSv" value="Patient Arrivals" />
     <property role="3GE5qa" value="People" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2vFOz$FUEfh" role="1TKVEi">
       <property role="IQ2ns" value="2876623929997960145" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="PatientArrivalLines" />
+      <property role="20kJfa" value="PatientArrivalLines_old" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="2vFOz$FUEc$" resolve="PatientArrivalLine" />
+      <ref role="20lvS9" node="2vFOz$FUEc$" resolve="PatientArrivalLine_old" />
+      <node concept="asaX9" id="2S_5Uq$dj4h" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientArrivals&quot;" />
+      </node>
     </node>
     <node concept="1TJgyj" id="EFW1mZoVng" role="1TKVEi">
       <property role="IQ2ns" value="768972137592763856" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="ArrivalLocation" />
-      <property role="20lbJX" value="fLJekj4/_1" />
+      <property role="20kJfa" value="ArrivalLocation_old" />
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+      <node concept="asaX9" id="2S_5Uq$dj4s" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientArrivals&quot;" />
+      </node>
+    </node>
+    <node concept="asaX9" id="2S_5Uq$dj3o" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;PatientLanguage&quot;" />
     </node>
   </node>
   <node concept="1TIwiD" id="EFW1mY_7c6">
     <property role="EcuMT" value="768972137579180806" />
-    <property role="TrG5h" value="PatientProfile" />
+    <property role="TrG5h" value="PatientProfile_old" />
     <property role="3GE5qa" value="People" />
     <property role="R4oN_" value="The patient profile" />
     <property role="19KtqR" value="true" />
@@ -493,26 +529,36 @@
     <node concept="1TJgyj" id="EFW1mY_h9p" role="1TKVEi">
       <property role="IQ2ns" value="768972137579221593" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attributes" />
+      <property role="20kJfa" value="attributes_old" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2lOlAdQiLDw" resolve="AttributeTable" />
+      <node concept="asaX9" id="2S_5Uq$dj4B" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientProfile&quot;" />
+      </node>
     </node>
     <node concept="1TJgyj" id="EFW1mY_ha0" role="1TKVEi">
       <property role="IQ2ns" value="768972137579221632" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="arrivalRate" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals" />
+      <property role="20kJfa" value="arrivalRate_old" />
+      <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals_old" />
+      <node concept="asaX9" id="2S_5Uq$dj4M" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientProfile&quot;" />
+      </node>
     </node>
     <node concept="1TJgyj" id="1xAzJ9NBOBv" role="1TKVEi">
       <property role="IQ2ns" value="1758249876507806175" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attendanceRoute" />
-      <property role="20lbJX" value="fLJekj4/_1" />
+      <property role="20kJfa" value="attendanceRoute_old" />
       <ref role="20lvS9" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+      <node concept="asaX9" id="2S_5Uq$dj4X" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientProfile&quot;" />
+      </node>
     </node>
     <node concept="PrWs8" id="1xAzJ9O2iPR" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="asaX9" id="2S_5Uq$dj3$" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;PatientLanguage&quot;" />
     </node>
   </node>
   <node concept="1TIwiD" id="1SF32lRXYq">
@@ -1271,16 +1317,22 @@
   <node concept="1TIwiD" id="i1eH3VE_aN">
     <property role="EcuMT" value="324605317397238451" />
     <property role="3GE5qa" value="People" />
-    <property role="TrG5h" value="Patient" />
+    <property role="TrG5h" value="Patient_old" />
     <property role="34LRSv" value="patient" />
     <property role="19KtqR" value="true" />
     <ref role="1TJDcQ" node="lSEs44W_QZ" resolve="Person" />
     <node concept="1TJgyj" id="i1eH3VE_aX" role="1TKVEi">
       <property role="IQ2ns" value="324605317397238461" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="patientProperty" />
+      <property role="20kJfa" value="patientProperty_old" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+      <node concept="asaX9" id="2S_5Uq$dj46" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.Patient&quot;" />
+      </node>
+    </node>
+    <node concept="asaX9" id="2S_5Uq$dj30" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;PatientLanguage&quot;" />
     </node>
   </node>
   <node concept="1TIwiD" id="i1eH3Wpca0">

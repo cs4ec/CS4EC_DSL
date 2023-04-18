@@ -165,8 +165,6 @@ public class WardNurse extends Actor {
 
 
 
-  public void ALLCOLLECTEDBEHAVIOURS() {
-  }
 
 
 

@@ -33,9 +33,9 @@ public class patientGenerator_1 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("");
+    sendSignalTemp.setName("PatientArrivesTrigger_d");
     sendSignalTemp.AddData("patient", a);
-    sendSignalTemp.AddActor("");
+    sendSignalTemp.AddActor("TriageNurse");
 
 
     // For each agent attribute
@@ -85,6 +85,18 @@ public class patientGenerator_1 extends AgentGenerator {
 
     double runningTotal = 0;
 
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsAdmissionRouteElectiveattendance"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.AdmissionRoute = "Electiveattendance";
+      return;
+    }
+
+  }
+  public void generateAttribute_c_0(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
     runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsSeveritymoderate"));
     if (rndDouble < (runningTotal / 100)) {
       agent.Severity = "moderate";
@@ -106,7 +118,7 @@ public class patientGenerator_1 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_c_0(patient agent) {
+  public void generateAttribute_d_0(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -125,7 +137,7 @@ public class patientGenerator_1 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_d_0(patient agent) {
+  public void generateAttribute_e(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -141,18 +153,6 @@ public class patientGenerator_1 extends AgentGenerator {
       return;
     } else {
       runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsRecentCovidContactNo");
-    }
-
-  }
-  public void generateAttribute_e(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsadmissionRouteElectiveattendance"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.admissionRoute = "Electiveattendance";
-      return;
     }
 
   }

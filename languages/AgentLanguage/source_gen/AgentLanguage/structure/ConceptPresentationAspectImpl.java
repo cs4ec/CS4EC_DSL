@@ -32,7 +32,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_BehaviourElementReference;
   private ConceptPresentation props_BehaviourSequence;
   private ConceptPresentation props_BinaryCondition;
+  private ConceptPresentation props_Breadcrumb;
   private ConceptPresentation props_Choice;
+  private ConceptPresentation props_ColourLine;
+  private ConceptPresentation props_ColourTable;
   private ConceptPresentation props_CompositeOrder;
   private ConceptPresentation props_Condition;
   private ConceptPresentation props_ConsequenceElement;
@@ -45,6 +48,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_Description;
   private ConceptPresentation props_DirectSignal;
   private ConceptPresentation props_DistanceCondition;
+  private ConceptPresentation props_DropBreadcrumb;
   private ConceptPresentation props_ExpressionWrapper;
   private ConceptPresentation props_FollowOrder;
   private ConceptPresentation props_ForEach;
@@ -55,6 +59,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_InfectionState;
   private ConceptPresentation props_IsExactlyOperator;
   private ConceptPresentation props_IsLessThanOperator;
+  private ConceptPresentation props_IsPathObstructedCondition;
   private ConceptPresentation props_Iterable;
   private ConceptPresentation props_IterableAttributeCondition;
   private ConceptPresentation props_KernelFCondition;
@@ -292,6 +297,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_BinaryCondition = cpb.create();
         }
         return props_BinaryCondition;
+      case LanguageConceptSwitch.Breadcrumb:
+        if (props_Breadcrumb == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Breadcrumb = cpb.create();
+        }
+        return props_Breadcrumb;
       case LanguageConceptSwitch.Choice:
         if (props_Choice == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -300,6 +312,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Choice = cpb.create();
         }
         return props_Choice;
+      case LanguageConceptSwitch.ColourLine:
+        if (props_ColourLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ColourLine");
+          props_ColourLine = cpb.create();
+        }
+        return props_ColourLine;
+      case LanguageConceptSwitch.ColourTable:
+        if (props_ColourTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ColourTable = cpb.create();
+        }
+        return props_ColourTable;
       case LanguageConceptSwitch.CompositeOrder:
         if (props_CompositeOrder == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -386,6 +412,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DistanceCondition = cpb.create();
         }
         return props_DistanceCondition;
+      case LanguageConceptSwitch.DropBreadcrumb:
+        if (props_DropBreadcrumb == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Drop a breadcrumb");
+          cpb.presentationByName();
+          props_DropBreadcrumb = cpb.create();
+        }
+        return props_DropBreadcrumb;
       case LanguageConceptSwitch.ExpressionWrapper:
         if (props_ExpressionWrapper == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -457,6 +491,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IsLessThanOperator = cpb.create();
         }
         return props_IsLessThanOperator;
+      case LanguageConceptSwitch.IsPathObstructedCondition:
+        if (props_IsPathObstructedCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Is path obstructed to");
+          props_IsPathObstructedCondition = cpb.create();
+        }
+        return props_IsPathObstructedCondition;
       case LanguageConceptSwitch.Iterable:
         if (props_Iterable == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

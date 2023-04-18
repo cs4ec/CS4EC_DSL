@@ -43,6 +43,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     // Reset log contents
     new ToolBox(this).GetLog().clearOldContents();
+    ToolBox.grids.clear();
 
     context.setId("EDProject");
     int mapWidth = 120;
@@ -62,6 +63,10 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+
+    Grid<Object> StrepABreadcrumbgrid = gridFactory.createGrid("StrepABreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    ToolBox.grids.add(StrepABreadcrumbgrid);
+
 
     context.add(new patientGenerator_0(space, grid, context));
     context.add(new patientGenerator_1(space, grid, context));

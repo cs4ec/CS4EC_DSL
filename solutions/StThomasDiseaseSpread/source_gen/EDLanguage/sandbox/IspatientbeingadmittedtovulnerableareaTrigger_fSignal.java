@@ -14,7 +14,7 @@ public class IspatientbeingadmittedtovulnerableareaTrigger_fSignal extends Actor
   public IspatientbeingadmittedtovulnerableareaTrigger_fSignal() {
     this.setName("IspatientbeingadmittedtovulnerableareaTrigger_f");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("CubicleNurse");
+    this.AddActor("MajorsCCubicleNurse");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

@@ -7,6 +7,7 @@
     <string>patientgetSeverityissevere</string>
     <string>patientgetSeverityismoderate</string>
     <string>patientgetSeverityislow</string>
+    <string>patientgetAdmissionRouteisElectiveattendance</string>
     <string>patientgetImmunocompromisedisYes</string>
     <string>patientgetImmunocompromisedisNo</string>
     <string>patientgetRecentCovidContactisYes</string>
@@ -18,6 +19,7 @@
     <string>patientgetadmittedToisGreenBaygetSeverityissevere</string>
     <string>patientgetadmittedToisGreenBaygetSeverityismoderate</string>
     <string>patientgetadmittedToisGreenBaygetSeverityislow</string>
+    <string>patientgetadmittedToisGreenBaygetAdmissionRouteisElectiveattendance</string>
     <string>patientgetadmittedToisGreenBaygetImmunocompromisedisYes</string>
     <string>patientgetadmittedToisGreenBaygetImmunocompromisedisNo</string>
     <string>patientgetadmittedToisGreenBaygetRecentCovidContactisYes</string>

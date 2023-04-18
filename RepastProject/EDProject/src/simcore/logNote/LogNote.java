@@ -29,13 +29,13 @@ public class LogNote {
 	
 	public void clearOldContents() {
 		// Clear old logs
-		File parentFolder = new File(projectPath + "output/");
-		try {
-			FileUtils.cleanDirectory(parentFolder);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+//		File parentFolder = new File(projectPath + "output/");
+//		try {
+//			FileUtils.cleanDirectory(parentFolder);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} 
 	}
 	
     public void SetAddress(String s) {

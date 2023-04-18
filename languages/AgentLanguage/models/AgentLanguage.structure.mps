@@ -2100,5 +2100,85 @@
       <ref role="20lvS9" node="3l6cNjec8l6" resolve="BehaviourSequence" />
     </node>
   </node>
+  <node concept="1TIwiD" id="G77p895LJp">
+    <property role="EcuMT" value="794636372309122009" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="Breadcrumb" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="G77p895LKS" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="G77p8aOD__" role="1TKVEi">
+      <property role="IQ2ns" value="794636372338186597" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="colourTable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="G77p8aOBVq" resolve="ColourTable" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="G77p895LJz">
+    <property role="EcuMT" value="794636372309122019" />
+    <property role="3GE5qa" value="actions.basic actions" />
+    <property role="TrG5h" value="DropBreadcrumb" />
+    <property role="34LRSv" value="drop" />
+    <property role="R4oN_" value="Drop a breadcrumb" />
+    <ref role="1TJDcQ" node="3l6cNjec8l7" resolve="Behaviour" />
+    <node concept="PrWs8" id="G77p895LK8" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="G77p895LKa" role="1TKVEi">
+      <property role="IQ2ns" value="794636372309122058" />
+      <property role="20kJfa" value="breadcrumb" />
+      <ref role="20lvS9" node="G77p895LJp" resolve="Breadcrumb" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="G77p8aOBVq">
+    <property role="EcuMT" value="794636372338179802" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="ColourTable" />
+    <property role="34LRSv" value="Colour Table" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="G77p8aOBWh" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="G77p8aOBY5" role="1TKVEi">
+      <property role="IQ2ns" value="794636372338179973" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="G77p8aOBWj" resolve="ColourLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="G77p8aOBWj">
+    <property role="EcuMT" value="794636372338179859" />
+    <property role="3GE5qa" value="Structures" />
+    <property role="TrG5h" value="ColourLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="G77p8aOBWS" role="1TKVEl">
+      <property role="IQ2nx" value="794636372338179896" />
+      <property role="TrG5h" value="Colour" />
+      <ref role="AX2Wp" node="6o2BuIx6R5l" resolve="Colour" />
+    </node>
+    <node concept="1TJgyi" id="G77p8aOBWU" role="1TKVEl">
+      <property role="IQ2nx" value="794636372338179898" />
+      <property role="TrG5h" value="Occurances" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="pxbXbtDjCy">
+    <property role="EcuMT" value="459701219676731938" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="IsPathObstructedCondition" />
+    <property role="34LRSv" value="Is path obstructed to" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+    <node concept="1TJgyj" id="pxbXbtDjKb" role="1TKVEi">
+      <property role="IQ2ns" value="459701219676732427" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="target" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="7o6PzEpI6ey" resolve="HumanInstance" />
+    </node>
+  </node>
 </model>
 

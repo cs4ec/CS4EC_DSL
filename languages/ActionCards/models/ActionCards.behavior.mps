@@ -17,6 +17,7 @@
     <import index="fnmy" ref="r:89c0fb70-0977-4113-a076-5906f9d8630f(jetbrains.mps.baseLanguage.scopes)" />
     <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
     <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" />
+    <import index="s2d1" ref="r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
@@ -265,7 +266,7 @@
   </node>
   <node concept="13h7C7" id="EFW1mYATDV">
     <property role="3GE5qa" value="People" />
-    <ref role="13h7C2" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+    <ref role="13h7C2" to="e88n:EFW1mY_7c6" resolve="PatientProfile_old" />
     <node concept="13hLZK" id="EFW1mYATDW" role="13h7CW">
       <node concept="3clFbS" id="EFW1mYATDX" role="2VODD2">
         <node concept="3clFbF" id="EFW1mYATEi" role="3cqZAp">
@@ -768,12 +769,12 @@
                       </node>
                       <node concept="2RRcyG" id="1xAzJ9NfW3A" role="2OqNvi">
                         <node concept="chp4Y" id="1fQ3pJcUc0L" role="3MHsoP">
-                          <ref role="cht4Q" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                          <ref role="cht4Q" to="s2d1:EFW1mY_7c6" resolve="PatientProfile" />
                         </node>
                       </node>
                     </node>
                     <node concept="13MTOL" id="1xAzJ9Ng0qm" role="2OqNvi">
-                      <ref role="13MTZf" to="e88n:EFW1mY_h9p" resolve="attributes" />
+                      <ref role="13MTZf" to="s2d1:EFW1mY_h9p" resolve="attributes" />
                     </node>
                   </node>
                   <node concept="3zZkjj" id="1xAzJ9Ng1bS" role="2OqNvi">
@@ -930,12 +931,12 @@
                       </node>
                       <node concept="2RRcyG" id="1xAzJ9PnEJM" role="2OqNvi">
                         <node concept="chp4Y" id="1fQ3pJcUc0M" role="3MHsoP">
-                          <ref role="cht4Q" to="e88n:EFW1mY_7c6" resolve="PatientProfile" />
+                          <ref role="cht4Q" to="s2d1:EFW1mY_7c6" resolve="PatientProfile" />
                         </node>
                       </node>
                     </node>
                     <node concept="13MTOL" id="1xAzJ9PnEJN" role="2OqNvi">
-                      <ref role="13MTZf" to="e88n:EFW1mY_h9p" resolve="attributes" />
+                      <ref role="13MTZf" to="s2d1:EFW1mY_h9p" resolve="attributes" />
                     </node>
                   </node>
                   <node concept="3zZkjj" id="1xAzJ9PnEJO" role="2OqNvi">

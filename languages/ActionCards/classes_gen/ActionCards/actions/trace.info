@@ -27,9 +27,9 @@
     <file name="RecentContactFactory.java">
       <node id="1758249876502975376" at="22,41,23,145" concept="2" />
       <node id="1758249876502950644" at="30,0,31,0" concept="3" trace="patientProperty$FJ4E" />
-      <node id="1758249876502950644" at="31,0,32,0" concept="3" trace="attributes$kiaM" />
+      <node id="1758249876502950644" at="31,0,32,0" concept="3" trace="attributes$eds7" />
       <node id="1758249876502950644" at="32,0,33,0" concept="3" trace="patientProperty$d18a" />
-      <node id="1758249876502950644" at="36,0,37,0" concept="3" trace="PatientProfile$ZT" />
+      <node id="1758249876502950644" at="36,0,37,0" concept="3" trace="PatientProfile$he" />
       <node id="1758249876502950644" at="37,0,38,0" concept="3" trace="RecentCovidContactProperty$IY" />
       <node id="1758249876502975140" at="22,0,25,0" concept="1" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="1758249876502950660" at="20,91,25,47" concept="0" />
@@ -56,9 +56,9 @@
     <file name="ImmunocompromisedFactory.java">
       <node id="1758249876537129762" at="22,41,23,143" concept="2" />
       <node id="1758249876537129593" at="30,0,31,0" concept="3" trace="patientProperty$FJ4E" />
-      <node id="1758249876537129593" at="31,0,32,0" concept="3" trace="attributes$kiaM" />
+      <node id="1758249876537129593" at="31,0,32,0" concept="3" trace="attributes$eds7" />
       <node id="1758249876537129593" at="32,0,33,0" concept="3" trace="patientProperty$d18a" />
-      <node id="1758249876537129593" at="36,0,37,0" concept="3" trace="PatientProfile$ZT" />
+      <node id="1758249876537129593" at="36,0,37,0" concept="3" trace="PatientProfile$he" />
       <node id="1758249876537129593" at="37,0,38,0" concept="3" trace="ImmunosuppressedProperty$On" />
       <node id="1758249876537129760" at="22,0,25,0" concept="1" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
       <node id="1758249876537129746" at="20,91,25,47" concept="0" />

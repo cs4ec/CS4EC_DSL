@@ -854,7 +854,7 @@ public class Doctor extends Actor {
     }
 
     public boolean finishCondition() {
-      return (timeExecuted == (1200 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+      return (timeExecuted == (600 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
 
     }
   }
@@ -980,7 +980,7 @@ public class Doctor extends Actor {
     }
 
     public boolean finishCondition() {
-      return (timeExecuted == (1200 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
+      return (timeExecuted == (600 / RunEnvironment.getInstance().getParameters().getInteger("SecondsPerTick")));
 
     }
   }
