@@ -30,7 +30,6 @@
         <property id="3785632457359082556" name="simulation_repetitions" index="2rAC2l" />
         <property id="8998806958909918627" name="secondsPerTick" index="wKqbz" />
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
-        <child id="2338410313177321440" name="ActionCards" index="1SufKE" />
       </concept>
       <concept id="5402567240278617723" name="ActionCards.structure.StaffNumber" flags="ng" index="2_0uwW">
         <property id="5402567240278617733" name="number" index="2_0uz2" />
@@ -126,9 +125,6 @@
       </concept>
       <concept id="1758249876538241356" name="ActionCards.structure.DischargeAction" flags="ng" index="1H2jYY" />
       <concept id="1758249876537114910" name="ActionCards.structure.ImmunosuppressedProperty" flags="ng" index="1He0ZG" />
-      <concept id="1758249876539396808" name="ActionCards.structure.ActionCardReference" flags="ng" index="1HTXKU">
-        <reference id="1758249876539396856" name="actionCard" index="1HTXKa" />
-      </concept>
       <concept id="6963522544237023781" name="ActionCards.structure.ActionDurationMinutes" flags="ng" index="1M3RjT">
         <property id="6963522544237023782" name="duration" index="1M3RjU" />
       </concept>
@@ -349,12 +345,6 @@
     <node concept="2_0uwW" id="3VLqyG6Chhw" role="2_0uzz">
       <property role="2_0uz2" value="10" />
       <ref role="2_0uz0" node="2K0oNvtWdy4" resolve="WardNurse" />
-    </node>
-    <node concept="1HTXKU" id="21NGWDofZ0P" role="1SufKE">
-      <ref role="1HTXKa" node="1Iqh_KLvlmx" resolve="Current Pathway (MajorsAB)" />
-    </node>
-    <node concept="1HTXKU" id="21NGWDofZ0R" role="1SufKE">
-      <ref role="1HTXKa" node="6lG8bJ3T0lH" resolve="Current Pathway (MajorsC)" />
     </node>
   </node>
   <node concept="2Ovb82" id="EFW1mZonCG">

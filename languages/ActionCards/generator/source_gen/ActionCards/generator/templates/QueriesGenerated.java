@@ -338,7 +338,7 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Object referenceMacro_GetReferent_6_3(final ReferenceMacroContext _context) {
     return _context.getOutputNodeByInputNodeAndMappingLabel(Sequence.fromIterable(SLinkOperations.collectMany(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb)).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return !(Objects.equals(SLinkOperations.getTarget(it, LINKS.UsageCondition$srTD), null)) && Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), LINKS.ActionCards$jAPY), LINKS.actionCard$QzY2)).contains(it);
+        return !(Objects.equals(SLinkOperations.getTarget(it, LINKS.UsageCondition$srTD), null));
       }
     }), LINKS.Actions$nh$G)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(final SNode it) {
@@ -876,8 +876,8 @@ public class QueriesGenerated extends QueryProviderBase {
 
     _context.showWarningMessage(null, "Start Create Base Action Script");
     List<SNode> rootActionCards = ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.ActionCard$eb)).where(new IWhereFilter<SNode>() {
-      public boolean accept(SNode it1) {
-        return !(Objects.equals(SLinkOperations.getTarget(it1, LINKS.UsageCondition$srTD), null)) && Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(ListSequence.fromList(SModelOperations.roots(_context.getInputModel(), CONCEPTS.EDScenario$wp)).first(), LINKS.ActionCards$jAPY), LINKS.actionCard$QzY2)).contains(it1);
+      public boolean accept(SNode ac) {
+        return !(Objects.equals(SLinkOperations.getTarget(ac, LINKS.UsageCondition$srTD), null));
       }
     }).toListSequence();
 
@@ -2130,8 +2130,6 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink orderPatientLocation$SPZH = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x348ff1b011050997L, "orderPatientLocation");
     /*package*/ static final SReferenceLink patientProperty$d18a = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L, 0x4813ad0fbaa5f13L, "patientProperty");
     /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
-    /*package*/ static final SContainmentLink ActionCards$jAPY = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e56L, 0x2073b3ca580b4fe0L, "ActionCards");
-    /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
     /*package*/ static final SContainmentLink Actions$nh$G = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2ef557ae9cb06877L, "Actions");
     /*package*/ static final SReferenceLink disease$NZ2B = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e7089L, 0x18668ef26f40918bL, "disease");
     /*package*/ static final SContainmentLink attributes$f_y3 = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x257e995deb85de00L, "attributes");
@@ -2169,6 +2167,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink condition$HxRE = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L, 0x18668ef27386cf03L, "condition");
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
     /*package*/ static final SContainmentLink TestingProcess$hIgq = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL, 0x348ff1b011d7b149L, "TestingProcess");
+    /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
     /*package*/ static final SContainmentLink admissionActionCard$3$8i = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x78ac3095dfdf9aL, 0x2c006337ddf0db18L, "admissionActionCard");
     /*package*/ static final SContainmentLink possibleValue$QY6s = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a7cL, 0x5dc1936ab296486eL, "possibleValue");
     /*package*/ static final SContainmentLink ArrivalLocation$Zd0d = MetaAdapterFactory.getContainmentLink(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x637eade0e62ce2b8L, 0xaabf015bf63b5d0L, "ArrivalLocation");

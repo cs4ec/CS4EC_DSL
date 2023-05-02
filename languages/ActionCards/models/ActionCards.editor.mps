@@ -10,6 +10,7 @@
     <use id="9d69e719-78c8-4286-90db-fb19c107d049" name="com.mbeddr.mpsutil.grammarcells" version="2" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="2" />
     <use id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts" version="0" />
+    <use id="6106f611-7a74-42d1-80de-edc5c602bfd1" name="jetbrains.mps.lang.editor.diagram" version="1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -507,32 +508,22 @@
             <property role="2USNnj" value="gtbM8PH/underlined" />
           </node>
         </node>
-        <node concept="3F0ifn" id="21NGWDo2P1f" role="3EZMnx">
-          <node concept="pVoyu" id="21NGWDo2P4m" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="3F0ifn" id="21NGWDo2OZV" role="3EZMnx">
-          <property role="3F0ifm" value="Action Cards to run:" />
-          <node concept="pVoyu" id="21NGWDo2P0k" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-          <node concept="VSNWy" id="21NGWDo2P4$" role="3F10Kt">
-            <property role="1lJzqX" value="14" />
-          </node>
-          <node concept="VQ3r3" id="21NGWDo2P4G" role="3F10Kt">
-            <property role="2USNnj" value="gtbM8PH/underlined" />
-          </node>
-        </node>
-        <node concept="3F2HdR" id="21NGWDo2P0K" role="3EZMnx">
-          <ref role="1NtTu8" to="e88n:21NGWDo2OZw" resolve="ActionCards" />
-          <node concept="l2Vlx" id="21NGWDo2P0M" role="2czzBx" />
-          <node concept="pVoyu" id="21NGWDo2P1d" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
         <node concept="3F0ifn" id="21NGWDo2P5i" role="3EZMnx">
           <node concept="pVoyu" id="21NGWDo2P5O" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F0ifn" id="6w5xUwN7QBm" role="3EZMnx">
+          <property role="3F0ifm" value="Primary Action Card:" />
+          <node concept="pVoyu" id="6w5xUwN7QCI" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+        </node>
+        <node concept="3F1sOY" id="6w5xUwN7QCg" role="3EZMnx">
+          <ref role="1NtTu8" to="e88n:6w5xUwN7QAR" resolve="primaryActionCard" />
+        </node>
+        <node concept="3F0ifn" id="6w5xUwN7QDf" role="3EZMnx">
+          <node concept="pVoyu" id="6w5xUwN7QFn" role="3F10Kt">
             <property role="VOm3f" value="true" />
           </node>
         </node>
@@ -2891,13 +2882,26 @@
     </node>
     <node concept="2ZK4vF" id="1xAzJ9NxGWf" role="2wV5jI">
       <node concept="38c6YI" id="1xAzJ9NRzfD" role="3F10Kt">
-        <property role="Vb096" value="fLwANPn/red" />
+        <property role="Vb096" value="g1_qVrt/darkMagenta" />
       </node>
       <node concept="3EZMnI" id="1xAzJ9NxGWg" role="1ytjkN">
         <node concept="2iRkQZ" id="1xAzJ9NxGWk" role="2iSdaV" />
         <node concept="Veino" id="1xAzJ9NxGWl" role="3F10Kt" />
-        <node concept="3F1sOY" id="4NxsD3bZ9Il" role="3EZMnx">
-          <ref role="1NtTu8" to="e88n:1xAzJ9NxGW3" resolve="condition" />
+        <node concept="3EZMnI" id="6w5xUwMhcAU" role="3EZMnx">
+          <node concept="VPM3Z" id="6w5xUwMhcAW" role="3F10Kt" />
+          <node concept="3F0ifn" id="6w5xUwMhcAY" role="3EZMnx">
+            <property role="3F0ifm" value="Use if:" />
+            <node concept="VSNWy" id="6w5xUwMhhG4" role="3F10Kt">
+              <property role="1lJzqX" value="12" />
+            </node>
+          </node>
+          <node concept="3F1sOY" id="4NxsD3bZ9Il" role="3EZMnx">
+            <ref role="1NtTu8" to="e88n:1xAzJ9NxGW3" resolve="condition" />
+            <node concept="VSNWy" id="6w5xUwMhhFY" role="3F10Kt">
+              <property role="1lJzqX" value="12" />
+            </node>
+          </node>
+          <node concept="2iRfu4" id="6w5xUwMhcAZ" role="2iSdaV" />
         </node>
       </node>
     </node>
@@ -2906,7 +2910,7 @@
       <node concept="Veino" id="4NxsD3bUtx2" role="3F10Kt" />
       <node concept="3EZMnI" id="4NxsD3bUtx3" role="3EZMnx">
         <node concept="3F0ifn" id="4NxsD3bUtx4" role="3EZMnx">
-          <property role="3F0ifm" value="Usage Conditions:" />
+          <property role="3F0ifm" value="Use If:" />
           <node concept="VSNWy" id="4NxsD3bUtx5" role="3F10Kt">
             <property role="1lJzqX" value="12" />
           </node>
@@ -3142,6 +3146,20 @@
       </node>
       <node concept="3F0ifn" id="YUPWPn1W$m" role="3EZMnx">
         <node concept="pVoyu" id="YUPWPn1W_s" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="6w5xUwMrWD3" role="3EZMnx">
+        <property role="3F0ifm" value="Primary Action Card:" />
+        <node concept="pVoyu" id="6w5xUwMrWE0" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="6w5xUwMrWDF" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:6w5xUwMno1q" resolve="isRootActionCard" />
+      </node>
+      <node concept="3F0ifn" id="6w5xUwMrWEo" role="3EZMnx">
+        <node concept="pVoyu" id="6w5xUwMrWEJ" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>

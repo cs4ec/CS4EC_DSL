@@ -13,18 +13,18 @@
     <file name="QueriesGenerated.java">
       <unit at="2039,0,2054,0" name="ActionCards.generator.templates.QueriesGenerated$MNQ" />
       <unit at="2065,0,2083,0" name="ActionCards.generator.templates.QueriesGenerated$LIQ" />
-      <unit at="2179,0,2200,0" name="ActionCards.generator.templates.QueriesGenerated$CONCEPTS" />
+      <unit at="2178,0,2199,0" name="ActionCards.generator.templates.QueriesGenerated$CONCEPTS" />
       <unit at="2002,0,2029,0" name="ActionCards.generator.templates.QueriesGenerated$IMQ" />
       <unit at="2084,0,2112,0" name="ActionCards.generator.templates.QueriesGenerated$PROPS" />
       <unit at="1142,0,1173,0" name="ActionCards.generator.templates.QueriesGenerated$SCB" />
       <unit at="1955,0,1986,0" name="ActionCards.generator.templates.QueriesGenerated$VVQ" />
       <unit at="1203,0,1256,0" name="ActionCards.generator.templates.QueriesGenerated$SNQ" />
       <unit at="1633,0,1686,0" name="ActionCards.generator.templates.QueriesGenerated$IfMC" />
-      <unit at="2113,0,2178,0" name="ActionCards.generator.templates.QueriesGenerated$LINKS" />
+      <unit at="2113,0,2177,0" name="ActionCards.generator.templates.QueriesGenerated$LINKS" />
       <unit at="1300,0,1381,0" name="ActionCards.generator.templates.QueriesGenerated$SNsQ" />
       <unit at="1457,0,1603,0" name="ActionCards.generator.templates.QueriesGenerated$PVQ" />
       <unit at="1771,0,1937,0" name="ActionCards.generator.templates.QueriesGenerated$RTQ" />
-      <unit at="63,0,2201,0" name="ActionCards.generator.templates.QueriesGenerated" />
+      <unit at="63,0,2200,0" name="ActionCards.generator.templates.QueriesGenerated" />
     </file>
   </root>
   <root nodeRef="r:2b34b262-70b8-44fb-abbb-589788150497(ActionCards.generator.templates@generator)/147289298427229388">
@@ -168,7 +168,7 @@
     <file name="QueriesGenerated.java">
       <node id="1758249876526442733" at="875,86,876,0" concept="7" />
       <node id="1862364223776981512" at="876,0,877,73" concept="0" />
-      <node id="3170643229268496792" at="879,40,880,343" concept="5" />
+      <node id="3170643229268496792" at="879,39,880,97" concept="5" />
       <node id="6925550037367239382" at="882,24,883,0" concept="7" />
       <node id="6925550037367239557" at="883,0,884,0" concept="7" />
       <node id="1758249876526432790" at="888,44,889,95" concept="5" />
@@ -208,11 +208,11 @@
       <node id="1758249876526442862" at="903,55,914,7" concept="1" />
       <node id="6925550037361393884" at="897,0,918,5" concept="1" />
       <node id="1758249876526393806" at="875,0,923,0" concept="8" trace="mappingScript_CodeBlock_21#(Ljetbrains/mps/generator/template/MappingScriptContext;)V" />
-      <scope id="6925550037364969751" at="879,40,880,343" />
+      <scope id="6925550037364969751" at="879,39,880,97" />
       <scope id="1758249876526431931" at="888,44,889,95" />
       <scope id="1758249876526393805" at="1150,15,1152,17" />
       <scope id="6925550037364969750" at="879,0,882,0">
-        <var name="it1" id="6925550037364969750" />
+        <var name="ac" id="6925550037364969750" />
       </scope>
       <scope id="1758249876526431930" at="888,0,891,0">
         <var name="it2" id="1758249876526431930" />
@@ -2086,7 +2086,7 @@
       <node id="506397452382634677" at="329,93,330,165" concept="5" />
       <node id="768972137579218407" at="332,93,333,192" concept="5" />
       <node id="768972137593373099" at="335,93,336,177" concept="5" />
-      <node id="8122408734008868957" at="340,39,341,341" concept="5" />
+      <node id="8122408734008868957" at="340,39,341,97" concept="5" />
       <node id="8149202941029974837" at="346,44,347,95" concept="5" />
       <node id="506397452382639902" at="715,104,716,86" concept="5" />
       <node id="506397452382636159" at="718,104,719,157" concept="5" />
@@ -2140,7 +2140,7 @@
       <scope id="506397452382634450" at="329,93,330,165" />
       <scope id="768972137579212822" at="332,93,333,192" />
       <scope id="768972137593373023" at="335,93,336,177" />
-      <scope id="8122408734008868194" at="340,39,341,341" />
+      <scope id="8122408734008868194" at="340,39,341,97" />
       <scope id="8149202941029973460" at="346,44,347,95" />
       <scope id="506397452382639896" at="715,104,716,86" />
       <scope id="506397452382635023" at="718,104,719,157" />

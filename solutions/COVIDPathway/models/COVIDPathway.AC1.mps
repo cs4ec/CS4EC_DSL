@@ -5368,6 +5368,16 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="7uBbotlywek" role="37mRID">
+        <property role="37mO49" value="8621910070903047010" />
+        <node concept="gqqVs" id="7uBbotlywej" role="37mO4d">
+          <property role="gqqTZ" value="733.5" />
+          <property role="gqqTW" value="88.0" />
+          <property role="gqqTX" value="102.0" />
+          <property role="gqqTy" value="38.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0vH" role="2MhjZp">
       <property role="TrG5h" value="Lateral Flow Test" />
@@ -5524,6 +5534,22 @@
     <node concept="2lDReE" id="2S_5Uq_1a3N" role="2MhjZp">
       <property role="TrG5h" value="Admit to Red Bay" />
       <node concept="2_8ZN7" id="2S_5Uq_1a3O" role="2_8HaY" />
+    </node>
+    <node concept="2MhjZa" id="7uBbotlywdy" role="2MhjZp">
+      <property role="TrG5h" value="Triage" />
+      <node concept="2_8ZN7" id="7uBbotlywdz" role="2_8HaY">
+        <ref role="2_8ZNy" node="2_JteYPiCG6" resolve="TriageNurse" />
+      </node>
+      <node concept="1M3RjT" id="7uBbotlywpV" role="1M293l">
+        <property role="1M3RjU" value="5" />
+      </node>
+      <node concept="UeIYj" id="7uBbotlywpX" role="3lENdC">
+        <ref role="Udx8D" node="EFW1mYOHdm" resolve="TriageDesk" />
+      </node>
+      <node concept="2GGxJi" id="7uBbotlywpZ" role="A3aay">
+        <ref role="3tVEyn" node="7uBbotlywdy" resolve="Triage" />
+        <ref role="2GGxGe" node="6lG8bJ3T0vH" resolve="Lateral Flow Test" />
+      </node>
     </node>
   </node>
   <node concept="2MhjZA" id="6lG8bJ3TBxM">

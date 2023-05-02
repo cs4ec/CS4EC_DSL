@@ -29,7 +29,7 @@
         <property id="3785632457359082556" name="simulation_repetitions" index="2rAC2l" />
         <property id="8998806958909918627" name="secondsPerTick" index="wKqbz" />
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
-        <child id="2338410313177321440" name="ActionCards" index="1SufKE" />
+        <child id="7495546311310010807" name="primaryActionCard" index="1r6ISv" />
       </concept>
       <concept id="5402567240278617723" name="ActionCards.structure.StaffNumber" flags="ng" index="2_0uwW">
         <property id="5402567240278617733" name="number" index="2_0uz2" />
@@ -326,7 +326,7 @@
       <property role="2_0uz2" value="10" />
       <ref role="2_0uz0" node="2K0oNvtWdy4" resolve="WardNurse" />
     </node>
-    <node concept="1HTXKU" id="21NGWDofZ0P" role="1SufKE">
+    <node concept="1HTXKU" id="6w5xUwNepju" role="1r6ISv">
       <ref role="1HTXKa" node="1Iqh_KLvlmx" resolve="Current Pathway (MajorsAB)" />
     </node>
   </node>

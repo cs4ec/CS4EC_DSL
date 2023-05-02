@@ -25,6 +25,8 @@ import jetbrains.mps.openapi.editor.style.StyleRegistry;
 import jetbrains.mps.nodeEditor.MPSColors;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Vertical;
+import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Horizontal;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.lang.editor.cellProviders.SingleRoleCellProvider;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import jetbrains.mps.openapi.editor.cells.CellActionType;
@@ -98,7 +100,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
         editorCell.value.setBig(true);
         setCellContext(editorCell.value);
         Style style = new StyleImpl();
-        style.set(StyleAttributes.getInstance().<Color>getAttribute("de.itemis.mps.editor.diagram.styles", "__shade-color"), StyleRegistry.getInstance().getSimpleColor(MPSColors.red));
+        style.set(StyleAttributes.getInstance().<Color>getAttribute("de.itemis.mps.editor.diagram.styles", "__shade-color"), StyleRegistry.getInstance().getSimpleColor(MPSColors.DARK_MAGENTA));
         editorCell.value.getStyle().putAll(style);
 
         editorCell.value.addEditorCell(contentCell);
@@ -116,18 +118,37 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     Style style = new StyleImpl();
     style.set(StyleAttributes.BACKGROUND_COLOR, (Color) null);
     editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createCollection_1());
+    return editorCell;
+  }
+  private EditorCell createCollection_1() {
+    EditorCell_Collection editorCell = new EditorCell_Collection(getEditorContext(), myNode, new CellLayout_Horizontal());
+    editorCell.setCellId("Collection_t29eg1_a0a");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
+    editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createRefNode_0());
     return editorCell;
   }
+  private EditorCell createConstant_0() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Use if:");
+    editorCell.setCellId("Constant_t29eg1_a0a0");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.FONT_SIZE, 12);
+    editorCell.getStyle().putAll(style);
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
   private EditorCell createRefNode_0() {
-    SingleRoleCellProvider provider = new conditionSingleRoleHandler_t29eg1_a0a(myNode, LINKS.condition$HxRE, getEditorContext());
+    SingleRoleCellProvider provider = new conditionSingleRoleHandler_t29eg1_b0a0(myNode, LINKS.condition$HxRE, getEditorContext());
     return provider.createCell();
   }
-  private static class conditionSingleRoleHandler_t29eg1_a0a extends SingleRoleCellProvider {
+  private static class conditionSingleRoleHandler_t29eg1_b0a0 extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public conditionSingleRoleHandler_t29eg1_a0a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public conditionSingleRoleHandler_t29eg1_b0a0(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -155,6 +176,9 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
       if (editorCell.getSRole() == null) {
         editorCell.setSRole(LINKS.condition$HxRE);
       }
+      Style style = new StyleImpl();
+      style.set(StyleAttributes.FONT_SIZE, 12);
+      editorCell.getStyle().putAll(style);
     }
     @Override
     protected EditorCell createEmptyCell() {

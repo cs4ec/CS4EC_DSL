@@ -342,6 +342,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.property("showDiagramView", 0x7ce22f405c59c5feL).type(PrimitiveTypeId.BOOLEAN).origin("8998806958913471998").done();
     b.property("isSubProcess", 0x4f871b6380a37071L).type(PrimitiveTypeId.BOOLEAN).origin("5730579165026152561").done();
+    b.property("isRootActionCard", 0x680587a8325d805aL).type(PrimitiveTypeId.BOOLEAN).origin("7495546311297302618").done();
     b.aggregate("Actions", 0x2ef557ae9cb06877L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L).optional(false).ordered(true).multiple(true).origin("3383707102503528567").done();
     b.aggregate("Branches", 0x2574566374fd2551L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL).optional(true).ordered(true).multiple(true).origin("2698877061866267985").done();
     b.aggregate("UsageCondition", 0x18668ef27386c3a5L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L).optional(true).ordered(true).multiple(false).origin("1758249876506198949").done();
@@ -575,7 +576,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("secondsPerTick", 0x7ce22f405c238da3L).type(PrimitiveTypeId.INTEGER).origin("8998806958909918627").done();
     b.property("simulation_repetitions", 0x348944a9af13c43cL).type(PrimitiveTypeId.INTEGER).origin("3785632457359082556").done();
     b.aggregate("staffNumbers", 0x4af9c647eff82ea4L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647eff82e7bL).optional(true).ordered(true).multiple(true).origin("5402567240278617764").done();
-    b.aggregate("ActionCards", 0x2073b3ca580b4fe0L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L).optional(true).ordered(true).multiple(true).origin("2338410313177321440").done();
+    b.aggregate("primaryActionCard", 0x680587a8331f69b7L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L).optional(true).ordered(true).multiple(false).origin("7495546311310010807").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForElectiveAttendanceRoute() {
