@@ -14,10 +14,11 @@
     <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
-    <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(EDLanguage.structure)" implicit="true" />
+    <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="vp87" ref="r:60c6eb7f-1114-40cb-8017-ba8b3d645e48(AgentLanguage.behavior)" implicit="true" />
+    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -81,13 +82,16 @@
     </language>
     <language id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints">
       <concept id="6702802731807351367" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAChild" flags="in" index="9S07l" />
+      <concept id="6702802731807424858" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAnAncestor" flags="in" index="9SQb8" />
       <concept id="1202989658459" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_parentNode" flags="nn" index="nLn13" />
+      <concept id="4303308395523096213" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_childConcept" flags="ng" index="2DD5aU" />
       <concept id="1147468365020" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_node" flags="nn" index="EsrRn" />
       <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
         <reference id="8401916545537438643" name="kind" index="1dDu$A" />
       </concept>
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
+        <child id="6702802731807532730" name="canBeAncestor" index="9SGkC" />
         <child id="6702802731807737306" name="canBeChild" index="9Vyp8" />
         <child id="1213100494875" name="referent" index="1Mr941" />
       </concept>
@@ -116,6 +120,9 @@
       <concept id="1883223317721008713" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVariable" flags="ng" index="JncvC" />
       <concept id="1883223317721107059" name="jetbrains.mps.lang.smodel.structure.IfInstanceOfVarReference" flags="nn" index="Jnkvi" />
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
+      <concept id="1180031783296" name="jetbrains.mps.lang.smodel.structure.Concept_IsSubConceptOfOperation" flags="nn" index="2Zo12i">
+        <child id="1180031783297" name="conceptArgument" index="2Zo12j" />
+      </concept>
       <concept id="1144101972840" name="jetbrains.mps.lang.smodel.structure.OperationParm_Concept" flags="ng" index="1xMEDy">
         <child id="1207343664468" name="conceptArgument" index="ri$Ld" />
       </concept>
@@ -984,6 +991,159 @@
         </node>
       </node>
     </node>
+  </node>
+  <node concept="1M2fIO" id="6SUjQPsMGuS">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPsMF$a" resolve="RoomSelectionRule" />
+    <node concept="9S07l" id="6SUjQPsMG__" role="9Vyp8">
+      <node concept="3clFbS" id="6SUjQPsMG_A" role="2VODD2">
+        <node concept="3cpWs6" id="6SUjQPsMG_W" role="3cqZAp">
+          <node concept="3clFbT" id="6SUjQPsMGA4" role="3cqZAk" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="6SUjQPsMH7c">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPsMGA_" resolve="SelectRoomWithNoAgentsOfType" />
+    <node concept="9S07l" id="6SUjQPsMHbx" role="9Vyp8">
+      <node concept="3clFbS" id="6SUjQPsMHby" role="2VODD2">
+        <node concept="3cpWs6" id="6SUjQPsMHc4" role="3cqZAp">
+          <node concept="3clFbT" id="6SUjQPsMHcc" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="6SUjQPtUwI$">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPtUvT0" resolve="SelectClosestRoom" />
+    <node concept="9S07l" id="6SUjQPtUwI_" role="9Vyp8">
+      <node concept="3clFbS" id="6SUjQPtUwIA" role="2VODD2">
+        <node concept="3cpWs6" id="6SUjQPtUwJ8" role="3cqZAp">
+          <node concept="3clFbT" id="6SUjQPtUwJM" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="6SUjQPu39ld">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPu39iP" resolve="SelectRoomByRelationshipToOccupier" />
+    <node concept="9S07l" id="6SUjQPu39le" role="9Vyp8">
+      <node concept="3clFbS" id="6SUjQPu39lf" role="2VODD2">
+        <node concept="3clFbF" id="6SUjQPu39p9" role="3cqZAp">
+          <node concept="3clFbT" id="6SUjQPu39p8" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3QFgDmIMra5">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:3QFgDmIMr4_" resolve="SelectRoomByCapacity" />
+    <node concept="9S07l" id="3QFgDmIMra6" role="9Vyp8">
+      <node concept="3clFbS" id="3QFgDmIMra7" role="2VODD2">
+        <node concept="3clFbF" id="3QFgDmIMrau" role="3cqZAp">
+          <node concept="3clFbT" id="3QFgDmIMrat" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3d01stAf2dZ">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:3d01stAf2dN" resolve="RoomSelectionCondition" />
+    <node concept="9S07l" id="3d01stAf2e0" role="9Vyp8">
+      <node concept="3clFbS" id="3d01stAf2e1" role="2VODD2">
+        <node concept="3clFbF" id="3d01stAf2hV" role="3cqZAp">
+          <node concept="3clFbT" id="3d01stAf2hU" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3d01stAf2mJ">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:3d01stAf2m5" resolve="RoomTypeCondition" />
+    <node concept="9S07l" id="3d01stAf2mK" role="9Vyp8">
+      <node concept="3clFbS" id="3d01stAf2mL" role="2VODD2">
+        <node concept="3clFbF" id="3d01stAf2qF" role="3cqZAp">
+          <node concept="3clFbT" id="3d01stAf2qE" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3d01stArcud">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:6SUjQPsMEXw" resolve="RoomSelectionStrategyLine" />
+    <node concept="9SQb8" id="3d01stBw1cy" role="9SGkC">
+      <node concept="3clFbS" id="3d01stBw1cz" role="2VODD2">
+        <node concept="3clFbJ" id="3d01stBYHUA" role="3cqZAp">
+          <node concept="3clFbS" id="3d01stBYHUC" role="3clFbx">
+            <node concept="3clFbJ" id="3d01stBSw3C" role="3cqZAp">
+              <node concept="3clFbS" id="3d01stBSw3E" role="3clFbx">
+                <node concept="3cpWs6" id="3d01stBSwvZ" role="3cqZAp">
+                  <node concept="3clFbT" id="3d01stBSww8" role="3cqZAk">
+                    <property role="3clFbU" value="true" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="3d01stBSwbI" role="3clFbw">
+                <node concept="2DD5aU" id="3d01stBSw4X" role="2Oq$k0" />
+                <node concept="2Zo12i" id="3d01stBSwqw" role="2OqNvi">
+                  <node concept="chp4Y" id="3d01stBSwue" role="2Zo12j">
+                    <ref role="cht4Q" to="3751:3d01stAf2dN" resolve="RoomSelectionCondition" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbJ" id="3d01stBYItS" role="3cqZAp">
+              <node concept="3clFbS" id="3d01stBYItT" role="3clFbx">
+                <node concept="3cpWs6" id="3d01stBYItU" role="3cqZAp">
+                  <node concept="3clFbT" id="3d01stBYItV" role="3cqZAk">
+                    <property role="3clFbU" value="true" />
+                  </node>
+                </node>
+              </node>
+              <node concept="2OqwBi" id="3d01stBYItW" role="3clFbw">
+                <node concept="2DD5aU" id="3d01stBYItX" role="2Oq$k0" />
+                <node concept="2Zo12i" id="3d01stBYItY" role="2OqNvi">
+                  <node concept="chp4Y" id="3d01stC4Mfi" role="2Zo12j">
+                    <ref role="cht4Q" to="hm2y:4rZeNQ6MpKl" resolve="BinaryExpression" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cpWs6" id="3d01stBYIBw" role="3cqZAp">
+              <node concept="3clFbT" id="3d01stBYICY" role="3cqZAk" />
+            </node>
+          </node>
+          <node concept="2OqwBi" id="3d01stBYI38" role="3clFbw">
+            <node concept="2DD5aU" id="3d01stBYHWd" role="2Oq$k0" />
+            <node concept="2Zo12i" id="3d01stBYI8e" role="2OqNvi">
+              <node concept="chp4Y" id="3d01stBYIc6" role="2Zo12j">
+                <ref role="cht4Q" to="hm2y:6sdnDbSla17" resolve="Expression" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3cpWs6" id="3d01stBGlGB" role="3cqZAp">
+          <node concept="3clFbT" id="3d01stBGlH4" role="3cqZAk">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="72S_VmbM3Ek">
+    <property role="3GE5qa" value="actors.attribute" />
+    <ref role="1M2myG" to="3751:6MzSDQOa74z" resolve="AggregateAttributeMonitor" />
   </node>
 </model>
 

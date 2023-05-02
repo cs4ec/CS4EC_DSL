@@ -29,6 +29,8 @@ import de.itemis.mps.editor.diagram.runtime.model.GeneratedConnectionType;
 import de.itemis.mps.editor.diagram.runtime.model.IConnectionEndpoint;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import de.itemis.mps.editor.diagram.runtime.model.DiagramModel;
+import de.itemis.mps.editor.diagram.runtime.jgraph.ElkLayouter;
+import de.itemis.mps.editor.diagram.runtime.jgraph.TreeLayouter;
 import de.itemis.mps.editor.diagram.runtime.model.IPaletteEntryProvider;
 import de.itemis.mps.editor.diagram.runtime.model.CompositePaletteEntryProvider;
 import de.itemis.mps.editor.diagram.runtime.model.SubstituteInfoPaletteEntryProvider;
@@ -86,10 +88,17 @@ import org.jetbrains.mps.openapi.language.SConcept;
                           public Iterable<SNode> query() {
                             List<SNode> newList = ListSequence.fromList(new ArrayList<SNode>());
                             for (SNode action : ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.Actions$nh$G))) {
-                              for (SNode branch : ListSequence.fromList(SLinkOperations.getChildren(action, LINKS.outgoingBranches$cwqF))) {
+                              for (SNode branch : ListSequence.fromList(SLinkOperations.getChildren(action, LINKS.outgoingBranches$JI4V))) {
                                 ListSequence.fromList(newList).addElement(branch);
                               }
                             }
+
+                            for (SNode actionCardReference : ListSequence.fromList(SLinkOperations.getChildren(node, LINKS.ActionCardReferences$o2ug))) {
+                              for (SNode branch : ListSequence.fromList(SLinkOperations.getChildren(actionCardReference, LINKS.outgoingBranches$JI4V))) {
+                                ListSequence.fromList(newList).addElement(branch);
+                              }
+                            }
+
 
                             return newList;
                           }
@@ -121,7 +130,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
                             {
                               SNode newBranch = SLinkOperations.addNewChild(((SNode) _variablesContext.getValue("thisNode")), LINKS.Branches$1fde, null);
                               SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, fromNode);
-                              ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(newBranch, LINKS.fromAction$DE5P), LINKS.outgoingBranches$cwqF)).addElement(newBranch);
+                              ListSequence.fromList(SLinkOperations.getChildren(((SNode) SLinkOperations.getTarget(newBranch, LINKS.fromAction$DE5P)), LINKS.outgoingBranches$JI4V)).addElement(newBranch);
                               SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, toNode);
                             }
                           }
@@ -144,12 +153,78 @@ import org.jetbrains.mps.openapi.language.SConcept;
                             return true;
                           }
                         }));
+                        connectionTypes.addAll(Collections.singletonList(new GeneratedConnectionType() {
+                          public String getName() {
+                            return "Reference Action Card";
+                          }
+                          @Override
+                          public void create(final IConnectionEndpoint from, final IConnectionEndpoint to) {
+                            final SNode fromNode = SNodeOperations.cast(from.getSNode(), CONCEPTS.ActionCardElement$yx);
+                            final SNode toNode = SNodeOperations.cast(to.getSNode(), CONCEPTS.ActionCardElement$yx);
+                            final String fromPort = from.getPortName();
+                            final String toPort = to.getPortName();
+
+                            if (SNodeOperations.isInstanceOf(fromNode, CONCEPTS.Action$K5)) {
+                              if (SNodeOperations.isInstanceOf(toNode, CONCEPTS.ActionCardReference$CD)) {
+                                SNode newBranch = SLinkOperations.addNewChild(((SNode) _variablesContext.getValue("thisNode")), LINKS.Branches$1fde, null);
+                                SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, fromNode);
+                                ListSequence.fromList(SLinkOperations.getChildren(((SNode) SLinkOperations.getTarget(newBranch, LINKS.fromAction$DE5P)), LINKS.outgoingBranches$JI4V)).addElement(newBranch);
+                                SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(((SNode) toNode), LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).first());
+                              }
+
+                              if (SNodeOperations.isInstanceOf(toNode, CONCEPTS.Action$K5)) {
+                                SNode newBranch = SLinkOperations.addNewChild(((SNode) _variablesContext.getValue("thisNode")), LINKS.Branches$1fde, null);
+                                SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, fromNode);
+                                ListSequence.fromList(SLinkOperations.getChildren(((SNode) SLinkOperations.getTarget(newBranch, LINKS.fromAction$DE5P)), LINKS.outgoingBranches$JI4V)).addElement(newBranch);
+                                SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, toNode);
+                              }
+                            }
+
+                            if (SNodeOperations.isInstanceOf(fromNode, CONCEPTS.ActionCardReference$CD)) {
+                              if (SNodeOperations.isInstanceOf(toNode, CONCEPTS.ActionCardReference$CD)) {
+                                SNode newBranch = SLinkOperations.addNewChild(((SNode) _variablesContext.getValue("thisNode")), LINKS.Branches$1fde, null);
+                                SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, fromNode);
+                                ListSequence.fromList(SLinkOperations.getChildren(((SNode) SLinkOperations.getTarget(newBranch, LINKS.fromAction$DE5P)), LINKS.outgoingBranches$JI4V)).addElement(newBranch);
+                                SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(((SNode) toNode), LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).first());
+                              }
+
+                              if (SNodeOperations.isInstanceOf(toNode, CONCEPTS.Action$K5)) {
+                                SNode newBranch = SLinkOperations.addNewChild(((SNode) _variablesContext.getValue("thisNode")), LINKS.Branches$1fde, null);
+                                SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, fromNode);
+                                ListSequence.fromList(SLinkOperations.getChildren(((SNode) fromNode), LINKS.outgoingBranches$JI4V)).addElement(newBranch);
+                                SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, toNode);
+                              }
+                            }
+
+                          }
+                          @Override
+                          public boolean isValidStart(IConnectionEndpoint from) {
+                            final SNode fromNode = SNodeOperations.as(from.getSNode(), CONCEPTS.ActionCardElement$yx);
+                            if (fromNode == null) {
+                              return false;
+                            }
+                            final String fromPort = from.getPortName();
+                            return true;
+                          }
+                          @Override
+                          public boolean isValidEnd(IConnectionEndpoint to) {
+                            final SNode toNode = SNodeOperations.as(to.getSNode(), CONCEPTS.ActionCardElement$yx);
+                            if (toNode == null) {
+                              return false;
+                            }
+                            final String toPort = to.getPortName();
+                            return true;
+                          }
+                        }));
                         return connectionTypes;
                       }
 
                     };
 
                     DiagramModel model = DiagramModel.getModel(editorContext, node, "8399499156273261182", accessor);
+
+                    ElkLayouter layouter = new TreeLayouter();
+                    model.setLayouter(layouter);
 
                     IPaletteEntryProvider paletteEntryProvider = new CompositePaletteEntryProvider(new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.Actions$nh$G))), new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.UsageCondition$srTD))), new SubstituteInfoPaletteEntryProvider(new SubstituteInfoFactory(editorContext, node).forChildLink(node, SLinkOperations.findLinkDeclaration(LINKS.ActionCardReferences$o2ug))));
                     model.setPaletteEntryProvider(paletteEntryProvider);
@@ -158,6 +233,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
                       editorCell.value = new SubDiagramECell(editorContext, node, model);
                     } else {
                       editorCell.value = new RootDiagramECell(editorContext, node, model);
+                      ((RootDiagramECell) editorCell.value).runAutoLayouterOnInit(node, false);
                     }
                     editorCell.value.setCellId("Diagram_o0biy1_a");
                     editorCell.value.setBig(true);
@@ -185,15 +261,18 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink Actions$nh$G = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2ef557ae9cb06877L, "Actions");
-    /*package*/ static final SContainmentLink outgoingBranches$cwqF = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x29f0721df2f38bbL, "outgoingBranches");
-    /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
+    /*package*/ static final SContainmentLink outgoingBranches$JI4V = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b011fd1debL, 0x348ff1b012835312L, "outgoingBranches");
     /*package*/ static final SContainmentLink ActionCardReferences$o2ug = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27581757bL, "ActionCardReferences");
+    /*package*/ static final SContainmentLink UsageCondition$srTD = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27386c3a5L, "UsageCondition");
     /*package*/ static final SContainmentLink Branches$1fde = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2574566374fd2551L, "Branches");
     /*package*/ static final SReferenceLink fromAction$DE5P = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x29f0721df71afb6L, "fromAction");
     /*package*/ static final SReferenceLink targetAction$Z7ub = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x4f415ebce3f345b2L, "targetAction");
+    /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
   }
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Action$K5 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action");
+    /*package*/ static final SConcept ActionCardElement$yx = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b011fd1debL, "ActionCards.structure.ActionCardElement");
+    /*package*/ static final SConcept ActionCardReference$CD = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, "ActionCards.structure.ActionCardReference");
   }
 }

@@ -2,18 +2,21 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
-      <modulePath path="$PROJECT_DIR$/devkits/ActionCardWrapper/ActionCardWrapper.devkit" folder="" />
+      <modulePath path="$PROJECT_DIR$/devkits/NewDevkit/NewDevkit.devkit" folder="" />
       <modulePath path="$PROJECT_DIR$/gson.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/ActionCards/ActionCards.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/AgentLanguage/AgentLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/BuiltEnvironment/BuiltEnvironment.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/DiseaseModel/DiseaseModel.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/PatientLanguage/PatientLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/PatientSelectionStrategy/PatientSelectionStrategy.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/SimulationMonitor/SimulationMonitor.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/StaffDefinitionLanguage/StaffDefinitionLanguage.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/ActionCardWinter2021/ActionCardWinter2021.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/ActionCardWinter2021WithObs/ActionCardWinter2021WithObs.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/COVIDPathway/COVIDPathway.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/DiseaseSpreadTesting/DiseaseSpreadTesting.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/DualCassetteIntervention/DualCassetteIntervention.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/DualCassetteInterventionPreChange/DualCassetteInterventionPreChange.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.LanguageDependency/EDLanguage.LanguageDependency.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.Runner/EDLanguage.Runner.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntimeSolution/EDRuntimeSolution.msd" folder="" />
@@ -21,9 +24,14 @@
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_EDProject/EDRuntime_EDProject.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_Repast/EDRuntime_Repast.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
-      <modulePath path="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway.clone/FluCovidEmergencyPathway.clone.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/FluCovidEmergencyPathway/FluCovidEmergencyPathway.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/FluCovidEmergencyPathwayoptimise/FluCovidEmergencyPathwayoptimise.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/PreStrepAIntervention/PreStrepAIntervention.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/QuickCompileTestingBed/QuickCompileTestingBed.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/RepastProvider/RepastProvider.msd" folder="dependencies" />
+      <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpread/StThomasDiseaseSpread.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpreadRespBays/StThomasDiseaseSpreadRespBays.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpreadSpeedy/StThomasDiseaseSpreadSpeedy.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/StrepAIntervention/StrepAIntervention.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/StyleFiles/StyleFiles.msd" folder="" />
     </projectModules>
   </component>
 </project>

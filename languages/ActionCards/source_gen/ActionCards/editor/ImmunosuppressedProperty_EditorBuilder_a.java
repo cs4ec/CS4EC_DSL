@@ -39,7 +39,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Patient is immuno-compromised");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Patient is immunosuppressed");
     editorCell.setCellId("Constant_6u3uwr_a0");
     editorCell.setDefaultText("");
     return editorCell;

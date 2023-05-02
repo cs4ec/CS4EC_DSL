@@ -9,6 +9,7 @@
     <facet type="java">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
+    <facet planModel="r:32c556b8-26a8-4157-a249-7d5a4c644e6a(FluCovidEmergencyPathwayoptimise.GenPlan)" type="generator" />
   </facets>
   <sourcePath />
   <dependencies>
@@ -51,7 +52,7 @@
   <dependencyVersions>
     <module reference="bb2e6412-1c7a-4784-ba11-0fa17c48151d(ActionCardWinter2021)" version="0" />
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-    <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="0" />
+    <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
     <module reference="4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)" version="0" />
     <module reference="4fbbea45-19cc-4b4e-a78f-8d62c6a38b7a(EDRuntime_Repast)" version="0" />
     <module reference="7b231e0f-0b71-40a0-97e2-0c4f2be864f2(FluCovidEmergencyPathwayoptimise)" version="0" />

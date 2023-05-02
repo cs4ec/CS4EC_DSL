@@ -6,10 +6,12 @@
     </modelRoot>
     <modelRoot contentPath="${module}/lib" type="java_classes">
       <sourceRoot location="simcore.jar" />
+      <sourceRoot location="saf.core.ui.jar" />
+      <sourceRoot location="saf.core.v3d.jar" />
     </modelRoot>
   </models>
   <facets>
-    <facet type="java" languageLevel="JAVA_8">
+    <facet type="java" languageLevel="JAVA_9">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
   </facets>

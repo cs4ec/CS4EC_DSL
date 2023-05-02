@@ -13,6 +13,7 @@ import repast.simphony.space.grid.Grid;
 import repast.simphony.space.grid.GridPoint;
 import repast.simphony.util.collections.IndexedIterable;
 import repast.simphony.valueLayer.GridValueLayer;
+import simcore.agents.Agent;
 import simcore.utilities.aStarPathFinder;
 
 public class EDMap {
@@ -20,7 +21,6 @@ public class EDMap {
 	private List<Room> places;
 	private List<RoomType> roomTypes;
 	private Context context;
-	private Grid<Object> grid;
 	
 	public EDMap(Context c) {
 		context = c;
@@ -40,9 +40,8 @@ public class EDMap {
 		}		
 	}
 	
-	public EDMap WithGrid(Grid g) {
-		grid = g;
-		return this;
+	public Room getCurrentRoom(Agent a) {
+		return places.stream().filter(r -> a.ImAt(r)).findFirst().orElse(null);
 	}
 	
 	public Room FindPlace(String roomName) {
@@ -59,32 +58,4 @@ public class EDMap {
         Collections.shuffle(pRooms); 
         return pRooms;
 	}
-	
-	public Stack<GridPoint> FindWay(Object o, String roomName){
-		return FindWay(o, FindPlace(roomName));
-	}
-	
-	public Stack<GridPoint> FindWay(Object self, Object target){
-		
-		if(target == null) {
-			System.out.println("Target does Not exist!");
-			return null;
-		}
-		
-		if(target instanceof Room) {
-			return FindWay(self, (Room)target);
-		}
-		
-		GridValueLayer vl = (GridValueLayer)context.getValueLayer("cellbox");
-		return new aStarPathFinder(grid.getLocation(self), grid.getLocation(target), vl).getPath();
-
-	}
-	
-    public Stack<GridPoint> FindWay(Object o, Room room){
-		GridValueLayer vl = (GridValueLayer)context.getValueLayer("cellbox");
-		return new aStarPathFinder(grid.getLocation(o), room.getEntryPoint(), vl).getPath();
-	}
-	
-
-
 }

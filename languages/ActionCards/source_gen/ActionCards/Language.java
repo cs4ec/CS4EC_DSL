@@ -14,6 +14,10 @@ import jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor;
 import jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor;
 import ActionCards.editor.EditorAspectDescriptorImpl;
+import jetbrains.mps.openapi.intentions.IntentionAspectDescriptor;
+import ActionCards.intentions.IntentionsDescriptor;
+import jetbrains.mps.lang.migration.runtime.base.MigrationAspectDescriptor;
+import ActionCards.migration.MigrationDescriptor;
 import jetbrains.mps.smodel.runtime.StructureAspectDescriptor;
 import jetbrains.mps.smodel.runtime.ConceptPresentationAspect;
 import ActionCards.structure.ConceptPresentationAspectImpl;
@@ -36,7 +40,7 @@ public class Language extends LanguageRuntime {
 
   @Override
   public int getVersion() {
-    return 0;
+    return 2;
   }
 
   public SLanguageId getId() {
@@ -46,13 +50,11 @@ public class Language extends LanguageRuntime {
   @Override
   protected void fillExtendedLanguages(Collection<SLanguage> extendedLanguages) {
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("cfaa4966-b7d5-4b69-b66a-309a6e1a7290"), "org.iets3.core.expr.base"));
+    extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("1a0150ac-dda5-4129-824e-01dce96fdea4"), "BuiltEnvironment"));
   }
 
   @Override
   protected <T extends ILanguageAspect> T createAspect(Class<T> aspectClass) {
-
-
-    // AP: legacy part, must be migrated from switch: please use lang.descriptor mapping label 
     if (aspectClass == ActionAspectDescriptor.class) {
       return aspectClass.cast(new ActionAspectDescriptorImpl());
     }
@@ -64,6 +66,12 @@ public class Language extends LanguageRuntime {
     }
     if (aspectClass == EditorAspectDescriptor.class) {
       return aspectClass.cast(new EditorAspectDescriptorImpl());
+    }
+    if (aspectClass == IntentionAspectDescriptor.class) {
+      return aspectClass.cast(new IntentionsDescriptor());
+    }
+    if (aspectClass == MigrationAspectDescriptor.class) {
+      return aspectClass.cast(new MigrationDescriptor());
     }
     if (aspectClass == StructureAspectDescriptor.class) {
       return aspectClass.cast(new ActionCards.structure.StructureAspectDescriptor());

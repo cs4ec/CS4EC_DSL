@@ -11,15 +11,17 @@
     <use id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts" version="0" />
     <use id="3ad5badc-1d9c-461c-b7b1-fa2fcd0a0ae7" name="jetbrains.mps.lang.context" version="0" />
     <use id="ad93155d-79b2-4759-b10c-55123e763903" name="jetbrains.mps.lang.messages" version="0" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
     <devkit ref="00000000-0000-4000-0000-5604ebd4f22c(jetbrains.mps.devkit.aspect.constraints)" />
   </languages>
   <imports>
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
-    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" implicit="true" />
+    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" implicit="true" />
+    <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -132,7 +134,10 @@
         <child id="1180031783297" name="conceptArgument" index="2Zo12j" />
       </concept>
       <concept id="1182511038748" name="jetbrains.mps.lang.smodel.structure.Model_NodesIncludingImportedOperation" flags="nn" index="1j9C0f">
-        <reference id="1182511038750" name="concept" index="1j9C0d" />
+        <child id="6750920497477143623" name="conceptArgument" index="3MHPCF" />
+      </concept>
+      <concept id="1172326502327" name="jetbrains.mps.lang.smodel.structure.Concept_IsExactlyOperation" flags="nn" index="3O6GUB">
+        <child id="1206733650006" name="conceptArgument" index="3QVz_e" />
       </concept>
       <concept id="1140137987495" name="jetbrains.mps.lang.smodel.structure.SNodeTypeCastExpression" flags="nn" index="1PxgMI" />
       <concept id="1138055754698" name="jetbrains.mps.lang.smodel.structure.SNodeType" flags="in" index="3Tqbb2">
@@ -162,17 +167,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="1M2fIO" id="4X1nFNzX3nr">
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="1M2myG" to="e88n:4X1nFNzWOlr" resolve="ActionStep" />
-    <node concept="9S07l" id="4X1nFNzX3ns" role="9Vyp8">
-      <node concept="3clFbS" id="4X1nFNzX3nt" role="2VODD2">
-        <node concept="3cpWs6" id="4X1nFNzX3rm" role="3cqZAp">
-          <node concept="3clFbT" id="4X1nFNzX3rK" role="3cqZAk" />
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="1M2fIO" id="av1M7vfJS6">
     <property role="3GE5qa" value="Expressions.Conditions" />
     <ref role="1M2myG" to="e88n:av1M7vdxsc" resolve="DiagnosticCondition" />
@@ -289,7 +283,9 @@
                   <node concept="I4A8Y" id="1xAzJ9Lntmo" role="2OqNvi" />
                 </node>
                 <node concept="1j9C0f" id="1xAzJ9Lnt$o" role="2OqNvi">
-                  <ref role="1j9C0d" to="e88n:1xAzJ9Jg95t" resolve="VaccineStatusProperty" />
+                  <node concept="chp4Y" id="1fQ3pJcUc0N" role="3MHPCF">
+                    <ref role="cht4Q" to="e88n:1xAzJ9Jg95t" resolve="VaccineStatusProperty" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -396,7 +392,9 @@
                   <node concept="I4A8Y" id="1xAzJ9Ly5sd" role="2OqNvi" />
                 </node>
                 <node concept="1j9C0f" id="1xAzJ9Ly5se" role="2OqNvi">
-                  <ref role="1j9C0d" to="e88n:1xAzJ9JfB29" resolve="InfectionStatusProperty" />
+                  <node concept="chp4Y" id="1fQ3pJcUc0O" role="3MHPCF">
+                    <ref role="cht4Q" to="e88n:1xAzJ9JfB29" resolve="InfectionStatusProperty" />
+                  </node>
                 </node>
               </node>
             </node>
@@ -621,33 +619,6 @@
       </node>
     </node>
   </node>
-  <node concept="1M2fIO" id="1xAzJ9NKtNr">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1M2myG" to="e88n:1xAzJ9NKtIU" resolve="AttendanceRouteCondition" />
-    <node concept="9S07l" id="1xAzJ9NKtNs" role="9Vyp8">
-      <node concept="3clFbS" id="1xAzJ9NKtNt" role="2VODD2">
-        <node concept="3clFbF" id="1xAzJ9NKtRn" role="3cqZAp">
-          <node concept="3clFbT" id="1xAzJ9NKtRm" role="3clFbG">
-            <property role="3clFbU" value="true" />
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="9SLcT" id="1xAzJ9OREA3" role="9SGkU">
-      <node concept="3clFbS" id="1xAzJ9OREA4" role="2VODD2">
-        <node concept="3clFbF" id="1xAzJ9OREAr" role="3cqZAp">
-          <node concept="2OqwBi" id="1xAzJ9OREL1" role="3clFbG">
-            <node concept="2DD5aU" id="1xAzJ9OREZN" role="2Oq$k0" />
-            <node concept="2Zo12i" id="1xAzJ9ORF9X" role="2OqNvi">
-              <node concept="chp4Y" id="1xAzJ9ORFh1" role="2Zo12j">
-                <ref role="cht4Q" to="e88n:1xAzJ9NG9Dt" resolve="AttendanceRoute" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="1M2fIO" id="1xAzJ9PnEpc">
     <property role="3GE5qa" value="Expressions.Conditions" />
     <ref role="1M2myG" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
@@ -661,6 +632,211 @@
                 <ref role="cht4Q" to="e88n:1xAzJ9NaVjz" resolve="BooleanExpression" />
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4EKCctwQpin">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
+    <node concept="9S07l" id="4EKCctwQpio" role="9Vyp8">
+      <node concept="3clFbS" id="4EKCctwQpip" role="2VODD2">
+        <node concept="3clFbF" id="4EKCctwQpiW" role="3cqZAp">
+          <node concept="3clFbT" id="4EKCctwQpiV" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9SLcT" id="4EKCctwQpnl" role="9SGkU">
+      <node concept="3clFbS" id="4EKCctwQpnm" role="2VODD2">
+        <node concept="3clFbF" id="4EKCctwQpnZ" role="3cqZAp">
+          <node concept="2OqwBi" id="4EKCctwQpB2" role="3clFbG">
+            <node concept="2DD5aU" id="4EKCctwQpnY" role="2Oq$k0" />
+            <node concept="3O6GUB" id="4EKCctwQqj2" role="2OqNvi">
+              <node concept="chp4Y" id="4EKCctwQqzd" role="3QVz_e">
+                <ref role="cht4Q" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3JSrgvMffb6">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:3JSrgvMff0N" resolve="ResourceAvailableCondition" />
+    <node concept="9S07l" id="3JSrgvMffby" role="9Vyp8">
+      <node concept="3clFbS" id="3JSrgvMffbz" role="2VODD2">
+        <node concept="3clFbF" id="3JSrgvMffbU" role="3cqZAp">
+          <node concept="3clFbT" id="3JSrgvMffbT" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3JSrgvO6fl$">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:3JSrgvO6fgX" resolve="TimeOfDayCondition" />
+    <node concept="9S07l" id="3JSrgvO6fl_" role="9Vyp8">
+      <node concept="3clFbS" id="3JSrgvO6flA" role="2VODD2">
+        <node concept="3clFbF" id="3JSrgvO6flX" role="3cqZAp">
+          <node concept="3clFbT" id="3JSrgvO6flW" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOdM$">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:3d01stAl78w" resolve="RoomSelectionRule" />
+    <node concept="9S07l" id="4ePomJhOdM_" role="9Vyp8">
+      <node concept="3clFbS" id="4ePomJhOdMA" role="2VODD2">
+        <node concept="3clFbF" id="4ePomJhOdQw" role="3cqZAp">
+          <node concept="3clFbT" id="4ePomJhOdQv" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOebi">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:4ePomJhObTO" resolve="RoomSelectionLine" />
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOfLj">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:4ePomJhOfGV" resolve="SelectEmptyRoom" />
+    <node concept="9S07l" id="4ePomJhOfLk" role="9Vyp8">
+      <node concept="3clFbS" id="4ePomJhOfLl" role="2VODD2">
+        <node concept="3clFbF" id="4ePomJhOfLq" role="3cqZAp">
+          <node concept="3clFbT" id="4ePomJhOfLp" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOliL">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:4ePomJhOliI" resolve="RoomSelectionCondition" />
+    <node concept="9S07l" id="4ePomJhOliM" role="9Vyp8">
+      <node concept="3clFbS" id="4ePomJhOliN" role="2VODD2">
+        <node concept="3clFbF" id="4ePomJhOlmH" role="3cqZAp">
+          <node concept="3clFbT" id="4ePomJhOlmG" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="4ePomJhOlqT">
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1M2myG" to="e88n:4ePomJhOliH" resolve="RoomTypeCondition" />
+    <node concept="9S07l" id="4ePomJhOlqU" role="9Vyp8">
+      <node concept="3clFbS" id="4ePomJhOlqV" role="2VODD2">
+        <node concept="3clFbF" id="4ePomJhOlr0" role="3cqZAp">
+          <node concept="3clFbT" id="4ePomJhOlqZ" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="sr1c8P9fld">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1M2myG" to="e88n:sr1c8P9fkH" resolve="PatientSeverity" />
+    <node concept="9S07l" id="sr1c8P9fle" role="9Vyp8">
+      <node concept="3clFbS" id="sr1c8P9flf" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9fp9" role="3cqZAp">
+          <node concept="3clFbT" id="sr1c8P9fp8" role="3clFbG" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="sr1c8P9fx1">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1M2myG" to="e88n:sr1c8P9fdY" resolve="PatientSeverity_Severe" />
+    <node concept="9S07l" id="sr1c8P9fx2" role="9Vyp8">
+      <node concept="3clFbS" id="sr1c8P9fx3" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9fx8" role="3cqZAp">
+          <node concept="3clFbT" id="sr1c8P9fx7" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="sr1c8P9fXR">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1M2myG" to="e88n:sr1c8P9fXF" resolve="Patient_Severity_Moderate" />
+    <node concept="9S07l" id="sr1c8P9fXS" role="9Vyp8">
+      <node concept="3clFbS" id="sr1c8P9fXT" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9g1Z" role="3cqZAp">
+          <node concept="3clFbT" id="sr1c8P9g1Y" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="sr1c8P9ga7">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <ref role="1M2myG" to="e88n:sr1c8P9g9V" resolve="PatientSeverity_Low" />
+    <node concept="9S07l" id="sr1c8P9ga8" role="9Vyp8">
+      <node concept="3clFbS" id="sr1c8P9ga9" role="2VODD2">
+        <node concept="3clFbF" id="sr1c8P9gae" role="3cqZAp">
+          <node concept="3clFbT" id="sr1c8P9gad" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="3mDt9dhI8Sj">
+    <property role="3GE5qa" value="Testing" />
+    <ref role="1M2myG" to="e88n:3mDt9dhI7lM" resolve="TestSelectionRule" />
+    <node concept="9S07l" id="3mDt9dhI8Sk" role="9Vyp8">
+      <node concept="3clFbS" id="3mDt9dhI8Sl" role="2VODD2">
+        <node concept="3cpWs6" id="3mDt9dhI8SF" role="3cqZAp">
+          <node concept="3clFbT" id="3mDt9dhI8SN" role="3cqZAk" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2K0oNvtRlgm">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:2K0oNvtRlaD" resolve="CompositeTestResultCondition" />
+    <node concept="9S07l" id="2K0oNvtRlgn" role="9Vyp8">
+      <node concept="3clFbS" id="2K0oNvtRlgo" role="2VODD2">
+        <node concept="3clFbF" id="2K0oNvtRlki" role="3cqZAp">
+          <node concept="3clFbT" id="2K0oNvtRlkh" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="1BosAjNP_8Y">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:1BosAjNP_7f" resolve="CompositeDiagnosticCondition" />
+    <node concept="9S07l" id="1BosAjNP_d1" role="9Vyp8">
+      <node concept="3clFbS" id="1BosAjNP_d2" role="2VODD2">
+        <node concept="3clFbF" id="1BosAjNP_dp" role="3cqZAp">
+          <node concept="3clFbT" id="1BosAjNP_do" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="i1eH3Wpcjy">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1M2myG" to="e88n:i1eH3Wpca0" resolve="ProbabilityCondition" />
+    <node concept="9S07l" id="i1eH3Wpcjz" role="9Vyp8">
+      <node concept="3clFbS" id="i1eH3Wpcj$" role="2VODD2">
+        <node concept="3clFbF" id="i1eH3WpcjV" role="3cqZAp">
+          <node concept="3clFbT" id="i1eH3WpcjU" role="3clFbG">
+            <property role="3clFbU" value="true" />
           </node>
         </node>
       </node>

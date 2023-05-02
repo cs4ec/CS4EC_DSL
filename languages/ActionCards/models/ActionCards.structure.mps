@@ -5,13 +5,17 @@
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
     <use id="71934284-d7d1-45ee-a054-8c072591085f" name="org.iets3.core.expr.toplevel" version="4" />
     <use id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel" version="0" />
+    <use id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment" version="0" />
+    <use id="289fb12b-7f53-4ef7-bc2e-1ed2c6a7c998" name="org.iets3.core.expr.datetime" version="0" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
+    <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" />
+    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
+    <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
-    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -20,6 +24,9 @@
       </concept>
       <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
         <child id="3348158742936976577" name="members" index="25R1y" />
+      </concept>
+      <concept id="1224240836180" name="jetbrains.mps.lang.structure.structure.DeprecatedNodeAnnotation" flags="ig" index="asaX9">
+        <property id="1225118933224" name="comment" index="YLQ7P" />
       </concept>
       <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
         <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
@@ -55,6 +62,7 @@
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
         <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
@@ -64,10 +72,25 @@
   <node concept="1TIwiD" id="2VPlUUsG6x8">
     <property role="EcuMT" value="3383707102503528520" />
     <property role="TrG5h" value="ActionCard" />
-    <property role="19KtqR" value="true" />
     <property role="34LRSv" value="Action Card" />
     <property role="R4oN_" value="Overall Description of a patient pathway" />
     <property role="3GE5qa" value="ActionCard" />
+    <property role="19KtqR" value="true" />
+    <node concept="1TJgyi" id="7NybO1smsnY" role="1TKVEl">
+      <property role="IQ2nx" value="8998806958913471998" />
+      <property role="TrG5h" value="showDiagramView" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="4Y76Qe0CR1L" role="1TKVEl">
+      <property role="IQ2nx" value="5730579165026152561" />
+      <property role="TrG5h" value="isSubProcess" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="6w5xUwMno1q" role="1TKVEl">
+      <property role="IQ2nx" value="7495546311297302618" />
+      <property role="TrG5h" value="isRootActionCard" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="2VPlUUsG6xR" role="1TKVEi">
       <property role="IQ2ns" value="3383707102503528567" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -104,7 +127,7 @@
     <property role="TrG5h" value="Action" />
     <property role="R4oN_" value="A task that must be completed" />
     <property role="3GE5qa" value="ActionCard" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="3ifWr0hZhRF" resolve="ActionCardElement" />
     <node concept="1TJgyj" id="4FTL$vJQLjT" role="1TKVEi">
       <property role="IQ2ns" value="5402567240276710649" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
@@ -112,31 +135,23 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="4FTL$vJQzE0" resolve="StaffTypeReference" />
     </node>
+    <node concept="1TJgyj" id="62zpHKiEZo9" role="1TKVEi">
+      <property role="IQ2ns" value="6963522544237016585" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="duration" />
+      <ref role="20lvS9" node="62zpHKiHExK" resolve="AbstractDurationLine" />
+    </node>
     <node concept="1TJgyj" id="3WgUQREIXw5" role="1TKVEi">
       <property role="IQ2ns" value="4544390881338972165" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="location" />
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
-    <node concept="1TJgyj" id="av1M7vbNyV" role="1TKVEi">
-      <property role="IQ2ns" value="188877551432579259" />
+    <node concept="1TJgyj" id="3ifWr0h1gAn" role="1TKVEi">
+      <property role="IQ2ns" value="3787511550143957399" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="outgoingBranches" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
-    </node>
-    <node concept="1TJgyj" id="av1M7vspUW" role="1TKVEi">
-      <property role="IQ2ns" value="188877551436930748" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="incomingBranches" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
-    </node>
-    <node concept="1TJgyj" id="4Y2SMts7FTW" role="1TKVEi">
-      <property role="IQ2ns" value="5729391434157440636" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="maxDuration" />
-      <ref role="20lvS9" to="tpee:fzcmrck" resolve="IntegerConstant" />
+      <property role="20kJfa" value="orderPatientLocation" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
     <node concept="PrWs8" id="4X1nFNzWQUs" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -156,28 +171,26 @@
       <property role="TrG5h" value="yPos" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="1SF32mNbc$" role="1TKVEl">
-      <property role="IQ2nx" value="33966321893684004" />
-      <property role="TrG5h" value="minDuration" />
+    <node concept="1TJgyi" id="pxbXbuAnfU" role="1TKVEl">
+      <property role="IQ2nx" value="459701219692737530" />
+      <property role="TrG5h" value="width" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="pxbXbuAnfZ" role="1TKVEl">
+      <property role="IQ2nx" value="459701219692737535" />
+      <property role="TrG5h" value="height" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyj" id="av1M7viD_O" role="1TKVEi">
       <property role="IQ2ns" value="188877551434373492" />
       <property role="20kJfa" value="resource" />
-      <ref role="20lvS9" node="av1M7vbNwp" resolve="Resource" />
+      <ref role="20lvS9" to="3z3g:3JSrgvKcGzn" resolve="Resource" />
     </node>
     <node concept="1TJgyj" id="4Y2SMttqqWk" role="1TKVEi">
       <property role="IQ2ns" value="5729391434179129108" />
       <property role="20kJfa" value="timeDistributionTable" />
       <ref role="20lvS9" to="3751:2_JteYPogU9" resolve="TimeDistributionTable" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="4X1nFNzWOlr">
-    <property role="EcuMT" value="5710949967853733211" />
-    <property role="TrG5h" value="ActionStep" />
-    <property role="R4oN_" value="Individual steps of an Action" />
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
   </node>
   <node concept="1TIwiD" id="4X1nFNzWOlI">
     <property role="EcuMT" value="5710949967853733230" />
@@ -201,15 +214,20 @@
       <property role="TrG5h" value="toPort" />
       <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
+    <node concept="1TJgyi" id="2S_5Uq$_XRk" role="1TKVEl">
+      <property role="IQ2nx" value="3325089904376405460" />
+      <property role="TrG5h" value="showConditionLabel" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
     <node concept="1TJgyj" id="4X1nFNzWOmM" role="1TKVEi">
       <property role="IQ2ns" value="5710949967853733298" />
       <property role="20kJfa" value="targetAction" />
-      <ref role="20lvS9" node="2VPlUUsG6x$" resolve="Action" />
+      <ref role="20lvS9" node="3ifWr0hZhRF" resolve="ActionCardElement" />
     </node>
     <node concept="1TJgyj" id="av1M7vsqYQ" role="1TKVEi">
       <property role="IQ2ns" value="188877551436935094" />
       <property role="20kJfa" value="fromAction" />
-      <ref role="20lvS9" node="2VPlUUsG6x$" resolve="Action" />
+      <ref role="20lvS9" node="3ifWr0hZhRF" resolve="ActionCardElement" />
     </node>
   </node>
   <node concept="1TIwiD" id="4X1nFNzWOrG">
@@ -218,7 +236,23 @@
     <property role="R4oN_" value="Staff type in the ED" />
     <property role="19KtqR" value="true" />
     <property role="3GE5qa" value="People.Staff" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <ref role="1TJDcQ" node="lSEs44W_QZ" resolve="Person" />
+    <node concept="1TJgyi" id="i1eH3VqwZY" role="1TKVEl">
+      <property role="IQ2nx" value="324605317393027070" />
+      <property role="TrG5h" value="patientLimit" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="1MmdcH82H9n" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927260254807" />
+      <property role="TrG5h" value="colour" />
+      <ref role="AX2Wp" to="3751:6o2BuIx6R5l" resolve="Colour" />
+    </node>
+    <node concept="1TJgyj" id="3QFgDmJ3g8u" role="1TKVEi">
+      <property role="IQ2ns" value="4443718667985551902" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="idleLocation" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
     <node concept="PrWs8" id="4X1nFNzWPeB" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -247,9 +281,25 @@
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="4FTL$vJY2TV" resolve="StaffNumber" />
     </node>
+    <node concept="1TJgyj" id="6w5xUwN7QAR" role="1TKVEi">
+      <property role="IQ2ns" value="7495546311310010807" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="primaryActionCard" />
+      <ref role="20lvS9" node="1xAzJ9Pwlb8" resolve="ActionCardReference" />
+    </node>
     <node concept="1TJgyi" id="4Y2SMttz1js" role="1TKVEl">
       <property role="IQ2nx" value="5729391434181383388" />
       <property role="TrG5h" value="runDuration" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7NybO1s8SQz" role="1TKVEl">
+      <property role="IQ2nx" value="8998806958909918627" />
+      <property role="TrG5h" value="secondsPerTick" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="3i9haAJ4WgW" role="1TKVEl">
+      <property role="IQ2nx" value="3785632457359082556" />
+      <property role="TrG5h" value="simulation_repetitions" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
@@ -270,22 +320,6 @@
       <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
     </node>
   </node>
-  <node concept="1TIwiD" id="av1M7vbNwp">
-    <property role="EcuMT" value="188877551432579097" />
-    <property role="TrG5h" value="Resource" />
-    <property role="R4oN_" value="A resource in the hospital" />
-    <property role="3GE5qa" value="ActionCard" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="av1M7vbNwC" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="av1M7vc794">
-    <property role="EcuMT" value="188877551432659524" />
-    <property role="TrG5h" value="Variable" />
-    <property role="3GE5qa" value="Expressions" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-  </node>
   <node concept="1TIwiD" id="av1M7vdxsc">
     <property role="EcuMT" value="188877551433029388" />
     <property role="TrG5h" value="DiagnosticCondition" />
@@ -296,27 +330,18 @@
       <property role="IQ2ns" value="188877551433123871" />
       <property role="20kJfa" value="test" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="ijr0ZWehMB" resolve="DiseaseTest" />
+      <ref role="20lvS9" node="6MzSDQOui5f" resolve="Test" />
     </node>
     <node concept="1TJgyj" id="3WTvlUVugCc" role="1TKVEi">
       <property role="IQ2ns" value="4555810343887637004" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
     <node concept="1TJgyi" id="2lOlAdPyFhO" role="1TKVEl">
       <property role="IQ2nx" value="2698877061875545204" />
       <property role="TrG5h" value="outcome" />
       <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
-    </node>
-  </node>
-  <node concept="25R3W" id="av1M7vdSz0">
-    <property role="3F6X1D" value="188877551433124032" />
-    <property role="TrG5h" value="Operators" />
-    <property role="3GE5qa" value="Expressions" />
-    <node concept="25R33" id="av1M7vdSz1" role="25R1y">
-      <property role="3tVfz5" value="188877551433124033" />
-      <property role="TrG5h" value="and" />
     </node>
   </node>
   <node concept="1TIwiD" id="1rknCs3SeRP">
@@ -357,30 +382,29 @@
     <property role="34LRSv" value="disease test" />
     <property role="R4oN_" value="Type of a test" />
     <property role="3GE5qa" value="Testing" />
-    <ref role="1TJDcQ" node="6MzSDQOui5f" resolve="Test" />
-    <node concept="PrWs8" id="ijr0ZWehMC" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="351ASBMa07g" role="1TKVEl">
+      <property role="IQ2nx" value="3549288998120194512" />
+      <property role="TrG5h" value="sensitivity" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
-    <node concept="1TJgyj" id="5ivS4t6ssT3" role="1TKVEi">
-      <property role="IQ2ns" value="6097839017212104259" />
+    <node concept="1TJgyi" id="351ASBMa07i" role="1TKVEl">
+      <property role="IQ2nx" value="3549288998120194514" />
+      <property role="TrG5h" value="specificity" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyj" id="351ASBMa07l" role="1TKVEi">
+      <property role="IQ2ns" value="3549288998120194517" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="CapturedDiseases" />
+      <property role="20kJfa" value="possibleOutcomes" />
       <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="5ivS4t6ssOS" resolve="TestCapturedDisease" />
+      <ref role="20lvS9" node="1BosAjNPpsC" resolve="TestOutcome" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="2lOlAdPyF0i">
-    <property role="EcuMT" value="2698877061875544082" />
-    <property role="TrG5h" value="Disease" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" node="2lOlAdPyF0B" resolve="Attribute" />
-    <node concept="1TJgyj" id="6MzSDQOuh9s" role="1TKVEi">
-      <property role="IQ2ns" value="7828349744265630300" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="symptomReferences" />
-      <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6MzSDQOuh97" resolve="DiseaseSymptomReference" />
+    <node concept="1TJgyj" id="351ASBMa07b" role="1TKVEi">
+      <property role="IQ2ns" value="3549288998120194507" />
+      <property role="20kJfa" value="disease" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
   </node>
   <node concept="1TIwiD" id="2lOlAdPyF0B">
@@ -410,19 +434,18 @@
     <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
     <property role="TrG5h" value="AttributeTable" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="i1eH3VE_Wj" role="1TKVEi">
+      <property role="IQ2ns" value="324605317397241619" />
+      <property role="20kJfa" value="patientProperty" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
     <node concept="1TJgyj" id="2lOlAdQiLFi" role="1TKVEi">
       <property role="IQ2ns" value="2698877061888154322" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="attributeLines" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2lOlAdQiLDW" resolve="AttributeLine" />
-    </node>
-    <node concept="1TJgyj" id="1xAzJ9JghCa" role="1TKVEi">
-      <property role="IQ2ns" value="1758249876434524682" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="patientProperty" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
     </node>
     <node concept="PrWs8" id="5R1$QEMOJHt" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
@@ -448,44 +471,61 @@
   </node>
   <node concept="1TIwiD" id="2vFOz$FUEc$">
     <property role="EcuMT" value="2876623929997959972" />
-    <property role="TrG5h" value="PatientArrivalLine" />
+    <property role="TrG5h" value="PatientArrivalLine_old" />
     <property role="3GE5qa" value="People" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyi" id="2vFOz$FUEcI" role="1TKVEl">
       <property role="IQ2nx" value="2876623929997959982" />
-      <property role="TrG5h" value="Time" />
+      <property role="TrG5h" value="Time_old" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+      <node concept="asaX9" id="2S_5Uq$dj3K" role="lGtFl">
+        <property role="YLQ7P" value="The property was moved to concept &quot;PatientLanguage.structure.PatientArrivalLine&quot;" />
+      </node>
     </node>
     <node concept="1TJgyi" id="2vFOz$FUEcK" role="1TKVEl">
       <property role="IQ2nx" value="2876623929997959984" />
-      <property role="TrG5h" value="NumPatientsInHour" />
+      <property role="TrG5h" value="NumPatientsInHour_old" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+      <node concept="asaX9" id="2S_5Uq$dj3V" role="lGtFl">
+        <property role="YLQ7P" value="The property was moved to concept &quot;PatientLanguage.structure.PatientArrivalLine&quot;" />
+      </node>
+    </node>
+    <node concept="asaX9" id="2S_5Uq$dj3c" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;PatientLanguage&quot;" />
     </node>
   </node>
   <node concept="1TIwiD" id="6dYFu3AbeaS">
     <property role="EcuMT" value="7169358838266389176" />
-    <property role="TrG5h" value="PatientArrivals" />
+    <property role="TrG5h" value="PatientArrivals_old" />
     <property role="34LRSv" value="Patient Arrivals" />
     <property role="3GE5qa" value="People" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="2vFOz$FUEfh" role="1TKVEi">
       <property role="IQ2ns" value="2876623929997960145" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="PatientArrivalLines" />
+      <property role="20kJfa" value="PatientArrivalLines_old" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="2vFOz$FUEc$" resolve="PatientArrivalLine" />
+      <ref role="20lvS9" node="2vFOz$FUEc$" resolve="PatientArrivalLine_old" />
+      <node concept="asaX9" id="2S_5Uq$dj4h" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientArrivals&quot;" />
+      </node>
     </node>
     <node concept="1TJgyj" id="EFW1mZoVng" role="1TKVEi">
       <property role="IQ2ns" value="768972137592763856" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="ArrivalLocation" />
-      <property role="20lbJX" value="fLJekj4/_1" />
+      <property role="20kJfa" value="ArrivalLocation_old" />
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+      <node concept="asaX9" id="2S_5Uq$dj4s" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientArrivals&quot;" />
+      </node>
+    </node>
+    <node concept="asaX9" id="2S_5Uq$dj3o" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;PatientLanguage&quot;" />
     </node>
   </node>
   <node concept="1TIwiD" id="EFW1mY_7c6">
     <property role="EcuMT" value="768972137579180806" />
-    <property role="TrG5h" value="PatientProfile" />
+    <property role="TrG5h" value="PatientProfile_old" />
     <property role="3GE5qa" value="People" />
     <property role="R4oN_" value="The patient profile" />
     <property role="19KtqR" value="true" />
@@ -493,26 +533,36 @@
     <node concept="1TJgyj" id="EFW1mY_h9p" role="1TKVEi">
       <property role="IQ2ns" value="768972137579221593" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attributes" />
+      <property role="20kJfa" value="attributes_old" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="2lOlAdQiLDw" resolve="AttributeTable" />
+      <node concept="asaX9" id="2S_5Uq$dj4B" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientProfile&quot;" />
+      </node>
     </node>
     <node concept="1TJgyj" id="EFW1mY_ha0" role="1TKVEi">
       <property role="IQ2ns" value="768972137579221632" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="arrivalRate" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals" />
+      <property role="20kJfa" value="arrivalRate_old" />
+      <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals_old" />
+      <node concept="asaX9" id="2S_5Uq$dj4M" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientProfile&quot;" />
+      </node>
     </node>
     <node concept="1TJgyj" id="1xAzJ9NBOBv" role="1TKVEi">
       <property role="IQ2ns" value="1758249876507806175" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attendanceRoute" />
-      <property role="20lbJX" value="fLJekj4/_1" />
+      <property role="20kJfa" value="attendanceRoute_old" />
       <ref role="20lvS9" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+      <node concept="asaX9" id="2S_5Uq$dj4X" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.PatientProfile&quot;" />
+      </node>
     </node>
     <node concept="PrWs8" id="1xAzJ9O2iPR" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="asaX9" id="2S_5Uq$dj3$" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;PatientLanguage&quot;" />
     </node>
   </node>
   <node concept="1TIwiD" id="1SF32lRXYq">
@@ -521,6 +571,12 @@
     <property role="TrG5h" value="AdmissionAction" />
     <property role="34LRSv" value="admission action" />
     <ref role="1TJDcQ" node="2VPlUUsG6x$" resolve="Action" />
+    <node concept="1TJgyj" id="2K0oNvtWdGo" role="1TKVEi">
+      <property role="IQ2ns" value="3170643229266729752" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="admissionActionCard" />
+      <ref role="20lvS9" node="1xAzJ9Pwlb8" resolve="ActionCardReference" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5ivS4t6ssOS">
     <property role="EcuMT" value="6097839017212103992" />
@@ -531,7 +587,7 @@
       <property role="IQ2ns" value="6097839017212104069" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
     <node concept="1TJgyi" id="5ivS4t6ssPJ" role="1TKVEl">
       <property role="IQ2nx" value="6097839017212104047" />
@@ -543,12 +599,6 @@
       <property role="TrG5h" value="Specificity" />
       <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
-  </node>
-  <node concept="1TIwiD" id="6MzSDQOuh4M">
-    <property role="EcuMT" value="7828349744265630002" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="TrG5h" value="DiseaseSymptom" />
-    <ref role="1TJDcQ" node="2lOlAdPyF0B" resolve="Attribute" />
   </node>
   <node concept="1TIwiD" id="6MzSDQOuh6B">
     <property role="EcuMT" value="7828349744265630119" />
@@ -562,7 +612,10 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="SymptomReference" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6MzSDQOuh97" resolve="DiseaseSymptomReference" />
+      <ref role="20lvS9" to="482l:6MzSDQOuh97" resolve="DiseaseSymptomReference" />
+    </node>
+    <node concept="PrWs8" id="1BosAjNFsDA" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="6MzSDQOuh7T">
@@ -577,19 +630,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="symptoms" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
-      <ref role="20lvS9" node="6MzSDQOuh4M" resolve="DiseaseSymptom" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="6MzSDQOuh97">
-    <property role="EcuMT" value="7828349744265630279" />
-    <property role="3GE5qa" value="Attributes" />
-    <property role="TrG5h" value="DiseaseSymptomReference" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="6MzSDQOuh9h" role="1TKVEi">
-      <property role="IQ2ns" value="7828349744265630289" />
-      <property role="20kJfa" value="symptom" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="6MzSDQOuh4M" resolve="DiseaseSymptom" />
+      <ref role="20lvS9" to="482l:6MzSDQOuh4M" resolve="DiseaseSymptom" />
     </node>
   </node>
   <node concept="1TIwiD" id="6MzSDQOui5f">
@@ -597,12 +638,26 @@
     <property role="3GE5qa" value="Testing" />
     <property role="TrG5h" value="Test" />
     <property role="34LRSv" value="test" />
-    <ref role="1TJDcQ" node="av1M7vbNwp" resolve="Resource" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="3z3g:3JSrgvKcGzn" resolve="Resource" />
     <node concept="1TJgyj" id="6MzSDQOui68" role="1TKVEi">
       <property role="IQ2ns" value="7828349744265634184" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="ProcessingTimeTable" />
       <ref role="20lvS9" node="1rknCs3SeRP" resolve="ProcessingTimeTable" />
+    </node>
+    <node concept="1TJgyj" id="3ifWr0hPV59" role="1TKVEi">
+      <property role="IQ2ns" value="3787511550157762889" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="TestingProcess" />
+      <ref role="20lvS9" node="1xAzJ9Pwlb8" resolve="ActionCardReference" />
+    </node>
+    <node concept="1TJgyj" id="351ASBMa077" role="1TKVEi">
+      <property role="IQ2ns" value="3549288998120194503" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="Captures" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="ijr0ZWehMB" resolve="DiseaseTest" />
     </node>
     <node concept="PrWs8" id="6MzSDQOui5O" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -655,7 +710,7 @@
       <property role="IQ2ns" value="1758249876434489739" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9Jg95t">
@@ -668,7 +723,7 @@
       <property role="IQ2ns" value="1758249876434501114" />
       <property role="20kJfa" value="disease" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="2lOlAdPyF0i" resolve="Disease" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
     </node>
     <node concept="PrWs8" id="1xAzJ9Jg95B" role="PzmwI">
       <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
@@ -733,18 +788,6 @@
     <node concept="1TJgyj" id="1xAzJ9L5vWE" role="1TKVEi">
       <property role="IQ2ns" value="1758249876465254186" />
       <property role="20kJfa" value="patientProperty" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
-    </node>
-  </node>
-  <node concept="1TIwiD" id="1xAzJ9KVgC6">
-    <property role="TrG5h" value="PatientPropertyReference" />
-    <property role="EcuMT" value="1758249876462569990" />
-    <property role="3GE5qa" value="Attributes.PatientProperties" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="1xAzJ9KVgC7" role="1TKVEi">
-      <property role="IQ2ns" value="1758249876462569991" />
-      <property role="20kJfa" value="property" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
     </node>
@@ -826,20 +869,6 @@
     <property role="34LRSv" value="Elective attendance" />
     <ref role="1TJDcQ" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
   </node>
-  <node concept="1TIwiD" id="1xAzJ9NKtIU">
-    <property role="EcuMT" value="1758249876510071738" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <property role="TrG5h" value="AttendanceRouteCondition" />
-    <property role="34LRSv" value="Check patient attendance route" />
-    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
-    <node concept="1TJgyj" id="1xAzJ9OY5DV" role="1TKVEi">
-      <property role="IQ2ns" value="1758249876530420347" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attendanceRoute" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" node="1xAzJ9NG9Dt" resolve="AttendanceRoute" />
-    </node>
-  </node>
   <node concept="1TIwiD" id="1xAzJ9PnC4u">
     <property role="EcuMT" value="1758249876537114910" />
     <property role="3GE5qa" value="Attributes.PatientProperties" />
@@ -868,11 +897,477 @@
     <property role="EcuMT" value="1758249876539396808" />
     <property role="3GE5qa" value="ActionCard" />
     <property role="TrG5h" value="ActionCardReference" />
+    <ref role="1TJDcQ" node="3ifWr0hZhRF" resolve="ActionCardElement" />
     <node concept="1TJgyj" id="1xAzJ9PwlbS" role="1TKVEi">
       <property role="IQ2ns" value="1758249876539396856" />
       <property role="20kJfa" value="actionCard" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="2VPlUUsG6x8" resolve="ActionCard" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4EKCctwQp7G">
+    <property role="EcuMT" value="5381978332891550188" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="LocationCapacityCondition" />
+    <property role="34LRSv" value="Check capacity of a room" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyi" id="4EKCctwQp9$" role="1TKVEl">
+      <property role="IQ2nx" value="5381978332891550308" />
+      <property role="TrG5h" value="minCapacity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="4EKCctwQp8G" role="1TKVEi">
+      <property role="IQ2ns" value="5381978332891550252" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="location" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3JSrgvMff0N">
+    <property role="EcuMT" value="4321323723358269491" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="ResourceAvailableCondition" />
+    <property role="34LRSv" value="resource availability condition" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyj" id="3JSrgvMocHY" role="1TKVEi">
+      <property role="IQ2ns" value="4321323723360619390" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="availabilityExpression" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3JSrgvO6fgX">
+    <property role="EcuMT" value="4321323723389465661" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="TimeOfDayCondition" />
+    <property role="34LRSv" value="time of day condition" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyj" id="3JSrgvOCzXC" role="1TKVEi">
+      <property role="IQ2ns" value="4321323723398463336" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="expression" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3ifWr0hZhRF">
+    <property role="EcuMT" value="3787511550160215531" />
+    <property role="3GE5qa" value="ActionCard" />
+    <property role="TrG5h" value="ActionCardElement" />
+    <property role="34LRSv" value="action card element" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3ifWr0iwPcg" role="1TKVEi">
+      <property role="IQ2ns" value="3787511550169010960" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="incomingBranches" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
+    </node>
+    <node concept="1TJgyj" id="3ifWr0iwPci" role="1TKVEi">
+      <property role="IQ2ns" value="3787511550169010962" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="outgoingBranches" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4X1nFNzWOlI" resolve="Branch" />
+    </node>
+    <node concept="PrWs8" id="3ifWr0hZhWK" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="62zpHKiEZo8">
+    <property role="EcuMT" value="6963522544237016584" />
+    <property role="3GE5qa" value="Attributes" />
+    <property role="TrG5h" value="ActionDurationEmptyLine" />
+    <ref role="1TJDcQ" node="62zpHKiHExK" resolve="AbstractDurationLine" />
+  </node>
+  <node concept="1TIwiD" id="62zpHKiF18_">
+    <property role="EcuMT" value="6963522544237023781" />
+    <property role="3GE5qa" value="Attributes" />
+    <property role="TrG5h" value="ActionDurationMinutes" />
+    <property role="34LRSv" value="minutes" />
+    <ref role="1TJDcQ" node="62zpHKiHExK" resolve="AbstractDurationLine" />
+    <node concept="1TJgyi" id="62zpHKiF18A" role="1TKVEl">
+      <property role="IQ2nx" value="6963522544237023782" />
+      <property role="TrG5h" value="duration" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="62zpHKiHExK">
+    <property role="EcuMT" value="6963522544237717616" />
+    <property role="3GE5qa" value="Attributes" />
+    <property role="TrG5h" value="AbstractDurationLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="8bhHoBICAE">
+    <property role="EcuMT" value="147289298423155114" />
+    <property role="3GE5qa" value="Attributes" />
+    <property role="TrG5h" value="TimeDistributionTable" />
+    <property role="34LRSv" value="Time distribution table" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="62zpHKiHExK" resolve="AbstractDurationLine" />
+    <node concept="1TJgyj" id="8bhHoBICAF" role="1TKVEi">
+      <property role="IQ2ns" value="147289298423155115" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="timeLines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="8bhHoBICAH" resolve="TimeDistributionLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="8bhHoBICAH">
+    <property role="EcuMT" value="147289298423155117" />
+    <property role="3GE5qa" value="Attributes" />
+    <property role="TrG5h" value="TimeDistributionLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="8bhHoBICAI" role="1TKVEl">
+      <property role="IQ2nx" value="147289298423155118" />
+      <property role="TrG5h" value="Time" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyi" id="8bhHoBICAK" role="1TKVEl">
+      <property role="IQ2nx" value="147289298423155120" />
+      <property role="TrG5h" value="Occurances" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3d01stAl78w">
+    <property role="EcuMT" value="3692958048417247776" />
+    <property role="TrG5h" value="RoomSelectionRule" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="4ePomJhObTO">
+    <property role="EcuMT" value="4878912887035313780" />
+    <property role="TrG5h" value="RoomSelectionLine" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4ePomJhOe6r" role="1TKVEi">
+      <property role="IQ2ns" value="4878912887035322779" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <ref role="20lvS9" to="tpee:fz3vP1J" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="4ePomJhOe6t" role="1TKVEi">
+      <property role="IQ2ns" value="4878912887035322781" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rule" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3d01stAl78w" resolve="RoomSelectionRule" />
+    </node>
+    <node concept="PrWs8" id="4ePomJhOe6p" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4ePomJhOfGV">
+    <property role="EcuMT" value="4878912887035329339" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <property role="TrG5h" value="SelectEmptyRoom" />
+    <ref role="1TJDcQ" node="3d01stAl78w" resolve="RoomSelectionRule" />
+  </node>
+  <node concept="1TIwiD" id="4ePomJhOliH">
+    <property role="EcuMT" value="4878912887035352237" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <property role="TrG5h" value="RoomTypeCondition" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4ePomJhOlyH" role="1TKVEi">
+      <property role="IQ2ns" value="4878912887035353261" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="AllowedRooms" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4ePomJhOliI">
+    <property role="EcuMT" value="4878912887035352238" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <property role="TrG5h" value="RoomSelectionCondition" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9dhZ">
+    <property role="EcuMT" value="512008214798455935" />
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <property role="TrG5h" value="PatientSeverityProperty" />
+    <property role="34LRSv" value="Patient Severity" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="sr1c8P9di9" role="PzmwI">
+      <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9fdY">
+    <property role="EcuMT" value="512008214798463870" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <property role="TrG5h" value="PatientSeverity_Severe" />
+    <property role="34LRSv" value="severe" />
+    <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9fkH">
+    <property role="EcuMT" value="512008214798464301" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <property role="TrG5h" value="PatientSeverity" />
+    <property role="34LRSv" value="patient severity" />
+    <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9fXF">
+    <property role="EcuMT" value="512008214798466923" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <property role="TrG5h" value="Patient_Severity_Moderate" />
+    <property role="34LRSv" value="moderate" />
+    <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+  </node>
+  <node concept="1TIwiD" id="sr1c8P9g9V">
+    <property role="EcuMT" value="512008214798467707" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <property role="TrG5h" value="PatientSeverity_Low" />
+    <property role="34LRSv" value="low" />
+    <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhI7l$">
+    <property role="EcuMT" value="3866749931154339172" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="CompositeTest" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="composite test" />
+    <ref role="1TJDcQ" node="6MzSDQOui5f" resolve="Test" />
+    <node concept="1TJgyj" id="3mDt9dhI7lD" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154339177" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="testSelectionStrategy" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3mDt9dhI7lG" resolve="TestSelectionStrategy" />
+    </node>
+    <node concept="1TJgyj" id="351ASBMMCi0" role="1TKVEi">
+      <property role="IQ2ns" value="3549288998130844800" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="resultsMappingTable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="351ASBMMzuC" resolve="ResultsMappingTable" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhI7lG">
+    <property role="EcuMT" value="3866749931154339180" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestSelectionStrategy" />
+    <property role="34LRSv" value="test selection strategy" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhI7lH">
+    <property role="EcuMT" value="3866749931154339181" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestSelectionRuleLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3mDt9dhI7lK" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154339184" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="rule" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3mDt9dhI7lM" resolve="TestSelectionRule" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhI7lM">
+    <property role="EcuMT" value="3866749931154339186" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestSelectionRule" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhIeZN">
+    <property role="EcuMT" value="3866749931154370547" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ProbabilityDistribution" />
+    <property role="34LRSv" value="probability distribution" />
+    <ref role="1TJDcQ" node="3mDt9dhI7lG" resolve="TestSelectionStrategy" />
+    <node concept="1TJgyj" id="3mDt9dhIf1E" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154370666" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="3mDt9dhIf0e" resolve="ProbabilityDistributionLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3mDt9dhIf0e">
+    <property role="EcuMT" value="3866749931154370574" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ProbabilityDistributionLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="3mDt9dhIf0f" role="1TKVEl">
+      <property role="IQ2nx" value="3866749931154370575" />
+      <property role="TrG5h" value="probability" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+    <node concept="1TJgyj" id="3mDt9dhIf21" role="1TKVEi">
+      <property role="IQ2ns" value="3866749931154370689" />
+      <property role="20kJfa" value="test" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6MzSDQOui5f" resolve="Test" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2K0oNvtRlaD">
+    <property role="EcuMT" value="3170643229265449641" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="CompositeTestResultCondition" />
+    <property role="34LRSv" value="composite test result condition" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyj" id="2K0oNvtRlaG" role="1TKVEi">
+      <property role="IQ2ns" value="3170643229265449644" />
+      <property role="20kJfa" value="test" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3mDt9dhI7l$" resolve="CompositeTest" />
+    </node>
+    <node concept="1TJgyj" id="2K0oNvtRlaI" role="1TKVEi">
+      <property role="IQ2ns" value="3170643229265449646" />
+      <property role="20kJfa" value="disease" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
+    </node>
+    <node concept="1TJgyi" id="2K0oNvtRlaE" role="1TKVEl">
+      <property role="IQ2nx" value="3170643229265449642" />
+      <property role="TrG5h" value="outcome" />
+      <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1BosAjNPpsC">
+    <property role="EcuMT" value="1862364223830857512" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="TestOutcome" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="351ASBMa07p" role="1TKVEl">
+      <property role="IQ2nx" value="3549288998120194521" />
+      <property role="TrG5h" value="outcome" />
+      <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1BosAjNP_7f">
+    <property role="EcuMT" value="1862364223830905295" />
+    <property role="TrG5h" value="CompositeDiagnosticCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="34LRSv" value="composite diagnostic condition" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyj" id="1BosAjNP_7g" role="1TKVEi">
+      <property role="IQ2ns" value="188877551433123871" />
+      <property role="20kJfa" value="test" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="3mDt9dhI7l$" resolve="CompositeTest" />
+    </node>
+    <node concept="1TJgyj" id="1BosAjNP_7h" role="1TKVEi">
+      <property role="IQ2ns" value="4555810343887637004" />
+      <property role="20kJfa" value="disease" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
+    </node>
+    <node concept="1TJgyi" id="1BosAjNP_7i" role="1TKVEl">
+      <property role="IQ2nx" value="2698877061875545204" />
+      <property role="TrG5h" value="outcome" />
+      <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="351ASBMMzuC">
+    <property role="EcuMT" value="3549288998130825128" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ResultsMappingTable" />
+    <property role="34LRSv" value="results mapping table" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="351ASBMMzzB" role="1TKVEi">
+      <property role="IQ2ns" value="3549288998130825447" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="351ASBMMzvU" resolve="ResultsMappingLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="351ASBMMzvU">
+    <property role="EcuMT" value="3549288998130825210" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ResultsMappingLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="351ASBMMzwv" role="1TKVEi">
+      <property role="IQ2ns" value="3549288998130825247" />
+      <property role="20kJfa" value="Disease" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="482l:2lOlAdPyF0i" resolve="Disease" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4pv5aglTBc6">
+    <property role="EcuMT" value="5070794400417084166" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ConditionalSelection" />
+    <property role="34LRSv" value="conditional distribution" />
+    <ref role="1TJDcQ" node="3mDt9dhI7lG" resolve="TestSelectionStrategy" />
+    <node concept="1TJgyj" id="4pv5aglTBdy" role="1TKVEi">
+      <property role="IQ2ns" value="5070794400417084258" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="lines" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="4pv5aglTBcp" resolve="ConditionalLine" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4pv5aglTBcp">
+    <property role="EcuMT" value="5070794400417084185" />
+    <property role="3GE5qa" value="Testing" />
+    <property role="TrG5h" value="ConditionalLine" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4pv5aglTBdd" role="1TKVEi">
+      <property role="IQ2ns" value="5070794400417084237" />
+      <property role="20kJfa" value="test" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="6MzSDQOui5f" resolve="Test" />
+    </node>
+    <node concept="1TJgyj" id="4pv5aglTBdb" role="1TKVEi">
+      <property role="IQ2ns" value="5070794400417084235" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="i1eH3VE_aN">
+    <property role="EcuMT" value="324605317397238451" />
+    <property role="3GE5qa" value="People" />
+    <property role="TrG5h" value="Patient_old" />
+    <property role="34LRSv" value="patient" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="lSEs44W_QZ" resolve="Person" />
+    <node concept="1TJgyj" id="i1eH3VE_aX" role="1TKVEi">
+      <property role="IQ2ns" value="324605317397238461" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="patientProperty_old" />
+      <property role="20lbJX" value="fLJekj5/_0__n" />
+      <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+      <node concept="asaX9" id="2S_5Uq$dj46" role="lGtFl">
+        <property role="YLQ7P" value="The link was moved to concept &quot;PatientLanguage.structure.Patient&quot;" />
+      </node>
+    </node>
+    <node concept="asaX9" id="2S_5Uq$dj30" role="lGtFl">
+      <property role="YLQ7P" value="The concept was moved to language &quot;PatientLanguage&quot;" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="i1eH3Wpca0">
+    <property role="EcuMT" value="324605317409456768" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="ProbabilityCondition" />
+    <property role="34LRSv" value="probability" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyi" id="i1eH3WpcaI" role="1TKVEl">
+      <property role="IQ2nx" value="324605317409456814" />
+      <property role="TrG5h" value="probabilityChance" />
+      <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="lSEs44W_QZ">
+    <property role="EcuMT" value="394251613871693247" />
+    <property role="3GE5qa" value="People" />
+    <property role="TrG5h" value="Person" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="lSEs4504UO" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="s75sN8M$HE">
+    <property role="EcuMT" value="506397452388682602" />
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <property role="TrG5h" value="AdmissionRouteProperty" />
+    <property role="34LRSv" value="Admission Route" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="s75sN8M$HF" role="PzmwI">
+      <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
     </node>
   </node>
 </model>

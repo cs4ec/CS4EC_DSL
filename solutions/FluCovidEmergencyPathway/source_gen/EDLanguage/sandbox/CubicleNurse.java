@@ -95,9 +95,9 @@ public class CubicleNurse extends Actor {
         behaviourBuilder = new Behaviour("SignificantCOVIDContactTrigger_h");
         this.InitSignificantCOVIDContact_h(s);
         break;
-      case "SignificantCOVIDContactTrigger_i":
-        behaviourBuilder = new Behaviour("SignificantCOVIDContactTrigger_i");
-        this.InitSignificantCOVIDContact_i(s);
+      case "COVIDRiskCheckTrigger_i":
+        behaviourBuilder = new Behaviour("COVIDRiskCheckTrigger_i");
+        this.InitCOVIDRiskCheck_i(s);
         break;
       case "ConfirmwithPCRTrigger_j":
         behaviourBuilder = new Behaviour("ConfirmwithPCRTrigger_j");
@@ -155,10 +155,101 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0a_8 extends BehaviourStep {
+  public class StayAction_c0a_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_8(Behaviour behaviour) {
+    public StayAction_c0a_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 3;
+    }
+  }
+  public class SendSignalAction_d0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_d0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new COVIDandFluLFDTrigger_dSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class StayAction_e0a extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_e0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      // Do nothing 
+      timeExecuted++;
+    }
+
+    public boolean finishCondition() {
+      return timeExecuted == 1;
+    }
+  }
+  public class MoveAction_a0a_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ Object target;
+    /*package*/ Object concreteTarget;
+    public MoveAction_a0a_5(Behaviour behaviour) {
+      target = RespiratoryCubicle.getInstance();
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (concreteTarget == null) {
+        if (target instanceof RoomType) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        } else {
+          concreteTarget = target;
+        }
+      }
+
+      if (target instanceof RoomType) {
+        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
+          concreteTarget = SelectLocation(((RoomType) target));
+        }
+      }
+
+      MoveTowards(concreteTarget);
+    }
+
+    public boolean finishCondition() {
+      return ImAt(concreteTarget);
+    }
+  }
+  public class OrderAction_b0a_5 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public OrderAction_b0a_5(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
+
+      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
+    }
+  }
+  public class StayAction_c0a_9 extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+    /*package*/ int timeExecuted = 0;
+    public StayAction_c0a_9(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -203,102 +294,11 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0a_9 extends BehaviourStep {
+  public class MoveAction_a0b_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0a_9(Behaviour behaviour) {
-      target = RespiratoryCubicle.getInstance();
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (concreteTarget == null) {
-        if (target instanceof RoomType) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        } else {
-          concreteTarget = target;
-        }
-      }
-
-      if (target instanceof RoomType) {
-        if (EvaluateRoomChoice(((Room) concreteTarget)) == 0) {
-          concreteTarget = SelectLocation(((RoomType) target));
-        }
-      }
-
-      MoveTowards(concreteTarget);
-    }
-
-    public boolean finishCondition() {
-      return ImAt(concreteTarget);
-    }
-  }
-  public class OrderAction_b0a_9 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public OrderAction_b0a_9(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
-
-      a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
-    }
-  }
-  public class StayAction_c0a_13 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_13(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 3;
-    }
-  }
-  public class SendSignalAction_d0a_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-
-    public SendSignalAction_d0a_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      Board b = ReadBoard();
-      Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new COVIDandFluLFDTrigger_dSignal();
-      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
-
-      b.PushMission(sendSignalTemp);
-    }
-  }
-  public class StayAction_e0a_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ int timeExecuted = 0;
-    public StayAction_e0a_5(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      // Do nothing 
-      timeExecuted++;
-    }
-
-    public boolean finishCondition() {
-      return timeExecuted == 1;
-    }
-  }
-  public class MoveAction_a0b_5 extends BehaviourStep {
-    /*package*/ Behaviour behaviour;
-    /*package*/ Object target;
-    /*package*/ Object concreteTarget;
-    public MoveAction_a0b_5(Behaviour behaviour) {
+    public MoveAction_a0b_3(Behaviour behaviour) {
       target = NonRespiratoryArea.getInstance();
       this.behaviour = behaviour;
     }
@@ -337,10 +337,10 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0b_5 extends BehaviourStep {
+  public class StayAction_c0b_3 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0b_5(Behaviour behaviour) {
+    public StayAction_c0b_3(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -385,11 +385,11 @@ public class CubicleNurse extends Actor {
       return timeExecuted == 1;
     }
   }
-  public class MoveAction_a0b_7 extends BehaviourStep {
+  public class MoveAction_a0b_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_7(Behaviour behaviour) {
+    public MoveAction_a0b_5(Behaviour behaviour) {
       target = NonRespiratoryArea.getInstance();
       this.behaviour = behaviour;
     }
@@ -428,10 +428,10 @@ public class CubicleNurse extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(CubicleNurse.this));
     }
   }
-  public class StayAction_c0b_7 extends BehaviourStep {
+  public class StayAction_c0b_5 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0b_7(Behaviour behaviour) {
+    public StayAction_c0b_5(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -1376,7 +1376,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -1392,7 +1392,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2378,7 +2378,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new SignificantCOVIDContactTrigger_iSignal();
+      sendSignalTemp = new COVIDRiskCheckTrigger_iSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -2394,7 +2394,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new SignificantCOVIDContactTrigger_iSignal();
+      sendSignalTemp = new COVIDRiskCheckTrigger_iSignal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3286,7 +3286,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "Unvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes" || ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3303,7 +3303,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "partiallyvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "fullyvaccinated") && ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No" && ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3395,7 +3395,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "Unvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes" || ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3415,7 +3415,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3431,7 +3431,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3444,7 +3444,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "partiallyvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "fullyvaccinated") && ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No" && ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0f(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3464,7 +3464,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_2Signal();
+      sendSignalTemp = new TakeabedTrigger_a_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3480,7 +3480,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_2Signal();
+      sendSignalTemp = new TakeabedTrigger_a_1Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3568,7 +3568,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "Unvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes" || ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0g(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3585,7 +3585,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "partiallyvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "fullyvaccinated") && ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No" && ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0g(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3677,7 +3677,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "Unvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes" || ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0g(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3697,7 +3697,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3713,7 +3713,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3726,7 +3726,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "partiallyvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "fullyvaccinated") && ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No" && ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0g(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3850,7 +3850,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "Unvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes" || ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0h(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3867,7 +3867,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "partiallyvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "fullyvaccinated") && ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No" && ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0h(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3959,7 +3959,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "Unvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes" || ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "Yes") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0d0h(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -3979,7 +3979,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -3995,7 +3995,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -4008,7 +4008,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "partiallyvaccinated" || ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDVaccineStatus == "fullyvaccinated") && ((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No" && ((patient) behaviour.getSignalTrigger().GetData("patient")).RecentCovidContact == "No") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0h(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -4814,7 +4814,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -4830,7 +4830,7 @@ public class CubicleNurse extends Actor {
     public void execute() {
       Board b = ReadBoard();
       Signal sendSignalTemp = new Signal();
-      sendSignalTemp = new TakeabedTrigger_a_1Signal();
+      sendSignalTemp = new TakeabedTrigger_a_2Signal();
       sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
 
       b.PushMission(sendSignalTemp);
@@ -4859,9 +4859,9 @@ public class CubicleNurse extends Actor {
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0a_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0a_3(behaviourBuilder));
-    plstSteps.add(new StayAction_c0a_8(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_d0a_1(behaviourBuilder));
-    plstSteps.add(new StayAction_e0a_1(behaviourBuilder));
+    plstSteps.add(new StayAction_c0a_5(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_d0a(behaviourBuilder));
+    plstSteps.add(new StayAction_e0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -4870,9 +4870,9 @@ public class CubicleNurse extends Actor {
   public void InitRespiratorysymptomsabsent_c(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_5(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0b_3(behaviourBuilder));
     plstSteps.add(new OrderAction_b0b_3(behaviourBuilder));
-    plstSteps.add(new StayAction_c0b_5(behaviourBuilder));
+    plstSteps.add(new StayAction_c0b_3(behaviourBuilder));
     plstSteps.add(new SendSignalAction_d0b(behaviourBuilder));
     plstSteps.add(new StayAction_e0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
@@ -4963,7 +4963,7 @@ public class CubicleNurse extends Actor {
     Signal sendSignalTemp = new Signal();
 
   }
-  public void InitSignificantCOVIDContact_i(Signal s) {
+  public void InitCOVIDRiskCheck_i(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
     plstSteps.add(new MoveAction_a0h_3(behaviourBuilder));

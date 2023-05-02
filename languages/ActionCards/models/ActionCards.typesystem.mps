@@ -3,11 +3,13 @@
   <persistence version="9" />
   <languages>
     <use id="7a5dda62-9140-4668-ab76-d5ed1746f2b2" name="jetbrains.mps.lang.typesystem" version="5" />
+    <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="11" />
+    <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="5" />
     <devkit ref="00000000-0000-4000-0000-1de82b3a4936(jetbrains.mps.devkit.aspect.typesystem)" />
   </languages>
   <imports>
-    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
-    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" implicit="true" />
+    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" />
+    <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
@@ -240,32 +242,6 @@
       <ref role="1YaFvo" to="e88n:1xAzJ9NaXT$" resolve="RecentCOVIDContactCondition" />
     </node>
   </node>
-  <node concept="1YbPZF" id="1xAzJ9NKu1N">
-    <property role="TrG5h" value="typeof_AttendanceRouteCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <node concept="3clFbS" id="1xAzJ9NKu1O" role="18ibNy">
-      <node concept="1Z5TYs" id="1xAzJ9NKu1U" role="3cqZAp">
-        <node concept="mw_s8" id="1xAzJ9NKu1V" role="1ZfhK$">
-          <node concept="1Z2H0r" id="1xAzJ9NKu1W" role="mwGJk">
-            <node concept="1YBJjd" id="1xAzJ9NKu4v" role="1Z2MuG">
-              <ref role="1YBMHb" node="1xAzJ9NKu1Q" resolve="attendanceRouteCondition" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="1xAzJ9NKu1Y" role="1ZfhKB">
-          <node concept="2pJPEk" id="1xAzJ9NKu1Z" role="mwGJk">
-            <node concept="2pJPED" id="1xAzJ9NKu20" role="2pJPEn">
-              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="1xAzJ9NKu1Q" role="1YuTPh">
-      <property role="TrG5h" value="attendanceRouteCondition" />
-      <ref role="1YaFvo" to="e88n:1xAzJ9NKtIU" resolve="AttendanceRouteCondition" />
-    </node>
-  </node>
   <node concept="1YbPZF" id="1xAzJ9PnFt6">
     <property role="TrG5h" value="typeof_ImmunocompromisedCondition" />
     <property role="3GE5qa" value="Expressions.Conditions" />
@@ -290,6 +266,240 @@
     <node concept="1YaCAy" id="1xAzJ9PnFt9" role="1YuTPh">
       <property role="TrG5h" value="immunocompromisedCondition" />
       <ref role="1YaFvo" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="4EKCctwQqDu">
+    <property role="TrG5h" value="typeof_LocationCapacityCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="4EKCctwQqDv" role="18ibNy">
+      <node concept="1Z5TYs" id="4EKCctwQqDR" role="3cqZAp">
+        <node concept="mw_s8" id="4EKCctwQqDS" role="1ZfhK$">
+          <node concept="1Z2H0r" id="4EKCctwQqDT" role="mwGJk">
+            <node concept="1YBJjd" id="4EKCctwQqEp" role="1Z2MuG">
+              <ref role="1YBMHb" node="4EKCctwQqDx" resolve="locationCapacityCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="4EKCctwQqDV" role="1ZfhKB">
+          <node concept="2pJPEk" id="4EKCctwQqDW" role="mwGJk">
+            <node concept="2pJPED" id="4EKCctwQqDX" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4EKCctwQqDx" role="1YuTPh">
+      <property role="TrG5h" value="locationCapacityCondition" />
+      <ref role="1YaFvo" to="e88n:4EKCctwQp7G" resolve="LocationCapacityCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3JSrgvMffwG">
+    <property role="TrG5h" value="typeof_ResourceAvailableCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="3JSrgvMffwH" role="18ibNy">
+      <node concept="1Z5TYs" id="3JSrgvMffwN" role="3cqZAp">
+        <node concept="mw_s8" id="3JSrgvMffwO" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3JSrgvMffwP" role="mwGJk">
+            <node concept="1YBJjd" id="3JSrgvMffxS" role="1Z2MuG">
+              <ref role="1YBMHb" node="3JSrgvMffwJ" resolve="resourceAvailableCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3JSrgvMffwR" role="1ZfhKB">
+          <node concept="2pJPEk" id="3JSrgvMffwS" role="mwGJk">
+            <node concept="2pJPED" id="3JSrgvMffwT" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3JSrgvMffwJ" role="1YuTPh">
+      <property role="TrG5h" value="resourceAvailableCondition" />
+      <ref role="1YaFvo" to="e88n:3JSrgvMff0N" resolve="ResourceAvailableCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3JSrgvO6fys">
+    <property role="TrG5h" value="typeof_TimeOfDayCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="3JSrgvO6fyt" role="18ibNy">
+      <node concept="1Z5TYs" id="3JSrgvO6fyz" role="3cqZAp">
+        <node concept="mw_s8" id="3JSrgvO6fy$" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3JSrgvO6fy_" role="mwGJk">
+            <node concept="1YBJjd" id="3JSrgvO6fz5" role="1Z2MuG">
+              <ref role="1YBMHb" node="3JSrgvO6fyv" resolve="timeOfDayCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3JSrgvO6fyB" role="1ZfhKB">
+          <node concept="2pJPEk" id="3JSrgvO6fyC" role="mwGJk">
+            <node concept="2pJPED" id="3JSrgvO6fyD" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3JSrgvO6fyv" role="1YuTPh">
+      <property role="TrG5h" value="timeOfDayCondition" />
+      <ref role="1YaFvo" to="e88n:3JSrgvO6fgX" resolve="TimeOfDayCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="4ePomJhOlQa">
+    <property role="TrG5h" value="typeof_RoomTypeCondition" />
+    <property role="3GE5qa" value="RoomSelection" />
+    <node concept="3clFbS" id="4ePomJhOlQb" role="18ibNy">
+      <node concept="1Z5TYs" id="3d01stCgWV5" role="3cqZAp">
+        <node concept="mw_s8" id="3d01stCgWV6" role="1ZfhKB">
+          <node concept="2pJPEk" id="3d01stCgWV7" role="mwGJk">
+            <node concept="2pJPED" id="3d01stCgWV8" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3d01stCgWV9" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3d01stCgWVa" role="mwGJk">
+            <node concept="1YBJjd" id="4ePomJhOlRu" role="1Z2MuG">
+              <ref role="1YBMHb" node="4ePomJhOlQd" resolve="roomTypeCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="4ePomJhOlQd" role="1YuTPh">
+      <property role="TrG5h" value="roomTypeCondition" />
+      <ref role="1YaFvo" to="e88n:4ePomJhOliH" resolve="RoomTypeCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="sr1c8P9h2O">
+    <property role="TrG5h" value="typeof_PatientSeverity" />
+    <property role="3GE5qa" value="Attributes.PatientProperties.PatientSeverity" />
+    <node concept="3clFbS" id="sr1c8P9h2P" role="18ibNy">
+      <node concept="1Z5TYs" id="1ofb2Ww00IW" role="3cqZAp">
+        <node concept="mw_s8" id="1ofb2Ww00Jg" role="1ZfhKB">
+          <node concept="2pJPEk" id="1ofb2Ww00Jc" role="mwGJk">
+            <node concept="2pJPED" id="1xAzJ9MuxEH" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:4rZeNQ6OYR8" resolve="StringLiteral" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1ofb2Ww00IZ" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1ofb2Ww00v6" role="mwGJk">
+            <node concept="1YBJjd" id="sr1c8P9h3C" role="1Z2MuG">
+              <ref role="1YBMHb" node="sr1c8P9h2R" resolve="patientSeverity" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="sr1c8P9h2R" role="1YuTPh">
+      <property role="TrG5h" value="patientSeverity" />
+      <ref role="1YaFvo" to="e88n:sr1c8P9fkH" resolve="PatientSeverity" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="2K0oNvtRlp9">
+    <property role="TrG5h" value="typeof_CompositeTestResultCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="2K0oNvtRlpa" role="18ibNy">
+      <node concept="1Z5TYs" id="2K0oNvtRlpg" role="3cqZAp">
+        <node concept="mw_s8" id="2K0oNvtRlph" role="1ZfhK$">
+          <node concept="1Z2H0r" id="2K0oNvtRlpi" role="mwGJk">
+            <node concept="1YBJjd" id="2K0oNvtRlpM" role="1Z2MuG">
+              <ref role="1YBMHb" node="2K0oNvtRlpc" resolve="compositeTestResultCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="2K0oNvtRlpk" role="1ZfhKB">
+          <node concept="2pJPEk" id="2K0oNvtRlpl" role="mwGJk">
+            <node concept="2pJPED" id="2K0oNvtRlpm" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="2K0oNvtRlpc" role="1YuTPh">
+      <property role="TrG5h" value="compositeTestResultCondition" />
+      <ref role="1YaFvo" to="e88n:2K0oNvtRlaD" resolve="CompositeTestResultCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1BosAjNP_jS">
+    <property role="TrG5h" value="typeof_CompositeDiagnosticCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="1BosAjNP_jT" role="18ibNy">
+      <node concept="1Z5TYs" id="1BosAjNP_jZ" role="3cqZAp">
+        <node concept="mw_s8" id="1BosAjNP_k0" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1BosAjNP_k1" role="mwGJk">
+            <node concept="1YBJjd" id="1BosAjNP_kx" role="1Z2MuG">
+              <ref role="1YBMHb" node="1BosAjNP_jV" resolve="compositeDiagnosticCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1BosAjNP_k3" role="1ZfhKB">
+          <node concept="2pJPEk" id="1BosAjNP_k4" role="mwGJk">
+            <node concept="2pJPED" id="1BosAjNP_k5" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1BosAjNP_jV" role="1YuTPh">
+      <property role="TrG5h" value="compositeDiagnosticCondition" />
+      <ref role="1YaFvo" to="e88n:1BosAjNP_7f" resolve="CompositeDiagnosticCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="i1eH3WpcqG">
+    <property role="TrG5h" value="typeof_ProbabilityCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="i1eH3WpcqH" role="18ibNy">
+      <node concept="1Z5TYs" id="i1eH3WpcqW" role="3cqZAp">
+        <node concept="mw_s8" id="i1eH3WpcqX" role="1ZfhK$">
+          <node concept="1Z2H0r" id="i1eH3WpcqY" role="mwGJk">
+            <node concept="1YBJjd" id="i1eH3WpcrB" role="1Z2MuG">
+              <ref role="1YBMHb" node="i1eH3WpcqJ" resolve="probabilityCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="i1eH3Wpcr0" role="1ZfhKB">
+          <node concept="2pJPEk" id="i1eH3Wpcr1" role="mwGJk">
+            <node concept="2pJPED" id="i1eH3Wpcr2" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="i1eH3WpcqJ" role="1YuTPh">
+      <property role="TrG5h" value="probabilityCondition" />
+      <ref role="1YaFvo" to="e88n:i1eH3Wpca0" resolve="ProbabilityCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1MmdcHbXLhT">
+    <property role="TrG5h" value="typeof_BranchConditional" />
+    <property role="3GE5qa" value="Expressions" />
+    <node concept="3clFbS" id="1MmdcHbXLhU" role="18ibNy">
+      <node concept="1Z5TYs" id="1MmdcHbXLkd" role="3cqZAp">
+        <node concept="mw_s8" id="1MmdcHbXLke" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1MmdcHbXLkf" role="mwGJk">
+            <node concept="1YBJjd" id="1MmdcHbXLkJ" role="1Z2MuG">
+              <ref role="1YBMHb" node="1MmdcHbXLhW" resolve="branchConditional" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1MmdcHbXLkh" role="1ZfhKB">
+          <node concept="2pJPEk" id="1MmdcHbXLki" role="mwGJk">
+            <node concept="2pJPED" id="1MmdcHbXLkj" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1MmdcHbXLhW" role="1YuTPh">
+      <property role="TrG5h" value="branchConditional" />
+      <ref role="1YaFvo" to="e88n:1xAzJ9JDBLw" resolve="BranchConditional" />
     </node>
   </node>
 </model>

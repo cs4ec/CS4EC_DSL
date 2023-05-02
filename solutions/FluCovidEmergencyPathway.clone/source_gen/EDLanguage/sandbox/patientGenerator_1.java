@@ -102,6 +102,12 @@ public class patientGenerator_1 extends AgentGenerator {
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("RecentCovidContactYes")) {
       a.RecentCovidContact = "Yes";
     }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedNo")) {
+      a.Immunocompromised = "No";
+    }
+    if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("ImmunocompromisedYes")) {
+      a.Immunocompromised = "Yes";
+    }
     if (rndDouble < RunEnvironment.getInstance().getParameters().getDouble("admissionRouteEmergencyAttendance")) {
       a.admissionRoute = "EmergencyAttendance";
     }

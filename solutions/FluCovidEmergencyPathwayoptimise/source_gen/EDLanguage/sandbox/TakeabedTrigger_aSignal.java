@@ -7,7 +7,7 @@ import simcore.Signals.ActorTypeSignal;
 public class TakeabedTrigger_aSignal extends ActorTypeSignal {
   public TakeabedTrigger_aSignal() {
     this.setName("TakeabedTrigger_a");
-    this.setDescription("SecondPlaceholderSignal");
+    this.setDescription("h");
     this.AddActor("WardStaff");
   }
 

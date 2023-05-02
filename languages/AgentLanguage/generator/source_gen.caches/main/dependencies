@@ -2,8 +2,12 @@
 <dependenciesRoot>
   <dependency className="main.QueriesGenerated">
     <classNode dependClassName="AgentLanguage.behavior.Actor__BehaviorDescriptor" />
+    <classNode dependClassName="AgentLanguage.behavior.AggregateAttributeMonitor__BehaviorDescriptor" />
+    <classNode dependClassName="AgentLanguage.behavior.AttributeMonitor__BehaviorDescriptor" />
     <classNode dependClassName="AgentLanguage.behavior.BehaviourElement__BehaviorDescriptor" />
-    <classNode dependClassName="AgentLanguage.behavior.RoomType__BehaviorDescriptor" />
+    <classNode dependClassName="AgentLanguage.behavior.Iterable__BehaviorDescriptor" />
+    <classNode dependClassName="BuiltEnvironment.behavior.OccupiableDefinition__BehaviorDescriptor" />
+    <classNode dependClassName="BuiltEnvironment.behavior.RoomType__BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Iterable" />
@@ -16,10 +20,12 @@
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="java.util.Objects" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.ClassConcept__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.behavior.Classifier__BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
     <classNode dependClassName="jetbrains.mps.generator.impl.GenerationFailureException" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.IfMacroCondition" />
+    <classNode dependClassName="jetbrains.mps.generator.impl.query.LabelInputQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.MapRootRuleCondition" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.PropertyValueQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.QueryKey" />
@@ -27,15 +33,19 @@
     <classNode dependClassName="jetbrains.mps.generator.impl.query.ReferenceTargetQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.SourceNodeQuery" />
     <classNode dependClassName="jetbrains.mps.generator.impl.query.SourceNodesQuery" />
+    <classNode dependClassName="jetbrains.mps.generator.impl.query.VariableValueQuery" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.Generated" />
     <classNode dependClassName="jetbrains.mps.generator.template.BaseMappingRuleContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.IfMacroContext" />
+    <classNode dependClassName="jetbrains.mps.generator.template.LabelKeyQueryContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.MapRootRuleContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.PropertyMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.ReductionRuleQueryContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.ReferenceMacroContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.SourceSubstituteMacroNodeContext" />
     <classNode dependClassName="jetbrains.mps.generator.template.SourceSubstituteMacroNodesContext" />
+    <classNode dependClassName="jetbrains.mps.generator.template.TemplateQueryContext" />
+    <classNode dependClassName="jetbrains.mps.generator.template.TemplateVarContext" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />

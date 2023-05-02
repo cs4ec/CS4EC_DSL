@@ -23,15 +23,15 @@ public class ConstraintsAspectDescriptor extends BaseConstraintsAspectDescriptor
       case 1:
         return new ActionCardCondition_Constraints();
       case 2:
-        return new ActionStep_Constraints();
-      case 3:
         return new AttendanceRoute_Constraints();
-      case 4:
-        return new AttendanceRouteCondition_Constraints();
-      case 5:
+      case 3:
         return new BooleanExpression_Constraints();
-      case 6:
+      case 4:
         return new Branch_Constraints();
+      case 5:
+        return new CompositeDiagnosticCondition_Constraints();
+      case 6:
+        return new CompositeTestResultCondition_Constraints();
       case 7:
         return new DiagnosticCondition_Constraints();
       case 8:
@@ -45,24 +45,52 @@ public class ConstraintsAspectDescriptor extends BaseConstraintsAspectDescriptor
       case 12:
         return new InfectionStatusCondition_Constraints();
       case 13:
-        return new No_Constraints();
+        return new LocationCapacityCondition_Constraints();
       case 14:
-        return new PartiallyVaccinated_Constraints();
+        return new No_Constraints();
       case 15:
-        return new PatientPropertyConditional_Constraints();
+        return new PartiallyVaccinated_Constraints();
       case 16:
-        return new RecentCOVIDContactCondition_Constraints();
+        return new PatientPropertyConditional_Constraints();
       case 17:
-        return new Unvaccinated_Constraints();
+        return new PatientSeverity_Constraints();
       case 18:
-        return new VaccinationStatus_Constraints();
+        return new PatientSeverity_Low_Constraints();
       case 19:
-        return new VaccineStatusCondition_Constraints();
+        return new PatientSeverity_Severe_Constraints();
       case 20:
+        return new Patient_Severity_Moderate_Constraints();
+      case 21:
+        return new ProbabilityCondition_Constraints();
+      case 22:
+        return new RecentCOVIDContactCondition_Constraints();
+      case 23:
+        return new ResourceAvailableCondition_Constraints();
+      case 24:
+        return new RoomSelectionCondition_Constraints();
+      case 25:
+        return new RoomSelectionLine_Constraints();
+      case 26:
+        return new RoomSelectionRule_Constraints();
+      case 27:
+        return new RoomTypeCondition_Constraints();
+      case 28:
+        return new SelectEmptyRoom_Constraints();
+      case 29:
+        return new TestSelectionRule_Constraints();
+      case 30:
+        return new TimeOfDayCondition_Constraints();
+      case 31:
+        return new Unvaccinated_Constraints();
+      case 32:
+        return new VaccinationStatus_Constraints();
+      case 33:
+        return new VaccineStatusCondition_Constraints();
+      case 34:
         return new Yes_Constraints();
       default:
     }
     return new BaseConstraintsDescriptor(concept);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3455bL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273b09a5dL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273c1dbbaL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bb4e3L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df36170cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273b09e71L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273b09c56L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61137L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2755ea288L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27101e2faL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bb4e4L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61154L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bde64L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61167L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61141L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f431e45L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bb4e2L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27386cf02L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273b09a5dL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bb4e3L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x19d87264f3d651cfL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2c006337dddd52a9L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df36170cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273b09e71L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef273b09c56L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61137L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2755ea288L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27101e2faL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4ab0a0c760d991ecL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bb4e4L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61154L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x71b04c23524f52dL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x71b04c23525027bL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x71b04c23524f37eL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x71b04c23524ff6bL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4813ad0fc64c280L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bde64L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3bf86d07f23cf033L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x43b5616bd1d154aeL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x43b5616bd1d0be74L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x334005c766547220L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x43b5616bd1d154adL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x43b5616bd1d0fb3bL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x35a9749351b87572L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3bf86d07f418f43dL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61167L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fc61141L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f431e45L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bb4e2L)).seal();
 }

@@ -30,7 +30,7 @@
       <node id="6655867674930331884" at="54,93,55,0" concept="8" />
       <node id="6655867674930331893" at="56,141,57,117" concept="1" />
       <node id="6655867674930430278" at="58,7,59,0" concept="8" />
-      <node id="6655867674930460271" at="59,0,60,50" concept="7" />
+      <node id="6655867674930460271" at="59,0,60,49" concept="7" />
       <node id="6655867674930453449" at="61,151,62,41" concept="1" />
       <node id="6655867674930434672" at="63,7,64,0" concept="8" />
       <node id="6655867674930393820" at="64,0,65,80" concept="5" />
@@ -52,9 +52,9 @@
       <node id="6655867674930331934" at="88,37,89,116" concept="12" />
       <node id="6655867674930331942" at="90,9,91,51" concept="5" />
       <node id="6655867674930331969" at="91,51,92,0" concept="8" />
-      <node id="6655867674930331970" at="92,0,93,198" concept="5" />
-      <node id="6655867674930332011" at="93,198,94,48" concept="7" />
-      <node id="6655867674930501957" at="94,48,95,128" concept="5" />
+      <node id="6655867674930331970" at="92,0,93,201" concept="5" />
+      <node id="6655867674930332011" at="93,201,94,47" concept="7" />
+      <node id="6655867674930501957" at="94,47,95,128" concept="5" />
       <node id="6655867674930682169" at="97,43,98,98" concept="6" />
       <node id="6655867674930539767" at="100,11,101,85" concept="5" />
       <node id="6655867674930534091" at="102,35,103,48" concept="1" />
@@ -77,8 +77,8 @@
       <node id="6655867674930332124" at="122,0,123,85" concept="5" />
       <node id="6655867674930332131" at="123,85,124,80" concept="5" />
       <node id="6655867674930332139" at="125,31,126,90" concept="12" />
-      <node id="6655867674930332150" at="127,9,128,71" concept="1" />
-      <node id="6655867674930482960" at="128,71,129,0" concept="8" />
+      <node id="6655867674930332150" at="127,9,128,70" concept="1" />
+      <node id="6655867674930482960" at="128,70,129,0" concept="8" />
       <node id="6655867674930485089" at="129,0,130,62" concept="1" />
       <node id="6655867674930332156" at="131,7,132,0" concept="8" />
       <node id="6655867674930332157" at="132,0,133,100" concept="1" />
@@ -93,21 +93,21 @@
       <node id="768972137584792362" at="166,85,167,113" concept="12" />
       <node id="768972137584792363" at="168,5,169,33" concept="6" />
       <node id="768972137584489422" at="174,0,175,0" concept="9" trace="name$MnvL" />
-      <node id="768972137584489422" at="175,0,176,0" concept="9" trace="x$8h86" />
-      <node id="768972137584489422" at="176,0,177,0" concept="9" trace="y$8hA8" />
-      <node id="768972137584489422" at="177,0,178,0" concept="9" trace="width$g4wh" />
-      <node id="768972137584489422" at="178,0,179,0" concept="9" trace="height$g5sl" />
-      <node id="768972137584489422" at="179,0,180,0" concept="9" trace="desks$VmIX" />
-      <node id="768972137584489422" at="180,0,181,0" concept="9" trace="seats$VfGv" />
-      <node id="768972137584489422" at="181,0,182,0" concept="9" trace="beds$zE0I" />
-      <node id="768972137584489422" at="182,0,183,0" concept="9" trace="colour$7icN" />
-      <node id="768972137584489422" at="186,0,187,0" concept="9" trace="RoomType$1b" />
-      <node id="768972137584489422" at="187,0,188,0" concept="9" trace="RoomInstanceDefinition$Jk" />
-      <node id="768972137584489422" at="191,0,192,0" concept="9" trace="roomType$2uZL" />
-      <node id="768972137584489422" at="192,0,193,0" concept="9" trace="rooms$Qimv" />
+      <node id="768972137584489422" at="175,0,176,0" concept="9" trace="x$6tRi" />
+      <node id="768972137584489422" at="176,0,177,0" concept="9" trace="y$6ulk" />
+      <node id="768972137584489422" at="177,0,178,0" concept="9" trace="width$ehft" />
+      <node id="768972137584489422" at="178,0,179,0" concept="9" trace="height$eibx" />
+      <node id="768972137584489422" at="179,0,180,0" concept="9" trace="desks$Tzu9" />
+      <node id="768972137584489422" at="180,0,181,0" concept="9" trace="seats$TsrF" />
+      <node id="768972137584489422" at="181,0,182,0" concept="9" trace="beds$xQJU" />
+      <node id="768972137584489422" at="182,0,183,0" concept="9" trace="colour$5uVZ" />
+      <node id="768972137584489422" at="186,0,187,0" concept="9" trace="RoomType$Kn" />
+      <node id="768972137584489422" at="187,0,188,0" concept="9" trace="RoomInstanceDefinition$uw" />
+      <node id="768972137584489422" at="191,0,192,0" concept="9" trace="roomType$FIX" />
+      <node id="768972137584489422" at="192,0,193,0" concept="9" trace="rooms$Ov5F" />
       <node id="6655867674930331833" at="39,0,42,5" concept="13" />
       <node id="6655867674930331885" at="55,0,58,7" concept="2" />
-      <node id="6655867674930436464" at="60,50,63,7" concept="2" />
+      <node id="6655867674930436464" at="60,49,63,7" concept="2" />
       <node id="6655867674931015092" at="71,56,74,9" concept="3" />
       <node id="6655867674931034770" at="78,0,81,9" concept="3" />
       <node id="6655867674930331928" at="87,49,90,9" concept="3" />
@@ -145,7 +145,7 @@
       <scope id="6655867674930331885" at="55,0,58,7">
         <var name="roomType" id="6655867674930331886" />
       </scope>
-      <scope id="6655867674930436464" at="60,50,63,7">
+      <scope id="6655867674930436464" at="60,49,63,7">
         <var name="room" id="6655867674930436466" />
       </scope>
       <scope id="6655867674930681410" at="97,0,100,0">

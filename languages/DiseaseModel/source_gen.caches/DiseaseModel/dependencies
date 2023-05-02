@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="DiseaseModel.Language">
+    <classNode dependClassName="DiseaseModel.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="DiseaseModel.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="DiseaseModel.editor.EditorAspectDescriptorImpl" />
     <classNode dependClassName="DiseaseModel.structure.ConceptPresentationAspectImpl" />
@@ -15,6 +16,7 @@
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConceptPresentationAspect" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ILanguageAspect" />

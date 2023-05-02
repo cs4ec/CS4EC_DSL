@@ -7,6 +7,9 @@
     <modelRoot contentPath="${module}/lib/plugins/repast.simphony.runtime_2.7.0" type="java_classes">
       <sourceRoot location="bin" />
       <sourceRoot location="lib" />
+      <excluded location="lib/log4j-1.2.16.jar" />
+      <excluded location="lib/commons-cli-1.3.1.jar" />
+      <excluded location="lib/commons-logging-1.1.2.jar" />
     </modelRoot>
   </models>
   <facets>

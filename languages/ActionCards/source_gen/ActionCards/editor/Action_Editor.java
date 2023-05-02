@@ -11,7 +11,4 @@ public class Action_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
     return new Action_EditorBuilder_a(editorContext, node).createCell();
   }
-  public EditorCell createInspectedCell(EditorContext editorContext, SNode node) {
-    return new Action_InspectorBuilder_a(editorContext, node).createCell();
-  }
 }

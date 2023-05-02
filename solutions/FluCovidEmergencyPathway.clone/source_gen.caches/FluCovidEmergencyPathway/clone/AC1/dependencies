@@ -5,6 +5,7 @@
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
   <dependency className="FluCovidEmergencyPathway.clone.AC1.CubicleNurse">
+    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.ESaaTrigger_aSignal" />
     <classNode dependClassName="EDLanguage.sandbox.TakeabedTrigger_aSignal" />
@@ -28,6 +29,7 @@
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />
     <classNode dependClassName="simcore.action.InstantBehaviourStep" />
+    <classNode dependClassName="simcore.basicStructures.Bed" />
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode extendsClassName="simcore.agents.Actor" />
   </dependency>

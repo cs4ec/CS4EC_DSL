@@ -9,7 +9,11 @@ import jetbrains.mps.openapi.editor.EditorContext;
 import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Collection;
 import jetbrains.mps.nodeEditor.cellLayout.CellLayout_Indent;
+import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
 import jetbrains.mps.nodeEditor.cellProviders.AbstractCellListHandler;
+import jetbrains.mps.openapi.editor.style.Style;
+import jetbrains.mps.editor.runtime.style.StyleImpl;
+import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.lang.editor.cellProviders.RefNodeListHandler;
 import org.jetbrains.mps.openapi.language.SContainmentLink;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
@@ -46,21 +50,32 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.setCellId("Collection_lybgyf_a");
     editorCell.setBig(true);
     setCellContext(editorCell);
+    editorCell.addEditorCell(createConstant_0());
     editorCell.addEditorCell(createRefNodeList_0());
     return editorCell;
   }
+  private EditorCell createConstant_0() {
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Values from:");
+    editorCell.setCellId("Constant_lybgyf_a0");
+    editorCell.setDefaultText("");
+    return editorCell;
+  }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new attributeMonitorPossibleValuesListHandler_lybgyf_a0(myNode, getEditorContext());
+    AbstractCellListHandler handler = new AttributeMonitorsListHandler_lybgyf_b0(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_attributeMonitorPossibleValues");
+    editorCell.setCellId("refNodeList_AttributeMonitors");
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class attributeMonitorPossibleValuesListHandler_lybgyf_a0 extends RefNodeListHandler {
+  private static class AttributeMonitorsListHandler_lybgyf_b0 extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public attributeMonitorPossibleValuesListHandler_lybgyf_a0(SNode ownerNode, EditorContext context) {
+    public AttributeMonitorsListHandler_lybgyf_b0(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -70,10 +85,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.attributeMonitorPossibleValues$x6OO;
+      return LINKS.AttributeMonitors$x6OO;
     }
     public SAbstractConcept getChildSConcept() {
-      return CONCEPTS.Expression$D_;
+      return CONCEPTS.AttributeMonitorReference$fM;
     }
 
     public EditorCell createNodeCell(SNode elementNode) {
@@ -83,7 +98,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(attributeMonitorPossibleValuesListHandler_lybgyf_a0.this.getNode(), LINKS.attributeMonitorPossibleValues$x6OO));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(AttributeMonitorsListHandler_lybgyf_b0.this.getNode(), LINKS.AttributeMonitors$x6OO));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -125,10 +140,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink attributeMonitorPossibleValues$x6OO = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6ca3e29db4287123L, 0x6ca3e29db4287150L, "attributeMonitorPossibleValues");
+    /*package*/ static final SContainmentLink AttributeMonitors$x6OO = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6ca3e29db4287123L, 0x6ca3e29db4287150L, "AttributeMonitors");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SConcept AttributeMonitorReference$fM = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x70b897b58be2575eL, "AgentLanguage.structure.AttributeMonitorReference");
   }
 }

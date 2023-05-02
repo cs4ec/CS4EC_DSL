@@ -4,12 +4,16 @@ import java.awt.Color;
 import java.util.ArrayList;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduledMethod;
+import repast.simphony.space.SpatialMath;
 import repast.simphony.space.continuous.ContinuousSpace;
+import repast.simphony.space.continuous.NdPoint;
 import repast.simphony.space.grid.Grid;
+import repast.simphony.space.grid.GridPoint;
 import simcore.agents.Agent;
 
 public class Occupiable extends Locatable{
 	protected Agent occupier;
+	protected Agent allocatedTo;
 	protected Room inRoom;
 
 	public Occupiable(Context<Object> context, ContinuousSpace<Object> space, Grid<Object> grid, int x, int y, Room inRoom) {
@@ -33,11 +37,19 @@ public class Occupiable extends Locatable{
 	public void setOccupier(Agent person) {
 		occupier = person;
 		person.SetOccupying(this);
+		
+	}
+	
+	public void setAllocated(Agent person) {
+		allocatedTo = person;
+		person.setAllocated(this);
 	}
 	
 	public void eject(Agent person) {
 		occupier = null;
+		allocatedTo = null;
 		person.SetOccupying(null);
+		person.setAllocated(null);
 	}
 	
 	public Agent getOccupier() {
@@ -51,6 +63,11 @@ public class Occupiable extends Locatable{
 	public Boolean isOccupied() {
 		return occupier != null;
 	}
+	
+	public Boolean isAllocated() {
+		return allocatedTo != null;
+	}
+	
 	
 	@Override
 	public String toString() {

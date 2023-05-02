@@ -215,6 +215,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
   private EditorCell createIndentCell_1() {
     EditorCell_Indent editorCell = new EditorCell_Indent(getEditorContext(), myNode);
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
+    editorCell.getStyle().putAll(style);
     return editorCell;
   }
   private EditorCell createCollection_2() {
@@ -267,14 +270,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefNode_1() {
-    SingleRoleCellProvider provider = new behaviourSingleRoleHandler_s6xfkm_a1c8a(myNode, LINKS.behaviour$hsTv, getEditorContext());
+    SingleRoleCellProvider provider = new behaviourSequenceSingleRoleHandler_s6xfkm_a1c8a(myNode, LINKS.behaviourSequence$hsTv, getEditorContext());
     return provider.createCell();
   }
-  private static class behaviourSingleRoleHandler_s6xfkm_a1c8a extends SingleRoleCellProvider {
+  private static class behaviourSequenceSingleRoleHandler_s6xfkm_a1c8a extends SingleRoleCellProvider {
     @NotNull
     private SNode myNode;
 
-    public behaviourSingleRoleHandler_s6xfkm_a1c8a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
+    public behaviourSequenceSingleRoleHandler_s6xfkm_a1c8a(SNode ownerNode, SContainmentLink containmentLink, EditorContext context) {
       super(containmentLink, context);
       myNode = ownerNode;
     }
@@ -287,8 +290,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
     protected EditorCell createChildCell(SNode child) {
       EditorCell editorCell = getUpdateSession().updateChildNodeCell(child);
-      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.behaviour$hsTv, child));
-      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.behaviour$hsTv, child));
+      editorCell.setAction(CellActionType.DELETE, new CellAction_DeleteSmart(getNode(), LINKS.behaviourSequence$hsTv, child));
+      editorCell.setAction(CellActionType.BACKSPACE, new CellAction_DeleteSmart(getNode(), LINKS.behaviourSequence$hsTv, child));
       installCellInfo(child, editorCell, false);
       return editorCell;
     }
@@ -300,16 +303,16 @@ import org.jetbrains.mps.openapi.language.SConcept;
         editorCell.setSubstituteInfo((isEmpty ? new SEmptyContainmentSubstituteInfo(editorCell) : new SChildSubstituteInfo(editorCell)));
       }
       if (editorCell.getSRole() == null) {
-        editorCell.setSRole(LINKS.behaviour$hsTv);
+        editorCell.setSRole(LINKS.behaviourSequence$hsTv);
       }
     }
     @Override
     protected EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.behaviour$hsTv));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(getNode(), LINKS.behaviourSequence$hsTv));
       try {
         EditorCell editorCell = super.createEmptyCell();
-        editorCell.setCellId("empty_behaviour");
+        editorCell.setCellId("empty_behaviourSequence");
         installCellInfo(null, editorCell, true);
         setCellContext(editorCell);
         return editorCell;
@@ -318,7 +321,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     protected String getNoTargetText() {
-      return "<no behaviour>";
+      return "<no behaviourSequence>";
     }
   }
   private EditorCell createConstant_7() {
@@ -433,7 +436,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink signal$k9aw = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, 0x71ffe5bd0133e89L, "signal");
-    /*package*/ static final SContainmentLink behaviour$hsTv = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, 0x35463334ce308543L, "behaviour");
+    /*package*/ static final SContainmentLink behaviourSequence$hsTv = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, 0x35463334ce308543L, "behaviourSequence");
     /*package*/ static final SContainmentLink consequence$Yo37 = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce306b7aL, 0x50f1fbdc6defea4eL, "consequence");
   }
 }

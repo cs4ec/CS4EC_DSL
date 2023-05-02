@@ -10,9 +10,15 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Asymptomatic;
-  private ConceptPresentation props_DiseaseStatus;
+  private ConceptPresentation props_Disease;
+  private ConceptPresentation props_DiseaseSymptom;
+  private ConceptPresentation props_DiseaseSymptomReference;
+  private ConceptPresentation props_Exposed;
   private ConceptPresentation props_Infected;
+  private ConceptPresentation props_InfectionSpreadLine;
+  private ConceptPresentation props_InfectionSpreadTable;
   private ConceptPresentation props_InfectionStatus;
+  private ConceptPresentation props_SusceptibilityStatus;
   private ConceptPresentation props_Susceptible;
   private ConceptPresentation props_Symptomatic;
   private ConceptPresentation props_Unvaccinated;
@@ -31,13 +37,34 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Asymptomatic = cpb.create();
         }
         return props_Asymptomatic;
-      case LanguageConceptSwitch.DiseaseStatus:
-        if (props_DiseaseStatus == null) {
+      case LanguageConceptSwitch.Disease:
+        if (props_Disease == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("DiseaseStatus");
-          props_DiseaseStatus = cpb.create();
+          cpb.presentationByName();
+          props_Disease = cpb.create();
         }
-        return props_DiseaseStatus;
+        return props_Disease;
+      case LanguageConceptSwitch.DiseaseSymptom:
+        if (props_DiseaseSymptom == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_DiseaseSymptom = cpb.create();
+        }
+        return props_DiseaseSymptom;
+      case LanguageConceptSwitch.DiseaseSymptomReference:
+        if (props_DiseaseSymptomReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x6ca3e29db4791247L, 0x6ca3e29db4791251L, "symptom", "", "");
+          props_DiseaseSymptomReference = cpb.create();
+        }
+        return props_DiseaseSymptomReference;
+      case LanguageConceptSwitch.Exposed:
+        if (props_Exposed == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Exposed");
+          props_Exposed = cpb.create();
+        }
+        return props_Exposed;
       case LanguageConceptSwitch.Infected:
         if (props_Infected == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -45,6 +72,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Infected = cpb.create();
         }
         return props_Infected;
+      case LanguageConceptSwitch.InfectionSpreadLine:
+        if (props_InfectionSpreadLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("InfectionSpreadLine");
+          props_InfectionSpreadLine = cpb.create();
+        }
+        return props_InfectionSpreadLine;
+      case LanguageConceptSwitch.InfectionSpreadTable:
+        if (props_InfectionSpreadTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Infection spread table");
+          props_InfectionSpreadTable = cpb.create();
+        }
+        return props_InfectionSpreadTable;
       case LanguageConceptSwitch.InfectionStatus:
         if (props_InfectionStatus == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -53,6 +94,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InfectionStatus = cpb.create();
         }
         return props_InfectionStatus;
+      case LanguageConceptSwitch.SusceptibilityStatus:
+        if (props_SusceptibilityStatus == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("SusceptibilityStatus");
+          props_SusceptibilityStatus = cpb.create();
+        }
+        return props_SusceptibilityStatus;
       case LanguageConceptSwitch.Susceptible:
         if (props_Susceptible == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

@@ -13,7 +13,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,71,0" name="AgentLanguage.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,89,0" name="AgentLanguage.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/2480088909319821629">
@@ -681,6 +681,183 @@
       <unit id="33966321881517835" at="18,0,47,0" name="AgentLanguage.constraints.SelectRelationshipDataSignal_Constraints" />
     </file>
   </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/3692958048415654783">
+    <file name="RoomSelectionCondition_Constraints.java">
+      <node id="3692958048415654783" at="19,47,20,46" concept="10" />
+      <node id="3692958048415654783" at="27,127,28,128" concept="5" />
+      <node id="3692958048415654783" at="28,128,29,0" concept="7" />
+      <node id="3692958048415654783" at="30,55,31,71" concept="2" />
+      <node id="3692958048415654783" at="32,9,33,0" concept="7" />
+      <node id="3692958048415654783" at="33,0,34,22" concept="6" />
+      <node id="3692958048415655035" at="38,128,39,17" concept="6" />
+      <node id="3692958048415654783" at="41,0,42,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="3692958048415654783" at="44,0,45,0" concept="8" trace="RoomSelectionCondition$N0" />
+      <node id="3692958048415654783" at="19,0,22,0" concept="1" trace="RoomSelectionCondition_Constraints#()V" />
+      <node id="3692958048415654783" at="29,0,32,9" concept="3" />
+      <node id="3692958048415654783" at="38,0,41,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="3692958048415654783" at="26,0,36,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="3692958048415654783" at="24,103,36,6" concept="6" />
+      <node id="3692958048415654783" at="23,0,38,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="3692958048415654783" at="19,47,20,46" />
+      <scope id="3692958048415654783" at="30,55,31,71" />
+      <scope id="3692958048415654785" at="38,128,39,17" />
+      <scope id="3692958048415654783" at="19,0,22,0" />
+      <scope id="3692958048415654783" at="38,0,41,0">
+        <var name="childConcept" id="3692958048415654783" />
+        <var name="link" id="3692958048415654783" />
+        <var name="node" id="3692958048415654783" />
+        <var name="parentNode" id="3692958048415654783" />
+      </scope>
+      <scope id="3692958048415654783" at="27,127,34,22">
+        <var name="result" id="3692958048415654783" />
+      </scope>
+      <scope id="3692958048415654783" at="26,0,36,0">
+        <var name="checkingNodeContext" id="3692958048415654783" />
+        <var name="context" id="3692958048415654783" />
+      </scope>
+      <scope id="3692958048415654783" at="24,103,36,6" />
+      <scope id="3692958048415654783" at="23,0,38,0" />
+      <unit id="3692958048415654783" at="43,0,46,0" name="AgentLanguage.constraints.RoomSelectionCondition_Constraints$CONCEPTS" />
+      <unit id="3692958048415654783" at="25,15,36,5" name="AgentLanguage.constraints.RoomSelectionCondition_Constraints$1" />
+      <unit id="3692958048415654783" at="18,0,47,0" name="AgentLanguage.constraints.RoomSelectionCondition_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/3692958048415655343">
+    <file name="RoomTypeCondition_Constraints.java">
+      <node id="3692958048415655343" at="19,42,20,41" concept="10" />
+      <node id="3692958048415655343" at="27,127,28,128" concept="5" />
+      <node id="3692958048415655343" at="28,128,29,0" concept="7" />
+      <node id="3692958048415655343" at="30,55,31,71" concept="2" />
+      <node id="3692958048415655343" at="32,9,33,0" concept="7" />
+      <node id="3692958048415655343" at="33,0,34,22" concept="6" />
+      <node id="3692958048415655595" at="38,128,39,16" concept="6" />
+      <node id="3692958048415655343" at="41,0,42,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="3692958048415655343" at="44,0,45,0" concept="8" trace="RoomTypeCondition$xY" />
+      <node id="3692958048415655343" at="19,0,22,0" concept="1" trace="RoomTypeCondition_Constraints#()V" />
+      <node id="3692958048415655343" at="29,0,32,9" concept="3" />
+      <node id="3692958048415655343" at="38,0,41,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="3692958048415655343" at="26,0,36,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="3692958048415655343" at="24,103,36,6" concept="6" />
+      <node id="3692958048415655343" at="23,0,38,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="3692958048415655343" at="19,42,20,41" />
+      <scope id="3692958048415655343" at="30,55,31,71" />
+      <scope id="3692958048415655345" at="38,128,39,16" />
+      <scope id="3692958048415655343" at="19,0,22,0" />
+      <scope id="3692958048415655343" at="38,0,41,0">
+        <var name="childConcept" id="3692958048415655343" />
+        <var name="link" id="3692958048415655343" />
+        <var name="node" id="3692958048415655343" />
+        <var name="parentNode" id="3692958048415655343" />
+      </scope>
+      <scope id="3692958048415655343" at="27,127,34,22">
+        <var name="result" id="3692958048415655343" />
+      </scope>
+      <scope id="3692958048415655343" at="26,0,36,0">
+        <var name="checkingNodeContext" id="3692958048415655343" />
+        <var name="context" id="3692958048415655343" />
+      </scope>
+      <scope id="3692958048415655343" at="24,103,36,6" />
+      <scope id="3692958048415655343" at="23,0,38,0" />
+      <unit id="3692958048415655343" at="43,0,46,0" name="AgentLanguage.constraints.RoomTypeCondition_Constraints$CONCEPTS" />
+      <unit id="3692958048415655343" at="25,15,36,5" name="AgentLanguage.constraints.RoomTypeCondition_Constraints$1" />
+      <unit id="3692958048415655343" at="18,0,47,0" name="AgentLanguage.constraints.RoomTypeCondition_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/3692958048418842509">
+    <file name="RoomSelectionStrategyLine_Constraints.java">
+      <node id="3692958048418842509" at="21,50,22,49" concept="10" />
+      <node id="3692958048418842509" at="29,130,30,161" concept="5" />
+      <node id="3692958048418842509" at="30,161,31,0" concept="7" />
+      <node id="3692958048418842509" at="32,55,33,70" concept="2" />
+      <node id="3692958048418842509" at="34,9,35,0" concept="7" />
+      <node id="3692958048418842509" at="35,0,36,22" concept="6" />
+      <node id="3692958048443303935" at="42,124,43,20" concept="6" />
+      <node id="3692958048444934010" at="45,118,46,20" concept="6" />
+      <node id="3692958048444934624" at="47,7,48,19" concept="6" />
+      <node id="3692958048440113959" at="49,5,50,16" concept="6" />
+      <node id="3692958048418842509" at="52,0,53,0" concept="8" trace="canBeRootBreakingPoint" />
+      <node id="3692958048418842509" at="55,0,56,0" concept="8" trace="RoomSelectionStrategyLine$5S" />
+      <node id="3692958048418842509" at="56,0,57,0" concept="8" trace="RoomSelectionCondition$N0" />
+      <node id="3692958048418842509" at="57,0,58,0" concept="8" trace="BinaryExpression$j$" />
+      <node id="3692958048418842509" at="58,0,59,0" concept="8" trace="Expression$D_" />
+      <node id="3692958048418842509" at="21,0,24,0" concept="1" trace="RoomSelectionStrategyLine_Constraints#()V" />
+      <node id="3692958048418842509" at="31,0,34,9" concept="3" />
+      <node id="3692958048443302120" at="41,110,44,7" concept="3" />
+      <node id="3692958048444934008" at="44,7,47,7" concept="3" />
+      <node id="3692958048444931750" at="40,149,49,5" concept="3" />
+      <node id="3692958048418842509" at="28,0,38,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeAncestor;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="3692958048418842509" at="26,109,38,6" concept="6" />
+      <node id="3692958048418842509" at="40,0,52,0" concept="9" trace="staticCanBeAnAncestor#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="3692958048418842509" at="25,0,40,0" concept="4" trace="calculateCanBeAncestorConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="3692958048418842509" at="21,50,22,49" />
+      <scope id="3692958048418842509" at="32,55,33,70" />
+      <scope id="3692958048443302122" at="42,124,43,20" />
+      <scope id="3692958048444934009" at="45,118,46,20" />
+      <scope id="3692958048418842509" at="21,0,24,0" />
+      <scope id="3692958048418842509" at="29,130,36,22">
+        <var name="result" id="3692958048418842509" />
+      </scope>
+      <scope id="3692958048444931752" at="41,110,48,19" />
+      <scope id="3692958048418842509" at="28,0,38,0">
+        <var name="checkingNodeContext" id="3692958048418842509" />
+        <var name="context" id="3692958048418842509" />
+      </scope>
+      <scope id="3692958048436884259" at="40,149,50,16" />
+      <scope id="3692958048418842509" at="26,109,38,6" />
+      <scope id="3692958048418842509" at="40,0,52,0">
+        <var name="childConcept" id="3692958048418842509" />
+        <var name="childNode" id="3692958048418842509" />
+        <var name="link" id="3692958048418842509" />
+        <var name="node" id="3692958048418842509" />
+        <var name="parentNode" id="3692958048418842509" />
+      </scope>
+      <scope id="3692958048418842509" at="25,0,40,0" />
+      <unit id="3692958048418842509" at="54,0,60,0" name="AgentLanguage.constraints.RoomSelectionStrategyLine_Constraints$CONCEPTS" />
+      <unit id="3692958048418842509" at="27,15,38,5" name="AgentLanguage.constraints.RoomSelectionStrategyLine_Constraints$1" />
+      <unit id="3692958048418842509" at="20,0,61,0" name="AgentLanguage.constraints.RoomSelectionStrategyLine_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/4443718667981140613">
+    <file name="SelectRoomByCapacity_Constraints.java">
+      <node id="4443718667981140613" at="19,45,20,44" concept="10" />
+      <node id="4443718667981140613" at="27,127,28,128" concept="5" />
+      <node id="4443718667981140613" at="28,128,29,0" concept="7" />
+      <node id="4443718667981140613" at="30,55,31,71" concept="2" />
+      <node id="4443718667981140613" at="32,9,33,0" concept="7" />
+      <node id="4443718667981140613" at="33,0,34,22" concept="6" />
+      <node id="4443718667981140638" at="38,128,39,16" concept="6" />
+      <node id="4443718667981140613" at="41,0,42,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="4443718667981140613" at="44,0,45,0" concept="8" trace="SelectRoomByCapacity$ZA" />
+      <node id="4443718667981140613" at="19,0,22,0" concept="1" trace="SelectRoomByCapacity_Constraints#()V" />
+      <node id="4443718667981140613" at="29,0,32,9" concept="3" />
+      <node id="4443718667981140613" at="38,0,41,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="4443718667981140613" at="26,0,36,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="4443718667981140613" at="24,103,36,6" concept="6" />
+      <node id="4443718667981140613" at="23,0,38,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="4443718667981140613" at="19,45,20,44" />
+      <scope id="4443718667981140613" at="30,55,31,71" />
+      <scope id="4443718667981140615" at="38,128,39,16" />
+      <scope id="4443718667981140613" at="19,0,22,0" />
+      <scope id="4443718667981140613" at="38,0,41,0">
+        <var name="childConcept" id="4443718667981140613" />
+        <var name="link" id="4443718667981140613" />
+        <var name="node" id="4443718667981140613" />
+        <var name="parentNode" id="4443718667981140613" />
+      </scope>
+      <scope id="4443718667981140613" at="27,127,34,22">
+        <var name="result" id="4443718667981140613" />
+      </scope>
+      <scope id="4443718667981140613" at="26,0,36,0">
+        <var name="checkingNodeContext" id="4443718667981140613" />
+        <var name="context" id="4443718667981140613" />
+      </scope>
+      <scope id="4443718667981140613" at="24,103,36,6" />
+      <scope id="4443718667981140613" at="23,0,38,0" />
+      <unit id="4443718667981140613" at="43,0,46,0" name="AgentLanguage.constraints.SelectRoomByCapacity_Constraints$CONCEPTS" />
+      <unit id="4443718667981140613" at="25,15,36,5" name="AgentLanguage.constraints.SelectRoomByCapacity_Constraints$1" />
+      <unit id="4443718667981140613" at="18,0,47,0" name="AgentLanguage.constraints.SelectRoomByCapacity_Constraints" />
+    </file>
+  </root>
   <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/5832719916574256519">
     <file name="BehaviourElementReference_Constraints.java">
       <node id="5832719916574256519" at="23,50,24,49" concept="10" />
@@ -833,6 +1010,181 @@
       <unit id="7454555096515508560" at="37,19,47,9" name="AgentLanguage.constraints.AttributeExpressionReference_Constraints$1$1" />
       <unit id="7454555096515508560" at="29,48,49,5" name="AgentLanguage.constraints.AttributeExpressionReference_Constraints$1" />
       <unit id="7454555096515508559" at="22,0,65,0" name="AgentLanguage.constraints.AttributeExpressionReference_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/7942748223948113848">
+    <file name="RoomSelectionRule_Constraints.java">
+      <node id="7942748223948113848" at="19,42,20,41" concept="10" />
+      <node id="7942748223948113848" at="27,127,28,128" concept="5" />
+      <node id="7942748223948113848" at="28,128,29,0" concept="7" />
+      <node id="7942748223948113848" at="30,55,31,71" concept="2" />
+      <node id="7942748223948113848" at="32,9,33,0" concept="7" />
+      <node id="7942748223948113848" at="33,0,34,22" concept="6" />
+      <node id="7942748223948114300" at="38,128,39,17" concept="6" />
+      <node id="7942748223948113848" at="41,0,42,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="7942748223948113848" at="44,0,45,0" concept="8" trace="RoomSelectionRule$y$" />
+      <node id="7942748223948113848" at="19,0,22,0" concept="1" trace="RoomSelectionRule_Constraints#()V" />
+      <node id="7942748223948113848" at="29,0,32,9" concept="3" />
+      <node id="7942748223948113848" at="38,0,41,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="7942748223948113848" at="26,0,36,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="7942748223948113848" at="24,103,36,6" concept="6" />
+      <node id="7942748223948113848" at="23,0,38,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="7942748223948113848" at="19,42,20,41" />
+      <scope id="7942748223948113848" at="30,55,31,71" />
+      <scope id="7942748223948114278" at="38,128,39,17" />
+      <scope id="7942748223948113848" at="19,0,22,0" />
+      <scope id="7942748223948113848" at="38,0,41,0">
+        <var name="childConcept" id="7942748223948113848" />
+        <var name="link" id="7942748223948113848" />
+        <var name="node" id="7942748223948113848" />
+        <var name="parentNode" id="7942748223948113848" />
+      </scope>
+      <scope id="7942748223948113848" at="27,127,34,22">
+        <var name="result" id="7942748223948113848" />
+      </scope>
+      <scope id="7942748223948113848" at="26,0,36,0">
+        <var name="checkingNodeContext" id="7942748223948113848" />
+        <var name="context" id="7942748223948113848" />
+      </scope>
+      <scope id="7942748223948113848" at="24,103,36,6" />
+      <scope id="7942748223948113848" at="23,0,38,0" />
+      <unit id="7942748223948113848" at="43,0,46,0" name="AgentLanguage.constraints.RoomSelectionRule_Constraints$CONCEPTS" />
+      <unit id="7942748223948113848" at="25,15,36,5" name="AgentLanguage.constraints.RoomSelectionRule_Constraints$1" />
+      <unit id="7942748223948113848" at="18,0,47,0" name="AgentLanguage.constraints.RoomSelectionRule_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/7942748223948116428">
+    <file name="SelectRoomWithNoAgentsOfType_Constraints.java">
+      <node id="7942748223948116428" at="19,53,20,52" concept="10" />
+      <node id="7942748223948116428" at="27,127,28,128" concept="5" />
+      <node id="7942748223948116428" at="28,128,29,0" concept="7" />
+      <node id="7942748223948116428" at="30,55,31,71" concept="2" />
+      <node id="7942748223948116428" at="32,9,33,0" concept="7" />
+      <node id="7942748223948116428" at="33,0,34,22" concept="6" />
+      <node id="7942748223948116740" at="38,128,39,16" concept="6" />
+      <node id="7942748223948116428" at="41,0,42,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="7942748223948116428" at="44,0,45,0" concept="8" trace="SelectRoomWithNoAgentsOfType$4v" />
+      <node id="7942748223948116428" at="19,0,22,0" concept="1" trace="SelectRoomWithNoAgentsOfType_Constraints#()V" />
+      <node id="7942748223948116428" at="29,0,32,9" concept="3" />
+      <node id="7942748223948116428" at="38,0,41,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="7942748223948116428" at="26,0,36,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="7942748223948116428" at="24,103,36,6" concept="6" />
+      <node id="7942748223948116428" at="23,0,38,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="7942748223948116428" at="19,53,20,52" />
+      <scope id="7942748223948116428" at="30,55,31,71" />
+      <scope id="7942748223948116706" at="38,128,39,16" />
+      <scope id="7942748223948116428" at="19,0,22,0" />
+      <scope id="7942748223948116428" at="38,0,41,0">
+        <var name="childConcept" id="7942748223948116428" />
+        <var name="link" id="7942748223948116428" />
+        <var name="node" id="7942748223948116428" />
+        <var name="parentNode" id="7942748223948116428" />
+      </scope>
+      <scope id="7942748223948116428" at="27,127,34,22">
+        <var name="result" id="7942748223948116428" />
+      </scope>
+      <scope id="7942748223948116428" at="26,0,36,0">
+        <var name="checkingNodeContext" id="7942748223948116428" />
+        <var name="context" id="7942748223948116428" />
+      </scope>
+      <scope id="7942748223948116428" at="24,103,36,6" />
+      <scope id="7942748223948116428" at="23,0,38,0" />
+      <unit id="7942748223948116428" at="43,0,46,0" name="AgentLanguage.constraints.SelectRoomWithNoAgentsOfType_Constraints$CONCEPTS" />
+      <unit id="7942748223948116428" at="25,15,36,5" name="AgentLanguage.constraints.SelectRoomWithNoAgentsOfType_Constraints$1" />
+      <unit id="7942748223948116428" at="18,0,47,0" name="AgentLanguage.constraints.SelectRoomWithNoAgentsOfType_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/7942748223966940068">
+    <file name="SelectClosestRoom_Constraints.java">
+      <node id="7942748223966940068" at="19,42,20,41" concept="10" />
+      <node id="7942748223966940068" at="27,127,28,128" concept="5" />
+      <node id="7942748223966940068" at="28,128,29,0" concept="7" />
+      <node id="7942748223966940068" at="30,55,31,71" concept="2" />
+      <node id="7942748223966940068" at="32,9,33,0" concept="7" />
+      <node id="7942748223966940068" at="33,0,34,22" concept="6" />
+      <node id="7942748223966940104" at="38,128,39,16" concept="6" />
+      <node id="7942748223966940068" at="41,0,42,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="7942748223966940068" at="44,0,45,0" concept="8" trace="SelectClosestRoom$MD" />
+      <node id="7942748223966940068" at="19,0,22,0" concept="1" trace="SelectClosestRoom_Constraints#()V" />
+      <node id="7942748223966940068" at="29,0,32,9" concept="3" />
+      <node id="7942748223966940068" at="38,0,41,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="7942748223966940068" at="26,0,36,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="7942748223966940068" at="24,103,36,6" concept="6" />
+      <node id="7942748223966940068" at="23,0,38,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="7942748223966940068" at="19,42,20,41" />
+      <scope id="7942748223966940068" at="30,55,31,71" />
+      <scope id="7942748223966940070" at="38,128,39,16" />
+      <scope id="7942748223966940068" at="19,0,22,0" />
+      <scope id="7942748223966940068" at="38,0,41,0">
+        <var name="childConcept" id="7942748223966940068" />
+        <var name="link" id="7942748223966940068" />
+        <var name="node" id="7942748223966940068" />
+        <var name="parentNode" id="7942748223966940068" />
+      </scope>
+      <scope id="7942748223966940068" at="27,127,34,22">
+        <var name="result" id="7942748223966940068" />
+      </scope>
+      <scope id="7942748223966940068" at="26,0,36,0">
+        <var name="checkingNodeContext" id="7942748223966940068" />
+        <var name="context" id="7942748223966940068" />
+      </scope>
+      <scope id="7942748223966940068" at="24,103,36,6" />
+      <scope id="7942748223966940068" at="23,0,38,0" />
+      <unit id="7942748223966940068" at="43,0,46,0" name="AgentLanguage.constraints.SelectClosestRoom_Constraints$CONCEPTS" />
+      <unit id="7942748223966940068" at="25,15,36,5" name="AgentLanguage.constraints.SelectClosestRoom_Constraints$1" />
+      <unit id="7942748223966940068" at="18,0,47,0" name="AgentLanguage.constraints.SelectClosestRoom_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/7942748223969203533">
+    <file name="SelectRoomByRelationshipToOccupier_Constraints.java">
+      <node id="7942748223969203533" at="19,59,20,58" concept="10" />
+      <node id="7942748223969203533" at="27,127,28,128" concept="5" />
+      <node id="7942748223969203533" at="28,128,29,0" concept="7" />
+      <node id="7942748223969203533" at="30,55,31,71" concept="2" />
+      <node id="7942748223969203533" at="32,9,33,0" concept="7" />
+      <node id="7942748223969203533" at="33,0,34,22" concept="6" />
+      <node id="7942748223969203785" at="38,128,39,16" concept="6" />
+      <node id="7942748223969203533" at="41,0,42,0" concept="8" trace="canBeChildBreakingPoint" />
+      <node id="7942748223969203533" at="44,0,45,0" concept="8" trace="SelectRoomByRelationshipToOccupier$o_" />
+      <node id="7942748223969203533" at="19,0,22,0" concept="1" trace="SelectRoomByRelationshipToOccupier_Constraints#()V" />
+      <node id="7942748223969203533" at="29,0,32,9" concept="3" />
+      <node id="7942748223969203533" at="38,0,41,0" concept="9" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="7942748223969203533" at="26,0,36,0" concept="4" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="7942748223969203533" at="24,103,36,6" concept="6" />
+      <node id="7942748223969203533" at="23,0,38,0" concept="4" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="7942748223969203533" at="19,59,20,58" />
+      <scope id="7942748223969203533" at="30,55,31,71" />
+      <scope id="7942748223969203535" at="38,128,39,16" />
+      <scope id="7942748223969203533" at="19,0,22,0" />
+      <scope id="7942748223969203533" at="38,0,41,0">
+        <var name="childConcept" id="7942748223969203533" />
+        <var name="link" id="7942748223969203533" />
+        <var name="node" id="7942748223969203533" />
+        <var name="parentNode" id="7942748223969203533" />
+      </scope>
+      <scope id="7942748223969203533" at="27,127,34,22">
+        <var name="result" id="7942748223969203533" />
+      </scope>
+      <scope id="7942748223969203533" at="26,0,36,0">
+        <var name="checkingNodeContext" id="7942748223969203533" />
+        <var name="context" id="7942748223969203533" />
+      </scope>
+      <scope id="7942748223969203533" at="24,103,36,6" />
+      <scope id="7942748223969203533" at="23,0,38,0" />
+      <unit id="7942748223969203533" at="43,0,46,0" name="AgentLanguage.constraints.SelectRoomByRelationshipToOccupier_Constraints$CONCEPTS" />
+      <unit id="7942748223969203533" at="25,15,36,5" name="AgentLanguage.constraints.SelectRoomByRelationshipToOccupier_Constraints$1" />
+      <unit id="7942748223969203533" at="18,0,47,0" name="AgentLanguage.constraints.SelectRoomByRelationshipToOccupier_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/8122408733952719508">
+    <file name="AggregateAttributeMonitor_Constraints.java">
+      <node id="8122408733952719508" at="10,50,11,49" concept="10" />
+      <node id="8122408733952719508" at="15,0,16,0" concept="8" trace="AggregateAttributeMonitor$nr" />
+      <node id="8122408733952719508" at="10,0,13,0" concept="1" trace="AggregateAttributeMonitor_Constraints#()V" />
+      <scope id="8122408733952719508" at="10,50,11,49" />
+      <scope id="8122408733952719508" at="10,0,13,0" />
+      <unit id="8122408733952719508" at="14,0,17,0" name="AgentLanguage.constraints.AggregateAttributeMonitor_Constraints$CONCEPTS" />
+      <unit id="8122408733952719508" at="9,0,18,0" name="AgentLanguage.constraints.AggregateAttributeMonitor_Constraints" />
     </file>
   </root>
   <root nodeRef="r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)/88285669853803192">

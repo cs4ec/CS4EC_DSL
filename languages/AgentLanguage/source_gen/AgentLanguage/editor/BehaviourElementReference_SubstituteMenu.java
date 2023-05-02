@@ -49,7 +49,7 @@ public class BehaviourElementReference_SubstituteMenu extends SubstituteMenuBase
   public class SMP_ReferenceScope_ox3yra_a extends ReferenceScopeSubstituteMenuPart {
 
     public SMP_ReferenceScope_ox3yra_a() {
-      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051 
+      // that cast is needed for prevent the users from https://youtrack.jetbrains.com/issue/MPS-29051
       super((SAbstractConcept) CONCEPTS.BehaviourElementReference$9L, LINKS.behaviourElement$jt2v);
     }
     @NotNull

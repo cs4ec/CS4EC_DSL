@@ -11,6 +11,7 @@
     <import index="c9jv" ref="44e82148-5a09-47bc-8eb0-6e257bdf20d7/java:com.google.gson.stream(gson/)" />
     <import index="wy2b" ref="44e82148-5a09-47bc-8eb0-6e257bdf20d7/java:com.google.gson(gson/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <import index="3z3g" ref="r:a5dee2a3-4fe9-4915-8278-24d412bcaf0e(BuiltEnvironment.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
   </imports>
   <registry>
@@ -152,7 +153,7 @@
       </concept>
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
-        <reference id="1171315804605" name="concept" index="2RRcyH" />
+        <child id="6750920497477046361" name="conceptArgument" index="3MHsoP" />
       </concept>
       <concept id="1171323947159" name="jetbrains.mps.lang.smodel.structure.Model_NodesOperation" flags="nn" index="2SmgA7">
         <child id="1758937410080001570" name="conceptArgument" index="1dBWTz" />
@@ -375,14 +376,14 @@
                   <node concept="3rvAFt" id="EFW1mYTIea" role="1tU5fm">
                     <node concept="17QB3L" id="EFW1mYTIkZ" role="3rvQeY" />
                     <node concept="3Tqbb2" id="EFW1mYTIrQ" role="3rvSg0">
-                      <ref role="ehGHo" to="3751:5QJON_AUfSp" resolve="RoomType" />
+                      <ref role="ehGHo" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
                     </node>
                   </node>
                   <node concept="2ShNRf" id="EFW1mYTIyL" role="33vP2m">
                     <node concept="3rGOSV" id="EFW1mYTIMz" role="2ShVmc">
                       <node concept="17QB3L" id="EFW1mYTIXs" role="3rHrn6" />
                       <node concept="3Tqbb2" id="EFW1mYTJ89" role="3rHtpV">
-                        <ref role="ehGHo" to="3751:5QJON_AUfSp" resolve="RoomType" />
+                        <ref role="ehGHo" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
                       </node>
                     </node>
                   </node>
@@ -401,7 +402,9 @@
                     <node concept="I4A8Y" id="EFW1mYTLV2" role="2OqNvi" />
                   </node>
                   <node concept="2RRcyG" id="EFW1mYTMhW" role="2OqNvi">
-                    <ref role="2RRcyH" to="3751:5QJON_AUfSp" resolve="RoomType" />
+                    <node concept="chp4Y" id="1fQ3pJcUc1U" role="3MHsoP">
+                      <ref role="cht4Q" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
+                    </node>
                   </node>
                 </node>
                 <node concept="3clFbS" id="EFW1mYTLoO" role="2LFqv$">
@@ -433,14 +436,14 @@
                   <node concept="3rvAFt" id="EFW1mYU3up" role="1tU5fm">
                     <node concept="10Oyi0" id="EFW1mYU3_V" role="3rvQeY" />
                     <node concept="3Tqbb2" id="EFW1mYU3DU" role="3rvSg0">
-                      <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                      <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                     </node>
                   </node>
                   <node concept="2ShNRf" id="EFW1mYU3N5" role="33vP2m">
                     <node concept="32Fmki" id="EFW1mYU435" role="2ShVmc">
                       <node concept="10Oyi0" id="EFW1mYU4eq" role="3rHrn6" />
                       <node concept="3Tqbb2" id="EFW1mYU4mf" role="3rHtpV">
-                        <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                        <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                       </node>
                     </node>
                   </node>
@@ -592,7 +595,7 @@
                     <node concept="3cpWsn" id="EFW1mYUFZv" role="3cpWs9">
                       <property role="TrG5h" value="room" />
                       <node concept="3Tqbb2" id="EFW1mYUFZq" role="1tU5fm">
-                        <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                        <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                       </node>
                       <node concept="2OqwBi" id="EFW1mYUK9H" role="33vP2m">
                         <node concept="2OqwBi" id="EFW1mYUHXW" role="2Oq$k0">
@@ -600,7 +603,7 @@
                             <ref role="3cqZAo" node="EFW1mYTo44" resolve="targetContainer" />
                           </node>
                           <node concept="3Tsc0h" id="EFW1mYUIhl" role="2OqNvi">
-                            <ref role="3TtcxE" to="3751:3KCb14J9923" resolve="rooms" />
+                            <ref role="3TtcxE" to="3z3g:3KCb14J9923" resolve="rooms" />
                           </node>
                         </node>
                         <node concept="1z4cxt" id="EFW1mYUN6u" role="2OqNvi">
@@ -616,7 +619,7 @@
                                       <ref role="3cqZAo" node="EFW1mYUN6y" resolve="it" />
                                     </node>
                                     <node concept="3TrcHB" id="EFW1mYUPPn" role="2OqNvi">
-                                      <ref role="3TsBF5" to="3751:EFW1mYUOC_" resolve="ID" />
+                                      <ref role="3TsBF5" to="3z3g:EFW1mYUOC_" resolve="ID" />
                                     </node>
                                   </node>
                                 </node>
@@ -644,7 +647,7 @@
                           <node concept="2ShNRf" id="EFW1mYUVKb" role="37vLTx">
                             <node concept="3zrR0B" id="EFW1mYUW24" role="2ShVmc">
                               <node concept="3Tqbb2" id="EFW1mYUW26" role="3zrR0E">
-                                <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                                <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                               </node>
                             </node>
                           </node>
@@ -660,7 +663,7 @@
                               <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                             </node>
                             <node concept="3TrcHB" id="EFW1mYUWsf" role="2OqNvi">
-                              <ref role="3TsBF5" to="3751:EFW1mYUOC_" resolve="ID" />
+                              <ref role="3TsBF5" to="3z3g:EFW1mYUOC_" resolve="ID" />
                             </node>
                           </node>
                           <node concept="37vLTw" id="EFW1mYUUgM" role="37vLTx">
@@ -723,7 +726,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="EFW1mYV1Bk" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:4_Lh49vi2LZ" resolve="x" />
+                          <ref role="3TsBF5" to="3z3g:4_Lh49vi2LZ" resolve="x" />
                         </node>
                       </node>
                       <node concept="1rXfSq" id="EFW1mYUW$_" role="37vLTx">
@@ -747,7 +750,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="EFW1mYV2bt" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:4_Lh49vi2M1" resolve="y" />
+                          <ref role="3TsBF5" to="3z3g:4_Lh49vi2M1" resolve="y" />
                         </node>
                       </node>
                       <node concept="1rXfSq" id="EFW1mYUW$G" role="37vLTx">
@@ -771,7 +774,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="EFW1mYV2qG" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:4_Lh49vvMP5" resolve="width" />
+                          <ref role="3TsBF5" to="3z3g:4_Lh49vvMP5" resolve="width" />
                         </node>
                       </node>
                       <node concept="1rXfSq" id="EFW1mYUW$N" role="37vLTx">
@@ -795,7 +798,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="EFW1mYV2Dr" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:4_Lh49vvMP9" resolve="height" />
+                          <ref role="3TsBF5" to="3z3g:4_Lh49vvMP9" resolve="height" />
                         </node>
                       </node>
                       <node concept="1rXfSq" id="EFW1mYUW$U" role="37vLTx">
@@ -819,7 +822,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="EFW1mYV2IU" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:7lVoe4ydlB2" resolve="desks" />
+                          <ref role="3TsBF5" to="3z3g:7lVoe4ydlB2" resolve="desks" />
                         </node>
                       </node>
                       <node concept="1rXfSq" id="EFW1mYUW_1" role="37vLTx">
@@ -843,7 +846,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="EFW1mYV2WD" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:7lVoe4ydlAT" resolve="seats" />
+                          <ref role="3TsBF5" to="3z3g:7lVoe4ydlAT" resolve="seats" />
                         </node>
                       </node>
                       <node concept="1rXfSq" id="EFW1mYUW_8" role="37vLTx">
@@ -867,7 +870,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="EFW1mYV31g" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:2blVuwVgjzN" resolve="beds" />
+                          <ref role="3TsBF5" to="3z3g:2blVuwVgjzN" resolve="beds" />
                         </node>
                       </node>
                       <node concept="1rXfSq" id="EFW1mYUW_f" role="37vLTx">
@@ -964,7 +967,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="EFW1mYVct_" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:6o2BuIx6R73" resolve="colour" />
+                          <ref role="3TsBF5" to="3z3g:6o2BuIx6R73" resolve="colour" />
                         </node>
                       </node>
                     </node>
@@ -993,7 +996,7 @@
                     <node concept="3cpWsn" id="EFW1mYVMO6" role="3cpWs9">
                       <property role="TrG5h" value="roomType" />
                       <node concept="3Tqbb2" id="EFW1mYVMO1" role="1tU5fm">
-                        <ref role="ehGHo" to="3751:5QJON_AUfSp" resolve="RoomType" />
+                        <ref role="ehGHo" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
                       </node>
                       <node concept="3EllGN" id="EFW1mYVOdq" role="33vP2m">
                         <node concept="37vLTw" id="EFW1mYVOih" role="3ElVtu">
@@ -1045,7 +1048,7 @@
                           <ref role="3cqZAo" node="EFW1mYUFZv" resolve="room" />
                         </node>
                         <node concept="3TrEf2" id="EFW1mYVTJw" role="2OqNvi">
-                          <ref role="3Tt5mk" to="3751:5QJON_AVrZ9" resolve="roomType" />
+                          <ref role="3Tt5mk" to="3z3g:5QJON_AVrZ9" resolve="roomType" />
                         </node>
                       </node>
                     </node>
@@ -1060,7 +1063,7 @@
                       <ref role="3cqZAo" node="EFW1mYTo44" resolve="targetContainer" />
                     </node>
                     <node concept="3Tsc0h" id="EFW1mYVgwp" role="2OqNvi">
-                      <ref role="3TtcxE" to="3751:3KCb14J9923" resolve="rooms" />
+                      <ref role="3TtcxE" to="3z3g:3KCb14J9923" resolve="rooms" />
                     </node>
                   </node>
                   <node concept="2Kehj3" id="EFW1mYVja_" role="2OqNvi" />
@@ -1073,7 +1076,7 @@
                       <ref role="3cqZAo" node="EFW1mYTo44" resolve="targetContainer" />
                     </node>
                     <node concept="3Tsc0h" id="EFW1mZ0YDp" role="2OqNvi">
-                      <ref role="3TtcxE" to="3751:3KCb14J9923" resolve="rooms" />
+                      <ref role="3TtcxE" to="3z3g:3KCb14J9923" resolve="rooms" />
                     </node>
                   </node>
                   <node concept="X8dFx" id="EFW1mZ14sb" role="2OqNvi">
@@ -1122,7 +1125,7 @@
         <node concept="37vLTG" id="EFW1mYTo44" role="3clF46">
           <property role="TrG5h" value="targetContainer" />
           <node concept="3Tqbb2" id="EFW1mYTo7$" role="1tU5fm">
-            <ref role="ehGHo" to="3751:3KCb14J9922" resolve="RoomDefinition" />
+            <ref role="ehGHo" to="3z3g:3KCb14J9922" resolve="Area" />
           </node>
         </node>
         <node concept="3uibUv" id="EFW1mYTshl" role="Sfmx6">
@@ -1244,14 +1247,14 @@
                 <node concept="3rvAFt" id="5Lup6bke$3_" role="1tU5fm">
                   <node concept="17QB3L" id="5Lup6bke$3A" role="3rvQeY" />
                   <node concept="3Tqbb2" id="5Lup6bke$3B" role="3rvSg0">
-                    <ref role="ehGHo" to="3751:5QJON_AUfSp" resolve="RoomType" />
+                    <ref role="ehGHo" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
                   </node>
                 </node>
                 <node concept="2ShNRf" id="5Lup6bke$3C" role="33vP2m">
                   <node concept="3rGOSV" id="5Lup6bke$3D" role="2ShVmc">
                     <node concept="17QB3L" id="5Lup6bke$3E" role="3rHrn6" />
                     <node concept="3Tqbb2" id="5Lup6bke$3F" role="3rHtpV">
-                      <ref role="ehGHo" to="3751:5QJON_AUfSp" resolve="RoomType" />
+                      <ref role="ehGHo" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
                     </node>
                   </node>
                 </node>
@@ -1270,7 +1273,9 @@
                   <node concept="I4A8Y" id="5Lup6bke$3M" role="2OqNvi" />
                 </node>
                 <node concept="2RRcyG" id="5Lup6bke$3N" role="2OqNvi">
-                  <ref role="2RRcyH" to="3751:5QJON_AUfSp" resolve="RoomType" />
+                  <node concept="chp4Y" id="1fQ3pJcUc1V" role="3MHsoP">
+                    <ref role="cht4Q" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
+                  </node>
                 </node>
               </node>
               <node concept="3clFbS" id="5Lup6bke$3O" role="2LFqv$">
@@ -1335,7 +1340,7 @@
                 </node>
                 <node concept="2SmgA7" id="5Lup6bkeZ03" role="2OqNvi">
                   <node concept="chp4Y" id="5Lup6bkeZ1_" role="1dBWTz">
-                    <ref role="cht4Q" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                    <ref role="cht4Q" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                   </node>
                 </node>
               </node>
@@ -1356,13 +1361,13 @@
                 <property role="TrG5h" value="importedRooms" />
                 <node concept="_YKpA" id="5Lup6bkeNbo" role="1tU5fm">
                   <node concept="3Tqbb2" id="5Lup6bkeOf4" role="_ZDj9">
-                    <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                    <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                   </node>
                 </node>
                 <node concept="2ShNRf" id="5Lup6bkeOtT" role="33vP2m">
                   <node concept="Tc6Ow" id="5Lup6bkeOtr" role="2ShVmc">
                     <node concept="3Tqbb2" id="5Lup6bkeOts" role="HW$YZ">
-                      <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                      <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                     </node>
                   </node>
                 </node>
@@ -1635,12 +1640,12 @@
                   <node concept="3cpWsn" id="5Lup6bke$53" role="3cpWs9">
                     <property role="TrG5h" value="room" />
                     <node concept="3Tqbb2" id="5Lup6bke$54" role="1tU5fm">
-                      <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                      <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                     </node>
                     <node concept="2ShNRf" id="5Lup6bkf57i" role="33vP2m">
                       <node concept="3zrR0B" id="5Lup6bkf56Q" role="2ShVmc">
                         <node concept="3Tqbb2" id="5Lup6bkf56R" role="3zrR0E">
-                          <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                          <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                         </node>
                       </node>
                     </node>
@@ -1676,7 +1681,7 @@
                     <property role="TrG5h" value="roomsWithDuplicateName" />
                     <node concept="A3Dl8" id="5Lup6bkfV7u" role="1tU5fm">
                       <node concept="3Tqbb2" id="5Lup6bkfV7w" role="A3Ik2">
-                        <ref role="ehGHo" to="3751:3KCb14J9915" resolve="RoomInstanceDefinition" />
+                        <ref role="ehGHo" to="3z3g:3KCb14J9915" resolve="RoomInstanceDefinition" />
                       </node>
                     </node>
                     <node concept="2OqwBi" id="5Lup6bkfSVd" role="33vP2m">
@@ -1780,7 +1785,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrcHB" id="5Lup6bke$5V" role="2OqNvi">
-                        <ref role="3TsBF5" to="3751:4_Lh49vi2LZ" resolve="x" />
+                        <ref role="3TsBF5" to="3z3g:4_Lh49vi2LZ" resolve="x" />
                       </node>
                     </node>
                     <node concept="1rXfSq" id="5Lup6bke$5W" role="37vLTx">
@@ -1821,7 +1826,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrcHB" id="5Lup6bkhkm$" role="2OqNvi">
-                        <ref role="3TsBF5" to="3751:4_Lh49vi2M1" resolve="y" />
+                        <ref role="3TsBF5" to="3z3g:4_Lh49vi2M1" resolve="y" />
                       </node>
                     </node>
                   </node>
@@ -1836,7 +1841,7 @@
                           <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                         </node>
                         <node concept="3TrcHB" id="5Lup6bke$64" role="2OqNvi">
-                          <ref role="3TsBF5" to="3751:4_Lh49vi2M1" resolve="y" />
+                          <ref role="3TsBF5" to="3z3g:4_Lh49vi2M1" resolve="y" />
                         </node>
                       </node>
                       <node concept="1rXfSq" id="5Lup6bke$65" role="37vLTx">
@@ -1861,7 +1866,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrcHB" id="5Lup6bke$6d" role="2OqNvi">
-                        <ref role="3TsBF5" to="3751:4_Lh49vvMP5" resolve="width" />
+                        <ref role="3TsBF5" to="3z3g:4_Lh49vvMP5" resolve="width" />
                       </node>
                     </node>
                     <node concept="1rXfSq" id="5Lup6bke$6e" role="37vLTx">
@@ -1885,7 +1890,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrcHB" id="5Lup6bke$6m" role="2OqNvi">
-                        <ref role="3TsBF5" to="3751:4_Lh49vvMP9" resolve="height" />
+                        <ref role="3TsBF5" to="3z3g:4_Lh49vvMP9" resolve="height" />
                       </node>
                     </node>
                     <node concept="1rXfSq" id="5Lup6bke$6n" role="37vLTx">
@@ -1909,7 +1914,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrcHB" id="5Lup6bke$6v" role="2OqNvi">
-                        <ref role="3TsBF5" to="3751:7lVoe4ydlB2" resolve="desks" />
+                        <ref role="3TsBF5" to="3z3g:7lVoe4ydlB2" resolve="desks" />
                       </node>
                     </node>
                     <node concept="1rXfSq" id="5Lup6bke$6w" role="37vLTx">
@@ -1933,7 +1938,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrcHB" id="5Lup6bke$6C" role="2OqNvi">
-                        <ref role="3TsBF5" to="3751:7lVoe4ydlAT" resolve="seats" />
+                        <ref role="3TsBF5" to="3z3g:7lVoe4ydlAT" resolve="seats" />
                       </node>
                     </node>
                     <node concept="1rXfSq" id="5Lup6bke$6D" role="37vLTx">
@@ -1957,7 +1962,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrcHB" id="5Lup6bke$6L" role="2OqNvi">
-                        <ref role="3TsBF5" to="3751:2blVuwVgjzN" resolve="beds" />
+                        <ref role="3TsBF5" to="3z3g:2blVuwVgjzN" resolve="beds" />
                       </node>
                     </node>
                     <node concept="1rXfSq" id="5Lup6bke$6M" role="37vLTx">
@@ -2049,7 +2054,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrcHB" id="5Lup6bke$7p" role="2OqNvi">
-                        <ref role="3TsBF5" to="3751:6o2BuIx6R73" resolve="colour" />
+                        <ref role="3TsBF5" to="3z3g:6o2BuIx6R73" resolve="colour" />
                       </node>
                     </node>
                   </node>
@@ -2078,7 +2083,7 @@
                   <node concept="3cpWsn" id="5Lup6bke$7$" role="3cpWs9">
                     <property role="TrG5h" value="roomType" />
                     <node concept="3Tqbb2" id="5Lup6bke$7_" role="1tU5fm">
-                      <ref role="ehGHo" to="3751:5QJON_AUfSp" resolve="RoomType" />
+                      <ref role="ehGHo" to="3z3g:5QJON_AUfSp" resolve="RoomType" />
                     </node>
                     <node concept="3EllGN" id="5Lup6bke$7A" role="33vP2m">
                       <node concept="37vLTw" id="5Lup6bke$7B" role="3ElVtu">
@@ -2130,7 +2135,7 @@
                         <ref role="3cqZAo" node="5Lup6bke$53" resolve="room" />
                       </node>
                       <node concept="3TrEf2" id="5Lup6bke$7V" role="2OqNvi">
-                        <ref role="3Tt5mk" to="3751:5QJON_AVrZ9" resolve="roomType" />
+                        <ref role="3Tt5mk" to="3z3g:5QJON_AVrZ9" resolve="roomType" />
                       </node>
                     </node>
                   </node>
@@ -2158,7 +2163,7 @@
                     <ref role="3cqZAo" node="5Lup6bke$8o" resolve="targetContainer" />
                   </node>
                   <node concept="3Tsc0h" id="5Lup6bke$81" role="2OqNvi">
-                    <ref role="3TtcxE" to="3751:3KCb14J9923" resolve="rooms" />
+                    <ref role="3TtcxE" to="3z3g:3KCb14J9923" resolve="rooms" />
                   </node>
                 </node>
                 <node concept="2Kehj3" id="5Lup6bke$82" role="2OqNvi" />
@@ -2171,7 +2176,7 @@
                     <ref role="3cqZAo" node="5Lup6bke$8o" resolve="targetContainer" />
                   </node>
                   <node concept="3Tsc0h" id="5Lup6bke$87" role="2OqNvi">
-                    <ref role="3TtcxE" to="3751:3KCb14J9923" resolve="rooms" />
+                    <ref role="3TtcxE" to="3z3g:3KCb14J9923" resolve="rooms" />
                   </node>
                 </node>
                 <node concept="X8dFx" id="5Lup6bke$88" role="2OqNvi">
@@ -2217,7 +2222,7 @@
       <node concept="37vLTG" id="5Lup6bke$8o" role="3clF46">
         <property role="TrG5h" value="targetContainer" />
         <node concept="3Tqbb2" id="5Lup6bke$8p" role="1tU5fm">
-          <ref role="ehGHo" to="3751:3KCb14J9922" resolve="RoomDefinition" />
+          <ref role="ehGHo" to="3z3g:3KCb14J9922" resolve="Area" />
         </node>
       </node>
       <node concept="3uibUv" id="5Lup6bke$8q" role="Sfmx6">

@@ -53,12 +53,12 @@ public class ImporterLogic {
 
       Map<String, SNode> roomTypesByName = MapSequence.fromMap(new HashMap<String, SNode>());
 
-      for (SNode roomType : ListSequence.fromList(SModelOperations.roots(SNodeOperations.getModel(targetContainer), CONCEPTS.RoomType$1b))) {
+      for (SNode roomType : ListSequence.fromList(SModelOperations.roots(SNodeOperations.getModel(targetContainer), CONCEPTS.RoomType$Kn))) {
         MapSequence.fromMap(roomTypesByName).put(SPropertyOperations.getString(roomType, PROPS.name$MnvL), roomType);
       }
 
-      // Remove all existing rooms from the model 
-      for (SNode room : ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(targetContainer), CONCEPTS.RoomInstanceDefinition$Jk))) {
+      // Remove all existing rooms from the model
+      for (SNode room : ListSequence.fromList(SModelOperations.nodes(SNodeOperations.getModel(targetContainer), CONCEPTS.RoomInstanceDefinition$uw))) {
         SNodeOperations.deleteNode(room);
       }
 
@@ -90,8 +90,8 @@ public class ImporterLogic {
         }
         JsonObject object = item.getAsJsonObject();
 
-        SNode room = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, "AgentLanguage.structure.RoomInstanceDefinition"));
-        // ReadsimplepropertiesdirectlyfromJSON 
+        SNode room = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, "BuiltEnvironment.structure.RoomInstanceDefinition"));
+        // ReadsimplepropertiesdirectlyfromJSON
         final Wrappers._T<String> newRoomName = new Wrappers._T<String>(getString(object, "name of the room", prefixForErrors));
         Iterable<SNode> roomsWithDuplicateName = ListSequence.fromList(importedRooms).where(new IWhereFilter<SNode>() {
           public boolean accept(SNode it) {
@@ -104,20 +104,20 @@ public class ImporterLogic {
         }
 
         SPropertyOperations.assign(room, PROPS.name$MnvL, getString(object, "name of the room", prefixForErrors));
-        SPropertyOperations.assign(room, PROPS.x$8h86, getInt(object, "x coordinate", prefixForErrors));
-        SPropertyOperations.assign(room, PROPS.y$8hA8, maxY - getInt(object, "y coordinate", prefixForErrors));
-        SPropertyOperations.assign(room, PROPS.width$g4wh, getInt(object, "width", prefixForErrors));
-        SPropertyOperations.assign(room, PROPS.height$g5sl, getInt(object, "height", prefixForErrors));
-        SPropertyOperations.assign(room, PROPS.desks$VmIX, getInt(object, "desks", prefixForErrors));
-        SPropertyOperations.assign(room, PROPS.seats$VfGv, getInt(object, "seats", prefixForErrors));
-        SPropertyOperations.assign(room, PROPS.beds$zE0I, getInt(object, "beds", prefixForErrors));
+        SPropertyOperations.assign(room, PROPS.x$6tRi, getInt(object, "x coordinate", prefixForErrors));
+        SPropertyOperations.assign(room, PROPS.y$6ulk, maxY - getInt(object, "y coordinate", prefixForErrors));
+        SPropertyOperations.assign(room, PROPS.width$ehft, getInt(object, "width", prefixForErrors));
+        SPropertyOperations.assign(room, PROPS.height$eibx, getInt(object, "height", prefixForErrors));
+        SPropertyOperations.assign(room, PROPS.desks$Tzu9, getInt(object, "desks", prefixForErrors));
+        SPropertyOperations.assign(room, PROPS.seats$TsrF, getInt(object, "seats", prefixForErrors));
+        SPropertyOperations.assign(room, PROPS.beds$xQJU, getInt(object, "beds", prefixForErrors));
 
         String colourName = getString(object, "color", prefixForErrors);
         SEnumerationLiteral colour = SEnumOperations.getMemberForPresentation(MetaAdapterFactory.getEnumeration(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L, "AgentLanguage.structure.Colour"), colourName);
         if (colour == null) {
           colour = SEnumOperations.getMember(MetaAdapterFactory.getEnumeration(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L, "AgentLanguage.structure.Colour"), 0x66029deba11b715eL, "GRAY");
         }
-        SPropertyOperations.assignEnum(room, PROPS.colour$7icN, (SEnumerationLiteral) colour);
+        SPropertyOperations.assignEnum(room, PROPS.colour$5uVZ, (SEnumerationLiteral) colour);
 
 
         String roomTypeName = getString(object, "type of the room", prefixForErrors);
@@ -125,13 +125,13 @@ public class ImporterLogic {
         if (roomType == null) {
           throw new JsonFormatException(prefixForErrors + "unknown room type" + roomType);
         }
-        SLinkOperations.setTarget(room, LINKS.roomType$2uZL, roomType);
+        SLinkOperations.setTarget(room, LINKS.roomType$FIX, roomType);
 
         ListSequence.fromList(importedRooms).addElement(room);
       }
 
-      ListSequence.fromList(SLinkOperations.getChildren(targetContainer, LINKS.rooms$Qimv)).clear();
-      ListSequence.fromList(SLinkOperations.getChildren(targetContainer, LINKS.rooms$Qimv)).addSequence(ListSequence.fromList(importedRooms));
+      ListSequence.fromList(SLinkOperations.getChildren(targetContainer, LINKS.rooms$Ov5F)).clear();
+      ListSequence.fromList(SLinkOperations.getChildren(targetContainer, LINKS.rooms$Ov5F)).addSequence(ListSequence.fromList(importedRooms));
 
     }
   }
@@ -172,23 +172,23 @@ public class ImporterLogic {
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty x$8h86 = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x497144425f482c7fL, "x");
-    /*package*/ static final SProperty y$8hA8 = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x497144425f482c81L, "y");
-    /*package*/ static final SProperty width$g4wh = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x497144425f7f2d45L, "width");
-    /*package*/ static final SProperty height$g5sl = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x497144425f7f2d49L, "height");
-    /*package*/ static final SProperty desks$VmIX = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x757b60e1223559c2L, "desks");
-    /*package*/ static final SProperty seats$VfGv = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x757b60e1223559b9L, "seats");
-    /*package*/ static final SProperty beds$zE0I = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x22d5ede83b4138f3L, "beds");
-    /*package*/ static final SProperty colour$7icN = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x66029deba11b71c3L, "colour");
+    /*package*/ static final SProperty x$6tRi = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x497144425f482c7fL, "x");
+    /*package*/ static final SProperty y$6ulk = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x497144425f482c81L, "y");
+    /*package*/ static final SProperty width$ehft = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x497144425f7f2d45L, "width");
+    /*package*/ static final SProperty height$eibx = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x497144425f7f2d49L, "height");
+    /*package*/ static final SProperty desks$Tzu9 = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x757b60e1223559c2L, "desks");
+    /*package*/ static final SProperty seats$TsrF = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x757b60e1223559b9L, "seats");
+    /*package*/ static final SProperty beds$xQJU = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x22d5ede83b4138f3L, "beds");
+    /*package*/ static final SProperty colour$5uVZ = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x66029deba11b71c3L, "colour");
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept RoomType$1b = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33966e8fe19L, "AgentLanguage.structure.RoomType");
-    /*package*/ static final SConcept RoomInstanceDefinition$Jk = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, "AgentLanguage.structure.RoomInstanceDefinition");
+    /*package*/ static final SConcept RoomType$Kn = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x5dafd33966e8fe19L, "BuiltEnvironment.structure.RoomType");
+    /*package*/ static final SConcept RoomInstanceDefinition$uw = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, "BuiltEnvironment.structure.RoomInstanceDefinition");
   }
 
   private static final class LINKS {
-    /*package*/ static final SReferenceLink roomType$2uZL = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249045L, 0x5dafd33966edbfc9L, "roomType");
-    /*package*/ static final SContainmentLink rooms$Qimv = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x3c282c112f249082L, 0x3c282c112f249083L, "rooms");
+    /*package*/ static final SReferenceLink roomType$FIX = MetaAdapterFactory.getReferenceLink(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x5dafd33966edbfc9L, "roomType");
+    /*package*/ static final SContainmentLink rooms$Ov5F = MetaAdapterFactory.getContainmentLink(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249082L, 0x3c282c112f249083L, "rooms");
   }
 }

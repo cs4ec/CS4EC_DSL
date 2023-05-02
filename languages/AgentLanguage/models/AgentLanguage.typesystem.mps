@@ -158,5 +158,202 @@
       <ref role="1YaFvo" to="3751:3KCb14J4_kl" resolve="AttributeCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="3d01stCgWKs">
+    <property role="TrG5h" value="typeof_RoomTypeCondition" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <node concept="3clFbS" id="3d01stCgWKt" role="18ibNy">
+      <node concept="1Z5TYs" id="3d01stCgWV5" role="3cqZAp">
+        <node concept="mw_s8" id="3d01stCgWV6" role="1ZfhKB">
+          <node concept="2pJPEk" id="3d01stCgWV7" role="mwGJk">
+            <node concept="2pJPED" id="3d01stCgWV8" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3d01stCgWV9" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3d01stCgWVa" role="mwGJk">
+            <node concept="1YBJjd" id="3d01stCgWVB" role="1Z2MuG">
+              <ref role="1YBMHb" node="3d01stCgWKv" resolve="roomTypeCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3d01stCgWKv" role="1YuTPh">
+      <property role="TrG5h" value="roomTypeCondition" />
+      <ref role="1YaFvo" to="3751:3d01stAf2m5" resolve="RoomTypeCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="351ASBN67Gi">
+    <property role="TrG5h" value="typeof_AgentAttributeReference" />
+    <property role="3GE5qa" value="actors.attribute" />
+    <node concept="3clFbS" id="351ASBN67Gj" role="18ibNy">
+      <node concept="1Z5TYs" id="351ASBN67O4" role="3cqZAp">
+        <node concept="mw_s8" id="351ASBN67O5" role="1ZfhKB">
+          <node concept="1Z2H0r" id="351ASBN67O6" role="mwGJk">
+            <node concept="2OqwBi" id="351ASBN68Kl" role="1Z2MuG">
+              <node concept="2OqwBi" id="351ASBN67O7" role="2Oq$k0">
+                <node concept="2OqwBi" id="351ASBN67O8" role="2Oq$k0">
+                  <node concept="1YBJjd" id="351ASBN67Rt" role="2Oq$k0">
+                    <ref role="1YBMHb" node="351ASBN67Gl" resolve="agentAttributeReference" />
+                  </node>
+                  <node concept="3TrEf2" id="351ASBN68au" role="2OqNvi">
+                    <ref role="3Tt5mk" to="3751:351ASBN64bt" resolve="attributeReference" />
+                  </node>
+                </node>
+                <node concept="3TrEf2" id="351ASBN68uH" role="2OqNvi">
+                  <ref role="3Tt5mk" to="3751:3KCb14J4_kq" resolve="attribute" />
+                </node>
+              </node>
+              <node concept="3TrEf2" id="351ASBN69a8" role="2OqNvi">
+                <ref role="3Tt5mk" to="hm2y:69zaTr1EKHX" resolve="type" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="351ASBN67Oc" role="1ZfhK$">
+          <node concept="1Z2H0r" id="351ASBN67Od" role="mwGJk">
+            <node concept="1YBJjd" id="351ASBN67Qt" role="1Z2MuG">
+              <ref role="1YBMHb" node="351ASBN67Gl" resolve="agentAttributeReference" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="351ASBN67Gl" role="1YuTPh">
+      <property role="TrG5h" value="agentAttributeReference" />
+      <ref role="1YaFvo" to="3751:351ASBN64bs" resolve="AgentAttributeReference" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1MmdcH8WXsw">
+    <property role="TrG5h" value="typeof_IterableAttributeCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="1MmdcH8WXsx" role="18ibNy">
+      <node concept="1Z5TYs" id="1MmdcH8WXCh" role="3cqZAp">
+        <node concept="mw_s8" id="1MmdcH8WXCi" role="1ZfhKB">
+          <node concept="2pJPEk" id="1MmdcH8WXCj" role="mwGJk">
+            <node concept="2pJPED" id="1MmdcH8WXCk" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1MmdcH8WXCl" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1MmdcH8WXCm" role="mwGJk">
+            <node concept="1YBJjd" id="1MmdcH8WXCN" role="1Z2MuG">
+              <ref role="1YBMHb" node="1MmdcH8WXsz" resolve="iterableAttributeCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1MmdcH8WXsz" role="1YuTPh">
+      <property role="TrG5h" value="iterableAttributeCondition" />
+      <ref role="1YaFvo" to="3751:1MmdcH8OnFq" resolve="IterableAttributeCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1MmdcH921pF">
+    <property role="TrG5h" value="typeof_MyAttributeCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="1MmdcH921pG" role="18ibNy">
+      <node concept="1Z5TYs" id="1MmdcH921pM" role="3cqZAp">
+        <node concept="mw_s8" id="1MmdcH921pN" role="1ZfhKB">
+          <node concept="2pJPEk" id="1MmdcH921pO" role="mwGJk">
+            <node concept="2pJPED" id="1MmdcH921pP" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1MmdcH921pQ" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1MmdcH921pR" role="mwGJk">
+            <node concept="1YBJjd" id="1MmdcH921qk" role="1Z2MuG">
+              <ref role="1YBMHb" node="1MmdcH921pI" resolve="myAttributeCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1MmdcH921pI" role="1YuTPh">
+      <property role="TrG5h" value="myAttributeCondition" />
+      <ref role="1YaFvo" to="3751:1MmdcH921mh" resolve="MyAttributeCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="1MmdcH9MsvH">
+    <property role="TrG5h" value="typeof_DistanceCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="1MmdcH9MsvI" role="18ibNy">
+      <node concept="1Z5TYs" id="1MmdcH9MsFv" role="3cqZAp">
+        <node concept="mw_s8" id="1MmdcH9MsFw" role="1ZfhKB">
+          <node concept="2pJPEk" id="1MmdcH9MsFx" role="mwGJk">
+            <node concept="2pJPED" id="1MmdcH9MsFy" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="1MmdcH9MsFz" role="1ZfhK$">
+          <node concept="1Z2H0r" id="1MmdcH9MsF$" role="mwGJk">
+            <node concept="1YBJjd" id="1MmdcH9MsG1" role="1Z2MuG">
+              <ref role="1YBMHb" node="1MmdcH9MsvK" resolve="distanceCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="1MmdcH9MsvK" role="1YuTPh">
+      <property role="TrG5h" value="distanceCondition" />
+      <ref role="1YaFvo" to="3751:1MmdcH9tbrk" resolve="DistanceCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="3hAz$Jp5uXB">
+    <property role="TrG5h" value="typeof_InSameRoomCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="3hAz$Jp5uXC" role="18ibNy">
+      <node concept="1Z5TYs" id="3hAz$Jp5uXF" role="3cqZAp">
+        <node concept="mw_s8" id="3hAz$Jp5uXG" role="1ZfhKB">
+          <node concept="2pJPEk" id="3hAz$Jp5uXH" role="mwGJk">
+            <node concept="2pJPED" id="3hAz$Jp5uXI" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="3hAz$Jp5uXJ" role="1ZfhK$">
+          <node concept="1Z2H0r" id="3hAz$Jp5uXK" role="mwGJk">
+            <node concept="1YBJjd" id="3hAz$Jp5uXV" role="1Z2MuG">
+              <ref role="1YBMHb" node="3hAz$Jp5uXE" resolve="inSameRoomCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="3hAz$Jp5uXE" role="1YuTPh">
+      <property role="TrG5h" value="inSameRoomCondition" />
+      <ref role="1YaFvo" to="3751:4Skof6wwmET" resolve="InSameRoomCondition" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="pxbXbtDjNd">
+    <property role="TrG5h" value="typeof_IsPathObstructedCondition" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <node concept="3clFbS" id="pxbXbtDjNe" role="18ibNy">
+      <node concept="1Z5TYs" id="pxbXbtDjNk" role="3cqZAp">
+        <node concept="mw_s8" id="pxbXbtDjNl" role="1ZfhKB">
+          <node concept="2pJPEk" id="pxbXbtDjNm" role="mwGJk">
+            <node concept="2pJPED" id="pxbXbtDjNn" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="pxbXbtDjNo" role="1ZfhK$">
+          <node concept="1Z2H0r" id="pxbXbtDjNp" role="mwGJk">
+            <node concept="1YBJjd" id="pxbXbtDjNq" role="1Z2MuG">
+              <ref role="1YBMHb" node="pxbXbtDjNg" resolve="isPathObstructedCondition" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="pxbXbtDjNg" role="1YuTPh">
+      <property role="TrG5h" value="isPathObstructedCondition" />
+      <ref role="1YaFvo" to="3751:pxbXbtDjCy" resolve="IsPathObstructedCondition" />
+    </node>
+  </node>
 </model>
 

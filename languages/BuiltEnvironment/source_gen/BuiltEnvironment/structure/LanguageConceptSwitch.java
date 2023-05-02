@@ -9,11 +9,55 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 
 public final class LanguageConceptSwitch {
   private final LanguageConceptIndex myIndex;
-  public static final int MapImporter = 0;
+  public static final int ActorInstantiation = 0;
+  public static final int AdmissionBay = 1;
+  public static final int AdmissionBayList = 2;
+  public static final int Area = 3;
+  public static final int BlueprintMap = 4;
+  public static final int DateTimeNowVariable = 5;
+  public static final int MapImporter = 6;
+  public static final int OccupiableAllocation = 7;
+  public static final int OccupiableDefinition = 8;
+  public static final int OccupiablesList = 9;
+  public static final int Resource = 10;
+  public static final int ResourceAllocation = 11;
+  public static final int ResourceAvailabilityVariable = 12;
+  public static final int Room = 13;
+  public static final int RoomInstanceDefinition = 14;
+  public static final int RoomType = 15;
+  public static final int ScenarioBuilder = 16;
+  public static final int StaffRoomAllocationLine = 17;
+  public static final int StaffRoomAllocationTable = 18;
+  public static final int TimeOfDayVariable = 19;
+  public static final int TimeOfDayWrapper = 20;
+  public static final int WallDefinition = 21;
+  public static final int WallInstanceDefinition = 22;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x1a0150acdda54129L, 0x824e01dce96fdea4L);
+    builder.put(0x35463334ce2f7b02L, ActorInstantiation);
+    builder.put(0xc489c6b16b4a524L, AdmissionBay);
+    builder.put(0xc489c6b16b4a529L, AdmissionBayList);
+    builder.put(0x3c282c112f249082L, Area);
+    builder.put(0x348ff1b011c19a5fL, BlueprintMap);
+    builder.put(0x3bf86d07f43264edL, DateTimeNowVariable);
     builder.put(0xaabf015bed74217L, MapImporter);
+    builder.put(0x3111466f2002ad53L, OccupiableAllocation);
+    builder.put(0x3111466f1f9fe043L, OccupiableDefinition);
+    builder.put(0x3111466f1fc8162aL, OccupiablesList);
+    builder.put(0x3bf86d07f032c8d7L, Resource);
+    builder.put(0x3bf86d07ef54c6b7L, ResourceAllocation);
+    builder.put(0x3bf86d07f2b57f6bL, ResourceAvailabilityVariable);
+    builder.put(0x3c282c112f249042L, Room);
+    builder.put(0x3c282c112f249045L, RoomInstanceDefinition);
+    builder.put(0x5dafd33966e8fe19L, RoomType);
+    builder.put(0x35463334ce2f7b00L, ScenarioBuilder);
+    builder.put(0x578a9c1038db406L, StaffRoomAllocationLine);
+    builder.put(0x578a9c1038db3f3L, StaffRoomAllocationTable);
+    builder.put(0x3bf86d07f429da00L, TimeOfDayVariable);
+    builder.put(0x3bf86d07f4a23f47L, TimeOfDayWrapper);
+    builder.put(0x109830a68a82ca51L, WallDefinition);
+    builder.put(0x109830a68a78a1e8L, WallInstanceDefinition);
     myIndex = builder.seal();
   }
 

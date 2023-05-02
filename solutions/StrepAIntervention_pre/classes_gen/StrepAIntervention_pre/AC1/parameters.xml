@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+	<parameter name="SecondsPerTick"
+		displayName="Seconds Per Tick" type="int" defaultValue="60"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="randomSeed"
+		displayName="Default Random Seed" type="int" defaultValue="__NULL__"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="UsePathFinding"
+		displayName="Use path finding" type="boolean" defaultValue="false"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
+  	<parameter name="Severitysevere"
+  		displayName="Severitysevere" type="double" defaultValue="15"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="Severitymoderate"
+  		displayName="Severitymoderate" type="double" defaultValue="85"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="Severitylow"
+  		displayName="Severitylow" type="double" defaultValue="0"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="ImmunocompromisedYes"
+  		displayName="ImmunocompromisedYes" type="double" defaultValue="20"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="ImmunocompromisedNo"
+  		displayName="ImmunocompromisedNo" type="double" defaultValue="80"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="RecentCovidContactYes"
+  		displayName="RecentCovidContactYes" type="double" defaultValue="50"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="RecentCovidContactNo"
+  		displayName="RecentCovidContactNo" type="double" defaultValue="50"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="admissionRouteEmergencyAttendance"
+  		displayName="admissionRouteEmergencyAttendance" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="StrepAInfectionStatusSusceptible"
+  		displayName="StrepAInfectionStatusSusceptible" type="double" defaultValue="60"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="StrepAInfectionStatusAsymptomatic"
+  		displayName="StrepAInfectionStatusAsymptomatic" type="double" defaultValue="30"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="StrepAInfectionStatusSymptomatic"
+  		displayName="StrepAInfectionStatusSymptomatic" type="double" defaultValue="10"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="admissionRouteElectiveattendance"
+  		displayName="admissionRouteElectiveattendance" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+</parameters>

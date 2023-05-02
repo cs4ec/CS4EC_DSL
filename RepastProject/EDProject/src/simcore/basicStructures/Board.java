@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import repast.simphony.engine.schedule.ScheduleParameters;
+import repast.simphony.engine.schedule.ScheduledMethod;
 import simcore.Signals.ActorTypeSignal;
 import simcore.Signals.DirectSignal;
 import simcore.Signals.Signal;
@@ -13,32 +15,24 @@ import simcore.agents.Actor;
 
 public class Board {
 	
+	public ArrayList<Signal> signalQueue;
 	public ArrayList<Signal> board;
 	
 	public Board() {
 		board = new ArrayList<Signal>();
+		signalQueue = new ArrayList<Signal>();
 	}
 	
 	public void PushMission(Signal s) {
-		board.add(s);
+		signalQueue.add(s);
 	}
 	
-//	// randomly take a mission and remove it from board
-//	public Signal PullMission(Class c) {
-//		Signal ans = null;
-//		while(c != Actor.class){
-//			for(Signal signal : board){
-//				if(signal.CanBeActorOf(c)) {
-//					ans = signal;
-//					board.remove(signal);
-//					return ans;
-//				}
-//			}
-//			c = c.getSuperclass();
-//		}
-//		
-//		return ans;
-//	}
+	@ScheduledMethod(start = 1, interval = 1, priority = ScheduleParameters.LAST_PRIORITY)
+	public void PostSignalsToBoard() {
+		board.addAll(signalQueue);
+		signalQueue = new ArrayList<Signal>();
+	}
+	
 	
 	public List<Signal> GetSignalListBySubject(Class c) {
 		List<Signal> list = new ArrayList<Signal>();

@@ -10,15 +10,15 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1081236700938:jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" />
   <root>
     <file name="TypesystemDescriptor.java">
-      <unit at="8,0,48,0" name="ActionCards.typesystem.TypesystemDescriptor" />
+      <unit at="8,0,80,0" name="ActionCards.typesystem.TypesystemDescriptor" />
     </file>
   </root>
   <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/1758249876458090153">
     <file name="TypesystemDescriptor.java">
-      <node id="1758249876458090153" at="38,5,39,89" concept="4" />
-      <node id="1758249876458090153" at="39,89,40,47" concept="2" />
-      <node id="1758249876458090153" at="37,5,41,5" concept="0" />
-      <scope id="1758249876458090153" at="38,5,40,47">
+      <node id="1758249876458090153" at="70,5,71,89" concept="4" />
+      <node id="1758249876458090153" at="71,89,72,47" concept="2" />
+      <node id="1758249876458090153" at="69,5,73,5" concept="0" />
+      <scope id="1758249876458090153" at="70,5,72,47">
         <var name="inferenceRule" id="1758249876458090153" />
       </scope>
     </file>
@@ -70,10 +70,10 @@
   </root>
   <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/1758249876458498455">
     <file name="TypesystemDescriptor.java">
-      <node id="1758249876458498455" at="42,5,43,94" concept="4" />
-      <node id="1758249876458498455" at="43,94,44,47" concept="2" />
-      <node id="1758249876458498455" at="41,5,45,5" concept="0" />
-      <scope id="1758249876458498455" at="42,5,44,47">
+      <node id="1758249876458498455" at="74,5,75,94" concept="4" />
+      <node id="1758249876458498455" at="75,94,76,47" concept="2" />
+      <node id="1758249876458498455" at="73,5,77,5" concept="0" />
+      <scope id="1758249876458498455" at="74,5,76,47">
         <var name="inferenceRule" id="1758249876458498455" />
       </scope>
     </file>
@@ -125,10 +125,10 @@
   </root>
   <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/1758249876462570045">
     <file name="TypesystemDescriptor.java">
-      <node id="1758249876462570045" at="26,5,27,98" concept="4" />
-      <node id="1758249876462570045" at="27,98,28,47" concept="2" />
-      <node id="1758249876462570045" at="25,5,29,5" concept="0" />
-      <scope id="1758249876462570045" at="26,5,28,47">
+      <node id="1758249876462570045" at="38,5,39,98" concept="4" />
+      <node id="1758249876462570045" at="39,98,40,47" concept="2" />
+      <node id="1758249876462570045" at="37,5,41,5" concept="0" />
+      <scope id="1758249876462570045" at="38,5,40,47">
         <var name="inferenceRule" id="1758249876462570045" />
       </scope>
     </file>
@@ -180,10 +180,10 @@
   </root>
   <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/1758249876480119821">
     <file name="TypesystemDescriptor.java">
-      <node id="1758249876480119821" at="34,5,35,84" concept="4" />
-      <node id="1758249876480119821" at="35,84,36,47" concept="2" />
-      <node id="1758249876480119821" at="33,5,37,5" concept="0" />
-      <scope id="1758249876480119821" at="34,5,36,47">
+      <node id="1758249876480119821" at="66,5,67,84" concept="4" />
+      <node id="1758249876480119821" at="67,84,68,47" concept="2" />
+      <node id="1758249876480119821" at="65,5,69,5" concept="0" />
+      <scope id="1758249876480119821" at="66,5,68,47">
         <var name="inferenceRule" id="1758249876480119821" />
       </scope>
     </file>
@@ -235,10 +235,10 @@
   </root>
   <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/1758249876500242903">
     <file name="TypesystemDescriptor.java">
-      <node id="1758249876500242903" at="30,5,31,99" concept="4" />
-      <node id="1758249876500242903" at="31,99,32,47" concept="2" />
-      <node id="1758249876500242903" at="29,5,33,5" concept="0" />
-      <scope id="1758249876500242903" at="30,5,32,47">
+      <node id="1758249876500242903" at="50,5,51,99" concept="4" />
+      <node id="1758249876500242903" at="51,99,52,47" concept="2" />
+      <node id="1758249876500242903" at="49,5,53,5" concept="0" />
+      <scope id="1758249876500242903" at="50,5,52,47">
         <var name="inferenceRule" id="1758249876500242903" />
       </scope>
     </file>
@@ -288,67 +288,12 @@
       <unit id="1758249876500242903" at="16,0,45,0" name="ActionCards.typesystem.typeof_RecentCOVIDContactCondition_InferenceRule" />
     </file>
   </root>
-  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/1758249876510072947">
-    <file name="TypesystemDescriptor.java">
-      <node id="1758249876510072947" at="10,5,11,96" concept="4" />
-      <node id="1758249876510072947" at="11,96,12,47" concept="2" />
-      <node id="1758249876510072947" at="9,33,13,5" concept="0" />
-      <scope id="1758249876510072947" at="10,5,12,47">
-        <var name="inferenceRule" id="1758249876510072947" />
-      </scope>
-    </file>
-    <file name="typeof_AttendanceRouteCondition_InferenceRule.java">
-      <node id="1758249876510072954" at="20,5,21,66" concept="4" />
-      <node id="1758249876510072954" at="21,66,22,188" concept="4" />
-      <node id="1758249876510072954" at="22,188,23,265" concept="2" />
-      <node id="1758249876510072947" at="26,50,27,48" concept="5" />
-      <node id="1758249876510072947" at="29,68,30,102" concept="5" />
-      <node id="1758249876510072947" at="32,30,33,17" concept="5" />
-      <node id="1758249876510072959" at="35,61,36,71" concept="4" />
-      <node id="1758249876510072959" at="36,71,37,26" concept="5" />
-      <node id="1758249876510072947" at="41,0,42,0" concept="6" trace="AttendanceRouteCondition$qI" />
-      <node id="1758249876510072947" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
-      <node id="1758249876510072947" at="17,0,19,0" concept="1" trace="typeof_AttendanceRouteCondition_InferenceRule#()V" />
-      <node id="1758249876510072947" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
-      <node id="1758249876510072947" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-      <node id="1758249876510072947" at="32,0,35,0" concept="3" trace="overrides#()Z" />
-      <node id="1758249876510072959" at="35,0,39,0" concept="7" trace="createBooleanType_3ys9z3_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
-      <node id="1758249876510072954" at="19,137,24,5" concept="0" />
-      <node id="1758249876510072947" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-      <scope id="1758249876510072947" at="17,58,17,58" />
-      <scope id="1758249876510072947" at="26,50,27,48" />
-      <scope id="1758249876510072947" at="29,68,30,102" />
-      <scope id="1758249876510072947" at="32,30,33,17" />
-      <scope id="1758249876510072947" at="17,0,19,0" />
-      <scope id="1758249876510072959" at="35,61,37,26">
-        <var name="n0" id="1758249876510072959" />
-      </scope>
-      <scope id="1758249876510072954" at="20,5,23,265">
-        <var name="_info_12389875345" id="1758249876510072954" />
-        <var name="_nodeToCheck_1029348928467" id="1758249876510072954" />
-      </scope>
-      <scope id="1758249876510072947" at="26,0,29,0" />
-      <scope id="1758249876510072947" at="29,0,32,0">
-        <var name="argument" id="1758249876510072947" />
-      </scope>
-      <scope id="1758249876510072947" at="32,0,35,0" />
-      <scope id="1758249876510072959" at="35,0,39,0" />
-      <scope id="1758249876510072948" at="19,137,24,5" />
-      <scope id="1758249876510072947" at="19,0,26,0">
-        <var name="attendanceRouteCondition" id="1758249876510072947" />
-        <var name="status" id="1758249876510072947" />
-        <var name="typeCheckingContext" id="1758249876510072947" />
-      </scope>
-      <unit id="1758249876510072947" at="40,0,44,0" name="ActionCards.typesystem.typeof_AttendanceRouteCondition_InferenceRule$CONCEPTS" />
-      <unit id="1758249876510072947" at="16,0,45,0" name="ActionCards.typesystem.typeof_AttendanceRouteCondition_InferenceRule" />
-    </file>
-  </root>
   <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/1758249876537128774">
     <file name="TypesystemDescriptor.java">
-      <node id="1758249876537128774" at="18,5,19,98" concept="4" />
-      <node id="1758249876537128774" at="19,98,20,47" concept="2" />
-      <node id="1758249876537128774" at="17,5,21,5" concept="0" />
-      <scope id="1758249876537128774" at="18,5,20,47">
+      <node id="1758249876537128774" at="26,5,27,98" concept="4" />
+      <node id="1758249876537128774" at="27,98,28,47" concept="2" />
+      <node id="1758249876537128774" at="25,5,29,5" concept="0" />
+      <scope id="1758249876537128774" at="26,5,28,47">
         <var name="inferenceRule" id="1758249876537128774" />
       </scope>
     </file>
@@ -398,12 +343,507 @@
       <unit id="1758249876537128774" at="16,0,45,0" name="ActionCards.typesystem.typeof_ImmunocompromisedCondition_InferenceRule" />
     </file>
   </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/1862364223830906104">
+    <file name="TypesystemDescriptor.java">
+      <node id="1862364223830906104" at="14,5,15,100" concept="4" />
+      <node id="1862364223830906104" at="15,100,16,47" concept="2" />
+      <node id="1862364223830906104" at="13,5,17,5" concept="0" />
+      <scope id="1862364223830906104" at="14,5,16,47">
+        <var name="inferenceRule" id="1862364223830906104" />
+      </scope>
+    </file>
+    <file name="typeof_CompositeDiagnosticCondition_InferenceRule.java">
+      <node id="1862364223830906111" at="20,5,21,70" concept="4" />
+      <node id="1862364223830906111" at="21,70,22,188" concept="4" />
+      <node id="1862364223830906111" at="22,188,23,265" concept="2" />
+      <node id="1862364223830906104" at="26,50,27,52" concept="5" />
+      <node id="1862364223830906104" at="29,68,30,102" concept="5" />
+      <node id="1862364223830906104" at="32,30,33,17" concept="5" />
+      <node id="1862364223830906116" at="35,61,36,71" concept="4" />
+      <node id="1862364223830906116" at="36,71,37,26" concept="5" />
+      <node id="1862364223830906104" at="41,0,42,0" concept="6" trace="CompositeDiagnosticCondition$tb" />
+      <node id="1862364223830906104" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
+      <node id="1862364223830906104" at="17,0,19,0" concept="1" trace="typeof_CompositeDiagnosticCondition_InferenceRule#()V" />
+      <node id="1862364223830906104" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="1862364223830906104" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="1862364223830906104" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="1862364223830906116" at="35,0,39,0" concept="7" trace="createBooleanType_jzb8p4_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1862364223830906111" at="19,141,24,5" concept="0" />
+      <node id="1862364223830906104" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="1862364223830906104" at="17,62,17,62" />
+      <scope id="1862364223830906104" at="26,50,27,52" />
+      <scope id="1862364223830906104" at="29,68,30,102" />
+      <scope id="1862364223830906104" at="32,30,33,17" />
+      <scope id="1862364223830906104" at="17,0,19,0" />
+      <scope id="1862364223830906116" at="35,61,37,26">
+        <var name="n0" id="1862364223830906116" />
+      </scope>
+      <scope id="1862364223830906111" at="20,5,23,265">
+        <var name="_info_12389875345" id="1862364223830906111" />
+        <var name="_nodeToCheck_1029348928467" id="1862364223830906111" />
+      </scope>
+      <scope id="1862364223830906104" at="26,0,29,0" />
+      <scope id="1862364223830906104" at="29,0,32,0">
+        <var name="argument" id="1862364223830906104" />
+      </scope>
+      <scope id="1862364223830906104" at="32,0,35,0" />
+      <scope id="1862364223830906116" at="35,0,39,0" />
+      <scope id="1862364223830906105" at="19,141,24,5" />
+      <scope id="1862364223830906104" at="19,0,26,0">
+        <var name="compositeDiagnosticCondition" id="1862364223830906104" />
+        <var name="status" id="1862364223830906104" />
+        <var name="typeCheckingContext" id="1862364223830906104" />
+      </scope>
+      <unit id="1862364223830906104" at="40,0,44,0" name="ActionCards.typesystem.typeof_CompositeDiagnosticCondition_InferenceRule$CONCEPTS" />
+      <unit id="1862364223830906104" at="16,0,45,0" name="ActionCards.typesystem.typeof_CompositeDiagnosticCondition_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/2059891927326069881">
+    <file name="TypesystemDescriptor.java">
+      <node id="2059891927326069881" at="10,5,11,89" concept="4" />
+      <node id="2059891927326069881" at="11,89,12,47" concept="2" />
+      <node id="2059891927326069881" at="9,33,13,5" concept="0" />
+      <scope id="2059891927326069881" at="10,5,12,47">
+        <var name="inferenceRule" id="2059891927326069881" />
+      </scope>
+    </file>
+    <file name="typeof_BranchConditional_InferenceRule.java">
+      <node id="2059891927326070029" at="20,5,21,59" concept="4" />
+      <node id="2059891927326070029" at="21,59,22,188" concept="4" />
+      <node id="2059891927326070029" at="22,188,23,265" concept="2" />
+      <node id="2059891927326069881" at="26,50,27,41" concept="5" />
+      <node id="2059891927326069881" at="29,68,30,102" concept="5" />
+      <node id="2059891927326069881" at="32,30,33,17" concept="5" />
+      <node id="2059891927326070034" at="35,61,36,71" concept="4" />
+      <node id="2059891927326070034" at="36,71,37,26" concept="5" />
+      <node id="2059891927326069881" at="41,0,42,0" concept="6" trace="BranchConditional$k$" />
+      <node id="2059891927326069881" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
+      <node id="2059891927326069881" at="17,0,19,0" concept="1" trace="typeof_BranchConditional_InferenceRule#()V" />
+      <node id="2059891927326069881" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="2059891927326069881" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="2059891927326069881" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="2059891927326070034" at="35,0,39,0" concept="7" trace="createBooleanType_1ocjhi_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="2059891927326070029" at="19,130,24,5" concept="0" />
+      <node id="2059891927326069881" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="2059891927326069881" at="17,51,17,51" />
+      <scope id="2059891927326069881" at="26,50,27,41" />
+      <scope id="2059891927326069881" at="29,68,30,102" />
+      <scope id="2059891927326069881" at="32,30,33,17" />
+      <scope id="2059891927326069881" at="17,0,19,0" />
+      <scope id="2059891927326070034" at="35,61,37,26">
+        <var name="n0" id="2059891927326070034" />
+      </scope>
+      <scope id="2059891927326070029" at="20,5,23,265">
+        <var name="_info_12389875345" id="2059891927326070029" />
+        <var name="_nodeToCheck_1029348928467" id="2059891927326070029" />
+      </scope>
+      <scope id="2059891927326069881" at="26,0,29,0" />
+      <scope id="2059891927326069881" at="29,0,32,0">
+        <var name="argument" id="2059891927326069881" />
+      </scope>
+      <scope id="2059891927326069881" at="32,0,35,0" />
+      <scope id="2059891927326070034" at="35,0,39,0" />
+      <scope id="2059891927326069882" at="19,130,24,5" />
+      <scope id="2059891927326069881" at="19,0,26,0">
+        <var name="branchConditional" id="2059891927326069881" />
+        <var name="status" id="2059891927326069881" />
+        <var name="typeCheckingContext" id="2059891927326069881" />
+      </scope>
+      <unit id="2059891927326069881" at="40,0,44,0" name="ActionCards.typesystem.typeof_BranchConditional_InferenceRule$CONCEPTS" />
+      <unit id="2059891927326069881" at="16,0,45,0" name="ActionCards.typesystem.typeof_BranchConditional_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/3170643229265450569">
+    <file name="TypesystemDescriptor.java">
+      <node id="3170643229265450569" at="18,5,19,100" concept="4" />
+      <node id="3170643229265450569" at="19,100,20,47" concept="2" />
+      <node id="3170643229265450569" at="17,5,21,5" concept="0" />
+      <scope id="3170643229265450569" at="18,5,20,47">
+        <var name="inferenceRule" id="3170643229265450569" />
+      </scope>
+    </file>
+    <file name="typeof_CompositeTestResultCondition_InferenceRule.java">
+      <node id="3170643229265450576" at="20,5,21,70" concept="4" />
+      <node id="3170643229265450576" at="21,70,22,188" concept="4" />
+      <node id="3170643229265450576" at="22,188,23,265" concept="2" />
+      <node id="3170643229265450569" at="26,50,27,52" concept="5" />
+      <node id="3170643229265450569" at="29,68,30,102" concept="5" />
+      <node id="3170643229265450569" at="32,30,33,17" concept="5" />
+      <node id="3170643229265450581" at="35,61,36,71" concept="4" />
+      <node id="3170643229265450581" at="36,71,37,26" concept="5" />
+      <node id="3170643229265450569" at="41,0,42,0" concept="6" trace="CompositeTestResultCondition$rV" />
+      <node id="3170643229265450569" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
+      <node id="3170643229265450569" at="17,0,19,0" concept="1" trace="typeof_CompositeTestResultCondition_InferenceRule#()V" />
+      <node id="3170643229265450569" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="3170643229265450569" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="3170643229265450569" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="3170643229265450581" at="35,0,39,0" concept="7" trace="createBooleanType_61a4c4_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3170643229265450576" at="19,141,24,5" concept="0" />
+      <node id="3170643229265450569" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="3170643229265450569" at="17,62,17,62" />
+      <scope id="3170643229265450569" at="26,50,27,52" />
+      <scope id="3170643229265450569" at="29,68,30,102" />
+      <scope id="3170643229265450569" at="32,30,33,17" />
+      <scope id="3170643229265450569" at="17,0,19,0" />
+      <scope id="3170643229265450581" at="35,61,37,26">
+        <var name="n0" id="3170643229265450581" />
+      </scope>
+      <scope id="3170643229265450576" at="20,5,23,265">
+        <var name="_info_12389875345" id="3170643229265450576" />
+        <var name="_nodeToCheck_1029348928467" id="3170643229265450576" />
+      </scope>
+      <scope id="3170643229265450569" at="26,0,29,0" />
+      <scope id="3170643229265450569" at="29,0,32,0">
+        <var name="argument" id="3170643229265450569" />
+      </scope>
+      <scope id="3170643229265450569" at="32,0,35,0" />
+      <scope id="3170643229265450581" at="35,0,39,0" />
+      <scope id="3170643229265450570" at="19,141,24,5" />
+      <scope id="3170643229265450569" at="19,0,26,0">
+        <var name="compositeTestResultCondition" id="3170643229265450569" />
+        <var name="status" id="3170643229265450569" />
+        <var name="typeCheckingContext" id="3170643229265450569" />
+      </scope>
+      <unit id="3170643229265450569" at="40,0,44,0" name="ActionCards.typesystem.typeof_CompositeTestResultCondition_InferenceRule$CONCEPTS" />
+      <unit id="3170643229265450569" at="16,0,45,0" name="ActionCards.typesystem.typeof_CompositeTestResultCondition_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/324605317409457836">
+    <file name="TypesystemDescriptor.java">
+      <node id="324605317409457836" at="46,5,47,92" concept="4" />
+      <node id="324605317409457836" at="47,92,48,47" concept="2" />
+      <node id="324605317409457836" at="45,5,49,5" concept="0" />
+      <scope id="324605317409457836" at="46,5,48,47">
+        <var name="inferenceRule" id="324605317409457836" />
+      </scope>
+    </file>
+    <file name="typeof_ProbabilityCondition_InferenceRule.java">
+      <node id="324605317409457852" at="20,5,21,62" concept="4" />
+      <node id="324605317409457852" at="21,62,22,187" concept="4" />
+      <node id="324605317409457852" at="22,187,23,264" concept="2" />
+      <node id="324605317409457836" at="26,50,27,44" concept="5" />
+      <node id="324605317409457836" at="29,68,30,102" concept="5" />
+      <node id="324605317409457836" at="32,30,33,17" concept="5" />
+      <node id="324605317409457857" at="35,61,36,71" concept="4" />
+      <node id="324605317409457857" at="36,71,37,26" concept="5" />
+      <node id="324605317409457836" at="41,0,42,0" concept="6" trace="ProbabilityCondition$dt" />
+      <node id="324605317409457836" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
+      <node id="324605317409457836" at="17,0,19,0" concept="1" trace="typeof_ProbabilityCondition_InferenceRule#()V" />
+      <node id="324605317409457836" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="324605317409457836" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="324605317409457836" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="324605317409457857" at="35,0,39,0" concept="7" trace="createBooleanType_1xndz9_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="324605317409457852" at="19,133,24,5" concept="0" />
+      <node id="324605317409457836" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="324605317409457836" at="17,54,17,54" />
+      <scope id="324605317409457836" at="26,50,27,44" />
+      <scope id="324605317409457836" at="29,68,30,102" />
+      <scope id="324605317409457836" at="32,30,33,17" />
+      <scope id="324605317409457836" at="17,0,19,0" />
+      <scope id="324605317409457857" at="35,61,37,26">
+        <var name="n0" id="324605317409457857" />
+      </scope>
+      <scope id="324605317409457852" at="20,5,23,264">
+        <var name="_info_12389875345" id="324605317409457852" />
+        <var name="_nodeToCheck_1029348928467" id="324605317409457852" />
+      </scope>
+      <scope id="324605317409457836" at="26,0,29,0" />
+      <scope id="324605317409457836" at="29,0,32,0">
+        <var name="argument" id="324605317409457836" />
+      </scope>
+      <scope id="324605317409457836" at="32,0,35,0" />
+      <scope id="324605317409457857" at="35,0,39,0" />
+      <scope id="324605317409457837" at="19,133,24,5" />
+      <scope id="324605317409457836" at="19,0,26,0">
+        <var name="probabilityCondition" id="324605317409457836" />
+        <var name="status" id="324605317409457836" />
+        <var name="typeCheckingContext" id="324605317409457836" />
+      </scope>
+      <unit id="324605317409457836" at="40,0,44,0" name="ActionCards.typesystem.typeof_ProbabilityCondition_InferenceRule$CONCEPTS" />
+      <unit id="324605317409457836" at="16,0,45,0" name="ActionCards.typesystem.typeof_ProbabilityCondition_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/4321323723358271532">
+    <file name="TypesystemDescriptor.java">
+      <node id="4321323723358271532" at="54,5,55,98" concept="4" />
+      <node id="4321323723358271532" at="55,98,56,47" concept="2" />
+      <node id="4321323723358271532" at="53,5,57,5" concept="0" />
+      <scope id="4321323723358271532" at="54,5,56,47">
+        <var name="inferenceRule" id="4321323723358271532" />
+      </scope>
+    </file>
+    <file name="typeof_ResourceAvailableCondition_InferenceRule.java">
+      <node id="4321323723358271539" at="20,5,21,68" concept="4" />
+      <node id="4321323723358271539" at="21,68,22,188" concept="4" />
+      <node id="4321323723358271539" at="22,188,23,265" concept="2" />
+      <node id="4321323723358271532" at="26,50,27,50" concept="5" />
+      <node id="4321323723358271532" at="29,68,30,102" concept="5" />
+      <node id="4321323723358271532" at="32,30,33,17" concept="5" />
+      <node id="4321323723358271544" at="35,61,36,71" concept="4" />
+      <node id="4321323723358271544" at="36,71,37,26" concept="5" />
+      <node id="4321323723358271532" at="41,0,42,0" concept="6" trace="ResourceAvailableCondition$ew" />
+      <node id="4321323723358271532" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
+      <node id="4321323723358271532" at="17,0,19,0" concept="1" trace="typeof_ResourceAvailableCondition_InferenceRule#()V" />
+      <node id="4321323723358271532" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="4321323723358271532" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="4321323723358271532" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="4321323723358271544" at="35,0,39,0" concept="7" trace="createBooleanType_3moij6_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="4321323723358271539" at="19,139,24,5" concept="0" />
+      <node id="4321323723358271532" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="4321323723358271532" at="17,60,17,60" />
+      <scope id="4321323723358271532" at="26,50,27,50" />
+      <scope id="4321323723358271532" at="29,68,30,102" />
+      <scope id="4321323723358271532" at="32,30,33,17" />
+      <scope id="4321323723358271532" at="17,0,19,0" />
+      <scope id="4321323723358271544" at="35,61,37,26">
+        <var name="n0" id="4321323723358271544" />
+      </scope>
+      <scope id="4321323723358271539" at="20,5,23,265">
+        <var name="_info_12389875345" id="4321323723358271539" />
+        <var name="_nodeToCheck_1029348928467" id="4321323723358271539" />
+      </scope>
+      <scope id="4321323723358271532" at="26,0,29,0" />
+      <scope id="4321323723358271532" at="29,0,32,0">
+        <var name="argument" id="4321323723358271532" />
+      </scope>
+      <scope id="4321323723358271532" at="32,0,35,0" />
+      <scope id="4321323723358271544" at="35,0,39,0" />
+      <scope id="4321323723358271533" at="19,139,24,5" />
+      <scope id="4321323723358271532" at="19,0,26,0">
+        <var name="resourceAvailableCondition" id="4321323723358271532" />
+        <var name="status" id="4321323723358271532" />
+        <var name="typeCheckingContext" id="4321323723358271532" />
+      </scope>
+      <unit id="4321323723358271532" at="40,0,44,0" name="ActionCards.typesystem.typeof_ResourceAvailableCondition_InferenceRule$CONCEPTS" />
+      <unit id="4321323723358271532" at="16,0,45,0" name="ActionCards.typesystem.typeof_ResourceAvailableCondition_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/4321323723389466780">
+    <file name="TypesystemDescriptor.java">
+      <node id="4321323723389466780" at="62,5,63,90" concept="4" />
+      <node id="4321323723389466780" at="63,90,64,47" concept="2" />
+      <node id="4321323723389466780" at="61,5,65,5" concept="0" />
+      <scope id="4321323723389466780" at="62,5,64,47">
+        <var name="inferenceRule" id="4321323723389466780" />
+      </scope>
+    </file>
+    <file name="typeof_TimeOfDayCondition_InferenceRule.java">
+      <node id="4321323723389466787" at="20,5,21,60" concept="4" />
+      <node id="4321323723389466787" at="21,60,22,188" concept="4" />
+      <node id="4321323723389466787" at="22,188,23,265" concept="2" />
+      <node id="4321323723389466780" at="26,50,27,42" concept="5" />
+      <node id="4321323723389466780" at="29,68,30,102" concept="5" />
+      <node id="4321323723389466780" at="32,30,33,17" concept="5" />
+      <node id="4321323723389466792" at="35,61,36,71" concept="4" />
+      <node id="4321323723389466792" at="36,71,37,26" concept="5" />
+      <node id="4321323723389466780" at="41,0,42,0" concept="6" trace="TimeOfDayCondition$dV" />
+      <node id="4321323723389466780" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
+      <node id="4321323723389466780" at="17,0,19,0" concept="1" trace="typeof_TimeOfDayCondition_InferenceRule#()V" />
+      <node id="4321323723389466780" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="4321323723389466780" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="4321323723389466780" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="4321323723389466792" at="35,0,39,0" concept="7" trace="createBooleanType_p6ou0j_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="4321323723389466787" at="19,131,24,5" concept="0" />
+      <node id="4321323723389466780" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="4321323723389466780" at="17,52,17,52" />
+      <scope id="4321323723389466780" at="26,50,27,42" />
+      <scope id="4321323723389466780" at="29,68,30,102" />
+      <scope id="4321323723389466780" at="32,30,33,17" />
+      <scope id="4321323723389466780" at="17,0,19,0" />
+      <scope id="4321323723389466792" at="35,61,37,26">
+        <var name="n0" id="4321323723389466792" />
+      </scope>
+      <scope id="4321323723389466787" at="20,5,23,265">
+        <var name="_info_12389875345" id="4321323723389466787" />
+        <var name="_nodeToCheck_1029348928467" id="4321323723389466787" />
+      </scope>
+      <scope id="4321323723389466780" at="26,0,29,0" />
+      <scope id="4321323723389466780" at="29,0,32,0">
+        <var name="argument" id="4321323723389466780" />
+      </scope>
+      <scope id="4321323723389466780" at="32,0,35,0" />
+      <scope id="4321323723389466792" at="35,0,39,0" />
+      <scope id="4321323723389466781" at="19,131,24,5" />
+      <scope id="4321323723389466780" at="19,0,26,0">
+        <var name="status" id="4321323723389466780" />
+        <var name="timeOfDayCondition" id="4321323723389466780" />
+        <var name="typeCheckingContext" id="4321323723389466780" />
+      </scope>
+      <unit id="4321323723389466780" at="40,0,44,0" name="ActionCards.typesystem.typeof_TimeOfDayCondition_InferenceRule$CONCEPTS" />
+      <unit id="4321323723389466780" at="16,0,45,0" name="ActionCards.typesystem.typeof_TimeOfDayCondition_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/4878912887035354506">
+    <file name="TypesystemDescriptor.java">
+      <node id="4878912887035354506" at="58,5,59,89" concept="4" />
+      <node id="4878912887035354506" at="59,89,60,47" concept="2" />
+      <node id="4878912887035354506" at="57,5,61,5" concept="0" />
+      <scope id="4878912887035354506" at="58,5,60,47">
+        <var name="inferenceRule" id="4878912887035354506" />
+      </scope>
+    </file>
+    <file name="typeof_RoomTypeCondition_InferenceRule.java">
+      <node id="3692958048449711813" at="20,5,21,59" concept="4" />
+      <node id="3692958048449711813" at="21,59,22,188" concept="4" />
+      <node id="3692958048449711813" at="22,188,23,265" concept="2" />
+      <node id="4878912887035354506" at="26,50,27,41" concept="5" />
+      <node id="4878912887035354506" at="29,68,30,102" concept="5" />
+      <node id="4878912887035354506" at="32,30,33,17" concept="5" />
+      <node id="3692958048449711815" at="35,61,36,71" concept="4" />
+      <node id="3692958048449711815" at="36,71,37,26" concept="5" />
+      <node id="4878912887035354506" at="41,0,42,0" concept="6" trace="RoomTypeCondition$6P" />
+      <node id="4878912887035354506" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
+      <node id="4878912887035354506" at="17,0,19,0" concept="1" trace="typeof_RoomTypeCondition_InferenceRule#()V" />
+      <node id="4878912887035354506" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="4878912887035354506" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="4878912887035354506" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="3692958048449711815" at="35,0,39,0" concept="7" trace="createBooleanType_7gm2af_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="3692958048449711813" at="19,130,24,5" concept="0" />
+      <node id="4878912887035354506" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="4878912887035354506" at="17,51,17,51" />
+      <scope id="4878912887035354506" at="26,50,27,41" />
+      <scope id="4878912887035354506" at="29,68,30,102" />
+      <scope id="4878912887035354506" at="32,30,33,17" />
+      <scope id="4878912887035354506" at="17,0,19,0" />
+      <scope id="3692958048449711815" at="35,61,37,26">
+        <var name="n0" id="3692958048449711815" />
+      </scope>
+      <scope id="3692958048449711813" at="20,5,23,265">
+        <var name="_info_12389875345" id="3692958048449711813" />
+        <var name="_nodeToCheck_1029348928467" id="3692958048449711813" />
+      </scope>
+      <scope id="4878912887035354506" at="26,0,29,0" />
+      <scope id="4878912887035354506" at="29,0,32,0">
+        <var name="argument" id="4878912887035354506" />
+      </scope>
+      <scope id="4878912887035354506" at="32,0,35,0" />
+      <scope id="3692958048449711815" at="35,0,39,0" />
+      <scope id="4878912887035354507" at="19,130,24,5" />
+      <scope id="4878912887035354506" at="19,0,26,0">
+        <var name="roomTypeCondition" id="4878912887035354506" />
+        <var name="status" id="4878912887035354506" />
+        <var name="typeCheckingContext" id="4878912887035354506" />
+      </scope>
+      <unit id="4878912887035354506" at="40,0,44,0" name="ActionCards.typesystem.typeof_RoomTypeCondition_InferenceRule$CONCEPTS" />
+      <unit id="4878912887035354506" at="16,0,45,0" name="ActionCards.typesystem.typeof_RoomTypeCondition_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/512008214798471348">
+    <file name="TypesystemDescriptor.java">
+      <node id="512008214798471348" at="42,5,43,87" concept="4" />
+      <node id="512008214798471348" at="43,87,44,47" concept="2" />
+      <node id="512008214798471348" at="41,5,45,5" concept="0" />
+      <scope id="512008214798471348" at="42,5,44,47">
+        <var name="inferenceRule" id="512008214798471348" />
+      </scope>
+    </file>
+    <file name="typeof_PatientSeverity_InferenceRule.java">
+      <node id="1589537774397033404" at="20,5,21,57" concept="4" />
+      <node id="1589537774397033404" at="21,57,22,188" concept="4" />
+      <node id="1589537774397033404" at="22,188,23,267" concept="2" />
+      <node id="512008214798471348" at="26,50,27,39" concept="5" />
+      <node id="512008214798471348" at="29,68,30,102" concept="5" />
+      <node id="512008214798471348" at="32,30,33,17" concept="5" />
+      <node id="1589537774397033420" at="35,63,36,73" concept="4" />
+      <node id="1589537774397033420" at="36,73,37,26" concept="5" />
+      <node id="512008214798471348" at="41,0,42,0" concept="6" trace="PatientSeverity$7A" />
+      <node id="512008214798471348" at="42,0,43,0" concept="6" trace="StringLiteral$By" />
+      <node id="512008214798471348" at="17,0,19,0" concept="1" trace="typeof_PatientSeverity_InferenceRule#()V" />
+      <node id="512008214798471348" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="512008214798471348" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="512008214798471348" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="1589537774397033420" at="35,0,39,0" concept="7" trace="createStringLiteral_ayqxyt_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="1589537774397033404" at="19,128,24,5" concept="0" />
+      <node id="512008214798471348" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="512008214798471348" at="17,49,17,49" />
+      <scope id="512008214798471348" at="26,50,27,39" />
+      <scope id="512008214798471348" at="29,68,30,102" />
+      <scope id="512008214798471348" at="32,30,33,17" />
+      <scope id="512008214798471348" at="17,0,19,0" />
+      <scope id="1589537774397033420" at="35,63,37,26">
+        <var name="n0" id="1589537774397033420" />
+      </scope>
+      <scope id="1589537774397033404" at="20,5,23,267">
+        <var name="_info_12389875345" id="1589537774397033404" />
+        <var name="_nodeToCheck_1029348928467" id="1589537774397033404" />
+      </scope>
+      <scope id="512008214798471348" at="26,0,29,0" />
+      <scope id="512008214798471348" at="29,0,32,0">
+        <var name="argument" id="512008214798471348" />
+      </scope>
+      <scope id="512008214798471348" at="32,0,35,0" />
+      <scope id="1589537774397033420" at="35,0,39,0" />
+      <scope id="512008214798471349" at="19,128,24,5" />
+      <scope id="512008214798471348" at="19,0,26,0">
+        <var name="patientSeverity" id="512008214798471348" />
+        <var name="status" id="512008214798471348" />
+        <var name="typeCheckingContext" id="512008214798471348" />
+      </scope>
+      <unit id="512008214798471348" at="40,0,44,0" name="ActionCards.typesystem.typeof_PatientSeverity_InferenceRule$CONCEPTS" />
+      <unit id="512008214798471348" at="16,0,45,0" name="ActionCards.typesystem.typeof_PatientSeverity_InferenceRule" />
+    </file>
+  </root>
+  <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/5381978332891556446">
+    <file name="TypesystemDescriptor.java">
+      <node id="5381978332891556446" at="30,5,31,97" concept="4" />
+      <node id="5381978332891556446" at="31,97,32,47" concept="2" />
+      <node id="5381978332891556446" at="29,5,33,5" concept="0" />
+      <scope id="5381978332891556446" at="30,5,32,47">
+        <var name="inferenceRule" id="5381978332891556446" />
+      </scope>
+    </file>
+    <file name="typeof_LocationCapacityCondition_InferenceRule.java">
+      <node id="5381978332891556471" at="20,5,21,67" concept="4" />
+      <node id="5381978332891556471" at="21,67,22,188" concept="4" />
+      <node id="5381978332891556471" at="22,188,23,265" concept="2" />
+      <node id="5381978332891556446" at="26,50,27,49" concept="5" />
+      <node id="5381978332891556446" at="29,68,30,102" concept="5" />
+      <node id="5381978332891556446" at="32,30,33,17" concept="5" />
+      <node id="5381978332891556476" at="35,61,36,71" concept="4" />
+      <node id="5381978332891556476" at="36,71,37,26" concept="5" />
+      <node id="5381978332891556446" at="41,0,42,0" concept="6" trace="LocationCapacityCondition$c9" />
+      <node id="5381978332891556446" at="42,0,43,0" concept="6" trace="BooleanType$eL" />
+      <node id="5381978332891556446" at="17,0,19,0" concept="1" trace="typeof_LocationCapacityCondition_InferenceRule#()V" />
+      <node id="5381978332891556446" at="26,0,29,0" concept="3" trace="getApplicableConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="5381978332891556446" at="29,0,32,0" concept="3" trace="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+      <node id="5381978332891556446" at="32,0,35,0" concept="3" trace="overrides#()Z" />
+      <node id="5381978332891556476" at="35,0,39,0" concept="7" trace="createBooleanType_hy6x3e_a1a0c0a0b#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+      <node id="5381978332891556471" at="19,138,24,5" concept="0" />
+      <node id="5381978332891556446" at="19,0,26,0" concept="3" trace="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+      <scope id="5381978332891556446" at="17,59,17,59" />
+      <scope id="5381978332891556446" at="26,50,27,49" />
+      <scope id="5381978332891556446" at="29,68,30,102" />
+      <scope id="5381978332891556446" at="32,30,33,17" />
+      <scope id="5381978332891556446" at="17,0,19,0" />
+      <scope id="5381978332891556476" at="35,61,37,26">
+        <var name="n0" id="5381978332891556476" />
+      </scope>
+      <scope id="5381978332891556471" at="20,5,23,265">
+        <var name="_info_12389875345" id="5381978332891556471" />
+        <var name="_nodeToCheck_1029348928467" id="5381978332891556471" />
+      </scope>
+      <scope id="5381978332891556446" at="26,0,29,0" />
+      <scope id="5381978332891556446" at="29,0,32,0">
+        <var name="argument" id="5381978332891556446" />
+      </scope>
+      <scope id="5381978332891556446" at="32,0,35,0" />
+      <scope id="5381978332891556476" at="35,0,39,0" />
+      <scope id="5381978332891556447" at="19,138,24,5" />
+      <scope id="5381978332891556446" at="19,0,26,0">
+        <var name="locationCapacityCondition" id="5381978332891556446" />
+        <var name="status" id="5381978332891556446" />
+        <var name="typeCheckingContext" id="5381978332891556446" />
+      </scope>
+      <unit id="5381978332891556446" at="40,0,44,0" name="ActionCards.typesystem.typeof_LocationCapacityCondition_InferenceRule$CONCEPTS" />
+      <unit id="5381978332891556446" at="16,0,45,0" name="ActionCards.typesystem.typeof_LocationCapacityCondition_InferenceRule" />
+    </file>
+  </root>
   <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/6097839017201948385">
     <file name="TypesystemDescriptor.java">
-      <node id="6097839017201948385" at="14,5,15,91" concept="4" />
-      <node id="6097839017201948385" at="15,91,16,47" concept="2" />
-      <node id="6097839017201948385" at="13,5,17,5" concept="0" />
-      <scope id="6097839017201948385" at="14,5,16,47">
+      <node id="6097839017201948385" at="22,5,23,91" concept="4" />
+      <node id="6097839017201948385" at="23,91,24,47" concept="2" />
+      <node id="6097839017201948385" at="21,5,25,5" concept="0" />
+      <scope id="6097839017201948385" at="22,5,24,47">
         <var name="inferenceRule" id="6097839017201948385" />
       </scope>
     </file>
@@ -455,10 +895,10 @@
   </root>
   <root nodeRef="r:7ef4b8fb-d504-46d8-992e-206765437297(ActionCards.typesystem)/7828349744267291595">
     <file name="TypesystemDescriptor.java">
-      <node id="7828349744267291595" at="22,5,23,93" concept="4" />
-      <node id="7828349744267291595" at="23,93,24,47" concept="2" />
-      <node id="7828349744267291595" at="21,5,25,5" concept="0" />
-      <scope id="7828349744267291595" at="22,5,24,47">
+      <node id="7828349744267291595" at="34,5,35,93" concept="4" />
+      <node id="7828349744267291595" at="35,93,36,47" concept="2" />
+      <node id="7828349744267291595" at="33,5,37,5" concept="0" />
+      <scope id="7828349744267291595" at="34,5,36,47">
         <var name="inferenceRule" id="7828349744267291595" />
       </scope>
     </file>

@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?><sweep runs="1">
+	<parameter name="SecondsPerTick"
+		type="constant" constant_type="int" value="60" />
+	<parameter name="randomSeed"
+		type="number" number_type="int" start="1" end="10" step="1" />
+	<parameter name="UsePathFinding"
+		type="constant" constant_type="boolean" value="false" />
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70.7" />
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99.1" />
+  	<parameter name="DualCassetteLateralFlowTestFluASensitivity"
+  		type="constant" constant_type="double" value="84" />
+  	<parameter name="DualCassetteLateralFlowTestFluASpecificity"
+  		type="constant" constant_type="double" value="97" />
+  	<parameter name="DualCassetteLateralFlowTestFluBSensitivity"
+  		type="constant" constant_type="double" value="84" />
+  	<parameter name="DualCassetteLateralFlowTestFluBSpecificity"
+  		type="constant" constant_type="double" value="97" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="98.4" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="96.5" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="99.4" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LabPCRFluASensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LabPCRFluASpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LabPCRFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LabPCRFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="CepheidCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="CepheidCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="CepheidFluASensitivity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluASpecificity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluBSensitivity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="CepheidFluBSpecificity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="98.4" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="96.5" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="99.4" />
+  	<parameter name="CepheidCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="CepheidCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="CepheidFluASensitivity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluASpecificity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluBSensitivity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="CepheidFluBSpecificity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70.7" />
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99.1" />
+  	<parameter name="DualCassetteLateralFlowTestFluASensitivity"
+  		type="constant" constant_type="double" value="84" />
+  	<parameter name="DualCassetteLateralFlowTestFluASpecificity"
+  		type="constant" constant_type="double" value="97" />
+  	<parameter name="DualCassetteLateralFlowTestFluBSensitivity"
+  		type="constant" constant_type="double" value="84" />
+  	<parameter name="DualCassetteLateralFlowTestFluBSpecificity"
+  		type="constant" constant_type="double" value="97" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="98.4" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="96.5" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="99.4" />
+  	<parameter name="CepheidCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="CepheidCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="CepheidFluASensitivity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluASpecificity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluBSensitivity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="CepheidFluBSpecificity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="98.4" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="96.5" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="99.4" />
+  	<parameter name="CepheidCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="CepheidCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="CepheidFluASensitivity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluASpecificity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluBSensitivity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="CepheidFluBSpecificity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70.7" />
+  	<parameter name="DualCassetteLateralFlowTestCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99.1" />
+  	<parameter name="DualCassetteLateralFlowTestFluASensitivity"
+  		type="constant" constant_type="double" value="84" />
+  	<parameter name="DualCassetteLateralFlowTestFluASpecificity"
+  		type="constant" constant_type="double" value="97" />
+  	<parameter name="DualCassetteLateralFlowTestFluBSensitivity"
+  		type="constant" constant_type="double" value="84" />
+  	<parameter name="DualCassetteLateralFlowTestFluBSpecificity"
+  		type="constant" constant_type="double" value="97" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluASpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSensitivity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="PHEThreeFluBSpecificity"
+  		type="constant" constant_type="double" value="99" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="98.4" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="96.5" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="99.4" />
+  	<parameter name="CepheidCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="CepheidCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="CepheidFluASensitivity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluASpecificity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluBSensitivity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="CepheidFluBSpecificity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LIATFluASensitivity"
+  		type="constant" constant_type="double" value="98.4" />
+  	<parameter name="LIATFluASpecificity"
+  		type="constant" constant_type="double" value="96.5" />
+  	<parameter name="LIATFluBSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="LIATFluBSpecificity"
+  		type="constant" constant_type="double" value="99.4" />
+  	<parameter name="CepheidCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="CepheidCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="CepheidFluASensitivity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluASpecificity"
+  		type="constant" constant_type="double" value="99.99" />
+  	<parameter name="CepheidFluBSensitivity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="CepheidFluBSpecificity"
+  		type="constant" constant_type="double" value="99.9" />
+  	<parameter name="patientCOVIDInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "0.5" />
+  	<parameter name="patientCOVIDInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="patientCOVIDInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "99.5" />
+  	<parameter name="patientFluBInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="patientFluBInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="patientFluBInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="patientFluAInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "0.17" />
+  	<parameter name="patientFluAInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "0" />
+  	<parameter name="patientFluAInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "99.83" />
+  	<parameter name="patientSeveritysevere"
+  		 type="constant" constant_type="double" value = "3" />
+  	<parameter name="patientSeveritymoderate"
+  		 type="constant" constant_type="double" value = "27" />
+  	<parameter name="patientSeveritylow"
+  		 type="constant" constant_type="double" value = "70" />
+  	<parameter name="patientImmunocompromisedYes"
+  		 type="constant" constant_type="double" value = "1" />
+  	<parameter name="patientImmunocompromisedNo"
+  		 type="constant" constant_type="double" value = "99" />
+  	<parameter name="patientadmissionRouteEmergencyAttendance"
+  		 type="constant" constant_type="double" value = "100" />
+</sweep>

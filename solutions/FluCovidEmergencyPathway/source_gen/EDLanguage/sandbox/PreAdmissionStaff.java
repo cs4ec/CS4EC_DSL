@@ -252,10 +252,10 @@ public class PreAdmissionStaff extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class StayAction_c0a_5 extends BehaviourStep {
+  public class StayAction_c0a_7 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_c0a_5(Behaviour behaviour) {
+    public StayAction_c0a_7(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 

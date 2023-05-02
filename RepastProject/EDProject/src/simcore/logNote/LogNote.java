@@ -5,9 +5,15 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
+
+import repast.simphony.engine.schedule.ScheduledMethod;
+
 public class LogNote {
 	
-	private String projectPath = "C:\\Users\\w2037451\\Documents\\HelloAgent\\";
+//	private String projectPath = "C:\\Users\\w2037451\\OneDrive - King's College London\\Documents\\HelloAgent\\RepastProject\\EDProject\\";
+
+	private String projectPath = "/Users/thomasgodfrey/MPSProjects/CS4EC/RepastProject/EDProject/";
 	private static LogNote logInstance = null;
 	
 	private LogNote() {}
@@ -21,6 +27,17 @@ public class LogNote {
 		}
 	}
 	
+	public void clearOldContents() {
+		// Clear old logs
+//		File parentFolder = new File(projectPath + "output/");
+//		try {
+//			FileUtils.cleanDirectory(parentFolder);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} 
+	}
+	
     public void SetAddress(String s) {
     	projectPath = s;
 	}
@@ -30,8 +47,9 @@ public class LogNote {
 	}
 	
 	public void WriteLog(String fileName, String content) {
-		try { 
-			File file = new File(projectPath + "output\\" + fileName + ".txt");
+		try {
+			File file = new File(projectPath + "output/" + fileName + ".txt");
+			
 			if(!file.exists()){
 				System.out.println("Generating Log: " + file.getPath());
 				file.createNewFile();
