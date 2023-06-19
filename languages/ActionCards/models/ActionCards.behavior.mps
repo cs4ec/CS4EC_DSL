@@ -5,9 +5,6 @@
     <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="18" />
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="2" />
     <use id="d8f591ec-4d86-4af2-9f92-a9e93c803ffa" name="jetbrains.mps.lang.scopes" version="0" />
-    <use id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base" version="3" />
-    <use id="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" name="org.iets3.core.expr.genjava.base" version="0" />
-    <use id="7b68d745-a7b8-48b9-bd9c-05c0f8725a35" name="org.iets3.core.base" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -1215,7 +1212,7 @@
   </node>
   <node concept="13h7C7" id="s75sN8M_hW">
     <property role="3GE5qa" value="Attributes.PatientProperties" />
-    <ref role="13h7C2" to="e88n:s75sN8M$HE" resolve="AdmissionRouteProperty" />
+    <ref role="13h7C2" to="e88n:s75sN8M$HE" resolve="AttendanceRouteProperty" />
     <node concept="13hLZK" id="s75sN8M_hX" role="13h7CW">
       <node concept="3clFbS" id="s75sN8M_hY" role="2VODD2">
         <node concept="3clFbF" id="s75sN8M_o0" role="3cqZAp">
@@ -1266,7 +1263,7 @@
               </node>
             </node>
             <node concept="Xl_RD" id="s75sN8M_ox" role="37vLTx">
-              <property role="Xl_RC" value="AdmissionRoute" />
+              <property role="Xl_RC" value="AttendanceRoute" />
             </node>
           </node>
         </node>
@@ -1279,7 +1276,7 @@
       <node concept="3clFbS" id="s75sN8M_ib" role="3clF47">
         <node concept="3cpWs6" id="s75sN8M_mR" role="3cqZAp">
           <node concept="Xl_RD" id="s75sN8M_nb" role="3cqZAk">
-            <property role="Xl_RC" value="AdmissionRoute" />
+            <property role="Xl_RC" value="AttendanceRoute" />
           </node>
         </node>
       </node>

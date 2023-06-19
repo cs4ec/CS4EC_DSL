@@ -19,7 +19,7 @@
   		 type="constant" constant_type="double" value = "85" />
   	<parameter name="NormalPatientsSeveritylow"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="NormalPatientsAdmissionRouteEmergencyAttendance"
+  	<parameter name="NormalPatientsAttendanceRouteEmergencyAttendance"
   		 type="constant" constant_type="double" value = "100" />
   	<parameter name="NormalPatientsImmunocompromisedYes"
   		 type="constant" constant_type="double" value = "20" />
@@ -35,7 +35,7 @@
   		 type="constant" constant_type="double" value = "30" />
   	<parameter name="StrepPatientsStrepAInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "10" />
-  	<parameter name="StrepPatientsAdmissionRouteElectiveattendance"
+  	<parameter name="StrepPatientsAttendanceRouteElectiveattendance"
   		 type="constant" constant_type="double" value = "100" />
   	<parameter name="StrepPatientsSeveritysevere"
   		 type="constant" constant_type="double" value = "20" />

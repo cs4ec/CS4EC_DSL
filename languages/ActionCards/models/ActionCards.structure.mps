@@ -782,14 +782,14 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
-    <node concept="PrWs8" id="1xAzJ9L0ufz" role="PzmwI">
-      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
-    </node>
     <node concept="1TJgyj" id="1xAzJ9L5vWE" role="1TKVEi">
       <property role="IQ2ns" value="1758249876465254186" />
       <property role="20kJfa" value="patientProperty" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
+    <node concept="PrWs8" id="10zWyfqPOGM" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9L0ubU">
@@ -1363,8 +1363,8 @@
   <node concept="1TIwiD" id="s75sN8M$HE">
     <property role="EcuMT" value="506397452388682602" />
     <property role="3GE5qa" value="Attributes.PatientProperties" />
-    <property role="TrG5h" value="AdmissionRouteProperty" />
-    <property role="34LRSv" value="Admission Route" />
+    <property role="TrG5h" value="AttendanceRouteProperty" />
+    <property role="34LRSv" value="Attendance Route" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="s75sN8M$HF" role="PzmwI">
       <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />

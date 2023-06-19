@@ -572,8 +572,4 @@
   		displayName="patientImmunocompromisedNo" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="patientadmissionRouteEmergencyAttendance"
-  		displayName="patientadmissionRouteEmergencyAttendance" type="double" defaultValue="100"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 </parameters>

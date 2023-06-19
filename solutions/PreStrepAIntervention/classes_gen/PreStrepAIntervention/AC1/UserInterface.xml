@@ -6,6 +6,14 @@
       <string>simcore.basicStructures.Room</string>
       <string>simcore.styles.LocationStyle</string>
     </entry>
+    <entry>
+      <string>simcore.basicStructures.Wall</string>
+      <string>simcore.styles.WallStyle</string>
+    </entry>
+      <entry>
+      <string>EDLanguage.sandbox.StrepABreadcrumb</string>
+      <string>EDLanguage.sandbox.StrepABreadcrumbstyle</string>
+      </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>
       <string>EDLanguage.sandbox.Bedstyle</string>
@@ -60,19 +68,6 @@
       </entry>
   </styles>
   <editedStyles>
-    <entry>
-      <string>simcore.basicStructures.Room</string>
-      <null/>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Occupiable</string>
-      <string>simcore.basicStructures.Occupiable.style_1.xml</string>
-    </entry>
-    <entry>
-      <string>simcore.basicStructures.Wall</string>
-      <null/>
-    </entry>
-
   </editedStyles>
   <netStyles/>
   <editedNetStyles/>
@@ -101,13 +96,17 @@
 
     <entry>
       <string>simcore.basicStructures.Wall</string>
-      <int>1</int>
+      <int>1001</int>
     </entry>
 
     <entry>
       <string>simcore.basicStructures.Occupiable</string>
       <int>2</int>
     </entry>
+      <entry>
+      <string>EDLanguage.sandbox.StrepABreadcrumb</string>
+      <int>17</int>
+      </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>
       <int>4</int>

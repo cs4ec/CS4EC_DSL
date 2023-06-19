@@ -50,6 +50,12 @@
           <property role="20Rdg7" value="ActionCards.generator" />
         </node>
       </node>
+      <node concept="3uMdn$" id="7hL7ecKvzjp" role="3uOsAP">
+        <node concept="20RdaH" id="7hL7ecKvzjq" role="3uMdmt">
+          <property role="20Rdg5" value="88b9ad4f-bdb6-4e67-a8c6-3d6b292dac53" />
+          <property role="20Rdg7" value="PatientLanguage.generator" />
+        </node>
+      </node>
       <node concept="3uMdn$" id="5R1$QENcoxs" role="3uOsAP">
         <node concept="20RdaH" id="5R1$QENcoxt" role="3uMdmt">
           <property role="20Rdg5" value="30369e0d-2047-484c-82bf-d567e7d22145" />

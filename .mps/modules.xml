@@ -15,11 +15,10 @@
       <modulePath path="$PROJECT_DIR$/languages/StaffDefinitionLanguage/StaffDefinitionLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/COVIDPathway/COVIDPathway.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/DiseaseSpreadTesting/DiseaseSpreadTesting.msd" folder="runtime" />
+      <modulePath path="$PROJECT_DIR$/solutions/DualCassetteIntervention.clone/DualCassetteIntervention.clone.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/DualCassetteIntervention/DualCassetteIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/DualCassetteInterventionPreChange/DualCassetteInterventionPreChange.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.LanguageDependency/EDLanguage.LanguageDependency.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.Runner/EDLanguage.Runner.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/EDRuntimeSolution/EDRuntimeSolution.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_EDLog/EDRuntime_EDLog.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_EDProject/EDRuntime_EDProject.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_Repast/EDRuntime_Repast.msd" folder="dependencies" />

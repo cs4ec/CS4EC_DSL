@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Scenario simphonyVersion="2.7.0">
+<model.initializer class="org.haldane.rrepast.ModelInitializerBroker"/>
 <repast.simphony.action.data_set context="EDProject" file="patientWaitTimesDataSetDaily.xml" />
 <repast.simphony.action.data_set context="EDProject" file="repast.simphony.action.data_set_patientDaily.xml" />
 <repast.simphony.action.file_sink context="EDProject" file="patientWaitTimeDaily.xml" />

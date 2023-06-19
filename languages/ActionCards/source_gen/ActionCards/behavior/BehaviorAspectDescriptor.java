@@ -12,7 +12,7 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
-  private final BHDescriptor myAdmissionRouteProperty__BehaviorDescriptor = new AdmissionRouteProperty__BehaviorDescriptor();
+  private final BHDescriptor myAttendanceRouteProperty__BehaviorDescriptor = new AttendanceRouteProperty__BehaviorDescriptor();
   private final BHDescriptor myPatientSeverityProperty__BehaviorDescriptor = new PatientSeverityProperty__BehaviorDescriptor();
   private final BHDescriptor myPatientProfile_old__BehaviorDescriptor = new PatientProfile_old__BehaviorDescriptor();
   private final BHDescriptor myIPatientProperty__BehaviorDescriptor = new IPatientProperty__BehaviorDescriptor();
@@ -45,7 +45,7 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
       case 2:
         return myActionCardElement__BehaviorDescriptor;
       case 3:
-        return myAdmissionRouteProperty__BehaviorDescriptor;
+        return myAttendanceRouteProperty__BehaviorDescriptor;
       case 4:
         return myDischargeAction__BehaviorDescriptor;
       case 5:

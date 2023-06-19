@@ -4,10 +4,11 @@ package ActionCards.constraints;
 
 import jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor;
 import jetbrains.mps.smodel.runtime.ConstraintFunction;
-import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeParent;
+import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeChild;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import jetbrains.mps.smodel.runtime.CheckingNodeContext;
+import jetbrains.mps.smodel.runtime.ConstraintContext_CanBeParent;
 import java.util.Map;
 import org.jetbrains.mps.openapi.language.SReferenceLink;
 import jetbrains.mps.smodel.runtime.ReferenceConstraintsDescriptor;
@@ -40,6 +41,21 @@ public class VaccineStatusCondition_Constraints extends BaseConstraintsDescripto
   }
 
   @Override
+  protected ConstraintFunction<ConstraintContext_CanBeChild, Boolean> calculateCanBeChildConstraint() {
+    return new ConstraintFunction<ConstraintContext_CanBeChild, Boolean>() {
+      @NotNull
+      public Boolean invoke(@NotNull ConstraintContext_CanBeChild context, @Nullable CheckingNodeContext checkingNodeContext) {
+        boolean result = staticCanBeAChild(context.getNode(), context.getParentNode(), context.getConcept(), context.getLink());
+
+        if (!(result) && checkingNodeContext != null) {
+          checkingNodeContext.setBreakingNode(canBeChildBreakingPoint);
+        }
+
+        return result;
+      }
+    };
+  }
+  @Override
   protected ConstraintFunction<ConstraintContext_CanBeParent, Boolean> calculateCanBeParentConstraint() {
     return new ConstraintFunction<ConstraintContext_CanBeParent, Boolean>() {
       @NotNull
@@ -67,7 +83,7 @@ public class VaccineStatusCondition_Constraints extends BaseConstraintsDescripto
         return new BaseScopeProvider() {
           @Override
           public SNodeReference getSearchScopeValidatorNode() {
-            return breakingNode_d8k0x1_a0a0a0a0a1a0a0a0d;
+            return breakingNode_d8k0x1_a0a0a0a0a1a0a0a0e;
           }
           @Override
           public Scope createScope(final ReferenceConstraintsContext _context) {
@@ -87,11 +103,15 @@ public class VaccineStatusCondition_Constraints extends BaseConstraintsDescripto
     references.put(d0.getReference(), d0);
     return references;
   }
+  private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
+    return true;
+  }
   private static boolean staticCanBeAParent(SNode node, SNode childNode, SAbstractConcept childConcept, SContainmentLink link) {
     return SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), CONCEPTS.VaccinationStatus$Oy);
   }
+  private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)", "1163039364599195852");
   private static final SNodePointer canBeParentBreakingPoint = new SNodePointer("r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)", "1758249876469087660");
-  private static final SNodePointer breakingNode_d8k0x1_a0a0a0a0a1a0a0a0d = new SNodePointer("r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)", "1758249876469957427");
+  private static final SNodePointer breakingNode_d8k0x1_a0a0a0a0a1a0a0a0e = new SNodePointer("r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)", "1758249876469957427");
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept VaccineStatusCondition$cq = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f431e45L, "ActionCards.structure.VaccineStatusCondition");

@@ -25,7 +25,6 @@
         <property id="3785632457359082556" name="simulation_repetitions" index="2rAC2l" />
         <property id="8998806958909918627" name="secondsPerTick" index="wKqbz" />
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
-        <child id="2338410313177321440" name="ActionCards" index="1SufKE" />
       </concept>
       <concept id="5402567240278617723" name="ActionCards.structure.StaffNumber" flags="ng" index="2_0uwW">
         <property id="5402567240278617733" name="number" index="2_0uz2" />
@@ -70,7 +69,7 @@
         <child id="1758249876506198949" name="UsageCondition" index="1FS4Pn" />
         <child id="1758249876539405691" name="ActionCardReferences" index="1HTZI9" />
       </concept>
-      <concept id="506397452388682602" name="ActionCards.structure.AdmissionRouteProperty" flags="ng" index="3fNlUA" />
+      <concept id="506397452388682602" name="ActionCards.structure.AttendanceRouteProperty" flags="ng" index="3fNlUA" />
       <concept id="2698877061888154208" name="ActionCards.structure.AttributeTable" flags="ng" index="1jfOK3">
         <reference id="324605317397241619" name="patientProperty" index="3ZaQn3" />
         <child id="2698877061888154322" name="attributeLines" index="1jfOML" />
@@ -287,15 +286,6 @@
     <node concept="2_0uwW" id="i1eH3VeDUS" role="2_0uzz">
       <property role="2_0uz2" value="2" />
       <ref role="2_0uz0" node="i1eH3VeDCH" resolve="MinorsDoctor" />
-    </node>
-    <node concept="1HTXKU" id="YUPWPn7x48" role="1SufKE">
-      <ref role="1HTXKa" node="6lG8bJ5b7hc" resolve="EmergencyDepartmentTriage" />
-    </node>
-    <node concept="1HTXKU" id="YUPWPn7x4a" role="1SufKE">
-      <ref role="1HTXKa" node="i1eH3VeDNM" resolve="Majors" />
-    </node>
-    <node concept="1HTXKU" id="YUPWPn7x4d" role="1SufKE">
-      <ref role="1HTXKa" node="i1eH3VeDPM" resolve="Minors" />
     </node>
   </node>
   <node concept="2Ovb82" id="EFW1mZonCG">

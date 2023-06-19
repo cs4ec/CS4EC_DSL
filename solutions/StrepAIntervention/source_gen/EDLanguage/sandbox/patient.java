@@ -18,8 +18,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
-import simcore.action.InstantBehaviourStep;
-import simcore.action.BehaviourStep;
 import simcore.basicStructures.TimeKeeper;
 
 public class patient extends Actor {
@@ -27,9 +25,8 @@ public class patient extends Actor {
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
   public String Severity = "NotConfigured";
-  public String AdmissionRoute = "NotConfigured";
+  public String AttendanceRoute = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
-  public String RecentCovidContact = "NotConfigured";
   public String StrepAInfectionStatus = "NotConfigured";
   public Behaviour behaviourBuilder;
 
@@ -146,8 +143,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getAdmissionRouteisElectiveattendance() {
-    if (this.AdmissionRoute == "Electiveattendance") {
+  public int getAttendanceRouteisElectiveattendance() {
+    if (this.AttendanceRoute == "Electiveattendance") {
       return 1;
     }
     return 0;
@@ -160,18 +157,6 @@ public class patient extends Actor {
   }
   public int getImmunocompromisedisNo() {
     if (this.Immunocompromised == "No") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getRecentCovidContactisYes() {
-    if (this.RecentCovidContact == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getRecentCovidContactisNo() {
-    if (this.RecentCovidContact == "No") {
       return 1;
     }
     return 0;
@@ -218,8 +203,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetAdmissionRouteisElectiveattendance() {
-    if (this.admittedTo == "GreenBay" && this.AdmissionRoute == "Electiveattendance") {
+  public int getadmittedToisGreenBaygetAttendanceRouteisElectiveattendance() {
+    if (this.admittedTo == "GreenBay" && this.AttendanceRoute == "Electiveattendance") {
       return 1;
     }
     return 0;
@@ -232,18 +217,6 @@ public class patient extends Actor {
   }
   public int getadmittedToisGreenBaygetImmunocompromisedisNo() {
     if (this.admittedTo == "GreenBay" && this.Immunocompromised == "No") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetRecentCovidContactisYes() {
-    if (this.admittedTo == "GreenBay" && this.RecentCovidContact == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetRecentCovidContactisNo() {
-    if (this.admittedTo == "GreenBay" && this.RecentCovidContact == "No") {
       return 1;
     }
     return 0;
@@ -268,34 +241,6 @@ public class patient extends Actor {
   }
 
 
-  public class Consequence_a0a0a extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).placeholder = "HELLO";
-
-    }
-  }
-  public class Choice_a0a extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA") {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
 
 
 

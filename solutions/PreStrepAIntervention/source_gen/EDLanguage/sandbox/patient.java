@@ -18,8 +18,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
-import simcore.action.InstantBehaviourStep;
-import simcore.action.BehaviourStep;
 import simcore.basicStructures.TimeKeeper;
 
 public class patient extends Actor {
@@ -27,7 +25,7 @@ public class patient extends Actor {
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
   public String Severity = "NotConfigured";
-  public String AdmissionRoute = "NotConfigured";
+  public String AttendanceRoute = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
   public String RecentCovidContact = "NotConfigured";
   public String StrepAInfectionStatus = "NotConfigured";
@@ -146,8 +144,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getAdmissionRouteisEmergencyAttendance() {
-    if (this.AdmissionRoute == "EmergencyAttendance") {
+  public int getAttendanceRouteisEmergencyAttendance() {
+    if (this.AttendanceRoute == "EmergencyAttendance") {
       return 1;
     }
     return 0;
@@ -218,8 +216,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance() {
-    if (this.admittedTo == "GreenBay" && this.AdmissionRoute == "EmergencyAttendance") {
+  public int getadmittedToisGreenBaygetAttendanceRouteisEmergencyAttendance() {
+    if (this.admittedTo == "GreenBay" && this.AttendanceRoute == "EmergencyAttendance") {
       return 1;
     }
     return 0;
@@ -268,34 +266,6 @@ public class patient extends Actor {
   }
 
 
-  public class Consequence_a0a0a extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Consequence_a0a0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      ((patient) behaviour.getSignalTrigger().GetData("patient")).placeholder = "HELLO";
-
-    }
-  }
-  public class Choice_a0a extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_a0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 10 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA") {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new Consequence_a0a0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
 
 
 

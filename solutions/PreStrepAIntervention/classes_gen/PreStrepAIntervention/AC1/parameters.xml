@@ -40,8 +40,8 @@
   		displayName="NormalPatientsSeveritylow" type="double" defaultValue="0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="NormalPatientsAdmissionRouteEmergencyAttendance"
-  		displayName="NormalPatientsAdmissionRouteEmergencyAttendance" type="double" defaultValue="100"
+  	<parameter name="NormalPatientsAttendanceRouteEmergencyAttendance"
+  		displayName="NormalPatientsAttendanceRouteEmergencyAttendance" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="NormalPatientsImmunocompromisedYes"
@@ -72,8 +72,8 @@
   		displayName="StrepPatientsStrepAInfectionStatusSymptomatic" type="double" defaultValue="10"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepPatientsAdmissionRouteElectiveattendance"
-  		displayName="StrepPatientsAdmissionRouteElectiveattendance" type="double" defaultValue="100"
+  	<parameter name="StrepPatientsAttendanceRouteElectiveattendance"
+  		displayName="StrepPatientsAttendanceRouteElectiveattendance" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="StrepPatientsSeveritysevere"

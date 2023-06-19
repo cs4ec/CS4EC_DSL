@@ -168,6 +168,7 @@ public class LabTechnician extends Actor {
 
 
 
+
   public int LabTechniciangetAliveTime() {
     if (deSpawnTime == null) {
       return 0;

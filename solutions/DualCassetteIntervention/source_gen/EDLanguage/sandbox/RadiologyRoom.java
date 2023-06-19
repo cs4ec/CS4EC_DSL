@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class RadiologyRoom extends RoomType {
-  private static RadiologyRoom instance;
+  private static RoomType instance;
 
   private RadiologyRoom() {
     super();

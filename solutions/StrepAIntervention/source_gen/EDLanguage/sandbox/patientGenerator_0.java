@@ -46,7 +46,6 @@ public class patientGenerator_0 extends AgentGenerator {
     this.generateAttribute_a(a);
     this.generateAttribute_b(a);
     this.generateAttribute_c(a);
-    this.generateAttribute_d(a);
 
     b.PushMission(sendSignalTemp);
 
@@ -84,9 +83,9 @@ public class patientGenerator_0 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsAdmissionRouteElectiveattendance"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsAttendanceRouteElectiveattendance"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.AdmissionRoute = "Electiveattendance";
+      agent.AttendanceRoute = "Electiveattendance";
       return;
     }
 
@@ -107,25 +106,6 @@ public class patientGenerator_0 extends AgentGenerator {
       return;
     } else {
       runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsImmunocompromisedYes");
-    }
-
-  }
-  public void generateAttribute_d(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsRecentCovidContactYes"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.RecentCovidContact = "Yes";
-      return;
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsRecentCovidContactNo") + runningTotal) / 100)) {
-      agent.RecentCovidContact = "No";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsRecentCovidContactNo");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Typical PatientsRecentCovidContactNo");
     }
 
   }

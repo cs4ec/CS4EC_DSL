@@ -1,2 +1,0 @@
-"patientgetImmunocompromisedisYes","patientgetImmunocompromisedisNo","patientgetCOVIDInfectionStatusisSusceptible","patientgetCOVIDInfectionStatusisAsymptomatic","patientgetadmittedToisCOVIDPositiveCohort","patientgetadmittedToisCOVIDPositiveCohortgetImmunocompromisedisYes","patientgetadmittedToisCOVIDPositiveCohortgetImmunocompromisedisNo","patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSusceptible","patientgetadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisAsymptomatic","patientgetAliveTime"
-1.0,7.0,0.0,8.0,7.0,1.0,6.0,0.0,7.0,1269.5

@@ -168,6 +168,7 @@ public class TriageNurse extends Actor {
 
 
 
+
   public int TriageNursegetAliveTime() {
     if (deSpawnTime == null) {
       return 0;

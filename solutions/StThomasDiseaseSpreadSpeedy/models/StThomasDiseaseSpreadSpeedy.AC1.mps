@@ -67,7 +67,7 @@
       <concept id="3549288998130825210" name="ActionCards.structure.ResultsMappingLine" flags="ng" index="33yULN">
         <reference id="3549288998130825247" name="Disease" index="33yUem" />
       </concept>
-      <concept id="506397452388682602" name="ActionCards.structure.AdmissionRouteProperty" flags="ng" index="3fNlUA" />
+      <concept id="506397452388682602" name="ActionCards.structure.AttendanceRouteProperty" flags="ng" index="3fNlUA" />
       <concept id="4321323723389465661" name="ActionCards.structure.TimeOfDayCondition" flags="ng" index="3fS9$U">
         <child id="4321323723398463336" name="expression" index="3fm_9J" />
       </concept>

@@ -18,8 +18,8 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActionDurationEmptyLine;
   private ConceptPresentation props_ActionDurationMinutes;
   private ConceptPresentation props_AdmissionAction;
-  private ConceptPresentation props_AdmissionRouteProperty;
   private ConceptPresentation props_AttendanceRoute;
+  private ConceptPresentation props_AttendanceRouteProperty;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeLine;
   private ConceptPresentation props_AttributeTable;
@@ -163,13 +163,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AdmissionAction = cpb.create();
         }
         return props_AdmissionAction;
-      case LanguageConceptSwitch.AdmissionRouteProperty:
-        if (props_AdmissionRouteProperty == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Admission Route");
-          props_AdmissionRouteProperty = cpb.create();
-        }
-        return props_AdmissionRouteProperty;
       case LanguageConceptSwitch.AttendanceRoute:
         if (props_AttendanceRoute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -177,6 +170,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttendanceRoute = cpb.create();
         }
         return props_AttendanceRoute;
+      case LanguageConceptSwitch.AttendanceRouteProperty:
+        if (props_AttendanceRouteProperty == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Attendance Route");
+          props_AttendanceRouteProperty = cpb.create();
+        }
+        return props_AttendanceRouteProperty;
       case LanguageConceptSwitch.Attribute:
         if (props_Attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

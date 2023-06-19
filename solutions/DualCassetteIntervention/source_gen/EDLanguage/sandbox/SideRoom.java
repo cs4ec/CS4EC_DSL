@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class SideRoom extends RoomType {
-  private static SideRoom instance;
+  private static RoomType instance;
 
   private SideRoom() {
     super();

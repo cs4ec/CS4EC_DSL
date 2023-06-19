@@ -58,6 +58,19 @@
     <classNode dependClassName="simcore.basicStructures.Occupiable" />
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
+  <dependency className="DualCassetteIntervention.AC1.COVIDBreadcrumb">
+    <classNode extendsClassName="simcore.basicStructures.Breadcrumb" />
+  </dependency>
+  <dependency className="DualCassetteIntervention.AC1.COVIDBreadcrumbstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.basicStructures.Breadcrumb" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
   <dependency className="DualCassetteIntervention.AC1.COVIDCohortTrigger_bSignal">
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
     <classNode dependClassName="java.util.function.Predicate" />
@@ -357,6 +370,32 @@
   <dependency className="DualCassetteIntervention.AC1.ElectiveAttendanceArea">
     <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="DualCassetteIntervention.AC1.FluABreadcrumb">
+    <classNode extendsClassName="simcore.basicStructures.Breadcrumb" />
+  </dependency>
+  <dependency className="DualCassetteIntervention.AC1.FluABreadcrumbstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.basicStructures.Breadcrumb" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="DualCassetteIntervention.AC1.FluBBreadcrumb">
+    <classNode extendsClassName="simcore.basicStructures.Breadcrumb" />
+  </dependency>
+  <dependency className="DualCassetteIntervention.AC1.FluBBreadcrumbstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.basicStructures.Breadcrumb" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.FluCohortTrigger_cSignal">
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
@@ -797,7 +836,6 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.patient">
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
@@ -814,8 +852,6 @@
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
-    <classNode dependClassName="simcore.action.BehaviourStep" />
-    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />

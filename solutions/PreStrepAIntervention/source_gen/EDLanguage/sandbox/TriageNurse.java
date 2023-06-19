@@ -306,7 +306,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).AdmissionRoute == "EmergencyAttendance") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).AttendanceRoute == "EmergencyAttendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0e0a_0(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -339,7 +339,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).AdmissionRoute == "Electiveattendance") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).AttendanceRoute == "Electiveattendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0f0a_0(behaviour));
         behaviour.injectSteps(plstSteps);
@@ -724,7 +724,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).AdmissionRoute == "EmergencyAttendance") || (((patient) behaviour.getSignalTrigger().GetData("patient")).AdmissionRoute == "Electiveattendance")) {
+      if ((((patient) behaviour.getSignalTrigger().GetData("patient")).AttendanceRoute == "EmergencyAttendance") || (((patient) behaviour.getSignalTrigger().GetData("patient")).AttendanceRoute == "Electiveattendance")) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0a0d(behaviour));
         behaviour.injectSteps(plstSteps);

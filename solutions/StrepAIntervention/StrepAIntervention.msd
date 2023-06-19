@@ -6,7 +6,7 @@
     </modelRoot>
   </models>
   <facets>
-    <facet type="java">
+    <facet type="java" languageLevel="JAVA_9">
       <classes generated="true" path="${module}/classes_gen" />
     </facet>
     <facet planModel="r:ac2df552-8ba2-4448-b093-7895f4e0bd3c(StrepAIntervention.GenPlan)" type="generator" />

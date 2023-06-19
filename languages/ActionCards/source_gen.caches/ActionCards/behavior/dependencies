@@ -57,7 +57,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.core.aspects.behaviour.BaseBHDescriptor" />
   </dependency>
-  <dependency className="ActionCards.behavior.AdmissionRouteProperty__BehaviorDescriptor">
+  <dependency className="ActionCards.behavior.AttendanceRouteProperty__BehaviorDescriptor">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -86,7 +86,7 @@
     <classNode dependClassName="ActionCards.behavior.ActionCardCondition__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.ActionCardElement__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.Action__BehaviorDescriptor" />
-    <classNode dependClassName="ActionCards.behavior.AdmissionRouteProperty__BehaviorDescriptor" />
+    <classNode dependClassName="ActionCards.behavior.AttendanceRouteProperty__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.DischargeAction__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.IPatientProperty__BehaviorDescriptor" />
     <classNode dependClassName="ActionCards.behavior.ImmunocompromisedCondition__BehaviorDescriptor" />

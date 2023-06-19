@@ -4,7 +4,7 @@
   <delimiter>,</delimiter>
   <format>TABULAR</format>
   <sourceIds class="linked-hash-set">
-    <string>patientgetAdmissionRouteisEmergencyAttendance</string>
+    <string>patientgetAttendanceRouteisEmergencyAttendance</string>
     <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
     <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
     <string>patientgetCOVIDInfectionStatusisSusceptible</string>

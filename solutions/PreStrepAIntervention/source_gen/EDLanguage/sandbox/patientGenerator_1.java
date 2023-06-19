@@ -85,9 +85,9 @@ public class patientGenerator_1 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsAdmissionRouteElectiveattendance"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsAttendanceRouteElectiveattendance"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.AdmissionRoute = "Electiveattendance";
+      agent.AttendanceRoute = "Electiveattendance";
       return;
     }
 

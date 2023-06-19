@@ -564,7 +564,7 @@
                 </node>
                 <node concept="3cpWs3" id="2YIKz$5fUrB" role="37vLTx">
                   <node concept="Xl_RD" id="2YIKz$5fUt$" role="3uHU7w">
-                    <property role="Xl_RC" value="RepastProject/EDProject/EDProject.rs" />
+                    <property role="Xl_RC" value="RepastProject/EDProject/EDProject/EDProject.rs" />
                   </node>
                   <node concept="2YIFZM" id="5_FodVJeu6b" role="3uHU7B">
                     <ref role="1Pybhc" node="5_FodVJemp9" resolve="MyRunner" />
@@ -745,7 +745,7 @@
               <ref role="3uigEE" to="wyt6:~String" resolve="String" />
             </node>
             <node concept="Xl_RD" id="32D7375HeHB" role="33vP2m">
-              <property role="Xl_RC" value="RepastProject/EDProject/EDProject.rs/" />
+              <property role="Xl_RC" value="RepastProject/EDProject/EDProject/EDProject.rs/" />
             </node>
           </node>
         </node>
@@ -1596,7 +1596,7 @@
               <ref role="3uigEE" to="wyt6:~String" resolve="String" />
             </node>
             <node concept="Xl_RD" id="3i9haAIuRtf" role="33vP2m">
-              <property role="Xl_RC" value="RepastProject/EDProject/batch/" />
+              <property role="Xl_RC" value="RepastProject/EDProject/EDProject/batch/" />
             </node>
           </node>
         </node>
@@ -2336,7 +2336,7 @@
               <ref role="3uigEE" to="wyt6:~String" resolve="String" />
             </node>
             <node concept="Xl_RD" id="2YIKz$5jAF1" role="33vP2m">
-              <property role="Xl_RC" value="RepastProject/EDProject/bin/EDLanguage/sandbox/" />
+              <property role="Xl_RC" value="RepastProject/EDProject/EDProject/bin/EDLanguage/sandbox/" />
             </node>
           </node>
         </node>
@@ -2386,7 +2386,7 @@
               <ref role="3uigEE" to="wyt6:~String" resolve="String" />
             </node>
             <node concept="Xl_RD" id="2YIKz$5jAKn" role="33vP2m">
-              <property role="Xl_RC" value="RepastProject/EDProject/src/EDLanguage/sandbox/" />
+              <property role="Xl_RC" value="RepastProject/EDProject/EDProject/src/EDLanguage/sandbox/" />
             </node>
           </node>
         </node>

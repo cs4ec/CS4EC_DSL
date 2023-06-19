@@ -502,7 +502,7 @@ public class CubicleNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).AdmissionRoute == "EmergencyAttendance") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).AttendanceRoute == "EmergencyAttendance") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0a0d(behaviour));
         behaviour.injectSteps(plstSteps);

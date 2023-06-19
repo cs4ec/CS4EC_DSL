@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class MajorsCBay extends RoomType {
-  private static MajorsCBay instance;
+  private static RoomType instance;
 
   private MajorsCBay() {
     super();

@@ -43,6 +43,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     // Reset log contents
     new ToolBox(this).GetLog().clearOldContents();
+    ToolBox.grids.clear();
 
     context.setId("EDProject");
     int mapWidth = 449;
@@ -62,6 +63,14 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+
+    Grid<Object> COVIDBreadcrumbgrid = gridFactory.createGrid("COVIDBreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    Grid<Object> FluABreadcrumbgrid = gridFactory.createGrid("FluABreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    Grid<Object> FluBBreadcrumbgrid = gridFactory.createGrid("FluBBreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    ToolBox.grids.add(COVIDBreadcrumbgrid);
+    ToolBox.grids.add(FluABreadcrumbgrid);
+    ToolBox.grids.add(FluBBreadcrumbgrid);
+
 
     context.add(new patientGenerator_0(space, grid, context));
     context.add(new Board());

@@ -831,6 +831,13 @@ public class QueriesGenerated extends QueryProviderBase {
   public static Object propertyMacro_GetValue_104_0(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.name$MnvL) + "style";
   }
+  public static Object propertyMacro_GetValue_106_0(final PropertyMacroContext _context) {
+    String s = jetbrains.mps.smodel.SModelOperations.getOutputLocation(_context.getOriginalInputModel()).getPath().split("/solutions")[0];
+    return s += "/RepastProject/EDProject";
+  }
+  public static Object propertyMacro_GetValue_106_1(final PropertyMacroContext _context) {
+    return ((SPropertyOperations.getInteger(_context.getNode(), PROPS.runDuration$NQVu) * 24 * 60 * 60) / SPropertyOperations.getInteger(_context.getNode(), PROPS.secondsPerTick$6SBy)) + 1 + "";
+  }
   public static Object referenceMacro_GetReferent_1_0(final ReferenceMacroContext _context) {
     return SPropertyOperations.getString((_context.getOutputNodeByInputNodeAndMappingLabel(_context.getNode(), "BehaviourMap")), PROPS.name$MnvL);
   }
@@ -2265,6 +2272,8 @@ public class QueriesGenerated extends QueryProviderBase {
     pvqMethods.put("794636372309555797", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "DropBreadcrumbAction"));
     pvqMethods.put("794636372309518817", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "map_Breadcrumb"));
     pvqMethods.put("794636372325856868", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "BreadcrumbStyle"));
+    pvqMethods.put("761862404968093543", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "/Users/k2037451/Desktop/EDProject"));
+    pvqMethods.put("761862404968082514", new PVQ(i++, MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name"), "1441"));
   }
   @NotNull
   @Override
@@ -2693,6 +2702,10 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.propertyMacro_GetValue_103_0(ctx);
         case 205:
           return QueriesGenerated.propertyMacro_GetValue_104_0(ctx);
+        case 206:
+          return QueriesGenerated.propertyMacro_GetValue_106_0(ctx);
+        case 207:
+          return QueriesGenerated.propertyMacro_GetValue_106_1(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }

@@ -43,6 +43,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     // Reset log contents
     new ToolBox(this).GetLog().clearOldContents();
+    ToolBox.grids.clear();
 
     context.setId("EDProject");
     int mapWidth = 449;
@@ -62,6 +63,10 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+
+    Grid<Object> StrepABreadcrumbgrid = gridFactory.createGrid("StrepABreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    ToolBox.grids.add(StrepABreadcrumbgrid);
+
 
     context.add(new patientGenerator_0(space, grid, context));
     context.add(new patientGenerator_1(space, grid, context));
@@ -98,7 +103,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room MajorsABStaffRoom_b = new Room("MajorsABStaffRoom", context, space, grid, 45, 187, 10, 5, 1, 20, StaffRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room MajorsCStaffRoom_c = new Room("MajorsCStaffRoom", context, space, grid, 1, 170, 5, 5, 1, 20, StaffRoom.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room TriageWaitingRoom_d = new Room("TriageWaitingRoom", context, space, grid, 10, 195, 11, 5, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room Triage_e = new Room("Triage", context, space, grid, 10, 190, 5, 5, 1, 20, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);
+    Room Triage_e = new Room("Triage", context, space, grid, 10, 190, 5, 5, 1, 20, TriageDesk.getInstance(), Color.ORANGE, EmergencyDepartment_0);
     Room MinorsWaitingRoom_f = new Room("MinorsWaitingRoom", context, space, grid, 16, 170, 11, 13, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room MinorsOne_g = new Room("MinorsOne", context, space, grid, 3, 163, 5, 5, 1, 5, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
     Room MinorsTwo_h = new Room("MinorsTwo", context, space, grid, 8, 163, 5, 5, 1, 5, MinorsBay.getInstance(), Color.RED, EmergencyDepartment_0);
@@ -129,7 +134,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Room COVIDCohort_gb = new Room("COVIDCohort", context, space, grid, 40, 165, 10, 10, 1, 10000, COVIDPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
     Room FluCohort_hb = new Room("FluCohort", context, space, grid, 40, 153, 10, 10, 1, 100000, FluPositiveCohort.getInstance(), Color.RED, EmergencyDepartment_0);
     Room GreenBay_ib = new Room("GreenBay", context, space, grid, 52, 165, 10, 10, 1, 100000, GreenBay.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room SideRoom_jb = new Room("SideRoom", context, space, grid, 52, 151, 10, 10, 1, 10000000, SideRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room SideRoom_jb = new Room("SideRoom", context, space, grid, 52, 153, 10, 10, 1, 10000000, SideRoom.getInstance(), Color.YELLOW, EmergencyDepartment_0);
 
     try {
       TriageWaitingRoom_d.addOccupiable(new Seat(context, space, grid, 11, 196, TriageWaitingRoom_d));
@@ -197,7 +202,7 @@ public class EDBuilder implements ContextBuilder<Object> {
       MinorsSeven_m.addOccupiable(new Bed(context, space, grid, 12, 157, MinorsSeven_m));
       MinorsEight_n.addOccupiable(new Bed(context, space, grid, 17, 157, MinorsEight_n));
       MinorsNine_o.addOccupiable(new Bed(context, space, grid, 22, 157, MinorsNine_o));
-      MajorsABOne_p.addOccupiable(new Bed(context, space, grid, 36, 195, MajorsABOne_p));
+      MajorsABOne_p.addOccupiable(new Bed(context, space, grid, 36, 196, MajorsABOne_p));
       MajorsABTwo_q.addOccupiable(new Bed(context, space, grid, 41, 196, MajorsABTwo_q));
       MajorsABThree_r.addOccupiable(new Bed(context, space, grid, 46, 196, MajorsABThree_r));
       MajorsABFour_s.addOccupiable(new Bed(context, space, grid, 51, 196, MajorsABFour_s));

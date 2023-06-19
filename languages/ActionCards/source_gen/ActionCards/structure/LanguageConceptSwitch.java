@@ -18,8 +18,8 @@ public final class LanguageConceptSwitch {
   public static final int ActionDurationEmptyLine = 6;
   public static final int ActionDurationMinutes = 7;
   public static final int AdmissionAction = 8;
-  public static final int AdmissionRouteProperty = 9;
-  public static final int AttendanceRoute = 10;
+  public static final int AttendanceRoute = 9;
+  public static final int AttendanceRouteProperty = 10;
   public static final int Attribute = 11;
   public static final int AttributeLine = 12;
   public static final int AttributeTable = 13;
@@ -104,8 +104,8 @@ public final class LanguageConceptSwitch {
     builder.put(0x60a366dc12abf608L, ActionDurationEmptyLine);
     builder.put(0x60a366dc12ac1225L, ActionDurationMinutes);
     builder.put(0x78ac3095dfdf9aL, AdmissionAction);
-    builder.put(0x70715ccc8ca4b6aL, AdmissionRouteProperty);
     builder.put(0x18668ef273b09a5dL, AttendanceRoute);
+    builder.put(0x70715ccc8ca4b6aL, AttendanceRouteProperty);
     builder.put(0x25745663758ab027L, Attribute);
     builder.put(0x25745663764b1a7cL, AttributeLine);
     builder.put(0x25745663764b1a60L, AttributeTable);

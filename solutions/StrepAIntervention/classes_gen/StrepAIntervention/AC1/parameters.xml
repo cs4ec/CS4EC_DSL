@@ -72,8 +72,8 @@
   		displayName="Typical PatientsSeveritylow" type="double" defaultValue="0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsAdmissionRouteElectiveattendance"
-  		displayName="Typical PatientsAdmissionRouteElectiveattendance" type="double" defaultValue="100"
+  	<parameter name="Typical PatientsAttendanceRouteElectiveattendance"
+  		displayName="Typical PatientsAttendanceRouteElectiveattendance" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="Typical PatientsImmunocompromisedYes"
@@ -82,14 +82,6 @@
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="Typical PatientsImmunocompromisedNo"
   		displayName="Typical PatientsImmunocompromisedNo" type="double" defaultValue="80"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsRecentCovidContactYes"
-  		displayName="Typical PatientsRecentCovidContactYes" type="double" defaultValue="50"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsRecentCovidContactNo"
-  		displayName="Typical PatientsRecentCovidContactNo" type="double" defaultValue="50"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="Strep A PatientsStrepAInfectionStatusSusceptible"
@@ -104,8 +96,8 @@
   		displayName="Strep A PatientsStrepAInfectionStatusSymptomatic" type="double" defaultValue="10"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Strep A PatientsAdmissionRouteEmergencyAttendance"
-  		displayName="Strep A PatientsAdmissionRouteEmergencyAttendance" type="double" defaultValue="100"
+  	<parameter name="Strep A PatientsAttendanceRouteEmergencyAttendance"
+  		displayName="Strep A PatientsAttendanceRouteEmergencyAttendance" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="Strep A PatientsSeveritysevere"

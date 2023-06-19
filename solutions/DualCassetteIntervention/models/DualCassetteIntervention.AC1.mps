@@ -116,9 +116,6 @@
       </concept>
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
-      <concept id="1758249876510071738" name="ActionCards.structure.AttendanceRouteCondition" flags="ng" index="1FDPl8">
-        <child id="1758249876530420347" name="attendanceRoute" index="1GBHi9" />
-      </concept>
       <concept id="1758249876508941398" name="ActionCards.structure.EmergencyAttendanceRoute" flags="ng" index="1FPxa$" />
       <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
         <child id="1758249876506201859" name="condition" index="1FS47L" />
@@ -4435,14 +4432,9 @@
       </node>
     </node>
     <node concept="1FS47K" id="72S_Vmflfls" role="1FS4Pn">
-      <node concept="30deo4" id="4pv5aglSTDZ" role="1FS47L">
-        <node concept="1CySur" id="4pv5aglSTFr" role="30dEsF">
-          <ref role="1DsR7o" node="1$AaFX9f$4h" />
-          <node concept="MfwqT" id="4pv5aglSTGb" role="1CySjL" />
-        </node>
-        <node concept="1FDPl8" id="72S_VmflfmG" role="30dEs_">
-          <node concept="1FPxa$" id="72S_Vmflfo1" role="1GBHi9" />
-        </node>
+      <node concept="1CySur" id="4pv5aglSTFr" role="1FS47L">
+        <ref role="1DsR7o" node="1$AaFX9f$4h" />
+        <node concept="MfwqT" id="4pv5aglSTGb" role="1CySjL" />
       </node>
     </node>
     <node concept="2MhjZa" id="72S_VmflfYc" role="2MhjZp">
@@ -7455,8 +7447,8 @@
       <node concept="37mRIm" id="6lG8bJ3T0yz" role="37mRID">
         <property role="37mO49" value="7308252286132946963" />
         <node concept="gqqVs" id="6lG8bJ3T0yy" role="37mO4d">
-          <property role="gqqTZ" value="395.0" />
-          <property role="gqqTW" value="-95.0" />
+          <property role="gqqTZ" value="355.0" />
+          <property role="gqqTW" value="-31.0" />
           <property role="gqqTX" value="968.0" />
           <property role="gqqTy" value="117.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -7798,14 +7790,9 @@
           <ref role="1DsR7o" node="1$AaFX9f$4h" />
           <node concept="MfZID" id="6lG8bJ3TBhm" role="1CySjL" />
         </node>
-        <node concept="30deo4" id="6lG8bJ3TBgg" role="30dEs_">
-          <node concept="1CySur" id="6lG8bJ3T0wl" role="30dEsF">
-            <ref role="1DsR7o" node="1$AaFX9f$4h" />
-            <node concept="MfZuW" id="6lG8bJ3TBfQ" role="1CySjL" />
-          </node>
-          <node concept="1FDPl8" id="6lG8bJ3T0wn" role="30dEs_">
-            <node concept="1FPxa$" id="6lG8bJ3T0wo" role="1GBHi9" />
-          </node>
+        <node concept="1CySur" id="6lG8bJ3T0wl" role="30dEs_">
+          <ref role="1DsR7o" node="1$AaFX9f$4h" />
+          <node concept="MfZuW" id="6lG8bJ3TBfQ" role="1CySjL" />
         </node>
       </node>
     </node>

@@ -17,10 +17,10 @@
   <imports>
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
-    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" implicit="true" />
+    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
   </imports>
   <registry>
@@ -233,16 +233,14 @@
   <node concept="1M2fIO" id="1xAzJ9L2alD">
     <property role="3GE5qa" value="Expressions.Conditions" />
     <ref role="1M2myG" to="e88n:1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
-    <node concept="9SLcT" id="1xAzJ9Lnq_3" role="9SGkU">
-      <node concept="3clFbS" id="1xAzJ9Lnq_4" role="2VODD2">
-        <node concept="3clFbF" id="1xAzJ9LnqCY" role="3cqZAp">
-          <node concept="2OqwBi" id="1xAzJ9LnqN5" role="3clFbG">
-            <node concept="2DD5aU" id="1xAzJ9LnqCX" role="2Oq$k0" />
-            <node concept="2Zo12i" id="1xAzJ9LnqXr" role="2OqNvi">
-              <node concept="chp4Y" id="1xAzJ9Lnr85" role="2Zo12j">
-                <ref role="cht4Q" to="hm2y:6sdnDbSla17" resolve="Expression" />
-              </node>
-            </node>
+    <node concept="1N5Pfh" id="10zWyfqTlPU" role="1Mr941">
+      <ref role="1N5Vy1" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
+    </node>
+    <node concept="9S07l" id="10zWyfqIKAN" role="9Vyp8">
+      <node concept="3clFbS" id="10zWyfqIKAO" role="2VODD2">
+        <node concept="3clFbF" id="10zWyfqIKEI" role="3cqZAp">
+          <node concept="3clFbT" id="10zWyfqMk7B" role="3clFbG">
+            <property role="3clFbU" value="true" />
           </node>
         </node>
       </node>
@@ -352,6 +350,15 @@
                 <ref role="cht4Q" to="e88n:1xAzJ9JLx51" resolve="VaccinationStatus" />
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9S07l" id="10zWyfqIMzc" role="9Vyp8">
+      <node concept="3clFbS" id="10zWyfqIMzd" role="2VODD2">
+        <node concept="3clFbF" id="10zWyfqIMzj" role="3cqZAp">
+          <node concept="3clFbT" id="10zWyfqIMzi" role="3clFbG">
+            <property role="3clFbU" value="true" />
           </node>
         </node>
       </node>
@@ -466,6 +473,15 @@
         </node>
       </node>
     </node>
+    <node concept="9S07l" id="10zWyfqILyd" role="9Vyp8">
+      <node concept="3clFbS" id="10zWyfqILye" role="2VODD2">
+        <node concept="3clFbF" id="10zWyfqILHR" role="3cqZAp">
+          <node concept="3clFbT" id="10zWyfqILHQ" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
   <node concept="1M2fIO" id="1xAzJ9LB4Vj">
     <property role="3GE5qa" value="ActionCard" />
@@ -508,6 +524,15 @@
                 <ref role="cht4Q" to="e88n:1xAzJ9NaVjz" resolve="BooleanExpression" />
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9S07l" id="10zWyfqIM2w" role="9Vyp8">
+      <node concept="3clFbS" id="10zWyfqIM2x" role="2VODD2">
+        <node concept="3clFbF" id="10zWyfqIM2S" role="3cqZAp">
+          <node concept="3clFbT" id="10zWyfqIM2R" role="3clFbG">
+            <property role="3clFbU" value="true" />
           </node>
         </node>
       </node>
@@ -629,9 +654,18 @@
             <node concept="2DD5aU" id="1xAzJ9PnEtx" role="2Oq$k0" />
             <node concept="2Zo12i" id="1xAzJ9PnEty" role="2OqNvi">
               <node concept="chp4Y" id="1xAzJ9PnEtz" role="2Zo12j">
-                <ref role="cht4Q" to="e88n:1xAzJ9NaVjz" resolve="BooleanExpression" />
+                <ref role="cht4Q" to="e88n:1xAzJ9PnC4u" resolve="ImmunosuppressedProperty" />
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="9S07l" id="10zWyfqIKXM" role="9Vyp8">
+      <node concept="3clFbS" id="10zWyfqIKXN" role="2VODD2">
+        <node concept="3clFbF" id="10zWyfqIKYa" role="3cqZAp">
+          <node concept="3clFbT" id="10zWyfqIKY9" role="3clFbG">
+            <property role="3clFbU" value="true" />
           </node>
         </node>
       </node>
@@ -837,6 +871,24 @@
         <node concept="3clFbF" id="i1eH3WpcjV" role="3cqZAp">
           <node concept="3clFbT" id="i1eH3WpcjU" role="3clFbG">
             <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="10zWyfqtgFD">
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <ref role="1M2myG" to="e88n:s75sN8M$HE" resolve="AttendanceRouteProperty" />
+    <node concept="9SLcT" id="10zWyfqtgFE" role="9SGkU">
+      <node concept="3clFbS" id="10zWyfqtgFF" role="2VODD2">
+        <node concept="3cpWs6" id="10zWyfqtgJ$" role="3cqZAp">
+          <node concept="2OqwBi" id="10zWyfqth6f" role="3cqZAk">
+            <node concept="2DD5aU" id="10zWyfqtgNT" role="2Oq$k0" />
+            <node concept="2Zo12i" id="10zWyfqti2x" role="2OqNvi">
+              <node concept="chp4Y" id="10zWyfqti3g" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:1xAzJ9NG9Dt" resolve="AttendanceRoute" />
+              </node>
+            </node>
           </node>
         </node>
       </node>

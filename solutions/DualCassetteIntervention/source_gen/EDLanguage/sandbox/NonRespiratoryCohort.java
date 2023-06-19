@@ -5,7 +5,7 @@ package EDLanguage.sandbox;
 import simcore.basicStructures.RoomType;
 
 public class NonRespiratoryCohort extends RoomType {
-  private static NonRespiratoryCohort instance;
+  private static RoomType instance;
 
   private NonRespiratoryCohort() {
     super();

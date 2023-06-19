@@ -42,21 +42,6 @@ import jetbrains.mps.nodeEditor.cellMenu.SReferenceSubstituteInfo;
 import jetbrains.mps.lang.core.behavior.LinkAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.cells.EditorCell_RefPresentation;
 import jetbrains.mps.smodel.action.IReferentPresentationProvider;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Component;
-import javax.swing.JComponent;
-import javax.swing.JButton;
-import javax.swing.AbstractAction;
-import java.awt.event.ActionEvent;
-import com.intellij.openapi.project.Project;
-import com.intellij.openapi.actionSystem.CommonDataKeys;
-import com.intellij.ide.DataManager;
-import java.awt.Component;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import com.intellij.notification.Notifications;
-import com.intellij.notification.Notification;
-import com.intellij.notification.NotificationType;
-import BuiltEnvironment.plugin.ImporterLogic;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
@@ -91,8 +76,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     editorCell.addEditorCell(createRefNode_0());
     editorCell.addEditorCell(createConstant_3());
     editorCell.addEditorCell(createRefCell_0());
-    editorCell.addEditorCell(createConstant_4());
-    editorCell.addEditorCell(createJComponent_0());
     return editorCell;
   }
   private EditorCell createConstant_0() {
@@ -271,51 +254,9 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return editorCell;
     }
   }
-  private EditorCell createConstant_4() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
-    editorCell.setCellId("Constant_phdge7_h0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
-    editorCell.getStyle().putAll(style);
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-  private EditorCell createJComponent_0() {
-    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_phdge7_a8a(), "JComponent_phdge7_i0");
-    editorCell.setCellId("JComponent_phdge7_i0_0");
-    Style style = new StyleImpl();
-    style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
-    editorCell.getStyle().putAll(style);
-    return editorCell;
-  }
-  private JComponent _QueryFunction_JComponent_phdge7_a8a() {
-    return new JButton(new AbstractAction("Import") {
-      @Override
-      public void actionPerformed(ActionEvent event) {
-        getEditorContext().getRepository().getModelAccess().executeCommand(new Runnable() {
-          public void run() {
-            final Project ideaProject = CommonDataKeys.PROJECT.getData(DataManager.getInstance().getDataContext((Component) getEditorContext().getEditorComponent()));
-            if (SPropertyOperations.getString(SLinkOperations.getTarget(myNode, LINKS.sourceFile$6sYk), PROPS.path$VaYg).isEmpty() || SLinkOperations.getTarget(myNode, LINKS.targetContainer$Z49N) == null) {
-              Notifications.Bus.notify(new Notification("LJH JSON Importer", "Error", "Must specify both source and target before importing", NotificationType.ERROR), ideaProject);
-              return;
-            }
-
-            try {
-              ImporterLogic.ImportJson(SPropertyOperations.getString(SLinkOperations.getTarget(myNode, LINKS.sourceFile$6sYk), PROPS.path$VaYg), SLinkOperations.getTarget(myNode, LINKS.targetContainer$Z49N));
-              getEditorContext().getEditorPanelManager().openEditor(SLinkOperations.getTarget(myNode, LINKS.targetContainer$Z49N));
-            } catch (Exception e) {
-              Notifications.Bus.notify(new Notification("LJH JSON Importer", "Error", "Error while importing " + e.getMessage(), NotificationType.ERROR), ideaProject);
-            }
-
-          }
-        });
-      }
-    });
-  }
 
   private static final class PROPS {
     /*package*/ static final SProperty name$MnvL = MetaAdapterFactory.getProperty(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L, 0x110396ec041L, "name");
-    /*package*/ static final SProperty path$VaYg = MetaAdapterFactory.getProperty(0xd3a0fd26445a466cL, 0x900e10444ddfed52L, 0x55705e73a6773808L, 0x55705e73a6774a6eL, "path");
   }
 
   private static final class CONCEPTS {

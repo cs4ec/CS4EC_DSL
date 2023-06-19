@@ -96,6 +96,18 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
                         return connectionTypes;
                       }
 
+
+
+
+
+
+
+                      @Override
+                      public boolean runAutoLayout() {
+                        boolean autoLayoutFlag = false;
+                        return autoLayoutFlag;
+                      }
+
                     };
 
                     DiagramModel model = DiagramModel.getModel(editorContext, node, "3787511550156378417", accessor);
@@ -109,7 +121,7 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
                       editorCell.value = new SubDiagramECell(editorContext, node, model);
                     } else {
                       editorCell.value = new RootDiagramECell(editorContext, node, model);
-                      ((RootDiagramECell) editorCell.value).runAutoLayouterOnInit(node, false);
+                      ((RootDiagramECell) editorCell.value).runAutoLayouterOnInit(node, accessor.runAutoLayout());
                     }
                     editorCell.value.setCellId("Diagram_kjb02t_a");
                     editorCell.value.setBig(true);
@@ -139,6 +151,8 @@ import org.jetbrains.mps.openapi.language.SReferenceLink;
         });
       }
     });
+
+
 
     return editorCell.value;
   }

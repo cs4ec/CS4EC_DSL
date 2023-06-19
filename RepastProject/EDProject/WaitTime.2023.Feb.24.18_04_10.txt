@@ -1,3 +1,0 @@
-"agentName","patientgetAliveTime"
-"259",0
-"260",0

@@ -43,11 +43,11 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetAdmissionRouteisEmergencyAttendance</string>
+        <string>patientgetAttendanceRouteisEmergencyAttendance</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetAdmissionRouteisEmergencyAttendance</id>
+          <id>patientgetAttendanceRouteisEmergencyAttendance</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getAdmissionRouteisEmergencyAttendance</methodName>
+          <methodName>getAttendanceRouteisEmergencyAttendance</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
@@ -152,11 +152,11 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance</string>
+        <string>patientgetadmittedToisGreenBaygetAttendanceRouteisEmergencyAttendance</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance</id>
+          <id>patientgetadmittedToisGreenBaygetAttendanceRouteisEmergencyAttendance</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance</methodName>
+          <methodName>getadmittedToisGreenBaygetAttendanceRouteisEmergencyAttendance</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

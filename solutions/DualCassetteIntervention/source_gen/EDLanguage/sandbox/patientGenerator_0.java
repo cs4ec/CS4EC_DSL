@@ -48,7 +48,6 @@ public class patientGenerator_0 extends AgentGenerator {
     this.generateAttribute_c(a);
     this.generateAttribute_d(a);
     this.generateAttribute_e(a);
-    this.generateAttribute_f(a);
 
     b.PushMission(sendSignalTemp);
 
@@ -175,18 +174,6 @@ public class patientGenerator_0 extends AgentGenerator {
       return;
     } else {
       runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientImmunocompromisedYes");
-    }
-
-  }
-  public void generateAttribute_f(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patientadmissionRouteEmergencyAttendance"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.admissionRoute = "EmergencyAttendance";
-      return;
     }
 
   }

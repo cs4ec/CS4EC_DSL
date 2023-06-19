@@ -285,6 +285,4 @@
   		 type="constant" constant_type="double" value = "1" />
   	<parameter name="patientImmunocompromisedNo"
   		 type="constant" constant_type="double" value = "99" />
-  	<parameter name="patientadmissionRouteEmergencyAttendance"
-  		 type="constant" constant_type="double" value = "100" />
 </sweep>

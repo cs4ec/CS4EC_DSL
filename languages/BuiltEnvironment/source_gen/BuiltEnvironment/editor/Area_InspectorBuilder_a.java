@@ -23,9 +23,6 @@ import jetbrains.mps.lang.core.behavior.PropertyAttribute__BehaviorDescriptor;
 import jetbrains.mps.nodeEditor.EditorManager;
 import jetbrains.mps.openapi.editor.update.AttributeKind;
 import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
-import jetbrains.mps.nodeEditor.cells.EditorCell_Component;
-import javax.swing.JComponent;
-import BuiltEnvironment.behavior.PreviewFactory;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 import org.jetbrains.mps.openapi.language.SConcept;
 
@@ -55,7 +52,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
     setCellContext(editorCell);
     editorCell.addEditorCell(createProperty_0());
     editorCell.addEditorCell(createConstant_0());
-    editorCell.addEditorCell(createJComponent_0());
     return editorCell;
   }
   private EditorCell createProperty_0() {
@@ -84,18 +80,10 @@ import org.jetbrains.mps.openapi.language.SConcept;
     }
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, ":");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "");
     editorCell.setCellId("Constant_ju1rqn_0");
     editorCell.setDefaultText("");
     return editorCell;
-  }
-  private EditorCell createJComponent_0() {
-    EditorCell editorCell = EditorCell_Component.createComponentCell(getEditorContext(), myNode, _QueryFunction_JComponent_ju1rqn_a2a(), "JComponent_ju1rqn_0");
-    editorCell.setCellId("JComponent_ju1rqn_1");
-    return editorCell;
-  }
-  private JComponent _QueryFunction_JComponent_ju1rqn_a2a() {
-    return PreviewFactory.createPanel(myNode);
   }
 
   private static final class PROPS {

@@ -945,7 +945,6 @@
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
   <dependency className="StrepAIntervention.AC1.patient">
-    <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
     <classNode dependClassName="java.lang.Object" />
@@ -962,8 +961,6 @@
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
-    <classNode dependClassName="simcore.action.BehaviourStep" />
-    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
     <classNode dependClassName="simcore.agents.Agent" />
     <classNode dependClassName="simcore.basicStructures.Board" />
     <classNode dependClassName="simcore.basicStructures.Room" />
