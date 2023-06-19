@@ -7,8 +7,8 @@ import jetbrains.mps.openapi.editor.cells.EditorCell;
 import jetbrains.mps.openapi.editor.EditorContext;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class AttendanceRouteProperty_Editor extends DefaultNodeEditor {
+public class PatientCohortCondition_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return new AttendanceRouteProperty_EditorBuilder_a(editorContext, node).createCell();
+    return new PatientCohortCondition_EditorBuilder_a(editorContext, node).createCell();
   }
 }

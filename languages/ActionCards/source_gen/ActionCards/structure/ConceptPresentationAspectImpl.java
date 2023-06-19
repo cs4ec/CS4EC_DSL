@@ -19,7 +19,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActionDurationMinutes;
   private ConceptPresentation props_AdmissionAction;
   private ConceptPresentation props_AttendanceRoute;
-  private ConceptPresentation props_AttendanceRouteProperty;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeLine;
   private ConceptPresentation props_AttributeTable;
@@ -50,6 +49,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PartiallyVaccinated;
   private ConceptPresentation props_PatientArrivalLine_old;
   private ConceptPresentation props_PatientArrivals_old;
+  private ConceptPresentation props_PatientCohortCondition;
   private ConceptPresentation props_PatientProfile_old;
   private ConceptPresentation props_PatientPropertyConditional;
   private ConceptPresentation props_PatientSeverity;
@@ -170,13 +170,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AttendanceRoute = cpb.create();
         }
         return props_AttendanceRoute;
-      case LanguageConceptSwitch.AttendanceRouteProperty:
-        if (props_AttendanceRouteProperty == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("Attendance Route");
-          props_AttendanceRouteProperty = cpb.create();
-        }
-        return props_AttendanceRouteProperty;
       case LanguageConceptSwitch.Attribute:
         if (props_Attribute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -394,6 +387,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientArrivals_old = cpb.create();
         }
         return props_PatientArrivals_old;
+      case LanguageConceptSwitch.PatientCohortCondition:
+        if (props_PatientCohortCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Check patient cohort");
+          props_PatientCohortCondition = cpb.create();
+        }
+        return props_PatientCohortCondition;
       case LanguageConceptSwitch.PatientProfile_old:
         if (props_PatientProfile_old == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L);

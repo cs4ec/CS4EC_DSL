@@ -16,11 +16,11 @@
   <atEnd>false</atEnd>
   <methodDataSources class="linked-hash-map">
       <entry>
-        <string>patientgetAdmissionRouteisEmergencyAttendance</string>
+        <string>patientgetAttendanceRouteisEmergencyAttendance</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetAdmissionRouteisEmergencyAttendance</id>
+          <id>patientgetAttendanceRouteisEmergencyAttendance</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getAdmissionRouteisEmergencyAttendance</methodName>
+          <methodName>getAttendanceRouteisEmergencyAttendance</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

@@ -16,6 +16,7 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
+    <import index="s2d1" ref="r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -1360,14 +1361,17 @@
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
-  <node concept="1TIwiD" id="s75sN8M$HE">
-    <property role="EcuMT" value="506397452388682602" />
-    <property role="3GE5qa" value="Attributes.PatientProperties" />
-    <property role="TrG5h" value="AttendanceRouteProperty" />
-    <property role="34LRSv" value="Attendance Route" />
-    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="PrWs8" id="s75sN8M$HF" role="PzmwI">
-      <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+  <node concept="1TIwiD" id="7hL7ecKWo9q">
+    <property role="EcuMT" value="8390519342872232538" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="PatientCohortCondition" />
+    <property role="34LRSv" value="Check patient cohort" />
+    <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
+    <node concept="1TJgyj" id="7hL7ecKWo9t" role="1TKVEi">
+      <property role="IQ2ns" value="8390519342872232541" />
+      <property role="20kJfa" value="cohort" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="s2d1:EFW1mY_7c6" resolve="PatientProfile" />
     </node>
   </node>
 </model>

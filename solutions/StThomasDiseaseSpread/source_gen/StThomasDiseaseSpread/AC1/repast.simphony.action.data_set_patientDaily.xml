@@ -16,15 +16,6 @@
   <atEnd>false</atEnd>
   <methodDataSources class="linked-hash-map">
       <entry>
-        <string>patientgetAdmissionRouteisEmergencyAttendance</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetAdmissionRouteisEmergencyAttendance</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getAdmissionRouteisEmergencyAttendance</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
         <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
           <id>patientgetCOVIDInfectionStatusisSymptomatic</id>
@@ -466,24 +457,6 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
 
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisCOVIDPositiveCohortgetAdmissionRouteisEmergencyAttendance</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisCOVIDPositiveCohortgetAdmissionRouteisEmergencyAttendance</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisCOVIDPositiveCohortgetAdmissionRouteisEmergencyAttendance</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
       <entry>
         <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>

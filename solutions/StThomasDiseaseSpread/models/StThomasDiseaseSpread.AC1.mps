@@ -72,7 +72,9 @@
       <concept id="3549288998130825210" name="ActionCards.structure.ResultsMappingLine" flags="ng" index="33yULN">
         <reference id="3549288998130825247" name="Disease" index="33yUem" />
       </concept>
-      <concept id="506397452388682602" name="ActionCards.structure.AdmissionRouteProperty" flags="ng" index="3fNlUA" />
+      <concept id="8390519342872232538" name="ActionCards.structure.PatientCohortCondition" flags="ng" index="14w9UT">
+        <reference id="8390519342872232541" name="cohort" index="14w9UY" />
+      </concept>
       <concept id="4321323723389465661" name="ActionCards.structure.TimeOfDayCondition" flags="ng" index="3fS9$U">
         <child id="4321323723398463336" name="expression" index="3fm_9J" />
       </concept>
@@ -116,8 +118,6 @@
       </concept>
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
-      <concept id="1758249876508941937" name="ActionCards.structure.ElectiveAttendanceRoute" flags="ng" index="1FPx23" />
-      <concept id="1758249876508941398" name="ActionCards.structure.EmergencyAttendanceRoute" flags="ng" index="1FPxa$" />
       <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
         <child id="1758249876506201859" name="condition" index="1FS47L" />
       </concept>
@@ -159,7 +159,6 @@
       <concept id="768972137579180806" name="PatientLanguage.structure.PatientProfile" flags="ng" index="2OfScj">
         <child id="768972137579221593" name="attributes" index="2OfI9c" />
         <child id="768972137579221632" name="arrivalRate" index="2OfIal" />
-        <child id="1758249876507806175" name="attendanceRoute" index="1FYssH" />
       </concept>
       <concept id="324605317397238451" name="PatientLanguage.structure.Patient" flags="ng" index="3ZaQxz">
         <child id="324605317397238461" name="patientProperty" index="3ZaQxH" />
@@ -5287,17 +5286,9 @@
       </node>
     </node>
     <node concept="1FS47K" id="6lG8bJ3T0wj" role="1FS4Pn">
-      <node concept="30deo4" id="1Iqh_KLw1XQ" role="1FS47L">
-        <node concept="30bsCy" id="1Iqh_KLw22L" role="30dEsF">
-          <node concept="1CySur" id="1Iqh_KLw239" role="30bsDf">
-            <ref role="1DsR7o" node="1$AaFX9f$4h" />
-            <node concept="MfwqT" id="3EfopC$LMz7" role="1CySjL" />
-          </node>
-        </node>
-        <node concept="1CySur" id="s75sN8RGOM" role="30dEs_">
-          <ref role="1DsR7o" node="s75sN8RGIm" />
-          <node concept="1FPxa$" id="s75sN8RGPs" role="1CySjL" />
-        </node>
+      <node concept="1CySur" id="1Iqh_KLw239" role="1FS47L">
+        <ref role="1DsR7o" node="1$AaFX9f$4h" />
+        <node concept="MfwqT" id="3EfopC$LMz7" role="1CySjL" />
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0wp" role="2MhjZp">
@@ -8700,22 +8691,21 @@
       </node>
     </node>
     <node concept="1FS47K" id="1Iqh_KLvlyy" role="1FS4Pn">
-      <node concept="30deo4" id="1Iqh_KLw1V0" role="1FS47L">
-        <node concept="30bsCy" id="3EfopC$LLQq" role="30dEsF">
-          <node concept="30deu6" id="3EfopC$LLQQ" role="30bsDf">
-            <node concept="1CySur" id="3EfopC$LLRk" role="30dEsF">
+      <node concept="30deo4" id="7hL7ecL02rr" role="1FS47L">
+        <node concept="14w9UT" id="7hL7ecL02s8" role="30dEs_">
+          <ref role="14w9UY" node="1xAzJ9Ksr_q" resolve="EmergencyAttendance" />
+        </node>
+        <node concept="30bsCy" id="7hL7ecL02qQ" role="30dEsF">
+          <node concept="30deu6" id="7hL7ecL02qR" role="30bsDf">
+            <node concept="1CySur" id="7hL7ecL02qS" role="30dEsF">
               <ref role="1DsR7o" node="1$AaFX9f$4h" />
-              <node concept="MfZID" id="3EfopC$LLSl" role="1CySjL" />
+              <node concept="MfZID" id="7hL7ecL02qT" role="1CySjL" />
             </node>
-            <node concept="1CySur" id="3EfopC$LLQr" role="30dEs_">
+            <node concept="1CySur" id="7hL7ecL02qU" role="30dEs_">
               <ref role="1DsR7o" node="1$AaFX9f$4h" />
-              <node concept="MfZuW" id="3EfopC$LLQs" role="1CySjL" />
+              <node concept="MfZuW" id="7hL7ecL02qV" role="1CySjL" />
             </node>
           </node>
-        </node>
-        <node concept="1CySur" id="s75sN8RGKd" role="30dEs_">
-          <ref role="1DsR7o" node="s75sN8RGIm" />
-          <node concept="1FPxa$" id="s75sN8RGLd" role="1CySjL" />
         </node>
       </node>
     </node>
@@ -8954,11 +8944,6 @@
   </node>
   <node concept="3ZaQxz" id="1$AaFX9f$1b">
     <property role="TrG5h" value="patient" />
-    <node concept="3fNlUA" id="s75sN8RGIm" role="3ZaQxH">
-      <property role="1C_jdu" value="AdmissionRoute" />
-      <node concept="1FPx23" id="s75sN8RGIn" role="1R9Jzl" />
-      <node concept="1FPxa$" id="s75sN8RGIo" role="1R9Jzl" />
-    </node>
     <node concept="1RmfTV" id="1$AaFX9f$1c" role="3ZaQxH">
       <property role="1C_jdu" value="nullInfectionStatus" />
       <ref role="1R9xXT" node="5R1$QEMKFjT" resolve="COVID" />
@@ -8993,14 +8978,7 @@
     </node>
   </node>
   <node concept="2OfScj" id="1xAzJ9Ksr_q">
-    <property role="TrG5h" value="patientProfile" />
-    <node concept="1jfOK3" id="s75sN8RGIT" role="2OfI9c">
-      <ref role="3ZaQn3" node="s75sN8RGIm" />
-      <node concept="1jfOKv" id="s75sN8RGJy" role="1jfOML">
-        <property role="3JlXGq" value="100" />
-        <node concept="1FPxa$" id="s75sN8RGJC" role="3JlXG4" />
-      </node>
-    </node>
+    <property role="TrG5h" value="EmergencyAttendance" />
     <node concept="1jfOK3" id="1$AaFX9f$2R" role="2OfI9c">
       <ref role="3ZaQn3" node="1$AaFX9f$1c" />
       <node concept="1jfOKv" id="1$AaFX9f$2T" role="1jfOML">
@@ -9161,7 +9139,6 @@
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
       </node>
     </node>
-    <node concept="1FPxa$" id="1xAzJ9P01j9" role="1FYssH" />
   </node>
 </model>
 

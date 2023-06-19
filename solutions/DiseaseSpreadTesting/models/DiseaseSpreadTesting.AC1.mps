@@ -29,7 +29,6 @@
         <property id="3785632457359082556" name="simulation_repetitions" index="2rAC2l" />
         <property id="8998806958909918627" name="secondsPerTick" index="wKqbz" />
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
-        <child id="2338410313177321440" name="ActionCards" index="1SufKE" />
       </concept>
       <concept id="5402567240278617723" name="ActionCards.structure.StaffNumber" flags="ng" index="2_0uwW">
         <property id="5402567240278617733" name="number" index="2_0uz2" />
@@ -61,7 +60,6 @@
       <concept id="3383707102503528520" name="ActionCards.structure.ActionCard" flags="ng" index="2MhjZA">
         <child id="3383707102503528567" name="Actions" index="2MhjZp" />
         <child id="2698877061866267985" name="Branches" index="1hyncM" />
-        <child id="1758249876506198949" name="UsageCondition" index="1FS4Pn" />
       </concept>
       <concept id="3549288998130825128" name="ActionCards.structure.ResultsMappingTable" flags="ng" index="33yUKx">
         <child id="3549288998130825447" name="lines" index="33yUdI" />
@@ -69,7 +67,7 @@
       <concept id="3549288998130825210" name="ActionCards.structure.ResultsMappingLine" flags="ng" index="33yULN">
         <reference id="3549288998130825247" name="Disease" index="33yUem" />
       </concept>
-      <concept id="506397452388682602" name="ActionCards.structure.AdmissionRouteProperty" flags="ng" index="3fNlUA" />
+      <concept id="506397452388682602" name="ActionCards.structure.AttendanceRouteProperty" flags="ng" index="3fNlUA" />
       <concept id="4321323723389465661" name="ActionCards.structure.TimeOfDayCondition" flags="ng" index="3fS9$U">
         <child id="4321323723398463336" name="expression" index="3fm_9J" />
       </concept>
@@ -99,22 +97,12 @@
         <child id="3549288998130844800" name="resultsMappingTable" index="33yLW9" />
         <child id="3866749931154339177" name="testSelectionStrategy" index="1$4g7U" />
       </concept>
-      <concept id="1758249876462569833" name="ActionCards.structure.PatientPropertyConditional" flags="ng" index="1CySur">
-        <reference id="1758249876465254186" name="patientProperty" index="1DsR7o" />
-        <child id="1758249876462569987" name="checkValue" index="1CySjL" />
-      </concept>
       <concept id="1862364223830857512" name="ActionCards.structure.TestOutcome" flags="ng" index="3E3ulc">
         <property id="3549288998120194521" name="outcome" index="33qpDg" />
       </concept>
       <concept id="1758249876508941937" name="ActionCards.structure.ElectiveAttendanceRoute" flags="ng" index="1FPx23" />
       <concept id="1758249876508941398" name="ActionCards.structure.EmergencyAttendanceRoute" flags="ng" index="1FPxa$" />
-      <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
-        <child id="1758249876506201859" name="condition" index="1FS47L" />
-      </concept>
       <concept id="1758249876538241356" name="ActionCards.structure.DischargeAction" flags="ng" index="1H2jYY" />
-      <concept id="1758249876539396808" name="ActionCards.structure.ActionCardReference" flags="ng" index="1HTXKU">
-        <reference id="1758249876539396856" name="actionCard" index="1HTXKa" />
-      </concept>
       <concept id="6963522544237023781" name="ActionCards.structure.ActionDurationMinutes" flags="ng" index="1M3RjT">
         <property id="6963522544237023782" name="duration" index="1M3RjU" />
       </concept>
@@ -335,9 +323,6 @@
     <node concept="2_0uwW" id="3VLqyG6Chhw" role="2_0uzz">
       <property role="2_0uz2" value="10" />
       <ref role="2_0uz0" node="2K0oNvtWdy4" resolve="WardNurse" />
-    </node>
-    <node concept="1HTXKU" id="21NGWDofZ0P" role="1SufKE">
-      <ref role="1HTXKa" node="1Iqh_KLvlmx" resolve="Current Pathway (MajorsAB)" />
     </node>
   </node>
   <node concept="2Ovb82" id="EFW1mZonCG">
@@ -4601,12 +4586,6 @@
       <node concept="2GGxJi" id="s75sN8R3In" role="A3aay">
         <ref role="3tVEyn" node="1Iqh_KLvlyW" resolve="Perform LIAT or Cepheid" />
         <ref role="2GGxGe" node="s75sN8R3xL" resolve="ActionTwo" />
-      </node>
-    </node>
-    <node concept="1FS47K" id="s75sN8Qgq6" role="1FS4Pn">
-      <node concept="1CySur" id="s75sN8QgAy" role="1FS47L">
-        <ref role="1DsR7o" node="s75sN8QgBl" />
-        <node concept="1FPxa$" id="s75sN8QgCY" role="1CySjL" />
       </node>
     </node>
     <node concept="2MhjZa" id="s75sN8R3xL" role="2MhjZp">

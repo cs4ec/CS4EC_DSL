@@ -46,8 +46,8 @@ public class EDBuilder implements ContextBuilder<Object> {
     ToolBox.grids.clear();
 
     context.setId("EDProject");
-    int mapWidth = 121;
-    int mapHeight = 250;
+    int mapWidth = 75;
+    int mapHeight = 155;
 
     Parameters params = RunEnvironment.getInstance().getParameters();
 
@@ -101,7 +101,7 @@ public class EDBuilder implements ContextBuilder<Object> {
 
     // add Locations here
 
-    Area EmergencyDepartment_0 = new Area(context, space, grid, 1, 1, 71, 200, Color.WHITE);
+    Area EmergencyDepartment_0 = new Area(context, space, grid, 1, 1, 20, 15, Color.WHITE);
     EmergencyDepartment_0.addResource(LabPCR.getInstance(), 1000);
     EmergencyDepartment_0.addResource(LateralFlow.getInstance(), 1000);
     EmergencyDepartment_0.addResource(LIAT.getInstance(), 1000);
@@ -117,11 +117,11 @@ public class EDBuilder implements ContextBuilder<Object> {
     EmergencyDepartment_0.setReplenishFrequency(LIAT.getInstance(), 1);
     EmergencyDepartment_0.setReplenishFrequency(Cepheid.getInstance(), 1);
     EmergencyDepartment_0.setReplenishFrequency(PHEThree.getInstance(), 1);
-    Room Entrance_a = new Room("Entrance", context, space, grid, 5, 199, 3, 1, 1, 10000, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
-    Room MajorsABOne_b = new Room("MajorsABOne", context, space, grid, 20, 100, 5, 5, 1, 10, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsABTwo_c = new Room("MajorsABTwo", context, space, grid, 26, 100, 5, 5, 1, 10, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsABThree_d = new Room("MajorsABThree", context, space, grid, 60, 100, 5, 5, 1, 10, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
-    Room MajorsABFour_e = new Room("MajorsABFour", context, space, grid, 66, 100, 5, 5, 1, 10, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room Entrance_a = new Room("Entrance", context, space, grid, 15, 10, 5, 5, 1, 10000, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
+    Room MajorsABOne_b = new Room("MajorsABOne", context, space, grid, 15, 10, 5, 5, 1, 10, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABTwo_c = new Room("MajorsABTwo", context, space, grid, 15, 10, 5, 5, 1, 10, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABThree_d = new Room("MajorsABThree", context, space, grid, 15, 10, 5, 5, 1, 10, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
+    Room MajorsABFour_e = new Room("MajorsABFour", context, space, grid, 15, 10, 5, 5, 1, 10, MajorsAB_Cubicle.getInstance(), Color.GREEN, EmergencyDepartment_0);
 
     try {
       MajorsABOne_b.addOccupiable(new Bed(context, space, grid, 22, 102, MajorsABOne_b));

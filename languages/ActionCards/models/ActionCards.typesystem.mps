@@ -502,5 +502,31 @@
       <ref role="1YaFvo" to="e88n:1xAzJ9JDBLw" resolve="BranchConditional" />
     </node>
   </node>
+  <node concept="1YbPZF" id="7hL7ecKWoj_">
+    <property role="TrG5h" value="typeof_PatientCohortCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <node concept="3clFbS" id="7hL7ecKWojA" role="18ibNy">
+      <node concept="1Z5TYs" id="7hL7ecKWojG" role="3cqZAp">
+        <node concept="mw_s8" id="7hL7ecKWojH" role="1ZfhK$">
+          <node concept="1Z2H0r" id="7hL7ecKWojI" role="mwGJk">
+            <node concept="1YBJjd" id="7hL7ecKWojJ" role="1Z2MuG">
+              <ref role="1YBMHb" node="7hL7ecKWojC" resolve="patientCohortCondition" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="7hL7ecKWojK" role="1ZfhKB">
+          <node concept="2pJPEk" id="7hL7ecKWojL" role="mwGJk">
+            <node concept="2pJPED" id="7hL7ecKWojM" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7hL7ecKWojC" role="1YuTPh">
+      <property role="TrG5h" value="patientCohortCondition" />
+      <ref role="1YaFvo" to="e88n:7hL7ecKWo9q" resolve="PatientCohortCondition" />
+    </node>
+  </node>
 </model>
 

@@ -450,10 +450,26 @@ public class QueriesGenerated extends QueryProviderBase {
     return "DoubleConverter";
   }
   public static Object propertyMacro_GetValue_52_6(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(((SNode) _context.getVariable("var:AgentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL) + String.valueOf(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    String str = SPropertyOperations.getString(((SNode) _context.getVariable("var:AgentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL);
+
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      str += String.valueOf(SPropertyOperations.getString(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)), PROPS.value$zwlK).replaceAll("\\s+", ""));
+    } else {
+      str += String.valueOf(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    }
+
+    return str;
   }
   public static Object propertyMacro_GetValue_52_7(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(((SNode) _context.getVariable("var:AgentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL) + String.valueOf(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    String str = SPropertyOperations.getString(((SNode) _context.getVariable("var:AgentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL);
+
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      str += String.valueOf(SPropertyOperations.getString(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)), PROPS.value$zwlK).replaceAll("\\s+", ""));
+    } else {
+      str += String.valueOf(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    }
+
+    return str;
   }
   public static Object propertyMacro_GetValue_52_8(final PropertyMacroContext _context) {
     return "double";
@@ -628,7 +644,16 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(_context.getNode(), PROPS.value$f34J);
   }
   public static Object propertyMacro_GetValue_80_5(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(((SNode) _context.getVariable("var:AgentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL) + String.valueOf(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    String str = SPropertyOperations.getString(((SNode) _context.getVariable("var:AgentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL);
+
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      str += String.valueOf(SPropertyOperations.getString(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)), PROPS.value$zwlK).replaceAll("\\s+", ""));
+    } else {
+      str += String.valueOf(SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    }
+
+    return str;
+
   }
   public static Object propertyMacro_GetValue_80_6(final PropertyMacroContext _context) {
     return SPropertyOperations.getString(_context.getNode(), PROPS.probabilityDistribution$lZQn) + "";
@@ -637,16 +662,54 @@ public class QueriesGenerated extends QueryProviderBase {
     return SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.actorReference$UTQx), PROPS.name$MnvL);
   }
   public static Object propertyMacro_GetValue_82_0(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(((SNode) _context.getVariable("var:agentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.attribute$9E7a), PROPS.name$MnvL) + String.valueOf((SNodeOperations.getConcept(SLinkOperations.getTarget(Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:linesInDescOrder"))).first(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", "")));
+    String returnString = "";
+    returnString += SPropertyOperations.getString(((SNode) _context.getVariable("var:agentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(_context.getNode(), LINKS.attribute$9E7a), PROPS.name$MnvL);
+
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:linesInDescOrder"))).first(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      returnString += SPropertyOperations.getString(((SNode) (SLinkOperations.getTarget(Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:linesInDescOrder"))).first(), LINKS.attributeValue$vq_t))), PROPS.value$zwlK);
+    } else {
+      returnString += (String.valueOf((SNodeOperations.getConcept(SLinkOperations.getTarget(Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:linesInDescOrder"))).first(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""))));
+    }
+
+    return returnString;
   }
   public static Object propertyMacro_GetValue_82_1(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(((SNode) _context.getVariable("var:agentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL) + String.valueOf((SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", "")));
+
+    String returnString = "";
+    returnString += SPropertyOperations.getString(((SNode) _context.getVariable("var:agentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL);
+
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      returnString += SPropertyOperations.getString(((SNode) (SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t))), PROPS.value$zwlK);
+    } else {
+      returnString += (String.valueOf((SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""))));
+    }
+
+    return returnString;
+
   }
   public static Object propertyMacro_GetValue_82_2(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(((SNode) _context.getVariable("var:agentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL) + String.valueOf((SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", "")));
+    String returnString = "";
+    returnString += SPropertyOperations.getString(((SNode) _context.getVariable("var:agentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL);
+
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      returnString += SPropertyOperations.getString(((SNode) (SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t))), PROPS.value$zwlK);
+    } else {
+      returnString += (String.valueOf((SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""))));
+    }
+
+    return returnString;
   }
   public static Object propertyMacro_GetValue_82_3(final PropertyMacroContext _context) {
-    return SPropertyOperations.getString(((SNode) _context.getVariable("var:agentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL) + String.valueOf((SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", "")));
+    String returnString = "";
+    returnString += SPropertyOperations.getString(((SNode) _context.getVariable("var:agentGenerator")), PROPS.agentProfileName$3MqF) + SPropertyOperations.getString(SLinkOperations.getTarget(SNodeOperations.getNodeAncestor(_context.getNode(), CONCEPTS.AttributeDistributionTable$$C, false, false), LINKS.attribute$9E7a), PROPS.name$MnvL);
+
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      returnString += SPropertyOperations.getString(((SNode) (SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t))), PROPS.value$zwlK);
+    } else {
+      returnString += (String.valueOf((SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""))));
+    }
+
+    return returnString;
   }
   public static Object propertyMacro_GetValue_82_4(final PropertyMacroContext _context) {
     return _context.createUniqueName("generateAttribute", null);
@@ -1244,13 +1307,22 @@ public class QueriesGenerated extends QueryProviderBase {
   }
   public static SNode sourceNodeQuery_82_0(final SourceSubstituteMacroNodeContext _context) {
     SNode str = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, "org.iets3.core.expr.simpleTypes.structure.StringLiteral"));
-    SPropertyOperations.assign(str, PROPS.value$zwlK, SNodeOperations.getConcept(SLinkOperations.getTarget(Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:linesInDescOrder"))).first(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:linesInDescOrder"))).first(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      SPropertyOperations.assign(str, PROPS.value$zwlK, SPropertyOperations.getString(((SNode) SLinkOperations.getTarget(Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:linesInDescOrder"))).first(), LINKS.attributeValue$vq_t)), PROPS.value$zwlK));
+    } else {
+      SPropertyOperations.assign(str, PROPS.value$zwlK, SNodeOperations.getConcept(SLinkOperations.getTarget(Sequence.fromIterable(((Iterable<SNode>) _context.getVariable("var:linesInDescOrder"))).first(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    }
     return str;
   }
   public static SNode sourceNodeQuery_82_1(final SourceSubstituteMacroNodeContext _context) {
     SNode str = SConceptOperations.createNewNode(MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, "org.iets3.core.expr.simpleTypes.structure.StringLiteral"));
-    SPropertyOperations.assign(str, PROPS.value$zwlK, SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t), CONCEPTS.StringLiteral$By)) {
+      SPropertyOperations.assign(str, PROPS.value$zwlK, SPropertyOperations.getString(((SNode) SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)), PROPS.value$zwlK));
+    } else {
+      SPropertyOperations.assign(str, PROPS.value$zwlK, SNodeOperations.getConcept(SLinkOperations.getTarget(_context.getNode(), LINKS.attributeValue$vq_t)).getConceptAlias().replaceAll("\\s+", ""));
+    }
     return str;
+
   }
   public static SNode sourceNodeQuery_84_0(final SourceSubstituteMacroNodeContext _context) {
     return SLinkOperations.getTarget(_context.getNode(), LINKS.targetRoomType$LtjS);
@@ -3136,8 +3208,8 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SContainmentLink AgentType$lBsa = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x637eade0e62ce2b8L, 0xaabf015be70c170L, "AgentType");
     /*package*/ static final SContainmentLink receivers$HQLn = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x71ffe5bd010732aL, 0x139a759561627f7L, "receivers");
     /*package*/ static final SContainmentLink lines$5kpG = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610e89L, 0x296f74efb5610f1bL, "lines");
-    /*package*/ static final SContainmentLink attributeValue$vq_t = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f367L, 0x296f74efb466f49aL, "attributeValue");
     /*package*/ static final SReferenceLink attribute$9E7a = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f407L, 0x70715ccc787d84bL, "attribute");
+    /*package*/ static final SContainmentLink attributeValue$vq_t = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f367L, 0x296f74efb466f49aL, "attributeValue");
     /*package*/ static final SContainmentLink AttributeMonitors$x6OO = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6ca3e29db4287123L, 0x6ca3e29db4287150L, "AttributeMonitors");
     /*package*/ static final SReferenceLink attributeMonitor$zPap = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x70b897b58be2575eL, 0x70b897b58be2577aL, "attributeMonitor");
     /*package*/ static final SContainmentLink possibleValues$MgDX = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x70b897b58bc16ef7L, 0x70b897b58bc16f01L, "possibleValues");
@@ -3249,6 +3321,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SConcept WallDefinition$Qt = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x109830a68a82ca51L, "BuiltEnvironment.structure.WallDefinition");
     /*package*/ static final SConcept ScenarioBuilder$Aw = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x35463334ce2f7b00L, "BuiltEnvironment.structure.ScenarioBuilder");
     /*package*/ static final SConcept AttributeDistributionTable$$C = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f407L, "AgentLanguage.structure.AttributeDistributionTable");
+    /*package*/ static final SConcept StringLiteral$By = MetaAdapterFactory.getConcept(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, "org.iets3.core.expr.simpleTypes.structure.StringLiteral");
     /*package*/ static final SConcept ProbabilityDistribution$1L = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35a97493533736a5L, "AgentLanguage.structure.ProbabilityDistribution");
     /*package*/ static final SConcept OccupiableDefinition$ZY = MetaAdapterFactory.getConcept(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L, "BuiltEnvironment.structure.OccupiableDefinition");
     /*package*/ static final SConcept Actor$CU = MetaAdapterFactory.getConcept(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, "AgentLanguage.structure.Actor");
@@ -3294,6 +3367,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty Time$2ecp = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb5610eb7L, 0x296f74efb5610ed3L, "Time");
     /*package*/ static final SProperty value$f34J = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d465e21e9L, 0x33299c1cba4a21f8L, "value");
     /*package*/ static final SProperty agentProfileName$3MqF = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x637eade0e62ce2b8L, 0x4813ad0fc12f478L, "agentProfileName");
+    /*package*/ static final SProperty value$zwlK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value");
     /*package*/ static final SProperty probabilityDistribution$lZQn = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x296f74efb466f367L, 0x296f74efb466f3a2L, "probabilityDistribution");
     /*package*/ static final SProperty minCapacity$6u3x = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x4ab0a0c760d9b8f3L, 0x4ab0a0c760d9e3cdL, "minCapacity");
     /*package*/ static final SProperty time$mFPb = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3bf86d07f429da00L, 0x3bf86d07f429da01L, "time");
@@ -3305,6 +3379,5 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SProperty colour$5uVZ = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3c282c112f249045L, 0x66029deba11b71c3L, "colour");
     /*package*/ static final SProperty name$2kMF = MetaAdapterFactory.getProperty(0x1a0150acdda54129L, 0x824e01dce96fdea4L, 0x3111466f1f9fe043L, 0x3111466f1f9fe04fL, "name");
     /*package*/ static final SProperty colour$gkeh = MetaAdapterFactory.getProperty(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x1c9634cb480adf09L, "colour");
-    /*package*/ static final SProperty value$zwlK = MetaAdapterFactory.getProperty(0x6b277d9ad52d416fL, 0xa2091919bd737f50L, 0x46ff3b3d86d3edc8L, 0x46ff3b3d86d3edcbL, "value");
   }
 }

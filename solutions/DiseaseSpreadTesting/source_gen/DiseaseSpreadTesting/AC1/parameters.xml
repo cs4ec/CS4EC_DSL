@@ -184,8 +184,8 @@
   		displayName="InfectionSpreadChance:COVIDSymptomatic-10_a0" type="double" defaultValue="100.0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="patientProfileAdmissionRouteEmergencyAttendance"
-  		displayName="patientProfileAdmissionRouteEmergencyAttendance" type="double" defaultValue="100"
+  	<parameter name="patientProfileAttendanceRouteEmergencyAttendance"
+  		displayName="patientProfileAttendanceRouteEmergencyAttendance" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="patientProfileCOVIDInfectionStatusSymptomatic"

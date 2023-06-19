@@ -876,23 +876,5 @@
       </node>
     </node>
   </node>
-  <node concept="1M2fIO" id="10zWyfqtgFD">
-    <property role="3GE5qa" value="Attributes.PatientProperties" />
-    <ref role="1M2myG" to="e88n:s75sN8M$HE" resolve="AttendanceRouteProperty" />
-    <node concept="9SLcT" id="10zWyfqtgFE" role="9SGkU">
-      <node concept="3clFbS" id="10zWyfqtgFF" role="2VODD2">
-        <node concept="3cpWs6" id="10zWyfqtgJ$" role="3cqZAp">
-          <node concept="2OqwBi" id="10zWyfqth6f" role="3cqZAk">
-            <node concept="2DD5aU" id="10zWyfqtgNT" role="2Oq$k0" />
-            <node concept="2Zo12i" id="10zWyfqti2x" role="2OqNvi">
-              <node concept="chp4Y" id="10zWyfqti3g" role="2Zo12j">
-                <ref role="cht4Q" to="e88n:1xAzJ9NG9Dt" resolve="AttendanceRoute" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
 </model>
 

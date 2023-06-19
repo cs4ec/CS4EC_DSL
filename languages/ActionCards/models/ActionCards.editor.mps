@@ -2875,10 +2875,9 @@
               <property role="1lJzqX" value="12" />
             </node>
           </node>
-          <node concept="3F0ifn" id="10zWyfqnUBd" role="3EZMnx">
-            <property role="3F0ifm" value="^" />
+          <node concept="3F1sOY" id="7hL7ecKWxdw" role="3EZMnx">
+            <ref role="1NtTu8" to="e88n:1xAzJ9NxGW3" resolve="condition" />
           </node>
-          <node concept="3F0ifn" id="10zWyfqnUBn" role="3EZMnx" />
           <node concept="2iRfu4" id="6w5xUwMhcAZ" role="2iSdaV" />
         </node>
       </node>
@@ -3748,16 +3747,6 @@
       <node concept="l2Vlx" id="i1eH3WpcbF" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="s75sN8M$HO">
-    <property role="3GE5qa" value="Attributes.PatientProperties" />
-    <ref role="1XX52x" to="e88n:s75sN8M$HE" resolve="AttendanceRouteProperty" />
-    <node concept="3EZMnI" id="s75sN8M$HQ" role="2wV5jI">
-      <node concept="3F0ifn" id="s75sN8M$HX" role="3EZMnx">
-        <property role="3F0ifm" value="Attendance Route" />
-      </node>
-      <node concept="l2Vlx" id="s75sN8M$HT" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="22mcaB" id="2S_5Uq$dj31">
     <ref role="aqKnT" to="e88n:i1eH3VE_aN" resolve="Patient_old" />
     <node concept="22hDWj" id="2S_5Uq$dj32" role="22hAXT" />
@@ -3801,6 +3790,25 @@
     <property role="3GE5qa" value="Attributes.PatientProperties" />
     <property role="TrG5h" value="AddDisease" />
     <ref role="1h_SK9" to="e88n:1xAzJ9JfB29" resolve="InfectionStatusProperty" />
+  </node>
+  <node concept="24kQdi" id="7hL7ecKWo9T">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="1XX52x" to="e88n:7hL7ecKWo9q" resolve="PatientCohortCondition" />
+    <node concept="3EZMnI" id="7hL7ecKWo9V" role="2wV5jI">
+      <node concept="3F0ifn" id="7hL7ecKWoa2" role="3EZMnx">
+        <property role="3F0ifm" value="Patient cohort is:" />
+      </node>
+      <node concept="1iCGBv" id="7hL7ecKWoa8" role="3EZMnx">
+        <ref role="1NtTu8" to="e88n:7hL7ecKWo9t" resolve="cohort" />
+        <node concept="1sVBvm" id="7hL7ecKWoaa" role="1sWHZn">
+          <node concept="3F0A7n" id="7hL7ecKWoai" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="7hL7ecKWo9Y" role="2iSdaV" />
+    </node>
   </node>
 </model>
 

@@ -18,15 +18,15 @@ import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
-public class GrammarCellsSubstituteMenu_AttendanceRouteProperty extends SubstituteMenuBase {
-  public GrammarCellsSubstituteMenu_AttendanceRouteProperty() {
+public class GrammarCellsSubstituteMenu_PatientCohortCondition extends SubstituteMenuBase {
+  public GrammarCellsSubstituteMenu_PatientCohortCondition() {
     super(true);
   }
   @NotNull
   @Override
   protected List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> getParts(final SubstituteMenuContext _context) {
     List<MenuPart<SubstituteMenuItem, SubstituteMenuContext>> result = new ArrayList<MenuPart<SubstituteMenuItem, SubstituteMenuContext>>();
-    result.add(new GrammarCellsSubstituteMenuPart_pyl1jw_a());
+    result.add(new GrammarCellsSubstituteMenuPart_92ov3y_a());
     return result;
   }
 
@@ -34,7 +34,7 @@ public class GrammarCellsSubstituteMenu_AttendanceRouteProperty extends Substitu
   @Override
   public List<SubstituteMenuItem> createMenuItems(@NotNull SubstituteMenuContext context) {
     context.getEditorMenuTrace().pushTraceInfo();
-    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "AttendanceRouteProperty", null));
+    context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("contribution to the " + "default substitute menu for " + "PatientCohortCondition", null));
     try {
       return super.createMenuItems(context);
     } finally {
@@ -43,18 +43,18 @@ public class GrammarCellsSubstituteMenu_AttendanceRouteProperty extends Substitu
   }
 
 
-  private class GrammarCellsSubstituteMenuPart_pyl1jw_a extends GrammarCellsSubstituteMenuPart {
+  private class GrammarCellsSubstituteMenuPart_92ov3y_a extends GrammarCellsSubstituteMenuPart {
     @Override
     public SModule getModule(SRepository repository) {
       return PersistenceFacade.getInstance().createModuleReference("b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)").resolve(repository);
     }
     @Override
     public SAbstractConcept getExpectedOutputConcept() {
-      return CONCEPTS.AttendanceRouteProperty$eb;
+      return CONCEPTS.PatientCohortCondition$Rl;
     }
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept AttendanceRouteProperty$eb = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x70715ccc8ca4b6aL, "ActionCards.structure.AttendanceRouteProperty");
+    /*package*/ static final SConcept PatientCohortCondition$Rl = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce330f1825aL, "ActionCards.structure.PatientCohortCondition");
   }
 }

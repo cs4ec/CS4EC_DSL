@@ -284,27 +284,6 @@
             <property role="VOm3f" value="true" />
           </node>
         </node>
-        <node concept="3F0ifn" id="1xAzJ9OWiEv" role="3EZMnx">
-          <property role="3F0ifm" value="Attendance:" />
-          <node concept="pVoyu" id="1xAzJ9OWiEU" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-          <node concept="VSNWy" id="1xAzJ9OY4ju" role="3F10Kt">
-            <property role="1lJzqX" value="14" />
-          </node>
-          <node concept="Vb9p2" id="1xAzJ9OY4jv" role="3F10Kt">
-            <property role="Vbekb" value="g1_tSyq/BOLD_ITALIC" />
-          </node>
-        </node>
-        <node concept="3F1sOY" id="1xAzJ9OWiFn" role="3EZMnx">
-          <ref role="1NtTu8" to="s2d1:1xAzJ9NBOBv" resolve="attendanceRoute" />
-          <node concept="VSNWy" id="1xAzJ9OY4jz" role="3F10Kt">
-            <property role="1lJzqX" value="14" />
-          </node>
-          <node concept="Vb9p2" id="1xAzJ9OY4j$" role="3F10Kt">
-            <property role="Vbekb" value="g1_tSyq/BOLD_ITALIC" />
-          </node>
-        </node>
         <node concept="3F0ifn" id="4NxsD3ccpCq" role="3EZMnx">
           <node concept="pVoyu" id="4NxsD3ccpCX" role="3F10Kt">
             <property role="VOm3f" value="true" />

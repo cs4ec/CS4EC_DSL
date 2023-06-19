@@ -4,7 +4,6 @@
   <delimiter>,</delimiter>
   <format>TABULAR</format>
   <sourceIds class="linked-hash-set">
-    <string>patientgetAdmissionRouteisEmergencyAttendance</string>
     <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
     <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
     <string>patientgetCOVIDInfectionStatusisSusceptible</string>
@@ -54,8 +53,6 @@
     <string>patientgetCepheidFluBResultisNegative</string>
     <string>patientgetadmittedToisGreenBay</string>
     <string>patientgetadmittedToisCOVIDPositiveCohort</string>
-    <string>patientgetadmittedToisGreenBaygetAdmissionRouteisEmergencyAttendance</string>
-    <string>patientgetadmittedToisCOVIDPositiveCohortgetAdmissionRouteisEmergencyAttendance</string>
     <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisAsymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSusceptible</string>

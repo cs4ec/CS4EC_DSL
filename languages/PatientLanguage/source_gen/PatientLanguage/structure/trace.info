@@ -15,7 +15,7 @@
       <unit at="10,0,34,0" name="PatientLanguage.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="15,0,102,0" name="PatientLanguage.structure.StructureAspectDescriptor" />
+      <unit at="15,0,101,0" name="PatientLanguage.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)/2876623929997959972">
@@ -153,14 +153,13 @@
       <node id="768972137579180806" at="94,101,95,17" concept="0" />
       <node id="768972137579221593" at="95,17,96,200" concept="0" />
       <node id="768972137579221632" at="96,200,97,203" concept="0" />
-      <node id="1758249876507806175" at="97,203,98,209" concept="0" />
-      <node id="768972137579180806" at="98,209,99,22" concept="4" />
-      <node id="768972137579180806" at="90,0,101,0" concept="6" trace="createDescriptorForPatientProfile#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="768972137579180806" at="97,203,98,22" concept="4" />
+      <node id="768972137579180806" at="90,0,100,0" concept="6" trace="createDescriptorForPatientProfile#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="768972137579180806" at="49,48,50,39" />
-      <scope id="768972137579180806" at="90,72,99,22">
+      <scope id="768972137579180806" at="90,72,98,22">
         <var name="b" id="768972137579180806" />
       </scope>
-      <scope id="768972137579180806" at="90,0,101,0" />
+      <scope id="768972137579180806" at="90,0,100,0" />
     </file>
   </root>
 </debug-info>

@@ -118,13 +118,6 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals" />
     </node>
-    <node concept="1TJgyj" id="1xAzJ9NBOBv" role="1TKVEi">
-      <property role="IQ2ns" value="1758249876507806175" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="attendanceRoute" />
-      <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="e88n:1xAzJ9NG9Dt" resolve="AttendanceRoute" />
-    </node>
     <node concept="PrWs8" id="1xAzJ9O2iPR" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>

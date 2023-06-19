@@ -281,40 +281,40 @@
   		type="constant" constant_type="double" value="0.012" />
   	<parameter name="InfectionSpreadChance:FluBSymptomatic-1.2_b0"
   		type="constant" constant_type="double" value="0.006" />
-  	<parameter name="patientProfileAdmissionRouteEmergencyAttendance"
+  	<parameter name="EmergencyAttendancecohortEmergencyAttendance"
   		 type="constant" constant_type="double" value = "100" />
-  	<parameter name="patientProfileCOVIDInfectionStatusSymptomatic"
+  	<parameter name="EmergencyAttendanceCOVIDInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "0.5" />
-  	<parameter name="patientProfileCOVIDInfectionStatusAsymptomatic"
+  	<parameter name="EmergencyAttendanceCOVIDInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="patientProfileCOVIDInfectionStatusSusceptible"
+  	<parameter name="EmergencyAttendanceCOVIDInfectionStatusSusceptible"
   		 type="constant" constant_type="double" value = "99.5" />
-  	<parameter name="patientProfileCOVIDInfectionStatusExposed"
+  	<parameter name="EmergencyAttendanceCOVIDInfectionStatusExposed"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="patientProfileFluAInfectionStatusSymptomatic"
+  	<parameter name="EmergencyAttendanceFluAInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "0.17" />
-  	<parameter name="patientProfileFluAInfectionStatusAsymptomatic"
+  	<parameter name="EmergencyAttendanceFluAInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="patientProfileFluAInfectionStatusSusceptible"
+  	<parameter name="EmergencyAttendanceFluAInfectionStatusSusceptible"
   		 type="constant" constant_type="double" value = "99.83" />
-  	<parameter name="patientProfileFluAInfectionStatusExposed"
+  	<parameter name="EmergencyAttendanceFluAInfectionStatusExposed"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="patientProfileFluBInfectionStatusSymptomatic"
+  	<parameter name="EmergencyAttendanceFluBInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "0.17" />
-  	<parameter name="patientProfileFluBInfectionStatusAsymptomatic"
+  	<parameter name="EmergencyAttendanceFluBInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="patientProfileFluBInfectionStatusSusceptible"
+  	<parameter name="EmergencyAttendanceFluBInfectionStatusSusceptible"
   		 type="constant" constant_type="double" value = "99.83" />
-  	<parameter name="patientProfileFluBInfectionStatusExposed"
+  	<parameter name="EmergencyAttendanceFluBInfectionStatusExposed"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="patientProfileSeveritysevere"
+  	<parameter name="EmergencyAttendanceSeveritysevere"
   		 type="constant" constant_type="double" value = "3" />
-  	<parameter name="patientProfileSeveritymoderate"
+  	<parameter name="EmergencyAttendanceSeveritymoderate"
   		 type="constant" constant_type="double" value = "37" />
-  	<parameter name="patientProfileSeveritylow"
+  	<parameter name="EmergencyAttendanceSeveritylow"
   		 type="constant" constant_type="double" value = "60" />
-  	<parameter name="patientProfileImmunocompromisedYes"
+  	<parameter name="EmergencyAttendanceImmunocompromisedYes"
   		 type="constant" constant_type="double" value = "1" />
-  	<parameter name="patientProfileImmunocompromisedNo"
+  	<parameter name="EmergencyAttendanceImmunocompromisedNo"
   		 type="constant" constant_type="double" value = "99" />
 </sweep>

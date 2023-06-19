@@ -27,10 +27,10 @@
     <import index="krs4" ref="r:30217dbd-9533-41ef-b6a7-ddd037873326(DiseaseModel.behavior)" />
     <import index="s2d1" ref="r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)" />
     <import index="uyrv" ref="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)" implicit="true" />
+    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
-    <import index="5qo5" ref="r:6d93ddb1-b0b0-4eee-8079-51303666672a(org.iets3.core.expr.simpleTypes.structure)" implicit="true" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" implicit="true" />
   </imports>
   <registry>
@@ -213,6 +213,7 @@
         <child id="2985733650842580021" name="lines" index="2t2o3q" />
       </concept>
       <concept id="2985733650842579815" name="AgentLanguage.structure.AttributeDistributionLine" flags="ng" index="2t2ou8">
+        <property id="2985733650842579874" name="probabilityDistribution" index="2t2otd" />
         <child id="2985733650842580122" name="attributeValue" index="2t2o1P" />
       </concept>
       <concept id="7454555096515224041" name="AgentLanguage.structure.ExpressionWrapper" flags="ng" index="xbsuO">
@@ -1018,6 +1019,12 @@
       <property role="TrG5h" value="DiseaseToBreadcrumb" />
       <ref role="2rZz_L" to="3751:G77p895LJp" resolve="Breadcrumb" />
       <ref role="2rTdP9" to="482l:2lOlAdPyF0i" resolve="Disease" />
+    </node>
+    <node concept="3aamgX" id="7hL7ecKWtUp" role="3acgRq">
+      <ref role="30HIoZ" to="e88n:7hL7ecKWo9q" resolve="PatientCohortCondition" />
+      <node concept="j$656" id="7hL7ecKWtUq" role="1lVwrX">
+        <ref role="v9R2y" node="7hL7ecKWtUn" resolve="reduce_PatientCohortCondition" />
+      </node>
     </node>
   </node>
   <node concept="3Vql55" id="4FTL$vJIr_A">
@@ -2701,6 +2708,67 @@
     </node>
   </node>
   <node concept="25k$Xo" id="EFW1mY3_MX">
+    <node concept="2t2o3C" id="7hL7ecL4g3M" role="2tLcDf">
+      <ref role="30wcQ7" node="7hL7ecKWsxe" resolve="cohort" />
+      <node concept="2t2ou8" id="7hL7ecL4gpp" role="2t2o3q">
+        <property role="2t2otd" value="100" />
+        <node concept="30bdrP" id="7hL7ecL8EzH" role="2t2o1P">
+          <node concept="3_AbJx" id="7hL7ecL8EzU" role="lGtFl">
+            <node concept="3_AbJw" id="7hL7ecL8EzV" role="3_A0Ny">
+              <node concept="3clFbS" id="7hL7ecL8EzW" role="2VODD2">
+                <node concept="3cpWs8" id="7hL7ecL8EWQ" role="3cqZAp">
+                  <node concept="3cpWsn" id="7hL7ecL8EWT" role="3cpWs9">
+                    <property role="TrG5h" value="node" />
+                    <node concept="3Tqbb2" id="7hL7ecL8EWO" role="1tU5fm">
+                      <ref role="ehGHo" to="5qo5:4rZeNQ6OYR8" resolve="StringLiteral" />
+                    </node>
+                    <node concept="2ShNRf" id="7hL7ecL8F7D" role="33vP2m">
+                      <node concept="3zrR0B" id="7hL7ecL8Gp5" role="2ShVmc">
+                        <node concept="3Tqbb2" id="7hL7ecL8Gp7" role="3zrR0E">
+                          <ref role="ehGHo" to="5qo5:4rZeNQ6OYR8" resolve="StringLiteral" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3clFbF" id="7hL7ecL8GB4" role="3cqZAp">
+                  <node concept="37vLTI" id="7hL7ecL8HJs" role="3clFbG">
+                    <node concept="2OqwBi" id="7hL7ecL8GUg" role="37vLTJ">
+                      <node concept="37vLTw" id="7hL7ecL8GB2" role="2Oq$k0">
+                        <ref role="3cqZAo" node="7hL7ecL8EWT" resolve="node" />
+                      </node>
+                      <node concept="3TrcHB" id="7hL7ecL8HpJ" role="2OqNvi">
+                        <ref role="3TsBF5" to="5qo5:4rZeNQ6OYRb" resolve="value" />
+                      </node>
+                    </node>
+                    <node concept="2OqwBi" id="7hL7ecL4heq" role="37vLTx">
+                      <node concept="2OqwBi" id="7hL7ecL4gNl" role="2Oq$k0">
+                        <node concept="30H73N" id="7hL7ecL4gB8" role="2Oq$k0" />
+                        <node concept="2Xjw5R" id="7hL7ecL4gY7" role="2OqNvi">
+                          <node concept="1xMEDy" id="7hL7ecL4gY8" role="1xVPHs">
+                            <node concept="chp4Y" id="7hL7ecL4gY9" role="ri$Ld">
+                              <ref role="cht4Q" to="s2d1:EFW1mY_7c6" resolve="PatientProfile" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                      <node concept="3TrcHB" id="7hL7ecL4hwK" role="2OqNvi">
+                        <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="3cpWs6" id="7hL7ecL8I2m" role="3cqZAp">
+                  <node concept="37vLTw" id="7hL7ecL8IaG" role="3cqZAk">
+                    <ref role="3cqZAo" node="7hL7ecL8EWT" resolve="node" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="2t2o3C" id="s75sN8ruVx" role="2tLcDf">
       <ref role="30wcQ7" node="5ivS4t6stD9" resolve="TestAttribute" />
       <node concept="2t2ou8" id="s75sN8rx9q" role="2t2o3q">
@@ -4114,7 +4182,6 @@
                   </node>
                 </node>
                 <node concept="3clFbH" id="4EKCctwBXba" role="3cqZAp" />
-                <node concept="3clFbH" id="4EKCctwzAIT" role="3cqZAp" />
                 <node concept="3clFbJ" id="4EKCctwulI3" role="3cqZAp">
                   <node concept="3clFbS" id="4EKCctwulI5" role="3clFbx">
                     <node concept="3clFbF" id="4EKCctwupWB" role="3cqZAp">
@@ -4386,6 +4453,13 @@
           </node>
         </node>
       </node>
+    </node>
+    <node concept="jeB$7" id="7hL7ecKWsxe" role="3eYOtt">
+      <property role="TrG5h" value="cohort" />
+      <node concept="30bdrP" id="7hL7ecKWsAu" role="1gSNMQ">
+        <property role="30bdrQ" value="CohortOne" />
+      </node>
+      <node concept="30bdrU" id="7hL7ecKWsAj" role="2zM23F" />
     </node>
     <node concept="n94m4" id="EFW1mY_7M1" role="lGtFl">
       <ref role="n9lRv" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
@@ -12237,6 +12311,132 @@
                 <node concept="30H73N" id="G77p89VkMe" role="2Oq$k0" />
                 <node concept="3TrcHB" id="G77p89Vlkx" role="2OqNvi">
                   <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="7hL7ecKWtUn">
+    <property role="TrG5h" value="reduce_PatientCohortCondition" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="3gUMe" to="e88n:7hL7ecKWo9q" resolve="PatientCohortCondition" />
+    <node concept="jeB$4" id="7hL7ecKWtVq" role="13RCb5">
+      <property role="jeB_Y" value="3KCb14J4_lk/equals" />
+      <ref role="2h88ii" node="EFW1mY_7M0" resolve="map_Patient" />
+      <ref role="2u9qTp" node="7hL7ecKWsxe" resolve="cohort" />
+      <node concept="30bdrP" id="7hL7ecKWtVG" role="x4oD$">
+        <node concept="17Uvod" id="7hL7ecKWu4P" role="lGtFl">
+          <property role="2qtEX9" value="value" />
+          <property role="P4ACc" value="6b277d9a-d52d-416f-a209-1919bd737f50/5115872837157252552/5115872837157252555" />
+          <node concept="3zFVjK" id="7hL7ecKWu4Q" role="3zH0cK">
+            <node concept="3clFbS" id="7hL7ecKWu4R" role="2VODD2">
+              <node concept="3clFbF" id="7hL7ecKWu9v" role="3cqZAp">
+                <node concept="2OqwBi" id="7hL7ecKWuYz" role="3clFbG">
+                  <node concept="2OqwBi" id="7hL7ecKWup3" role="2Oq$k0">
+                    <node concept="30H73N" id="7hL7ecKWu9u" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="7hL7ecKWuKr" role="2OqNvi">
+                      <ref role="3Tt5mk" to="e88n:7hL7ecKWo9t" resolve="cohort" />
+                    </node>
+                  </node>
+                  <node concept="3TrcHB" id="7hL7ecKWvd9" role="2OqNvi">
+                    <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="raruj" id="7hL7ecKWu2i" role="lGtFl" />
+      <node concept="1ZhdrF" id="7hL7ecLuzcR" role="lGtFl">
+        <property role="2qtEX8" value="actorRef" />
+        <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/4334763093659899157/2985733650908180605" />
+        <node concept="3$xsQk" id="7hL7ecLuzcS" role="3$ytzL">
+          <node concept="3clFbS" id="7hL7ecLuzcT" role="2VODD2">
+            <node concept="3clFbF" id="7hL7ecLuzmM" role="3cqZAp">
+              <node concept="2OqwBi" id="7hL7ecLuzmN" role="3clFbG">
+                <node concept="1iwH7S" id="7hL7ecLuzmO" role="2Oq$k0" />
+                <node concept="1iwH70" id="7hL7ecLuzmP" role="2OqNvi">
+                  <ref role="1iwH77" node="1xAzJ9O2jGr" resolve="PatientProfileReduction" />
+                  <node concept="2OqwBi" id="7hL7ecLuzmQ" role="1iwH7V">
+                    <node concept="2OqwBi" id="7hL7ecLuzmR" role="2Oq$k0">
+                      <node concept="2OqwBi" id="7hL7ecLuzmS" role="2Oq$k0">
+                        <node concept="1iwH7S" id="7hL7ecLuzmT" role="2Oq$k0" />
+                        <node concept="1r8y6K" id="7hL7ecLuzmU" role="2OqNvi" />
+                      </node>
+                      <node concept="2RRcyG" id="7hL7ecLuzmV" role="2OqNvi">
+                        <node concept="chp4Y" id="7hL7ecLuzmW" role="3MHsoP">
+                          <ref role="cht4Q" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="1uHKPH" id="7hL7ecLuzmX" role="2OqNvi" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1ZhdrF" id="7hL7ecLuzVW" role="lGtFl">
+        <property role="2qtEX8" value="attrRef" />
+        <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/4334763093659899157/2985733650891070134" />
+        <node concept="3$xsQk" id="7hL7ecLuzVX" role="3$ytzL">
+          <node concept="3clFbS" id="7hL7ecLuzVY" role="2VODD2">
+            <node concept="3clFbF" id="7hL7ecL$gpE" role="3cqZAp">
+              <node concept="2OqwBi" id="7hL7ecL$lSF" role="3clFbG">
+                <node concept="2OqwBi" id="7hL7ecL$gGN" role="2Oq$k0">
+                  <node concept="2OqwBi" id="7hL7ecL$gpG" role="2Oq$k0">
+                    <node concept="1iwH7S" id="7hL7ecL$gpH" role="2Oq$k0" />
+                    <node concept="1iwH70" id="7hL7ecL$gpI" role="2OqNvi">
+                      <ref role="1iwH77" node="1xAzJ9O2jGr" resolve="PatientProfileReduction" />
+                      <node concept="2OqwBi" id="7hL7ecL$gpJ" role="1iwH7V">
+                        <node concept="2OqwBi" id="7hL7ecL$gpK" role="2Oq$k0">
+                          <node concept="2OqwBi" id="7hL7ecL$gpL" role="2Oq$k0">
+                            <node concept="1iwH7S" id="7hL7ecL$gpM" role="2Oq$k0" />
+                            <node concept="1r8y6K" id="7hL7ecL$gpN" role="2OqNvi" />
+                          </node>
+                          <node concept="2RRcyG" id="7hL7ecL$gpO" role="2OqNvi">
+                            <node concept="chp4Y" id="7hL7ecL$gpP" role="3MHsoP">
+                              <ref role="cht4Q" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="1uHKPH" id="7hL7ecL$gpQ" role="2OqNvi" />
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3Tsc0h" id="7hL7ecL$gYG" role="2OqNvi">
+                    <ref role="3TtcxE" to="3751:2lYAlRFxtS0" resolve="attributes" />
+                  </node>
+                </node>
+                <node concept="1z4cxt" id="7hL7ecLDhhp" role="2OqNvi">
+                  <node concept="1bVj0M" id="7hL7ecLDhhr" role="23t8la">
+                    <node concept="3clFbS" id="7hL7ecLDhhs" role="1bW5cS">
+                      <node concept="3clFbF" id="7hL7ecLDhoz" role="3cqZAp">
+                        <node concept="17R0WA" id="7hL7ecLDjTu" role="3clFbG">
+                          <node concept="Xl_RD" id="7hL7ecLDk2p" role="3uHU7w">
+                            <property role="Xl_RC" value="cohort" />
+                          </node>
+                          <node concept="2OqwBi" id="7hL7ecLDhQo" role="3uHU7B">
+                            <node concept="37vLTw" id="7hL7ecLDhoy" role="2Oq$k0">
+                              <ref role="3cqZAo" node="7hL7ecLDhht" resolve="it" />
+                            </node>
+                            <node concept="3TrcHB" id="7hL7ecLDjq3" role="2OqNvi">
+                              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="Rh6nW" id="7hL7ecLDhht" role="1bW2Oz">
+                      <property role="TrG5h" value="it" />
+                      <node concept="2jxLKc" id="7hL7ecLDhhu" role="1tU5fm" />
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
