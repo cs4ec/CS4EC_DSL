@@ -49,6 +49,7 @@ import com.mbeddr.mpsutil.grammarcells.runtime.IRule;
 import org.jetbrains.mps.openapi.model.SModel;
 import java.util.Set;
 import org.jetbrains.mps.openapi.language.SLanguage;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
 
 public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor implements IGrammarActionsDescriptor {
@@ -69,7 +70,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Branch", new SNodePointer("r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)", "3787511550153605449")));
           try {
             if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.Branch$sq)) {
-              final SAbstractConcept wrappedConcept = CONCEPTS.Expression$D_;
+              final SAbstractConcept wrappedConcept = CONCEPTS.ConditonalStatement$kU;
               for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.Branch$sq, _context.getModel(), Branch_diagram_Editor.class, _context.getEditorContext()))) {
                 final SConcept outputConcept = ((SConcept) subconcept);
 
@@ -105,7 +106,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                             wrappedNode = nodeToWrap;
                             // use setupNode after setting wrapped element to allow access to the wrapped element in node factories
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
-                            SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$D_));
+                            SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.ConditonalStatement$kU));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
 
                             return wrapper;
@@ -152,7 +153,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Branch", new SNodePointer("r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)", "90846643924969389")));
           try {
             if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.Branch$sq)) {
-              final SAbstractConcept wrappedConcept = CONCEPTS.Expression$D_;
+              final SAbstractConcept wrappedConcept = CONCEPTS.ConditonalStatement$kU;
               for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.Branch$sq, _context.getModel(), Branch_Editor.class, _context.getEditorContext()))) {
                 final SConcept outputConcept = ((SConcept) subconcept);
 
@@ -188,7 +189,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                             wrappedNode = nodeToWrap;
                             // use setupNode after setting wrapped element to allow access to the wrapped element in node factories
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
-                            SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$D_));
+                            SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.ConditonalStatement$kU));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
 
                             return wrapper;
@@ -235,7 +236,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
           _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Branch", new SNodePointer("r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)", "90846643924025675")));
           try {
             if (SConceptOperations.isExactly(SNodeOperations.asSConcept(expectedOutputConceptExactly), CONCEPTS.Branch$sq)) {
-              final SAbstractConcept wrappedConcept = CONCEPTS.Expression$D_;
+              final SAbstractConcept wrappedConcept = CONCEPTS.ConditonalStatement$kU;
               for (SConcept subconcept : ListSequence.fromList(GrammarCellsUtil.getVisibleSubconceptsNonAbstract(CONCEPTS.Branch$sq, _context.getModel(), Branch_Editor.class, _context.getEditorContext()))) {
                 final SConcept outputConcept = ((SConcept) subconcept);
 
@@ -271,7 +272,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                             wrappedNode = nodeToWrap;
                             // use setupNode after setting wrapped element to allow access to the wrapped element in node factories
                             SNode wrapper = SConceptOperations.createNewNode(SNodeOperations.asInstanceConcept(outputConcept));
-                            SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.Expression$D_));
+                            SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(nodeToWrap, CONCEPTS.ConditonalStatement$kU));
                             NodeFactoryManager.setupNode(outputConcept, wrapper, _context.getCurrentTargetNode(), _context.getParentNode(), _context.getModel());
 
                             return wrapper;
@@ -341,7 +342,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
               _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Branch", new SNodePointer("r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)", "3787511550153605449")));
               try {
                 if (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM) {
-                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$D_, null);
+                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.ConditonalStatement$kU, null);
                   if (sourceNode != null) {
                     final SAbstractConcept sourceNodeConcept = SNodeOperations.getConcept(sourceNode);
                     SContainmentLink link = sourceNode.getContainmentLink();
@@ -366,7 +367,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                                 String matchingText = getMatchingText(pattern);
                                 SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.Branch$sq);
                                 SNodeOperations.replaceWithAnother(sourceNode, wrapper);
-                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.Expression$D_));
+                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.ConditonalStatement$kU));
 
 
                                 SNode newChild = ListSequence.fromList(SNodeOperations.getChildren(wrapper)).findFirst(new IWhereFilter<SNode>() {
@@ -403,7 +404,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                   }
                 }
                 if (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) {
-                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$D_, null);
+                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.ConditonalStatement$kU, null);
                   if (sourceNode != null) {
                     final SAbstractConcept sourceNodeConcept = SNodeOperations.getConcept(sourceNode);
                     SContainmentLink link = sourceNode.getContainmentLink();
@@ -428,7 +429,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                                 String matchingText = getMatchingText(pattern);
                                 SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.Branch$sq);
                                 SNodeOperations.replaceWithAnother(sourceNode, wrapper);
-                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.Expression$D_));
+                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.ConditonalStatement$kU));
 
 
                                 SNode newChild = ListSequence.fromList(SNodeOperations.getChildren(wrapper)).findFirst(new IWhereFilter<SNode>() {
@@ -488,7 +489,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
               _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Branch", new SNodePointer("r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)", "90846643924969389")));
               try {
                 if (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM) {
-                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$D_, null);
+                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.ConditonalStatement$kU, null);
                   if (sourceNode != null) {
                     final SAbstractConcept sourceNodeConcept = SNodeOperations.getConcept(sourceNode);
                     SContainmentLink link = sourceNode.getContainmentLink();
@@ -513,7 +514,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                                 String matchingText = getMatchingText(pattern);
                                 SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.Branch$sq);
                                 SNodeOperations.replaceWithAnother(sourceNode, wrapper);
-                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.Expression$D_));
+                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.ConditonalStatement$kU));
 
 
                                 SNode newChild = ListSequence.fromList(SNodeOperations.getChildren(wrapper)).findFirst(new IWhereFilter<SNode>() {
@@ -550,7 +551,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                   }
                 }
                 if (_context.getMenuLocation() == MenuLocations.RIGHT_SIDE_TRANSFORM) {
-                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$D_, null);
+                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.ConditonalStatement$kU, null);
                   if (sourceNode != null) {
                     final SAbstractConcept sourceNodeConcept = SNodeOperations.getConcept(sourceNode);
                     SContainmentLink link = sourceNode.getContainmentLink();
@@ -575,7 +576,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                                 String matchingText = getMatchingText(pattern);
                                 SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.Branch$sq);
                                 SNodeOperations.replaceWithAnother(sourceNode, wrapper);
-                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.Expression$D_));
+                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.ConditonalStatement$kU));
 
 
                                 SNode newChild = ListSequence.fromList(SNodeOperations.getChildren(wrapper)).findFirst(new IWhereFilter<SNode>() {
@@ -635,7 +636,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
               _context.getEditorMenuTrace().setDescriptor(new EditorMenuDescriptorBase("grammar.wrap in " + "Branch", new SNodePointer("r:83e379e8-8e36-45eb-acaf-08cc8eb21ff8(ActionCards.editor)", "90846643924025675")));
               try {
                 if (_context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM) {
-                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.Expression$D_, null);
+                  final SNode sourceNode = new Parser(_context.getModel()).isEndOf(_context.getNode(), _context.getMenuLocation() == MenuLocations.LEFT_SIDE_TRANSFORM, CONCEPTS.ConditonalStatement$kU, null);
                   if (sourceNode != null) {
                     final SAbstractConcept sourceNodeConcept = SNodeOperations.getConcept(sourceNode);
                     SContainmentLink link = sourceNode.getContainmentLink();
@@ -660,7 +661,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
                                 String matchingText = getMatchingText(pattern);
                                 SNode wrapper = SNodeOperations.cast(SNodeFactoryOperations.createNewNode(subconcept, null), CONCEPTS.Branch$sq);
                                 SNodeOperations.replaceWithAnother(sourceNode, wrapper);
-                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.Expression$D_));
+                                SLinkOperations.setTarget(wrapper, LINKS.condition$UnEW, SNodeOperations.cast(sourceNode, CONCEPTS.ConditonalStatement$kU));
 
 
                                 SNode newChild = ListSequence.fromList(SNodeOperations.getChildren(wrapper)).findFirst(new IWhereFilter<SNode>() {
@@ -742,7 +743,7 @@ public class GrammarActionsDescriptor extends AbstractGrammarActionDescriptor im
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Expression$D_ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L, "org.iets3.core.expr.base.structure.Expression");
+    /*package*/ static final SInterfaceConcept ConditonalStatement$kU = MetaAdapterFactory.getInterfaceConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL, "ActionCards.structure.ConditonalStatement");
     /*package*/ static final SConcept Branch$sq = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch");
   }
 

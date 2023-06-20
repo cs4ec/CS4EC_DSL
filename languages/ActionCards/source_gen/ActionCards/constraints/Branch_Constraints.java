@@ -16,6 +16,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.SNodePointer;
 import org.jetbrains.mps.openapi.language.SConcept;
 import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
+import org.jetbrains.mps.openapi.language.SInterfaceConcept;
 
 public class Branch_Constraints extends BaseConstraintsDescriptor {
   public Branch_Constraints() {
@@ -38,13 +39,12 @@ public class Branch_Constraints extends BaseConstraintsDescriptor {
     };
   }
   private static boolean staticCanBeAParent(SNode node, SNode childNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), CONCEPTS.BranchConditional$k$) || SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), CONCEPTS.BinaryExpression$j$);
+    return SConceptOperations.isSubConceptOf(SNodeOperations.asSConcept(childConcept), CONCEPTS.ConditonalStatement$kU);
   }
   private static final SNodePointer canBeParentBreakingPoint = new SNodePointer("r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)", "1758249876474056404");
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept Branch$sq = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, "ActionCards.structure.Branch");
-    /*package*/ static final SConcept BinaryExpression$j$ = MetaAdapterFactory.getConcept(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86c99c15L, "org.iets3.core.expr.base.structure.BinaryExpression");
-    /*package*/ static final SConcept BranchConditional$k$ = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L, "ActionCards.structure.BranchConditional");
+    /*package*/ static final SInterfaceConcept ConditonalStatement$kU = MetaAdapterFactory.getInterfaceConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL, "ActionCards.structure.ConditonalStatement");
   }
 }

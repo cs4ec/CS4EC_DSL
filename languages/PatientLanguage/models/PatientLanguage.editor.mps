@@ -262,7 +262,7 @@
       <node concept="3EZMnI" id="EFW1mY_7cs" role="3EZMnx">
         <node concept="l2Vlx" id="EFW1mY_7cv" role="2iSdaV" />
         <node concept="3F0ifn" id="EFW1mY_h9k" role="3EZMnx">
-          <property role="3F0ifm" value="Profile:" />
+          <property role="3F0ifm" value="Cohort Profile:" />
           <node concept="VSNWy" id="1xAzJ9NqPO_" role="3F10Kt">
             <property role="1lJzqX" value="18" />
           </node>

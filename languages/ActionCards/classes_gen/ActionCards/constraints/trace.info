@@ -12,7 +12,7 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1070475587102:jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
   <root>
     <file name="ConstraintsAspectDescriptor.java">
-      <unit at="13,0,97,0" name="ActionCards.constraints.ConstraintsAspectDescriptor" />
+      <unit at="13,0,101,0" name="ActionCards.constraints.ConstraintsAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876458087651">
@@ -476,45 +476,44 @@
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876474056403">
     <file name="Branch_Constraints.java">
-      <node id="1758249876474056403" at="21,31,22,30" concept="9" />
-      <node id="1758249876474056403" at="29,128,30,133" concept="4" />
-      <node id="1758249876474056403" at="30,133,31,0" concept="6" />
-      <node id="1758249876474056403" at="32,55,33,72" concept="1" />
-      <node id="1758249876474056403" at="34,9,35,0" concept="6" />
-      <node id="1758249876474056403" at="35,0,36,22" concept="5" />
-      <node id="1758249876474056655" at="40,128,41,227" concept="5" />
-      <node id="1758249876474056403" at="43,0,44,0" concept="7" trace="canBeParentBreakingPoint" />
-      <node id="1758249876474056403" at="46,0,47,0" concept="7" trace="Branch$sq" />
-      <node id="1758249876474056403" at="47,0,48,0" concept="7" trace="BinaryExpression$j$" />
-      <node id="1758249876474056403" at="48,0,49,0" concept="7" trace="BranchConditional$k$" />
-      <node id="1758249876474056403" at="21,0,24,0" concept="0" trace="Branch_Constraints#()V" />
-      <node id="1758249876474056403" at="31,0,34,9" concept="2" />
-      <node id="1758249876474056403" at="40,0,43,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
-      <node id="1758249876474056403" at="28,0,38,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
-      <node id="1758249876474056403" at="26,105,38,6" concept="5" />
-      <node id="1758249876474056403" at="25,0,40,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="1758249876474056403" at="21,31,22,30" />
-      <scope id="1758249876474056403" at="32,55,33,72" />
-      <scope id="1758249876474056405" at="40,128,41,227" />
-      <scope id="1758249876474056403" at="21,0,24,0" />
-      <scope id="1758249876474056403" at="40,0,43,0">
+      <node id="1758249876474056403" at="22,31,23,30" concept="9" />
+      <node id="1758249876474056403" at="30,128,31,133" concept="4" />
+      <node id="1758249876474056403" at="31,133,32,0" concept="6" />
+      <node id="1758249876474056403" at="33,55,34,72" concept="1" />
+      <node id="1758249876474056403" at="35,9,36,0" concept="6" />
+      <node id="1758249876474056403" at="36,0,37,22" concept="5" />
+      <node id="8390519342892649427" at="41,128,42,120" concept="5" />
+      <node id="1758249876474056403" at="44,0,45,0" concept="7" trace="canBeParentBreakingPoint" />
+      <node id="1758249876474056403" at="47,0,48,0" concept="7" trace="Branch$sq" />
+      <node id="1758249876474056403" at="48,0,49,0" concept="7" trace="ConditonalStatement$kU" />
+      <node id="1758249876474056403" at="22,0,25,0" concept="0" trace="Branch_Constraints#()V" />
+      <node id="1758249876474056403" at="32,0,35,9" concept="2" />
+      <node id="1758249876474056403" at="41,0,44,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="1758249876474056403" at="29,0,39,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="1758249876474056403" at="27,105,39,6" concept="5" />
+      <node id="1758249876474056403" at="26,0,41,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="1758249876474056403" at="22,31,23,30" />
+      <scope id="1758249876474056403" at="33,55,34,72" />
+      <scope id="1758249876474056405" at="41,128,42,120" />
+      <scope id="1758249876474056403" at="22,0,25,0" />
+      <scope id="1758249876474056403" at="41,0,44,0">
         <var name="childConcept" id="1758249876474056403" />
         <var name="childNode" id="1758249876474056403" />
         <var name="link" id="1758249876474056403" />
         <var name="node" id="1758249876474056403" />
       </scope>
-      <scope id="1758249876474056403" at="29,128,36,22">
+      <scope id="1758249876474056403" at="30,128,37,22">
         <var name="result" id="1758249876474056403" />
       </scope>
-      <scope id="1758249876474056403" at="28,0,38,0">
+      <scope id="1758249876474056403" at="29,0,39,0">
         <var name="checkingNodeContext" id="1758249876474056403" />
         <var name="context" id="1758249876474056403" />
       </scope>
-      <scope id="1758249876474056403" at="26,105,38,6" />
-      <scope id="1758249876474056403" at="25,0,40,0" />
-      <unit id="1758249876474056403" at="45,0,50,0" name="ActionCards.constraints.Branch_Constraints$CONCEPTS" />
-      <unit id="1758249876474056403" at="27,15,38,5" name="ActionCards.constraints.Branch_Constraints$1" />
-      <unit id="1758249876474056403" at="20,0,51,0" name="ActionCards.constraints.Branch_Constraints" />
+      <scope id="1758249876474056403" at="27,105,39,6" />
+      <scope id="1758249876474056403" at="26,0,41,0" />
+      <unit id="1758249876474056403" at="46,0,50,0" name="ActionCards.constraints.Branch_Constraints$CONCEPTS" />
+      <unit id="1758249876474056403" at="28,15,39,5" name="ActionCards.constraints.Branch_Constraints$1" />
+      <unit id="1758249876474056403" at="21,0,51,0" name="ActionCards.constraints.Branch_Constraints" />
     </file>
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876502986302">
@@ -725,45 +724,44 @@
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876506653989">
     <file name="ActionCardCondition_Constraints.java">
-      <node id="1758249876506653989" at="21,44,22,43" concept="9" />
-      <node id="1758249876506653989" at="29,128,30,133" concept="4" />
-      <node id="1758249876506653989" at="30,133,31,0" concept="6" />
-      <node id="1758249876506653989" at="32,55,33,72" concept="1" />
-      <node id="1758249876506653989" at="34,9,35,0" concept="6" />
-      <node id="1758249876506653989" at="35,0,36,22" concept="5" />
-      <node id="1758249876506217373" at="40,128,41,227" concept="5" />
-      <node id="1758249876506653989" at="43,0,44,0" concept="7" trace="canBeParentBreakingPoint" />
-      <node id="1758249876506653989" at="46,0,47,0" concept="7" trace="ActionCardCondition$FL" />
-      <node id="1758249876506653989" at="47,0,48,0" concept="7" trace="BinaryExpression$j$" />
-      <node id="1758249876506653989" at="48,0,49,0" concept="7" trace="BranchConditional$k$" />
-      <node id="1758249876506653989" at="21,0,24,0" concept="0" trace="ActionCardCondition_Constraints#()V" />
-      <node id="1758249876506653989" at="31,0,34,9" concept="2" />
-      <node id="1758249876506653989" at="40,0,43,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
-      <node id="1758249876506653989" at="28,0,38,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
-      <node id="1758249876506653989" at="26,105,38,6" concept="5" />
-      <node id="1758249876506653989" at="25,0,40,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="1758249876506653989" at="21,44,22,43" />
-      <scope id="1758249876506653989" at="32,55,33,72" />
-      <scope id="1758249876506653991" at="40,128,41,227" />
-      <scope id="1758249876506653989" at="21,0,24,0" />
-      <scope id="1758249876506653989" at="40,0,43,0">
+      <node id="1758249876506653989" at="22,44,23,43" concept="9" />
+      <node id="1758249876506653989" at="30,128,31,133" concept="4" />
+      <node id="1758249876506653989" at="31,133,32,0" concept="6" />
+      <node id="1758249876506653989" at="33,55,34,72" concept="1" />
+      <node id="1758249876506653989" at="35,9,36,0" concept="6" />
+      <node id="1758249876506653989" at="36,0,37,22" concept="5" />
+      <node id="8390519342892652765" at="41,128,42,120" concept="5" />
+      <node id="1758249876506653989" at="44,0,45,0" concept="7" trace="canBeParentBreakingPoint" />
+      <node id="1758249876506653989" at="47,0,48,0" concept="7" trace="ActionCardCondition$FL" />
+      <node id="1758249876506653989" at="48,0,49,0" concept="7" trace="ConditonalStatement$kU" />
+      <node id="1758249876506653989" at="22,0,25,0" concept="0" trace="ActionCardCondition_Constraints#()V" />
+      <node id="1758249876506653989" at="32,0,35,9" concept="2" />
+      <node id="1758249876506653989" at="41,0,44,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="1758249876506653989" at="29,0,39,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="1758249876506653989" at="27,105,39,6" concept="5" />
+      <node id="1758249876506653989" at="26,0,41,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="1758249876506653989" at="22,44,23,43" />
+      <scope id="1758249876506653989" at="33,55,34,72" />
+      <scope id="1758249876506653991" at="41,128,42,120" />
+      <scope id="1758249876506653989" at="22,0,25,0" />
+      <scope id="1758249876506653989" at="41,0,44,0">
         <var name="childConcept" id="1758249876506653989" />
         <var name="childNode" id="1758249876506653989" />
         <var name="link" id="1758249876506653989" />
         <var name="node" id="1758249876506653989" />
       </scope>
-      <scope id="1758249876506653989" at="29,128,36,22">
+      <scope id="1758249876506653989" at="30,128,37,22">
         <var name="result" id="1758249876506653989" />
       </scope>
-      <scope id="1758249876506653989" at="28,0,38,0">
+      <scope id="1758249876506653989" at="29,0,39,0">
         <var name="checkingNodeContext" id="1758249876506653989" />
         <var name="context" id="1758249876506653989" />
       </scope>
-      <scope id="1758249876506653989" at="26,105,38,6" />
-      <scope id="1758249876506653989" at="25,0,40,0" />
-      <unit id="1758249876506653989" at="45,0,50,0" name="ActionCards.constraints.ActionCardCondition_Constraints$CONCEPTS" />
-      <unit id="1758249876506653989" at="27,15,38,5" name="ActionCards.constraints.ActionCardCondition_Constraints$1" />
-      <unit id="1758249876506653989" at="20,0,51,0" name="ActionCards.constraints.ActionCardCondition_Constraints" />
+      <scope id="1758249876506653989" at="27,105,39,6" />
+      <scope id="1758249876506653989" at="26,0,41,0" />
+      <unit id="1758249876506653989" at="46,0,50,0" name="ActionCards.constraints.ActionCardCondition_Constraints$CONCEPTS" />
+      <unit id="1758249876506653989" at="28,15,39,5" name="ActionCards.constraints.ActionCardCondition_Constraints$1" />
+      <unit id="1758249876506653989" at="21,0,51,0" name="ActionCards.constraints.ActionCardCondition_Constraints" />
     </file>
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876508940898">
@@ -1657,6 +1655,90 @@
       <unit id="5381978332891550871" at="28,15,39,5" name="ActionCards.constraints.LocationCapacityCondition_Constraints$1" />
       <unit id="5381978332891550871" at="43,15,54,5" name="ActionCards.constraints.LocationCapacityCondition_Constraints$2" />
       <unit id="5381978332891550871" at="21,0,70,0" name="ActionCards.constraints.LocationCapacityCondition_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/8390519342893594758">
+    <file name="AndConditional_Constraints.java">
+      <node id="8390519342893594758" at="22,39,23,38" concept="9" />
+      <node id="8390519342893594758" at="30,128,31,133" concept="4" />
+      <node id="8390519342893594758" at="31,133,32,0" concept="6" />
+      <node id="8390519342893594758" at="33,55,34,72" concept="1" />
+      <node id="8390519342893594758" at="35,9,36,0" concept="6" />
+      <node id="8390519342893594758" at="36,0,37,22" concept="5" />
+      <node id="8390519342893595010" at="41,128,42,120" concept="5" />
+      <node id="8390519342893594758" at="44,0,45,0" concept="7" trace="canBeParentBreakingPoint" />
+      <node id="8390519342893594758" at="47,0,48,0" concept="7" trace="AndConditional$EH" />
+      <node id="8390519342893594758" at="48,0,49,0" concept="7" trace="ConditonalStatement$kU" />
+      <node id="8390519342893594758" at="22,0,25,0" concept="0" trace="AndConditional_Constraints#()V" />
+      <node id="8390519342893594758" at="32,0,35,9" concept="2" />
+      <node id="8390519342893594758" at="41,0,44,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="8390519342893594758" at="29,0,39,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="8390519342893594758" at="27,105,39,6" concept="5" />
+      <node id="8390519342893594758" at="26,0,41,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="8390519342893594758" at="22,39,23,38" />
+      <scope id="8390519342893594758" at="33,55,34,72" />
+      <scope id="8390519342893594760" at="41,128,42,120" />
+      <scope id="8390519342893594758" at="22,0,25,0" />
+      <scope id="8390519342893594758" at="41,0,44,0">
+        <var name="childConcept" id="8390519342893594758" />
+        <var name="childNode" id="8390519342893594758" />
+        <var name="link" id="8390519342893594758" />
+        <var name="node" id="8390519342893594758" />
+      </scope>
+      <scope id="8390519342893594758" at="30,128,37,22">
+        <var name="result" id="8390519342893594758" />
+      </scope>
+      <scope id="8390519342893594758" at="29,0,39,0">
+        <var name="checkingNodeContext" id="8390519342893594758" />
+        <var name="context" id="8390519342893594758" />
+      </scope>
+      <scope id="8390519342893594758" at="27,105,39,6" />
+      <scope id="8390519342893594758" at="26,0,41,0" />
+      <unit id="8390519342893594758" at="46,0,50,0" name="ActionCards.constraints.AndConditional_Constraints$CONCEPTS" />
+      <unit id="8390519342893594758" at="28,15,39,5" name="ActionCards.constraints.AndConditional_Constraints$1" />
+      <unit id="8390519342893594758" at="21,0,51,0" name="ActionCards.constraints.AndConditional_Constraints" />
+    </file>
+  </root>
+  <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/8390519342894521097">
+    <file name="OrConditional_Constraints.java">
+      <node id="8390519342894521097" at="22,38,23,37" concept="9" />
+      <node id="8390519342894521097" at="30,128,31,133" concept="4" />
+      <node id="8390519342894521097" at="31,133,32,0" concept="6" />
+      <node id="8390519342894521097" at="33,55,34,72" concept="1" />
+      <node id="8390519342894521097" at="35,9,36,0" concept="6" />
+      <node id="8390519342894521097" at="36,0,37,22" concept="5" />
+      <node id="8390519342894521349" at="41,128,42,120" concept="5" />
+      <node id="8390519342894521097" at="44,0,45,0" concept="7" trace="canBeParentBreakingPoint" />
+      <node id="8390519342894521097" at="47,0,48,0" concept="7" trace="OrConditional$MG" />
+      <node id="8390519342894521097" at="48,0,49,0" concept="7" trace="ConditonalStatement$kU" />
+      <node id="8390519342894521097" at="22,0,25,0" concept="0" trace="OrConditional_Constraints#()V" />
+      <node id="8390519342894521097" at="32,0,35,9" concept="2" />
+      <node id="8390519342894521097" at="41,0,44,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="8390519342894521097" at="29,0,39,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="8390519342894521097" at="27,105,39,6" concept="5" />
+      <node id="8390519342894521097" at="26,0,41,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <scope id="8390519342894521097" at="22,38,23,37" />
+      <scope id="8390519342894521097" at="33,55,34,72" />
+      <scope id="8390519342894521099" at="41,128,42,120" />
+      <scope id="8390519342894521097" at="22,0,25,0" />
+      <scope id="8390519342894521097" at="41,0,44,0">
+        <var name="childConcept" id="8390519342894521097" />
+        <var name="childNode" id="8390519342894521097" />
+        <var name="link" id="8390519342894521097" />
+        <var name="node" id="8390519342894521097" />
+      </scope>
+      <scope id="8390519342894521097" at="30,128,37,22">
+        <var name="result" id="8390519342894521097" />
+      </scope>
+      <scope id="8390519342894521097" at="29,0,39,0">
+        <var name="checkingNodeContext" id="8390519342894521097" />
+        <var name="context" id="8390519342894521097" />
+      </scope>
+      <scope id="8390519342894521097" at="27,105,39,6" />
+      <scope id="8390519342894521097" at="26,0,41,0" />
+      <unit id="8390519342894521097" at="46,0,50,0" name="ActionCards.constraints.OrConditional_Constraints$CONCEPTS" />
+      <unit id="8390519342894521097" at="28,15,39,5" name="ActionCards.constraints.OrConditional_Constraints$1" />
+      <unit id="8390519342894521097" at="21,0,51,0" name="ActionCards.constraints.OrConditional_Constraints" />
     </file>
   </root>
 </debug-info>

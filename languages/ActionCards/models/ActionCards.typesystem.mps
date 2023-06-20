@@ -528,5 +528,57 @@
       <ref role="1YaFvo" to="e88n:7hL7ecKWo9q" resolve="PatientCohortCondition" />
     </node>
   </node>
+  <node concept="1YbPZF" id="7hL7ecMntla">
+    <property role="TrG5h" value="typeof_AndConditional" />
+    <property role="3GE5qa" value="Expressions.Conditions.LogicalOperators" />
+    <node concept="3clFbS" id="7hL7ecMntlb" role="18ibNy">
+      <node concept="1Z5TYs" id="7hL7ecMntlW" role="3cqZAp">
+        <node concept="mw_s8" id="7hL7ecMntlX" role="1ZfhK$">
+          <node concept="1Z2H0r" id="7hL7ecMntlY" role="mwGJk">
+            <node concept="1YBJjd" id="7hL7ecMntlZ" role="1Z2MuG">
+              <ref role="1YBMHb" node="7hL7ecMntld" resolve="andConditional" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="7hL7ecMntm0" role="1ZfhKB">
+          <node concept="2pJPEk" id="7hL7ecMntm1" role="mwGJk">
+            <node concept="2pJPED" id="7hL7ecMntm2" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7hL7ecMntld" role="1YuTPh">
+      <property role="TrG5h" value="andConditional" />
+      <ref role="1YaFvo" to="e88n:7hL7ecLXnQQ" resolve="AndConditional" />
+    </node>
+  </node>
+  <node concept="1YbPZF" id="7hL7ecMntnd">
+    <property role="TrG5h" value="typeof_OrConditional" />
+    <property role="3GE5qa" value="Expressions.Conditions.LogicalOperators" />
+    <node concept="3clFbS" id="7hL7ecMntne" role="18ibNy">
+      <node concept="1Z5TYs" id="7hL7ecMntnk" role="3cqZAp">
+        <node concept="mw_s8" id="7hL7ecMntnl" role="1ZfhK$">
+          <node concept="1Z2H0r" id="7hL7ecMntnm" role="mwGJk">
+            <node concept="1YBJjd" id="7hL7ecMntnn" role="1Z2MuG">
+              <ref role="1YBMHb" node="7hL7ecMntng" resolve="orConditional" />
+            </node>
+          </node>
+        </node>
+        <node concept="mw_s8" id="7hL7ecMntno" role="1ZfhKB">
+          <node concept="2pJPEk" id="7hL7ecMntnp" role="mwGJk">
+            <node concept="2pJPED" id="7hL7ecMntnq" role="2pJPEn">
+              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="7hL7ecMntng" role="1YuTPh">
+      <property role="TrG5h" value="orConditional" />
+      <ref role="1YaFvo" to="e88n:7hL7ecM2uaI" resolve="OrConditional" />
+    </node>
+  </node>
 </model>
 

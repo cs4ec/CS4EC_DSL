@@ -75,6 +75,7 @@
       <concept id="8390519342872232538" name="ActionCards.structure.PatientCohortCondition" flags="ng" index="14w9UT">
         <reference id="8390519342872232541" name="cohort" index="14w9UY" />
       </concept>
+      <concept id="8390519342889270710" name="ActionCards.structure.AndConditional" flags="ng" index="15x65l" />
       <concept id="4321323723389465661" name="ActionCards.structure.TimeOfDayCondition" flags="ng" index="3fS9$U">
         <child id="4321323723398463336" name="expression" index="3fm_9J" />
       </concept>
@@ -5286,9 +5287,14 @@
       </node>
     </node>
     <node concept="1FS47K" id="6lG8bJ3T0wj" role="1FS4Pn">
-      <node concept="1CySur" id="1Iqh_KLw239" role="1FS47L">
-        <ref role="1DsR7o" node="1$AaFX9f$4h" />
-        <node concept="MfwqT" id="3EfopC$LMz7" role="1CySjL" />
+      <node concept="15x65l" id="7hL7ecM0SQG" role="1FS47L">
+        <node concept="14w9UT" id="7hL7ecLXnPO" role="30dEsF">
+          <ref role="14w9UY" node="1xAzJ9Ksr_q" resolve="EmergencyAttendance" />
+        </node>
+        <node concept="1CySur" id="1Iqh_KLw239" role="30dEs_">
+          <ref role="1DsR7o" node="1$AaFX9f$4h" />
+          <node concept="MfwqT" id="3EfopC$LMz7" role="1CySjL" />
+        </node>
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0wp" role="2MhjZp">

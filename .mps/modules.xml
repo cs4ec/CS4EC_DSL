@@ -13,7 +13,6 @@
       <modulePath path="$PROJECT_DIR$/languages/RunnerLanguage/RunnerLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/SimulationMonitor/SimulationMonitor.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/StaffDefinitionLanguage/StaffDefinitionLanguage.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/COVIDPathway/COVIDPathway.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/DiseaseSpreadTesting/DiseaseSpreadTesting.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/DualCassetteIntervention.clone/DualCassetteIntervention.clone.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/DualCassetteIntervention/DualCassetteIntervention.msd" folder="runtime" />
@@ -26,6 +25,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/PreStrepAIntervention/PreStrepAIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/QuickCompileTestingBed/QuickCompileTestingBed.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/RepastProvider/RepastProvider.msd" folder="dependencies" />
+      <modulePath path="$PROJECT_DIR$/solutions/SmallTestingBed/SmallTestingBed.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpread/StThomasDiseaseSpread.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpreadRespBays/StThomasDiseaseSpreadRespBays.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpreadSpeedy/StThomasDiseaseSpreadSpeedy.msd" folder="runtime" />

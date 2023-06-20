@@ -20,12 +20,10 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="482l" ref="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)" implicit="true" />
-    <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
@@ -91,10 +89,6 @@
       <concept id="1107461130800" name="jetbrains.mps.baseLanguage.structure.Classifier" flags="ng" index="3pOWGL">
         <property id="521412098689998745" name="nonStatic" index="2bfB8j" />
         <child id="5375687026011219971" name="member" index="jymVt" unordered="true" />
-      </concept>
-      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
-        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
-        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
@@ -488,22 +482,12 @@
     <ref role="1M2myG" to="e88n:4X1nFNzWOlI" resolve="Branch" />
     <node concept="9SLcT" id="1xAzJ9LB4Vk" role="9SGkU">
       <node concept="3clFbS" id="1xAzJ9LB4Vl" role="2VODD2">
-        <node concept="3clFbF" id="1xAzJ9LB4Zf" role="3cqZAp">
-          <node concept="22lmx$" id="1xAzJ9LB5Hr" role="3clFbG">
-            <node concept="2OqwBi" id="1xAzJ9LB5VI" role="3uHU7w">
-              <node concept="2DD5aU" id="1xAzJ9LB5OW" role="2Oq$k0" />
-              <node concept="2Zo12i" id="1xAzJ9LB6dc" role="2OqNvi">
-                <node concept="chp4Y" id="1xAzJ9LB6$Q" role="2Zo12j">
-                  <ref role="cht4Q" to="hm2y:4rZeNQ6MpKl" resolve="BinaryExpression" />
-                </node>
-              </node>
-            </node>
-            <node concept="2OqwBi" id="1xAzJ9LB59m" role="3uHU7B">
-              <node concept="2DD5aU" id="1xAzJ9LB4Ze" role="2Oq$k0" />
-              <node concept="2Zo12i" id="1xAzJ9LB5fX" role="2OqNvi">
-                <node concept="chp4Y" id="1xAzJ9LB5n4" role="2Zo12j">
-                  <ref role="cht4Q" to="e88n:1xAzJ9JDBLw" resolve="BranchConditional" />
-                </node>
+        <node concept="3clFbF" id="7hL7ecMagJj" role="3cqZAp">
+          <node concept="2OqwBi" id="7hL7ecMah1E" role="3clFbG">
+            <node concept="2DD5aU" id="7hL7ecMagJi" role="2Oq$k0" />
+            <node concept="2Zo12i" id="7hL7ecMahdX" role="2OqNvi">
+              <node concept="chp4Y" id="7hL7ecMahl4" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:7hL7ecM603q" resolve="ConditonalStatement" />
               </node>
             </node>
           </node>
@@ -584,22 +568,12 @@
     <ref role="1M2myG" to="e88n:1xAzJ9NxGW2" resolve="ActionCardCondition" />
     <node concept="9SLcT" id="1xAzJ9NzrkA" role="9SGkU">
       <node concept="3clFbS" id="1xAzJ9NzrkB" role="2VODD2">
-        <node concept="3clFbF" id="1xAzJ9NxKIt" role="3cqZAp">
-          <node concept="22lmx$" id="1xAzJ9NxKIu" role="3clFbG">
-            <node concept="2OqwBi" id="1xAzJ9NxKIv" role="3uHU7w">
-              <node concept="2DD5aU" id="1xAzJ9NxKIw" role="2Oq$k0" />
-              <node concept="2Zo12i" id="1xAzJ9NxKIx" role="2OqNvi">
-                <node concept="chp4Y" id="1xAzJ9NxKIy" role="2Zo12j">
-                  <ref role="cht4Q" to="hm2y:4rZeNQ6MpKl" resolve="BinaryExpression" />
-                </node>
-              </node>
-            </node>
-            <node concept="2OqwBi" id="1xAzJ9NxKIz" role="3uHU7B">
-              <node concept="2DD5aU" id="1xAzJ9NxKI$" role="2Oq$k0" />
-              <node concept="2Zo12i" id="1xAzJ9NxKI_" role="2OqNvi">
-                <node concept="chp4Y" id="1xAzJ9NxKIA" role="2Zo12j">
-                  <ref role="cht4Q" to="e88n:1xAzJ9JDBLw" resolve="BranchConditional" />
-                </node>
+        <node concept="3clFbF" id="7hL7ecMahzt" role="3cqZAp">
+          <node concept="2OqwBi" id="7hL7ecMahPO" role="3clFbG">
+            <node concept="2DD5aU" id="7hL7ecMahzs" role="2Oq$k0" />
+            <node concept="2Zo12i" id="7hL7ecMai6A" role="2OqNvi">
+              <node concept="chp4Y" id="7hL7ecMaidH" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:7hL7ecM603q" resolve="ConditonalStatement" />
               </node>
             </node>
           </node>
@@ -871,6 +845,42 @@
         <node concept="3clFbF" id="i1eH3WpcjV" role="3cqZAp">
           <node concept="3clFbT" id="i1eH3WpcjU" role="3clFbG">
             <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="7hL7ecMdRy6">
+    <property role="3GE5qa" value="Expressions.Conditions.LogicalOperators" />
+    <ref role="1M2myG" to="e88n:7hL7ecLXnQQ" resolve="AndConditional" />
+    <node concept="9SLcT" id="7hL7ecMdRy7" role="9SGkU">
+      <node concept="3clFbS" id="7hL7ecMdRy8" role="2VODD2">
+        <node concept="3clFbF" id="7hL7ecMdRA2" role="3cqZAp">
+          <node concept="2OqwBi" id="7hL7ecMdSko" role="3clFbG">
+            <node concept="2DD5aU" id="7hL7ecMdS5A" role="2Oq$k0" />
+            <node concept="2Zo12i" id="7hL7ecMdS$5" role="2OqNvi">
+              <node concept="chp4Y" id="7hL7ecMdSFc" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:7hL7ecM603q" resolve="ConditonalStatement" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="7hL7ecMhpG9">
+    <property role="3GE5qa" value="Expressions.Conditions.LogicalOperators" />
+    <ref role="1M2myG" to="e88n:7hL7ecM2uaI" resolve="OrConditional" />
+    <node concept="9SLcT" id="7hL7ecMhpGa" role="9SGkU">
+      <node concept="3clFbS" id="7hL7ecMhpGb" role="2VODD2">
+        <node concept="3clFbF" id="7hL7ecMhpK5" role="3cqZAp">
+          <node concept="2OqwBi" id="7hL7ecMhpYT" role="3clFbG">
+            <node concept="2DD5aU" id="7hL7ecMhpK4" role="2Oq$k0" />
+            <node concept="2Zo12i" id="7hL7ecMhqc8" role="2OqNvi">
+              <node concept="chp4Y" id="7hL7ecMhqjf" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:7hL7ecM603q" resolve="ConditonalStatement" />
+              </node>
+            </node>
           </node>
         </node>
       </node>

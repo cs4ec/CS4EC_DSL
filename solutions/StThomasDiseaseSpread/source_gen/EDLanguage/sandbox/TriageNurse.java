@@ -691,7 +691,7 @@ public class TriageNurse extends Actor {
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "low") {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).cohort == "EmergencyAttendance" && ((patient) behaviour.getSignalTrigger().GetData("patient")).Severity == "low") {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0a0b(behaviour));
         behaviour.injectSteps(plstSteps);

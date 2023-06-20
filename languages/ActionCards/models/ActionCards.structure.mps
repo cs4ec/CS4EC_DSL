@@ -203,7 +203,7 @@
       <property role="IQ2ns" value="2698877061866373100" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      <ref role="20lvS9" node="7hL7ecM603q" resolve="ConditonalStatement" />
     </node>
     <node concept="1TJgyi" id="av1M7vspU_" role="1TKVEl">
       <property role="IQ2nx" value="188877551436930725" />
@@ -343,6 +343,9 @@
       <property role="IQ2nx" value="2698877061875545204" />
       <property role="TrG5h" value="outcome" />
       <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
+    </node>
+    <node concept="PrWs8" id="7hL7ecM603v" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
     </node>
   </node>
   <node concept="1TIwiD" id="1rknCs3SeRP">
@@ -680,6 +683,9 @@
       <property role="20kJfa" value="test" />
       <ref role="20lvS9" node="6MzSDQOuh6B" resolve="ObservationTest" />
     </node>
+    <node concept="PrWs8" id="7hL7ecMagqf" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="PlHQZ" id="1xAzJ9JfzHc">
     <property role="EcuMT" value="1758249876434336588" />
@@ -736,6 +742,9 @@
     <property role="TrG5h" value="VaccineStatusCondition" />
     <property role="34LRSv" value="check vaccine status of patient" />
     <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+    <node concept="PrWs8" id="7hL7ecMagqv" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9JDBLw">
     <property role="EcuMT" value="1758249876441168992" />
@@ -792,6 +801,9 @@
     <node concept="PrWs8" id="10zWyfqPOGM" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
+    <node concept="PrWs8" id="7hL7ecMagqk" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9L0ubU">
     <property role="EcuMT" value="1758249876463936250" />
@@ -799,6 +811,9 @@
     <property role="TrG5h" value="InfectionStatusCondition" />
     <property role="34LRSv" value="check infection status of a patient" />
     <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+    <node concept="PrWs8" id="7hL7ecMagqb" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9NaT1k">
     <property role="EcuMT" value="1758249876500222036" />
@@ -836,6 +851,9 @@
     <property role="TrG5h" value="RecentCOVIDContactCondition" />
     <property role="34LRSv" value="check if patient had a recent COVID contact" />
     <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+    <node concept="PrWs8" id="7hL7ecMagqp" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9NxGW2">
     <property role="EcuMT" value="1758249876506201858" />
@@ -847,7 +865,7 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="condition" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+      <ref role="20lvS9" node="7hL7ecM603q" resolve="ConditonalStatement" />
     </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9NG9Dt">
@@ -886,6 +904,9 @@
     <property role="TrG5h" value="ImmunocompromisedCondition" />
     <property role="34LRSv" value="check if patient is immuno-compromised" />
     <ref role="1TJDcQ" node="1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+    <node concept="PrWs8" id="7hL7ecMagq9" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9PrV5c">
     <property role="EcuMT" value="1758249876538241356" />
@@ -923,6 +944,9 @@
       <property role="20kJfa" value="location" />
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
+    <node concept="PrWs8" id="7hL7ecMagqd" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3JSrgvMff0N">
     <property role="EcuMT" value="4321323723358269491" />
@@ -937,6 +961,9 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
     </node>
+    <node concept="PrWs8" id="7hL7ecMagqr" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3JSrgvO6fgX">
     <property role="EcuMT" value="4321323723389465661" />
@@ -950,6 +977,9 @@
       <property role="20kJfa" value="expression" />
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    </node>
+    <node concept="PrWs8" id="7hL7ecMagqt" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
     </node>
   </node>
   <node concept="1TIwiD" id="3ifWr0hZhRF">
@@ -1224,6 +1254,9 @@
       <property role="TrG5h" value="outcome" />
       <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
     </node>
+    <node concept="PrWs8" id="7hL7ecMagq7" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1BosAjNPpsC">
     <property role="EcuMT" value="1862364223830857512" />
@@ -1258,6 +1291,9 @@
       <property role="IQ2nx" value="2698877061875545204" />
       <property role="TrG5h" value="outcome" />
       <ref role="AX2Wp" node="2lOlAdPyF1W" resolve="E_Result" />
+    </node>
+    <node concept="PrWs8" id="7hL7ecMagq5" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
     </node>
   </node>
   <node concept="1TIwiD" id="351ASBMMzuC">
@@ -1351,6 +1387,9 @@
       <property role="TrG5h" value="probabilityChance" />
       <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
+    <node concept="PrWs8" id="7hL7ecMagqn" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
   </node>
   <node concept="1TIwiD" id="lSEs44W_QZ">
     <property role="EcuMT" value="394251613871693247" />
@@ -1373,6 +1412,34 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" to="s2d1:EFW1mY_7c6" resolve="PatientProfile" />
     </node>
+    <node concept="PrWs8" id="7hL7ecMagqh" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7hL7ecLXnQQ">
+    <property role="EcuMT" value="8390519342889270710" />
+    <property role="3GE5qa" value="Expressions.Conditions.LogicalOperators" />
+    <property role="TrG5h" value="AndConditional" />
+    <property role="34LRSv" value="and" />
+    <ref role="1TJDcQ" to="hm2y:4rZeNQ6MXOT" resolve="LogicalAndExpression" />
+    <node concept="PrWs8" id="7hL7ecM603r" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7hL7ecM2uaI">
+    <property role="EcuMT" value="8390519342890607278" />
+    <property role="3GE5qa" value="Expressions.Conditions.LogicalOperators" />
+    <property role="TrG5h" value="OrConditional" />
+    <property role="34LRSv" value="or" />
+    <ref role="1TJDcQ" to="hm2y:4rZeNQ6MXMV" resolve="LogicalOrExpression" />
+    <node concept="PrWs8" id="7hL7ecM603t" role="PzmwI">
+      <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="7hL7ecM603q">
+    <property role="EcuMT" value="8390519342891532506" />
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <property role="TrG5h" value="ConditonalStatement" />
   </node>
 </model>
 

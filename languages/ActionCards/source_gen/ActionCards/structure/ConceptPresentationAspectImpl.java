@@ -18,6 +18,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ActionDurationEmptyLine;
   private ConceptPresentation props_ActionDurationMinutes;
   private ConceptPresentation props_AdmissionAction;
+  private ConceptPresentation props_AndConditional;
   private ConceptPresentation props_AttendanceRoute;
   private ConceptPresentation props_Attribute;
   private ConceptPresentation props_AttributeLine;
@@ -30,6 +31,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_CompositeTestResultCondition;
   private ConceptPresentation props_ConditionalLine;
   private ConceptPresentation props_ConditionalSelection;
+  private ConceptPresentation props_ConditonalStatement;
   private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_DischargeAction;
   private ConceptPresentation props_DiseaseTest;
@@ -46,6 +48,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_No;
   private ConceptPresentation props_ObservationTest;
   private ConceptPresentation props_ObservationsCondition;
+  private ConceptPresentation props_OrConditional;
   private ConceptPresentation props_PartiallyVaccinated;
   private ConceptPresentation props_PatientArrivalLine_old;
   private ConceptPresentation props_PatientArrivals_old;
@@ -163,6 +166,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_AdmissionAction = cpb.create();
         }
         return props_AdmissionAction;
+      case LanguageConceptSwitch.AndConditional:
+        if (props_AndConditional == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("and");
+          props_AndConditional = cpb.create();
+        }
+        return props_AndConditional;
       case LanguageConceptSwitch.AttendanceRoute:
         if (props_AttendanceRoute == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -248,6 +258,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ConditionalSelection = cpb.create();
         }
         return props_ConditionalSelection;
+      case LanguageConceptSwitch.ConditonalStatement:
+        if (props_ConditonalStatement == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_ConditonalStatement = cpb.create();
+        }
+        return props_ConditonalStatement;
       case LanguageConceptSwitch.DiagnosticCondition:
         if (props_DiagnosticCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -360,6 +376,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_ObservationsCondition = cpb.create();
         }
         return props_ObservationsCondition;
+      case LanguageConceptSwitch.OrConditional:
+        if (props_OrConditional == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("or");
+          props_OrConditional = cpb.create();
+        }
+        return props_OrConditional;
       case LanguageConceptSwitch.PartiallyVaccinated:
         if (props_PartiallyVaccinated == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

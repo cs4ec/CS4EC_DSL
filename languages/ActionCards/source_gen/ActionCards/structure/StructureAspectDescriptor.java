@@ -25,6 +25,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptActionDurationEmptyLine = createDescriptorForActionDurationEmptyLine();
   /*package*/ final ConceptDescriptor myConceptActionDurationMinutes = createDescriptorForActionDurationMinutes();
   /*package*/ final ConceptDescriptor myConceptAdmissionAction = createDescriptorForAdmissionAction();
+  /*package*/ final ConceptDescriptor myConceptAndConditional = createDescriptorForAndConditional();
   /*package*/ final ConceptDescriptor myConceptAttendanceRoute = createDescriptorForAttendanceRoute();
   /*package*/ final ConceptDescriptor myConceptAttribute = createDescriptorForAttribute();
   /*package*/ final ConceptDescriptor myConceptAttributeLine = createDescriptorForAttributeLine();
@@ -37,6 +38,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptCompositeTestResultCondition = createDescriptorForCompositeTestResultCondition();
   /*package*/ final ConceptDescriptor myConceptConditionalLine = createDescriptorForConditionalLine();
   /*package*/ final ConceptDescriptor myConceptConditionalSelection = createDescriptorForConditionalSelection();
+  /*package*/ final ConceptDescriptor myConceptConditonalStatement = createDescriptorForConditonalStatement();
   /*package*/ final ConceptDescriptor myConceptDiagnosticCondition = createDescriptorForDiagnosticCondition();
   /*package*/ final ConceptDescriptor myConceptDischargeAction = createDescriptorForDischargeAction();
   /*package*/ final ConceptDescriptor myConceptDiseaseTest = createDescriptorForDiseaseTest();
@@ -53,6 +55,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptNo = createDescriptorForNo();
   /*package*/ final ConceptDescriptor myConceptObservationTest = createDescriptorForObservationTest();
   /*package*/ final ConceptDescriptor myConceptObservationsCondition = createDescriptorForObservationsCondition();
+  /*package*/ final ConceptDescriptor myConceptOrConditional = createDescriptorForOrConditional();
   /*package*/ final ConceptDescriptor myConceptPartiallyVaccinated = createDescriptorForPartiallyVaccinated();
   /*package*/ final ConceptDescriptor myConceptPatientArrivalLine_old = createDescriptorForPatientArrivalLine_old();
   /*package*/ final ConceptDescriptor myConceptPatientArrivals_old = createDescriptorForPatientArrivals_old();
@@ -120,7 +123,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptAdmissionAction, myConceptAttendanceRoute, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptCompositeDiagnosticCondition, myConceptCompositeTest, myConceptCompositeTestResultCondition, myConceptConditionalLine, myConceptConditionalSelection, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptPartiallyVaccinated, myConceptPatientArrivalLine_old, myConceptPatientArrivals_old, myConceptPatientCohortCondition, myConceptPatientProfile_old, myConceptPatientPropertyConditional, myConceptPatientSeverity, myConceptPatientSeverityProperty, myConceptPatientSeverity_Low, myConceptPatientSeverity_Severe, myConceptPatient_Severity_Moderate, myConceptPatient_old, myConceptPerson, myConceptProbabilityCondition, myConceptProbabilityDistribution, myConceptProbabilityDistributionLine, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptResultsMappingLine, myConceptResultsMappingTable, myConceptRoomSelectionCondition, myConceptRoomSelectionLine, myConceptRoomSelectionRule, myConceptRoomTypeCondition, myConceptSelectEmptyRoom, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTestOutcome, myConceptTestSelectionRule, myConceptTestSelectionRuleLine, myConceptTestSelectionStrategy, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
+    return Arrays.asList(myConceptAbstractDurationLine, myConceptAction, myConceptActionCard, myConceptActionCardCondition, myConceptActionCardElement, myConceptActionCardReference, myConceptActionDurationEmptyLine, myConceptActionDurationMinutes, myConceptAdmissionAction, myConceptAndConditional, myConceptAttendanceRoute, myConceptAttribute, myConceptAttributeLine, myConceptAttributeTable, myConceptBooleanExpression, myConceptBranch, myConceptBranchConditional, myConceptCompositeDiagnosticCondition, myConceptCompositeTest, myConceptCompositeTestResultCondition, myConceptConditionalLine, myConceptConditionalSelection, myConceptConditonalStatement, myConceptDiagnosticCondition, myConceptDischargeAction, myConceptDiseaseTest, myConceptEDScenario, myConceptElectiveAttendanceRoute, myConceptEmergencyAttendanceRoute, myConceptFullyVaccinated, myConceptIPatientProperty, myConceptImmunocompromisedCondition, myConceptImmunosuppressedProperty, myConceptInfectionStatusCondition, myConceptInfectionStatusProperty, myConceptLocationCapacityCondition, myConceptNo, myConceptObservationTest, myConceptObservationsCondition, myConceptOrConditional, myConceptPartiallyVaccinated, myConceptPatientArrivalLine_old, myConceptPatientArrivals_old, myConceptPatientCohortCondition, myConceptPatientProfile_old, myConceptPatientPropertyConditional, myConceptPatientSeverity, myConceptPatientSeverityProperty, myConceptPatientSeverity_Low, myConceptPatientSeverity_Severe, myConceptPatient_Severity_Moderate, myConceptPatient_old, myConceptPerson, myConceptProbabilityCondition, myConceptProbabilityDistribution, myConceptProbabilityDistributionLine, myConceptProcessingTimeLine, myConceptProcessingTimeTable, myConceptRecentCOVIDContactCondition, myConceptRecentCovidContactProperty, myConceptResourceAvailableCondition, myConceptResultsMappingLine, myConceptResultsMappingTable, myConceptRoomSelectionCondition, myConceptRoomSelectionLine, myConceptRoomSelectionRule, myConceptRoomTypeCondition, myConceptSelectEmptyRoom, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference, myConceptSymptomList, myConceptTest, myConceptTestCapturedDisease, myConceptTestOutcome, myConceptTestSelectionRule, myConceptTestSelectionRuleLine, myConceptTestSelectionStrategy, myConceptTimeDistributionLine, myConceptTimeDistributionTable, myConceptTimeOfDayCondition, myConceptUnvaccinated, myConceptVaccinationStatus, myConceptVaccineStatusCondition, myConceptVaccineStatusProperty, myConceptYes);
   }
 
   @Override
@@ -145,6 +148,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptActionDurationMinutes;
       case LanguageConceptSwitch.AdmissionAction:
         return myConceptAdmissionAction;
+      case LanguageConceptSwitch.AndConditional:
+        return myConceptAndConditional;
       case LanguageConceptSwitch.AttendanceRoute:
         return myConceptAttendanceRoute;
       case LanguageConceptSwitch.Attribute:
@@ -169,6 +174,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptConditionalLine;
       case LanguageConceptSwitch.ConditionalSelection:
         return myConceptConditionalSelection;
+      case LanguageConceptSwitch.ConditonalStatement:
+        return myConceptConditonalStatement;
       case LanguageConceptSwitch.DiagnosticCondition:
         return myConceptDiagnosticCondition;
       case LanguageConceptSwitch.DischargeAction:
@@ -201,6 +208,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptObservationTest;
       case LanguageConceptSwitch.ObservationsCondition:
         return myConceptObservationsCondition;
+      case LanguageConceptSwitch.OrConditional:
+        return myConceptOrConditional;
       case LanguageConceptSwitch.PartiallyVaccinated:
         return myConceptPartiallyVaccinated;
       case LanguageConceptSwitch.PatientArrivalLine_old:
@@ -355,7 +364,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876506201858");
     b.version(2);
-    b.aggregate("condition", 0x18668ef27386cf03L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1758249876506201859").done();
+    b.aggregate("condition", 0x18668ef27386cf03L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL).optional(false).ordered(true).multiple(false).origin("1758249876506201859").done();
     b.alias("Condition");
     return b.create();
   }
@@ -405,6 +414,16 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("admissionActionCard", 0x2c006337ddf0db18L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L).optional(true).ordered(true).multiple(false).origin("3170643229266729752").done();
     b.alias("admission action");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForAndConditional() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "AndConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce331f57db6L);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.LogicalAndExpression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cbdd39L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/8390519342889270710");
+    b.version(2);
+    b.alias("and");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForAttendanceRoute() {
@@ -460,7 +479,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("showConditionLabel", 0x2e2517a6a497ddd4L).type(PrimitiveTypeId.BOOLEAN).origin("3325089904376405460").done();
     b.associate("targetAction", 0x4f415ebce3f345b2L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b011fd1debL).optional(true).origin("5710949967853733298").done();
     b.associate("fromAction", 0x29f0721df71afb6L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b011fd1debL).optional(true).origin("188877551436935094").done();
-    b.aggregate("condition", 0x2574566374febfecL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(true).ordered(true).multiple(false).origin("2698877061866373100").done();
+    b.aggregate("condition", 0x2574566374febfecL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL).optional(true).ordered(true).multiple(false).origin("2698877061866373100").done();
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForBranchConditional() {
@@ -475,6 +494,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "CompositeDiagnosticCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x19d87264f3d651cfL);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1862364223830905295");
     b.version(2);
     b.property("outcome", 0x25745663758ab474L).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab07cL)).origin("1862364223830905298").done();
@@ -498,6 +518,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "CompositeTestResultCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2c006337dddd52a9L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/3170643229265449641");
     b.version(2);
     b.property("outcome", 0x2c006337dddd52aaL).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab07cL)).origin("3170643229265449642").done();
@@ -525,10 +546,18 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.alias("conditional distribution");
     return b.create();
   }
+  private static ConceptDescriptor createDescriptorForConditonalStatement() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ConditonalStatement", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
+    b.interface_();
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/8390519342891532506");
+    b.version(2);
+    return b.create();
+  }
   private static ConceptDescriptor createDescriptorForDiagnosticCondition() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "DiagnosticCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df36170cL);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/188877551433029388");
     b.version(2);
     b.property("outcome", 0x25745663758ab474L).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab07cL)).origin("2698877061875545204").done();
@@ -610,6 +639,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ImmunocompromisedCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2755ea288L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.PatientPropertyConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876537123464");
     b.version(2);
     b.alias("check if patient is immuno-compromised");
@@ -628,6 +658,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "InfectionStatusCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef27101e2faL);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.PatientPropertyConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876463936250");
     b.version(2);
     b.alias("check infection status of a patient");
@@ -647,6 +678,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "LocationCapacityCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4ab0a0c760d991ecL);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/5381978332891550188");
     b.version(2);
     b.property("minCapacity", 0x4ab0a0c760d99264L).type(PrimitiveTypeId.INTEGER).origin("5381978332891550308").done();
@@ -678,11 +710,22 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ObservationsCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db4926ae3L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/7828349744267291363");
     b.version(2);
     b.property("outcome", 0x6ca3e29db4926b23L).type(MetaIdFactory.dataTypeId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663758ab07cL)).origin("7828349744267291427").done();
     b.associate("test", 0x6ca3e29db4926b37L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db47911a7L).optional(true).origin("7828349744267291447").done();
     b.alias("observations result");
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForOrConditional() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "OrConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce33209e2aeL);
+    b.class_(false, false, false);
+    b.super_("org.iets3.core.expr.base.structure.LogicalOrExpression", 0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x46ff3b3d86cbdcbbL);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
+    b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/8390519342890607278");
+    b.version(2);
+    b.alias("or");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPartiallyVaccinated() {
@@ -717,6 +760,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "PatientCohortCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce330f1825aL);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/8390519342872232538");
     b.version(2);
     b.associate("cohort", 0x74711ce330f1825dL).target(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0xaabf015be947306L).optional(false).origin("8390519342872232541").done();
@@ -739,6 +783,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
     b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876462569833");
     b.version(2);
     b.associate("patientProperty", 0x18668ef27115ff2aL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL).optional(false).origin("1758249876465254186").done();
@@ -813,6 +858,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ProbabilityCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4813ad0fc64c280L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/324605317409456768");
     b.version(2);
     b.property("probabilityChance", 0x4813ad0fc64c2aeL).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("324605317409456814").done();
@@ -860,6 +906,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "RecentCOVIDContactCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2732bde64L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.PatientPropertyConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876500242020");
     b.version(2);
     b.alias("check if patient had a recent COVID contact");
@@ -878,6 +925,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "ResourceAvailableCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3bf86d07f23cf033L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4321323723358269491");
     b.version(2);
     b.aggregate("availabilityExpression", 0x3bf86d07f260cb7eL).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("4321323723360619390").done();
@@ -1058,6 +1106,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "TimeOfDayCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x3bf86d07f418f43dL);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/4321323723389465661");
     b.version(2);
     b.aggregate("expression", 0x3bf86d07f4a23f68L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("4321323723398463336").done();
@@ -1085,6 +1134,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("ActionCards", "VaccineStatusCondition", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f431e45L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.PatientPropertyConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L);
+    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)/1758249876434656837");
     b.version(2);
     b.alias("check vaccine status of patient");

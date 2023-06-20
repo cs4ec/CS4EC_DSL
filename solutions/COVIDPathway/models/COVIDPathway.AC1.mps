@@ -14,9 +14,7 @@
     <engage id="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" name="org.iets3.core.expr.genjava.simpleTypes" />
     <devkit ref="68431102-8c53-4b26-b93f-2e7c57674ca6(NewDevkit)" />
   </languages>
-  <imports>
-    <import index="2jw" ref="r:89d28cee-e63f-45c3-83da-f519738636d8(org.iets3.core.expr.genjava.simpleTypes.typesystem)" />
-  </imports>
+  <imports />
   <registry>
     <language id="b3cac82c-d024-46bc-b485-624ad80c3cc2" name="ActionCards">
       <concept id="1645043697875742234" name="ActionCards.structure.ProcessingTimeLine" flags="ng" index="ldb2t">
@@ -52,7 +50,6 @@
         <child id="2698877061866373100" name="condition" index="1hyIAf" />
       </concept>
       <concept id="512008214798467707" name="ActionCards.structure.PatientSeverity_Low" flags="ng" index="MfwqT" />
-      <concept id="512008214798455935" name="ActionCards.structure.PatientSeverityProperty" flags="ng" index="MfX2X" />
       <concept id="512008214798463870" name="ActionCards.structure.PatientSeverity_Severe" flags="ng" index="MfZuW" />
       <concept id="512008214798466923" name="ActionCards.structure.Patient_Severity_Moderate" flags="ng" index="MfZID" />
       <concept id="3383707102503528548" name="ActionCards.structure.Action" flags="ng" index="2MhjZa">
@@ -75,16 +72,11 @@
       <concept id="3549288998130825210" name="ActionCards.structure.ResultsMappingLine" flags="ng" index="33yULN">
         <reference id="3549288998130825247" name="Disease" index="33yUem" />
       </concept>
+      <concept id="8390519342872232538" name="ActionCards.structure.PatientCohortCondition" flags="ng" index="14w9UT">
+        <reference id="8390519342872232541" name="cohort" index="14w9UY" />
+      </concept>
       <concept id="4321323723389465661" name="ActionCards.structure.TimeOfDayCondition" flags="ng" index="3fS9$U">
         <child id="4321323723398463336" name="expression" index="3fm_9J" />
-      </concept>
-      <concept id="2698877061888154208" name="ActionCards.structure.AttributeTable" flags="ng" index="1jfOK3">
-        <child id="2698877061888154322" name="attributeLines" index="1jfOML" />
-        <child id="1758249876434524682" name="patientProperty" index="1R9TjS" />
-      </concept>
-      <concept id="2698877061888154236" name="ActionCards.structure.AttributeLine" flags="ng" index="1jfOKv">
-        <property id="6755843002504464496" name="prevalence" index="3JlXGq" />
-        <child id="6755843002504464494" name="possibleValue" index="3JlXG4" />
       </concept>
       <concept id="5070794400417084166" name="ActionCards.structure.ConditionalSelection" flags="ng" index="1jImuy">
         <child id="5070794400417084258" name="lines" index="1jImv6" />
@@ -116,29 +108,17 @@
       <concept id="1862364223830857512" name="ActionCards.structure.TestOutcome" flags="ng" index="3E3ulc">
         <property id="3549288998120194521" name="outcome" index="33qpDg" />
       </concept>
-      <concept id="1758249876500222036" name="ActionCards.structure.RecentCovidContactProperty" flags="ng" index="1FjhUA" />
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
-      <concept id="1758249876510071738" name="ActionCards.structure.AttendanceRouteCondition" flags="ng" index="1FDPl8">
-        <child id="1758249876530420347" name="attendanceRoute" index="1GBHi9" />
-      </concept>
-      <concept id="1758249876508941398" name="ActionCards.structure.EmergencyAttendanceRoute" flags="ng" index="1FPxa$" />
       <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
         <child id="1758249876506201859" name="condition" index="1FS47L" />
       </concept>
       <concept id="1758249876538241356" name="ActionCards.structure.DischargeAction" flags="ng" index="1H2jYY" />
-      <concept id="1758249876537114910" name="ActionCards.structure.ImmunosuppressedProperty" flags="ng" index="1He0ZG" />
       <concept id="1758249876539396808" name="ActionCards.structure.ActionCardReference" flags="ng" index="1HTXKU">
         <reference id="1758249876539396856" name="actionCard" index="1HTXKa" />
       </concept>
       <concept id="6963522544237023781" name="ActionCards.structure.ActionDurationMinutes" flags="ng" index="1M3RjT">
         <property id="6963522544237023782" name="duration" index="1M3RjU" />
-      </concept>
-      <concept id="1758249876434336588" name="ActionCards.structure.IPatientProperty" flags="ng" index="1RmbmY">
-        <property id="1758249876463009196" name="name" index="1C_jdu" />
-      </concept>
-      <concept id="1758249876434350217" name="ActionCards.structure.InfectionStatusProperty" flags="ng" index="1RmfTV">
-        <reference id="1758249876434489739" name="disease" index="1R9xXT" />
       </concept>
       <concept id="329726013640088743" name="ActionCards.structure.DiseaseTest" flags="ng" index="3SEB2C">
         <property id="3549288998120194512" name="sensitivity" index="33qpDp" />
@@ -164,9 +144,7 @@
         <property id="2876623929997959984" name="NumPatientsInHour" index="c0n49" />
       </concept>
       <concept id="768972137579180806" name="PatientLanguage.structure.PatientProfile" flags="ng" index="2OfScj">
-        <child id="768972137579221593" name="attributes" index="2OfI9c" />
         <child id="768972137579221632" name="arrivalRate" index="2OfIal" />
-        <child id="1758249876507806175" name="attendanceRoute" index="1FYssH" />
       </concept>
     </language>
     <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
@@ -196,9 +174,6 @@
         <reference id="7828349744265630289" name="symptom" index="3oQJ3c" />
       </concept>
       <concept id="7828349744265630002" name="DiseaseModel.structure.DiseaseSymptom" flags="ng" index="3oQJeJ" />
-      <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
-      <concept id="6755843002512513317" name="DiseaseModel.structure.Susceptible" flags="ng" index="3IO8Df" />
-      <concept id="6755843002512513336" name="DiseaseModel.structure.Symptomatic" flags="ng" index="3IO8Di" />
     </language>
     <language id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment">
       <concept id="3535684625554910547" name="BuiltEnvironment.structure.OccupiableAllocation" flags="ng" index="h4YGW">
@@ -5513,7 +5488,9 @@
     </node>
     <node concept="2MhjZa" id="2S_5Uq_18QK" role="2MhjZp">
       <property role="TrG5h" value="Asymptomatic" />
-      <node concept="2_8ZN7" id="2S_5Uq_18QL" role="2_8HaY" />
+      <node concept="2_8ZN7" id="2S_5Uq_18QL" role="2_8HaY">
+        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
+      </node>
       <node concept="2GGxJi" id="2S_5Uq_193b" role="A3aay">
         <ref role="3tVEyn" node="2S_5Uq_18QK" resolve="Asymptomatic" />
         <ref role="2GGxGe" node="6lG8bJ3T0w5" resolve="Suitable for Liat?" />
@@ -5525,7 +5502,9 @@
     </node>
     <node concept="2MhjZa" id="2S_5Uq_193e" role="2MhjZp">
       <property role="TrG5h" value="Perform PCR" />
-      <node concept="2_8ZN7" id="2S_5Uq_193f" role="2_8HaY" />
+      <node concept="2_8ZN7" id="2S_5Uq_193f" role="2_8HaY">
+        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
+      </node>
       <node concept="2GGxJi" id="2S_5Uq_1ag6" role="A3aay">
         <ref role="3tVEyn" node="2S_5Uq_193e" resolve="Perform PCR" />
         <ref role="2GGxGe" node="2S_5Uq_1a3N" resolve="Admit to Red Bay" />
@@ -5533,7 +5512,9 @@
     </node>
     <node concept="2lDReE" id="2S_5Uq_1a3N" role="2MhjZp">
       <property role="TrG5h" value="Admit to Red Bay" />
-      <node concept="2_8ZN7" id="2S_5Uq_1a3O" role="2_8HaY" />
+      <node concept="2_8ZN7" id="7hL7ecLXnej" role="2_8HaY">
+        <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
+      </node>
     </node>
     <node concept="2MhjZa" id="7uBbotlywdy" role="2MhjZp">
       <property role="TrG5h" value="Triage" />
@@ -9048,8 +9029,8 @@
           <ref role="1DsR7o" node="sr1c8PfM2P" />
           <node concept="MfwqT" id="5YqbxErl8zg" role="1CySjL" />
         </node>
-        <node concept="1FDPl8" id="5YqbxErl88x" role="30dEs_">
-          <node concept="1FPxa$" id="5YqbxErl88y" role="1GBHi9" />
+        <node concept="14w9UT" id="7hL7ecLXn1o" role="30dEs_">
+          <ref role="14w9UY" node="1xAzJ9Ksr_q" resolve="emergency cohort" />
         </node>
       </node>
     </node>
@@ -9141,104 +9122,7 @@
     </node>
   </node>
   <node concept="2OfScj" id="1xAzJ9Ksr_q">
-    <property role="TrG5h" value="patient" />
-    <node concept="1jfOK3" id="1xAzJ9L0u7b" role="2OfI9c">
-      <node concept="1RmfTV" id="1xAzJ9L0u7B" role="1R9TjS">
-        <property role="1C_jdu" value="nullInfectionStatus" />
-        <ref role="1R9xXT" node="5R1$QEMKFjT" resolve="COVID" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9L0u7G" role="1jfOML">
-        <property role="3JlXGq" value="0.17" />
-        <node concept="3IO8Di" id="1xAzJ9L0u7C" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9L0u7H" role="1jfOML">
-        <property role="3JlXGq" value="0" />
-        <node concept="3IO8Cx" id="1xAzJ9L0u7D" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9L0u7I" role="1jfOML">
-        <property role="3JlXGq" value="99.83" />
-        <node concept="3IO8Df" id="1xAzJ9L0u7E" role="3JlXG4" />
-      </node>
-    </node>
-    <node concept="1jfOK3" id="1xAzJ9M3qzB" role="2OfI9c">
-      <node concept="1RmfTV" id="1xAzJ9M3q$b" role="1R9TjS">
-        <property role="1C_jdu" value="nullInfectionStatus" />
-        <ref role="1R9xXT" node="5R1$QEMKFkE" resolve="FluA" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9M3q$g" role="1jfOML">
-        <property role="3JlXGq" value="2" />
-        <node concept="3IO8Di" id="1xAzJ9M3q$c" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9M3q$h" role="1jfOML">
-        <property role="3JlXGq" value="0" />
-        <node concept="3IO8Cx" id="1xAzJ9M3q$d" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9M3q$i" role="1jfOML">
-        <property role="3JlXGq" value="98" />
-        <node concept="3IO8Df" id="1xAzJ9M3q$e" role="3JlXG4" />
-      </node>
-    </node>
-    <node concept="1jfOK3" id="1xAzJ9MkBPc" role="2OfI9c">
-      <node concept="1RmfTV" id="1xAzJ9MkBPS" role="1R9TjS">
-        <property role="1C_jdu" value="nullInfectionStatus" />
-        <ref role="1R9xXT" node="5R1$QEMMkRG" resolve="FluB" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9MkBPX" role="1jfOML">
-        <property role="3JlXGq" value="0.17" />
-        <node concept="3IO8Di" id="1xAzJ9MkBPT" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9MkBPY" role="1jfOML">
-        <property role="3JlXGq" value="0" />
-        <node concept="3IO8Cx" id="1xAzJ9MkBPU" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9MkBPZ" role="1jfOML">
-        <property role="3JlXGq" value="99.83" />
-        <node concept="3IO8Df" id="1xAzJ9MkBPV" role="3JlXG4" />
-      </node>
-    </node>
-    <node concept="1jfOK3" id="1xAzJ9Nqhsn" role="2OfI9c">
-      <node concept="1FjhUA" id="1xAzJ9Nqhtb" role="1R9TjS">
-        <property role="1C_jdu" value="RecentCovidContact" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9Nqhtf" role="1jfOML">
-        <property role="3JlXGq" value="1" />
-        <node concept="1FjjCg" id="1xAzJ9Nqhtn" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1xAzJ9Nqhtg" role="1jfOML">
-        <property role="3JlXGq" value="99" />
-        <node concept="1FjjCm" id="1xAzJ9Nqhtd" role="3JlXG4" />
-      </node>
-    </node>
-    <node concept="1jfOK3" id="sr1c8PfM1P" role="2OfI9c">
-      <node concept="MfX2X" id="sr1c8PfM2P" role="1R9TjS">
-        <property role="1C_jdu" value="PatientSeverity" />
-      </node>
-      <node concept="1jfOKv" id="sr1c8PfM2U" role="1jfOML">
-        <property role="3JlXGq" value="3" />
-        <node concept="MfZuW" id="sr1c8PfM2Q" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="sr1c8PfM2V" role="1jfOML">
-        <property role="3JlXGq" value="27" />
-        <node concept="MfZID" id="sr1c8PfM2R" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="sr1c8PfM2W" role="1jfOML">
-        <property role="3JlXGq" value="70" />
-        <node concept="MfwqT" id="sr1c8PfM2S" role="3JlXG4" />
-      </node>
-    </node>
-    <node concept="1jfOK3" id="4pv5agm8qFZ" role="2OfI9c">
-      <node concept="1He0ZG" id="4pv5agm8qGD" role="1R9TjS">
-        <property role="1C_jdu" value="Immunocompromised" />
-      </node>
-      <node concept="1jfOKv" id="4pv5agm8qGH" role="1jfOML">
-        <property role="3JlXGq" value="5" />
-        <node concept="1FjjCg" id="4pv5agm8qGE" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="4pv5agm8qGI" role="1jfOML">
-        <property role="3JlXGq" value="95" />
-        <node concept="1FjjCm" id="4pv5agm8qGF" role="3JlXG4" />
-      </node>
-    </node>
+    <property role="TrG5h" value="emergency cohort" />
     <node concept="25k$Xo" id="EFW1mYBKlW" role="2OfIal">
       <node concept="c0n4t" id="EFW1mYBKm6" role="c0n7C">
         <property role="c0n49" value="5" />
@@ -9316,7 +9200,6 @@
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
       </node>
     </node>
-    <node concept="1FPxa$" id="1xAzJ9P01j9" role="1FYssH" />
   </node>
 </model>
 
