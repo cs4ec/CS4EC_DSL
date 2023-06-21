@@ -1,0 +1,6 @@
+"agentName","patientgetAliveTime"
+"58",1858
+"57",1961
+"56",2247
+"60",0
+"59",0
