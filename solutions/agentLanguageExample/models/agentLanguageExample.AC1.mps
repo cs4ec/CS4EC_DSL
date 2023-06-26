@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:9b1091b9-809b-4965-8684-f55a1462e929(SmallTestingBed.AC1)">
+<model ref="r:2e758208-a02d-4b5e-bc9a-b7002db21252(agentLanguageExample.AC1)">
   <persistence version="9" />
   <attribute name="doNotGenerate" value="false" />
   <languages>
@@ -38,13 +38,6 @@
       </concept>
       <concept id="3787511550160215531" name="ActionCards.structure.ActionCardElement" flags="ng" index="_sILr">
         <child id="3787511550169010962" name="outgoingBranches" index="A3aay" />
-      </concept>
-      <concept id="147289298423155117" name="ActionCards.structure.TimeDistributionLine" flags="ng" index="_GsXV">
-        <property id="147289298423155120" name="Occurances" index="_GsXA" />
-        <property id="147289298423155118" name="Time" index="_GsXS" />
-      </concept>
-      <concept id="147289298423155114" name="ActionCards.structure.TimeDistributionTable" flags="ng" index="_GsXW">
-        <child id="147289298423155115" name="timeLines" index="_GsXX" />
       </concept>
       <concept id="5710949967853733612" name="ActionCards.structure.StaffType" flags="ng" index="2GGxxg">
         <property id="2059891927260254807" name="colour" index="1kBeqs" />
@@ -145,11 +138,52 @@
       </concept>
     </language>
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage">
+      <concept id="4334763093661302211" name="AgentLanguage.structure.PlaceInstanceReference" flags="ng" index="j3T7i">
+        <reference id="4334763093661302212" name="spaceInstance" index="j3T7l" />
+      </concept>
+      <concept id="4334763093659899158" name="AgentLanguage.structure.Attribute" flags="ng" index="jeB$7">
+        <child id="2698877061876378325" name="value" index="1gSNMQ" />
+      </concept>
+      <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
+      <concept id="3535684625548403902" name="AgentLanguage.structure.PassiveWaitUntil" flags="ng" index="Izybh">
+        <child id="3535684625548411656" name="condition" index="IzGlB" />
+      </concept>
       <concept id="6750846609956093098" name="AgentLanguage.structure.RoomTypeReference" flags="ng" index="UeIYj">
         <reference id="6750846609956389136" name="roomType" index="Udx8D" />
       </concept>
+      <concept id="2838504078745189" name="AgentLanguage.structure.PlaceInstanceCollection" flags="ng" index="2Vh8JZ">
+        <child id="2838504078745190" name="place" index="2Vh8JW" />
+      </concept>
       <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableReference" flags="ng" index="1kHjla">
         <reference id="3535684625553292470" name="occupiable" index="IYbFp" />
+      </concept>
+      <concept id="513408552829815467" name="AgentLanguage.structure.ActorReference" flags="ng" index="3n3BjK" />
+      <concept id="513408552829743914" name="AgentLanguage.structure.Signal" flags="ng" index="3n3SPL">
+        <child id="88285669848655863" name="receivers" index="1nbS2I" />
+        <child id="4211260315489209511" name="senders" index="3z7ADm" />
+      </concept>
+      <concept id="513408552829743917" name="AgentLanguage.structure.SignalDefinition" flags="ng" index="3n3SPQ">
+        <child id="513408552829743918" name="signals" index="3n3SPP" />
+      </concept>
+      <concept id="5626228425388812985" name="AgentLanguage.structure.InSameRoomCondition" flags="ng" index="3I_gD8">
+        <child id="5626228425388813013" name="target" index="3I_gC$" />
+      </concept>
+      <concept id="8504720493511205796" name="AgentLanguage.structure.PatientInstance" flags="ng" index="3JJFmu" />
+      <concept id="3838812034270454385" name="AgentLanguage.structure.Actor" flags="ng" index="3Vql55">
+        <property id="2059891927260258057" name="colour" index="1kBeJ2" />
+        <property id="8465466444634577437" name="patientCapacity" index="1n5rFW" />
+        <child id="2814466787070108702" name="behaviourMethods" index="2Ov1EZ" />
+        <child id="2701765455131303424" name="attributes" index="3eYOtt" />
+      </concept>
+      <concept id="3838812034270522234" name="AgentLanguage.structure.BehaviourElement" flags="ng" index="3Vt_xe">
+        <child id="513408552829927049" name="signal" index="3n3c3i" />
+        <child id="3838812034270528835" name="behaviourSequence" index="3VtFpR" />
+      </concept>
+      <concept id="3838812034270528852" name="AgentLanguage.structure.MoveAction" flags="ng" index="3VtFpw">
+        <child id="513408552830880866" name="targetObject" index="3nfz8T" />
+      </concept>
+      <concept id="3838812034270528838" name="AgentLanguage.structure.BehaviourSequence" flags="ng" index="3VtFpM">
+        <child id="3838812034270528840" name="steps" index="3VtFpW" />
       </concept>
     </language>
     <language id="2fa21111-1327-44d6-9000-fd96b15fb9b6" name="PatientLanguage">
@@ -178,6 +212,11 @@
       <concept id="5115872837156576277" name="org.iets3.core.expr.base.structure.BinaryExpression" flags="ng" index="30dEsC">
         <child id="5115872837156576280" name="right" index="30dEs_" />
         <child id="5115872837156576278" name="left" index="30dEsF" />
+      </concept>
+    </language>
+    <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
+      <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
+        <property id="5115872837157054173" name="value" index="30bXRw" />
       </concept>
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
@@ -5432,20 +5471,6 @@
       <node concept="UeIYj" id="1Iqh_KLvlxZ" role="_yJwB">
         <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
       </node>
-      <node concept="_GsXW" id="7hL7ecMyAh8" role="1M293l">
-        <node concept="_GsXV" id="7hL7ecMyAha" role="_GsXX">
-          <property role="_GsXS" value="20" />
-          <property role="_GsXA" value="1" />
-        </node>
-        <node concept="_GsXV" id="7hL7ecMyAhc" role="_GsXX">
-          <property role="_GsXS" value="30" />
-          <property role="_GsXA" value="3" />
-        </node>
-        <node concept="_GsXV" id="7hL7ecMyAhf" role="_GsXX">
-          <property role="_GsXS" value="45" />
-          <property role="_GsXA" value="8" />
-        </node>
-      </node>
     </node>
     <node concept="2MhjZa" id="1Iqh_KLvly0" role="2MhjZp">
       <property role="TrG5h" value="LFD" />
@@ -5809,6 +5834,47 @@
       <node concept="UeIYj" id="EFW1mZs4ME" role="2PM4n5">
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
       </node>
+    </node>
+  </node>
+  <node concept="3Vql55" id="7hL7ecMz5Du">
+    <property role="TrG5h" value="Doctor" />
+    <property role="1n5rFW" value="3" />
+    <property role="1kBeJ2" value="6o2BuIx6R5q/BLUE" />
+    <node concept="jeB$7" id="7hL7ecMz5Dv" role="3eYOtt">
+      <property role="TrG5h" value="Height" />
+      <node concept="30bXRB" id="7hL7ecMz5DF" role="1gSNMQ">
+        <property role="30bXRw" value="999999" />
+      </node>
+    </node>
+    <node concept="3Vt_xe" id="7hL7ecMz5E7" role="2Ov1EZ">
+      <property role="TrG5h" value="Blood Test" />
+      <node concept="3VtFpM" id="7hL7ecMz5E8" role="3VtFpR">
+        <node concept="3VtFpw" id="7hL7ecMz5Ek" role="3VtFpW">
+          <node concept="UeIYj" id="7hL7ecMz5Eq" role="3nfz8T">
+            <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsAB_Cubicle" />
+          </node>
+        </node>
+        <node concept="Izybh" id="7hL7ecMz5E$" role="3VtFpW">
+          <node concept="3I_gD8" id="7hL7ecMz5EG" role="IzGlB">
+            <node concept="3JJFmu" id="7hL7ecMz5EP" role="3I_gC$" />
+          </node>
+        </node>
+        <node concept="3VtFpw" id="7hL7ecMz5F4" role="3VtFpW">
+          <node concept="2Vh8JZ" id="7hL7ecMz5Ff" role="3nfz8T">
+            <node concept="j3T7i" id="7hL7ecMz5Fh" role="2Vh8JW">
+              <ref role="j3T7l" node="1$AaFX9fw8w" resolve="Entrance" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="EZebP" id="7hL7ecMz5Ht" role="3n3c3i" />
+    </node>
+  </node>
+  <node concept="3n3SPQ" id="7hL7ecMz5H7">
+    <node concept="3n3SPL" id="7hL7ecMz5H8" role="3n3SPP">
+      <property role="TrG5h" value="start blood test" />
+      <node concept="3n3BjK" id="7hL7ecMz5H9" role="3z7ADm" />
+      <node concept="3n3BjK" id="7hL7ecMz5Ha" role="1nbS2I" />
     </node>
   </node>
 </model>

@@ -25,12 +25,14 @@
       <modulePath path="$PROJECT_DIR$/solutions/PreStrepAIntervention/PreStrepAIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/QuickCompileTestingBed/QuickCompileTestingBed.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/RepastProvider/RepastProvider.msd" folder="dependencies" />
+      <modulePath path="$PROJECT_DIR$/solutions/SimpleExample/SimpleExample.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/SmallTestingBed/SmallTestingBed.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpread/StThomasDiseaseSpread.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpreadRespBays/StThomasDiseaseSpreadRespBays.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StThomasDiseaseSpreadSpeedy/StThomasDiseaseSpreadSpeedy.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StrepAIntervention/StrepAIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/StyleFiles/StyleFiles.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/agentLanguageExample/agentLanguageExample.msd" folder="runtime" />
     </projectModules>
   </component>
 </project>

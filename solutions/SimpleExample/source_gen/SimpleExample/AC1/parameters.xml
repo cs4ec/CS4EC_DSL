@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+	<parameter name="SecondsPerTick"
+		displayName="Seconds Per Tick" type="int" defaultValue="60"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="randomSeed"
+		displayName="Default Random Seed" type="int" defaultValue="__NULL__"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="UsePathFinding"
+		displayName="Use path finding" type="boolean" defaultValue="false"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
+  	<parameter name="patienCcohortcohortpatienCcohort"
+  		displayName="patienCcohortcohortpatienCcohort" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patienCcohortSeveritysevere"
+  		displayName="patienCcohortSeveritysevere" type="double" defaultValue="3"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patienCcohortSeveritymoderate"
+  		displayName="patienCcohortSeveritymoderate" type="double" defaultValue="37"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patienCcohortSeveritylow"
+  		displayName="patienCcohortSeveritylow" type="double" defaultValue="60"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+</parameters>

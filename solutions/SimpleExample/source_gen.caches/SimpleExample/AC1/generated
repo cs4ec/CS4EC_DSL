@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<product version="3" modelHash="-7nn6j78b4slat2ya0d49pzba5cfhtci">
+  <files names="PatientWaitTimesDataSet.xml:PatientWaitTimesDataSetDaily.xml:StabilityTest.R:UserInterface.xml:batch_params.xml:parameters.xml:patientWaitTime.xml:patientWaitTimeDaily.xml:repast.simphony.action.data_set_patient.xml:repast.simphony.action.data_set_patientDaily.xml:repast.simphony.action.file_sink_patient.xml:repast.simphony.action.file_sink_patientDaily.xml:repast.simphony.dataLoader.engine.ClassNameDataLoaderAction_0.xml:scenario.xml" />
+  <files dir="EDLanguage/sandbox" names="Bed.java:Bedstyle.java:COVIDPositiveCohort.java:DischargeTrigger_cSignal.java:Doctor.java:Doctorstyle.java:EDBuilder.java:ElectiveAttendanceArea.java:FirstActionTrigger_aSignal.java:FluPositiveCohort.java:GreenBay.java:LIATBooth.java:Labaratory.java:MainEntrance.java:MajorsAB_Cubicle.java:MajorsCWaitingRoom.java:MajorsC_Cubicle.java:NonRespiratoryArea.java:NonRespiratoryCohort.java:Nurse.java:Nursestyle.java:RadiologyRoom.java:RespiratoryArea.java:Seat.java:Seatstyle.java:SecondActionTrigger_bSignal.java:SideRoom.java:StaffReception.java:TaskRoom.java:TriageDesk.java:VulnerableArea.java:WaitingRoom.java:Ward.java:map_PatientProfile.java:map_PatientProfilestyle.java:nullTrigger_aSignal.java:patient.java:patientGenerator_0.java:patientstyle.java" />
+</product>
+
