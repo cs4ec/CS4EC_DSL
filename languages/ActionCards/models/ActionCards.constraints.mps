@@ -886,5 +886,27 @@
       </node>
     </node>
   </node>
+  <node concept="1M2fIO" id="3iCSjG9MuOb">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
+    <ref role="1M2myG" to="e88n:2lOlAdQiLDw" resolve="AttributeTable" />
+  </node>
+  <node concept="1M2fIO" id="3iCSjG9MwSV">
+    <property role="3GE5qa" value="Attributes.PatientProperties.PropertyTables" />
+    <ref role="1M2myG" to="e88n:2lOlAdQiLDW" resolve="AttributeLine" />
+    <node concept="9SLcT" id="3iCSjG9MwSW" role="9SGkU">
+      <node concept="3clFbS" id="3iCSjG9MwSX" role="2VODD2">
+        <node concept="3clFbF" id="3iCSjG9MwWR" role="3cqZAp">
+          <node concept="2OqwBi" id="3iCSjG9Mxfe" role="3clFbG">
+            <node concept="2DD5aU" id="3iCSjG9MwWQ" role="2Oq$k0" />
+            <node concept="2Zo12i" id="3iCSjG9Mxrx" role="2OqNvi">
+              <node concept="chp4Y" id="3iCSjG9MxyC" role="2Zo12j">
+                <ref role="cht4Q" to="e88n:3iCSjG9MnGG" resolve="IPatientPropertyValue" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

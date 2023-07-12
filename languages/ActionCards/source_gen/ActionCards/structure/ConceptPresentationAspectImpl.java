@@ -40,6 +40,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_EmergencyAttendanceRoute;
   private ConceptPresentation props_FullyVaccinated;
   private ConceptPresentation props_IPatientProperty;
+  private ConceptPresentation props_IPatientPropertyValue;
   private ConceptPresentation props_ImmunocompromisedCondition;
   private ConceptPresentation props_ImmunosuppressedProperty;
   private ConceptPresentation props_InfectionStatusCondition;
@@ -320,6 +321,12 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_IPatientProperty = cpb.create();
         }
         return props_IPatientProperty;
+      case LanguageConceptSwitch.IPatientPropertyValue:
+        if (props_IPatientPropertyValue == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          props_IPatientPropertyValue = cpb.create();
+        }
+        return props_IPatientPropertyValue;
       case LanguageConceptSwitch.ImmunocompromisedCondition:
         if (props_ImmunocompromisedCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

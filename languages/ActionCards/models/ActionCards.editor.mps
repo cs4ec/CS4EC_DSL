@@ -2045,6 +2045,9 @@
               <ref role="Ul1FP" to="e88n:1xAzJ9JfzHc" resolve="IPatientProperty" />
             </node>
           </node>
+          <node concept="A1WHr" id="3iCSjG9HO0D" role="3vIgyS">
+            <ref role="2ZyFGn" to="e88n:2lOlAdQiLDw" resolve="AttributeTable" />
+          </node>
         </node>
       </node>
       <node concept="2iRkQZ" id="5R1$QEM_$w1" role="2iSdaV" />

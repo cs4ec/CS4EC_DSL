@@ -15,7 +15,7 @@
       <unit at="10,0,56,0" name="DiseaseModel.structure.LanguageConceptSwitch" />
     </file>
     <file name="StructureAspectDescriptor.java">
-      <unit at="15,0,227,0" name="DiseaseModel.structure.StructureAspectDescriptor" />
+      <unit at="15,0,228,0" name="DiseaseModel.structure.StructureAspectDescriptor" />
     </file>
   </root>
   <root nodeRef="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/2059891927310146397">
@@ -184,16 +184,17 @@
       <node id="6755843002512513275" at="165,73,166,162" concept="3" />
       <node id="6755843002512513275" at="166,162,167,34" concept="0" />
       <node id="6755843002512513275" at="167,34,168,125" concept="0" />
-      <node id="6755843002512513275" at="168,125,169,99" concept="0" />
-      <node id="6755843002512513275" at="169,99,170,17" concept="0" />
-      <node id="6755843002512513275" at="170,17,171,32" concept="0" />
-      <node id="6755843002512513275" at="171,32,172,22" concept="4" />
-      <node id="6755843002512513275" at="165,0,174,0" concept="6" trace="createDescriptorForInfectionStatus#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6755843002512513275" at="168,125,169,76" concept="0" />
+      <node id="6755843002512513275" at="169,76,170,99" concept="0" />
+      <node id="6755843002512513275" at="170,99,171,17" concept="0" />
+      <node id="6755843002512513275" at="171,17,172,32" concept="0" />
+      <node id="6755843002512513275" at="172,32,173,22" concept="4" />
+      <node id="6755843002512513275" at="165,0,175,0" concept="6" trace="createDescriptorForInfectionStatus#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6755843002512513275" at="69,49,70,40" />
-      <scope id="6755843002512513275" at="165,73,172,22">
+      <scope id="6755843002512513275" at="165,73,173,22">
         <var name="b" id="6755843002512513275" />
       </scope>
-      <scope id="6755843002512513275" at="165,0,174,0" />
+      <scope id="6755843002512513275" at="165,0,175,0" />
     </file>
   </root>
   <root nodeRef="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512513296">
@@ -251,19 +252,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="6755843002512513317" at="26,0,27,0" concept="1" trace="myConceptSusceptible" />
       <node id="6755843002512513317" at="73,45,74,36" concept="4" />
-      <node id="6755843002512513317" at="183,69,184,158" concept="3" />
-      <node id="6755843002512513317" at="184,158,185,34" concept="0" />
-      <node id="6755843002512513317" at="185,34,186,118" concept="0" />
-      <node id="6755843002512513317" at="186,118,187,99" concept="0" />
-      <node id="6755843002512513317" at="187,99,188,17" concept="0" />
-      <node id="6755843002512513317" at="188,17,189,27" concept="0" />
-      <node id="6755843002512513317" at="189,27,190,22" concept="4" />
-      <node id="6755843002512513317" at="183,0,192,0" concept="6" trace="createDescriptorForSusceptible#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6755843002512513317" at="184,69,185,158" concept="3" />
+      <node id="6755843002512513317" at="185,158,186,34" concept="0" />
+      <node id="6755843002512513317" at="186,34,187,118" concept="0" />
+      <node id="6755843002512513317" at="187,118,188,99" concept="0" />
+      <node id="6755843002512513317" at="188,99,189,17" concept="0" />
+      <node id="6755843002512513317" at="189,17,190,27" concept="0" />
+      <node id="6755843002512513317" at="190,27,191,22" concept="4" />
+      <node id="6755843002512513317" at="184,0,193,0" concept="6" trace="createDescriptorForSusceptible#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6755843002512513317" at="73,45,74,36" />
-      <scope id="6755843002512513317" at="183,69,190,22">
+      <scope id="6755843002512513317" at="184,69,191,22">
         <var name="b" id="6755843002512513317" />
       </scope>
-      <scope id="6755843002512513317" at="183,0,192,0" />
+      <scope id="6755843002512513317" at="184,0,193,0" />
     </file>
   </root>
   <root nodeRef="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512513336">
@@ -286,19 +287,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="6755843002512513336" at="27,0,28,0" concept="1" trace="myConceptSymptomatic" />
       <node id="6755843002512513336" at="75,45,76,36" concept="4" />
-      <node id="6755843002512513336" at="192,69,193,158" concept="3" />
-      <node id="6755843002512513336" at="193,158,194,34" concept="0" />
-      <node id="6755843002512513336" at="194,34,195,111" concept="0" />
-      <node id="6755843002512513336" at="195,111,196,99" concept="0" />
-      <node id="6755843002512513336" at="196,99,197,17" concept="0" />
-      <node id="6755843002512513336" at="197,17,198,27" concept="0" />
-      <node id="6755843002512513336" at="198,27,199,22" concept="4" />
-      <node id="6755843002512513336" at="192,0,201,0" concept="6" trace="createDescriptorForSymptomatic#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6755843002512513336" at="193,69,194,158" concept="3" />
+      <node id="6755843002512513336" at="194,158,195,34" concept="0" />
+      <node id="6755843002512513336" at="195,34,196,111" concept="0" />
+      <node id="6755843002512513336" at="196,111,197,99" concept="0" />
+      <node id="6755843002512513336" at="197,99,198,17" concept="0" />
+      <node id="6755843002512513336" at="198,17,199,27" concept="0" />
+      <node id="6755843002512513336" at="199,27,200,22" concept="4" />
+      <node id="6755843002512513336" at="193,0,202,0" concept="6" trace="createDescriptorForSymptomatic#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6755843002512513336" at="75,45,76,36" />
-      <scope id="6755843002512513336" at="192,69,199,22">
+      <scope id="6755843002512513336" at="193,69,200,22">
         <var name="b" id="6755843002512513336" />
       </scope>
-      <scope id="6755843002512513336" at="192,0,201,0" />
+      <scope id="6755843002512513336" at="193,0,202,0" />
     </file>
   </root>
   <root nodeRef="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512513355">
@@ -356,19 +357,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="6755843002512513401" at="25,0,26,0" concept="1" trace="myConceptSusceptibilityStatus" />
       <node id="6755843002512513401" at="71,54,72,45" concept="4" />
-      <node id="6755843002512513401" at="174,78,175,167" concept="3" />
-      <node id="6755843002512513401" at="175,167,176,34" concept="0" />
-      <node id="6755843002512513401" at="176,34,177,99" concept="0" />
-      <node id="6755843002512513401" at="177,99,178,17" concept="0" />
-      <node id="6755843002514239060" at="178,17,179,209" concept="0" />
-      <node id="6755843002514239064" at="179,209,180,207" concept="0" />
-      <node id="6755843002512513401" at="180,207,181,22" concept="4" />
-      <node id="6755843002512513401" at="174,0,183,0" concept="6" trace="createDescriptorForSusceptibilityStatus#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6755843002512513401" at="175,78,176,167" concept="3" />
+      <node id="6755843002512513401" at="176,167,177,34" concept="0" />
+      <node id="6755843002512513401" at="177,34,178,99" concept="0" />
+      <node id="6755843002512513401" at="178,99,179,17" concept="0" />
+      <node id="6755843002514239060" at="179,17,180,209" concept="0" />
+      <node id="6755843002514239064" at="180,209,181,207" concept="0" />
+      <node id="6755843002512513401" at="181,207,182,22" concept="4" />
+      <node id="6755843002512513401" at="175,0,184,0" concept="6" trace="createDescriptorForSusceptibilityStatus#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6755843002512513401" at="71,54,72,45" />
-      <scope id="6755843002512513401" at="174,78,181,22">
+      <scope id="6755843002512513401" at="175,78,182,22">
         <var name="b" id="6755843002512513401" />
       </scope>
-      <scope id="6755843002512513401" at="174,0,183,0" />
+      <scope id="6755843002512513401" at="175,0,184,0" />
     </file>
   </root>
   <root nodeRef="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512515028">
@@ -391,17 +392,17 @@
     <file name="StructureAspectDescriptor.java">
       <node id="6755843002512515028" at="30,0,31,0" concept="1" trace="myConceptVaccineStatus" />
       <node id="6755843002512515028" at="81,47,82,38" concept="4" />
-      <node id="6755843002512515028" at="219,71,220,160" concept="3" />
-      <node id="6755843002512515028" at="220,160,221,34" concept="0" />
-      <node id="6755843002512515028" at="221,34,222,99" concept="0" />
-      <node id="6755843002512515028" at="222,99,223,17" concept="0" />
-      <node id="6755843002512515028" at="223,17,224,22" concept="4" />
-      <node id="6755843002512515028" at="219,0,226,0" concept="6" trace="createDescriptorForVaccineStatus#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6755843002512515028" at="220,71,221,160" concept="3" />
+      <node id="6755843002512515028" at="221,160,222,34" concept="0" />
+      <node id="6755843002512515028" at="222,34,223,99" concept="0" />
+      <node id="6755843002512515028" at="223,99,224,17" concept="0" />
+      <node id="6755843002512515028" at="224,17,225,22" concept="4" />
+      <node id="6755843002512515028" at="220,0,227,0" concept="6" trace="createDescriptorForVaccineStatus#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6755843002512515028" at="81,47,82,38" />
-      <scope id="6755843002512515028" at="219,71,224,22">
+      <scope id="6755843002512515028" at="220,71,225,22">
         <var name="b" id="6755843002512515028" />
       </scope>
-      <scope id="6755843002512515028" at="219,0,226,0" />
+      <scope id="6755843002512515028" at="220,0,227,0" />
     </file>
   </root>
   <root nodeRef="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512515103">
@@ -424,19 +425,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="6755843002512515103" at="29,0,30,0" concept="1" trace="myConceptVaccinated" />
       <node id="6755843002512515103" at="79,44,80,35" concept="4" />
-      <node id="6755843002512515103" at="210,68,211,157" concept="3" />
-      <node id="6755843002512515103" at="211,157,212,34" concept="0" />
-      <node id="6755843002512515103" at="212,34,213,116" concept="0" />
-      <node id="6755843002512515103" at="213,116,214,99" concept="0" />
-      <node id="6755843002512515103" at="214,99,215,17" concept="0" />
-      <node id="6755843002512515103" at="215,17,216,26" concept="0" />
-      <node id="6755843002512515103" at="216,26,217,22" concept="4" />
-      <node id="6755843002512515103" at="210,0,219,0" concept="6" trace="createDescriptorForVaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6755843002512515103" at="211,68,212,157" concept="3" />
+      <node id="6755843002512515103" at="212,157,213,34" concept="0" />
+      <node id="6755843002512515103" at="213,34,214,116" concept="0" />
+      <node id="6755843002512515103" at="214,116,215,99" concept="0" />
+      <node id="6755843002512515103" at="215,99,216,17" concept="0" />
+      <node id="6755843002512515103" at="216,17,217,26" concept="0" />
+      <node id="6755843002512515103" at="217,26,218,22" concept="4" />
+      <node id="6755843002512515103" at="211,0,220,0" concept="6" trace="createDescriptorForVaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6755843002512515103" at="79,44,80,35" />
-      <scope id="6755843002512515103" at="210,68,217,22">
+      <scope id="6755843002512515103" at="211,68,218,22">
         <var name="b" id="6755843002512515103" />
       </scope>
-      <scope id="6755843002512515103" at="210,0,219,0" />
+      <scope id="6755843002512515103" at="211,0,220,0" />
     </file>
   </root>
   <root nodeRef="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/6755843002512515122">
@@ -459,19 +460,19 @@
     <file name="StructureAspectDescriptor.java">
       <node id="6755843002512515122" at="28,0,29,0" concept="1" trace="myConceptUnvaccinated" />
       <node id="6755843002512515122" at="77,46,78,37" concept="4" />
-      <node id="6755843002512515122" at="201,70,202,159" concept="3" />
-      <node id="6755843002512515122" at="202,159,203,34" concept="0" />
-      <node id="6755843002512515122" at="203,34,204,116" concept="0" />
-      <node id="6755843002512515122" at="204,116,205,99" concept="0" />
-      <node id="6755843002512515122" at="205,99,206,17" concept="0" />
-      <node id="6755843002512515122" at="206,17,207,28" concept="0" />
-      <node id="6755843002512515122" at="207,28,208,22" concept="4" />
-      <node id="6755843002512515122" at="201,0,210,0" concept="6" trace="createDescriptorForUnvaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
+      <node id="6755843002512515122" at="202,70,203,159" concept="3" />
+      <node id="6755843002512515122" at="203,159,204,34" concept="0" />
+      <node id="6755843002512515122" at="204,34,205,116" concept="0" />
+      <node id="6755843002512515122" at="205,116,206,99" concept="0" />
+      <node id="6755843002512515122" at="206,99,207,17" concept="0" />
+      <node id="6755843002512515122" at="207,17,208,28" concept="0" />
+      <node id="6755843002512515122" at="208,28,209,22" concept="4" />
+      <node id="6755843002512515122" at="202,0,211,0" concept="6" trace="createDescriptorForUnvaccinated#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="6755843002512515122" at="77,46,78,37" />
-      <scope id="6755843002512515122" at="201,70,208,22">
+      <scope id="6755843002512515122" at="202,70,209,22">
         <var name="b" id="6755843002512515122" />
       </scope>
-      <scope id="6755843002512515122" at="201,0,210,0" />
+      <scope id="6755843002512515122" at="202,0,211,0" />
     </file>
   </root>
   <root nodeRef="r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/7828349744265630002">

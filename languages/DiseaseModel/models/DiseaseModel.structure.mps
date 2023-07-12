@@ -57,6 +57,9 @@
     <property role="R4oN_" value="A person's infection status" />
     <property role="3GE5qa" value="InfectionStatus" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="3iCSjG9MnKX" role="PzmwI">
+      <ref role="PrY4T" to="e88n:3iCSjG9MnGG" resolve="IPatientPropertyValue" />
+    </node>
   </node>
   <node concept="1TIwiD" id="5R1$QEN4h$g">
     <property role="EcuMT" value="6755843002512513296" />

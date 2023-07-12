@@ -764,6 +764,9 @@
     <property role="3GE5qa" value="Attributes.PatientProperties.VaccinatedAttributes" />
     <property role="TrG5h" value="VaccinationStatus" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="3iCSjG9MnKT" role="PzmwI">
+      <ref role="PrY4T" node="3iCSjG9MnGG" resolve="IPatientPropertyValue" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9JLx5k">
     <property role="EcuMT" value="1758249876443238740" />
@@ -837,6 +840,9 @@
     <property role="3GE5qa" value="Attributes.PatientProperties.Boolean" />
     <property role="TrG5h" value="BooleanExpression" />
     <ref role="1TJDcQ" to="hm2y:6sdnDbSla17" resolve="Expression" />
+    <node concept="PrWs8" id="3iCSjG9MnKV" role="PzmwI">
+      <ref role="PrY4T" node="3iCSjG9MnGG" resolve="IPatientPropertyValue" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9NaVj$">
     <property role="EcuMT" value="1758249876500231396" />
@@ -896,6 +902,9 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="1xAzJ9PnC4L" role="PzmwI">
       <ref role="PrY4T" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
+    <node concept="PrWs8" id="3iCSjG9MnGH" role="PzmwI">
+      <ref role="PrY4T" node="3iCSjG9MnGG" resolve="IPatientPropertyValue" />
     </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9PnEa8">
@@ -1130,6 +1139,9 @@
     <property role="TrG5h" value="PatientSeverity_Severe" />
     <property role="34LRSv" value="severe" />
     <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+    <node concept="PrWs8" id="3iCSjG9MnGO" role="PzmwI">
+      <ref role="PrY4T" node="3iCSjG9MnGG" resolve="IPatientPropertyValue" />
+    </node>
   </node>
   <node concept="1TIwiD" id="sr1c8P9fkH">
     <property role="EcuMT" value="512008214798464301" />
@@ -1144,6 +1156,9 @@
     <property role="TrG5h" value="Patient_Severity_Moderate" />
     <property role="34LRSv" value="moderate" />
     <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+    <node concept="PrWs8" id="3iCSjG9MnGK" role="PzmwI">
+      <ref role="PrY4T" node="3iCSjG9MnGG" resolve="IPatientPropertyValue" />
+    </node>
   </node>
   <node concept="1TIwiD" id="sr1c8P9g9V">
     <property role="EcuMT" value="512008214798467707" />
@@ -1151,6 +1166,9 @@
     <property role="TrG5h" value="PatientSeverity_Low" />
     <property role="34LRSv" value="low" />
     <ref role="1TJDcQ" node="sr1c8P9fkH" resolve="PatientSeverity" />
+    <node concept="PrWs8" id="3iCSjG9MnGM" role="PzmwI">
+      <ref role="PrY4T" node="3iCSjG9MnGG" resolve="IPatientPropertyValue" />
+    </node>
   </node>
   <node concept="1TIwiD" id="3mDt9dhI7l$">
     <property role="EcuMT" value="3866749931154339172" />
@@ -1440,6 +1458,11 @@
     <property role="EcuMT" value="8390519342891532506" />
     <property role="3GE5qa" value="Expressions.Conditions" />
     <property role="TrG5h" value="ConditonalStatement" />
+  </node>
+  <node concept="PlHQZ" id="3iCSjG9MnGG">
+    <property role="EcuMT" value="3794530329743162156" />
+    <property role="3GE5qa" value="Attributes.PatientProperties" />
+    <property role="TrG5h" value="IPatientPropertyValue" />
   </node>
 </model>
 

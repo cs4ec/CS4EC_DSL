@@ -54,14 +54,6 @@
         <child id="3383707102503528567" name="Actions" index="2MhjZp" />
         <child id="2698877061866267985" name="Branches" index="1hyncM" />
       </concept>
-      <concept id="2698877061888154208" name="ActionCards.structure.AttributeTable" flags="ng" index="1jfOK3">
-        <reference id="324605317397241619" name="patientProperty" index="3ZaQn3" />
-        <child id="2698877061888154322" name="attributeLines" index="1jfOML" />
-      </concept>
-      <concept id="2698877061888154236" name="ActionCards.structure.AttributeLine" flags="ng" index="1jfOKv">
-        <property id="6755843002504464496" name="prevalence" index="3JlXGq" />
-        <child id="6755843002504464494" name="possibleValue" index="3JlXG4" />
-      </concept>
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
       <concept id="1758249876538241356" name="ActionCards.structure.DischargeAction" flags="ng" index="1H2jYY" />
@@ -91,7 +83,6 @@
         <property id="2876623929997959984" name="NumPatientsInHour" index="c0n49" />
       </concept>
       <concept id="768972137579180806" name="PatientLanguage.structure.PatientProfile" flags="ng" index="2OfScj">
-        <child id="768972137579221593" name="attributes" index="2OfI9c" />
         <child id="768972137579221632" name="arrivalRate" index="2OfIal" />
       </concept>
       <concept id="324605317397238451" name="PatientLanguage.structure.Patient" flags="ng" index="3ZaQxz">
@@ -4826,21 +4817,6 @@
   </node>
   <node concept="2OfScj" id="1xAzJ9Ksr_q">
     <property role="TrG5h" value="patienCcohort" />
-    <node concept="1jfOK3" id="1$AaFX9f$4Z" role="2OfI9c">
-      <ref role="3ZaQn3" node="1$AaFX9f$4h" />
-      <node concept="1jfOKv" id="1$AaFX9f$5$" role="1jfOML">
-        <property role="3JlXGq" value="3" />
-        <node concept="MfZuW" id="1$AaFX9f$5G" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1$AaFX9f$5M" role="1jfOML">
-        <property role="3JlXGq" value="37" />
-        <node concept="MfZID" id="1$AaFX9f$61" role="3JlXG4" />
-      </node>
-      <node concept="1jfOKv" id="1$AaFX9f$67" role="1jfOML">
-        <property role="3JlXGq" value="60" />
-        <node concept="MfwqT" id="1$AaFX9f$6l" role="3JlXG4" />
-      </node>
-    </node>
     <node concept="25k$Xo" id="EFW1mYBKlW" role="2OfIal">
       <node concept="c0n4t" id="EFW1mYBKm6" role="c0n7C">
         <property role="c0n49" value="5" />

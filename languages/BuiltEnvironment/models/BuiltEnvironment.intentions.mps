@@ -189,7 +189,7 @@
             <node concept="3clFbS" id="7NybO1smHK8" role="9aQI4">
               <node concept="3cpWs6" id="7NybO1smHK9" role="3cqZAp">
                 <node concept="Xl_RD" id="7NybO1smHKa" role="3cqZAk">
-                  <property role="Xl_RC" value="View Name" />
+                  <property role="Xl_RC" value="View Text" />
                 </node>
               </node>
             </node>
