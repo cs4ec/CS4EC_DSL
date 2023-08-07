@@ -160,6 +160,11 @@ import org.jetbrains.mps.openapi.language.SProperty;
           }
 
 
+          public boolean canDrop(Object data) {
+            return true;
+          }
+          public void drop(Object data) {
+          }
         };
 
         editorCell.value = new EditorCell_DiagramElement(editorContext, node, accessor);

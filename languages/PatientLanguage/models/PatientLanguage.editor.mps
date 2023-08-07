@@ -131,7 +131,7 @@
       <node concept="3EZMnI" id="i1eH3VLBoC" role="3EZMnx">
         <node concept="2iRkQZ" id="i1eH3VLBoD" role="2iSdaV" />
         <node concept="3F2HdR" id="i1eH3VLBoo" role="3EZMnx">
-          <ref role="1NtTu8" to="s2d1:i1eH3VE_aX" resolve="patientProperty" />
+          <ref role="1NtTu8" to="s2d1:i1eH3VE_aX" resolve="patientProperties" />
           <node concept="l2Vlx" id="i1eH3VLBor" role="2czzBx" />
           <node concept="pVoyu" id="i1eH3VLBoz" role="3F10Kt">
             <property role="VOm3f" value="true" />

@@ -58,7 +58,7 @@
     <node concept="1TJgyj" id="i1eH3VE_aX" role="1TKVEi">
       <property role="IQ2ns" value="324605317397238461" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="patientProperty" />
+      <property role="20kJfa" value="patientProperties" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" to="e88n:1xAzJ9JfzHc" resolve="IPatientProperty" />
     </node>

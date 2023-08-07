@@ -51,17 +51,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ObservationsCondition;
   private ConceptPresentation props_OrConditional;
   private ConceptPresentation props_PartiallyVaccinated;
-  private ConceptPresentation props_PatientArrivalLine_old;
-  private ConceptPresentation props_PatientArrivals_old;
   private ConceptPresentation props_PatientCohortCondition;
-  private ConceptPresentation props_PatientProfile_old;
   private ConceptPresentation props_PatientPropertyConditional;
   private ConceptPresentation props_PatientSeverity;
   private ConceptPresentation props_PatientSeverityProperty;
   private ConceptPresentation props_PatientSeverity_Low;
   private ConceptPresentation props_PatientSeverity_Severe;
   private ConceptPresentation props_Patient_Severity_Moderate;
-  private ConceptPresentation props_Patient_old;
   private ConceptPresentation props_Person;
   private ConceptPresentation props_ProbabilityCondition;
   private ConceptPresentation props_ProbabilityDistribution;
@@ -397,26 +393,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PartiallyVaccinated = cpb.create();
         }
         return props_PartiallyVaccinated;
-      case LanguageConceptSwitch.PatientArrivalLine_old:
-        if (props_PatientArrivalLine_old == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x27ebd2392beaa324L);
-          cpb.deprecated(true);
-          cpb.deprecateProperty(0x27ebd2392beaa32eL, "Time_old");
-          cpb.deprecateProperty(0x27ebd2392beaa330L, "NumPatientsInHour_old");
-          cpb.rawPresentation("PatientArrivalLine_old");
-          props_PatientArrivalLine_old = cpb.create();
-        }
-        return props_PatientArrivalLine_old;
-      case LanguageConceptSwitch.PatientArrivals_old:
-        if (props_PatientArrivals_old == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x637eade0e62ce2b8L);
-          cpb.deprecated(true);
-          cpb.deprecateAggregation(0x27ebd2392beaa3d1L, "PatientArrivalLines_old");
-          cpb.deprecateAggregation(0xaabf015bf63b5d0L, "ArrivalLocation_old");
-          cpb.rawPresentation("Patient Arrivals");
-          props_PatientArrivals_old = cpb.create();
-        }
-        return props_PatientArrivals_old;
       case LanguageConceptSwitch.PatientCohortCondition:
         if (props_PatientCohortCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -424,18 +400,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientCohortCondition = cpb.create();
         }
         return props_PatientCohortCondition;
-      case LanguageConceptSwitch.PatientProfile_old:
-        if (props_PatientProfile_old == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0xaabf015be947306L);
-          cpb.deprecated(true);
-          cpb.deprecateAggregation(0xaabf015be951259L, "attributes_old");
-          cpb.deprecateAggregation(0xaabf015be951280L, "arrivalRate_old");
-          cpb.deprecateAggregation(0x18668ef2739f49dfL, "attendanceRoute_old");
-          cpb.shortDesc("The patient profile");
-          cpb.presentationByName();
-          props_PatientProfile_old = cpb.create();
-        }
-        return props_PatientProfile_old;
       case LanguageConceptSwitch.PatientPropertyConditional:
         if (props_PatientPropertyConditional == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -478,15 +442,6 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Patient_Severity_Moderate = cpb.create();
         }
         return props_Patient_Severity_Moderate;
-      case LanguageConceptSwitch.Patient_old:
-        if (props_Patient_old == null) {
-          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4813ad0fbaa52b3L);
-          cpb.deprecated(true);
-          cpb.deprecateAggregation(0x4813ad0fbaa52bdL, "patientProperty_old");
-          cpb.presentationByName();
-          props_Patient_old = cpb.create();
-        }
-        return props_Patient_old;
       case LanguageConceptSwitch.Person:
         if (props_Person == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -532,6 +487,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.RecentCOVIDContactCondition:
         if (props_RecentCOVIDContactCondition == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.deprecated(true);
           cpb.rawPresentation("check if patient had a recent COVID contact");
           props_RecentCOVIDContactCondition = cpb.create();
         }

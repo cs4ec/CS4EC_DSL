@@ -181,56 +181,109 @@
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876464379241">
     <file name="PatientPropertyConditional_Constraints.java">
-      <node id="1758249876464379241" at="24,51,25,50" concept="9" />
-      <node id="1758249876464379241" at="32,127,33,128" concept="4" />
-      <node id="1758249876464379241" at="33,128,34,0" concept="6" />
-      <node id="1758249876464379241" at="35,55,36,71" concept="1" />
-      <node id="1758249876464379241" at="37,9,38,0" concept="6" />
-      <node id="1758249876464379241" at="38,0,39,22" concept="5" />
-      <node id="1163039364601961850" at="44,90,45,120" concept="4" />
-      <node id="1758249876464379241" at="45,120,46,131" concept="4" />
-      <node id="1163039364601961850" at="46,131,47,42" concept="1" />
-      <node id="1758249876464379241" at="47,42,48,22" concept="5" />
-      <node id="1163039364599188142" at="50,128,51,16" concept="5" />
-      <node id="1758249876464379241" at="53,0,54,0" concept="7" trace="canBeChildBreakingPoint" />
-      <node id="1758249876464379241" at="56,0,57,0" concept="7" trace="PatientPropertyConditional$B4" />
-      <node id="1758249876464379241" at="60,0,61,0" concept="7" trace="patientProperty$FJ4E" />
-      <node id="1758249876464379241" at="24,0,27,0" concept="0" trace="PatientPropertyConditional_Constraints#()V" />
-      <node id="1758249876464379241" at="34,0,37,9" concept="2" />
-      <node id="1758249876464379241" at="50,0,53,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
-      <node id="1758249876464379241" at="43,0,50,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
-      <node id="1758249876464379241" at="31,0,41,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
-      <node id="1758249876464379241" at="29,103,41,6" concept="5" />
-      <node id="1758249876464379241" at="28,0,43,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
-      <scope id="1758249876464379241" at="24,51,25,50" />
-      <scope id="1758249876464379241" at="35,55,36,71" />
-      <scope id="1163039364599187892" at="50,128,51,16" />
-      <scope id="1758249876464379241" at="24,0,27,0" />
-      <scope id="1758249876464379241" at="50,0,53,0">
+      <node id="1758249876464379241" at="32,51,33,50" concept="9" />
+      <node id="1758249876464379241" at="40,127,41,128" concept="4" />
+      <node id="1758249876464379241" at="41,128,42,0" concept="6" />
+      <node id="1758249876464379241" at="43,55,44,71" concept="1" />
+      <node id="1758249876464379241" at="45,9,46,0" concept="6" />
+      <node id="1758249876464379241" at="46,0,47,22" concept="5" />
+      <node id="1758249876464379241" at="55,128,56,133" concept="4" />
+      <node id="1758249876464379241" at="56,133,57,0" concept="6" />
+      <node id="1758249876464379241" at="58,55,59,72" concept="1" />
+      <node id="1758249876464379241" at="60,9,61,0" concept="6" />
+      <node id="1758249876464379241" at="61,0,62,22" concept="5" />
+      <node id="1163039364601961850" at="67,90,68,120" concept="4" />
+      <node id="1758249876464379241" at="68,120,69,131" concept="4" />
+      <node id="1163039364601961850" at="69,131,70,42" concept="1" />
+      <node id="1758249876464379241" at="70,42,71,22" concept="5" />
+      <node id="1163039364599188142" at="73,128,74,16" concept="5" />
+      <node id="5921756238155577966" at="76,140,77,0" concept="6" />
+      <node id="5921756238155578936" at="79,39,80,151" concept="5" />
+      <node id="5921756238155610081" at="83,39,84,76" concept="5" />
+      <node id="5921756238155627701" at="86,22,87,18" concept="5" />
+      <node id="5921756238155578013" at="88,5,89,0" concept="6" />
+      <node id="5921756238153659357" at="89,0,90,17" concept="5" />
+      <node id="1758249876464379241" at="92,0,93,0" concept="7" trace="canBeChildBreakingPoint" />
+      <node id="1758249876464379241" at="93,0,94,0" concept="7" trace="canBeParentBreakingPoint" />
+      <node id="1758249876464379241" at="96,0,97,0" concept="7" trace="PatientPropertyConditional$B4" />
+      <node id="1758249876464379241" at="97,0,98,0" concept="7" trace="PatientProfile$he" />
+      <node id="1758249876464379241" at="101,0,102,0" concept="7" trace="patientProperty$FJ4E" />
+      <node id="1758249876464379241" at="102,0,103,0" concept="7" trace="attributes$eds7" />
+      <node id="1758249876464379241" at="103,0,104,0" concept="7" trace="patientProperty$d18a" />
+      <node id="1758249876464379241" at="104,0,105,0" concept="7" trace="possibleValues$MtIS" />
+      <node id="1758249876464379241" at="32,0,35,0" concept="0" trace="PatientPropertyConditional_Constraints#()V" />
+      <node id="1758249876464379241" at="42,0,45,9" concept="2" />
+      <node id="1758249876464379241" at="57,0,60,9" concept="2" />
+      <node id="1758249876464379241" at="73,0,76,0" concept="8" trace="staticCanBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <node id="5921756238155578934" at="79,0,82,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="5921756238155609311" at="83,0,86,0" concept="3" trace="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
+      <node id="1758249876464379241" at="66,0,73,0" concept="3" trace="getSpecifiedReferences#()Ljava/util/Map;" />
+      <node id="1758249876464379241" at="39,0,49,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeChild;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="1758249876464379241" at="54,0,64,0" concept="3" trace="invoke#(Ljetbrains/mps/smodel/runtime/ConstraintContext_CanBeParent;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Ljava/lang/Boolean;" />
+      <node id="5921756238155578909" at="77,0,88,5" concept="2" />
+      <node id="1758249876464379241" at="37,103,49,6" concept="5" />
+      <node id="1758249876464379241" at="52,105,64,6" concept="5" />
+      <node id="1758249876464379241" at="36,0,51,0" concept="3" trace="calculateCanBeChildConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <node id="1758249876464379241" at="51,0,66,0" concept="3" trace="calculateCanBeParentConstraint#()Ljetbrains/mps/smodel/runtime/ConstraintFunction;" />
+      <node id="1758249876464379241" at="76,0,92,0" concept="8" trace="staticCanBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/language/SContainmentLink;)Z" />
+      <scope id="1758249876464379241" at="32,51,33,50" />
+      <scope id="1758249876464379241" at="43,55,44,71" />
+      <scope id="1758249876464379241" at="58,55,59,72" />
+      <scope id="1163039364599187892" at="73,128,74,16" />
+      <scope id="5921756238155578935" at="79,39,80,151" />
+      <scope id="5921756238155609312" at="83,39,84,76" />
+      <scope id="5921756238155578910" at="86,22,87,18" />
+      <scope id="1758249876464379241" at="32,0,35,0" />
+      <scope id="1758249876464379241" at="73,0,76,0">
         <var name="childConcept" id="1758249876464379241" />
         <var name="link" id="1758249876464379241" />
         <var name="node" id="1758249876464379241" />
         <var name="parentNode" id="1758249876464379241" />
       </scope>
-      <scope id="1758249876464379241" at="44,90,48,22">
+      <scope id="5921756238155578934" at="79,0,82,0">
+        <var name="it" id="5921756238155578934" />
+      </scope>
+      <scope id="5921756238155609311" at="83,0,86,0">
+        <var name="it" id="5921756238155609311" />
+      </scope>
+      <scope id="1758249876464379241" at="67,90,71,22">
         <var name="d0" id="1163039364601961850" />
         <var name="references" id="1758249876464379241" />
       </scope>
-      <scope id="1758249876464379241" at="32,127,39,22">
+      <scope id="1758249876464379241" at="40,127,47,22">
         <var name="result" id="1758249876464379241" />
       </scope>
-      <scope id="1758249876464379241" at="43,0,50,0" />
-      <scope id="1758249876464379241" at="31,0,41,0">
+      <scope id="1758249876464379241" at="55,128,62,22">
+        <var name="result" id="1758249876464379241" />
+      </scope>
+      <scope id="1758249876464379241" at="66,0,73,0" />
+      <scope id="1758249876464379241" at="39,0,49,0">
         <var name="checkingNodeContext" id="1758249876464379241" />
         <var name="context" id="1758249876464379241" />
       </scope>
-      <scope id="1758249876464379241" at="29,103,41,6" />
-      <scope id="1758249876464379241" at="28,0,43,0" />
-      <unit id="1163039364601961850" at="45,48,45,119" name="ActionCards.constraints.PatientPropertyConditional_Constraints$2" />
-      <unit id="1758249876464379241" at="55,0,58,0" name="ActionCards.constraints.PatientPropertyConditional_Constraints$CONCEPTS" />
-      <unit id="1758249876464379241" at="59,0,62,0" name="ActionCards.constraints.PatientPropertyConditional_Constraints$LINKS" />
-      <unit id="1758249876464379241" at="30,15,41,5" name="ActionCards.constraints.PatientPropertyConditional_Constraints$1" />
-      <unit id="1758249876464379241" at="23,0,63,0" name="ActionCards.constraints.PatientPropertyConditional_Constraints" />
+      <scope id="1758249876464379241" at="54,0,64,0">
+        <var name="checkingNodeContext" id="1758249876464379241" />
+        <var name="context" id="1758249876464379241" />
+      </scope>
+      <scope id="1758249876464379241" at="37,103,49,6" />
+      <scope id="1758249876464379241" at="52,105,64,6" />
+      <scope id="5921756238146898259" at="76,140,90,17" />
+      <scope id="1758249876464379241" at="36,0,51,0" />
+      <scope id="1758249876464379241" at="51,0,66,0" />
+      <scope id="1758249876464379241" at="76,0,92,0">
+        <var name="childConcept" id="1758249876464379241" />
+        <var name="childNode" id="1758249876464379241" />
+        <var name="link" id="1758249876464379241" />
+        <var name="node" id="1758249876464379241" />
+      </scope>
+      <unit id="1163039364601961850" at="68,48,68,119" name="ActionCards.constraints.PatientPropertyConditional_Constraints$3" />
+      <unit id="5921756238155578934" at="78,283,82,5" name="ActionCards.constraints.PatientPropertyConditional_Constraints$4" />
+      <unit id="5921756238155609311" at="82,46,86,5" name="ActionCards.constraints.PatientPropertyConditional_Constraints$5" />
+      <unit id="1758249876464379241" at="95,0,99,0" name="ActionCards.constraints.PatientPropertyConditional_Constraints$CONCEPTS" />
+      <unit id="1758249876464379241" at="100,0,106,0" name="ActionCards.constraints.PatientPropertyConditional_Constraints$LINKS" />
+      <unit id="1758249876464379241" at="38,15,49,5" name="ActionCards.constraints.PatientPropertyConditional_Constraints$1" />
+      <unit id="1758249876464379241" at="53,15,64,5" name="ActionCards.constraints.PatientPropertyConditional_Constraints$2" />
+      <unit id="1758249876464379241" at="31,0,107,0" name="ActionCards.constraints.PatientPropertyConditional_Constraints" />
     </file>
   </root>
   <root nodeRef="r:74fe0192-4a81-4beb-a23f-6c0508ee7fc0(ActionCards.constraints)/1758249876469087659">

@@ -261,27 +261,6 @@
       <node concept="3clFbS" id="2lOlAdPvbFh" role="2VODD2" />
     </node>
   </node>
-  <node concept="13h7C7" id="EFW1mYATDV">
-    <property role="3GE5qa" value="People" />
-    <ref role="13h7C2" to="e88n:EFW1mY_7c6" resolve="PatientProfile_old" />
-    <node concept="13hLZK" id="EFW1mYATDW" role="13h7CW">
-      <node concept="3clFbS" id="EFW1mYATDX" role="2VODD2">
-        <node concept="3clFbF" id="EFW1mYATEi" role="3cqZAp">
-          <node concept="37vLTI" id="EFW1mYAUkY" role="3clFbG">
-            <node concept="Xl_RD" id="EFW1mYAUly" role="37vLTx">
-              <property role="Xl_RC" value="patient" />
-            </node>
-            <node concept="2OqwBi" id="EFW1mYATNS" role="37vLTJ">
-              <node concept="13iPFW" id="EFW1mYATEg" role="2Oq$k0" />
-              <node concept="3TrcHB" id="EFW1mYAU0o" role="2OqNvi">
-                <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="13h7C7" id="1xAzJ9JfB39">
     <property role="3GE5qa" value="Attributes.PatientProperties" />
     <ref role="13h7C2" to="e88n:1xAzJ9JfB29" resolve="InfectionStatusProperty" />

@@ -122,43 +122,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
                           }
                           @Override
                           public void create(final IConnectionEndpoint from, final IConnectionEndpoint to) {
-                            final SNode fromNode = SNodeOperations.cast(from.getSNode(), CONCEPTS.Action$K5);
-                            final SNode toNode = SNodeOperations.cast(to.getSNode(), CONCEPTS.Action$K5);
-                            final String fromPort = from.getPortName();
-                            final String toPort = to.getPortName();
-
-                            {
-                              SNode newBranch = SLinkOperations.addNewChild(((SNode) _variablesContext.getValue("thisNode")), LINKS.Branches$1fde, null);
-                              SLinkOperations.setTarget(newBranch, LINKS.fromAction$DE5P, fromNode);
-                              ListSequence.fromList(SLinkOperations.getChildren(((SNode) SLinkOperations.getTarget(newBranch, LINKS.fromAction$DE5P)), LINKS.outgoingBranches$JI4V)).addElement(newBranch);
-                              SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, toNode);
-                            }
-                          }
-                          @Override
-                          public boolean isValidStart(IConnectionEndpoint from) {
-                            final SNode fromNode = SNodeOperations.as(from.getSNode(), CONCEPTS.Action$K5);
-                            if (fromNode == null) {
-                              return false;
-                            }
-                            final String fromPort = from.getPortName();
-                            return true;
-                          }
-                          @Override
-                          public boolean isValidEnd(IConnectionEndpoint to) {
-                            final SNode toNode = SNodeOperations.as(to.getSNode(), CONCEPTS.Action$K5);
-                            if (toNode == null) {
-                              return false;
-                            }
-                            final String toPort = to.getPortName();
-                            return true;
-                          }
-                        }));
-                        connectionTypes.addAll(Collections.singletonList(new GeneratedConnectionType() {
-                          public String getName() {
-                            return "Reference Action Card";
-                          }
-                          @Override
-                          public void create(final IConnectionEndpoint from, final IConnectionEndpoint to) {
                             final SNode fromNode = SNodeOperations.cast(from.getSNode(), CONCEPTS.ActionCardElement$yx);
                             final SNode toNode = SNodeOperations.cast(to.getSNode(), CONCEPTS.ActionCardElement$yx);
                             final String fromPort = from.getPortName();
@@ -195,7 +158,6 @@ import org.jetbrains.mps.openapi.language.SConcept;
                                 SLinkOperations.setTarget(newBranch, LINKS.targetAction$Z7ub, toNode);
                               }
                             }
-
                           }
                           @Override
                           public boolean isValidStart(IConnectionEndpoint from) {
@@ -285,8 +247,8 @@ import org.jetbrains.mps.openapi.language.SConcept;
   }
 
   private static final class CONCEPTS {
-    /*package*/ static final SConcept Action$K5 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action");
     /*package*/ static final SConcept ActionCardElement$yx = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x348ff1b011fd1debL, "ActionCards.structure.ActionCardElement");
     /*package*/ static final SConcept ActionCardReference$CD = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, "ActionCards.structure.ActionCardReference");
+    /*package*/ static final SConcept Action$K5 = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, "ActionCards.structure.Action");
   }
 }

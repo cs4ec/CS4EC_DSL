@@ -42,6 +42,20 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
         if (true) {
           // concept
           intentions = new IntentionFactory[1];
+          intentions[0] = new ShowLabels_Intention();
+        }
+        break;
+      case 2:
+        if (true) {
+          // concept
+          intentions = new IntentionFactory[1];
+          intentions[0] = new AddPatientAttribute_Intention();
+        }
+        break;
+      case 3:
+        if (true) {
+          // concept
+          intentions = new IntentionFactory[1];
           intentions[0] = new AddSubProcess_Intention();
         }
         break;
@@ -54,10 +68,12 @@ public final class IntentionsDescriptor extends AbstractIntentionAspectDescripto
   @NotNull
   @Override
   public Collection<IntentionFactory> getAllIntentions() {
-    IntentionFactory[] rv = new IntentionFactory[2];
+    IntentionFactory[] rv = new IntentionFactory[4];
     rv[0] = new ShowDiagramView_Intention();
     rv[1] = new AddSubProcess_Intention();
+    rv[2] = new ShowLabels_Intention();
+    rv[3] = new AddPatientAttribute_Intention();
     return Arrays.asList(rv);
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x29f0721df36170cL), MetaIdFactory.conceptId(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x6ca3e29db479214fL)).seal();
 }
