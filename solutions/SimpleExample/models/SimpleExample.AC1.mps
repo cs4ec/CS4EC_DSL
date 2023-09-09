@@ -15,30 +15,21 @@
   <imports />
   <registry>
     <language id="b3cac82c-d024-46bc-b485-624ad80c3cc2" name="ActionCards">
+      <concept id="33966321878163354" name="ActionCards.structure.AdmissionAction" flags="ng" index="2lDReE" />
       <concept id="5402567240278617686" name="ActionCards.structure.EDScenario" flags="ng" index="2_0uwh">
         <property id="5729391434181383388" name="runDuration" index="i3JvV" />
         <property id="3785632457359082556" name="simulation_repetitions" index="2rAC2l" />
         <property id="8998806958909918627" name="secondsPerTick" index="wKqbz" />
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
-      </concept>
-      <concept id="5402567240278617723" name="ActionCards.structure.StaffNumber" flags="ng" index="2_0uwW">
-        <property id="5402567240278617733" name="number" index="2_0uz2" />
-        <reference id="5402567240278617735" name="staff" index="2_0uz0" />
-      </concept>
-      <concept id="5402567240276654720" name="ActionCards.structure.StaffTypeReference" flags="ng" index="2_8ZN7">
-        <reference id="5402567240276654757" name="staffType" index="2_8ZNy" />
+        <child id="7495546311310010807" name="primaryActionCard" index="1r6ISv" />
       </concept>
       <concept id="3787511550160215531" name="ActionCards.structure.ActionCardElement" flags="ng" index="_sILr">
         <child id="3787511550169010962" name="outgoingBranches" index="A3aay" />
       </concept>
-      <concept id="5710949967853733612" name="ActionCards.structure.StaffType" flags="ng" index="2GGxxg">
-        <property id="2059891927260254807" name="colour" index="1kBeqs" />
-        <property id="324605317393027070" name="patientLimit" index="3ZUNkI" />
-        <child id="4443718667985551902" name="idleLocation" index="2iD$2b" />
-      </concept>
       <concept id="5710949967853733230" name="ActionCards.structure.Branch" flags="ng" index="2GGxJi">
         <reference id="5710949967853733298" name="targetAction" index="2GGxGe" />
         <reference id="188877551436935094" name="fromAction" index="3tVEyn" />
+        <child id="2698877061866373100" name="condition" index="1hyIAf" />
       </concept>
       <concept id="512008214798467707" name="ActionCards.structure.PatientSeverity_Low" flags="ng" index="MfwqT" />
       <concept id="512008214798455935" name="ActionCards.structure.PatientSeverityProperty" flags="ng" index="MfX2X" />
@@ -46,6 +37,7 @@
       <concept id="512008214798466923" name="ActionCards.structure.Patient_Severity_Moderate" flags="ng" index="MfZID" />
       <concept id="3383707102503528548" name="ActionCards.structure.Action" flags="ng" index="2MhjZa">
         <property id="4544390881339097912" name="requiresPatient" index="3lFixl" />
+        <reference id="188877551434373492" name="resource" index="3tPpTl" />
         <child id="5402567240276710649" name="staffTypeReference" index="2_8HaY" />
         <child id="4544390881338972165" name="location" index="3lENdC" />
         <child id="6963522544237016585" name="duration" index="1M293l" />
@@ -53,17 +45,38 @@
       <concept id="3383707102503528520" name="ActionCards.structure.ActionCard" flags="ng" index="2MhjZA">
         <child id="3383707102503528567" name="Actions" index="2MhjZp" />
         <child id="2698877061866267985" name="Branches" index="1hyncM" />
+        <child id="1758249876506198949" name="UsageCondition" index="1FS4Pn" />
+      </concept>
+      <concept id="8390519342872232538" name="ActionCards.structure.PatientCohortCondition" flags="ng" index="14w9UT">
+        <reference id="8390519342872232541" name="cohort" index="14w9UY" />
+      </concept>
+      <concept id="2698877061888154208" name="ActionCards.structure.AttributeTable" flags="ng" index="1jfOK3">
+        <reference id="324605317397241619" name="patientProperty" index="3ZaQn3" />
+        <child id="2698877061888154322" name="attributeLines" index="1jfOML" />
+      </concept>
+      <concept id="2698877061888154236" name="ActionCards.structure.AttributeLine" flags="ng" index="1jfOKv">
+        <property id="6755843002504464496" name="prevalence" index="3JlXGq" />
+        <child id="6755843002504464494" name="possibleValue" index="3JlXG4" />
       </concept>
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
+      <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
+        <child id="1758249876506201859" name="condition" index="1FS47L" />
+      </concept>
       <concept id="1758249876538241356" name="ActionCards.structure.DischargeAction" flags="ng" index="1H2jYY" />
       <concept id="1758249876537114910" name="ActionCards.structure.ImmunosuppressedProperty" flags="ng" index="1He0ZG" />
+      <concept id="1758249876539396808" name="ActionCards.structure.ActionCardReference" flags="ng" index="1HTXKU">
+        <reference id="1758249876539396856" name="actionCard" index="1HTXKa" />
+      </concept>
       <concept id="6963522544237023781" name="ActionCards.structure.ActionDurationMinutes" flags="ng" index="1M3RjT">
         <property id="6963522544237023782" name="duration" index="1M3RjU" />
       </concept>
       <concept id="1758249876434336588" name="ActionCards.structure.IPatientProperty" flags="ng" index="1RmbmY">
         <property id="1758249876463009196" name="name" index="1C_jdu" />
         <child id="1758249876434482727" name="possibleValues" index="1R9Jzl" />
+      </concept>
+      <concept id="1758249876434350217" name="ActionCards.structure.InfectionStatusProperty" flags="ng" index="1RmfTV">
+        <reference id="1758249876434489739" name="disease" index="1R9xXT" />
       </concept>
     </language>
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage">
@@ -82,11 +95,55 @@
       <concept id="2876623929997959972" name="PatientLanguage.structure.PatientArrivalLine" flags="ng" index="c0n4t">
         <property id="2876623929997959984" name="NumPatientsInHour" index="c0n49" />
       </concept>
+      <concept id="5402567240278617723" name="PatientLanguage.structure.StaffNumber" flags="ng" index="2_0uwW">
+        <property id="5402567240278617733" name="number" index="2_0uz2" />
+        <reference id="5402567240278617735" name="staff" index="2_0uz0" />
+      </concept>
+      <concept id="5402567240276654720" name="PatientLanguage.structure.StaffTypeReference" flags="ng" index="2_8ZN7">
+        <reference id="5402567240276654757" name="staffType" index="2_8ZNy" />
+      </concept>
+      <concept id="5710949967853733612" name="PatientLanguage.structure.StaffType" flags="ng" index="2GGxxg">
+        <property id="2059891927260254807" name="colour" index="1kBeqs" />
+        <property id="324605317393027070" name="patientLimit" index="3ZUNkI" />
+        <child id="4443718667985551902" name="idleLocation" index="2iD$2b" />
+      </concept>
       <concept id="768972137579180806" name="PatientLanguage.structure.PatientProfile" flags="ng" index="2OfScj">
+        <child id="768972137579221593" name="attributes" index="2OfI9c" />
         <child id="768972137579221632" name="arrivalRate" index="2OfIal" />
       </concept>
       <concept id="324605317397238451" name="PatientLanguage.structure.Patient" flags="ng" index="3ZaQxz">
-        <child id="324605317397238461" name="patientProperty" index="3ZaQxH" />
+        <child id="324605317397238461" name="patientProperties" index="3ZaQxH" />
+      </concept>
+    </language>
+    <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
+      <concept id="1645043697875742234" name="DiseaseModel.structure.ProcessingTimeLine" flags="ng" index="ldb2t">
+        <property id="1645043697875742262" name="Time" index="ldb2L" />
+        <property id="1645043697875742264" name="Occurances" index="ldb2Z" />
+      </concept>
+      <concept id="1645043697875742197" name="DiseaseModel.structure.ProcessingTimeTable" flags="ng" index="ldbdM">
+        <child id="1645043697875742305" name="ProcessingTimeLines" index="ldb3A" />
+      </concept>
+      <concept id="2698877061875544082" name="DiseaseModel.structure.Disease" flags="ng" index="1gZIpL" />
+      <concept id="7828349744265634127" name="DiseaseModel.structure.Test" flags="ng" index="3oQGfi">
+        <child id="3549288998120194503" name="Captures" index="33qpDe" />
+        <child id="7828349744265634184" name="ProcessingTimeTable" index="3oQGcl" />
+      </concept>
+      <concept id="188877551433029388" name="DiseaseModel.structure.DiagnosticCondition" flags="ng" index="3tEh0H">
+        <property id="2698877061875545204" name="outcome" index="1gZI8n" />
+        <reference id="4555810343887637004" name="disease" index="24g7ti" />
+        <reference id="188877551433123871" name="test" index="3tE8WY" />
+      </concept>
+      <concept id="1862364223830857512" name="DiseaseModel.structure.TestOutcome" flags="ng" index="3E3ulc">
+        <property id="3549288998120194521" name="outcome" index="33qpDg" />
+      </concept>
+      <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
+      <concept id="6755843002512513317" name="DiseaseModel.structure.Susceptible" flags="ng" index="3IO8Df" />
+      <concept id="6755843002512513336" name="DiseaseModel.structure.Symptomatic" flags="ng" index="3IO8Di" />
+      <concept id="329726013640088743" name="DiseaseModel.structure.DiseaseTest" flags="ng" index="3SEB2C">
+        <property id="3549288998120194512" name="sensitivity" index="33qpDp" />
+        <property id="3549288998120194514" name="specificity" index="33qpDr" />
+        <reference id="3549288998120194507" name="disease" index="33qpD2" />
+        <child id="3549288998120194517" name="possibleOutcomes" index="33qpDs" />
       </concept>
     </language>
     <language id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment">
@@ -114,6 +171,7 @@
       </concept>
       <concept id="4334763093661094018" name="BuiltEnvironment.structure.Area" flags="ng" index="j3bMj">
         <child id="4334763093661094019" name="rooms" index="j3bMi" />
+        <child id="6442102128031378571" name="resourceNumbers" index="2HvXPb" />
       </concept>
       <concept id="1195759192913398353" name="BuiltEnvironment.structure.WallDefinition" flags="ng" index="2q6JFR" />
       <concept id="3535684625548435523" name="BuiltEnvironment.structure.OccupiableDefinition" flags="ng" index="IzEoG">
@@ -126,6 +184,12 @@
       <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw">
         <child id="394251613848621944" name="staffRoomAllocation" index="6UJET" />
         <child id="5626228425383343645" name="PatientOccupiable" index="3IeprG" />
+      </concept>
+      <concept id="4321323723309500087" name="BuiltEnvironment.structure.ResourceAllocation" flags="ng" index="3kFaIK">
+        <property id="4321323723355291805" name="replenishAmount" index="39XYQq" />
+        <property id="4321323723355291802" name="replenishFrequency" index="39XYQt" />
+        <property id="4321323723309500088" name="startingNumber" index="3kFaIZ" />
+        <reference id="4321323723309500090" name="resource" index="3kFaIX" />
       </concept>
     </language>
     <language id="d3a0fd26-445a-466c-900e-10444ddfed52" name="com.mbeddr.mpsutil.filepicker">
@@ -176,26 +240,21 @@
       </concept>
     </language>
   </registry>
-  <node concept="2GGxxg" id="av1M7vbJYz">
-    <property role="TrG5h" value="Doctor" />
-    <property role="3GE5qa" value="Staff" />
-    <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
-    <node concept="UeIYj" id="1Iqh_KLliOn" role="2iD$2b">
-      <ref role="Udx8D" node="3EfopC$LMzx" resolve="StaffReception" />
-    </node>
-  </node>
   <node concept="2_0uwh" id="EFW1mYe4_u">
     <property role="3GE5qa" value="Simulation Scenario" />
     <property role="i3JvV" value="7" />
     <property role="wKqbz" value="60" />
     <property role="2rAC2l" value="10" />
     <node concept="2_0uwW" id="EFW1mYe4_C" role="2_0uzz">
-      <property role="2_0uz2" value="1" />
+      <property role="2_0uz2" value="5" />
       <ref role="2_0uz0" node="av1M7vbJYz" resolve="Doctor" />
     </node>
     <node concept="2_0uwW" id="5Lup6bkacRn" role="2_0uzz">
-      <property role="2_0uz2" value="1" />
+      <property role="2_0uz2" value="5" />
       <ref role="2_0uz0" node="2_JteYPiCG6" resolve="Nurse" />
+    </node>
+    <node concept="1HTXKU" id="ymNNsfBjvI" role="1r6ISv">
+      <ref role="1HTXKa" node="1Iqh_KLvlmx" resolve="patient flowchart" />
     </node>
   </node>
   <node concept="2Ovb82" id="EFW1mZonCG">
@@ -205,12 +264,6 @@
     <node concept="3VlSI9" id="EFW1mZonD8" role="2PX5YI">
       <property role="3N1Lgt" value="C:/Users/w2037451/Documents/HelloAgent/solutions/ActionCardWinter2021/StThomasEDMap2.json" />
     </node>
-  </node>
-  <node concept="2GGxxg" id="2_JteYPiCG6">
-    <property role="3GE5qa" value="Staff" />
-    <property role="TrG5h" value="Nurse" />
-    <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
-    <property role="3ZUNkI" value="1" />
   </node>
   <node concept="j3bMj" id="EFW1mZkn0D">
     <property role="3GE5qa" value="ED Layout" />
@@ -1572,6 +1625,12 @@
         </node>
       </node>
     </node>
+    <node concept="3kFaIK" id="ymNNsfBGrm" role="2HvXPb">
+      <property role="3kFaIZ" value="1000" />
+      <property role="39XYQq" value="100" />
+      <property role="39XYQt" value="1" />
+      <ref role="3kFaIX" node="ymNNsfAKWm" resolve="LIAT" />
+    </node>
   </node>
   <node concept="VhMOw" id="2lOlAdP2IBt">
     <property role="TrG5h" value="Ward" />
@@ -1591,10 +1650,6 @@
       <node concept="6XhR7" id="1Iqh_KLkMrf" role="6XhPa">
         <property role="6XH8M" value="1" />
         <ref role="6XhRh" node="1$AaFX9f$1b" resolve="patient" />
-      </node>
-      <node concept="6XhR7" id="1Iqh_KLkMt$" role="6XhPa">
-        <property role="6XH8M" value="1" />
-        <ref role="6XhRh" node="av1M7vbJYz" resolve="Doctor" />
       </node>
     </node>
   </node>
@@ -1631,10 +1686,6 @@
       <node concept="6XhR7" id="1Iqh_KLkMtU" role="6XhPa">
         <property role="6XH8M" value="1" />
         <ref role="6XhRh" node="1$AaFX9f$1b" resolve="patient" />
-      </node>
-      <node concept="6XhR7" id="1Iqh_KLkMtW" role="6XhPa">
-        <property role="6XH8M" value="1" />
-        <ref role="6XhRh" node="av1M7vbJYz" resolve="Doctor" />
       </node>
     </node>
   </node>
@@ -4745,6 +4796,16 @@
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
+      <node concept="37mRIm" id="ymNNsfAKYt" role="37mRID">
+        <property role="37mO49" value="618909834201993094" />
+        <node concept="gqqVs" id="ymNNsfAKYs" role="37mO4d">
+          <property role="gqqTZ" value="370.0" />
+          <property role="gqqTW" value="258.0" />
+          <property role="gqqTX" value="132.0" />
+          <property role="gqqTy" value="38.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="2MhjZa" id="1Iqh_KLvlxK" role="2MhjZp">
       <property role="TrG5h" value="First Action" />
@@ -4766,6 +4827,7 @@
     <node concept="2MhjZa" id="7hL7ecMzduf" role="2MhjZp">
       <property role="TrG5h" value="Second Action" />
       <property role="3lFixl" value="true" />
+      <ref role="3tPpTl" node="ymNNsfAKWm" resolve="LIAT" />
       <node concept="2_8ZN7" id="7hL7ecMzdug" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
       </node>
@@ -4778,6 +4840,20 @@
       <node concept="2GGxJi" id="7hL7ecMzdRw" role="A3aay">
         <ref role="3tVEyn" node="7hL7ecMzduf" resolve="Second Action" />
         <ref role="2GGxGe" node="7hL7ecMzdEN" resolve="Discharge" />
+        <node concept="3tEh0H" id="ymNNsfAKWS" role="1hyIAf">
+          <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
+          <ref role="3tE8WY" node="ymNNsfAKWm" resolve="LIAT" />
+          <ref role="24g7ti" node="ymNNsfAKXn" resolve="COVID" />
+        </node>
+      </node>
+      <node concept="2GGxJi" id="ymNNsfALaS" role="A3aay">
+        <ref role="3tVEyn" node="7hL7ecMzduf" resolve="Second Action" />
+        <ref role="2GGxGe" node="ymNNsfAKY6" resolve="AdmitToGreen" />
+        <node concept="3tEh0H" id="ymNNsfALb1" role="1hyIAf">
+          <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
+          <ref role="3tE8WY" node="ymNNsfAKWm" resolve="LIAT" />
+          <ref role="24g7ti" node="ymNNsfAKXn" resolve="COVID" />
+        </node>
       </node>
     </node>
     <node concept="1H2jYY" id="7hL7ecMzdEN" role="2MhjZp">
@@ -4787,6 +4863,20 @@
       </node>
       <node concept="2_8ZN7" id="7hL7ecMzdF1" role="2_8HaY">
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
+      </node>
+    </node>
+    <node concept="2lDReE" id="ymNNsfAKY6" role="2MhjZp">
+      <property role="TrG5h" value="AdmitToGreen" />
+      <node concept="UeIYj" id="ymNNsfAKYo" role="3lENdC">
+        <ref role="Udx8D" node="7$JgZMbkJ3A" resolve="GreenBay" />
+      </node>
+      <node concept="2_8ZN7" id="ymNNsfAKYq" role="2_8HaY">
+        <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
+      </node>
+    </node>
+    <node concept="1FS47K" id="ymNNsfBtnB" role="1FS4Pn">
+      <node concept="14w9UT" id="ymNNsfBtnF" role="1FS47L">
+        <ref role="14w9UY" node="1xAzJ9Ksr_q" resolve="patientCohort" />
       </node>
     </node>
   </node>
@@ -4814,9 +4904,31 @@
       <node concept="1FjjCg" id="1$AaFX9f$8i" role="1R9Jzl" />
       <node concept="1FjjCm" id="1$AaFX9f$8j" role="1R9Jzl" />
     </node>
+    <node concept="1RmfTV" id="ymNNsfB9lx" role="3ZaQxH">
+      <property role="1C_jdu" value="nullInfectionStatus" />
+      <ref role="1R9xXT" node="ymNNsfAKXn" resolve="COVID" />
+      <node concept="3IO8Di" id="ymNNsfB9ly" role="1R9Jzl" />
+      <node concept="3IO8Cx" id="ymNNsfB9lz" role="1R9Jzl" />
+      <node concept="3IO8Df" id="ymNNsfB9l$" role="1R9Jzl" />
+    </node>
   </node>
   <node concept="2OfScj" id="1xAzJ9Ksr_q">
-    <property role="TrG5h" value="patienCcohort" />
+    <property role="TrG5h" value="patientCohort" />
+    <node concept="1jfOK3" id="ymNNsfB9ld" role="2OfI9c">
+      <ref role="3ZaQn3" node="ymNNsfB9lx" />
+      <node concept="1jfOKv" id="ymNNsfB9lU" role="1jfOML">
+        <property role="3JlXGq" value="90" />
+        <node concept="3IO8Cx" id="ymNNsfB9lY" role="3JlXG4" />
+      </node>
+      <node concept="1jfOKv" id="ymNNsfB9m4" role="1jfOML">
+        <property role="3JlXGq" value="7" />
+        <node concept="3IO8Di" id="ymNNsfB9ma" role="3JlXG4" />
+      </node>
+      <node concept="1jfOKv" id="ymNNsfB9mg" role="1jfOML">
+        <property role="3JlXGq" value="3" />
+        <node concept="3IO8Df" id="ymNNsfB9mo" role="3JlXG4" />
+      </node>
+    </node>
     <node concept="25k$Xo" id="EFW1mYBKlW" role="2OfIal">
       <node concept="c0n4t" id="EFW1mYBKm6" role="c0n7C">
         <property role="c0n49" value="5" />
@@ -4894,6 +5006,51 @@
         <ref role="Udx8D" node="EFW1mYOHez" resolve="MainEntrance" />
       </node>
     </node>
+  </node>
+  <node concept="2GGxxg" id="av1M7vbJYz">
+    <property role="TrG5h" value="Doctor" />
+    <property role="3GE5qa" value="Staff" />
+    <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
+    <node concept="UeIYj" id="1Iqh_KLliOn" role="2iD$2b">
+      <ref role="Udx8D" node="3EfopC$LMzx" resolve="StaffReception" />
+    </node>
+  </node>
+  <node concept="2GGxxg" id="2_JteYPiCG6">
+    <property role="3GE5qa" value="Staff" />
+    <property role="TrG5h" value="Nurse" />
+    <property role="3ZUNkI" value="1" />
+    <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
+  </node>
+  <node concept="3oQGfi" id="ymNNsfAKWm">
+    <property role="TrG5h" value="LIAT" />
+    <node concept="3SEB2C" id="ymNNsfAKXa" role="33qpDe">
+      <property role="33qpDp" value="89" />
+      <property role="33qpDr" value="91" />
+      <ref role="33qpD2" node="ymNNsfAKXn" resolve="COVID" />
+      <node concept="3E3ulc" id="ymNNsfAKXE" role="33qpDs">
+        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
+      </node>
+      <node concept="3E3ulc" id="ymNNsfAKXK" role="33qpDs">
+        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
+      </node>
+    </node>
+    <node concept="ldbdM" id="ymNNsfAKWw" role="3oQGcl">
+      <node concept="ldb2t" id="ymNNsfAKWy" role="ldb3A">
+        <property role="ldb2L" value="30" />
+        <property role="ldb2Z" value="1" />
+      </node>
+      <node concept="ldb2t" id="ymNNsfAKW$" role="ldb3A">
+        <property role="ldb2L" value="45" />
+        <property role="ldb2Z" value="1" />
+      </node>
+      <node concept="ldb2t" id="ymNNsfAKWB" role="ldb3A">
+        <property role="ldb2L" value="60" />
+        <property role="ldb2Z" value="1" />
+      </node>
+    </node>
+  </node>
+  <node concept="1gZIpL" id="ymNNsfAKXn">
+    <property role="TrG5h" value="COVID" />
   </node>
 </model>
 

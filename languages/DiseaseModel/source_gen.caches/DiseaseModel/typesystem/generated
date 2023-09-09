@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-4zi2b7xkjd72krary654yp34k1on5jj">
-  <files names="TypesystemDescriptor.java:typeof_InfectionStatus_InferenceRule.java" />
+<product version="3" modelHash="-bouq0ero2p80yjmkrpkcjyh5keabs2b">
+  <files names="TypesystemDescriptor.java:typeof_CompositeDiagnosticCondition_InferenceRule.java:typeof_CompositeTestResultCondition_InferenceRule.java:typeof_DiagnosticCondition_InferenceRule.java:typeof_ImmunocompromisedCondition_InferenceRule.java:typeof_InfectionStatus_InferenceRule.java:typeof_ObservationsCondition_InferenceRule.java:typeof_VaccineStatusCondition_InferenceRule.java" />
 </product>
 

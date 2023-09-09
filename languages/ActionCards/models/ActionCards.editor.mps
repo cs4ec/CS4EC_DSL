@@ -19,6 +19,7 @@
     <import index="tpcq" ref="r:00000000-0000-4000-0000-011c89590286(jetbrains.mps.lang.core.plugin)" />
     <import index="wo6c" ref="r:de91083f-90a8-4dd4-83b1-8a92d65ab81d(de.itemis.mps.editor.diagram.shapes)" />
     <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
+    <import index="s2d1" ref="r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="uyrv" ref="r:cf577ec0-6275-4070-b66c-9052d9240d69(ActionCards.behavior)" implicit="true" />
     <import index="3751" ref="r:773fb116-fb45-4750-a73a-f0ffaf85115c(AgentLanguage.structure)" implicit="true" />
@@ -79,9 +80,6 @@
       </concept>
       <concept id="1186403694788" name="jetbrains.mps.lang.editor.structure.ColorStyleClassItem" flags="ln" index="VaVBg">
         <property id="1186403713874" name="color" index="Vb096" />
-      </concept>
-      <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2">
-        <property id="1186403771423" name="style" index="Vbekb" />
       </concept>
       <concept id="1186404549998" name="jetbrains.mps.lang.editor.structure.ForegroundColorStyleClassItem" flags="ln" index="VechU" />
       <concept id="1186404574412" name="jetbrains.mps.lang.editor.structure.BackgroundColorStyleClassItem" flags="ln" index="Veino" />
@@ -154,11 +152,8 @@
       <concept id="5624877018228267058" name="jetbrains.mps.lang.editor.structure.ITransformationMenu" flags="ng" index="3INCJE">
         <child id="1638911550608572412" name="sections" index="IW6Ez" />
       </concept>
-      <concept id="6918029743850363447" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_targetNode" flags="ng" index="1NM5Ph" />
       <concept id="422708224287891156" name="jetbrains.mps.lang.editor.structure.TransformationMenuPart_ReferenceMenu" flags="ng" index="3PzhKR">
         <reference id="422708224287891157" name="referenceLink" index="3PzhKQ" />
-        <child id="8537008540390643508" name="textFunction" index="w35GX" />
-        <child id="7136626533202861118" name="visibleTextFunction" index="1t9nwV" />
       </concept>
       <concept id="1088612959204" name="jetbrains.mps.lang.editor.structure.CellModel_Alternation" flags="sg" stub="8104358048506729361" index="1QoScp">
         <property id="1088613081987" name="vertical" index="1QpmdY" />
@@ -337,7 +332,10 @@
       <concept id="8587703283523590697" name="de.itemis.mps.editor.diagram.structure.ConnectionEndpoint" flags="ng" index="1PNbMa">
         <child id="9064581101900868073" name="target" index="ljJml" />
         <child id="8587703283523590803" name="shape" index="1PNbKK" />
+        <child id="8587703283523590801" name="setTarget" index="1PNbKM" />
       </concept>
+      <concept id="5712445629353395770" name="de.itemis.mps.editor.diagram.structure.Parameter_TargetNode" flags="ng" index="3R4i$M" />
+      <concept id="5712445629353393305" name="de.itemis.mps.editor.diagram.structure.Function_SetConnectionEndpoint" flags="ig" index="3R4teh" />
       <concept id="1981294357059563448" name="de.itemis.mps.editor.diagram.structure.ChildRolePaletteSource" flags="ng" index="1RuTs0">
         <reference id="1981294357059564497" name="linkDeclaration" index="1RuSHD" />
       </concept>
@@ -443,62 +441,6 @@
       <concept id="1172254888721" name="jetbrains.mps.baseLanguage.collections.structure.ContainsOperation" flags="nn" index="3JPx81" />
     </language>
   </registry>
-  <node concept="24kQdi" id="4X1nFNzWPIm">
-    <property role="3GE5qa" value="People.Staff" />
-    <ref role="1XX52x" to="e88n:4X1nFNzWOrG" resolve="StaffType" />
-    <node concept="3EZMnI" id="4X1nFNzWPIx" role="2wV5jI">
-      <node concept="3F0A7n" id="4X1nFNzWPIC" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="3QFgDmJ3g8J" role="3EZMnx">
-        <property role="3F0ifm" value="-----------------------" />
-        <node concept="pVoyu" id="3QFgDmJ3g8R" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="i1eH3Vqx08" role="3EZMnx">
-        <property role="3F0ifm" value="Patient Limit:" />
-        <node concept="pVoyu" id="i1eH3Vqx0h" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="i1eH3Vqx0t" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:i1eH3VqwZY" resolve="patientLimit" />
-      </node>
-      <node concept="3F0ifn" id="3QFgDmJ3g8j" role="3EZMnx">
-        <property role="3F0ifm" value="When I am idle I will go to a " />
-        <node concept="pVoyu" id="3QFgDmJ3g8n" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="3QFgDmJ6AHh" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:3QFgDmJ3g8u" resolve="idleLocation" />
-      </node>
-      <node concept="3F0ifn" id="1MmdcH82H9B" role="3EZMnx">
-        <property role="3F0ifm" value="Colour:" />
-        <node concept="pVoyu" id="1MmdcH82H9O" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="1MmdcH82Ha3" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1MmdcH82H9n" resolve="colour" />
-      </node>
-      <node concept="l2Vlx" id="4X1nFNzWPI$" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="4FTL$vJQzFb">
-    <property role="3GE5qa" value="People.Staff" />
-    <ref role="1XX52x" to="e88n:4FTL$vJQzE0" resolve="StaffTypeReference" />
-    <node concept="1iCGBv" id="4FTL$vJQzFm" role="2wV5jI">
-      <ref role="1NtTu8" to="e88n:4FTL$vJQzE_" resolve="staffType" />
-      <node concept="1sVBvm" id="4FTL$vJQzFo" role="1sWHZn">
-        <node concept="3F0A7n" id="4FTL$vJQzFv" role="2wV5jI">
-          <property role="1Intyy" value="true" />
-          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="4FTL$vJY2UJ">
     <ref role="1XX52x" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
     <node concept="3EZMnI" id="21NGWDo2P1G" role="2wV5jI">
@@ -512,20 +454,6 @@
           <node concept="VQ3r3" id="21NGWDo2P4t" role="3F10Kt">
             <property role="2USNnj" value="gtbM8PH/underlined" />
           </node>
-        </node>
-        <node concept="3F0ifn" id="21NGWDo2P5i" role="3EZMnx">
-          <node concept="pVoyu" id="21NGWDo2P5O" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="3F0ifn" id="6w5xUwN7QBm" role="3EZMnx">
-          <property role="3F0ifm" value="Primary Action Card:" />
-          <node concept="pVoyu" id="6w5xUwN7QCI" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-        <node concept="3F1sOY" id="6w5xUwN7QCg" role="3EZMnx">
-          <ref role="1NtTu8" to="e88n:6w5xUwN7QAR" resolve="primaryActionCard" />
         </node>
         <node concept="3F0ifn" id="6w5xUwN7QDf" role="3EZMnx">
           <node concept="pVoyu" id="6w5xUwN7QFn" role="3F10Kt">
@@ -591,28 +519,6 @@
         </node>
         <node concept="l2Vlx" id="4FTL$vJY2UX" role="2iSdaV" />
       </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="4FTL$vJY2VT">
-    <property role="3GE5qa" value="People.Staff" />
-    <ref role="1XX52x" to="e88n:4FTL$vJY2TV" resolve="StaffNumber" />
-    <node concept="3EZMnI" id="4FTL$vJY2W4" role="2wV5jI">
-      <node concept="1iCGBv" id="4FTL$vJY2Wb" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:4FTL$vJY2U7" resolve="staff" />
-        <node concept="1sVBvm" id="4FTL$vJY2Wd" role="1sWHZn">
-          <node concept="3F0A7n" id="4FTL$vJY2Wk" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="4FTL$vJY2Wy" role="3EZMnx">
-        <property role="3F0ifm" value="x" />
-      </node>
-      <node concept="3F0A7n" id="4FTL$vJY2WI" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:4FTL$vJY2U5" resolve="number" />
-      </node>
-      <node concept="l2Vlx" id="4FTL$vJY2W7" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="7ih0ZFGR6B4">
@@ -1307,6 +1213,28 @@
             </node>
           </node>
         </node>
+        <node concept="3R4teh" id="1jVX9cGRYmY" role="1PNbKM">
+          <node concept="3clFbS" id="1jVX9cGRYmZ" role="2VODD2">
+            <node concept="3clFbF" id="1jVX9cGRYnd" role="3cqZAp">
+              <node concept="37vLTI" id="1jVX9cGRZ5B" role="3clFbG">
+                <node concept="1eOMI4" id="1jVX9cGRZee" role="37vLTx">
+                  <node concept="10QFUN" id="1jVX9cGRZeb" role="1eOMHV">
+                    <node concept="3Tqbb2" id="1jVX9cGRZip" role="10QFUM">
+                      <ref role="ehGHo" to="e88n:2VPlUUsG6x$" resolve="Action" />
+                    </node>
+                    <node concept="3R4i$M" id="1jVX9cGRZa7" role="10QFUP" />
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="1jVX9cGRYwT" role="37vLTJ">
+                  <node concept="2ZN8Hh" id="1jVX9cGRYnc" role="2Oq$k0" />
+                  <node concept="3TrEf2" id="1jVX9cGRYHY" role="2OqNvi">
+                    <ref role="3Tt5mk" to="e88n:av1M7vsqYQ" resolve="fromAction" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
       <node concept="1PNbMa" id="av1M7v12tT" role="1PN8qh">
         <node concept="2xQOud" id="2lOlAdPtEkF" role="1PNbKK">
@@ -1419,6 +1347,28 @@
                 </node>
               </node>
               <node concept="1uHKPH" id="1xAzJ9Pw$P2" role="2OqNvi" />
+            </node>
+          </node>
+        </node>
+        <node concept="3R4teh" id="1jVX9cGRYdo" role="1PNbKM">
+          <node concept="3clFbS" id="1jVX9cGRYdp" role="2VODD2">
+            <node concept="3clFbF" id="1jVX9cGGs0y" role="3cqZAp">
+              <node concept="37vLTI" id="1jVX9cGGsKn" role="3clFbG">
+                <node concept="1eOMI4" id="1jVX9cGGsSY" role="37vLTx">
+                  <node concept="10QFUN" id="1jVX9cGGsSV" role="1eOMHV">
+                    <node concept="3Tqbb2" id="1jVX9cGGsX9" role="10QFUM">
+                      <ref role="ehGHo" to="e88n:2VPlUUsG6x$" resolve="Action" />
+                    </node>
+                    <node concept="3R4i$M" id="1jVX9cGGsOR" role="10QFUP" />
+                  </node>
+                </node>
+                <node concept="2OqwBi" id="1jVX9cGGs8i" role="37vLTJ">
+                  <node concept="2ZN8Hh" id="1jVX9cGGs0x" role="2Oq$k0" />
+                  <node concept="3TrEf2" id="1jVX9cGGskR" role="2OqNvi">
+                    <ref role="3Tt5mk" to="e88n:4X1nFNzWOmM" resolve="targetAction" />
+                  </node>
+                </node>
+              </node>
             </node>
           </node>
         </node>
@@ -1607,140 +1557,6 @@
         </node>
       </node>
       <node concept="2iRkQZ" id="2S_5Uq$_Yhm" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="av1M7vfo4$">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1XX52x" to="e88n:av1M7vdxsc" resolve="DiagnosticCondition" />
-    <node concept="3EZMnI" id="av1M7vfo4J" role="2wV5jI">
-      <node concept="3F0ifn" id="av1M7vfo4Q" role="3EZMnx">
-        <property role="3F0ifm" value="test" />
-      </node>
-      <node concept="1iCGBv" id="av1M7vfo4W" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:av1M7vdSwv" resolve="test" />
-        <node concept="1sVBvm" id="av1M7vfo4Y" role="1sWHZn">
-          <node concept="3F0A7n" id="av1M7vfo56" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="1iCGBv" id="3WTvlUVBjcs" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:3WTvlUVugCc" resolve="disease" />
-        <node concept="1sVBvm" id="3WTvlUVBjcu" role="1sWHZn">
-          <node concept="3F0A7n" id="3WTvlUVBjcF" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="av1M7vfo5f" role="3EZMnx">
-        <property role="3F0ifm" value="gives" />
-      </node>
-      <node concept="3F0A7n" id="2lOlAdPyKCs" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:2lOlAdPyFhO" resolve="outcome" />
-      </node>
-      <node concept="2iRfu4" id="av1M7vfo4M" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="av1M7vc7eg">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:1rknCs3SeRP" resolve="ProcessingTimeTable" />
-    <node concept="3EZMnI" id="2_JteYNWsdf" role="2wV5jI">
-      <node concept="2iRkQZ" id="2_JteYNWsdg" role="2iSdaV" />
-      <node concept="2rfBfz" id="1rknCs3SeVH" role="3EZMnx">
-        <node concept="2reSaE" id="1rknCs3SeVM" role="2rf8GZ">
-          <ref role="2reCK$" to="e88n:1rknCs3SeTx" resolve="ProcessingTimeLines" />
-          <node concept="2r3Xtq" id="1rknCs3VJaA" role="2YiT2b">
-            <node concept="2rfbtV" id="1rknCs3VJeQ" role="uCobI">
-              <property role="2rfbtB" value="Processing Time (minutes)" />
-            </node>
-            <node concept="2rfbtV" id="1rknCs3VJeW" role="uCobI">
-              <property role="2rfbtB" value="Occurances" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="av1M7vc9lp">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:1rknCs3SeSq" resolve="ProcessingTimeLine" />
-    <node concept="2r0Tta" id="1rknCs3SeUG" role="2wV5jI">
-      <node concept="2reCLk" id="1rknCs3SeUJ" role="2r0Tv6">
-        <node concept="2reCLy" id="1rknCs3SeUL" role="2reCL6">
-          <node concept="3F0A7n" id="1rknCs3VZtm" role="2reSmM">
-            <ref role="1NtTu8" to="e88n:1rknCs3SeSQ" resolve="Time" />
-          </node>
-        </node>
-        <node concept="2reCLy" id="1rknCs3VZt_" role="2reCL6">
-          <node concept="3F0A7n" id="1rknCs3VZtH" role="2reSmM">
-            <ref role="1NtTu8" to="e88n:1rknCs3SeSS" resolve="Occurances" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="av1M7vc7dk">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:ijr0ZWehMB" resolve="DiseaseTest" />
-    <node concept="3EZMnI" id="ijr0ZWehML" role="2wV5jI">
-      <node concept="3F0ifn" id="351ASBMa6Df" role="3EZMnx">
-        <property role="3F0ifm" value="Disease:" />
-        <node concept="pVoyu" id="351ASBMa6DI" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="1iCGBv" id="351ASBMa6Eg" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:351ASBMa07b" resolve="disease" />
-        <node concept="1sVBvm" id="351ASBMa6Ei" role="1sWHZn">
-          <node concept="3F0A7n" id="351ASBMa6ER" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="351ASBMa6_G" role="3EZMnx">
-        <property role="3F0ifm" value="Sensitivity:" />
-        <node concept="pVoyu" id="351ASBMa6A6" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="351ASBMa6Ay" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:351ASBMa07g" resolve="sensitivity" />
-      </node>
-      <node concept="3F0ifn" id="3IhX87gfHXD" role="3EZMnx">
-        <property role="3F0ifm" value="%" />
-      </node>
-      <node concept="3F0ifn" id="351ASBMa6Bo" role="3EZMnx">
-        <property role="3F0ifm" value="Specificity:" />
-        <node concept="pVoyu" id="351ASBMa6BO" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="351ASBMa6Cj" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:351ASBMa07i" resolve="specificity" />
-      </node>
-      <node concept="3F0ifn" id="3IhX87gfHYp" role="3EZMnx">
-        <property role="3F0ifm" value="%" />
-      </node>
-      <node concept="3F0ifn" id="4NxsD3bOgcm" role="3EZMnx">
-        <property role="3F0ifm" value="Possible Outcomes:" />
-        <node concept="pVoyu" id="4NxsD3bOgcA" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F2HdR" id="21NGWDnYOWI" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:351ASBMa07l" resolve="possibleOutcomes" />
-        <node concept="l2Vlx" id="21NGWDnYOWK" role="2czzBx" />
-        <node concept="pVoyu" id="21NGWDnYOX2" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="21NGWDnYOX4" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="l2Vlx" id="ijr0ZWehMO" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="2lOlAdOYz1t">
@@ -2060,7 +1876,7 @@
           <ref role="1NtTu8" to="e88n:4FTL$vJQLjT" resolve="staffTypeReference" />
           <node concept="1sVBvm" id="2_JteYOboL8" role="1sWHZn">
             <node concept="1iCGBv" id="2_JteYOboL9" role="2wV5jI">
-              <ref role="1NtTu8" to="e88n:4FTL$vJQzE_" resolve="staffType" />
+              <ref role="1NtTu8" to="s2d1:4FTL$vJQzE_" resolve="staffType" />
               <node concept="1sVBvm" id="2_JteYOboLa" role="1sWHZn">
                 <node concept="3F0A7n" id="2_JteYOboLb" role="2wV5jI">
                   <property role="1Intyy" value="true" />
@@ -2083,58 +1899,6 @@
         <node concept="2iRfu4" id="2K0oNvtWdGS" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="2_JteYOboLd" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="5ivS4t6ssQe">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:5ivS4t6ssOS" resolve="TestCapturedDisease" />
-    <node concept="3EZMnI" id="5ivS4t6ssQg" role="2wV5jI">
-      <node concept="3F0ifn" id="5ivS4t6ssRM" role="3EZMnx">
-        <property role="3F0ifm" value="Disease:" />
-        <node concept="lj46D" id="5ivS4t6ssS2" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="1iCGBv" id="5ivS4t6ssQV" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:5ivS4t6ssQ5" resolve="disease" />
-        <node concept="1sVBvm" id="5ivS4t6ssQX" role="1sWHZn">
-          <node concept="3F0A7n" id="5ivS4t6ssR4" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="5ivS4t6ssRc" role="3EZMnx">
-        <property role="3F0ifm" value="Sensitivity:" />
-        <node concept="pVoyu" id="5ivS4t6ssRd" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="5ivS4t6ssRe" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="5ivS4t6ssRf" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:5ivS4t6ssPJ" resolve="Sensitivity" />
-      </node>
-      <node concept="3F0ifn" id="5ivS4t6ssRg" role="3EZMnx">
-        <property role="3F0ifm" value="%" />
-      </node>
-      <node concept="3F0ifn" id="5ivS4t6ssRh" role="3EZMnx">
-        <property role="3F0ifm" value="Specificity:" />
-        <node concept="pVoyu" id="5ivS4t6ssRi" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="5ivS4t6ssRj" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="5ivS4t6ssRk" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:5ivS4t6ssPK" resolve="Specificity" />
-      </node>
-      <node concept="3F0ifn" id="5ivS4t6ssRl" role="3EZMnx">
-        <property role="3F0ifm" value="%" />
-      </node>
-      <node concept="l2Vlx" id="5ivS4t6ssQj" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="6MzSDQOuh85">
@@ -2164,77 +1928,6 @@
         </node>
       </node>
       <node concept="l2Vlx" id="6MzSDQOuh8a" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="6MzSDQOuiV2">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:6MzSDQOuh6B" resolve="ObservationTest" />
-    <node concept="3EZMnI" id="6MzSDQOuiVx" role="2wV5jI">
-      <node concept="3F0ifn" id="6MzSDQOuiVy" role="3EZMnx">
-        <property role="3F0ifm" value="Observation:" />
-        <node concept="VSNWy" id="5R1$QEO4VhP" role="3F10Kt">
-          <property role="1lJzqX" value="18" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="5R1$QEO4VhV" role="3EZMnx">
-        <property role="3F0ifm" value="------------------------------" />
-        <node concept="pVoyu" id="5R1$QEO4VhX" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3EZMnI" id="6MzSDQOuiV$" role="3EZMnx">
-        <node concept="3F0ifn" id="6MzSDQOuiW1" role="3EZMnx">
-          <property role="3F0ifm" value="Positive if patient has:" />
-          <node concept="VSNWy" id="5R1$QEO4VhY" role="3F10Kt">
-            <property role="1lJzqX" value="14" />
-          </node>
-        </node>
-        <node concept="2iRkQZ" id="6MzSDQOuiV_" role="2iSdaV" />
-        <node concept="pVoyu" id="6MzSDQOuiVD" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="3F2HdR" id="6MzSDQOuiVX" role="3EZMnx">
-          <ref role="1NtTu8" to="e88n:6MzSDQOuhb5" resolve="SymptomReference" />
-          <node concept="2iRkQZ" id="6MzSDQOuiVY" role="2czzBx" />
-          <node concept="lj46D" id="5R1$QEO4Vid" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-          <node concept="pVoyu" id="5R1$QEO4Vif" role="3F10Kt">
-            <property role="VOm3f" value="true" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="5R1$QEO4Vi0" role="3EZMnx">
-        <node concept="pVoyu" id="5R1$QEO4Vi3" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="l2Vlx" id="6MzSDQOuiVH" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="6MzSDQO$AHi">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1XX52x" to="e88n:6MzSDQO$AFz" resolve="ObservationsCondition" />
-    <node concept="3EZMnI" id="6MzSDQO$AHk" role="2wV5jI">
-      <node concept="3F0ifn" id="6MzSDQO$AHl" role="3EZMnx">
-        <property role="3F0ifm" value="test" />
-      </node>
-      <node concept="1iCGBv" id="4pv5agm4hdv" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:6MzSDQO$AGR" resolve="test" />
-        <node concept="1sVBvm" id="4pv5agm4hdx" role="1sWHZn">
-          <node concept="3F0A7n" id="4pv5agm4hdF" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="6MzSDQO$AHs" role="3EZMnx">
-        <property role="3F0ifm" value="gives" />
-      </node>
-      <node concept="3F0A7n" id="6MzSDQO$AHt" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:6MzSDQO$AGz" resolve="outcome" />
-      </node>
-      <node concept="2iRfu4" id="6MzSDQO$AHu" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="1xAzJ9Jg94i">
@@ -2290,55 +1983,6 @@
       <node concept="l2Vlx" id="1xAzJ9JgbS8" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="1xAzJ9JgLTo">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1XX52x" to="e88n:1xAzJ9JgLT5" resolve="VaccineStatusCondition" />
-    <node concept="3EZMnI" id="1xAzJ9KQP65" role="2wV5jI">
-      <node concept="3F0ifn" id="1xAzJ9JgLTx" role="3EZMnx">
-        <property role="3F0ifm" value="vaccine status for" />
-      </node>
-      <node concept="1iCGBv" id="1xAzJ9LwoTe" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
-        <node concept="1sVBvm" id="1xAzJ9LwoTg" role="1sWHZn">
-          <node concept="3F0A7n" id="1xAzJ9LwoTq" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="e88n:1xAzJ9KWVQG" resolve="name" />
-          </node>
-        </node>
-        <node concept="A1WHr" id="1xAzJ9LwoTv" role="3vIgyS">
-          <ref role="2ZyFGn" to="e88n:1xAzJ9JgLT5" resolve="VaccineStatusCondition" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="1xAzJ9JLx6X" role="3EZMnx">
-        <property role="3F0ifm" value="is" />
-      </node>
-      <node concept="3F1sOY" id="1xAzJ9KC_Lq" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
-      </node>
-      <node concept="2iRfu4" id="1xAzJ9KQP68" role="2iSdaV" />
-    </node>
-    <node concept="3EZMnI" id="4EKCctx9E5u" role="6VMZX">
-      <node concept="2iRfu4" id="4EKCctx9E5v" role="2iSdaV" />
-      <node concept="3F0ifn" id="4EKCctx9E5y" role="3EZMnx">
-        <property role="3F0ifm" value="vax status for" />
-      </node>
-      <node concept="1iCGBv" id="5_AWs3O39bB" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
-        <node concept="1sVBvm" id="5_AWs3O39bD" role="1sWHZn">
-          <node concept="3F0A7n" id="5_AWs3O39bL" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="e88n:1xAzJ9KWVQG" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="5_AWs3O39bU" role="3EZMnx">
-        <property role="3F0ifm" value="is" />
-      </node>
-      <node concept="3F1sOY" id="5_AWs3O39c8" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="1xAzJ9KbPwf">
     <property role="3GE5qa" value="Attributes.PatientProperties.VaccinatedAttributes" />
     <ref role="1XX52x" to="e88n:1xAzJ9JLx51" resolve="VaccinationStatus" />
@@ -2356,13 +2000,55 @@
       <node concept="3F0ifn" id="10zWyfqTmIv" role="3EZMnx">
         <property role="3F0ifm" value="check" />
       </node>
-      <node concept="1iCGBv" id="10zWyfqTmUH" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
-        <node concept="1sVBvm" id="10zWyfqTmUJ" role="1sWHZn">
-          <node concept="3F0A7n" id="10zWyfqTmUT" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="e88n:1xAzJ9KWVQG" resolve="name" />
+      <node concept="XafU7" id="58IjuLXWBQO" role="3EZMnx">
+        <property role="ihaIw" value="Patient Property" />
+        <node concept="3TQVft" id="58IjuLXWBQQ" role="3TRxkO">
+          <node concept="3TQlhw" id="58IjuLXWBQS" role="3TQWv3">
+            <node concept="3clFbS" id="58IjuLXWBQU" role="2VODD2">
+              <node concept="3clFbF" id="58IjuLXWBZQ" role="3cqZAp">
+                <node concept="2OqwBi" id="58IjuLXWCPg" role="3clFbG">
+                  <node concept="2OqwBi" id="58IjuLXWCh6" role="2Oq$k0">
+                    <node concept="pncrf" id="58IjuLXWBZP" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="58IjuLXWCGH" role="2OqNvi">
+                      <ref role="3Tt5mk" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
+                    </node>
+                  </node>
+                  <node concept="2qgKlT" id="58IjuLXWD74" role="2OqNvi">
+                    <ref role="37wK5l" to="uyrv:1xAzJ9JgcJZ" resolve="getName" />
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
+          <node concept="3TQsA7" id="58IjuLXWBQW" role="3TQXYj">
+            <node concept="3clFbS" id="58IjuLXWBQY" role="2VODD2">
+              <node concept="3clFbF" id="58IjuLXWDk5" role="3cqZAp">
+                <node concept="2OqwBi" id="58IjuLXWDwV" role="3clFbG">
+                  <node concept="pncrf" id="58IjuLXWDk4" role="2Oq$k0" />
+                  <node concept="3TrEf2" id="58IjuLXWDZs" role="2OqNvi">
+                    <ref role="3Tt5mk" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3TQwEX" id="58IjuLXWBR0" role="3TQZqC">
+            <node concept="3clFbS" id="58IjuLXWBR2" role="2VODD2">
+              <node concept="3clFbF" id="ymNNsewHHD" role="3cqZAp">
+                <node concept="3clFbT" id="ymNNsewHHC" role="3clFbG">
+                  <property role="3clFbU" value="true" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="OXEIz" id="58IjuLY0ekA" role="P5bDN">
+          <node concept="UkePV" id="58IjuLY0ewf" role="OY2wv">
+            <ref role="Ul1FP" to="e88n:1xAzJ9JfzHc" resolve="IPatientProperty" />
+          </node>
+        </node>
+        <node concept="A1WHr" id="ymNNses4oK" role="3vIgyS">
+          <ref role="2ZyFGn" to="e88n:1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
         </node>
       </node>
       <node concept="3F0ifn" id="10zWyfqTmIQ" role="3EZMnx">
@@ -2374,152 +2060,6 @@
       <node concept="2iRfu4" id="10zWyfqTmIS" role="2iSdaV" />
     </node>
   </node>
-  <node concept="3ICUPy" id="1xAzJ9Ld$WW">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="aqKnT" to="e88n:1xAzJ9JgLT5" resolve="VaccineStatusCondition" />
-    <node concept="1Qtc8_" id="1xAzJ9Ld$WZ" role="IW6Ez">
-      <node concept="3eGOoe" id="1xAzJ9Ld$X3" role="1Qtc8$" />
-      <node concept="3PzhKR" id="1xAzJ9Ld$X6" role="1Qtc8A">
-        <ref role="3PzhKQ" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
-        <node concept="1hCUdq" id="1xAzJ9Ld$X8" role="w35GX">
-          <node concept="3clFbS" id="1xAzJ9Ld$X9" role="2VODD2">
-            <node concept="3clFbF" id="1xAzJ9Ld_1H" role="3cqZAp">
-              <node concept="2OqwBi" id="1xAzJ9Ld_XR" role="3clFbG">
-                <node concept="2OqwBi" id="1xAzJ9Ld_cK" role="2Oq$k0">
-                  <node concept="3TrEf2" id="1xAzJ9Ld_rP" role="2OqNvi">
-                    <ref role="3Tt5mk" to="e88n:1xAzJ9JgbRU" resolve="disease" />
-                  </node>
-                  <node concept="1eOMI4" id="1xAzJ9LnSk6" role="2Oq$k0">
-                    <node concept="10QFUN" id="1xAzJ9LnRCv" role="1eOMHV">
-                      <node concept="3Tqbb2" id="1xAzJ9LnRHK" role="10QFUM">
-                        <ref role="ehGHo" to="e88n:1xAzJ9Jg95t" resolve="VaccineStatusProperty" />
-                      </node>
-                      <node concept="1NM5Ph" id="1xAzJ9Ld_1G" role="10QFUP" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3TrcHB" id="1xAzJ9LdAh7" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1hCUdq" id="1xAzJ9LdAuK" role="1t9nwV">
-          <node concept="3clFbS" id="1xAzJ9LdAuL" role="2VODD2">
-            <node concept="3clFbF" id="1xAzJ9LnT18" role="3cqZAp">
-              <node concept="2OqwBi" id="1xAzJ9LnT19" role="3clFbG">
-                <node concept="2OqwBi" id="1xAzJ9LnT1a" role="2Oq$k0">
-                  <node concept="3TrEf2" id="1xAzJ9LnT1b" role="2OqNvi">
-                    <ref role="3Tt5mk" to="e88n:1xAzJ9JgbRU" resolve="disease" />
-                  </node>
-                  <node concept="1eOMI4" id="1xAzJ9LnT1c" role="2Oq$k0">
-                    <node concept="10QFUN" id="1xAzJ9LnT1d" role="1eOMHV">
-                      <node concept="3Tqbb2" id="1xAzJ9LnT1e" role="10QFUM">
-                        <ref role="ehGHo" to="e88n:1xAzJ9Jg95t" resolve="VaccineStatusProperty" />
-                      </node>
-                      <node concept="1NM5Ph" id="1xAzJ9LnT1f" role="10QFUP" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3TrcHB" id="1xAzJ9LnT1g" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="22hDWj" id="1xAzJ9Ld$WX" role="22hAXT" />
-  </node>
-  <node concept="24kQdi" id="1xAzJ9Ly2oK">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1XX52x" to="e88n:1xAzJ9L0ubU" resolve="InfectionStatusCondition" />
-    <node concept="3EZMnI" id="1xAzJ9Ly2oM" role="2wV5jI">
-      <node concept="3F0ifn" id="1xAzJ9Ly2oT" role="3EZMnx">
-        <property role="3F0ifm" value="infection status for" />
-      </node>
-      <node concept="1iCGBv" id="1xAzJ9Ly2oZ" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
-        <node concept="1sVBvm" id="1xAzJ9Ly2p1" role="1sWHZn">
-          <node concept="3F0A7n" id="1xAzJ9Ly2p9" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="e88n:1xAzJ9KWVQG" resolve="name" />
-          </node>
-        </node>
-        <node concept="A1WHr" id="1xAzJ9LzKDz" role="3vIgyS">
-          <ref role="2ZyFGn" to="e88n:1xAzJ9L0ubU" resolve="InfectionStatusCondition" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="1xAzJ9Ly2pi" role="3EZMnx">
-        <property role="3F0ifm" value="is" />
-      </node>
-      <node concept="3F1sOY" id="1xAzJ9Ly2pw" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
-      </node>
-      <node concept="2iRfu4" id="1xAzJ9Ly2oP" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="3ICUPy" id="1xAzJ9Ly2$C">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="aqKnT" to="e88n:1xAzJ9L0ubU" resolve="InfectionStatusCondition" />
-    <node concept="1Qtc8_" id="1xAzJ9Ly2$F" role="IW6Ez">
-      <node concept="3eGOoe" id="1xAzJ9Ly2$J" role="1Qtc8$" />
-      <node concept="3PzhKR" id="1xAzJ9Ly2$M" role="1Qtc8A">
-        <ref role="3PzhKQ" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
-        <node concept="1hCUdq" id="1xAzJ9Ly2$O" role="w35GX">
-          <node concept="3clFbS" id="1xAzJ9Ly2$P" role="2VODD2">
-            <node concept="3clFbF" id="1xAzJ9Ly2HO" role="3cqZAp">
-              <node concept="2OqwBi" id="1xAzJ9Ly2HP" role="3clFbG">
-                <node concept="2OqwBi" id="1xAzJ9Ly2HQ" role="2Oq$k0">
-                  <node concept="3TrEf2" id="1xAzJ9Ly3Dm" role="2OqNvi">
-                    <ref role="3Tt5mk" to="e88n:1xAzJ9Jg96b" resolve="disease" />
-                  </node>
-                  <node concept="1eOMI4" id="1xAzJ9Ly2HS" role="2Oq$k0">
-                    <node concept="10QFUN" id="1xAzJ9Ly2HT" role="1eOMHV">
-                      <node concept="3Tqbb2" id="1xAzJ9Ly2HU" role="10QFUM">
-                        <ref role="ehGHo" to="e88n:1xAzJ9JfB29" resolve="InfectionStatusProperty" />
-                      </node>
-                      <node concept="1NM5Ph" id="1xAzJ9Ly2HV" role="10QFUP" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3TrcHB" id="1xAzJ9Ly4ep" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="1hCUdq" id="1xAzJ9Ly2Sn" role="1t9nwV">
-          <node concept="3clFbS" id="1xAzJ9Ly2So" role="2VODD2">
-            <node concept="3clFbF" id="1xAzJ9Ly2TH" role="3cqZAp">
-              <node concept="2OqwBi" id="1xAzJ9Ly2TI" role="3clFbG">
-                <node concept="2OqwBi" id="1xAzJ9Ly2TJ" role="2Oq$k0">
-                  <node concept="3TrEf2" id="1xAzJ9Ly3EX" role="2OqNvi">
-                    <ref role="3Tt5mk" to="e88n:1xAzJ9Jg96b" resolve="disease" />
-                  </node>
-                  <node concept="1eOMI4" id="1xAzJ9Ly2TL" role="2Oq$k0">
-                    <node concept="10QFUN" id="1xAzJ9Ly2TM" role="1eOMHV">
-                      <node concept="3Tqbb2" id="1xAzJ9Ly2TN" role="10QFUM">
-                        <ref role="ehGHo" to="e88n:1xAzJ9JfB29" resolve="InfectionStatusProperty" />
-                      </node>
-                      <node concept="1NM5Ph" id="1xAzJ9Ly2TO" role="10QFUP" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="3TrcHB" id="1xAzJ9Ly4Or" role="2OqNvi">
-                  <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="22hDWj" id="1xAzJ9Ly2$D" role="22hAXT" />
-  </node>
   <node concept="24kQdi" id="1xAzJ9NaT1X">
     <property role="3GE5qa" value="Attributes.PatientProperties" />
     <ref role="1XX52x" to="e88n:1xAzJ9NaT1k" resolve="RecentCovidContactProperty" />
@@ -2528,19 +2068,6 @@
         <property role="3F0ifm" value="Patient has recent COVID contact" />
       </node>
       <node concept="2iRfu4" id="1xAzJ9NaT1s" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="1xAzJ9NaXTG">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1XX52x" to="e88n:1xAzJ9NaXT$" resolve="RecentCOVIDContactCondition" />
-    <node concept="3EZMnI" id="1xAzJ9NaXTI" role="2wV5jI">
-      <node concept="3F0ifn" id="1xAzJ9NaXTP" role="3EZMnx">
-        <property role="3F0ifm" value="Recent COVID contact is" />
-      </node>
-      <node concept="3F1sOY" id="1xAzJ9Nltdv" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
-      </node>
-      <node concept="2iRfu4" id="1xAzJ9NaXTL" role="2iSdaV" />
     </node>
   </node>
   <node concept="24kQdi" id="1xAzJ9NjBfx">
@@ -2569,7 +2096,7 @@
         <node concept="3EZMnI" id="6w5xUwMhcAU" role="3EZMnx">
           <node concept="VPM3Z" id="6w5xUwMhcAW" role="3F10Kt" />
           <node concept="3F0ifn" id="6w5xUwMhcAY" role="3EZMnx">
-            <property role="3F0ifm" value="Use if:" />
+            <property role="3F0ifm" value="Use for:" />
             <node concept="VSNWy" id="6w5xUwMhhG4" role="3F10Kt">
               <property role="1lJzqX" value="12" />
             </node>
@@ -2627,19 +2154,6 @@
       <node concept="2iRfu4" id="1xAzJ9PnC5z" role="2iSdaV" />
     </node>
   </node>
-  <node concept="24kQdi" id="1xAzJ9PnEhu">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1XX52x" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
-    <node concept="3EZMnI" id="1xAzJ9PnEhw" role="2wV5jI">
-      <node concept="3F0ifn" id="1xAzJ9PnEhB" role="3EZMnx">
-        <property role="3F0ifm" value="Patient immuno-compomised is" />
-      </node>
-      <node concept="3F1sOY" id="1xAzJ9PnEhH" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1xAzJ9KVgC3" resolve="checkValue" />
-      </node>
-      <node concept="2iRfu4" id="1xAzJ9PnEhz" role="2iSdaV" />
-    </node>
-  </node>
   <node concept="24kQdi" id="1xAzJ9PrV6p">
     <property role="3GE5qa" value="ActionCard" />
     <ref role="1XX52x" to="e88n:1xAzJ9PrV5c" resolve="DischargeAction" />
@@ -2692,7 +2206,7 @@
           <ref role="1NtTu8" to="e88n:4FTL$vJQLjT" resolve="staffTypeReference" />
           <node concept="1sVBvm" id="1xAzJ9PrV8a" role="1sWHZn">
             <node concept="1iCGBv" id="1xAzJ9PrV8b" role="2wV5jI">
-              <ref role="1NtTu8" to="e88n:4FTL$vJQzE_" resolve="staffType" />
+              <ref role="1NtTu8" to="s2d1:4FTL$vJQzE_" resolve="staffType" />
               <node concept="1sVBvm" id="1xAzJ9PrV8c" role="1sWHZn">
                 <node concept="3F0A7n" id="1xAzJ9PrV8d" role="2wV5jI">
                   <property role="1Intyy" value="true" />
@@ -3086,300 +2600,6 @@
       <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
     </node>
   </node>
-  <node concept="24kQdi" id="3mDt9dhI8WY">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:3mDt9dhI7lH" resolve="TestSelectionRuleLine" />
-    <node concept="3EZMnI" id="3mDt9dhI8X5" role="2wV5jI">
-      <node concept="3F1sOY" id="3mDt9dhI8Xc" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:3mDt9dhI7lK" resolve="rule" />
-      </node>
-      <node concept="l2Vlx" id="3mDt9dhI8X8" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="3mDt9dhIf0q">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:3mDt9dhIf0e" resolve="ProbabilityDistributionLine" />
-    <node concept="2r0Tta" id="3mDt9dhIf0s" role="2wV5jI">
-      <node concept="2reCLk" id="3mDt9dhIf0v" role="2r0Tv6">
-        <node concept="2reCLy" id="3mDt9dhIf0x" role="2reCL6">
-          <node concept="1iCGBv" id="3mDt9dhIf25" role="2reSmM">
-            <ref role="1NtTu8" to="e88n:3mDt9dhIf21" resolve="test" />
-            <node concept="1sVBvm" id="3mDt9dhIf27" role="1sWHZn">
-              <node concept="3F0A7n" id="3mDt9dhIf2e" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="2reCLy" id="3mDt9dhIf0G" role="2reCL6">
-          <node concept="3F0A7n" id="3mDt9dhIf0O" role="2reSmM">
-            <ref role="1NtTu8" to="e88n:3mDt9dhIf0f" resolve="probability" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="3mDt9dhIf0Y">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:3mDt9dhIeZN" resolve="ProbabilityDistribution" />
-    <node concept="3EZMnI" id="3mDt9dhIf10" role="2wV5jI">
-      <node concept="2rfBfz" id="3mDt9dhIf1u" role="3EZMnx">
-        <node concept="2reSaE" id="3mDt9dhIf1B" role="2rf8GZ">
-          <ref role="2reCK$" to="e88n:3mDt9dhIf1E" resolve="lines" />
-          <node concept="2r3Xtq" id="3mDt9dhIf1L" role="2YiT2b">
-            <node concept="2rfbtV" id="3mDt9dhIf1P" role="uCobI">
-              <property role="2rfbtB" value="Test" />
-            </node>
-            <node concept="2rfbtV" id="3mDt9dhIf1V" role="uCobI">
-              <property role="2rfbtB" value="Probability (%)" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="2iRkQZ" id="3mDt9dhIf13" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="3mDt9diCdWp">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:3mDt9dhI7l$" resolve="CompositeTest" />
-    <node concept="3EZMnI" id="3mDt9diCdWr" role="2wV5jI">
-      <node concept="3F0A7n" id="3mDt9diCdWy" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="3mDt9diCdW_" role="3EZMnx">
-        <property role="3F0ifm" value="-------------------------------" />
-      </node>
-      <node concept="3F0ifn" id="3mDt9diCdWL" role="3EZMnx">
-        <property role="3F0ifm" value="Test selection strategy:" />
-      </node>
-      <node concept="3F1sOY" id="3mDt9diCdWG" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:3mDt9dhI7lD" resolve="testSelectionStrategy" />
-      </node>
-      <node concept="3F0ifn" id="3IhX87gchXD" role="3EZMnx" />
-      <node concept="3F0ifn" id="351ASBMMCi3" role="3EZMnx">
-        <property role="3F0ifm" value="Results Table:" />
-      </node>
-      <node concept="3F1sOY" id="351ASBMMCig" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:351ASBMMCi0" resolve="resultsMappingTable" />
-      </node>
-      <node concept="2iRkQZ" id="3mDt9diCdWu" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="2K0oNvtRlaS">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1XX52x" to="e88n:2K0oNvtRlaD" resolve="CompositeTestResultCondition" />
-    <node concept="3EZMnI" id="2K0oNvtRlaU" role="2wV5jI">
-      <node concept="3F0ifn" id="2K0oNvtRlb1" role="3EZMnx">
-        <property role="3F0ifm" value="test" />
-      </node>
-      <node concept="1iCGBv" id="2K0oNvtRlb7" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:2K0oNvtRlaG" resolve="test" />
-        <node concept="1sVBvm" id="2K0oNvtRlb9" role="1sWHZn">
-          <node concept="3F0A7n" id="2K0oNvtRlbh" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="1iCGBv" id="2K0oNvtRlbq" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:2K0oNvtRlaI" resolve="disease" />
-        <node concept="1sVBvm" id="2K0oNvtRlbs" role="1sWHZn">
-          <node concept="3F0A7n" id="2K0oNvtRlbB" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="2K0oNvtRlbN" role="3EZMnx">
-        <property role="3F0ifm" value="gives" />
-      </node>
-      <node concept="3F0A7n" id="2K0oNvtRlc7" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:2K0oNvtRlaE" resolve="outcome" />
-      </node>
-      <node concept="2iRfu4" id="2K0oNvtRlaX" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="1BosAjNP_7y">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="1XX52x" to="e88n:1BosAjNP_7f" resolve="CompositeDiagnosticCondition" />
-    <node concept="3EZMnI" id="1BosAjNP_7$" role="2wV5jI">
-      <node concept="3F0ifn" id="1BosAjNP_7F" role="3EZMnx">
-        <property role="3F0ifm" value="test" />
-      </node>
-      <node concept="1iCGBv" id="1BosAjNP_7L" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1BosAjNP_7g" resolve="test" />
-        <node concept="1sVBvm" id="1BosAjNP_7N" role="1sWHZn">
-          <node concept="3F0A7n" id="1BosAjNP_7V" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="1iCGBv" id="1BosAjNP_84" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1BosAjNP_7h" resolve="disease" />
-        <node concept="1sVBvm" id="1BosAjNP_86" role="1sWHZn">
-          <node concept="3F0A7n" id="1BosAjNP_8h" role="2wV5jI">
-            <property role="1Intyy" value="true" />
-            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="1BosAjNP_8t" role="3EZMnx">
-        <property role="3F0ifm" value="gives" />
-      </node>
-      <node concept="3F0A7n" id="1BosAjNP_8L" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:1BosAjNP_7i" resolve="outcome" />
-      </node>
-      <node concept="2iRfu4" id="1BosAjNP_7B" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="351ASBMpH__">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:6MzSDQOui5f" resolve="Test" />
-    <node concept="3EZMnI" id="351ASBMpH_B" role="2wV5jI">
-      <node concept="3EZMnI" id="351ASBMpH_P" role="3EZMnx">
-        <node concept="VPM3Z" id="351ASBMpH_R" role="3F10Kt" />
-        <node concept="3F0A7n" id="351ASBMpHA2" role="3EZMnx">
-          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-          <node concept="VSNWy" id="4NxsD3bOg9p" role="3F10Kt">
-            <property role="1lJzqX" value="18" />
-          </node>
-          <node concept="Vb9p2" id="4NxsD3bOg9q" role="3F10Kt">
-            <property role="Vbekb" value="g1_kEg4/ITALIC" />
-          </node>
-          <node concept="VQ3r3" id="4NxsD3bOg9M" role="3F10Kt">
-            <property role="2USNnj" value="gtbM8PH/underlined" />
-          </node>
-        </node>
-        <node concept="2iRfu4" id="351ASBMpH_U" role="2iSdaV" />
-      </node>
-      <node concept="3F0ifn" id="4NxsD3bOgag" role="3EZMnx" />
-      <node concept="3EZMnI" id="351ASBMpHBu" role="3EZMnx">
-        <node concept="2iRfu4" id="351ASBMpHBv" role="2iSdaV" />
-        <node concept="3F0ifn" id="4R$T3as5c2z" role="3EZMnx">
-          <property role="3F0ifm" value="Testing Process Action Card:" />
-        </node>
-        <node concept="3F1sOY" id="4R$T3as8gtV" role="3EZMnx">
-          <ref role="1NtTu8" to="e88n:3ifWr0hPV59" resolve="TestingProcess" />
-        </node>
-      </node>
-      <node concept="3F0ifn" id="4NxsD3bRlon" role="3EZMnx" />
-      <node concept="3F1sOY" id="351ASBMpHCD" role="3EZMnx">
-        <ref role="1NtTu8" to="e88n:6MzSDQOui68" resolve="ProcessingTimeTable" />
-      </node>
-      <node concept="3F0ifn" id="4NxsD3bOgb4" role="3EZMnx" />
-      <node concept="3F0ifn" id="4NxsD3bL8Zs" role="3EZMnx">
-        <property role="3F0ifm" value="Can Capture..." />
-        <node concept="VSNWy" id="4NxsD3bOg9x" role="3F10Kt">
-          <property role="1lJzqX" value="13" />
-        </node>
-        <node concept="Vb9p2" id="4NxsD3bOg9y" role="3F10Kt">
-          <property role="Vbekb" value="g1_k_vY/BOLD" />
-        </node>
-        <node concept="VQ3r3" id="4NxsD3bOg9D" role="3F10Kt">
-          <property role="2USNnj" value="gtbM8PH/underlined" />
-        </node>
-      </node>
-      <node concept="3EZMnI" id="351ASBMpHAG" role="3EZMnx">
-        <node concept="2iRkQZ" id="351ASBMpHAH" role="2iSdaV" />
-        <node concept="3F2HdR" id="351ASBMpHAx" role="3EZMnx">
-          <ref role="1NtTu8" to="e88n:351ASBMa077" resolve="Captures" />
-          <node concept="2iRkQZ" id="351ASBMpHAz" role="2czzBx" />
-        </node>
-      </node>
-      <node concept="2iRkQZ" id="351ASBMpH_E" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="351ASBMwwa9">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:1BosAjNPpsC" resolve="TestOutcome" />
-    <node concept="3F0A7n" id="351ASBMwwaj" role="2wV5jI">
-      <ref role="1NtTu8" to="e88n:351ASBMa07p" resolve="outcome" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="351ASBMMzwS">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:351ASBMMzvU" resolve="ResultsMappingLine" />
-    <node concept="2r0Tta" id="351ASBMMzwU" role="2wV5jI">
-      <node concept="2reCLk" id="351ASBMMzwX" role="2r0Tv6">
-        <node concept="2reCLy" id="351ASBMMzwZ" role="2reCL6">
-          <node concept="1iCGBv" id="351ASBMMzx3" role="2reSmM">
-            <ref role="1NtTu8" to="e88n:351ASBMMzwv" resolve="Disease" />
-            <node concept="1sVBvm" id="351ASBMMzx5" role="1sWHZn">
-              <node concept="3F0A7n" id="351ASBMMzxc" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="24kQdi" id="351ASBMMzyV">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:351ASBMMzuC" resolve="ResultsMappingTable" />
-    <node concept="3EZMnI" id="351ASBMMzzo" role="2wV5jI">
-      <node concept="2rfBfz" id="351ASBMMzzv" role="3EZMnx">
-        <node concept="2reSaE" id="351ASBMMzz$" role="2rf8GZ">
-          <ref role="2reCK$" to="e88n:351ASBMMzzB" resolve="lines" />
-          <node concept="2r3Xtq" id="351ASBMMzzS" role="2YiT2b">
-            <node concept="2rfbtV" id="351ASBMMzzW" role="uCobI">
-              <property role="2rfbtB" value="Disease" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="3F0ifn" id="351ASBMMzzM" role="3EZMnx" />
-      <node concept="3F0ifn" id="351ASBMMzzD" role="3EZMnx" />
-      <node concept="2iRkQZ" id="351ASBMMzzr" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="4pv5aglTBdO">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:4pv5aglTBc6" resolve="ConditionalSelection" />
-    <node concept="3EZMnI" id="4pv5aglTBdZ" role="2wV5jI">
-      <node concept="2rfBfz" id="4pv5aglTBe6" role="3EZMnx">
-        <node concept="2reSaE" id="4pv5aglTBeb" role="2rf8GZ">
-          <ref role="2reCK$" to="e88n:4pv5aglTBdy" resolve="lines" />
-          <node concept="2r3Xtq" id="4pv5aglTBee" role="2YiT2b">
-            <node concept="2rfbtV" id="4pv5aglTBei" role="uCobI">
-              <property role="2rfbtB" value="Test" />
-            </node>
-            <node concept="2rfbtV" id="4pv5aglTBeo" role="uCobI">
-              <property role="2rfbtB" value="Condition" />
-            </node>
-          </node>
-        </node>
-      </node>
-      <node concept="2iRkQZ" id="4pv5aglTBe2" role="2iSdaV" />
-    </node>
-  </node>
-  <node concept="24kQdi" id="4pv5aglXasj">
-    <property role="3GE5qa" value="Testing" />
-    <ref role="1XX52x" to="e88n:4pv5aglTBcp" resolve="ConditionalLine" />
-    <node concept="2r0Tta" id="4pv5aglXasB" role="2wV5jI">
-      <node concept="2reCLk" id="4pv5aglXasE" role="2r0Tv6">
-        <node concept="2reCLy" id="4pv5aglXasG" role="2reCL6">
-          <node concept="1iCGBv" id="4pv5aglXasK" role="2reSmM">
-            <ref role="1NtTu8" to="e88n:4pv5aglTBdd" resolve="test" />
-            <node concept="1sVBvm" id="4pv5aglXasM" role="1sWHZn">
-              <node concept="3F0A7n" id="4pv5aglXasT" role="2wV5jI">
-                <property role="1Intyy" value="true" />
-                <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="2reCLy" id="4pv5aglXat2" role="2reCL6">
-          <node concept="3F1sOY" id="4pv5aglXatc" role="2reSmM">
-            <ref role="1NtTu8" to="e88n:4pv5aglTBdb" resolve="condition" />
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="24kQdi" id="i1eH3WpcaR">
     <property role="3GE5qa" value="Expressions.Conditions" />
     <ref role="1XX52x" to="e88n:i1eH3Wpca0" resolve="ProbabilityCondition" />
@@ -3422,11 +2642,6 @@
     <ref role="aqKnT" to="e88n:1xAzJ9NxGW2" resolve="ActionCardCondition" />
     <node concept="22hDWj" id="10zWyfqnY7c" role="22hAXT" />
   </node>
-  <node concept="22mcaB" id="10zWyfqFj6v">
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <ref role="aqKnT" to="e88n:1xAzJ9L0ubU" resolve="InfectionStatusCondition" />
-    <node concept="22hDWj" id="10zWyfqFjw2" role="22hAXT" />
-  </node>
   <node concept="1h_SRR" id="10zWyfr3WFR">
     <property role="3GE5qa" value="Attributes.PatientProperties" />
     <property role="TrG5h" value="AddDisease" />
@@ -3436,9 +2651,6 @@
     <property role="3GE5qa" value="Expressions.Conditions" />
     <ref role="1XX52x" to="e88n:7hL7ecKWo9q" resolve="PatientCohortCondition" />
     <node concept="3EZMnI" id="7hL7ecKWo9V" role="2wV5jI">
-      <node concept="3F0ifn" id="7hL7ecKWoa2" role="3EZMnx">
-        <property role="3F0ifm" value="Patient cohort is:" />
-      </node>
       <node concept="1iCGBv" id="7hL7ecKWoa8" role="3EZMnx">
         <ref role="1NtTu8" to="e88n:7hL7ecKWo9t" resolve="cohort" />
         <node concept="1sVBvm" id="7hL7ecKWoaa" role="1sWHZn">
@@ -3448,7 +2660,21 @@
           </node>
         </node>
       </node>
+      <node concept="3F0ifn" id="1jVX9cGhc0V" role="3EZMnx">
+        <property role="3F0ifm" value="patient cohort" />
+      </node>
       <node concept="l2Vlx" id="7hL7ecKWo9Y" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="3ICUPy" id="ymNNseXhme">
+    <property role="3GE5qa" value="Expressions.Conditions" />
+    <ref role="aqKnT" to="e88n:1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
+    <node concept="22hDWj" id="ymNNseXhmf" role="22hAXT" />
+    <node concept="1Qtc8_" id="ymNNseXhmh" role="IW6Ez">
+      <node concept="2j_NTm" id="ymNNseXhml" role="1Qtc8$" />
+      <node concept="3PzhKR" id="ymNNseXhmq" role="1Qtc8A">
+        <ref role="3PzhKQ" to="e88n:1xAzJ9L5vWE" resolve="patientProperty" />
+      </node>
     </node>
   </node>
 </model>

@@ -60,58 +60,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="1YbPZF" id="5ivS4t5PHrx">
-    <property role="TrG5h" value="typeof_DiagnosticCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <node concept="3clFbS" id="5ivS4t5PHry" role="18ibNy">
-      <node concept="1Z5TYs" id="5ivS4t5PHF5" role="3cqZAp">
-        <node concept="mw_s8" id="5ivS4t5PHF8" role="1ZfhK$">
-          <node concept="1Z2H0r" id="5ivS4t5PHrC" role="mwGJk">
-            <node concept="1YBJjd" id="5ivS4t5PHtx" role="1Z2MuG">
-              <ref role="1YBMHb" node="5ivS4t5PHr$" resolve="diagnosticCondition" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="5ivS4t5PIO6" role="1ZfhKB">
-          <node concept="2pJPEk" id="5ivS4t5PIO2" role="mwGJk">
-            <node concept="2pJPED" id="5ivS4t5PIOh" role="2pJPEn">
-              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="5ivS4t5PHr$" role="1YuTPh">
-      <property role="TrG5h" value="diagnosticCondition" />
-      <ref role="1YaFvo" to="e88n:av1M7vdxsc" resolve="DiagnosticCondition" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="6MzSDQO$AJb">
-    <property role="TrG5h" value="typeof_ObservationsCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <node concept="3clFbS" id="6MzSDQO$AJc" role="18ibNy">
-      <node concept="1Z5TYs" id="6MzSDQO$AU7" role="3cqZAp">
-        <node concept="mw_s8" id="6MzSDQO$AUr" role="1ZfhKB">
-          <node concept="2pJPEk" id="6MzSDQO$AUn" role="mwGJk">
-            <node concept="2pJPED" id="6MzSDQO$AUA" role="2pJPEn">
-              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="6MzSDQO$AUa" role="1ZfhK$">
-          <node concept="1Z2H0r" id="6MzSDQO$AJi" role="mwGJk">
-            <node concept="1YBJjd" id="6MzSDQO$ALa" role="1Z2MuG">
-              <ref role="1YBMHb" node="6MzSDQO$AJe" resolve="observationsCondition" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="6MzSDQO$AJe" role="1YuTPh">
-      <property role="TrG5h" value="observationsCondition" />
-      <ref role="1YaFvo" to="e88n:6MzSDQO$AFz" resolve="ObservationsCondition" />
-    </node>
-  </node>
   <node concept="1YbPZF" id="1xAzJ9KEaUD">
     <property role="TrG5h" value="typeof_VaccinationStatus" />
     <property role="3GE5qa" value="Attributes.PatientProperties.VaccinatedAttributes" />
@@ -136,32 +84,6 @@
     <node concept="1YaCAy" id="1xAzJ9KEaUG" role="1YuTPh">
       <property role="TrG5h" value="vaccinationStatus" />
       <ref role="1YaFvo" to="e88n:1xAzJ9JLx51" resolve="VaccinationStatus" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="1xAzJ9KFIAn">
-    <property role="TrG5h" value="typeof_VaccineStatusCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <node concept="3clFbS" id="1xAzJ9KFIAo" role="18ibNy">
-      <node concept="1Z5TYs" id="1xAzJ9KFIAu" role="3cqZAp">
-        <node concept="mw_s8" id="1xAzJ9KFIAv" role="1ZfhK$">
-          <node concept="1Z2H0r" id="1xAzJ9KFIAw" role="mwGJk">
-            <node concept="1YBJjd" id="1xAzJ9KFID5" role="1Z2MuG">
-              <ref role="1YBMHb" node="1xAzJ9KFIAq" resolve="vaccineStatusCondition" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="1xAzJ9KFIAy" role="1ZfhKB">
-          <node concept="2pJPEk" id="1xAzJ9KFIAz" role="mwGJk">
-            <node concept="2pJPED" id="1xAzJ9KFIEg" role="2pJPEn">
-              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="1xAzJ9KFIAq" role="1YuTPh">
-      <property role="TrG5h" value="vaccineStatusCondition" />
-      <ref role="1YaFvo" to="e88n:1xAzJ9JgLT5" resolve="VaccineStatusCondition" />
     </node>
   </node>
   <node concept="1YbPZF" id="1xAzJ9KVgCX">
@@ -214,58 +136,6 @@
     <node concept="1YaCAy" id="1xAzJ9LYdgg" role="1YuTPh">
       <property role="TrG5h" value="unvaccinated" />
       <ref role="1YaFvo" to="e88n:1xAzJ9JLx5B" resolve="Unvaccinated" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="1xAzJ9NaY7n">
-    <property role="TrG5h" value="typeof_RecentCOVIDContactCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <node concept="3clFbS" id="1xAzJ9NaY7o" role="18ibNy">
-      <node concept="1Z5TYs" id="1xAzJ9NaY7u" role="3cqZAp">
-        <node concept="mw_s8" id="1xAzJ9NaY7v" role="1ZfhK$">
-          <node concept="1Z2H0r" id="1xAzJ9NaY7w" role="mwGJk">
-            <node concept="1YBJjd" id="1xAzJ9NaYa4" role="1Z2MuG">
-              <ref role="1YBMHb" node="1xAzJ9NaY7q" resolve="recentCOVIDContactCondition" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="1xAzJ9NaY7y" role="1ZfhKB">
-          <node concept="2pJPEk" id="1xAzJ9NaY7z" role="mwGJk">
-            <node concept="2pJPED" id="1xAzJ9NaY7$" role="2pJPEn">
-              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="1xAzJ9NaY7q" role="1YuTPh">
-      <property role="TrG5h" value="recentCOVIDContactCondition" />
-      <ref role="1YaFvo" to="e88n:1xAzJ9NaXT$" resolve="RecentCOVIDContactCondition" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="1xAzJ9PnFt6">
-    <property role="TrG5h" value="typeof_ImmunocompromisedCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <node concept="3clFbS" id="1xAzJ9PnFt7" role="18ibNy">
-      <node concept="1Z5TYs" id="1xAzJ9PnFtv" role="3cqZAp">
-        <node concept="mw_s8" id="1xAzJ9PnFtw" role="1ZfhK$">
-          <node concept="1Z2H0r" id="1xAzJ9PnFtx" role="mwGJk">
-            <node concept="1YBJjd" id="1xAzJ9PnFu1" role="1Z2MuG">
-              <ref role="1YBMHb" node="1xAzJ9PnFt9" resolve="immunocompromisedCondition" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="1xAzJ9PnFtz" role="1ZfhKB">
-          <node concept="2pJPEk" id="1xAzJ9PnFt$" role="mwGJk">
-            <node concept="2pJPED" id="1xAzJ9PnFt_" role="2pJPEn">
-              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="1xAzJ9PnFt9" role="1YuTPh">
-      <property role="TrG5h" value="immunocompromisedCondition" />
-      <ref role="1YaFvo" to="e88n:1xAzJ9PnEa8" resolve="ImmunocompromisedCondition" />
     </node>
   </node>
   <node concept="1YbPZF" id="4EKCctwQqDu">
@@ -396,58 +266,6 @@
     <node concept="1YaCAy" id="sr1c8P9h2R" role="1YuTPh">
       <property role="TrG5h" value="patientSeverity" />
       <ref role="1YaFvo" to="e88n:sr1c8P9fkH" resolve="PatientSeverity" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="2K0oNvtRlp9">
-    <property role="TrG5h" value="typeof_CompositeTestResultCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <node concept="3clFbS" id="2K0oNvtRlpa" role="18ibNy">
-      <node concept="1Z5TYs" id="2K0oNvtRlpg" role="3cqZAp">
-        <node concept="mw_s8" id="2K0oNvtRlph" role="1ZfhK$">
-          <node concept="1Z2H0r" id="2K0oNvtRlpi" role="mwGJk">
-            <node concept="1YBJjd" id="2K0oNvtRlpM" role="1Z2MuG">
-              <ref role="1YBMHb" node="2K0oNvtRlpc" resolve="compositeTestResultCondition" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="2K0oNvtRlpk" role="1ZfhKB">
-          <node concept="2pJPEk" id="2K0oNvtRlpl" role="mwGJk">
-            <node concept="2pJPED" id="2K0oNvtRlpm" role="2pJPEn">
-              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="2K0oNvtRlpc" role="1YuTPh">
-      <property role="TrG5h" value="compositeTestResultCondition" />
-      <ref role="1YaFvo" to="e88n:2K0oNvtRlaD" resolve="CompositeTestResultCondition" />
-    </node>
-  </node>
-  <node concept="1YbPZF" id="1BosAjNP_jS">
-    <property role="TrG5h" value="typeof_CompositeDiagnosticCondition" />
-    <property role="3GE5qa" value="Expressions.Conditions" />
-    <node concept="3clFbS" id="1BosAjNP_jT" role="18ibNy">
-      <node concept="1Z5TYs" id="1BosAjNP_jZ" role="3cqZAp">
-        <node concept="mw_s8" id="1BosAjNP_k0" role="1ZfhK$">
-          <node concept="1Z2H0r" id="1BosAjNP_k1" role="mwGJk">
-            <node concept="1YBJjd" id="1BosAjNP_kx" role="1Z2MuG">
-              <ref role="1YBMHb" node="1BosAjNP_jV" resolve="compositeDiagnosticCondition" />
-            </node>
-          </node>
-        </node>
-        <node concept="mw_s8" id="1BosAjNP_k3" role="1ZfhKB">
-          <node concept="2pJPEk" id="1BosAjNP_k4" role="mwGJk">
-            <node concept="2pJPED" id="1BosAjNP_k5" role="2pJPEn">
-              <ref role="2pJxaS" to="5qo5:6sdnDbSlaon" resolve="BooleanType" />
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="1YaCAy" id="1BosAjNP_jV" role="1YuTPh">
-      <property role="TrG5h" value="compositeDiagnosticCondition" />
-      <ref role="1YaFvo" to="e88n:1BosAjNP_7f" resolve="CompositeDiagnosticCondition" />
     </node>
   </node>
   <node concept="1YbPZF" id="i1eH3WpcqG">

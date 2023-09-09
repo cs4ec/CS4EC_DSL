@@ -12,7 +12,88 @@
   <concept fqn="c:f3061a53-9226-4cc5-a443-f952ceaf5816/1164991038168:jetbrains.mps.baseLanguage.structure.ThrowStatement" />
   <root>
     <file name="BehaviorAspectDescriptor.java">
-      <unit at="14,0,32,0" name="PatientLanguage.behavior.BehaviorAspectDescriptor" />
+      <unit at="14,0,35,0" name="PatientLanguage.behavior.BehaviorAspectDescriptor" />
+    </file>
+  </root>
+  <root nodeRef="r:5947ca34-c787-4a0c-aff3-1dbb60d6fbe9(PatientLanguage.behavior)/618909834186158236">
+    <file name="Patient__BehaviorDescriptor.java">
+      <node id="618909834186158236" at="28,0,29,0" concept="6" trace="CONCEPT" />
+      <node id="618909834186158236" at="30,0,31,0" concept="6" trace="getScope_id52_Geb4QDV$" />
+      <node id="618909834186158236" at="32,0,33,0" concept="6" trace="BH_METHODS" />
+      <node id="618909834186182934" at="38,108,39,90" concept="5" />
+      <node id="618909834186184272" at="40,5,41,58" concept="5" />
+      <node id="618909834186158236" at="48,114,49,21" concept="1" />
+      <node id="618909834186158236" at="53,114,54,49" concept="4" />
+      <node id="618909834186158236" at="55,26,56,56" concept="9" />
+      <node id="618909834186158236" at="59,13,60,115" concept="5" />
+      <node id="618909834186158236" at="61,14,62,58" concept="9" />
+      <node id="618909834186158236" at="67,128,68,49" concept="4" />
+      <node id="618909834186158236" at="69,26,70,56" concept="9" />
+      <node id="618909834186158236" at="73,14,74,58" concept="9" />
+      <node id="618909834186158236" at="80,48,81,22" concept="5" />
+      <node id="618909834186158236" at="86,40,87,19" concept="5" />
+      <node id="618909834186158236" at="91,0,92,0" concept="6" trace="IPatientProperty$nw" />
+      <node id="618909834186158236" at="95,0,96,0" concept="6" trace="patientProperties$1osX" />
+      <node id="618909834186158236" at="34,0,36,0" concept="7" trace="___init___#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+      <node id="618909834186158236" at="44,0,46,0" concept="0" trace="Patient__BehaviorDescriptor#()V" />
+      <node id="618909834186180696" at="37,116,40,5" concept="2" />
+      <node id="618909834186158236" at="54,49,57,5" concept="2" />
+      <node id="618909834186158236" at="68,49,71,5" concept="2" />
+      <node id="618909834186158236" at="47,0,51,0" concept="3" trace="initNode#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SConstructor;[Ljava/lang/Object;)V" />
+      <node id="618909834186158236" at="71,5,75,5" concept="8" />
+      <node id="618909834186158236" at="78,0,83,0" concept="3" trace="getDeclaredMethods#()Ljava/util/List;" />
+      <node id="618909834186158236" at="84,0,89,0" concept="3" trace="getConcept#()Lorg/jetbrains/mps/openapi/language/SAbstractConcept;" />
+      <node id="618909834186158236" at="37,0,43,0" concept="7" trace="getScope_id52_Geb4QDV$#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
+      <node id="618909834186158236" at="57,5,63,5" concept="8" />
+      <node id="618909834186158236" at="66,0,77,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/language/SAbstractConcept;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <node id="618909834186158236" at="52,0,65,0" concept="3" trace="invokeSpecial0#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/core/aspects/behaviour/api/SMethod;[Ljava/lang/Object;)null" />
+      <scope id="618909834186158236" at="34,63,34,63" />
+      <scope id="618909834186158236" at="44,45,44,45" />
+      <scope id="618909834186180698" at="38,108,39,90" />
+      <scope id="618909834186158236" at="48,114,49,21" />
+      <scope id="618909834186158236" at="55,26,56,56" />
+      <scope id="618909834186158236" at="59,13,60,115" />
+      <scope id="618909834186158236" at="61,14,62,58" />
+      <scope id="618909834186158236" at="69,26,70,56" />
+      <scope id="618909834186158236" at="73,14,74,58" />
+      <scope id="618909834186158236" at="80,48,81,22" />
+      <scope id="618909834186158236" at="86,40,87,19" />
+      <scope id="618909834186158236" at="34,0,36,0">
+        <var name="__thisNode__" id="618909834186158236" />
+      </scope>
+      <scope id="618909834186158236" at="44,0,46,0" />
+      <scope id="618909834186179653" at="37,116,41,58" />
+      <scope id="618909834186158236" at="47,0,51,0">
+        <var name="constructor" id="618909834186158236" />
+        <var name="node" id="618909834186158236" />
+        <var name="parameters" id="618909834186158236" />
+      </scope>
+      <scope id="618909834186158236" at="78,0,83,0" />
+      <scope id="618909834186158236" at="84,0,89,0" />
+      <scope id="618909834186158236" at="37,0,43,0">
+        <var name="__thisNode__" id="618909834186158236" />
+        <var name="child" id="618909834186179656" />
+        <var name="kind" id="618909834186179654" />
+      </scope>
+      <scope id="618909834186158236" at="67,128,75,5">
+        <var name="methodIndex" id="618909834186158236" />
+      </scope>
+      <scope id="618909834186158236" at="53,114,63,5">
+        <var name="methodIndex" id="618909834186158236" />
+      </scope>
+      <scope id="618909834186158236" at="66,0,77,0">
+        <var name="concept" id="618909834186158236" />
+        <var name="method" id="618909834186158236" />
+        <var name="parameters" id="618909834186158236" />
+      </scope>
+      <scope id="618909834186158236" at="52,0,65,0">
+        <var name="method" id="618909834186158236" />
+        <var name="node" id="618909834186158236" />
+        <var name="parameters" id="618909834186158236" />
+      </scope>
+      <unit id="618909834186158236" at="90,0,93,0" name="PatientLanguage.behavior.Patient__BehaviorDescriptor$CONCEPTS" />
+      <unit id="618909834186158236" at="94,0,97,0" name="PatientLanguage.behavior.Patient__BehaviorDescriptor$LINKS" />
+      <unit id="618909834186158236" at="27,0,98,0" name="PatientLanguage.behavior.Patient__BehaviorDescriptor" />
     </file>
   </root>
   <root nodeRef="r:5947ca34-c787-4a0c-aff3-1dbb60d6fbe9(PatientLanguage.behavior)/768972137579649659">

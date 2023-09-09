@@ -54,13 +54,16 @@
     <property role="TrG5h" value="Patient" />
     <property role="34LRSv" value="patient" />
     <property role="19KtqR" value="true" />
-    <ref role="1TJDcQ" to="e88n:lSEs44W_QZ" resolve="Person" />
+    <ref role="1TJDcQ" node="lSEs44W_QZ" resolve="Person" />
     <node concept="1TJgyj" id="i1eH3VE_aX" role="1TKVEi">
       <property role="IQ2ns" value="324605317397238461" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="patientProperties" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" to="e88n:1xAzJ9JfzHc" resolve="IPatientProperty" />
+    </node>
+    <node concept="PrWs8" id="ymNNseEmSU" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="2vFOz$FUEc$">
@@ -119,6 +122,67 @@
       <ref role="20lvS9" node="6dYFu3AbeaS" resolve="PatientArrivals" />
     </node>
     <node concept="PrWs8" id="1xAzJ9O2iPR" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4FTL$vJY2TV">
+    <property role="EcuMT" value="5402567240278617723" />
+    <property role="TrG5h" value="StaffNumber" />
+    <property role="3GE5qa" value="People.Staff" />
+    <node concept="1TJgyi" id="4FTL$vJY2U5" role="1TKVEl">
+      <property role="IQ2nx" value="5402567240278617733" />
+      <property role="TrG5h" value="number" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="4FTL$vJY2U7" role="1TKVEi">
+      <property role="IQ2ns" value="5402567240278617735" />
+      <property role="20kJfa" value="staff" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4X1nFNzWOrG">
+    <property role="EcuMT" value="5710949967853733612" />
+    <property role="TrG5h" value="StaffType" />
+    <property role="R4oN_" value="Staff type in the ED" />
+    <property role="19KtqR" value="true" />
+    <property role="3GE5qa" value="People.Staff" />
+    <node concept="1TJgyi" id="i1eH3VqwZY" role="1TKVEl">
+      <property role="IQ2nx" value="324605317393027070" />
+      <property role="TrG5h" value="patientLimit" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="1MmdcH82H9n" role="1TKVEl">
+      <property role="IQ2nx" value="2059891927260254807" />
+      <property role="TrG5h" value="colour" />
+      <ref role="AX2Wp" to="3751:6o2BuIx6R5l" resolve="Colour" />
+    </node>
+    <node concept="1TJgyj" id="3QFgDmJ3g8u" role="1TKVEi">
+      <property role="IQ2ns" value="4443718667985551902" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="idleLocation" />
+      <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
+    </node>
+    <node concept="PrWs8" id="4X1nFNzWPeB" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4FTL$vJQzE0">
+    <property role="EcuMT" value="5402567240276654720" />
+    <property role="TrG5h" value="StaffTypeReference" />
+    <property role="3GE5qa" value="People.Staff" />
+    <node concept="1TJgyj" id="4FTL$vJQzE_" role="1TKVEi">
+      <property role="IQ2ns" value="5402567240276654757" />
+      <property role="20kJfa" value="staffType" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="4X1nFNzWOrG" resolve="StaffType" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="lSEs44W_QZ">
+    <property role="EcuMT" value="394251613871693247" />
+    <property role="3GE5qa" value="People" />
+    <property role="TrG5h" value="Person" />
+    <node concept="PrWs8" id="lSEs4504UO" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>

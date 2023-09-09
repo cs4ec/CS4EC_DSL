@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="DiseaseModel.Language">
+    <classNode dependClassName="DiseaseModel.actions.ActionAspectDescriptorImpl" />
     <classNode dependClassName="DiseaseModel.behavior.BehaviorAspectDescriptor" />
     <classNode dependClassName="DiseaseModel.constraints.ConstraintsAspectDescriptor" />
     <classNode dependClassName="DiseaseModel.editor.EditorAspectDescriptorImpl" />
+    <classNode dependClassName="DiseaseModel.intentions.IntentionsDescriptor" />
     <classNode dependClassName="DiseaseModel.structure.ConceptPresentationAspectImpl" />
     <classNode dependClassName="DiseaseModel.structure.StructureAspectDescriptor" />
     <classNode dependClassName="DiseaseModel.typesystem.TypesystemDescriptor" />
@@ -12,7 +14,9 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Collection" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IHelginsDescriptor" />
+    <classNode dependClassName="jetbrains.mps.openapi.actions.descriptor.ActionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.openapi.editor.descriptor.EditorAspectDescriptor" />
+    <classNode dependClassName="jetbrains.mps.openapi.intentions.IntentionAspectDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.ids.SLanguageId" />
     <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
     <classNode dependClassName="jetbrains.mps.smodel.language.LanguageExtensions" />

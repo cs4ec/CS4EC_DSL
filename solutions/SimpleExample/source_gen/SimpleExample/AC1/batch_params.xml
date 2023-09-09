@@ -5,12 +5,20 @@
 		type="number" number_type="int" start="1" end="10" step="1" />
 	<parameter name="UsePathFinding"
 		type="constant" constant_type="boolean" value="false" />
-  	<parameter name="patienCcohortcohortpatienCcohort"
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="89" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="91" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		type="constant" constant_type="double" value="89" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		type="constant" constant_type="double" value="91" />
+  	<parameter name="patientCohortcohortpatientCohort"
   		 type="constant" constant_type="double" value = "100" />
-  	<parameter name="patienCcohortSeveritysevere"
+  	<parameter name="patientCohortCOVIDInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "90" />
+  	<parameter name="patientCohortCOVIDInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "7" />
+  	<parameter name="patientCohortCOVIDInfectionStatusSusceptible"
   		 type="constant" constant_type="double" value = "3" />
-  	<parameter name="patienCcohortSeveritymoderate"
-  		 type="constant" constant_type="double" value = "37" />
-  	<parameter name="patienCcohortSeveritylow"
-  		 type="constant" constant_type="double" value = "60" />
 </sweep>

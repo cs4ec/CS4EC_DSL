@@ -85,7 +85,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Profile:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Cohort Profile:");
     editorCell.setCellId("Constant_a3jus4_a0a");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_SIZE, 18);

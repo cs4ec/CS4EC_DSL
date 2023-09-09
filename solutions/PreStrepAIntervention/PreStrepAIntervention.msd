@@ -51,10 +51,11 @@
   </languageVersions>
   <dependencyVersions>
     <module reference="bb2e6412-1c7a-4784-ba11-0fa17c48151d(ActionCardWinter2021)" version="0" />
-    <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="2" />
+    <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="5" />
     <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
     <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
+    <module reference="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" version="0" />
     <module reference="4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)" version="0" />
     <module reference="4fbbea45-19cc-4b4e-a78f-8d62c6a38b7a(EDRuntime_Repast)" version="0" />
     <module reference="4b2a3d37-2689-493c-a466-548e3aadfc05(HighPrevalenceSurgeCOVIDTestingFlowchart)" version="0" />
@@ -65,6 +66,7 @@
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
     <module reference="68431102-8c53-4b26-b93f-2e7c57674ca6(NewDevkit)" version="0" />
+    <module reference="2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)" version="0" />
     <module reference="cf2be57c-9e5d-45d6-b656-f7c43c0f737e(PreStrepAIntervention)" version="0" />
     <module reference="c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)" version="0" />
     <module reference="d4280a54-f6df-4383-aa41-d1b2bffa7eb1(com.mbeddr.core.base)" version="3" />

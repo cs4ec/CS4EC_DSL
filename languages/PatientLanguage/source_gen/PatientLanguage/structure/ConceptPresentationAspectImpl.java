@@ -13,6 +13,10 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_PatientArrivalLine;
   private ConceptPresentation props_PatientArrivals;
   private ConceptPresentation props_PatientProfile;
+  private ConceptPresentation props_Person;
+  private ConceptPresentation props_StaffNumber;
+  private ConceptPresentation props_StaffType;
+  private ConceptPresentation props_StaffTypeReference;
 
   @Override
   @Nullable
@@ -48,6 +52,35 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_PatientProfile = cpb.create();
         }
         return props_PatientProfile;
+      case LanguageConceptSwitch.Person:
+        if (props_Person == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Person = cpb.create();
+        }
+        return props_Person;
+      case LanguageConceptSwitch.StaffNumber:
+        if (props_StaffNumber == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4af9c647eff82e7bL, 0x4af9c647eff82e87L, "staff", "", "");
+          props_StaffNumber = cpb.create();
+        }
+        return props_StaffNumber;
+      case LanguageConceptSwitch.StaffType:
+        if (props_StaffType == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Staff type in the ED");
+          cpb.presentationByName();
+          props_StaffType = cpb.create();
+        }
+        return props_StaffType;
+      case LanguageConceptSwitch.StaffTypeReference:
+        if (props_StaffTypeReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4af9c647efda3a80L, 0x4af9c647efda3aa5L, "staffType", "", "");
+          props_StaffTypeReference = cpb.create();
+        }
+        return props_StaffTypeReference;
     }
     return null;
   }

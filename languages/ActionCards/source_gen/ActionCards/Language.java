@@ -40,7 +40,7 @@ public class Language extends LanguageRuntime {
 
   @Override
   public int getVersion() {
-    return 2;
+    return 5;
   }
 
   public SLanguageId getId() {
@@ -51,6 +51,8 @@ public class Language extends LanguageRuntime {
   protected void fillExtendedLanguages(Collection<SLanguage> extendedLanguages) {
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("cfaa4966-b7d5-4b69-b66a-309a6e1a7290"), "org.iets3.core.expr.base"));
     extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("1a0150ac-dda5-4129-824e-01dce96fdea4"), "BuiltEnvironment"));
+    extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("2fa21111-1327-44d6-9000-fd96b15fb9b6"), "PatientLanguage"));
+    extendedLanguages.add(MetaAdapterFactory.getLanguage(SLanguageId.deserialize("bb69d087-96cc-48ca-aeb6-c2cb27e532b0"), "DiseaseModel"));
   }
 
   @Override

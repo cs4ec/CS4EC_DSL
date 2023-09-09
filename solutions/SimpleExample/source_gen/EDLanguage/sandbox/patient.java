@@ -24,7 +24,8 @@ public class patient extends Actor {
 
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
-  public String Severity = "NotConfigured";
+  public String COVIDInfectionStatus = "NotConfigured";
+  public String LIATCOVIDResult = "Incomplete";
   public String cohort = "CohortOne";
   public Behaviour behaviourBuilder;
 
@@ -123,20 +124,68 @@ public class patient extends Actor {
   }
 
 
-  public int getSeverityissevere() {
-    if (this.Severity == "severe") {
+  public int getCOVIDInfectionStatusisAsymptomatic() {
+    if (this.COVIDInfectionStatus == "Asymptomatic") {
       return 1;
     }
     return 0;
   }
-  public int getSeverityismoderate() {
-    if (this.Severity == "moderate") {
+  public int getCOVIDInfectionStatusisSymptomatic() {
+    if (this.COVIDInfectionStatus == "Symptomatic") {
       return 1;
     }
     return 0;
   }
-  public int getSeverityislow() {
-    if (this.Severity == "low") {
+  public int getCOVIDInfectionStatusisSusceptible() {
+    if (this.COVIDInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLIATCOVIDResultisPositive() {
+    if (this.LIATCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLIATCOVIDResultisNegative() {
+    if (this.LIATCOVIDResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisGreenBay() {
+    if (this.admittedTo == "GreenBay") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisAsymptomatic() {
+    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Asymptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic() {
+    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Symptomatic") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisSusceptible() {
+    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Susceptible") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisGreenBaygetLIATCOVIDResultisPositive() {
+    if (this.admittedTo == "GreenBay" && this.LIATCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisGreenBaygetLIATCOVIDResultisNegative() {
+    if (this.admittedTo == "GreenBay" && this.LIATCOVIDResult == "Negative") {
       return 1;
     }
     return 0;

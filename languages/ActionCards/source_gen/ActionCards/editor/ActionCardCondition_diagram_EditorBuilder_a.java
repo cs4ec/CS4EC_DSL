@@ -132,7 +132,7 @@ import jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Use if:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Use for:");
     editorCell.setCellId("Constant_t29eg1_a0a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.FONT_SIZE, 12);

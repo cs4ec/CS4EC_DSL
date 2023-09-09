@@ -203,7 +203,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createRefCell_0() {
-    CellProviderWithRole provider = new RefCellCellProvider(myNode, LINKS.staffTypeReference$jtXw, CONCEPTS.StaffTypeReference$tN, "staffTypeReference", getEditorContext()) {
+    CellProviderWithRole provider = new RefCellCellProvider(myNode, LINKS.staffTypeReference$jtXw, CONCEPTS.StaffTypeReference$J8, "staffTypeReference", getEditorContext()) {
 
       @Override
       protected EditorCell createRefCell(EditorContext context, SNode effectiveNode, SNode node) {
@@ -255,14 +255,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
       return editorCell;
     }
     private EditorCell createRefCell_1() {
-      final SReferenceLink referenceLink = LINKS.staffType$$i7d;
+      final SReferenceLink referenceLink = LINKS.staffType$udoy;
       SReferenceCellProvider provider = new SReferenceCellProvider(getNode(), referenceLink, getEditorContext()) {
         protected EditorCell createReferenceCell(final SNode targetNode) {
           EditorCell cell = getUpdateSession().updateReferencedNodeCell(new Computable<EditorCell>() {
             public EditorCell compute() {
               return new Inline_Builder1(getEditorContext(), getNode(), targetNode).createCell();
             }
-          }, targetNode, LINKS.staffType$$i7d);
+          }, targetNode, LINKS.staffType$udoy);
           CellUtil.setupIDeprecatableStyles(targetNode, cell);
           setSemanticNodeToCells(cell, getNode());
           installDeleteActions_notnull_smartReference(cell);
@@ -282,7 +282,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
       if (editorCell.getSRole() == null) {
         editorCell.setReferenceCell(true);
-        editorCell.setSRole(LINKS.staffType$$i7d);
+        editorCell.setSRole(LINKS.staffType$udoy);
       }
       editorCell.setSubstituteInfo(new SReferenceSubstituteInfoSmartReferenceDecorator(new SReferenceSubstituteInfo(editorCell, referenceLink)));
       Iterable<SNode> referenceAttributes = SNodeOperations.ofConcept(new IAttributeDescriptor.AllAttributes().list(myNode), CONCEPTS.LinkAttribute$v_);
@@ -426,14 +426,14 @@ import org.jetbrains.mps.openapi.language.SConcept;
 
   private static final class CONCEPTS {
     /*package*/ static final SConcept PropertyAttribute$Gb = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da56L, "jetbrains.mps.lang.core.structure.PropertyAttribute");
-    /*package*/ static final SConcept StaffTypeReference$tN = MetaAdapterFactory.getConcept(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L, "ActionCards.structure.StaffTypeReference");
+    /*package*/ static final SConcept StaffTypeReference$J8 = MetaAdapterFactory.getConcept(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4af9c647efda3a80L, "PatientLanguage.structure.StaffTypeReference");
     /*package*/ static final SConcept LinkAttribute$v_ = MetaAdapterFactory.getConcept(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x2eb1ad060897da51L, "jetbrains.mps.lang.core.structure.LinkAttribute");
   }
 
   private static final class LINKS {
     /*package*/ static final SContainmentLink location$2x_J = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x3f10eb6deabbd805L, "location");
     /*package*/ static final SContainmentLink staffTypeReference$jtXw = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06864L, 0x4af9c647efdb14f9L, "staffTypeReference");
-    /*package*/ static final SReferenceLink staffType$$i7d = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4af9c647efda3a80L, 0x4af9c647efda3aa5L, "staffType");
+    /*package*/ static final SReferenceLink staffType$udoy = MetaAdapterFactory.getReferenceLink(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4af9c647efda3a80L, 0x4af9c647efda3aa5L, "staffType");
     /*package*/ static final SContainmentLink admissionActionCard$3$8i = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x78ac3095dfdf9aL, 0x2c006337ddf0db18L, "admissionActionCard");
   }
 }

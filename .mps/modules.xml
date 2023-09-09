@@ -14,7 +14,6 @@
       <modulePath path="$PROJECT_DIR$/languages/SimulationMonitor/SimulationMonitor.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/StaffDefinitionLanguage/StaffDefinitionLanguage.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/DiseaseSpreadTesting/DiseaseSpreadTesting.msd" folder="runtime" />
-      <modulePath path="$PROJECT_DIR$/solutions/DualCassetteIntervention.clone/DualCassetteIntervention.clone.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/DualCassetteIntervention/DualCassetteIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/DualCassetteInterventionPreChange/DualCassetteInterventionPreChange.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/EDLanguage.Runner/EDLanguage.Runner.msd" folder="runtime" />
@@ -22,6 +21,8 @@
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_EDProject/EDRuntime_EDProject.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_Repast/EDRuntime_Repast.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
+      <modulePath path="$PROJECT_DIR$/solutions/EvaluationModel.Testing/EvaluationModel.Testing.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/EvaluationModel/EvaluationModel.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/PreStrepAIntervention/PreStrepAIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/QuickCompileTestingBed/QuickCompileTestingBed.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/RepastProvider/RepastProvider.msd" folder="dependencies" />

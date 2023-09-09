@@ -9,7 +9,6 @@ public class TriageDesk extends RoomType {
 
   private TriageDesk() {
     super();
-    actorAllocationLimit.put(patient.class, 5);
   }
 
   public static RoomType getInstance() {

@@ -11,12 +11,17 @@ import jetbrains.mps.smodel.adapter.ids.SConceptId;
 import org.jetbrains.mps.openapi.language.SAbstractConcept;
 import jetbrains.mps.smodel.runtime.impl.ConceptDescriptorBuilder2;
 import jetbrains.mps.smodel.adapter.ids.PrimitiveTypeId;
+import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   /*package*/ final ConceptDescriptor myConceptPatient = createDescriptorForPatient();
   /*package*/ final ConceptDescriptor myConceptPatientArrivalLine = createDescriptorForPatientArrivalLine();
   /*package*/ final ConceptDescriptor myConceptPatientArrivals = createDescriptorForPatientArrivals();
   /*package*/ final ConceptDescriptor myConceptPatientProfile = createDescriptorForPatientProfile();
+  /*package*/ final ConceptDescriptor myConceptPerson = createDescriptorForPerson();
+  /*package*/ final ConceptDescriptor myConceptStaffNumber = createDescriptorForStaffNumber();
+  /*package*/ final ConceptDescriptor myConceptStaffType = createDescriptorForStaffType();
+  /*package*/ final ConceptDescriptor myConceptStaffTypeReference = createDescriptorForStaffTypeReference();
   private final LanguageConceptSwitch myIndexSwitch;
 
   public StructureAspectDescriptor() {
@@ -26,14 +31,13 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
-    deps.extendedLanguage(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, "ActionCards");
     deps.aggregatedLanguage(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, "ActionCards");
     deps.aggregatedLanguage(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, "AgentLanguage");
   }
 
   @Override
   public Collection<ConceptDescriptor> getDescriptors() {
-    return Arrays.asList(myConceptPatient, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile);
+    return Arrays.asList(myConceptPatient, myConceptPatientArrivalLine, myConceptPatientArrivals, myConceptPatientProfile, myConceptPerson, myConceptStaffNumber, myConceptStaffType, myConceptStaffTypeReference);
   }
 
   @Override
@@ -48,6 +52,14 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
         return myConceptPatientArrivals;
       case LanguageConceptSwitch.PatientProfile:
         return myConceptPatientProfile;
+      case LanguageConceptSwitch.Person:
+        return myConceptPerson;
+      case LanguageConceptSwitch.StaffNumber:
+        return myConceptStaffNumber;
+      case LanguageConceptSwitch.StaffType:
+        return myConceptStaffType;
+      case LanguageConceptSwitch.StaffTypeReference:
+        return myConceptStaffTypeReference;
       default:
         return null;
     }
@@ -61,10 +73,11 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForPatient() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("PatientLanguage", "Patient", 0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4813ad0fbaa52b3L);
     b.class_(false, false, true);
-    b.super_("ActionCards.structure.Person", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x578a9c104f25dbfL);
+    b.super_("PatientLanguage.structure.Person", 0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x578a9c104f25dbfL);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x33d23ee961a0cbf3L);
     b.origin("r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)/324605317397238451");
     b.version(2);
-    b.aggregate("patientProperty", 0x4813ad0fbaa52bdL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL).optional(true).ordered(true).multiple(true).origin("324605317397238461").done();
+    b.aggregate("patientProperties", 0x4813ad0fbaa52bdL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL).optional(true).ordered(true).multiple(true).origin("324605317397238461").done();
     b.alias("patient");
     return b.create();
   }
@@ -95,6 +108,42 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.aggregate("attributes", 0xaabf015be951259L).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x25745663764b1a60L).optional(true).ordered(true).multiple(true).origin("768972137579221593").done();
     b.aggregate("arrivalRate", 0xaabf015be951280L).target(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x637eade0e62ce2b8L).optional(false).ordered(true).multiple(false).origin("768972137579221632").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForPerson() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("PatientLanguage", "Person", 0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x578a9c104f25dbfL);
+    b.class_(false, false, false);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)/394251613871693247");
+    b.version(2);
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStaffNumber() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("PatientLanguage", "StaffNumber", 0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4af9c647eff82e7bL);
+    b.class_(false, false, false);
+    b.origin("r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)/5402567240278617723");
+    b.version(2);
+    b.property("number", 0x4af9c647eff82e85L).type(PrimitiveTypeId.INTEGER).origin("5402567240278617733").done();
+    b.associate("staff", 0x4af9c647eff82e87L).target(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4f415ebce3f346ecL).optional(false).origin("5402567240278617735").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStaffType() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("PatientLanguage", "StaffType", 0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4f415ebce3f346ecL);
+    b.class_(false, false, true);
+    b.parent(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, 0x110396eaaa4L);
+    b.origin("r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)/5710949967853733612");
+    b.version(2);
+    b.property("patientLimit", 0x4813ad0fb6a0ffeL).type(PrimitiveTypeId.INTEGER).origin("324605317393027070").done();
+    b.property("colour", 0x1c9634cb480ad257L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x66029deba11b7155L)).origin("2059891927260254807").done();
+    b.aggregate("idleLocation", 0x3dab4295af0d021eL).target(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x5dafd33967953caaL).optional(true).ordered(true).multiple(false).origin("4443718667985551902").done();
+    return b.create();
+  }
+  private static ConceptDescriptor createDescriptorForStaffTypeReference() {
+    ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("PatientLanguage", "StaffTypeReference", 0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4af9c647efda3a80L);
+    b.class_(false, false, false);
+    b.origin("r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)/5402567240276654720");
+    b.version(2);
+    b.associate("staffType", 0x4af9c647efda3aa5L).target(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4f415ebce3f346ecL).optional(false).origin("5402567240276654757").done();
     return b.create();
   }
 }

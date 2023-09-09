@@ -11,6 +11,10 @@
       <string>simcore.styles.WallStyle</string>
     </entry>
       <entry>
+      <string>EDLanguage.sandbox.COVIDBreadcrumb</string>
+      <string>EDLanguage.sandbox.COVIDBreadcrumbstyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.Bed</string>
       <string>EDLanguage.sandbox.Bedstyle</string>
       </entry>
@@ -71,6 +75,10 @@
       <string>simcore.basicStructures.Occupiable</string>
       <int>2</int>
     </entry>
+      <entry>
+      <string>EDLanguage.sandbox.COVIDBreadcrumb</string>
+      <int>10</int>
+      </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>
       <int>4</int>

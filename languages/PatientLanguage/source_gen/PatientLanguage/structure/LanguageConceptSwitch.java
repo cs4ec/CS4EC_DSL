@@ -13,6 +13,10 @@ public final class LanguageConceptSwitch {
   public static final int PatientArrivalLine = 1;
   public static final int PatientArrivals = 2;
   public static final int PatientProfile = 3;
+  public static final int Person = 4;
+  public static final int StaffNumber = 5;
+  public static final int StaffType = 6;
+  public static final int StaffTypeReference = 7;
 
   public LanguageConceptSwitch() {
     LanguageConceptIndexBuilder builder = new LanguageConceptIndexBuilder(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L);
@@ -20,6 +24,10 @@ public final class LanguageConceptSwitch {
     builder.put(0x27ebd2392beaa324L, PatientArrivalLine);
     builder.put(0x637eade0e62ce2b8L, PatientArrivals);
     builder.put(0xaabf015be947306L, PatientProfile);
+    builder.put(0x578a9c104f25dbfL, Person);
+    builder.put(0x4af9c647eff82e7bL, StaffNumber);
+    builder.put(0x4f415ebce3f346ecL, StaffType);
+    builder.put(0x4af9c647efda3a80L, StaffTypeReference);
     myIndex = builder.seal();
   }
 

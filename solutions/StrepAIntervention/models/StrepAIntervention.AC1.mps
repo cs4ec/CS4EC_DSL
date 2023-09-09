@@ -26,13 +26,6 @@
         <property id="8998806958909918627" name="secondsPerTick" index="wKqbz" />
         <child id="5402567240278617764" name="staffNumbers" index="2_0uzz" />
       </concept>
-      <concept id="5402567240278617723" name="ActionCards.structure.StaffNumber" flags="ng" index="2_0uwW">
-        <property id="5402567240278617733" name="number" index="2_0uz2" />
-        <reference id="5402567240278617735" name="staff" index="2_0uz0" />
-      </concept>
-      <concept id="5402567240276654720" name="ActionCards.structure.StaffTypeReference" flags="ng" index="2_8ZN7">
-        <reference id="5402567240276654757" name="staffType" index="2_8ZNy" />
-      </concept>
       <concept id="3787511550160215531" name="ActionCards.structure.ActionCardElement" flags="ng" index="_sILr">
         <child id="3787511550169010962" name="outgoingBranches" index="A3aay" />
       </concept>
@@ -42,11 +35,6 @@
       </concept>
       <concept id="147289298423155114" name="ActionCards.structure.TimeDistributionTable" flags="ng" index="_GsXW">
         <child id="147289298423155115" name="timeLines" index="_GsXX" />
-      </concept>
-      <concept id="5710949967853733612" name="ActionCards.structure.StaffType" flags="ng" index="2GGxxg">
-        <property id="2059891927260254807" name="colour" index="1kBeqs" />
-        <property id="324605317393027070" name="patientLimit" index="3ZUNkI" />
-        <child id="4443718667985551902" name="idleLocation" index="2iD$2b" />
       </concept>
       <concept id="5710949967853733230" name="ActionCards.structure.Branch" flags="ng" index="2GGxJi">
         <property id="3325089904376405460" name="showConditionLabel" index="2aGGDM" />
@@ -82,10 +70,6 @@
       </concept>
       <concept id="7828349744265630201" name="ActionCards.structure.SymptomList" flags="ng" index="3oQJd$">
         <child id="7828349744265630211" name="symptoms" index="3oQJ2u" />
-      </concept>
-      <concept id="188877551433029388" name="ActionCards.structure.DiagnosticCondition" flags="ng" index="3tEh0H">
-        <property id="2698877061875545204" name="outcome" index="1gZI8n" />
-        <reference id="4555810343887637004" name="disease" index="24g7ti" />
       </concept>
       <concept id="1758249876462569833" name="ActionCards.structure.PatientPropertyConditional" flags="ng" index="1CySur">
         <reference id="1758249876465254186" name="patientProperty" index="1DsR7o" />
@@ -130,18 +114,34 @@
       <concept id="2876623929997959972" name="PatientLanguage.structure.PatientArrivalLine" flags="ng" index="c0n4t">
         <property id="2876623929997959984" name="NumPatientsInHour" index="c0n49" />
       </concept>
+      <concept id="5402567240278617723" name="PatientLanguage.structure.StaffNumber" flags="ng" index="2_0uwW">
+        <property id="5402567240278617733" name="number" index="2_0uz2" />
+        <reference id="5402567240278617735" name="staff" index="2_0uz0" />
+      </concept>
+      <concept id="5402567240276654720" name="PatientLanguage.structure.StaffTypeReference" flags="ng" index="2_8ZN7">
+        <reference id="5402567240276654757" name="staffType" index="2_8ZNy" />
+      </concept>
+      <concept id="5710949967853733612" name="PatientLanguage.structure.StaffType" flags="ng" index="2GGxxg">
+        <property id="2059891927260254807" name="colour" index="1kBeqs" />
+        <property id="324605317393027070" name="patientLimit" index="3ZUNkI" />
+        <child id="4443718667985551902" name="idleLocation" index="2iD$2b" />
+      </concept>
       <concept id="768972137579180806" name="PatientLanguage.structure.PatientProfile" flags="ng" index="2OfScj">
         <child id="768972137579221593" name="attributes" index="2OfI9c" />
         <child id="768972137579221632" name="arrivalRate" index="2OfIal" />
         <child id="1758249876507806175" name="attendanceRoute" index="1FYssH" />
       </concept>
       <concept id="324605317397238451" name="PatientLanguage.structure.Patient" flags="ng" index="3ZaQxz">
-        <child id="324605317397238461" name="patientProperty" index="3ZaQxH" />
+        <child id="324605317397238461" name="patientProperties" index="3ZaQxH" />
       </concept>
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
       <concept id="2698877061875544082" name="DiseaseModel.structure.Disease" flags="ng" index="1gZIpL" />
       <concept id="7828349744265630002" name="DiseaseModel.structure.DiseaseSymptom" flags="ng" index="3oQJeJ" />
+      <concept id="188877551433029388" name="DiseaseModel.structure.DiagnosticCondition" flags="ng" index="3tEh0H">
+        <property id="2698877061875545204" name="outcome" index="1gZI8n" />
+        <reference id="4555810343887637004" name="disease" index="24g7ti" />
+      </concept>
       <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
       <concept id="6755843002512513317" name="DiseaseModel.structure.Susceptible" flags="ng" index="3IO8Df" />
       <concept id="6755843002512513336" name="DiseaseModel.structure.Symptomatic" flags="ng" index="3IO8Di" />
@@ -226,15 +226,6 @@
       </concept>
     </language>
   </registry>
-  <node concept="2GGxxg" id="av1M7vbJYz">
-    <property role="TrG5h" value="MajorsDoctor" />
-    <property role="3GE5qa" value="Staff" />
-    <property role="3ZUNkI" value="5" />
-    <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
-    <node concept="UeIYj" id="34hhAWvhKM1" role="2iD$2b">
-      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
-    </node>
-  </node>
   <node concept="2_0uwh" id="EFW1mYe4_u">
     <property role="3GE5qa" value="Simulation Scenario" />
     <property role="i3JvV" value="1" />
@@ -274,30 +265,6 @@
     <property role="3GE5qa" value="ED Layout" />
     <ref role="2Ovb8z" node="EFW1mZkn0D" resolve="EmergencyDepartment" />
   </node>
-  <node concept="2GGxxg" id="2_JteYPiCG6">
-    <property role="3GE5qa" value="Staff" />
-    <property role="TrG5h" value="TriageNurse" />
-    <property role="3ZUNkI" value="0" />
-    <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
-  </node>
-  <node concept="2GGxxg" id="2_JteYPiCHe">
-    <property role="3GE5qa" value="Staff" />
-    <property role="TrG5h" value="MajorsNurse" />
-    <property role="3ZUNkI" value="5" />
-    <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
-    <node concept="UeIYj" id="i1eH3VeDCF" role="2iD$2b">
-      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
-    </node>
-  </node>
-  <node concept="2GGxxg" id="52K8Ej3GgM">
-    <property role="3GE5qa" value="Staff" />
-    <property role="TrG5h" value="SeniorDoc" />
-    <property role="3ZUNkI" value="0" />
-    <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
-    <node concept="UeIYj" id="i1eH3WJik2" role="2iD$2b">
-      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
-    </node>
-  </node>
   <node concept="3oQJd$" id="6MzSDQOvLH$">
     <property role="3GE5qa" value="Diseases" />
     <node concept="3oQJeJ" id="6MzSDQOvLHI" role="3oQJ2u">
@@ -314,15 +281,6 @@
     </node>
     <node concept="3oQJeJ" id="5R1$QEO4Qbj" role="3oQJ2u">
       <property role="TrG5h" value="Loss of smell" />
-    </node>
-  </node>
-  <node concept="2GGxxg" id="1xAzJ9NxGdV">
-    <property role="3GE5qa" value="Staff" />
-    <property role="TrG5h" value="MinorsNurse" />
-    <property role="3ZUNkI" value="5" />
-    <property role="1kBeqs" value="6o2BuIx6R5m/RED" />
-    <node concept="UeIYj" id="i1eH3WJij_" role="2iD$2b">
-      <ref role="Udx8D" node="1Iqh_KL7vdp" resolve="MinorsDesk" />
     </node>
   </node>
   <node concept="j3bMj" id="EFW1mZkn0D">
@@ -1682,12 +1640,6 @@
   <node concept="IzEoG" id="34hhAWxKdrf">
     <property role="IzEow" value="Bed" />
   </node>
-  <node concept="2GGxxg" id="2K0oNvtWdy4">
-    <property role="3GE5qa" value="Staff" />
-    <property role="TrG5h" value="WardNurse" />
-    <property role="3ZUNkI" value="0" />
-    <property role="1kBeqs" value="6o2BuIx6R5u/GRAY" />
-  </node>
   <node concept="2MhjZA" id="3i9haAIoNzA">
     <property role="3GE5qa" value="Action Cards" />
     <property role="TrG5h" value="TwoQuestionsTwoTriages" />
@@ -2627,15 +2579,6 @@
       <ref role="1HTXKa" node="i1eH3VeDPM" resolve="Minors" />
     </node>
   </node>
-  <node concept="2GGxxg" id="i1eH3VeDCH">
-    <property role="3GE5qa" value="Staff" />
-    <property role="TrG5h" value="MinorsDoctor" />
-    <property role="3ZUNkI" value="5" />
-    <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
-    <node concept="UeIYj" id="i1eH3WJijq" role="2iD$2b">
-      <ref role="Udx8D" node="1Iqh_KL7vdp" resolve="MinorsDesk" />
-    </node>
-  </node>
   <node concept="2MhjZA" id="i1eH3VeDNM">
     <property role="3GE5qa" value="Action Cards" />
     <property role="TrG5h" value="Majors" />
@@ -3496,15 +3439,6 @@
       </node>
     </node>
   </node>
-  <node concept="2GGxxg" id="i1eH3VgOG6">
-    <property role="3GE5qa" value="Staff" />
-    <property role="TrG5h" value="GASNurse" />
-    <property role="3ZUNkI" value="1" />
-    <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
-    <node concept="UeIYj" id="i1eH3VgOGg" role="2iD$2b">
-      <ref role="Udx8D" node="EFW1mYOHdm" resolve="TriageDesk" />
-    </node>
-  </node>
   <node concept="IzEoG" id="lSEs465oM2">
     <property role="IzEow" value="Seat" />
   </node>
@@ -3802,6 +3736,72 @@
   <node concept="1gZIpL" id="10zWyfr3TgV">
     <property role="3GE5qa" value="Diseases" />
     <property role="TrG5h" value="Flu" />
+  </node>
+  <node concept="2GGxxg" id="av1M7vbJYz">
+    <property role="TrG5h" value="MajorsDoctor" />
+    <property role="3GE5qa" value="Staff" />
+    <property role="3ZUNkI" value="5" />
+    <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
+    <node concept="UeIYj" id="34hhAWvhKM1" role="2iD$2b">
+      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
+    </node>
+  </node>
+  <node concept="2GGxxg" id="2_JteYPiCG6">
+    <property role="3GE5qa" value="Staff" />
+    <property role="TrG5h" value="TriageNurse" />
+    <property role="3ZUNkI" value="0" />
+    <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
+  </node>
+  <node concept="2GGxxg" id="2_JteYPiCHe">
+    <property role="3GE5qa" value="Staff" />
+    <property role="TrG5h" value="MajorsNurse" />
+    <property role="3ZUNkI" value="5" />
+    <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
+    <node concept="UeIYj" id="i1eH3VeDCF" role="2iD$2b">
+      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
+    </node>
+  </node>
+  <node concept="2GGxxg" id="52K8Ej3GgM">
+    <property role="3GE5qa" value="Staff" />
+    <property role="TrG5h" value="SeniorDoc" />
+    <property role="3ZUNkI" value="0" />
+    <property role="1kBeqs" value="6o2BuIx6R5D/YELLOW" />
+    <node concept="UeIYj" id="i1eH3WJik2" role="2iD$2b">
+      <ref role="Udx8D" node="1Iqh_KL7vdz" resolve="MajorsDesk" />
+    </node>
+  </node>
+  <node concept="2GGxxg" id="1xAzJ9NxGdV">
+    <property role="3GE5qa" value="Staff" />
+    <property role="TrG5h" value="MinorsNurse" />
+    <property role="3ZUNkI" value="5" />
+    <property role="1kBeqs" value="6o2BuIx6R5m/RED" />
+    <node concept="UeIYj" id="i1eH3WJij_" role="2iD$2b">
+      <ref role="Udx8D" node="1Iqh_KL7vdp" resolve="MinorsDesk" />
+    </node>
+  </node>
+  <node concept="2GGxxg" id="2K0oNvtWdy4">
+    <property role="3GE5qa" value="Staff" />
+    <property role="TrG5h" value="WardNurse" />
+    <property role="3ZUNkI" value="0" />
+    <property role="1kBeqs" value="6o2BuIx6R5u/GRAY" />
+  </node>
+  <node concept="2GGxxg" id="i1eH3VeDCH">
+    <property role="3GE5qa" value="Staff" />
+    <property role="TrG5h" value="MinorsDoctor" />
+    <property role="3ZUNkI" value="5" />
+    <property role="1kBeqs" value="2blVuwUK9bq/ORANGE" />
+    <node concept="UeIYj" id="i1eH3WJijq" role="2iD$2b">
+      <ref role="Udx8D" node="1Iqh_KL7vdp" resolve="MinorsDesk" />
+    </node>
+  </node>
+  <node concept="2GGxxg" id="i1eH3VgOG6">
+    <property role="3GE5qa" value="Staff" />
+    <property role="TrG5h" value="GASNurse" />
+    <property role="3ZUNkI" value="1" />
+    <property role="1kBeqs" value="6o2BuIx6R5n/GREEN" />
+    <node concept="UeIYj" id="i1eH3VgOGg" role="2iD$2b">
+      <ref role="Udx8D" node="EFW1mYOHdm" resolve="TriageDesk" />
+    </node>
   </node>
 </model>
 

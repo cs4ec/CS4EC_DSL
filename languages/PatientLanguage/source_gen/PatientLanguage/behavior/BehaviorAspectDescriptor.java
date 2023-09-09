@@ -12,6 +12,7 @@ import jetbrains.mps.lang.smodel.ConceptSwitchIndexBuilder;
 import jetbrains.mps.smodel.adapter.ids.MetaIdFactory;
 
 public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor {
+  private final BHDescriptor myPatient__BehaviorDescriptor = new Patient__BehaviorDescriptor();
   private final BHDescriptor myPatientProfile__BehaviorDescriptor = new PatientProfile__BehaviorDescriptor();
 
   public BehaviorAspectDescriptor() {
@@ -22,10 +23,12 @@ public final class BehaviorAspectDescriptor extends BaseBehaviorAspectDescriptor
     SAbstractConcept cncpt = concept;
     switch (conceptIndex.index(cncpt)) {
       case 0:
+        return myPatient__BehaviorDescriptor;
+      case 1:
         return myPatientProfile__BehaviorDescriptor;
       default:
     }
     return null;
   }
-  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0xaabf015be947306L)).seal();
+  private static final ConceptSwitchIndex conceptIndex = new ConceptSwitchIndexBuilder().put(MetaIdFactory.conceptId(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4813ad0fbaa52b3L), MetaIdFactory.conceptId(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0xaabf015be947306L)).seal();
 }

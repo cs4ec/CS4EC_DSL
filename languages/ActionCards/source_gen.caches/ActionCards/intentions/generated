@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="7c0ck45dbs62zvftdkwj2mk9ewencra">
-  <files names="AddPatientAttribute_Intention.java:AddSubProcess_Intention.java:IntentionsDescriptor.java:ShowDiagramView_Intention.java:ShowLabels_Intention.java" />
+<product version="3" modelHash="-6raxt08yz0dswi1lsrhigcli6np8qtv">
+  <files names="IntentionsDescriptor.java:ShowDiagramView_Intention.java:ShowLabels_Intention.java" />
 </product>
 

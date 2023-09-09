@@ -10,20 +10,44 @@ import jetbrains.mps.smodel.runtime.ConceptPresentationBuilder;
 
 public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase {
   private ConceptPresentation props_Asymptomatic;
+  private ConceptPresentation props_CompositeDiagnosticCondition;
+  private ConceptPresentation props_CompositeTest;
+  private ConceptPresentation props_CompositeTestResultCondition;
+  private ConceptPresentation props_ConditionalLine;
+  private ConceptPresentation props_ConditionalSelection;
+  private ConceptPresentation props_DiagnosticCondition;
   private ConceptPresentation props_Disease;
   private ConceptPresentation props_DiseaseSymptom;
   private ConceptPresentation props_DiseaseSymptomReference;
+  private ConceptPresentation props_DiseaseTest;
   private ConceptPresentation props_Exposed;
+  private ConceptPresentation props_ImmunocompromisedCondition;
   private ConceptPresentation props_Infected;
   private ConceptPresentation props_InfectionSpreadLine;
   private ConceptPresentation props_InfectionSpreadTable;
   private ConceptPresentation props_InfectionStatus;
+  private ConceptPresentation props_InfectionStatusCondition;
+  private ConceptPresentation props_ObservationTest;
+  private ConceptPresentation props_ObservationsCondition;
+  private ConceptPresentation props_ProbabilityDistribution;
+  private ConceptPresentation props_ProbabilityDistributionLine;
+  private ConceptPresentation props_ProcessingTimeLine;
+  private ConceptPresentation props_ProcessingTimeTable;
+  private ConceptPresentation props_ResultsMappingLine;
+  private ConceptPresentation props_ResultsMappingTable;
   private ConceptPresentation props_SusceptibilityStatus;
   private ConceptPresentation props_Susceptible;
   private ConceptPresentation props_Symptomatic;
+  private ConceptPresentation props_Test;
+  private ConceptPresentation props_TestCapturedDisease;
+  private ConceptPresentation props_TestOutcome;
+  private ConceptPresentation props_TestSelectionRule;
+  private ConceptPresentation props_TestSelectionRuleLine;
+  private ConceptPresentation props_TestSelectionStrategy;
   private ConceptPresentation props_Unvaccinated;
   private ConceptPresentation props_Vaccinated;
   private ConceptPresentation props_VaccineStatus;
+  private ConceptPresentation props_VaccineStatusCondition;
 
   @Override
   @Nullable
@@ -37,6 +61,48 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Asymptomatic = cpb.create();
         }
         return props_Asymptomatic;
+      case LanguageConceptSwitch.CompositeDiagnosticCondition:
+        if (props_CompositeDiagnosticCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("composite diagnostic condition");
+          props_CompositeDiagnosticCondition = cpb.create();
+        }
+        return props_CompositeDiagnosticCondition;
+      case LanguageConceptSwitch.CompositeTest:
+        if (props_CompositeTest == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_CompositeTest = cpb.create();
+        }
+        return props_CompositeTest;
+      case LanguageConceptSwitch.CompositeTestResultCondition:
+        if (props_CompositeTestResultCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("composite test result condition");
+          props_CompositeTestResultCondition = cpb.create();
+        }
+        return props_CompositeTestResultCondition;
+      case LanguageConceptSwitch.ConditionalLine:
+        if (props_ConditionalLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x465f14a415e67319L, 0x465f14a415e6734dL, "test", "", "");
+          props_ConditionalLine = cpb.create();
+        }
+        return props_ConditionalLine;
+      case LanguageConceptSwitch.ConditionalSelection:
+        if (props_ConditionalSelection == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("conditional distribution");
+          props_ConditionalSelection = cpb.create();
+        }
+        return props_ConditionalSelection;
+      case LanguageConceptSwitch.DiagnosticCondition:
+        if (props_DiagnosticCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("diagnostic condition");
+          props_DiagnosticCondition = cpb.create();
+        }
+        return props_DiagnosticCondition;
       case LanguageConceptSwitch.Disease:
         if (props_Disease == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -58,6 +124,14 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_DiseaseSymptomReference = cpb.create();
         }
         return props_DiseaseSymptomReference;
+      case LanguageConceptSwitch.DiseaseTest:
+        if (props_DiseaseTest == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.shortDesc("Type of a test");
+          cpb.rawPresentation("disease test");
+          props_DiseaseTest = cpb.create();
+        }
+        return props_DiseaseTest;
       case LanguageConceptSwitch.Exposed:
         if (props_Exposed == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -65,6 +139,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Exposed = cpb.create();
         }
         return props_Exposed;
+      case LanguageConceptSwitch.ImmunocompromisedCondition:
+        if (props_ImmunocompromisedCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("check if patient is immuno-compromised");
+          props_ImmunocompromisedCondition = cpb.create();
+        }
+        return props_ImmunocompromisedCondition;
       case LanguageConceptSwitch.Infected:
         if (props_Infected == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -94,6 +175,69 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_InfectionStatus = cpb.create();
         }
         return props_InfectionStatus;
+      case LanguageConceptSwitch.InfectionStatusCondition:
+        if (props_InfectionStatusCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("check infection status of a patient");
+          props_InfectionStatusCondition = cpb.create();
+        }
+        return props_InfectionStatusCondition;
+      case LanguageConceptSwitch.ObservationTest:
+        if (props_ObservationTest == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_ObservationTest = cpb.create();
+        }
+        return props_ObservationTest;
+      case LanguageConceptSwitch.ObservationsCondition:
+        if (props_ObservationsCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("observations result");
+          props_ObservationsCondition = cpb.create();
+        }
+        return props_ObservationsCondition;
+      case LanguageConceptSwitch.ProbabilityDistribution:
+        if (props_ProbabilityDistribution == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("probability distribution");
+          props_ProbabilityDistribution = cpb.create();
+        }
+        return props_ProbabilityDistribution;
+      case LanguageConceptSwitch.ProbabilityDistributionLine:
+        if (props_ProbabilityDistributionLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x35a9749351b8f00eL, 0x35a9749351b8f081L, "test", "", "");
+          props_ProbabilityDistributionLine = cpb.create();
+        }
+        return props_ProbabilityDistributionLine;
+      case LanguageConceptSwitch.ProcessingTimeLine:
+        if (props_ProcessingTimeLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("ProcessingTimeLine");
+          props_ProcessingTimeLine = cpb.create();
+        }
+        return props_ProcessingTimeLine;
+      case LanguageConceptSwitch.ProcessingTimeTable:
+        if (props_ProcessingTimeTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Test processing time table");
+          props_ProcessingTimeTable = cpb.create();
+        }
+        return props_ProcessingTimeTable;
+      case LanguageConceptSwitch.ResultsMappingLine:
+        if (props_ResultsMappingLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x31419b89f2ca37faL, 0x31419b89f2ca381fL, "Disease", "", "");
+          props_ResultsMappingLine = cpb.create();
+        }
+        return props_ResultsMappingLine;
+      case LanguageConceptSwitch.ResultsMappingTable:
+        if (props_ResultsMappingTable == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("results mapping table");
+          props_ResultsMappingTable = cpb.create();
+        }
+        return props_ResultsMappingTable;
       case LanguageConceptSwitch.SusceptibilityStatus:
         if (props_SusceptibilityStatus == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -115,6 +259,48 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Symptomatic = cpb.create();
         }
         return props_Symptomatic;
+      case LanguageConceptSwitch.Test:
+        if (props_Test == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_Test = cpb.create();
+        }
+        return props_Test;
+      case LanguageConceptSwitch.TestCapturedDisease:
+        if (props_TestCapturedDisease == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByReference(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x549fe0474671cd38L, 0x549fe0474671cd85L, "disease", "", "");
+          props_TestCapturedDisease = cpb.create();
+        }
+        return props_TestCapturedDisease;
+      case LanguageConceptSwitch.TestOutcome:
+        if (props_TestOutcome == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("TestOutcome");
+          props_TestOutcome = cpb.create();
+        }
+        return props_TestOutcome;
+      case LanguageConceptSwitch.TestSelectionRule:
+        if (props_TestSelectionRule == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("TestSelectionRule");
+          props_TestSelectionRule = cpb.create();
+        }
+        return props_TestSelectionRule;
+      case LanguageConceptSwitch.TestSelectionRuleLine:
+        if (props_TestSelectionRuleLine == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("TestSelectionRuleLine");
+          props_TestSelectionRuleLine = cpb.create();
+        }
+        return props_TestSelectionRuleLine;
+      case LanguageConceptSwitch.TestSelectionStrategy:
+        if (props_TestSelectionStrategy == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("test selection strategy");
+          props_TestSelectionStrategy = cpb.create();
+        }
+        return props_TestSelectionStrategy;
       case LanguageConceptSwitch.Unvaccinated:
         if (props_Unvaccinated == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -136,6 +322,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_VaccineStatus = cpb.create();
         }
         return props_VaccineStatus;
+      case LanguageConceptSwitch.VaccineStatusCondition:
+        if (props_VaccineStatusCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("check vaccine status of patient");
+          props_VaccineStatusCondition = cpb.create();
+        }
+        return props_VaccineStatusCondition;
     }
     return null;
   }

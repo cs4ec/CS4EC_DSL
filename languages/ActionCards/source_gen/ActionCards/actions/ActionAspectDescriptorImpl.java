@@ -18,10 +18,6 @@ public class ActionAspectDescriptorImpl extends BaseActionAspectDescriptor imple
       switch (concept.getName()) {
         case "IPatientProperty":
           return Collections.<NodeFactory>singletonList(new PatientPropertyTableUpdater.NodeFactory_1758249876435103904());
-        case "ImmunocompromisedCondition":
-          return Collections.<NodeFactory>singletonList(new ImmunocompromisedFactory.NodeFactory_1758249876537129594());
-        case "RecentCOVIDContactCondition":
-          return Collections.<NodeFactory>singletonList(new RecentContactFactory.NodeFactory_1758249876502950645());
         default:
       }
     }

@@ -48,7 +48,7 @@ public final class ShowDiagramView_Intention extends AbstractIntentionDescriptor
       if (explicitEditorHintsForNode == null || explicitEditorHintsForNode.length == 0) {
         return "View Diagram";
       } else {
-        return "View Name";
+        return "View Text";
       }
     }
 

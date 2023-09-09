@@ -23,6 +23,7 @@ import simcore.agents.Agent;
 import simcore.action.BehaviourStep;
 import repast.simphony.engine.environment.RunEnvironment;
 import simcore.Signals.Orders.MoveToOrder;
+import simcore.action.InstantBehaviourStep;
 import simcore.basicStructures.TimeKeeper;
 
 public class Nurse extends Actor {
@@ -159,9 +160,13 @@ public class Nurse extends Actor {
     switch (s.getName()) {
       case "":
         break;
-      case "FirstActionTrigger_a":
-        behaviourBuilder = new Behaviour("FirstActionTrigger_a", this);
+      case "FirstActionTrigger_b":
+        behaviourBuilder = new Behaviour("FirstActionTrigger_b", this);
         this.InitFirstAction_a(s);
+        break;
+      case "PatientArrivesTrigger_e":
+        behaviourBuilder = new Behaviour("PatientArrivesTrigger_e", this);
+        this.InitPatientArrives_e(s);
         break;
       default:
         System.out.println("Set mission: " + s.getName() + " failed!");
@@ -259,10 +264,10 @@ public class Nurse extends Actor {
 
     }
   }
-  public class SendSignalAction_e0a_0 extends BehaviourStep {
+  public class SendSignalAction_e0a extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_e0a_0(Behaviour behaviour) {
+    public SendSignalAction_e0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -275,6 +280,39 @@ public class Nurse extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
+  public class SendSignalAction_a0a0b extends BehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public SendSignalAction_a0a0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      Board b = ReadBoard();
+      Signal sendSignalTemp = new Signal();
+      sendSignalTemp = new FirstActionTrigger_bSignal();
+      sendSignalTemp.AddData("patient", behaviour.getSignalTrigger().GetData("patient"));
+
+      b.PushMission(sendSignalTemp);
+    }
+  }
+  public class Choice_a0b extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0b(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (((patient) behaviour.getSignalTrigger().GetData("patient")).cohort == "patientCohort") {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0a0b(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
 
 
   public void InitFirstAction_a(Signal s) {
@@ -284,7 +322,16 @@ public class Nurse extends Actor {
     plstSteps.add(new OrderAction_b0a_0(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0a_0(behaviourBuilder));
     plstSteps.add(new StayAction_d0a_0(behaviourBuilder));
-    plstSteps.add(new SendSignalAction_e0a_0(behaviourBuilder));
+    plstSteps.add(new SendSignalAction_e0a(behaviourBuilder));
+    behaviourBuilder.setSteps(plstSteps);
+
+    Signal sendSignalTemp = new Signal();
+
+  }
+  public void InitPatientArrives_e(Signal s) {
+    behaviourBuilder.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new Choice_a0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

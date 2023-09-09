@@ -41,7 +41,12 @@
       <concept id="1186415722038" name="jetbrains.mps.lang.editor.structure.FontSizeStyleClassItem" flags="ln" index="VSNWy">
         <property id="1221209241505" name="value" index="1lJzqX" />
       </concept>
+      <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
+        <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
+      <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -349,6 +354,84 @@
           <node concept="lj46D" id="EFW1mY_haC" role="3F10Kt">
             <property role="VOm3f" value="true" />
           </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="4FTL$vJY2VT">
+    <property role="3GE5qa" value="People.Staff" />
+    <ref role="1XX52x" to="s2d1:4FTL$vJY2TV" resolve="StaffNumber" />
+    <node concept="3EZMnI" id="4FTL$vJY2W4" role="2wV5jI">
+      <node concept="1iCGBv" id="4FTL$vJY2Wb" role="3EZMnx">
+        <ref role="1NtTu8" to="s2d1:4FTL$vJY2U7" resolve="staff" />
+        <node concept="1sVBvm" id="4FTL$vJY2Wd" role="1sWHZn">
+          <node concept="3F0A7n" id="4FTL$vJY2Wk" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="4FTL$vJY2Wy" role="3EZMnx">
+        <property role="3F0ifm" value="x" />
+      </node>
+      <node concept="3F0A7n" id="4FTL$vJY2WI" role="3EZMnx">
+        <ref role="1NtTu8" to="s2d1:4FTL$vJY2U5" resolve="number" />
+      </node>
+      <node concept="l2Vlx" id="4FTL$vJY2W7" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4X1nFNzWPIm">
+    <property role="3GE5qa" value="People.Staff" />
+    <ref role="1XX52x" to="s2d1:4X1nFNzWOrG" resolve="StaffType" />
+    <node concept="3EZMnI" id="4X1nFNzWPIx" role="2wV5jI">
+      <node concept="3F0A7n" id="4X1nFNzWPIC" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="3QFgDmJ3g8J" role="3EZMnx">
+        <property role="3F0ifm" value="-----------------------" />
+        <node concept="pVoyu" id="3QFgDmJ3g8R" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="i1eH3Vqx08" role="3EZMnx">
+        <property role="3F0ifm" value="Patient Limit:" />
+        <node concept="pVoyu" id="i1eH3Vqx0h" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="i1eH3Vqx0t" role="3EZMnx">
+        <ref role="1NtTu8" to="s2d1:i1eH3VqwZY" resolve="patientLimit" />
+      </node>
+      <node concept="3F0ifn" id="3QFgDmJ3g8j" role="3EZMnx">
+        <property role="3F0ifm" value="When I am idle I will go to a " />
+        <node concept="pVoyu" id="3QFgDmJ3g8n" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="3QFgDmJ6AHh" role="3EZMnx">
+        <ref role="1NtTu8" to="s2d1:3QFgDmJ3g8u" resolve="idleLocation" />
+      </node>
+      <node concept="3F0ifn" id="1MmdcH82H9B" role="3EZMnx">
+        <property role="3F0ifm" value="Colour:" />
+        <node concept="pVoyu" id="1MmdcH82H9O" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="1MmdcH82Ha3" role="3EZMnx">
+        <ref role="1NtTu8" to="s2d1:1MmdcH82H9n" resolve="colour" />
+      </node>
+      <node concept="l2Vlx" id="4X1nFNzWPI$" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4FTL$vJQzFb">
+    <property role="3GE5qa" value="People.Staff" />
+    <ref role="1XX52x" to="s2d1:4FTL$vJQzE0" resolve="StaffTypeReference" />
+    <node concept="1iCGBv" id="4FTL$vJQzFm" role="2wV5jI">
+      <ref role="1NtTu8" to="s2d1:4FTL$vJQzE_" resolve="staffType" />
+      <node concept="1sVBvm" id="4FTL$vJQzFo" role="1sWHZn">
+        <node concept="3F0A7n" id="4FTL$vJQzFv" role="2wV5jI">
+          <property role="1Intyy" value="true" />
+          <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
         </node>
       </node>
     </node>

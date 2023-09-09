@@ -33,9 +33,9 @@ public class patientGenerator_0 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("");
+    sendSignalTemp.setName("PatientArrivesTrigger_e");
     sendSignalTemp.AddData("patient", a);
-    sendSignalTemp.AddActor("");
+    sendSignalTemp.AddActor("Nurse");
 
 
     // For each agent attribute
@@ -56,9 +56,9 @@ public class patientGenerator_0 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patienCcohortcohortpatienCcohort"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patientCohortcohortpatientCohort"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.cohort = "patienCcohort";
+      agent.cohort = "patientCohort";
       return;
     }
 
@@ -68,24 +68,24 @@ public class patientGenerator_0 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patienCcohortSeveritylow"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("patientCohortCOVIDInfectionStatusAsymptomatic"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.Severity = "low";
+      agent.COVIDInfectionStatus = "Asymptomatic";
       return;
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("patienCcohortSeveritymoderate") + runningTotal) / 100)) {
-      agent.Severity = "moderate";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patienCcohortSeveritymoderate");
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("patientCohortCOVIDInfectionStatusSymptomatic") + runningTotal) / 100)) {
+      agent.COVIDInfectionStatus = "Symptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientCohortCOVIDInfectionStatusSymptomatic");
       return;
     } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patienCcohortSeveritymoderate");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientCohortCOVIDInfectionStatusSymptomatic");
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("patienCcohortSeveritysevere") + runningTotal) / 100)) {
-      agent.Severity = "severe";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patienCcohortSeveritysevere");
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("patientCohortCOVIDInfectionStatusSusceptible") + runningTotal) / 100)) {
+      agent.COVIDInfectionStatus = "Susceptible";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientCohortCOVIDInfectionStatusSusceptible");
       return;
     } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patienCcohortSeveritysevere");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("patientCohortCOVIDInfectionStatusSusceptible");
     }
 
   }

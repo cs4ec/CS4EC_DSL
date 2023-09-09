@@ -64,16 +64,18 @@ public class EDBuilder implements ContextBuilder<Object> {
     GridFactory gridFactory = GridFactoryFinder.createGridFactory(null);
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
+    Grid<Object> COVIDBreadcrumbgrid = gridFactory.createGrid("COVIDBreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    ToolBox.grids.add(COVIDBreadcrumbgrid);
 
 
     context.add(new patientGenerator_0(space, grid, context));
     context.add(new Board());
 
     // add Agents
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 5; i++) {
       context.add(new Doctor(space, grid, context));
     }
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 5; i++) {
       context.add(new Nurse(space, grid, context));
     }
 
@@ -84,6 +86,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     // add Locations here
 
     Area EmergencyDepartment_0 = new Area(context, space, grid, 1, 1, 70, 200, Color.WHITE);
+    EmergencyDepartment_0.addResource(LIAT.getInstance(), 1000);
+    EmergencyDepartment_0.setReplenishAmount(LIAT.getInstance(), 100);
+    EmergencyDepartment_0.setReplenishFrequency(LIAT.getInstance(), 1);
     Room Entrance_a = new Room("Entrance", context, space, grid, 5, 199, 3, 1, 1, 10000, MainEntrance.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room TriageWaitingRoom_b = new Room("TriageWaitingRoom", context, space, grid, 10, 195, 11, 5, 1, 10000, WaitingRoom.getInstance(), Color.GRAY, EmergencyDepartment_0);
     Room Triage_c = new Room("Triage", context, space, grid, 10, 190, 5, 5, 1, 20, TriageDesk.getInstance(), Color.BLUE, EmergencyDepartment_0);

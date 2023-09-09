@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<product version="3" modelHash="-ehg8dduncbe074mbb8pdbyh57deg00y">
-  <files names="BehaviorAspectDescriptor.java:DiseaseSymptom__BehaviorDescriptor.java" />
+<product version="3" modelHash="5fhz1at1qtsba60o07xpnk6higjh5de">
+  <files names="BehaviorAspectDescriptor.java:DiseaseSymptom__BehaviorDescriptor.java:ImmunocompromisedCondition__BehaviorDescriptor.java:Test__BehaviorDescriptor.java" />
 </product>
 

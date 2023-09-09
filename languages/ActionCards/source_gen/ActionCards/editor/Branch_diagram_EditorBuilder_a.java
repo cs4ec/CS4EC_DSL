@@ -120,12 +120,28 @@ import org.jetbrains.mps.openapi.language.SProperty;
             writeFrom(EndpointUtil.getSNode(endpoint), EndpointUtil.getPortName(endpoint));
           }
           public void writeFrom(final SNode targetNode, final String port) {
+            SLinkOperations.setTarget(node, LINKS.fromAction$DE5P, ((SNode) targetNode));
           }
           @Override
           public void writeTo(IConnectionEndpoint_Internal endpoint) {
             writeTo(EndpointUtil.getSNode(endpoint), EndpointUtil.getPortName(endpoint));
           }
           public void writeTo(final SNode targetNode, final String port) {
+            SLinkOperations.setTarget(node, LINKS.targetAction$Z7ub, ((SNode) targetNode));
+          }
+          @Override
+          public boolean canWriteFrom(IConnectionEndpoint_Internal endpoint) {
+            return canWriteFrom(EndpointUtil.getSNode(endpoint), EndpointUtil.getPortName(endpoint));
+          }
+          public boolean canWriteFrom(final SNode targetNode, final String port) {
+            return true;
+          }
+          @Override
+          public boolean canWriteTo(IConnectionEndpoint_Internal endpoint) {
+            return canWriteTo(EndpointUtil.getSNode(endpoint), EndpointUtil.getPortName(endpoint));
+          }
+          public boolean canWriteTo(final SNode targetNode, final String port) {
+            return true;
           }
 
           @Override

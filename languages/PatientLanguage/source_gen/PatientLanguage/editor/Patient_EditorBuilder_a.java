@@ -91,9 +91,9 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     return editorCell;
   }
   private EditorCell createRefNodeList_0() {
-    AbstractCellListHandler handler = new patientPropertyListHandler_rtlbf7_a3a(myNode, getEditorContext());
+    AbstractCellListHandler handler = new patientPropertiesListHandler_rtlbf7_a3a(myNode, getEditorContext());
     EditorCell_Collection editorCell = handler.createCells(new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_patientProperty");
+    editorCell.setCellId("refNodeList_patientProperties");
     Style style = new StyleImpl();
     style.set(StyleAttributes.INDENT_LAYOUT_ON_NEW_LINE, true);
     style.set(StyleAttributes.INDENT_LAYOUT_CHILDREN_NEWLINE, true);
@@ -101,11 +101,11 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     editorCell.setSRole(handler.getElementSRole());
     return editorCell;
   }
-  private static class patientPropertyListHandler_rtlbf7_a3a extends RefNodeListHandler {
+  private static class patientPropertiesListHandler_rtlbf7_a3a extends RefNodeListHandler {
     @NotNull
     private SNode myNode;
 
-    public patientPropertyListHandler_rtlbf7_a3a(SNode ownerNode, EditorContext context) {
+    public patientPropertiesListHandler_rtlbf7_a3a(SNode ownerNode, EditorContext context) {
       super(context, false);
       myNode = ownerNode;
     }
@@ -115,7 +115,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
       return myNode;
     }
     public SContainmentLink getSLink() {
-      return LINKS.patientProperty$1osX;
+      return LINKS.patientProperties$1osX;
     }
     public SAbstractConcept getChildSConcept() {
       return CONCEPTS.IPatientProperty$nw;
@@ -128,7 +128,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
     }
     public EditorCell createEmptyCell() {
       getCellFactory().pushCellContext();
-      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(patientPropertyListHandler_rtlbf7_a3a.this.getNode(), LINKS.patientProperty$1osX));
+      getCellFactory().setNodeLocation(new SNodeLocation.FromParentAndLink(patientPropertiesListHandler_rtlbf7_a3a.this.getNode(), LINKS.patientProperties$1osX));
       try {
         EditorCell emptyCell = null;
         emptyCell = super.createEmptyCell();
@@ -170,7 +170,7 @@ import org.jetbrains.mps.openapi.language.SInterfaceConcept;
   }
 
   private static final class LINKS {
-    /*package*/ static final SContainmentLink patientProperty$1osX = MetaAdapterFactory.getContainmentLink(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4813ad0fbaa52b3L, 0x4813ad0fbaa52bdL, "patientProperty");
+    /*package*/ static final SContainmentLink patientProperties$1osX = MetaAdapterFactory.getContainmentLink(0x2fa21111132744d6L, 0x9000fd96b15fb9b6L, 0x4813ad0fbaa52b3L, 0x4813ad0fbaa52bdL, "patientProperties");
   }
 
   private static final class CONCEPTS {

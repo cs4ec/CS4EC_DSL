@@ -10,6 +10,7 @@
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="e88n" ref="r:e220bde4-f6e0-4580-ba24-92680041be3b(ActionCards.structure)" />
     <import index="hm2y" ref="r:66e07cb4-a4b0-4bf3-a36d-5e9ed1ff1bd3(org.iets3.core.expr.base.structure)" />
+    <import index="s2d1" ref="r:06a7b580-4814-4599-bc1b-c1d2ab528d3e(PatientLanguage.structure)" />
     <import index="68mc" ref="r:2a10821d-612f-4a73-b7b0-ed6b57106321(com.mbeddr.mpsutil.filepicker.structure)" implicit="true" />
   </imports>
   <registry>
@@ -551,7 +552,7 @@
       <property role="IQ2ns" value="394251613848318992" />
       <property role="20kJfa" value="staff" />
       <property role="20lbJX" value="fLJekj4/_1" />
-      <ref role="20lvS9" to="e88n:lSEs44W_QZ" resolve="Person" />
+      <ref role="20lvS9" to="s2d1:lSEs44W_QZ" resolve="Person" />
     </node>
   </node>
 </model>
