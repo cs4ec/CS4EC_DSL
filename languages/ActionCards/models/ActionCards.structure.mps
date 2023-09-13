@@ -440,7 +440,7 @@
     <property role="EcuMT" value="1758249876462569833" />
     <property role="3GE5qa" value="Expressions.Conditions" />
     <property role="TrG5h" value="PatientPropertyConditional" />
-    <property role="34LRSv" value="patient property" />
+    <property role="34LRSv" value="check patient's condition" />
     <ref role="1TJDcQ" node="1xAzJ9JDBLw" resolve="BranchConditional" />
     <node concept="1TJgyj" id="1xAzJ9KVgC3" role="1TKVEi">
       <property role="IQ2ns" value="1758249876462569987" />
@@ -455,7 +455,7 @@
       <property role="20lbJX" value="fLJekj4/_1" />
       <ref role="20lvS9" node="1xAzJ9JfzHc" resolve="IPatientProperty" />
     </node>
-    <node concept="PrWs8" id="7hL7ecMagqk" role="PzmwI">
+    <node concept="PrWs8" id="1jVX9cI5HKV" role="PzmwI">
       <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
     </node>
   </node>

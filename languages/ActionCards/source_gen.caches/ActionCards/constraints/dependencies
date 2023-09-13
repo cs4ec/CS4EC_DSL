@@ -24,6 +24,11 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
+  <dependency className="ActionCards.constraints.Action_Constraints">
+    <classNode dependClassName="jetbrains.mps.smodel.adapter.structure.MetaAdapterFactory" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
+  </dependency>
   <dependency className="ActionCards.constraints.AndConditional_Constraints">
     <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Override" />
@@ -121,6 +126,7 @@
   <dependency className="ActionCards.constraints.ConstraintsAspectDescriptor">
     <classNode dependClassName="ActionCards.constraints.ActionCardCondition_Constraints" />
     <classNode dependClassName="ActionCards.constraints.ActionCard_Constraints" />
+    <classNode dependClassName="ActionCards.constraints.Action_Constraints" />
     <classNode dependClassName="ActionCards.constraints.AndConditional_Constraints" />
     <classNode dependClassName="ActionCards.constraints.AttendanceRoute_Constraints" />
     <classNode dependClassName="ActionCards.constraints.AttributeLine_Constraints" />

@@ -488,9 +488,6 @@
     <property role="TrG5h" value="ImmunocompromisedCondition" />
     <property role="34LRSv" value="check if patient is immuno-compromised" />
     <ref role="1TJDcQ" to="e88n:1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
-    <node concept="PrWs8" id="7hL7ecMagq9" role="PzmwI">
-      <ref role="PrY4T" to="e88n:7hL7ecM603q" resolve="ConditonalStatement" />
-    </node>
   </node>
   <node concept="1TIwiD" id="1xAzJ9L0ubU">
     <property role="EcuMT" value="1758249876463936250" />
@@ -498,9 +495,6 @@
     <property role="TrG5h" value="InfectionStatusCondition" />
     <property role="34LRSv" value="check infection status of a patient" />
     <ref role="1TJDcQ" to="e88n:1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
-    <node concept="PrWs8" id="7hL7ecMagqb" role="PzmwI">
-      <ref role="PrY4T" to="e88n:7hL7ecM603q" resolve="ConditonalStatement" />
-    </node>
   </node>
   <node concept="1TIwiD" id="2K0oNvtRlaD">
     <property role="EcuMT" value="3170643229265449641" />
@@ -599,9 +593,6 @@
     <property role="TrG5h" value="VaccineStatusCondition" />
     <property role="34LRSv" value="check vaccine status of patient" />
     <ref role="1TJDcQ" to="e88n:1xAzJ9KVg_D" resolve="PatientPropertyConditional" />
-    <node concept="PrWs8" id="7hL7ecMagqv" role="PzmwI">
-      <ref role="PrY4T" to="e88n:7hL7ecM603q" resolve="ConditonalStatement" />
-    </node>
   </node>
 </model>
 

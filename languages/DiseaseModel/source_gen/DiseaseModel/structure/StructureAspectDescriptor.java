@@ -291,7 +291,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "ImmunocompromisedCondition", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x18668ef2755ea288L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.PatientPropertyConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L);
-    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/1758249876537123464");
     b.version(2);
     b.alias("check if patient is immuno-compromised");
@@ -339,7 +338,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "InfectionStatusCondition", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x18668ef27101e2faL);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.PatientPropertyConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L);
-    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/1758249876463936250");
     b.version(2);
     b.alias("check infection status of a patient");
@@ -529,7 +527,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "VaccineStatusCondition", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x18668ef26f431e45L);
     b.class_(false, false, false);
     b.super_("ActionCards.structure.PatientPropertyConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef270ed0969L);
-    b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/1758249876434656837");
     b.version(2);
     b.alias("check vaccine status of patient");

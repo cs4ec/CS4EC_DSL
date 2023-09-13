@@ -4362,7 +4362,6 @@
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0vH" role="2MhjZp">
       <property role="TrG5h" value="Check Symptomatic" />
-      <property role="3lFixl" value="true" />
       <ref role="3tPpTl" node="3IhX87gchU6" resolve="PHEThree" />
       <node concept="2_8ZN7" id="6lG8bJ3T0vI" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCG6" resolve="TriageNurse" />
@@ -4385,7 +4384,7 @@
         <ref role="3tVEyn" node="6lG8bJ3T0vH" resolve="Check Symptomatic" />
         <ref role="2GGxGe" node="6lG8bJ3T0wC" resolve="Is patient being admitted to vulnerable area" />
         <node concept="3tEh0H" id="3iCSjG9zyMw" role="1hyIAf">
-          <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
+          <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
           <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
           <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
         </node>
@@ -4397,7 +4396,7 @@
     <node concept="2MhjZa" id="6lG8bJ3T0vU" role="2MhjZp">
       <property role="TrG5h" value="Perform LFT" />
       <property role="3lFixl" value="true" />
-      <ref role="3tPpTl" node="3IhX87gchRq" resolve="LateralFlowTest" />
+      <ref role="3tPpTl" node="3IhX87gchTb" resolve="LabPCR" />
       <node concept="2_8ZN7" id="6lG8bJ3T0vV" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -4478,9 +4477,9 @@
       <node concept="2GGxJi" id="6lG8bJ3T0wI" role="A3aay">
         <ref role="3tVEyn" node="6lG8bJ3T0wC" resolve="Is patient being admitted to vulnerable area" />
         <ref role="2GGxGe" node="6lG8bJ3T0wM" resolve="Perform Rapid PCR" />
-        <node concept="1CySur" id="1jVX9cGn$8t" role="1hyIAf">
+        <node concept="1CySur" id="1jVX9cIzLIS" role="1hyIAf">
           <ref role="1DsR7o" node="1$AaFX9f$8h" />
-          <node concept="1FjjCg" id="1jVX9cGn$8H" role="1CySjL" />
+          <node concept="1FjjCg" id="1jVX9cIJpgD" role="1CySjL" />
         </node>
       </node>
       <node concept="2GGxJi" id="6lG8bJ3TD89" role="A3aay">
@@ -4535,8 +4534,8 @@
       <node concept="UeIYj" id="1jVX9cGn$eF" role="3lENdC">
         <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
       </node>
-      <node concept="2_8ZN7" id="1jVX9cGn$qf" role="2_8HaY">
-        <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
+      <node concept="2_8ZN7" id="1jVX9cHZuRe" role="2_8HaY">
+        <ref role="2_8ZNy" node="2_JteYPiCG6" resolve="TriageNurse" />
       </node>
     </node>
     <node concept="2MhjZa" id="1jVX9cGn$A0" role="2MhjZp">
@@ -4834,8 +4833,8 @@
       </node>
     </node>
     <node concept="3SEB2C" id="3IhX87gchTp" role="33qpDe">
-      <property role="33qpDp" value="99" />
-      <property role="33qpDr" value="99" />
+      <property role="33qpDp" value="12" />
+      <property role="33qpDr" value="23" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
       <node concept="3E3ulc" id="3IhX87gchTq" role="33qpDs">
         <property role="33qpDg" value="2lOlAdPyF1X/Positive" />

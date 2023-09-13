@@ -296,7 +296,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.PatientPropertyConditional:
         if (props_PatientPropertyConditional == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("patient property");
+          cpb.rawPresentation("check patient's condition");
           props_PatientPropertyConditional = cpb.create();
         }
         return props_PatientPropertyConditional;

@@ -25,6 +25,7 @@ import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
 import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
 import de.itemis.mps.editor.diagram.runtime.model.IConnectionEndpoint_Internal;
+import jetbrains.mps.internal.collections.runtime.Sequence;
 import java.util.List;
 import de.itemis.mps.editor.diagram.runtime.model.IDiagramElementAccessor;
 import de.itemis.mps.editor.diagram.runtime.model.IAccessorFactory;
@@ -127,7 +128,21 @@ import org.jetbrains.mps.openapi.language.SProperty;
             writeTo(EndpointUtil.getSNode(endpoint), EndpointUtil.getPortName(endpoint));
           }
           public void writeTo(final SNode targetNode, final String port) {
-            SLinkOperations.setTarget(node, LINKS.targetAction$Z7ub, ((SNode) targetNode));
+            if (Objects.equals(SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(node, LINKS.fromAction$DE5P), CONCEPTS.ActionCard$eb, false, false), SNodeOperations.getNodeAncestor(SLinkOperations.getTarget(node, LINKS.targetAction$Z7ub), CONCEPTS.ActionCard$eb, false, false))) {
+              SLinkOperations.setTarget(node, LINKS.targetAction$Z7ub, ((SNode) targetNode));
+            } else {
+              final SNode targetActionCard = SLinkOperations.getTarget(ListSequence.fromList(SLinkOperations.getChildren(SNodeOperations.getNodeAncestor(node, CONCEPTS.ActionCard$eb, false, false), LINKS.ActionCardReferences$o2ug)).where(new IWhereFilter<SNode>() {
+                public boolean accept(SNode it) {
+                  return ListSequence.fromList(SLinkOperations.getChildren(SLinkOperations.getTarget(it, LINKS.actionCard$QzY2), LINKS.Actions$nh$G)).contains((SNode) SLinkOperations.getTarget(node, LINKS.targetAction$Z7ub));
+                }
+              }).first(), LINKS.actionCard$QzY2);
+
+              SLinkOperations.setTarget(node, LINKS.targetAction$Z7ub, ListSequence.fromList(SLinkOperations.getChildren(targetActionCard, LINKS.Actions$nh$G)).where(new IWhereFilter<SNode>() {
+                public boolean accept(SNode it) {
+                  return !(Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(targetActionCard, LINKS.Branches$1fde), LINKS.targetAction$Z7ub)).contains(it));
+                }
+              }).first());
+            }
           }
           @Override
           public boolean canWriteFrom(IConnectionEndpoint_Internal endpoint) {
@@ -336,6 +351,7 @@ import org.jetbrains.mps.openapi.language.SProperty;
     /*package*/ static final SContainmentLink ActionCardReferences$o2ug = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x18668ef27581757bL, "ActionCardReferences");
     /*package*/ static final SReferenceLink actionCard$QzY2 = MetaAdapterFactory.getReferenceLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef2758152c8L, 0x18668ef2758152f8L, "actionCard");
     /*package*/ static final SContainmentLink Actions$nh$G = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2ef557ae9cb06877L, "Actions");
+    /*package*/ static final SContainmentLink Branches$1fde = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x2ef557ae9cb06848L, 0x2574566374fd2551L, "Branches");
     /*package*/ static final SContainmentLink condition$UnEW = MetaAdapterFactory.getContainmentLink(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x4f415ebce3f3456eL, 0x2574566374febfecL, "condition");
   }
 

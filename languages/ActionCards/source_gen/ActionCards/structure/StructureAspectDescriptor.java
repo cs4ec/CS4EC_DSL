@@ -546,7 +546,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.version(2);
     b.associate("patientProperty", 0x18668ef27115ff2aL).target(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26f3e3b4cL).optional(false).origin("1758249876465254186").done();
     b.aggregate("checkValue", 0x18668ef270ed0a03L).target(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, 0x670d5e92f854a047L).optional(false).ordered(true).multiple(false).origin("1758249876462569987").done();
-    b.alias("patient property");
+    b.alias("check patient's condition");
     return b.create();
   }
   private static ConceptDescriptor createDescriptorForPatientSeverity() {

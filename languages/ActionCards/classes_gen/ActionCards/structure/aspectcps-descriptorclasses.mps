@@ -2918,7 +2918,7 @@
                         <ref role="37wK5l" to="ze1i:~ConceptPresentationBuilder.rawPresentation(java.lang.String)" resolve="rawPresentation" />
                         <uo k="s:originTrace" v="n:1758249876462569833" />
                         <node concept="Xl_RD" id="gy" role="37wK5m">
-                          <property role="Xl_RC" value="patient property" />
+                          <property role="Xl_RC" value="check patient's condition" />
                           <uo k="s:originTrace" v="n:1758249876462569833" />
                         </node>
                       </node>
@@ -14565,7 +14565,7 @@
             <node concept="liA8E" id="1jU" role="2OqNvi">
               <ref role="37wK5l" to="bzg8:~ConceptDescriptorBuilder2.alias(java.lang.String)" resolve="alias" />
               <node concept="Xl_RD" id="1jV" role="37wK5m">
-                <property role="Xl_RC" value="patient property" />
+                <property role="Xl_RC" value="check patient's condition" />
               </node>
             </node>
           </node>

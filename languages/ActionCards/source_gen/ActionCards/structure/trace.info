@@ -379,8 +379,8 @@
     <file name="ConceptPresentationAspectImpl.java">
       <node id="1758249876462569833" at="44,0,45,0" concept="2" trace="props_PatientPropertyConditional" />
       <node id="1758249876462569833" at="297,55,298,76" concept="5" />
-      <node id="1758249876462569833" at="298,76,299,50" concept="1" />
-      <node id="1758249876462569833" at="299,50,300,58" concept="1" />
+      <node id="1758249876462569833" at="298,76,299,59" concept="1" />
+      <node id="1758249876462569833" at="299,59,300,58" concept="1" />
       <node id="1758249876462569833" at="301,9,302,48" concept="6" />
       <node id="1758249876462569833" at="296,60,301,9" concept="3" />
       <scope id="1758249876462569833" at="297,55,300,58">
@@ -402,8 +402,8 @@
       <node id="1758249876462569833" at="545,98,546,17" concept="1" />
       <node id="1758249876465254186" at="546,17,547,179" concept="1" />
       <node id="1758249876462569987" at="547,179,548,204" concept="1" />
-      <node id="1758249876462569833" at="548,204,549,32" concept="1" />
-      <node id="1758249876462569833" at="549,32,550,22" concept="6" />
+      <node id="1758249876462569833" at="548,204,549,41" concept="1" />
+      <node id="1758249876462569833" at="549,41,550,22" concept="6" />
       <node id="1758249876462569833" at="540,0,552,0" concept="8" trace="createDescriptorForPatientPropertyConditional#()Ljetbrains/mps/smodel/runtime/ConceptDescriptor;" />
       <scope id="1758249876462569833" at="165,60,166,51" />
       <scope id="1758249876462569833" at="540,84,550,22">
