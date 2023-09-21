@@ -33,14 +33,14 @@ public class Behaviour {
 	}
 	
 	public void step() {
-		int actionCounter = 1; // I can only do one action that takes a timestep
+		int actionCounter = 1; // I can only do one action that takes a time-step
 		
-		while(actionCounter >0 && currentStep < steps.size()) {
+		while(actionCounter > 0 && currentStep < steps.size()) {
 			BehaviourStep currentAction = steps.get(currentStep);
 			
 			currentAction.execute();
 			
-			// If this action takes a timestep, then decrement the action counter
+			// If this action takes a time-step, then decrement the action counter
 			if(!(currentAction instanceof InstantBehaviourStep)) {
 				actionCounter--;
 			}
@@ -113,7 +113,18 @@ public class Behaviour {
 	
 	@Override
 	public String toString() {
+		String returnString = "";
 		// TODO Auto-generated method stub
-		return name + ", step " + currentStep;
+		if(currentStep < steps.size()) {
+			returnString = name + ", step "+ currentStep + ": " + steps.get(currentStep).getClass().getSimpleName();
+		} else {
+			returnString = "Finishing " + name;
+		}
+		
+		if(signalTrigger != null && signalTrigger.GetData("patient") != null) {
+			returnString+= " with patient " + ((Agent)signalTrigger.GetData("patient")).agentName();
+		}
+		
+		return returnString;
 	}
 }

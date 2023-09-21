@@ -1182,6 +1182,16 @@ public class QueriesGenerated extends QueryProviderBase {
       }
     }), "ActorMap");
   }
+  public static Object referenceMacro_GetReferent_107_0(final ReferenceMacroContext _context) {
+    return (String) Actor__BehaviorDescriptor.getFormattedName_id52K8EjkEtU.invoke(ListSequence.fromList(SModelOperations.nodes(_context.getInputModel(), CONCEPTS.Actor$CU)).findFirst(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return ListSequence.fromList(SNodeOperations.getNodeAncestors(_context.getNode(), null, false)).contains(it);
+      }
+    }));
+  }
+  public static Object referenceMacro_GetReferent_107_1(final ReferenceMacroContext _context) {
+    return (String) OccupiableDefinition__BehaviorDescriptor.getFormattedName_id34hhAWvP6xc.invoke(SLinkOperations.getTarget(_context.getNode(), LINKS.occupiable$n5Vq));
+  }
   public static boolean ifMacro_Condition_1_0(final IfMacroContext _context) {
     return !(Objects.equals(SLinkOperations.getTarget(_context.getNode(), LINKS.signalselectionstrategy$4pxu), null));
   }
@@ -2906,6 +2916,8 @@ public class QueriesGenerated extends QueryProviderBase {
     rtqMethods.put("794636372336637241", new RTQ(74, "Breadcrumb"));
     rtqMethods.put("794636372316842932", new RTQ(75, "Breadcrumb"));
     rtqMethods.put("459701219676762511", new RTQ(76, "outer"));
+    rtqMethods.put("2171300594375925360", new RTQ(77, "outerClass"));
+    rtqMethods.put("2171300594375929426", new RTQ(78, "Occupiable"));
   }
   @NotNull
   @Override
@@ -3076,6 +3088,10 @@ public class QueriesGenerated extends QueryProviderBase {
           return QueriesGenerated.referenceMacro_GetReferent_102_3(ctx);
         case 76:
           return QueriesGenerated.referenceMacro_GetReferent_105_0(ctx);
+        case 77:
+          return QueriesGenerated.referenceMacro_GetReferent_107_0(ctx);
+        case 78:
+          return QueriesGenerated.referenceMacro_GetReferent_107_1(ctx);
         default:
           throw new GenerationFailureException(String.format("Inconsistent QueriesGenerated: there's no method for query %s (key: #%d)", ctx.getTemplateReference(), methodKey));
       }
@@ -3248,6 +3264,7 @@ public class QueriesGenerated extends QueryProviderBase {
     /*package*/ static final SReferenceLink iterable$xUqC = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x1c9634cb48d17adaL, 0x1c9634cb48d19a4dL, "iterable");
     /*package*/ static final SReferenceLink attribute$xV7F = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x1c9634cb48d17adaL, 0x1c9634cb48d19a50L, "attribute");
     /*package*/ static final SReferenceLink atribute$HtuS = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x1c9634cb49081591L, 0x1c9634cb49081596L, "atribute");
+    /*package*/ static final SReferenceLink occupiable$n5Vq = MetaAdapterFactory.getReferenceLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x1e220262f45edb3eL, 0x3111466f1fe9fcb6L, "occupiable");
     /*package*/ static final SContainmentLink signalselectionstrategy$4pxu = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x78ac3095f38bfaL, "signalselectionstrategy");
     /*package*/ static final SContainmentLink roomSelectionStrategy$KUvr = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x6e3a4f6d5ccaa31cL, "roomSelectionStrategy");
     /*package*/ static final SContainmentLink isIdleBehaviour$pDqV = MetaAdapterFactory.getContainmentLink(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x35463334ce2f6271L, 0x3dab4295aef20062L, "isIdleBehaviour");

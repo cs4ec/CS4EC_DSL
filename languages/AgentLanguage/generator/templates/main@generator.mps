@@ -1551,6 +1551,12 @@
         <ref role="v9R2y" node="pxbXbtDjP1" resolve="reduce_IsPathObstructedCondition" />
       </node>
     </node>
+    <node concept="3aamgX" id="1Sy0AbOnI5z" role="3acgRq">
+      <ref role="30HIoZ" to="3751:1Sy0AbOnHGY" resolve="MyRoomsOccupiableReference" />
+      <node concept="j$656" id="1Sy0AbOnI5$" role="1lVwrX">
+        <ref role="v9R2y" node="1Sy0AbOnI5x" resolve="reduce_MyRoomsOccupiableReference" />
+      </node>
+    </node>
   </node>
   <node concept="312cEu" id="DbMKZsswSi">
     <property role="TrG5h" value="MyActor" />
@@ -29938,6 +29944,143 @@
     </node>
     <node concept="n94m4" id="EiFt8vQ26u" role="lGtFl">
       <ref role="n9lRv" to="3z3g:3l6cNjebRG0" resolve="ScenarioBuilder" />
+    </node>
+  </node>
+  <node concept="13MO4I" id="1Sy0AbOnI5x">
+    <property role="TrG5h" value="reduce_MyRoomsOccupiableReference" />
+    <property role="3GE5qa" value="Structures.Class" />
+    <ref role="3gUMe" to="3751:1Sy0AbOnHGY" resolve="MyRoomsOccupiableReference" />
+    <node concept="312cEu" id="1Sy0AbOnLT_" role="13RCb5">
+      <property role="TrG5h" value="outerClass" />
+      <node concept="15s5l7" id="1Sy0AbOnLTA" role="lGtFl">
+        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: No template fragments found&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902e4(jetbrains.mps.lang.generator.typesystem)/7952422520064723850]&quot;;" />
+        <property role="huDt6" value="Error: No template fragments found" />
+      </node>
+      <node concept="15s5l7" id="1Sy0AbOnLTB" role="lGtFl">
+        <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: There is no default constructor available in super class simcore.agents.Agent&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/8974945326827961340]&quot;;" />
+        <property role="huDt6" value="Error: There is no default constructor available in super class simcore.agents.Agent" />
+      </node>
+      <node concept="2tJIrI" id="1Sy0AbOnLTC" role="jymVt" />
+      <node concept="312cEu" id="1Sy0AbOnLTD" role="jymVt">
+        <property role="2bfB8j" value="true" />
+        <property role="TrG5h" value="inner" />
+        <node concept="3clFb_" id="1Sy0AbOnLTE" role="jymVt">
+          <property role="TrG5h" value="test" />
+          <node concept="3clFbS" id="1Sy0AbOnLTF" role="3clF47">
+            <node concept="3clFbF" id="1Sy0AbOnLTG" role="3cqZAp">
+              <node concept="15s5l7" id="1Sy0AbOnLTH" role="lGtFl">
+                <property role="1eyWvh" value="FLAVOUR_ISSUE_KIND=&quot;typesystem (typesystem)&quot;;FLAVOUR_MESSAGE=&quot;Error: Not a legal statement, the expression value should be used or returned&quot;;FLAVOUR_RULE_ID=&quot;[r:00000000-0000-4000-0000-011c895902c5(jetbrains.mps.baseLanguage.typesystem)/2453008993620467766]&quot;;" />
+                <property role="huDt6" value="Error: Not a legal statement, the expression value should be used or returned" />
+              </node>
+              <node concept="2OqwBi" id="1Sy0AbOnP2y" role="3clFbG">
+                <node concept="2OqwBi" id="1Sy0AbOnMkK" role="2Oq$k0">
+                  <node concept="2OqwBi" id="1Sy0AbOnLTI" role="2Oq$k0">
+                    <node concept="Xjq3P" id="1Sy0AbOnLTJ" role="2Oq$k0">
+                      <ref role="1HBi2w" node="1Sy0AbOnLT_" resolve="outerClass" />
+                      <node concept="1ZhdrF" id="1Sy0AbOnLTK" role="lGtFl">
+                        <property role="2qtEX8" value="classConcept" />
+                        <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1070475354124/1182955020723" />
+                        <node concept="3$xsQk" id="1Sy0AbOnLTL" role="3$ytzL">
+                          <node concept="3clFbS" id="1Sy0AbOnLTM" role="2VODD2">
+                            <node concept="3clFbF" id="1Sy0AbOnLTN" role="3cqZAp">
+                              <node concept="2OqwBi" id="1Sy0AbOnLTO" role="3clFbG">
+                                <node concept="2OqwBi" id="1Sy0AbOnLTP" role="2Oq$k0">
+                                  <node concept="2OqwBi" id="1Sy0AbOnLTQ" role="2Oq$k0">
+                                    <node concept="2OqwBi" id="1Sy0AbOnLTR" role="2Oq$k0">
+                                      <node concept="1iwH7S" id="1Sy0AbOnLTS" role="2Oq$k0" />
+                                      <node concept="1r8y6K" id="1Sy0AbOnLTT" role="2OqNvi" />
+                                    </node>
+                                    <node concept="2SmgA7" id="1Sy0AbOnLTU" role="2OqNvi">
+                                      <node concept="chp4Y" id="1Sy0AbOnLTV" role="1dBWTz">
+                                        <ref role="cht4Q" to="3751:3l6cNjebQ9L" resolve="Actor" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                  <node concept="1z4cxt" id="1Sy0AbOnLTW" role="2OqNvi">
+                                    <node concept="1bVj0M" id="1Sy0AbOnLTX" role="23t8la">
+                                      <node concept="3clFbS" id="1Sy0AbOnLTY" role="1bW5cS">
+                                        <node concept="3clFbF" id="1Sy0AbOnLTZ" role="3cqZAp">
+                                          <node concept="2OqwBi" id="1Sy0AbOnLU0" role="3clFbG">
+                                            <node concept="2OqwBi" id="1Sy0AbOnLU1" role="2Oq$k0">
+                                              <node concept="30H73N" id="1Sy0AbOnLU2" role="2Oq$k0" />
+                                              <node concept="z$bX8" id="1Sy0AbOnLU3" role="2OqNvi" />
+                                            </node>
+                                            <node concept="3JPx81" id="1Sy0AbOnLU4" role="2OqNvi">
+                                              <node concept="37vLTw" id="1Sy0AbOnLU5" role="25WWJ7">
+                                                <ref role="3cqZAo" node="1Sy0AbOnLU6" resolve="it" />
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                      </node>
+                                      <node concept="Rh6nW" id="1Sy0AbOnLU6" role="1bW2Oz">
+                                        <property role="TrG5h" value="it" />
+                                        <node concept="2jxLKc" id="1Sy0AbOnLU7" role="1tU5fm" />
+                                      </node>
+                                    </node>
+                                  </node>
+                                </node>
+                                <node concept="2qgKlT" id="1Sy0AbOnLU8" role="2OqNvi">
+                                  <ref role="37wK5l" to="vp87:52K8EjkEtU" resolve="getFormattedName" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                    <node concept="2OwXpG" id="1Sy0AbOnLU9" role="2OqNvi">
+                      <ref role="2Oxat5" to="uux2:~Agent.curInside" resolve="curInside" />
+                    </node>
+                  </node>
+                  <node concept="liA8E" id="1Sy0AbOnMFZ" role="2OqNvi">
+                    <ref role="37wK5l" to="y2pi:~Room.getAllOcupiablesOfType(java.lang.Class)" resolve="getAllOcupiablesOfType" />
+                    <node concept="3VsKOn" id="1Sy0AbOnMTg" role="37wK5m">
+                      <ref role="3VsUkX" to="y2pi:~Occupiable" resolve="Occupiable" />
+                      <node concept="1ZhdrF" id="1Sy0AbOnMTi" role="lGtFl">
+                        <property role="2qtEX8" value="classifier" />
+                        <property role="P3scX" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1116615150612/1116615189566" />
+                        <node concept="3$xsQk" id="1Sy0AbOnMTj" role="3$ytzL">
+                          <node concept="3clFbS" id="1Sy0AbOnMTk" role="2VODD2">
+                            <node concept="3clFbF" id="1Sy0AbOnMTl" role="3cqZAp">
+                              <node concept="2OqwBi" id="1Sy0AbOnMTm" role="3clFbG">
+                                <node concept="2OqwBi" id="1Sy0AbOnMTn" role="2Oq$k0">
+                                  <node concept="30H73N" id="1Sy0AbOnMTo" role="2Oq$k0" />
+                                  <node concept="3TrEf2" id="1Sy0AbOnMTp" role="2OqNvi">
+                                    <ref role="3Tt5mk" to="3751:1Sy0AbOnHGZ" resolve="occupiable" />
+                                  </node>
+                                </node>
+                                <node concept="2qgKlT" id="1Sy0AbOnMTq" role="2OqNvi">
+                                  <ref role="37wK5l" to="wrwt:34hhAWvP6xc" resolve="getFormattedName" />
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="liA8E" id="1Sy0AbOnQgV" role="2OqNvi">
+                  <ref role="37wK5l" to="33ny:~List.get(int)" resolve="get" />
+                  <node concept="3cmrfG" id="1Sy0AbOnQT8" role="37wK5m">
+                    <property role="3cmrfH" value="0" />
+                  </node>
+                </node>
+                <node concept="raruj" id="1Sy0AbOnRx2" role="lGtFl" />
+              </node>
+            </node>
+          </node>
+          <node concept="3Tm6S6" id="1Sy0AbOnLUb" role="1B3o_S" />
+          <node concept="3cqZAl" id="1Sy0AbOnLUc" role="3clF45" />
+        </node>
+        <node concept="3Tm1VV" id="1Sy0AbOnLUd" role="1B3o_S" />
+      </node>
+      <node concept="2tJIrI" id="1Sy0AbOnLUe" role="jymVt" />
+      <node concept="3Tm1VV" id="1Sy0AbOnLUf" role="1B3o_S" />
+      <node concept="3uibUv" id="1Sy0AbOnLUg" role="1zkMxy">
+        <ref role="3uigEE" to="uux2:~Actor" resolve="Actor" />
+      </node>
     </node>
   </node>
 </model>

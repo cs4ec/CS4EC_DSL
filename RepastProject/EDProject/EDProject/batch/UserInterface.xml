@@ -115,18 +115,6 @@
       <string>EDLanguage.sandbox.TriageNurse</string>
       <int>8</int>
       </entry>
-      <entry>
-      <string>EDLanguage.sandbox.PreAdmissionStaff</string>
-      <int>9</int>
-      </entry>
-      <entry>
-      <string>EDLanguage.sandbox.LabTechnician</string>
-      <int>10</int>
-      </entry>
-      <entry>
-      <string>EDLanguage.sandbox.WardNurse</string>
-      <int>11</int>
-      </entry>
   </layerOrder>
   <projections>
     <repast.simphony.scenario.data.ProjectionData>

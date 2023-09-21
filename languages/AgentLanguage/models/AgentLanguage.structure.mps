@@ -2180,5 +2180,21 @@
       <ref role="20lvS9" node="7o6PzEpI6ey" resolve="HumanInstance" />
     </node>
   </node>
+  <node concept="1TIwiD" id="1Sy0AbOnHGY">
+    <property role="EcuMT" value="2171300594375908158" />
+    <property role="3GE5qa" value="Structures.Class" />
+    <property role="TrG5h" value="MyRoomsOccupiableReference" />
+    <property role="34LRSv" value="my room's occupiable" />
+    <ref role="1TJDcQ" node="7o6PzEpI6ez" resolve="PlaceInstance" />
+    <node concept="1TJgyj" id="1Sy0AbOnHGZ" role="1TKVEi">
+      <property role="IQ2ns" value="3535684625553292470" />
+      <property role="20kJfa" value="occupiable" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" to="3z3g:34hhAWvBY13" resolve="OccupiableDefinition" />
+    </node>
+    <node concept="PrWs8" id="1Sy0AbOnHH0" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
 </model>
 

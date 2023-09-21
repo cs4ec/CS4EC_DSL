@@ -149,6 +149,13 @@
       </concept>
     </language>
     <language id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment">
+      <concept id="394251613848318963" name="BuiltEnvironment.structure.StaffRoomAllocationTable" flags="ng" index="6XhCM">
+        <child id="394251613848319115" name="lines" index="6XhPa" />
+      </concept>
+      <concept id="394251613848318982" name="BuiltEnvironment.structure.StaffRoomAllocationLine" flags="ng" index="6XhR7">
+        <property id="394251613848370163" name="limit" index="6XH8M" />
+        <reference id="394251613848318992" name="staff" index="6XhRh" />
+      </concept>
       <concept id="3535684625554910547" name="BuiltEnvironment.structure.OccupiableAllocation" flags="ng" index="h4YGW">
         <property id="3535684625555883197" name="y" index="h0cbi" />
         <property id="3535684625554910575" name="x" index="h4YG0" />
@@ -177,6 +184,7 @@
         <child id="768972137592500155" name="sourceFile" index="2PX5YI" />
       </concept>
       <concept id="6750846609944804889" name="BuiltEnvironment.structure.RoomType" flags="ng" index="VhMOw">
+        <child id="394251613848621944" name="staffRoomAllocation" index="6UJET" />
         <child id="5626228425383343645" name="PatientOccupiable" index="3IeprG" />
       </concept>
       <concept id="4321323723309500087" name="BuiltEnvironment.structure.ResourceAllocation" flags="ng" index="3kFaIK">
@@ -244,7 +252,7 @@
       <ref role="2_0uz0" node="av1M7vbJYz" resolve="Doctor" />
     </node>
     <node concept="2_0uwW" id="5Lup6bkacRf" role="2_0uzz">
-      <property role="2_0uz2" value="30" />
+      <property role="2_0uz2" value="10" />
       <ref role="2_0uz0" node="2_JteYPiCHe" resolve="CubicleNurse" />
     </node>
     <node concept="2_0uwW" id="5Lup6bkacRn" role="2_0uzz">
@@ -1458,6 +1466,12 @@
     <node concept="1kHjla" id="4Skof6wcCdG" role="3IeprG">
       <ref role="IYbFp" node="34hhAWxKdrf" />
     </node>
+    <node concept="6XhCM" id="1Sy0AbOlb7l" role="6UJET">
+      <node concept="6XhR7" id="1Sy0AbOlb7n" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="1$AaFX9f$1b" resolve="patient" />
+      </node>
+    </node>
   </node>
   <node concept="VhMOw" id="EFW1mYOHdO">
     <property role="3GE5qa" value="ED Layout.RoomType" />
@@ -1479,6 +1493,12 @@
     <property role="TrG5h" value="MajorsC_Cubicle" />
     <node concept="1kHjla" id="4Skof6wcCdx" role="3IeprG">
       <ref role="IYbFp" node="34hhAWxKdrf" />
+    </node>
+    <node concept="6XhCM" id="1Sy0AbOlb7y" role="6UJET">
+      <node concept="6XhR7" id="1Sy0AbOlb7$" role="6XhPa">
+        <property role="6XH8M" value="1" />
+        <ref role="6XhRh" node="1$AaFX9f$1b" resolve="patient" />
+      </node>
     </node>
   </node>
   <node concept="VhMOw" id="52K8Ej3GeZ">
@@ -4384,7 +4404,7 @@
         <ref role="3tVEyn" node="6lG8bJ3T0vH" resolve="Check Symptomatic" />
         <ref role="2GGxGe" node="6lG8bJ3T0wC" resolve="Is patient being admitted to vulnerable area" />
         <node concept="3tEh0H" id="3iCSjG9zyMw" role="1hyIAf">
-          <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
+          <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
           <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
           <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
         </node>
@@ -4396,7 +4416,7 @@
     <node concept="2MhjZa" id="6lG8bJ3T0vU" role="2MhjZp">
       <property role="TrG5h" value="Perform LFT" />
       <property role="3lFixl" value="true" />
-      <ref role="3tPpTl" node="3IhX87gchTb" resolve="LabPCR" />
+      <ref role="3tPpTl" node="3IhX87gchRq" resolve="LateralFlowTest" />
       <node concept="2_8ZN7" id="6lG8bJ3T0vV" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -4468,6 +4488,7 @@
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0wC" role="2MhjZp">
       <property role="TrG5h" value="Is patient being admitted to vulnerable area" />
+      <property role="3lFixl" value="true" />
       <node concept="2_8ZN7" id="6lG8bJ3T0wD" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -4489,6 +4510,9 @@
           <ref role="1DsR7o" node="1$AaFX9f$8h" />
           <node concept="1FjjCm" id="ymNNsenu9w" role="1CySjL" />
         </node>
+      </node>
+      <node concept="1M3RjT" id="1Sy0AbOlxYb" role="1M293l">
+        <property role="1M3RjU" value="1" />
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0wM" role="2MhjZp">
@@ -4512,7 +4536,7 @@
         <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
       </node>
       <node concept="UeIYj" id="6lG8bJ3T0wT" role="3lENdC">
-        <ref role="Udx8D" node="1BosAjMPcje" resolve="VulnerableArea" />
+        <ref role="Udx8D" node="52K8Ej3GjE" resolve="SideRoom" />
       </node>
     </node>
     <node concept="1H2jYY" id="6lG8bJ3TCWa" role="2MhjZp">
@@ -4534,8 +4558,8 @@
       <node concept="UeIYj" id="1jVX9cGn$eF" role="3lENdC">
         <ref role="Udx8D" node="52K8Ej3GeZ" resolve="COVIDPositiveCohort" />
       </node>
-      <node concept="2_8ZN7" id="1jVX9cHZuRe" role="2_8HaY">
-        <ref role="2_8ZNy" node="2_JteYPiCG6" resolve="TriageNurse" />
+      <node concept="2_8ZN7" id="1Sy0AbOk6yV" role="2_8HaY">
+        <ref role="2_8ZNy" node="av1M7vbJYz" resolve="Doctor" />
       </node>
     </node>
     <node concept="2MhjZa" id="1jVX9cGn$A0" role="2MhjZp">
@@ -4688,15 +4712,15 @@
     <node concept="1jfOK3" id="3iCSjGayr4L" role="2OfI9c">
       <ref role="3ZaQn3" node="3iCSjGayr4M" />
       <node concept="1jfOKv" id="3iCSjGayr4Q" role="1jfOML">
-        <property role="3JlXGq" value="100" />
+        <property role="3JlXGq" value="10" />
         <node concept="3IO8Df" id="3iCSjGayr4R" role="3JlXG4" />
       </node>
       <node concept="1jfOKv" id="3iCSjGayr4S" role="1jfOML">
-        <property role="3JlXGq" value="0" />
+        <property role="3JlXGq" value="50" />
         <node concept="3IO8Cx" id="3iCSjGayr4T" role="3JlXG4" />
       </node>
       <node concept="1jfOKv" id="3iCSjGayr4U" role="1jfOML">
-        <property role="3JlXGq" value="0" />
+        <property role="3JlXGq" value="40" />
         <node concept="3IO8Di" id="3iCSjGayr4V" role="3JlXG4" />
       </node>
     </node>

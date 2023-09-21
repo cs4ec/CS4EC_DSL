@@ -32,6 +32,7 @@ public class Actor extends Agent {
 	protected Schedule schedule;
 	protected int idleTime = 0;
 	protected List<Order> myOrders = new ArrayList<>();
+	protected List<Order> pastOrders = new ArrayList<>();
 
 	public Actor(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
 		super(space, grid, context);
@@ -40,7 +41,6 @@ public class Actor extends Agent {
 
 		// Traverse the ancestors of class to record all the Fields
 		fields = new ArrayList<>();
-
 		Class c = this.getClass();
 
 		while (c != Actor.class) {
@@ -83,11 +83,27 @@ public class Actor extends Agent {
 				return;
 			}
 
+			// Get all my non-passive actions 
 			List<Behaviour> plstReadyActions = myCurrentActions.stream()
 					.filter(a -> !(a.getCurrentStep() instanceof PassiveBehaviourStep)).collect(Collectors.toList());
 
-			// If no active actions ongoing, then look for new signals
-			if (plstReadyActions.isEmpty()) {
+			if (!plstReadyActions.isEmpty()) {
+				myActiveAction = plstReadyActions.get(0);
+
+				// If I have some actions available, then do the first one
+				if(!actionHistory.isEmpty()) {
+					if(actionHistory.get(actionHistory.size()-1).getSignalTrigger()!= null && actionHistory.get(actionHistory.size()-1).getSignalTrigger().GetData("patient") != null) {
+						Agent lastPatient = (Agent) actionHistory.get(actionHistory.size()-1).getSignalTrigger().GetData("patient");
+						for (Behaviour behaviour : plstReadyActions) {
+							if(behaviour.getSignalTrigger() != null && behaviour.getSignalTrigger().GetData("patient") == lastPatient) {
+								myActiveAction = behaviour;
+							}
+						}
+					}
+				} 
+				
+			} else {
+				// If no active actions ongoing, then look for new signals
 
 				Signal s = searchForSignals(board);
 				// If we now have a signal, build the action for which this signal is a trigger
@@ -101,17 +117,14 @@ public class Actor extends Agent {
 						myActiveAction = signalAction;
 					}
 				}
-			} else {
-				Behaviour myCurrentAction = plstReadyActions.get(0);
-				myActiveAction = myCurrentAction;
 			}
 
-			if (myActiveAction == null) {
-//				myActiveAction = isIdleAction(null);
-				if (myActiveAction != null && !myCurrentActions.contains(myActiveAction)) {
-					myCurrentActions.add(myActiveAction);
-				}
-			}
+//			if (myActiveAction == null) {
+////				myActiveAction = isIdleAction(null);
+//				if (myActiveAction != null && !myCurrentActions.contains(myActiveAction)) {
+//					myCurrentActions.add(myActiveAction);
+//				}
+//			}
 		}
 
 		executeCurrentActions();
@@ -185,10 +198,13 @@ public class Actor extends Agent {
 	 */
 	private void iterateOrder() {
 		if (myOrders.get(0).getNextStep() != null) {
+			pastOrders.add(myOrders.get(0));
 			myOrders.set(0, myOrders.get(0).getNextStep());
 		} else {
+			pastOrders.add(myOrders.get(0));
 			myOrders.remove(0);
 		}
+		
 	}
 
 	protected Signal searchForSignals(Board board) {
@@ -230,7 +246,27 @@ public class Actor extends Agent {
 		String out = "Current Actions: ";
 		if (myCurrentActions != null) {
 			for (Behaviour behaviour : myCurrentActions) {
-				out += behaviour.toString() + ",";
+				out += "[" + behaviour.toString() + "],";
+			}
+		}
+		return out;
+	}
+	
+	@Parameter(usageName = "ActiveAction", displayName = "My Active Action")
+	public String getActiveAction() {
+		String out = "Active Action: ";
+		if (myActiveAction != null) {
+				out += "[" + myActiveAction.toString() + "]";
+			}
+		return out;
+	}
+	
+	@Parameter(usageName = "pastActions", displayName = "My Past Actions")
+	public String getPastActions() {
+		String out = "Past Actions: ";
+		if (actionHistory != null) {
+			for (Behaviour behaviour : actionHistory) {
+				out += "[" + behaviour.toString() + "],";
 			}
 		}
 		return out;
@@ -246,6 +282,17 @@ public class Actor extends Agent {
 		String out = "";
 		if (myOrders != null) {
 			for (Order order : myOrders) {
+				out += order.toString() + ",";
+			}
+		}
+		return out;
+	}
+	
+	@Parameter(usageName = "pastOrders", displayName = "My Past Orders")
+	public String getPastOrders() {
+		String out = "";
+		if (pastOrders != null) {
+			for (Order order : pastOrders) {
 				out += order.toString() + ",";
 			}
 		}

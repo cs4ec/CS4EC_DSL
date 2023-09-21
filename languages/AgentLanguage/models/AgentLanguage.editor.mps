@@ -2127,7 +2127,7 @@
     <ref role="1XX52x" to="3751:4Skof6wY8pa" resolve="MyRoomInstance" />
     <node concept="3EZMnI" id="4Skof6wY8ED" role="2wV5jI">
       <node concept="3F0ifn" id="4Skof6wY8Fm" role="3EZMnx">
-        <property role="3F0ifm" value="the room I am in" />
+        <property role="3F0ifm" value="my room" />
       </node>
       <node concept="l2Vlx" id="4Skof6wY8EG" role="2iSdaV" />
     </node>
@@ -2672,6 +2672,25 @@
         <property role="3F0ifm" value="obstructed" />
       </node>
       <node concept="l2Vlx" id="pxbXbtDjKp" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="1Sy0AbOnHHP">
+    <property role="3GE5qa" value="Structures.Class" />
+    <ref role="1XX52x" to="3751:1Sy0AbOnHGY" resolve="MyRoomsOccupiableReference" />
+    <node concept="3EZMnI" id="1Sy0AbOnHHR" role="2wV5jI">
+      <node concept="3F0ifn" id="1Sy0AbOnHI1" role="3EZMnx">
+        <property role="3F0ifm" value="my room's" />
+      </node>
+      <node concept="1iCGBv" id="1Sy0AbOnHI7" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:1Sy0AbOnHGZ" resolve="occupiable" />
+        <node concept="1sVBvm" id="1Sy0AbOnHI9" role="1sWHZn">
+          <node concept="3F0A7n" id="1Sy0AbOnHIh" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="3z3g:34hhAWvBY1f" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="1Sy0AbOnHHU" role="2iSdaV" />
     </node>
   </node>
 </model>

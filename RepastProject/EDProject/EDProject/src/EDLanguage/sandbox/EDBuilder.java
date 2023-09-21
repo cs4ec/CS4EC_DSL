@@ -75,20 +75,11 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 10; i++) {
       context.add(new Doctor(space, grid, context));
     }
-    for (int i = 0; i < 30; i++) {
+    for (int i = 0; i < 10; i++) {
       context.add(new CubicleNurse(space, grid, context));
     }
     for (int i = 0; i < 5; i++) {
       context.add(new TriageNurse(space, grid, context));
-    }
-    for (int i = 0; i < 5; i++) {
-      context.add(new PreAdmissionStaff(space, grid, context));
-    }
-    for (int i = 0; i < 7; i++) {
-      context.add(new LabTechnician(space, grid, context));
-    }
-    for (int i = 0; i < 30; i++) {
-      context.add(new WardNurse(space, grid, context));
     }
 
 

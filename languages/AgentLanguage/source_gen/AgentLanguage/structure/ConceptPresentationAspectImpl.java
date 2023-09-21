@@ -68,6 +68,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_MoveOrder;
   private ConceptPresentation props_MyAttributeCondition;
   private ConceptPresentation props_MyRoomInstance;
+  private ConceptPresentation props_MyRoomsOccupiableReference;
   private ConceptPresentation props_NewPatientSignal;
   private ConceptPresentation props_ObjectInstance;
   private ConceptPresentation props_OccupiableAvailabilityCondition;
@@ -555,6 +556,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_MyRoomInstance = cpb.create();
         }
         return props_MyRoomInstance;
+      case LanguageConceptSwitch.MyRoomsOccupiableReference:
+        if (props_MyRoomsOccupiableReference == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.presentationByName();
+          props_MyRoomsOccupiableReference = cpb.create();
+        }
+        return props_MyRoomsOccupiableReference;
       case LanguageConceptSwitch.NewPatientSignal:
         if (props_NewPatientSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

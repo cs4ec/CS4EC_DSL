@@ -318,6 +318,7 @@
         <child id="3785632457336057245" name="prob" index="2pfi$O" />
         <child id="3866749931179423427" name="behaviour" index="1AB$9g" />
       </concept>
+      <concept id="2171300594375908158" name="AgentLanguage.structure.MyRoomsOccupiableReference" flags="ng" index="3Evd_s" />
       <concept id="5626228425388812985" name="AgentLanguage.structure.InSameRoomCondition" flags="ng" index="3I_gD8">
         <child id="5626228425388813013" name="target" index="3I_gC$" />
       </concept>
@@ -1818,12 +1819,12 @@
               <node concept="3IVeqV" id="4Skof6x7w_B" role="3JG_nS" />
             </node>
             <node concept="3JG_m7" id="4Skof6vUVId" role="2n6HdJ">
-              <node concept="1kHjla" id="4Skof6vUVIj" role="3JG_nS">
-                <node concept="1ZhdrF" id="4Skof6vUVIm" role="lGtFl">
+              <node concept="3Evd_s" id="1Sy0AbOthrY" role="3JG_nS">
+                <node concept="1ZhdrF" id="1Sy0AbOths0" role="lGtFl">
                   <property role="2qtEX8" value="occupiable" />
-                  <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/8465466444624057771/3535684625553292470" />
-                  <node concept="3$xsQk" id="4Skof6vUVIn" role="3$ytzL">
-                    <node concept="3clFbS" id="4Skof6vUVIo" role="2VODD2">
+                  <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/2171300594375908158/3535684625553292470" />
+                  <node concept="3$xsQk" id="1Sy0AbOths1" role="3$ytzL">
+                    <node concept="3clFbS" id="1Sy0AbOths2" role="2VODD2">
                       <node concept="3clFbF" id="4Skof6vUW37" role="3cqZAp">
                         <node concept="2OqwBi" id="4Skof6wcHGo" role="3clFbG">
                           <node concept="2OqwBi" id="4Skof6wcGO7" role="2Oq$k0">

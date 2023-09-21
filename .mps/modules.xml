@@ -23,6 +23,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/EDRuntime_RepastMainProvider/EDRuntime_RepastMainProvider.msd" folder="dependencies" />
       <modulePath path="$PROJECT_DIR$/solutions/EvaluationModel.Testing/EvaluationModel.Testing.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/EvaluationModel/EvaluationModel.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/PatientAllocationTesting/PatientAllocationTesting.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/PreStrepAIntervention/PreStrepAIntervention.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/QuickCompileTestingBed/QuickCompileTestingBed.msd" folder="runtime" />
       <modulePath path="$PROJECT_DIR$/solutions/RepastProvider/RepastProvider.msd" folder="dependencies" />

@@ -34,6 +34,7 @@ import simcore.action.BackgroundBehaviour;
 import simcore.action.Behaviour;
 import simcore.action.BehaviourStep;
 import simcore.action.Consequence;
+import simcore.action.InstantBehaviourStep;
 import simcore.action.PassiveBehaviourStep;
 import simcore.action.basicAction.MoveAction;
 import simcore.action.basicAction.OccupyAction;
@@ -537,29 +538,35 @@ public class Agent {
 	public String agentName() {
 		return myID + "";
 	}
-
-	@Parameter(usageName = "details", displayName = "Staff's patients")
-	public String getDetails() {
-		String myPatientList = "";
-		Iterator<RepastEdge<Agent>> myPatients = ((Network) context.getProjection("CurrentPatientAllocations"))
-				.getEdges(this).iterator();
-		while (myPatients.hasNext()) {
-			myPatientList += myPatients.next().getTarget().agentName() + " | ";
-		}
-
-		return myID + ", my patients: " + myPatientList;
-	}
-
+	
 	@Parameter(usageName = "AllocatedStaff", displayName = "AllocatedStaff")
 	public String getAllocatedStaff() {
 		String myStaffList = "";
-		Iterator<RepastEdge<Agent>> myStaff = ((Network) context.getProjection("CurrentPatientAllocations"))
-				.getEdges(this).iterator();
-		while (myStaff.hasNext()) {
-			myStaffList += myStaff.next().getSource().agentName() + " | ";
+		if(((Network) context.getProjection("CurrentPatientAllocations"))
+				.getEdges(this) != null) {
+			Iterator<RepastEdge<Agent>> myStaff = ((Network) context.getProjection("CurrentPatientAllocations"))
+					.getEdges(this).iterator();
+			while (myStaff.hasNext()) {
+				myStaffList += myStaff.next().getSource().agentName() + " | ";
+			}
 		}
-
-		return myID + ", my staff: " + myStaffList;
+		
+		return "My staff: " + myStaffList;
+	}
+	
+	@Parameter(usageName = "AllocatedPatients", displayName = "AllocatedPatients")
+	public String getAllocatedPatients() {
+		String myPatients = "";
+		if(((Network) context.getProjection("CurrentPatientAllocations"))
+				.getEdges(this) != null) {
+			Iterator<RepastEdge<Agent>> myStaff = ((Network) context.getProjection("CurrentPatientAllocations"))
+					.getEdges(this).iterator();
+			while (myStaff.hasNext()) {
+				myPatients += myStaff.next().getTarget().agentName() + " | ";
+			}
+		}
+		
+		return "My patients: " + myPatients;
 	}
 
 	public void printActivityHistory() {

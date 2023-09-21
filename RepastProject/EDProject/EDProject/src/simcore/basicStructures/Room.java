@@ -13,6 +13,7 @@ import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import EDLanguage.sandbox.CubicleNurse;
 import EDLanguage.sandbox.patient;
 import repast.simphony.context.Context;
 import repast.simphony.engine.schedule.ScheduleParameters;
