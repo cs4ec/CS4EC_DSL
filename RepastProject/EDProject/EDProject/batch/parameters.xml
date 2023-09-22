@@ -44,12 +44,36 @@
   		displayName="PHEThreeCOVIDSpecificity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		displayName="LabPCRCOVIDSensitivity" type="double" defaultValue="12"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		displayName="LabPCRCOVIDSpecificity" type="double" defaultValue="23"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LateralFlowTestCOVIDSensitivity"
+  		displayName="LateralFlowTestCOVIDSensitivity" type="double" defaultValue="70.7"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LateralFlowTestCOVIDSpecificity"
+  		displayName="LateralFlowTestCOVIDSpecificity" type="double" defaultValue="99.1"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeCOVIDSensitivity"
   		displayName="PHEThreeCOVIDSensitivity" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeCOVIDSpecificity"
   		displayName="PHEThreeCOVIDSpecificity" type="double" defaultValue="99"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		displayName="LabPCRCOVIDSensitivity" type="double" defaultValue="12"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		displayName="LabPCRCOVIDSpecificity" type="double" defaultValue="23"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LateralFlowTestCOVIDSensitivity"

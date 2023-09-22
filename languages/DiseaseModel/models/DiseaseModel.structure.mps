@@ -285,13 +285,6 @@
       <property role="TrG5h" value="specificity" />
       <ref role="AX2Wp" to="3751:6tNT_P6sCAW" resolve="EasyFloatNumber" />
     </node>
-    <node concept="1TJgyj" id="351ASBMa07l" role="1TKVEi">
-      <property role="IQ2ns" value="3549288998120194517" />
-      <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="possibleOutcomes" />
-      <property role="20lbJX" value="fLJekj6/_1__n" />
-      <ref role="20lvS9" node="1BosAjNPpsC" resolve="TestOutcome" />
-    </node>
     <node concept="1TJgyj" id="351ASBMa07b" role="1TKVEi">
       <property role="IQ2ns" value="3549288998120194507" />
       <property role="20kJfa" value="disease" />

@@ -31,6 +31,7 @@ public class patient extends Actor {
   public String RapidPCRTestCOVIDResult = "Incomplete";
   public String LabPCRCOVIDResult = "Incomplete";
   public String PHEThreeCOVIDResult = "Incomplete";
+  public String LFTorPCRCOVIDResult = "Incomplete";
   public String cohort = "CohortOne";
   public Behaviour behaviourBuilder;
 

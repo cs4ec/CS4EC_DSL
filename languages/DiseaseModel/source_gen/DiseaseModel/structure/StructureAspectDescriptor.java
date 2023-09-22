@@ -274,7 +274,6 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
     b.property("sensitivity", 0x31419b89f22801d0L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("3549288998120194512").done();
     b.property("specificity", 0x31419b89f22801d2L).type(MetaIdFactory.dataTypeId(0x7dcff301ba01414eL, 0x8574a8f6da31876bL, 0x6773e65d467289bcL)).origin("3549288998120194514").done();
     b.associate("disease", 0x31419b89f22801cbL).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x25745663758ab012L).optional(false).origin("3549288998120194507").done();
-    b.aggregate("possibleOutcomes", 0x31419b89f22801d5L).target(0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x19d87264f3d59728L).optional(false).ordered(true).multiple(true).origin("3549288998120194517").done();
     b.alias("disease test");
     return b.create();
   }

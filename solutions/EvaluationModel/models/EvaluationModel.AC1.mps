@@ -118,6 +118,10 @@
         <child id="324605317397238461" name="patientProperties" index="3ZaQxH" />
       </concept>
     </language>
+    <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
+      <concept id="7425695345928358745" name="org.iets3.core.expr.simpleTypes.structure.TrueLiteral" flags="ng" index="2vmpnb" />
+      <concept id="7425695345928358774" name="org.iets3.core.expr.simpleTypes.structure.FalseLiteral" flags="ng" index="2vmpn$" />
+    </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
       <concept id="1645043697875742234" name="DiseaseModel.structure.ProcessingTimeLine" flags="ng" index="ldb2t">
         <property id="1645043697875742262" name="Time" index="ldb2L" />
@@ -126,7 +130,20 @@
       <concept id="1645043697875742197" name="DiseaseModel.structure.ProcessingTimeTable" flags="ng" index="ldbdM">
         <child id="1645043697875742305" name="ProcessingTimeLines" index="ldb3A" />
       </concept>
+      <concept id="3549288998130825128" name="DiseaseModel.structure.ResultsMappingTable" flags="ng" index="33yUKx">
+        <child id="3549288998130825447" name="lines" index="33yUdI" />
+      </concept>
+      <concept id="3549288998130825210" name="DiseaseModel.structure.ResultsMappingLine" flags="ng" index="33yULN">
+        <reference id="3549288998130825247" name="Disease" index="33yUem" />
+      </concept>
       <concept id="2698877061875544082" name="DiseaseModel.structure.Disease" flags="ng" index="1gZIpL" />
+      <concept id="5070794400417084166" name="DiseaseModel.structure.ConditionalSelection" flags="ng" index="1jImuy">
+        <child id="5070794400417084258" name="lines" index="1jImv6" />
+      </concept>
+      <concept id="5070794400417084185" name="DiseaseModel.structure.ConditionalLine" flags="ng" index="1jImuX">
+        <reference id="5070794400417084237" name="test" index="1jImvD" />
+        <child id="5070794400417084235" name="condition" index="1jImvJ" />
+      </concept>
       <concept id="7828349744265634127" name="DiseaseModel.structure.Test" flags="ng" index="3oQGfi">
         <child id="3549288998120194503" name="Captures" index="33qpDe" />
         <child id="7828349744265634184" name="ProcessingTimeTable" index="3oQGcl" />
@@ -136,8 +153,9 @@
         <reference id="4555810343887637004" name="disease" index="24g7ti" />
         <reference id="188877551433123871" name="test" index="3tE8WY" />
       </concept>
-      <concept id="1862364223830857512" name="DiseaseModel.structure.TestOutcome" flags="ng" index="3E3ulc">
-        <property id="3549288998120194521" name="outcome" index="33qpDg" />
+      <concept id="3866749931154339172" name="DiseaseModel.structure.CompositeTest" flags="ng" index="1$4g7R">
+        <child id="3549288998130844800" name="resultsMappingTable" index="33yLW9" />
+        <child id="3866749931154339177" name="testSelectionStrategy" index="1$4g7U" />
       </concept>
       <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
       <concept id="6755843002512513317" name="DiseaseModel.structure.Susceptible" flags="ng" index="3IO8Df" />
@@ -146,7 +164,6 @@
         <property id="3549288998120194512" name="sensitivity" index="33qpDp" />
         <property id="3549288998120194514" name="specificity" index="33qpDr" />
         <reference id="3549288998120194507" name="disease" index="33qpD2" />
-        <child id="3549288998120194517" name="possibleOutcomes" index="33qpDs" />
       </concept>
     </language>
     <language id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment">
@@ -4420,7 +4437,7 @@
     <node concept="2MhjZa" id="6lG8bJ3T0vU" role="2MhjZp">
       <property role="TrG5h" value="Perform LFT" />
       <property role="3lFixl" value="true" />
-      <ref role="3tPpTl" node="3IhX87gchRq" resolve="LateralFlowTest" />
+      <ref role="3tPpTl" node="1Sy0AbONMqu" resolve="LFTorPCR" />
       <node concept="2_8ZN7" id="6lG8bJ3T0vV" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="CubicleNurse" />
       </node>
@@ -4432,8 +4449,8 @@
         <ref role="2GGxGe" node="6lG8bJ3T0w5" resolve="Check Clinical Suspicion" />
         <node concept="3tEh0H" id="3iCSjG9zyMR" role="1hyIAf">
           <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-          <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlowTest" />
           <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
+          <ref role="3tE8WY" node="1Sy0AbONMqu" resolve="LFTorPCR" />
         </node>
       </node>
       <node concept="1M3RjT" id="3iCSjG9zyM3" role="1M293l">
@@ -4444,8 +4461,8 @@
         <ref role="2GGxGe" node="1jVX9cGn$A0" resolve="Perform PCR" />
         <node concept="3tEh0H" id="1jVX9cGn$Xw" role="1hyIAf">
           <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-          <ref role="3tE8WY" node="3IhX87gchRq" resolve="LateralFlowTest" />
           <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
+          <ref role="3tE8WY" node="1Sy0AbONMqu" resolve="LFTorPCR" />
         </node>
       </node>
       <node concept="UeIYj" id="1Sy0AbO_FEC" role="_yJwB">
@@ -4791,12 +4808,6 @@
       <property role="33qpDp" value="70.7" />
       <property role="33qpDr" value="99.1" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchRM" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchRP" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
     </node>
   </node>
   <node concept="3oQGfi" id="3IhX87gchSh">
@@ -4820,12 +4831,6 @@
       <property role="33qpDp" value="97.9" />
       <property role="33qpDr" value="100" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchSB" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchSE" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
     </node>
   </node>
   <node concept="3oQGfi" id="3IhX87gchTb">
@@ -4873,12 +4878,6 @@
       <property role="33qpDp" value="12" />
       <property role="33qpDr" value="23" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchTq" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchTr" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
     </node>
   </node>
   <node concept="3oQGfi" id="3IhX87gchU6">
@@ -4910,11 +4909,24 @@
       <property role="33qpDp" value="99" />
       <property role="33qpDr" value="99" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchUh" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
+    </node>
+  </node>
+  <node concept="1$4g7R" id="1Sy0AbONMqu">
+    <property role="3GE5qa" value="Tests" />
+    <property role="TrG5h" value="LFTorPCR" />
+    <node concept="1jImuy" id="1Sy0AbONMqE" role="1$4g7U">
+      <node concept="1jImuX" id="1Sy0AbONMqH" role="1jImv6">
+        <ref role="1jImvD" node="3IhX87gchTb" resolve="LabPCR" />
+        <node concept="2vmpnb" id="1Sy0AbONMqN" role="1jImvJ" />
       </node>
-      <node concept="3E3ulc" id="3IhX87gchUi" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
+      <node concept="1jImuX" id="1Sy0AbONMqT" role="1jImv6">
+        <ref role="1jImvD" node="3IhX87gchRq" resolve="LateralFlowTest" />
+        <node concept="2vmpn$" id="1Sy0AbONMr9" role="1jImvJ" />
+      </node>
+    </node>
+    <node concept="33yUKx" id="1Sy0AbONMqw" role="33yLW9">
+      <node concept="33yULN" id="1Sy0AbONMrf" role="33yUdI">
+        <ref role="33yUem" node="5R1$QEMKFjT" resolve="COVID" />
       </node>
     </node>
   </node>

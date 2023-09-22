@@ -85,6 +85,8 @@
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.CheckClinicalSuspicionTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlowTest" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlowTestExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
@@ -256,6 +258,10 @@
     <classNode dependClassName="simcore.basicStructures.Room" />
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EvaluationModel.AC1.LFTorPCR">
+    <classNode dependClassName="EDLanguage.sandbox.LFTorPCR" />
+    <classNode extendsClassName="simcore.basicStructures.Resource" />
   </dependency>
   <dependency className="EvaluationModel.AC1.LIATBooth">
     <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
