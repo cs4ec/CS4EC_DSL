@@ -1,0 +1,4 @@
+"patientgetCOVIDInfectionStatusisAsymptomatic","patientgetCOVIDInfectionStatusisSymptomatic","patientgetCOVIDInfectionStatusisSusceptible","patientgetLIATCOVIDResultisPositive","patientgetLIATCOVIDResultisNegative","patientgetadmittedToisGreenBay","patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisAsymptomatic","patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic","patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSusceptible","patientgetadmittedToisGreenBaygetLIATCOVIDResultisPositive","patientgetadmittedToisGreenBaygetLIATCOVIDResultisNegative","patientgetAliveTime"
+172.0,12.0,10.0,85.0,12.0,84.0,78.0,6.0,0.0,84.0,0.0,8838.556701030924
+271.0,16.0,10.0,73.0,15.0,73.0,67.0,5.0,1.0,73.0,0.0,18536.9696969697
+351.0,24.0,11.0,73.0,8.0,73.0,70.0,3.0,0.0,73.0,0.0,23290.725388601015

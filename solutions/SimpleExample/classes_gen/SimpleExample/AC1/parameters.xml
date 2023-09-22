@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parameters>
+	<parameter name="SecondsPerTick"
+		displayName="Seconds Per Tick" type="int" defaultValue="60"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="randomSeed"
+		displayName="Default Random Seed" type="int" defaultValue="__NULL__"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
+	<parameter name="UsePathFinding"
+		displayName="Use path finding" type="boolean" defaultValue="false"
+		isReadOnly="false"
+		converter="repast.simphony.parameter.StringConverterFactory$BooleanConverter" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		displayName="LIATCOVIDSensitivity" type="double" defaultValue="89"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		displayName="LIATCOVIDSpecificity" type="double" defaultValue="91"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATCOVIDSensitivity"
+  		displayName="LIATCOVIDSensitivity" type="double" defaultValue="89"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LIATCOVIDSpecificity"
+  		displayName="LIATCOVIDSpecificity" type="double" defaultValue="91"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientCohortcohortpatientCohort"
+  		displayName="patientCohortcohortpatientCohort" type="double" defaultValue="100"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientCohortCOVIDInfectionStatusAsymptomatic"
+  		displayName="patientCohortCOVIDInfectionStatusAsymptomatic" type="double" defaultValue="90"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientCohortCOVIDInfectionStatusSymptomatic"
+  		displayName="patientCohortCOVIDInfectionStatusSymptomatic" type="double" defaultValue="7"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="patientCohortCOVIDInfectionStatusSusceptible"
+  		displayName="patientCohortCOVIDInfectionStatusSusceptible" type="double" defaultValue="3"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+</parameters>

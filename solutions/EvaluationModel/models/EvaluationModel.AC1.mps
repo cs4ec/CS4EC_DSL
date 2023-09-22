@@ -41,6 +41,7 @@
         <property id="4544390881339097912" name="requiresPatient" index="3lFixl" />
         <reference id="188877551434373492" name="resource" index="3tPpTl" />
         <child id="5402567240276710649" name="staffTypeReference" index="2_8HaY" />
+        <child id="3787511550143957399" name="orderPatientLocation" index="_yJwB" />
         <child id="4544390881338972165" name="location" index="3lENdC" />
         <child id="6963522544237016585" name="duration" index="1M293l" />
       </concept>
@@ -4412,6 +4413,9 @@
       <node concept="1M3RjT" id="3iCSjG9zyM1" role="1M293l">
         <property role="1M3RjU" value="3" />
       </node>
+      <node concept="UeIYj" id="1Sy0AbO_FEt" role="_yJwB">
+        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0vU" role="2MhjZp">
       <property role="TrG5h" value="Perform LFT" />
@@ -4444,6 +4448,9 @@
           <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
         </node>
       </node>
+      <node concept="UeIYj" id="1Sy0AbO_FEC" role="_yJwB">
+        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+      </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0w5" role="2MhjZp">
       <property role="TrG5h" value="Check Clinical Suspicion" />
@@ -4475,6 +4482,9 @@
           <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
           <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
         </node>
+      </node>
+      <node concept="UeIYj" id="1Sy0AbO_FEG" role="_yJwB">
+        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
       </node>
     </node>
     <node concept="2lDReE" id="6lG8bJ3T0w$" role="2MhjZp">
@@ -4513,6 +4523,9 @@
       </node>
       <node concept="1M3RjT" id="1Sy0AbOlxYb" role="1M293l">
         <property role="1M3RjU" value="1" />
+      </node>
+      <node concept="UeIYj" id="1Sy0AbO_FEE" role="_yJwB">
+        <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0wM" role="2MhjZp">

@@ -94,6 +94,7 @@
     <classNode dependClassName="EDLanguage.sandbox.PerformRapidPCRTrigger_fSignal" />
     <classNode dependClassName="EDLanguage.sandbox.RapidPCRTest" />
     <classNode dependClassName="EDLanguage.sandbox.RapidPCRTestExecutionTimeMap" />
+    <classNode dependClassName="EDLanguage.sandbox.Seat" />
     <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
@@ -484,8 +485,10 @@
     <classNode dependClassName="EDLanguage.sandbox.IspatientbeingadmittedtovulnerableareaTrigger_eSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.PerformLFTTrigger_bSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.Seat" />
     <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
     <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.patient" />
     <classNode dependClassName="java.lang.Double" />
     <classNode dependClassName="java.lang.Math" />
@@ -503,6 +506,7 @@
     <classNode dependClassName="repast.simphony.space.graph.Network" />
     <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
     <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
     <classNode dependClassName="simcore.Signals.Signal" />
     <classNode dependClassName="simcore.action.Behaviour" />
     <classNode dependClassName="simcore.action.BehaviourStep" />

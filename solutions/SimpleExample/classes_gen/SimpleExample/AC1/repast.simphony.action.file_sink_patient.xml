@@ -1,0 +1,22 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>patientDataSink</name>
+  <dataSet>patientDataSet</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
+    <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
+    <string>patientgetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetLIATCOVIDResultisPositive</string>
+    <string>patientgetLIATCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisGreenBay</string>
+    <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisAsymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic</string>
+    <string>patientgetadmittedToisGreenBaygetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisGreenBaygetLIATCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisGreenBaygetLIATCOVIDResultisNegative</string>
+    <string>patientgetAliveTime</string>
+  </sourceIds>
+  <fileName>patientDataOutput.txt</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>
