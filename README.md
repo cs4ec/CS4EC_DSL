@@ -70,7 +70,7 @@ The model parameters and data output formats can be found in [model parameters](
 
 The models used for this case study are split between two projects: One project representing _before_ dual-cassette LFTs were introduced, and one represnting _after_ dual-casssette LFTs were introduced. The models for both projects can be found in: [Before Dual-Cassette Model](solutions/DualCassetteInterventionPreChange) and [after Dual-Cassette Model](solutions/DualCassetteIntervention).
 The generated model Java classes can be found in: [Before Dual-Cassette Java classes](solutions/DualCassetteInterventionPreChange/source_gen/EDLanguage/sandbox) and [after Dual-Cassette Java classes](solutions/DualCassetteIntervention/source_gen/EDLanguage/sandbox).
-The model parameters and data output formats can be found in [Before Dual-Cassette model parameters](solutions/DualCassetteInterventionPreChange/source_gen/DualCassetteIntervention/AC1) and [after Dual-Cassette model paramaters](solutions/DualCassetteIntervention/source_gen/DualCassetteIntervention/AC1).
+The model parameters and data output formats can be found in [Before Dual-Cassette model parameters](solutions/DualCassetteInterventionPreChange/source_gen/DualCassetteInterventionPreChange/AC1) and [after Dual-Cassette model paramaters](solutions/DualCassetteIntervention/source_gen/DualCassetteIntervention/AC1).
 
 
 ## References
