@@ -33,10 +33,6 @@
   		type="constant" constant_type="double" value="99" />
   	<parameter name="PHEThreeCOVIDSpecificity"
   		type="constant" constant_type="double" value="99" />
-  	<parameter name="LabPCRCOVIDSensitivity"
-  		type="constant" constant_type="double" value="12" />
-  	<parameter name="LabPCRCOVIDSpecificity"
-  		type="constant" constant_type="double" value="23" />
   	<parameter name="LateralFlowTestCOVIDSensitivity"
   		type="constant" constant_type="double" value="70.7" />
   	<parameter name="LateralFlowTestCOVIDSpecificity"

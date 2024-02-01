@@ -15,6 +15,10 @@
       <string>EDLanguage.sandbox.StrepABreadcrumbstyle</string>
       </entry>
       <entry>
+      <string>EDLanguage.sandbox.FluBreadcrumb</string>
+      <string>EDLanguage.sandbox.FluBreadcrumbstyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.Bed</string>
       <string>EDLanguage.sandbox.Bedstyle</string>
       </entry>
@@ -106,6 +110,10 @@
       <entry>
       <string>EDLanguage.sandbox.StrepABreadcrumb</string>
       <int>17</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.FluBreadcrumb</string>
+      <int>18</int>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>

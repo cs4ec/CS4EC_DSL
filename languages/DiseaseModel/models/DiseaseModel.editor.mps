@@ -328,14 +328,14 @@
         <property role="3F0ifm" value="-------------------------------" />
       </node>
       <node concept="3F0ifn" id="3mDt9diCdWL" role="3EZMnx">
-        <property role="3F0ifm" value="Test selection strategy:" />
+        <property role="3F0ifm" value="Test selection rules:" />
       </node>
       <node concept="3F1sOY" id="3mDt9diCdWG" role="3EZMnx">
         <ref role="1NtTu8" to="482l:3mDt9dhI7lD" resolve="testSelectionStrategy" />
       </node>
       <node concept="3F0ifn" id="3IhX87gchXD" role="3EZMnx" />
       <node concept="3F0ifn" id="351ASBMMCi3" role="3EZMnx">
-        <property role="3F0ifm" value="Results Table:" />
+        <property role="3F0ifm" value="Captured Diseases" />
       </node>
       <node concept="3F1sOY" id="351ASBMMCig" role="3EZMnx">
         <ref role="1NtTu8" to="482l:351ASBMMCi0" resolve="resultsMappingTable" />

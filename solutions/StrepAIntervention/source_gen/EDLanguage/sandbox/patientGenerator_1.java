@@ -33,7 +33,7 @@ public class patientGenerator_1 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("PatientArrivesTrigger_k");
+    sendSignalTemp.setName("PatientArrivesTrigger_m");
     sendSignalTemp.AddData("patient", a);
     sendSignalTemp.AddActor("TriageNurse");
 
@@ -57,24 +57,10 @@ public class patientGenerator_1 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsStrepAInfectionStatusSusceptible"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientscohortStrepAPatients"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.StrepAInfectionStatus = "Susceptible";
+      agent.cohort = "StrepAPatients";
       return;
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsStrepAInfectionStatusAsymptomatic") + runningTotal) / 100)) {
-      agent.StrepAInfectionStatus = "Asymptomatic";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsStrepAInfectionStatusAsymptomatic");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsStrepAInfectionStatusAsymptomatic");
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsStrepAInfectionStatusSymptomatic") + runningTotal) / 100)) {
-      agent.StrepAInfectionStatus = "Symptomatic";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsStrepAInfectionStatusSymptomatic");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsStrepAInfectionStatusSymptomatic");
     }
 
   }
@@ -83,10 +69,24 @@ public class patientGenerator_1 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsAttendanceRouteEmergencyAttendance"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsStrepAInfectionStatusSusceptible"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.AttendanceRoute = "EmergencyAttendance";
+      agent.StrepAInfectionStatus = "Susceptible";
       return;
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsStrepAInfectionStatusAsymptomatic") + runningTotal) / 100)) {
+      agent.StrepAInfectionStatus = "Asymptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsStrepAInfectionStatusAsymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsStrepAInfectionStatusAsymptomatic");
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsStrepAInfectionStatusSymptomatic") + runningTotal) / 100)) {
+      agent.StrepAInfectionStatus = "Symptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsStrepAInfectionStatusSymptomatic");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsStrepAInfectionStatusSymptomatic");
     }
 
   }
@@ -95,24 +95,24 @@ public class patientGenerator_1 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsSeveritymoderate"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsSeveritymoderate"));
     if (rndDouble < (runningTotal / 100)) {
       agent.Severity = "moderate";
       return;
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsSeveritysevere") + runningTotal) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsSeveritysevere") + runningTotal) / 100)) {
       agent.Severity = "severe";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsSeveritysevere");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsSeveritysevere");
       return;
     } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsSeveritysevere");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsSeveritysevere");
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsSeveritylow") + runningTotal) / 100)) {
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsSeveritylow") + runningTotal) / 100)) {
       agent.Severity = "low";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsSeveritylow");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsSeveritylow");
       return;
     } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("Strep A PatientsSeveritylow");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepAPatientsSeveritylow");
     }
 
   }

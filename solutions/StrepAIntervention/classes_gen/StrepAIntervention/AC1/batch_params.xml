@@ -9,10 +9,18 @@
   		type="constant" constant_type="double" value="50" />
   	<parameter name="BranchProbability_b0"
   		type="constant" constant_type="double" value="50" />
-  	<parameter name="BranchProbability_a2"
-  		type="constant" constant_type="double" value="20" />
-  	<parameter name="BranchProbability_b2"
-  		type="constant" constant_type="double" value="80" />
+  	<parameter name="BranchProbability_a0_0"
+  		type="constant" constant_type="double" value="25" />
+  	<parameter name="BranchProbability_b0_0"
+  		type="constant" constant_type="double" value="75" />
+  	<parameter name="BranchProbability_a01"
+  		type="constant" constant_type="double" value="15" />
+  	<parameter name="BranchProbability_b01"
+  		type="constant" constant_type="double" value="85" />
+  	<parameter name="BranchProbability_a11"
+  		type="constant" constant_type="double" value="15" />
+  	<parameter name="BranchProbability_b11"
+  		type="constant" constant_type="double" value="85" />
   	<parameter name="BranchProbability_a1"
   		type="constant" constant_type="double" value="50" />
   	<parameter name="BranchProbability_b1"
@@ -25,34 +33,40 @@
   		type="constant" constant_type="double" value="80" />
   	<parameter name="BranchProbability_b5_0"
   		type="constant" constant_type="double" value="20" />
-  	<parameter name="BranchProbability_a0_0"
+  	<parameter name="BranchProbability_a0_1"
   		type="constant" constant_type="double" value="80" />
-  	<parameter name="BranchProbability_b0_0"
+  	<parameter name="BranchProbability_b0_1"
   		type="constant" constant_type="double" value="20" />
-  	<parameter name="Typical PatientsSeveritysevere"
+  	<parameter name="BranchProbability_a1_0"
+  		type="constant" constant_type="double" value="60" />
+  	<parameter name="BranchProbability_b1_0"
+  		type="constant" constant_type="double" value="30" />
+  	<parameter name="BranchProbability_c1"
+  		type="constant" constant_type="double" value="10" />
+  	<parameter name="TypicalPatientscohortTypicalPatients"
+  		 type="constant" constant_type="double" value = "100" />
+  	<parameter name="TypicalPatientsSeveritysevere"
   		 type="constant" constant_type="double" value = "15" />
-  	<parameter name="Typical PatientsSeveritymoderate"
+  	<parameter name="TypicalPatientsSeveritymoderate"
   		 type="constant" constant_type="double" value = "85" />
-  	<parameter name="Typical PatientsSeveritylow"
+  	<parameter name="TypicalPatientsSeveritylow"
   		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="Typical PatientsAttendanceRouteElectiveattendance"
-  		 type="constant" constant_type="double" value = "100" />
-  	<parameter name="Typical PatientsImmunocompromisedYes"
+  	<parameter name="TypicalPatientsImmunocompromisedYes"
   		 type="constant" constant_type="double" value = "20" />
-  	<parameter name="Typical PatientsImmunocompromisedNo"
+  	<parameter name="TypicalPatientsImmunocompromisedNo"
   		 type="constant" constant_type="double" value = "80" />
-  	<parameter name="Strep A PatientsStrepAInfectionStatusSusceptible"
+  	<parameter name="StrepAPatientscohortStrepAPatients"
+  		 type="constant" constant_type="double" value = "100" />
+  	<parameter name="StrepAPatientsStrepAInfectionStatusSusceptible"
   		 type="constant" constant_type="double" value = "60" />
-  	<parameter name="Strep A PatientsStrepAInfectionStatusAsymptomatic"
+  	<parameter name="StrepAPatientsStrepAInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "30" />
-  	<parameter name="Strep A PatientsStrepAInfectionStatusSymptomatic"
+  	<parameter name="StrepAPatientsStrepAInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "10" />
-  	<parameter name="Strep A PatientsAttendanceRouteEmergencyAttendance"
-  		 type="constant" constant_type="double" value = "100" />
-  	<parameter name="Strep A PatientsSeveritysevere"
+  	<parameter name="StrepAPatientsSeveritysevere"
   		 type="constant" constant_type="double" value = "20" />
-  	<parameter name="Strep A PatientsSeveritymoderate"
+  	<parameter name="StrepAPatientsSeveritymoderate"
   		 type="constant" constant_type="double" value = "80" />
-  	<parameter name="Strep A PatientsSeveritylow"
+  	<parameter name="StrepAPatientsSeveritylow"
   		 type="constant" constant_type="double" value = "0" />
 </sweep>

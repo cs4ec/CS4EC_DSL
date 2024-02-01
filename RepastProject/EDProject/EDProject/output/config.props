@@ -1,9 +1,9 @@
-model.archive = /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/output/complete_model.jar
+model.archive = /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/complete_model.jar
 batch.params.file = scenario.rs/batch_params.xml
 ssh.key_dir = /Users/k2037451/.ssh
 poll.frequency = 60.0
-model.output = /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/output
+model.output = /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
 
 vm.arguments = -Xmx6G -XX:+IgnoreUnrecognizedVMOptions --add-modules=ALL-SYSTEM --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED -Dfile.encoding=UTF-8
-local.0.instances = 8
+local.0.instances = 2
 local.0.working_directory = /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/

@@ -20,12 +20,28 @@
   		displayName="BranchProbability_b0" type="double" defaultValue="50"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_a2"
-  		displayName="BranchProbability_a2" type="double" defaultValue="20"
+  	<parameter name="BranchProbability_a0_0"
+  		displayName="BranchProbability_a0_0" type="double" defaultValue="25"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b2"
-  		displayName="BranchProbability_b2" type="double" defaultValue="80"
+  	<parameter name="BranchProbability_b0_0"
+  		displayName="BranchProbability_b0_0" type="double" defaultValue="75"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="BranchProbability_a01"
+  		displayName="BranchProbability_a01" type="double" defaultValue="15"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="BranchProbability_b01"
+  		displayName="BranchProbability_b01" type="double" defaultValue="85"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="BranchProbability_a11"
+  		displayName="BranchProbability_a11" type="double" defaultValue="15"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="BranchProbability_b11"
+  		displayName="BranchProbability_b11" type="double" defaultValue="85"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="BranchProbability_a1"
@@ -52,64 +68,76 @@
   		displayName="BranchProbability_b5_0" type="double" defaultValue="20"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_a0_0"
-  		displayName="BranchProbability_a0_0" type="double" defaultValue="80"
+  	<parameter name="BranchProbability_a0_1"
+  		displayName="BranchProbability_a0_1" type="double" defaultValue="80"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="BranchProbability_b0_0"
-  		displayName="BranchProbability_b0_0" type="double" defaultValue="20"
+  	<parameter name="BranchProbability_b0_1"
+  		displayName="BranchProbability_b0_1" type="double" defaultValue="20"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsSeveritysevere"
-  		displayName="Typical PatientsSeveritysevere" type="double" defaultValue="15"
+  	<parameter name="BranchProbability_a1_0"
+  		displayName="BranchProbability_a1_0" type="double" defaultValue="60"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsSeveritymoderate"
-  		displayName="Typical PatientsSeveritymoderate" type="double" defaultValue="85"
+  	<parameter name="BranchProbability_b1_0"
+  		displayName="BranchProbability_b1_0" type="double" defaultValue="30"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsSeveritylow"
-  		displayName="Typical PatientsSeveritylow" type="double" defaultValue="0"
+  	<parameter name="BranchProbability_c1"
+  		displayName="BranchProbability_c1" type="double" defaultValue="10"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsAttendanceRouteElectiveattendance"
-  		displayName="Typical PatientsAttendanceRouteElectiveattendance" type="double" defaultValue="100"
+  	<parameter name="TypicalPatientscohortTypicalPatients"
+  		displayName="TypicalPatientscohortTypicalPatients" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsImmunocompromisedYes"
-  		displayName="Typical PatientsImmunocompromisedYes" type="double" defaultValue="20"
+  	<parameter name="TypicalPatientsSeveritysevere"
+  		displayName="TypicalPatientsSeveritysevere" type="double" defaultValue="15"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Typical PatientsImmunocompromisedNo"
-  		displayName="Typical PatientsImmunocompromisedNo" type="double" defaultValue="80"
+  	<parameter name="TypicalPatientsSeveritymoderate"
+  		displayName="TypicalPatientsSeveritymoderate" type="double" defaultValue="85"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Strep A PatientsStrepAInfectionStatusSusceptible"
-  		displayName="Strep A PatientsStrepAInfectionStatusSusceptible" type="double" defaultValue="60"
+  	<parameter name="TypicalPatientsSeveritylow"
+  		displayName="TypicalPatientsSeveritylow" type="double" defaultValue="0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Strep A PatientsStrepAInfectionStatusAsymptomatic"
-  		displayName="Strep A PatientsStrepAInfectionStatusAsymptomatic" type="double" defaultValue="30"
+  	<parameter name="TypicalPatientsImmunocompromisedYes"
+  		displayName="TypicalPatientsImmunocompromisedYes" type="double" defaultValue="20"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Strep A PatientsStrepAInfectionStatusSymptomatic"
-  		displayName="Strep A PatientsStrepAInfectionStatusSymptomatic" type="double" defaultValue="10"
+  	<parameter name="TypicalPatientsImmunocompromisedNo"
+  		displayName="TypicalPatientsImmunocompromisedNo" type="double" defaultValue="80"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Strep A PatientsAttendanceRouteEmergencyAttendance"
-  		displayName="Strep A PatientsAttendanceRouteEmergencyAttendance" type="double" defaultValue="100"
+  	<parameter name="StrepAPatientscohortStrepAPatients"
+  		displayName="StrepAPatientscohortStrepAPatients" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Strep A PatientsSeveritysevere"
-  		displayName="Strep A PatientsSeveritysevere" type="double" defaultValue="20"
+  	<parameter name="StrepAPatientsStrepAInfectionStatusSusceptible"
+  		displayName="StrepAPatientsStrepAInfectionStatusSusceptible" type="double" defaultValue="60"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Strep A PatientsSeveritymoderate"
-  		displayName="Strep A PatientsSeveritymoderate" type="double" defaultValue="80"
+  	<parameter name="StrepAPatientsStrepAInfectionStatusAsymptomatic"
+  		displayName="StrepAPatientsStrepAInfectionStatusAsymptomatic" type="double" defaultValue="30"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="Strep A PatientsSeveritylow"
-  		displayName="Strep A PatientsSeveritylow" type="double" defaultValue="0"
+  	<parameter name="StrepAPatientsStrepAInfectionStatusSymptomatic"
+  		displayName="StrepAPatientsStrepAInfectionStatusSymptomatic" type="double" defaultValue="10"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="StrepAPatientsSeveritysevere"
+  		displayName="StrepAPatientsSeveritysevere" type="double" defaultValue="20"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="StrepAPatientsSeveritymoderate"
+  		displayName="StrepAPatientsSeveritymoderate" type="double" defaultValue="80"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="StrepAPatientsSeveritylow"
+  		displayName="StrepAPatientsSeveritylow" type="double" defaultValue="0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 </parameters>

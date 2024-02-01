@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?><sweep runs="1">
+	<parameter name="SecondsPerTick"
+		type="constant" constant_type="int" value="1" />
+	<parameter name="randomSeed"
+		type="number" number_type="int" start="1" end="10" step="1" />
+	<parameter name="UsePathFinding"
+		type="constant" constant_type="boolean" value="false" />
+  	<parameter name="LateralFlowTestCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70.7" />
+  	<parameter name="LateralFlowTestCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99.1" />
+  	<parameter name="RapidPCRTestCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="RapidPCRTestCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="12" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="23" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		type="constant" constant_type="double" value="88" />
+  	<parameter name="LabPCRCOVIDSensitivity"
+  		type="constant" constant_type="double" value="12" />
+  	<parameter name="LabPCRCOVIDSpecificity"
+  		type="constant" constant_type="double" value="23" />
+  	<parameter name="LateralFlowTestCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70.7" />
+  	<parameter name="LateralFlowTestCOVIDSpecificity"
+  		type="constant" constant_type="double" value="99.1" />
+  	<parameter name="PHEThreeCOVIDSensitivity"
+  		type="constant" constant_type="double" value="70" />
+  	<parameter name="PHEThreeCOVIDSpecificity"
+  		type="constant" constant_type="double" value="88" />
+  	<parameter name="RapidPCRTestCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="RapidPCRTestCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="RapidPCRTestCOVIDSensitivity"
+  		type="constant" constant_type="double" value="97.9" />
+  	<parameter name="RapidPCRTestCOVIDSpecificity"
+  		type="constant" constant_type="double" value="100" />
+  	<parameter name="InfectionSpreadChance:COVIDSymptomatic-2_a0"
+  		type="constant" constant_type="double" value="3.4E-4" />
+  	<parameter name="EmergencycohortEmergency"
+  		 type="constant" constant_type="double" value = "100" />
+  	<parameter name="EmergencyImmunocompromisedYes"
+  		 type="constant" constant_type="double" value = "5" />
+  	<parameter name="EmergencyImmunocompromisedNo"
+  		 type="constant" constant_type="double" value = "95" />
+  	<parameter name="EmergencySeveritysevere"
+  		 type="constant" constant_type="double" value = "10" />
+  	<parameter name="EmergencySeveritymoderate"
+  		 type="constant" constant_type="double" value = "30" />
+  	<parameter name="EmergencySeveritylow"
+  		 type="constant" constant_type="double" value = "60" />
+  	<parameter name="EmergencyCOVIDInfectionStatusSusceptible"
+  		 type="constant" constant_type="double" value = "50" />
+  	<parameter name="EmergencyCOVIDInfectionStatusAsymptomatic"
+  		 type="constant" constant_type="double" value = "10" />
+  	<parameter name="EmergencyCOVIDInfectionStatusSymptomatic"
+  		 type="constant" constant_type="double" value = "40" />
+</sweep>

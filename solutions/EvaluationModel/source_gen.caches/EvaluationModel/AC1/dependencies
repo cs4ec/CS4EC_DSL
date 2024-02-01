@@ -85,8 +85,6 @@
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.CheckClinicalSuspicionTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
-    <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlowTest" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlowTestExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />

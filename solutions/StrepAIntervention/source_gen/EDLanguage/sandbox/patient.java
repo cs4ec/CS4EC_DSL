@@ -25,9 +25,9 @@ public class patient extends Actor {
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
   public String Severity = "NotConfigured";
-  public String AttendanceRoute = "NotConfigured";
   public String Immunocompromised = "NotConfigured";
   public String StrepAInfectionStatus = "NotConfigured";
+  public String cohort = "CohortOne";
   public Behaviour behaviourBuilder;
 
   public patient(ContinuousSpace<Object> space, Grid<Object> grid, Context<Object> context) {
@@ -143,12 +143,6 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getAttendanceRouteisElectiveattendance() {
-    if (this.AttendanceRoute == "Electiveattendance") {
-      return 1;
-    }
-    return 0;
-  }
   public int getImmunocompromisedisYes() {
     if (this.Immunocompromised == "Yes") {
       return 1;
@@ -199,12 +193,6 @@ public class patient extends Actor {
   }
   public int getadmittedToisGreenBaygetSeverityislow() {
     if (this.admittedTo == "GreenBay" && this.Severity == "low") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetAttendanceRouteisElectiveattendance() {
-    if (this.admittedTo == "GreenBay" && this.AttendanceRoute == "Electiveattendance") {
       return 1;
     }
     return 0;

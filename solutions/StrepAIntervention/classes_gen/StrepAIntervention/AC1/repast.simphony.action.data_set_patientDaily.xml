@@ -43,15 +43,6 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetAttendanceRouteisElectiveattendance</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetAttendanceRouteisElectiveattendance</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getAttendanceRouteisElectiveattendance</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
         <string>patientgetImmunocompromisedisYes</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
           <id>patientgetImmunocompromisedisYes</id>
@@ -130,15 +121,6 @@
           <id>patientgetadmittedToisGreenBaygetSeverityislow</id>
           <className>EDLanguage.sandbox.patient</className>
           <methodName>getadmittedToisGreenBaygetSeverityislow</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetAttendanceRouteisElectiveattendance</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetAttendanceRouteisElectiveattendance</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetAttendanceRouteisElectiveattendance</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>

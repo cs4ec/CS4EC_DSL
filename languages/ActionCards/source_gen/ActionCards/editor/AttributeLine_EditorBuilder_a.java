@@ -204,7 +204,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       }
     }
     protected String getNoTargetText() {
-      return "<no possibleValue>";
+      return "Enter attribute value";
     }
   }
   public Grid createTableCell_g7hbm6_b0a(final EditorContext editorContext, final SNode node) {
@@ -236,7 +236,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
       final SProperty property = PROPS.prevalence$QY$u;
       getCellFactory().setPropertyInfo(new SPropertyInfo(myNode, property));
       EditorCell_Property editorCell = EditorCell_Property.create(getEditorContext(), new SPropertyAccessor(myNode, property, false, false), myNode);
-      editorCell.setDefaultText("<no prevalence>");
+      editorCell.setDefaultText("Enter % prevalence");
       editorCell.setCellId("property_prevalence");
       editorCell.setSubstituteInfo(new SPropertySubstituteInfo(editorCell, property));
       setCellContext(editorCell);

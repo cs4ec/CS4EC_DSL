@@ -246,7 +246,7 @@ public class MajorsDoctor extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(MajorsDoctor.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(MajorsDoctor.this.curInside).andThen(new MoveToOrder().WithDestination(MajorsDoctor.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
   public class StayForConditionAction_c0a extends BehaviourStep {
@@ -321,8 +321,8 @@ public class MajorsDoctor extends Actor {
 
     public void execute() {
       double rndDouble = RandomHelper.nextDouble();
-
-      if (rndDouble < ((50) / 100)) {
+      double d = Double.valueOf(50);
+      if (rndDouble < (d / 100)) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0a4a0(behaviour));

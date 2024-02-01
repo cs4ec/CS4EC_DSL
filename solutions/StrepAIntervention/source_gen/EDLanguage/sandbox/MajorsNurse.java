@@ -294,8 +294,8 @@ public class MajorsNurse extends Actor {
 
     public void execute() {
       double rndDouble = RandomHelper.nextDouble();
-
-      if (rndDouble < ((50) / 100)) {
+      double d = Double.valueOf(50);
+      if (rndDouble < (d / 100)) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0a2a0(behaviour));
@@ -309,11 +309,11 @@ public class MajorsNurse extends Actor {
 
     }
   }
-  public class MoveAction_a0b_0 extends BehaviourStep {
+  public class MoveAction_a0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_0(Behaviour behaviour) {
+    public MoveAction_a0b_1(Behaviour behaviour) {
       target = MajorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -351,22 +351,22 @@ public class MajorsNurse extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0b_0 extends BehaviourStep {
+  public class OrderAction_b0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0b_0(Behaviour behaviour) {
+    public OrderAction_b0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(MajorsNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(MajorsNurse.this.curInside).andThen(new MoveToOrder().WithDestination(MajorsNurse.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
-  public class StayForConditionAction_c0b_0 extends BehaviourStep {
+  public class StayForConditionAction_c0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0b_0(Behaviour behaviour) {
+    public StayForConditionAction_c0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -378,10 +378,10 @@ public class MajorsNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0b extends BehaviourStep {
+  public class StayAction_d0b_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0b(Behaviour behaviour) {
+    public StayAction_d0b_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -462,7 +462,7 @@ public class MajorsNurse extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(MajorsNurse.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(MajorsNurse.this.curInside).andThen(new MoveToOrder().WithDestination(MajorsNurse.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
   public class StayForConditionAction_c0c_0 extends BehaviourStep {
@@ -480,10 +480,10 @@ public class MajorsNurse extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0c extends BehaviourStep {
+  public class StayAction_d0c_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0c(Behaviour behaviour) {
+    public StayAction_d0c_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -537,8 +537,8 @@ public class MajorsNurse extends Actor {
 
     public void execute() {
       double rndDouble = RandomHelper.nextDouble();
-
-      if (rndDouble < ((90) / 100)) {
+      double d = Double.valueOf(90);
+      if (rndDouble < (d / 100)) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
         plstSteps.add(new SendSignalAction_a0a4a2(behaviour));
@@ -610,10 +610,10 @@ public class MajorsNurse extends Actor {
   public void InitObsReview_e(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0b_0(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0b_0(behaviourBuilder));
-    plstSteps.add(new StayAction_d0b(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0b_1(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0b_1(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0b_1(behaviourBuilder));
+    plstSteps.add(new StayAction_d0b_0(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0b(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -626,7 +626,7 @@ public class MajorsNurse extends Actor {
     plstSteps.add(new MoveAction_a0c_1(behaviourBuilder));
     plstSteps.add(new OrderAction_b0c_0(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0c_0(behaviourBuilder));
-    plstSteps.add(new StayAction_d0c(behaviourBuilder));
+    plstSteps.add(new StayAction_d0c_0(behaviourBuilder));
     plstSteps.add(new ProbabilityDistribution_e0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

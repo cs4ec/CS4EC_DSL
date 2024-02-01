@@ -251,7 +251,7 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(SeniorDoc.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
   public class StayForConditionAction_c0a_1 extends BehaviourStep {
@@ -302,11 +302,11 @@ public class SeniorDoc extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_a0b_1 extends BehaviourStep {
+  public class MoveAction_a0b_2 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_1(Behaviour behaviour) {
+    public MoveAction_a0b_2(Behaviour behaviour) {
       target = MajorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -344,22 +344,22 @@ public class SeniorDoc extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0b_1 extends BehaviourStep {
+  public class OrderAction_b0b_2 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0b_1(Behaviour behaviour) {
+    public OrderAction_b0b_2(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(SeniorDoc.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
-  public class StayForConditionAction_c0b_1 extends BehaviourStep {
+  public class StayForConditionAction_c0b_2 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0b_1(Behaviour behaviour) {
+    public StayForConditionAction_c0b_2(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -371,10 +371,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0b_0 extends BehaviourStep {
+  public class StayAction_d0b_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0b_0(Behaviour behaviour) {
+    public StayAction_d0b_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -455,7 +455,7 @@ public class SeniorDoc extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(SeniorDoc.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
   public class StayForConditionAction_c0c_1 extends BehaviourStep {
@@ -473,10 +473,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0c_0 extends BehaviourStep {
+  public class StayAction_d0c_1 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0c_0(Behaviour behaviour) {
+    public StayAction_d0c_1(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -506,11 +506,11 @@ public class SeniorDoc extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_a0d_0 extends BehaviourStep {
+  public class MoveAction_a0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0d_0(Behaviour behaviour) {
+    public MoveAction_a0d(Behaviour behaviour) {
       target = MinorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -548,22 +548,22 @@ public class SeniorDoc extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0d_0 extends BehaviourStep {
+  public class OrderAction_b0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0d_0(Behaviour behaviour) {
+    public OrderAction_b0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(SeniorDoc.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
-  public class StayForConditionAction_c0d_0 extends BehaviourStep {
+  public class StayForConditionAction_c0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0d_0(Behaviour behaviour) {
+    public StayForConditionAction_c0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -575,10 +575,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0d_0 extends BehaviourStep {
+  public class StayAction_d0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0d_0(Behaviour behaviour) {
+    public StayAction_d0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -592,9 +592,9 @@ public class SeniorDoc extends Actor {
 
     }
   }
-  public class OrderAction_e0d_0 extends BehaviourStep {
+  public class OrderAction_e0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_e0d_0(Behaviour behaviour) {
+    public OrderAction_e0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -604,9 +604,9 @@ public class SeniorDoc extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(MinorsWaitingRoom.getInstance()));
     }
   }
-  public class OrderAction_f0d_0 extends BehaviourStep {
+  public class OrderAction_f0d extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_f0d_0(Behaviour behaviour) {
+    public OrderAction_f0d(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -632,11 +632,11 @@ public class SeniorDoc extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class MoveAction_a0e_0 extends BehaviourStep {
+  public class MoveAction_a0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0e_0(Behaviour behaviour) {
+    public MoveAction_a0e(Behaviour behaviour) {
       target = MinorsBay.getInstance();
       this.behaviour = behaviour;
     }
@@ -674,22 +674,22 @@ public class SeniorDoc extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0e_0 extends BehaviourStep {
+  public class OrderAction_b0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0e_0(Behaviour behaviour) {
+    public OrderAction_b0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(SeniorDoc.this.curInside).andThen(new MoveToOrder().WithDestination(SeniorDoc.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
-  public class StayForConditionAction_c0e_0 extends BehaviourStep {
+  public class StayForConditionAction_c0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0e_0(Behaviour behaviour) {
+    public StayForConditionAction_c0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -701,10 +701,10 @@ public class SeniorDoc extends Actor {
       return curInside != null && curInside == ((Actor) behaviour.getSignalTrigger().GetData("patient")).getRoom();
     }
   }
-  public class StayAction_d0e_0 extends BehaviourStep {
+  public class StayAction_d0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ int timeExecuted = 0;
-    public StayAction_d0e_0(Behaviour behaviour) {
+    public StayAction_d0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -718,9 +718,9 @@ public class SeniorDoc extends Actor {
 
     }
   }
-  public class OrderAction_e0e_0 extends BehaviourStep {
+  public class OrderAction_e0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_e0e_0(Behaviour behaviour) {
+    public OrderAction_e0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -730,9 +730,9 @@ public class SeniorDoc extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(MinorsWaitingRoom.getInstance()));
     }
   }
-  public class OrderAction_f0e_0 extends BehaviourStep {
+  public class OrderAction_f0e extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_f0e_0(Behaviour behaviour) {
+    public OrderAction_f0e(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -818,10 +818,10 @@ public class SeniorDoc extends Actor {
   public void InitAdditionalAssessment_g(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_1(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0b_1(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0b_1(behaviourBuilder));
-    plstSteps.add(new StayAction_d0b_0(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0b_2(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0b_2(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0b_2(behaviourBuilder));
+    plstSteps.add(new StayAction_d0b_1(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0b_0(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -834,7 +834,7 @@ public class SeniorDoc extends Actor {
     plstSteps.add(new MoveAction_a0c_2(behaviourBuilder));
     plstSteps.add(new OrderAction_b0c_1(behaviourBuilder));
     plstSteps.add(new StayForConditionAction_c0c_1(behaviourBuilder));
-    plstSteps.add(new StayAction_d0c_0(behaviourBuilder));
+    plstSteps.add(new StayAction_d0c_1(behaviourBuilder));
     plstSteps.add(new SendSignalAction_e0c(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -844,12 +844,12 @@ public class SeniorDoc extends Actor {
   public void InitAdditionalAssessment_c_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0d_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0d_0(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0d_0(behaviourBuilder));
-    plstSteps.add(new StayAction_d0d_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_e0d_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_f0d_0(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0d(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0d(behaviourBuilder));
+    plstSteps.add(new StayAction_d0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_e0d(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0d(behaviourBuilder));
     plstSteps.add(new SendSignalAction_g0d(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
@@ -859,12 +859,12 @@ public class SeniorDoc extends Actor {
   public void InitSeniorReview_g(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0e_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0e_0(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0e_0(behaviourBuilder));
-    plstSteps.add(new StayAction_d0e_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_e0e_0(behaviourBuilder));
-    plstSteps.add(new OrderAction_f0e_0(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0e(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0e(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0e(behaviourBuilder));
+    plstSteps.add(new StayAction_d0e(behaviourBuilder));
+    plstSteps.add(new OrderAction_e0e(behaviourBuilder));
+    plstSteps.add(new OrderAction_f0e(behaviourBuilder));
     plstSteps.add(new SendSignalAction_g0e(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 

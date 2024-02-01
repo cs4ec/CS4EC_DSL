@@ -63,7 +63,7 @@ public class PatientPropertyConditional_Constraints extends BaseConstraintsDescr
     return true;
   }
   private static boolean staticCanBeAParent(final SNode node, SNode childNode, final SAbstractConcept childConcept, SContainmentLink link) {
-    if (ListSequence.fromList(SLinkOperations.getChildren(Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.collectMany(SModelOperations.roots(SNodeOperations.getModel(node), CONCEPTS.PatientProfile$he), LINKS.attributes$eds7), LINKS.patientProperty$d18a)).findFirst(new IWhereFilter<SNode>() {
+    if (ListSequence.fromList(SLinkOperations.getChildren(Sequence.fromIterable(SLinkOperations.collect(SLinkOperations.getChildren(ListSequence.fromList(SModelOperations.roots(SNodeOperations.getModel(node), CONCEPTS.PatientProfile$he)).first(), LINKS.attributes$eds7), LINKS.patientProperty$d18a)).findFirst(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return Objects.equals(SNodeOperations.getConcept(it), SNodeOperations.getConcept(SLinkOperations.getTarget(node, LINKS.patientProperty$FJ4E)));
       }

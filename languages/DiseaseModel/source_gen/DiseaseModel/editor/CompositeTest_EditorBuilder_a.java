@@ -99,7 +99,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_1() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Test selection strategy:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Test selection rules:");
     editorCell.setCellId("Constant_pvsy2h_c0");
     editorCell.setDefaultText("");
     return editorCell;
@@ -166,7 +166,7 @@ import org.jetbrains.mps.openapi.language.SConcept;
     return editorCell;
   }
   private EditorCell createConstant_3() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Results Table:");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Captured Diseases");
     editorCell.setCellId("Constant_pvsy2h_f0");
     editorCell.setDefaultText("");
     return editorCell;

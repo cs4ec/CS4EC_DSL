@@ -24,14 +24,9 @@ public class patient extends Actor {
 
   public String placeholder = "PlaceholderAttribute";
   public String admittedTo = "NA";
-  public String Immunocompromised = "NotConfigured";
   public String Severity = "NotConfigured";
-  public String COVIDInfectionStatus = "NotConfigured";
-  public String LateralFlowTestCOVIDResult = "Incomplete";
-  public String RapidPCRTestCOVIDResult = "Incomplete";
-  public String LabPCRCOVIDResult = "Incomplete";
-  public String PHEThreeCOVIDResult = "Incomplete";
-  public String LFTorPCRCOVIDResult = "Incomplete";
+  public String Immunocompromised = "NotConfigured";
+  public String StrepAInfectionStatus = "NotConfigured";
   public String cohort = "CohortOne";
   public Behaviour behaviourBuilder;
 
@@ -130,18 +125,6 @@ public class patient extends Actor {
   }
 
 
-  public int getImmunocompromisedisYes() {
-    if (this.Immunocompromised == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getImmunocompromisedisNo() {
-    if (this.Immunocompromised == "No") {
-      return 1;
-    }
-    return 0;
-  }
   public int getSeverityissevere() {
     if (this.Severity == "severe") {
       return 1;
@@ -160,122 +143,38 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getCOVIDInfectionStatusisSusceptible() {
-    if (this.COVIDInfectionStatus == "Susceptible") {
+  public int getImmunocompromisedisYes() {
+    if (this.Immunocompromised == "Yes") {
       return 1;
     }
     return 0;
   }
-  public int getCOVIDInfectionStatusisAsymptomatic() {
-    if (this.COVIDInfectionStatus == "Asymptomatic") {
+  public int getImmunocompromisedisNo() {
+    if (this.Immunocompromised == "No") {
       return 1;
     }
     return 0;
   }
-  public int getCOVIDInfectionStatusisSymptomatic() {
-    if (this.COVIDInfectionStatus == "Symptomatic") {
+  public int getStrepAInfectionStatusisSusceptible() {
+    if (this.StrepAInfectionStatus == "Susceptible") {
       return 1;
     }
     return 0;
   }
-  public int getLateralFlowTestCOVIDResultisPositive() {
-    if (this.LateralFlowTestCOVIDResult == "Positive") {
+  public int getStrepAInfectionStatusisAsymptomatic() {
+    if (this.StrepAInfectionStatus == "Asymptomatic") {
       return 1;
     }
     return 0;
   }
-  public int getLateralFlowTestCOVIDResultisNegative() {
-    if (this.LateralFlowTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getRapidPCRTestCOVIDResultisPositive() {
-    if (this.RapidPCRTestCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getRapidPCRTestCOVIDResultisNegative() {
-    if (this.RapidPCRTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRCOVIDResultisPositive() {
-    if (this.LabPCRCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getLabPCRCOVIDResultisNegative() {
-    if (this.LabPCRCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getPHEThreeCOVIDResultisPositive() {
-    if (this.PHEThreeCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getPHEThreeCOVIDResultisNegative() {
-    if (this.PHEThreeCOVIDResult == "Negative") {
+  public int getStrepAInfectionStatusisSymptomatic() {
+    if (this.StrepAInfectionStatus == "Symptomatic") {
       return 1;
     }
     return 0;
   }
   public int getadmittedToisGreenBay() {
     if (this.admittedTo == "GreenBay") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoom() {
-    if (this.admittedTo == "SideRoom") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohort() {
-    if (this.admittedTo == "COVIDPositiveCohort") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetImmunocompromisedisYes() {
-    if (this.admittedTo == "GreenBay" && this.Immunocompromised == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetImmunocompromisedisNo() {
-    if (this.admittedTo == "GreenBay" && this.Immunocompromised == "No") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetImmunocompromisedisYes() {
-    if (this.admittedTo == "SideRoom" && this.Immunocompromised == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetImmunocompromisedisNo() {
-    if (this.admittedTo == "SideRoom" && this.Immunocompromised == "No") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetImmunocompromisedisYes() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.Immunocompromised == "Yes") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetImmunocompromisedisNo() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.Immunocompromised == "No") {
       return 1;
     }
     return 0;
@@ -298,236 +197,32 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetSeverityissevere() {
-    if (this.admittedTo == "SideRoom" && this.Severity == "severe") {
+  public int getadmittedToisGreenBaygetImmunocompromisedisYes() {
+    if (this.admittedTo == "GreenBay" && this.Immunocompromised == "Yes") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetSeverityismoderate() {
-    if (this.admittedTo == "SideRoom" && this.Severity == "moderate") {
+  public int getadmittedToisGreenBaygetImmunocompromisedisNo() {
+    if (this.admittedTo == "GreenBay" && this.Immunocompromised == "No") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisSideRoomgetSeverityislow() {
-    if (this.admittedTo == "SideRoom" && this.Severity == "low") {
+  public int getadmittedToisGreenBaygetStrepAInfectionStatusisSusceptible() {
+    if (this.admittedTo == "GreenBay" && this.StrepAInfectionStatus == "Susceptible") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohortgetSeverityissevere() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.Severity == "severe") {
+  public int getadmittedToisGreenBaygetStrepAInfectionStatusisAsymptomatic() {
+    if (this.admittedTo == "GreenBay" && this.StrepAInfectionStatus == "Asymptomatic") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisCOVIDPositiveCohortgetSeverityismoderate() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.Severity == "moderate") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetSeverityislow() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.Severity == "low") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisSusceptible() {
-    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisAsymptomatic() {
-    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic() {
-    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Symptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetCOVIDInfectionStatusisSusceptible() {
-    if (this.admittedTo == "SideRoom" && this.COVIDInfectionStatus == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetCOVIDInfectionStatusisAsymptomatic() {
-    if (this.admittedTo == "SideRoom" && this.COVIDInfectionStatus == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetCOVIDInfectionStatusisSymptomatic() {
-    if (this.admittedTo == "SideRoom" && this.COVIDInfectionStatus == "Symptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSusceptible() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.COVIDInfectionStatus == "Susceptible") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisAsymptomatic() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.COVIDInfectionStatus == "Asymptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetCOVIDInfectionStatusisSymptomatic() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.COVIDInfectionStatus == "Symptomatic") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetLateralFlowTestCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowTestCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetLateralFlowTestCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetLateralFlowTestCOVIDResultisPositive() {
-    if (this.admittedTo == "SideRoom" && this.LateralFlowTestCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetLateralFlowTestCOVIDResultisNegative() {
-    if (this.admittedTo == "SideRoom" && this.LateralFlowTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetLateralFlowTestCOVIDResultisPositive() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LateralFlowTestCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetLateralFlowTestCOVIDResultisNegative() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LateralFlowTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetRapidPCRTestCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.RapidPCRTestCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetRapidPCRTestCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.RapidPCRTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetRapidPCRTestCOVIDResultisPositive() {
-    if (this.admittedTo == "SideRoom" && this.RapidPCRTestCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetRapidPCRTestCOVIDResultisNegative() {
-    if (this.admittedTo == "SideRoom" && this.RapidPCRTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetRapidPCRTestCOVIDResultisPositive() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.RapidPCRTestCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetRapidPCRTestCOVIDResultisNegative() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.RapidPCRTestCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetLabPCRCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.LabPCRCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetLabPCRCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.LabPCRCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetLabPCRCOVIDResultisPositive() {
-    if (this.admittedTo == "SideRoom" && this.LabPCRCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetLabPCRCOVIDResultisNegative() {
-    if (this.admittedTo == "SideRoom" && this.LabPCRCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetLabPCRCOVIDResultisPositive() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LabPCRCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetLabPCRCOVIDResultisNegative() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.LabPCRCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetPHEThreeCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.PHEThreeCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisGreenBaygetPHEThreeCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.PHEThreeCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetPHEThreeCOVIDResultisPositive() {
-    if (this.admittedTo == "SideRoom" && this.PHEThreeCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisSideRoomgetPHEThreeCOVIDResultisNegative() {
-    if (this.admittedTo == "SideRoom" && this.PHEThreeCOVIDResult == "Negative") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetPHEThreeCOVIDResultisPositive() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.PHEThreeCOVIDResult == "Positive") {
-      return 1;
-    }
-    return 0;
-  }
-  public int getadmittedToisCOVIDPositiveCohortgetPHEThreeCOVIDResultisNegative() {
-    if (this.admittedTo == "COVIDPositiveCohort" && this.PHEThreeCOVIDResult == "Negative") {
+  public int getadmittedToisGreenBaygetStrepAInfectionStatusisSymptomatic() {
+    if (this.admittedTo == "GreenBay" && this.StrepAInfectionStatus == "Symptomatic") {
       return 1;
     }
     return 0;

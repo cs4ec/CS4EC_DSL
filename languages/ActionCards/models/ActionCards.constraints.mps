@@ -114,6 +114,7 @@
         <child id="1204796294226" name="closure" index="23t8la" />
       </concept>
       <concept id="1203518072036" name="jetbrains.mps.baseLanguage.collections.structure.SmartClosureParameterDeclaration" flags="ig" index="Rh6nW" />
+      <concept id="1165525191778" name="jetbrains.mps.baseLanguage.collections.structure.GetFirstOperation" flags="nn" index="1uHKPH" />
       <concept id="1225727723840" name="jetbrains.mps.baseLanguage.collections.structure.FindFirstOperation" flags="nn" index="1z4cxt" />
       <concept id="1202120902084" name="jetbrains.mps.baseLanguage.collections.structure.WhereOperation" flags="nn" index="3zZkjj" />
       <concept id="1176501494711" name="jetbrains.mps.baseLanguage.collections.structure.IsNotEmptyOperation" flags="nn" index="3GX2aA" />
@@ -197,19 +198,22 @@
                 <node concept="2OqwBi" id="58IjuLXHRSE" role="2Oq$k0">
                   <node concept="2OqwBi" id="58IjuLXHRSF" role="2Oq$k0">
                     <node concept="2OqwBi" id="58IjuLXHRSG" role="2Oq$k0">
-                      <node concept="2OqwBi" id="58IjuLXHRSH" role="2Oq$k0">
-                        <node concept="2OqwBi" id="58IjuLXHRSI" role="2Oq$k0">
-                          <node concept="EsrRn" id="58IjuLXHRSJ" role="2Oq$k0" />
-                          <node concept="I4A8Y" id="58IjuLXHRSK" role="2OqNvi" />
-                        </node>
-                        <node concept="2RRcyG" id="58IjuLXHRSL" role="2OqNvi">
-                          <node concept="chp4Y" id="58IjuLXHRSM" role="3MHsoP">
-                            <ref role="cht4Q" to="s2d1:EFW1mY_7c6" resolve="PatientProfile" />
+                      <node concept="2OqwBi" id="6Amt2PFkyPa" role="2Oq$k0">
+                        <node concept="2OqwBi" id="58IjuLXHRSH" role="2Oq$k0">
+                          <node concept="2OqwBi" id="58IjuLXHRSI" role="2Oq$k0">
+                            <node concept="EsrRn" id="58IjuLXHRSJ" role="2Oq$k0" />
+                            <node concept="I4A8Y" id="58IjuLXHRSK" role="2OqNvi" />
+                          </node>
+                          <node concept="2RRcyG" id="58IjuLXHRSL" role="2OqNvi">
+                            <node concept="chp4Y" id="58IjuLXHRSM" role="3MHsoP">
+                              <ref role="cht4Q" to="s2d1:EFW1mY_7c6" resolve="PatientProfile" />
+                            </node>
                           </node>
                         </node>
+                        <node concept="1uHKPH" id="6Amt2PFk_TG" role="2OqNvi" />
                       </node>
-                      <node concept="13MTOL" id="58IjuLXHRSN" role="2OqNvi">
-                        <ref role="13MTZf" to="s2d1:EFW1mY_h9p" resolve="attributes" />
+                      <node concept="3Tsc0h" id="6Amt2PFlmHe" role="2OqNvi">
+                        <ref role="3TtcxE" to="s2d1:EFW1mY_h9p" resolve="attributes" />
                       </node>
                     </node>
                     <node concept="13MTOL" id="58IjuLXHRSO" role="2OqNvi">

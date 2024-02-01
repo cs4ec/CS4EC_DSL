@@ -62,8 +62,8 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
 
   @Override
   public void reportDependencies(jetbrains.mps.smodel.runtime.StructureAspectDescriptor.Dependencies deps) {
-    deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
     deps.extendedLanguage(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, "ActionCards");
+    deps.extendedLanguage(0xceab519525ea4f22L, 0x9b92103b95ca8c0cL, "jetbrains.mps.lang.core");
     deps.extendedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
     deps.extendedLanguage(0x1a0150acdda54129L, 0x824e01dce96fdea4L, "BuiltEnvironment");
     deps.aggregatedLanguage(0xcfaa4966b7d54b69L, 0xb66a309a6e1a7290L, "org.iets3.core.expr.base");
@@ -231,6 +231,7 @@ public class StructureAspectDescriptor extends BaseStructureAspectDescriptor {
   private static ConceptDescriptor createDescriptorForDiagnosticCondition() {
     ConceptDescriptorBuilder2 b = new ConceptDescriptorBuilder2("DiseaseModel", "DiagnosticCondition", 0xbb69d08796cc48caL, 0xaeb6c2cb27e532b0L, 0x29f0721df36170cL);
     b.class_(false, false, false);
+    b.super_("ActionCards.structure.BranchConditional", 0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x18668ef26fa67c60L);
     b.parent(0xb3cac82cd02446bcL, 0xb485624ad80c3cc2L, 0x74711ce3321800daL);
     b.origin("r:05ae8c50-350e-4329-955e-32a7f7194003(DiseaseModel.structure)/188877551433029388");
     b.version(2);

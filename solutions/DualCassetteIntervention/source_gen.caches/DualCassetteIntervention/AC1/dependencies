@@ -10,27 +10,7 @@
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="DualCassetteIntervention.AC1.AdmittoGreenBayTrigger_e_0Signal">
-    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="DualCassetteIntervention.AC1.AdmittoVulnerableAreaTrigger_hSignal">
-    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.AdmittoVulnerableAreaTrigger_h_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -101,16 +81,6 @@
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.CheckClinicalSusipicionTrigger_cSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.CheckClinicalSusipicionTrigger_c_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -123,49 +93,30 @@
   <dependency className="DualCassetteIntervention.AC1.CheckSymptomaticTrigger_bSignal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="DualCassetteIntervention.AC1.CheckSymptomaticTrigger_b_0Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.CheckSymptomaticTrigger_cSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.CheckSymptomaticTrigger_c_0Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
   <dependency className="DualCassetteIntervention.AC1.CubicleNurse">
     <classNode dependClassName="EDLanguage.sandbox.AdmittoGreenBayTrigger_eSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmittoGreenBayTrigger_e_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.AdmittoVulnerableAreaTrigger_hSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.AdmittoVulnerableAreaTrigger_h_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
     <classNode dependClassName="EDLanguage.sandbox.COVIDCohortTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveTrigger_hSignal" />
     <classNode dependClassName="EDLanguage.sandbox.Cepheid" />
     <classNode dependClassName="EDLanguage.sandbox.CepheidExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.CheckClinicalSusipicionTrigger_cSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.CheckClinicalSusipicionTrigger_c_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_bSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.CheckSymptomaticTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
     <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_iSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_i_0Signal" />
     <classNode dependClassName="EDLanguage.sandbox.DualCassetteLateralFlowTest" />
     <classNode dependClassName="EDLanguage.sandbox.DualCassetteLateralFlowTestExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.FluCohortTrigger_cSignal" />
     <classNode dependClassName="EDLanguage.sandbox.FluPositiveTrigger_iSignal" />
     <classNode dependClassName="EDLanguage.sandbox.GreenCohortTrigger_dSignal" />
     <classNode dependClassName="EDLanguage.sandbox.IspatientbeingadmittedtovulnerableareaTrigger_fSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.IspatientbeingadmittedtovulnerableareaTrigger_f_0Signal" />
-    <classNode dependClassName="EDLanguage.sandbox.LFDTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.LIAT" />
     <classNode dependClassName="EDLanguage.sandbox.LIATExecutionTimeMap" />
     <classNode dependClassName="EDLanguage.sandbox.LateralFlowTestTrigger_bSignal" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThree" />
     <classNode dependClassName="EDLanguage.sandbox.PHEThreeExecutionTimeMap" />
-    <classNode dependClassName="EDLanguage.sandbox.PerformLIATorCepheidTrigger_dSignal" />
-    <classNode dependClassName="EDLanguage.sandbox.PerformLIATorCepheidTrigger_gSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PerformRapidPCRTrigger_dSignal" />
     <classNode dependClassName="EDLanguage.sandbox.PerformRapidPCRTrigger_gSignal" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoomTrigger_fSignal" />
@@ -224,16 +175,6 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.DischargeTrigger_iSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.DischargeTrigger_i_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
@@ -371,23 +312,10 @@
     <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
   </dependency>
-  <dependency className="DualCassetteIntervention.AC1.FluABreadcrumb">
+  <dependency className="DualCassetteIntervention.AC1.FluBreadcrumb">
     <classNode extendsClassName="simcore.basicStructures.Breadcrumb" />
   </dependency>
-  <dependency className="DualCassetteIntervention.AC1.FluABreadcrumbstyle">
-    <classNode dependClassName="java.awt.Color" />
-    <classNode dependClassName="java.lang.Object" />
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="saf.v3d.scene.Position" />
-    <classNode dependClassName="saf.v3d.scene.VSpatial" />
-    <classNode dependClassName="simcore.basicStructures.Breadcrumb" />
-    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.FluBBreadcrumb">
-    <classNode extendsClassName="simcore.basicStructures.Breadcrumb" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.FluBBreadcrumbstyle">
+  <dependency className="DualCassetteIntervention.AC1.FluBreadcrumbstyle">
     <classNode dependClassName="java.awt.Color" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Override" />
@@ -432,27 +360,7 @@
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.IspatientbeingadmittedtovulnerableareaTrigger_fSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.IspatientbeingadmittedtovulnerableareaTrigger_f_0Signal">
     <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.LFDTrigger_bSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
     <classNode dependClassName="java.util.function.Predicate" />
     <classNode dependClassName="repast.simphony.context.Context" />
     <classNode dependClassName="simcore.agents.Actor" />
@@ -539,10 +447,6 @@
     <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
-  <dependency className="DualCassetteIntervention.AC1.LiatOrCepheid">
-    <classNode dependClassName="EDLanguage.sandbox.LiatOrCepheid" />
-    <classNode extendsClassName="simcore.basicStructures.Resource" />
-  </dependency>
   <dependency className="DualCassetteIntervention.AC1.MainEntrance">
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode extendsClassName="simcore.basicStructures.RoomType" />
@@ -579,30 +483,11 @@
     <classNode dependClassName="java.util.Map" />
     <classNode dependClassName="simcore.utilities.Distribution" />
   </dependency>
+  <dependency className="DualCassetteIntervention.AC1.POCTTest">
+    <classNode dependClassName="EDLanguage.sandbox.POCTTest" />
+    <classNode extendsClassName="simcore.basicStructures.Resource" />
+  </dependency>
   <dependency className="DualCassetteIntervention.AC1.PatientArrivesTrigger_jSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.PatientArrivesTrigger_j_0Signal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.PerformLIATorCepheidTrigger_dSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.PerformLIATorCepheidTrigger_gSignal">
-    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
-    <classNode dependClassName="java.util.function.Predicate" />
-    <classNode dependClassName="repast.simphony.context.Context" />
-    <classNode dependClassName="simcore.agents.Actor" />
-    <classNode dependClassName="simcore.agents.Agent" />
-    <classNode dependClassName="simcore.basicStructures.Room" />
-    <classNode dependClassName="simcore.basicStructures.ToolBox" />
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.PerformRapidPCRTrigger_dSignal">
@@ -830,9 +715,6 @@
     <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.nullTrigger_aSignal">
-    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
-  </dependency>
-  <dependency className="DualCassetteIntervention.AC1.nullTrigger_a_0Signal">
     <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
   </dependency>
   <dependency className="DualCassetteIntervention.AC1.patient">

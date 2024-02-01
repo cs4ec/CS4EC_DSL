@@ -33,7 +33,7 @@ public class patientGenerator_0 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("PatientArrivesTrigger_k");
+    sendSignalTemp.setName("PatientArrivesTrigger_m");
     sendSignalTemp.AddData("patient", a);
     sendSignalTemp.AddActor("TriageNurse");
 
@@ -46,7 +46,6 @@ public class patientGenerator_0 extends AgentGenerator {
     this.generateAttribute_a(a);
     this.generateAttribute_b(a);
     this.generateAttribute_c(a);
-    this.generateAttribute_d(a);
 
     b.PushMission(sendSignalTemp);
 
@@ -58,9 +57,9 @@ public class patientGenerator_0 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("EmergencycohortEmergency"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientscohortTypicalPatients"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.cohort = "Emergency";
+      agent.cohort = "TypicalPatients";
       return;
     }
 
@@ -70,17 +69,24 @@ public class patientGenerator_0 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("EmergencyImmunocompromisedNo"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritymoderate"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.Immunocompromised = "No";
+      agent.Severity = "moderate";
       return;
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("EmergencyImmunocompromisedYes") + runningTotal) / 100)) {
-      agent.Immunocompromised = "Yes";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyImmunocompromisedYes");
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritysevere") + runningTotal) / 100)) {
+      agent.Severity = "severe";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritysevere");
       return;
     } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyImmunocompromisedYes");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritysevere");
+    }
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritylow") + runningTotal) / 100)) {
+      agent.Severity = "low";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritylow");
+      return;
+    } else {
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritylow");
     }
 
   }
@@ -89,80 +95,47 @@ public class patientGenerator_0 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("EmergencySeveritylow"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsImmunocompromisedNo"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.Severity = "low";
+      agent.Immunocompromised = "No";
       return;
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("EmergencySeveritymoderate") + runningTotal) / 100)) {
-      agent.Severity = "moderate";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencySeveritymoderate");
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsImmunocompromisedYes") + runningTotal) / 100)) {
+      agent.Immunocompromised = "Yes";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsImmunocompromisedYes");
       return;
     } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencySeveritymoderate");
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("EmergencySeveritysevere") + runningTotal) / 100)) {
-      agent.Severity = "severe";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencySeveritysevere");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencySeveritysevere");
-    }
-
-  }
-  public void generateAttribute_d(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusAsymptomatic"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.COVIDInfectionStatus = "Asymptomatic";
-      return;
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSymptomatic") + runningTotal) / 100)) {
-      agent.COVIDInfectionStatus = "Symptomatic";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSymptomatic");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSymptomatic");
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSusceptible") + runningTotal) / 100)) {
-      agent.COVIDInfectionStatus = "Susceptible";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSusceptible");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSusceptible");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsImmunocompromisedYes");
     }
 
   }
 
   public void initialiseArrivalMap() {
     ArrivalPerHour = new HashMap<Integer, Integer>();
-    ArrivalPerHour.put(1, 3);
-    ArrivalPerHour.put(2, 4);
-    ArrivalPerHour.put(3, 3);
-    ArrivalPerHour.put(4, 5);
-    ArrivalPerHour.put(5, 6);
-    ArrivalPerHour.put(6, 8);
-    ArrivalPerHour.put(7, 7);
+    ArrivalPerHour.put(1, 2);
+    ArrivalPerHour.put(2, 2);
+    ArrivalPerHour.put(3, 2);
+    ArrivalPerHour.put(4, 3);
+    ArrivalPerHour.put(5, 2);
+    ArrivalPerHour.put(6, 2);
+    ArrivalPerHour.put(7, 6);
     ArrivalPerHour.put(8, 6);
-    ArrivalPerHour.put(9, 9);
-    ArrivalPerHour.put(10, 10);
-    ArrivalPerHour.put(11, 13);
-    ArrivalPerHour.put(12, 12);
-    ArrivalPerHour.put(13, 14);
-    ArrivalPerHour.put(14, 16);
-    ArrivalPerHour.put(15, 13);
-    ArrivalPerHour.put(16, 15);
-    ArrivalPerHour.put(17, 17);
-    ArrivalPerHour.put(18, 13);
-    ArrivalPerHour.put(19, 10);
-    ArrivalPerHour.put(20, 9);
-    ArrivalPerHour.put(21, 7);
-    ArrivalPerHour.put(22, 7);
-    ArrivalPerHour.put(23, 6);
-    ArrivalPerHour.put(24, 4);
+    ArrivalPerHour.put(9, 6);
+    ArrivalPerHour.put(10, 6);
+    ArrivalPerHour.put(11, 6);
+    ArrivalPerHour.put(12, 6);
+    ArrivalPerHour.put(13, 9);
+    ArrivalPerHour.put(14, 9);
+    ArrivalPerHour.put(15, 9);
+    ArrivalPerHour.put(16, 9);
+    ArrivalPerHour.put(17, 9);
+    ArrivalPerHour.put(18, 9);
+    ArrivalPerHour.put(19, 4);
+    ArrivalPerHour.put(20, 5);
+    ArrivalPerHour.put(21, 4);
+    ArrivalPerHour.put(22, 5);
+    ArrivalPerHour.put(23, 4);
+    ArrivalPerHour.put(24, 5);
 
 
 

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="EvaluationComparisonStudy.AC1.AdmittoWardTrigger_cSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.Bed">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode extendsClassName="simcore.basicStructures.StaticOccupiable" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.Bedstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.basicStructures.Occupiable" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.COVIDBreadcrumb">
+    <classNode extendsClassName="simcore.basicStructures.Breadcrumb" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.COVIDBreadcrumbstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.basicStructures.Breadcrumb" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.COVIDPositiveCohort">
+    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.CubicleNurse">
+    <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="java.util.stream.StreamSupport" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.CubicleNursestyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.DischargeTrigger_dSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.Doctor">
+    <classNode dependClassName="EDLanguage.sandbox.AdmittoWardTrigger_cSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.DischargeTrigger_dSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.Doctor" />
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.TriageTrigger_bSignal" />
+    <classNode dependClassName="EDLanguage.sandbox.Ward" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.Iterator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="java.util.stream.StreamSupport" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.action.InstantBehaviourStep" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.Doctorstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.EDBuilder">
+    <classNode dependClassName="EDLanguage.sandbox.Bed" />
+    <classNode dependClassName="EDLanguage.sandbox.CubicleNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.Doctor" />
+    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.Seat" />
+    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
+    <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="EDLanguage.sandbox.Ward" />
+    <classNode dependClassName="EDLanguage.sandbox.patientGenerator_0" />
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Boolean" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.NumberFormatException" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactory" />
+    <classNode dependClassName="repast.simphony.context.space.continuous.ContinuousSpaceFactoryFinder" />
+    <classNode dependClassName="repast.simphony.context.space.graph.NetworkBuilder" />
+    <classNode dependClassName="repast.simphony.context.space.grid.GridFactory" />
+    <classNode dependClassName="repast.simphony.context.space.grid.GridFactoryFinder" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ISchedule" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduleParameters" />
+    <classNode dependClassName="repast.simphony.parameter.Parameters" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.continuous.NdPoint" />
+    <classNode dependClassName="repast.simphony.space.continuous.StrictBorders" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="repast.simphony.space.grid.GridBuilderParameters" />
+    <classNode dependClassName="repast.simphony.space.grid.SimpleGridAdder" />
+    <classNode dependClassName="repast.simphony.space.grid.StrictBorders" />
+    <classNode dependClassName="repast.simphony.valueLayer.GridValueLayer" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Area" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode dependClassName="simcore.basicStructures.Wall" />
+    <classNode dependClassName="simcore.utilities.ModelParameterStore" />
+    <classNode dependClassName="simcore.utilities.PatientArrivalStore" />
+    <classNode dependClassName="simcore.utilities.StaffAdder" />
+    <classNode extendsClassName="repast.simphony.dataLoader.ContextBuilder" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.ElectiveAttendanceArea">
+    <classNode dependClassName="EDLanguage.sandbox.ElectiveAttendanceArea" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.GreenBay">
+    <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.LIATBooth">
+    <classNode dependClassName="EDLanguage.sandbox.LIATBooth" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.LabPCR">
+    <classNode dependClassName="EDLanguage.sandbox.LabPCR" />
+    <classNode extendsClassName="simcore.basicStructures.Resource" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.LabPCRExecutionTimeMap">
+    <classNode dependClassName="EDLanguage.sandbox.LabPCRExecutionTimeMap" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="java.util.Map" />
+    <classNode dependClassName="simcore.utilities.Distribution" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.LabTechnician">
+    <classNode dependClassName="EDLanguage.sandbox.LabTechnician" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="java.util.stream.StreamSupport" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.LabTechnicianstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.Labaratory">
+    <classNode dependClassName="EDLanguage.sandbox.Labaratory" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.MainEntrance">
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.MajorsAB_Cubicle">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsAB_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.MajorsCBay">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsCBay" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.MajorsC_Cubicle">
+    <classNode dependClassName="EDLanguage.sandbox.MajorsC_Cubicle" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.PatientArrivesTrigger_dSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.PreAdmissionStaff">
+    <classNode dependClassName="EDLanguage.sandbox.PreAdmissionStaff" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="java.util.stream.StreamSupport" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.PreAdmissionStaffstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.RadiologyRoom">
+    <classNode dependClassName="EDLanguage.sandbox.RadiologyRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.Seat">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode extendsClassName="simcore.basicStructures.StaticOccupiable" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.Seatstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.basicStructures.Occupiable" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.SideRoom">
+    <classNode dependClassName="EDLanguage.sandbox.SideRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.TaskRoom">
+    <classNode dependClassName="EDLanguage.sandbox.TaskRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.TriageDesk">
+    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.TriageNurse">
+    <classNode dependClassName="EDLanguage.sandbox.Seat" />
+    <classNode dependClassName="EDLanguage.sandbox.TriageDesk" />
+    <classNode dependClassName="EDLanguage.sandbox.TriageNurse" />
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="java.util.stream.StreamSupport" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Orders.MoveToOrder" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.action.BehaviourStep" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.TriageNursestyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.TriageTrigger_bSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.VulnerableArea">
+    <classNode dependClassName="EDLanguage.sandbox.VulnerableArea" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.WaitingRoom">
+    <classNode dependClassName="EDLanguage.sandbox.WaitingRoom" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.Ward">
+    <classNode dependClassName="EDLanguage.sandbox.Ward" />
+    <classNode extendsClassName="simcore.basicStructures.RoomType" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.WardNurse">
+    <classNode dependClassName="EDLanguage.sandbox.WardNurse" />
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="java.util.stream.StreamSupport" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="repast.simphony.space.graph.RepastEdge" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.WardNursestyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.map_PatientProfile">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.map_PatientProfilestyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.nullTrigger_aSignal">
+    <classNode extendsClassName="simcore.Signals.ActorTypeSignal" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.patient">
+    <classNode dependClassName="java.lang.Double" />
+    <classNode dependClassName="java.lang.Math" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.Comparator" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="java.util.function.Predicate" />
+    <classNode dependClassName="java.util.stream.Collectors" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.graph.Network" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.action.Behaviour" />
+    <classNode dependClassName="simcore.agents.Agent" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.Room" />
+    <classNode dependClassName="simcore.basicStructures.RoomType" />
+    <classNode dependClassName="simcore.basicStructures.TimeKeeper" />
+    <classNode extendsClassName="simcore.agents.Actor" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.patientGenerator_0">
+    <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
+    <classNode dependClassName="EDLanguage.sandbox.patient" />
+    <classNode dependClassName="java.lang.Integer" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.util.HashMap" />
+    <classNode dependClassName="repast.simphony.context.Context" />
+    <classNode dependClassName="repast.simphony.engine.environment.RunEnvironment" />
+    <classNode dependClassName="repast.simphony.engine.schedule.ScheduledMethod" />
+    <classNode dependClassName="repast.simphony.random.RandomHelper" />
+    <classNode dependClassName="repast.simphony.space.continuous.ContinuousSpace" />
+    <classNode dependClassName="repast.simphony.space.grid.Grid" />
+    <classNode dependClassName="simcore.Signals.ActorTypeSignal" />
+    <classNode dependClassName="simcore.Signals.Signal" />
+    <classNode dependClassName="simcore.basicStructures.Board" />
+    <classNode dependClassName="simcore.basicStructures.ToolBox" />
+    <classNode extendsClassName="simcore.basicStructures.AgentGenerator" />
+  </dependency>
+  <dependency className="EvaluationComparisonStudy.AC1.patientstyle">
+    <classNode dependClassName="java.awt.Color" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="saf.v3d.scene.Position" />
+    <classNode dependClassName="saf.v3d.scene.VSpatial" />
+    <classNode dependClassName="simcore.agents.Actor" />
+    <classNode extendsClassName="repast.simphony.visualizationOGL2D.DefaultStyleOGL2D" />
+  </dependency>
+</dependenciesRoot>
+

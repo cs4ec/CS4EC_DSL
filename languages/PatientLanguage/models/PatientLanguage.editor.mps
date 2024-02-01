@@ -47,6 +47,7 @@
       </concept>
       <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1139852716018" name="noTargetText" index="1$x2rV" />
         <property id="1140017977771" name="readOnly" index="1Intyy" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
@@ -159,6 +160,7 @@
       <node concept="2reCLk" id="2vFOz$FUEel" role="2r0Tv6">
         <node concept="2reCLy" id="2vFOz$FUEey" role="2reCL6">
           <node concept="3F0A7n" id="2vFOz$FUEeE" role="2reSmM">
+            <property role="1$x2rV" value="Enter patients per hour" />
             <ref role="1NtTu8" to="s2d1:2vFOz$FUEcK" resolve="NumPatientsInHour" />
           </node>
           <node concept="2rfbtV" id="EFW1mYKybo" role="2recC9">

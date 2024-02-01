@@ -54,7 +54,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     Boolean pBool = params.getBoolean("UsePathFinding");
     ModelParameterStore.UsePathFinding = false;
 
-    RunEnvironment.getInstance().endAt(86400 / params.getInteger("SecondsPerTick"));
+    RunEnvironment.getInstance().endAt(604800 / params.getInteger("SecondsPerTick"));
 
     CreatePatientArrivalMap();
 
@@ -65,7 +65,9 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
     Grid<Object> StrepABreadcrumbgrid = gridFactory.createGrid("StrepABreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    Grid<Object> FluBreadcrumbgrid = gridFactory.createGrid("FluBreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
     ToolBox.grids.add(StrepABreadcrumbgrid);
+    ToolBox.grids.add(FluBreadcrumbgrid);
 
 
     context.add(new patientGenerator_0(space, grid, context));
@@ -91,7 +93,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     for (int i = 0; i < 2; i++) {
       context.add(new MinorsDoctor(space, grid, context));
     }
-    for (int i = 0; i < 2; i++) {
+    for (int i = 0; i < 1; i++) {
       context.add(new GASNurse(space, grid, context));
     }
 

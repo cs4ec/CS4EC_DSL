@@ -517,6 +517,7 @@
     <property role="TrG5h" value="DiagnosticCondition" />
     <property role="3GE5qa" value="Expressions.Conditions" />
     <property role="34LRSv" value="diagnostic condition" />
+    <ref role="1TJDcQ" to="e88n:1xAzJ9JDBLw" resolve="BranchConditional" />
     <node concept="1TJgyj" id="av1M7vdSwv" role="1TKVEi">
       <property role="IQ2ns" value="188877551433123871" />
       <property role="20kJfa" value="test" />

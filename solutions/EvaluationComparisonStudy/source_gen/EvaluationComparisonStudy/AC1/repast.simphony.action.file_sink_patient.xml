@@ -1,0 +1,32 @@
+<repast.simphony.data2.engine.FileSinkDescriptor simphonyVersion="2.7.0">
+  <name>patientDataSink</name>
+  <dataSet>patientDataSet</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>patientgetImmunocompromisedisYes</string>
+    <string>patientgetImmunocompromisedisNo</string>
+    <string>patientgetSeverityissevere</string>
+    <string>patientgetSeverityismoderate</string>
+    <string>patientgetSeverityislow</string>
+    <string>patientgetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
+    <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
+    <string>patientgetLabPCRCOVIDResultisPositive</string>
+    <string>patientgetLabPCRCOVIDResultisNegative</string>
+    <string>patientgetadmittedToisWard</string>
+    <string>patientgetadmittedToisWardgetImmunocompromisedisYes</string>
+    <string>patientgetadmittedToisWardgetImmunocompromisedisNo</string>
+    <string>patientgetadmittedToisWardgetSeverityissevere</string>
+    <string>patientgetadmittedToisWardgetSeverityismoderate</string>
+    <string>patientgetadmittedToisWardgetSeverityislow</string>
+    <string>patientgetadmittedToisWardgetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetadmittedToisWardgetCOVIDInfectionStatusisAsymptomatic</string>
+    <string>patientgetadmittedToisWardgetCOVIDInfectionStatusisSymptomatic</string>
+    <string>patientgetadmittedToisWardgetLabPCRCOVIDResultisPositive</string>
+    <string>patientgetadmittedToisWardgetLabPCRCOVIDResultisNegative</string>
+    <string>patientgetAliveTime</string>
+  </sourceIds>
+  <fileName>patientDataOutput.txt</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>

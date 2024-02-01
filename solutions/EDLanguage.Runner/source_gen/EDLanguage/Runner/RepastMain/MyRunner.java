@@ -56,7 +56,7 @@ public class MyRunner {
 
   public void DoTransferParameters(String baseProjectPath) {
 
-    String filePath = "/Users/k2037451/MPSProjects/CS4EC_DSL2/solutions/EvaluationModel/classes_gen/EvaluationModel/AC1";
+    String filePath = "/Users/k2037451/MPSProjects/CS4EC_DSL2/solutions/StrepAIntervention/classes_gen/StrepAIntervention/AC1";
     String filePathAfter = "RepastProject/EDProject/EDProject/EDProject.rs/";
     // WINDOWS BELWO
 
@@ -130,7 +130,7 @@ public class MyRunner {
 
   public void DoTransferBatchParameters(String baseProjectPath) {
 
-    String filePath = "/Users/k2037451/MPSProjects/CS4EC_DSL2/solutions/EvaluationModel/classes_gen/EvaluationModel/AC1";
+    String filePath = "/Users/k2037451/MPSProjects/CS4EC_DSL2/solutions/StrepAIntervention/classes_gen/StrepAIntervention/AC1";
 
     String filePathAfter = "RepastProject/EDProject/EDProject/batch/";
     // WINDOWS AFTER
@@ -206,11 +206,11 @@ public class MyRunner {
     ClearDir(LogNote.GetUniqueLog().GetAddress() + "output/");
 
     String classPathOld = "languages/EDLanguage/sandbox/classes_gen/EDLanguage/sandbox/";
-    String classPath = "/Users/k2037451/MPSProjects/CS4EC_DSL2/solutions/EvaluationModel/classes_gen/EDLanguage/sandbox";
+    String classPath = "/Users/k2037451/MPSProjects/CS4EC_DSL2/solutions/StrepAIntervention/classes_gen/EDLanguage/sandbox";
     String classPathAfter = "RepastProject/EDProject/EDProject/bin/EDLanguage/sandbox/";
 
     String javaPathOld = "languages/EDLanguage/sandbox/source_gen/EDLanguage/sandbox/";
-    String javaPath = "/Users/k2037451/MPSProjects/CS4EC_DSL2/solutions/EvaluationModel/source_gen/EDLanguage/sandbox";
+    String javaPath = "/Users/k2037451/MPSProjects/CS4EC_DSL2/solutions/StrepAIntervention/source_gen/EDLanguage/sandbox";
     String javaPathAfter = "RepastProject/EDProject/EDProject/src/EDLanguage/sandbox/";
 
     System.out.println("Generating files:");

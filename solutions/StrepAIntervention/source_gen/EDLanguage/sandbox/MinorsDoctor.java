@@ -242,7 +242,7 @@ public class MinorsDoctor extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(MinorsDoctor.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(MinorsDoctor.this.curInside).andThen(new MoveToOrder().WithDestination(MinorsDoctor.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
   public class StayForConditionAction_c0a_2 extends BehaviourStep {
@@ -301,10 +301,10 @@ public class MinorsDoctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
-  public class SendSignalAction_a0a6a0 extends BehaviourStep {
+  public class SendSignalAction_a0a6a0_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0a6a0(Behaviour behaviour) {
+    public SendSignalAction_a0a6a0_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -317,10 +317,10 @@ public class MinorsDoctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class SendSignalAction_a0b6a0 extends BehaviourStep {
+  public class SendSignalAction_a0b6a0_0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0b6a0(Behaviour behaviour) {
+    public SendSignalAction_a0b6a0_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -333,34 +333,34 @@ public class MinorsDoctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class ProbabilityDistribution_g0a extends InstantBehaviourStep {
+  public class ProbabilityDistribution_g0a_0 extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public ProbabilityDistribution_g0a(Behaviour behaviour) {
+    public ProbabilityDistribution_g0a_0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
       double rndDouble = RandomHelper.nextDouble();
-
-      if (rndDouble < ((80) / 100)) {
+      double d = Double.valueOf(80);
+      if (rndDouble < (d / 100)) {
 
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0a6a0(behaviour));
+        plstSteps.add(new SendSignalAction_a0a6a0_0(behaviour));
         behaviour.injectSteps(plstSteps);
 
       } else if (rndDouble < ((20 + 80.0) / 100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0b6a0(behaviour));
+        plstSteps.add(new SendSignalAction_a0b6a0_0(behaviour));
         behaviour.injectSteps(plstSteps);
       }
 
     }
   }
-  public class MoveAction_a0b_3 extends BehaviourStep {
+  public class MoveAction_a0b_4 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
-    public MoveAction_a0b_3(Behaviour behaviour) {
+    public MoveAction_a0b_4(Behaviour behaviour) {
       target = MainEntrance.getInstance();
       this.behaviour = behaviour;
     }
@@ -398,9 +398,9 @@ public class MinorsDoctor extends Actor {
       return concreteTarget != null && ImAt(concreteTarget);
     }
   }
-  public class OrderAction_b0b_3 extends BehaviourStep {
+  public class OrderAction_b0b_4 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
-    public OrderAction_b0b_3(Behaviour behaviour) {
+    public OrderAction_b0b_4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -410,10 +410,10 @@ public class MinorsDoctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(MinorsDoctor.this));
     }
   }
-  public class StayForConditionAction_c0b_3 extends BehaviourStep {
+  public class StayForConditionAction_c0b_4 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public StayForConditionAction_c0b_3(Behaviour behaviour) {
+    public StayForConditionAction_c0b_4(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -513,7 +513,7 @@ public class MinorsDoctor extends Actor {
     plstSteps.add(new StayAction_d0a_2(behaviourBuilder));
     plstSteps.add(new OrderAction_e0a_0(behaviourBuilder));
     plstSteps.add(new OrderAction_f0a_0(behaviourBuilder));
-    plstSteps.add(new ProbabilityDistribution_g0a(behaviourBuilder));
+    plstSteps.add(new ProbabilityDistribution_g0a_0(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();
@@ -522,9 +522,9 @@ public class MinorsDoctor extends Actor {
   public void InitDischargeActionDischarge_d_0(Signal s) {
     behaviourBuilder.setSignalTrigger(s);
     ArrayList<BehaviourStep> plstSteps = new ArrayList();
-    plstSteps.add(new MoveAction_a0b_3(behaviourBuilder));
-    plstSteps.add(new OrderAction_b0b_3(behaviourBuilder));
-    plstSteps.add(new StayForConditionAction_c0b_3(behaviourBuilder));
+    plstSteps.add(new MoveAction_a0b_4(behaviourBuilder));
+    plstSteps.add(new OrderAction_b0b_4(behaviourBuilder));
+    plstSteps.add(new StayForConditionAction_c0b_4(behaviourBuilder));
     plstSteps.add(new Consequence_d0b_0(behaviourBuilder));
     plstSteps.add(new RemoveRelationshipAction_e0b_0(behaviourBuilder));
     plstSteps.add(new DespawnAction_f0b_0(behaviourBuilder));

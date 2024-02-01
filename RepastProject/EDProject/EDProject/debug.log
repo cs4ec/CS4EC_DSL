@@ -1,5 +1,367 @@
-FATAL [AWT-EventQueue-0] 2023-05-22T17:19:00,313 MessageCenter.INTERNAL.repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
-java.lang.NoClassDefFoundError: EDLanguage/sandbox/AdditionalAssessmentTrigger_gSignal
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-19T16:07:44,209 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705680101995/instance_1
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-19T16:07:44,228 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705680101995/instance_1
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:07:44,228 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:07:44,232 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0012
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:07:44,232 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 6.0374
+INFO  [AWT-EventQueue-0] 2024-01-19T16:27:11,551 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-19T16:27:11,567 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:27:15,864 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost10653583891959458542.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191 ...
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:27:15,893 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:27:15,893 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0284
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:27:15,893 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191/k2037451_localhost10653583891959458542.zip
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:27:16,195 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-2] 2024-01-19T16:27:28,096 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:27:28 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-2] 2024-01-19T16:27:28,097 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:27:28 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-2] 2024-01-19T16:27:28,097 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-2] 2024-01-19T16:27:28,097 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-2] 2024-01-19T16:27:28,097 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:27:28 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-2] 2024-01-19T16:27:28,097 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-2] 2024-01-19T16:27:28,097 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:27:28 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-2] 2024-01-19T16:27:28,097 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-2] 2024-01-19T16:27:28,112 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-2] 2024-01-19T16:27:28,113 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-4-thread-1] 2024-01-19T16:28:16,204 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191 for DONE:  no
+INFO  [pool-4-thread-1] 2024-01-19T16:29:16,213 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,215 repast.simphony.batch.ssh.SessionsDriver - Run Time: 2.0053
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,224 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191
+WARN  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,228 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191/instance_2
+WARN  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,229 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191/instance_2
+WARN  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,230 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191/instance_1
+WARN  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,230 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681634191/instance_1
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,230 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,231 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0003
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-19T16:29:16,231 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 2.0340
+INFO  [AWT-EventQueue-0] 2024-01-19T16:31:47,820 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-19T16:31:47,834 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:31:52,279 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost9998203817749007424.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448 ...
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:31:52,315 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:31:52,316 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0311
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:31:52,316 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448/k2037451_localhost9998203817749007424.zip
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:31:52,665 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-3] 2024-01-19T16:32:04,831 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:32:04 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-3] 2024-01-19T16:32:04,832 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-3] 2024-01-19T16:32:04,832 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:32:04 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-3] 2024-01-19T16:32:04,832 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-3] 2024-01-19T16:32:04,833 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:32:04 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-3] 2024-01-19T16:32:04,833 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-3] 2024-01-19T16:32:04,833 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:32:04 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-3] 2024-01-19T16:32:04,833 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-3] 2024-01-19T16:32:04,847 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-3] 2024-01-19T16:32:04,847 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-3] 2024-01-19T16:32:04,847 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-3] 2024-01-19T16:32:04,847 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-3] 2024-01-19T16:32:04,847 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-3] 2024-01-19T16:32:04,849 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-3] 2024-01-19T16:32:04,849 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-3] 2024-01-19T16:32:04,849 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-3] 2024-01-19T16:32:04,849 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-3] 2024-01-19T16:32:04,849 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-5-thread-1] 2024-01-19T16:32:52,679 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448 for DONE:  no
+INFO  [pool-5-thread-1] 2024-01-19T16:33:52,692 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,697 repast.simphony.batch.ssh.SessionsDriver - Run Time: 2.0063
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,709 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448
+WARN  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,712 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448/instance_2
+WARN  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,712 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448/instance_2
+WARN  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,713 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448/instance_1
+WARN  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,713 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705681910448/instance_1
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,713 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,715 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0003
+INFO  [SwingWorker-pool-2-thread-3] 2024-01-19T16:33:52,715 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 2.0379
+INFO  [AWT-EventQueue-0] 2024-01-19T16:35:31,038 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-19T16:35:31,053 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:35:35,469 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost9116876564907711887.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633 ...
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:35:35,546 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:35:35,546 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0319
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:35:35,546 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633/k2037451_localhost9116876564907711887.zip
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:35:35,870 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-4] 2024-01-19T16:35:48,200 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:35:48 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-19T16:35:48,201 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-4] 2024-01-19T16:35:48,202 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:35:48 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-19T16:35:48,202 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-4] 2024-01-19T16:35:48,207 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:35:48 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-19T16:35:48,207 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-4] 2024-01-19T16:35:48,207 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:35:48 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-19T16:35:48,207 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-4] 2024-01-19T16:35:48,215 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-4] 2024-01-19T16:35:48,216 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-4] 2024-01-19T16:35:48,216 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-4] 2024-01-19T16:35:48,218 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-4] 2024-01-19T16:35:48,218 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-4] 2024-01-19T16:35:48,222 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-4] 2024-01-19T16:35:48,223 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-4] 2024-01-19T16:35:48,223 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-4] 2024-01-19T16:35:48,223 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-4] 2024-01-19T16:35:48,223 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-6-thread-1] 2024-01-19T16:36:35,876 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633 for DONE:  no
+INFO  [pool-6-thread-1] 2024-01-19T16:37:35,884 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633 for DONE:  no
+INFO  [pool-6-thread-1] 2024-01-19T16:38:35,896 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633 for DONE:  no
+INFO  [pool-6-thread-1] 2024-01-19T16:39:35,903 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633 for DONE:  no
+INFO  [pool-6-thread-1] 2024-01-19T16:40:35,915 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633 for DONE:  no
+INFO  [pool-6-thread-1] 2024-01-19T16:41:35,924 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,927 repast.simphony.batch.ssh.SessionsDriver - Run Time: 6.0064
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,934 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633
+WARN  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,936 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633/instance_2
+WARN  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,936 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633/instance_2
+WARN  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,937 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633/instance_1
+WARN  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,937 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682133633/instance_1
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,937 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,940 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0002
+INFO  [SwingWorker-pool-2-thread-4] 2024-01-19T16:41:35,940 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 6.0386
+INFO  [AWT-EventQueue-0] 2024-01-19T16:42:21,782 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-19T16:42:21,819 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:42:26,358 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost2560206392134209919.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632 ...
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:42:26,401 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:42:26,402 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0295
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:42:26,402 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632/k2037451_localhost2560206392134209919.zip
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:42:26,726 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-1] 2024-01-19T16:42:38,620 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:42:38 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-19T16:42:38,620 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-1] 2024-01-19T16:42:38,620 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:42:38 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-19T16:42:38,620 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-1] 2024-01-19T16:42:38,625 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:42:38 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-19T16:42:38,626 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-1] 2024-01-19T16:42:38,626 repast.simphony.batch.ssh.LocalSession - Jan 19, 2024 4:42:38 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-19T16:42:38,626 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-1] 2024-01-19T16:42:38,640 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-1] 2024-01-19T16:42:38,640 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-1] 2024-01-19T16:42:38,640 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-1] 2024-01-19T16:42:38,640 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-1] 2024-01-19T16:42:38,640 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-1] 2024-01-19T16:42:38,642 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-1] 2024-01-19T16:42:38,642 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-1] 2024-01-19T16:42:38,642 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-1] 2024-01-19T16:42:38,642 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-1] 2024-01-19T16:42:38,642 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-3-thread-1] 2024-01-19T16:43:26,732 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632 for DONE:  no
+INFO  [pool-3-thread-1] 2024-01-19T16:44:26,743 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,749 repast.simphony.batch.ssh.SessionsDriver - Run Time: 2.0058
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,782 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,796 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632/instance_2
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,796 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632/instance_2
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,797 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632/instance_1
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,798 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705682544632/instance_1
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,798 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,800 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0009
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-19T16:44:26,800 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 2.0362
+INFO  [AWT-EventQueue-0] 2024-01-21T20:59:27,159 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-21T20:59:27,193 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T20:59:31,585 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost7891550853335396617.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869 ...
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T20:59:31,618 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T20:59:31,618 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0291
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T20:59:31,618 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869/k2037451_localhost7891550853335396617.zip
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T20:59:31,905 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-4] 2024-01-21T20:59:44,213 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 8:59:44 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-21T20:59:44,215 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-4] 2024-01-21T20:59:44,215 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 8:59:44 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-21T20:59:44,215 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-4] 2024-01-21T20:59:44,220 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 8:59:44 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-21T20:59:44,221 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-4] 2024-01-21T20:59:44,221 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 8:59:44 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-21T20:59:44,221 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-4] 2024-01-21T20:59:44,236 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-4] 2024-01-21T20:59:44,236 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-4] 2024-01-21T20:59:44,241 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-4] 2024-01-21T20:59:44,242 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-4] 2024-01-21T20:59:44,242 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-4] 2024-01-21T20:59:44,243 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-4] 2024-01-21T20:59:44,243 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-4] 2024-01-21T20:59:44,244 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-4] 2024-01-21T20:59:44,244 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-4] 2024-01-21T20:59:44,244 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-3-thread-1] 2024-01-21T21:00:31,912 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869 for DONE:  no
+INFO  [pool-3-thread-1] 2024-01-21T21:01:31,920 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869 for DONE:  no
+INFO  [pool-3-thread-1] 2024-01-21T21:02:31,926 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,928 repast.simphony.batch.ssh.SessionsDriver - Run Time: 3.0052
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,967 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,983 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869/instance_2
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,983 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869/instance_2
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,984 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869/instance_1
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,984 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705870769869/instance_1
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,984 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,991 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0010
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:02:31,991 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 3.0355
+INFO  [AWT-EventQueue-0] 2024-01-21T21:06:47,551 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-21T21:06:47,557 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:06:52,012 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost10212293568999022409.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203 ...
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:06:52,056 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:06:52,057 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0309
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:06:52,057 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203/k2037451_localhost10212293568999022409.zip
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:06:52,367 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-5] 2024-01-21T21:07:04,748 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 9:07:04 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-5] 2024-01-21T21:07:04,750 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-5] 2024-01-21T21:07:04,750 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 9:07:04 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-5] 2024-01-21T21:07:04,750 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-5] 2024-01-21T21:07:04,757 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 9:07:04 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-5] 2024-01-21T21:07:04,758 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-5] 2024-01-21T21:07:04,758 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 9:07:04 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-5] 2024-01-21T21:07:04,758 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-5] 2024-01-21T21:07:04,767 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-5] 2024-01-21T21:07:04,767 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-5] 2024-01-21T21:07:04,768 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-5] 2024-01-21T21:07:04,768 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-5] 2024-01-21T21:07:04,768 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-5] 2024-01-21T21:07:04,776 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-5] 2024-01-21T21:07:04,778 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-5] 2024-01-21T21:07:04,778 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-5] 2024-01-21T21:07:04,778 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-5] 2024-01-21T21:07:04,778 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-4-thread-1] 2024-01-21T21:07:52,374 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203 for DONE:  no
+INFO  [pool-4-thread-1] 2024-01-21T21:08:52,380 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203 for DONE:  no
+INFO  [pool-4-thread-1] 2024-01-21T21:09:52,389 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,394 repast.simphony.batch.ssh.SessionsDriver - Run Time: 3.0056
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,410 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203
+WARN  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,413 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203/instance_2
+WARN  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,413 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203/instance_2
+WARN  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,414 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203/instance_1
+WARN  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,414 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705871210203/instance_1
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,414 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,420 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0004
+INFO  [SwingWorker-pool-2-thread-2] 2024-01-21T21:09:52,420 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 3.0370
+INFO  [AWT-EventQueue-0] 2024-01-21T21:34:51,596 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-21T21:34:51,644 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:34:56,069 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost2490772140432182428.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356 ...
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:34:56,086 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:34:56,087 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0288
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:34:56,087 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356/k2037451_localhost2490772140432182428.zip
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:34:56,374 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-4] 2024-01-21T21:35:08,335 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 9:35:08 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-21T21:35:08,336 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-4] 2024-01-21T21:35:08,336 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 9:35:08 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-21T21:35:08,336 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-4] 2024-01-21T21:35:08,336 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 9:35:08 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-21T21:35:08,336 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-4] 2024-01-21T21:35:08,336 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 9:35:08 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-4] 2024-01-21T21:35:08,336 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-4] 2024-01-21T21:35:08,351 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-4] 2024-01-21T21:35:08,351 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-4] 2024-01-21T21:35:08,351 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-4] 2024-01-21T21:35:08,351 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-4] 2024-01-21T21:35:08,352 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-4] 2024-01-21T21:35:08,352 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-4] 2024-01-21T21:35:08,352 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-4] 2024-01-21T21:35:08,352 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-4] 2024-01-21T21:35:08,352 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-4] 2024-01-21T21:35:08,352 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-3-thread-1] 2024-01-21T21:35:56,382 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356 for DONE:  no
+INFO  [pool-3-thread-1] 2024-01-21T21:36:56,394 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356 for DONE:  no
+INFO  [pool-3-thread-1] 2024-01-21T21:38:59,233 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,238 repast.simphony.batch.ssh.SessionsDriver - Run Time: 4.0525
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,273 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,289 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356/instance_2
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,290 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356/instance_2
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,290 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356/instance_1
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,290 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705872894356/instance_1
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,291 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,297 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0009
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T21:38:59,297 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 4.0824
+INFO  [AWT-EventQueue-0] 2024-01-21T22:05:57,991 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-21T22:05:58,034 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:06:02,452 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost13879323924961152711.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705874760779 ...
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:06:02,489 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:06:02,490 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0285
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:06:02,490 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705874760779/k2037451_localhost13879323924961152711.zip
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:06:02,797 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-1] 2024-01-21T22:06:15,021 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 10:06:15 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-21T22:06:15,022 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-1] 2024-01-21T22:06:15,022 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 10:06:15 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-21T22:06:15,022 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-1] 2024-01-21T22:06:15,029 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 10:06:15 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-21T22:06:15,029 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-1] 2024-01-21T22:06:15,029 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 10:06:15 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-21T22:06:15,030 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-1] 2024-01-21T22:06:15,037 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-1] 2024-01-21T22:06:15,037 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705874760779/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-1] 2024-01-21T22:06:15,037 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-1] 2024-01-21T22:06:15,037 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-1] 2024-01-21T22:06:15,037 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-1] 2024-01-21T22:06:15,046 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-1] 2024-01-21T22:06:15,046 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705874760779/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-1] 2024-01-21T22:06:15,046 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-1] 2024-01-21T22:06:15,046 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-1] 2024-01-21T22:06:15,046 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-3-thread-1] 2024-01-21T22:07:02,805 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705874760779 for DONE:  no
+INFO  [pool-3-thread-1] 2024-01-21T22:08:02,811 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705874760779 for DONE:  no
+INFO  [AWT-EventQueue-0] 2024-01-21T22:22:22,835 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output/config.props
+INFO  [AWT-EventQueue-0] 2024-01-21T22:22:22,869 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/batch_params.xml to
+	/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:22:27,403 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/k2037451_localhost14913907398299990098.zip to 
+/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622 ...
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:22:27,425 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:22:27,426 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0.0300
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:22:27,426 repast.simphony.batch.ssh.LocalSession - Unzipping model /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622/k2037451_localhost14913907398299990098.zip
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:22:27,723 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-1] 2024-01-21T22:22:39,957 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 10:22:39 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-21T22:22:39,958 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-1] 2024-01-21T22:22:39,958 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 10:22:39 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-21T22:22:39,958 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-1] 2024-01-21T22:22:39,959 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 10:22:39 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-21T22:22:39,960 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker]::initialize
+INFO  [Thread-1] 2024-01-21T22:22:39,960 repast.simphony.batch.ssh.LocalSession - Jan 21, 2024 10:22:39 PM org.haldane.rrepast.ModelInitializerBroker initialize
+INFO  [Thread-1] 2024-01-21T22:22:39,960 repast.simphony.batch.ssh.LocalSession - INFO: [ModelInitializerBroker] No CustomIntializer found!
+INFO  [Thread-1] 2024-01-21T22:22:39,975 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-1] 2024-01-21T22:22:39,975 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-1] 2024-01-21T22:22:39,975 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-1] 2024-01-21T22:22:39,975 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-1] 2024-01-21T22:22:39,975 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [Thread-1] 2024-01-21T22:22:39,976 repast.simphony.batch.ssh.LocalSession - WARNING: An illegal reflective access operation has occurred
+INFO  [Thread-1] 2024-01-21T22:22:39,976 repast.simphony.batch.ssh.LocalSession - WARNING: Illegal reflective access by net.sf.cglib.core.ReflectUtils$2 (file:/private/var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622/lib/cglib-nodep-2.2.3.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+INFO  [Thread-1] 2024-01-21T22:22:39,976 repast.simphony.batch.ssh.LocalSession - WARNING: Please consider reporting this to the maintainers of net.sf.cglib.core.ReflectUtils$2
+INFO  [Thread-1] 2024-01-21T22:22:39,976 repast.simphony.batch.ssh.LocalSession - WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+INFO  [Thread-1] 2024-01-21T22:22:39,976 repast.simphony.batch.ssh.LocalSession - WARNING: All illegal access operations will be denied in a future release
+INFO  [pool-3-thread-1] 2024-01-21T22:23:27,730 repast.simphony.batch.ssh.LocalDonePoller - Polled /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,733 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1.0051
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,759 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,774 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622/instance_2
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,774 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622/instance_2
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,775 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.batch_param_map.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622/instance_1
+WARN  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,775 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**/,}patientDataOutput*.txt in /var/folders/6n/5m_50zy54kxg15sfd5wc9wrw0000gq/T/simphony_model_1705875745622/instance_1
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,775 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/output
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,778 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0.0007
+INFO  [SwingWorker-pool-2-thread-1] 2024-01-21T22:23:27,778 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1.0360
+FATAL [AWT-EventQueue-0] 2024-02-01T18:15:39,635 MessageCenter.INTERNAL.repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
+java.lang.NoClassDefFoundError: EDLanguage/sandbox/ChecksTrigger_cSignal
 	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?]
 	at java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[?:?]
 	at java.lang.Class.privateGetPublicMethods(Class.java:3191) ~[?:?]
@@ -29,129 +391,11 @@ java.lang.NoClassDefFoundError: EDLanguage/sandbox/AdditionalAssessmentTrigger_g
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
-Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.AdditionalAssessmentTrigger_gSignal
+Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.ChecksTrigger_cSignal
 	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source) ~[jpf.jar:1.0.0]
 	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
 	... 29 more
-ERROR [AWT-EventQueue-0] 2023-08-08T15:46:49,236 MessageCenter.INTERNAL.repast.simphony.ui.RSApplication - Scenario Load Error
-repast.simphony.scenario.ScenarioLoadException: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/scenario.xml (No such file or directory)
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:229) ~[?:?]
-	at repast.simphony.ui.RSApplication.open(RSApplication.java:373) ~[?:?]
-	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39) ~[?:?]
-	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216) ~[?:?]
-	at saf.core.ui.GUICreator$1.run(GUICreator.java:18) ~[?:?]
-	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33) ~[saf.core.runtime.jar:?]
-	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47) ~[saf.core.runtime.jar:?]
-	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16) ~[?:?]
-	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101) ~[?:?]
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313) ~[?:?]
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:740) ~[?:?]
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
-Caused by: java.io.FileNotFoundException: /Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject/EDProject/EDProject.rs/scenario.xml (No such file or directory)
-	at java.io.FileInputStream.open0(Native Method) ~[?:?]
-	at java.io.FileInputStream.open(FileInputStream.java:219) ~[?:?]
-	at java.io.FileInputStream.<init>(FileInputStream.java:157) ~[?:?]
-	at java.io.FileInputStream.<init>(FileInputStream.java:112) ~[?:?]
-	at sun.net.www.protocol.file.FileURLConnection.connect(FileURLConnection.java:86) ~[?:?]
-	at sun.net.www.protocol.file.FileURLConnection.getInputStream(FileURLConnection.java:184) ~[?:?]
-	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:652) ~[?:?]
-	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150) ~[?:?]
-	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:860) ~[?:?]
-	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824) ~[?:?]
-	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141) ~[?:?]
-	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1216) ~[?:?]
-	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:635) ~[?:?]
-	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:324) ~[?:?]
-	at javax.xml.parsers.SAXParser.parse(SAXParser.java:330) ~[?:?]
-	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:69) ~[?:?]
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:199) ~[?:?]
-	... 21 more
-FATAL [Thread-3] 2023-08-08T15:51:43,486 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1441.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.ImAt(Agent.java:481) ~[?:?]
-	at simcore.agents.Agent.ImAt(Agent.java:470) ~[?:?]
-	at EDLanguage.sandbox.Doctor$StayForConditionAction_a0d.finishCondition(Doctor.java:629) ~[?:?]
-	at simcore.action.Behaviour.step(Behaviour.java:48) ~[?:?]
-	at simcore.agents.Agent.stepAction(Agent.java:134) ~[?:?]
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:104) ~[?:?]
-	at simcore.agents.Actor.Perceive(Actor.java:117) ~[?:?]
-	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-FATAL [Thread-4] 2023-08-08T15:51:56,035 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1441.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-Caused by: java.lang.NullPointerException
-FATAL [Thread-3] 2023-08-08T15:52:27,625 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (2881.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.reflect.InvocationTargetException
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.ImAt(Agent.java:481) ~[?:?]
-	at simcore.agents.Agent.ImAt(Agent.java:470) ~[?:?]
-	at EDLanguage.sandbox.Doctor$StayForConditionAction_a0d.finishCondition(Doctor.java:629) ~[?:?]
-	at simcore.action.Behaviour.step(Behaviour.java:48) ~[?:?]
-	at simcore.agents.Agent.stepAction(Agent.java:134) ~[?:?]
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:104) ~[?:?]
-	at simcore.agents.Actor.Perceive(Actor.java:117) ~[?:?]
-	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
-	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-FATAL [Thread-3] 2023-08-08T16:02:32,886 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+FATAL [Thread-3] 2024-02-01T18:17:18,130 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
 Current tick (28.0)
 java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
@@ -163,390 +407,55 @@ java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
 	at java.lang.Thread.run(Thread.java:834) ~[?:?]
 Caused by: java.lang.reflect.InvocationTargetException
+	at EDLanguage.sandbox.patientGenerator_0$$FastClassByCGLIB$$7657273d.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: repast.simphony.parameter.IllegalParameterException: Parameter 'Typical PatientscohortTypical Patients' not found in the schema.
+	at repast.simphony.parameter.DefaultParameters.getValue(DefaultParameters.java:211) ~[?:?]
+	at repast.simphony.parameter.DefaultParameters.getDouble(DefaultParameters.java:223) ~[?:?]
+	at EDLanguage.sandbox.patientGenerator_0.generateAttribute_a(patientGenerator_0.java:60) ~[?:?]
+	at EDLanguage.sandbox.patientGenerator_0.onGenerate(patientGenerator_0.java:46) ~[?:?]
+	at simcore.basicStructures.AgentGenerator.tick(AgentGenerator.java:52) ~[?:?]
+	at EDLanguage.sandbox.patientGenerator_0.step(patientGenerator_0.java:27) ~[?:?]
+	at EDLanguage.sandbox.patientGenerator_0$$FastClassByCGLIB$$7657273d.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-4] 2024-02-01T18:21:04,515 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (628.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
 	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
 	... 7 more
-Caused by: java.lang.NullPointerException
-	at simcore.basicStructures.Area.decrementResource(Area.java:49) ~[?:?]
-	at EDLanguage.sandbox.Doctor$UseAction_e0a.execute(Doctor.java:292) ~[?:?]
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
 	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
-	at simcore.agents.Agent.stepAction(Agent.java:134) ~[?:?]
-	at simcore.agents.Agent.executeCurrentActions(Agent.java:104) ~[?:?]
-	at simcore.agents.Actor.Perceive(Actor.java:117) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
 	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
 	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
 	... 7 more
-ERROR [AWT-EventQueue-0] 2023-08-11T11:56:26,390 MessageCenter.INTERNAL.repast.simphony.ui.RSApplication - Scenario Load Error
-repast.simphony.scenario.ScenarioLoadException: class EDLanguage.sandbox.EDBuilder cannot be cast to class repast.simphony.dataLoader.ContextBuilder (EDLanguage.sandbox.EDBuilder and repast.simphony.dataLoader.ContextBuilder are in unnamed module of loader repast.simphony.plugin.ExtendablePluginClassLoader @69fe0ed4)
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:229) ~[?:?]
-	at repast.simphony.ui.RSApplication.open(RSApplication.java:373) ~[?:?]
-	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39) ~[?:?]
-	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216) ~[?:?]
-	at saf.core.ui.GUICreator$1.run(GUICreator.java:18) ~[?:?]
-	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33) ~[saf.core.runtime.jar:?]
-	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47) ~[saf.core.runtime.jar:?]
-	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16) ~[?:?]
-	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101) ~[?:?]
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313) ~[?:?]
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:740) ~[?:?]
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
-Caused by: java.lang.ClassCastException: class EDLanguage.sandbox.EDBuilder cannot be cast to class repast.simphony.dataLoader.ContextBuilder (EDLanguage.sandbox.EDBuilder and repast.simphony.dataLoader.ContextBuilder are in unnamed module of loader repast.simphony.plugin.ExtendablePluginClassLoader @69fe0ed4)
-	at repast.simphony.dataLoader.engine.ClassNameContextBuilder.<init>(ClassNameContextBuilder.java:21) ~[?:?]
-	at repast.simphony.dataLoader.engine.ClassNameDataLoaderAction.<init>(ClassNameDataLoaderAction.java:23) ~[?:?]
-	at repast.simphony.dataLoader.engine.CNDataLoaderActionLoader.performLoad(CNDataLoaderActionLoader.java:35) ~[?:?]
-	at repast.simphony.scenario.AbstractActionLoader.loadAction(AbstractActionLoader.java:35) ~[?:?]
-	at repast.simphony.scenario.ScenarioFileLoader.createActions(ScenarioFileLoader.java:106) ~[?:?]
-	at repast.simphony.scenario.ScenarioFileLoader.load(ScenarioFileLoader.java:70) ~[?:?]
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:199) ~[?:?]
-	... 21 more
-FATAL [Thread-3] 2023-08-11T11:59:36,982 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (51.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.reflect.InvocationTargetException
-	at EDLanguage.sandbox.patientGenerator_0$$FastClassByCGLIB$$7657273d.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-Caused by: java.util.NoSuchElementException: No value present
-	at java.util.Optional.get(Optional.java:148) ~[?:?]
-	at simcore.basicStructures.AgentGenerator.tick(AgentGenerator.java:59) ~[?:?]
-	at EDLanguage.sandbox.patientGenerator_0.step(patientGenerator_0.java:53) ~[?:?]
-	at EDLanguage.sandbox.patientGenerator_0$$FastClassByCGLIB$$7657273d.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-FATAL [Thread-3] 2023-08-11T12:01:10,353 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (51.0)
-java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
-	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
-	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
-	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
-	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.reflect.InvocationTargetException
-	at EDLanguage.sandbox.patientGenerator_0$$FastClassByCGLIB$$7657273d.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-Caused by: java.util.NoSuchElementException: No value present
-	at java.util.Optional.get(Optional.java:148) ~[?:?]
-	at simcore.basicStructures.AgentGenerator.tick(AgentGenerator.java:59) ~[?:?]
-	at EDLanguage.sandbox.patientGenerator_0.step(patientGenerator_0.java:53) ~[?:?]
-	at EDLanguage.sandbox.patientGenerator_0$$FastClassByCGLIB$$7657273d.invoke(<generated>) ~[?:?]
-	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
-	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
-	... 7 more
-FATAL [AWT-EventQueue-0] 2023-09-07T17:22:33,358 MessageCenter.INTERNAL.repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
-java.lang.NoClassDefFoundError: EDLanguage/sandbox/SuitableforAdmissionTrigger_aSignal
-	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?]
-	at java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[?:?]
-	at java.lang.Class.privateGetPublicMethods(Class.java:3191) ~[?:?]
-	at java.lang.Class.getMethods(Class.java:1904) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36) ~[?:?]
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155) ~[?:?]
-	at repast.simphony.ui.RSApplication.open(RSApplication.java:373) ~[?:?]
-	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39) ~[?:?]
-	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216) ~[?:?]
-	at saf.core.ui.GUICreator$1.run(GUICreator.java:18) ~[?:?]
-	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33) ~[saf.core.runtime.jar:?]
-	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47) ~[saf.core.runtime.jar:?]
-	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16) ~[?:?]
-	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101) ~[?:?]
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313) ~[?:?]
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:740) ~[?:?]
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
-Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.SuitableforAdmissionTrigger_aSignal
-	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source) ~[jpf.jar:1.0.0]
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
-	... 29 more
-FATAL [AWT-EventQueue-0] 2023-09-07T17:23:24,555 MessageCenter.INTERNAL.repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
-java.lang.NoClassDefFoundError: EDLanguage/sandbox/DischargeTrigger_eSignal
-	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?]
-	at java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[?:?]
-	at java.lang.Class.privateGetPublicMethods(Class.java:3191) ~[?:?]
-	at java.lang.Class.getMethods(Class.java:1904) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36) ~[?:?]
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155) ~[?:?]
-	at repast.simphony.ui.RSApplication.open(RSApplication.java:373) ~[?:?]
-	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39) ~[?:?]
-	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216) ~[?:?]
-	at saf.core.ui.GUICreator$1.run(GUICreator.java:18) ~[?:?]
-	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33) ~[saf.core.runtime.jar:?]
-	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47) ~[saf.core.runtime.jar:?]
-	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16) ~[?:?]
-	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101) ~[?:?]
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313) ~[?:?]
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:740) ~[?:?]
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
-Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.DischargeTrigger_eSignal
-	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source) ~[jpf.jar:1.0.0]
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
-	... 29 more
-FATAL [AWT-EventQueue-0] 2023-09-07T17:24:10,247 MessageCenter.INTERNAL.repast.simphony.ui.RSUIPlugin - Fatal error starting Repast
-java.lang.NoClassDefFoundError: EDLanguage/sandbox/DischargeTrigger_eSignal
-	at java.lang.Class.getDeclaredMethods0(Native Method) ~[?:?]
-	at java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[?:?]
-	at java.lang.Class.privateGetPublicMethods(Class.java:3191) ~[?:?]
-	at java.lang.Class.getMethods(Class.java:1904) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.findWatchAnnotation(WatchAnnotationReader.java:42) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClass(WatchAnnotationReader.java:30) ~[?:?]
-	at repast.simphony.engine.watcher.WatchAnnotationReader.processClasses(WatchAnnotationReader.java:36) ~[?:?]
-	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:155) ~[?:?]
-	at repast.simphony.ui.RSApplication.open(RSApplication.java:373) ~[?:?]
-	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39) ~[?:?]
-	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:216) ~[?:?]
-	at saf.core.ui.GUICreator$1.run(GUICreator.java:18) ~[?:?]
-	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33) ~[saf.core.runtime.jar:?]
-	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47) ~[saf.core.runtime.jar:?]
-	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16) ~[?:?]
-	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:101) ~[?:?]
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313) ~[?:?]
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:721) ~[?:?]
-	at java.awt.EventQueue$4.run(EventQueue.java:715) ~[?:?]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:?]
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85) ~[?:?]
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:740) ~[?:?]
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109) ~[?:?]
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) ~[?:?]
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90) ~[?:?]
-Caused by: java.lang.ClassNotFoundException: EDLanguage.sandbox.DischargeTrigger_eSignal
-	at org.java.plugin.standard.StandardPluginClassLoader.loadClass(Unknown Source) ~[jpf.jar:1.0.0]
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?]
-	... 29 more
-FATAL [Thread-3] 2023-09-21T15:44:16,565 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1440.0)
-com.jgoodies.binding.beans.PropertyAccessException: Failed to read an adapted Java Bean property.
-cause=java.lang.NullPointerException
-bean=EDLanguage.sandbox.patient@299af92b
-bean type=EDLanguage.sandbox.patient
-property name=allocatedStaff
-property type=java.lang.String
-property reader=public java.lang.String simcore.agents.Agent.getAllocatedStaff()
-	at com.jgoodies.binding.beans.PropertyAccessException.createReadAccessException(PropertyAccessException.java:92) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:162) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.getValue0(BeanAdapter.java:1149) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.access$500(BeanAdapter.java:288) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter$SimplePropertyAdapter.fireChange(BeanAdapter.java:1434) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter$SimplePropertyAdapter.fireChange(ProbeModel.java:64) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter.fireChange(ProbeModel.java:52) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel.update(ProbeModel.java:108) ~[?:?]
-	at repast.simphony.ui.probe.Probe.update(Probe.java:76) ~[?:?]
-	at repast.simphony.ui.probe.ProbeManager.update(ProbeManager.java:76) ~[?:?]
-	at repast.simphony.ui.RSApplication.tickCountUpdated(RSApplication.java:622) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:60) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.getAllocatedStaff(Agent.java:557) ~[?:?]
-	at jdk.internal.reflect.GeneratedMethodAccessor87.invoke(Unknown Source) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:160) ~[?:?]
-	... 11 more
-FATAL [Thread-3] 2023-09-21T15:56:58,085 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (4320.0)
-com.jgoodies.binding.beans.PropertyAccessException: Failed to read an adapted Java Bean property.
-cause=java.lang.NullPointerException
-bean=EDLanguage.sandbox.patient@1cd5e7b6
-bean type=EDLanguage.sandbox.patient
-property name=allocatedStaff
-property type=java.lang.String
-property reader=public java.lang.String simcore.agents.Agent.getAllocatedStaff()
-	at com.jgoodies.binding.beans.PropertyAccessException.createReadAccessException(PropertyAccessException.java:92) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:162) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.getValue0(BeanAdapter.java:1149) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.access$500(BeanAdapter.java:288) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter$SimplePropertyAdapter.fireChange(BeanAdapter.java:1434) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter$SimplePropertyAdapter.fireChange(ProbeModel.java:64) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter.fireChange(ProbeModel.java:52) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel.update(ProbeModel.java:108) ~[?:?]
-	at repast.simphony.ui.probe.Probe.update(Probe.java:76) ~[?:?]
-	at repast.simphony.ui.probe.ProbeManager.update(ProbeManager.java:76) ~[?:?]
-	at repast.simphony.ui.RSApplication.tickCountUpdated(RSApplication.java:622) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:60) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.getAllocatedStaff(Agent.java:557) ~[?:?]
-	at jdk.internal.reflect.GeneratedMethodAccessor90.invoke(Unknown Source) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:160) ~[?:?]
-	... 11 more
-FATAL [Thread-3] 2023-09-21T16:13:08,711 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1440.0)
-com.jgoodies.binding.beans.PropertyAccessException: Failed to read an adapted Java Bean property.
-cause=java.lang.NullPointerException
-bean=EDLanguage.sandbox.patient@67d64a3e
-bean type=EDLanguage.sandbox.patient
-property name=allocatedStaff
-property type=java.lang.String
-property reader=public java.lang.String simcore.agents.Agent.getAllocatedStaff()
-	at com.jgoodies.binding.beans.PropertyAccessException.createReadAccessException(PropertyAccessException.java:92) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:162) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.getValue0(BeanAdapter.java:1149) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.access$500(BeanAdapter.java:288) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter$SimplePropertyAdapter.fireChange(BeanAdapter.java:1434) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter$SimplePropertyAdapter.fireChange(ProbeModel.java:64) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter.fireChange(ProbeModel.java:52) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel.update(ProbeModel.java:108) ~[?:?]
-	at repast.simphony.ui.probe.Probe.update(Probe.java:76) ~[?:?]
-	at repast.simphony.ui.probe.ProbeManager.update(ProbeManager.java:76) ~[?:?]
-	at repast.simphony.ui.RSApplication.tickCountUpdated(RSApplication.java:622) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:60) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.getAllocatedStaff(Agent.java:557) ~[?:?]
-	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:160) ~[?:?]
-	... 11 more
-FATAL [Thread-3] 2023-09-21T16:16:12,387 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1440.0)
-com.jgoodies.binding.beans.PropertyAccessException: Failed to read an adapted Java Bean property.
-cause=java.lang.NullPointerException
-bean=EDLanguage.sandbox.patient@6b1c4f56
-bean type=EDLanguage.sandbox.patient
-property name=allocatedStaff
-property type=java.lang.String
-property reader=public java.lang.String EDLanguage.sandbox.patient.getAllocatedStaff()
-	at com.jgoodies.binding.beans.PropertyAccessException.createReadAccessException(PropertyAccessException.java:92) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:162) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.getValue0(BeanAdapter.java:1149) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.access$500(BeanAdapter.java:288) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter$SimplePropertyAdapter.fireChange(BeanAdapter.java:1434) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter$SimplePropertyAdapter.fireChange(ProbeModel.java:64) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter.fireChange(ProbeModel.java:52) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel.update(ProbeModel.java:108) ~[?:?]
-	at repast.simphony.ui.probe.Probe.update(Probe.java:76) ~[?:?]
-	at repast.simphony.ui.probe.ProbeManager.update(ProbeManager.java:76) ~[?:?]
-	at repast.simphony.ui.RSApplication.tickCountUpdated(RSApplication.java:622) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:60) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.NullPointerException
-	at EDLanguage.sandbox.patient.getAllocatedStaff(patient.java:544) ~[?:?]
-	at jdk.internal.reflect.GeneratedMethodAccessor93.invoke(Unknown Source) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:160) ~[?:?]
-	... 11 more
-FATAL [Thread-3] 2023-09-21T16:18:43,049 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (1440.0)
-com.jgoodies.binding.beans.PropertyAccessException: Failed to read an adapted Java Bean property.
-cause=java.lang.NullPointerException
-bean=EDLanguage.sandbox.patient@52e7bf51
-bean type=EDLanguage.sandbox.patient
-property name=details
-property type=java.lang.String
-property reader=public java.lang.String simcore.agents.Agent.getDetails()
-	at com.jgoodies.binding.beans.PropertyAccessException.createReadAccessException(PropertyAccessException.java:92) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:162) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.getValue0(BeanAdapter.java:1149) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.access$500(BeanAdapter.java:288) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter$SimplePropertyAdapter.fireChange(BeanAdapter.java:1434) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter$SimplePropertyAdapter.fireChange(ProbeModel.java:64) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter.fireChange(ProbeModel.java:52) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel.update(ProbeModel.java:108) ~[?:?]
-	at repast.simphony.ui.probe.Probe.update(Probe.java:76) ~[?:?]
-	at repast.simphony.ui.probe.ProbeManager.update(ProbeManager.java:76) ~[?:?]
-	at repast.simphony.ui.RSApplication.tickCountUpdated(RSApplication.java:622) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:60) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.NullPointerException
-	at simcore.agents.Agent.getDetails(Agent.java:545) ~[?:?]
-	at jdk.internal.reflect.GeneratedMethodAccessor22.invoke(Unknown Source) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:160) ~[?:?]
-	... 11 more
-FATAL [Thread-3] 2023-09-21T16:20:17,557 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (2014.0)
-com.jgoodies.binding.beans.PropertyAccessException: Failed to read an adapted Java Bean property.
-cause=java.lang.IndexOutOfBoundsException: Index 9 out of bounds for length 9
-bean=EDLanguage.sandbox.CubicleNurse@3e4221a5
-bean type=EDLanguage.sandbox.CubicleNurse
-property name=actions
-property type=java.lang.String
-property reader=public java.lang.String simcore.agents.Actor.getActions()
-	at com.jgoodies.binding.beans.PropertyAccessException.createReadAccessException(PropertyAccessException.java:92) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:162) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.getValue0(BeanAdapter.java:1149) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter.access$500(BeanAdapter.java:288) ~[?:?]
-	at com.jgoodies.binding.beans.BeanAdapter$SimplePropertyAdapter.fireChange(BeanAdapter.java:1434) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter$SimplePropertyAdapter.fireChange(ProbeModel.java:64) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel$ProbeBeanAdapter.fireChange(ProbeModel.java:52) ~[?:?]
-	at repast.simphony.ui.probe.ProbeModel.update(ProbeModel.java:108) ~[?:?]
-	at repast.simphony.ui.probe.Probe.update(Probe.java:76) ~[?:?]
-	at repast.simphony.ui.probe.ProbeManager.update(ProbeManager.java:76) ~[?:?]
-	at repast.simphony.ui.RSApplication.tickCountUpdated(RSApplication.java:622) ~[?:?]
-	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:60) ~[?:?]
-	at java.lang.Thread.run(Thread.java:834) ~[?:?]
-Caused by: java.lang.IndexOutOfBoundsException: Index 9 out of bounds for length 9
-	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
-	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
-	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
-	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
-	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
-	at simcore.action.Behaviour.toString(Behaviour.java:117) ~[?:?]
-	at simcore.agents.Actor.getActions(Actor.java:233) ~[?:?]
-	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source) ~[?:?]
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
-	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
-	at com.jgoodies.binding.beans.PropertyAccessor.getValue(PropertyAccessor.java:160) ~[?:?]
-	... 11 more
-FATAL [Thread-3] 2023-09-21T17:19:49,565 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
-Current tick (36.0)
+FATAL [Thread-3] 2024-02-01T18:23:01,094 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (555.0)
 java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
 	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
@@ -561,13 +470,241 @@ Caused by: java.lang.reflect.InvocationTargetException
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
 	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
 	... 7 more
-Caused by: java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 1
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
 	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
 	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
 	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
 	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
 	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
-	at simcore.agents.Actor.Perceive(Actor.java:93) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2024-02-01T18:26:56,967 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (191.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-4] 2024-02-01T18:34:28,112 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (105.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2024-02-01T18:34:42,639 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (963.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2024-02-01T18:41:46,688 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (99.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2024-02-01T18:42:09,533 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1073.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2024-02-01T18:50:44,199 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (1070.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
+	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+FATAL [Thread-3] 2024-02-01T18:52:26,734 MessageCenter.INTERNAL.repast.simphony.ui.GUIScheduleRunner - RunTimeException when running the schedule
+Current tick (763.0)
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:72) ~[?:?]
+	at repast.simphony.engine.controller.ScheduledMethodControllerAction$ScheduleMethodAllAction.execute(ScheduledMethodControllerAction.java:336) ~[?:?]
+	at repast.simphony.engine.schedule.DefaultAction.execute(DefaultAction.java:38) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.executeList(ScheduleGroup.java:205) ~[?:?]
+	at repast.simphony.engine.schedule.ScheduleGroup.execute(ScheduleGroup.java:231) ~[?:?]
+	at repast.simphony.engine.schedule.Schedule.execute(Schedule.java:375) ~[?:?]
+	at repast.simphony.ui.GUIScheduleRunner$ScheduleLoopRunnable.run(GUIScheduleRunner.java:52) ~[?:?]
+	at java.lang.Thread.run(Thread.java:834) ~[?:?]
+Caused by: java.lang.reflect.InvocationTargetException
+	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
+	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
+	at repast.simphony.engine.schedule.DynamicTargetAction.execute(DynamicTargetAction.java:69) ~[?:?]
+	... 7 more
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:372) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:459) ~[?:?]
+	at EDLanguage.sandbox.GASNurse$OrderAction_b0a_3.execute(GASNurse.java:274) ~[?:?]
+	at simcore.action.Behaviour.step(Behaviour.java:41) ~[?:?]
+	at simcore.agents.Agent.stepAction(Agent.java:135) ~[?:?]
+	at simcore.agents.Agent.executeCurrentActions(Agent.java:105) ~[?:?]
+	at simcore.agents.Actor.Perceive(Actor.java:130) ~[?:?]
 	at simcore.agents.Actor.step(Actor.java:70) ~[?:?]
 	at simcore.agents.Actor$$FastClassByCGLIB$$26cf43ed.invoke(<generated>) ~[?:?]
 	at net.sf.cglib.reflect.FastMethod.invoke(FastMethod.java:53) ~[?:?]
