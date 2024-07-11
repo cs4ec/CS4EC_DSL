@@ -1,0 +1,16 @@
+1. Install Jetbrains MPS 2021.1.4 (https://www.jetbrains.com/mps/download/previous.html)
+2. Follow the following link to the Mbeddr Github page for the MPS2021.1 release. Download the .zip and extract the locally on your machine (https://github.com/mbeddr/mbeddr.core/packages/862420)
+3. Follow the following link to the iets3 Github page for the MPS2021.1 release. Download the .zip and extract locally to your machine (https://github.com/IETS3/iets3.opensource/packages/896426)
+4. Open your MPS, and on the main window go to Customize → All Settings →Build, Execution, Deployment → Global Libraries, and within that window, add the two folders you downloaded and extracted in Steps 2 and 3. 
+5. Get the DSML project from GitHub and import via vcs on MPS. 
+6. Open the imported project in MPS. You are likely to get errors relating to MPS extensions. Please completely restart MPS if you get those errors
+7. Re-build the entire project. Ignore any errors as these are related to the build order between the MPS Languages. 
+8. The DSML should now be installed.
+
+1. Install the latest version of Repast Simphony. 
+2. Open Repast Simphony (Eclipse) and import the git project into your workspace via import → Git → Projects from Git → Projects from Git → Existing Local Repository
+    1. Then select the repo that can be found in your mpsProjects directory (the same location as imported into MPS above)
+3. To run the model, you may be required to add a new run configuration for the imported EDProject project inside Eclipse. This can be done via right-clicking the EDProject project file, then selecting Properties → Run/Debug Settings and select EDProject model
+    1. Note: The options for ‘Batch Model’, ‘Installer’, ‘Portable Archive’ can also be selected depending on your needs. 
+        1. Batch Model will open a batch-running window in which parameter sweeps can be configured for multiple model runs. In this mode, no graphical UI is shown during model runs
+        2. Installer and Portable Archive are used for installing the model as a standalone executable on your machine or a different machine (via the portable archive)
