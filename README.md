@@ -13,11 +13,11 @@
 ## DSML Installation Instructions:
 1. Install Jetbrains MPS 2021.1.4 (https://www.jetbrains.com/mps/download/previous.html)
 
-2. Follow the following link to the Mbeddr Github page for the MPS2021.1 release. Download the .zip and extract the locally on your machine (https://github.com/mbeddr/mbeddr.core/packages/862420):
- ![MBeddr Package](InstallInstructions/MBeddrPackage.png) 
+2. Follow the following link to the Mbeddr Github page for the MPS2021.1 release. Download the .zip and extract the locally on your machine (https://github.com/mbeddr/mbeddr.core/releases/tag/nightly-732):
+ ![MBeddr Package](InstallInstructions/MBeddrDownload.png) 
 
-3. Follow the following link to the iets3 Github page for the MPS2021.1 release. Download the .zip and extract locally to your machine (https://github.com/IETS3/iets3.opensource/packages/896426):
- ![IETS3 Package](InstallInstructions/MBeddrPackage.png) 
+3. Follow the following link to the iets3 Github page for the MPS2021.1 release. Download the .zip and extract locally to your machine (https://github.com/IETS3/iets3.opensource/releases/tag/nightly-2021.1.4769.7ca9ea5):
+ ![IETS3 Package](InstallInstructions/IETS3Download.png) 
 
 4. Open your MPS, and on the main window go to Customize → All Settings →Build, Execution, Deployment → Global Libraries, and within that window, add the two folders you downloaded and extracted in Steps 2 and 3. 
  ![MPS Global Libraries](InstallInstructions/MPSGlobalLibraries.png) 
