@@ -1,6 +1,6 @@
 # CS4EC_DSML
 ---------
-> The CS4EC DSML is designed to facilitate the participatory development of agent-based models of hospital emergency departments. We intend for these ABMs to be used to evaluate and compare the efficacy of past, present, or future workplace interventions according to directional changes in key performance indicators (KPI) such as patient waiting time, patient risk, resource usage, etc. For example, the DSML could be used to model an intervention such as adding a new type of diagnostic test for an infectious disease to a patient pathway. By modelling the domain processes before and after the addition of the new test, we can measure any directional changes in KPIs to indicate the effectiveness of that intervention. 
+The CS4EC DSML is designed to facilitate the participatory development of agent-based models of hospital emergency departments. We intend for these ABMs to be used to evaluate and compare the efficacy of past, present, or future workplace interventions according to directional changes in key performance indicators (KPI) such as patient waiting time, patient risk, resource usage, etc. For example, the DSML could be used to model an intervention such as adding a new type of diagnostic test for an infectious disease to a patient pathway. By modelling the domain processes before and after the addition of the new test, we can measure any directional changes in KPIs to indicate the effectiveness of that intervention. 
 
 ## Repository Contents: 
 - Our DSML modules can be found in the [Languages](languages) folder.
