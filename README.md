@@ -105,7 +105,8 @@ As part of the evaluation chapter of the thesis (chapter 10), we conducted a com
 The descriptions of these models are included in the thesis text, however, the models themselves are linked below:
 
  [Model in the DSML](solutions/EvaluationComparisonStudy/models/EvaluationComparisonStudy.AC1.mps)
- [Model in FlexSim]()
+ 
+ [Model in FlexSim](CaseStudies/HealthcareModel.fsm)
 
 ## References
 <a id="1">[1]</a> 
