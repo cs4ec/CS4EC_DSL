@@ -1,17 +1,45 @@
 # CS4EC_DSML
 ---------
-> The CS4EC DSML is designed to facilitate the participatory development of agent-based models of hospital emergency departments. We intend for these ABMs to be used to evaluate and compare the efficacy of past, present, or future workplace interventions according to directional changes in key performance indicators (KPI) such as patient waiting time, patient risk, resource usage, etc. For example, the DSML could be used to model an intervention such as adding a new type of diagnostic test for an infectious disease to a patient pathway. By modelling the domain processes before and after the addition of the new test, we can measure any directional changes in KPIs to indicate the effectiveness of that intervention. 
+The CS4EC DSML is designed to facilitate the participatory development of agent-based models of hospital emergency departments. We intend for these ABMs to be used to evaluate and compare the efficacy of past, present, or future workplace interventions according to directional changes in key performance indicators (KPI) such as patient waiting time, patient risk, resource usage, etc. For example, the DSML could be used to model an intervention such as adding a new type of diagnostic test for an infectious disease to a patient pathway. By modelling the domain processes before and after the addition of the new test, we can measure any directional changes in KPIs to indicate the effectiveness of that intervention. 
 
 ## Repository Contents: 
-- Our DSML modules found in the [Languages](languages) folder.
-- Our example models found in the [Solutions](solutions) folder.
+- Our DSML modules can be found in the [Languages](languages) folder.
+- Our example models can be found in the [Solutions](solutions) folder.
 
 ## Technologies:
 - The DSML has been developed with [Jetbrains MPS](https://www.jetbrains.com/mps/).
 - The target language for our DSML (and therefore the execution environment for generated ABMs) is [Repast Simphony](https://repast.github.io/).
 
-## Installation Instructions:
-Please see the file: [DSML Installation Guide](DSML_InstallationGuide.docx) for install instructions including required software.
+## DSML Installation Instructions:
+1. Install Jetbrains MPS 2021.1.4 (https://www.jetbrains.com/mps/download/previous.html)
+
+2. Follow the following link to the Mbeddr Github page for the MPS2021.1 release. Download the .zip and extract the locally on your machine (https://github.com/mbeddr/mbeddr.core/releases/tag/nightly-732):
+ ![MBeddr Package](InstallInstructions/MBeddrDownload.png) 
+
+3. Follow the following link to the iets3 Github page for the MPS2021.1 release. Download the .zip and extract locally to your machine (https://github.com/IETS3/iets3.opensource/releases/tag/nightly-2021.1.4769.7ca9ea5):
+ ![IETS3 Package](InstallInstructions/IETS3Download.png) 
+
+4. Open your MPS, and on the main window go to Customize → All Settings →Build, Execution, Deployment → Global Libraries, and within that window, add the two folders you downloaded and extracted in Steps 2 and 3. 
+ ![MPS Global Libraries](InstallInstructions/MPSGlobalLibraries.png) 
+
+5. Get the DSML project from GitHub and import via vcs on MPS. 
+ ![MPS Import](InstallInstructions/MPSImport.png) 
+
+6. Open the imported project in MPS. If you receive a large number of errors, please fully restart MPS so that the program can re-organise the new global libraries.
+
+7. Re-build the entire project. Ignore any errors as these are related to the build order between the MPS Languages. 
+ ![MPS Rebuild](InstallInstructions/RebuildProject.png) 
+
+8. The DSML should now be installed!
+
+## Repast Simphony Installation Instructions:
+1. Install the latest version of Repast Simphony. 
+2. Open Repast Simphony (Eclipse) and import the git project into your workspace via import → Git → Projects from Git → Projects from Git → Existing Local Repository
+    1. Then select the repo that can be found in your mpsProjects directory (the same location as imported into MPS above)
+3. To run the model, you may be required to add a new run configuration for the imported EDProject project inside Eclipse. This can be done via right-clicking the EDProject project file, then selecting Properties → Run/Debug Settings and select EDProject model
+    1. Note: The options for ‘Batch Model’, ‘Installer’, ‘Portable Archive’ can also be selected depending on your needs. 
+        1. Batch Model will open a batch-running window in which parameter sweeps can be configured for multiple model runs. In this mode, no graphical UI is shown during model runs
+        2. Installer and Portable Archive are used for installing the model as a standalone executable on your machine or a different machine (via the portable archive)
 
 ## Software Architecture:
 The CS4EC DSML consists of multiple DSML modules. Each language module covers a distinct aspect of the healthcare domain. We show all the DSML modules and their dependencies in the following image: 
