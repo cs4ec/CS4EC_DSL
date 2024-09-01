@@ -105,8 +105,11 @@ As part of the evaluation chapter of the thesis (chapter 10), we conducted a com
 The descriptions of these models are included in the thesis text, however, the models themselves are linked below:
 
  [Model in the DSML](solutions/EvaluationComparisonStudy/models/EvaluationComparisonStudy.AC1.mps)
+ Please import this model into your local MPS installation with the DSML configured as described above.
  
  [Model in FlexSim](CaseStudies/HealthcareModel.fsm)
+ Please download the trial version of FlexSim from the official FlexSim website [website](https://www.flexsim.com/). 
+ The provided .fsm file can then be imported into your local FlexSim installation
 
 ## References
 <a id="1">[1]</a> 
