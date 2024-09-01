@@ -20,6 +20,7 @@
       <concept id="1140524381322" name="jetbrains.mps.lang.editor.structure.CellModel_ListWithRole" flags="ng" index="2czfm3">
         <property id="1140524450557" name="separatorText" index="2czwfO" />
         <child id="1140524464360" name="cellLayout" index="2czzBx" />
+        <child id="1233141163694" name="separatorStyle" index="sWeuL" />
       </concept>
       <concept id="1106270549637" name="jetbrains.mps.lang.editor.structure.CellLayout_Horizontal" flags="nn" index="2iRfu4" />
       <concept id="1106270571710" name="jetbrains.mps.lang.editor.structure.CellLayout_Vertical" flags="nn" index="2iRkQZ" />
@@ -30,12 +31,16 @@
       <concept id="1142886221719" name="jetbrains.mps.lang.editor.structure.QueryFunction_NodeCondition" flags="in" index="pkWqt" />
       <concept id="1142886811589" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_node" flags="nn" index="pncrf" />
       <concept id="1237385578942" name="jetbrains.mps.lang.editor.structure.IndentLayoutOnNewLineStyleClassItem" flags="ln" index="pVoyu" />
+      <concept id="1233148810477" name="jetbrains.mps.lang.editor.structure.InlineStyleDeclaration" flags="ng" index="tppnM" />
       <concept id="1080736578640" name="jetbrains.mps.lang.editor.structure.BaseEditorComponent" flags="ig" index="2wURMF">
         <child id="1080736633877" name="cellModel" index="2wV5jI" />
       </concept>
       <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW" />
       <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
         <reference id="1078939183255" name="editorComponent" index="PMmxG" />
+      </concept>
+      <concept id="1186403751766" name="jetbrains.mps.lang.editor.structure.FontStyleStyleClassItem" flags="ln" index="Vb9p2">
+        <property id="1186403771423" name="style" index="Vbekb" />
       </concept>
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
@@ -754,13 +759,52 @@
         <node concept="3EZMnI" id="1MmdcH82HYd" role="3EZMnx">
           <node concept="VPM3Z" id="1MmdcH82HYf" role="3F10Kt" />
           <node concept="3F0ifn" id="1MmdcH82HYh" role="3EZMnx">
-            <property role="3F0ifm" value="Colour:" />
+            <property role="3F0ifm" value="Display Colour:" />
           </node>
           <node concept="3F0A7n" id="1MmdcH82HZ3" role="3EZMnx">
             <ref role="1NtTu8" to="3751:1MmdcH82HW9" resolve="colour" />
           </node>
           <node concept="2iRfu4" id="1MmdcH82HYi" role="2iSdaV" />
         </node>
+        <node concept="3F0ifn" id="7o6PzEpEZAC" role="3EZMnx" />
+        <node concept="3F0ifn" id="3QFgDmIWw1F" role="3EZMnx">
+          <property role="3F0ifm" value="Behaviours" />
+        </node>
+        <node concept="3F0ifn" id="1FCnaGvDVWp" role="3EZMnx">
+          <property role="3F0ifm" value="-----------" />
+        </node>
+        <node concept="3F0ifn" id="1FCnaGvDVXh" role="3EZMnx" />
+        <node concept="3F0ifn" id="3QFgDmIWw2d" role="3EZMnx">
+          <property role="3F0ifm" value="When idle will:" />
+        </node>
+        <node concept="3F1sOY" id="3QFgDmIWw3k" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:3QFgDmIWw1y" resolve="isIdleBehaviour" />
+        </node>
+        <node concept="3F0ifn" id="7o6PzEpEZBf" role="3EZMnx" />
+        <node concept="3F0ifn" id="s75sN4xHoF" role="3EZMnx">
+          <property role="3F0ifm" value="Triggered Behaviours:" />
+        </node>
+        <node concept="3F2HdR" id="s75sN4xHnN" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:2seZE6jsIgu" resolve="behaviourMethods" />
+          <node concept="2iRkQZ" id="s75sN4xHnP" role="2czzBx" />
+        </node>
+        <node concept="3F0ifn" id="s75sN4xHmY" role="3EZMnx" />
+        <node concept="3F0ifn" id="1MmdcH97lh9" role="3EZMnx">
+          <property role="3F0ifm" value="Scheduled Behaviours:" />
+        </node>
+        <node concept="3F2HdR" id="1MmdcH97ljs" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:1MmdcH97lgZ" resolve="scheduledBehaviours" />
+          <node concept="2iRkQZ" id="1MmdcH97lju" role="2czzBx" />
+        </node>
+        <node concept="3F0ifn" id="1MmdcH97liE" role="3EZMnx" />
+        <node concept="3F0ifn" id="1MmdcH9tisA" role="3EZMnx">
+          <property role="3F0ifm" value="Background Behaviours:" />
+        </node>
+        <node concept="3F2HdR" id="1MmdcHagY8n" role="3EZMnx">
+          <ref role="1NtTu8" to="3751:1MmdcHa7tAF" resolve="backgroundBehaviours" />
+          <node concept="2iRkQZ" id="1MmdcHagY8p" role="2czzBx" />
+        </node>
+        <node concept="3F0ifn" id="7o6PzEpEZ$A" role="3EZMnx" />
         <node concept="3EZMnI" id="7o6PzEpEZA7" role="3EZMnx">
           <node concept="VPM3Z" id="7o6PzEpEZA9" role="3F10Kt" />
           <node concept="3F0ifn" id="7o6PzEpEZAb" role="3EZMnx">
@@ -796,52 +840,17 @@
         <node concept="3F0ifn" id="1$Pby2vHkLO" role="3EZMnx" />
         <node concept="3EZMnI" id="2_JteYOhd$8" role="3EZMnx">
           <node concept="3F1sOY" id="1SF32lWSJZ" role="3EZMnx">
-            <ref role="1NtTu8" to="3751:1SF32lWSJU" resolve="signalselectionstrategy" />
+            <ref role="1NtTu8" to="3751:1SF32lWSJU" resolve="messageSelectionstrategy" />
           </node>
           <node concept="2iRfu4" id="2_JteYOhd$9" role="2iSdaV" />
         </node>
+        <node concept="3F0ifn" id="10oeqP5kfIQ" role="3EZMnx" />
         <node concept="3EZMnI" id="6SUjQPsRMQY" role="3EZMnx">
-          <node concept="VPM3Z" id="6SUjQPsRMR0" role="3F10Kt" />
           <node concept="3F1sOY" id="6SUjQPsRMR_" role="3EZMnx">
             <ref role="1NtTu8" to="3751:6SUjQPsMEcs" resolve="roomSelectionStrategy" />
           </node>
           <node concept="2iRfu4" id="6SUjQPsRMR3" role="2iSdaV" />
         </node>
-        <node concept="3F0ifn" id="7o6PzEpEZAC" role="3EZMnx">
-          <property role="3F0ifm" value="who" />
-        </node>
-        <node concept="3F0ifn" id="3QFgDmIWw1F" role="3EZMnx" />
-        <node concept="3F0ifn" id="3QFgDmIWw2d" role="3EZMnx">
-          <property role="3F0ifm" value="When idle will:" />
-        </node>
-        <node concept="3F1sOY" id="3QFgDmIWw3k" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:3QFgDmIWw1y" resolve="isIdleBehaviour" />
-        </node>
-        <node concept="3F0ifn" id="7o6PzEpEZBf" role="3EZMnx" />
-        <node concept="3F0ifn" id="s75sN4xHoF" role="3EZMnx">
-          <property role="3F0ifm" value="Triggered Behaviours:" />
-        </node>
-        <node concept="3F2HdR" id="s75sN4xHnN" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:2seZE6jsIgu" resolve="behaviourMethods" />
-          <node concept="2iRkQZ" id="s75sN4xHnP" role="2czzBx" />
-        </node>
-        <node concept="3F0ifn" id="s75sN4xHmY" role="3EZMnx" />
-        <node concept="3F0ifn" id="1MmdcH97lh9" role="3EZMnx">
-          <property role="3F0ifm" value="Scheduled Behaviours:" />
-        </node>
-        <node concept="3F2HdR" id="1MmdcH97ljs" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:1MmdcH97lgZ" resolve="scheduledBehaviours" />
-          <node concept="2iRkQZ" id="1MmdcH97lju" role="2czzBx" />
-        </node>
-        <node concept="3F0ifn" id="1MmdcH97liE" role="3EZMnx" />
-        <node concept="3F0ifn" id="1MmdcH9tisA" role="3EZMnx">
-          <property role="3F0ifm" value="Background Behaviours:" />
-        </node>
-        <node concept="3F2HdR" id="1MmdcHagY8n" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:1MmdcHa7tAF" resolve="backgroundBehaviours" />
-          <node concept="2iRkQZ" id="1MmdcHagY8p" role="2czzBx" />
-        </node>
-        <node concept="3F0ifn" id="7o6PzEpEZ$A" role="3EZMnx" />
         <node concept="3F0ifn" id="6yEBuhzAMN$" role="3EZMnx" />
         <node concept="2iRkQZ" id="7o6PzEpEZ$g" role="2iSdaV" />
       </node>
@@ -1385,6 +1394,65 @@
       <node concept="2iRkQZ" id="2_JteYOEVVB" role="2iSdaV" />
       <node concept="3EZMnI" id="2vFOz$FUTDm" role="3EZMnx">
         <node concept="2iRfu4" id="2vFOz$FUTDn" role="2iSdaV" />
+        <node concept="3EZMnI" id="74nMeo6B8v2" role="3EZMnx">
+          <node concept="VPM3Z" id="74nMeo6B8v4" role="3F10Kt" />
+          <node concept="3EZMnI" id="74nMeo6B8xn" role="3EZMnx">
+            <node concept="VPM3Z" id="74nMeo6B8xp" role="3F10Kt" />
+            <node concept="3F0ifn" id="EFW1mYwZsu" role="3EZMnx">
+              <property role="3F0ifm" value="Agent Type:" />
+            </node>
+            <node concept="3F1sOY" id="EFW1mYwZtq" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:EFW1mYsc5K" resolve="AgentType" />
+            </node>
+            <node concept="2iRfu4" id="74nMeo6B8xs" role="2iSdaV" />
+          </node>
+          <node concept="3EZMnI" id="2r8kCFte7hX" role="3EZMnx">
+            <node concept="VPM3Z" id="2r8kCFte7hZ" role="3F10Kt" />
+            <node concept="3F0ifn" id="EFW1mZoVG$" role="3EZMnx">
+              <property role="3F0ifm" value="Spawn at:" />
+            </node>
+            <node concept="3F1sOY" id="EFW1mZp2zv" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:EFW1mZoVH$" resolve="SpawnAt" />
+            </node>
+            <node concept="3F0ifn" id="2r8kCFte7i1" role="3EZMnx" />
+            <node concept="2iRfu4" id="2r8kCFte7i2" role="2iSdaV" />
+          </node>
+          <node concept="3EZMnI" id="74nMeo6B8zG" role="3EZMnx">
+            <node concept="VPM3Z" id="74nMeo6B8zI" role="3F10Kt" />
+            <node concept="3F0ifn" id="74nMeo6B8zK" role="3EZMnx">
+              <property role="3F0ifm" value="Arrival Message:" />
+            </node>
+            <node concept="3F1sOY" id="74nMeo6B8$0" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:74nMeo6B8q1" resolve="ArrivalMessage" />
+            </node>
+            <node concept="2iRfu4" id="74nMeo6B8zL" role="2iSdaV" />
+          </node>
+          <node concept="3EZMnI" id="i1eH3W4Jju" role="3EZMnx">
+            <node concept="VPM3Z" id="i1eH3W4Jjw" role="3F10Kt" />
+            <node concept="3F0ifn" id="i1eH3W4Jjy" role="3EZMnx">
+              <property role="3F0ifm" value="Profile Name:" />
+            </node>
+            <node concept="3F0A7n" id="i1eH3W4JjR" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:i1eH3W4JhS" resolve="agentProfileName" />
+            </node>
+            <node concept="2iRfu4" id="i1eH3W4Jjz" role="2iSdaV" />
+          </node>
+          <node concept="3F0ifn" id="2r8kCFte7f8" role="3EZMnx">
+            <property role="3F0ifm" value="Attributes" />
+          </node>
+          <node concept="3F0ifn" id="2r8kCFte7fw" role="3EZMnx">
+            <property role="3F0ifm" value="-----------" />
+          </node>
+          <node concept="3EZMnI" id="2_JteYOEVXP" role="3EZMnx">
+            <node concept="2iRkQZ" id="2_JteYOEVXQ" role="2iSdaV" />
+            <node concept="3F2HdR" id="2_JteYOEVXf" role="3EZMnx">
+              <ref role="1NtTu8" to="3751:2_JteYOEVUw" resolve="AttributeMaps" />
+              <node concept="2iRkQZ" id="2_JteYOEVXh" role="2czzBx" />
+            </node>
+          </node>
+          <node concept="3F0ifn" id="2r8kCFte7bR" role="3EZMnx" />
+          <node concept="2iRkQZ" id="74nMeo6B8v7" role="2iSdaV" />
+        </node>
         <node concept="2rfBfz" id="2vFOz$FUEfw" role="3EZMnx">
           <node concept="2reSaE" id="2vFOz$FUEfL" role="2rf8GZ">
             <ref role="2reCK$" to="3751:2vFOz$FUEfh" resolve="AgentGeneratorLines" />
@@ -1464,53 +1532,6 @@
             </node>
           </node>
         </node>
-        <node concept="3EZMnI" id="74nMeo6B8v2" role="3EZMnx">
-          <node concept="VPM3Z" id="74nMeo6B8v4" role="3F10Kt" />
-          <node concept="3EZMnI" id="74nMeo6B8xn" role="3EZMnx">
-            <node concept="VPM3Z" id="74nMeo6B8xp" role="3F10Kt" />
-            <node concept="3F0ifn" id="EFW1mYwZsu" role="3EZMnx">
-              <property role="3F0ifm" value="Agent Type:" />
-            </node>
-            <node concept="3F1sOY" id="EFW1mYwZtq" role="3EZMnx">
-              <ref role="1NtTu8" to="3751:EFW1mYsc5K" resolve="AgentType" />
-            </node>
-            <node concept="3F0ifn" id="EFW1mZoVG$" role="3EZMnx">
-              <property role="3F0ifm" value="Spawn at:" />
-            </node>
-            <node concept="3F1sOY" id="EFW1mZp2zv" role="3EZMnx">
-              <ref role="1NtTu8" to="3751:EFW1mZoVH$" resolve="SpawnAt" />
-            </node>
-            <node concept="2iRfu4" id="74nMeo6B8xs" role="2iSdaV" />
-          </node>
-          <node concept="3EZMnI" id="74nMeo6B8zG" role="3EZMnx">
-            <node concept="VPM3Z" id="74nMeo6B8zI" role="3F10Kt" />
-            <node concept="3F0ifn" id="74nMeo6B8zK" role="3EZMnx">
-              <property role="3F0ifm" value="Arrival Message:" />
-            </node>
-            <node concept="3F1sOY" id="74nMeo6B8$0" role="3EZMnx">
-              <ref role="1NtTu8" to="3751:74nMeo6B8q1" resolve="ArrivalMessage" />
-            </node>
-            <node concept="2iRfu4" id="74nMeo6B8zL" role="2iSdaV" />
-          </node>
-          <node concept="3EZMnI" id="i1eH3W4Jju" role="3EZMnx">
-            <node concept="VPM3Z" id="i1eH3W4Jjw" role="3F10Kt" />
-            <node concept="3F0ifn" id="i1eH3W4Jjy" role="3EZMnx">
-              <property role="3F0ifm" value="Profile Name:" />
-            </node>
-            <node concept="3F0A7n" id="i1eH3W4JjR" role="3EZMnx">
-              <ref role="1NtTu8" to="3751:i1eH3W4JhS" resolve="agentProfileName" />
-            </node>
-            <node concept="2iRfu4" id="i1eH3W4Jjz" role="2iSdaV" />
-          </node>
-          <node concept="2iRkQZ" id="74nMeo6B8v7" role="2iSdaV" />
-        </node>
-      </node>
-      <node concept="3EZMnI" id="2_JteYOEVXP" role="3EZMnx">
-        <node concept="2iRkQZ" id="2_JteYOEVXQ" role="2iSdaV" />
-        <node concept="3F2HdR" id="2_JteYOEVXf" role="3EZMnx">
-          <ref role="1NtTu8" to="3751:2_JteYOEVUw" resolve="AttributeMaps" />
-          <node concept="2iRkQZ" id="2_JteYOEVXh" role="2czzBx" />
-        </node>
       </node>
     </node>
   </node>
@@ -1580,7 +1601,7 @@
         <ref role="1NtTu8" to="3751:1SF32lWRBw" resolve="condition" />
       </node>
       <node concept="3F0ifn" id="1SF32lWSEZ" role="3EZMnx">
-        <property role="3F0ifm" value="then" />
+        <property role="3F0ifm" value=":" />
       </node>
       <node concept="3F1sOY" id="1SF32lWRCg" role="3EZMnx">
         <ref role="1NtTu8" to="3751:1SF32lWRBy" resolve="rule" />
@@ -1593,7 +1614,7 @@
     <ref role="1XX52x" to="3751:1SF32lWSFn" resolve="SelectFirstSignal" />
     <node concept="3EZMnI" id="1SF32lWSFG" role="2wV5jI">
       <node concept="3F0ifn" id="1SF32lWSFN" role="3EZMnx">
-        <property role="3F0ifm" value="select first signal" />
+        <property role="3F0ifm" value="select first message" />
       </node>
       <node concept="l2Vlx" id="1SF32lWSFJ" role="2iSdaV" />
     </node>
@@ -1603,7 +1624,7 @@
     <ref role="1XX52x" to="3751:1SF32lWSFZ" resolve="SelectRandomSignal" />
     <node concept="3EZMnI" id="1SF32lWSGk" role="2wV5jI">
       <node concept="3F0ifn" id="1SF32lWSGr" role="3EZMnx">
-        <property role="3F0ifm" value="Select a random signal" />
+        <property role="3F0ifm" value="Select a random message" />
       </node>
       <node concept="l2Vlx" id="1SF32lWSGn" role="2iSdaV" />
     </node>
@@ -1613,19 +1634,22 @@
     <ref role="1XX52x" to="3751:1SF32lWSGB" resolve="SelectRelationshipDataSignal" />
     <node concept="3EZMnI" id="1SF32lWSH1" role="2wV5jI">
       <node concept="3F0ifn" id="1SF32lWSH8" role="3EZMnx">
-        <property role="3F0ifm" value="Select signal where data item '" />
+        <property role="3F0ifm" value="Select message where data slot '" />
       </node>
       <node concept="3F0A7n" id="1SF32lWSHe" role="3EZMnx">
         <ref role="1NtTu8" to="3751:1SF32lWSGN" resolve="dataName" />
       </node>
       <node concept="3F0ifn" id="1SF32lWSHm" role="3EZMnx">
-        <property role="3F0ifm" value="' is in relationship '" />
+        <property role="3F0ifm" value="' is in relationship:" />
       </node>
-      <node concept="3F0A7n" id="1SF32lWSHw" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:1SF32lWSGL" resolve="relationshipName" />
-      </node>
-      <node concept="3F0ifn" id="1SF32lWSHG" role="3EZMnx">
-        <property role="3F0ifm" value="'" />
+      <node concept="1iCGBv" id="2r8kCFs4HNa" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2r8kCFs4HMW" resolve="relationship" />
+        <node concept="1sVBvm" id="2r8kCFs4HNc" role="1sWHZn">
+          <node concept="3F0A7n" id="2r8kCFs4HNm" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
       </node>
       <node concept="l2Vlx" id="1SF32lWSH4" role="2iSdaV" />
     </node>
@@ -1644,9 +1668,28 @@
       <node concept="3F0ifn" id="1SF32lWSIW" role="3EZMnx">
         <property role="3F0ifm" value="------------------------------" />
       </node>
-      <node concept="3F2HdR" id="1SF32lWSJ7" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:1SF32lWSIn" resolve="rules" />
-        <node concept="2iRkQZ" id="1SF32lWSJ9" role="2czzBx" />
+      <node concept="3F0ifn" id="2r8kCFsy8L2" role="3EZMnx">
+        <property role="3F0ifm" value="In order of preference..." />
+        <node concept="Vb9p2" id="2r8kCFsy8Li" role="3F10Kt">
+          <property role="Vbekb" value="g1_kEg4/ITALIC" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="10oeqP5pDaM" role="3EZMnx">
+        <node concept="3F0ifn" id="10oeqP5pDbh" role="3EZMnx">
+          <property role="3F0ifm" value="+" />
+        </node>
+        <node concept="VPM3Z" id="10oeqP5pDaO" role="3F10Kt" />
+        <node concept="3F2HdR" id="10oeqP5pDb1" role="3EZMnx">
+          <property role="2czwfO" value="+" />
+          <ref role="1NtTu8" to="3751:1SF32lWSIn" resolve="rules" />
+          <node concept="l2Vlx" id="10oeqP5pDb4" role="2czzBx" />
+          <node concept="tppnM" id="10oeqP5pDbo" role="sWeuL">
+            <node concept="pVoyu" id="10oeqP5pDbq" role="3F10Kt">
+              <property role="VOm3f" value="true" />
+            </node>
+          </node>
+        </node>
+        <node concept="l2Vlx" id="10oeqP5pDaR" role="2iSdaV" />
       </node>
     </node>
   </node>
@@ -1655,19 +1698,22 @@
     <ref role="1XX52x" to="3751:1SF32lXSQZ" resolve="SelectNotRelationshipDataSignal" />
     <node concept="3EZMnI" id="1SF32lXYVl" role="2wV5jI">
       <node concept="3F0ifn" id="1SF32lXZrl" role="3EZMnx">
-        <property role="3F0ifm" value="Select signal where data '" />
+        <property role="3F0ifm" value="Select message where data line: '" />
       </node>
       <node concept="3F0A7n" id="1SF32lXZrr" role="3EZMnx">
         <ref role="1NtTu8" to="3751:1SF32lXXNK" resolve="dataName" />
       </node>
       <node concept="3F0ifn" id="1SF32lXZrz" role="3EZMnx">
-        <property role="3F0ifm" value="' is not present in relationship '" />
+        <property role="3F0ifm" value="' is not present in :" />
       </node>
-      <node concept="3F0A7n" id="1SF32lXZrH" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:1SF32lXXNI" resolve="relationshipName" />
-      </node>
-      <node concept="3F0ifn" id="1SF32lXZrT" role="3EZMnx">
-        <property role="3F0ifm" value="'" />
+      <node concept="1iCGBv" id="10oeqP5pDkQ" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:10oeqP5pDkF" resolve="relationship" />
+        <node concept="1sVBvm" id="10oeqP5pDkS" role="1sWHZn">
+          <node concept="3F0A7n" id="10oeqP5pDl2" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
       </node>
       <node concept="l2Vlx" id="1SF32lXYVo" role="2iSdaV" />
     </node>
@@ -1984,10 +2030,10 @@
   </node>
   <node concept="24kQdi" id="6SUjQPsMH1$">
     <property role="3GE5qa" value="RoomSelectionStrategy" />
-    <ref role="1XX52x" to="3751:6SUjQPsMGA_" resolve="SelectRoomWithNoAgentsOfType" />
+    <ref role="1XX52x" to="3751:6SUjQPsMGA_" resolve="SelectRoomByVacancy" />
     <node concept="3EZMnI" id="6SUjQPsMH3Y" role="2wV5jI">
       <node concept="3F0ifn" id="6SUjQPsMH6J" role="3EZMnx">
-        <property role="3F0ifm" value="Select room containing no agents of type" />
+        <property role="3F0ifm" value="Select room vacant of" />
       </node>
       <node concept="3F1sOY" id="6SUjQPsMHIG" role="3EZMnx">
         <ref role="1NtTu8" to="3751:6SUjQPsMHIB" resolve="AgentType" />
@@ -2005,9 +2051,28 @@
       <node concept="3F0ifn" id="6SUjQPsRMSI" role="3EZMnx">
         <property role="3F0ifm" value="------------------------" />
       </node>
-      <node concept="3F2HdR" id="6SUjQPsRMSP" role="3EZMnx">
-        <ref role="1NtTu8" to="3751:6SUjQPsMES_" resolve="rules" />
-        <node concept="2iRkQZ" id="6SUjQPsRMSR" role="2czzBx" />
+      <node concept="3F0ifn" id="10oeqP5eYHb" role="3EZMnx">
+        <property role="3F0ifm" value="In order of preference..." />
+        <node concept="Vb9p2" id="10oeqP5eYV5" role="3F10Kt">
+          <property role="Vbekb" value="g1_kEg4/ITALIC" />
+        </node>
+      </node>
+      <node concept="3EZMnI" id="10oeqP5kfOA" role="3EZMnx">
+        <node concept="3F0ifn" id="10oeqP5kfP0" role="3EZMnx">
+          <property role="3F0ifm" value="+" />
+        </node>
+        <node concept="VPM3Z" id="10oeqP5kfOC" role="3F10Kt" />
+        <node concept="3F2HdR" id="10oeqP5kfOQ" role="3EZMnx">
+          <property role="2czwfO" value="+" />
+          <ref role="1NtTu8" to="3751:6SUjQPsMES_" resolve="rules" />
+          <node concept="l2Vlx" id="10oeqP5kfOT" role="2czzBx" />
+          <node concept="tppnM" id="10oeqP5kfP9" role="sWeuL">
+            <node concept="pVoyu" id="10oeqP5kfPd" role="3F10Kt">
+              <property role="VOm3f" value="true" />
+            </node>
+          </node>
+        </node>
+        <node concept="l2Vlx" id="10oeqP5kfOF" role="2iSdaV" />
       </node>
       <node concept="2iRkQZ" id="6SUjQPsRMSB" role="2iSdaV" />
     </node>
@@ -2691,6 +2756,72 @@
         </node>
       </node>
       <node concept="l2Vlx" id="1Sy0AbOnHHU" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="10oeqP4V2vh">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:10oeqP4V2u$" resolve="SelectRoomByOccupantRelationship" />
+    <node concept="3EZMnI" id="10oeqP4V2vj" role="2wV5jI">
+      <node concept="3F0ifn" id="10oeqP4V2vq" role="3EZMnx">
+        <property role="3F0ifm" value="Select room where occupant is part of:" />
+      </node>
+      <node concept="1iCGBv" id="10oeqP4V2vw" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:10oeqP4V2u_" resolve="relationship" />
+        <node concept="1sVBvm" id="10oeqP4V2vy" role="1sWHZn">
+          <node concept="3F0A7n" id="10oeqP4V2vE" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="l2Vlx" id="10oeqP4V2vm" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="10oeqP59vpB">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1XX52x" to="3751:10oeqP59vpt" resolve="SelectRoomByMessageContent" />
+    <node concept="3EZMnI" id="10oeqP59vpD" role="2wV5jI">
+      <node concept="3F0ifn" id="10oeqP59vpK" role="3EZMnx">
+        <property role="3F0ifm" value="Select room that contains dataLine:'" />
+      </node>
+      <node concept="3F0A7n" id="10oeqP59vpQ" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:10oeqP59vpu" resolve="dataLineKey" />
+      </node>
+      <node concept="3F0ifn" id="10oeqP59vpY" role="3EZMnx">
+        <property role="3F0ifm" value="' in behaviour trigger" />
+      </node>
+      <node concept="l2Vlx" id="10oeqP59vpG" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="2r8kCFsbPOS">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1XX52x" to="3751:2r8kCFsbPOG" resolve="SelectMessageByRelationshipCapacity" />
+    <node concept="3EZMnI" id="2r8kCFsbPOU" role="2wV5jI">
+      <node concept="3F0ifn" id="2r8kCFsbPP1" role="3EZMnx">
+        <property role="3F0ifm" value="Select message where" />
+      </node>
+      <node concept="3F0ifn" id="2r8kCFsbPPf" role="3EZMnx">
+        <property role="3F0ifm" value="relationship:" />
+      </node>
+      <node concept="1iCGBv" id="2r8kCFsbPPp" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2r8kCFsbPOH" resolve="relationship" />
+        <node concept="1sVBvm" id="2r8kCFsbPPr" role="1sWHZn">
+          <node concept="3F0A7n" id="2r8kCFsbPPH" role="2wV5jI">
+            <property role="1Intyy" value="true" />
+            <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="2r8kCFsqQmV" role="3EZMnx">
+        <property role="3F0ifm" value="has capacity for data slot:'" />
+      </node>
+      <node concept="3F0A7n" id="2r8kCFsqQnb" role="3EZMnx">
+        <ref role="1NtTu8" to="3751:2r8kCFsqQmB" resolve="dataline" />
+      </node>
+      <node concept="3F0ifn" id="2r8kCFsy5M9" role="3EZMnx">
+        <property role="3F0ifm" value="'" />
+      </node>
+      <node concept="l2Vlx" id="2r8kCFsbPOX" role="2iSdaV" />
     </node>
   </node>
 </model>

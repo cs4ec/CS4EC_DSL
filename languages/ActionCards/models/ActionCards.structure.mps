@@ -574,7 +574,7 @@
       <property role="20kJfa" value="location" />
       <ref role="20lvS9" to="3751:5QJON_B_jME" resolve="RoomTypeReference" />
     </node>
-    <node concept="PrWs8" id="7hL7ecMagqd" role="PzmwI">
+    <node concept="PrWs8" id="1FCnaGvVvfQ" role="PzmwI">
       <ref role="PrY4T" node="7hL7ecM603q" resolve="ConditonalStatement" />
     </node>
   </node>

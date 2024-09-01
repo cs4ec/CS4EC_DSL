@@ -102,7 +102,7 @@
     <node concept="1TJgyj" id="1SF32lWSJU" role="1TKVEi">
       <property role="IQ2ns" value="33966321879452666" />
       <property role="20lmBu" value="fLJjDmT/aggregation" />
-      <property role="20kJfa" value="signalselectionstrategy" />
+      <property role="20kJfa" value="messageSelectionstrategy" />
       <ref role="20lvS9" node="1SF32lWRB3" resolve="MessageSelectionStrategy" />
     </node>
     <node concept="1TJgyj" id="6SUjQPsMEcs" role="1TKVEi">
@@ -136,6 +136,9 @@
     </node>
     <node concept="PrWs8" id="53LYXLHKkvB" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="PrWs8" id="2r8kCFt4$wz" role="PzmwI">
+      <ref role="PrY4T" to="tpck:2WmWrdnSpX2" resolve="ICanSuppressErrors" />
     </node>
     <node concept="1TJgyj" id="3l6cNjec6IC" role="1TKVEi">
       <property role="IQ2ns" value="3838812034270522280" />
@@ -1324,13 +1327,14 @@
   <node concept="1TIwiD" id="1SF32lWSGB">
     <property role="EcuMT" value="33966321879452455" />
     <property role="TrG5h" value="SelectRelationshipDataSignal" />
-    <property role="34LRSv" value="select signal based on relationship of data" />
+    <property role="34LRSv" value="select message based on relationship inclusion" />
     <property role="3GE5qa" value="SignalSelectionStrategy" />
     <ref role="1TJDcQ" node="1SF32lWRBI" resolve="SignalSelectionRule" />
-    <node concept="1TJgyi" id="1SF32lWSGL" role="1TKVEl">
-      <property role="IQ2nx" value="33966321879452465" />
-      <property role="TrG5h" value="relationshipName" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="1TJgyj" id="2r8kCFs4HMW" role="1TKVEi">
+      <property role="IQ2ns" value="2794574325134580924" />
+      <property role="20kJfa" value="relationship" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1SF32mdTHt" resolve="Relationship" />
     </node>
     <node concept="1TJgyi" id="1SF32lWSGN" role="1TKVEl">
       <property role="IQ2nx" value="33966321879452467" />
@@ -1342,11 +1346,13 @@
     <property role="EcuMT" value="33966321879715263" />
     <property role="3GE5qa" value="SignalSelectionStrategy" />
     <property role="TrG5h" value="SelectNotRelationshipDataSignal" />
+    <property role="34LRSv" value="select message based on relationship exclusion" />
     <ref role="1TJDcQ" node="1SF32lWRBI" resolve="SignalSelectionRule" />
-    <node concept="1TJgyi" id="1SF32lXXNI" role="1TKVEl">
-      <property role="IQ2nx" value="33966321879735534" />
-      <property role="TrG5h" value="relationshipName" />
-      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="1TJgyj" id="10oeqP5pDkF" role="1TKVEi">
+      <property role="IQ2ns" value="1159740320404378923" />
+      <property role="20kJfa" value="relationship" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1SF32mdTHt" resolve="Relationship" />
     </node>
     <node concept="1TJgyi" id="1SF32lXXNK" role="1TKVEl">
       <property role="IQ2nx" value="33966321879735536" />
@@ -1662,7 +1668,7 @@
   <node concept="1TIwiD" id="6SUjQPsMGA_">
     <property role="EcuMT" value="7942748223948114341" />
     <property role="3GE5qa" value="RoomSelectionStrategy" />
-    <property role="TrG5h" value="SelectRoomWithNoAgentsOfType" />
+    <property role="TrG5h" value="SelectRoomByVacancy" />
     <property role="34LRSv" value="select room containing no x type agents" />
     <ref role="1TJDcQ" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
     <node concept="1TJgyj" id="6SUjQPsMHIB" role="1TKVEi">
@@ -2194,6 +2200,56 @@
     </node>
     <node concept="PrWs8" id="1Sy0AbOnHH0" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="1FCnaGw3$eW">
+    <property role="EcuMT" value="1938901529629967292" />
+    <property role="3GE5qa" value="actions.actions.basic actions.StayAction.StayForConditionAction.Condition" />
+    <property role="TrG5h" value="RelationshipMemberSizeCondition" />
+    <property role="34LRSv" value="Check relationship member size" />
+    <ref role="1TJDcQ" node="3VxbR92UVH2" resolve="Condition" />
+  </node>
+  <node concept="1TIwiD" id="10oeqP4V2u$">
+    <property role="EcuMT" value="1159740320396355492" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="SelectRoomByOccupantRelationship" />
+    <property role="34LRSv" value="select room based on occupant" />
+    <ref role="1TJDcQ" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
+    <node concept="1TJgyj" id="10oeqP4V2u_" role="1TKVEi">
+      <property role="IQ2ns" value="1159740320396355493" />
+      <property role="20kJfa" value="relationship" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1SF32mdTHt" resolve="Relationship" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="10oeqP59vpt">
+    <property role="EcuMT" value="1159740320400143965" />
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <property role="TrG5h" value="SelectRoomByMessageContent" />
+    <property role="34LRSv" value="select room based on message contents" />
+    <ref role="1TJDcQ" node="6SUjQPsMF$a" resolve="RoomSelectionRule" />
+    <node concept="1TJgyi" id="10oeqP59vpu" role="1TKVEl">
+      <property role="IQ2nx" value="1159740320400143966" />
+      <property role="TrG5h" value="dataLineKey" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2r8kCFsbPOG">
+    <property role="EcuMT" value="2794574325136448812" />
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <property role="TrG5h" value="SelectMessageByRelationshipCapacity" />
+    <property role="34LRSv" value="Select message based on relationship capacity" />
+    <ref role="1TJDcQ" node="1SF32lWRBI" resolve="SignalSelectionRule" />
+    <node concept="1TJgyj" id="2r8kCFsbPOH" role="1TKVEi">
+      <property role="IQ2ns" value="2794574325136448813" />
+      <property role="20kJfa" value="relationship" />
+      <property role="20lbJX" value="fLJekj4/_1" />
+      <ref role="20lvS9" node="1SF32mdTHt" resolve="Relationship" />
+    </node>
+    <node concept="1TJgyi" id="2r8kCFsqQmB" role="1TKVEl">
+      <property role="IQ2nx" value="2794574325140383143" />
+      <property role="TrG5h" value="dataline" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
   </node>
 </model>

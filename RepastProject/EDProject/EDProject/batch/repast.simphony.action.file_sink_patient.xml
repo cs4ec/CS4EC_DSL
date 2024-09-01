@@ -4,23 +4,19 @@
   <delimiter>,</delimiter>
   <format>TABULAR</format>
   <sourceIds class="linked-hash-set">
-    <string>patientgetSeverityissevere</string>
-    <string>patientgetSeverityismoderate</string>
-    <string>patientgetSeverityislow</string>
     <string>patientgetImmunocompromisedisYes</string>
     <string>patientgetImmunocompromisedisNo</string>
-    <string>patientgetStrepAInfectionStatusisSusceptible</string>
-    <string>patientgetStrepAInfectionStatusisAsymptomatic</string>
-    <string>patientgetStrepAInfectionStatusisSymptomatic</string>
-    <string>patientgetadmittedToisGreenBay</string>
-    <string>patientgetadmittedToisGreenBaygetSeverityissevere</string>
-    <string>patientgetadmittedToisGreenBaygetSeverityismoderate</string>
-    <string>patientgetadmittedToisGreenBaygetSeverityislow</string>
-    <string>patientgetadmittedToisGreenBaygetImmunocompromisedisYes</string>
-    <string>patientgetadmittedToisGreenBaygetImmunocompromisedisNo</string>
-    <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSusceptible</string>
-    <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisAsymptomatic</string>
-    <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSymptomatic</string>
+    <string>patientgetCOVIDInfectionStatusisSusceptible</string>
+    <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
+    <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
+    <string>patientgetTestCOVIDResultisPositive</string>
+    <string>patientgetTestCOVIDResultisNegative</string>
+    <string>patientgetLIATCOVIDResultisPositive</string>
+    <string>patientgetLIATCOVIDResultisNegative</string>
+    <string>patientgetLabPCRCOVIDResultisPositive</string>
+    <string>patientgetLabPCRCOVIDResultisNegative</string>
+    <string>patientgetPHEThreeCOVIDResultisPositive</string>
+    <string>patientgetPHEThreeCOVIDResultisNegative</string>
     <string>patientgetAliveTime</string>
   </sourceIds>
   <fileName>patientDataOutput.txt</fileName>

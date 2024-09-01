@@ -72,7 +72,6 @@
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
         <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
         <module reference="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" version="0" />
-        <module reference="29af8eae-5649-40f8-acdf-a1edf032cb72(EDLanguage.Runner)" version="0" />
         <module reference="4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
@@ -125,12 +124,12 @@
   <sourcePath />
   <dependencies>
     <dependency reexport="false">7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)</dependency>
-    <dependency reexport="false">bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)</dependency>
     <dependency reexport="false">f7ad14aa-a3e2-4301-8822-d919845c8bcf(de.itemis.mps.editor.diagram.shapes)</dependency>
-    <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
     <dependency reexport="true">c7e8e49a-acaa-4f3d-bcb1-3beb9fec80c3(StyleFiles)</dependency>
-    <dependency reexport="false">2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)</dependency>
     <dependency reexport="false">7127d409-29f0-43e8-917f-f016ea288944(jetbrains.mps.lang.feedback.problem.structural)</dependency>
+    <dependency reexport="false">2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)</dependency>
+    <dependency reexport="false">1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</dependency>
+    <dependency reexport="false">bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:b3cac82c-d024-46bc-b485-624ad80c3cc2:ActionCards" version="1" />
@@ -268,9 +267,6 @@
   </dependencyVersions>
   <extendedLanguages>
     <extendedLanguage>cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</extendedLanguage>
-    <extendedLanguage>1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</extendedLanguage>
-    <extendedLanguage>2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)</extendedLanguage>
-    <extendedLanguage>bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)</extendedLanguage>
   </extendedLanguages>
 </language>
 

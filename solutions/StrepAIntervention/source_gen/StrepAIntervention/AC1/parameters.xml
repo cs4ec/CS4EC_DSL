@@ -92,26 +92,6 @@
   		displayName="TypicalPatientscohortTypicalPatients" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="TypicalPatientsSeveritysevere"
-  		displayName="TypicalPatientsSeveritysevere" type="double" defaultValue="15"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="TypicalPatientsSeveritymoderate"
-  		displayName="TypicalPatientsSeveritymoderate" type="double" defaultValue="85"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="TypicalPatientsSeveritylow"
-  		displayName="TypicalPatientsSeveritylow" type="double" defaultValue="0"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="TypicalPatientsImmunocompromisedYes"
-  		displayName="TypicalPatientsImmunocompromisedYes" type="double" defaultValue="20"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="TypicalPatientsImmunocompromisedNo"
-  		displayName="TypicalPatientsImmunocompromisedNo" type="double" defaultValue="80"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="StrepAPatientscohortStrepAPatients"
   		displayName="StrepAPatientscohortStrepAPatients" type="double" defaultValue="100"
   		isReadOnly="false"
@@ -126,18 +106,6 @@
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="StrepAPatientsStrepAInfectionStatusSymptomatic"
   		displayName="StrepAPatientsStrepAInfectionStatusSymptomatic" type="double" defaultValue="10"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepAPatientsSeveritysevere"
-  		displayName="StrepAPatientsSeveritysevere" type="double" defaultValue="20"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepAPatientsSeveritymoderate"
-  		displayName="StrepAPatientsSeveritymoderate" type="double" defaultValue="80"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="StrepAPatientsSeveritylow"
-  		displayName="StrepAPatientsSeveritylow" type="double" defaultValue="0"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 </parameters>

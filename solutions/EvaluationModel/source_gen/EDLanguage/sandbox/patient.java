@@ -18,6 +18,13 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import simcore.agents.Agent;
 import repast.simphony.space.graph.Network;
+import simcore.action.InstantBehaviourStep;
+import simcore.basicStructures.ToolBox;
+import repast.simphony.space.continuous.NdPoint;
+import repast.simphony.engine.environment.RunEnvironment;
+import simcore.action.BehaviourStep;
+import repast.simphony.engine.schedule.ScheduledMethod;
+import simcore.action.BackgroundBehaviour;
 import simcore.basicStructures.TimeKeeper;
 
 public class patient extends Actor {
@@ -30,6 +37,7 @@ public class patient extends Actor {
   public String LateralFlowTestCOVIDResult = "Incomplete";
   public String RapidPCRTestCOVIDResult = "Incomplete";
   public String LabPCRCOVIDResult = "Incomplete";
+  public String LabPCRFluResult = "Incomplete";
   public String PHEThreeCOVIDResult = "Incomplete";
   public String LFTorPCRCOVIDResult = "Incomplete";
   public String cohort = "CohortOne";
@@ -214,6 +222,18 @@ public class patient extends Actor {
     }
     return 0;
   }
+  public int getLabPCRFluResultisPositive() {
+    if (this.LabPCRFluResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getLabPCRFluResultisNegative() {
+    if (this.LabPCRFluResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
   public int getPHEThreeCOVIDResultisPositive() {
     if (this.PHEThreeCOVIDResult == "Positive") {
       return 1;
@@ -226,8 +246,8 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBay() {
-    if (this.admittedTo == "GreenBay") {
+  public int getadmittedToisAmberBay() {
+    if (this.admittedTo == "AmberBay") {
       return 1;
     }
     return 0;
@@ -244,14 +264,14 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetImmunocompromisedisYes() {
-    if (this.admittedTo == "GreenBay" && this.Immunocompromised == "Yes") {
+  public int getadmittedToisAmberBaygetImmunocompromisedisYes() {
+    if (this.admittedTo == "AmberBay" && this.Immunocompromised == "Yes") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetImmunocompromisedisNo() {
-    if (this.admittedTo == "GreenBay" && this.Immunocompromised == "No") {
+  public int getadmittedToisAmberBaygetImmunocompromisedisNo() {
+    if (this.admittedTo == "AmberBay" && this.Immunocompromised == "No") {
       return 1;
     }
     return 0;
@@ -280,20 +300,20 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetSeverityissevere() {
-    if (this.admittedTo == "GreenBay" && this.Severity == "severe") {
+  public int getadmittedToisAmberBaygetSeverityissevere() {
+    if (this.admittedTo == "AmberBay" && this.Severity == "severe") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetSeverityismoderate() {
-    if (this.admittedTo == "GreenBay" && this.Severity == "moderate") {
+  public int getadmittedToisAmberBaygetSeverityismoderate() {
+    if (this.admittedTo == "AmberBay" && this.Severity == "moderate") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetSeverityislow() {
-    if (this.admittedTo == "GreenBay" && this.Severity == "low") {
+  public int getadmittedToisAmberBaygetSeverityislow() {
+    if (this.admittedTo == "AmberBay" && this.Severity == "low") {
       return 1;
     }
     return 0;
@@ -334,20 +354,20 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisSusceptible() {
-    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Susceptible") {
+  public int getadmittedToisAmberBaygetCOVIDInfectionStatusisSusceptible() {
+    if (this.admittedTo == "AmberBay" && this.COVIDInfectionStatus == "Susceptible") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisAsymptomatic() {
-    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Asymptomatic") {
+  public int getadmittedToisAmberBaygetCOVIDInfectionStatusisAsymptomatic() {
+    if (this.admittedTo == "AmberBay" && this.COVIDInfectionStatus == "Asymptomatic") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetCOVIDInfectionStatusisSymptomatic() {
-    if (this.admittedTo == "GreenBay" && this.COVIDInfectionStatus == "Symptomatic") {
+  public int getadmittedToisAmberBaygetCOVIDInfectionStatusisSymptomatic() {
+    if (this.admittedTo == "AmberBay" && this.COVIDInfectionStatus == "Symptomatic") {
       return 1;
     }
     return 0;
@@ -388,14 +408,14 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLateralFlowTestCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowTestCOVIDResult == "Positive") {
+  public int getadmittedToisAmberBaygetLateralFlowTestCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LateralFlowTestCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLateralFlowTestCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.LateralFlowTestCOVIDResult == "Negative") {
+  public int getadmittedToisAmberBaygetLateralFlowTestCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LateralFlowTestCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
@@ -424,14 +444,14 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetRapidPCRTestCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.RapidPCRTestCOVIDResult == "Positive") {
+  public int getadmittedToisAmberBaygetRapidPCRTestCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.RapidPCRTestCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetRapidPCRTestCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.RapidPCRTestCOVIDResult == "Negative") {
+  public int getadmittedToisAmberBaygetRapidPCRTestCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.RapidPCRTestCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
@@ -460,14 +480,14 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLabPCRCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.LabPCRCOVIDResult == "Positive") {
+  public int getadmittedToisAmberBaygetLabPCRCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRCOVIDResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetLabPCRCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.LabPCRCOVIDResult == "Negative") {
+  public int getadmittedToisAmberBaygetLabPCRCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
@@ -496,14 +516,50 @@ public class patient extends Actor {
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetPHEThreeCOVIDResultisPositive() {
-    if (this.admittedTo == "GreenBay" && this.PHEThreeCOVIDResult == "Positive") {
+  public int getadmittedToisAmberBaygetLabPCRFluResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRFluResult == "Positive") {
       return 1;
     }
     return 0;
   }
-  public int getadmittedToisGreenBaygetPHEThreeCOVIDResultisNegative() {
-    if (this.admittedTo == "GreenBay" && this.PHEThreeCOVIDResult == "Negative") {
+  public int getadmittedToisAmberBaygetLabPCRFluResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.LabPCRFluResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisSideRoomgetLabPCRFluResultisPositive() {
+    if (this.admittedTo == "SideRoom" && this.LabPCRFluResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisSideRoomgetLabPCRFluResultisNegative() {
+    if (this.admittedTo == "SideRoom" && this.LabPCRFluResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetLabPCRFluResultisPositive() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.LabPCRFluResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisCOVIDPositiveCohortgetLabPCRFluResultisNegative() {
+    if (this.admittedTo == "COVIDPositiveCohort" && this.LabPCRFluResult == "Negative") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetPHEThreeCOVIDResultisPositive() {
+    if (this.admittedTo == "AmberBay" && this.PHEThreeCOVIDResult == "Positive") {
+      return 1;
+    }
+    return 0;
+  }
+  public int getadmittedToisAmberBaygetPHEThreeCOVIDResultisNegative() {
+    if (this.admittedTo == "AmberBay" && this.PHEThreeCOVIDResult == "Negative") {
       return 1;
     }
     return 0;
@@ -534,6 +590,117 @@ public class patient extends Actor {
   }
 
 
+  public class Consequence_a0a0a0a0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Consequence_a0a0a0a0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      ((patient) behaviour.getSignalTrigger().GetData("patient")).COVIDInfectionStatus = "Exposed";
+
+    }
+  }
+  public class DropBreadcrumb_b0a0a0a0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+
+    public DropBreadcrumb_b0a0a0a0(Behaviour behaviour) {
+      Grid grid = (Grid) ToolBox.grids.stream().filter(new Predicate<Grid>() {
+        public boolean test(Grid g) {
+          return g.getName() == "COVIDBreadcrumb";
+        }
+      }).findFirst().get();
+
+      NdPoint spacePt = space.getLocation(patient.this);
+      int diffusionRange = 3;
+      for (int xAxis = (int) (spacePt.getX() - diffusionRange); xAxis < (int) (spacePt.getX() + diffusionRange); xAxis++) {
+        int xCloseness = Math.abs(((int) spacePt.getX() - xAxis));
+        for (int yAxis = (int) (spacePt.getY() - diffusionRange); yAxis < (int) (spacePt.getY() + diffusionRange); yAxis++) {
+          int yCloseness = Math.abs(((int) spacePt.getY() - yAxis));
+
+          for (int count = Math.max(xCloseness, yCloseness); count < diffusionRange; count++) {
+            if (grid.getObjectAt(xAxis, yAxis) == null) {
+              COVIDBreadcrumb breadcrumb = new COVIDBreadcrumb();
+              context.add(breadcrumb);
+              grid.getAdder().add(grid, breadcrumb);
+              grid.moveTo(breadcrumb, xAxis, yAxis);
+              space.moveTo(breadcrumb, xAxis, yAxis);
+            } else {
+              ((COVIDBreadcrumb) grid.getObjectAt(xAxis, yAxis)).count++;
+            }
+
+          }
+        }
+
+      }
+
+
+    }
+  }
+  public class Choice_a0a0a0 extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public Choice_a0a0a0(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+      if (Dice(RunEnvironment.getInstance().getParameters().getDouble("InfectionSpreadChance:COVIDSymptomatic-2_a0"))) {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Consequence_a0a0a0a0(behaviour));
+        plstSteps.add(new DropBreadcrumb_b0a0a0a0(behaviour));
+        behaviour.injectSteps(plstSteps);
+      } else {
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        behaviour.injectSteps(plstSteps);
+      }
+    }
+  }
+  public class DecisionTree_a0a extends InstantBehaviourStep {
+    /*package*/ Behaviour behaviour;
+    public DecisionTree_a0a(Behaviour behaviour) {
+      this.behaviour = behaviour;
+    }
+
+    public void execute() {
+
+
+
+      if (patient.this.COVIDInfectionStatus == "Symptomatic" && distanceTo(((patient) behaviour.getSignalTrigger().GetData("patient"))) < 2 && ((patient) behaviour.getSignalTrigger().GetData("patient")).admittedTo == "NA" && !(((isPathObstructed(grid.getLocation(patient.this), grid.getLocation(behaviour.getSignalTrigger().GetData("patient"))))))) {
+
+        ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new Choice_a0a0a0(behaviour));
+        behaviour.injectSteps(plstSteps);
+
+      }
+
+    }
+  }
+  @ScheduledMethod(start = 1, interval = 1)
+  public void ScheduledBehaviourForCOVID() {
+    if (deSpawnTime == null) {
+      for (Object object : context.getObjects(patient.class)) {
+        patient a = (patient) object;
+        if (a != this && a.deSpawnTime == null && distanceTo(a) < 2) {
+          Signal s = new Signal();
+          s.setName("patient" + a.agentName());
+          s.setDescription("BackgroundBehaviourForCOVIDTrigger");
+          s.AddActor("patient");
+          s.AddData("patient", a);
+          BackgroundBehaviourForCOVID(s);
+        }
+      }
+    }
+  }
+  public void BackgroundBehaviourForCOVID(Signal s) {
+    BackgroundBehaviour backgroundBehaviour = new BackgroundBehaviour("BackgroundBehaviourForCOVID", this);
+
+    backgroundBehaviour.setSignalTrigger(s);
+    ArrayList<BehaviourStep> plstSteps = new ArrayList();
+    plstSteps.add(new DecisionTree_a0a(backgroundBehaviour));
+    backgroundBehaviour.setSteps(plstSteps);
+
+    myBackgroundBehaviours.add(backgroundBehaviour);
+  }
 
 
 

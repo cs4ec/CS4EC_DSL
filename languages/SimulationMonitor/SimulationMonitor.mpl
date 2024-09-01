@@ -62,6 +62,7 @@
     <language slang="l:b3cac82c-d024-46bc-b485-624ad80c3cc2:ActionCards" version="1" />
     <language slang="l:7dcff301-ba01-414e-8574-a8f6da31876b:AgentLanguage" version="1" />
     <language slang="l:1a0150ac-dda5-4129-824e-01dce96fdea4:BuiltEnvironment" version="1" />
+    <language slang="l:bb69d087-96cc-48ca-aeb6-c2cb27e532b0:DiseaseModel" version="0" />
     <language slang="l:2fa21111-1327-44d6-9000-fd96b15fb9b6:PatientLanguage" version="0" />
     <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="6" />
     <language slang="l:63e0e566-5131-447e-90e3-12ea330e1a00:com.mbeddr.mpsutil.blutil" version="1" />

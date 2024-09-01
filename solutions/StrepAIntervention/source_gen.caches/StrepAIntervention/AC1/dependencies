@@ -133,21 +133,16 @@
   </dependency>
   <dependency className="StrepAIntervention.AC1.EDBuilder">
     <classNode dependClassName="EDLanguage.sandbox.Bed" />
-    <classNode dependClassName="EDLanguage.sandbox.COVIDPositiveCohort" />
-    <classNode dependClassName="EDLanguage.sandbox.FluPositiveCohort" />
     <classNode dependClassName="EDLanguage.sandbox.GASNurse" />
     <classNode dependClassName="EDLanguage.sandbox.GASRoom" />
     <classNode dependClassName="EDLanguage.sandbox.GreenBay" />
     <classNode dependClassName="EDLanguage.sandbox.MainEntrance" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.MajorsDesk" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsDoctor" />
     <classNode dependClassName="EDLanguage.sandbox.MajorsNurse" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsBay" />
-    <classNode dependClassName="EDLanguage.sandbox.MinorsDesk" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsDoctor" />
     <classNode dependClassName="EDLanguage.sandbox.MinorsNurse" />
-    <classNode dependClassName="EDLanguage.sandbox.MinorsWaitingRoom" />
     <classNode dependClassName="EDLanguage.sandbox.Seat" />
     <classNode dependClassName="EDLanguage.sandbox.SeniorDoc" />
     <classNode dependClassName="EDLanguage.sandbox.SideRoom" />

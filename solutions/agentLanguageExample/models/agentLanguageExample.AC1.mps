@@ -12,7 +12,10 @@
     <engage id="30254c5b-f87e-4bb3-a60a-77a7ec6ed411" name="org.iets3.core.expr.genjava.base" />
     <engage id="5a0b0b9c-ca67-4d27-9caa-ec974d9cfa40" name="org.iets3.core.expr.genjava.simpleTypes" />
   </languages>
-  <imports />
+  <imports>
+    <import index="ti4l" ref="f0c70b12-fd0b-4567-afd7-a55701cade91/i:10000005(EvaluationModel@transient20/EvaluationModel.AC1@2_3)" />
+    <import index="ti4m" ref="21823841-8653-49df-a182-e9de3906e9ca/i:10000005(EvaluationModel@transient24/EvaluationModel.AC1@2_3)" implicit="true" />
+  </imports>
   <registry>
     <language id="b3cac82c-d024-46bc-b485-624ad80c3cc2" name="ActionCards">
       <concept id="33966321878163354" name="ActionCards.structure.AdmissionAction" flags="ng" index="2lDReE" />
@@ -62,6 +65,10 @@
       <concept id="7828349744265630201" name="ActionCards.structure.SymptomList" flags="ng" index="3oQJd$">
         <child id="7828349744265630211" name="symptoms" index="3oQJ2u" />
       </concept>
+      <concept id="1758249876462569833" name="ActionCards.structure.PatientPropertyConditional" flags="ng" index="1CySur">
+        <reference id="1758249876465254186" name="patientProperty" index="1DsR7o" />
+        <child id="1758249876462569987" name="checkValue" index="1CySjL" />
+      </concept>
       <concept id="1758249876500231394" name="ActionCards.structure.Yes" flags="ng" index="1FjjCg" />
       <concept id="1758249876500231396" name="ActionCards.structure.No" flags="ng" index="1FjjCm" />
       <concept id="1758249876506201858" name="ActionCards.structure.ActionCardCondition" flags="ng" index="1FS47K">
@@ -84,40 +91,122 @@
       </concept>
     </language>
     <language id="7dcff301-ba01-414e-8574-a8f6da31876b" name="AgentLanguage">
-      <concept id="4334763093661302211" name="AgentLanguage.structure.PlaceInstanceReference" flags="ng" index="j3T7i">
-        <reference id="4334763093661302212" name="spaceInstance" index="j3T7l" />
+      <concept id="4334763093660390701" name="AgentLanguage.structure.StayForTimeAction" flags="ng" index="jcv$W">
+        <property id="4334763093660390702" name="timeSpan" index="jcv$Z" />
+      </concept>
+      <concept id="4334763093660390794" name="AgentLanguage.structure.StayForConditionAction" flags="ng" index="jcvAr">
+        <child id="4334763093660390795" name="condition" index="jcvAq" />
+      </concept>
+      <concept id="4334763093659899157" name="AgentLanguage.structure.AttributeCondition" flags="ng" index="jeB$4">
+        <property id="4334763093659899247" name="operator" index="jeB_Y" />
+        <reference id="2985733650908180605" name="actorRef" index="2h88ii" />
+        <reference id="2985733650891070134" name="attrRef" index="2u9qTp" />
+        <child id="7454555096515505209" name="right" index="x4oD$" />
       </concept>
       <concept id="4334763093659899158" name="AgentLanguage.structure.Attribute" flags="ng" index="jeB$7">
         <child id="2698877061876378325" name="value" index="1gSNMQ" />
       </concept>
-      <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
-      <concept id="3535684625548403902" name="AgentLanguage.structure.PassiveWaitUntil" flags="ng" index="Izybh">
-        <child id="3535684625548411656" name="condition" index="IzGlB" />
+      <concept id="4334763093659899161" name="AgentLanguage.structure.AttributeReference" flags="ng" index="jeB$8">
+        <reference id="4334763093659899162" name="attribute" index="jeB$b" />
+      </concept>
+      <concept id="4334763093659899312" name="AgentLanguage.structure.ObjectInstance" flags="ng" index="jeBAx">
+        <property id="4334763093659899313" name="type" index="jeBAw" />
+      </concept>
+      <concept id="4334763093659899467" name="AgentLanguage.structure.PossibilityCondition" flags="ng" index="jeBDq">
+        <child id="7454555096515830426" name="possibility" index="x58j7" />
+      </concept>
+      <concept id="33966321879448003" name="AgentLanguage.structure.MessageSelectionStrategy" flags="ng" index="2lyXnN" />
+      <concept id="33966321883913053" name="AgentLanguage.structure.Relationship" flags="ng" index="2mjNtH" />
+      <concept id="3553172394608014330" name="AgentLanguage.structure.CompositeOrder" flags="ng" index="2n6Hid">
+        <child id="3553172394608014358" name="orderLeft" index="2n6Hdx" />
+        <child id="3553172394608014360" name="orderRight" index="2n6HdJ" />
+      </concept>
+      <concept id="2985733650858970807" name="AgentLanguage.structure.TimeDistributionLine" flags="ng" index="2s3BDo">
+        <property id="2985733650858970836" name="Occurances" index="2s3BCV" />
+        <property id="2985733650858970835" name="Time" index="2s3BCW" />
+      </concept>
+      <concept id="2985733650858970761" name="AgentLanguage.structure.TimeDistributionTable" flags="ng" index="2s3BDA">
+        <child id="2985733650858970907" name="lines" index="2s3BJO" />
+      </concept>
+      <concept id="2985733650858963285" name="AgentLanguage.structure.PassiveWaitAction" flags="ng" index="2s3SmU">
+        <reference id="2985733650858971688" name="timeDistributionTable" index="2s3Ar7" />
+      </concept>
+      <concept id="7454555096515224041" name="AgentLanguage.structure.ExpressionWrapper" flags="ng" index="xbsuO">
+        <property id="3686649417177899512" name="value" index="29oVR$" />
+        <property id="3686649417169385946" name="repastVariableName" index="2aSqn6" />
+      </concept>
+      <concept id="4973502446685367656" name="AgentLanguage.structure.DataInstanceMap" flags="ng" index="2_cGdR">
+        <reference id="5832719916573057037" name="dataLine" index="XnLJh" />
+        <child id="4973502446685367659" name="objectInstance" index="2_cGdO" />
+      </concept>
+      <concept id="7942748223948107616" name="AgentLanguage.structure.RoomSelectionStrategyLine" flags="ng" index="MWe0d">
+        <child id="7942748223948109783" name="rule" index="MWfyU" />
+      </concept>
+      <concept id="7942748223948105583" name="AgentLanguage.structure.RoomSelectionStrategy" flags="ng" index="MWew2">
+        <child id="7942748223948107301" name="rules" index="MWe58" />
       </concept>
       <concept id="6750846609956093098" name="AgentLanguage.structure.RoomTypeReference" flags="ng" index="UeIYj">
         <reference id="6750846609956389136" name="roomType" index="Udx8D" />
       </concept>
-      <concept id="2838504078745189" name="AgentLanguage.structure.PlaceInstanceCollection" flags="ng" index="2Vh8JZ">
-        <child id="2838504078745190" name="place" index="2Vh8JW" />
+      <concept id="5832719916577320042" name="AgentLanguage.structure.UpdateAttributeAction" flags="ng" index="X7xuQ">
+        <reference id="2985733650910570790" name="actorRef" index="2h6LR9" />
+        <child id="768972137555555169" name="value" index="2Rw0dO" />
+        <child id="768972137554994742" name="attributeReference" index="2Ry9oz" />
+      </concept>
+      <concept id="4321323723331232502" name="AgentLanguage.structure.UseResourceAction" flags="ng" index="3bm0ZL">
+        <reference id="4321323723335586258" name="targetResource" index="3b6FNl" />
       </concept>
       <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableReference" flags="ng" index="1kHjla">
         <reference id="3535684625553292470" name="occupiable" index="IYbFp" />
       </concept>
-      <concept id="513408552829815467" name="AgentLanguage.structure.ActorReference" flags="ng" index="3n3BjK" />
+      <concept id="1159740320396355492" name="AgentLanguage.structure.SelectRoomByOccupantRelationship" flags="ng" index="1kX1S9">
+        <reference id="1159740320396355493" name="relationship" index="1kX1S8" />
+      </concept>
+      <concept id="513408552829965726" name="AgentLanguage.structure.SignalReference" flags="ng" index="3n32J5">
+        <reference id="513408552829965727" name="signal" index="3n32J4" />
+      </concept>
+      <concept id="513408552829815467" name="AgentLanguage.structure.ActorReference" flags="ng" index="3n3BjK">
+        <reference id="513408552829815468" name="actor" index="3n3BjR" />
+      </concept>
       <concept id="513408552829743914" name="AgentLanguage.structure.Signal" flags="ng" index="3n3SPL">
+        <property id="513408552829744291" name="description" index="3n3SFS" />
         <child id="88285669848655863" name="receivers" index="1nbS2I" />
         <child id="4211260315489209511" name="senders" index="3z7ADm" />
       </concept>
       <concept id="513408552829743917" name="AgentLanguage.structure.SignalDefinition" flags="ng" index="3n3SPQ">
         <child id="513408552829743918" name="signals" index="3n3SPP" />
       </concept>
+      <concept id="88285669848655860" name="AgentLanguage.structure.ActorTypeSignal" flags="ng" index="1nbS2H" />
+      <concept id="4211260315489209491" name="AgentLanguage.structure.SignalInitReference" flags="ng" index="3z7ADy">
+        <reference id="4211260315489209492" name="signal" index="3z7AD_" />
+        <child id="4334763093659899423" name="signalContent" index="jeBCe" />
+      </concept>
+      <concept id="4211260315489212560" name="AgentLanguage.structure.SendSignalAction" flags="ng" index="3z7BTx">
+        <child id="4211260315489212561" name="signalInitReference" index="3z7BTw" />
+      </concept>
+      <concept id="2171300594375908158" name="AgentLanguage.structure.MyRoomsOccupiableReference" flags="ng" index="3Evd_s">
+        <reference id="3535684625553292470" name="occupiable" index="IYbFq" />
+      </concept>
       <concept id="5626228425388812985" name="AgentLanguage.structure.InSameRoomCondition" flags="ng" index="3I_gD8">
         <child id="5626228425388813013" name="target" index="3I_gC$" />
+      </concept>
+      <concept id="5626228425396618826" name="AgentLanguage.structure.MyRoomInstance" flags="ng" index="3IVeqV" />
+      <concept id="8504720493510951867" name="AgentLanguage.structure.OrderPatientAction" flags="ng" index="3JG_m1">
+        <child id="8504720493510951967" name="targetPatient" index="3JG_8_" />
+        <child id="8504720493510951878" name="orderContent" index="3JG_nW" />
+      </concept>
+      <concept id="8504720493510951869" name="AgentLanguage.structure.MoveOrder" flags="ng" index="3JG_m7">
+        <child id="8504720493510951874" name="targetObject" index="3JG_nS" />
+      </concept>
+      <concept id="8504720493511355375" name="AgentLanguage.structure.HumanInstanceFromSignal" flags="ng" index="3JJ7Rl">
+        <property id="8504720493511355376" name="data" index="3JJ7Ra" />
       </concept>
       <concept id="8504720493511205796" name="AgentLanguage.structure.PatientInstance" flags="ng" index="3JJFmu" />
       <concept id="3838812034270454385" name="AgentLanguage.structure.Actor" flags="ng" index="3Vql55">
         <property id="2059891927260258057" name="colour" index="1kBeJ2" />
         <property id="8465466444634577437" name="patientCapacity" index="1n5rFW" />
+        <child id="33966321879452666" name="messageSelectionstrategy" index="2lyMva" />
+        <child id="7942748223948104476" name="roomSelectionStrategy" index="MWeLL" />
         <child id="2814466787070108702" name="behaviourMethods" index="2Ov1EZ" />
         <child id="2701765455131303424" name="attributes" index="3eYOtt" />
       </concept>
@@ -130,6 +219,11 @@
       </concept>
       <concept id="3838812034270528838" name="AgentLanguage.structure.BehaviourSequence" flags="ng" index="3VtFpM">
         <child id="3838812034270528840" name="steps" index="3VtFpW" />
+      </concept>
+      <concept id="3838812034270528842" name="AgentLanguage.structure.Choice" flags="ng" index="3VtFpY">
+        <child id="3838812034270528848" name="else_case" index="3VtFp$" />
+        <child id="3838812034270528845" name="condition" index="3VtFpT" />
+        <child id="3838812034270528843" name="if_case" index="3VtFpZ" />
       </concept>
     </language>
     <language id="2fa21111-1327-44d6-9000-fd96b15fb9b6" name="PatientLanguage">
@@ -161,6 +255,12 @@
       </concept>
     </language>
     <language id="cfaa4966-b7d5-4b69-b66a-309a6e1a7290" name="org.iets3.core.expr.base">
+      <concept id="7089558164905593724" name="org.iets3.core.expr.base.structure.IOptionallyTyped" flags="ng" index="2zM23E">
+        <child id="7089558164905593725" name="type" index="2zM23F" />
+      </concept>
+      <concept id="5115872837157187871" name="org.iets3.core.expr.base.structure.ParensExpression" flags="ng" index="30bsCy">
+        <child id="5115872837157187954" name="expr" index="30bsDf" />
+      </concept>
       <concept id="5115872837156687889" name="org.iets3.core.expr.base.structure.GreaterEqualsExpression" flags="ng" index="30d6GG" />
       <concept id="5115872837156687891" name="org.iets3.core.expr.base.structure.LessEqualsExpression" flags="ng" index="30d6GI" />
       <concept id="5115872837156687890" name="org.iets3.core.expr.base.structure.LessExpression" flags="ng" index="30d6GJ" />
@@ -173,9 +273,10 @@
       </concept>
     </language>
     <language id="6b277d9a-d52d-416f-a209-1919bd737f50" name="org.iets3.core.expr.simpleTypes">
-      <concept id="5115872837157054170" name="org.iets3.core.expr.simpleTypes.structure.NumberLiteral" flags="ng" index="30bXRB">
-        <property id="5115872837157054173" name="value" index="30bXRw" />
+      <concept id="5115872837157252552" name="org.iets3.core.expr.simpleTypes.structure.StringLiteral" flags="ng" index="30bdrP">
+        <property id="5115872837157252555" name="value" index="30bdrQ" />
       </concept>
+      <concept id="5115872837157252551" name="org.iets3.core.expr.simpleTypes.structure.StringType" flags="ng" index="30bdrU" />
     </language>
     <language id="bb69d087-96cc-48ca-aeb6-c2cb27e532b0" name="DiseaseModel">
       <concept id="1645043697875742234" name="DiseaseModel.structure.ProcessingTimeLine" flags="ng" index="ldb2t">
@@ -293,6 +394,9 @@
         <property id="4321323723309500088" name="startingNumber" index="3kFaIZ" />
         <reference id="4321323723309500090" name="resource" index="3kFaIX" />
       </concept>
+      <concept id="3838812034270460672" name="BuiltEnvironment.structure.ScenarioBuilder" flags="ng" index="3VqkwO">
+        <child id="33966321883924980" name="relationships" index="2mjQn4" />
+      </concept>
     </language>
     <language id="d3a0fd26-445a-466c-900e-10444ddfed52" name="com.mbeddr.mpsutil.filepicker">
       <concept id="6156524541422549000" name="com.mbeddr.mpsutil.filepicker.structure.AbstractPicker" flags="ng" index="3N1QpV">
@@ -307,6 +411,10 @@
       </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="4222318806802425298" name="jetbrains.mps.lang.core.structure.SuppressErrorsAnnotation" flags="ng" index="15s5l7">
+        <property id="8575328350543493365" name="message" index="huDt6" />
+        <property id="2423417345669755629" name="filter" index="1eyWvh" />
       </concept>
     </language>
     <language id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout">
@@ -1347,7 +1455,7 @@
       <property role="3kFaIZ" value="1000" />
       <property role="39XYQq" value="1000" />
       <property role="39XYQt" value="1" />
-      <ref role="3kFaIX" node="3IhX87gchRq" resolve="LateralFlow" />
+      <ref role="3kFaIX" node="3IhX87gchRq" resolve="LateralFlowTest" />
     </node>
     <node concept="3kFaIK" id="3IhX87gluVj" role="2HvXPb">
       <property role="3kFaIZ" value="1000" />
@@ -5048,18 +5156,18 @@
         <node concept="16ufTd" id="7hL7ecMagh$" role="1hyIAf">
           <node concept="3tEh0H" id="1Iqh_KLvlxP" role="30dEs_">
             <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-            <ref role="3tE8WY" node="3IhX87gchU6" />
+            <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
             <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
           </node>
           <node concept="16ufTd" id="7hL7ecMagiC" role="30dEsF">
             <node concept="3tEh0H" id="7hL7ecMaghZ" role="30dEs_">
               <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-              <ref role="3tE8WY" node="3IhX87gchU6" />
+              <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
               <ref role="24g7ti" node="5R1$QEMMkRG" resolve="FluB" />
             </node>
             <node concept="3tEh0H" id="7hL7ecMagjc" role="30dEsF">
               <property role="1gZI8n" value="2lOlAdPyF1X/Positive" />
-              <ref role="3tE8WY" node="3IhX87gchU6" />
+              <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
               <ref role="24g7ti" node="5R1$QEMKFkE" resolve="FluA" />
             </node>
           </node>
@@ -5074,18 +5182,18 @@
         <node concept="16ufTd" id="7hL7ecMagnh" role="1hyIAf">
           <node concept="3tEh0H" id="7hL7ecMagni" role="30dEs_">
             <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-            <ref role="3tE8WY" node="3IhX87gchU6" />
+            <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
             <ref role="24g7ti" node="5R1$QEMKFjT" resolve="COVID" />
           </node>
           <node concept="16ufTd" id="7hL7ecMagnj" role="30dEsF">
             <node concept="3tEh0H" id="7hL7ecMagnk" role="30dEs_">
               <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-              <ref role="3tE8WY" node="3IhX87gchU6" />
+              <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
               <ref role="24g7ti" node="5R1$QEMMkRG" resolve="FluB" />
             </node>
             <node concept="3tEh0H" id="7hL7ecMagnl" role="30dEsF">
               <property role="1gZI8n" value="2lOlAdPyF27/Negative" />
-              <ref role="3tE8WY" node="3IhX87gchU6" />
+              <ref role="3tE8WY" node="3IhX87gchU6" resolve="PHEThree" />
               <ref role="24g7ti" node="5R1$QEMKFkE" resolve="FluA" />
             </node>
           </node>
@@ -5098,7 +5206,7 @@
     <node concept="2MhjZa" id="1Iqh_KLvly0" role="2MhjZp">
       <property role="TrG5h" value="LFD" />
       <property role="3lFixl" value="true" />
-      <ref role="3tPpTl" node="3IhX87gchRq" resolve="LateralFlow" />
+      <ref role="3tPpTl" node="3IhX87gchRq" resolve="LateralFlowTest" />
       <node concept="2_8ZN7" id="1Iqh_KLvly1" role="2_8HaY">
         <ref role="2_8ZNy" node="2_JteYPiCHe" resolve="MajorsABCubicleNurse" />
       </node>
@@ -5451,44 +5559,144 @@
     </node>
   </node>
   <node concept="3Vql55" id="7hL7ecMz5Du">
-    <property role="TrG5h" value="Doctor" />
+    <property role="TrG5h" value="Cubicle Nurse" />
     <property role="1n5rFW" value="3" />
     <property role="1kBeJ2" value="6o2BuIx6R5q/BLUE" />
-    <node concept="jeB$7" id="7hL7ecMz5Dv" role="3eYOtt">
-      <property role="TrG5h" value="Height" />
-      <node concept="30bXRB" id="7hL7ecMz5DF" role="1gSNMQ">
-        <property role="30bXRw" value="999999" />
+    <node concept="jeB$7" id="1FCnaGvVucd" role="3eYOtt">
+      <property role="TrG5h" value="LateralFlowTestCOVIDResult" />
+      <node concept="30bdrP" id="1FCnaGvVuce" role="1gSNMQ">
+        <property role="30bdrQ" value="Incomplete" />
       </node>
+      <node concept="30bdrU" id="1FCnaGvVucf" role="2zM23F" />
     </node>
     <node concept="3Vt_xe" id="7hL7ecMz5E7" role="2Ov1EZ">
-      <property role="TrG5h" value="Blood Test" />
+      <property role="TrG5h" value="Lateral Flow Test" />
       <node concept="3VtFpM" id="7hL7ecMz5E8" role="3VtFpR">
         <node concept="3VtFpw" id="7hL7ecMz5Ek" role="3VtFpW">
           <node concept="UeIYj" id="7hL7ecMz5Eq" role="3nfz8T">
             <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsAB_Cubicle" />
           </node>
         </node>
-        <node concept="Izybh" id="7hL7ecMz5E$" role="3VtFpW">
-          <node concept="3I_gD8" id="7hL7ecMz5EG" role="IzGlB">
-            <node concept="3JJFmu" id="7hL7ecMz5EP" role="3I_gC$" />
+        <node concept="jcv$W" id="1FCnaGvURTu" role="3VtFpW">
+          <property role="jcv$Z" value="5" />
+        </node>
+        <node concept="3bm0ZL" id="1FCnaGvURTL" role="3VtFpW">
+          <ref role="3b6FNl" node="3IhX87gchRq" resolve="LateralFlowTest" />
+        </node>
+        <node concept="3VtFpY" id="1FCnaGvURU5" role="3VtFpW">
+          <node concept="30bsCy" id="1FCnaGvURWi" role="3VtFpT">
+            <node concept="30deu6" id="1FCnaGvURXb" role="30bsDf">
+              <node concept="1CySur" id="1FCnaGvURXz" role="30dEsF">
+                <ref role="1DsR7o" node="1$AaFX9f$1c" />
+                <node concept="3IO8Di" id="1FCnaGvURYb" role="1CySjL" />
+              </node>
+              <node concept="1CySur" id="1FCnaGvURWw" role="30dEs_">
+                <ref role="1DsR7o" node="1$AaFX9f$1c" />
+                <node concept="3IO8Cx" id="1FCnaGvURWM" role="1CySjL" />
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="1FCnaGvURU9" role="3VtFpZ">
+            <node concept="3VtFpY" id="1FCnaGvURYB" role="3VtFpW">
+              <node concept="3STvxg" id="1FCnaGvURYP" role="3VtFpT">
+                <property role="3STvxY" value="70" />
+              </node>
+              <node concept="3VtFpM" id="1FCnaGvURYF" role="3VtFpZ">
+                <node concept="X7xuQ" id="1FCnaGvVu4K" role="3VtFpW">
+                  <ref role="2h6LR9" node="1FCnaGvVi2C" resolve="patient" />
+                  <node concept="jeB$8" id="1FCnaGvVu4L" role="2Ry9oz">
+                    <ref role="jeB$b" node="1FCnaGvVucd" resolve="LateralFlowTestCOVIDResult" />
+                  </node>
+                  <node concept="30bdrP" id="1FCnaGvVu4V" role="2Rw0dO">
+                    <property role="30bdrQ" value="Positive" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="1FCnaGvVueS" role="3VtFp$">
+                <node concept="X7xuQ" id="1FCnaGvVufJ" role="3VtFpW">
+                  <ref role="2h6LR9" node="1FCnaGvVi2C" resolve="patient" />
+                  <node concept="jeB$8" id="1FCnaGvVufK" role="2Ry9oz">
+                    <ref role="jeB$b" node="1FCnaGvVucd" resolve="LateralFlowTestCOVIDResult" />
+                  </node>
+                  <node concept="30bdrP" id="1FCnaGvVufL" role="2Rw0dO">
+                    <property role="30bdrQ" value="Negative" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="1FCnaGvVug3" role="3VtFp$">
+            <node concept="3VtFpY" id="1FCnaGvVug7" role="3VtFpW">
+              <node concept="3STvxg" id="1FCnaGvVug8" role="3VtFpT">
+                <property role="3STvxY" value="99" />
+              </node>
+              <node concept="3VtFpM" id="1FCnaGvVug9" role="3VtFpZ">
+                <node concept="X7xuQ" id="1FCnaGvVuga" role="3VtFpW">
+                  <ref role="2h6LR9" node="1FCnaGvVi2C" resolve="patient" />
+                  <node concept="jeB$8" id="1FCnaGvVugb" role="2Ry9oz">
+                    <ref role="jeB$b" node="1FCnaGvVucd" resolve="LateralFlowTestCOVIDResult" />
+                  </node>
+                  <node concept="30bdrP" id="1FCnaGvVugc" role="2Rw0dO">
+                    <property role="30bdrQ" value="Negative" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="1FCnaGvVugd" role="3VtFp$">
+                <node concept="X7xuQ" id="1FCnaGvVuge" role="3VtFpW">
+                  <ref role="2h6LR9" node="1FCnaGvVi2C" resolve="patient" />
+                  <node concept="jeB$8" id="1FCnaGvVugf" role="2Ry9oz">
+                    <ref role="jeB$b" node="1FCnaGvVucd" resolve="LateralFlowTestCOVIDResult" />
+                  </node>
+                  <node concept="30bdrP" id="1FCnaGvVugg" role="2Rw0dO">
+                    <property role="30bdrQ" value="Positive" />
+                  </node>
+                </node>
+              </node>
+            </node>
           </node>
         </node>
-        <node concept="3VtFpw" id="7hL7ecMz5F4" role="3VtFpW">
-          <node concept="2Vh8JZ" id="7hL7ecMz5Ff" role="3nfz8T">
-            <node concept="j3T7i" id="7hL7ecMz5Fh" role="2Vh8JW">
-              <ref role="j3T7l" node="1$AaFX9fw8w" resolve="Entrance" />
+        <node concept="3JG_m1" id="1FCnaGvVuic" role="3VtFpW">
+          <node concept="3JJFmu" id="1FCnaGvVuie" role="3JG_8_" />
+          <node concept="3JG_m7" id="1FCnaGvVuiQ" role="3JG_nW">
+            <node concept="UeIYj" id="1FCnaGvVuiW" role="3JG_nS">
+              <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
             </node>
           </node>
         </node>
       </node>
-      <node concept="EZebP" id="7hL7ecMz5Ht" role="3n3c3i" />
+      <node concept="3n32J5" id="1FCnaGvURT2" role="3n3c3i">
+        <ref role="3n32J4" node="1FCnaGvURSW" resolve="PatientNeedsLFT" />
+      </node>
+    </node>
+    <node concept="2lyXnN" id="1FCnaGw3$eo" role="2lyMva" />
+    <node concept="MWew2" id="10oeqP59soY" role="MWeLL">
+      <node concept="MWe0d" id="10oeqP59sp0" role="MWe58">
+        <node concept="1kX1S9" id="10oeqP59sp4" role="MWfyU">
+          <ref role="1kX1S8" node="10oeqP59tgn" resolve="CurrentPatients" />
+        </node>
+      </node>
     </node>
   </node>
   <node concept="3n3SPQ" id="7hL7ecMz5H7">
-    <node concept="3n3SPL" id="7hL7ecMz5H8" role="3n3SPP">
-      <property role="TrG5h" value="start blood test" />
-      <node concept="3n3BjK" id="7hL7ecMz5H9" role="3z7ADm" />
-      <node concept="3n3BjK" id="7hL7ecMz5Ha" role="1nbS2I" />
+    <node concept="1nbS2H" id="2r8kCFt4$tN" role="3n3SPP">
+      <property role="TrG5h" value="PerformLFTTrigger_b" />
+      <property role="3n3SFS" value="Patient needs an LFT test" />
+      <node concept="3n3BjK" id="2r8kCFt4$tO" role="3z7ADm">
+        <ref role="3n3BjR" node="7hL7ecMz5Du" resolve="Cubicle Nurse" />
+      </node>
+      <node concept="3n3BjK" id="2r8kCFt4$tP" role="1nbS2I">
+        <ref role="3n3BjR" node="7hL7ecMz5Du" resolve="Cubicle Nurse" />
+      </node>
+    </node>
+    <node concept="1nbS2H" id="1FCnaGvURSW" role="3n3SPP">
+      <property role="TrG5h" value="PatientNeedsLFT" />
+      <property role="3n3SFS" value="Patient needs an LFT test" />
+      <node concept="3n3BjK" id="1FCnaGvURSX" role="3z7ADm">
+        <ref role="3n3BjR" node="7hL7ecMz5Du" resolve="Cubicle Nurse" />
+      </node>
+      <node concept="3n3BjK" id="1FCnaGvURSY" role="1nbS2I">
+        <ref role="3n3BjR" node="7hL7ecMz5Du" resolve="Cubicle Nurse" />
+      </node>
     </node>
   </node>
   <node concept="2GGxxg" id="av1M7vbJYz">
@@ -5542,7 +5750,7 @@
     <property role="TrG5h" value="LiatOrCepheid" />
     <node concept="1jImuy" id="6lG8bJ2M3za" role="1$4g7U">
       <node concept="1jImuX" id="6lG8bJ2M3zd" role="1jImv6">
-        <ref role="1jImvD" node="3IhX87gchSh" />
+        <ref role="1jImvD" node="3IhX87gchSh" resolve="LIAT" />
         <node concept="3fS9$U" id="6lG8bJ2M3zo" role="1jImvJ">
           <node concept="30deu6" id="6lG8bJ3DsKn" role="3fm_9J">
             <node concept="30d6GG" id="6lG8bJ3DsN$" role="30dEs_">
@@ -5565,7 +5773,7 @@
         </node>
       </node>
       <node concept="1jImuX" id="6lG8bJ2M3$o" role="1jImv6">
-        <ref role="1jImvD" node="4pv5agm0H15" />
+        <ref role="1jImvD" node="4pv5agm0H15" resolve="Cepheid" />
         <node concept="30deo4" id="6lG8bJ3DsP_" role="1jImvJ">
           <node concept="30d7iD" id="6lG8bJ3DsPA" role="30dEs_">
             <node concept="3fMwBE" id="6lG8bJ2M3$A" role="30dEsF" />
@@ -5600,7 +5808,7 @@
   </node>
   <node concept="3oQGfi" id="3IhX87gchRq">
     <property role="3GE5qa" value="Tests" />
-    <property role="TrG5h" value="LateralFlow" />
+    <property role="TrG5h" value="LateralFlowTest" />
     <node concept="ldbdM" id="3IhX87gchR$" role="3oQGcl">
       <node concept="ldb2t" id="3IhX87gchRA" role="ldb3A">
         <property role="ldb2L" value="10" />
@@ -5875,6 +6083,271 @@
       <node concept="3E3ulc" id="4pv5agm0H1G" role="33qpDs">
         <property role="33qpDg" value="2lOlAdPyF27/Negative" />
       </node>
+    </node>
+  </node>
+  <node concept="3Vql55" id="1FCnaGvVi2C">
+    <property role="TrG5h" value="patient" />
+    <property role="1kBeJ2" value="6o2BuIx6R5m/RED" />
+    <property role="1n5rFW" value="0" />
+    <node concept="jeB$7" id="1FCnaGvUxj_" role="3eYOtt">
+      <property role="TrG5h" value="LateralFlowTestCOVIDResult" />
+      <node concept="30bdrP" id="1FCnaGvUxjA" role="1gSNMQ">
+        <property role="30bdrQ" value="Incomplete" />
+      </node>
+      <node concept="30bdrU" id="1FCnaGvUxjC" role="2zM23F" />
+    </node>
+  </node>
+  <node concept="3VqkwO" id="10oeqP59tgm">
+    <node concept="2mjNtH" id="10oeqP59tgn" role="2mjQn4">
+      <property role="TrG5h" value="CurrentPatients" />
+    </node>
+  </node>
+  <node concept="3Vql55" id="2r8kCFt4$qz">
+    <property role="TrG5h" value="CubicleNurse" />
+    <property role="1kBeJ2" value="6o2BuIx6R5D/YELLOW" />
+    <property role="1n5rFW" value="0" />
+    <node concept="15s5l7" id="2r8kCFtdGrx" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.TargetModuleNotImportedReportItem&quot;;FLAVOUR_MESSAGE=&quot;Target module EvaluationModel@transient24 should be imported&quot;;FLAVOUR_NODE_FEATURE=&quot;dataLine&quot;;" />
+      <property role="huDt6" value="Target module EvaluationModel@transient24 should be imported" />
+    </node>
+    <node concept="15s5l7" id="2r8kCFtdGrn" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.TargetModuleNotImportedReportItem&quot;;FLAVOUR_MESSAGE=&quot;Target module EvaluationModel@transient24 should be imported&quot;;FLAVOUR_NODE_FEATURE=&quot;signal&quot;;" />
+      <property role="huDt6" value="Target module EvaluationModel@transient24 should be imported" />
+    </node>
+    <node concept="15s5l7" id="2r8kCFtdGrc" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.TargetModuleNotImportedReportItem&quot;;FLAVOUR_MESSAGE=&quot;Target module EvaluationModel@transient24 should be imported&quot;;FLAVOUR_NODE_FEATURE=&quot;attribute&quot;;" />
+      <property role="huDt6" value="Target module EvaluationModel@transient24 should be imported" />
+    </node>
+    <node concept="15s5l7" id="2r8kCFtdGr2" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.TargetModuleNotImportedReportItem&quot;;FLAVOUR_MESSAGE=&quot;Target module EvaluationModel@transient24 should be imported&quot;;FLAVOUR_NODE_FEATURE=&quot;attrRef&quot;;" />
+      <property role="huDt6" value="Target module EvaluationModel@transient24 should be imported" />
+    </node>
+    <node concept="3Vt_xe" id="2r8kCFtdkEQ" role="2Ov1EZ">
+      <property role="TrG5h" value="PerformLFT_b" />
+      <node concept="3VtFpM" id="2r8kCFtdkER" role="3VtFpR">
+        <node concept="3VtFpw" id="2r8kCFtdkES" role="3VtFpW">
+          <node concept="UeIYj" id="2r8kCFtdkET" role="3nfz8T">
+            <ref role="Udx8D" node="EFW1mYOHdw" resolve="MajorsAB_Cubicle" />
+          </node>
+        </node>
+        <node concept="3JG_m1" id="2r8kCFtdkEV" role="3VtFpW">
+          <node concept="3JJFmu" id="2r8kCFtdkEW" role="3JG_8_" />
+          <node concept="2n6Hid" id="2r8kCFtdkEX" role="3JG_nW">
+            <node concept="3JG_m7" id="2r8kCFtdkEY" role="2n6Hdx">
+              <node concept="3IVeqV" id="2r8kCFtdkEZ" role="3JG_nS" />
+            </node>
+            <node concept="3JG_m7" id="2r8kCFtdkF0" role="2n6HdJ">
+              <node concept="3Evd_s" id="2r8kCFtdkF1" role="3JG_nS">
+                <ref role="IYbFq" node="34hhAWxKdrf" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="jcvAr" id="2r8kCFtdkF3" role="3VtFpW">
+          <node concept="3I_gD8" id="2r8kCFtdkF4" role="jcvAq">
+            <node concept="3JJFmu" id="2r8kCFtdkF5" role="3I_gC$" />
+          </node>
+        </node>
+        <node concept="jcv$W" id="2r8kCFtdkF6" role="3VtFpW">
+          <property role="jcv$Z" value="5" />
+        </node>
+        <node concept="3bm0ZL" id="2r8kCFtdkF8" role="3VtFpW">
+          <ref role="3b6FNl" node="3IhX87gchRq" resolve="LateralFlowTest" />
+        </node>
+        <node concept="2s3SmU" id="2r8kCFtdkF9" role="3VtFpW">
+          <ref role="2s3Ar7" node="2r8kCFtcN8t" resolve="LateralFlowTimeDistribution" />
+        </node>
+        <node concept="3VtFpY" id="2r8kCFtdkFa" role="3VtFpW">
+          <node concept="3VtFpM" id="2r8kCFtdkFb" role="3VtFpZ">
+            <node concept="3VtFpY" id="2r8kCFtdkFc" role="3VtFpW">
+              <node concept="3VtFpM" id="2r8kCFtdkFd" role="3VtFpZ">
+                <node concept="X7xuQ" id="2r8kCFtdkFe" role="3VtFpW">
+                  <ref role="2h6LR9" node="1FCnaGvVi2C" resolve="patient" />
+                  <node concept="jeB$8" id="2r8kCFtdkFf" role="2Ry9oz">
+                    <ref role="jeB$b" to="ti4m:2r8kCFtdkNH" resolve="LateralFlowTestCOVIDResult" />
+                  </node>
+                  <node concept="30bdrP" id="2r8kCFtdkFg" role="2Rw0dO">
+                    <property role="30bdrQ" value="Positive" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="2r8kCFtdkFh" role="3VtFp$">
+                <node concept="X7xuQ" id="2r8kCFtdkFi" role="3VtFpW">
+                  <ref role="2h6LR9" node="1FCnaGvVi2C" resolve="patient" />
+                  <node concept="jeB$8" id="2r8kCFtdkFj" role="2Ry9oz">
+                    <ref role="jeB$b" to="ti4m:2r8kCFtdkNH" resolve="LateralFlowTestCOVIDResult" />
+                  </node>
+                  <node concept="30bdrP" id="2r8kCFtdkFk" role="2Rw0dO">
+                    <property role="30bdrQ" value="Negative" />
+                  </node>
+                </node>
+              </node>
+              <node concept="jeBDq" id="2r8kCFtdkFl" role="3VtFpT">
+                <node concept="xbsuO" id="2r8kCFtdkFm" role="x58j7">
+                  <property role="29oVR$" value="70.7" />
+                  <property role="2aSqn6" value="LateralFlowTestCOVIDSensitivity" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3VtFpM" id="2r8kCFtdkFn" role="3VtFp$">
+            <node concept="3VtFpY" id="2r8kCFtdkFo" role="3VtFpW">
+              <node concept="3VtFpM" id="2r8kCFtdkFp" role="3VtFpZ">
+                <node concept="X7xuQ" id="2r8kCFtdkFq" role="3VtFpW">
+                  <ref role="2h6LR9" node="1FCnaGvVi2C" resolve="patient" />
+                  <node concept="jeB$8" id="2r8kCFtdkFr" role="2Ry9oz">
+                    <ref role="jeB$b" to="ti4m:2r8kCFtdkNH" resolve="LateralFlowTestCOVIDResult" />
+                  </node>
+                  <node concept="30bdrP" id="2r8kCFtdkFs" role="2Rw0dO">
+                    <property role="30bdrQ" value="Negative" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3VtFpM" id="2r8kCFtdkFt" role="3VtFp$">
+                <node concept="X7xuQ" id="2r8kCFtdkFu" role="3VtFpW">
+                  <ref role="2h6LR9" node="1FCnaGvVi2C" resolve="patient" />
+                  <node concept="jeB$8" id="2r8kCFtdkFv" role="2Ry9oz">
+                    <ref role="jeB$b" to="ti4m:2r8kCFtdkNH" resolve="LateralFlowTestCOVIDResult" />
+                  </node>
+                  <node concept="30bdrP" id="2r8kCFtdkFw" role="2Rw0dO">
+                    <property role="30bdrQ" value="Positive" />
+                  </node>
+                </node>
+              </node>
+              <node concept="jeBDq" id="2r8kCFtdkFx" role="3VtFpT">
+                <node concept="xbsuO" id="2r8kCFtdkFy" role="x58j7">
+                  <property role="29oVR$" value="99.1" />
+                  <property role="2aSqn6" value="LateralFlowTestCOVIDSpecificity" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="30deu6" id="2r8kCFtdkFz" role="3VtFpT">
+            <node concept="30bsCy" id="2r8kCFtdkF$" role="30dEs_">
+              <node concept="jeB$4" id="2r8kCFtdkF_" role="30bsDf">
+                <property role="jeB_Y" value="3KCb14J4_lk/equals" />
+                <ref role="2u9qTp" to="ti4m:2r8kCFtdkND" resolve="COVIDInfectionStatus" />
+                <ref role="2h88ii" node="1FCnaGvVi2C" resolve="patient" />
+                <node concept="30bdrP" id="2r8kCFtdkFA" role="x4oD$">
+                  <property role="30bdrQ" value="Asymptomatic" />
+                </node>
+              </node>
+            </node>
+            <node concept="30bsCy" id="2r8kCFtdkFB" role="30dEsF">
+              <node concept="jeB$4" id="2r8kCFtdkFC" role="30bsDf">
+                <property role="jeB_Y" value="3KCb14J4_lk/equals" />
+                <ref role="2u9qTp" to="ti4m:2r8kCFtdkND" resolve="COVIDInfectionStatus" />
+                <ref role="2h88ii" node="1FCnaGvVi2C" resolve="patient" />
+                <node concept="30bdrP" id="2r8kCFtdkFD" role="x4oD$">
+                  <property role="30bdrQ" value="Symptomatic" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3JG_m1" id="2r8kCFtdkFE" role="3VtFpW">
+          <node concept="3JJFmu" id="2r8kCFtdkFF" role="3JG_8_" />
+          <node concept="3JG_m7" id="2r8kCFtdkFG" role="3JG_nW">
+            <node concept="UeIYj" id="2r8kCFtdkFH" role="3JG_nS">
+              <ref role="Udx8D" node="EFW1mYOHdO" resolve="WaitingRoom" />
+            </node>
+          </node>
+        </node>
+        <node concept="3JG_m1" id="2r8kCFtdkFJ" role="3VtFpW">
+          <node concept="3JJFmu" id="2r8kCFtdkFK" role="3JG_8_" />
+          <node concept="3JG_m7" id="2r8kCFtdkFL" role="3JG_nW">
+            <node concept="1kHjla" id="2r8kCFtdkFM" role="3JG_nS">
+              <ref role="IYbFp" node="7WB5kYMxfEs" />
+            </node>
+          </node>
+        </node>
+        <node concept="3VtFpY" id="2r8kCFtdkFN" role="3VtFpW">
+          <node concept="jeB$4" id="2r8kCFtdkFO" role="3VtFpT">
+            <property role="jeB_Y" value="3KCb14J4_lk/equals" />
+            <ref role="2u9qTp" to="ti4m:2r8kCFtdkNH" resolve="LateralFlowTestCOVIDResult" />
+            <ref role="2h88ii" node="1FCnaGvVi2C" resolve="patient" />
+            <node concept="30bdrP" id="2r8kCFtdkFP" role="x4oD$">
+              <property role="30bdrQ" value="Negative" />
+            </node>
+          </node>
+          <node concept="3VtFpM" id="2r8kCFtdkFQ" role="3VtFpZ">
+            <node concept="3z7BTx" id="2r8kCFtdkFR" role="3VtFpW">
+              <node concept="3z7ADy" id="2r8kCFtdkFS" role="3z7BTw">
+                <ref role="3z7AD_" to="ti4m:2r8kCFtdkJW" resolve="CheckClinicalSuspicionTrigger_c" />
+                <node concept="2_cGdR" id="2r8kCFtdkFT" role="jeBCe">
+                  <ref role="XnLJh" to="ti4m:2r8kCFtdkJY" resolve="patient" />
+                  <node concept="3JJ7Rl" id="2r8kCFtdkFU" role="2_cGdO">
+                    <property role="3JJ7Ra" value="patient" />
+                    <property role="jeBAw" value="29F2V$jpgeN/Person" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3VtFpY" id="2r8kCFtdkFV" role="3VtFpW">
+          <node concept="jeB$4" id="2r8kCFtdkFW" role="3VtFpT">
+            <property role="jeB_Y" value="3KCb14J4_lk/equals" />
+            <ref role="2u9qTp" to="ti4m:2r8kCFtdkNH" resolve="LateralFlowTestCOVIDResult" />
+            <ref role="2h88ii" node="1FCnaGvVi2C" resolve="patient" />
+            <node concept="30bdrP" id="2r8kCFtdkFX" role="x4oD$">
+              <property role="30bdrQ" value="Positive" />
+            </node>
+          </node>
+          <node concept="3VtFpM" id="2r8kCFtdkFY" role="3VtFpZ">
+            <node concept="3z7BTx" id="2r8kCFtdkFZ" role="3VtFpW">
+              <node concept="3z7ADy" id="2r8kCFtdkG0" role="3z7BTw">
+                <ref role="3z7AD_" to="ti4m:2r8kCFtdkKH" resolve="PerformPCRTrigger_j" />
+                <node concept="2_cGdR" id="2r8kCFtdkG1" role="jeBCe">
+                  <ref role="XnLJh" to="ti4m:2r8kCFtdkKJ" resolve="patient" />
+                  <node concept="3JJ7Rl" id="2r8kCFtdkG2" role="2_cGdO">
+                    <property role="3JJ7Ra" value="patient" />
+                    <property role="jeBAw" value="29F2V$jpgeN/Person" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3n32J5" id="2r8kCFtdkG3" role="3n3c3i">
+        <ref role="3n32J4" node="2r8kCFt4$tN" resolve="PerformLFTTrigger_b" />
+      </node>
+    </node>
+    <node concept="15s5l7" id="2r8kCFtcNal" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.UnresolvedReferenceReportItem&quot;;FLAVOUR_MESSAGE=&quot;Unresolved reference: patient&quot;;FLAVOUR_NODE_FEATURE=&quot;dataLine&quot;;" />
+      <property role="huDt6" value="Unresolved reference: patient" />
+    </node>
+    <node concept="15s5l7" id="2r8kCFtcN8_" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.UnresolvedReferenceReportItem&quot;;FLAVOUR_MESSAGE=&quot;Unresolved reference: CheckClinicalSuspicionTrigger_c&quot;;FLAVOUR_NODE_FEATURE=&quot;signal&quot;;" />
+      <property role="huDt6" value="Unresolved reference: CheckClinicalSuspicionTrigger_c" />
+    </node>
+    <node concept="15s5l7" id="2r8kCFtcN8w" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.UnresolvedReferenceReportItem&quot;;FLAVOUR_MESSAGE=&quot;Unresolved reference: LateralFlowTestCOVIDResult&quot;;FLAVOUR_NODE_FEATURE=&quot;attribute&quot;;" />
+      <property role="huDt6" value="Unresolved reference: LateralFlowTestCOVIDResult" />
+    </node>
+    <node concept="15s5l7" id="2r8kCFtcN8p" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.project.validation.ConceptFeatureCardinalityError&quot;;FLAVOUR_MESSAGE=&quot;No reference in the obligatory role 'timeDistributionTable'&quot;;FLAVOUR_NODE_FEATURE=&quot;timeDistributionTable&quot;;" />
+      <property role="huDt6" value="No reference in the obligatory role 'timeDistributionTable'" />
+    </node>
+    <node concept="15s5l7" id="2r8kCFtbPgE" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.UnresolvedReferenceReportItem&quot;;FLAVOUR_MESSAGE=&quot;Unresolved reference: COVIDInfectionStatus&quot;;FLAVOUR_NODE_FEATURE=&quot;attrRef&quot;;" />
+      <property role="huDt6" value="Unresolved reference: COVIDInfectionStatus" />
+    </node>
+    <node concept="15s5l7" id="2r8kCFtbPgA" role="lGtFl">
+      <property role="1eyWvh" value="FLAVOUR_CLASS=&quot;class jetbrains.mps.errors.item.UnresolvedReferenceReportItem&quot;;FLAVOUR_MESSAGE=&quot;Unresolved reference: LateralFlowTestExecutionTimeMap&quot;;FLAVOUR_NODE_FEATURE=&quot;timeDistributionTable&quot;;" />
+      <property role="huDt6" value="Unresolved reference: LateralFlowTestExecutionTimeMap" />
+    </node>
+  </node>
+  <node concept="2s3BDA" id="2r8kCFtcN8t">
+    <property role="TrG5h" value="LateralFlowTimeDistribution" />
+    <node concept="2s3BDo" id="2r8kCFtdHu9" role="2s3BJO">
+      <property role="2s3BCW" value="15" />
+      <property role="2s3BCV" value="1" />
+    </node>
+    <node concept="2s3BDo" id="2r8kCFtdHub" role="2s3BJO">
+      <property role="2s3BCW" value="20" />
+      <property role="2s3BCV" value="1" />
     </node>
   </node>
 </model>

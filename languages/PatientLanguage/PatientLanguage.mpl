@@ -44,12 +44,7 @@
       </languageVersions>
       <dependencyVersions>
         <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="5" />
-        <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
         <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-        <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
-        <module reference="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" version="0" />
-        <module reference="29af8eae-5649-40f8-acdf-a1edf032cb72(EDLanguage.Runner)" version="0" />
-        <module reference="4b3471fe-3d18-4cd3-b548-991a9fa81520(EDRuntime_EDProject)" version="0" />
         <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
         <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
         <module reference="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" version="0" />
@@ -94,7 +89,6 @@
         <module reference="7b68d745-a7b8-48b9-bd9c-05c0f8725a35(org.iets3.core.base)" version="0" />
         <module reference="cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)" version="1" />
         <module reference="dbe08fb5-334d-4b64-86a0-622406fa0e87(org.iets3.core.expr.base.runtime)" version="0" />
-        <module reference="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" version="1" />
       </dependencyVersions>
       <mapping-priorities />
     </generator>
@@ -103,6 +97,7 @@
   <dependencies>
     <dependency reexport="false">2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)</dependency>
     <dependency reexport="false">d8f591ec-4d86-4af2-9f92-a9e93c803ffa(jetbrains.mps.lang.scopes)</dependency>
+    <dependency reexport="false">7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:7e450f4e-1ac3-41ef-a851-4598161bdb94:de.slisson.mps.tables" version="0" />
@@ -143,8 +138,6 @@
     <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="5" />
     <module reference="7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)" version="1" />
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
-    <module reference="1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)" version="1" />
-    <module reference="bb69d087-96cc-48ca-aeb6-c2cb27e532b0(DiseaseModel)" version="0" />
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" version="0" />
     <module reference="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" version="0" />

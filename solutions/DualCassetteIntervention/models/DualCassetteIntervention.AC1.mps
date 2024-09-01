@@ -297,15 +297,15 @@
     <property role="wKqbz" value="60" />
     <property role="2rAC2l" value="10" />
     <node concept="2_0uwW" id="EFW1mYe4_C" role="2_0uzz">
-      <property role="2_0uz2" value="10" />
+      <property role="2_0uz2" value="5" />
       <ref role="2_0uz0" node="av1M7vbJYz" resolve="Doctor" />
     </node>
     <node concept="2_0uwW" id="5Lup6bkacRf" role="2_0uzz">
-      <property role="2_0uz2" value="30" />
+      <property role="2_0uz2" value="10" />
       <ref role="2_0uz0" node="2_JteYPiCHe" resolve="CubicleNurse" />
     </node>
     <node concept="2_0uwW" id="5Lup6bkacRn" role="2_0uzz">
-      <property role="2_0uz2" value="5" />
+      <property role="2_0uz2" value="4" />
       <ref role="2_0uz0" node="2_JteYPiCG6" resolve="TriageNurse" />
     </node>
     <node concept="2_0uwW" id="1xAzJ9P173A" role="2_0uzz">
@@ -313,11 +313,11 @@
       <ref role="2_0uz0" node="1xAzJ9NxGdV" resolve="PreAdmissionStaff" />
     </node>
     <node concept="2_0uwW" id="3mDt9dit_I3" role="2_0uzz">
-      <property role="2_0uz2" value="7" />
+      <property role="2_0uz2" value="5" />
       <ref role="2_0uz0" node="52K8Ej3GgM" resolve="LabTechnician" />
     </node>
     <node concept="2_0uwW" id="3VLqyG6Chhw" role="2_0uzz">
-      <property role="2_0uz2" value="30" />
+      <property role="2_0uz2" value="10" />
       <ref role="2_0uz0" node="2K0oNvtWdy4" resolve="WardNurse" />
     </node>
   </node>
@@ -4451,6 +4451,19 @@
             <property role="2Vclpx" value="690.0" />
             <property role="2Vclpz" value="166.0" />
           </node>
+          <node concept="3ul5H1" id="7OZSinOd_PU" role="3ul5Gx">
+            <property role="3ul5GH" value="label" />
+            <node concept="3wpmZ1" id="7OZSinOd_PV" role="3ul5Gz">
+              <node concept="2VclrF" id="7OZSinOd_PW" role="3wpmZR">
+                <property role="2Vclpx" value="114.50026362304686" />
+                <property role="2Vclpz" value="68.5" />
+              </node>
+              <node concept="2VclrF" id="7OZSinOd_PX" role="3wpmZP">
+                <property role="2Vclpx" value="0.0" />
+                <property role="2Vclpz" value="0.0" />
+              </node>
+            </node>
+          </node>
         </node>
       </node>
       <node concept="37mRIm" id="6lG8bJ3TDPK" role="37mRID">
@@ -4513,6 +4526,9 @@
             <ref role="24g7ti" node="2m9IUjAUAjB" resolve="Flu" />
           </node>
         </node>
+      </node>
+      <node concept="1M3RjT" id="6gCYsFMwPri" role="1M293l">
+        <property role="1M3RjU" value="10" />
       </node>
     </node>
     <node concept="2MhjZa" id="6lG8bJ3T0vU" role="2MhjZp">

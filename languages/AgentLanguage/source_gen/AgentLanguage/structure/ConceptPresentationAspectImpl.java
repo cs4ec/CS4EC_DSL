@@ -90,6 +90,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ProbabilityDistribution;
   private ConceptPresentation props_ProbabilityDistributionLine;
   private ConceptPresentation props_Relationship;
+  private ConceptPresentation props_RelationshipMemberSizeCondition;
   private ConceptPresentation props_RemoveRelationshipAction;
   private ConceptPresentation props_RepastParam;
   private ConceptPresentation props_RoomIsEmptyOrContainsRelationshipMemberCondition;
@@ -103,12 +104,15 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
   private ConceptPresentation props_ScheduledBehaviour;
   private ConceptPresentation props_SelectClosestRoom;
   private ConceptPresentation props_SelectFirstSignal;
+  private ConceptPresentation props_SelectMessageByRelationshipCapacity;
   private ConceptPresentation props_SelectNotRelationshipDataSignal;
   private ConceptPresentation props_SelectRandomSignal;
   private ConceptPresentation props_SelectRelationshipDataSignal;
   private ConceptPresentation props_SelectRoomByCapacity;
+  private ConceptPresentation props_SelectRoomByMessageContent;
+  private ConceptPresentation props_SelectRoomByOccupantRelationship;
   private ConceptPresentation props_SelectRoomByRelationshipToOccupier;
-  private ConceptPresentation props_SelectRoomWithNoAgentsOfType;
+  private ConceptPresentation props_SelectRoomByVacancy;
   private ConceptPresentation props_SelfInstance;
   private ConceptPresentation props_SendSignalAction;
   private ConceptPresentation props_Signal;
@@ -714,6 +718,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_Relationship = cpb.create();
         }
         return props_Relationship;
+      case LanguageConceptSwitch.RelationshipMemberSizeCondition:
+        if (props_RelationshipMemberSizeCondition == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Check relationship member size");
+          props_RelationshipMemberSizeCondition = cpb.create();
+        }
+        return props_RelationshipMemberSizeCondition;
       case LanguageConceptSwitch.RemoveRelationshipAction:
         if (props_RemoveRelationshipAction == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -807,10 +818,17 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SelectFirstSignal = cpb.create();
         }
         return props_SelectFirstSignal;
+      case LanguageConceptSwitch.SelectMessageByRelationshipCapacity:
+        if (props_SelectMessageByRelationshipCapacity == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("Select message based on relationship capacity");
+          props_SelectMessageByRelationshipCapacity = cpb.create();
+        }
+        return props_SelectMessageByRelationshipCapacity;
       case LanguageConceptSwitch.SelectNotRelationshipDataSignal:
         if (props_SelectNotRelationshipDataSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("SelectNotRelationshipDataSignal");
+          cpb.rawPresentation("select message based on relationship exclusion");
           props_SelectNotRelationshipDataSignal = cpb.create();
         }
         return props_SelectNotRelationshipDataSignal;
@@ -824,7 +842,7 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
       case LanguageConceptSwitch.SelectRelationshipDataSignal:
         if (props_SelectRelationshipDataSignal == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
-          cpb.rawPresentation("select signal based on relationship of data");
+          cpb.rawPresentation("select message based on relationship inclusion");
           props_SelectRelationshipDataSignal = cpb.create();
         }
         return props_SelectRelationshipDataSignal;
@@ -835,6 +853,20 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SelectRoomByCapacity = cpb.create();
         }
         return props_SelectRoomByCapacity;
+      case LanguageConceptSwitch.SelectRoomByMessageContent:
+        if (props_SelectRoomByMessageContent == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select room based on message contents");
+          props_SelectRoomByMessageContent = cpb.create();
+        }
+        return props_SelectRoomByMessageContent;
+      case LanguageConceptSwitch.SelectRoomByOccupantRelationship:
+        if (props_SelectRoomByOccupantRelationship == null) {
+          ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
+          cpb.rawPresentation("select room based on occupant");
+          props_SelectRoomByOccupantRelationship = cpb.create();
+        }
+        return props_SelectRoomByOccupantRelationship;
       case LanguageConceptSwitch.SelectRoomByRelationshipToOccupier:
         if (props_SelectRoomByRelationshipToOccupier == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
@@ -842,13 +874,13 @@ public class ConceptPresentationAspectImpl extends ConceptPresentationAspectBase
           props_SelectRoomByRelationshipToOccupier = cpb.create();
         }
         return props_SelectRoomByRelationshipToOccupier;
-      case LanguageConceptSwitch.SelectRoomWithNoAgentsOfType:
-        if (props_SelectRoomWithNoAgentsOfType == null) {
+      case LanguageConceptSwitch.SelectRoomByVacancy:
+        if (props_SelectRoomByVacancy == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();
           cpb.rawPresentation("select room containing no x type agents");
-          props_SelectRoomWithNoAgentsOfType = cpb.create();
+          props_SelectRoomByVacancy = cpb.create();
         }
-        return props_SelectRoomWithNoAgentsOfType;
+        return props_SelectRoomByVacancy;
       case LanguageConceptSwitch.SelfInstance:
         if (props_SelfInstance == null) {
           ConceptPresentationBuilder cpb = new ConceptPresentationBuilder();

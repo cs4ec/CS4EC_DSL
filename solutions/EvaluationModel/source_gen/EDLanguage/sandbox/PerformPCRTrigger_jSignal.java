@@ -14,7 +14,7 @@ public class PerformPCRTrigger_jSignal extends ActorTypeSignal {
   public PerformPCRTrigger_jSignal() {
     this.setName("PerformPCRTrigger_j");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("CubicleNurse");
+    this.AddActor("Doctor");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

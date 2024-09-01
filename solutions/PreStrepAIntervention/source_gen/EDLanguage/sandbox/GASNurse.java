@@ -184,7 +184,7 @@ public class GASNurse extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_11(Behaviour behaviour) {
-      target = StaffRoom.getInstance();
+      target = WaitingRoom.getInstance();
       this.behaviour = behaviour;
     }
 

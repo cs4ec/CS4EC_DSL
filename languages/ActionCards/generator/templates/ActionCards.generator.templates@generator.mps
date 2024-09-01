@@ -185,18 +185,14 @@
       </concept>
       <concept id="4443718667981140261" name="AgentLanguage.structure.SelectRoomByCapacity" flags="ng" index="2joJeK" />
       <concept id="33966321879452455" name="AgentLanguage.structure.SelectRelationshipDataSignal" flags="ng" index="2lyMsn">
-        <property id="33966321879452465" name="relationshipName" index="2lyMs1" />
         <property id="33966321879452467" name="dataName" index="2lyMs3" />
+        <reference id="2794574325134580924" name="relationship" index="3UQCSQ" />
       </concept>
       <concept id="33966321879448022" name="AgentLanguage.structure.SignalSelectionRuleLine" flags="ng" index="2lyXnA">
         <child id="33966321879448034" name="rule" index="2lyXni" />
       </concept>
       <concept id="33966321879448003" name="AgentLanguage.structure.MessageSelectionStrategy" flags="ng" index="2lyXnN">
         <child id="33966321879452567" name="rules" index="2lyMuB" />
-      </concept>
-      <concept id="33966321879715263" name="AgentLanguage.structure.SelectNotRelationshipDataSignal" flags="ng" index="2lzM6f">
-        <property id="33966321879735536" name="dataName" index="2lzR30" />
-        <property id="33966321879735534" name="relationshipName" index="2lzR3u" />
       </concept>
       <concept id="33966321883913053" name="AgentLanguage.structure.Relationship" flags="ng" index="2mjNtH" />
       <concept id="3553172394608014330" name="AgentLanguage.structure.CompositeOrder" flags="ng" index="2n6Hid">
@@ -225,11 +221,7 @@
       </concept>
       <concept id="3435897115888459980" name="AgentLanguage.structure.NewPatientSignal" flags="ng" index="EZebP" />
       <concept id="8910807539222190210" name="AgentLanguage.structure.Description" flags="ng" index="2IBTiW" />
-      <concept id="7942748223969203381" name="AgentLanguage.structure.SelectRoomByRelationshipToOccupier" flags="ng" index="KdHJo">
-        <property id="7942748223969203475" name="relationshipName" index="KdHDY" />
-        <child id="7942748223970427929" name="AgentType" index="K9gHO" />
-      </concept>
-      <concept id="7942748223948114341" name="AgentLanguage.structure.SelectRoomWithNoAgentsOfType" flags="ng" index="MW8r8">
+      <concept id="7942748223948114341" name="AgentLanguage.structure.SelectRoomByVacancy" flags="ng" index="MW8r8">
         <child id="7942748223948118951" name="AgentType" index="MW9ja" />
       </concept>
       <concept id="7942748223948107616" name="AgentLanguage.structure.RoomSelectionStrategyLine" flags="ng" index="MWe0d">
@@ -265,6 +257,9 @@
       </concept>
       <concept id="2059891927271849305" name="AgentLanguage.structure.BackgroundBehaviour" flags="ng" index="1kboAi" />
       <concept id="8465466444624057771" name="AgentLanguage.structure.OccupiableReference" flags="ng" index="1kHjla" />
+      <concept id="1159740320400143965" name="AgentLanguage.structure.SelectRoomByMessageContent" flags="ng" index="1lfsZK">
+        <property id="1159740320400143966" name="dataLineKey" index="1lfsZN" />
+      </concept>
       <concept id="2059891927276852625" name="AgentLanguage.structure.MyAttributeCondition" flags="ng" index="1lBy5q">
         <property id="2059891927276852626" name="operator" index="1lBy5p" />
         <child id="2059891927276852628" name="right" index="1lBy5v" />
@@ -344,6 +339,10 @@
         <reference id="8149202941056073918" name="attribute" index="1T88xo" />
         <child id="8149202941056073926" name="possibleValues" index="1T88ww" />
       </concept>
+      <concept id="2794574325136448812" name="AgentLanguage.structure.SelectMessageByRelationshipCapacity" flags="ng" index="3UTKYA">
+        <property id="2794574325140383143" name="dataline" index="3UCNsH" />
+        <reference id="2794574325136448813" name="relationship" index="3UTKYB" />
+      </concept>
       <concept id="8122408733954430814" name="AgentLanguage.structure.AttributeMonitorReference" flags="ng" index="3VmG3F">
         <reference id="8122408733954430842" name="attributeMonitor" index="3VmG3f" />
       </concept>
@@ -352,7 +351,7 @@
         <property id="8465466444634577437" name="patientCapacity" index="1n5rFW" />
         <child id="1816408742367153233" name="aggregateAttributeMonitors" index="26w69L" />
         <child id="4443718667983781986" name="isIdleBehaviour" index="2jmkbR" />
-        <child id="33966321879452666" name="signalselectionstrategy" index="2lyMva" />
+        <child id="33966321879452666" name="messageSelectionstrategy" index="2lyMva" />
         <child id="7942748223948104476" name="roomSelectionStrategy" index="MWeLL" />
         <child id="2814466787070108702" name="behaviourMethods" index="2Ov1EZ" />
         <child id="2701765455131303424" name="attributes" index="3eYOtt" />
@@ -1122,55 +1121,23 @@
       <ref role="2rW$FS" node="4FTL$vJSBos" resolve="staffReduction" />
     </node>
     <node concept="2lyXnN" id="1SF32m1qad" role="2lyMva">
-      <node concept="2lyXnA" id="1SF32m719N" role="2lyMuB">
-        <node concept="2lyMsn" id="1SF32m719R" role="2lyXni">
+      <node concept="2lyXnA" id="2r8kCFsbP$w" role="2lyMuB">
+        <node concept="2lyMsn" id="2r8kCFsbP$A" role="2lyXni">
           <property role="2lyMs3" value="patient" />
-          <property role="2lyMs1" value="CurrentPatientAllocations" />
+          <ref role="3UQCSQ" node="7NybO1sg0Xa" resolve="CurrentPatientAllocations" />
         </node>
       </node>
-      <node concept="2lyXnA" id="1SF32mI9dA" role="2lyMuB">
-        <node concept="2lzM6f" id="1SF32mI9dI" role="2lyXni">
-          <property role="2lzR30" value="patient" />
-          <property role="2lzR3u" value="CurrentPatientAllocations" />
+      <node concept="2lyXnA" id="2r8kCFsqAGj" role="2lyMuB">
+        <node concept="3UTKYA" id="2r8kCFsy5LW" role="2lyXni">
+          <property role="3UCNsH" value="patient" />
+          <ref role="3UTKYB" node="7NybO1sg0Xa" resolve="CurrentPatientAllocations" />
         </node>
       </node>
     </node>
     <node concept="MWew2" id="6SUjQPsW9Si" role="MWeLL">
-      <node concept="MWe0d" id="6SUjQPuclB0" role="MWe58">
-        <node concept="KdHJo" id="6SUjQPuclBn" role="MWfyU">
-          <property role="KdHDY" value="CurrentPatientAllocations" />
-          <node concept="3n3BjK" id="6SUjQPuclBp" role="K9gHO">
-            <node concept="1ZhdrF" id="6SUjQPuclBt" role="lGtFl">
-              <property role="2qtEX8" value="actor" />
-              <property role="P3scX" value="7dcff301-ba01-414e-8574-a8f6da31876b/513408552829815467/513408552829815468" />
-              <node concept="3$xsQk" id="6SUjQPuclBu" role="3$ytzL">
-                <node concept="3clFbS" id="6SUjQPuclBv" role="2VODD2">
-                  <node concept="3clFbF" id="6SUjQPuclEh" role="3cqZAp">
-                    <node concept="2OqwBi" id="6SUjQPuclEi" role="3clFbG">
-                      <node concept="1iwH7S" id="6SUjQPuclEj" role="2Oq$k0" />
-                      <node concept="1iwH70" id="6SUjQPuclEk" role="2OqNvi">
-                        <ref role="1iwH77" node="1xAzJ9O2jGr" resolve="PatientProfileReduction" />
-                        <node concept="2OqwBi" id="6SUjQPuclEl" role="1iwH7V">
-                          <node concept="2OqwBi" id="6SUjQPuclEm" role="2Oq$k0">
-                            <node concept="2OqwBi" id="6SUjQPuclEn" role="2Oq$k0">
-                              <node concept="1iwH7S" id="6SUjQPuclEo" role="2Oq$k0" />
-                              <node concept="1r8y6K" id="6SUjQPuclEp" role="2OqNvi" />
-                            </node>
-                            <node concept="2RRcyG" id="6SUjQPuclEq" role="2OqNvi">
-                              <node concept="chp4Y" id="1fQ3pJcUc0R" role="3MHsoP">
-                                <ref role="cht4Q" to="e88n:4FTL$vJY2Tm" resolve="EDScenario" />
-                              </node>
-                            </node>
-                          </node>
-                          <node concept="1uHKPH" id="6SUjQPuclEr" role="2OqNvi" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
+      <node concept="MWe0d" id="10oeqP5eWwk" role="MWe58">
+        <node concept="1lfsZK" id="10oeqP5eWws" role="MWfyU">
+          <property role="1lfsZN" value="patient" />
         </node>
       </node>
       <node concept="MWe0d" id="4Skof6vmdDU" role="MWe58">
@@ -1762,7 +1729,7 @@
     <property role="3GE5qa" value="ActionCard" />
     <ref role="3gUMe" to="e88n:2VPlUUsG6x$" resolve="Action" />
     <node concept="3Vt_xe" id="1JOzhSNIBWq" role="13RCb5">
-      <property role="TrG5h" value="test" />
+      <property role="TrG5h" value="behaviourName" />
       <node concept="3VtFpM" id="1JOzhSNIBWr" role="3VtFpR">
         <node concept="3VtFpw" id="3WgUQREIYTs" role="3VtFpW">
           <node concept="UeIYj" id="3WgUQREIYUA" role="3nfz8T">
@@ -10245,7 +10212,7 @@
               <node concept="jeBDq" id="3mDt9dhIVdQ" role="3VtFpT">
                 <node concept="xbsuO" id="3mDt9dhIVdR" role="x58j7">
                   <property role="29oVR$" value="10.5" />
-                  <property role="2aSqn6" value="Hoy" />
+                  <property role="2aSqn6" value="Hy" />
                   <node concept="17Uvod" id="3mDt9dhIVdS" role="lGtFl">
                     <property role="2qtEX9" value="value" />
                     <property role="P4ACc" value="7dcff301-ba01-414e-8574-a8f6da31876b/7454555096515224041/3686649417177899512" />

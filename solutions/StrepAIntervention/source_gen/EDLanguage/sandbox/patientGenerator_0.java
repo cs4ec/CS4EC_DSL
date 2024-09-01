@@ -44,8 +44,6 @@ public class patientGenerator_0 extends AgentGenerator {
     double rndDouble = RandomHelper.nextDouble();
 
     this.generateAttribute_a(a);
-    this.generateAttribute_b(a);
-    this.generateAttribute_c(a);
 
     b.PushMission(sendSignalTemp);
 
@@ -61,51 +59,6 @@ public class patientGenerator_0 extends AgentGenerator {
     if (rndDouble < (runningTotal / 100)) {
       agent.cohort = "TypicalPatients";
       return;
-    }
-
-  }
-  public void generateAttribute_b(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritymoderate"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.Severity = "moderate";
-      return;
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritysevere") + runningTotal) / 100)) {
-      agent.Severity = "severe";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritysevere");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritysevere");
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritylow") + runningTotal) / 100)) {
-      agent.Severity = "low";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritylow");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsSeveritylow");
-    }
-
-  }
-  public void generateAttribute_c(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsImmunocompromisedNo"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.Immunocompromised = "No";
-      return;
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsImmunocompromisedYes") + runningTotal) / 100)) {
-      agent.Immunocompromised = "Yes";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsImmunocompromisedYes");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("TypicalPatientsImmunocompromisedYes");
     }
 
   }

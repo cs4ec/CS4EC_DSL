@@ -14,7 +14,7 @@ public class AdmittoCOVIDBayTrigger_iSignal extends ActorTypeSignal {
   public AdmittoCOVIDBayTrigger_iSignal() {
     this.setName("AdmittoCOVIDBayTrigger_i");
     this.setDescription("SecondPlaceholderSignal");
-    this.AddActor("Doctor");
+    this.AddActor("TriageNurse");
   }
 
   public boolean checkPreCondition(Context context, Actor receiver) {

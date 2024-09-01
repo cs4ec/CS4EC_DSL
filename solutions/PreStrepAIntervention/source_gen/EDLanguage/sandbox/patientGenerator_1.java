@@ -33,7 +33,7 @@ public class patientGenerator_1 extends AgentGenerator {
 
     Signal sendSignalTemp = new ActorTypeSignal();
 
-    sendSignalTemp.setName("PatientArrivesTrigger_d");
+    sendSignalTemp.setName("PatientArrivesTrigger_c");
     sendSignalTemp.AddData("patient", a);
     sendSignalTemp.AddActor("TriageNurse");
 
@@ -45,9 +45,7 @@ public class patientGenerator_1 extends AgentGenerator {
 
     this.generateAttribute_a_0(a);
     this.generateAttribute_b_0(a);
-    this.generateAttribute_c_0(a);
-    this.generateAttribute_d_0(a);
-    this.generateAttribute_e(a);
+    this.generateAttribute_c(a);
 
     b.PushMission(sendSignalTemp);
 
@@ -55,6 +53,18 @@ public class patientGenerator_1 extends AgentGenerator {
   }
 
   public void generateAttribute_a_0(patient agent) {
+    double rndDouble = RandomHelper.nextDouble();
+
+    double runningTotal = 0;
+
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientscohortStrepPatients"));
+    if (rndDouble < (runningTotal / 100)) {
+      agent.cohort = "StrepPatients";
+      return;
+    }
+
+  }
+  public void generateAttribute_b_0(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -80,19 +90,7 @@ public class patientGenerator_1 extends AgentGenerator {
     }
 
   }
-  public void generateAttribute_b_0(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsAttendanceRouteElectiveattendance"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.AttendanceRoute = "Electiveattendance";
-      return;
-    }
-
-  }
-  public void generateAttribute_c_0(patient agent) {
+  public void generateAttribute_c(patient agent) {
     double rndDouble = RandomHelper.nextDouble();
 
     double runningTotal = 0;
@@ -115,44 +113,6 @@ public class patientGenerator_1 extends AgentGenerator {
       return;
     } else {
       runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsSeveritylow");
-    }
-
-  }
-  public void generateAttribute_d_0(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsImmunocompromisedNo"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.Immunocompromised = "No";
-      return;
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsImmunocompromisedYes") + runningTotal) / 100)) {
-      agent.Immunocompromised = "Yes";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsImmunocompromisedYes");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsImmunocompromisedYes");
-    }
-
-  }
-  public void generateAttribute_e(patient agent) {
-    double rndDouble = RandomHelper.nextDouble();
-
-    double runningTotal = 0;
-
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsRecentCovidContactYes"));
-    if (rndDouble < (runningTotal / 100)) {
-      agent.RecentCovidContact = "Yes";
-      return;
-    }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsRecentCovidContactNo") + runningTotal) / 100)) {
-      agent.RecentCovidContact = "No";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsRecentCovidContactNo");
-      return;
-    } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("StrepPatientsRecentCovidContactNo");
     }
 
   }

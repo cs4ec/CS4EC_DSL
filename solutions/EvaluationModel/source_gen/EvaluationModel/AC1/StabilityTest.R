@@ -7,4 +7,4 @@ modelpath<- "/Users/k2037451/MPSProjects/CS4EC_DSL2/RepastProject/EDProject"
 
 Easy.Setup(modelpath)
 
-v<- Easy.Run(modelpath, "patientDataSetDaily", 10081, 1)
+v<- Easy.Run(modelpath, "patientDataSetDaily", 604801, 1)

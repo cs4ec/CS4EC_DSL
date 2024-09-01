@@ -28,7 +28,6 @@
         <child id="3787511550169010962" name="outgoingBranches" index="A3aay" />
       </concept>
       <concept id="5710949967853733230" name="ActionCards.structure.Branch" flags="ng" index="2GGxJi">
-        <property id="3325089904376405460" name="showConditionLabel" index="2aGGDM" />
         <reference id="5710949967853733298" name="targetAction" index="2GGxGe" />
         <reference id="188877551436935094" name="fromAction" index="3tVEyn" />
         <child id="2698877061866373100" name="condition" index="1hyIAf" />
@@ -4015,7 +4014,7 @@
         <property role="37mO49" value="7308252286132946925" />
         <node concept="gqqVs" id="6lG8bJ3T0ye" role="37mO4d">
           <property role="gqqTZ" value="287.5000999999999" />
-          <property role="gqqTW" value="177.0" />
+          <property role="gqqTW" value="194.0" />
           <property role="gqqTX" value="182.0" />
           <property role="gqqTy" value="38.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -4347,7 +4346,7 @@
         <property role="37mO49" value="3794530329739276088" />
         <node concept="gqqVs" id="3iCSjG9zyXm" role="37mO4d">
           <property role="gqqTZ" value="240.50009999999992" />
-          <property role="gqqTW" value="62.000000000000014" />
+          <property role="gqqTW" value="83.00000000000001" />
           <property role="gqqTX" value="276.0" />
           <property role="gqqTy" value="52.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -4528,7 +4527,6 @@
         <ref role="2_8ZNy" node="2_JteYPiCG6" resolve="TriageNurse" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0vJ" role="A3aay">
-        <property role="2aGGDM" value="true" />
         <ref role="3tVEyn" node="6lG8bJ3T0vH" resolve="Check Symptomatic" />
         <ref role="2GGxGe" node="6lG8bJ3T0w$" resolve="Admit to Amber Bay" />
         <node concept="3tEh0H" id="3iCSjG9zyM9" role="1hyIAf">
@@ -4541,7 +4539,6 @@
         <ref role="Udx8D" node="EFW1mYOHdm" resolve="TriageDesk" />
       </node>
       <node concept="2GGxJi" id="6lG8bJ3T0vN" role="A3aay">
-        <property role="2aGGDM" value="true" />
         <ref role="3tVEyn" node="6lG8bJ3T0vH" resolve="Check Symptomatic" />
         <ref role="2GGxGe" node="6lG8bJ3T0wM" resolve="Perform Rapid PCR" />
         <node concept="3tEh0H" id="3iCSjG9zyMw" role="1hyIAf">

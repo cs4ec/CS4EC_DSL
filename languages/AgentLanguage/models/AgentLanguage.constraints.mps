@@ -1005,7 +1005,7 @@
   </node>
   <node concept="1M2fIO" id="6SUjQPsMH7c">
     <property role="3GE5qa" value="RoomSelectionStrategy" />
-    <ref role="1M2myG" to="3751:6SUjQPsMGA_" resolve="SelectRoomWithNoAgentsOfType" />
+    <ref role="1M2myG" to="3751:6SUjQPsMGA_" resolve="SelectRoomByVacancy" />
     <node concept="9S07l" id="6SUjQPsMHbx" role="9Vyp8">
       <node concept="3clFbS" id="6SUjQPsMHby" role="2VODD2">
         <node concept="3cpWs6" id="6SUjQPsMHc4" role="3cqZAp">
@@ -1035,9 +1035,7 @@
     <node concept="9S07l" id="6SUjQPu39le" role="9Vyp8">
       <node concept="3clFbS" id="6SUjQPu39lf" role="2VODD2">
         <node concept="3clFbF" id="6SUjQPu39p9" role="3cqZAp">
-          <node concept="3clFbT" id="6SUjQPu39p8" role="3clFbG">
-            <property role="3clFbU" value="true" />
-          </node>
+          <node concept="3clFbT" id="10oeqP59voV" role="3clFbG" />
         </node>
       </node>
     </node>
@@ -1144,6 +1142,45 @@
   <node concept="1M2fIO" id="72S_VmbM3Ek">
     <property role="3GE5qa" value="actors.attribute" />
     <ref role="1M2myG" to="3751:6MzSDQOa74z" resolve="AggregateAttributeMonitor" />
+  </node>
+  <node concept="1M2fIO" id="10oeqP4V2zM">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:10oeqP4V2u$" resolve="SelectRoomByOccupantRelationship" />
+    <node concept="9S07l" id="10oeqP4V2zN" role="9Vyp8">
+      <node concept="3clFbS" id="10oeqP4V2zO" role="2VODD2">
+        <node concept="3clFbF" id="10oeqP4V2zT" role="3cqZAp">
+          <node concept="3clFbT" id="10oeqP59vkj" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="10oeqP59vq5">
+    <property role="3GE5qa" value="RoomSelectionStrategy" />
+    <ref role="1M2myG" to="3751:10oeqP59vpt" resolve="SelectRoomByMessageContent" />
+    <node concept="9S07l" id="10oeqP59vq6" role="9Vyp8">
+      <node concept="3clFbS" id="10oeqP59vq7" role="2VODD2">
+        <node concept="3clFbF" id="10oeqP59vu1" role="3cqZAp">
+          <node concept="3clFbT" id="10oeqP59vu0" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="2r8kCFsbPPM">
+    <property role="3GE5qa" value="SignalSelectionStrategy" />
+    <ref role="1M2myG" to="3751:2r8kCFsbPOG" resolve="SelectMessageByRelationshipCapacity" />
+    <node concept="9S07l" id="2r8kCFsbPPN" role="9Vyp8">
+      <node concept="3clFbS" id="2r8kCFsbPPO" role="2VODD2">
+        <node concept="3clFbF" id="2r8kCFsbPTI" role="3cqZAp">
+          <node concept="3clFbT" id="2r8kCFsbPTH" role="3clFbG">
+            <property role="3clFbU" value="true" />
+          </node>
+        </node>
+      </node>
+    </node>
   </node>
 </model>
 

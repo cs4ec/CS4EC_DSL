@@ -16,33 +16,6 @@
   <atEnd>false</atEnd>
   <methodDataSources class="linked-hash-map">
       <entry>
-        <string>patientgetSeverityissevere</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetSeverityissevere</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getSeverityissevere</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetSeverityismoderate</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetSeverityismoderate</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getSeverityismoderate</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetSeverityislow</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetSeverityislow</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getSeverityislow</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
         <string>patientgetImmunocompromisedisYes</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
           <id>patientgetImmunocompromisedisYes</id>
@@ -61,114 +34,106 @@
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetStrepAInfectionStatusisSusceptible</string>
+        <string>patientgetCOVIDInfectionStatusisSusceptible</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetStrepAInfectionStatusisSusceptible</id>
+          <id>patientgetCOVIDInfectionStatusisSusceptible</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getStrepAInfectionStatusisSusceptible</methodName>
+          <methodName>getCOVIDInfectionStatusisSusceptible</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetStrepAInfectionStatusisAsymptomatic</string>
+        <string>patientgetCOVIDInfectionStatusisAsymptomatic</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetStrepAInfectionStatusisAsymptomatic</id>
+          <id>patientgetCOVIDInfectionStatusisAsymptomatic</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getStrepAInfectionStatusisAsymptomatic</methodName>
+          <methodName>getCOVIDInfectionStatusisAsymptomatic</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetStrepAInfectionStatusisSymptomatic</string>
+        <string>patientgetCOVIDInfectionStatusisSymptomatic</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetStrepAInfectionStatusisSymptomatic</id>
+          <id>patientgetCOVIDInfectionStatusisSymptomatic</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getStrepAInfectionStatusisSymptomatic</methodName>
+          <methodName>getCOVIDInfectionStatusisSymptomatic</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
       <entry>
-        <string>patientgetadmittedToisGreenBay</string>
+        <string>patientgetTestCOVIDResultisPositive</string>
         <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBay</id>
+          <id>patientgetTestCOVIDResultisPositive</id>
           <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBay</methodName>
+          <methodName>getTestCOVIDResultisPositive</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetTestCOVIDResultisNegative</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetTestCOVIDResultisNegative</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getTestCOVIDResultisNegative</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLIATCOVIDResultisPositive</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLIATCOVIDResultisPositive</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLIATCOVIDResultisPositive</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLIATCOVIDResultisNegative</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLIATCOVIDResultisNegative</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLIATCOVIDResultisNegative</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLabPCRCOVIDResultisPositive</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLabPCRCOVIDResultisPositive</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLabPCRCOVIDResultisPositive</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetLabPCRCOVIDResultisNegative</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetLabPCRCOVIDResultisNegative</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getLabPCRCOVIDResultisNegative</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetPHEThreeCOVIDResultisPositive</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetPHEThreeCOVIDResultisPositive</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getPHEThreeCOVIDResultisPositive</methodName>
+          <aggType>SUM</aggType>
+        </repast.simphony.data2.engine.MethodDataSourceDefinition>
+      </entry>
+      <entry>
+        <string>patientgetPHEThreeCOVIDResultisNegative</string>
+        <repast.simphony.data2.engine.MethodDataSourceDefinition>
+          <id>patientgetPHEThreeCOVIDResultisNegative</id>
+          <className>EDLanguage.sandbox.patient</className>
+          <methodName>getPHEThreeCOVIDResultisNegative</methodName>
           <aggType>SUM</aggType>
         </repast.simphony.data2.engine.MethodDataSourceDefinition>
       </entry>
 
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetSeverityissevere</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetSeverityissevere</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetSeverityissevere</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetSeverityismoderate</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetSeverityismoderate</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetSeverityismoderate</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetSeverityislow</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetSeverityislow</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetSeverityislow</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetImmunocompromisedisYes</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetImmunocompromisedisYes</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetImmunocompromisedisYes</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetImmunocompromisedisNo</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetImmunocompromisedisNo</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetImmunocompromisedisNo</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSusceptible</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSusceptible</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetStrepAInfectionStatusisSusceptible</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisAsymptomatic</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisAsymptomatic</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetStrepAInfectionStatusisAsymptomatic</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
-      <entry>
-        <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSymptomatic</string>
-        <repast.simphony.data2.engine.MethodDataSourceDefinition>
-          <id>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSymptomatic</id>
-          <className>EDLanguage.sandbox.patient</className>
-          <methodName>getadmittedToisGreenBaygetStrepAInfectionStatusisSymptomatic</methodName>
-          <aggType>SUM</aggType>
-        </repast.simphony.data2.engine.MethodDataSourceDefinition>
-      </entry>
+
       <entry>
       <string>two</string>
       <repast.simphony.data2.engine.MethodDataSourceDefinition>

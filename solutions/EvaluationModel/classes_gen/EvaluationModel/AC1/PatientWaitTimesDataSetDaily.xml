@@ -6,8 +6,8 @@
   <inclBatchRun>false</inclBatchRun>
   <inclRandomSeed>false</inclRandomSeed>
   <scheduleParams>
-    <start>1440</start>
-    <interval>1440</interval>
+    <start>86400</start>
+    <interval>86400</interval>
     <priority>Infinity</priority>
     <pType>FIRST</pType>
     <duration>-1.0</duration>

@@ -36,7 +36,7 @@ public class SelectRoomByRelationshipToOccupier_Constraints extends BaseConstrai
     };
   }
   private static boolean staticCanBeAChild(SNode node, SNode parentNode, SAbstractConcept childConcept, SContainmentLink link) {
-    return true;
+    return false;
   }
   private static final SNodePointer canBeChildBreakingPoint = new SNodePointer("r:8af044a8-b97e-4b60-8dc9-53a519dacbc1(AgentLanguage.constraints)", "7942748223969203534");
 

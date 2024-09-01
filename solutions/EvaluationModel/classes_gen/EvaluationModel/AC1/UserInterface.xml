@@ -15,6 +15,14 @@
       <string>EDLanguage.sandbox.COVIDBreadcrumbstyle</string>
       </entry>
       <entry>
+      <string>EDLanguage.sandbox.FluBreadcrumb</string>
+      <string>EDLanguage.sandbox.FluBreadcrumbstyle</string>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.MeaslesBreadcrumb</string>
+      <string>EDLanguage.sandbox.MeaslesBreadcrumbstyle</string>
+      </entry>
+      <entry>
       <string>EDLanguage.sandbox.Bed</string>
       <string>EDLanguage.sandbox.Bedstyle</string>
       </entry>
@@ -94,6 +102,14 @@
       <entry>
       <string>EDLanguage.sandbox.COVIDBreadcrumb</string>
       <int>14</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.FluBreadcrumb</string>
+      <int>15</int>
+      </entry>
+      <entry>
+      <string>EDLanguage.sandbox.MeaslesBreadcrumb</string>
+      <int>16</int>
       </entry>
       <entry>
       <string>EDLanguage.sandbox.Bed</string>

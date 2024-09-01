@@ -45,16 +45,6 @@
   		type="constant" constant_type="double" value="10" />
   	<parameter name="TypicalPatientscohortTypicalPatients"
   		 type="constant" constant_type="double" value = "100" />
-  	<parameter name="TypicalPatientsSeveritysevere"
-  		 type="constant" constant_type="double" value = "15" />
-  	<parameter name="TypicalPatientsSeveritymoderate"
-  		 type="constant" constant_type="double" value = "85" />
-  	<parameter name="TypicalPatientsSeveritylow"
-  		 type="constant" constant_type="double" value = "0" />
-  	<parameter name="TypicalPatientsImmunocompromisedYes"
-  		 type="constant" constant_type="double" value = "20" />
-  	<parameter name="TypicalPatientsImmunocompromisedNo"
-  		 type="constant" constant_type="double" value = "80" />
   	<parameter name="StrepAPatientscohortStrepAPatients"
   		 type="constant" constant_type="double" value = "100" />
   	<parameter name="StrepAPatientsStrepAInfectionStatusSusceptible"
@@ -63,10 +53,4 @@
   		 type="constant" constant_type="double" value = "30" />
   	<parameter name="StrepAPatientsStrepAInfectionStatusSymptomatic"
   		 type="constant" constant_type="double" value = "10" />
-  	<parameter name="StrepAPatientsSeveritysevere"
-  		 type="constant" constant_type="double" value = "20" />
-  	<parameter name="StrepAPatientsSeveritymoderate"
-  		 type="constant" constant_type="double" value = "80" />
-  	<parameter name="StrepAPatientsSeveritylow"
-  		 type="constant" constant_type="double" value = "0" />
 </sweep>

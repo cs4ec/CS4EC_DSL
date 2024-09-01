@@ -13,8 +13,8 @@ public class LateralFlowTestExecutionTimeMap {
   private LateralFlowTestExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 3;
-    returnMap.put(15, ((Double) (1 / TotalOccurances)));
-    returnMap.put(20, ((Double) (1 / TotalOccurances)));
+    returnMap.put(900, ((Double) (1 / TotalOccurances)));
+    returnMap.put(1200, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

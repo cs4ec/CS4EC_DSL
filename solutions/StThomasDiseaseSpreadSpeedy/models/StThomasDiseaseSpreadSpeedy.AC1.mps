@@ -5108,7 +5108,7 @@
     <property role="TrG5h" value="LiatOrCepheid" />
     <node concept="1jImuy" id="6lG8bJ2M3za" role="1$4g7U">
       <node concept="1jImuX" id="6lG8bJ2M3zd" role="1jImv6">
-        <ref role="1jImvD" node="3IhX87gchSh" />
+        <ref role="1jImvD" node="3IhX87gchSh" resolve="LIAT" />
         <node concept="3fS9$U" id="6lG8bJ2M3zo" role="1jImvJ">
           <node concept="30deu6" id="6lG8bJ3DsKn" role="3fm_9J">
             <node concept="30d6GG" id="6lG8bJ3DsN$" role="30dEs_">
@@ -5131,7 +5131,7 @@
         </node>
       </node>
       <node concept="1jImuX" id="6lG8bJ2M3$o" role="1jImv6">
-        <ref role="1jImvD" node="4pv5agm0H15" />
+        <ref role="1jImvD" node="4pv5agm0H15" resolve="Cepheid" />
         <node concept="30deo4" id="6lG8bJ3DsP_" role="1jImvJ">
           <node concept="30d7iD" id="6lG8bJ3DsPA" role="30dEs_">
             <node concept="3fMwBE" id="6lG8bJ2M3$A" role="30dEsF" />

@@ -56,6 +56,12 @@
           <property role="20Rdg7" value="DiseaseModel.generator" />
         </node>
       </node>
+      <node concept="3uMdn$" id="1u4SRVa5Zym" role="3uOsAP">
+        <node concept="20RdaH" id="1u4SRVa5Zyn" role="3uMdmt">
+          <property role="20Rdg5" value="88b9ad4f-bdb6-4e67-a8c6-3d6b292dac53" />
+          <property role="20Rdg7" value="PatientLanguage.generator" />
+        </node>
+      </node>
     </node>
     <node concept="2VgMA2" id="32D7375FabQ" role="2VgMA7">
       <node concept="2Qf6Nf" id="32D7375Facv" role="2Qf7GQ">

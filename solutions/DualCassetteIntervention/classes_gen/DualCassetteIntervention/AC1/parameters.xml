@@ -233,7 +233,7 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyCOVIDInfectionStatusSymptomatic"
-  		displayName="EmergencyCOVIDInfectionStatusSymptomatic" type="double" defaultValue="0.5"
+  		displayName="EmergencyCOVIDInfectionStatusSymptomatic" type="double" defaultValue="0.17"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyCOVIDInfectionStatusAsymptomatic"
@@ -241,11 +241,11 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyCOVIDInfectionStatusSusceptible"
-  		displayName="EmergencyCOVIDInfectionStatusSusceptible" type="double" defaultValue="99.5"
+  		displayName="EmergencyCOVIDInfectionStatusSusceptible" type="double" defaultValue="99.83"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyFluInfectionStatusSymptomatic"
-  		displayName="EmergencyFluInfectionStatusSymptomatic" type="double" defaultValue="0.17"
+  		displayName="EmergencyFluInfectionStatusSymptomatic" type="double" defaultValue="1"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyFluInfectionStatusAsymptomatic"
@@ -253,7 +253,7 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyFluInfectionStatusSusceptible"
-  		displayName="EmergencyFluInfectionStatusSusceptible" type="double" defaultValue="99.83"
+  		displayName="EmergencyFluInfectionStatusSusceptible" type="double" defaultValue="99"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencySeveritysevere"

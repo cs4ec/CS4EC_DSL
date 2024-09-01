@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <parameters>
 	<parameter name="SecondsPerTick"
-		displayName="Seconds Per Tick" type="int" defaultValue="60"
+		displayName="Seconds Per Tick" type="int" defaultValue="1"
 		isReadOnly="false"
 		converter="repast.simphony.parameter.StringConverterFactory$IntConverter" />
 	<parameter name="randomSeed"
@@ -29,11 +29,19 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LabPCRCOVIDSensitivity"
-  		displayName="LabPCRCOVIDSensitivity" type="double" defaultValue="12"
+  		displayName="LabPCRCOVIDSensitivity" type="double" defaultValue="98"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LabPCRCOVIDSpecificity"
-  		displayName="LabPCRCOVIDSpecificity" type="double" defaultValue="23"
+  		displayName="LabPCRCOVIDSpecificity" type="double" defaultValue="99.5"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LabPCRFluSensitivity"
+  		displayName="LabPCRFluSensitivity" type="double" defaultValue="97"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LabPCRFluSpecificity"
+  		displayName="LabPCRFluSpecificity" type="double" defaultValue="95"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeCOVIDSensitivity"
@@ -45,11 +53,19 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LabPCRCOVIDSensitivity"
-  		displayName="LabPCRCOVIDSensitivity" type="double" defaultValue="12"
+  		displayName="LabPCRCOVIDSensitivity" type="double" defaultValue="98"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LabPCRCOVIDSpecificity"
-  		displayName="LabPCRCOVIDSpecificity" type="double" defaultValue="23"
+  		displayName="LabPCRCOVIDSpecificity" type="double" defaultValue="99.5"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LabPCRFluSensitivity"
+  		displayName="LabPCRFluSensitivity" type="double" defaultValue="97"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="LabPCRFluSpecificity"
+  		displayName="LabPCRFluSpecificity" type="double" defaultValue="95"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LateralFlowTestCOVIDSensitivity"
@@ -58,6 +74,14 @@
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="LateralFlowTestCOVIDSpecificity"
   		displayName="LateralFlowTestCOVIDSpecificity" type="double" defaultValue="99.1"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="RapidPCRTestCOVIDSensitivity"
+  		displayName="RapidPCRTestCOVIDSensitivity" type="double" defaultValue="97.9"
+  		isReadOnly="false"
+  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
+  	<parameter name="RapidPCRTestCOVIDSpecificity"
+  		displayName="RapidPCRTestCOVIDSpecificity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="PHEThreeCOVIDSensitivity"
@@ -92,12 +116,8 @@
   		displayName="RapidPCRTestCOVIDSpecificity" type="double" defaultValue="100"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="RapidPCRTestCOVIDSensitivity"
-  		displayName="RapidPCRTestCOVIDSensitivity" type="double" defaultValue="97.9"
-  		isReadOnly="false"
-  		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
-  	<parameter name="RapidPCRTestCOVIDSpecificity"
-  		displayName="RapidPCRTestCOVIDSpecificity" type="double" defaultValue="100"
+  	<parameter name="InfectionSpreadChance:COVIDSymptomatic-2_a0"
+  		displayName="InfectionSpreadChance:COVIDSymptomatic-2_a0" type="double" defaultValue="3.4E-4"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencycohortEmergency"
@@ -125,15 +145,15 @@
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyCOVIDInfectionStatusSusceptible"
-  		displayName="EmergencyCOVIDInfectionStatusSusceptible" type="double" defaultValue="10"
+  		displayName="EmergencyCOVIDInfectionStatusSusceptible" type="double" defaultValue="97"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyCOVIDInfectionStatusAsymptomatic"
-  		displayName="EmergencyCOVIDInfectionStatusAsymptomatic" type="double" defaultValue="50"
+  		displayName="EmergencyCOVIDInfectionStatusAsymptomatic" type="double" defaultValue="1"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
   	<parameter name="EmergencyCOVIDInfectionStatusSymptomatic"
-  		displayName="EmergencyCOVIDInfectionStatusSymptomatic" type="double" defaultValue="40"
+  		displayName="EmergencyCOVIDInfectionStatusSymptomatic" type="double" defaultValue="2"
   		isReadOnly="false"
   		converter="repast.simphony.parameter.StringConverterFactory$DoubleConverter" />
 </parameters>

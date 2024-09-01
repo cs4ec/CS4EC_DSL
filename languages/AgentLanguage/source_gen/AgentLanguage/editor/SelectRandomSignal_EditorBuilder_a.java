@@ -39,7 +39,7 @@ import jetbrains.mps.nodeEditor.cells.EditorCell_Constant;
     return editorCell;
   }
   private EditorCell createConstant_0() {
-    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Select a random signal");
+    EditorCell_Constant editorCell = new EditorCell_Constant(getEditorContext(), myNode, "Select a random message");
     editorCell.setCellId("Constant_7zg9pe_a0");
     editorCell.setDefaultText("");
     return editorCell;

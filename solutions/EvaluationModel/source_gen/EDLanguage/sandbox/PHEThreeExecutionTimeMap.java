@@ -13,11 +13,11 @@ public class PHEThreeExecutionTimeMap {
   private PHEThreeExecutionTimeMap() {
     HashMap<Integer, Double> returnMap = new HashMap<Integer, Double>();
     double TotalOccurances = 6;
-    returnMap.put(2, ((Double) (1 / TotalOccurances)));
-    returnMap.put(3, ((Double) (1 / TotalOccurances)));
-    returnMap.put(4, ((Double) (1 / TotalOccurances)));
-    returnMap.put(5, ((Double) (1 / TotalOccurances)));
-    returnMap.put(6, ((Double) (1 / TotalOccurances)));
+    returnMap.put(120, ((Double) (1 / TotalOccurances)));
+    returnMap.put(180, ((Double) (1 / TotalOccurances)));
+    returnMap.put(240, ((Double) (1 / TotalOccurances)));
+    returnMap.put(300, ((Double) (1 / TotalOccurances)));
+    returnMap.put(360, ((Double) (1 / TotalOccurances)));
 
     processingTimeDistribution = new Distribution<Integer>((Map) returnMap);
   }

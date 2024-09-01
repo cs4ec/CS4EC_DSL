@@ -24,6 +24,7 @@ import simcore.action.BehaviourStep;
 import repast.simphony.engine.environment.RunEnvironment;
 import simcore.Signals.Orders.MoveToOrder;
 import simcore.action.InstantBehaviourStep;
+import repast.simphony.random.RandomHelper;
 import java.util.Iterator;
 import simcore.basicStructures.TimeKeeper;
 
@@ -241,7 +242,7 @@ public class MinorsDoctor extends Actor {
     public void execute() {
       Actor a = (Actor) behaviour.getSignalTrigger().GetData("patient");
 
-      a.TakeOrder(new MoveToOrder().WithDestination(MinorsDoctor.this.curInside).andThen(new MoveToOrder().WithDestination(Bed.class)));
+      a.TakeOrder(new MoveToOrder().WithDestination(MinorsDoctor.this.curInside).andThen(new MoveToOrder().WithDestination(MinorsDoctor.this.curInside.getAllOcupiablesOfType(Bed.class).get(0))));
     }
   }
   public class StayForConditionAction_c0a_2 extends BehaviourStep {
@@ -300,10 +301,10 @@ public class MinorsDoctor extends Actor {
       a.TakeOrder(new MoveToOrder().WithDestination(Seat.class));
     }
   }
-  public class SendSignalAction_a0g0a extends BehaviourStep {
+  public class SendSignalAction_a0a6a0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0g0a(Behaviour behaviour) {
+    public SendSignalAction_a0a6a0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -316,27 +317,10 @@ public class MinorsDoctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_g0a extends InstantBehaviourStep {
-    /*package*/ Behaviour behaviour;
-    public Choice_g0a(Behaviour behaviour) {
-      this.behaviour = behaviour;
-    }
-
-    public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "No") {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0g0a(behaviour));
-        behaviour.injectSteps(plstSteps);
-      } else {
-        ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        behaviour.injectSteps(plstSteps);
-      }
-    }
-  }
-  public class SendSignalAction_a0h0a extends BehaviourStep {
+  public class SendSignalAction_a0b6a0 extends BehaviourStep {
     /*package*/ Behaviour behaviour;
 
-    public SendSignalAction_a0h0a(Behaviour behaviour) {
+    public SendSignalAction_a0b6a0(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
@@ -349,21 +333,27 @@ public class MinorsDoctor extends Actor {
       b.PushMission(sendSignalTemp);
     }
   }
-  public class Choice_h0a extends InstantBehaviourStep {
+  public class ProbabilityDistribution_g0a extends InstantBehaviourStep {
     /*package*/ Behaviour behaviour;
-    public Choice_h0a(Behaviour behaviour) {
+    public ProbabilityDistribution_g0a(Behaviour behaviour) {
       this.behaviour = behaviour;
     }
 
     public void execute() {
-      if (((patient) behaviour.getSignalTrigger().GetData("patient")).Immunocompromised == "Yes") {
+      double rndDouble = RandomHelper.nextDouble();
+      double d = Double.valueOf(80);
+      if (rndDouble < (d / 100)) {
+
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
-        plstSteps.add(new SendSignalAction_a0h0a(behaviour));
+        plstSteps.add(new SendSignalAction_a0a6a0(behaviour));
         behaviour.injectSteps(plstSteps);
-      } else {
+
+      } else if (rndDouble < ((20 + 80.0) / 100)) {
         ArrayList<BehaviourStep> plstSteps = new ArrayList();
+        plstSteps.add(new SendSignalAction_a0b6a0(behaviour));
         behaviour.injectSteps(plstSteps);
       }
+
     }
   }
   public class MoveAction_a0b_4 extends BehaviourStep {
@@ -475,7 +465,7 @@ public class MinorsDoctor extends Actor {
     /*package*/ Object target;
     /*package*/ Object concreteTarget;
     public MoveAction_a0a_10(Behaviour behaviour) {
-      target = StaffRoom.getInstance();
+      target = WaitingRoom.getInstance();
       this.behaviour = behaviour;
     }
 
@@ -523,8 +513,7 @@ public class MinorsDoctor extends Actor {
     plstSteps.add(new StayAction_d0a_2(behaviourBuilder));
     plstSteps.add(new OrderAction_e0a(behaviourBuilder));
     plstSteps.add(new OrderAction_f0a(behaviourBuilder));
-    plstSteps.add(new Choice_g0a(behaviourBuilder));
-    plstSteps.add(new Choice_h0a(behaviourBuilder));
+    plstSteps.add(new ProbabilityDistribution_g0a(behaviourBuilder));
     behaviourBuilder.setSteps(plstSteps);
 
     Signal sendSignalTemp = new Signal();

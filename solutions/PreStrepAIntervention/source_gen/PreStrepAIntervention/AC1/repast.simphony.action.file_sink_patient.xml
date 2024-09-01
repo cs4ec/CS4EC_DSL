@@ -7,11 +7,6 @@
     <string>patientgetSeverityissevere</string>
     <string>patientgetSeverityismoderate</string>
     <string>patientgetSeverityislow</string>
-    <string>patientgetAttendanceRouteisEmergencyAttendance</string>
-    <string>patientgetImmunocompromisedisYes</string>
-    <string>patientgetImmunocompromisedisNo</string>
-    <string>patientgetRecentCovidContactisYes</string>
-    <string>patientgetRecentCovidContactisNo</string>
     <string>patientgetStrepAInfectionStatusisSusceptible</string>
     <string>patientgetStrepAInfectionStatusisAsymptomatic</string>
     <string>patientgetStrepAInfectionStatusisSymptomatic</string>
@@ -19,11 +14,6 @@
     <string>patientgetadmittedToisGreenBaygetSeverityissevere</string>
     <string>patientgetadmittedToisGreenBaygetSeverityismoderate</string>
     <string>patientgetadmittedToisGreenBaygetSeverityislow</string>
-    <string>patientgetadmittedToisGreenBaygetAttendanceRouteisEmergencyAttendance</string>
-    <string>patientgetadmittedToisGreenBaygetImmunocompromisedisYes</string>
-    <string>patientgetadmittedToisGreenBaygetImmunocompromisedisNo</string>
-    <string>patientgetadmittedToisGreenBaygetRecentCovidContactisYes</string>
-    <string>patientgetadmittedToisGreenBaygetRecentCovidContactisNo</string>
     <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSusceptible</string>
     <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisAsymptomatic</string>
     <string>patientgetadmittedToisGreenBaygetStrepAInfectionStatusisSymptomatic</string>

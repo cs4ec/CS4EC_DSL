@@ -65,7 +65,11 @@ public class EDBuilder implements ContextBuilder<Object> {
     Grid<Object> grid = gridFactory.createGrid("grid", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
 
     Grid<Object> COVIDBreadcrumbgrid = gridFactory.createGrid("COVIDBreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    Grid<Object> FluBreadcrumbgrid = gridFactory.createGrid("FluBreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
+    Grid<Object> MeaslesBreadcrumbgrid = gridFactory.createGrid("MeaslesBreadcrumb", context, new GridBuilderParameters<Object>(new repast.simphony.space.grid.StrictBorders(), new SimpleGridAdder<Object>(), true, mapWidth, mapHeight));
     ToolBox.grids.add(COVIDBreadcrumbgrid);
+    ToolBox.grids.add(FluBreadcrumbgrid);
+    ToolBox.grids.add(MeaslesBreadcrumbgrid);
 
 
     context.add(new patientGenerator_0(space, grid, context));
@@ -245,7 +249,7 @@ public class EDBuilder implements ContextBuilder<Object> {
     ArrivalPerHour.putIfAbsent(2, 4);
     ArrivalPerHour.putIfAbsent(3, 3);
     ArrivalPerHour.putIfAbsent(4, 5);
-    ArrivalPerHour.putIfAbsent(5, 6);
+    ArrivalPerHour.putIfAbsent(5, 3);
     ArrivalPerHour.putIfAbsent(6, 8);
     ArrivalPerHour.putIfAbsent(7, 7);
     ArrivalPerHour.putIfAbsent(8, 6);

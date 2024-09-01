@@ -115,9 +115,9 @@ public class patientGenerator_0 extends AgentGenerator {
 
     double runningTotal = 0;
 
-    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusAsymptomatic"));
+    runningTotal = (RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSusceptible"));
     if (rndDouble < (runningTotal / 100)) {
-      agent.COVIDInfectionStatus = "Asymptomatic";
+      agent.COVIDInfectionStatus = "Susceptible";
       return;
     }
     if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSymptomatic") + runningTotal) / 100)) {
@@ -127,12 +127,12 @@ public class patientGenerator_0 extends AgentGenerator {
     } else {
       runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSymptomatic");
     }
-    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSusceptible") + runningTotal) / 100)) {
-      agent.COVIDInfectionStatus = "Susceptible";
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSusceptible");
+    if (rndDouble < ((RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusAsymptomatic") + runningTotal) / 100)) {
+      agent.COVIDInfectionStatus = "Asymptomatic";
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusAsymptomatic");
       return;
     } else {
-      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusSusceptible");
+      runningTotal += RunEnvironment.getInstance().getParameters().getDouble("EmergencyCOVIDInfectionStatusAsymptomatic");
     }
 
   }
@@ -143,7 +143,7 @@ public class patientGenerator_0 extends AgentGenerator {
     ArrivalPerHour.put(2, 4);
     ArrivalPerHour.put(3, 3);
     ArrivalPerHour.put(4, 5);
-    ArrivalPerHour.put(5, 6);
+    ArrivalPerHour.put(5, 3);
     ArrivalPerHour.put(6, 8);
     ArrivalPerHour.put(7, 7);
     ArrivalPerHour.put(8, 6);

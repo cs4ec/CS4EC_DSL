@@ -15,12 +15,10 @@
   <dependencies>
     <dependency reexport="false">7dcff301-ba01-414e-8574-a8f6da31876b(AgentLanguage)</dependency>
     <dependency reexport="false">6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)</dependency>
+    <dependency reexport="false">2fa21111-1327-44d6-9000-fd96b15fb9b6(PatientLanguage)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:b3cac82c-d024-46bc-b485-624ad80c3cc2:ActionCards" version="1" />
-    <language slang="l:7dcff301-ba01-414e-8574-a8f6da31876b:AgentLanguage" version="1" />
-    <language slang="l:1a0150ac-dda5-4129-824e-01dce96fdea4:BuiltEnvironment" version="1" />
-    <language slang="l:2fa21111-1327-44d6-9000-fd96b15fb9b6:PatientLanguage" version="0" />
     <language slang="l:d4280a54-f6df-4383-aa41-d1b2bffa7eb1:com.mbeddr.core.base" version="6" />
     <language slang="l:63e0e566-5131-447e-90e3-12ea330e1a00:com.mbeddr.mpsutil.blutil" version="1" />
     <language slang="l:d3a0fd26-445a-466c-900e-10444ddfed52:com.mbeddr.mpsutil.filepicker" version="0" />
@@ -67,7 +65,6 @@
     <language slang="l:db8bd035-3f51-41d8-8fed-954c202d18be:org.iets3.analysis.base" version="0" />
     <language slang="l:7b68d745-a7b8-48b9-bd9c-05c0f8725a35:org.iets3.core.base" version="0" />
     <language slang="l:cfaa4966-b7d5-4b69-b66a-309a6e1a7290:org.iets3.core.expr.base" version="3" />
-    <language slang="l:6b277d9a-d52d-416f-a209-1919bd737f50:org.iets3.core.expr.simpleTypes" version="1" />
   </languageVersions>
   <dependencyVersions>
     <module reference="b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)" version="5" />
@@ -114,8 +111,9 @@
     <module reference="6b277d9a-d52d-416f-a209-1919bd737f50(org.iets3.core.expr.simpleTypes)" version="1" />
   </dependencyVersions>
   <extendedLanguages>
-    <extendedLanguage>cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</extendedLanguage>
     <extendedLanguage>b3cac82c-d024-46bc-b485-624ad80c3cc2(ActionCards)</extendedLanguage>
+    <extendedLanguage>cfaa4966-b7d5-4b69-b66a-309a6e1a7290(org.iets3.core.expr.base)</extendedLanguage>
+    <extendedLanguage>1a0150ac-dda5-4129-824e-01dce96fdea4(BuiltEnvironment)</extendedLanguage>
   </extendedLanguages>
 </language>
 

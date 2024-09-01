@@ -116,17 +116,17 @@
   	<parameter name="EmergencycohortEmergency"
   		 type="constant" constant_type="double" value = "100" />
   	<parameter name="EmergencyCOVIDInfectionStatusSymptomatic"
-  		 type="constant" constant_type="double" value = "0.5" />
+  		 type="constant" constant_type="double" value = "0.17" />
   	<parameter name="EmergencyCOVIDInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
   	<parameter name="EmergencyCOVIDInfectionStatusSusceptible"
-  		 type="constant" constant_type="double" value = "99.5" />
+  		 type="constant" constant_type="double" value = "99.83" />
   	<parameter name="EmergencyFluInfectionStatusSymptomatic"
-  		 type="constant" constant_type="double" value = "0.17" />
+  		 type="constant" constant_type="double" value = "1" />
   	<parameter name="EmergencyFluInfectionStatusAsymptomatic"
   		 type="constant" constant_type="double" value = "0" />
   	<parameter name="EmergencyFluInfectionStatusSusceptible"
-  		 type="constant" constant_type="double" value = "99.83" />
+  		 type="constant" constant_type="double" value = "99" />
   	<parameter name="EmergencySeveritysevere"
   		 type="constant" constant_type="double" value = "3" />
   	<parameter name="EmergencySeveritymoderate"
