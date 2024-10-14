@@ -100,6 +100,16 @@ The models used for this case study are split between two projects: One project 
 The generated model Java classes can be found in: [Before Dual-Cassette Java classes](solutions/DualCassetteInterventionPreChange/source_gen/EDLanguage/sandbox) and [after Dual-Cassette Java classes](solutions/DualCassetteIntervention/source_gen/EDLanguage/sandbox).
 The model parameters and data output formats can be found in [Before Dual-Cassette model parameters](solutions/DualCassetteInterventionPreChange/source_gen/DualCassetteInterventionPreChange/AC1) and [after Dual-Cassette model paramaters](solutions/DualCassetteIntervention/source_gen/DualCassetteIntervention/AC1).
 
+## Evaluation Models
+As part of the evaluation chapter of the thesis (chapter 10), we conducted a comparison workshop in which we presented a demonstration model in both our DSML and in FlexSim. 
+The descriptions of these models are included in the thesis text, however, the models themselves are linked below:
+
+ [Model in the DSML](solutions/EvaluationComparisonStudy/models/EvaluationComparisonStudy.AC1.mps)
+ Please import this model into your local MPS installation with the DSML configured as described above.
+ 
+ [Model in FlexSim](CaseStudies/HealthcareModel.fsm)
+ Please download the trial version of FlexSim from the official FlexSim [website](https://www.flexsim.com/). 
+ The provided .fsm file can then be imported into your local FlexSim installation
 
 ## References
 <a id="1">[1]</a> 
