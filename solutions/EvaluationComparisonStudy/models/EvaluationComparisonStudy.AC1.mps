@@ -650,7 +650,7 @@
       <property role="m3A$b" value="5" />
       <property role="m3wsY" value="5" />
       <property role="376uKC" value="6o2BuIx6R5m/RED" />
-      <ref role="VgANK" node="EFW1mYOHdY" resolve="MajorsCBay" />
+      <ref role="VgANK" node="52K8Ej3Gdk" resolve="MajorsC_Cubicle" />
       <node concept="h4YGW" id="1$AaFX9fzg$" role="h4YwH">
         <property role="h4YG0" value="2" />
         <property role="h0cbi" value="157" />

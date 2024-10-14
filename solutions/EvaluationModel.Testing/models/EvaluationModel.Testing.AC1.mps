@@ -195,9 +195,6 @@
         <child id="3549288998130844800" name="resultsMappingTable" index="33yLW9" />
         <child id="3866749931154339177" name="testSelectionStrategy" index="1$4g7U" />
       </concept>
-      <concept id="1862364223830857512" name="DiseaseModel.structure.TestOutcome" flags="ng" index="3E3ulc">
-        <property id="3549288998120194521" name="outcome" index="33qpDg" />
-      </concept>
       <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
       <concept id="6755843002512513317" name="DiseaseModel.structure.Susceptible" flags="ng" index="3IO8Df" />
       <concept id="6755843002512513336" name="DiseaseModel.structure.Symptomatic" flags="ng" index="3IO8Di" />
@@ -205,7 +202,6 @@
         <property id="3549288998120194512" name="sensitivity" index="33qpDp" />
         <property id="3549288998120194514" name="specificity" index="33qpDr" />
         <reference id="3549288998120194507" name="disease" index="33qpD2" />
-        <child id="3549288998120194517" name="possibleOutcomes" index="33qpDs" />
       </concept>
     </language>
     <language id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment">
@@ -4859,21 +4855,20 @@
         <property role="ldb2Z" value="1" />
       </node>
     </node>
-    <node concept="3SEB2C" id="3IhX87gchRF" role="33qpDe">
-      <property role="33qpDp" value="70.7" />
-      <property role="33qpDr" value="99.1" />
+    <node concept="3SEB2C" id="3fO4p$CtE5$" role="33qpDe">
+      <property role="33qpDp" value="99" />
+      <property role="33qpDr" value="99" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchRM" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchRP" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
     </node>
   </node>
   <node concept="3oQGfi" id="3IhX87gchSh">
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="RapidPCRTest" />
+    <node concept="3SEB2C" id="3fO4p$CtEbw" role="33qpDe">
+      <property role="33qpDp" value="97.9" />
+      <property role="33qpDr" value="99.99" />
+      <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
+    </node>
     <node concept="ldbdM" id="3IhX87gchSr" role="3oQGcl">
       <node concept="ldb2t" id="3IhX87gchSt" role="ldb3A">
         <property role="ldb2L" value="30" />
@@ -4888,21 +4883,15 @@
         <property role="ldb2Z" value="1" />
       </node>
     </node>
-    <node concept="3SEB2C" id="3IhX87gchSA" role="33qpDe">
-      <property role="33qpDp" value="97.9" />
-      <property role="33qpDr" value="100" />
-      <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchSB" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchSE" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
-    </node>
   </node>
   <node concept="3oQGfi" id="3IhX87gchTb">
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="LabPCR" />
+    <node concept="3SEB2C" id="3fO4p$CtE4G" role="33qpDe">
+      <property role="33qpDp" value="99" />
+      <property role="33qpDr" value="99" />
+      <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
+    </node>
     <node concept="ldbdM" id="1xAzJ9PFChe" role="3oQGcl">
       <node concept="ldb2t" id="1xAzJ9PFChg" role="ldb3A">
         <property role="ldb2L" value="300" />
@@ -4941,17 +4930,6 @@
         <property role="ldb2Z" value="55" />
       </node>
     </node>
-    <node concept="3SEB2C" id="3IhX87gchTp" role="33qpDe">
-      <property role="33qpDp" value="99" />
-      <property role="33qpDr" value="99" />
-      <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchTq" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchTr" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
-    </node>
     <node concept="1HTXKU" id="1jVX9cIc4FR" role="_m43T">
       <ref role="1HTXKa" node="1jVX9cIc4u2" resolve="Lab PCR Testing Procedure" />
     </node>
@@ -4959,6 +4937,11 @@
   <node concept="3oQGfi" id="3IhX87gchU6">
     <property role="3GE5qa" value="Tests" />
     <property role="TrG5h" value="PHEThree" />
+    <node concept="3SEB2C" id="3fO4p$CtEaC" role="33qpDe">
+      <property role="33qpDp" value="99" />
+      <property role="33qpDr" value="99" />
+      <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
+    </node>
     <node concept="ldbdM" id="3IhX87gluR5" role="3oQGcl">
       <node concept="ldb2t" id="3IhX87gluR7" role="ldb3A">
         <property role="ldb2L" value="2" />
@@ -4979,17 +4962,6 @@
       <node concept="ldb2t" id="3IhX87gluRl" role="ldb3A">
         <property role="ldb2L" value="6" />
         <property role="ldb2Z" value="1" />
-      </node>
-    </node>
-    <node concept="3SEB2C" id="3IhX87gchUg" role="33qpDe">
-      <property role="33qpDp" value="99" />
-      <property role="33qpDr" value="99" />
-      <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchUh" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchUi" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
       </node>
     </node>
   </node>

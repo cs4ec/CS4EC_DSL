@@ -135,9 +135,6 @@
         <reference id="4555810343887637004" name="disease" index="24g7ti" />
         <reference id="188877551433123871" name="test" index="3tE8WY" />
       </concept>
-      <concept id="1862364223830857512" name="DiseaseModel.structure.TestOutcome" flags="ng" index="3E3ulc">
-        <property id="3549288998120194521" name="outcome" index="33qpDg" />
-      </concept>
       <concept id="6755843002512513355" name="DiseaseModel.structure.Asymptomatic" flags="ng" index="3IO8Cx" />
       <concept id="6755843002512513317" name="DiseaseModel.structure.Susceptible" flags="ng" index="3IO8Df" />
       <concept id="6755843002512513336" name="DiseaseModel.structure.Symptomatic" flags="ng" index="3IO8Di" />
@@ -145,7 +142,6 @@
         <property id="3549288998120194512" name="sensitivity" index="33qpDp" />
         <property id="3549288998120194514" name="specificity" index="33qpDr" />
         <reference id="3549288998120194507" name="disease" index="33qpD2" />
-        <child id="3549288998120194517" name="possibleOutcomes" index="33qpDs" />
       </concept>
     </language>
     <language id="1a0150ac-dda5-4129-824e-01dce96fdea4" name="BuiltEnvironment">
@@ -4460,16 +4456,10 @@
         <property role="ldb2Z" value="1" />
       </node>
     </node>
-    <node concept="3SEB2C" id="3IhX87gchRF" role="33qpDe">
-      <property role="33qpDp" value="70.7" />
-      <property role="33qpDr" value="99.1" />
+    <node concept="3SEB2C" id="3fO4p$CtEhs" role="33qpDe">
+      <property role="33qpDp" value="70.1" />
+      <property role="33qpDr" value="98" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchRM" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchRP" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
     </node>
   </node>
   <node concept="3oQGfi" id="3IhX87gchSh">
@@ -4489,16 +4479,10 @@
         <property role="ldb2Z" value="1" />
       </node>
     </node>
-    <node concept="3SEB2C" id="3IhX87gchSA" role="33qpDe">
+    <node concept="3SEB2C" id="3fO4p$CtEno" role="33qpDe">
       <property role="33qpDp" value="97.9" />
-      <property role="33qpDr" value="100" />
+      <property role="33qpDr" value="99" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchSB" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchSE" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
     </node>
   </node>
   <node concept="3oQGfi" id="3IhX87gchTb">
@@ -4542,16 +4526,10 @@
         <property role="ldb2Z" value="55" />
       </node>
     </node>
-    <node concept="3SEB2C" id="3IhX87gchTp" role="33qpDe">
-      <property role="33qpDp" value="12" />
-      <property role="33qpDr" value="23" />
+    <node concept="3SEB2C" id="3fO4p$CtEg$" role="33qpDe">
+      <property role="33qpDp" value="99" />
+      <property role="33qpDr" value="99" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchTq" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchTr" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
     </node>
   </node>
   <node concept="3oQGfi" id="3IhX87gchU6">
@@ -4579,16 +4557,10 @@
         <property role="ldb2Z" value="1" />
       </node>
     </node>
-    <node concept="3SEB2C" id="3IhX87gchUg" role="33qpDe">
+    <node concept="3SEB2C" id="3fO4p$CtEmw" role="33qpDe">
       <property role="33qpDp" value="99" />
       <property role="33qpDr" value="99" />
       <ref role="33qpD2" node="5R1$QEMKFjT" resolve="COVID" />
-      <node concept="3E3ulc" id="3IhX87gchUh" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF1X/Positive" />
-      </node>
-      <node concept="3E3ulc" id="3IhX87gchUi" role="33qpDs">
-        <property role="33qpDg" value="2lOlAdPyF27/Negative" />
-      </node>
     </node>
   </node>
 </model>
